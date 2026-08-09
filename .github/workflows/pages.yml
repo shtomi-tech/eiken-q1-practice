@@ -1,0 +1,66 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Generate runtime config
+        run: node scripts/write-config.mjs
+        env:
+          APP_BASE_URL: ${{ secrets.APP_BASE_URL }}
+          AI_CHECK_ENDPOINT: ${{ secrets.AI_CHECK_ENDPOINT }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+
+      - name: Check Q1 data contract
+        run: python3 scripts/check_q1_data.py
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Prepare static files
+        run: |
+          rm -rf _site
+          mkdir -p _site/static/vendor/harness _site/data _site/assets/audio/vocab
+          cp index.html .nojekyll _site/
+          cp static/app.js static/mode-q1.js static/styles.css static/config.json _site/static/
+          cp static/vendor/harness/cloud.js _site/static/vendor/harness/
+          cp data/manifest.json _site/data/
+          cp data/questions_[0-9]*.json data/questions_p2_*.json data/questions_pre1_*.json _site/data/
+          cp data/vocab_[0-9]*.json data/vocab_p2_*.json data/vocab_pre1_*.json _site/data/
+          cp -R assets/audio/vocab/* _site/assets/audio/vocab/
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
