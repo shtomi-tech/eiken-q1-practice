@@ -19,6 +19,15 @@ const LEGACY_PRE1_APP_ID = "eiken-pre1";
 const PRE1_MIGRATION_VERSION = 1;
 const CORRUPT_PROGRESS_PREFIX = "eiken_q1_corrupt_";
 const MANIFEST_URL = "data/manifest.json";
+let storageStudentId = "";
+function scopedStorageKey(key) {
+  return storageStudentId
+    ? `eiken_q1_student_${encodeURIComponent(storageStudentId)}_${key}`
+    : key;
+}
+function datasetStorageKey() {
+  return scopedStorageKey(DATASET_KEY);
+}
 // datasetId の級プレフィックス → 音声フォルダ名。級の判定・同一級のプール化にも使う。
 // ここに無いプレフィックスは「級不明」として扱い、意味練習のプール対象から外す。
 const GRADE_BY_PREFIX = { eiken1: "1", eiken2: "2", eikenp1: "pre1", eikenp2: "pre2" };
@@ -75,7 +84,7 @@ async function loadAiConfig() {
 /* ---- progress (localStorage) ---- */
 function loadDatasetId() {
   try {
-    const id = localStorage.getItem(DATASET_KEY);
+    const id = localStorage.getItem(datasetStorageKey());
     if (id && DATASETS[id]) return id;
   } catch (e) { /* ignore */ }
   return defaultDatasetId();
@@ -130,13 +139,13 @@ function saveProgressFor(datasetId, progress) {
   });
 }
 function progressKey(datasetId = state.datasetId) {
-  return STORE_PREFIX + datasetId;
+  return scopedStorageKey(STORE_PREFIX + datasetId);
 }
 function loadProgress(datasetId = state.datasetId) {
   let raw = null;
   try {
     raw = localStorage.getItem(progressKey(datasetId));
-    if (!raw && datasetId === DEFAULT_DATASET_ID) raw = localStorage.getItem(LEGACY_STORE_KEY);
+    if (!raw && !storageStudentId && datasetId === DEFAULT_DATASET_ID) raw = localStorage.getItem(LEGACY_STORE_KEY);
   } catch (e) { return { units: {} }; }
   if (!raw) return { units: {} };
   try {
@@ -154,7 +163,7 @@ function loadProgress(datasetId = state.datasetId) {
   } catch (e) {
     // 壊れたJSONを空データとして保存し直さないよう、原文を別キーへ退避する。
     try {
-      const backupKey = CORRUPT_PROGRESS_PREFIX + datasetId;
+      const backupKey = scopedStorageKey(CORRUPT_PROGRESS_PREFIX + datasetId);
       if (!localStorage.getItem(backupKey)) localStorage.setItem(backupKey, raw);
     } catch (backupError) { /* ignore */ }
     return {
@@ -224,16 +233,16 @@ function migrateLegacyPre1Progress(legacyStore) {
   });
 
   try {
-    const currentDatasetId = localStorage.getItem(DATASET_KEY);
+    const currentDatasetId = localStorage.getItem(datasetStorageKey());
     const oldRound = localStorage.getItem(LEGACY_PRE1_ROUND_KEY);
-    if (!currentDatasetId && oldRound && DATASETS[`eikenp1-${oldRound}`]) {
-      localStorage.setItem(DATASET_KEY, `eikenp1-${oldRound}`);
+    if (!storageStudentId && !currentDatasetId && oldRound && DATASETS[`eikenp1-${oldRound}`]) {
+      localStorage.setItem(datasetStorageKey(), `eikenp1-${oldRound}`);
     }
   } catch (e) { /* ignore */ }
   return changed;
 }
 function examplesKey(datasetId = state.datasetId) {
-  return EXAMPLE_STORE_PREFIX + datasetId;
+  return scopedStorageKey(EXAMPLE_STORE_PREFIX + datasetId);
 }
 function loadUserExamples(datasetId = state.datasetId) {
   try {
@@ -522,6 +531,7 @@ const APP_ID = "eiken-q1-practice";
 let cloud = null; // harness createCloud のインスタンス（init で生成）
 let legacyPre1Cloud = null;
 let legacyPre1CloudProgress = null;
+let pendingCloudProgress = null;
 
 function setShareStatus(message, tone = "") {
   const slot = $("#shareStatus");
@@ -682,7 +692,7 @@ function applyCloudProgress(map) {
     ? map._meta.lastDatasetId
     : "";
   if (lastDatasetId && DATASETS[lastDatasetId]) {
-    try { localStorage.setItem(DATASET_KEY, lastDatasetId); } catch (e) { /* ignore */ }
+    try { localStorage.setItem(datasetStorageKey(), lastDatasetId); } catch (e) { /* ignore */ }
   }
   Object.entries(map).forEach(([id, prog]) => {
     if (DATASETS[id] && prog && typeof prog === "object") {
@@ -897,7 +907,7 @@ async function loadData(datasetId = state.datasetId) {
   state.meaningPool = { word: [], idiom: [] };
   state.progress = loadProgress(datasetId);
   state.userExamples = loadUserExamples(datasetId);
-  try { localStorage.setItem(DATASET_KEY, datasetId); } catch (e) { /* ignore */ }
+  try { localStorage.setItem(datasetStorageKey(), datasetId); } catch (e) { /* ignore */ }
 
   const current = dataset();
   const [vocab, qs] = await Promise.all([
@@ -2364,13 +2374,19 @@ async function boot() {
         progress: state.progress,
         meta: { lastDatasetId: state.datasetId },
       }),
-      applyLoaded: applyCloudProgress,
+      applyLoaded: (progress) => { pendingCloudProgress = progress; },
       onStatus: setShareStatus,
     });
     await cloud.init();
+    const cloudSession = cloud.getSession();
+    storageStudentId = cloudSession.enabled && cloudSession.student
+      ? cloudSession.student.id
+      : (cloudSession.requested ? `unverified:${cloudSession.studentId || "unknown"}` : "");
+    if (pendingCloudProgress) applyCloudProgress(pendingCloudProgress);
     applySharedUi();
 
-    const legacyProgress = legacyPre1CloudProgress || readStoredObject(LEGACY_PRE1_PROGRESS_KEY);
+    const legacyProgress = legacyPre1CloudProgress
+      || (cloudSession.requested ? null : readStoredObject(LEGACY_PRE1_PROGRESS_KEY));
     const migratedLegacy = migrateLegacyPre1Progress(legacyProgress);
     state.datasetId = loadDatasetId();
     if (migratedLegacy) {
