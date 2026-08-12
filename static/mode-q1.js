@@ -1025,13 +1025,6 @@ function renderHomeContent() {
     ),
     datasetPicker(),
   ));
-  const grid = el("div", { class: "dailyGrid cols5" });
-  grid.appendChild(statCell(learned, total, "通常学習済み"));
-  grid.appendChild(statCell(solved, total, "正解確認済み"));
-  grid.appendChild(statCell(unknown, total, "要確認"));
-  grid.appendChild(statCell(reviewQs.length, total, "復習対象"));
-  grid.appendChild(statCell(final.bestScore, finalTotal, "全語句 BEST"));
-
   // --- 次にやること（Hickの法則：迷わせないため主導線は常に1つに絞る） ---
   const resume = currentResume();
   const resumeIsDone = resume?.stage === "done";
@@ -1060,7 +1053,6 @@ function renderHomeContent() {
   if (coreResume) {
     primary = {
       label: "続きから再開する",
-      why: "前回保存した位置から再開します。",
       onclick: async () => { if (!(await restoreSession())) renderHome(); },
     };
   } else if (nextQ) {
@@ -1096,7 +1088,7 @@ function renderHomeContent() {
     const rec = el("div", { class: "recommend" });
     rec.appendChild(el("p", { class: "recEyebrow" }, "▶ まずはここから"));
     rec.appendChild(el("button", { class: "cta startCta", onclick: primary.onclick }, primary.label));
-    rec.appendChild(el("p", { class: "recWhy" }, primary.why));
+    if (primary.why) rec.appendChild(el("p", { class: "recWhy" }, primary.why));
     summary.appendChild(rec);
   } else {
     summary.appendChild(el("div", { class: "recommend" },
@@ -1112,15 +1104,6 @@ function renderHomeContent() {
       ),
     ));
   }
-  summary.appendChild(el("div", { class: "missionNote" },
-    el("p", { class: "hint" }, finalMessage(solved, total, reviewQs.length, final, finalTotal)),
-  ));
-  const progressDetails = el("details", { class: "progressDetails" },
-    el("summary", { class: "progressDetailsSummary" }, "進捗の詳細"),
-  );
-  progressDetails.appendChild(grid);
-  summary.appendChild(progressDetails);
-  summary.appendChild(recentLearningHistory());
   home.appendChild(summary);
   if (grade) {
     home.appendChild(meaningMission(meaningSummary, Boolean(pooled), meaningQueue, meaningItems, meaningResume ? resume : null, coreResume));
@@ -1172,13 +1155,6 @@ function renderHomeContent() {
     );
     home.appendChild(other);
   }
-}
-
-function statCell(n, d, caption) {
-  return el("div", { class: "dailyCell" },
-    el("div", { class: "dailyNum", html: `${n}<small>/ ${d}</small>` }),
-    el("div", { class: "dailyCaption" }, caption),
-  );
 }
 
 function meaningMission(summary, ready, nextQueue = [], learnedItems = [], meaningResume = null, coreResume = false) {
@@ -1238,59 +1214,6 @@ function meaningMission(summary, ready, nextQueue = [], learnedItems = [], meani
   mission.appendChild(el("button", buttonAttrs, buttonLabel));
   if (note) mission.appendChild(el("p", { class: "hint" }, note));
   return mission;
-}
-
-function recentLearningHistoryEvents() {
-  const grade = currentGrade();
-  const datasetIds = grade ? gradeDatasetIds(grade) : [state.datasetId];
-  return datasetIds
-    .flatMap((datasetId) => {
-      const progress = progressFor(datasetId);
-      return Array.isArray(progress.history)
-        ? progress.history.map((event) => ({ ...event, datasetId }))
-        : [];
-    })
-    .filter((event) => event && typeof event.at === "string")
-    .sort((a, b) => new Date(b.at).getTime() - new Date(a.at).getTime())
-    .slice(0, 10);
-}
-function historyDateLabel(value) {
-  const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return "日時不明";
-  return date.toLocaleString("ja-JP", { month: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit" });
-}
-function historyDescription(event) {
-  if (event.kind === "question") {
-    return `第${event.q}問・本番形式　${event.result === "correct" ? "正解" : "不正解"}`;
-  }
-  if (event.kind === "meaning") {
-    return `語句「${event.surface || "（不明）"}」・意味練習　${event.result === "correct" ? "正解" : "不正解"}`;
-  }
-  if (event.kind === "wrong-review") {
-    return `語句「${event.surface || "（不明）"}」・誤答復習　確認`;
-  }
-  return "大問1の学習";
-}
-function recentLearningHistory() {
-  const details = el("details", { class: "q1LearningHistory" },
-    el("summary", { class: "progressDetailsSummary" }, "最近の学習履歴"),
-  );
-  const events = recentLearningHistoryEvents();
-  if (!events.length) {
-    details.appendChild(el("p", { class: "hint" }, "まだ学習履歴はありません。"));
-    return details;
-  }
-  const list = el("ol", { class: "q1HistoryList" });
-  events.forEach((event) => {
-    const datasetLabel = DATASETS[event.datasetId]?.label || event.datasetId;
-    list.appendChild(el("li", {},
-      el("time", { datetime: event.at }, historyDateLabel(event.at)),
-      el("span", { class: "q1HistoryEvent" }, historyDescription(event)),
-      el("span", { class: "q1HistoryDataset" }, datasetLabel),
-    ));
-  });
-  details.appendChild(list);
-  return details;
 }
 
 function datasetGrades() {
@@ -1425,20 +1348,6 @@ function finalUnlocked() {
   return state.qList.length > 0
     && state.qList.every((q) => unit(q).solvedCorrect)
     && reviewQueue().length === 0;
-}
-
-function finalMessage(solved, total, reviewCount, final, finalTotal) {
-  const passScore = finalPassScore(finalTotal);
-  if (final.cleared) return `最終チェックを${final.lastScore}/${finalTotal}で突破済みです（${passScore}/${finalTotal}問以上でCLEAR）。`;
-  if (!finalUnlocked()) {
-    const needs = [];
-    if (solved < total) needs.push(`通常ステージをあと${total - solved}問`);
-    if (reviewCount) needs.push(`復習対象をあと${reviewCount}問`);
-    return `最終チェック解放まで：${needs.join(" / ")}`;
-  }
-  return final.bestScore
-    ? `最終チェック解放中。過去最高は${final.bestScore}/${finalTotal}です。${passScore}/${finalTotal}問以上（正答率80%以上）でCLEAR。`
-    : `最終チェック解放中。${finalTotal}問の意味チェックで${passScore}/${finalTotal}問以上（正答率80%以上）を取るとCLEAR。`;
 }
 
 /* ============================================================

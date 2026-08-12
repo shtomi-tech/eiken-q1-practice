@@ -58,6 +58,22 @@ assert.ok(
   renderHomeBody.includes("if (coreResume)"),
   "通常学習カードはcore resumeだけを表示対象にする必要がある",
 );
+assert.ok(
+  !renderHomeBody.includes('why: "前回保存した位置から再開します。"'),
+  "途中保存CTAの補足文は表示しない必要がある",
+);
+assert.ok(
+  !renderHomeBody.includes('class: "missionNote"'),
+  "最終チェック解放までの案内はホームに表示しない必要がある",
+);
+assert.ok(
+  !renderHomeBody.includes("progressDetails"),
+  "進捗の詳細ブロックはホームに表示しない必要がある",
+);
+assert.ok(
+  !renderHomeBody.includes("recentLearningHistory()"),
+  "最近の学習履歴ブロックはホームに表示しない必要がある",
+);
 assert.match(
   renderHomeBody,
   /meaningMission\([^;]*meaningResume[^;]*coreResume/s,

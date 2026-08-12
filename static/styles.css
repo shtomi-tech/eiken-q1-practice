@@ -302,35 +302,6 @@ h2 {
   width: 100%;
 }
 
-/* ---- Daily menu ---- */
-.dailyGrid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 8px;
-  margin: 14px 0 16px;
-}
-.dailyGrid.cols4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-.dailyGrid.cols5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
-.dailyCell {
-  background: var(--parchment);
-  border-radius: var(--r-md);
-  padding: 14px;
-}
-.dailyNum {
-  font-family: var(--serif);
-  font-size: 34px;
-  line-height: 1.1;
-}
-.dailyNum small { font-size: 14px; color: var(--muted); margin-left: 4px; }
-.dailyCaption {
-  color: var(--muted);
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  margin-top: 4px;
-}
-
 .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 14px; }
 .answerActions {
   scroll-margin: 32px;
@@ -393,50 +364,6 @@ h2 {
 }
 .recommend .startCta { width: 100%; min-width: 0; }
 .recWhy { color: var(--muted); font-size: 13px; margin: 8px 0 0; }
-
-.progressDetails {
-  border-top: 1px solid var(--line);
-  margin-top: 16px;
-  padding-top: 4px;
-}
-.progressDetailsSummary {
-  align-items: center;
-  color: var(--muted);
-  cursor: pointer;
-  display: flex;
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: .06em;
-  min-height: 44px;
-}
-.progressDetails[open] .progressDetailsSummary { color: var(--ink); }
-.progressDetails .dailyGrid { margin-top: 8px; }
-
-.q1LearningHistory {
-  border-top: 1px solid var(--line);
-  margin-top: 12px;
-  padding-top: 4px;
-}
-.q1HistoryList {
-  list-style: none;
-  margin: 8px 0 0;
-  padding: 0;
-}
-.q1HistoryList li {
-  display: grid;
-  gap: 2px 12px;
-  grid-template-columns: 5.5rem minmax(0, 1fr);
-  padding: 8px 0;
-  border-top: 1px solid var(--line);
-}
-.q1HistoryList time,
-.q1HistoryDataset {
-  color: var(--muted);
-  font-family: var(--mono);
-  font-size: 11px;
-}
-.q1HistoryEvent { font-size: 13px; }
-.q1HistoryDataset { grid-column: 2; }
 
 .secondaryActions {
   border-top: 1px solid var(--line);
@@ -527,13 +454,6 @@ h2 {
   white-space: nowrap;
 }
 .meaningMissionCta { width: 100%; }
-
-.missionNote {
-  border-top: 1px solid var(--line);
-  margin-top: 16px;
-  padding-top: 12px;
-}
-.missionNote .hint { margin: 0; }
 
 .settingRow {
   display: flex;
@@ -1012,16 +932,8 @@ h2 {
 .hide { display: none !important; }
 
 @media (max-width: 720px) {
-  .dailyGrid, .itemList { grid-template-columns: 1fr; }
-  .dailyGrid { grid-template-columns: repeat(3, 1fr); }
-  .dailyGrid.cols4 { grid-template-columns: repeat(2, 1fr); }
-  .dailyGrid.cols5 { grid-template-columns: repeat(2, 1fr); }
+  .itemList { grid-template-columns: 1fr; }
   .meaningMissionIntervalGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .dailyGrid.cols5 > .dailyCell:last-child {
-    grid-column: 1 / -1;
-    justify-self: center;
-    width: calc((100% - 8px) / 2);
-  }
   .topActions, .itemHead, .sectionHead { align-items: stretch; }
   .stagePill { min-width: 90px; font-size: 10px; }
   .selfExamplePanel { margin: 14px; }
