@@ -77,7 +77,7 @@ flowchart LR
 | 自作英文 | `eiken_q1_examples_<datasetId>` | 語句別の下書き・AIチェック結果 |
 | 旧Q1互換 | `eiken2_q1_v1` | 旧Q1のデフォルトセットだけを読むための後方互換 |
 
-クラウド読込時は `{ datasetId: progress }` の形を使う。Q1の保存は `app_save_progress_dataset` で現在の回だけを送信し、Supabase側で既存の別回とマージする。`_meta.lastDatasetId` に最後に選んだ回を保存するため、別端末でも同じ回から再開できる。
+クラウド読込時は `{ datasetId: progress }` の形を使う。独立版と総合版のQ1は同一のこの形式を使い、`app_save_progress_dataset` で `app='eiken2-q1'` の行に対して現在の回だけを送信し、Supabase側で既存の別回とマージする。`_meta.lastDatasetId` に最後に選んだ回を保存するため、別端末でも同じ回から再開できる。旧 `app='eiken-q1-practice'` 行は読み書きしないが削除しない。
 
 ## 5. 旧準1級進捗の移行
 

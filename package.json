@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "test": "node --check static/mode-q1.js && node scripts/check-student-storage-scope.cjs && node scripts/check-cloud-progress-namespace.cjs"
+  },
   "dependencies": {
     "openai": "^6.48.0"
   }

@@ -522,12 +522,12 @@ function finalProgress(finalTotal) {
 
 /* ============================================================
    cloud sync（生徒別・共有URL ?s=&t=）— harness/cloud.js を利用
-   共通スキーマ app_students / app_progress（app="eiken-q1-practice"）。
+   共通スキーマ app_students / app_progress（app="eiken2-q1"）。
    config.json が無ければ no-op で、従来どおり匿名ローカル動作（無回帰）。
    RPC/認証/デバウンス保存は vendor/harness/cloud.js に集約。
    このアプリ固有＝複数データセットの進捗を1つのjsonbにまとめる点のみ。
    ============================================================ */
-const APP_ID = "eiken-q1-practice";
+const APP_ID = "eiken2-q1";
 let cloud = null; // harness createCloud のインスタンス（init で生成）
 let legacyPre1Cloud = null;
 let legacyPre1CloudProgress = null;

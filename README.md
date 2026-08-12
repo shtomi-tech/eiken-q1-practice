@@ -98,9 +98,11 @@ py -3 scripts/add_example_translations.py
 
 元の総合アプリと既存の公開URLは変更していません。
 
-生徒別URLの `?s=<id>&t=<token>` では、共通Supabaseスキーマの `app_students` / `app_progress` に `app=eiken-q1-practice` として進捗を同期します。匿名利用では従来どおりローカル保存だけで動作します。
+生徒別URLの `?s=<id>&t=<token>` では、共通Supabaseスキーマの `app_students` / `app_progress` に `app=eiken2-q1` として進捗を同期します。総合アプリ側のQ1進捗と同じ行を共有するため、スマホとPCの学習内容が端末をまたいで復元されます。匿名利用では従来どおりローカル保存だけで動作します。
 
-Q1のクラウドアプリIDは `eiken2-q1` です。旧準1級アプリの `eiken-pre1` 進捗は、初回起動時にQ1形式へ読み取り移行します。旧キーは移行確認のため残します。
+`app=eiken-q1-practice` は2026-08-09〜2026-08-12に独立版だけが使っていた旧分岐IDです。既存の `eiken-q1-practice` 行はロールバック用バックアップとして残していますが、現在は読み書きしません。
+
+旧準1級アプリの `eiken-pre1` 進捗は、初回起動時にQ1形式へ読み取り移行します。旧キーは移行確認のため残します。
 
 ## 保存キー
 
