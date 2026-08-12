@@ -73,6 +73,7 @@
 - **副ボタン（`.ghost`）**: 透明地＋Ink文字＋hairline枠、角丸md。ホバーでInk地に反転
 - **二次アクション（`.secondaryCta`）**: 透明地＋hairline枠、角丸md。reviewCta/finalCta系統は枠・文字をClayに
 - **カード（`.card` 等）**: Card地・角丸lg・枠なし・影なし
+- **間隔復習カード（`.spacedReviewCard`）**: 通常学習カードの兄弟として置き、Clayの左4px罫だけで復習導線を示す。カード内のCTAは意味復習セッションだけを開始する
 - **強調タイル（`.hero` `.doneBanner` `.completionCard`）**: Ink地＋Parchment文字の反転表示、角丸lg。「学習フローの始まり」と「締めくくり」を示す
 - **選択肢（`.choiceBtn` `.dictChoice`）**: Paper地＋Ink文字＋hairline枠、角丸md。ホバー/選択でInk反転。正解＝OK色の2px枠、不正解＝NG色の2px枠（coral化しない。主要CTAとの混同を避けるため中立表現を維持）
 - **番号バッジ（`.key`）**: 24×24pxの円形（角丸pill）、currentColor枠

@@ -1034,10 +1034,14 @@ function renderHomeContent() {
 
   // --- 次にやること（Hickの法則：迷わせないため主導線は常に1つに絞る） ---
   const resume = currentResume();
+  const resumeIsDone = resume?.stage === "done";
+  const meaningResume = resume?.mode === "meaning" && !resumeIsDone;
+  const coreResume = Boolean(resume && resume.mode !== "meaning" && !resumeIsDone);
   const nextQ = state.qList.find((q) => !unit(q).learned);
   const canStartFinal = finalUnlocked();
+  const hasMeaningDue = Boolean(grade && meaningDueCount > 0);
 
-  if (resume) {
+  if (coreResume) {
     summary.appendChild(el("div", { class: "resumeNotice" },
       el("p", { class: "label" }, "途中保存"),
       el("p", { class: "resumeText" }, resumeDescription(resume)),
@@ -1053,7 +1057,7 @@ function renderHomeContent() {
 
   // おすすめ（主導線）＝状態に応じて1つだけ決める。詳細な進捗より先に置く。
   let primary;
-  if (resume) {
+  if (coreResume) {
     primary = {
       label: "続きから再開する",
       why: "前回保存した位置から再開します。",
@@ -1077,15 +1081,9 @@ function renderHomeContent() {
       why: `全${finalTotal}語の意味を通しで確認。${finalPassScore(finalTotal)}/${finalTotal}問以上（正答率80%以上）でCLEARです。`,
       onclick: startFinalCheck,
     };
-  } else if (grade && meaningDueCount > 0) {
-    // 1周目の学習・復習・最終チェックが片付いたあとの「戻ってきた日」の主導線。
-    // ここが無いと、復習待ちの語句があっても常に「第1問からもう一周」だけが案内される。
-    primary = {
-      label: `意味だけの復習を始める（今回${Math.min(meaningDueCount, MEANING_SESSION_SIZE)}語句）`,
-      why: `今すぐ復習する語句は${meaningDueCount}語句。最大${MEANING_SESSION_SIZE}語句ずつ確認します。`,
-      onclick: () => startMeaningPractice(true, meaningQueue),
-      isMeaningDue: true,
-    };
+  } else if (hasMeaningDue) {
+    // 間隔復習は下の独立カードを主導線にする。もう一周は二次操作へ残す。
+    primary = null;
   } else {
     primary = {
       label: "第1問からもう一周する",
@@ -1094,14 +1092,25 @@ function renderHomeContent() {
     };
   }
 
-  const rec = el("div", { class: "recommend" });
-  rec.appendChild(el("p", { class: "recEyebrow" }, "▶ まずはここから"));
-  rec.appendChild(el("button", { class: "cta startCta", onclick: primary.onclick }, primary.label));
-  rec.appendChild(el("p", { class: "recWhy" }, primary.why));
-  summary.appendChild(rec);
-
-  if (grade) {
-    summary.appendChild(meaningMission(meaningSummary, Boolean(pooled), meaningQueue, meaningItems, Boolean(resume)));
+  if (primary) {
+    const rec = el("div", { class: "recommend" });
+    rec.appendChild(el("p", { class: "recEyebrow" }, "▶ まずはここから"));
+    rec.appendChild(el("button", { class: "cta startCta", onclick: primary.onclick }, primary.label));
+    rec.appendChild(el("p", { class: "recWhy" }, primary.why));
+    summary.appendChild(rec);
+  } else {
+    summary.appendChild(el("div", { class: "recommend" },
+      el("p", { class: "recEyebrow" }, "▶ 今日の復習"),
+      el("p", { class: "recWhy" }, "通常学習は完了しています。今日の間隔復習は下のカードから開始します。"),
+    ));
+    summary.appendChild(el("div", { class: "secondaryActions" },
+      el("p", { class: "label" }, "通常学習をやり直す"),
+      el("div", { class: "actions" },
+        el("button", {
+          class: "secondaryCta", type: "button", onclick: () => startLearn(state.qList[0]),
+        }, "第1問からもう一周する"),
+      ),
+    ));
   }
   summary.appendChild(el("div", { class: "missionNote" },
     el("p", { class: "hint" }, finalMessage(solved, total, reviewQs.length, final, finalTotal)),
@@ -1113,6 +1122,9 @@ function renderHomeContent() {
   summary.appendChild(progressDetails);
   summary.appendChild(recentLearningHistory());
   home.appendChild(summary);
+  if (grade) {
+    home.appendChild(meaningMission(meaningSummary, Boolean(pooled), meaningQueue, meaningItems, meaningResume ? resume : null, coreResume));
+  }
 
   // question path
   const path = el("section", { class: "card" });
@@ -1169,15 +1181,18 @@ function statCell(n, d, caption) {
   );
 }
 
-function meaningMission(summary, ready, nextQueue = [], learnedItems = [], hasResume = false) {
+function meaningMission(summary, ready, nextQueue = [], learnedItems = [], meaningResume = null, coreResume = false) {
   const total = summary.total;
   const learned = summary.learned;
   const due = summary.due;
   const batch = nextQueue.length || Math.min(due, MEANING_SESSION_SIZE);
   const remaining = Math.max(0, due - batch);
-  const mission = el("div", { class: "meaningMission" },
+  const mission = el("section", {
+    class: "card spacedReviewCard",
+    "aria-labelledby": "spacedReviewCardTitle",
+  },
     el("p", { class: "label" }, "間隔復習"),
-    el("h3", {}, "意味だけ復習"),
+    el("h3", { id: "spacedReviewCardTitle" }, "意味だけ復習"),
     el("p", { class: "meaningMissionLead" },
       `${dataset().shortLabel}の収録セットをまとめ、通常学習で最後まで解いた設問の語句を1回最大${MEANING_SESSION_SIZE}語句で復習します。正解すると1・3・7・14日後へ進みます。`),
     el("div", { class: "meaningMissionMetrics" },
@@ -1191,14 +1206,25 @@ function meaningMission(summary, ready, nextQueue = [], learnedItems = [], hasRe
   } else if (ready) {
     mission.appendChild(el("p", { class: "hint" }, "まだ意味だけ復習の対象語句がありません。通常学習で本番形式まで解くと対象に加わります。"));
   }
-  if (hasResume) {
+  if (meaningResume) {
+    mission.appendChild(el("div", { class: "resumeNotice" },
+      el("p", { class: "label" }, "途中保存"),
+      el("p", { class: "resumeText" }, resumeDescription(meaningResume)),
+      el("p", { class: "hint" }, "意味だけ復習の続きから再開できます。"),
+    ));
+  }
+  if (coreResume) {
     mission.appendChild(el("p", { class: "hint" }, "通常学習の続きがあるため、先に再開するのがおすすめです。"));
   }
 
   const buttonAttrs = { class: "cta reviewCta meaningMissionCta", type: "button", disabled: "disabled" };
   let buttonLabel = "対象を確認中…";
   let note = "";
-  if (ready && learned === 0) {
+  if (meaningResume && ready) {
+    buttonLabel = "意味だけ復習の続きを再開する";
+    delete buttonAttrs.disabled;
+    buttonAttrs.onclick = async () => { if (!(await restoreSession())) renderHome(); };
+  } else if (ready && learned === 0) {
     buttonLabel = "通常学習後に利用できます";
   } else if (ready && due === 0) {
     buttonLabel = "今すぐ復習する語句はありません";
@@ -1208,7 +1234,7 @@ function meaningMission(summary, ready, nextQueue = [], learnedItems = [], hasRe
     buttonAttrs.onclick = () => startMeaningPractice(true, nextQueue);
     if (remaining > 0) note = `今すぐ復習する${due}語句のうち、今回は${batch}語句を出題します。残り${remaining}語句は次回に回ります。`;
   }
-  if (hasResume) buttonAttrs.class = "secondaryCta meaningMissionCta";
+  if (coreResume) buttonAttrs.class = "secondaryCta meaningMissionCta";
   mission.appendChild(el("button", buttonAttrs, buttonLabel));
   if (note) mission.appendChild(el("p", { class: "hint" }, note));
   return mission;

@@ -459,14 +459,10 @@ h2 {
 .secondaryCtaBadge { color: var(--muted); font-family: var(--mono); font-size: 12px; font-weight: 500; }
 
 /* ---- 意味だけ復習：通常学習済み語句だけを30語句単位で間隔復習（古文アプリの間隔復習UIに準拠） ---- */
-.meaningMission {
-  background: var(--surface-soft);
+.spacedReviewCard {
   border-left: 4px solid var(--clay);
-  border-radius: var(--r-lg);
-  margin-top: 20px;
-  padding: 18px;
 }
-.meaningMission h3 {
+.spacedReviewCard h3 {
   font-family: var(--serif);
   font-size: 22px;
   line-height: 1.35;

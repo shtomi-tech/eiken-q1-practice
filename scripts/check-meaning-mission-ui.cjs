@@ -23,6 +23,62 @@ function extractFunctionBody(source, name) {
 
 const meaningMissionBody = extractFunctionBody(js, "meaningMission");
 const intervalBreakdownBody = extractFunctionBody(js, "meaningIntervalBreakdown");
+const renderHomeBody = extractFunctionBody(js, "renderHomeContent");
+
+// --- ホーム上のカード境界とCTA所属 ---
+assert.ok(
+  !renderHomeBody.includes("summary.appendChild(meaningMission("),
+  "間隔復習カードは通常学習カードへ入れ子にしない必要がある",
+);
+assert.match(
+  renderHomeBody,
+  /home\.appendChild\(meaningMission\(/,
+  "間隔復習カードはホーム直下へ追加する必要がある",
+);
+assert.ok(
+  !renderHomeBody.includes("startMeaningPractice(true, meaningQueue)"),
+  "通常学習カードのprimary CTAから意味復習を直接開始してはいけない",
+);
+assert.match(
+  renderHomeBody,
+  /const resumeIsDone = resume\?\.stage === "done";/,
+  "完了済みresumeは途中再開の表示対象から除外する必要がある",
+);
+assert.match(
+  renderHomeBody,
+  /const meaningResume = resume\?\.mode === "meaning" && !resumeIsDone;/,
+  "meaning resumeはmodeで判定する必要がある",
+);
+assert.match(
+  renderHomeBody,
+  /const coreResume = Boolean\(resume && resume\.mode !== "meaning" && !resumeIsDone\);/,
+  "通常学習resumeはmeaning以外として判定する必要がある",
+);
+assert.ok(
+  renderHomeBody.includes("if (coreResume)"),
+  "通常学習カードはcore resumeだけを表示対象にする必要がある",
+);
+assert.match(
+  renderHomeBody,
+  /meaningMission\([^;]*meaningResume[^;]*coreResume/s,
+  "間隔復習カードへmeaning/coreのresume所属を渡す必要がある",
+);
+assert.ok(
+  meaningMissionBody.includes('class: "card spacedReviewCard"'),
+  "間隔復習カードのルートはcardとspacedReviewCardを持つ必要がある",
+);
+assert.ok(
+  meaningMissionBody.includes('"aria-labelledby": "spacedReviewCardTitle"'),
+  "間隔復習カードは見出しとaria-labelledbyで関連付ける必要がある",
+);
+assert.ok(
+  meaningMissionBody.includes('id: "spacedReviewCardTitle"'),
+  "間隔復習カードの見出しに一意なidが必要である",
+);
+assert.ok(
+  meaningMissionBody.includes("restoreSession()") && meaningMissionBody.includes("意味だけ復習の続きを再開する"),
+  "意味復習resumeは間隔復習カードから再開する必要がある",
+);
 
 // --- ラベル・見出し ---
 assert.ok(meaningMissionBody.includes("間隔復習"), "meaningMission() は「間隔復習」ラベルを描画する必要がある");
@@ -96,9 +152,10 @@ assert.ok(
 );
 
 // --- CSS ---
-for (const cls of [".meaningMission ", ".meaningMissionMetrics", ".meaningMissionCta", ".meaningMissionInterval"]) {
+for (const cls of [".spacedReviewCard", ".meaningMissionMetrics", ".meaningMissionCta", ".meaningMissionInterval"]) {
   assert.ok(css.includes(cls), `CSSに ${cls} の規則が必要`);
 }
+assert.ok(!css.includes(".meaningMission {"), "旧入れ子パネル用のmeaningMissionルート規則は削除する必要がある");
 assert.ok(
   !css.includes(".meaningMissionHead") && !css.includes(".meaningMissionBadge") && !css.includes(".meaningMissionProgress"),
   "参照されなくなった旧CSS規則（meaningMissionHead/Badge/Progress）は削除する必要がある",
