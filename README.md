@@ -92,6 +92,15 @@ py -3 scripts/add_example_translations.py
 
 暗記カードでは、例文の下に日本語訳を表示し、従来の「使い方・コロケーション」欄は表示しません。
 
+## モーション・状態表示
+
+正誤判定、進捗・残数、語彙音声、自作例文チェック、保存状態には短い状態変化を付けています（詳細は `DESIGN.md` のモーション節）。
+
+- 語彙音声ボタンは `data-audio-state="idle|loading|playing|error"` で状態を持ち、ラベル文言でも状態を示します。
+- 自作例文チェックのボタンは `data-submit-state="idle|submitting|ok|revise|error"` で状態を持ち、送信中は二重送信を防ぐため無効化されます。
+- 保存状態（画面右上）はローカル保存中は非表示、クラウド同期時のみ「保存中／保存済み／失敗」をアイコンと文言で表示します。
+- OS・ブラウザの「アニメーションを減らす」設定（`prefers-reduced-motion: reduce`）が有効な場合、装飾アニメーションはすべて停止し、状態を示す文言・記号はそのまま表示されます。
+
 ## 公開版・生徒別進捗
 
 公開URL: https://shtomi-tech.github.io/eiken-q1-practice/

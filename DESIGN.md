@@ -81,6 +81,26 @@
 - **フィードバックカード（`.feedback` `.resultBox`）**: 左4px太罫（Ink既定、OK/NGで色変化）＋Paper地、角丸md、外枠なし
 - **入力欄（select/input）**: Paper地＋hairline枠、角丸md、min-height 44px
 
+## モーション
+
+MOTION_INTENSITY: 3（既定UIに一貫した押下感・状態変化を与えるが、装飾演出は最小限）。参考: [Kinetics](https://kinetics.colorion.co/) の Push Button / Success Check / Error Shake / Elastic Progress / Submit States / Equalizer Bars / Status Pill / Tab Pill Glide。実装はVanilla JS/CSSのみで、本番依存を増やさない。
+
+### Duration・原則
+- **press** 80ms／**release** 180ms／**feedback**（正誤表示）200ms／**progress**（進捗・残数）280ms／**async-state**（音声・送信・保存の状態遷移）220ms／**completion**（初回CLEAR等）420ms
+- アニメーション対象は `transform`・`opacity`・色・progress fillに限定する。`width`/`height`/`margin`等レイアウトを揺らすプロパティはアニメーションしない
+- 正誤・結果の値は動きの完了を待たずに同フレームで確定表示する（アニメは装飾であり、情報を遅延させない）
+
+### 状態マトリクス
+| 対象 | 状態 | 表現 |
+| --- | --- | --- |
+| 語彙音声 | idle / loading / playing / error | ラベル文言＋`data-audio-state`。playing中は装飾Equalizer Bars（`aria-hidden`） |
+| 自作例文チェック | idle / submitting / ok / revise / error | `data-submit-state`。submitting中はボタンdisabled＋小さいloader。okはSuccess Check、reviseは既存の焦茶静的状態、errorは赤い左罫線＋再試行案内 |
+| 保存状態（`#shareStatus`） | local（非表示）/ syncing / saved / error | harnessの`tone`(`ok`/`syncing`/`ng`)をそのまま利用。syncingはloader、savedは一度だけcheck、errorは静的`!` |
+
+### reduced motion
+- `prefers-reduced-motion: reduce` では上記すべての追加アニメーションのdurationを0にする
+- 同期中を示すspinner系のみ、状態が分かるよう最小限の非アニメーション表現（静的ドット等）に置き換えてよい。処理中・失敗などの**文言自体は動作の有無に関わらず必ず表示する**
+
 ## Do / Don't
 
 ✓ CSS変数名は旧デザインとの互換のため維持し、値だけ差し替える（JSがvar参照するため）／ 正誤・状態は色だけでなく文言・記号を併記する／ 44px以上のタップターゲットを死守する（Claude原典のheight:40pxより優先）／ WCAG 2.2 AA を満たす／ 罫線は入力欄・選択肢・章区切りなど機能的な意味がある箇所にのみ残す

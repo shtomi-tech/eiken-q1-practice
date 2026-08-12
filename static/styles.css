@@ -22,9 +22,56 @@
   --r-md: 8px;
   --r-lg: 12px;
   --r-pill: 9999px;
+  --motion-press: 80ms;
+  --motion-release: 180ms;
+  --motion-feedback: 200ms;
+  --motion-progress: 280ms;
+  --motion-async: 220ms;
+  --motion-completion: 420ms;
+  --ease-spring-soft: cubic-bezier(.34, 1.56, .64, 1);
 }
 
 * { box-sizing: border-box; }
+
+/* 参照: DESIGN.md モーション節。durationはCSS変数のみを使う（reduced-motionで一括無効化するため）。 */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@keyframes kFeedbackEnter {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes kAnswerSuccess {
+  0% { transform: scale(1); }
+  45% { transform: scale(1.04); }
+  100% { transform: scale(1); }
+}
+@keyframes kAnswerError {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  50% { transform: translateX(3px); }
+  75% { transform: translateX(-2px); }
+}
+@keyframes kStatusCheck {
+  0% { transform: scale(.5); opacity: 0; }
+  60% { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes kContentEnter {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes kCounterSettle {
+  0% { transform: translateY(0); }
+  35% { transform: translateY(-3px); }
+  100% { transform: translateY(0); }
+}
 
 body {
   margin: 0;
@@ -52,10 +99,13 @@ button {
   color: var(--parchment);
   padding: 9px 16px;
   cursor: pointer;
+  transform: scale(1);
+  transition: transform var(--motion-release) var(--ease-spring-soft);
 }
 
 button:hover { background: #000; }
 button:disabled { opacity: .45; cursor: default; }
+button:active:not(:disabled) { transform: scale(.97); transition-duration: var(--motion-press); }
 
 button.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
 button.ghost:hover:not(:disabled) { background: var(--ink); color: var(--parchment); border-color: var(--ink); }
@@ -117,11 +167,39 @@ h2 {
 
 .topActions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 
-.shareStatus { margin: 2px 0 0; font-family: var(--mono); font-size: 11px; letter-spacing: .04em; color: var(--muted); }
+.shareStatus {
+  margin: 2px 0 0;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .04em;
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
 .shareStatus:empty { display: none; }
 .shareStatus.ok { color: var(--ink); }
 .shareStatus.ng { color: var(--clay); }
 .shareStatus.syncing { color: var(--muted); }
+.shareStatusIcon { flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; width: 10px; height: 10px; }
+.shareStatus.syncing .shareStatusIcon {
+  border: 2px solid rgba(97, 92, 84, .3);
+  border-top-color: var(--muted);
+  border-radius: 50%;
+  animation: kSpin 700ms linear infinite;
+}
+.shareStatus.ok .shareStatusIcon::before {
+  content: "✓";
+  font-size: 11px;
+  line-height: 1;
+  animation: kStatusCheck var(--motion-async) var(--ease-spring-soft);
+}
+.shareStatus.ng .shareStatusIcon::before {
+  content: "!";
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 1;
+}
 
 .card {
   background: var(--paper);
@@ -195,6 +273,7 @@ h2 {
   color: var(--ink);
   padding: 8px 10px;
   text-align: center;
+  transition: background-color var(--motion-feedback) ease, border-color var(--motion-feedback) ease, color var(--motion-feedback) ease;
 }
 .datasetGradeChoice:hover:not(:disabled) {
   border-color: var(--ink);
@@ -565,14 +644,34 @@ h2 {
 }
 .q1ProgressHead .label { margin: 0 auto 0 0; }
 .q1ProgressValue,
-.q1ProgressRemaining { font-family: var(--mono); font-size: 12px; }
+.q1ProgressRemaining { font-family: var(--mono); font-size: 12px; display: inline-block; }
 .q1ProgressRemaining { color: var(--muted); }
+.q1ProgressValue.progressSettle,
+.q1ProgressRemaining.progressSettle { animation: kCounterSettle var(--motion-progress) var(--ease-spring-soft); }
+/* 意味は<progress>（下記）に残し、見た目はJS駆動のfillで滑らかに更新する */
 .q1ProgressBar {
-  accent-color: var(--clay);
-  display: block;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.q1ProgressTrack {
+  background: var(--surface-strong);
+  border-radius: var(--r-pill);
   height: 8px;
   margin-top: 8px;
+  overflow: hidden;
   width: 100%;
+}
+.q1ProgressFill {
+  background: var(--clay);
+  height: 100%;
+  border-radius: var(--r-pill);
+  transition: width var(--motion-progress) var(--ease-spring-soft);
 }
 
 .roundInfo {
@@ -615,6 +714,7 @@ h2 {
   align-items: center;
   gap: 5px;
   min-height: 44px;
+  min-width: 104px;
   border: 1px solid rgba(250, 249, 245, .48);
   border-radius: var(--r-md);
   background: transparent;
@@ -623,10 +723,14 @@ h2 {
   font-size: 12px;
 }
 .flashListenButton:hover:not(:disabled),
-.flashListenButton.isPlaying {
+.flashListenButton[data-audio-state="playing"] {
   border-color: var(--parchment);
   background: var(--parchment);
   color: var(--ink);
+}
+.flashListenButton[data-audio-state="error"] {
+  border-color: var(--ng);
+  color: var(--ng);
 }
 .flashListenButton:disabled { cursor: wait; }
 .flashIpa {
@@ -719,14 +823,34 @@ h2 {
 .selfExampleStatus.ng { color: var(--ng); }
 .selfExampleActions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
 .selfExampleActions button { min-width: 140px; }
+.selfExampleActions .cta[data-submit-state="submitting"] { display: inline-flex; align-items: center; justify-content: center; gap: 6px; }
+.submitSpinner {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgba(250, 249, 246, .35);
+  border-top-color: var(--parchment);
+  border-radius: 50%;
+  animation: kSpin 700ms linear infinite;
+}
+@keyframes kSpin { to { transform: rotate(360deg); } }
 .selfExampleFeedbackHost { margin-top: 12px; }
 .selfExampleFeedback {
   border-left: 4px solid var(--ok);
   border-radius: var(--r-md);
   background: var(--parchment);
   padding: 12px 14px;
+  animation: kFeedbackEnter var(--motion-async) ease-out;
 }
 .selfExampleFeedback.revise { border-left-color: var(--clay); }
+.selfExampleFeedback.error { border-left-color: var(--ng); }
+.selfExampleFeedback.ok .selfExampleFeedbackTitle::before {
+  content: "✓";
+  display: inline-block;
+  margin-right: 6px;
+  color: var(--ok-text);
+  animation: kStatusCheck var(--motion-feedback) var(--ease-spring-soft);
+}
 .selfExampleFeedback p { margin: 5px 0 0; font-size: 13px; }
 .selfExampleFeedbackTitle { margin: 0 !important; font-family: var(--serif); font-size: 20px !important; font-weight: 600; }
 .selfExampleSuggestionLabel { color: var(--clay-hover); font-family: var(--mono); font-size: 10px !important; letter-spacing: .08em; }
@@ -742,7 +866,7 @@ h2 {
 }
 
 /* ---- Quiz (check + practice) ---- */
-.quizBox { background: var(--parchment); border-radius: var(--r-lg); padding: 16px; }
+.quizBox { background: var(--parchment); border-radius: var(--r-lg); padding: 16px; animation: kContentEnter var(--motion-progress) var(--ease-spring-soft); }
 .quizTop {
   display: flex;
   justify-content: space-between;
@@ -763,6 +887,7 @@ h2 {
   align-items: center;
   gap: 5px;
   min-height: 44px;
+  min-width: 104px;
   border: 1px solid var(--line);
   border-radius: var(--r-md);
   background: transparent;
@@ -771,12 +896,39 @@ h2 {
   font-size: 12px;
 }
 .quizListenButton:hover:not(:disabled),
-.quizListenButton.isPlaying {
+.quizListenButton[data-audio-state="playing"] {
   border-color: var(--ink);
   background: var(--ink);
   color: var(--parchment);
 }
+.quizListenButton[data-audio-state="error"] {
+  border-color: var(--ng);
+  color: var(--ng);
+}
 .quizListenButton:disabled { cursor: wait; }
+
+.audioBars {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 10px;
+}
+.audioBars span {
+  width: 2px;
+  background: currentColor;
+  border-radius: 1px;
+  height: 10px;
+  animation: kEqualizer 640ms ease-in-out infinite;
+}
+.audioBars span:nth-child(2) { animation-delay: 120ms; }
+.audioBars span:nth-child(3) { animation-delay: 240ms; }
+@keyframes kEqualizer {
+  0%, 100% { height: 3px; }
+  50% { height: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .audioBars span { height: 6px; }
+}
 
 .choices { display: grid; gap: 12px; }
 .choiceBtn {
@@ -790,8 +942,8 @@ h2 {
   text-align: left;
 }
 .choiceBtn:hover:not(:disabled) { background: var(--ink); color: var(--parchment); border-color: var(--ink); }
-.choiceBtn.correct { border-color: var(--ok); border-width: 2px; }
-.choiceBtn.wrong { border-color: var(--ng); border-width: 2px; }
+.choiceBtn.correct { border-color: var(--ok); border-width: 2px; animation: kAnswerSuccess var(--motion-feedback) var(--ease-spring-soft); }
+.choiceBtn.wrong { border-color: var(--ng); border-width: 2px; animation: kAnswerError var(--motion-feedback) ease-in-out; }
 .key {
   border: 1px solid currentColor;
   border-radius: var(--r-pill);
@@ -810,6 +962,7 @@ h2 {
   border-radius: var(--r-md);
   margin-top: 14px;
   padding: 12px 14px;
+  animation: kFeedbackEnter var(--motion-feedback) ease-out;
 }
 .feedback.ok { border-left-color: var(--ok); }
 .feedback.ng { border-left-color: var(--ng); }
@@ -845,6 +998,12 @@ h2 {
 }
 .doneBanner h2 { color: var(--parchment); }
 .doneBanner .big { font-family: var(--serif); font-size: 40px; line-height: 1.1; }
+.doneBanner .big.celebrate { animation: kAnswerSuccess var(--motion-completion) var(--ease-spring-soft); }
+.doneBanner h2.firstClear::before {
+  content: "✓ ";
+  display: inline-block;
+  animation: kStatusCheck var(--motion-completion) var(--ease-spring-soft);
+}
 
 .wrongReview { margin-top: 24px; border-top: 2px solid var(--ink); padding-top: 20px; }
 .wrongReview h3 { margin-top: 4px; }

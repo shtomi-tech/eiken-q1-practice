@@ -536,8 +536,13 @@ let pendingCloudProgress = null;
 function setShareStatus(message, tone = "") {
   const slot = $("#shareStatus");
   if (!slot) return;
-  slot.textContent = message || "";
+  slot.innerHTML = "";
   slot.className = "shareStatus" + (tone ? " " + tone : "");
+  if (!message) return;
+  if (tone === "ok" || tone === "ng" || tone === "syncing") {
+    slot.appendChild(el("span", { class: "shareStatusIcon", "aria-hidden": "true" }));
+  }
+  slot.appendChild(document.createTextNode(message));
 }
 // クラウド保存は全データセット分の進捗を1つのjsonbにまとめる: { [datasetId]: progress }
 function collectAllProgress() {
@@ -762,10 +767,24 @@ function vocabularyAudioEnabled(item) { return Boolean(vocabularyAudioDataset(it
 let activeVocabAudio = null;
 let activeVocabButton = null;
 let activeVocabSpeech = null;
+const AUDIO_STATE_LABEL = { idle: "音声", loading: "読込中", playing: "再生中", error: "再生できません" };
+function setAudioButtonState(button, stateName) {
+  if (!button) return;
+  button.dataset.audioState = stateName;
+  const label = button.querySelector(".audioLabel");
+  if (label) label.textContent = " " + (AUDIO_STATE_LABEL[stateName] || AUDIO_STATE_LABEL.idle);
+  const hasBars = Boolean(button.querySelector(".audioBars"));
+  if (stateName === "playing" && !hasBars) {
+    button.appendChild(el("span", { class: "audioBars", "aria-hidden": "true" },
+      el("span", {}), el("span", {}), el("span", {})));
+  } else if (stateName !== "playing" && hasBars) {
+    button.querySelector(".audioBars").remove();
+  }
+}
 function resetVocabAudioButton(button) {
   if (!button) return;
   button.disabled = false;
-  button.classList.remove("isPlaying");
+  setAudioButtonState(button, "idle");
 }
 function stopVocabSpeech() {
   if (!activeVocabSpeech) return;
@@ -775,6 +794,8 @@ function stopVocabSpeech() {
 }
 function playVocabSpeech(text, button) {
   if (!window.speechSynthesis || !window.SpeechSynthesisUtterance) {
+    button.disabled = false;
+    setAudioButtonState(button, "error");
     button.title = "このブラウザでは音声を再生できません。";
     return;
   }
@@ -789,13 +810,18 @@ function playVocabSpeech(text, button) {
   utterance.lang = "en-US";
   activeVocabSpeech = { utterance, button };
   button.disabled = true;
-  button.classList.add("isPlaying");
+  setAudioButtonState(button, "loading");
   const finish = () => {
     resetVocabAudioButton(button);
     if (activeVocabSpeech?.utterance === utterance) activeVocabSpeech = null;
   };
+  utterance.addEventListener("start", () => setAudioButtonState(button, "playing"), { once: true });
   utterance.addEventListener("end", finish, { once: true });
-  utterance.addEventListener("error", finish, { once: true });
+  utterance.addEventListener("error", () => {
+    button.disabled = false;
+    setAudioButtonState(button, "error");
+    if (activeVocabSpeech?.utterance === utterance) activeVocabSpeech = null;
+  }, { once: true });
   window.speechSynthesis.speak(utterance);
 }
 function playVocabAudio(path, button, text) {
@@ -813,7 +839,7 @@ function playVocabAudio(path, button, text) {
   activeVocabAudio = audio;
   activeVocabButton = button;
   button.disabled = true;
-  button.classList.add("isPlaying");
+  setAudioButtonState(button, "loading");
   const finish = () => {
     resetVocabAudioButton(button);
     if (activeVocabAudio === audio) {
@@ -821,6 +847,7 @@ function playVocabAudio(path, button, text) {
       activeVocabButton = null;
     }
   };
+  audio.addEventListener("playing", () => setAudioButtonState(button, "playing"), { once: true });
   audio.addEventListener("ended", finish, { once: true });
   audio.addEventListener("error", () => {
     finish();
@@ -836,9 +863,10 @@ function buildVocabAudioButton(item, className = "flashListenButton") {
     type: "button",
     "aria-label": `${surface}の発音を聞く`,
     title: "発音を聞く",
+    "data-audio-state": "idle",
   });
-  audioButton.appendChild(el("span", { "aria-hidden": "true" }, "▶"));
-  audioButton.appendChild(document.createTextNode(" 音声"));
+  audioButton.appendChild(el("span", { class: "audioIcon", "aria-hidden": "true" }, "▶"));
+  audioButton.appendChild(el("span", { class: "audioLabel" }, " 音声"));
   audioButton.addEventListener("click", () => playVocabAudio(vocabularyAudioPath(item), audioButton, surface));
   return audioButton;
 }
@@ -1310,8 +1338,15 @@ function datasetPicker() {
       : `現在：${currentLabel} ／ ${datasetGradeLabel(pickerGrade)}の回を選ぶと切り替わります`;
   }
 
+  // 押下時に全ボタンを作り直すと新規ノードになりCSS transitionが効かないため、
+  // 初回だけ生成し、以降はaria-pressedの更新のみで同じノードの背景色を切り替える。
   function renderGradeChoices() {
-    gradeChoices.innerHTML = "";
+    if (gradeChoices.children.length) {
+      [...gradeChoices.children].forEach((btn, i) => {
+        btn.setAttribute("aria-pressed", String(grades[i] === pickerGrade));
+      });
+      return;
+    }
     for (const grade of grades) {
       gradeChoices.appendChild(el("button", {
         class: "datasetGradeChoice",
@@ -1343,9 +1378,12 @@ function answerActions(...buttons) {
   return el("div", { class: "actions answerActions" }, ...buttons);
 }
 
+function prefersReducedMotion() {
+  return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
 function revealAnswerActions(actions) {
   requestAnimationFrame(() => {
-    actions.scrollIntoView({ behavior: "smooth", block: "center" });
+    actions.scrollIntoView({ behavior: prefersReducedMotion() ? "auto" : "smooth", block: "center" });
   });
 }
 
@@ -1512,6 +1550,8 @@ function startFinalCheck() {
     wrongLog: [],
     wrongChecked: [],
     wrongReviewed: false,
+    // 完了画面で「今回が初回CLEARかどうか」を判定するため、挑戦開始時点の状態を記録する。
+    wasClearedBeforeAttempt: finalProgress(queue.length).cleared,
   };
   renderSession();
   resetSessionScroll();
@@ -1640,6 +1680,29 @@ function stageBar(stage) {
   return bar;
 }
 
+// キー単位で直近値を覚え、値が変わった回だけ残数のsettleと装飾fillのtransitionを発火する。
+// リロード直後は前回値がないため発火しない（DESIGN.mdの完成条件どおり）。
+const lastProgressByKey = {};
+function progressTransition(key, value, total) {
+  const prev = lastProgressByKey[key];
+  lastProgressByKey[key] = { value, total };
+  if (!prev || prev.total !== total || prev.value === value) return { settle: false, from: null };
+  return { settle: true, from: prev.value };
+}
+function appendProgressFill(wrap, value, total, animateFrom) {
+  const pct = (v) => (total ? Math.min(100, Math.max(0, (v / total) * 100)) : 0);
+  const fill = el("div", { class: "q1ProgressFill" });
+  const track = el("div", { class: "q1ProgressTrack", "aria-hidden": "true" }, fill);
+  if (animateFrom != null && !prefersReducedMotion()) {
+    fill.style.width = pct(animateFrom) + "%";
+    wrap.appendChild(track);
+    requestAnimationFrame(() => requestAnimationFrame(() => { fill.style.width = pct(value) + "%"; }));
+  } else {
+    fill.style.width = pct(value) + "%";
+    wrap.appendChild(track);
+  }
+}
+
 function questionProgressBar() {
   const total = state.qList.length;
   if (!total) return el("div", { class: "q1Progress hide" });
@@ -1653,12 +1716,14 @@ function questionProgressBar() {
   const value = Math.min(total, current);
   const remaining = Math.max(0, total - value);
   const label = isQuestionSession ? `第${value}問 / ${total}問` : `通常学習済み ${value} / ${total}問`;
+  const t = progressTransition(`q:${state.datasetId}`, value, total);
+  const settleCls = t.settle ? " progressSettle" : "";
 
   const wrap = el("div", { class: "q1Progress" },
     el("div", { class: "q1ProgressHead" },
       el("span", { class: "label" }, "大問1 設問進捗"),
-      el("strong", { class: "q1ProgressValue" }, label),
-      el("span", { class: "q1ProgressRemaining" }, `残り${remaining}問`),
+      el("strong", { class: "q1ProgressValue" + settleCls }, label),
+      el("span", { class: "q1ProgressRemaining" + settleCls }, `残り${remaining}問`),
     ),
   );
   const progress = el("progress", {
@@ -1669,6 +1734,7 @@ function questionProgressBar() {
   });
   progress.setAttribute("aria-valuetext", `${label}、残り${remaining}問`);
   wrap.appendChild(progress);
+  appendProgressFill(wrap, value, total, t.from);
   return wrap;
 }
 
@@ -1678,11 +1744,13 @@ function meaningProgressBar() {
   if (!total) return el("div", { class: "q1Progress hide" });
   const remaining = Math.max(0, total - summary.learned);
   const label = `対象 ${summary.learned} / ${total}語句`;
+  const t = progressTransition(`m:${state.datasetId}`, summary.learned, total);
+  const settleCls = t.settle ? " progressSettle" : "";
   const wrap = el("div", { class: "q1Progress meaningProgress" },
     el("div", { class: "q1ProgressHead" },
       el("span", { class: "label" }, "意味練習の解放状況"),
-      el("strong", { class: "q1ProgressValue" }, label),
-      el("span", { class: "q1ProgressRemaining" }, `未解放${remaining}語句`),
+      el("strong", { class: "q1ProgressValue" + settleCls }, label),
+      el("span", { class: "q1ProgressRemaining" + settleCls }, `未解放${remaining}語句`),
     ),
   );
   const progress = el("progress", {
@@ -1693,6 +1761,7 @@ function meaningProgressBar() {
   });
   progress.setAttribute("aria-valuetext", `${label}、未解放${remaining}語句`);
   wrap.appendChild(progress);
+  appendProgressFill(wrap, summary.learned, total, t.from);
   return wrap;
 }
 
@@ -1811,6 +1880,25 @@ function validateSelfExample(item, sentence) {
   return "";
 }
 
+const SELF_EXAMPLE_BUTTON_LABEL = {
+  idle: "AIでチェック",
+  submitting: "確認中…",
+  ok: "AIでチェック",
+  revise: "AIでチェック",
+  error: "AIでチェック",
+};
+function setSelfExampleButtonState(button, stateName) {
+  if (!button) return;
+  button.dataset.submitState = stateName;
+  const spinner = button.querySelector(".submitSpinner");
+  if (stateName === "submitting") {
+    if (!spinner) button.insertBefore(el("span", { class: "submitSpinner", "aria-hidden": "true" }), button.firstChild);
+  } else if (spinner) {
+    spinner.remove();
+  }
+  const labelNode = button.querySelector(".submitLabel");
+  if (labelNode) labelNode.textContent = SELF_EXAMPLE_BUTTON_LABEL[stateName] || SELF_EXAMPLE_BUTTON_LABEL.idle;
+}
 function renderSelfExampleFeedback(host, feedback) {
   host.innerHTML = "";
   if (!feedback) return;
@@ -1828,6 +1916,13 @@ function renderSelfExampleFeedback(host, feedback) {
   }
   if (feedback.nextHint) box.appendChild(el("p", { class: "selfExampleFeedbackText" }, `次の一手：${feedback.nextHint}`));
   host.appendChild(box);
+}
+function renderSelfExampleError(host) {
+  host.innerHTML = "";
+  host.appendChild(el("div", { class: "selfExampleFeedback error", role: "alert" },
+    el("p", { class: "selfExampleFeedbackTitle" }, "送信できませんでした"),
+    el("p", { class: "selfExampleFeedbackText" }, "通信状況を確認して、もう一度お試しください。下書きは保存されています。"),
+  ));
 }
 
 async function checkSelfExample(item, textarea, checkButton, status, feedbackHost) {
@@ -1850,6 +1945,7 @@ async function checkSelfExample(item, textarea, checkButton, status, feedbackHos
   record.updatedAt = new Date().toISOString();
   saveUserExamples();
   checkButton.disabled = true;
+  setSelfExampleButtonState(checkButton, "submitting");
   status.textContent = "AIが英文を確認しています…";
   status.className = "selfExampleStatus";
   feedbackHost.innerHTML = "";
@@ -1871,10 +1967,13 @@ async function checkSelfExample(item, textarea, checkButton, status, feedbackHos
     record.checkedAt = new Date().toISOString();
     saveUserExamples();
     renderSelfExampleFeedback(feedbackHost, record.feedback);
+    setSelfExampleButtonState(checkButton, record.feedback.verdict === "ok" ? "ok" : "revise");
     status.textContent = "チェック結果を保存しました。";
     status.className = "selfExampleStatus ok";
   } catch (error) {
-    status.textContent = "AIチェックに失敗しました。下書きは保存されています。";
+    setSelfExampleButtonState(checkButton, "error");
+    renderSelfExampleError(feedbackHost);
+    status.textContent = "AIチェックに失敗しました。";
     status.className = "selfExampleStatus ng";
     console.error(error);
   } finally {
@@ -1912,9 +2011,9 @@ function buildSelfExamplePanel(item) {
   renderSelfExampleFeedback(feedbackHost, record.feedback);
   panel.appendChild(feedbackHost);
   const saveButton = el("button", { class: "ghost", type: "button" }, "下書きを保存");
-  const checkAttrs = { class: "cta", type: "button" };
-  if (!aiCheckEndpoint) checkAttrs.disabled = "disabled";
-  const checkButton = el("button", checkAttrs, aiCheckEndpoint ? "AIでチェック" : "AIチェックは未設定");
+  const checkButton = aiCheckEndpoint
+    ? el("button", { class: "cta", type: "button", "data-submit-state": "idle" }, el("span", { class: "submitLabel" }, "AIでチェック"))
+    : el("button", { class: "cta", type: "button", disabled: "disabled" }, "AIチェックは未設定");
   const actions = el("div", { class: "selfExampleActions" }, saveButton, checkButton);
   panel.appendChild(actions);
   if (!aiCheckEndpoint) panel.appendChild(el("p", { class: "hint selfExampleUnavailable" }, "AI接続後にチェックが使えるようになります。下書き保存は利用できます。"));
@@ -1935,6 +2034,7 @@ function buildSelfExamplePanel(item) {
     saveUserExamples();
     count.textContent = `${countEnglishWords(textarea.value)} words`;
     feedbackHost.innerHTML = "";
+    if (aiCheckEndpoint) setSelfExampleButtonState(checkButton, "idle");
     status.textContent = "入力を保存中";
     status.className = "selfExampleStatus";
   });
@@ -2254,8 +2354,10 @@ function renderDone(body) {
   if (isFinal) {
     const finalTotal = session.checkOrder.length;
     const passed = session.finalCorrect >= finalPassScore(finalTotal);
-    banner.appendChild(el("div", { class: "big" }, `${session.finalCorrect} / ${session.checkOrder.length}`));
-    banner.appendChild(el("h2", {}, passed
+    // 再表示・再CLEAR時は演出しない。未CLEAR→CLEARに変わった今回の挑戦だけ強調する。
+    const firstClear = passed && !session.wasClearedBeforeAttempt;
+    banner.appendChild(el("div", { class: "big" + (firstClear ? " celebrate" : "") }, `${session.finalCorrect} / ${session.checkOrder.length}`));
+    banner.appendChild(el("h2", { class: firstClear ? "firstClear" : "" }, passed
       ? `${dataset().shortLabel} 大問1 CLEAR`
       : `最終チェック完了。${session.finalCorrect}/${session.checkOrder.length}でした`));
     banner.appendChild(el("p", { class: "hint" }, `${finalPassScore(finalTotal)}/${finalTotal}問以上（正答率80%以上）でCLEAR`));
