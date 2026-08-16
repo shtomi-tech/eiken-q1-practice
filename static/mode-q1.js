@@ -984,8 +984,6 @@ function renderHomeContent() {
 
   const total = state.qList.length;
   const learned = state.qList.filter((q) => unit(q).learned).length;
-  const solved = state.qList.filter((q) => unit(q).solvedCorrect).length;
-  const unknown = state.qList.filter((q) => unitResult(unit(q)) === "unknown").length;
   const reviewQs = reviewQueue();
   const finalTotal = allVocabularyItems().length;
   const final = finalProgress(finalTotal);
@@ -1005,9 +1003,10 @@ function renderHomeContent() {
   const meaningItems = pooled ? learnedPooledItems(pooled.items) : [];
   const meaningQueue = pooled ? meaningPracticeQueue(meaningItems, true) : [];
   const meaningDueCount = meaningSummary ? meaningSummary.due : 0;
+  const isFirstVisit = learned === 0;
 
-  // hero は初回訪問（まだ何も学習していない）時だけ表示し、Today見出しとの説明重複を避ける
-  if (learned === 0) {
+  // hero は初回訪問（まだ何も学習していない）時だけ表示し、今日の学習カードとの説明重複を避ける
+  if (isFirstVisit) {
     home.appendChild(el("section", { class: "card hero" },
       el("p", { class: "label" }, "学習の流れ"),
       el("h2", {}, "大問1の語句を「覚えてから解く」"),
@@ -1015,15 +1014,15 @@ function renderHomeContent() {
     ));
   }
 
-  // daily / summary（旧・Today/Missionカードを統合。重複する指標は1本化する）
+  // 層1：今日の学習（現在セット名・主CTA・その理由）。問題セット選択は独立sectionへ分離。
   const summary = el("section", { class: "card" });
   const headerTitle = final.cleared ? `${currentDataset.shortLabel} 大問1 CLEAR` : `${currentDataset.shortLabel} 大問1を「覚えて→確かめて→解く」`;
   summary.appendChild(el("div", { class: "sectionHead" },
     el("div", {},
       el("p", { class: "label" }, final.cleared ? "達成状況" : "今日の学習"),
       el("h2", {}, headerTitle),
+      el("p", { class: "hint" }, currentDataset.label),
     ),
-    datasetPicker(),
   ));
   // --- 次にやること（Hickの法則：迷わせないため主導線は常に1つに絞る） ---
   const resume = currentResume();
@@ -1058,7 +1057,8 @@ function renderHomeContent() {
   } else if (nextQ) {
     primary = {
       label: `第${nextQ}問を学習する`,
-      why: "暗記カード → 意味確認 → 本番形式の3ステップで進みます。",
+      // 初回訪問はheroで同じ3ステップを説明済みのため、ここでは重複させない
+      why: isFirstVisit ? "" : "暗記カード → 意味確認 → 本番形式の3ステップで進みます。",
       onclick: () => startLearn(nextQ),
     };
   } else if (reviewQs.length) {
@@ -1105,35 +1105,41 @@ function renderHomeContent() {
     ));
   }
   home.appendChild(summary);
+
+  // 層2：問題セットUnitカード（独立section。同じ級の過去問・模試を進捗付きで一覧表示）
+  home.appendChild(el("section", { class: "card" }, datasetPicker()));
+
   if (grade) {
     home.appendChild(meaningMission(meaningSummary, Boolean(pooled), meaningQueue, meaningItems, meaningResume ? resume : null, coreResume));
   }
 
-  // question path
+  // 層3：詳細（問題一覧。状態・種別フィルター付き）
   const path = el("section", { class: "card" });
   path.appendChild(el("div", { class: "pathHead" },
     el("p", { class: "label" }, "問題一覧"),
     el("h2", {}, `${currentDataset.shortLabel} 大問1（全${total}問）`),
     el("p", { class: "hint" }, "各設問に出る4つの語句を覚えてから、その設問を解きます。クリックで開始。"),
   ));
-  const list = el("div", { class: "itemList" });
-  for (const q of state.qList) {
-    const u = unit(q);
-    const result = unitResult(u);
-    const items = state.itemsByQ[q];
-    const isIdiom = items[0].type === "idiom";
-    const words = items.map(surfaceOf).join(" / ");
-    const cls = "qCard" + (u.needsReview ? " review" : (result === "correct" ? " done" : (result === "unknown" ? " unknown" : "")));
-    const stat = u.needsReview
-      ? `復習対象・ミス${u.wrongCount}回`
-      : (result === "correct" ? "通常学習済み・正解確認済み" : (result === "unknown" ? "通常学習済み・要確認" : "未学習"));
-    list.appendChild(el("button", { class: cls, onclick: () => startLearn(q) },
-      el("span", { class: "qno" }, `第${q}問 ・ ${isIdiom ? "熟語" : "単語"}`),
-      el("span", { class: "qwords" }, words),
-      el("span", { class: "qstat" }, stat),
+  const statusCounts = { all: state.qList.length, notStarted: 0, inProgress: 0, review: 0, done: 0 };
+  const typeCounts = { all: state.qList.length, word: 0, idiom: 0 };
+  state.qList.forEach((q) => {
+    statusCounts[questionCardStatus(q)]++;
+    typeCounts[questionCardType(q)]++;
+  });
+  const filteredQList = state.qList.filter((q) =>
+    (questionFilters.status === "all" || questionCardStatus(q) === questionFilters.status)
+    && (questionFilters.type === "all" || questionCardType(q) === questionFilters.type));
+  path.appendChild(questionFilterBar({ status: statusCounts, type: typeCounts }));
+  if (filteredQList.length) {
+    const list = el("div", { class: "itemList" });
+    filteredQList.forEach((q) => list.appendChild(buildQuestionCard(q)));
+    path.appendChild(list);
+  } else {
+    path.appendChild(el("div", { class: "questionFilterEmpty" },
+      el("p", {}, "条件に合う問題はありません"),
+      el("button", { class: "secondaryCta", type: "button", onclick: () => resetQuestionFilters() }, "すべて表示"),
     ));
   }
-  path.appendChild(list);
   home.appendChild(path);
 
   if (!sharedMode()) {
@@ -1155,6 +1161,80 @@ function renderHomeContent() {
     );
     home.appendChild(other);
   }
+}
+
+/* ---- 問題一覧の状態・種別フィルター（表示専用。永続化・保存キーには影響しない） ---- */
+const questionFilters = { status: "all", type: "all" };
+const QUESTION_STATUS_LABELS = { all: "すべて", notStarted: "未学習", inProgress: "途中", review: "要復習", done: "完了" };
+const QUESTION_TYPE_LABELS = { all: "すべて", word: "単語", idiom: "熟語" };
+
+function resetQuestionFilters() {
+  questionFilters.status = "all";
+  questionFilters.type = "all";
+  renderHome();
+}
+
+// 「学習中」は、いま再開できる設問（resume.q）だけに付与する。他の未学習設問との区別を
+// 保存データだけから確実に判定できないため、推測で件数を出さない。
+function questionCardStatus(q) {
+  const u = unit(q);
+  if (u.needsReview) return "review";
+  const result = unitResult(u);
+  if (result === "correct" || result === "unknown") return "done";
+  const resume = currentResume();
+  if (resume && resume.mode === "learn" && Number(resume.q) === q && resume.stage !== "done") return "inProgress";
+  return "notStarted";
+}
+function questionCardType(q) {
+  return state.itemsByQ[q][0].type === "idiom" ? "idiom" : "word";
+}
+
+function buildQuestionCard(q) {
+  const u = unit(q);
+  const status = questionCardStatus(q);
+  const items = state.itemsByQ[q];
+  const isIdiom = items[0].type === "idiom";
+  const words = items.map(surfaceOf).join(" / ");
+  const statText = {
+    notStarted: "未学習",
+    inProgress: "学習中",
+    review: `要復習・ミス${u.wrongCount}回`,
+    done: u.answerResult === "unknown" ? "✓ 学習済み・要確認" : "✓ 通常学習済み",
+  }[status];
+  const metaText = u.attempts > 0 ? `${u.attempts}回挑戦` : `${items.length}語句`;
+  const cls = "qCard" + (status === "notStarted" ? "" : ` ${status}`);
+  return el("button", { class: cls, type: "button", onclick: () => startLearn(q) },
+    el("span", { class: "qCardNumber" }, String(q).padStart(2, "0")),
+    el("div", { class: "qCardMain" },
+      el("span", { class: "qno" }, `第${q}問 ・ ${isIdiom ? "熟語" : "単語"}`),
+      el("span", { class: "qwords" }, words),
+      el("span", { class: "qmeta" }, metaText),
+      el("span", { class: "qstat" }, statText),
+    ),
+    el("span", { class: "qCardArrow", "aria-hidden": "true" }, "→"),
+  );
+}
+
+function questionFilterBar(counts) {
+  const statusGroup = el("div", { class: "filterGroup", role: "group", "aria-label": "状態で絞り込む" });
+  for (const key of ["all", "notStarted", "inProgress", "review", "done"]) {
+    statusGroup.appendChild(el("button", {
+      class: "filterChip",
+      type: "button",
+      "aria-pressed": String(questionFilters.status === key),
+      onclick: () => { questionFilters.status = key; const y = window.scrollY; renderHome(); window.scrollTo(0, y); },
+    }, `${QUESTION_STATUS_LABELS[key]} ${counts.status[key]}`));
+  }
+  const typeGroup = el("div", { class: "filterGroup", role: "group", "aria-label": "種別で絞り込む" });
+  for (const key of ["all", "word", "idiom"]) {
+    typeGroup.appendChild(el("button", {
+      class: "filterChip",
+      type: "button",
+      "aria-pressed": String(questionFilters.type === key),
+      onclick: () => { questionFilters.type = key; const y = window.scrollY; renderHome(); window.scrollTo(0, y); },
+    }, `${QUESTION_TYPE_LABELS[key]} ${counts.type[key]}`));
+  }
+  return el("div", { class: "questionFilterBar" }, statusGroup, typeGroup);
 }
 
 function meaningMission(summary, ready, nextQueue = [], learnedItems = [], meaningResume = null, coreResume = false) {
@@ -1242,8 +1322,88 @@ function datasetSetLabel(datasetId, data) {
   return label || data.label || datasetId;
 }
 
+// 保存形式は変えず、Unitカード表示用の数値・状態だけを読み取り専用で算出する。
+// manifestに問題数・語句数が無いため、非アクティブなセットの総数は "—" とする（総数はアクティブなセットのみ確実に出せる）。
+function datasetSummary(datasetId, data) {
+  const isCurrent = datasetId === state.datasetId;
+  const progress = progressFor(datasetId);
+  const units = Object.values((progress && progress.units) || {});
+  const learnedQuestions = units.filter((u) => u.learned).length;
+  const correctQuestions = units.filter((u) => u.solvedCorrect).length;
+  const reviewQuestions = units.filter((u) => u.needsReview).length;
+  const cleared = Boolean(progress && progress.finalCheck && progress.finalCheck.cleared);
+  const totalQuestions = isCurrent ? state.qList.length : null;
+  const totalVocabulary = isCurrent ? allVocabularyItems().length : null;
+  let status = "notStarted";
+  if (cleared) status = "cleared";
+  else if (reviewQuestions > 0) status = "review";
+  else if (learnedQuestions > 0) status = "inProgress";
+  return { totalQuestions, totalVocabulary, learnedQuestions, correctQuestions, reviewQuestions, cleared, status };
+}
+
+function datasetPrimaryLabel(summary, isCurrent) {
+  if (summary.status === "cleared") return "もう一周する";
+  if (summary.status === "review") return "復習する";
+  if (summary.status === "inProgress" || isCurrent) return "続きから";
+  return "この回を始める";
+}
+
+// 1枚のUnitカード。番号は表示順（この級・この種別内の並び順）であり、永続IDとしては保存しない。
+function datasetUnitCard(id, data, index) {
+  const isCurrent = id === state.datasetId;
+  const summary = datasetSummary(id, data);
+  const label = datasetPrimaryLabel(summary, isCurrent);
+  const totalQ = summary.totalQuestions != null ? summary.totalQuestions : "—";
+  const totalV = summary.totalVocabulary != null ? summary.totalVocabulary : "—";
+  const progressLine = `${summary.learnedQuestions} / ${totalQ}問`;
+  const cls = ["datasetUnitCard"];
+  if (isCurrent) cls.push("current");
+  if (summary.cleared) cls.push("cleared");
+  else if (summary.reviewQuestions > 0) cls.push("review");
+  const ariaParts = [datasetSetLabel(id, data), progressLine];
+  if (summary.cleared) ariaParts.push("CLEAR");
+  else if (summary.reviewQuestions > 0) ariaParts.push(`要復習${summary.reviewQuestions}問`);
+  ariaParts.push(label);
+  const attrs = {
+    class: cls.join(" "),
+    type: "button",
+    "aria-label": ariaParts.join("・"),
+    onclick: () => { if (!isCurrent) switchDataset(id); },
+  };
+  if (isCurrent) attrs["aria-current"] = "true";
+  return el("button", attrs,
+    el("span", { class: "datasetUnitCardNumber" }, String(index + 1).padStart(2, "0")),
+    el("div", { class: "datasetUnitCardMain" },
+      el("span", { class: "datasetUnitCardTitle" }, datasetSetLabel(id, data)),
+      el("span", { class: "datasetUnitCardMeta" }, `全${totalQ}問・${totalV}語`),
+      el("span", { class: "datasetUnitCardProgress" }, progressLine),
+      summary.cleared
+        ? el("span", { class: "datasetUnitCardClear" }, "✓ CLEAR")
+        : (summary.reviewQuestions > 0
+          ? el("span", { class: "datasetUnitCardReview" }, `！要復習${summary.reviewQuestions}問`)
+          : null),
+      el("span", { class: "datasetUnitCardAction" }, label),
+    ),
+    el("span", { class: "datasetUnitCardArrow", "aria-hidden": "true" }, "→"),
+  );
+}
+
+// 同じ級の問題セットを「過去問」「模試」の小見出しごとにUnitカードで並べる。
+function datasetUnitCards(grade) {
+  const entries = availableDatasets().filter(([id]) => gradeOf(id) === grade);
+  const wrap = el("div", { class: "datasetUnitCards" });
+  for (const kind of ["過去問", "模試"]) {
+    const groupEntries = entries.filter(([id]) => datasetSetKind(id) === kind);
+    if (!groupEntries.length) continue;
+    wrap.appendChild(el("p", { class: "datasetUnitGroupLabel" }, `${datasetGradeLabel(grade)}・${kind}`));
+    const grid = el("div", { class: "datasetUnitGrid" });
+    groupEntries.forEach(([id, data], i) => grid.appendChild(datasetUnitCard(id, data, i)));
+    wrap.appendChild(grid);
+  }
+  return wrap;
+}
+
 function datasetPicker() {
-  const entries = availableDatasets();
   const grades = datasetGrades();
   let pickerGrade = currentGrade() || grades[0];
   const wrap = el("div", { class: "datasetPicker" });
@@ -1253,34 +1413,12 @@ function datasetPicker() {
     role: "group",
     "aria-label": "級を選ぶ",
   });
-  const setField = el("label", { class: "datasetSetField" },
-    el("span", { class: "fieldLabel" }, "回を選ぶ"),
-  );
-  const select = el("select", { class: "datasetSelect" });
+  const cardsHost = el("div", { class: "datasetUnitCardsHost" });
 
-  function renderOptions() {
-    select.innerHTML = "";
+  function renderCards() {
+    cardsHost.innerHTML = "";
+    cardsHost.appendChild(datasetUnitCards(pickerGrade));
     const currentDatasetGrade = currentGrade();
-    if (currentDatasetGrade !== pickerGrade) {
-      const placeholder = el("option", { value: "" }, `${datasetGradeLabel(pickerGrade)}のセットを選ぶ`);
-      placeholder.disabled = "disabled";
-      placeholder.selected = true;
-      select.appendChild(placeholder);
-    }
-
-    for (const kind of ["過去問", "模試"]) {
-      const groupEntries = entries.filter(([id]) => gradeOf(id) === pickerGrade && datasetSetKind(id) === kind);
-      if (!groupEntries.length) continue;
-      const group = el("optgroup", { label: `${datasetGradeLabel(pickerGrade)}・${kind}` });
-      for (const [id, data] of groupEntries) {
-        const opt = el("option", { value: id }, `${datasetSetLabel(id, data)}${datasetCleared(id) ? " ✅" : ""}`);
-        if (id === state.datasetId) opt.selected = true;
-        group.appendChild(opt);
-      }
-      select.appendChild(group);
-    }
-
-    if (currentDatasetGrade === pickerGrade) select.value = state.datasetId;
     const currentLabel = `${dataset().label}${datasetCleared(state.datasetId) ? " ✅" : ""}`;
     current.textContent = currentDatasetGrade === pickerGrade
       ? `現在：${currentLabel}`
@@ -1304,22 +1442,18 @@ function datasetPicker() {
         onclick: () => {
           pickerGrade = grade;
           renderGradeChoices();
-          renderOptions();
+          renderCards();
         },
       }, datasetGradeLabel(grade)));
     }
   }
 
-  select.addEventListener("change", (event) => {
-    if (event.target.value) switchDataset(event.target.value);
-  });
   wrap.appendChild(el("span", { class: "fieldLabel" }, "問題セット"));
   wrap.appendChild(gradeChoices);
   wrap.appendChild(current);
-  setField.appendChild(select);
-  wrap.appendChild(setField);
+  wrap.appendChild(cardsHost);
   renderGradeChoices();
-  renderOptions();
+  renderCards();
   return wrap;
 }
 
@@ -1505,6 +1639,9 @@ function renderSession() {
   const isIdiom = !isMeaning && !isFinal && session.items[0].type === "idiom";
   const isReview = session.mode === "review";
 
+  // 長いカードをスクロールしても現在地・戻る操作を見失わないための補助バー（元のヘッダーは残す）
+  panel.appendChild(sessionStickyNav(q, isReview, isMeaning, isFinal));
+
   // header
   panel.appendChild(el("div", { class: "itemHead" },
      el("div", {},
@@ -1530,6 +1667,28 @@ function renderSession() {
   else if (session.stage === "wrongReview") renderWrongReview(body);
   else if (session.stage === "practice") renderPractice(body);
   else if (session.stage === "done") renderDone(body);
+}
+
+// 元のitemHead/stageBar/q1Progressは残したまま、スクロール中も現在地が分かる補助バーを上に固定する。
+function sessionStickyNav(q, isReview, isMeaning, isFinal) {
+  const total = state.qList.length;
+  const posLabel = isFinal || isMeaning
+    ? `${session.checkIdx + 1} / ${session.checkOrder.length}`
+    : isReview
+      ? `${session.reviewIdx + 1} / ${session.reviewQueue.length}`
+      : (q != null && total ? `第${state.qList.indexOf(q) + 1} / ${total}問` : "");
+  const stageLabel = {
+    flash: "覚える", check: "確かめる", wrongReview: "復習", practice: "解く", done: "完了",
+  }[session.stage] || "";
+  const flashLabel = (!isMeaning && !isFinal && !isReview && session.stage === "flash" && session.items)
+    ? `${(session.flashIdx || 0) + 1}/${session.items.length}語`
+    : "";
+  return el("div", { class: "sessionStickyNav" },
+    el("button", { class: "sessionStickyBack ghost", type: "button", onclick: () => { saveResume(); renderHome(); } }, "一覧へ"),
+    el("span", { class: "sessionStickyPos" }, posLabel),
+    el("span", { class: "sessionStickyStage" }, stageLabel),
+    flashLabel ? el("span", { class: "sessionStickyFlash" }, flashLabel) : null,
+  );
 }
 
 function sessionLabel(q, isIdiom, isReview, isMeaning, isFinal) {
@@ -2292,9 +2451,11 @@ function renderDone(body) {
     // 再表示・再CLEAR時は演出しない。未CLEAR→CLEARに変わった今回の挑戦だけ強調する。
     const firstClear = passed && !session.wasClearedBeforeAttempt;
     banner.appendChild(el("div", { class: "big" + (firstClear ? " celebrate" : "") }, `${session.finalCorrect} / ${session.checkOrder.length}`));
-    banner.appendChild(el("h2", { class: firstClear ? "firstClear" : "" }, passed
+    // firstClear時は既存CSS（h2.firstClear::before）が✓を演出するため、ここでは付けない（二重表示防止）。
+    const finalSymbol = firstClear ? "" : (passed ? "✓ " : "! ");
+    banner.appendChild(el("h2", { class: firstClear ? "firstClear" : "" }, finalSymbol + (passed
       ? `${dataset().shortLabel} 大問1 CLEAR`
-      : `最終チェック完了。${session.finalCorrect}/${session.checkOrder.length}でした`));
+      : `最終チェック完了。${session.finalCorrect}/${session.checkOrder.length}でした`)));
     banner.appendChild(el("p", { class: "hint" }, `${finalPassScore(finalTotal)}/${finalTotal}問以上（正答率80%以上）でCLEAR`));
   } else if (isMeaning) {
     banner.appendChild(el("div", { class: "big" }, `${session.meaningCorrect} / ${session.checkOrder.length}`));
@@ -2307,7 +2468,7 @@ function renderDone(body) {
       ));
     }
   } else {
-    banner.appendChild(el("div", { class: "big" }, session.practiceResult ? "正解！" : "復習リストに残しました"));
+    banner.appendChild(el("div", { class: "big" }, session.practiceResult ? "✓ 正解！" : "! 復習リストに残しました"));
     banner.appendChild(el("h2", {}, isReview ? `第${q}問の復習演習が完了しました` : `第${q}問の4語句を学習しました`));
     if (!isReview) {
       banner.appendChild(el("p", { class: "hint" },
@@ -2340,16 +2501,17 @@ function renderDone(body) {
         `次の復習へ（第${nextReview}問） →`));
     }
   } else {
+    // 主CTAは常に1つ：誤答（復習待ち）があれば復習を優先し、無ければ次の設問→最終チェック→一覧の順。
     const nextQ = state.qList.find((qq) => !unit(qq).learned);
-    if (nextQ) {
-      actions.appendChild(el("button", { class: "cta", onclick: () => startLearn(nextQ) }, `次の設問へ（第${nextQ}問） →`));
-      if (pendingReviews.length) {
-        actions.appendChild(el("button", { class: "secondaryCta", onclick: startReview },
-          `復習対象を確認する（あと${pendingReviews.length}問） →`));
-      }
-    } else if (pendingReviews.length) {
+    if (pendingReviews.length) {
       actions.appendChild(el("button", { class: "cta reviewCta", onclick: startReview },
-        `復習対象を確認する（あと${pendingReviews.length}問） →`));
+        `間違えた${pendingReviews.length}問を復習する →`));
+      if (nextQ) {
+        actions.appendChild(el("button", { class: "secondaryCta", onclick: () => startLearn(nextQ) },
+          `次の設問へ（第${nextQ}問） →`));
+      }
+    } else if (nextQ) {
+      actions.appendChild(el("button", { class: "cta", onclick: () => startLearn(nextQ) }, `次の設問へ（第${nextQ}問） →`));
     } else if (finalUnlocked() && !finalProgress(allVocabularyItems().length).cleared) {
       actions.appendChild(el("button", { class: "cta finalCta", onclick: startFinalCheck }, "最終チェックへ →"));
     } else {
