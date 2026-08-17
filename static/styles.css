@@ -1018,6 +1018,60 @@ h2 {
 .feedback p { margin: 6px 0 0; }
 .feedback .trans { color: var(--muted); font-size: 14px; }
 
+.practiceChoiceMeanings {
+  border-top: 1px solid var(--line);
+  margin-top: 14px;
+  padding-top: 14px;
+}
+.practiceChoiceMeanings h4 {
+  margin: 0 0 10px;
+  font-family: var(--serif);
+  font-size: 17px;
+}
+.practiceChoiceMeaningList {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 28px;
+}
+.practiceChoiceMeaningRow {
+  padding: 8px 10px;
+  border-radius: var(--r-sm);
+  background: var(--surface-soft);
+}
+.practiceChoiceMeaningRow.isCorrect {
+  border-left: 3px solid var(--ok);
+}
+.practiceChoiceMeaningRow.isSelectedWrong {
+  border-left: 3px solid var(--ng);
+}
+.practiceChoiceMeaningHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 12px;
+  flex-wrap: wrap;
+}
+.practiceChoiceMeaningWord {
+  font-weight: 600;
+}
+.practiceChoiceMeaningState {
+  font-family: var(--mono);
+  font-size: 11px;
+}
+.practiceChoiceMeaningRow.isCorrect .practiceChoiceMeaningState {
+  color: var(--ok-text);
+}
+.practiceChoiceMeaningRow.isSelectedWrong .practiceChoiceMeaningState {
+  color: var(--ng);
+}
+.feedback .practiceChoiceMeaningText {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
 .empty {
   border: 1px dashed var(--line);
   border-radius: var(--r-md);

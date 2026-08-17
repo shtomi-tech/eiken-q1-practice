@@ -904,6 +904,42 @@ function findItemForSurface(items, value) {
     return false;
   }) || null;
 }
+// 回答後、4つの選択肢すべての意味を正解・ユーザー回答のラベル付きで一覧表示する
+function practiceChoiceMeanings(q_, items, selectedIdx) {
+  const section = el("section", {
+    class: "practiceChoiceMeanings",
+    "aria-labelledby": "practiceChoiceMeaningsTitle",
+  });
+  section.appendChild(el("h4", { id: "practiceChoiceMeaningsTitle" }, "4つの選択肢の意味"));
+
+  const list = el("ol", { class: "practiceChoiceMeaningList" });
+  q_.choices.forEach((choice, idx) => {
+    const item = findItemForSurface(items, choice);
+    const isCorrect = idx === q_.answerIndex;
+    const isSelected = idx === selectedIdx;
+    let stateLabel = "";
+    if (isCorrect && isSelected) stateLabel = "✓ 正解・あなたの回答";
+    else if (isCorrect) stateLabel = "✓ 正解";
+    else if (isSelected) stateLabel = "あなたの回答";
+
+    const head = el("div", { class: "practiceChoiceMeaningHead" },
+      el("span", { class: "practiceChoiceMeaningWord" }, choice),
+    );
+    if (stateLabel) {
+      head.appendChild(el("span", { class: "practiceChoiceMeaningState" }, stateLabel));
+    }
+
+    list.appendChild(el("li", {
+      class: `practiceChoiceMeaningRow${isCorrect ? " isCorrect" : ""}${isSelected && !isCorrect ? " isSelectedWrong" : ""}`,
+    },
+      head,
+      el("p", { class: "practiceChoiceMeaningText" }, item?.meaning || "意味を取得できませんでした"),
+    ));
+  });
+
+  section.appendChild(list);
+  return section;
+}
 // 選んだ誤答の意味が本当はどの語句のものかを逆引き（混同ペアの可視化）
 function findOwnerOfMeaning(type, meaning, excludeItem) {
   const pooled = session && session.mode === "meaning" ? pooledData() : null;
@@ -2402,13 +2438,13 @@ function onPracticeAnswer(idx, box, choiceWrap, q_, items) {
   });
 
   const correctWord = q_.choices[correctIdx];
-  const ansItem = findItemForSurface(items, correctWord);
 
   const fb = el("div", { class: "feedback " + (isCorrect ? "ok" : "ng"), role: "status", "aria-live": "polite" },
     el("h3", {}, isCorrect ? "正解！" : "不正解"),
-    el("p", {}, `正解：${correctIdx + 1}　${correctWord}　— ${ansItem ? ansItem.meaning : ""}`),
+    el("p", {}, `正解：${correctIdx + 1}　${correctWord}`),
   );
   if (q_.translation) fb.appendChild(el("p", { class: "trans" }, "和訳：" + q_.translation));
+  fb.appendChild(practiceChoiceMeanings(q_, items, idx));
   box.appendChild(fb);
 
   const u = unit(session.q);
