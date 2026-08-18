@@ -2264,9 +2264,15 @@ function renderCheck(body) {
 
   const box = el("div", { class: "quizBox" });
   box.appendChild(el("p", { class: "label" }, "次の語句の意味は？"));
+  const listenButton = buildVocabAudioButton(item, "quizListenButton");
+  // 音声を最初に押した時刻から解答までを反応時間として計測する
+  listenButton.addEventListener("click", () => {
+    if (session.checkAnswered || session.checkAudioAt) return;
+    session.checkAudioAt = Date.now();
+  });
   box.appendChild(el("div", { class: "askWordLine" },
     el("p", { class: "askWord" }, surface),
-    buildVocabAudioButton(item, "quizListenButton"),
+    listenButton,
   ));
 
   // choices: correct meaning + 3 distractors of same type
@@ -2292,6 +2298,10 @@ function renderCheck(body) {
       if (session.checkAnswered || choicesLocked()) return;
       session.checkAnswered = true;
       session.checkPicked = m;
+      if (session.checkAudioAt) {
+        session.checkElapsed = (Date.now() - session.checkAudioAt) / 1000;
+        (session.audioElapsedLog || (session.audioElapsedLog = [])).push(session.checkElapsed);
+      }
       const isCorrect = m === correct;
       session.checkCorrect = isCorrect;
       [...choiceWrap.children].forEach((c) => {
@@ -2324,6 +2334,9 @@ function appendCheckFeedback(box, item, surface, correct, isCorrect) {
     el("h3", {}, isCorrect ? "正解！" : "おしい！"),
     el("p", {}, `${surface}：${correct}`),
   );
+  if (typeof session.checkElapsed === "number") {
+    fb.appendChild(el("p", { class: "hint" }, `音声を押してから ${session.checkElapsed.toFixed(1)} 秒で解答`));
+  }
   if (item.etymology) fb.appendChild(el("p", { class: "trans" }, item.etymology));
   box.appendChild(fb);
 
@@ -2336,6 +2349,8 @@ function appendCheckFeedback(box, item, surface, correct, isCorrect) {
         session.checkPicked = null;
         session.checkCorrect = null;
         session._checkChoices = null;
+        session.checkAudioAt = null;
+        session.checkElapsed = null;
         if (last) {
           session.stage = nextStageAfterCheck();
           renderSession();
@@ -2579,6 +2594,12 @@ function renderDone(body) {
           `復習対象が${pendingReviews.length}問あります。下のボタンから確認できます。`));
       }
     }
+  }
+  const elapsedLog = session.audioElapsedLog || [];
+  if (elapsedLog.length) {
+    const avg = elapsedLog.reduce((a, b) => a + b, 0) / elapsedLog.length;
+    banner.appendChild(el("p", { class: "hint" },
+      `音声から解答までの平均 ${avg.toFixed(1)} 秒（計測${elapsedLog.length}語句・最速${Math.min(...elapsedLog).toFixed(1)}秒／最遅${Math.max(...elapsedLog).toFixed(1)}秒）`));
   }
   body.appendChild(banner);
 
