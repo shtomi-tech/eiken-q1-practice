@@ -167,8 +167,28 @@ assert.ok(
   "resumeあり時の案内文が必要",
 );
 
+// --- 他の級の復習待ち ---
+const otherGradeDueBody = extractFunctionBody(js, "otherGradeDueCounts");
+assert.ok(
+  !otherGradeDueBody.includes("fetch(") && !otherGradeDueBody.includes("loadPooledItems"),
+  "他の級の復習待ち件数は語彙JSONを読まず進捗だけで数える必要がある",
+);
+assert.ok(
+  meaningMissionBody.includes("otherGradeDueCounts()") && meaningMissionBody.includes("meaningMissionOtherGradeList"),
+  "間隔復習カードは他の級の復習待ちを表示する必要がある",
+);
+assert.match(
+  meaningMissionBody,
+  /switchDataset\(row\.datasetId\)/,
+  "他の級のチップはその級のセットへ移動する必要がある",
+);
+assert.ok(
+  meaningMissionBody.includes("dataset().shortLabel"),
+  "間隔復習カードの見出しはどの級のプールかを示す必要がある",
+);
+
 // --- CSS ---
-for (const cls of [".spacedReviewCard", ".meaningMissionMetrics", ".meaningMissionCta", ".meaningMissionInterval"]) {
+for (const cls of [".spacedReviewCard", ".meaningMissionMetrics", ".meaningMissionCta", ".meaningMissionInterval", ".meaningMissionOtherGrade"]) {
   assert.ok(css.includes(cls), `CSSに ${cls} の規則が必要`);
 }
 assert.ok(!css.includes(".meaningMission {"), "旧入れ子パネル用のmeaningMissionルート規則は削除する必要がある");

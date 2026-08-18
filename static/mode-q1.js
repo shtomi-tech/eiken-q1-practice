@@ -680,6 +680,31 @@ function meaningPracticeSummary() {
   };
 }
 
+// 他の級で復習期限が来ている語句数。語彙JSONは読まず、進捗の nextReviewAt だけで数える
+// （items の記録は意味だけ復習で解答したときにしか作られないため、学習済み判定は要らない）。
+// 級を切り替えると間隔復習カードの中身が丸ごと入れ替わるため、記録が別の級に残っていることを示す。
+function otherGradeDueCounts(now = Date.now()) {
+  const current = currentGrade();
+  const rows = [];
+  for (const grade of datasetGrades()) {
+    if (!grade || grade === current) continue;
+    let count = 0;
+    let topId = "";
+    let topCount = 0;
+    for (const id of gradeDatasetIds(grade)) {
+      const items = (progressFor(id) || {}).items || {};
+      let dueHere = 0;
+      for (const itemState of Object.values(items)) {
+        if (itemState && itemState.nextReviewAt && new Date(itemState.nextReviewAt).getTime() <= now) dueHere += 1;
+      }
+      count += dueHere;
+      if (dueHere > topCount) { topId = id; topCount = dueHere; }
+    }
+    if (count > 0) rows.push({ grade, label: datasetGradeLabel(grade), count, datasetId: topId });
+  }
+  return rows.sort((a, b) => b.count - a.count).slice(0, 3);
+}
+
 // 今回出題される語句を、直前の復習間隔で分類する。
 function meaningIntervalLabel(item) {
   const itemState = readItemStateOf(item);
@@ -1307,7 +1332,7 @@ function meaningMission(summary, ready, nextQueue = [], learnedItems = [], meani
     "aria-labelledby": "spacedReviewCardTitle",
   },
     el("p", { class: "label" }, "間隔復習"),
-    el("h3", { id: "spacedReviewCardTitle" }, "意味だけ復習"),
+    el("h3", { id: "spacedReviewCardTitle" }, `意味だけ復習（${dataset().shortLabel}）`),
     el("p", { class: "meaningMissionLead" },
       `${datasetSectionName()}の収録セットをまとめ、通常学習で最後まで解いた設問の語句を1回最大${MEANING_SESSION_SIZE}語句で復習します。正解すると1・3・7・14日後へ進みます。`),
     el("div", { class: "meaningMissionMetrics" },
@@ -1320,6 +1345,22 @@ function meaningMission(summary, ready, nextQueue = [], learnedItems = [], meani
     mission.appendChild(meaningIntervalBreakdown(learnedItems));
   } else if (ready) {
     mission.appendChild(el("p", { class: "hint" }, "まだ意味だけ復習の対象語句がありません。通常学習で本番形式まで解くと対象に加わります。"));
+  }
+  const otherDue = otherGradeDueCounts();
+  if (otherDue.length) {
+    const list = el("div", { class: "meaningMissionOtherGradeList" });
+    otherDue.forEach((row) => {
+      list.appendChild(el("button", {
+        class: "ghost meaningMissionOtherGrade",
+        type: "button",
+        "aria-label": `${row.label}の復習待ち${row.count}語句へ移動`,
+        onclick: () => switchDataset(row.datasetId),
+      }, el("strong", {}, row.label), el("span", {}, `${row.count}語句`)));
+    });
+    mission.appendChild(el("div", { class: "meaningMissionOtherGrades" },
+      el("p", { class: "label" }, "他の級の復習待ち"),
+      list,
+    ));
   }
   if (meaningResume) {
     mission.appendChild(el("div", { class: "resumeNotice" },

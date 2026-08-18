@@ -514,6 +514,24 @@ h2 {
   margin-top: 3px;
   white-space: nowrap;
 }
+.meaningMissionOtherGrades { margin-bottom: 14px; }
+.meaningMissionOtherGradeList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+.meaningMissionOtherGrade {
+  align-items: baseline;
+  display: inline-flex;
+  gap: 8px;
+  padding: 10px 14px;
+}
+.meaningMissionOtherGrade strong { font-size: 13px; }
+.meaningMissionOtherGrade span {
+  font-family: var(--mono);
+  font-size: 12px;
+}
 .meaningMissionCta { width: 100%; }
 
 .settingRow {
