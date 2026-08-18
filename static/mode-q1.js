@@ -619,9 +619,16 @@ function isLearnedQuestion(progress, q) {
 }
 
 function learnedPooledItems(items = []) {
-  return items.filter((item) => isLearnedQuestion(
-    progressFor(item._datasetId || state.datasetId),
-    item.q,
+  const learnedKeys = new Set(
+    items
+      .filter((item) => isLearnedQuestion(
+        progressFor(item._datasetId || state.datasetId),
+        item.q,
+      ))
+      .map((item) => `${item._datasetId || state.datasetId}:${itemKeyOf(item)}`),
+  );
+  return items.filter((item) => learnedKeys.has(
+    `${item._datasetId || state.datasetId}:${itemKeyOf(item)}`,
   ));
 }
 

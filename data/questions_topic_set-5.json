@@ -5,245 +5,245 @@
     "section": "Topic phrases（英語例文の空所補充）",
     "source": "data/topic_phrases_1.json（ユーザー提供の表現集）",
     "counts": {
-      "words": 12,
-      "idioms": 60,
+      "words": 11,
+      "idioms": 61,
       "total": 72
     },
-    "unique_total": 70
+    "unique_total": 69
   },
   "questions": [
     {
       "q": 1,
-      "stem": "Researchers identified ( ) as one factor behind the rapid social change.",
+      "stem": "Modern clinics rely on ( ) to share patient records with rural specialists.",
       "choices": [
+        "information technology",
         "the impact of technology usage on children",
         "the space race",
-        "information technology",
-        "electronics industry"
+        "the limits of technology"
       ],
       "answerIndex": 0,
-      "translation": "研究者は、テクノロジー利用の子どもへの影響が急速な社会変化の一因だと説明した。",
+      "translation": "情報技術によって、その診療所は地方の専門医と患者記録を共有できる。",
       "topic": "テクノロジー"
     },
     {
       "q": 2,
-      "stem": "Researchers identified ( ) as one factor behind the rapid social change.",
+      "stem": "The ( ) needs rare minerals as well as highly trained engineers.",
       "choices": [
-        "increased spending",
-        "inheritance",
-        "the introduction of a flat tax rate",
-        "the trickle-down effect"
+        "the impact of technology usage on children",
+        "the trickle-down effect",
+        "rejection",
+        "electronics industry"
       ],
       "answerIndex": 3,
-      "translation": "研究者は、トリクルダウン効果が急速な社会変化の一因だと説明した。",
-      "topic": "税"
+      "translation": "エレクトロニクス産業には、希少鉱物だけでなく高度な訓練を受けた技術者も必要である。",
+      "topic": "テクノロジー"
     },
     {
       "q": 3,
-      "stem": "The policy debate focused on ( ) and its effects on society.",
+      "stem": "Doctors now use ( ) to identify patterns in medical images they may overlook.",
       "choices": [
-        "information technology",
-        "the limits of technology",
+        "increased spending",
+        "the space race",
         "artificial intelligence",
-        "rejection"
+        "organ trade"
       ],
       "answerIndex": 2,
-      "translation": "その政策論争では、人工知能と社会への影響が焦点になった。",
+      "translation": "人工知能は、医師が見落とす可能性のある医療画像のパターンを特定できる。",
       "topic": "テクノロジー"
     },
     {
       "q": 4,
-      "stem": "The policy debate focused on ( ) and its effects on society.",
+      "stem": "Scientists studied the ( ) before approving the food for wider sale.",
       "choices": [
-        "commercial satellite",
+        "the trickle-down effect",
+        "influence on humans",
         "astronaut",
-        "organ trade",
-        "influence on humans"
+        "commercial satellite"
       ],
       "answerIndex": 1,
-      "translation": "その政策論争では、宇宙飛行士と社会への影響が焦点になった。",
-      "topic": "宇宙開発"
+      "translation": "科学者たちは、その食品を広く販売する前に人体への影響を研究した。",
+      "topic": "遺伝子組み換え作物"
     },
     {
       "q": 5,
-      "stem": "The policy debate focused on ( ) and its effects on society.",
+      "stem": "A ( ) over patented seeds can leave small farmers dependent on one supplier.",
       "choices": [
+        "monopoly",
         "zero-gravity environment",
         "International Space Station",
-        "monopoly",
-        "exploitation of farmers"
+        "efficiency of crops"
       ],
       "answerIndex": 0,
-      "translation": "その政策論争では、無重力環境と社会への影響が焦点になった。",
-      "topic": "宇宙開発"
+      "translation": "特許種子の独占は、小規模農家を一つの供給者に依存させる可能性がある。",
+      "topic": "遺伝子組み換え作物"
     },
     {
       "q": 6,
-      "stem": "The policy debate focused on ( ) and its effects on society.",
+      "stem": "The cooperative negotiated fair contracts to prevent ( ) by large buyers.",
       "choices": [
+        "space food",
         "prescription",
-        "habitable planet",
-        "human exploration",
-        "space food"
+        "chemical-free",
+        "exploitation of farmers"
       ],
       "answerIndex": 3,
-      "translation": "その政策論争では、宇宙食と社会への影響が焦点になった。",
-      "topic": "宇宙開発"
+      "translation": "その協同組合は、大規模な買い手による農家の搾取を防ぐため公正な契約を交渉した。",
+      "topic": "遺伝子組み換え作物"
     },
     {
       "q": 7,
-      "stem": "The policy debate focused on ( ) and its effects on society.",
+      "stem": "The laboratory sealed the samples because an accidental release could create a ( ).",
       "choices": [
-        "pharmaceutical drug",
-        "alternative remedy",
         "antibiotic",
-        "develop new drugs"
+        "pharmaceutical drug",
+        "biohazard",
+        "product safety"
       ],
       "answerIndex": 2,
-      "translation": "その政策論争では、抗生物質と社会への影響が焦点になった。",
-      "topic": "医療"
+      "translation": "事故による漏出がバイオハザードを生む可能性があるため、研究室は試料を封印した。",
+      "topic": "遺伝子組み換え作物"
     },
     {
       "q": 8,
-      "stem": "The policy debate focused on ( ) and its effects on society.",
+      "stem": "The laboratory grew a ( ) culture under carefully controlled conditions.",
       "choices": [
-        "tissue",
+        "ethical question",
         "stem cell",
         "regenerative medicine",
         "technological innovation"
       ],
       "answerIndex": 1,
-      "translation": "その政策論争では、幹細胞と社会への影響が焦点になった。",
+      "translation": "その研究室は、厳密に管理された条件で幹細胞の培養物を育てた。",
       "topic": "再生医療"
     },
     {
       "q": 9,
-      "stem": "The policy debate focused on ( ) and its effects on society.",
+      "stem": "The surgeon removed damaged ( ) while preserving the patient's healthy nerves.",
       "choices": [
-        "genetic trait",
-        "base salary",
+        "tissue",
+        "ecological destruction",
         "smart appliances",
-        "the practicality of investment in space-related technology"
+        "habitable planet"
       ],
       "answerIndex": 0,
-      "translation": "その政策論争では、遺伝形質と社会への影響が焦点になった。",
+      "translation": "外科医は患者の健康な神経を残しながら、損傷した組織を取り除いた。",
       "topic": "再生医療"
     },
     {
       "q": 10,
-      "stem": "The policy debate focused on ( ) and its effects on society.",
+      "stem": "The study examined whether the ( ) increased resistance to a rare disease.",
       "choices": [
-        "labor conditions",
-        "work-life balance",
-        "minimum wage",
-        "full-time job"
+        "doubts regarding experiments' effectiveness",
+        "human exploration",
+        "the practicality of investment in space-related technology",
+        "genetic trait"
       ],
       "answerIndex": 3,
-      "translation": "その政策論争では、フルタイムの仕事と社会への影響が焦点になった。",
-      "topic": "労働"
+      "translation": "その研究は、その遺伝形質がまれな病気への抵抗力を高めるか調べた。",
+      "topic": "再生医療"
     },
     {
       "q": 11,
-      "stem": "The policy debate focused on ( ) and its effects on society.",
+      "stem": "The offer included a modest ( ) but generous support for professional training.",
       "choices": [
-        "lifelong employment system",
-        "overtime allowance",
-        "early retirement",
-        "paid leave"
+        "wage reduction",
+        "work-life balance",
+        "base salary",
+        "minimum wage"
       ],
       "answerIndex": 2,
-      "translation": "その政策論争では、早期退職と社会への影響が焦点になった。",
+      "translation": "その提示には控えめな基本給と、手厚い職業訓練支援が含まれていた。",
       "topic": "労働"
     },
     {
       "q": 12,
-      "stem": "The policy debate focused on ( ) and its effects on society.",
+      "stem": "She accepted a ( ) after completing the company's six-month training course.",
       "choices": [
-        "wage reduction",
-        "merit system",
-        "flexible working hours",
-        "deregulation"
+        "unpaid overtime",
+        "full-time job",
+        "overtime allowance",
+        "paid leave"
       ],
       "answerIndex": 1,
-      "translation": "その政策論争では、能力給制度と社会への影響が焦点になった。",
+      "translation": "彼女は会社の6か月の研修課程を終えた後、フルタイムの仕事を受け入れた。",
       "topic": "労働"
     },
     {
       "q": 13,
-      "stem": "Experts warned that ( ) could seriously harm local communities if ignored.",
+      "stem": "The inspectors documented unsafe ( ) inside the crowded factory.",
       "choices": [
-        "biohazard",
-        "ethical question",
-        "efficiency of crops",
-        "chemical-free"
+        "labor conditions",
+        "death from overwork",
+        "flexible working hours",
+        "deregulation"
       ],
       "answerIndex": 0,
-      "translation": "専門家は、バイオハザードを放置すれば地域社会に深刻な影響を与える可能性があると警告した。",
-      "topic": "遺伝子組み換え作物"
+      "translation": "調査官は、混雑した工場内の危険な労働条件を記録した。",
+      "topic": "労働"
     },
     {
       "q": 14,
-      "stem": "Experts warned that ( ) could seriously harm local communities if ignored.",
+      "stem": "The factory offered ( ) to reduce staff numbers without immediate dismissals.",
       "choices": [
-        "ecological destruction",
-        "solution to world hunger",
+        "decline in the suicide rate",
         "allocation of resources",
-        "discrimination"
+        "alternative remedy",
+        "early retirement"
       ],
       "answerIndex": 3,
-      "translation": "専門家は、差別を放置すれば地域社会に深刻な影響を与える可能性があると警告した。",
-      "topic": "クローン"
+      "translation": "その工場は、即時解雇をせずに人員を減らすため早期退職を募った。",
+      "topic": "労働"
     },
     {
       "q": 15,
-      "stem": "Experts warned that ( ) could seriously harm local communities if ignored.",
+      "stem": "The ( ) is weakening as workers change companies more frequently.",
       "choices": [
-        "unpaid overtime",
-        "animal rights",
-        "doubts regarding experiments' effectiveness",
+        "tax avoidance",
+        "develop new drugs",
+        "lifelong employment system",
         "generic drug"
       ],
       "answerIndex": 2,
-      "translation": "専門家は、実験の有効性への疑問を放置すれば地域社会に深刻な影響を与える可能性があると警告した。",
-      "topic": "動物実験"
+      "translation": "労働者がより頻繁に会社を変えるため、終身雇用制度は弱まっている。",
+      "topic": "労働"
     },
     {
       "q": 16,
-      "stem": "Experts warned that ( ) could seriously harm local communities if ignored.",
+      "stem": "The ( ) rewarded sales results but made cooperation between departments harder.",
       "choices": [
-        "decline in the suicide rate",
-        "death from overwork",
-        "product safety",
-        "progressive taxes"
+        "tax evasion",
+        "merit system",
+        "solution to world hunger",
+        "animal rights"
       ],
       "answerIndex": 1,
-      "translation": "専門家は、過労死を放置すれば地域社会に深刻な影響を与える可能性があると警告した。",
+      "translation": "能力給制度は営業成績を評価したが、部署間の協力を難しくした。",
       "topic": "労働"
     },
     {
       "q": 17,
-      "stem": "Experts warned that ( ) could seriously harm local communities if ignored.",
+      "stem": "The siblings used their ( ) to restore the family home and start a clinic.",
       "choices": [
-        "tax avoidance",
-        "tax evasion",
-        "fairness",
-        "redistribution of wealth"
+        "inheritance",
+        "fall of motivation",
+        "progressive taxes",
+        "fairness"
       ],
       "answerIndex": 0,
-      "translation": "専門家は、租税回避、節税を放置すれば地域社会に深刻な影響を与える可能性があると警告した。",
+      "translation": "兄弟は遺産相続で得た財産を使い、実家を修復して診療所を始めた。",
       "topic": "税"
     },
     {
       "q": 18,
-      "stem": "Experts warned that ( ) could seriously harm local communities if ignored.",
+      "stem": "The reform involved ( ), which simplified filing but reduced progressivity.",
       "choices": [
         "social polarization",
+        "redistribution of wealth",
         "free competition",
-        "technological innovation",
-        "fall of motivation"
+        "the introduction of a flat tax rate"
       ],
       "answerIndex": 3,
-      "translation": "専門家は、モチベーションの低下を放置すれば地域社会に深刻な影響を与える可能性があると警告した。",
+      "translation": "均一税率の導入は申告を簡単にしたが、制度の累進性を弱めた。",
       "topic": "税"
     }
   ]

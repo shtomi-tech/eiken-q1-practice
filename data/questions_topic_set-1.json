@@ -5,8 +5,8 @@
     "section": "Topic phrases（英語例文の空所補充）",
     "source": "data/topic_phrases_1.json（ユーザー提供の表現集）",
     "counts": {
-      "words": 9,
-      "idioms": 71,
+      "words": 10,
+      "idioms": 70,
       "total": 80
     },
     "unique_total": 77
@@ -14,263 +14,263 @@
   "questions": [
     {
       "q": 1,
-      "stem": "Researchers identified ( ) as one factor behind the rapid social change.",
+      "stem": "An ( ) needs flexible services as the number of older residents rises.",
       "choices": [
+        "aging society",
         "advancement of medicine",
         "materialism",
-        "aging society",
-        "healthcare system"
+        "labor shortage"
       ],
       "answerIndex": 0,
-      "translation": "研究者は、医療の発達が急速な社会変化の一因だと説明した。",
+      "translation": "高齢化社会では高齢者が増えるため、柔軟なサービスが必要になる。",
       "topic": "少子高齢社会"
     },
     {
       "q": 2,
-      "stem": "Researchers identified ( ) as one factor behind the rapid social change.",
+      "stem": "Japan's ( ) must prepare for more home care and fewer doctors.",
       "choices": [
-        "the growing popularity of secularism",
-        "loss of moral values",
-        "sensitive issue",
-        "the growing trend of nuclear families"
+        "advancement of medicine",
+        "the growing trend of nuclear families",
+        "a decline in the working-age population",
+        "healthcare system"
       ],
       "answerIndex": 3,
-      "translation": "研究者は、核家族化が急速な社会変化の一因だと説明した。",
-      "topic": "現代人のモラル"
+      "translation": "日本の医療制度は、在宅医療の増加と医師不足に備えなければならない。",
+      "topic": "少子高齢社会"
     },
     {
       "q": 3,
-      "stem": "Major cities ( ), so public services must be planned carefully.",
+      "stem": "The survey found that ( ) improved after the city added parks, clinics, and buses.",
       "choices": [
-        "division of roles",
-        "commuter",
+        "the growing popularity of secularism",
         "have a high concentration of population",
-        "quality of life"
+        "quality of life",
+        "a decline in tax revenue"
       ],
       "answerIndex": 2,
-      "translation": "大都市では人口が集中しているため、公共サービスを慎重に計画しなければならない。",
-      "topic": "都市化"
+      "translation": "市が公園や診療所、安定したバスを整備すると、生活の質が向上した。",
+      "topic": "少子高齢社会"
     },
     {
       "q": 4,
-      "stem": "Researchers identified ( ) as one factor behind the rapid social change.",
+      "stem": "The ( ) became visible when officials treated corruption as ordinary.",
       "choices": [
-        "advancement of medicine",
-        "intensified competition",
-        "dual surnames",
-        "maiden name"
+        "materialism",
+        "loss of moral values",
+        "the growing trend of nuclear families",
+        "pension system collapse"
       ],
       "answerIndex": 1,
-      "translation": "研究者は、競争の激化が急速な社会変化の一因だと説明した。",
-      "topic": "女性の権利"
+      "translation": "公務員が汚職を当たり前のように扱ったとき、倫理観の喪失が明らかになった。",
+      "topic": "現代人のモラル"
     },
     {
       "q": 5,
-      "stem": "The policy debate focused on ( ) and its effects on society.",
+      "stem": "At home, ( ) should reflect preference rather than traditional expectations.",
       "choices": [
-        "basic human rights",
-        "freedom of speech",
-        "invade someone's privacy",
-        "regulation by state powers"
+        "division of roles",
+        "dual surnames",
+        "maiden name",
+        "gender equality"
       ],
       "answerIndex": 0,
-      "translation": "その政策論争では、基本的人権と社会への影響が焦点になった。",
-      "topic": "プライバシー"
-    },
-    {
-      "q": 6,
-      "stem": "The policy debate focused on ( ) and its effects on society.",
-      "choices": [
-        "regulation of protests",
-        "suppression by the government",
-        "hate speech",
-        "the First Amendment"
-      ],
-      "answerIndex": 3,
-      "translation": "その政策論争では、修正第1条と社会への影響が焦点になった。",
-      "topic": "言論の自由"
-    },
-    {
-      "q": 7,
-      "stem": "The policy debate focused on ( ) and its effects on society.",
-      "choices": [
-        "ratio of female managers",
-        "the glass ceiling",
-        "a break in one's career",
-        "discrimination against women"
-      ],
-      "answerIndex": 2,
-      "translation": "その政策論争では、キャリアの中断と社会への影響が焦点になった。",
+      "translation": "家庭での役割分担は、伝統的な期待ではなく本人の希望を反映すべきである。",
       "topic": "女性の権利"
     },
     {
-      "q": 8,
-      "stem": "The policy debate focused on ( ) and its effects on society.",
+      "q": 6,
+      "stem": "The two airlines faced ( ) and improved service without raising fares.",
       "choices": [
-        "college credit",
-        "entrance fee",
-        "tuition",
-        "labor shortage"
-      ],
-      "answerIndex": 1,
-      "translation": "その政策論争では、入学金と社会への影響が焦点になった。",
-      "topic": "教育"
-    },
-    {
-      "q": 9,
-      "stem": "The policy debate focused on ( ) and its effects on society.",
-      "choices": [
-        "college degree",
-        "graduate school",
-        "a decline in the working-age population",
-        "scholarship"
-      ],
-      "answerIndex": 0,
-      "translation": "その政策論争では、大学の学位と社会への影響が焦点になった。",
-      "topic": "教育"
-    },
-    {
-      "q": 10,
-      "stem": "The policy debate focused on ( ) and its effects on society.",
-      "choices": [
-        "required course",
-        "distance education",
-        "face-to-face education",
-        "curriculum"
+        "a break in one's career",
+        "ratio of female managers",
+        "diversity",
+        "intensified competition"
       ],
       "answerIndex": 3,
-      "translation": "その政策論争では、カリキュラムと社会への影響が焦点になった。",
-      "topic": "教育"
+      "translation": "競争の激化により、2社の航空会社は運賃を上げずにサービスを改善した。",
+      "topic": "女性の権利"
     },
     {
-      "q": 11,
-      "stem": "The policy debate focused on ( ) and its effects on society.",
+      "q": 7,
+      "stem": "A ( ) becomes unavoidable when municipal budgets cannot support basic care.",
       "choices": [
-        "cultural heritage",
-        "creative thinking",
-        "academic performance",
-        "higher education"
+        "sensitive issue",
+        "commuter",
+        "welfare crisis",
+        "preventive medicine"
       ],
       "answerIndex": 2,
-      "translation": "その政策論争では、学力、学業成績と社会への影響が焦点になった。",
-      "topic": "教育"
+      "translation": "自治体の予算で基礎的な介護を支えられなくなると、福祉の危機は避けられない。",
+      "topic": "少子高齢社会"
     },
     {
-      "q": 12,
-      "stem": "The policy debate focused on ( ) and its effects on society.",
+      "q": 8,
+      "stem": "The region suffered ( ) and lost young families to more stable jobs.",
       "choices": [
-        "historic site",
-        "historic structure",
-        "preventive medicine",
+        "basic human rights",
+        "economic deterioration",
+        "freedom of speech",
         "employment of senior citizens"
       ],
       "answerIndex": 1,
-      "translation": "その政策論争では、歴史的建造物と社会への影響が焦点になった。",
-      "topic": "伝統文化"
+      "translation": "景気の悪化により、若い家族は安定した仕事を求めて地域を離れた。",
+      "topic": "少子高齢社会"
+    },
+    {
+      "q": 9,
+      "stem": "Recent ( ) is accelerating as rural workers move toward factories and universities.",
+      "choices": [
+        "urbanization",
+        "the First Amendment",
+        "regulation of protests",
+        "development of infrastructure"
+      ],
+      "answerIndex": 0,
+      "translation": "農村の労働者が工場や大学のある地域へ移るにつれ、都市化が加速している。",
+      "topic": "都市化"
+    },
+    {
+      "q": 10,
+      "stem": "Rapid ( ) strains water supplies, public transport, and emergency services.",
+      "choices": [
+        "entrance fee",
+        "college credit",
+        "man's connection with nature",
+        "overpopulation in urban areas"
+      ],
+      "answerIndex": 3,
+      "translation": "都市部の人口過剰は、水道や公共交通、救急サービスに負担をかける。",
+      "topic": "都市化"
+    },
+    {
+      "q": 11,
+      "stem": "The ( ) threatens the wetlands that protect villages from floods.",
+      "choices": [
+        "college degree",
+        "graduate school",
+        "destruction of nature",
+        "sustainable society"
+      ],
+      "answerIndex": 2,
+      "translation": "自然破壊は、村を洪水から守る湿地を脅かしている。",
+      "topic": "都市化"
+    },
+    {
+      "q": 12,
+      "stem": "Unregulated applications can ( ) by collecting contacts without consent.",
+      "choices": [
+        "curriculum",
+        "invade someone's privacy",
+        "required course",
+        "human life protection"
+      ],
+      "answerIndex": 1,
+      "translation": "規制のないアプリは、同意なしに連絡先を集めて人のプライバシーを侵害することがある。",
+      "topic": "プライバシー"
     },
     {
       "q": 13,
-      "stem": "The policy debate focused on ( ) and its effects on society.",
+      "stem": "Critics said ( ) became excessive after officials monitored peaceful gatherings.",
       "choices": [
-        "traditional event",
-        "traditional culture",
-        "sustainable society",
+        "regulation by state powers",
+        "academic performance",
+        "cultural heritage",
         "fall in the unemployment rate"
       ],
       "answerIndex": 0,
-      "translation": "その政策論争では、伝統行事と社会への影響が焦点になった。",
-      "topic": "伝統文化"
+      "translation": "当局が平和的な集会を監視した後、国家権力による監視が問題になった。",
+      "topic": "プライバシー"
     },
     {
       "q": 14,
-      "stem": "The policy debate focused on ( ) and its effects on society.",
+      "stem": "The ( ) survived the earthquake because engineers reinforced its foundation.",
       "choices": [
-        "stadium maintenance costs",
+        "suppression by the government",
+        "moral education",
+        "altruistic behavior",
+        "historic structure"
+      ],
+      "answerIndex": 3,
+      "translation": "技術者が基礎を補強したため、その歴史的建造物は地震に耐えた。",
+      "topic": "伝統文化"
+    },
+    {
+      "q": 15,
+      "stem": "Visitors must register before entering the ( ) beside the river.",
+      "choices": [
+        "hate speech",
+        "excellent human resources",
+        "historic site",
+        "scholarship"
+      ],
+      "answerIndex": 2,
+      "translation": "訪問者は、川沿いの史跡に入る前に登録しなければならない。",
+      "topic": "伝統文化"
+    },
+    {
+      "q": 16,
+      "stem": "The town postponed its ( ) until the floodwater receded.",
+      "choices": [
+        "censorship",
+        "traditional event",
+        "distance education",
+        "face-to-face education"
+      ],
+      "answerIndex": 1,
+      "translation": "その町は、洪水が引くまで伝統行事を延期した。",
+      "topic": "伝統文化"
+    },
+    {
+      "q": 17,
+      "stem": "In the valley, ( ) changes gradually when younger residents add new forms of music.",
+      "choices": [
+        "traditional culture",
+        "the glass ceiling",
+        "creative thinking",
+        "higher education"
+      ],
+      "answerIndex": 0,
+      "translation": "若い住民が新しい音楽の形を加えると、伝統文化は徐々に変化する。",
+      "topic": "伝統文化"
+    },
+    {
+      "q": 18,
+      "stem": "The tournament produced a ( ), especially for nearby restaurants.",
+      "choices": [
+        "discrimination against women",
         "creation of jobs",
         "promotion of international exchange",
         "temporary economic effect"
       ],
       "answerIndex": 3,
-      "translation": "その政策論争では、一時的な経済効果と社会への影響が焦点になった。",
+      "translation": "その大会は、特に近隣の飲食店に一時的な経済効果をもたらした。",
       "topic": "スポーツイベント"
-    },
-    {
-      "q": 15,
-      "stem": "The policy debate focused on ( ) and its effects on society.",
-      "choices": [
-        "aging society",
-        "moral education",
-        "national budget",
-        "altruistic behavior"
-      ],
-      "answerIndex": 2,
-      "translation": "その政策論争では、国家予算と社会への影響が焦点になった。",
-      "topic": "スポーツイベント"
-    },
-    {
-      "q": 16,
-      "stem": "The policy debate focused on ( ) and its effects on society.",
-      "choices": [
-        "a decline in tax revenue",
-        "healthcare system",
-        "development of infrastructure",
-        "man's connection with nature"
-      ],
-      "answerIndex": 1,
-      "translation": "その政策論争では、医療制度と社会への影響が焦点になった。",
-      "topic": "少子高齢社会"
-    },
-    {
-      "q": 17,
-      "stem": "Experts warned that ( ) could seriously harm local communities if ignored.",
-      "choices": [
-        "pension system collapse",
-        "welfare crisis",
-        "human life protection",
-        "gender equality"
-      ],
-      "answerIndex": 0,
-      "translation": "専門家は、年金制度の崩壊を放置すれば地域社会に深刻な影響を与える可能性があると警告した。",
-      "topic": "少子高齢社会"
-    },
-    {
-      "q": 18,
-      "stem": "Experts warned that ( ) could seriously harm local communities if ignored.",
-      "choices": [
-        "urbanization",
-        "diversity",
-        "excellent human resources",
-        "economic deterioration"
-      ],
-      "answerIndex": 3,
-      "translation": "専門家は、景気の悪化を放置すれば地域社会に深刻な影響を与える可能性があると警告した。",
-      "topic": "少子高齢社会"
     },
     {
       "q": 19,
-      "stem": "Experts warned that ( ) could seriously harm local communities if ignored.",
+      "stem": "The audit found that ( ) had doubled since the roof was installed.",
       "choices": [
-        "destruction of nature",
+        "sexual harassment",
         "elementary education",
-        "overpopulation in urban areas",
+        "stadium maintenance costs",
         "early education"
       ],
       "answerIndex": 2,
-      "translation": "専門家は、都市部の人口過剰を放置すれば地域社会に深刻な影響を与える可能性があると警告した。",
-      "topic": "都市化"
+      "translation": "監査で、屋根の設置後に競技場の維持費が2倍になったことが分かった。",
+      "topic": "スポーツイベント"
     },
     {
       "q": 20,
-      "stem": "Experts warned that ( ) could seriously harm local communities if ignored.",
+      "stem": "The ( ) cannot fund every proposal without clear priorities.",
       "choices": [
-        "sexual harassment",
-        "censorship",
+        "tuition",
+        "national budget",
         "work experience",
         "internship"
       ],
       "answerIndex": 1,
-      "translation": "専門家は、検閲を放置すれば地域社会に深刻な影響を与える可能性があると警告した。",
-      "topic": "言論の自由"
+      "translation": "明確な優先順位がなければ、国家予算ですべての提案を賄うことはできない。",
+      "topic": "スポーツイベント"
     }
   ]
 }

@@ -6,7 +6,7 @@ import json
 import re
 from collections import Counter
 from functools import lru_cache
-from itertools import combinations_with_replacement
+from itertools import combinations_with_replacement, product
 from pathlib import Path
 
 
@@ -24,6 +24,7 @@ SET_TOPICS = {
 }
 EXPECTED_QUESTIONS = {1: 20, 2: 11, 3: 19, 4: 16, 5: 18}
 AXES = {"problem", "cause", "solution", "concept"}
+SET_EXCLUDED_SURFACES = {5: {"discrimination"}}
 
 
 # 出題表面形を一つに固定する。代替表現は意味・語源欄へ残す。
@@ -372,112 +373,48 @@ def topic_source(entries: list[dict], original: dict) -> dict:
     }
 
 
-def make_example(entry: dict) -> tuple[str, str]:
-    surface = entry["en"]
-    meaning = entry["ja"]
-    if surface == "have a high concentration of population":
-        return (
-            "Major cities have a high concentration of population, so public services must be planned carefully.",
-            "大都市では人口が集中しているため、公共サービスを慎重に計画しなければならない。",
-        )
-    if surface == "improve food self-sufficiency rate":
-        return (
-            "The government aims to improve food self-sufficiency rate by supporting local farmers.",
-            "政府は地元の農家を支援することで、食料自給率の改善を目指している。",
-        )
-    if surface == "eradicate extreme poverty":
-        return (
-            "International agencies work to eradicate extreme poverty through education and healthcare.",
-            "国際機関は教育と医療を通じて極度の貧困を根絶しようとしている。",
-        )
-    if surface == "develop new drugs":
-        return (
-            "Researchers are working to develop new drugs for infections that resist current treatments.",
-            "研究者たちは、現在の治療に抵抗する感染症向けの新薬を開発しようとしている。",
-        )
-    if surface == "pirate":
-        return (
-            "Some users pirate copyrighted material despite repeated legal warnings.",
-            "一部の利用者は、法的な警告を何度受けても著作物を違法に複製する。",
-        )
-    if surface == "invade someone's privacy":
-        return (
-            "Aggressive apps can invade someone's privacy without clear consent.",
-            "過剰なアプリは、明確な同意なしに人のプライバシーを侵害することがある。",
-        )
-    if surface == "out of control":
-        return (
-            "Without effective oversight, the spread of false information could get out of control.",
-            "効果的な監視がなければ、誤情報の拡散は制御不能になる可能性がある。",
-        )
-    if surface == "innocent until proven guilty":
-        return (
-            "In a fair trial, every suspect is treated as innocent until proven guilty.",
-            "公正な裁判では、すべての容疑者は有罪と証明されるまで無罪として扱われる。",
-        )
-    if surface == "chemical-free":
-        return (
-            "Many consumers prefer chemical-free produce when they can afford it.",
-            "多くの消費者は、購入できる余裕があれば無農薬の農産物を好む。",
-        )
-
-    if surface.startswith(("have ", "improve ", "eradicate ", "develop ", "pirate ", "invade ")):
-        return (
-            f"Governments should {surface} when they want to protect vulnerable communities.",
-            f"政府は、弱い立場の地域社会を守りたいなら、{meaning}べきだ。",
-        )
-    templates = {
-        "problem": (
-            f"Experts warned that {surface} could seriously harm local communities if ignored.",
-            f"専門家は、{meaning}を放置すれば地域社会に深刻な影響を与える可能性があると警告した。",
-        ),
-        "cause": (
-            f"Researchers identified {surface} as one factor behind the rapid social change.",
-            f"研究者は、{meaning}が急速な社会変化の一因だと説明した。",
-        ),
-        "solution": (
-            f"The government promoted {surface} to improve people's lives over the long term.",
-            f"政府は、長期的に人々の生活を改善するため、{meaning}を推進した。",
-        ),
-        "concept": (
-            f"The policy debate focused on {surface} and its effects on society.",
-            f"その政策論争では、{meaning}と社会への影響が焦点になった。",
-        ),
-    }
-    return templates[entry["axis"]]
-
-
 def example_key(entry: dict) -> str:
     return f"{entry['topic']}::{entry['en']}"
 
 
 def load_examples(entries: list[dict]) -> dict[str, dict[str, str]]:
-    generated = {example_key(entry): dict(zip(("example", "exampleTranslation"), make_example(entry))) for entry in entries}
-    if EXAMPLES_PATH.exists():
-        saved = load_json(EXAMPLES_PATH).get("examples", [])
-        if isinstance(saved, dict):
-            saved = [{"en": surface, **value} for surface, value in saved.items()]
-        for value in saved:
-            key = f"{value.get('topic', '')}::{value.get('en', '')}"
-            if key in generated and isinstance(value, dict):
-                generated[key].update({key: str(value[key]) for key in ("example", "exampleTranslation") if value.get(key)})
+    if not EXAMPLES_PATH.exists():
+        raise ValueError(f"例文データがありません: {EXAMPLES_PATH}")
+    saved = load_json(EXAMPLES_PATH).get("examples", [])
+    if isinstance(saved, dict):
+        saved = [{"en": surface, **value} for surface, value in saved.items()]
+    examples_by_key: dict[str, dict[str, str]] = {}
+    for value in saved:
+        if not isinstance(value, dict):
+            continue
+        key = f"{value.get('topic', '')}::{value.get('en', '')}"
+        if key in examples_by_key:
+            raise ValueError(f"例文データが重複しています: {key}")
+        examples_by_key[key] = {
+            field: str(value.get(field, ""))
+            for field in ("example", "exampleTranslation")
+        }
+    expected_keys = {example_key(entry) for entry in entries}
+    if set(examples_by_key) != expected_keys:
+        missing = sorted(expected_keys - set(examples_by_key))
+        extra = sorted(set(examples_by_key) - expected_keys)
+        raise ValueError(f"例文データのキーが不一致です: missing={missing} extra={extra}")
     for entry in entries:
-        item = generated[example_key(entry)]
-        if entry["en"] not in item["example"]:
+        key = example_key(entry)
+        item = examples_by_key.get(key)
+        if item is None:
+            raise ValueError(f"例文データがありません: {key}")
+        if not re.search(re.escape(entry["en"]), item["example"], flags=re.IGNORECASE):
             raise ValueError(f"例文に表層形がありません: {entry['en']}")
         if not item["exampleTranslation"]:
             raise ValueError(f"例文訳がありません: {entry['en']}")
-    example_rows = [
-        {"topic": entry["topic"], "en": entry["en"], **generated[example_key(entry)]}
-        for entry in entries
-    ]
-    write_json(EXAMPLES_PATH, {"meta": {"source": "data/topic_phrases_1.json", "entries": len(example_rows)}, "examples": example_rows})
-    return generated
+    return examples_by_key
 
 
 def set_entries(entries: list[dict], set_no: int) -> list[dict]:
     allowed = set(SET_TOPICS[set_no])
-    return [entry for entry in entries if entry["topic"] in allowed]
+    excluded = SET_EXCLUDED_SURFACES.get(set_no, set())
+    return [entry for entry in entries if entry["topic"] in allowed and entry["en"] not in excluded]
 
 
 def choose_groups(entries: list[dict], set_no: int) -> list[list[dict]]:
@@ -486,12 +423,20 @@ def choose_groups(entries: list[dict], set_no: int) -> list[list[dict]]:
     if repeat_count < 0 or repeat_count > 3:
         raise ValueError(f"set-{set_no}: 端数再掲数が不正です: {repeat_count}")
     base_pool = [dict(entry, _occurrence=i) for i, entry in enumerate(entries)]
-    base_pool += [dict(entries[i], _occurrence=len(entries) + i) for i in range(repeat_count)]
     axis_order = tuple(sorted(AXES))
+    unique_surfaces_by_axis = {
+        axis: len({entry["en"] for entry in entries if entry["axis"] == axis})
+        for axis in axis_order
+    }
     patterns = [
         pattern
         for pattern in combinations_with_replacement(axis_order, 4)
         if max(Counter(pattern).values()) <= 2
+        and any(count == 1 for count in Counter(pattern).values())
+        and all(
+            count <= unique_surfaces_by_axis[axis]
+            for axis, count in Counter(pattern).items()
+        )
     ]
 
     @lru_cache(maxsize=None)
@@ -508,16 +453,44 @@ def choose_groups(entries: list[dict], set_no: int) -> list[list[dict]]:
                 return (pattern, *result)
         return None
 
-    axis_counts = Counter(item["axis"] for item in base_pool)
-    axis_patterns = solve(question_count, tuple(axis_counts[axis] for axis in axis_order))
-    if axis_patterns is None:
+    repeat_axes: tuple[str, ...] | None = None
+    axis_patterns: tuple[tuple[str, ...], ...] | None = None
+    for candidate_axes in product(axis_order, repeat=repeat_count):
+        axis_counts = Counter(item["axis"] for item in base_pool)
+        axis_counts.update(candidate_axes)
+        result = solve(question_count, tuple(axis_counts[axis] for axis in axis_order))
+        if result is not None:
+            repeat_axes = candidate_axes
+            axis_patterns = result
+            break
+    if repeat_axes is None or axis_patterns is None:
         raise ValueError(f"set-{set_no}: axis規則を満たす組み合わせを作れません")
+
+    repeated_by_axis: Counter[str] = Counter()
+    for index, axis in enumerate(repeat_axes):
+        sources = [entry for entry in entries if entry["axis"] == axis]
+        source = sources[repeated_by_axis[axis] % len(sources)]
+        repeated_by_axis[axis] += 1
+        base_pool.append(dict(source, _occurrence=len(entries) + index))
 
     pools = {axis: [item for item in base_pool if item["axis"] == axis] for axis in axis_order}
     groups: list[list[dict]] = []
     for pattern in axis_patterns:
+        pattern_counts = Counter(pattern)
+        singleton_axes = [axis for axis in pattern if pattern_counts[axis] == 1]
+        answer_axis = next(
+            (
+                axis
+                for axis in singleton_axes
+                if any(item["_occurrence"] < len(entries) for item in pools[axis])
+            ),
+            None,
+        )
+        if answer_axis is None:
+            raise ValueError(f"set-{set_no}: 再掲語句を正答にできない組み合わせです")
+        ordered_axes = (answer_axis, *(axis for axis in pattern if axis != answer_axis))
         group: list[dict] = []
-        for axis in pattern:
+        for axis in ordered_axes:
             candidates = [item for item in pools[axis] if item["en"] not in {x["en"] for x in group}]
             if not candidates:
                 raise ValueError(f"set-{set_no}: 同一問の表層形重複を避けられません")
@@ -565,7 +538,13 @@ def build_set(entries: list[dict], set_no: int, examples: dict[str, dict[str, st
                 next_index = next(i for i, value in enumerate(ordered) if value is None)
                 ordered[next_index] = item
         surface = answer["en"]
-        stem = examples[example_key(answer)]["example"].replace(surface, "( )", 1)
+        stem = re.sub(
+            re.escape(surface),
+            "( )",
+            examples[example_key(answer)]["example"],
+            count=1,
+            flags=re.IGNORECASE,
+        )
         questions.append({
             "q": q,
             "stem": stem,
