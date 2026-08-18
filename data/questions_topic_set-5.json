@@ -2,7 +2,7 @@
   "meta": {
     "grade": "英検1級テーマ別",
     "round": "set-5",
-    "section": "Topic phrases（英語例文の空所補充）",
+    "section": "Topic phrases（設問文の空所補充）",
     "source": "data/topic_phrases_1.json（ユーザー提供の表現集）",
     "counts": {
       "words": 11,
@@ -14,237 +14,237 @@
   "questions": [
     {
       "q": 1,
-      "stem": "Modern clinics rely on ( ) to share patient records with rural specialists.",
+      "stem": "The apartment complex installed refrigerators that monitored electricity use and heating systems that adjusted themselves when rooms were empty, helping residents save energy through networked ( ).",
       "choices": [
-        "information technology",
-        "the impact of technology usage on children",
-        "the space race",
-        "the limits of technology"
+        "smart appliances",
+        "electronics industry",
+        "artificial intelligence",
+        "the impact of technology usage on children"
       ],
       "answerIndex": 0,
-      "translation": "情報技術によって、その診療所は地方の専門医と患者記録を共有できる。",
+      "translation": "集合住宅は電力使用量を監視する冷蔵庫と、部屋が空くと自動調整する暖房設備を導入し、ネットワーク化されたスマート家電によって住民が節電できるようにした。",
       "topic": "テクノロジー"
     },
     {
       "q": 2,
-      "stem": "The ( ) needs rare minerals as well as highly trained engineers.",
+      "stem": "The agency planned a multi-year mission to collect samples, test life-support systems, and study the surface of a distant moon, describing the project as the next stage of ( ).",
       "choices": [
-        "the impact of technology usage on children",
-        "the trickle-down effect",
-        "rejection",
-        "electronics industry"
+        "zero-gravity environment",
+        "International Space Station",
+        "the space race",
+        "human exploration"
       ],
       "answerIndex": 3,
-      "translation": "エレクトロニクス産業には、希少鉱物だけでなく高度な訓練を受けた技術者も必要である。",
-      "topic": "テクノロジー"
+      "translation": "宇宙機関は、遠い月の表面で試料を集め、生命維持装置を試験し、調査する数年がかりの任務を計画し、これを有人探査の次の段階と説明した。",
+      "topic": "宇宙開発"
     },
     {
       "q": 3,
-      "stem": "Doctors now use ( ) to identify patterns in medical images they may overlook.",
+      "stem": "Engineers tested compact meals that remained nutritious for eighteen months, produced little waste, and could be prepared with limited water before approving the menu as ( ) for a long expedition.",
       "choices": [
-        "increased spending",
-        "the space race",
-        "artificial intelligence",
-        "organ trade"
+        "the practicality of investment in space-related technology",
+        "the limits of technology",
+        "space food",
+        "allocation of resources"
       ],
       "answerIndex": 2,
-      "translation": "人工知能は、医師が見落とす可能性のある医療画像のパターンを特定できる。",
-      "topic": "テクノロジー"
+      "translation": "技術者は、18か月間栄養を保ち、廃棄物が少なく、限られた水で準備できる小型の食事を試験してから、長期遠征用の宇宙食としてメニューを承認した。",
+      "topic": "宇宙開発"
     },
     {
       "q": 4,
-      "stem": "Scientists studied the ( ) before approving the food for wider sale.",
+      "stem": "The hospital opened a laboratory where doctors grow replacement tissue and test methods for repairing damaged organs, while regulators review the safety of this developing field of ( ).",
       "choices": [
-        "the trickle-down effect",
-        "influence on humans",
-        "astronaut",
-        "commercial satellite"
+        "stem cell",
+        "regenerative medicine",
+        "tissue",
+        "rejection"
       ],
       "answerIndex": 1,
-      "translation": "科学者たちは、その食品を広く販売する前に人体への影響を研究した。",
-      "topic": "遺伝子組み換え作物"
+      "translation": "病院は、医師が代替組織を培養し、損傷した臓器を修復する方法を試験する研究室を開設し、規制当局は発展中の再生医療の安全性を審査している。",
+      "topic": "再生医療"
     },
     {
       "q": 5,
-      "stem": "A ( ) over patented seeds can leave small farmers dependent on one supplier.",
-      "choices": [
-        "monopoly",
-        "zero-gravity environment",
-        "International Space Station",
-        "efficiency of crops"
-      ],
-      "answerIndex": 0,
-      "translation": "特許種子の独占は、小規模農家を一つの供給者に依存させる可能性がある。",
-      "topic": "遺伝子組み換え作物"
-    },
-    {
-      "q": 6,
-      "stem": "The cooperative negotiated fair contracts to prevent ( ) by large buyers.",
-      "choices": [
-        "space food",
-        "prescription",
-        "chemical-free",
-        "exploitation of farmers"
-      ],
-      "answerIndex": 3,
-      "translation": "その協同組合は、大規模な買い手による農家の搾取を防ぐため公正な契約を交渉した。",
-      "topic": "遺伝子組み換え作物"
-    },
-    {
-      "q": 7,
-      "stem": "The laboratory sealed the samples because an accidental release could create a ( ).",
-      "choices": [
-        "antibiotic",
-        "pharmaceutical drug",
-        "biohazard",
-        "product safety"
-      ],
-      "answerIndex": 2,
-      "translation": "事故による漏出がバイオハザードを生む可能性があるため、研究室は試料を封印した。",
-      "topic": "遺伝子組み換え作物"
-    },
-    {
-      "q": 8,
-      "stem": "The laboratory grew a ( ) culture under carefully controlled conditions.",
-      "choices": [
-        "ethical question",
-        "stem cell",
-        "regenerative medicine",
-        "technological innovation"
-      ],
-      "answerIndex": 1,
-      "translation": "その研究室は、厳密に管理された条件で幹細胞の培養物を育てた。",
-      "topic": "再生医療"
-    },
-    {
-      "q": 9,
-      "stem": "The surgeon removed damaged ( ) while preserving the patient's healthy nerves.",
-      "choices": [
-        "tissue",
-        "ecological destruction",
-        "smart appliances",
-        "habitable planet"
-      ],
-      "answerIndex": 0,
-      "translation": "外科医は患者の健康な神経を残しながら、損傷した組織を取り除いた。",
-      "topic": "再生医療"
-    },
-    {
-      "q": 10,
-      "stem": "The study examined whether the ( ) increased resistance to a rare disease.",
-      "choices": [
-        "doubts regarding experiments' effectiveness",
-        "human exploration",
-        "the practicality of investment in space-related technology",
-        "genetic trait"
-      ],
-      "answerIndex": 3,
-      "translation": "その研究は、その遺伝形質がまれな病気への抵抗力を高めるか調べた。",
-      "topic": "再生医療"
-    },
-    {
-      "q": 11,
-      "stem": "The offer included a modest ( ) but generous support for professional training.",
+      "stem": "The factory offered shorter shifts and retraining instead of cutting pay, because employees feared that a sudden fall in monthly income would force skilled workers to accept a ( ).",
       "choices": [
         "wage reduction",
         "work-life balance",
         "base salary",
         "minimum wage"
       ],
-      "answerIndex": 2,
-      "translation": "その提示には控えめな基本給と、手厚い職業訓練支援が含まれていた。",
+      "answerIndex": 0,
+      "translation": "工場は賃金の低下を避けるため、給与を削る代わりに勤務時間の短縮と再訓練を提案した。従業員は月収の急減で熟練労働者が地域を離れることを恐れていた。",
       "topic": "労働"
+    },
+    {
+      "q": 6,
+      "stem": "The union collected time sheets and messages from staff who routinely worked after closing without extra pay, then demanded that the company compensate them for the hidden ( ).",
+      "choices": [
+        "overtime allowance",
+        "full-time job",
+        "labor conditions",
+        "unpaid overtime"
+      ],
+      "answerIndex": 3,
+      "translation": "組合は、閉店後に追加の賃金なしで日常的に働いていた職員の勤務表やメッセージを集め、会社にサービス残業という隠れた労働を補償するよう求めた。",
+      "topic": "労働"
+    },
+    {
+      "q": 7,
+      "stem": "The ministry required companies to record long working hours and contact exhausted employees after a series of tragedies showed that relentless schedules could lead to preventable ( ).",
+      "choices": [
+        "paid leave",
+        "flexible working hours",
+        "death from overwork",
+        "early retirement"
+      ],
+      "answerIndex": 2,
+      "translation": "連続した悲劇から、過酷な勤務日程が防げたはずの死を招く可能性が分かったため、政府は企業に長時間労働を記録し、疲れ切った従業員に連絡するよう求めた。過労死を防ぐためである。",
+      "topic": "労働"
+    },
+    {
+      "q": 8,
+      "stem": "The city expanded counseling, debt advice, and workplace inspections, then observed fewer self-inflicted deaths over five years and attributed the change partly to a sustained ( ).",
+      "choices": [
+        "deregulation",
+        "decline in the suicide rate",
+        "lifelong employment system",
+        "merit system"
+      ],
+      "answerIndex": 1,
+      "translation": "市は相談支援や債務助言、職場の検査を拡充し、5年間で自ら命を絶つ人が減ったことを確認した。その変化の一因を自殺率の低下にあると考えた。",
+      "topic": "労働"
+    },
+    {
+      "q": 9,
+      "stem": "The reform charged higher rates on larger incomes and used the additional revenue for schools and clinics, while supporters argued that the design would make ( ) fairer.",
+      "choices": [
+        "progressive taxes",
+        "the trickle-down effect",
+        "inheritance",
+        "tax avoidance"
+      ],
+      "answerIndex": 0,
+      "translation": "その改革は高所得に高い税率を課し、追加の収入を学校や診療所に使った。支持者は、この制度によって累進課税がより公平になると主張した。",
+      "topic": "税"
+    },
+    {
+      "q": 10,
+      "stem": "The proposal would charge the same percentage to every taxpayer, simplifying calculations but reducing progressivity; critics opposed ( ) for that reason.",
+      "choices": [
+        "tax evasion",
+        "fairness",
+        "fall of motivation",
+        "the introduction of a flat tax rate"
+      ],
+      "answerIndex": 3,
+      "translation": "その提案はすべての納税者に同じ割合を課して計算を簡単にする一方、累進性を下げるため、批判者は均一税率の導入に反対した。",
+      "topic": "税"
+    },
+    {
+      "q": 11,
+      "stem": "The audit found that emergency procurement and infrastructure repairs had pushed public costs far above the original plan, requiring lawmakers to explain the sudden ( ) to taxpayers.",
+      "choices": [
+        "redistribution of wealth",
+        "free competition",
+        "increased spending",
+        "social polarization"
+      ],
+      "answerIndex": 2,
+      "translation": "監査で、緊急調達とインフラ修理により公的費用が当初計画を大きく上回ったことが分かり、議員は納税者に突然の支出の増加を説明する必要が生じた。",
+      "topic": "税"
     },
     {
       "q": 12,
-      "stem": "She accepted a ( ) after completing the company's six-month training course.",
+      "stem": "Remote clinics now use digital databases and secure video calls to share patient records with specialists, illustrating the value of ( ) in rural medicine.",
       "choices": [
-        "unpaid overtime",
-        "full-time job",
-        "overtime allowance",
-        "paid leave"
+        "technological innovation",
+        "information technology",
+        "habitable planet",
+        "organ trade"
       ],
       "answerIndex": 1,
-      "translation": "彼女は会社の6か月の研修課程を終えた後、フルタイムの仕事を受け入れた。",
-      "topic": "労働"
+      "translation": "遠隔地の診療所は現在、デジタルデータベースと安全なビデオ通話を使って専門医と患者記録を共有しており、農村医療における情報技術の価値を示している。",
+      "topic": "テクノロジー"
     },
     {
       "q": 13,
-      "stem": "The inspectors documented unsafe ( ) inside the crowded factory.",
+      "stem": "The training program tested candidates in isolation chambers, underwater repairs, emergency medicine, and rapid decision-making before selecting the next person to serve as an ( ).",
       "choices": [
-        "labor conditions",
-        "death from overwork",
-        "flexible working hours",
-        "deregulation"
+        "astronaut",
+        "alternative remedy",
+        "develop new drugs",
+        "influence on humans"
       ],
       "answerIndex": 0,
-      "translation": "調査官は、混雑した工場内の危険な労働条件を記録した。",
-      "topic": "労働"
+      "translation": "訓練計画は、次の宇宙飛行士を選ぶ前に、候補者を隔離室や水中修理、救急医療、素早い意思決定の試験に参加させた。",
+      "topic": "宇宙開発"
     },
     {
       "q": 14,
-      "stem": "The factory offered ( ) to reduce staff numbers without immediate dismissals.",
+      "stem": "Farmers subscribed to privately operated orbital services that supplied frequent images of soil moisture and crop growth, showing how a ( ) could support ordinary businesses.",
       "choices": [
-        "decline in the suicide rate",
-        "allocation of resources",
-        "alternative remedy",
-        "early retirement"
+        "generic drug",
+        "efficiency of crops",
+        "monopoly",
+        "commercial satellite"
       ],
       "answerIndex": 3,
-      "translation": "その工場は、即時解雇をせずに人員を減らすため早期退職を募った。",
-      "topic": "労働"
+      "translation": "農家は土壌水分や作物の成長を頻繁に映す民間運用の軌道サービスを契約し、商用衛星が一般の企業を支えられることを示した。",
+      "topic": "宇宙開発"
     },
     {
       "q": 15,
-      "stem": "The ( ) is weakening as workers change companies more frequently.",
+      "stem": "The pharmacist checked the patient's allergies, current medicines, and dosage instructions before handing over the document needed to obtain the new treatment under a doctor's ( ).",
       "choices": [
-        "tax avoidance",
-        "develop new drugs",
-        "lifelong employment system",
-        "generic drug"
+        "chemical-free",
+        "product safety",
+        "prescription",
+        "exploitation of farmers"
       ],
       "answerIndex": 2,
-      "translation": "労働者がより頻繁に会社を変えるため、終身雇用制度は弱まっている。",
-      "topic": "労働"
+      "translation": "薬剤師は、認可された薬局で新しい治療薬を受け取るために必要な処方箋を渡す前に、患者のアレルギーや服用中の薬、用量の指示を確認した。",
+      "topic": "医療"
     },
     {
       "q": 16,
-      "stem": "The ( ) rewarded sales results but made cooperation between departments harder.",
+      "stem": "The doctor explained that the ( ) would work against the bacterial infection but not a virus, and urged the patient to finish the prescribed course instead of saving tablets.",
       "choices": [
-        "tax evasion",
-        "merit system",
+        "biohazard",
+        "antibiotic",
         "solution to world hunger",
         "animal rights"
       ],
       "answerIndex": 1,
-      "translation": "能力給制度は営業成績を評価したが、部署間の協力を難しくした。",
-      "topic": "労働"
+      "translation": "医師は、その抗生物質は細菌感染には効くがウイルスには効かないと説明し、錠剤を残すのではなく処方された期間を飲み切るよう患者に勧めた。",
+      "topic": "医療"
     },
     {
       "q": 17,
-      "stem": "The siblings used their ( ) to restore the family home and start a clinic.",
+      "stem": "Regulators approved the treatment only after trials measured side effects, dosage, and benefits, allowing hospitals to purchase the new medicine as a carefully monitored ( ).",
       "choices": [
-        "inheritance",
-        "fall of motivation",
-        "progressive taxes",
-        "fairness"
+        "pharmaceutical drug",
+        "ethical question",
+        "the impact of technology usage on children",
+        "the space race"
       ],
       "answerIndex": 0,
-      "translation": "兄弟は遺産相続で得た財産を使い、実家を修復して診療所を始めた。",
-      "topic": "税"
+      "translation": "規制当局は、副作用や用量、効果を試験で測定した後にだけ治療薬を承認し、病院が新しい薬剤を慎重に監視される医薬品として購入できるようにした。",
+      "topic": "医療"
     },
     {
       "q": 18,
-      "stem": "The reform involved ( ), which simplified filing but reduced progressivity.",
+      "stem": "Scientists compared families across generations to determine whether resistance to the disease was an inherited ( ) or the result of improved living conditions.",
       "choices": [
-        "social polarization",
-        "redistribution of wealth",
-        "free competition",
-        "the introduction of a flat tax rate"
+        "ecological destruction",
+        "doubts regarding experiments' effectiveness",
+        "the trickle-down effect",
+        "genetic trait"
       ],
       "answerIndex": 3,
-      "translation": "均一税率の導入は申告を簡単にしたが、制度の累進性を弱めた。",
-      "topic": "税"
+      "translation": "科学者たちは世代をまたいで家族を比較し、その病気への抵抗力が遺伝した遺伝形質なのか、生活環境の改善の結果なのかを判断しようとした。",
+      "topic": "再生医療"
     }
   ]
 }

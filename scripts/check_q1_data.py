@@ -22,6 +22,7 @@ EXPECTED_IDS = {
     "eiken1-mock-5",
     *(f"eikentopic-set-{set_no}" for set_no in range(1, 6)),
 }
+TRANSLATION_BLANK_RE = re.compile(r"(?:\(\s*\)|（\s*）)")
 
 
 def load_json(path: Path) -> dict:
@@ -108,7 +109,13 @@ def check_dataset(dataset_id: str, meta: dict) -> dict[str, list[dict]]:
                 raise ValueError(f"{dataset_id}: axis が不正です")
             if not item.get("example") or not item.get("exampleTranslation"):
                 raise ValueError(f"{dataset_id}: 例文または例文訳がありません")
-    topic_rows: dict[str, list[dict]] = {"questions": [], "items": []}
+    topic_rows: dict[str, list[dict]] = {
+        "questions": [],
+        "items": [],
+        "translation_warnings": [],
+        "mixed_questions": [],
+    }
+    topic_question_surfaces: Counter[str] = Counter()
     if not questions or not items:
         raise ValueError(f"{dataset_id}: 設問または語彙が空です")
 
@@ -155,13 +162,39 @@ def check_dataset(dataset_id: str, meta: dict) -> dict[str, list[dict]]:
             if any(item["axis"] == correct_axis for item in q_items if not item.get("is_answer")):
                 raise ValueError(f"{dataset_id}: Q{q}の正答と誤答のaxisが一致しています")
             stem = str(question.get("stem", ""))
-            if stem.count("( )") != 1 or surface(correct_items[0]) in stem:
-                raise ValueError(f"{dataset_id}: Q{q}の例文空所が不正です")
-            if not question.get("translation"):
-                raise ValueError(f"{dataset_id}: Q{q}の例文訳がありません")
+            if (
+                stem.count("( )") != 1
+                or re.search(re.escape(surface(correct_items[0])), stem, flags=re.IGNORECASE)
+            ):
+                raise ValueError(f"{dataset_id}: Q{q}の設問文空所が不正です")
+            if len(re.findall(r"[A-Za-z]+(?:[-'][A-Za-z]+)*", stem)) < 15:
+                raise ValueError(f"{dataset_id}: Q{q}の設問文が15語未満です")
+            question_translation = str(question.get("translation", ""))
+            if not question_translation:
+                raise ValueError(f"{dataset_id}: Q{q}の設問文訳がありません")
+            if TRANSLATION_BLANK_RE.search(question_translation):
+                raise ValueError(f"{dataset_id}: Q{q}の設問文訳に空所記号があります")
+            topic_question_surfaces.update(item_surfaces)
+            topics = {str(item.get("topic", "")) for item in q_items}
+            if len(topics) > 1:
+                topic_rows["mixed_questions"].append({
+                    "owner": f"{dataset_id}/Q{q}",
+                    "topics": sorted(topics),
+                })
+            correct_meaning = str(correct_items[0]["meaning"])
+            if correct_meaning not in question_translation:
+                topic_rows["translation_warnings"].append({
+                    "owner": f"{dataset_id}/Q{q}",
+                    "meaning": correct_meaning,
+                    "translation": question_translation,
+                })
             topic_rows["questions"].append({
                 "owner": f"{dataset_id}/Q{q}",
                 "stem": text_skeleton(stem),
+                "example_stems": [
+                    example_skeleton(str(item.get("example", "")), surface(item))
+                    for item in q_items
+                ],
             })
             for item in q_items:
                 item_surface = surface(item)
@@ -180,14 +213,29 @@ def check_dataset(dataset_id: str, meta: dict) -> dict[str, list[dict]]:
                     "surface": item_surface,
                 })
 
+    repeated_surfaces = {
+        item_surface: count
+        for item_surface, count in topic_question_surfaces.items()
+        if count >= 3
+    }
+    if repeated_surfaces:
+        repeated = ", ".join(
+            f"{item_surface}×{count}"
+            for item_surface, count in sorted(repeated_surfaces.items())
+        )
+        raise ValueError(f"{dataset_id}: 同じ語句が3問以上に登場します: {repeated}")
+
     print(f"{dataset_id}: {len(questions)} questions / {len(items)} words OK")
     return topic_rows
 
 
 def check_topic_rows(topic_rows: dict[str, list[dict]]) -> None:
+    for row in topic_rows["questions"]:
+        if row["stem"] in row["example_stems"]:
+            raise ValueError(f"テーマ別: 設問文が語句例文と同一です: {row['owner']}")
     check_unique(
         [(row["stem"], row["owner"]) for row in topic_rows["questions"]],
-        "設問例文の骨格",
+        "設問文の骨格",
     )
     unique_items = {row["key"]: row for row in topic_rows["items"]}
     check_unique(
@@ -213,12 +261,27 @@ def main() -> None:
     q1 = manifest.get("q1", {})
     if set(q1) != EXPECTED_IDS:
         raise ValueError(f"manifest.q1 のセットが不一致です: {sorted(q1)}")
-    topic_rows: dict[str, list[dict]] = {"questions": [], "items": []}
+    topic_rows: dict[str, list[dict]] = {
+        "questions": [],
+        "items": [],
+        "translation_warnings": [],
+        "mixed_questions": [],
+    }
     for dataset_id, meta in q1.items():
         checked = check_dataset(dataset_id, meta)
         topic_rows["questions"].extend(checked["questions"])
         topic_rows["items"].extend(checked["items"])
+        topic_rows["translation_warnings"].extend(checked["translation_warnings"])
+        topic_rows["mixed_questions"].extend(checked["mixed_questions"])
     check_topic_rows(topic_rows)
+    if topic_rows["translation_warnings"]:
+        print(f"WARN: 設問文訳に正答meaningを含まない設問 {len(topic_rows['translation_warnings'])}件")
+        for warning in topic_rows["translation_warnings"]:
+            print(f"  {warning['owner']}: {warning['meaning']}")
+    if topic_rows["mixed_questions"]:
+        print(f"WARN: 複数トピックの設問 {len(topic_rows['mixed_questions'])}件")
+        for warning in topic_rows["mixed_questions"]:
+            print(f"  {warning['owner']}: {' / '.join(warning['topics'])}")
     print("Q1 data: OK")
 
 

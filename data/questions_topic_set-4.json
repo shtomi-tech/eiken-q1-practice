@@ -2,7 +2,7 @@
   "meta": {
     "grade": "英検1級テーマ別",
     "round": "set-4",
-    "section": "Topic phrases（英語例文の空所補充）",
+    "section": "Topic phrases（設問文の空所補充）",
     "source": "data/topic_phrases_1.json（ユーザー提供の表現集）",
     "counts": {
       "words": 4,
@@ -14,210 +14,210 @@
   "questions": [
     {
       "q": 1,
-      "stem": "The ( ) has made satellite monitoring of weapons sites more precise.",
+      "stem": "Radar stations and interceptor systems were placed around the capital so that incoming rockets could be detected and destroyed, strengthening the country's ( ).",
       "choices": [
-        "hydrogen bomb",
         "preemptive strike",
-        "proliferation of nuclear weapons",
-        "development of technology"
+        "religious conflict",
+        "a vicious cycle of violence",
+        "missile defense"
       ],
       "answerIndex": 3,
-      "translation": "技術の発展により、衛星による兵器施設の監視はより正確になった。",
-      "topic": "核兵器"
-    },
-    {
-      "q": 2,
-      "stem": "The government invested in ( ) to protect the capital from incoming attacks.",
-      "choices": [
-        "development of technology",
-        "all-out war",
-        "missile defense",
-        "weapons of mass destruction"
-      ],
-      "answerIndex": 2,
-      "translation": "政府は、飛来する攻撃から首都を守るためミサイル防衛に投資した。",
+      "translation": "飛来するロケットを探知して破壊できるよう、首都の周囲にレーダー基地と迎撃システムが置かれ、国のミサイル防衛が強化された。",
       "topic": "戦争と紛争"
     },
     {
-      "q": 3,
-      "stem": "The generals described the submarine fleet as a ( ) rather than an offensive force.",
+      "q": 2,
+      "stem": "The museum displayed a damaged shelter and survivor testimonies to explain why a device based on nuclear fusion caused unprecedented destruction and intensified public opposition to the ( ).",
       "choices": [
-        "development of technology",
+        "proliferation of nuclear weapons",
         "deterrent",
-        "Treaty on the Non-Proliferation of Nuclear Weapons",
-        "mutual assured destruction"
+        "hydrogen bomb",
+        "Treaty on the Non-Proliferation of Nuclear Weapons"
+      ],
+      "answerIndex": 2,
+      "translation": "博物館は、核融合を利用した兵器が前例のない破壊をもたらした理由を説明するため、損傷した避難所と生存者の証言を展示し、水爆への世論の反対を強めた。",
+      "topic": "核兵器"
+    },
+    {
+      "q": 3,
+      "stem": "Disarmament advocates imagine ( ) in which nations settle disputes through inspections, mediation, and enforceable international agreements without fear of sudden annihilation.",
+      "choices": [
+        "mutual assured destruction",
+        "a world without nuclear weapons",
+        "secret development",
+        "development of technology"
       ],
       "answerIndex": 1,
-      "translation": "将軍たちは、その潜水艦隊を攻撃部隊ではなく抑止力だと説明した。",
+      "translation": "軍縮の支持者たちは、各国が査察、仲介、強制力のある国際協定を通じて紛争を解決する核なき世界を思い描いている。",
       "topic": "核兵器"
     },
     {
       "q": 4,
-      "stem": "The proposal describes ( ) that would still need peaceful dispute institutions.",
+      "stem": "The government reviewed evacuation plans and diplomatic channels after fighting broke out between two neighboring states, warning that a distant crisis could develop into a wider ( ) affecting trade and security.",
       "choices": [
-        "a world without nuclear weapons",
-        "development of technology",
-        "secret development",
-        "out of control"
+        "international conflict",
+        "breach of the Constitution",
+        "popular sentiment",
+        "protection of the people"
       ],
       "answerIndex": 0,
-      "translation": "核なき世界にも、紛争を平和的に解決する制度は必要だろう。",
-      "topic": "核兵器"
+      "translation": "近隣2国の間で戦闘が始まった後、政府は避難計画と外交ルートを見直し、遠い危機が貿易と安全保障に影響する広範な国際紛争へ発展する可能性があると警告した。",
+      "topic": "自衛隊"
     },
     {
       "q": 5,
-      "stem": "The ( ) supports joint training for disaster relief and maritime security.",
+      "stem": "Fewer customers visited local businesses during the recession, factories reduced output, and unemployment increased, all signs of ( ) in the region.",
       "choices": [
-        "international conflict",
-        "nuclear weapon",
-        "protection of the people",
-        "U.S.-Japan alliance"
+        "clean energy",
+        "development of biofuel",
+        "doubts about the effectiveness of recycling",
+        "lower economic activity"
       ],
       "answerIndex": 3,
-      "translation": "日米同盟は、災害救援と海上安全保障の共同訓練を支えている。",
-      "topic": "自衛隊"
+      "translation": "景気後退の間、地元の店を訪れる客が減り、工場は生産量を減らし、失業が増えた。これらは地域の経済活動の低下の兆候である。",
+      "topic": "化石燃料と再生可能エネルギー"
     },
     {
       "q": 6,
-      "stem": "Better evacuation warnings reduced ( ) during the coastal earthquake.",
+      "stem": "The utility diversified its power sources, upgraded transmission lines, and stored emergency fuel so hospitals could continue operating during storms and maintain a ( ) across the region.",
       "choices": [
-        "biological weapon",
-        "chemical weapon",
-        "loss of life",
-        "self-defense"
+        "risks of nuclear power",
+        "nuclear material",
+        "reliable supply of electricity",
+        "spent nuclear fuel"
       ],
       "answerIndex": 2,
-      "translation": "避難警報を改善したことで、沿岸地震による人命の犠牲が減った。",
-      "topic": "自衛隊"
+      "translation": "電力会社は電源を多様化し、送電線を改良し、緊急燃料を備蓄した。嵐の間も病院が運営を続け、地域全体で電力の安定供給を維持できるようにするためである。",
+      "topic": "原子力発電"
     },
     {
       "q": 7,
-      "stem": "Opponents argued that the emergency order amounted to a ( ).",
+      "stem": "Scientists found that clearing one forest removed nesting sites for birds, food plants for insects, and shelter for small mammals, showing how a single project could reduce local ( ).",
       "choices": [
-        "religious conflict",
-        "breach of the Constitution",
-        "a vicious cycle of violence",
-        "low-energy society"
+        "acid rain",
+        "biological diversity",
+        "desertification",
+        "world natural heritage"
       ],
       "answerIndex": 1,
-      "translation": "反対派は、その緊急命令が憲法違反に当たると主張した。",
-      "topic": "自衛隊"
+      "translation": "科学者は、1つの森林を伐採すると鳥の営巣地や昆虫の食用植物、小型哺乳類の隠れ場所が失われることを発見し、1つの事業が地域の生物多様性を減らしうると示した。",
+      "topic": "森林破壊"
     },
     {
       "q": 8,
-      "stem": "Recent ( ) shifted after residents saw rescue teams working through the night.",
+      "stem": "Joint exercises for disaster relief and maritime surveillance rely on close coordination between Tokyo and Washington, showing the practical value of the ( ).",
       "choices": [
-        "popular sentiment",
-        "air bombing",
-        "accidental bombing",
-        "clean energy"
+        "U.S.-Japan alliance",
+        "all-out war",
+        "weapons of mass destruction",
+        "self-defense"
       ],
       "answerIndex": 0,
-      "translation": "住民が救助隊の夜通しの活動を見た後、国民感情は変化した。",
+      "translation": "災害救援と海上監視の共同訓練は東京とワシントンの緊密な連携に依存しており、日米同盟の実際的な価値を示している。",
       "topic": "自衛隊"
     },
     {
       "q": 9,
-      "stem": "In winter, ( ) remains important when wind and solar output suddenly falls.",
+      "stem": "Improved evacuation maps and an earlier warning system helped residents leave the coast before the tsunami, greatly reducing the ( ) among residents in low-lying neighborhoods.",
       "choices": [
-        "doubts about the effectiveness of recycling",
-        "cyber war",
-        "development of biofuel",
-        "thermal power generation"
+        "nuclear weapon",
+        "biological weapon",
+        "low-energy society",
+        "loss of life"
       ],
       "answerIndex": 3,
-      "translation": "風力と太陽光の出力が急に落ちると、火力発電は依然として重要である。",
-      "topic": "化石燃料と再生可能エネルギー"
+      "translation": "改善された避難地図と早期警報システムにより、住民は津波の前に海岸を離れることができ、人命の犠牲が大幅に減少した。",
+      "topic": "自衛隊"
     },
     {
       "q": 10,
-      "stem": "The ( ) threatens industries that depend on cheap raw materials.",
+      "stem": "When wind farms produced little electricity during a winter cold spell, utilities increased coal and gas output to maintain ( ) across the grid.",
       "choices": [
-        "terror networks",
-        "increase of terrorism or war",
-        "exhaustion of natural resources",
+        "chemical weapon",
+        "air bombing",
+        "thermal power generation",
         "fuel cell"
       ],
       "answerIndex": 2,
-      "translation": "天然資源の枯渇は、安価な原材料に依存する産業を脅かしている。",
+      "translation": "冬の寒波の間に風力発電所の発電量が少なくなると、電力会社は送電網全体で火力発電を維持するため石炭とガスの発電量を増やした。",
       "topic": "化石燃料と再生可能エネルギー"
     },
     {
       "q": 11,
-      "stem": "The region experienced ( ), reduced electricity demand, and increased unemployment.",
+      "stem": "Manufacturers faced rising costs after easily accessible mineral deposits were depleted, warning that the continued ( ) could disrupt entire supply chains.",
       "choices": [
-        "prevention of terrorism",
-        "lower economic activity",
-        "state sponsor of terrorism",
+        "accidental bombing",
+        "exhaustion of natural resources",
+        "cyber war",
         "development of alternative energy"
       ],
       "answerIndex": 1,
-      "translation": "経済活動の低下は電力需要を減らしたが、失業も増加させた。",
+      "translation": "入手しやすい鉱床が枯渇した後、製造業者はコスト上昇に直面し、天然資源の枯渇が続けば供給網全体が混乱すると警告した。",
       "topic": "化石燃料と再生可能エネルギー"
     },
     {
       "q": 12,
-      "stem": "The ( ) stopped operating while engineers checked its cooling system.",
+      "stem": "The factory replaced old boilers, insulated its buildings, and scheduled heavy machinery outside peak hours, reducing fuel use without cutting production as part of a long-term ( ).",
       "choices": [
-        "nuclear power plant",
-        "risks of nuclear power",
-        "radioactive waste",
-        "reliable supply of electricity"
+        "energy conservation",
+        "out of control",
+        "terror networks",
+        "nuclear power plant"
       ],
       "answerIndex": 0,
-      "translation": "技術者が冷却システムを点検する間、その原子力発電所は運転を停止した。",
-      "topic": "原子力発電"
+      "translation": "工場は古いボイラーを交換し、建物を断熱し、大型機械をピーク時間外に動かした。長期的な省エネルギーの一環として、生産を削らず燃料使用量を減らしたのである。",
+      "topic": "化石燃料と再生可能エネルギー"
     },
     {
       "q": 13,
-      "stem": "The agency records every shipment of ( ) to prevent unauthorized diversion.",
+      "stem": "The council restricted construction near wetlands, restored native plants, and required developers to protect waterways, presenting the package as a practical plan for the ( ).",
       "choices": [
-        "nuclear meltdown",
-        "radiation leakage",
-        "energy conservation",
-        "nuclear material"
+        "increase of terrorism or war",
+        "prevention of terrorism",
+        "carbon footprint",
+        "protection of the environment"
       ],
       "answerIndex": 3,
-      "translation": "その機関は、無許可の転用を防ぐため核物質の輸送をすべて記録する。",
-      "topic": "原子力発電"
+      "translation": "議会は湿地周辺の建設を制限し、在来植物を復元し、開発業者に水路の保護を求めた。これらを環境保護のための実際的な計画として示したのである。",
+      "topic": "森林破壊"
     },
     {
       "q": 14,
-      "stem": "Engineers must isolate ( ) while they design a permanent repository.",
+      "stem": "Before approving the highway, officials measured noise, groundwater, wildlife movement, and tree loss, then required the company to revise its design on the basis of a detailed ( ).",
       "choices": [
-        "military utilization",
+        "state sponsor of terrorism",
         "War Against Terrorism",
-        "spent nuclear fuel",
-        "protection of the environment"
+        "environmental assessment",
+        "preemptive strike"
       ],
       "answerIndex": 2,
-      "translation": "使用済み核燃料は、技術者が恒久的な処分場を設計する間、隔離しておく必要がある。",
-      "topic": "原子力発電"
+      "translation": "高速道路を承認する前に、当局は騒音や地下水、野生動物の移動、樹木の減少を測定し、詳細な環境アセスメントに基づいて会社に設計の修正を求めた。",
+      "topic": "森林破壊"
     },
     {
       "q": 15,
-      "stem": "The island was designated ( ) because its coral ecosystem remained intact.",
+      "stem": "The village limited visitor numbers, hired local guides, and invested entrance fees in forest restoration, hoping that carefully managed ( ) would support residents without damaging wildlife habitats.",
       "choices": [
-        "acid rain",
-        "world natural heritage",
-        "biological diversity",
-        "environmental assessment"
+        "radioactive waste",
+        "ecotourism",
+        "nuclear meltdown",
+        "hydrogen bomb"
       ],
       "answerIndex": 1,
-      "translation": "その島はサンゴの生態系が手つかずだったため世界自然遺産に指定された。",
+      "translation": "村は訪問者数を制限し、地域の案内人を雇い、入場料を森林の復元に投資した。野生生物の生息地を壊さずに住民を支える、適切に管理されたエコツアーを目指したのである。",
       "topic": "森林破壊"
     },
     {
       "q": 16,
-      "stem": "The factory reduced its ( ) by replacing diesel trucks with electric vehicles.",
+      "stem": "The airline calculated emissions from a new route and funded verified wetland restoration elsewhere, explaining that the project would not erase pollution but could provide a measurable ( ).",
       "choices": [
-        "carbon footprint",
-        "desertification",
-        "ecotourism",
-        "carbon offset"
+        "carbon offset",
+        "radiation leakage",
+        "military utilization",
+        "U.S.-Japan alliance"
       ],
       "answerIndex": 0,
-      "translation": "その工場はディーゼルトラックを電気自動車に替え、二酸化炭素排出量を減らした。",
+      "translation": "航空会社は新路線の排出量を計算し、別の場所で検証済みの湿地復元に資金を出した。汚染を消すものではないが、測定可能なカーボンオフセットになると説明した。",
       "topic": "森林破壊"
     }
   ]

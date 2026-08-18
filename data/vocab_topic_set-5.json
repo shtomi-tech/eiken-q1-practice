@@ -2,7 +2,7 @@
   "meta": {
     "grade": "英検1級テーマ別",
     "round": "set-5",
-    "section": "Topic phrases（英語例文の空所補充）",
+    "section": "Topic phrases（設問文の空所補充）",
     "source": "data/topic_phrases_1.json（ユーザー提供の表現集）",
     "counts": {
       "words": 11,
@@ -13,7 +13,18 @@
   },
   "words": [
     {
-      "q": 2,
+      "q": 4,
+      "is_answer": false,
+      "meaning": "組織",
+      "example": "The surgeon removed damaged tissue while preserving the patient's healthy nerves.",
+      "exampleTranslation": "外科医は患者の健康な神経を残しながら、損傷した組織を取り除いた。",
+      "axis": "concept",
+      "topic": "再生医療",
+      "pos": "名詞",
+      "word": "tissue"
+    },
+    {
+      "q": 4,
       "is_answer": false,
       "meaning": "拒絶反応",
       "example": "Doctors monitored the transplant patient closely for signs of rejection during the first month.",
@@ -25,85 +36,7 @@
       "word": "rejection"
     },
     {
-      "q": 4,
-      "is_answer": false,
-      "meaning": "宇宙飛行士",
-      "example": "The astronaut repaired the antenna during a carefully rehearsed spacewalk.",
-      "exampleTranslation": "その宇宙飛行士は、入念に練習した宇宙遊泳中にアンテナを修理した。",
-      "axis": "concept",
-      "topic": "宇宙開発",
-      "pos": "名詞",
-      "word": "astronaut"
-    },
-    {
-      "q": 5,
-      "is_answer": true,
-      "meaning": "独占",
-      "example": "A monopoly over patented seeds can leave small farmers dependent on one supplier.",
-      "exampleTranslation": "特許種子の独占は、小規模農家を一つの供給者に依存させる可能性がある。",
-      "axis": "problem",
-      "topic": "遺伝子組み換え作物",
-      "pos": "名詞",
-      "word": "monopoly"
-    },
-    {
-      "q": 6,
-      "is_answer": false,
-      "meaning": "処方箋",
-      "example": "The pharmacist refused to fill the prescription because the dosage was unclear.",
-      "exampleTranslation": "薬剤師は用量が不明確だったため、処方箋に従った薬を調剤しなかった。",
-      "axis": "concept",
-      "topic": "医療",
-      "pos": "名詞",
-      "etymology": "prescribe: ～を処方する",
-      "word": "prescription"
-    },
-    {
-      "q": 6,
-      "is_answer": false,
-      "meaning": "無農薬の",
-      "example": "The farmer advertised chemical-free vegetables but still tested the soil for contamination.",
-      "exampleTranslation": "その農家は無農薬の野菜を宣伝したが、土壌の汚染検査も行った。",
-      "axis": "solution",
-      "topic": "遺伝子組み換え作物",
-      "pos": "形容詞句",
-      "word": "chemical-free"
-    },
-    {
-      "q": 7,
-      "is_answer": true,
-      "meaning": "バイオハザード",
-      "example": "The laboratory sealed the samples because an accidental release could create a biohazard.",
-      "exampleTranslation": "事故による漏出がバイオハザードを生む可能性があるため、研究室は試料を封印した。",
-      "axis": "problem",
-      "topic": "遺伝子組み換え作物",
-      "pos": "名詞",
-      "word": "biohazard"
-    },
-    {
-      "q": 7,
-      "is_answer": false,
-      "meaning": "抗生物質",
-      "example": "The doctor prescribed an antibiotic only after laboratory tests confirmed a bacterial infection.",
-      "exampleTranslation": "医師は、検査で細菌感染を確認してから抗生物質を処方した。",
-      "axis": "concept",
-      "topic": "医療",
-      "pos": "名詞",
-      "word": "antibiotic"
-    },
-    {
-      "q": 9,
-      "is_answer": true,
-      "meaning": "組織",
-      "example": "The surgeon removed damaged tissue while preserving the patient's healthy nerves.",
-      "exampleTranslation": "外科医は患者の健康な神経を残しながら、損傷した組織を取り除いた。",
-      "axis": "concept",
-      "topic": "再生医療",
-      "pos": "名詞",
-      "word": "tissue"
-    },
-    {
-      "q": 13,
+      "q": 8,
       "is_answer": false,
       "meaning": "規制緩和",
       "example": "Deregulation allowed smaller firms to enter the delivery market with new business models.",
@@ -114,8 +47,8 @@
       "word": "deregulation"
     },
     {
-      "q": 17,
-      "is_answer": true,
+      "q": 9,
+      "is_answer": false,
       "meaning": "遺産相続",
       "example": "The siblings used their inheritance to restore the family home and start a clinic.",
       "exampleTranslation": "兄弟は遺産相続で得た財産を使い、実家を修復して診療所を始めた。",
@@ -125,7 +58,7 @@
       "word": "inheritance"
     },
     {
-      "q": 17,
+      "q": 10,
       "is_answer": false,
       "meaning": "公平性",
       "example": "The committee debated fairness when deciding which households should receive energy subsidies.",
@@ -134,56 +67,90 @@
       "topic": "税",
       "pos": "名詞",
       "word": "fairness"
+    },
+    {
+      "q": 13,
+      "is_answer": true,
+      "meaning": "宇宙飛行士",
+      "example": "The astronaut repaired the antenna during a carefully rehearsed spacewalk.",
+      "exampleTranslation": "その宇宙飛行士は、入念に練習した宇宙遊泳中にアンテナを修理した。",
+      "axis": "concept",
+      "topic": "宇宙開発",
+      "pos": "名詞",
+      "word": "astronaut"
+    },
+    {
+      "q": 14,
+      "is_answer": false,
+      "meaning": "独占",
+      "example": "A monopoly over patented seeds can leave small farmers dependent on one supplier.",
+      "exampleTranslation": "特許種子の独占は、小規模農家を一つの供給者に依存させる可能性がある。",
+      "axis": "problem",
+      "topic": "遺伝子組み換え作物",
+      "pos": "名詞",
+      "word": "monopoly"
+    },
+    {
+      "q": 15,
+      "is_answer": true,
+      "meaning": "処方箋",
+      "example": "The pharmacist refused to fill the prescription because the dosage was unclear.",
+      "exampleTranslation": "薬剤師は用量が不明確だったため、処方箋に従った薬を調剤しなかった。",
+      "axis": "concept",
+      "topic": "医療",
+      "pos": "名詞",
+      "etymology": "prescribe: ～を処方する",
+      "word": "prescription"
+    },
+    {
+      "q": 15,
+      "is_answer": false,
+      "meaning": "無農薬の",
+      "example": "The farmer advertised chemical-free vegetables but still tested the soil for contamination.",
+      "exampleTranslation": "その農家は無農薬の野菜を宣伝したが、土壌の汚染検査も行った。",
+      "axis": "solution",
+      "topic": "遺伝子組み換え作物",
+      "pos": "形容詞句",
+      "word": "chemical-free"
+    },
+    {
+      "q": 16,
+      "is_answer": true,
+      "meaning": "抗生物質",
+      "example": "The doctor prescribed an antibiotic only after laboratory tests confirmed a bacterial infection.",
+      "exampleTranslation": "医師は、検査で細菌感染を確認してから抗生物質を処方した。",
+      "axis": "concept",
+      "topic": "医療",
+      "pos": "名詞",
+      "word": "antibiotic"
+    },
+    {
+      "q": 16,
+      "is_answer": false,
+      "meaning": "バイオハザード",
+      "example": "The laboratory sealed the samples because an accidental release could create a biohazard.",
+      "exampleTranslation": "事故による漏出がバイオハザードを生む可能性があるため、研究室は試料を封印した。",
+      "axis": "problem",
+      "topic": "遺伝子組み換え作物",
+      "pos": "名詞",
+      "word": "biohazard"
     }
   ],
   "idioms": [
     {
       "q": 1,
       "is_answer": true,
-      "meaning": "情報技術（略：IT）",
-      "example": "Modern clinics rely on information technology to share patient records with rural specialists.",
-      "exampleTranslation": "情報技術によって、その診療所は地方の専門医と患者記録を共有できる。",
-      "axis": "concept",
+      "meaning": "スマート家電",
+      "example": "Smart appliances reduce household electricity use by adjusting themselves during peak hours.",
+      "exampleTranslation": "スマート家電は、電力のピーク時間に自動調整して家庭の電力使用量を減らす。",
+      "axis": "solution",
       "topic": "テクノロジー",
       "pos": "熟語",
-      "phrase": "information technology"
+      "phrase": "smart appliances"
     },
     {
       "q": 1,
       "is_answer": false,
-      "meaning": "テクノロジー利用の子どもへの影響",
-      "example": "Researchers measured the impact of technology usage on children by tracking sleep and attention.",
-      "exampleTranslation": "研究者は、睡眠と集中力を追跡してテクノロジー利用の子どもへの影響を測定した。",
-      "axis": "cause",
-      "topic": "テクノロジー",
-      "pos": "熟語",
-      "phrase": "the impact of technology usage on children"
-    },
-    {
-      "q": 1,
-      "is_answer": false,
-      "meaning": "宇宙開発競争",
-      "example": "The space race accelerated research into rockets, communications, and materials science.",
-      "exampleTranslation": "宇宙開発競争は、ロケットや通信、材料科学の研究を加速させた。",
-      "axis": "cause",
-      "topic": "宇宙開発",
-      "pos": "熟語",
-      "phrase": "the space race"
-    },
-    {
-      "q": 1,
-      "is_answer": false,
-      "meaning": "技術の限界",
-      "example": "The failed launch reminded engineers of the limits of technology in harsh environments.",
-      "exampleTranslation": "打ち上げの失敗は、過酷な環境における技術の限界を技術者に思い出させた。",
-      "axis": "problem",
-      "topic": "宇宙開発",
-      "pos": "熟語",
-      "phrase": "the limits of technology"
-    },
-    {
-      "q": 2,
-      "is_answer": true,
       "meaning": "エレクトロニクス産業",
       "example": "The electronics industry needs rare minerals as well as highly trained engineers.",
       "exampleTranslation": "エレクトロニクス産業には、希少鉱物だけでなく高度な訓練を受けた技術者も必要である。",
@@ -193,7 +160,18 @@
       "phrase": "electronics industry"
     },
     {
-      "q": 2,
+      "q": 1,
+      "is_answer": false,
+      "meaning": "人工知能（略：AI）",
+      "example": "Doctors now use artificial intelligence to identify patterns in medical images they may overlook.",
+      "exampleTranslation": "人工知能は、医師が見落とす可能性のある医療画像のパターンを特定できる。",
+      "axis": "concept",
+      "topic": "テクノロジー",
+      "pos": "熟語",
+      "phrase": "artificial intelligence"
+    },
+    {
+      "q": 1,
       "is_answer": false,
       "meaning": "テクノロジー利用の子どもへの影響",
       "example": "Researchers measured the impact of technology usage on children by tracking sleep and attention.",
@@ -205,94 +183,17 @@
     },
     {
       "q": 2,
-      "is_answer": false,
-      "meaning": "トリクルダウン効果",
-      "example": "The minister claimed that corporate tax cuts would produce the trickle-down effect.",
-      "exampleTranslation": "大臣は、法人税減税がトリクルダウン効果を生むと主張した。",
-      "axis": "cause",
-      "topic": "税",
-      "pos": "熟語",
-      "phrase": "the trickle-down effect"
-    },
-    {
-      "q": 3,
       "is_answer": true,
-      "meaning": "人工知能（略：AI）",
-      "example": "Doctors now use artificial intelligence to identify patterns in medical images they may overlook.",
-      "exampleTranslation": "人工知能は、医師が見落とす可能性のある医療画像のパターンを特定できる。",
-      "axis": "concept",
-      "topic": "テクノロジー",
-      "pos": "熟語",
-      "phrase": "artificial intelligence"
-    },
-    {
-      "q": 3,
-      "is_answer": false,
-      "meaning": "支出の増加",
-      "example": "Increased spending on flood barriers protected the city but widened the annual deficit.",
-      "exampleTranslation": "洪水防壁への支出の増加は市を守ったが、年間赤字を広げた。",
-      "axis": "cause",
-      "topic": "税",
-      "pos": "熟語",
-      "phrase": "increased spending"
-    },
-    {
-      "q": 3,
-      "is_answer": false,
-      "meaning": "宇宙開発競争",
-      "example": "The space race accelerated research into rockets, communications, and materials science.",
-      "exampleTranslation": "宇宙開発競争は、ロケットや通信、材料科学の研究を加速させた。",
-      "axis": "cause",
+      "meaning": "有人探査",
+      "example": "Human exploration of Mars will require radiation shelters and reliable food supplies.",
+      "exampleTranslation": "火星の有人探査には、放射線シェルターと安定した食料供給が必要になる。",
+      "axis": "solution",
       "topic": "宇宙開発",
       "pos": "熟語",
-      "phrase": "the space race"
+      "phrase": "human exploration"
     },
     {
-      "q": 3,
-      "is_answer": false,
-      "meaning": "臓器売買",
-      "example": "Strict international rules are needed to prevent organ trade from exploiting desperate patients.",
-      "exampleTranslation": "絶望した患者が搾取されるのを防ぐには、臓器売買に対する厳しい国際規則が必要である。",
-      "axis": "problem",
-      "topic": "再生医療",
-      "pos": "熟語",
-      "phrase": "organ trade"
-    },
-    {
-      "q": 4,
-      "is_answer": true,
-      "meaning": "人体への影響",
-      "example": "Scientists studied the influence on humans before approving the food for wider sale.",
-      "exampleTranslation": "科学者たちは、その食品を広く販売する前に人体への影響を研究した。",
-      "axis": "problem",
-      "topic": "遺伝子組み換え作物",
-      "pos": "熟語",
-      "phrase": "influence on humans"
-    },
-    {
-      "q": 4,
-      "is_answer": false,
-      "meaning": "トリクルダウン効果",
-      "example": "The minister claimed that corporate tax cuts would produce the trickle-down effect.",
-      "exampleTranslation": "大臣は、法人税減税がトリクルダウン効果を生むと主張した。",
-      "axis": "cause",
-      "topic": "税",
-      "pos": "熟語",
-      "phrase": "the trickle-down effect"
-    },
-    {
-      "q": 4,
-      "is_answer": false,
-      "meaning": "商用衛星",
-      "example": "A commercial satellite provided farmers with updated images of damaged fields.",
-      "exampleTranslation": "商用衛星は、被害を受けた農地の最新画像を農家に提供した。",
-      "axis": "concept",
-      "topic": "宇宙開発",
-      "pos": "熟語",
-      "phrase": "commercial satellite"
-    },
-    {
-      "q": 5,
+      "q": 2,
       "is_answer": false,
       "meaning": "無重力環境",
       "example": "Muscles weaken quickly in a zero-gravity environment unless astronauts exercise daily.",
@@ -303,7 +204,7 @@
       "phrase": "zero-gravity environment"
     },
     {
-      "q": 5,
+      "q": 2,
       "is_answer": false,
       "meaning": "国際宇宙ステーション（略：ISS）",
       "example": "The International Space Station has hosted experiments that cannot be repeated on Earth.",
@@ -314,30 +215,19 @@
       "phrase": "International Space Station"
     },
     {
-      "q": 5,
+      "q": 2,
       "is_answer": false,
-      "meaning": "収穫効率",
-      "example": "The trial measured the efficiency of crops under both ordinary and reduced-water conditions.",
-      "exampleTranslation": "その試験は、通常の条件と節水条件での収穫効率を測定した。",
-      "axis": "solution",
-      "topic": "遺伝子組み換え作物",
+      "meaning": "宇宙開発競争",
+      "example": "The space race accelerated research into rockets, communications, and materials science.",
+      "exampleTranslation": "宇宙開発競争は、ロケットや通信、材料科学の研究を加速させた。",
+      "axis": "cause",
+      "topic": "宇宙開発",
       "pos": "熟語",
-      "phrase": "efficiency of crops"
+      "phrase": "the space race"
     },
     {
-      "q": 6,
+      "q": 3,
       "is_answer": true,
-      "meaning": "農家の搾取",
-      "example": "The cooperative negotiated fair contracts to prevent exploitation of farmers by large buyers.",
-      "exampleTranslation": "その協同組合は、大規模な買い手による農家の搾取を防ぐため公正な契約を交渉した。",
-      "axis": "problem",
-      "topic": "遺伝子組み換え作物",
-      "pos": "熟語",
-      "phrase": "exploitation of farmers"
-    },
-    {
-      "q": 6,
-      "is_answer": false,
       "meaning": "宇宙食",
       "example": "Engineers redesigned space food so astronauts could eat it safely in small capsules.",
       "exampleTranslation": "技術者は、宇宙飛行士が小さなカプセル内で安全に食べられるよう宇宙食を改良した。",
@@ -347,139 +237,7 @@
       "phrase": "space food"
     },
     {
-      "q": 7,
-      "is_answer": false,
-      "meaning": "薬剤、薬品",
-      "example": "Every pharmaceutical drug must pass safety tests before it reaches ordinary patients.",
-      "exampleTranslation": "すべての薬剤は、一般の患者に届く前に安全性試験を通過しなければならない。",
-      "axis": "concept",
-      "topic": "医療",
-      "pos": "熟語",
-      "phrase": "pharmaceutical drug"
-    },
-    {
-      "q": 7,
-      "is_answer": false,
-      "meaning": "製品の安全性",
-      "example": "The regulator required additional tests before confirming the product safety of the new crop.",
-      "exampleTranslation": "規制当局は、その新作物の製品の安全性を確認する前に追加試験を求めた。",
-      "axis": "solution",
-      "topic": "遺伝子組み換え作物",
-      "pos": "熟語",
-      "phrase": "product safety"
-    },
-    {
-      "q": 8,
-      "is_answer": true,
-      "meaning": "幹細胞",
-      "example": "The laboratory grew a stem cell culture under carefully controlled conditions.",
-      "exampleTranslation": "その研究室は、厳密に管理された条件で幹細胞の培養物を育てた。",
-      "axis": "concept",
-      "topic": "再生医療",
-      "pos": "熟語",
-      "phrase": "stem cell"
-    },
-    {
-      "q": 8,
-      "is_answer": false,
-      "meaning": "倫理的問題",
-      "example": "The experiment raised an ethical question about who should control a cloned animal.",
-      "exampleTranslation": "その実験は、クローン動物を誰が管理すべきかという倫理的問題を提起した。",
-      "axis": "problem",
-      "topic": "クローン",
-      "pos": "熟語",
-      "phrase": "ethical question"
-    },
-    {
-      "q": 8,
-      "is_answer": false,
-      "meaning": "再生医療",
-      "example": "Regenerative medicine may restore damaged tissue, although long-term results remain uncertain.",
-      "exampleTranslation": "再生医療は損傷した組織を回復させる可能性があるが、長期的な結果はまだ不確かだ。",
-      "axis": "solution",
-      "topic": "再生医療",
-      "pos": "熟語",
-      "phrase": "regenerative medicine"
-    },
-    {
-      "q": 8,
-      "is_answer": false,
-      "meaning": "技術革新",
-      "example": "Technological innovation helped the factory inspect tiny defects without slowing production.",
-      "exampleTranslation": "技術革新によって、その工場は生産を遅らせずに微小な欠陥を検査できた。",
-      "axis": "solution",
-      "topic": "テクノロジー",
-      "pos": "熟語",
-      "phrase": "technological innovation"
-    },
-    {
-      "q": 9,
-      "is_answer": false,
-      "meaning": "生態系の破壊",
-      "example": "Ecological destruction could accelerate if cloned species were released without testing.",
-      "exampleTranslation": "試験なしにクローン種を放せば、生態系の破壊が加速する可能性がある。",
-      "axis": "problem",
-      "topic": "クローン",
-      "pos": "熟語",
-      "phrase": "ecological destruction"
-    },
-    {
-      "q": 9,
-      "is_answer": false,
-      "meaning": "スマート家電",
-      "example": "Smart appliances reduce household electricity use by adjusting themselves during peak hours.",
-      "exampleTranslation": "スマート家電は、電力のピーク時間に自動調整して家庭の電力使用量を減らす。",
-      "axis": "solution",
-      "topic": "テクノロジー",
-      "pos": "熟語",
-      "phrase": "smart appliances"
-    },
-    {
-      "q": 9,
-      "is_answer": false,
-      "meaning": "生物が生存可能な惑星",
-      "example": "Scientists cannot call a distant world a habitable planet without evidence of liquid water.",
-      "exampleTranslation": "液体の水の証拠がなければ、科学者は遠い世界を生存可能な惑星とは呼べない。",
-      "axis": "solution",
-      "topic": "宇宙開発",
-      "pos": "熟語",
-      "phrase": "habitable planet"
-    },
-    {
-      "q": 10,
-      "is_answer": true,
-      "meaning": "遺伝形質",
-      "example": "The study examined whether the genetic trait increased resistance to a rare disease.",
-      "exampleTranslation": "その研究は、その遺伝形質がまれな病気への抵抗力を高めるか調べた。",
-      "axis": "concept",
-      "topic": "再生医療",
-      "pos": "熟語",
-      "phrase": "genetic trait"
-    },
-    {
-      "q": 10,
-      "is_answer": false,
-      "meaning": "実験の有効性への疑問",
-      "example": "Doubts regarding experiments' effectiveness grew when the results failed to repeat.",
-      "exampleTranslation": "結果を再現できなかったため、実験の有効性への疑問が強まった。",
-      "axis": "problem",
-      "topic": "動物実験",
-      "pos": "熟語",
-      "phrase": "doubts regarding experiments' effectiveness"
-    },
-    {
-      "q": 10,
-      "is_answer": false,
-      "meaning": "有人探査",
-      "example": "Human exploration of Mars will require radiation shelters and reliable food supplies.",
-      "exampleTranslation": "火星の有人探査には、放射線シェルターと安定した食料供給が必要になる。",
-      "axis": "solution",
-      "topic": "宇宙開発",
-      "pos": "熟語",
-      "phrase": "human exploration"
-    },
-    {
-      "q": 10,
+      "q": 3,
       "is_answer": false,
       "meaning": "宇宙関連技術への投資の実用性",
       "example": "Officials questioned the practicality of investment in space-related technology during a budget crisis.",
@@ -490,150 +248,18 @@
       "phrase": "the practicality of investment in space-related technology"
     },
     {
-      "q": 11,
-      "is_answer": true,
-      "meaning": "基本給（別表現: basic salary）",
-      "example": "The offer included a modest base salary but generous support for professional training.",
-      "exampleTranslation": "その提示には控えめな基本給と、手厚い職業訓練支援が含まれていた。",
-      "axis": "concept",
-      "topic": "労働",
-      "pos": "熟語",
-      "phrase": "base salary"
-    },
-    {
-      "q": 11,
+      "q": 3,
       "is_answer": false,
-      "meaning": "賃金の低下",
-      "example": "The union rejected a wage reduction because the company had reported record profits.",
-      "exampleTranslation": "会社が過去最高益を報告していたため、組合は賃金の低下を拒んだ。",
+      "meaning": "技術の限界",
+      "example": "The failed launch reminded engineers of the limits of technology in harsh environments.",
+      "exampleTranslation": "打ち上げの失敗は、過酷な環境における技術の限界を技術者に思い出させた。",
       "axis": "problem",
-      "topic": "労働",
+      "topic": "宇宙開発",
       "pos": "熟語",
-      "phrase": "wage reduction"
+      "phrase": "the limits of technology"
     },
     {
-      "q": 11,
-      "is_answer": false,
-      "meaning": "ワーク・ライフ・バランス",
-      "example": "Flexible schedules improved work-life balance for parents caring for young children.",
-      "exampleTranslation": "柔軟な勤務時間により、幼い子どもを育てる親のワーク・ライフ・バランスが改善した。",
-      "axis": "solution",
-      "topic": "労働",
-      "pos": "熟語",
-      "phrase": "work-life balance"
-    },
-    {
-      "q": 11,
-      "is_answer": false,
-      "meaning": "最低賃金",
-      "example": "The city raised its minimum wage after food and housing costs increased sharply.",
-      "exampleTranslation": "食費と住宅費が急上昇した後、その市は最低賃金を引き上げた。",
-      "axis": "solution",
-      "topic": "労働",
-      "pos": "熟語",
-      "phrase": "minimum wage"
-    },
-    {
-      "q": 12,
-      "is_answer": true,
-      "meaning": "フルタイムの仕事",
-      "example": "She accepted a full-time job after completing the company's six-month training course.",
-      "exampleTranslation": "彼女は会社の6か月の研修課程を終えた後、フルタイムの仕事を受け入れた。",
-      "axis": "concept",
-      "topic": "労働",
-      "pos": "熟語",
-      "phrase": "full-time job"
-    },
-    {
-      "q": 12,
-      "is_answer": false,
-      "meaning": "サービス残業",
-      "example": "The inspection found that unpaid overtime had become routine in the restaurant chain.",
-      "exampleTranslation": "調査で、そのレストランチェーンではサービス残業が常態化していることが分かった。",
-      "axis": "problem",
-      "topic": "労働",
-      "pos": "熟語",
-      "phrase": "unpaid overtime"
-    },
-    {
-      "q": 12,
-      "is_answer": false,
-      "meaning": "残業手当",
-      "example": "The new contract specifies an overtime allowance for work performed after midnight.",
-      "exampleTranslation": "新しい契約は、深夜以降に行った仕事の残業手当を定めている。",
-      "axis": "solution",
-      "topic": "労働",
-      "pos": "熟語",
-      "phrase": "overtime allowance"
-    },
-    {
-      "q": 12,
-      "is_answer": false,
-      "meaning": "有給休暇",
-      "example": "Employees used paid leave to care for relatives after the flood damaged their homes.",
-      "exampleTranslation": "洪水で家が損傷した後、従業員は親族の世話のため有給休暇を使った。",
-      "axis": "solution",
-      "topic": "労働",
-      "pos": "熟語",
-      "phrase": "paid leave"
-    },
-    {
-      "q": 13,
-      "is_answer": true,
-      "meaning": "労働条件（別表現: work conditions）",
-      "example": "The inspectors documented unsafe labor conditions inside the crowded factory.",
-      "exampleTranslation": "調査官は、混雑した工場内の危険な労働条件を記録した。",
-      "axis": "concept",
-      "topic": "労働",
-      "pos": "熟語",
-      "phrase": "labor conditions"
-    },
-    {
-      "q": 13,
-      "is_answer": false,
-      "meaning": "過労死",
-      "example": "The company introduced mandatory rest days after a public investigation into death from overwork.",
-      "exampleTranslation": "過労死に関する公開調査の後、その会社は休業日を義務化した。",
-      "axis": "problem",
-      "topic": "労働",
-      "pos": "熟語",
-      "phrase": "death from overwork"
-    },
-    {
-      "q": 13,
-      "is_answer": false,
-      "meaning": "フレックスタイム制",
-      "example": "Flexible working hours allowed staff to avoid the traffic that followed school dismissal.",
-      "exampleTranslation": "フレックスタイム制により、職員は下校時刻後の渋滞を避けられた。",
-      "axis": "solution",
-      "topic": "労働",
-      "pos": "熟語",
-      "phrase": "flexible working hours"
-    },
-    {
-      "q": 14,
-      "is_answer": true,
-      "meaning": "早期退職",
-      "example": "The factory offered early retirement to reduce staff numbers without immediate dismissals.",
-      "exampleTranslation": "その工場は、即時解雇をせずに人員を減らすため早期退職を募った。",
-      "axis": "concept",
-      "topic": "労働",
-      "pos": "熟語",
-      "phrase": "early retirement"
-    },
-    {
-      "q": 14,
-      "is_answer": false,
-      "meaning": "自殺率の低下",
-      "example": "A decline in the suicide rate followed the expansion of confidential counseling services.",
-      "exampleTranslation": "秘密を守るカウンセリングの拡充後、自殺率の低下が見られた。",
-      "axis": "problem",
-      "topic": "労働",
-      "pos": "熟語",
-      "phrase": "decline in the suicide rate"
-    },
-    {
-      "q": 14,
+      "q": 3,
       "is_answer": false,
       "meaning": "リソースの配分",
       "example": "Allocation of resources between lunar research and earth science sparked a parliamentary debate.",
@@ -644,19 +270,173 @@
       "phrase": "allocation of resources"
     },
     {
-      "q": 14,
-      "is_answer": false,
-      "meaning": "代替医療",
-      "example": "The patient tried an alternative remedy only after discussing possible risks with her doctor.",
-      "exampleTranslation": "その患者は、医師と危険性を話し合った後で初めて代替医療を試した。",
+      "q": 4,
+      "is_answer": true,
+      "meaning": "再生医療",
+      "example": "Regenerative medicine may restore damaged tissue, although long-term results remain uncertain.",
+      "exampleTranslation": "再生医療は損傷した組織を回復させる可能性があるが、長期的な結果はまだ不確かだ。",
       "axis": "solution",
-      "topic": "医療",
+      "topic": "再生医療",
       "pos": "熟語",
-      "phrase": "alternative remedy"
+      "phrase": "regenerative medicine"
     },
     {
-      "q": 15,
+      "q": 4,
+      "is_answer": false,
+      "meaning": "幹細胞",
+      "example": "The laboratory grew a stem cell culture under carefully controlled conditions.",
+      "exampleTranslation": "その研究室は、厳密に管理された条件で幹細胞の培養物を育てた。",
+      "axis": "concept",
+      "topic": "再生医療",
+      "pos": "熟語",
+      "phrase": "stem cell"
+    },
+    {
+      "q": 5,
       "is_answer": true,
+      "meaning": "賃金の低下",
+      "example": "The union rejected a wage reduction because the company had reported record profits.",
+      "exampleTranslation": "会社が過去最高益を報告していたため、組合は賃金の低下を拒んだ。",
+      "axis": "problem",
+      "topic": "労働",
+      "pos": "熟語",
+      "phrase": "wage reduction"
+    },
+    {
+      "q": 5,
+      "is_answer": false,
+      "meaning": "ワーク・ライフ・バランス",
+      "example": "Flexible schedules improved work-life balance for parents caring for young children.",
+      "exampleTranslation": "柔軟な勤務時間により、幼い子どもを育てる親のワーク・ライフ・バランスが改善した。",
+      "axis": "solution",
+      "topic": "労働",
+      "pos": "熟語",
+      "phrase": "work-life balance"
+    },
+    {
+      "q": 5,
+      "is_answer": false,
+      "meaning": "基本給（別表現: basic salary）",
+      "example": "The offer included a modest base salary but generous support for professional training.",
+      "exampleTranslation": "その提示には控えめな基本給と、手厚い職業訓練支援が含まれていた。",
+      "axis": "concept",
+      "topic": "労働",
+      "pos": "熟語",
+      "phrase": "base salary"
+    },
+    {
+      "q": 5,
+      "is_answer": false,
+      "meaning": "最低賃金",
+      "example": "The city raised its minimum wage after food and housing costs increased sharply.",
+      "exampleTranslation": "食費と住宅費が急上昇した後、その市は最低賃金を引き上げた。",
+      "axis": "solution",
+      "topic": "労働",
+      "pos": "熟語",
+      "phrase": "minimum wage"
+    },
+    {
+      "q": 6,
+      "is_answer": true,
+      "meaning": "サービス残業",
+      "example": "The inspection found that unpaid overtime had become routine in the restaurant chain.",
+      "exampleTranslation": "調査で、そのレストランチェーンではサービス残業が常態化していることが分かった。",
+      "axis": "problem",
+      "topic": "労働",
+      "pos": "熟語",
+      "phrase": "unpaid overtime"
+    },
+    {
+      "q": 6,
+      "is_answer": false,
+      "meaning": "残業手当",
+      "example": "The new contract specifies an overtime allowance for work performed after midnight.",
+      "exampleTranslation": "新しい契約は、深夜以降に行った仕事の残業手当を定めている。",
+      "axis": "solution",
+      "topic": "労働",
+      "pos": "熟語",
+      "phrase": "overtime allowance"
+    },
+    {
+      "q": 6,
+      "is_answer": false,
+      "meaning": "フルタイムの仕事",
+      "example": "She accepted a full-time job after completing the company's six-month training course.",
+      "exampleTranslation": "彼女は会社の6か月の研修課程を終えた後、フルタイムの仕事を受け入れた。",
+      "axis": "concept",
+      "topic": "労働",
+      "pos": "熟語",
+      "phrase": "full-time job"
+    },
+    {
+      "q": 6,
+      "is_answer": false,
+      "meaning": "労働条件（別表現: work conditions）",
+      "example": "The inspectors documented unsafe labor conditions inside the crowded factory.",
+      "exampleTranslation": "調査官は、混雑した工場内の危険な労働条件を記録した。",
+      "axis": "concept",
+      "topic": "労働",
+      "pos": "熟語",
+      "phrase": "labor conditions"
+    },
+    {
+      "q": 7,
+      "is_answer": true,
+      "meaning": "過労死",
+      "example": "The company introduced mandatory rest days after a public investigation into death from overwork.",
+      "exampleTranslation": "過労死に関する公開調査の後、その会社は休業日を義務化した。",
+      "axis": "problem",
+      "topic": "労働",
+      "pos": "熟語",
+      "phrase": "death from overwork"
+    },
+    {
+      "q": 7,
+      "is_answer": false,
+      "meaning": "有給休暇",
+      "example": "Employees used paid leave to care for relatives after the flood damaged their homes.",
+      "exampleTranslation": "洪水で家が損傷した後、従業員は親族の世話のため有給休暇を使った。",
+      "axis": "solution",
+      "topic": "労働",
+      "pos": "熟語",
+      "phrase": "paid leave"
+    },
+    {
+      "q": 7,
+      "is_answer": false,
+      "meaning": "フレックスタイム制",
+      "example": "Flexible working hours allowed staff to avoid the traffic that followed school dismissal.",
+      "exampleTranslation": "フレックスタイム制により、職員は下校時刻後の渋滞を避けられた。",
+      "axis": "solution",
+      "topic": "労働",
+      "pos": "熟語",
+      "phrase": "flexible working hours"
+    },
+    {
+      "q": 7,
+      "is_answer": false,
+      "meaning": "早期退職",
+      "example": "The factory offered early retirement to reduce staff numbers without immediate dismissals.",
+      "exampleTranslation": "その工場は、即時解雇をせずに人員を減らすため早期退職を募った。",
+      "axis": "concept",
+      "topic": "労働",
+      "pos": "熟語",
+      "phrase": "early retirement"
+    },
+    {
+      "q": 8,
+      "is_answer": true,
+      "meaning": "自殺率の低下",
+      "example": "A decline in the suicide rate followed the expansion of confidential counseling services.",
+      "exampleTranslation": "秘密を守るカウンセリングの拡充後、自殺率の低下が見られた。",
+      "axis": "problem",
+      "topic": "労働",
+      "pos": "熟語",
+      "phrase": "decline in the suicide rate"
+    },
+    {
+      "q": 8,
+      "is_answer": false,
       "meaning": "終身雇用制度",
       "example": "The lifelong employment system is weakening as workers change companies more frequently.",
       "exampleTranslation": "労働者がより頻繁に会社を変えるため、終身雇用制度は弱まっている。",
@@ -666,7 +446,40 @@
       "phrase": "lifelong employment system"
     },
     {
-      "q": 15,
+      "q": 8,
+      "is_answer": false,
+      "meaning": "能力給制度",
+      "example": "The merit system rewarded sales results but made cooperation between departments harder.",
+      "exampleTranslation": "能力給制度は営業成績を評価したが、部署間の協力を難しくした。",
+      "axis": "concept",
+      "topic": "労働",
+      "pos": "熟語",
+      "phrase": "merit system"
+    },
+    {
+      "q": 9,
+      "is_answer": true,
+      "meaning": "累進課税",
+      "example": "Progressive taxes ask higher earners to contribute a larger share of public revenue.",
+      "exampleTranslation": "累進課税では、高所得者に公共収入のより大きな割合の負担を求める。",
+      "axis": "solution",
+      "topic": "税",
+      "pos": "熟語",
+      "phrase": "progressive taxes"
+    },
+    {
+      "q": 9,
+      "is_answer": false,
+      "meaning": "トリクルダウン効果",
+      "example": "The minister claimed that corporate tax cuts would produce the trickle-down effect.",
+      "exampleTranslation": "大臣は、法人税減税がトリクルダウン効果を生むと主張した。",
+      "axis": "cause",
+      "topic": "税",
+      "pos": "熟語",
+      "phrase": "the trickle-down effect"
+    },
+    {
+      "q": 9,
       "is_answer": false,
       "meaning": "租税回避、節税",
       "example": "The audit distinguished legal tax avoidance from deliberately hiding income.",
@@ -677,7 +490,139 @@
       "phrase": "tax avoidance"
     },
     {
-      "q": 15,
+      "q": 10,
+      "is_answer": true,
+      "meaning": "均一税率の導入",
+      "example": "The reform involved the introduction of a flat tax rate, which simplified filing but reduced progressivity.",
+      "exampleTranslation": "均一税率の導入は申告を簡単にしたが、制度の累進性を弱めた。",
+      "axis": "concept",
+      "topic": "税",
+      "pos": "熟語",
+      "phrase": "the introduction of a flat tax rate"
+    },
+    {
+      "q": 10,
+      "is_answer": false,
+      "meaning": "脱税",
+      "example": "The court imposed a fine after investigators proved the company had practiced tax evasion.",
+      "exampleTranslation": "捜査官が会社の脱税を証明した後、裁判所は罰金を科した。",
+      "axis": "problem",
+      "topic": "税",
+      "pos": "熟語",
+      "phrase": "tax evasion"
+    },
+    {
+      "q": 10,
+      "is_answer": false,
+      "meaning": "モチベーションの低下",
+      "example": "A fall of motivation occurred after employees learned that extra effort brought no recognition.",
+      "exampleTranslation": "努力しても評価されないと従業員が知り、モチベーションの低下が起きた。",
+      "axis": "problem",
+      "topic": "税",
+      "pos": "熟語",
+      "phrase": "fall of motivation"
+    },
+    {
+      "q": 11,
+      "is_answer": true,
+      "meaning": "支出の増加",
+      "example": "Increased spending on flood barriers protected the city but widened the annual deficit.",
+      "exampleTranslation": "洪水防壁への支出の増加は市を守ったが、年間赤字を広げた。",
+      "axis": "cause",
+      "topic": "税",
+      "pos": "熟語",
+      "phrase": "increased spending"
+    },
+    {
+      "q": 11,
+      "is_answer": false,
+      "meaning": "富の再分配",
+      "example": "Redistribution of wealth can fund public schools, although taxpayers may disagree about its scale.",
+      "exampleTranslation": "富の再分配は公立学校に資金を回せるが、その規模について納税者の意見は分かれる。",
+      "axis": "solution",
+      "topic": "税",
+      "pos": "熟語",
+      "phrase": "redistribution of wealth"
+    },
+    {
+      "q": 11,
+      "is_answer": false,
+      "meaning": "自由競争",
+      "example": "Free competition encouraged three providers to lower prices and improve customer support.",
+      "exampleTranslation": "自由競争によって、3社の供給者は価格を下げ、顧客対応を改善した。",
+      "axis": "solution",
+      "topic": "税",
+      "pos": "熟語",
+      "phrase": "free competition"
+    },
+    {
+      "q": 11,
+      "is_answer": false,
+      "meaning": "格差社会",
+      "example": "Social polarization deepened when housing costs rose far faster than ordinary wages.",
+      "exampleTranslation": "住宅費が通常の賃金をはるかに上回って上昇し、格差社会が深刻化した。",
+      "axis": "problem",
+      "topic": "税",
+      "pos": "熟語",
+      "phrase": "social polarization"
+    },
+    {
+      "q": 12,
+      "is_answer": true,
+      "meaning": "情報技術（略：IT）",
+      "example": "Modern clinics rely on information technology to share patient records with rural specialists.",
+      "exampleTranslation": "情報技術によって、その診療所は地方の専門医と患者記録を共有できる。",
+      "axis": "concept",
+      "topic": "テクノロジー",
+      "pos": "熟語",
+      "phrase": "information technology"
+    },
+    {
+      "q": 12,
+      "is_answer": false,
+      "meaning": "技術革新",
+      "example": "Technological innovation helped the factory inspect tiny defects without slowing production.",
+      "exampleTranslation": "技術革新によって、その工場は生産を遅らせずに微小な欠陥を検査できた。",
+      "axis": "solution",
+      "topic": "テクノロジー",
+      "pos": "熟語",
+      "phrase": "technological innovation"
+    },
+    {
+      "q": 12,
+      "is_answer": false,
+      "meaning": "生物が生存可能な惑星",
+      "example": "Scientists cannot call a distant world a habitable planet without evidence of liquid water.",
+      "exampleTranslation": "液体の水の証拠がなければ、科学者は遠い世界を生存可能な惑星とは呼べない。",
+      "axis": "solution",
+      "topic": "宇宙開発",
+      "pos": "熟語",
+      "phrase": "habitable planet"
+    },
+    {
+      "q": 12,
+      "is_answer": false,
+      "meaning": "臓器売買",
+      "example": "Strict international rules are needed to prevent organ trade from exploiting desperate patients.",
+      "exampleTranslation": "絶望した患者が搾取されるのを防ぐには、臓器売買に対する厳しい国際規則が必要である。",
+      "axis": "problem",
+      "topic": "再生医療",
+      "pos": "熟語",
+      "phrase": "organ trade"
+    },
+    {
+      "q": 13,
+      "is_answer": false,
+      "meaning": "代替医療",
+      "example": "The patient tried an alternative remedy only after discussing possible risks with her doctor.",
+      "exampleTranslation": "その患者は、医師と危険性を話し合った後で初めて代替医療を試した。",
+      "axis": "solution",
+      "topic": "医療",
+      "pos": "熟語",
+      "phrase": "alternative remedy"
+    },
+    {
+      "q": 13,
       "is_answer": false,
       "meaning": "新薬を開発する",
       "example": "Researchers hope to develop new drugs for cancers resistant to current treatment.",
@@ -688,7 +633,29 @@
       "phrase": "develop new drugs"
     },
     {
-      "q": 15,
+      "q": 13,
+      "is_answer": false,
+      "meaning": "人体への影響",
+      "example": "Scientists studied the influence on humans before approving the food for wider sale.",
+      "exampleTranslation": "科学者たちは、その食品を広く販売する前に人体への影響を研究した。",
+      "axis": "problem",
+      "topic": "遺伝子組み換え作物",
+      "pos": "熟語",
+      "phrase": "influence on humans"
+    },
+    {
+      "q": 14,
+      "is_answer": true,
+      "meaning": "商用衛星",
+      "example": "A commercial satellite provided farmers with updated images of damaged fields.",
+      "exampleTranslation": "商用衛星は、被害を受けた農地の最新画像を農家に提供した。",
+      "axis": "concept",
+      "topic": "宇宙開発",
+      "pos": "熟語",
+      "phrase": "commercial satellite"
+    },
+    {
+      "q": 14,
       "is_answer": false,
       "meaning": "ジェネリック医薬品",
       "example": "The hospital switched to a generic drug after the original patent expired.",
@@ -699,26 +666,37 @@
       "phrase": "generic drug"
     },
     {
-      "q": 16,
-      "is_answer": true,
-      "meaning": "能力給制度",
-      "example": "The merit system rewarded sales results but made cooperation between departments harder.",
-      "exampleTranslation": "能力給制度は営業成績を評価したが、部署間の協力を難しくした。",
-      "axis": "concept",
-      "topic": "労働",
+      "q": 14,
+      "is_answer": false,
+      "meaning": "収穫効率",
+      "example": "The trial measured the efficiency of crops under both ordinary and reduced-water conditions.",
+      "exampleTranslation": "その試験は、通常の条件と節水条件での収穫効率を測定した。",
+      "axis": "solution",
+      "topic": "遺伝子組み換え作物",
       "pos": "熟語",
-      "phrase": "merit system"
+      "phrase": "efficiency of crops"
     },
     {
-      "q": 16,
+      "q": 15,
       "is_answer": false,
-      "meaning": "脱税",
-      "example": "The court imposed a fine after investigators proved the company had practiced tax evasion.",
-      "exampleTranslation": "捜査官が会社の脱税を証明した後、裁判所は罰金を科した。",
-      "axis": "problem",
-      "topic": "税",
+      "meaning": "製品の安全性",
+      "example": "The regulator required additional tests before confirming the product safety of the new crop.",
+      "exampleTranslation": "規制当局は、その新作物の製品の安全性を確認する前に追加試験を求めた。",
+      "axis": "solution",
+      "topic": "遺伝子組み換え作物",
       "pos": "熟語",
-      "phrase": "tax evasion"
+      "phrase": "product safety"
+    },
+    {
+      "q": 15,
+      "is_answer": false,
+      "meaning": "農家の搾取",
+      "example": "The cooperative negotiated fair contracts to prevent exploitation of farmers by large buyers.",
+      "exampleTranslation": "その協同組合は、大規模な買い手による農家の搾取を防ぐため公正な契約を交渉した。",
+      "axis": "problem",
+      "topic": "遺伝子組み換え作物",
+      "pos": "熟語",
+      "phrase": "exploitation of farmers"
     },
     {
       "q": 16,
@@ -744,69 +722,91 @@
     },
     {
       "q": 17,
-      "is_answer": false,
-      "meaning": "モチベーションの低下",
-      "example": "A fall of motivation occurred after employees learned that extra effort brought no recognition.",
-      "exampleTranslation": "努力しても評価されないと従業員が知り、モチベーションの低下が起きた。",
-      "axis": "problem",
-      "topic": "税",
+      "is_answer": true,
+      "meaning": "薬剤、薬品",
+      "example": "Every pharmaceutical drug must pass safety tests before it reaches ordinary patients.",
+      "exampleTranslation": "すべての薬剤は、一般の患者に届く前に安全性試験を通過しなければならない。",
+      "axis": "concept",
+      "topic": "医療",
       "pos": "熟語",
-      "phrase": "fall of motivation"
+      "phrase": "pharmaceutical drug"
     },
     {
       "q": 17,
       "is_answer": false,
-      "meaning": "累進課税",
-      "example": "Progressive taxes ask higher earners to contribute a larger share of public revenue.",
-      "exampleTranslation": "累進課税では、高所得者に公共収入のより大きな割合の負担を求める。",
-      "axis": "solution",
-      "topic": "税",
+      "meaning": "倫理的問題",
+      "example": "The experiment raised an ethical question about who should control a cloned animal.",
+      "exampleTranslation": "その実験は、クローン動物を誰が管理すべきかという倫理的問題を提起した。",
+      "axis": "problem",
+      "topic": "クローン",
       "pos": "熟語",
-      "phrase": "progressive taxes"
+      "phrase": "ethical question"
+    },
+    {
+      "q": 17,
+      "is_answer": false,
+      "meaning": "テクノロジー利用の子どもへの影響",
+      "example": "Researchers measured the impact of technology usage on children by tracking sleep and attention.",
+      "exampleTranslation": "研究者は、睡眠と集中力を追跡してテクノロジー利用の子どもへの影響を測定した。",
+      "axis": "cause",
+      "topic": "テクノロジー",
+      "pos": "熟語",
+      "phrase": "the impact of technology usage on children"
+    },
+    {
+      "q": 17,
+      "is_answer": false,
+      "meaning": "宇宙開発競争",
+      "example": "The space race accelerated research into rockets, communications, and materials science.",
+      "exampleTranslation": "宇宙開発競争は、ロケットや通信、材料科学の研究を加速させた。",
+      "axis": "cause",
+      "topic": "宇宙開発",
+      "pos": "熟語",
+      "phrase": "the space race"
     },
     {
       "q": 18,
       "is_answer": true,
-      "meaning": "均一税率の導入",
-      "example": "The reform involved the introduction of a flat tax rate, which simplified filing but reduced progressivity.",
-      "exampleTranslation": "均一税率の導入は申告を簡単にしたが、制度の累進性を弱めた。",
+      "meaning": "遺伝形質",
+      "example": "The study examined whether the genetic trait increased resistance to a rare disease.",
+      "exampleTranslation": "その研究は、その遺伝形質がまれな病気への抵抗力を高めるか調べた。",
       "axis": "concept",
-      "topic": "税",
+      "topic": "再生医療",
       "pos": "熟語",
-      "phrase": "the introduction of a flat tax rate"
+      "phrase": "genetic trait"
     },
     {
       "q": 18,
       "is_answer": false,
-      "meaning": "格差社会",
-      "example": "Social polarization deepened when housing costs rose far faster than ordinary wages.",
-      "exampleTranslation": "住宅費が通常の賃金をはるかに上回って上昇し、格差社会が深刻化した。",
+      "meaning": "生態系の破壊",
+      "example": "Ecological destruction could accelerate if cloned species were released without testing.",
+      "exampleTranslation": "試験なしにクローン種を放せば、生態系の破壊が加速する可能性がある。",
       "axis": "problem",
-      "topic": "税",
+      "topic": "クローン",
       "pos": "熟語",
-      "phrase": "social polarization"
+      "phrase": "ecological destruction"
     },
     {
       "q": 18,
       "is_answer": false,
-      "meaning": "富の再分配",
-      "example": "Redistribution of wealth can fund public schools, although taxpayers may disagree about its scale.",
-      "exampleTranslation": "富の再分配は公立学校に資金を回せるが、その規模について納税者の意見は分かれる。",
-      "axis": "solution",
-      "topic": "税",
+      "meaning": "実験の有効性への疑問",
+      "example": "Doubts regarding experiments' effectiveness grew when the results failed to repeat.",
+      "exampleTranslation": "結果を再現できなかったため、実験の有効性への疑問が強まった。",
+      "axis": "problem",
+      "topic": "動物実験",
       "pos": "熟語",
-      "phrase": "redistribution of wealth"
+      "phrase": "doubts regarding experiments' effectiveness"
     },
     {
       "q": 18,
       "is_answer": false,
-      "meaning": "自由競争",
-      "example": "Free competition encouraged three providers to lower prices and improve customer support.",
-      "exampleTranslation": "自由競争によって、3社の供給者は価格を下げ、顧客対応を改善した。",
-      "axis": "solution",
+      "meaning": "トリクルダウン効果",
+      "example": "The minister claimed that corporate tax cuts would produce the trickle-down effect.",
+      "exampleTranslation": "大臣は、法人税減税がトリクルダウン効果を生むと主張した。",
+      "axis": "cause",
       "topic": "税",
       "pos": "熟語",
-      "phrase": "free competition"
+      "phrase": "the trickle-down effect"
     }
   ]
 }

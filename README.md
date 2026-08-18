@@ -41,6 +41,8 @@
 - 1級模試第5回: `data/questions_1_mock-5.json` / `data/vocab_1_mock-5.json`
 - 1級テーマ別表現の正本: `data/topic_phrases_1.json`
 - 1級テーマ別表現の例文: `data/topic_phrase_examples_1.json`
+- 1級テーマ別設問の組み合わせ: `data/topic_question_groups_1.json`
+- 1級テーマ別設問文: `data/topic_question_stems_1.json`（暗記カードの例文とは別データ）
 - 1級テーマ別5セット: `data/questions_topic_set-*.json` / `data/vocab_topic_set-*.json`
 - 問題セット一覧: `data/manifest.json` の `q1`
 

@@ -2,7 +2,7 @@
   "meta": {
     "grade": "英検1級テーマ別",
     "round": "set-2",
-    "section": "Topic phrases（英語例文の空所補充）",
+    "section": "Topic phrases（設問文の空所補充）",
     "source": "data/topic_phrases_1.json（ユーザー提供の表現集）",
     "counts": {
       "words": 6,
@@ -14,146 +14,146 @@
   "questions": [
     {
       "q": 1,
-      "stem": "Historians link ( ) to the way small businesses reached customers abroad.",
+      "stem": "The clinic asked teenagers to record every hour spent checking messages and short videos after teachers reported poor sleep, headaches, and anxiety linked to constant phone use, a pattern doctors called ( ).",
       "choices": [
-        "browsing history",
-        "the emergence of the Internet",
         "image search",
-        "smartphone addiction"
+        "smartphone addiction",
+        "search engine",
+        "the emergence of the Internet"
       ],
       "answerIndex": 1,
-      "translation": "インターネットの出現は、小企業が海外の顧客に届く方法を変えた。",
+      "translation": "教師が睡眠不足や頭痛、絶え間ない携帯電話の使用に伴う不安を報告したため、診療所は十代の若者にメッセージや短い動画を確認した時間を毎時間記録させた。スマートフォン中毒への対策である。",
       "topic": "インターネット"
     },
     {
       "q": 2,
-      "stem": "Youth counselors opened evening programs after ( ) increased near the station.",
+      "stem": "After several influencers posted staged charity videos, viewers began asking for receipts, independent witnesses, and unedited footage, revealing a strong ( ) among online audiences.",
       "choices": [
-        "juvenile crime",
-        "the emergence of the Internet",
-        "criminal case",
-        "anti-social behavior"
+        "a demand for authenticity",
+        "affiliate marketing",
+        "cybercrime",
+        "hacking"
       ],
       "answerIndex": 0,
-      "translation": "駅の近くで少年犯罪が増えたため、青少年相談員は夜間の活動を始めた。",
-      "topic": "犯罪"
+      "translation": "複数のインフルエンサーが演出した慈善動画を投稿した後、視聴者は領収書や第三者の証言、編集されていない映像を求め始め、オンライン視聴者の間に信ぴょう性の要求が強いことが分かった。",
+      "topic": "インターネット"
     },
     {
       "q": 3,
-      "stem": "The ( ) alarmed residents who had previously felt safe.",
+      "stem": "The prosecutor reviewed witness statements, financial records, and security footage before deciding that the suspected fraud should be formally referred to court as a serious ( ).",
       "choices": [
-        "the emergence of the Internet",
-        "investigation",
-        "compelling evidence",
-        "increase of atrocious crimes"
+        "juvenile crime",
+        "increase of atrocious crimes",
+        "possibility of correction",
+        "criminal case"
       ],
       "answerIndex": 3,
-      "translation": "凶悪犯罪の増加は、それまで安全だと感じていた住民を不安にさせた。",
+      "translation": "検察官は、疑われる詐欺を重大な刑事事件として正式に裁判所へ送る前に、証言や財務記録、防犯カメラの映像を検討した。",
       "topic": "犯罪"
     },
     {
       "q": 4,
-      "stem": "The judge reminded the jury that every defendant is ( ).",
+      "stem": "The youth center combined counseling with evening sports after residents complained about vandalism, intimidation, and repeated disorder around the station, describing the pattern as ( ) rather than harmless mischief.",
       "choices": [
         "criminal organization",
         "decrease in crime rates",
-        "innocent until proven guilty",
-        "possibility of correction"
+        "anti-social behavior",
+        "social rehabilitation"
       ],
       "answerIndex": 2,
-      "translation": "裁判官は陪審に、すべての被告は有罪と証明されるまで無罪だと念を押した。",
+      "translation": "住民が駅周辺の器物損壊や脅迫、繰り返される騒ぎに苦情を述べたため、青少年センターは相談と夜間スポーツを組み合わせ、その行動を反社会的な行動であり、無害ないたずらではないと説明した。",
       "topic": "犯罪"
     },
     {
       "q": 5,
-      "stem": "Severe fatigue can impair a driver's ( ) during a long night journey.",
+      "stem": "The police compared travel records with street-camera footage and interviewed neighbors for three weeks, but the careful inquiry still failed to identify who had entered the warehouse during the ( ).",
       "choices": [
         "crime victim",
-        "judgment ability",
+        "investigation",
         "crime prevention",
-        "social rehabilitation"
+        "effect of heavy punishment"
       ],
       "answerIndex": 1,
-      "translation": "強い疲労は、夜通しの運転中に運転者の判断能力を低下させることがある。",
+      "translation": "警察は3週間、移動記録と街頭カメラの映像を照合し、近隣住民にも聞き取りを行ったが、慎重な捜査を続けても倉庫に入った人物は特定できなかった。",
       "topic": "犯罪"
     },
     {
       "q": 6,
-      "stem": "The documentary explored the ( ) rather than celebrating the offender.",
+      "stem": "The defense challenged the witness's memory, yet a time-stamped payment record and matching camera footage provided such strong proof that the judge considered the material ( ).",
       "choices": [
-        "emotion of victims",
+        "compelling evidence",
         "repeat offender",
         "rate of repeated crime",
-        "effect of heavy punishment"
+        "parole"
       ],
       "answerIndex": 0,
-      "translation": "その記録映画は、加害者を称賛するのではなく被害者感情を描いた。",
+      "translation": "弁護側は証人の記憶に異議を唱えたが、時刻の記録された支払い記録と一致する映像が有力な証拠となり、裁判官は決定的だと考えた。",
       "topic": "犯罪"
     },
     {
       "q": 7,
-      "stem": "The university blocked a ( ) that distributed unreleased films to students.",
+      "stem": "Although the accused had been widely criticized online, the judge reminded the jury that every defendant remains ( ) throughout the trial.",
       "choices": [
-        "copyright infringement",
-        "illegal file sharing",
-        "parole",
-        "torrent site"
+        "increase of prison population",
+        "violence among prisoners",
+        "accessibility",
+        "innocent until proven guilty"
       ],
       "answerIndex": 3,
-      "translation": "大学は、未公開映画を学生に配布していた動画共有サイトを遮断した。",
-      "topic": "違法ダウンロード"
+      "translation": "被告はオンラインで広く批判されていたが、裁判官は陪審に、すべての被告は裁判の間、疑わしきは罰せずという原則の下で扱われると念を押した。",
+      "topic": "犯罪"
     },
     {
       "q": 8,
-      "stem": "The revised ( ) covers short video clips used by commercial influencers.",
+      "stem": "The driving instructor stopped the lesson when exhaustion and medication made the student's ( ) too unreliable for heavy traffic on a crowded expressway.",
       "choices": [
-        "pirate",
-        "increase of prison population",
-        "copyright law",
-        "accessibility"
+        "prison break",
+        "copyright infringement",
+        "judgment ability",
+        "information sharing"
       ],
       "answerIndex": 2,
-      "translation": "改正著作権法は、商業インフルエンサーが使う短い動画も対象にしている。",
-      "topic": "違法ダウンロード"
+      "translation": "疲労と薬の影響で生徒の判断能力が交通量の多い道路にはあまりに不確かになったため、運転教官は教習を中止した。",
+      "topic": "犯罪"
     },
     {
       "q": 9,
-      "stem": "Blocking mirror domains became a ( ) as new addresses appeared daily.",
+      "stem": "The documentary gave survivors time to describe their fear and grief, rather than focusing only on the offender's motives or the police investigation, respecting the ( ).",
       "choices": [
-        "violence among prisoners",
-        "cat and mouse game",
-        "prison break",
-        "a demand for authenticity"
+        "illegal file sharing",
+        "emotion of victims",
+        "pirate",
+        "quick reporting"
       ],
       "answerIndex": 1,
-      "translation": "新しいアドレスが毎日現れ、ミラーサイトの遮断はいたちごっこになった。",
-      "topic": "違法ダウンロード"
+      "translation": "その記録映画は、加害者の動機や警察の捜査だけに焦点を当てず、生存者が恐怖や悲しみを語る時間を設け、被害者感情を尊重した。",
+      "topic": "犯罪"
     },
     {
       "q": 10,
-      "stem": "A ( ) can return biased results when its ranking data reflects popular myths.",
+      "stem": "Two television channels described the same demonstration in opposite ways, selecting different interviewees and omitting different facts, leading viewers to question whether their coverage contained systematic ( ).",
       "choices": [
-        "search engine",
-        "cybercrime",
-        "hacking",
-        "information sharing"
+        "media bias",
+        "torrent site",
+        "copyright law",
+        "possibility of correction"
       ],
       "answerIndex": 0,
-      "translation": "検索エンジンは、順位付けのデータが広まった俗説を反映すると偏った結果を返すことがある。",
-      "topic": "インターネット"
+      "translation": "2つのテレビ局が同じデモを正反対に描き、異なる取材対象を選び、異なる事実を省いたため、視聴者は報道に組織的な偏向報道が含まれているのではないかと疑った。",
+      "topic": "マスメディアと広告"
     },
     {
       "q": 11,
-      "stem": "In ( ), publishers earn commissions when readers buy products through a reviewer's link.",
+      "stem": "The broadcaster apologized after repeating an unverified claim about contaminated water, removed the clip from its website, and explained how a rushed editorial process had produced the ( ).",
       "choices": [
-        "media bias",
-        "false report",
-        "quick reporting",
-        "affiliate marketing"
+        "cat and mouse game",
+        "browsing history",
+        "social rehabilitation",
+        "false report"
       ],
       "answerIndex": 3,
-      "translation": "アフィリエイトマーケティングでは、読者が評論者のリンクから商品を買うと手数料を得られる。",
-      "topic": "インターネット"
+      "translation": "放送局は汚染水に関する未確認の主張を繰り返した後、謝罪してウェブサイトから動画を削除し、急いだ編集過程が誤報を生んだ経緯を説明した。",
+      "topic": "マスメディアと広告"
     }
   ]
 }

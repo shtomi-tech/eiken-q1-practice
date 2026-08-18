@@ -2,7 +2,7 @@
   "meta": {
     "grade": "英検1級テーマ別",
     "round": "set-4",
-    "section": "Topic phrases（英語例文の空所補充）",
+    "section": "Topic phrases（設問文の空所補充）",
     "source": "data/topic_phrases_1.json（ユーザー提供の表現集）",
     "counts": {
       "words": 4,
@@ -13,8 +13,8 @@
   },
   "words": [
     {
-      "q": 3,
-      "is_answer": true,
+      "q": 2,
+      "is_answer": false,
       "meaning": "抑止力",
       "example": "The generals described the submarine fleet as a deterrent rather than an offensive force.",
       "exampleTranslation": "将軍たちは、その潜水艦隊を攻撃部隊ではなく抑止力だと説明した。",
@@ -24,18 +24,7 @@
       "word": "deterrent"
     },
     {
-      "q": 6,
-      "is_answer": false,
-      "meaning": "正当防衛",
-      "example": "The court examined whether the soldiers' response was necessary self-defense.",
-      "exampleTranslation": "裁判所は、兵士たちの対応が必要な正当防衛だったかを検討した。",
-      "axis": "solution",
-      "topic": "自衛隊",
-      "pos": "名詞",
-      "word": "self-defense"
-    },
-    {
-      "q": 16,
+      "q": 7,
       "is_answer": false,
       "meaning": "砂漠化",
       "example": "Desertification advanced after repeated overgrazing stripped the grass from the plateau.",
@@ -46,8 +35,19 @@
       "word": "desertification"
     },
     {
-      "q": 16,
+      "q": 8,
       "is_answer": false,
+      "meaning": "正当防衛",
+      "example": "The court examined whether the soldiers' response was necessary self-defense.",
+      "exampleTranslation": "裁判所は、兵士たちの対応が必要な正当防衛だったかを検討した。",
+      "axis": "solution",
+      "topic": "自衛隊",
+      "pos": "名詞",
+      "word": "self-defense"
+    },
+    {
+      "q": 15,
+      "is_answer": true,
       "meaning": "エコツアー",
       "example": "Ecotourism supports village income when visitors follow strict rules for protecting wildlife.",
       "exampleTranslation": "訪問者が野生生物を守る厳しい規則に従えば、エコツアーは村の収入を支える。",
@@ -61,24 +61,13 @@
     {
       "q": 1,
       "is_answer": true,
-      "meaning": "技術の発展",
-      "example": "The development of technology has made satellite monitoring of weapons sites more precise.",
-      "exampleTranslation": "技術の発展により、衛星による兵器施設の監視はより正確になった。",
-      "axis": "cause",
-      "topic": "核兵器",
+      "meaning": "ミサイル防衛",
+      "example": "The government invested in missile defense to protect the capital from incoming attacks.",
+      "exampleTranslation": "政府は、飛来する攻撃から首都を守るためミサイル防衛に投資した。",
+      "axis": "solution",
+      "topic": "戦争と紛争",
       "pos": "熟語",
-      "phrase": "development of technology"
-    },
-    {
-      "q": 1,
-      "is_answer": false,
-      "meaning": "水爆",
-      "example": "The museum explains why a hydrogen bomb releases far more energy than ordinary explosives.",
-      "exampleTranslation": "その博物館は、水爆が通常の爆薬よりはるかに大きなエネルギーを放つ理由を説明している。",
-      "axis": "concept",
-      "topic": "核兵器",
-      "pos": "熟語",
-      "phrase": "hydrogen bomb"
+      "phrase": "missile defense"
     },
     {
       "q": 1,
@@ -94,6 +83,39 @@
     {
       "q": 1,
       "is_answer": false,
+      "meaning": "宗教対立",
+      "example": "Religious conflict displaced families who had lived together for generations.",
+      "exampleTranslation": "宗教対立により、何世代も共に暮らしてきた家族が避難した。",
+      "axis": "problem",
+      "topic": "戦争と紛争",
+      "pos": "熟語",
+      "phrase": "religious conflict"
+    },
+    {
+      "q": 1,
+      "is_answer": false,
+      "meaning": "報復の連鎖（別表現: a vicious cycle of revenge）",
+      "example": "Without reconciliation, a vicious cycle of violence can continue long after the ceasefire.",
+      "exampleTranslation": "和解がなければ、停戦後も報復の連鎖が長く続く可能性がある。",
+      "axis": "problem",
+      "topic": "戦争と紛争",
+      "pos": "熟語",
+      "phrase": "a vicious cycle of violence"
+    },
+    {
+      "q": 2,
+      "is_answer": true,
+      "meaning": "水爆",
+      "example": "The museum explains why a hydrogen bomb releases far more energy than ordinary explosives.",
+      "exampleTranslation": "その博物館は、水爆が通常の爆薬よりはるかに大きなエネルギーを放つ理由を説明している。",
+      "axis": "concept",
+      "topic": "核兵器",
+      "pos": "熟語",
+      "phrase": "hydrogen bomb"
+    },
+    {
+      "q": 2,
+      "is_answer": false,
       "meaning": "核の拡散",
       "example": "Diplomats fear that proliferation of nuclear weapons would make regional crises harder to contain.",
       "exampleTranslation": "外交官は、核の拡散によって地域危機の封じ込めが難しくなると懸念している。",
@@ -104,61 +126,6 @@
     },
     {
       "q": 2,
-      "is_answer": true,
-      "meaning": "ミサイル防衛",
-      "example": "The government invested in missile defense to protect the capital from incoming attacks.",
-      "exampleTranslation": "政府は、飛来する攻撃から首都を守るためミサイル防衛に投資した。",
-      "axis": "solution",
-      "topic": "戦争と紛争",
-      "pos": "熟語",
-      "phrase": "missile defense"
-    },
-    {
-      "q": 2,
-      "is_answer": false,
-      "meaning": "技術の発展",
-      "example": "The development of technology has made satellite monitoring of weapons sites more precise.",
-      "exampleTranslation": "技術の発展により、衛星による兵器施設の監視はより正確になった。",
-      "axis": "cause",
-      "topic": "核兵器",
-      "pos": "熟語",
-      "phrase": "development of technology"
-    },
-    {
-      "q": 2,
-      "is_answer": false,
-      "meaning": "全面戦争",
-      "example": "The treaty was designed to prevent all-out war between the rival powers.",
-      "exampleTranslation": "その条約は、対立する大国間の全面戦争を防ぐために作られた。",
-      "axis": "problem",
-      "topic": "戦争と紛争",
-      "pos": "熟語",
-      "phrase": "all-out war"
-    },
-    {
-      "q": 2,
-      "is_answer": false,
-      "meaning": "大量破壊兵器（略：WMD）",
-      "example": "Inspectors searched the facility for weapons of mass destruction after receiving new intelligence.",
-      "exampleTranslation": "新しい情報を得た後、査察官はその施設で大量破壊兵器を捜索した。",
-      "axis": "problem",
-      "topic": "戦争と紛争",
-      "pos": "熟語",
-      "phrase": "weapons of mass destruction"
-    },
-    {
-      "q": 3,
-      "is_answer": false,
-      "meaning": "技術の発展",
-      "example": "The development of technology has made satellite monitoring of weapons sites more precise.",
-      "exampleTranslation": "技術の発展により、衛星による兵器施設の監視はより正確になった。",
-      "axis": "cause",
-      "topic": "核兵器",
-      "pos": "熟語",
-      "phrase": "development of technology"
-    },
-    {
-      "q": 3,
       "is_answer": false,
       "meaning": "核拡散防止条約",
       "example": "The Treaty on the Non-Proliferation of Nuclear Weapons limits the spread of nuclear technology.",
@@ -167,6 +134,17 @@
       "topic": "核兵器",
       "pos": "熟語",
       "phrase": "Treaty on the Non-Proliferation of Nuclear Weapons"
+    },
+    {
+      "q": 3,
+      "is_answer": true,
+      "meaning": "核なき世界",
+      "example": "The proposal describes a world without nuclear weapons that would still need peaceful dispute institutions.",
+      "exampleTranslation": "核なき世界にも、紛争を平和的に解決する制度は必要だろう。",
+      "axis": "solution",
+      "topic": "核兵器",
+      "pos": "熟語",
+      "phrase": "a world without nuclear weapons"
     },
     {
       "q": 3,
@@ -180,18 +158,18 @@
       "phrase": "mutual assured destruction"
     },
     {
-      "q": 4,
-      "is_answer": true,
-      "meaning": "核なき世界",
-      "example": "The proposal describes a world without nuclear weapons that would still need peaceful dispute institutions.",
-      "exampleTranslation": "核なき世界にも、紛争を平和的に解決する制度は必要だろう。",
-      "axis": "solution",
+      "q": 3,
+      "is_answer": false,
+      "meaning": "秘密裏の開発",
+      "example": "Secret development of missiles increased suspicion and ended the inspection agreement.",
+      "exampleTranslation": "ミサイルの秘密裏の開発が疑念を高め、査察協定は打ち切られた。",
+      "axis": "problem",
       "topic": "核兵器",
       "pos": "熟語",
-      "phrase": "a world without nuclear weapons"
+      "phrase": "secret development"
     },
     {
-      "q": 4,
+      "q": 3,
       "is_answer": false,
       "meaning": "技術の発展",
       "example": "The development of technology has made satellite monitoring of weapons sites more precise.",
@@ -203,40 +181,7 @@
     },
     {
       "q": 4,
-      "is_answer": false,
-      "meaning": "秘密裏の開発",
-      "example": "Secret development of missiles increased suspicion and ended the inspection agreement.",
-      "exampleTranslation": "ミサイルの秘密裏の開発が疑念を高め、査察協定は打ち切られた。",
-      "axis": "problem",
-      "topic": "核兵器",
-      "pos": "熟語",
-      "phrase": "secret development"
-    },
-    {
-      "q": 4,
-      "is_answer": false,
-      "meaning": "制御不能で",
-      "example": "The arms race could go out of control if neither side accepts verification.",
-      "exampleTranslation": "どちらの側も検証を受け入れなければ、軍拡競争は制御不能になりうる。",
-      "axis": "problem",
-      "topic": "核兵器",
-      "pos": "熟語",
-      "phrase": "out of control"
-    },
-    {
-      "q": 5,
       "is_answer": true,
-      "meaning": "日米同盟",
-      "example": "The U.S.-Japan alliance supports joint training for disaster relief and maritime security.",
-      "exampleTranslation": "日米同盟は、災害救援と海上安全保障の共同訓練を支えている。",
-      "axis": "concept",
-      "topic": "自衛隊",
-      "pos": "熟語",
-      "phrase": "U.S.-Japan alliance"
-    },
-    {
-      "q": 5,
-      "is_answer": false,
       "meaning": "国際紛争",
       "example": "The peacekeepers were deployed to prevent an international conflict from spreading across the border.",
       "exampleTranslation": "平和維持部隊は、国際紛争が国境を越えて広がるのを防ぐため派遣された。",
@@ -246,18 +191,29 @@
       "phrase": "international conflict"
     },
     {
-      "q": 5,
+      "q": 4,
       "is_answer": false,
-      "meaning": "核兵器",
-      "example": "A nuclear weapon could destroy the port and contaminate the surrounding coastline.",
-      "exampleTranslation": "核兵器は港を破壊し、周辺の海岸を汚染する可能性がある。",
-      "axis": "problem",
-      "topic": "戦争と紛争",
+      "meaning": "憲法違反",
+      "example": "Opponents argued that the emergency order amounted to a breach of the Constitution.",
+      "exampleTranslation": "反対派は、その緊急命令が憲法違反に当たると主張した。",
+      "axis": "concept",
+      "topic": "自衛隊",
       "pos": "熟語",
-      "phrase": "nuclear weapon"
+      "phrase": "breach of the Constitution"
     },
     {
-      "q": 5,
+      "q": 4,
+      "is_answer": false,
+      "meaning": "国民感情",
+      "example": "Recent popular sentiment shifted after residents saw rescue teams working through the night.",
+      "exampleTranslation": "住民が救助隊の夜通しの活動を見た後、国民感情は変化した。",
+      "axis": "concept",
+      "topic": "自衛隊",
+      "pos": "熟語",
+      "phrase": "popular sentiment"
+    },
+    {
+      "q": 4,
       "is_answer": false,
       "meaning": "国民の保護",
       "example": "The mission emphasized protection of the people rather than control of territory.",
@@ -268,117 +224,18 @@
       "phrase": "protection of the people"
     },
     {
-      "q": 6,
+      "q": 5,
       "is_answer": true,
-      "meaning": "人命の犠牲",
-      "example": "Better evacuation warnings reduced loss of life during the coastal earthquake.",
-      "exampleTranslation": "避難警報を改善したことで、沿岸地震による人命の犠牲が減った。",
+      "meaning": "経済活動の低下",
+      "example": "The region experienced lower economic activity, reduced electricity demand, and increased unemployment.",
+      "exampleTranslation": "経済活動の低下は電力需要を減らしたが、失業も増加させた。",
       "axis": "concept",
-      "topic": "自衛隊",
-      "pos": "熟語",
-      "phrase": "loss of life"
-    },
-    {
-      "q": 6,
-      "is_answer": false,
-      "meaning": "生物兵器",
-      "example": "A biological weapon could spread silently before doctors recognized the unusual symptoms.",
-      "exampleTranslation": "生物兵器は、医師が異常な症状に気づく前に静かに広がりうる。",
-      "axis": "problem",
-      "topic": "戦争と紛争",
-      "pos": "熟語",
-      "phrase": "biological weapon"
-    },
-    {
-      "q": 6,
-      "is_answer": false,
-      "meaning": "化学兵器",
-      "example": "The inspectors collected soil samples after reports suggested a chemical weapon had been used.",
-      "exampleTranslation": "化学兵器が使われたという報告を受け、査察官は土壌の試料を集めた。",
-      "axis": "problem",
-      "topic": "戦争と紛争",
-      "pos": "熟語",
-      "phrase": "chemical weapon"
-    },
-    {
-      "q": 7,
-      "is_answer": true,
-      "meaning": "憲法違反",
-      "example": "Opponents argued that the emergency order amounted to a breach of the Constitution.",
-      "exampleTranslation": "反対派は、その緊急命令が憲法違反に当たると主張した。",
-      "axis": "concept",
-      "topic": "自衛隊",
-      "pos": "熟語",
-      "phrase": "breach of the Constitution"
-    },
-    {
-      "q": 7,
-      "is_answer": false,
-      "meaning": "宗教対立",
-      "example": "Religious conflict displaced families who had lived together for generations.",
-      "exampleTranslation": "宗教対立により、何世代も共に暮らしてきた家族が避難した。",
-      "axis": "problem",
-      "topic": "戦争と紛争",
-      "pos": "熟語",
-      "phrase": "religious conflict"
-    },
-    {
-      "q": 7,
-      "is_answer": false,
-      "meaning": "報復の連鎖（別表現: a vicious cycle of revenge）",
-      "example": "Without reconciliation, a vicious cycle of violence can continue long after the ceasefire.",
-      "exampleTranslation": "和解がなければ、停戦後も報復の連鎖が長く続く可能性がある。",
-      "axis": "problem",
-      "topic": "戦争と紛争",
-      "pos": "熟語",
-      "phrase": "a vicious cycle of violence"
-    },
-    {
-      "q": 7,
-      "is_answer": false,
-      "meaning": "低エネルギー社会",
-      "example": "A low-energy society uses insulation and public transport to reduce household demand.",
-      "exampleTranslation": "低エネルギー社会は、断熱と公共交通によって家庭の需要を減らす。",
-      "axis": "solution",
       "topic": "化石燃料と再生可能エネルギー",
       "pos": "熟語",
-      "phrase": "low-energy society"
+      "phrase": "lower economic activity"
     },
     {
-      "q": 8,
-      "is_answer": true,
-      "meaning": "国民感情",
-      "example": "Recent popular sentiment shifted after residents saw rescue teams working through the night.",
-      "exampleTranslation": "住民が救助隊の夜通しの活動を見た後、国民感情は変化した。",
-      "axis": "concept",
-      "topic": "自衛隊",
-      "pos": "熟語",
-      "phrase": "popular sentiment"
-    },
-    {
-      "q": 8,
-      "is_answer": false,
-      "meaning": "空爆",
-      "example": "Air bombing damaged the bridge and cut the only road to the hospital.",
-      "exampleTranslation": "空爆によって橋が損傷し、病院へ通じる唯一の道路が寸断された。",
-      "axis": "problem",
-      "topic": "戦争と紛争",
-      "pos": "熟語",
-      "phrase": "air bombing"
-    },
-    {
-      "q": 8,
-      "is_answer": false,
-      "meaning": "誤爆",
-      "example": "An accidental bombing destroyed a school that had been marked as a shelter.",
-      "exampleTranslation": "誤爆により、避難所として表示されていた学校が破壊された。",
-      "axis": "problem",
-      "topic": "戦争と紛争",
-      "pos": "熟語",
-      "phrase": "accidental bombing"
-    },
-    {
-      "q": 8,
+      "q": 5,
       "is_answer": false,
       "meaning": "クリーンエネルギー",
       "example": "Clean energy projects created technical jobs in communities once dependent on coal.",
@@ -389,40 +246,7 @@
       "phrase": "clean energy"
     },
     {
-      "q": 9,
-      "is_answer": true,
-      "meaning": "火力発電",
-      "example": "In winter, thermal power generation remains important when wind and solar output suddenly falls.",
-      "exampleTranslation": "風力と太陽光の出力が急に落ちると、火力発電は依然として重要である。",
-      "axis": "concept",
-      "topic": "化石燃料と再生可能エネルギー",
-      "pos": "熟語",
-      "phrase": "thermal power generation"
-    },
-    {
-      "q": 9,
-      "is_answer": false,
-      "meaning": "リサイクルの有効性への疑問（別表現: doubt about the effectiveness of recycling）",
-      "example": "Doubts about the effectiveness of recycling grew when mixed plastics were sent to landfills.",
-      "exampleTranslation": "混合プラスチックが埋立地に送られると、リサイクルの有効性への疑問が強まった。",
-      "axis": "problem",
-      "topic": "化石燃料と再生可能エネルギー",
-      "pos": "熟語",
-      "phrase": "doubts about the effectiveness of recycling"
-    },
-    {
-      "q": 9,
-      "is_answer": false,
-      "meaning": "サイバー戦争（別表現: cyber warfare）",
-      "example": "Cyber war can disrupt hospitals even when no physical missile crosses a border.",
-      "exampleTranslation": "サイバー戦争は、物理的なミサイルが国境を越えなくても病院を混乱させうる。",
-      "axis": "problem",
-      "topic": "戦争と紛争",
-      "pos": "熟語",
-      "phrase": "cyber war"
-    },
-    {
-      "q": 9,
+      "q": 5,
       "is_answer": false,
       "meaning": "バイオ燃料の開発",
       "example": "The development of biofuel accelerated after researchers found a productive algae strain.",
@@ -433,37 +257,202 @@
       "phrase": "development of biofuel"
     },
     {
+      "q": 5,
+      "is_answer": false,
+      "meaning": "リサイクルの有効性への疑問（別表現: doubt about the effectiveness of recycling）",
+      "example": "Doubts about the effectiveness of recycling grew when mixed plastics were sent to landfills.",
+      "exampleTranslation": "混合プラスチックが埋立地に送られると、リサイクルの有効性への疑問が強まった。",
+      "axis": "problem",
+      "topic": "化石燃料と再生可能エネルギー",
+      "pos": "熟語",
+      "phrase": "doubts about the effectiveness of recycling"
+    },
+    {
+      "q": 6,
+      "is_answer": true,
+      "meaning": "電力の安定供給",
+      "example": "Hospitals need a reliable supply of electricity even during severe winter storms.",
+      "exampleTranslation": "病院には、厳しい冬の嵐の最中でも電力の安定供給が必要である。",
+      "axis": "solution",
+      "topic": "原子力発電",
+      "pos": "熟語",
+      "phrase": "reliable supply of electricity"
+    },
+    {
+      "q": 6,
+      "is_answer": false,
+      "meaning": "原子力のリスク",
+      "example": "The hearing examined the risks of nuclear power before approving the new reactor.",
+      "exampleTranslation": "公聴会は、新しい原子炉を承認する前に原子力のリスクを検討した。",
+      "axis": "problem",
+      "topic": "原子力発電",
+      "pos": "熟語",
+      "phrase": "risks of nuclear power"
+    },
+    {
+      "q": 6,
+      "is_answer": false,
+      "meaning": "核物質",
+      "example": "The agency records every shipment of nuclear material to prevent unauthorized diversion.",
+      "exampleTranslation": "その機関は、無許可の転用を防ぐため核物質の輸送をすべて記録する。",
+      "axis": "concept",
+      "topic": "原子力発電",
+      "pos": "熟語",
+      "phrase": "nuclear material"
+    },
+    {
+      "q": 6,
+      "is_answer": false,
+      "meaning": "使用済み核燃料",
+      "example": "Engineers must isolate spent nuclear fuel while they design a permanent repository.",
+      "exampleTranslation": "使用済み核燃料は、技術者が恒久的な処分場を設計する間、隔離しておく必要がある。",
+      "axis": "concept",
+      "topic": "原子力発電",
+      "pos": "熟語",
+      "phrase": "spent nuclear fuel"
+    },
+    {
+      "q": 7,
+      "is_answer": true,
+      "meaning": "生物多様性（別表現: biodiversity）",
+      "example": "Biological diversity declined when one commercial tree replaced several native species.",
+      "exampleTranslation": "商業用の木が複数の在来種に取って代わると、生物多様性は低下した。",
+      "axis": "solution",
+      "topic": "森林破壊",
+      "pos": "熟語",
+      "phrase": "biological diversity"
+    },
+    {
+      "q": 7,
+      "is_answer": false,
+      "meaning": "酸性雨",
+      "example": "Acid rain damaged the mountain lake after factories increased sulfur emissions.",
+      "exampleTranslation": "工場が硫黄排出を増やした後、酸性雨が山の湖を傷めた。",
+      "axis": "problem",
+      "topic": "森林破壊",
+      "pos": "熟語",
+      "phrase": "acid rain"
+    },
+    {
+      "q": 7,
+      "is_answer": false,
+      "meaning": "世界自然遺産",
+      "example": "The island was designated world natural heritage because its coral ecosystem remained intact.",
+      "exampleTranslation": "その島はサンゴの生態系が手つかずだったため世界自然遺産に指定された。",
+      "axis": "concept",
+      "topic": "森林破壊",
+      "pos": "熟語",
+      "phrase": "world natural heritage"
+    },
+    {
+      "q": 8,
+      "is_answer": true,
+      "meaning": "日米同盟",
+      "example": "The U.S.-Japan alliance supports joint training for disaster relief and maritime security.",
+      "exampleTranslation": "日米同盟は、災害救援と海上安全保障の共同訓練を支えている。",
+      "axis": "concept",
+      "topic": "自衛隊",
+      "pos": "熟語",
+      "phrase": "U.S.-Japan alliance"
+    },
+    {
+      "q": 8,
+      "is_answer": false,
+      "meaning": "全面戦争",
+      "example": "The treaty was designed to prevent all-out war between the rival powers.",
+      "exampleTranslation": "その条約は、対立する大国間の全面戦争を防ぐために作られた。",
+      "axis": "problem",
+      "topic": "戦争と紛争",
+      "pos": "熟語",
+      "phrase": "all-out war"
+    },
+    {
+      "q": 8,
+      "is_answer": false,
+      "meaning": "大量破壊兵器（略：WMD）",
+      "example": "Inspectors searched the facility for weapons of mass destruction after receiving new intelligence.",
+      "exampleTranslation": "新しい情報を得た後、査察官はその施設で大量破壊兵器を捜索した。",
+      "axis": "problem",
+      "topic": "戦争と紛争",
+      "pos": "熟語",
+      "phrase": "weapons of mass destruction"
+    },
+    {
+      "q": 9,
+      "is_answer": true,
+      "meaning": "人命の犠牲",
+      "example": "Better evacuation warnings reduced loss of life during the coastal earthquake.",
+      "exampleTranslation": "避難警報を改善したことで、沿岸地震による人命の犠牲が減った。",
+      "axis": "concept",
+      "topic": "自衛隊",
+      "pos": "熟語",
+      "phrase": "loss of life"
+    },
+    {
+      "q": 9,
+      "is_answer": false,
+      "meaning": "核兵器",
+      "example": "A nuclear weapon could destroy the port and contaminate the surrounding coastline.",
+      "exampleTranslation": "核兵器は港を破壊し、周辺の海岸を汚染する可能性がある。",
+      "axis": "problem",
+      "topic": "戦争と紛争",
+      "pos": "熟語",
+      "phrase": "nuclear weapon"
+    },
+    {
+      "q": 9,
+      "is_answer": false,
+      "meaning": "生物兵器",
+      "example": "A biological weapon could spread silently before doctors recognized the unusual symptoms.",
+      "exampleTranslation": "生物兵器は、医師が異常な症状に気づく前に静かに広がりうる。",
+      "axis": "problem",
+      "topic": "戦争と紛争",
+      "pos": "熟語",
+      "phrase": "biological weapon"
+    },
+    {
+      "q": 9,
+      "is_answer": false,
+      "meaning": "低エネルギー社会",
+      "example": "A low-energy society uses insulation and public transport to reduce household demand.",
+      "exampleTranslation": "低エネルギー社会は、断熱と公共交通によって家庭の需要を減らす。",
+      "axis": "solution",
+      "topic": "化石燃料と再生可能エネルギー",
+      "pos": "熟語",
+      "phrase": "low-energy society"
+    },
+    {
       "q": 10,
       "is_answer": true,
-      "meaning": "天然資源の枯渇",
-      "example": "The exhaustion of natural resources threatens industries that depend on cheap raw materials.",
-      "exampleTranslation": "天然資源の枯渇は、安価な原材料に依存する産業を脅かしている。",
+      "meaning": "火力発電",
+      "example": "In winter, thermal power generation remains important when wind and solar output suddenly falls.",
+      "exampleTranslation": "風力と太陽光の出力が急に落ちると、火力発電は依然として重要である。",
       "axis": "concept",
       "topic": "化石燃料と再生可能エネルギー",
       "pos": "熟語",
-      "phrase": "exhaustion of natural resources"
+      "phrase": "thermal power generation"
     },
     {
       "q": 10,
       "is_answer": false,
-      "meaning": "テロ網",
-      "example": "Financial investigators tracked terror networks through suspicious transfers between shell companies.",
-      "exampleTranslation": "金融捜査官は、ペーパーカンパニー間の不審な送金からテロ網を追跡した。",
+      "meaning": "化学兵器",
+      "example": "The inspectors collected soil samples after reports suggested a chemical weapon had been used.",
+      "exampleTranslation": "化学兵器が使われたという報告を受け、査察官は土壌の試料を集めた。",
       "axis": "problem",
-      "topic": "テロリズム",
+      "topic": "戦争と紛争",
       "pos": "熟語",
-      "phrase": "terror networks"
+      "phrase": "chemical weapon"
     },
     {
       "q": 10,
       "is_answer": false,
-      "meaning": "テロや戦争の増加",
-      "example": "The increase of terrorism or war has made ordinary travel dangerous in the region.",
-      "exampleTranslation": "テロや戦争の増加により、その地域では日常の移動が危険になった。",
+      "meaning": "空爆",
+      "example": "Air bombing damaged the bridge and cut the only road to the hospital.",
+      "exampleTranslation": "空爆によって橋が損傷し、病院へ通じる唯一の道路が寸断された。",
       "axis": "problem",
-      "topic": "テロリズム",
+      "topic": "戦争と紛争",
       "pos": "熟語",
-      "phrase": "increase of terrorism or war"
+      "phrase": "air bombing"
     },
     {
       "q": 10,
@@ -479,35 +468,35 @@
     {
       "q": 11,
       "is_answer": true,
-      "meaning": "経済活動の低下",
-      "example": "The region experienced lower economic activity, reduced electricity demand, and increased unemployment.",
-      "exampleTranslation": "経済活動の低下は電力需要を減らしたが、失業も増加させた。",
+      "meaning": "天然資源の枯渇",
+      "example": "The exhaustion of natural resources threatens industries that depend on cheap raw materials.",
+      "exampleTranslation": "天然資源の枯渇は、安価な原材料に依存する産業を脅かしている。",
       "axis": "concept",
       "topic": "化石燃料と再生可能エネルギー",
       "pos": "熟語",
-      "phrase": "lower economic activity"
+      "phrase": "exhaustion of natural resources"
     },
     {
       "q": 11,
       "is_answer": false,
-      "meaning": "テロ抑止",
-      "example": "Prevention of terrorism requires cooperation between financial agencies and local communities.",
-      "exampleTranslation": "テロ抑止には、金融機関と地域社会の協力が必要である。",
+      "meaning": "誤爆",
+      "example": "An accidental bombing destroyed a school that had been marked as a shelter.",
+      "exampleTranslation": "誤爆により、避難所として表示されていた学校が破壊された。",
       "axis": "problem",
-      "topic": "テロリズム",
+      "topic": "戦争と紛争",
       "pos": "熟語",
-      "phrase": "prevention of terrorism"
+      "phrase": "accidental bombing"
     },
     {
       "q": 11,
       "is_answer": false,
-      "meaning": "テロ支援国家",
-      "example": "The report accused the regime of acting as a state sponsor of terrorism abroad.",
-      "exampleTranslation": "その報告書は、その政権が国外でテロ支援国家として活動していると非難した。",
+      "meaning": "サイバー戦争（別表現: cyber warfare）",
+      "example": "Cyber war can disrupt hospitals even when no physical missile crosses a border.",
+      "exampleTranslation": "サイバー戦争は、物理的なミサイルが国境を越えなくても病院を混乱させうる。",
       "axis": "problem",
-      "topic": "テロリズム",
+      "topic": "戦争と紛争",
       "pos": "熟語",
-      "phrase": "state sponsor of terrorism"
+      "phrase": "cyber war"
     },
     {
       "q": 11,
@@ -523,83 +512,6 @@
     {
       "q": 12,
       "is_answer": true,
-      "meaning": "原子力発電所",
-      "example": "The nuclear power plant stopped operating while engineers checked its cooling system.",
-      "exampleTranslation": "技術者が冷却システムを点検する間、その原子力発電所は運転を停止した。",
-      "axis": "concept",
-      "topic": "原子力発電",
-      "pos": "熟語",
-      "phrase": "nuclear power plant"
-    },
-    {
-      "q": 12,
-      "is_answer": false,
-      "meaning": "原子力のリスク",
-      "example": "The hearing examined the risks of nuclear power before approving the new reactor.",
-      "exampleTranslation": "公聴会は、新しい原子炉を承認する前に原子力のリスクを検討した。",
-      "axis": "problem",
-      "topic": "原子力発電",
-      "pos": "熟語",
-      "phrase": "risks of nuclear power"
-    },
-    {
-      "q": 12,
-      "is_answer": false,
-      "meaning": "放射性廃棄物",
-      "example": "Radioactive waste requires secure containers and monitoring for much longer than ordinary trash.",
-      "exampleTranslation": "放射性廃棄物には、通常のごみよりはるかに長期の安全な容器と監視が必要である。",
-      "axis": "problem",
-      "topic": "原子力発電",
-      "pos": "熟語",
-      "phrase": "radioactive waste"
-    },
-    {
-      "q": 12,
-      "is_answer": false,
-      "meaning": "電力の安定供給",
-      "example": "Hospitals need a reliable supply of electricity even during severe winter storms.",
-      "exampleTranslation": "病院には、厳しい冬の嵐の最中でも電力の安定供給が必要である。",
-      "axis": "solution",
-      "topic": "原子力発電",
-      "pos": "熟語",
-      "phrase": "reliable supply of electricity"
-    },
-    {
-      "q": 13,
-      "is_answer": true,
-      "meaning": "核物質",
-      "example": "The agency records every shipment of nuclear material to prevent unauthorized diversion.",
-      "exampleTranslation": "その機関は、無許可の転用を防ぐため核物質の輸送をすべて記録する。",
-      "axis": "concept",
-      "topic": "原子力発電",
-      "pos": "熟語",
-      "phrase": "nuclear material"
-    },
-    {
-      "q": 13,
-      "is_answer": false,
-      "meaning": "炉心溶融",
-      "example": "A nuclear meltdown can occur when cooling fails and the reactor core overheats.",
-      "exampleTranslation": "冷却に失敗して原子炉の炉心が過熱すると、炉心溶融が起こりうる。",
-      "axis": "problem",
-      "topic": "原子力発電",
-      "pos": "熟語",
-      "phrase": "nuclear meltdown"
-    },
-    {
-      "q": 13,
-      "is_answer": false,
-      "meaning": "放射能漏れ",
-      "example": "Radiation leakage was detected early because workers inspected the storage tank every morning.",
-      "exampleTranslation": "作業員が毎朝貯蔵タンクを点検していたため、放射能漏れは早期に検知された。",
-      "axis": "problem",
-      "topic": "原子力発電",
-      "pos": "熟語",
-      "phrase": "radiation leakage"
-    },
-    {
-      "q": 13,
-      "is_answer": false,
       "meaning": "省エネルギー",
       "example": "Energy conservation became easier after the factory replaced old motors with efficient ones.",
       "exampleTranslation": "工場が古いモーターを効率的なものに替えると、省エネルギーが進みやすくなった。",
@@ -609,26 +521,103 @@
       "phrase": "energy conservation"
     },
     {
-      "q": 14,
-      "is_answer": true,
-      "meaning": "使用済み核燃料",
-      "example": "Engineers must isolate spent nuclear fuel while they design a permanent repository.",
-      "exampleTranslation": "使用済み核燃料は、技術者が恒久的な処分場を設計する間、隔離しておく必要がある。",
+      "q": 12,
+      "is_answer": false,
+      "meaning": "制御不能で",
+      "example": "The arms race could go out of control if neither side accepts verification.",
+      "exampleTranslation": "どちらの側も検証を受け入れなければ、軍拡競争は制御不能になりうる。",
+      "axis": "problem",
+      "topic": "核兵器",
+      "pos": "熟語",
+      "phrase": "out of control"
+    },
+    {
+      "q": 12,
+      "is_answer": false,
+      "meaning": "テロ網",
+      "example": "Financial investigators tracked terror networks through suspicious transfers between shell companies.",
+      "exampleTranslation": "金融捜査官は、ペーパーカンパニー間の不審な送金からテロ網を追跡した。",
+      "axis": "problem",
+      "topic": "テロリズム",
+      "pos": "熟語",
+      "phrase": "terror networks"
+    },
+    {
+      "q": 12,
+      "is_answer": false,
+      "meaning": "原子力発電所",
+      "example": "The nuclear power plant stopped operating while engineers checked its cooling system.",
+      "exampleTranslation": "技術者が冷却システムを点検する間、その原子力発電所は運転を停止した。",
       "axis": "concept",
       "topic": "原子力発電",
       "pos": "熟語",
-      "phrase": "spent nuclear fuel"
+      "phrase": "nuclear power plant"
+    },
+    {
+      "q": 13,
+      "is_answer": true,
+      "meaning": "環境保護",
+      "example": "Protection of the environment requires land-use rules that preserve forests near rivers.",
+      "exampleTranslation": "環境保護には、川の近くの森林を守る土地利用規則が必要である。",
+      "axis": "solution",
+      "topic": "森林破壊",
+      "pos": "熟語",
+      "phrase": "protection of the environment"
+    },
+    {
+      "q": 13,
+      "is_answer": false,
+      "meaning": "テロや戦争の増加",
+      "example": "The increase of terrorism or war has made ordinary travel dangerous in the region.",
+      "exampleTranslation": "テロや戦争の増加により、その地域では日常の移動が危険になった。",
+      "axis": "problem",
+      "topic": "テロリズム",
+      "pos": "熟語",
+      "phrase": "increase of terrorism or war"
+    },
+    {
+      "q": 13,
+      "is_answer": false,
+      "meaning": "テロ抑止",
+      "example": "Prevention of terrorism requires cooperation between financial agencies and local communities.",
+      "exampleTranslation": "テロ抑止には、金融機関と地域社会の協力が必要である。",
+      "axis": "problem",
+      "topic": "テロリズム",
+      "pos": "熟語",
+      "phrase": "prevention of terrorism"
+    },
+    {
+      "q": 13,
+      "is_answer": false,
+      "meaning": "二酸化炭素排出量、カーボンフットプリント",
+      "example": "The factory reduced its carbon footprint by replacing diesel trucks with electric vehicles.",
+      "exampleTranslation": "その工場はディーゼルトラックを電気自動車に替え、二酸化炭素排出量を減らした。",
+      "axis": "concept",
+      "topic": "森林破壊",
+      "pos": "熟語",
+      "phrase": "carbon footprint"
+    },
+    {
+      "q": 14,
+      "is_answer": true,
+      "meaning": "環境アセスメント",
+      "example": "The company completed an environmental assessment before building a road through the forest.",
+      "exampleTranslation": "その会社は、森林を通る道路を建設する前に環境アセスメントを完了した。",
+      "axis": "solution",
+      "topic": "森林破壊",
+      "pos": "熟語",
+      "phrase": "environmental assessment"
     },
     {
       "q": 14,
       "is_answer": false,
-      "meaning": "軍事利用",
-      "example": "The committee debated whether military utilization of nuclear research should be permitted.",
-      "exampleTranslation": "委員会は、核研究の軍事利用を認めるべきか議論した。",
+      "meaning": "テロ支援国家",
+      "example": "The report accused the regime of acting as a state sponsor of terrorism abroad.",
+      "exampleTranslation": "その報告書は、その政権が国外でテロ支援国家として活動していると非難した。",
       "axis": "problem",
-      "topic": "原子力発電",
+      "topic": "テロリズム",
       "pos": "熟語",
-      "phrase": "military utilization"
+      "phrase": "state sponsor of terrorism"
     },
     {
       "q": 14,
@@ -644,72 +633,50 @@
     {
       "q": 14,
       "is_answer": false,
-      "meaning": "環境保護",
-      "example": "Protection of the environment requires land-use rules that preserve forests near rivers.",
-      "exampleTranslation": "環境保護には、川の近くの森林を守る土地利用規則が必要である。",
-      "axis": "solution",
-      "topic": "森林破壊",
-      "pos": "熟語",
-      "phrase": "protection of the environment"
-    },
-    {
-      "q": 15,
-      "is_answer": true,
-      "meaning": "世界自然遺産",
-      "example": "The island was designated world natural heritage because its coral ecosystem remained intact.",
-      "exampleTranslation": "その島はサンゴの生態系が手つかずだったため世界自然遺産に指定された。",
+      "meaning": "先制攻撃",
+      "example": "Leaders debated whether a preemptive strike would prevent conflict or provoke retaliation.",
+      "exampleTranslation": "指導者たちは、先制攻撃が紛争を防ぐのか報復を招くのかを議論した。",
       "axis": "concept",
-      "topic": "森林破壊",
+      "topic": "戦争と紛争",
       "pos": "熟語",
-      "phrase": "world natural heritage"
+      "phrase": "preemptive strike"
     },
     {
       "q": 15,
       "is_answer": false,
-      "meaning": "酸性雨",
-      "example": "Acid rain damaged the mountain lake after factories increased sulfur emissions.",
-      "exampleTranslation": "工場が硫黄排出を増やした後、酸性雨が山の湖を傷めた。",
+      "meaning": "放射性廃棄物",
+      "example": "Radioactive waste requires secure containers and monitoring for much longer than ordinary trash.",
+      "exampleTranslation": "放射性廃棄物には、通常のごみよりはるかに長期の安全な容器と監視が必要である。",
       "axis": "problem",
-      "topic": "森林破壊",
+      "topic": "原子力発電",
       "pos": "熟語",
-      "phrase": "acid rain"
+      "phrase": "radioactive waste"
     },
     {
       "q": 15,
       "is_answer": false,
-      "meaning": "生物多様性（別表現: biodiversity）",
-      "example": "Biological diversity declined when one commercial tree replaced several native species.",
-      "exampleTranslation": "商業用の木が複数の在来種に取って代わると、生物多様性は低下した。",
-      "axis": "solution",
-      "topic": "森林破壊",
+      "meaning": "炉心溶融",
+      "example": "A nuclear meltdown can occur when cooling fails and the reactor core overheats.",
+      "exampleTranslation": "冷却に失敗して原子炉の炉心が過熱すると、炉心溶融が起こりうる。",
+      "axis": "problem",
+      "topic": "原子力発電",
       "pos": "熟語",
-      "phrase": "biological diversity"
+      "phrase": "nuclear meltdown"
     },
     {
       "q": 15,
       "is_answer": false,
-      "meaning": "環境アセスメント",
-      "example": "The company completed an environmental assessment before building a road through the forest.",
-      "exampleTranslation": "その会社は、森林を通る道路を建設する前に環境アセスメントを完了した。",
-      "axis": "solution",
-      "topic": "森林破壊",
+      "meaning": "水爆",
+      "example": "The museum explains why a hydrogen bomb releases far more energy than ordinary explosives.",
+      "exampleTranslation": "その博物館は、水爆が通常の爆薬よりはるかに大きなエネルギーを放つ理由を説明している。",
+      "axis": "concept",
+      "topic": "核兵器",
       "pos": "熟語",
-      "phrase": "environmental assessment"
+      "phrase": "hydrogen bomb"
     },
     {
       "q": 16,
       "is_answer": true,
-      "meaning": "二酸化炭素排出量、カーボンフットプリント",
-      "example": "The factory reduced its carbon footprint by replacing diesel trucks with electric vehicles.",
-      "exampleTranslation": "その工場はディーゼルトラックを電気自動車に替え、二酸化炭素排出量を減らした。",
-      "axis": "concept",
-      "topic": "森林破壊",
-      "pos": "熟語",
-      "phrase": "carbon footprint"
-    },
-    {
-      "q": 16,
-      "is_answer": false,
       "meaning": "カーボンオフセット",
       "example": "The airline bought a carbon offset to support reforestation after calculating its emissions.",
       "exampleTranslation": "その航空会社は排出量を計算した後、植林を支援するカーボンオフセットを購入した。",
@@ -717,6 +684,39 @@
       "topic": "森林破壊",
       "pos": "熟語",
       "phrase": "carbon offset"
+    },
+    {
+      "q": 16,
+      "is_answer": false,
+      "meaning": "放射能漏れ",
+      "example": "Radiation leakage was detected early because workers inspected the storage tank every morning.",
+      "exampleTranslation": "作業員が毎朝貯蔵タンクを点検していたため、放射能漏れは早期に検知された。",
+      "axis": "problem",
+      "topic": "原子力発電",
+      "pos": "熟語",
+      "phrase": "radiation leakage"
+    },
+    {
+      "q": 16,
+      "is_answer": false,
+      "meaning": "軍事利用",
+      "example": "The committee debated whether military utilization of nuclear research should be permitted.",
+      "exampleTranslation": "委員会は、核研究の軍事利用を認めるべきか議論した。",
+      "axis": "problem",
+      "topic": "原子力発電",
+      "pos": "熟語",
+      "phrase": "military utilization"
+    },
+    {
+      "q": 16,
+      "is_answer": false,
+      "meaning": "日米同盟",
+      "example": "The U.S.-Japan alliance supports joint training for disaster relief and maritime security.",
+      "exampleTranslation": "日米同盟は、災害救援と海上安全保障の共同訓練を支えている。",
+      "axis": "concept",
+      "topic": "自衛隊",
+      "pos": "熟語",
+      "phrase": "U.S.-Japan alliance"
     }
   ]
 }
