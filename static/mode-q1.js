@@ -30,8 +30,8 @@ function datasetStorageKey() {
 }
 // datasetId の級プレフィックス → 音声フォルダ名。級の判定・同一級のプール化にも使う。
 // ここに無いプレフィックスは「級不明」として扱い、意味練習のプール対象から外す。
-const GRADE_BY_PREFIX = { eiken1: "1", eiken2: "2", eikenp1: "pre1", eikenp2: "pre2" };
-const DATASET_ID_RE = new RegExp(`^(${Object.keys(GRADE_BY_PREFIX).join("|")})-(\\d{4}-\\d+|mock-\\d+)$`);
+const GRADE_BY_PREFIX = { eiken1: "1", eiken2: "2", eikenp1: "pre1", eikenp2: "pre2", eikentopic: "topic" };
+const DATASET_ID_RE = new RegExp(`^(${Object.keys(GRADE_BY_PREFIX).join("|")})-(\\d{4}-\\d+|mock-\\d+|set-\\d+)$`);
 // 問題セット一覧は data/manifest.json（"q1"キー）から読み込む。
 // 回を追加するときはデータJSONを置いてmanifest.jsonに1エントリ足すだけでよく、このファイルの編集は不要。
 let DATASETS = {};
@@ -104,6 +104,16 @@ function gradeOf(datasetId) {
 }
 function currentGrade() {
   return gradeOf(state.datasetId);
+}
+function datasetIsTopic(datasetId = state.datasetId) {
+  return String(datasetId || "").startsWith("eikentopic-");
+}
+function datasetSectionName(datasetId = state.datasetId) {
+  return datasetIsTopic(datasetId) ? "テーマ別表現" : "大問1";
+}
+function datasetHeadline(datasetId = state.datasetId) {
+  const data = DATASETS[datasetId] || dataset();
+  return datasetIsTopic(datasetId) ? `英検${data.shortLabel}表現` : `英検${data.shortLabel} 大問1`;
 }
 // 1描画（＝1回のキュー生成）の間だけ、非アクティブ回のブロックをメモ化する。
 // ホーム描画は語句ごとに progressFor を呼ぶため、無いと localStorage.getItem + JSON.parse が
@@ -578,10 +588,16 @@ async function loadPooledItems(grade = currentGrade()) {
     ).then((loaded) => {
       const items = [];
       const meaningPool = { word: [], idiom: [] };
+      const seenTopicItems = new Set();
       for (const { id, vocab } of loaded) {
         const words = (vocab.words || []).map((w) => ({ ...w, type: "word", _datasetId: id }));
         const idioms = (vocab.idioms || []).map((w) => ({ ...w, type: "idiom", _datasetId: id }));
         for (const it of words.concat(idioms)) {
+          if (grade === "eikentopic") {
+            const key = `${id}:${itemKeyOf(it)}`;
+            if (seenTopicItems.has(key)) continue;
+            seenTopicItems.add(key);
+          }
           items.push(it);
           meaningPool[it.type].push(it.meaning);
         }
@@ -1012,7 +1028,7 @@ function renderHome() {
   return withProgressReadCache(renderHomeContent);
 }
 function renderHomeContent() {
-  setChromeTitle(`英検${dataset().shortLabel} 大問1 単語アプリ`);
+  setChromeTitle(`${datasetHeadline()} 単語アプリ`);
   $("#sessionPanel").classList.add("hide");
   const home = $("#homePanel");
   home.classList.remove("hide");
@@ -1045,14 +1061,14 @@ function renderHomeContent() {
   if (isFirstVisit) {
     home.appendChild(el("section", { class: "card hero" },
       el("p", { class: "label" }, "学習の流れ"),
-      el("h2", {}, "大問1の語句を「覚えてから解く」"),
+      el("h2", {}, `${datasetSectionName()}の語句を「覚えてから解く」`),
       el("p", { class: "hint" }, "各設問の4つの選択肢を、意味・補足情報で覚える → 意味を確認 → 本番形式で解く、の3ステップ。"),
     ));
   }
 
   // 層1：今日の学習（現在セット名・主CTA・その理由）。問題セット選択は独立sectionへ分離。
   const summary = el("section", { class: "card" });
-  const headerTitle = final.cleared ? `${currentDataset.shortLabel} 大問1 CLEAR` : `${currentDataset.shortLabel} 大問1を「覚えて→確かめて→解く」`;
+  const headerTitle = final.cleared ? `${datasetHeadline()} CLEAR` : `${datasetHeadline()}を「覚えて→確かめて→解く」`;
   summary.appendChild(el("div", { class: "sectionHead" },
     el("div", {},
       el("p", { class: "label" }, final.cleared ? "達成状況" : "今日の学習"),
@@ -1153,7 +1169,7 @@ function renderHomeContent() {
   const path = el("section", { class: "card" });
   path.appendChild(el("div", { class: "pathHead" },
     el("p", { class: "label" }, "問題一覧"),
-    el("h2", {}, `${currentDataset.shortLabel} 大問1（全${total}問）`),
+    el("h2", {}, `${datasetHeadline()}（全${total}問）`),
     el("p", { class: "hint" }, "各設問に出る4つの語句を覚えてから、その設問を解きます。クリックで開始。"),
   ));
   const statusCounts = { all: state.qList.length, notStarted: 0, inProgress: 0, review: 0, done: 0 };
@@ -1286,7 +1302,7 @@ function meaningMission(summary, ready, nextQueue = [], learnedItems = [], meani
     el("p", { class: "label" }, "間隔復習"),
     el("h3", { id: "spacedReviewCardTitle" }, "意味だけ復習"),
     el("p", { class: "meaningMissionLead" },
-      `${dataset().shortLabel}の収録セットをまとめ、通常学習で最後まで解いた設問の語句を1回最大${MEANING_SESSION_SIZE}語句で復習します。正解すると1・3・7・14日後へ進みます。`),
+      `${datasetSectionName()}の収録セットをまとめ、通常学習で最後まで解いた設問の語句を1回最大${MEANING_SESSION_SIZE}語句で復習します。正解すると1・3・7・14日後へ進みます。`),
     el("div", { class: "meaningMissionMetrics" },
       el("div", {}, el("strong", {}, ready ? `${learned} / ${total}` : "—"), el("span", {}, "対象語句")),
       el("div", { class: ready && due > 0 ? "meaningMissionMetricDue" : "" }, el("strong", {}, ready ? `${due}語句` : "—"), el("span", {}, "今すぐ復習")),
@@ -1347,6 +1363,7 @@ function datasetGradeLabel(grade) {
 }
 
 function datasetSetKind(datasetId) {
+  if (datasetIsTopic(datasetId)) return "テーマ別";
   return datasetId.includes("-mock-") ? "模試" : "過去問";
 }
 
@@ -1428,7 +1445,7 @@ function datasetUnitCard(id, data, index) {
 function datasetUnitCards(grade) {
   const entries = availableDatasets().filter(([id]) => gradeOf(id) === grade);
   const wrap = el("div", { class: "datasetUnitCards" });
-  for (const kind of ["過去問", "模試"]) {
+  for (const kind of ["過去問", "模試", "テーマ別"]) {
     const groupEntries = entries.filter(([id]) => datasetSetKind(id) === kind);
     if (!groupEntries.length) continue;
     wrap.appendChild(el("p", { class: "datasetUnitGroupLabel" }, `${datasetGradeLabel(grade)}・${kind}`));
@@ -1851,7 +1868,7 @@ function questionProgressBar() {
 
   const wrap = el("div", { class: "q1Progress" },
     el("div", { class: "q1ProgressHead" },
-      el("span", { class: "label" }, "大問1 設問進捗"),
+      el("span", { class: "label" }, `${datasetSectionName()} 設問進捗`),
       el("strong", { class: "q1ProgressValue" + settleCls }, label),
       el("span", { class: "q1ProgressRemaining" + settleCls }, `残り${remaining}問`),
     ),
@@ -1860,7 +1877,7 @@ function questionProgressBar() {
     class: "q1ProgressBar",
     max: total,
     value,
-    "aria-label": "大問1の設問進捗",
+    "aria-label": `${datasetSectionName()}の設問進捗`,
   });
   progress.setAttribute("aria-valuetext", `${label}、残り${remaining}問`);
   wrap.appendChild(progress);
@@ -2490,7 +2507,7 @@ function renderDone(body) {
     // firstClear時は既存CSS（h2.firstClear::before）が✓を演出するため、ここでは付けない（二重表示防止）。
     const finalSymbol = firstClear ? "" : (passed ? "✓ " : "! ");
     banner.appendChild(el("h2", { class: firstClear ? "firstClear" : "" }, finalSymbol + (passed
-      ? `${dataset().shortLabel} 大問1 CLEAR`
+      ? `${datasetHeadline()} CLEAR`
       : `最終チェック完了。${session.finalCorrect}/${session.checkOrder.length}でした`)));
     banner.appendChild(el("p", { class: "hint" }, `${finalPassScore(finalTotal)}/${finalTotal}問以上（正答率80%以上）でCLEAR`));
   } else if (isMeaning) {

@@ -1,6 +1,6 @@
-# 英検 大問1 単語アプリ
+# 英検 大問1・テーマ別表現 単語アプリ
 
-英検1級・2級・準2級・準1級の大問1（語彙）だけを扱う静的Webアプリです。各級の過去問3回分に加え、1級の模試第1回〜第5回を収録しています（合計17セット）。
+英検1級・2級・準2級・準1級の大問1（語彙）と、1級のトピック別表現を扱う静的Webアプリです。各級の過去問3回分に加え、1級の模試第1回〜第5回、テーマ別5セットを収録しています（合計22セット）。
 
 ## 学習の流れ
 
@@ -24,6 +24,7 @@
 | 準2級 | 45 | 180 |
 | 準1級 | 54 | 216 |
 | 1級（模試第1回〜第5回を含む） | 191 | 764 |
+| 1級テーマ別（5セット） | 84 | 325 |
 
 語句ごとの復習間隔は、その語句が属する回の進捗（`eiken_q1_progress_<datasetId>` の `items`）に保存します。級をまたいで混ざることはありません。
 
@@ -38,6 +39,9 @@
 - 1級模試第3回: `data/questions_1_mock-3.json` / `data/vocab_1_mock-3.json`
 - 1級模試第4回: `data/questions_1_mock-4.json` / `data/vocab_1_mock-4.json`
 - 1級模試第5回: `data/questions_1_mock-5.json` / `data/vocab_1_mock-5.json`
+- 1級テーマ別表現の正本: `data/topic_phrases_1.json`
+- 1級テーマ別表現の例文: `data/topic_phrase_examples_1.json`
+- 1級テーマ別5セット: `data/questions_topic_set-*.json` / `data/vocab_topic_set-*.json`
 - 問題セット一覧: `data/manifest.json` の `q1`
 
 準1級のQ1データは、全体過去問データから次で抽出します。
@@ -47,6 +51,7 @@ py -3 scripts/build_q1_pre1_data.py
 py -3 scripts/build_q1_1_data.py
 py -3 scripts/enrich_flashcard_fields.py
 py -3 scripts/curate_1_examples.py
+py -3 scripts/build_topic_data.py
 py -3 scripts/check_q1_data.py
 ```
 
@@ -59,7 +64,7 @@ py -3 -m http.server 8061 --bind 127.0.0.1
 
 ブラウザで `http://127.0.0.1:8061/` を開きます。JSONを相対パスで読むため、`index.html` を直接開かないでください。
 
-## 英検1級・2級・準1級・準2級の単語・熟語音声
+## 英検の単語・熟語音声
 
 Azure Speechのキーを保存せず、環境変数から読み込んで単語・熟語MP3を生成します。
 
@@ -70,9 +75,10 @@ py -3 scripts/generate_tts_1.py --grade 1 --round all
 py -3 scripts/generate_tts_1.py --grade 2 --round all
 py -3 scripts/generate_tts_1.py --grade pre1 --round all
 py -3 scripts/generate_tts_1.py --grade pre2 --round all
+py -3 scripts/generate_tts_1.py --grade topic --round all
 ```
 
-生成先は単語が `assets/audio/vocab/<級>/<回>/`、熟語が `assets/audio/vocab/<級>/<回>/idiom/` です。生成済みの単語・熟語は大問1の暗記カードと意味チェックで「音声」ボタンから再生できます。
+生成先は単語が `assets/audio/vocab/<級>/<回>/`、熟語が `assets/audio/vocab/<級>/<回>/idiom/` です。テーマ別表現は `<級>` が `topic`、回が `set-1`〜`set-5` になります。生成済みの単語・熟語は暗記カードと意味チェックで「音声」ボタンから再生できます。
 準1級はMP3がない場合も、暗記カードの「音声」ボタンからブラウザ標準の英語音声を再生します。
 
 ## 暗記カードの共通構成
@@ -134,6 +140,7 @@ py -3 scripts/add_example_translations.py
 - `scripts/build_q1_mock_3_data.py`: 1級模試第3回の問題・語彙データ生成
 - `scripts/build_q1_mock_4_data.py`: 1級模試第4回の問題・語彙データ生成
 - `scripts/build_q1_mock_5_data.py`: 1級模試第5回の問題・語彙データ生成
-- `scripts/check_q1_data.py`: 17セットのデータ契約チェック
+- `scripts/build_topic_data.py`: トピック別表現の正規化・例文・5セット生成
+- `scripts/check_q1_data.py`: 22セットのデータ契約チェック
 
 このリポジトリは大問1専用です。大問2・3、リスニング、ライティング、言い換えのコード・教材・音声・生成スクリプトには依存しません。

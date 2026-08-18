@@ -1,0 +1,503 @@
+{
+  "meta": {
+    "grade": "英検1級テーマ別",
+    "round": "set-2",
+    "section": "Topic phrases（英語例文の空所補充）",
+    "source": "data/topic_phrases_1.json（ユーザー提供の表現集）",
+    "counts": {
+      "words": 6,
+      "idioms": 38,
+      "total": 44
+    },
+    "unique_total": 42
+  },
+  "words": [
+    {
+      "q": 3,
+      "is_answer": true,
+      "meaning": "捜査",
+      "example": "The policy debate focused on investigation and its effects on society.",
+      "exampleTranslation": "その政策論争では、捜査と社会への影響が焦点になった。",
+      "axis": "concept",
+      "topic": "犯罪",
+      "pos": "名詞",
+      "etymology": "investigate: ～を捜査する",
+      "word": "investigation"
+    },
+    {
+      "q": 7,
+      "is_answer": false,
+      "meaning": "海賊行為をする",
+      "example": "Some users pirate copyrighted material despite repeated legal warnings.",
+      "exampleTranslation": "一部の利用者は、法的な警告を何度受けても著作物を違法に複製する。",
+      "axis": "problem",
+      "topic": "違法ダウンロード",
+      "pos": "名詞",
+      "word": "pirate"
+    },
+    {
+      "q": 8,
+      "is_answer": false,
+      "meaning": "サイバー犯罪",
+      "example": "Experts warned that cybercrime could seriously harm local communities if ignored.",
+      "exampleTranslation": "専門家は、サイバー犯罪を放置すれば地域社会に深刻な影響を与える可能性があると警告した。",
+      "axis": "problem",
+      "topic": "インターネット",
+      "pos": "名詞",
+      "word": "cybercrime"
+    },
+    {
+      "q": 8,
+      "is_answer": false,
+      "meaning": "アクセシビリティ",
+      "example": "The government promoted accessibility to improve people's lives over the long term.",
+      "exampleTranslation": "政府は、長期的に人々の生活を改善するため、アクセシビリティを推進した。",
+      "axis": "solution",
+      "topic": "インターネット",
+      "pos": "名詞",
+      "word": "accessibility"
+    },
+    {
+      "q": 10,
+      "is_answer": false,
+      "meaning": "ハッキング攻撃（別表現: cyber attack）",
+      "example": "Experts warned that hacking could seriously harm local communities if ignored.",
+      "exampleTranslation": "専門家は、ハッキング攻撃を放置すれば地域社会に深刻な影響を与える可能性があると警告した。",
+      "axis": "problem",
+      "topic": "インターネット",
+      "pos": "名詞",
+      "word": "hacking"
+    },
+    {
+      "q": 10,
+      "is_answer": false,
+      "meaning": "仮釈放",
+      "example": "The government promoted parole to improve people's lives over the long term.",
+      "exampleTranslation": "政府は、長期的に人々の生活を改善するため、仮釈放を推進した。",
+      "axis": "solution",
+      "topic": "刑務所",
+      "pos": "名詞",
+      "word": "parole"
+    }
+  ],
+  "idioms": [
+    {
+      "q": 1,
+      "is_answer": true,
+      "meaning": "インターネットの出現",
+      "example": "Researchers identified the emergence of the Internet as one factor behind the rapid social change.",
+      "exampleTranslation": "研究者は、インターネットの出現が急速な社会変化の一因だと説明した。",
+      "axis": "cause",
+      "topic": "インターネット",
+      "pos": "熟語",
+      "phrase": "the emergence of the Internet"
+    },
+    {
+      "q": 1,
+      "is_answer": false,
+      "meaning": "閲覧履歴",
+      "example": "The policy debate focused on browsing history and its effects on society.",
+      "exampleTranslation": "その政策論争では、閲覧履歴と社会への影響が焦点になった。",
+      "axis": "concept",
+      "topic": "インターネット",
+      "pos": "熟語",
+      "phrase": "browsing history"
+    },
+    {
+      "q": 1,
+      "is_answer": false,
+      "meaning": "画像検索",
+      "example": "The policy debate focused on image search and its effects on society.",
+      "exampleTranslation": "その政策論争では、画像検索と社会への影響が焦点になった。",
+      "axis": "concept",
+      "topic": "インターネット",
+      "pos": "熟語",
+      "phrase": "image search"
+    },
+    {
+      "q": 1,
+      "is_answer": false,
+      "meaning": "スマートフォン中毒",
+      "example": "Experts warned that smartphone addiction could seriously harm local communities if ignored.",
+      "exampleTranslation": "専門家は、スマートフォン中毒を放置すれば地域社会に深刻な影響を与える可能性があると警告した。",
+      "axis": "problem",
+      "topic": "インターネット",
+      "pos": "熟語",
+      "phrase": "smartphone addiction"
+    },
+    {
+      "q": 2,
+      "is_answer": true,
+      "meaning": "刑事事件",
+      "example": "The policy debate focused on criminal case and its effects on society.",
+      "exampleTranslation": "その政策論争では、刑事事件と社会への影響が焦点になった。",
+      "axis": "concept",
+      "topic": "犯罪",
+      "pos": "熟語",
+      "phrase": "criminal case"
+    },
+    {
+      "q": 2,
+      "is_answer": false,
+      "meaning": "反社会の行動",
+      "example": "The policy debate focused on anti-social behavior and its effects on society.",
+      "exampleTranslation": "その政策論争では、反社会の行動と社会への影響が焦点になった。",
+      "axis": "concept",
+      "topic": "犯罪",
+      "pos": "熟語",
+      "phrase": "anti-social behavior"
+    },
+    {
+      "q": 2,
+      "is_answer": false,
+      "meaning": "少年犯罪",
+      "example": "Experts warned that juvenile crime could seriously harm local communities if ignored.",
+      "exampleTranslation": "専門家は、少年犯罪を放置すれば地域社会に深刻な影響を与える可能性があると警告した。",
+      "axis": "problem",
+      "topic": "犯罪",
+      "pos": "熟語",
+      "phrase": "juvenile crime"
+    },
+    {
+      "q": 2,
+      "is_answer": false,
+      "meaning": "凶悪犯罪の増加",
+      "example": "Experts warned that increase of atrocious crimes could seriously harm local communities if ignored.",
+      "exampleTranslation": "専門家は、凶悪犯罪の増加を放置すれば地域社会に深刻な影響を与える可能性があると警告した。",
+      "axis": "problem",
+      "topic": "犯罪",
+      "pos": "熟語",
+      "phrase": "increase of atrocious crimes"
+    },
+    {
+      "q": 3,
+      "is_answer": false,
+      "meaning": "有力な証拠",
+      "example": "The policy debate focused on compelling evidence and its effects on society.",
+      "exampleTranslation": "その政策論争では、有力な証拠と社会への影響が焦点になった。",
+      "axis": "concept",
+      "topic": "犯罪",
+      "pos": "熟語",
+      "phrase": "compelling evidence"
+    },
+    {
+      "q": 3,
+      "is_answer": false,
+      "meaning": "犯罪組織",
+      "example": "Experts warned that criminal organization could seriously harm local communities if ignored.",
+      "exampleTranslation": "専門家は、犯罪組織を放置すれば地域社会に深刻な影響を与える可能性があると警告した。",
+      "axis": "problem",
+      "topic": "犯罪",
+      "pos": "熟語",
+      "phrase": "criminal organization"
+    },
+    {
+      "q": 3,
+      "is_answer": false,
+      "meaning": "犯罪率の低下",
+      "example": "Experts warned that decrease in crime rates could seriously harm local communities if ignored.",
+      "exampleTranslation": "専門家は、犯罪率の低下を放置すれば地域社会に深刻な影響を与える可能性があると警告した。",
+      "axis": "problem",
+      "topic": "犯罪",
+      "pos": "熟語",
+      "phrase": "decrease in crime rates"
+    },
+    {
+      "q": 4,
+      "is_answer": true,
+      "meaning": "疑わしきは罰せず",
+      "example": "In a fair trial, every suspect is treated as innocent until proven guilty.",
+      "exampleTranslation": "公正な裁判では、すべての容疑者は有罪と証明されるまで無罪として扱われる。",
+      "axis": "concept",
+      "topic": "犯罪",
+      "pos": "熟語",
+      "phrase": "innocent until proven guilty"
+    },
+    {
+      "q": 4,
+      "is_answer": false,
+      "meaning": "判断能力",
+      "example": "The policy debate focused on judgment ability and its effects on society.",
+      "exampleTranslation": "その政策論争では、判断能力と社会への影響が焦点になった。",
+      "axis": "concept",
+      "topic": "犯罪",
+      "pos": "熟語",
+      "phrase": "judgment ability"
+    },
+    {
+      "q": 4,
+      "is_answer": false,
+      "meaning": "犯罪被害者（別表現: victim of a crime）",
+      "example": "Experts warned that crime victim could seriously harm local communities if ignored.",
+      "exampleTranslation": "専門家は、犯罪被害者を放置すれば地域社会に深刻な影響を与える可能性があると警告した。",
+      "axis": "problem",
+      "topic": "犯罪",
+      "pos": "熟語",
+      "phrase": "crime victim"
+    },
+    {
+      "q": 4,
+      "is_answer": false,
+      "meaning": "少年犯罪",
+      "example": "Experts warned that juvenile crime could seriously harm local communities if ignored.",
+      "exampleTranslation": "専門家は、少年犯罪を放置すれば地域社会に深刻な影響を与える可能性があると警告した。",
+      "axis": "problem",
+      "topic": "犯罪",
+      "pos": "熟語",
+      "phrase": "juvenile crime"
+    },
+    {
+      "q": 5,
+      "is_answer": true,
+      "meaning": "被害者感情",
+      "example": "The policy debate focused on emotion of victims and its effects on society.",
+      "exampleTranslation": "その政策論争では、被害者感情と社会への影響が焦点になった。",
+      "axis": "concept",
+      "topic": "犯罪",
+      "pos": "熟語",
+      "phrase": "emotion of victims"
+    },
+    {
+      "q": 5,
+      "is_answer": false,
+      "meaning": "刑事事件",
+      "example": "The policy debate focused on criminal case and its effects on society.",
+      "exampleTranslation": "その政策論争では、刑事事件と社会への影響が焦点になった。",
+      "axis": "concept",
+      "topic": "犯罪",
+      "pos": "熟語",
+      "phrase": "criminal case"
+    },
+    {
+      "q": 5,
+      "is_answer": false,
+      "meaning": "犯罪抑止",
+      "example": "Experts warned that crime prevention could seriously harm local communities if ignored.",
+      "exampleTranslation": "専門家は、犯罪抑止を放置すれば地域社会に深刻な影響を与える可能性があると警告した。",
+      "axis": "problem",
+      "topic": "刑務所",
+      "pos": "熟語",
+      "phrase": "crime prevention"
+    },
+    {
+      "q": 5,
+      "is_answer": false,
+      "meaning": "再犯者",
+      "example": "Experts warned that repeat offender could seriously harm local communities if ignored.",
+      "exampleTranslation": "専門家は、再犯者を放置すれば地域社会に深刻な影響を与える可能性があると警告した。",
+      "axis": "problem",
+      "topic": "刑務所",
+      "pos": "熟語",
+      "phrase": "repeat offender"
+    },
+    {
+      "q": 6,
+      "is_answer": true,
+      "meaning": "動画共有サイト",
+      "example": "The policy debate focused on torrent site and its effects on society.",
+      "exampleTranslation": "その政策論争では、動画共有サイトと社会への影響が焦点になった。",
+      "axis": "concept",
+      "topic": "違法ダウンロード",
+      "pos": "熟語",
+      "phrase": "torrent site"
+    },
+    {
+      "q": 6,
+      "is_answer": false,
+      "meaning": "著作権法",
+      "example": "The policy debate focused on copyright law and its effects on society.",
+      "exampleTranslation": "その政策論争では、著作権法と社会への影響が焦点になった。",
+      "axis": "concept",
+      "topic": "違法ダウンロード",
+      "pos": "熟語",
+      "phrase": "copyright law"
+    },
+    {
+      "q": 6,
+      "is_answer": false,
+      "meaning": "著作権の侵害",
+      "example": "Experts warned that copyright infringement could seriously harm local communities if ignored.",
+      "exampleTranslation": "専門家は、著作権の侵害を放置すれば地域社会に深刻な影響を与える可能性があると警告した。",
+      "axis": "problem",
+      "topic": "違法ダウンロード",
+      "pos": "熟語",
+      "phrase": "copyright infringement"
+    },
+    {
+      "q": 6,
+      "is_answer": false,
+      "meaning": "違法なファイル共有",
+      "example": "Experts warned that illegal file sharing could seriously harm local communities if ignored.",
+      "exampleTranslation": "専門家は、違法なファイル共有を放置すれば地域社会に深刻な影響を与える可能性があると警告した。",
+      "axis": "problem",
+      "topic": "違法ダウンロード",
+      "pos": "熟語",
+      "phrase": "illegal file sharing"
+    },
+    {
+      "q": 7,
+      "is_answer": true,
+      "meaning": "いたちごっこ",
+      "example": "The policy debate focused on cat and mouse game and its effects on society.",
+      "exampleTranslation": "その政策論争では、いたちごっこと社会への影響が焦点になった。",
+      "axis": "concept",
+      "topic": "違法ダウンロード",
+      "pos": "熟語",
+      "phrase": "cat and mouse game"
+    },
+    {
+      "q": 7,
+      "is_answer": false,
+      "meaning": "検索エンジン",
+      "example": "The policy debate focused on search engine and its effects on society.",
+      "exampleTranslation": "その政策論争では、検索エンジンと社会への影響が焦点になった。",
+      "axis": "concept",
+      "topic": "インターネット",
+      "pos": "熟語",
+      "phrase": "search engine"
+    },
+    {
+      "q": 7,
+      "is_answer": false,
+      "meaning": "再犯率",
+      "example": "Experts warned that rate of repeated crime could seriously harm local communities if ignored.",
+      "exampleTranslation": "専門家は、再犯率を放置すれば地域社会に深刻な影響を与える可能性があると警告した。",
+      "axis": "problem",
+      "topic": "刑務所",
+      "pos": "熟語",
+      "phrase": "rate of repeated crime"
+    },
+    {
+      "q": 8,
+      "is_answer": true,
+      "meaning": "アフィリエイトマーケティング",
+      "example": "The policy debate focused on affiliate marketing and its effects on society.",
+      "exampleTranslation": "その政策論争では、アフィリエイトマーケティングと社会への影響が焦点になった。",
+      "axis": "concept",
+      "topic": "インターネット",
+      "pos": "熟語",
+      "phrase": "affiliate marketing"
+    },
+    {
+      "q": 8,
+      "is_answer": false,
+      "meaning": "信ぴょう性の要求",
+      "example": "The government promoted a demand for authenticity to improve people's lives over the long term.",
+      "exampleTranslation": "政府は、長期的に人々の生活を改善するため、信ぴょう性の要求を推進した。",
+      "axis": "solution",
+      "topic": "インターネット",
+      "pos": "熟語",
+      "phrase": "a demand for authenticity"
+    },
+    {
+      "q": 9,
+      "is_answer": true,
+      "meaning": "囚人の増加",
+      "example": "Experts warned that increase of prison population could seriously harm local communities if ignored.",
+      "exampleTranslation": "専門家は、囚人の増加を放置すれば地域社会に深刻な影響を与える可能性があると警告した。",
+      "axis": "problem",
+      "topic": "刑務所",
+      "pos": "熟語",
+      "phrase": "increase of prison population"
+    },
+    {
+      "q": 9,
+      "is_answer": false,
+      "meaning": "囚人間の暴力",
+      "example": "Experts warned that violence among prisoners could seriously harm local communities if ignored.",
+      "exampleTranslation": "専門家は、囚人間の暴力を放置すれば地域社会に深刻な影響を与える可能性があると警告した。",
+      "axis": "problem",
+      "topic": "刑務所",
+      "pos": "熟語",
+      "phrase": "violence among prisoners"
+    },
+    {
+      "q": 9,
+      "is_answer": false,
+      "meaning": "更正の可能性",
+      "example": "The government promoted possibility of correction to improve people's lives over the long term.",
+      "exampleTranslation": "政府は、長期的に人々の生活を改善するため、更正の可能性を推進した。",
+      "axis": "solution",
+      "topic": "刑務所",
+      "pos": "熟語",
+      "phrase": "possibility of correction"
+    },
+    {
+      "q": 9,
+      "is_answer": false,
+      "meaning": "社会復帰",
+      "example": "The government promoted social rehabilitation to improve people's lives over the long term.",
+      "exampleTranslation": "政府は、長期的に人々の生活を改善するため、社会復帰を推進した。",
+      "axis": "solution",
+      "topic": "刑務所",
+      "pos": "熟語",
+      "phrase": "social rehabilitation"
+    },
+    {
+      "q": 10,
+      "is_answer": true,
+      "meaning": "脱獄",
+      "example": "Experts warned that prison break could seriously harm local communities if ignored.",
+      "exampleTranslation": "専門家は、脱獄を放置すれば地域社会に深刻な影響を与える可能性があると警告した。",
+      "axis": "problem",
+      "topic": "刑務所",
+      "pos": "熟語",
+      "phrase": "prison break"
+    },
+    {
+      "q": 10,
+      "is_answer": false,
+      "meaning": "重罰の効果",
+      "example": "The government promoted effect of heavy punishment to improve people's lives over the long term.",
+      "exampleTranslation": "政府は、長期的に人々の生活を改善するため、重罰の効果を推進した。",
+      "axis": "solution",
+      "topic": "刑務所",
+      "pos": "熟語",
+      "phrase": "effect of heavy punishment"
+    },
+    {
+      "q": 11,
+      "is_answer": true,
+      "meaning": "偏向報道",
+      "example": "Experts warned that media bias could seriously harm local communities if ignored.",
+      "exampleTranslation": "専門家は、偏向報道を放置すれば地域社会に深刻な影響を与える可能性があると警告した。",
+      "axis": "problem",
+      "topic": "マスメディアと広告",
+      "pos": "熟語",
+      "phrase": "media bias"
+    },
+    {
+      "q": 11,
+      "is_answer": false,
+      "meaning": "誤報",
+      "example": "Experts warned that false report could seriously harm local communities if ignored.",
+      "exampleTranslation": "専門家は、誤報を放置すれば地域社会に深刻な影響を与える可能性があると警告した。",
+      "axis": "problem",
+      "topic": "マスメディアと広告",
+      "pos": "熟語",
+      "phrase": "false report"
+    },
+    {
+      "q": 11,
+      "is_answer": false,
+      "meaning": "情報共有",
+      "example": "The government promoted information sharing to improve people's lives over the long term.",
+      "exampleTranslation": "政府は、長期的に人々の生活を改善するため、情報共有を推進した。",
+      "axis": "solution",
+      "topic": "マスメディアと広告",
+      "pos": "熟語",
+      "phrase": "information sharing"
+    },
+    {
+      "q": 11,
+      "is_answer": false,
+      "meaning": "速報性",
+      "example": "The government promoted quick reporting to improve people's lives over the long term.",
+      "exampleTranslation": "政府は、長期的に人々の生活を改善するため、速報性を推進した。",
+      "axis": "solution",
+      "topic": "マスメディアと広告",
+      "pos": "熟語",
+      "phrase": "quick reporting"
+    }
+  ]
+}

@@ -1,9 +1,10 @@
-"""Q1用17データセットの最低限の契約を検証する。"""
+"""Q1用22データセットの最低限の契約を検証する。"""
 
 from __future__ import annotations
 
 import json
 import re
+from collections import Counter
 from pathlib import Path
 
 
@@ -19,6 +20,7 @@ EXPECTED_IDS = {
     "eiken1-mock-3",
     "eiken1-mock-4",
     "eiken1-mock-5",
+    *(f"eikentopic-set-{set_no}" for set_no in range(1, 6)),
 }
 
 
@@ -78,6 +80,12 @@ def check_dataset(dataset_id: str, meta: dict) -> None:
         {**item, "type": "idiom"}
         for item in vocab.get("idioms", [])
     ]
+    if dataset_id.startswith("eikentopic-"):
+        for item in items:
+            if item.get("axis") not in {"problem", "cause", "solution", "concept"}:
+                raise ValueError(f"{dataset_id}: axis が不正です")
+            if not item.get("example") or not item.get("exampleTranslation"):
+                raise ValueError(f"{dataset_id}: 例文または例文訳がありません")
     if not questions or not items:
         raise ValueError(f"{dataset_id}: 設問または語彙が空です")
 
@@ -113,6 +121,18 @@ def check_dataset(dataset_id: str, meta: dict) -> None:
         meanings = [item["meaning"] for item in q_items]
         if len(meanings) != len(set(meanings)):
             raise ValueError(f"{dataset_id}: Q{q}の意味が重複しています")
+        if dataset_id.startswith("eikentopic-"):
+            axes = [item["axis"] for item in q_items]
+            if max(Counter(axes).values()) > 2:
+                raise ValueError(f"{dataset_id}: Q{q}のaxisが3件以上重複しています")
+            correct_items = [item for item in q_items if item.get("is_answer")]
+            if len(correct_items) != 1:
+                raise ValueError(f"{dataset_id}: Q{q}の正答語句が1件ではありません")
+            stem = str(question.get("stem", ""))
+            if stem.count("( )") != 1 or surface(correct_items[0]) in stem:
+                raise ValueError(f"{dataset_id}: Q{q}の例文空所が不正です")
+            if not question.get("translation"):
+                raise ValueError(f"{dataset_id}: Q{q}の例文訳がありません")
 
     print(f"{dataset_id}: {len(questions)} questions / {len(items)} words OK")
 
