@@ -20,7 +20,6 @@ EXPECTED_IDS = {
     "eiken1-mock-3",
     "eiken1-mock-4",
     "eiken1-mock-5",
-    *(f"eikentopic-set-{set_no}" for set_no in range(1, 6)),
 }
 TRANSLATION_BLANK_RE = re.compile(r"(?:\(\s*\)|（\s*）)")
 
