@@ -2262,6 +2262,9 @@ function renderCheck(body) {
 
   body.appendChild(el("div", { class: "roundInfo" }, `4語句の意味確認 ${session.checkIdx + 1} / ${session.checkOrder.length}`));
 
+  // 出題表示の時刻。音声を押さなかった設問もここを起点に解答時間を測る
+  if (!session.checkShownAt) session.checkShownAt = Date.now();
+
   const box = el("div", { class: "quizBox" });
   box.appendChild(el("p", { class: "label" }, "次の語句の意味は？"));
   const listenButton = buildVocabAudioButton(item, "quizListenButton");
@@ -2298,8 +2301,10 @@ function renderCheck(body) {
       if (session.checkAnswered || choicesLocked()) return;
       session.checkAnswered = true;
       session.checkPicked = m;
-      if (session.checkAudioAt) {
-        session.checkElapsed = (Date.now() - session.checkAudioAt) / 1000;
+      const startedAt = session.checkAudioAt || session.checkShownAt;
+      if (startedAt) {
+        session.checkElapsed = (Date.now() - startedAt) / 1000;
+        session.checkElapsedFromAudio = Boolean(session.checkAudioAt);
         (session.audioElapsedLog || (session.audioElapsedLog = [])).push(session.checkElapsed);
       }
       const isCorrect = m === correct;
@@ -2335,7 +2340,8 @@ function appendCheckFeedback(box, item, surface, correct, isCorrect) {
     el("p", {}, `${surface}：${correct}`),
   );
   if (typeof session.checkElapsed === "number") {
-    fb.appendChild(el("p", { class: "hint" }, `音声を押してから ${session.checkElapsed.toFixed(1)} 秒で解答`));
+    fb.appendChild(el("p", { class: "hint" },
+      `${session.checkElapsedFromAudio ? "音声を押してから" : "出題から"} ${session.checkElapsed.toFixed(1)} 秒で解答`));
   }
   if (item.etymology) fb.appendChild(el("p", { class: "trans" }, item.etymology));
   box.appendChild(fb);
@@ -2350,7 +2356,9 @@ function appendCheckFeedback(box, item, surface, correct, isCorrect) {
         session.checkCorrect = null;
         session._checkChoices = null;
         session.checkAudioAt = null;
+        session.checkShownAt = null;
         session.checkElapsed = null;
+        session.checkElapsedFromAudio = false;
         if (last) {
           session.stage = nextStageAfterCheck();
           renderSession();
@@ -2599,7 +2607,7 @@ function renderDone(body) {
   if (elapsedLog.length) {
     const avg = elapsedLog.reduce((a, b) => a + b, 0) / elapsedLog.length;
     banner.appendChild(el("p", { class: "hint" },
-      `音声から解答までの平均 ${avg.toFixed(1)} 秒（計測${elapsedLog.length}語句・最速${Math.min(...elapsedLog).toFixed(1)}秒／最遅${Math.max(...elapsedLog).toFixed(1)}秒）`));
+      `解答までの平均 ${avg.toFixed(1)} 秒（計測${elapsedLog.length}語句・最速${Math.min(...elapsedLog).toFixed(1)}秒／最遅${Math.max(...elapsedLog).toFixed(1)}秒）`));
   }
   body.appendChild(banner);
 
