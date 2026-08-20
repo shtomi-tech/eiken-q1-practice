@@ -1408,9 +1408,9 @@ function vocabGoalCard(learned, ready) {
     : own < gap * 0.75 ? "半分をこえました。"
     : "ゴールが見えてきました。";
 
-  const cat = el("div", { class: "vgCat", "aria-hidden": "true", "data-walking": own > 0 ? "1" : "" },
-    el("span", { class: "vgCatSprite" }));
-  cat.style.left = pct(value);
+  const walker = el("div", { class: "vgHedgehog", "aria-hidden": "true", "data-walking": own > 0 ? "1" : "" },
+    el("span", { class: "vgHedgehogSprite" }));
+  walker.style.left = pct(value);
 
   const base = el("div", { class: "vgFillBase" });
   base.style.width = pct(goal.prev);
@@ -1425,7 +1425,7 @@ function vocabGoalCard(learned, ready) {
     "aria-valuemax": String(goal.target),
     "aria-valuenow": String(value),
     "aria-valuetext": `${dataset().shortLabel}の目標${num(goal.target)}語のうち${num(value)}語。${goal.prevLabel}までの${num(goal.prev)}語に、このアプリで学習した${num(own)}語句を足した数です。`,
-  }, base, ownFill, cat);
+  }, base, ownFill, walker);
 
   const prevTick = el("span", { class: "vgTick vgTickMid" },
     el("strong", {}, num(goal.prev)), el("small", {}, goal.prevLabel));

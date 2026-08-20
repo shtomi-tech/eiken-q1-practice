@@ -42,17 +42,17 @@ assert.ok(body.includes("習得済みとして計算"), "前級を既習前提�
 assert.ok(body.includes("目安です"), "語彙数が目安である旨の注記が必要");
 assert.ok(body.includes('role: "progressbar"'), "バーは progressbar として読み上げ可能にする必要がある");
 assert.ok(body.includes('"aria-valuetext"'), "aria-valuetext で内訳を読み上げる必要がある");
-assert.ok(body.includes('"aria-hidden": "true"'), "装飾の猫は支援技術から隠す必要がある");
+assert.ok(body.includes('"aria-hidden": "true"'), "装飾のハリネズミは支援技術から隠す必要がある");
 
 const renderHome = js.slice(js.indexOf("function renderHomeContent("));
 assert.match(renderHome, /home\.appendChild\(goalCard\)/, "語彙目標カードはホーム直下へ追加する必要がある");
 
-for (const cls of [".vgHead", ".vgTrack", ".vgFillBase", ".vgFillOwn", ".vgCat", ".vgTick"]) {
+for (const cls of [".vgHead", ".vgTrack", ".vgFillBase", ".vgFillOwn", ".vgHedgehog", ".vgTick"]) {
   assert.ok(css.includes(cls), `CSSに ${cls} の規則が必要`);
 }
-// ドット絵は2px刻み・10x6マス（34ドット）。崩れるとバー上で猫に見えなくなる。
-const shadow = css.match(/\.vgCatSprite \{[\s\S]*?box-shadow:([\s\S]*?);/);
-assert.ok(shadow, ".vgCatSprite の box-shadow が見つからない");
-assert.equal(shadow[1].split(",").length, 34, "猫のドットは34個である必要がある");
+// ドット絵は2px刻み・12x7マス（58ドット）。崩れるとバー上でハリネズミに見えなくなる。
+const shadow = css.match(/\.vgHedgehogSprite \{[\s\S]*?box-shadow:([\s\S]*?);/);
+assert.ok(shadow, ".vgHedgehogSprite の box-shadow が見つからない");
+assert.equal(shadow[1].split(",").length, 58, "ハリネズミのドットは58個である必要がある");
 
 console.log("vocab goal UI contract: OK");
