@@ -73,6 +73,7 @@
 - **副ボタン（`.ghost`）**: 透明地＋Ink文字＋hairline枠、角丸md。ホバーでInk地に反転
 - **二次アクション（`.secondaryCta`）**: 透明地＋hairline枠、角丸md。reviewCta/finalCta系統は枠・文字をClayに
 - **カード（`.card` 等）**: Card地・角丸lg・枠なし・影なし
+- **語彙目標カード（`.vocabGoalCard`）**: 級単位の語彙目標を、前級目標→当級目標の1本のバーで示す。前級までの区間は「習得済み前提」の中立色（Muted）、このアプリでの実績だけをClayで重ねる。実績は差分区間でクランプし、0でないときは最小3pxで可視化する。現在位置にはドット絵の猫（`.vgCat`／box-shadowのみ。外部画像を持たない、`aria-hidden`）が立ち、実績が1語句以上のときだけ歩く。語彙数は英検公式の公表値ではないため、「前級までは習得済みとして計算」「目安です」の注記を必ず併記する
 - **間隔復習カード（`.spacedReviewCard`）**: 通常学習カードの兄弟として置き、Clayの左4px罫だけで復習導線を示す。カード内のCTAは意味復習セッションだけを開始する
 - **問題セットUnitカード（`.datasetUnitCard`）**: Parchment地＋hairline枠、角丸md。現在選択中はInkの左4px罫＋Surface Strong地（`aria-current="true"`）、CLEAR済みはOKの左4px罫＋「✓ CLEAR」文言、要復習ありはClayの左4px罫＋「！要復習n問」文言。色だけに頼らず必ず文言を併記する。番号バッジは表示順であり永続IDではない
 - **強調タイル（`.hero` `.doneBanner` `.completionCard`）**: Ink地＋Parchment文字の反転表示、角丸lg。「学習フローの始まり」と「締めくくり」を示す
@@ -97,6 +98,7 @@ MOTION_INTENSITY: 3（既定UIに一貫した押下感・状態変化を与え�
 | --- | --- | --- |
 | 語彙音声 | idle / loading / playing / error | ラベル文言＋`data-audio-state`。playing中は装飾Equalizer Bars（`aria-hidden`） |
 | 自作例文チェック | idle / submitting / ok / revise / error | `data-submit-state`。submitting中はボタンdisabled＋小さいloader。okはSuccess Check、reviseは既存の焦茶静的状態、errorは赤い左罫線＋再試行案内 |
+| 語彙目標の猫（`.vgCat`） | 停止 / 歩行 | `data-walking`。実績が1語句以上で520ms・steps(2)の上下2フレーム歩行（transformのみ）。reduced-motionでは静止した猫を表示する |
 | 保存状態（`#shareStatus`） | local（非表示）/ syncing / saved / error | harnessの`tone`(`ok`/`syncing`/`ng`)をそのまま利用。syncingはloader、savedは一度だけcheck、errorは静的`!` |
 
 ### reduced motion

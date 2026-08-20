@@ -32,6 +32,15 @@ function datasetStorageKey() {
 // ここに無いプレフィックスは「級不明」として扱い、意味練習のプール対象から外す。
 const GRADE_BY_PREFIX = { eiken1: "1", eiken2: "2", eikenp1: "pre1", eikenp2: "pre2", eikentopic: "topic" };
 const DATASET_ID_RE = new RegExp(`^(${Object.keys(GRADE_BY_PREFIX).join("|")})-(\\d{4}-\\d+|mock-\\d+|set-\\d+)$`);
+// 級ごとの語彙目標。英検公式は必要語彙数を公表していないため、95%カバー率解析
+// （ei-raku.com の推定 1,650/3,000/5,100/8,900/14,400）を生徒が扱いやすい丸い数字にした目安。
+// prev は「前の級までは習得済み」という前提の起点で、累計と差分（+1,500/+2,000/+4,000/+5,000）が一致するよう丸めてある。
+const VOCAB_GOALS = {
+  eikenp2: { prev: 1500, target: 3000, prevLabel: "3級" },
+  eiken2: { prev: 3000, target: 5000, prevLabel: "準2級" },
+  eikenp1: { prev: 5000, target: 9000, prevLabel: "2級" },
+  eiken1: { prev: 9000, target: 14000, prevLabel: "準1級" },
+};
 // 問題セット一覧は data/manifest.json（"q1"キー）から読み込む。
 // 回を追加するときはデータJSONを置いてmanifest.jsonに1エントリ足すだけでよく、このファイルの編集は不要。
 let DATASETS = {};
@@ -1247,6 +1256,10 @@ function renderHomeContent() {
   }
   home.appendChild(summary);
 
+  // 語彙目標カード（級単位。問題セットより上位の目標なので、セット一覧より前に置く）
+  const goalCard = grade ? vocabGoalCard(meaningSummary ? meaningSummary.learned : 0, Boolean(pooled)) : null;
+  if (goalCard) home.appendChild(goalCard);
+
   // 層2：問題セットUnitカード（独立section。同じ級の過去問・模試を進捗付きで一覧表示）
   home.appendChild(el("section", { class: "card" }, datasetPicker()));
 
@@ -1376,6 +1389,70 @@ function questionFilterBar(counts) {
     }, `${QUESTION_TYPE_LABELS[key]} ${counts.type[key]}`));
   }
   return el("div", { class: "questionFilterBar" }, statusGroup, typeGroup);
+}
+
+// 語彙目標カード。前の級までは習得済みという前提で、前級目標→当級目標の区間を進捗として見せる。
+// 分子の実績は「その級で通常学習まで終えた語句数」（meaningPracticeSummary().learned と同じ母集団）。
+function vocabGoalCard(learned, ready) {
+  const goal = VOCAB_GOALS[currentGrade()];
+  if (!goal) return null;
+  const gap = goal.target - goal.prev;
+  const own = ready ? Math.min(learned, gap) : 0;
+  const value = goal.prev + own;
+  const pct = (n) => `${(n / goal.target) * 100}%`;
+  const num = (n) => n.toLocaleString("ja-JP");
+  const message = !ready ? "読み込み中…"
+    : own === 0 ? `ここからが${dataset().shortLabel}の${num(gap)}語。まず1問めから。`
+    : own < gap * 0.25 ? "一歩めが出ました。それがいちばん大変。"
+    : own < gap * 0.5 ? "歩き出しました。この調子。"
+    : own < gap * 0.75 ? "半分をこえました。"
+    : "ゴールが見えてきました。";
+
+  const cat = el("div", { class: "vgCat", "aria-hidden": "true", "data-walking": own > 0 ? "1" : "" },
+    el("span", { class: "vgCatSprite" }));
+  cat.style.left = pct(value);
+
+  const base = el("div", { class: "vgFillBase" });
+  base.style.width = pct(goal.prev);
+  const ownFill = el("div", { class: "vgFillOwn" });
+  ownFill.style.left = pct(goal.prev);
+  ownFill.style.width = own > 0 ? `max(3px, ${pct(own)})` : "0";
+
+  const track = el("div", {
+    class: "vgTrack",
+    role: "progressbar",
+    "aria-valuemin": "0",
+    "aria-valuemax": String(goal.target),
+    "aria-valuenow": String(value),
+    "aria-valuetext": `${dataset().shortLabel}の目標${num(goal.target)}語のうち${num(value)}語。${goal.prevLabel}までの${num(goal.prev)}語に、このアプリで学習した${num(own)}語句を足した数です。`,
+  }, base, ownFill, cat);
+
+  const prevTick = el("span", { class: "vgTick vgTickMid" },
+    el("strong", {}, num(goal.prev)), el("small", {}, goal.prevLabel));
+  prevTick.style.left = pct(goal.prev);
+
+  return el("section", { class: "card vocabGoalCard", "aria-labelledby": "vocabGoalTitle" },
+    el("div", { class: "vgHead" },
+      el("div", {},
+        el("p", { class: "label" }, "語彙の目標"),
+        el("h3", { id: "vocabGoalTitle" }, `${dataset().shortLabel}の語彙 ${num(goal.target)}語`),
+      ),
+      el("p", { class: "vgCount" },
+        el("strong", {}, num(value)),
+        el("span", {}, ` 語 / ${num(goal.target)}語`)),
+    ),
+    el("div", { class: "vgBar" }, track,
+      el("div", { class: "vgTicks" },
+        el("span", { class: "vgTick vgTickStart" }, el("strong", {}, "0")),
+        prevTick,
+        el("span", { class: "vgTick vgTickEnd" },
+          el("strong", {}, num(goal.target)), el("small", {}, dataset().shortLabel)),
+      ),
+    ),
+    el("p", { class: "vgMessage" }, message),
+    el("p", { class: "hint" },
+      `${goal.prevLabel}までの${num(goal.prev)}語は習得済みとして計算しています。このアプリで学習した語句は${ready ? num(own) : "—"}語句。語彙数は目安です。`),
+  );
 }
 
 function meaningMission(summary, ready, nextQueue = [], learnedItems = [], meaningResume = null, coreResume = false) {
