@@ -30,7 +30,7 @@ function datasetStorageKey() {
 }
 // datasetId の級プレフィックス → 音声フォルダ名。級の判定・同一級のプール化にも使う。
 // ここに無いプレフィックスは「級不明」として扱い、意味練習のプール対象から外す。
-const GRADE_BY_PREFIX = { eiken1: "1", eiken2: "2", eikenp1: "pre1", eikenp2: "pre2", eikentopic: "topic" };
+const GRADE_BY_PREFIX = { eiken1: "1", eiken2: "2", eikenp1: "pre1", eikenp2: "pre2", eikentopic: "topic", iuhw: "iuhw" };
 const DATASET_ID_RE = new RegExp(`^(${Object.keys(GRADE_BY_PREFIX).join("|")})-(\\d{4}-\\d+|mock-\\d+|set-\\d+)$`);
 const GRADE_KEY = "grade";
 const GRADE_PREFIXES = {
@@ -38,9 +38,10 @@ const GRADE_PREFIXES = {
   "2": ["eiken2"],
   pre1: ["eikenp1"],
   "1": ["eiken1"],
+  iuhw: ["iuhw"],
 };
-const GRADE_CHOICE_ORDER = ["pre2", "2", "pre1", "1"];
-const GRADE_LABELS = { pre2: "準2級", "2": "2級", pre1: "準1級", "1": "1級" };
+const GRADE_CHOICE_ORDER = ["pre2", "2", "pre1", "1", "iuhw"];
+const GRADE_LABELS = { pre2: "準2級", "2": "2級", pre1: "準1級", "1": "1級", iuhw: "医療福祉" };
 // 級ごとの語彙目標。英検公式は必要語彙数を公表していないため、95%カバー率解析
 // （ei-raku.com の推定 1,650/3,000/5,100/8,900/14,400）を生徒が扱いやすい丸い数字にした目安。
 // prev は「前の級までは習得済み」という前提の起点で、累計と差分（+1,500/+2,000/+4,000/+5,000）が一致するよう丸めてある。
@@ -144,7 +145,7 @@ function datasetCleared(datasetId) {
   const saved = progressFor(datasetId);
   return Boolean(saved && saved.finalCheck && saved.finalCheck.cleared);
 }
-// datasetId から級プレフィックス（eiken1 / eiken2 / eikenp1 / eikenp2）を取り出す。
+// datasetId から級プレフィックス（eiken1 / eiken2 / eikenp1 / eikenp2 / iuhw）を取り出す。
 // 意味だけ練習の間隔反復（Leitner）とプール化は、この級単位で行う。
 function gradeOf(datasetId) {
   const match = DATASET_ID_RE.exec(datasetId || "");
@@ -161,7 +162,8 @@ function datasetSectionName(datasetId = state.datasetId) {
 }
 function datasetHeadline(datasetId = state.datasetId) {
   const data = DATASETS[datasetId] || dataset();
-  return datasetIsTopic(datasetId) ? `英検${data.shortLabel}表現` : `英検${data.shortLabel} 大問1`;
+  const prefix = String(datasetId || "").startsWith("eiken") ? "英検" : "";
+  return datasetIsTopic(datasetId) ? `${prefix}${data.shortLabel}表現` : `${prefix}${data.shortLabel} 大問1`;
 }
 // 1描画（＝1回のキュー生成）の間だけ、非アクティブ回のブロックをメモ化する。
 // ホーム描画は語句ごとに progressFor を呼ぶため、無いと localStorage.getItem + JSON.parse が
@@ -1625,11 +1627,12 @@ function datasetGradeLabel(grade) {
 
 function datasetSetKind(datasetId) {
   if (datasetIsTopic(datasetId)) return "テーマ別";
+  if (gradeOf(datasetId) === "iuhw") return "基礎試験";
   return datasetId.includes("-mock-") ? "模試" : "過去問";
 }
 
 function datasetSetLabel(datasetId, data) {
-  const prefix = `英検${data.shortLabel || ""}`;
+  const prefix = String(datasetId || "").startsWith("eiken") ? `英検${data.shortLabel || ""}` : "";
   let label = String(data.label || "");
   if (prefix && label.startsWith(prefix)) label = label.slice(prefix.length).trim();
   if (datasetSetKind(datasetId) === "模試") label = label.replace(/^模試\s*/, "");
@@ -1702,11 +1705,11 @@ function datasetUnitCard(id, data, index) {
   );
 }
 
-// 同じ級の問題セットを「過去問」「模試」の小見出しごとにUnitカードで並べる。
+// 同じ級の問題セットを種別ごとの小見出しに分けてUnitカードで並べる。
 function datasetUnitCards(grade) {
   const entries = availableDatasets().filter(([id]) => gradeOf(id) === grade);
   const wrap = el("div", { class: "datasetUnitCards" });
-  for (const kind of ["過去問", "模試", "テーマ別"]) {
+  for (const kind of ["過去問", "模試", "テーマ別", "基礎試験"]) {
     const groupEntries = entries.filter(([id]) => datasetSetKind(id) === kind);
     if (!groupEntries.length) continue;
     wrap.appendChild(el("p", { class: "datasetUnitGroupLabel" }, `${datasetGradeLabel(grade)}・${kind}`));

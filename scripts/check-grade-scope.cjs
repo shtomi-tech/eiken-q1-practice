@@ -4,14 +4,15 @@ const vm = require("node:vm");
 
 const js = fs.readFileSync("static/mode-q1.js", "utf8");
 assert.match(js, /const GRADE_PREFIXES = \{/);
-assert.match(js, /const GRADE_CHOICE_ORDER = \["pre2", "2", "pre1", "1"\]/);
+assert.match(js, /const GRADE_CHOICE_ORDER = \["pre2", "2", "pre1", "1", "iuhw"\]/);
+assert.match(js, /for \(const kind of \["過去問", "模試", "テーマ別", "基礎試験"\]\)/);
 assert.match(js, /function applyGradeScope\(/);
 assert.match(js, /function resolveGradeCode\(/);
 assert.match(js, /function renderGradeChoice\(/);
 
 const source = js.replace(
   "return { mount, handleKey };",
-  "return { mount, handleKey, __test: { applyGradeScope, resolveGradeCode, availableDatasets, defaultDatasetId, datasetGrades, otherGradeDueCounts, setManifest: (datasets, defaultId) => { ALL_DATASETS = datasets; DATASETS = datasets; DEFAULT_DATASET_ID = defaultId; }, setDataset: (id) => { state.datasetId = id; }, gradeStorageKey: () => scopedStorageKey(GRADE_KEY) } };",
+  "return { mount, handleKey, __test: { applyGradeScope, resolveGradeCode, availableDatasets, defaultDatasetId, datasetGrades, otherGradeDueCounts, datasetHeadline, datasetSetKind, datasetSetLabel, setManifest: (datasets, defaultId) => { ALL_DATASETS = datasets; DATASETS = datasets; DEFAULT_DATASET_ID = defaultId; }, setDataset: (id) => { state.datasetId = id; }, gradeStorageKey: () => scopedStorageKey(GRADE_KEY) } };",
 );
 const values = new Map();
 const localStorage = {
@@ -35,6 +36,7 @@ const datasets = {
   "eikenp1-2026-1": {},
   "eiken1-2026-1": {},
   "eikentopic-set-1": {},
+  "iuhw-set-1": { label: "国際医療福祉大学 総合型選抜 基礎試験", shortLabel: "医療福祉" },
 };
 scope.setManifest(datasets, "eiken2-2026-1");
 const datasetIds = () => Array.from(scope.availableDatasets(), ([id]) => id);
@@ -59,6 +61,12 @@ assert.deepEqual(Array.from(scope.otherGradeDueCounts()), []);
 
 assert.equal(scope.applyGradeScope("2"), true, "級変更時に元の全データから再絞り込みできる");
 assert.deepEqual(datasetIds(), ["eiken2-2026-1"]);
+assert.equal(scope.applyGradeScope("iuhw"), true, "医療福祉セットへ絞り込める");
+assert.deepEqual(datasetIds(), ["iuhw-set-1"]);
+scope.setDataset("iuhw-set-1");
+assert.equal(scope.datasetHeadline(), "医療福祉 大問1", "医療福祉セットに英検の接頭辞を付けない");
+assert.equal(scope.datasetSetKind("iuhw-set-1"), "基礎試験");
+assert.equal(scope.datasetSetLabel("iuhw-set-1", datasets["iuhw-set-1"]), "国際医療福祉大学 総合型選抜 基礎試験");
 const beforeInvalidScope = datasetIds();
 assert.equal(scope.applyGradeScope("missing"), false);
 assert.deepEqual(datasetIds(), beforeInvalidScope, "未知の級で現在の範囲を壊さない");

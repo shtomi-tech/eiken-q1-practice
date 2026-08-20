@@ -1,6 +1,6 @@
 # 英検 大問1・テーマ別表現 単語アプリ
 
-英検1級・2級・準2級・準1級の大問1（語彙）と、1級のトピック別表現を扱う静的Webアプリです。各級の過去問3回分に加え、1級の模試第1回〜第5回、準2級の自作模試第1回、テーマ別5セットを収録しています（合計23セット）。準2級の自作模試は英検過去問を引用していません。
+英検1級・2級・準2級・準1級の大問1（語彙）と、1級のトピック別表現を扱う静的Webアプリです。各級の過去問3回分に加え、1級の模試第1回〜第5回、準2級の自作模試第1回、テーマ別5セット、国際医療福祉大学の総合型選抜基礎試験セットを収録しています（合計24セット）。準2級の自作模試と国際医療福祉大学セットは英検過去問を引用していません。
 
 ## 学習の流れ
 
@@ -27,6 +27,7 @@
 | 準1級 | 54 | 216 |
 | 1級（模試第1回〜第5回を含む） | 191 | 764 |
 | 1級テーマ別（5セット） | 84 | 324ユニーク（336スロット） |
+| 医療福祉 基礎試験 | 15 | 60 |
 
 語句ごとの復習間隔は、その語句が属する回の進捗（`eiken_q1_progress_<datasetId>` の `items`）に保存します。級をまたいで混ざることはありません。
 
@@ -47,6 +48,7 @@
 - 1級テーマ別設問の組み合わせ: `data/topic_question_groups_1.json`
 - 1級テーマ別設問文: `data/topic_question_stems_1.json`（暗記カードの例文とは別データ）
 - 1級テーマ別5セット: `data/questions_topic_set-*.json` / `data/vocab_topic_set-*.json`
+- 国際医療福祉大学 基礎試験: `data/questions_iuhw_set-1.json` / `data/vocab_iuhw_set-1.json`
 - 問題セット一覧: `data/manifest.json` の `q1`
 
 準1級のQ1データは、全体過去問データから次で抽出します。
@@ -81,6 +83,7 @@ py -3 scripts/generate_tts_1.py --grade 2 --round all
 py -3 scripts/generate_tts_1.py --grade pre1 --round all
 py -3 scripts/generate_tts_1.py --grade pre2 --round all
 py -3 scripts/generate_tts_1.py --grade topic --round all
+py -3 scripts/generate_tts_1.py --grade iuhw --round set-1
 ```
 
 生成先は単語が `assets/audio/vocab/<級>/<回>/`、熟語が `assets/audio/vocab/<級>/<回>/idiom/` です。テーマ別表現は `<級>` が `topic`、回が `set-1`〜`set-5` になります。生成済みの単語・熟語は暗記カードと意味チェックで「音声」ボタンから再生できます。
@@ -153,7 +156,8 @@ py -3 scripts/add_example_translations.py
 - `scripts/build_q1_mock_5_data.py`: 1級模試第5回の問題・語彙データ生成
 - `scripts/build_q1_p2_mock_1_data.py`: 準2級自作模試第1回の問題・語彙データ生成
 - `scripts/build_topic_data.py`: トピック別表現の正規化・例文・5セット生成
-- `scripts/check_q1_data.py`: 23セットのデータ契約チェック
+- `scripts/build_q1_iuhw_set_1_data.py`: 国際医療福祉大学セットの問題・語彙データ生成
+- `scripts/check_q1_data.py`: 24セットのデータ契約チェック
 - `scripts/check_p2_mock_data.py`: 準2級自作模試第1回の内容チェック
 
 このリポジトリは大問1専用です。大問2・3、リスニング、ライティング、言い換えのコード・教材・音声・生成スクリプトには依存しません。
