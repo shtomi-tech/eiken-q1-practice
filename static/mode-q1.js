@@ -1305,12 +1305,12 @@ function renderHomeContent() {
   const goalCard = grade ? vocabGoalCard(meaningSummary ? meaningSummary.learned : 0, Boolean(pooled)) : null;
   if (goalCard) home.appendChild(goalCard);
 
-  // 層2：問題セットUnitカード（独立section。同じ級の過去問・模試を進捗付きで一覧表示）
-  home.appendChild(el("section", { class: "card" }, datasetPicker()));
-
   if (grade) {
     home.appendChild(meaningMission(meaningSummary, Boolean(pooled), meaningQueue, meaningItems, meaningResume ? resume : null, coreResume));
   }
+
+  // 層2：問題セットUnitカード（独立section。同じ級の過去問・模試を進捗付きで一覧表示）
+  home.appendChild(el("section", { class: "card" }, datasetPicker()));
 
   // 層3：詳細（問題一覧。状態・種別フィルター付き）
   const path = el("section", { class: "card" });
@@ -1341,9 +1341,11 @@ function renderHomeContent() {
   }
   home.appendChild(path);
 
-  if (!sharedMode()) {
-    const other = el("section", { class: "card" },
-      el("details", { class: "moreDetails" },
+  const canChangeGrade = !new URLSearchParams(window.location.search).has("g");
+  if (!sharedMode() || canChangeGrade) {
+    const utility = el("section", { class: "card" });
+    if (!sharedMode()) {
+      utility.appendChild(el("details", { class: "moreDetails" },
         el("summary", { class: "label" }, "その他"),
         el("div", { class: "actions" },
           el("button", {
@@ -1356,23 +1358,23 @@ function renderHomeContent() {
             },
           }, "進捗リセット"),
         ),
-      ),
-    );
-    home.appendChild(other);
-  }
-  if (!new URLSearchParams(window.location.search).has("g")) {
-    home.appendChild(el("section", { class: "card gradeScopeChange" },
-      el("button", {
-        class: "ghost smallGhost",
-        type: "button",
-        onclick: () => {
-          if (!confirm("学習する級を変更します。現在の級以外の進捗も消えません。変更しますか？")) return;
-          try { localStorage.removeItem(scopedStorageKey(GRADE_KEY)); } catch (e) { /* ignore */ }
-          needsGradeChoice = true;
-          renderHome();
-        },
-      }, "級を変更"),
-    ));
+      ));
+    }
+    if (canChangeGrade) {
+      utility.appendChild(el("div", { class: "gradeScopeChange" },
+        el("button", {
+          class: "ghost smallGhost",
+          type: "button",
+          onclick: () => {
+            if (!confirm("学習する級を変更します。現在の級以外の進捗も消えません。変更しますか？")) return;
+            try { localStorage.removeItem(scopedStorageKey(GRADE_KEY)); } catch (e) { /* ignore */ }
+            needsGradeChoice = true;
+            renderHome();
+          },
+        }, "級を変更"),
+      ));
+    }
+    home.appendChild(utility);
   }
 }
 
