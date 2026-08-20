@@ -191,7 +191,7 @@ DETAILS = {
     "misnomer": ("誤った名称、誤称", "名詞", "Calling the tiny room a ballroom is a misnomer.", "その小さな部屋を舞踏室と呼ぶのは誤称だ。"),
     "wrench": ("激しい苦痛；ねじる道具", "名詞", "Leaving her hometown was an emotional wrench.", "故郷を離れることは精神的に大きな苦痛だった。"),
     "filtered": ("ろ過した、選別した", "動詞", "The technician filtered the water before testing it.", "技術者は検査前に水をろ過した。"),
-    "alleged": ("申し立てられた、 alleged の", "形容詞", "The alleged thief denied taking the necklace.", "容疑者とされた泥棒はネックレスを盗んだことを否定した。"),
+    "alleged": ("申し立てられた、疑惑の", "形容詞", "The alleged thief denied taking the necklace.", "容疑者とされた泥棒はネックレスを盗んだことを否定した。"),
     "tethered": ("つなぎ留めた", "動詞", "The hikers tethered the horses near the river.", "ハイカーたちは川の近くで馬をつないだ。"),
     "debriefed": ("任務後に事情聴取した", "動詞", "The rescue team was debriefed after returning to base.", "救助隊は基地に戻った後、任務について報告を求められた。"),
     "abominable": ("非常にひどい、忌まわしい", "形容詞", "The restaurant received an abominable safety rating.", "そのレストランは非常にひどい安全評価を受けた。"),
