@@ -36,6 +36,7 @@ const DATASET_ID_RE = new RegExp(`^(${Object.keys(GRADE_BY_PREFIX).join("|")})-(
 // 回を追加するときはデータJSONを置いてmanifest.jsonに1エントリ足すだけでよく、このファイルの編集は不要。
 let DATASETS = {};
 let DEFAULT_DATASET_ID = null;
+let lemmaMap = {};
 let aiCheckEndpoint = "";
 async function loadManifest() {
   const manifest = await fetch(MANIFEST_URL, { cache: "no-store" }).then((r) => r.json());
@@ -1965,17 +1966,25 @@ function buildFlashCard(item) {
   const card = el("div", { class: "flash" });
   const head = el("div", { class: "flashHead" });
   const surface = surfaceOf(item);
+  const lemma = item.type === "word" ? lemmaMap[String(surface).toLowerCase()] : "";
   const wordLine = el("div", { class: "flashWordLine" },
-    el("div", { class: "flashWord" }, surface),
+    el("div", { class: "flashWord" }, lemma || surface),
   );
-  if (item.ipa) wordLine.appendChild(el("div", { class: "flashIpa" }, item.ipa));
-  if (vocabularyAudioEnabled(item)) {
-    wordLine.appendChild(buildVocabAudioButton(item));
+  const headContent = el("div", {}, wordLine);
+  if (lemma) {
+    const lemmaNote = el("div", { class: "flashLemmaNote" },
+      el("span", { class: "flashLemmaLabel" }, "出題形"),
+      el("span", { class: "flashLemmaSurface" }, surface),
+    );
+    if (item.ipa) lemmaNote.appendChild(el("span", { class: "flashIpa" }, item.ipa));
+    if (vocabularyAudioEnabled(item)) lemmaNote.appendChild(buildVocabAudioButton(item));
+    headContent.appendChild(lemmaNote);
+  } else {
+    if (item.ipa) wordLine.appendChild(el("div", { class: "flashIpa" }, item.ipa));
+    if (vocabularyAudioEnabled(item)) wordLine.appendChild(buildVocabAudioButton(item));
   }
-  head.appendChild(el("div", {},
-    wordLine,
-    el("div", { class: "flashPos" }, item.pos || ""),
-  ));
+  headContent.appendChild(el("div", { class: "flashPos" }, item.pos || ""));
+  head.appendChild(headContent);
   card.appendChild(head);
 
   const inner = el("div", { class: "flashBody" });
@@ -2663,6 +2672,14 @@ let booted = false;
 async function boot() {
   try {
     await loadManifest();
+    try {
+      const lemmaData = await fetch("data/lemmas.json", { cache: "no-store" }).then((r) => r.json());
+      lemmaMap = lemmaData && lemmaData.lemmas && typeof lemmaData.lemmas === "object" && !Array.isArray(lemmaData.lemmas)
+        ? lemmaData.lemmas
+        : {};
+    } catch (e) {
+      lemmaMap = {};
+    }
     await loadAiConfig();
 
     // 旧準1級アプリのクラウド進捗は読み取り専用で一度だけ取り込む。

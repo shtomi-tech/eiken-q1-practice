@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "test": "node --check static/mode-q1.js && node scripts/check-student-storage-scope.cjs && node scripts/check-cloud-progress-namespace.cjs && node scripts/check-meaning-mission-ui.cjs && node scripts/check-unit-learning-ui.cjs && node scripts/check-practice-feedback-ui.cjs"
+    "test": "node --check static/mode-q1.js && node scripts/check-student-storage-scope.cjs && node scripts/check-cloud-progress-namespace.cjs && node scripts/check-meaning-mission-ui.cjs && node scripts/check-unit-learning-ui.cjs && node scripts/check-practice-feedback-ui.cjs && node scripts/check-lemma-headword.cjs"
   },
   "dependencies": {
     "openai": "^6.48.0"

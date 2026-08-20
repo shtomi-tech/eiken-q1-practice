@@ -773,6 +773,20 @@ h2 {
   gap: 10px;
   flex-wrap: wrap;
 }
+.flashLemmaNote {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+  color: rgba(250, 249, 246, .72);
+  font-size: 14px;
+}
+.flashLemmaLabel {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .08em;
+}
 .flashListenButton {
   display: inline-flex;
   align-items: center;
