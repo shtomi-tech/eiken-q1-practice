@@ -1,6 +1,6 @@
 # 英検 大問1・テーマ別表現 単語アプリ
 
-英検1級・2級・準2級・準1級の大問1（語彙）と、1級のトピック別表現を扱う静的Webアプリです。各級の過去問3回分に加え、1級の模試第1回〜第5回、テーマ別5セットを収録しています（合計22セット）。
+英検1級・2級・準2級・準1級の大問1（語彙）と、1級のトピック別表現を扱う静的Webアプリです。各級の過去問3回分に加え、1級の模試第1回〜第5回、準2級の自作模試第1回、テーマ別5セットを収録しています（合計23セット）。準2級の自作模試は英検過去問を引用していません。
 
 ## 学習の流れ
 
@@ -23,7 +23,7 @@
 | 級 | 設問数（3回合計） | 対象語句の上限 |
 | --- | --- | --- |
 | 2級 | 51 | 204 |
-| 準2級 | 45 | 180 |
+| 準2級 | 60 | 240 |
 | 準1級 | 54 | 216 |
 | 1級（模試第1回〜第5回を含む） | 191 | 764 |
 | 1級テーマ別（5セット） | 84 | 324ユニーク（336スロット） |
@@ -34,6 +34,7 @@
 
 - 2級: `data/questions_*.json` / `data/vocab_*.json`
 - 準2級: `data/questions_p2_*.json` / `data/vocab_p2_*.json`
+- 準2級模試第1回: `data/questions_p2_mock-1.json` / `data/vocab_p2_mock-1.json`
 - 準1級: `data/questions_pre1_*.json` / `data/vocab_pre1_*.json`
 - 1級: `data/questions_1_*.json` / `data/vocab_1_*.json`
 - 1級模試第1回: `data/questions_1_mock-1.json` / `data/vocab_1_mock-1.json`
@@ -150,7 +151,9 @@ py -3 scripts/add_example_translations.py
 - `scripts/build_q1_mock_3_data.py`: 1級模試第3回の問題・語彙データ生成
 - `scripts/build_q1_mock_4_data.py`: 1級模試第4回の問題・語彙データ生成
 - `scripts/build_q1_mock_5_data.py`: 1級模試第5回の問題・語彙データ生成
+- `scripts/build_q1_p2_mock_1_data.py`: 準2級自作模試第1回の問題・語彙データ生成
 - `scripts/build_topic_data.py`: トピック別表現の正規化・例文・5セット生成
-- `scripts/check_q1_data.py`: 22セットのデータ契約チェック
+- `scripts/check_q1_data.py`: 23セットのデータ契約チェック
+- `scripts/check_p2_mock_data.py`: 準2級自作模試第1回の内容チェック
 
 このリポジトリは大問1専用です。大問2・3、リスニング、ライティング、言い換えのコード・教材・音声・生成スクリプトには依存しません。

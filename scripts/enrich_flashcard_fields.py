@@ -18,7 +18,7 @@ from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
-TARGET_PATTERN = re.compile(r"^vocab_(?:1_20\d{2}-\d+|pre1_20\d{2}-\d+)\.json$")
+TARGET_PATTERN = re.compile(r"^vocab_(?:1_20\d{2}-\d+|pre1_20\d{2}-\d+|p2_mock-\d+)\.json$")
 POS_LABELS = {
     "n": "名詞",
     "v": "動詞",

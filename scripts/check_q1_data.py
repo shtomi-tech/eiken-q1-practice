@@ -1,4 +1,4 @@
-"""Q1用22データセットの最低限の契約を検証する。"""
+"""Q1用23データセットの最低限の契約を検証する。"""
 
 from __future__ import annotations
 
@@ -20,6 +20,7 @@ EXPECTED_IDS = {
     "eiken1-mock-3",
     "eiken1-mock-4",
     "eiken1-mock-5",
+    "eikenp2-mock-1",
 }
 TRANSLATION_BLANK_RE = re.compile(r"(?:\(\s*\)|（\s*）)")
 
