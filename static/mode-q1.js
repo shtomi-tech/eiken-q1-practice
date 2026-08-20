@@ -32,6 +32,15 @@ function datasetStorageKey() {
 // ここに無いプレフィックスは「級不明」として扱い、意味練習のプール対象から外す。
 const GRADE_BY_PREFIX = { eiken1: "1", eiken2: "2", eikenp1: "pre1", eikenp2: "pre2", eikentopic: "topic" };
 const DATASET_ID_RE = new RegExp(`^(${Object.keys(GRADE_BY_PREFIX).join("|")})-(\\d{4}-\\d+|mock-\\d+|set-\\d+)$`);
+const GRADE_KEY = "grade";
+const GRADE_PREFIXES = {
+  pre2: ["eikenp2"],
+  "2": ["eiken2"],
+  pre1: ["eikenp1"],
+  "1": ["eiken1"],
+};
+const GRADE_CHOICE_ORDER = ["pre2", "2", "pre1", "1"];
+const GRADE_LABELS = { pre2: "準2級", "2": "2級", pre1: "準1級", "1": "1級" };
 // 級ごとの語彙目標。英検公式は必要語彙数を公表していないため、95%カバー率解析
 // （ei-raku.com の推定 1,650/3,000/5,100/8,900/14,400）を生徒が扱いやすい丸い数字にした目安。
 // prev は「前の級までは習得済み」という前提の起点で、累計と差分（+1,500/+2,000/+4,000/+5,000）が一致するよう丸めてある。
@@ -44,13 +53,41 @@ const VOCAB_GOALS = {
 // 問題セット一覧は data/manifest.json（"q1"キー）から読み込む。
 // 回を追加するときはデータJSONを置いてmanifest.jsonに1エントリ足すだけでよく、このファイルの編集は不要。
 let DATASETS = {};
+let ALL_DATASETS = {};
 let DEFAULT_DATASET_ID = null;
 let lemmaMap = {};
 let aiCheckEndpoint = "";
 async function loadManifest() {
   const manifest = await fetch(MANIFEST_URL, { cache: "no-store" }).then((r) => r.json());
-  DATASETS = manifest.q1;
+  ALL_DATASETS = manifest.q1;
+  DATASETS = ALL_DATASETS;
   DEFAULT_DATASET_ID = manifest.defaultDatasetId;
+}
+
+function applyGradeScope(gradeCode) {
+  const prefixes = GRADE_PREFIXES[gradeCode];
+  if (!prefixes) return false;
+  const source = Object.keys(ALL_DATASETS).length ? ALL_DATASETS : DATASETS;
+  const scoped = Object.fromEntries(
+    Object.entries(source).filter(([id]) => prefixes.includes(gradeOf(id))),
+  );
+  if (!Object.keys(scoped).length) return false;
+  DATASETS = scoped;
+  if (!DATASETS[DEFAULT_DATASET_ID]) DEFAULT_DATASET_ID = Object.keys(DATASETS)[0];
+  return true;
+}
+
+function resolveGradeCode() {
+  const fromUrl = new URLSearchParams(window.location.search).get("g") || "";
+  if (GRADE_PREFIXES[fromUrl]) {
+    try { localStorage.setItem(scopedStorageKey(GRADE_KEY), fromUrl); } catch (e) { /* ignore */ }
+    return fromUrl;
+  }
+  try {
+    const saved = localStorage.getItem(scopedStorageKey(GRADE_KEY));
+    if (GRADE_PREFIXES[saved]) return saved;
+  } catch (e) { /* ignore */ }
+  return "";
 }
 
 function availableDatasets() {
@@ -76,6 +113,7 @@ const state = {
 const RESUMABLE_MODES = new Set(["learn", "review", "meaning", "final"]);
 let resumeRecoveryMessage = "";
 let resumeUnavailable = false;
+let needsGradeChoice = false;
 
 async function loadAiConfig() {
   aiCheckEndpoint = "";
@@ -623,7 +661,8 @@ function setShareStatus(message, tone = "") {
 // クラウド保存は全データセット分の進捗を1つのjsonbにまとめる: { [datasetId]: progress }
 function collectAllProgress() {
   const map = {};
-  Object.keys(DATASETS).forEach((id) => {
+  // 級を絞っても他級の進捗を落とした地図でクラウドを上書きしないよう、manifest全件を見る。
+  Object.keys(ALL_DATASETS).forEach((id) => {
     try {
       const raw = localStorage.getItem(progressKey(id));
       if (raw) map[id] = JSON.parse(raw);
@@ -1126,11 +1165,15 @@ function renderHome() {
   return withProgressReadCache(renderHomeContent);
 }
 function renderHomeContent() {
-  setChromeTitle(`${datasetHeadline()} 単語アプリ`);
   $("#sessionPanel").classList.add("hide");
   const home = $("#homePanel");
   home.classList.remove("hide");
   home.innerHTML = "";
+  if (needsGradeChoice) {
+    setChromeTitle("英検 大問1 単語アプリ");
+    return renderGradeChoice();
+  }
+  setChromeTitle(`${datasetHeadline()} 単語アプリ`);
 
   const total = state.qList.length;
   const learned = state.qList.filter((q) => unit(q).learned).length;
@@ -1315,6 +1358,42 @@ function renderHomeContent() {
     );
     home.appendChild(other);
   }
+  if (!new URLSearchParams(window.location.search).has("g")) {
+    home.appendChild(el("section", { class: "card gradeScopeChange" },
+      el("button", {
+        class: "ghost smallGhost",
+        type: "button",
+        onclick: () => {
+          if (!confirm("学習する級を変更します。現在の級以外の進捗も消えません。変更しますか？")) return;
+          try { localStorage.removeItem(scopedStorageKey(GRADE_KEY)); } catch (e) { /* ignore */ }
+          needsGradeChoice = true;
+          renderHome();
+        },
+      }, "級を変更"),
+    ));
+  }
+}
+
+function renderGradeChoice() {
+  const home = $("#homePanel");
+  const buttons = GRADE_CHOICE_ORDER.map((code) => el("button", {
+    class: "datasetGradeChoice",
+    type: "button",
+    onclick: async () => {
+      try { localStorage.setItem(scopedStorageKey(GRADE_KEY), code); } catch (e) { /* ignore */ }
+      if (!applyGradeScope(code)) return;
+      needsGradeChoice = false;
+      state.datasetId = loadDatasetId();
+      await loadData();
+      renderHome();
+    },
+  }, GRADE_LABELS[code] || code));
+  home.appendChild(el("section", { class: "card gradeChoiceCard" },
+    el("p", { class: "label" }, "学習範囲"),
+    el("h2", {}, "学習する級を選んでください"),
+    el("p", { class: "hint" }, "あとから変更できます。"),
+    el("div", { class: "datasetGradeChoices", role: "group", "aria-label": "学習する級を選ぶ" }, ...buttons),
+  ));
 }
 
 /* ---- 問題一覧の状態・種別フィルター（表示専用。永続化・保存キーには影響しない） ---- */
@@ -1684,7 +1763,7 @@ function datasetPicker() {
   }
 
   wrap.appendChild(el("span", { class: "fieldLabel" }, "問題セット"));
-  wrap.appendChild(gradeChoices);
+  if (grades.length > 1) wrap.appendChild(gradeChoices);
   wrap.appendChild(current);
   wrap.appendChild(cardsHost);
   renderGradeChoices();
@@ -2867,6 +2946,8 @@ async function boot() {
     const legacyProgress = legacyPre1CloudProgress
       || (cloudSession.requested ? null : readStoredObject(LEGACY_PRE1_PROGRESS_KEY));
     const migratedLegacy = migrateLegacyPre1Progress(legacyProgress);
+    const gradeCode = resolveGradeCode();
+    needsGradeChoice = !applyGradeScope(gradeCode);
     state.datasetId = loadDatasetId();
     if (migratedLegacy) {
       migratedLegacyDatasetIds.forEach((datasetId) => {
