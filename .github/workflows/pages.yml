@@ -55,6 +55,7 @@ jobs:
           cp data/questions_[0-9]*.json data/questions_p2_*.json data/questions_pre1_*.json _site/data/
           cp data/vocab_[0-9]*.json data/vocab_p2_*.json data/vocab_pre1_*.json _site/data/
           cp data/questions_topic_set-*.json data/vocab_topic_set-*.json _site/data/
+          cp data/questions_iuhw_*.json data/vocab_iuhw_*.json _site/data/
           cp -R assets/audio/vocab/* _site/assets/audio/vocab/
 
       - name: Upload artifact
