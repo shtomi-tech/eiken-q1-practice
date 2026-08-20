@@ -352,6 +352,8 @@ function saveResume() {
     practiceAnswered: Boolean(session.practiceAnswered),
     practiceResult: session.practiceResult,
     checkChoices: session._checkChoices || null,
+    audioElapsedLog: session.audioElapsedLog || [],
+    meaningRtLog: session.meaningRtLog || [],
   };
   resumeRecoveryMessage = "";
   resumeUnavailable = false;
@@ -403,6 +405,8 @@ async function restoreSession() {
     reviewQueue: saved.reviewQueue || [],
     wrongLog: (saved.wrongLog || []).map((entry) => ({ item: resolveItem(entry.item, pool), picked: entry.picked })).filter((entry) => entry.item),
     _checkChoices: saved.checkChoices || null,
+    audioElapsedLog: Array.isArray(saved.audioElapsedLog) ? saved.audioElapsedLog : [],
+    meaningRtLog: Array.isArray(saved.meaningRtLog) ? saved.meaningRtLog : [],
   };
   resumeRecoveryMessage = "";
   resumeUnavailable = false;
@@ -443,7 +447,49 @@ const MEANING_INTERVALS = [
 const MEANING_SESSION_SIZE = 30; // 1回に出す語句の上限
 const MEANING_PROGRESS_VERSION = 2;
 const LEARNING_HISTORY_LIMIT = 500;
-const DEFAULT_ITEM_STATE = Object.freeze({ wrongCount: 0, leitnerStage: 0, nextReviewAt: null, lastAnsweredAt: null });
+// ponytail: 閾値はこの4つだけ。初期値は実データを見て調整する前提。
+const RT_HARD_FLOOR_MS = 8000;
+const RT_HARD_CEIL_MS = 20000;
+const RT_HARD_RATIO = 1.6;
+const RT_OUTLIER_MS = 60000;
+const DEFAULT_ITEM_STATE = Object.freeze({
+  wrongCount: 0,
+  leitnerStage: 0,
+  nextReviewAt: null,
+  lastAnsweredAt: null,
+  lastMs: null,
+  avgMs: null,
+});
+
+function rtGrade(ms, medianMs) {
+  if (!Number.isFinite(ms)) return "good";
+  if (ms >= RT_HARD_CEIL_MS) return "hard";
+  if (ms < RT_HARD_FLOOR_MS) return "good";
+  const baseline = Number.isFinite(medianMs) ? medianMs : RT_HARD_FLOOR_MS;
+  return ms > RT_HARD_RATIO * baseline ? "hard" : "good";
+}
+
+function medianMs(values) {
+  const valid = values.filter((value) => Number.isFinite(value) && value >= 0 && value < RT_OUTLIER_MS).sort((a, b) => a - b);
+  if (valid.length < 5) return RT_HARD_FLOOR_MS;
+  const middle = Math.floor(valid.length / 2);
+  return valid.length % 2 ? valid[middle] : (valid[middle - 1] + valid[middle]) / 2;
+}
+
+function meaningResultState(stage, wrongCount, isCorrect, grade) {
+  const lastStage = LEITNER_LADDER.length - 1;
+  const maxStage = Number(wrongCount) >= 5 ? 1 : lastStage;
+  const currentStage = Math.min(Math.max(Number(stage) || 0, 0), maxStage);
+  if (!isCorrect) return { intervalDays: null, nextStage: 0 };
+  return {
+    intervalDays: LEITNER_LADDER[currentStage],
+    nextStage: grade === "hard" ? currentStage : Math.min(currentStage + 1, maxStage),
+  };
+}
+
+function nextAverageMs(previousMs, ms) {
+  return Number.isFinite(previousMs) ? Math.round(previousMs * 0.7 + ms * 0.3) : ms;
+}
 
 function itemKeyOf(item) {
   return `${item.type}:${surfaceOf(item).toLowerCase()}`;
@@ -461,6 +507,8 @@ function itemState(progress, key) {
   if (typeof s.leitnerStage !== "number") s.leitnerStage = 0;
   if (typeof s.nextReviewAt !== "string" && s.nextReviewAt !== null) s.nextReviewAt = null;
   if (typeof s.lastAnsweredAt !== "string" && s.lastAnsweredAt !== null) s.lastAnsweredAt = null;
+  if (!Number.isFinite(s.lastMs)) s.lastMs = null;
+  if (!Number.isFinite(s.avgMs)) s.avgMs = null;
   return s;
 }
 function appendLearningHistory(progress, event) {
@@ -471,21 +519,29 @@ function appendLearningHistory(progress, event) {
   }
 }
 // 意味だけ演習の解答結果をLeitnerに反映する。item._datasetId があれば本来の回の進捗へ書く。
-function recordMeaningResult(item, isCorrect) {
+function recordMeaningResult(item, isCorrect, responseMs) {
   const datasetId = item._datasetId || state.datasetId;
   const progress = progressFor(datasetId);
   const s = itemState(progress, itemKeyOf(item));
   const answeredAt = new Date();
+  const ms = Number.isFinite(responseMs) ? responseMs : null;
   s.lastAnsweredAt = answeredAt.toISOString();
   if (isCorrect) {
-    const stage = Math.min(s.leitnerStage, LEITNER_LADDER.length - 1);
+    const grade = rtGrade(ms, medianMs(session?.meaningRtLog || []));
+    const result = meaningResultState(s.leitnerStage, s.wrongCount, true, grade);
     const next = new Date(answeredAt);
-    next.setDate(next.getDate() + LEITNER_LADDER[stage]);
+    next.setDate(next.getDate() + result.intervalDays);
     s.nextReviewAt = next.toISOString();
-    s.leitnerStage = Math.min(stage + 1, LEITNER_LADDER.length - 1);
+    s.leitnerStage = result.nextStage;
+    if (ms !== null) {
+      // lastMs/avgMs は正答時だけ更新する。誤答は wrongCount と即時再出題で既に重みが付くため。
+      s.lastMs = ms;
+      s.avgMs = nextAverageMs(s.avgMs, ms);
+      if (ms < RT_OUTLIER_MS) (session.meaningRtLog || (session.meaningRtLog = [])).push(ms);
+    }
   } else {
     s.wrongCount += 1;
-    s.leitnerStage = 0;
+    s.leitnerStage = meaningResultState(s.leitnerStage, s.wrongCount, false, "good").nextStage;
     s.nextReviewAt = null;
   }
   appendLearningHistory(progress, {
@@ -1646,13 +1702,21 @@ function isItemDue(item, now = Date.now()) {
   const nextReviewAt = itemState.nextReviewAt;
   return !nextReviewAt || new Date(nextReviewAt).getTime() <= now;
 }
-// 誤答履歴が多い語を前に出す（ES2019以降 Array#sort は安定なので確率抽選は不要）。
+// 誤答・直近の遅い正答・期限超過を合成して前に出す。
 function weightedOrder(items) {
-  // 比較のたびに進捗を読み直さないよう、シャッフル後の並びで wrongCount を先に取る
-  // （同数の並びはシャッフル順のまま＝従来と同じ抽選）。
+  // ES2019以降 Array#sort は安定。同点の並びはシャッフル順のままにする。
   const shuffled = shuffle(items);
-  const wrongCounts = new Map(shuffled.map((item) => [item, readItemStateOf(item).wrongCount]));
-  return shuffled.sort((a, b) => wrongCounts.get(b) - wrongCounts.get(a));
+  const now = Date.now();
+  const dayMs = 24 * 60 * 60 * 1000;
+  const scores = new Map(shuffled.map((item) => {
+    const s = readItemStateOf(item);
+    const overdueMs = s.nextReviewAt ? now - new Date(s.nextReviewAt).getTime() : 0;
+    const overdueDays = Number.isFinite(overdueMs) ? Math.max(0, overdueMs / dayMs) : 0;
+    // lastGradeは保存しない制約のため、絶対床以上の「直近の正答RT」をHard相当として復元する。
+    const hard = Number.isFinite(s.lastMs) && s.lastMs >= RT_HARD_FLOOR_MS ? 1 : 0;
+    return [item, 2 * (Number(s.wrongCount) || 0) + hard + 0.5 * overdueDays];
+  }));
+  return shuffled.sort((a, b) => scores.get(b) - scores.get(a));
 }
 // dueOnly=true: 復習日が来た語だけ。未学習語句や次回予定の語句は補充しない。
 function meaningPracticeQueue(items, dueOnly) {
@@ -2310,9 +2374,13 @@ function renderCheck(body) {
       if (session.checkAnswered || choicesLocked()) return;
       session.checkAnswered = true;
       session.checkPicked = m;
-      const startedAt = session.checkAudioAt || session.checkShownAt;
-      if (startedAt) {
-        session.checkElapsed = (Date.now() - startedAt) / 1000;
+      const answeredAt = Date.now();
+      const responseMs = Number.isFinite(session.checkShownAt)
+        ? Math.max(0, answeredAt - session.checkShownAt)
+        : null;
+      const displayStartedAt = session.checkAudioAt || session.checkShownAt;
+      if (Number.isFinite(displayStartedAt)) {
+        session.checkElapsed = (answeredAt - displayStartedAt) / 1000;
         session.checkElapsedFromAudio = Boolean(session.checkAudioAt);
         (session.audioElapsedLog || (session.audioElapsedLog = [])).push(session.checkElapsed);
       }
@@ -2328,7 +2396,11 @@ function renderCheck(body) {
       if (session.mode === "final" && isCorrect) session.finalCorrect += 1;
       if (!isCorrect && session.wrongLog) session.wrongLog.push({ item, picked: m });
       if (last && session.mode === "final") saveFinalResult();
-      if (session.mode === "meaning" && currentGrade()) recordMeaningResult(item, isCorrect);
+      if (session.mode === "meaning" && currentGrade()) {
+        // 平均は今回の解答を取り込む前の値を見せる（「前回まで」との比較にするため）。
+        session.checkPrevAvgMs = readItemStateOf(item).avgMs;
+        recordMeaningResult(item, isCorrect, responseMs);
+      }
       saveResume();
       refreshMeaningBar();
       appendCheckFeedback(box, item, surface, correct, isCorrect);
@@ -2349,8 +2421,11 @@ function appendCheckFeedback(box, item, surface, correct, isCorrect) {
     el("p", {}, `${surface}：${correct}`),
   );
   if (typeof session.checkElapsed === "number") {
+    // 平均は出題起点で記録しているため、音声起点で測った回とは比べない。
+    const average = session.checkElapsedFromAudio ? null : session.checkPrevAvgMs;
+    const compare = Number.isFinite(average) ? `（前回までの平均 ${(average / 1000).toFixed(1)} 秒）` : "";
     fb.appendChild(el("p", { class: "hint" },
-      `${session.checkElapsedFromAudio ? "音声を押してから" : "出題から"} ${session.checkElapsed.toFixed(1)} 秒で解答`));
+      `${session.checkElapsedFromAudio ? "音声を押してから" : "出題から"} ${session.checkElapsed.toFixed(1)} 秒で解答${compare}`));
   }
   if (item.etymology) fb.appendChild(el("p", { class: "trans" }, item.etymology));
   box.appendChild(fb);
@@ -2368,6 +2443,7 @@ function appendCheckFeedback(box, item, surface, correct, isCorrect) {
         session.checkShownAt = null;
         session.checkElapsed = null;
         session.checkElapsedFromAudio = false;
+        session.checkPrevAvgMs = null;
         if (last) {
           session.stage = nextStageAfterCheck();
           renderSession();
