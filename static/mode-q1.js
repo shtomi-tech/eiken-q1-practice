@@ -401,7 +401,7 @@ function saveResume() {
     practiceAnswered: Boolean(session.practiceAnswered),
     practiceResult: session.practiceResult,
     checkChoices: session._checkChoices || null,
-    audioElapsedLog: session.audioElapsedLog || [],
+    responseElapsedLog: session.responseElapsedLog || [],
     meaningRtLog: session.meaningRtLog || [],
   };
   resumeRecoveryMessage = "";
@@ -454,7 +454,10 @@ async function restoreSession() {
     reviewQueue: saved.reviewQueue || [],
     wrongLog: (saved.wrongLog || []).map((entry) => ({ item: resolveItem(entry.item, pool), picked: entry.picked })).filter((entry) => entry.item),
     _checkChoices: saved.checkChoices || null,
-    audioElapsedLog: Array.isArray(saved.audioElapsedLog) ? saved.audioElapsedLog : [],
+    // 旧途中保存のaudioElapsedLogも、現在の表示起点ログとして引き継ぐ。
+    responseElapsedLog: Array.isArray(saved.responseElapsedLog)
+      ? saved.responseElapsedLog
+      : (Array.isArray(saved.audioElapsedLog) ? saved.audioElapsedLog : []),
     meaningRtLog: Array.isArray(saved.meaningRtLog) ? saved.meaningRtLog : [],
   };
   resumeRecoveryMessage = "";
@@ -2502,11 +2505,6 @@ function renderCheck(body) {
   const box = el("div", { class: "quizBox" });
   box.appendChild(el("p", { class: "label" }, "次の語句の意味は？"));
   const listenButton = buildVocabAudioButton(item, "quizListenButton");
-  // 音声を最初に押した時刻から解答までを反応時間として計測する
-  listenButton.addEventListener("click", () => {
-    if (session.checkAnswered || session.checkAudioAt) return;
-    session.checkAudioAt = Date.now();
-  });
   box.appendChild(el("div", { class: "askWordLine" },
     el("p", { class: "askWord" }, surface),
     listenButton,
@@ -2539,11 +2537,9 @@ function renderCheck(body) {
       const responseMs = Number.isFinite(session.checkShownAt)
         ? Math.max(0, answeredAt - session.checkShownAt)
         : null;
-      const displayStartedAt = session.checkAudioAt || session.checkShownAt;
-      if (Number.isFinite(displayStartedAt)) {
-        session.checkElapsed = (answeredAt - displayStartedAt) / 1000;
-        session.checkElapsedFromAudio = Boolean(session.checkAudioAt);
-        (session.audioElapsedLog || (session.audioElapsedLog = [])).push(session.checkElapsed);
+      if (Number.isFinite(session.checkShownAt)) {
+        session.checkElapsed = (answeredAt - session.checkShownAt) / 1000;
+        (session.responseElapsedLog || (session.responseElapsedLog = [])).push(session.checkElapsed);
       }
       const isCorrect = m === correct;
       session.checkCorrect = isCorrect;
@@ -2582,11 +2578,10 @@ function appendCheckFeedback(box, item, surface, correct, isCorrect) {
     el("p", {}, `${surface}：${correct}`),
   );
   if (typeof session.checkElapsed === "number") {
-    // 平均は出題起点で記録しているため、音声起点で測った回とは比べない。
-    const average = session.checkElapsedFromAudio ? null : session.checkPrevAvgMs;
+    const average = session.checkPrevAvgMs;
     const compare = Number.isFinite(average) ? `（前回までの平均 ${(average / 1000).toFixed(1)} 秒）` : "";
     fb.appendChild(el("p", { class: "hint" },
-      `${session.checkElapsedFromAudio ? "音声を押してから" : "出題から"} ${session.checkElapsed.toFixed(1)} 秒で解答${compare}`));
+      `出題から ${session.checkElapsed.toFixed(1)} 秒で解答${compare}`));
   }
   if (item.etymology) fb.appendChild(el("p", { class: "trans" }, item.etymology));
   box.appendChild(fb);
@@ -2600,10 +2595,8 @@ function appendCheckFeedback(box, item, surface, correct, isCorrect) {
         session.checkPicked = null;
         session.checkCorrect = null;
         session._checkChoices = null;
-        session.checkAudioAt = null;
         session.checkShownAt = null;
         session.checkElapsed = null;
-        session.checkElapsedFromAudio = false;
         session.checkPrevAvgMs = null;
         if (last) {
           session.stage = nextStageAfterCheck();
@@ -2849,11 +2842,11 @@ function renderDone(body) {
       }
     }
   }
-  const elapsedLog = session.audioElapsedLog || [];
-  if (elapsedLog.length) {
-    const avg = elapsedLog.reduce((a, b) => a + b, 0) / elapsedLog.length;
+  const responseElapsedLog = session.responseElapsedLog || [];
+  if (responseElapsedLog.length) {
+    const avg = responseElapsedLog.reduce((a, b) => a + b, 0) / responseElapsedLog.length;
     banner.appendChild(el("p", { class: "hint" },
-      `解答までの平均 ${avg.toFixed(1)} 秒（計測${elapsedLog.length}語句・最速${Math.min(...elapsedLog).toFixed(1)}秒／最遅${Math.max(...elapsedLog).toFixed(1)}秒）`));
+      `解答までの平均 ${avg.toFixed(1)} 秒（計測${responseElapsedLog.length}語句・最速${Math.min(...responseElapsedLog).toFixed(1)}秒／最遅${Math.max(...responseElapsedLog).toFixed(1)}秒）`));
   }
   body.appendChild(banner);
 

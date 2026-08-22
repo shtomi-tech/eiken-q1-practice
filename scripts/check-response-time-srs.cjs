@@ -39,4 +39,15 @@ assert.equal((record.match(/s\.lastMs = ms;/g) || []).length, 1, "lastMs の更�
 // avgMs は結果表示の読み手があって初めて意味を持つ。書き込み専用にしない。
 assert.ok(source.includes("前回までの平均"), "解答直後に前回までの平均を表示すること");
 
+// 回答時間は音声ボタンではなく、常に問題表示を起点にする。
+assert.ok(source.includes("responseElapsedLog"), "回答時間ログはresponseElapsedLogとして扱うこと");
+assert.ok(!source.includes("checkAudioAt"), "音声クリック時刻を回答時間の起点に使わないこと");
+assert.ok(!source.includes("checkElapsedFromAudio"), "音声起点の表示分岐を残さないこと");
+assert.ok(!source.includes("音声を押してから"), "音声起点の回答時間表示を残さないこと");
+assert.match(
+  source,
+  /const responseElapsedLog = session\.responseElapsedLog \|\| \[\];/,
+  "結果画面は問題表示起点の回答時間ログを集計すること",
+);
+
 console.log("response-time SRS contract: OK");

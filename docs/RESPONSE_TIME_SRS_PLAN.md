@@ -49,10 +49,10 @@ function rtGrade(ms, medianMs) {
 
 ### 計測起点の修正（前提のバグ）
 
-現状の起点は `session.checkAudioAt || session.checkShownAt`（[:2313](../static/mode-q1.js)）。音声を押した設問は再生待ち時間を含み、押さない設問と母数が混ざる。
+回答時間の起点は常に `session.checkShownAt`（問題表示時刻）とする。音声ボタンのクリック時刻は計時に使わない。
 
 - **スケジュール判定には常に `checkShownAt` 起点の値を使う。**
-- 画面表示（「音声を押してから n 秒で解答」）は現状のまま。表示用と判定用の2値を持つ。
+- 画面表示も「出題から n 秒で解答」に統一し、表示用と判定用で起点を分けない。
 
 ## 3. 保存するもの
 
@@ -93,8 +93,8 @@ score = 2 * wrongCount
 | `recordMeaningResult` (:474) | 第3引数 `ms` を受け、Hard 分岐・leech 上限・`lastMs`/`avgMs` 更新 |
 | `renderCheck` の選択ハンドラ (:2311) | 判定用 RT（`checkShownAt` 起点）を算出して `recordMeaningResult` へ渡す／セッションRTログへ push |
 | `weightedOrder` (:1650) | 合成スコアへ差し替え |
-| `saveResume` (:326) / `restoreSession` (:367) | RTログを保存・復元（**現状 `audioElapsedLog` は未保存で、再開すると結果画面の平均秒も欠落する。同時に直す**） |
-| `appendCheckFeedback` | 解答直後に「前回までの平均 n 秒」を併記（`avgMs` の読み手。出題起点で測った回のみ） |
+| `saveResume` (:326) / `restoreSession` (:367) | 問題表示起点の `responseElapsedLog` を保存・復元（旧 `audioElapsedLog` は読み込み時のみ互換扱い） |
+| `appendCheckFeedback` | 解答直後に「前回までの平均 n 秒」を併記（`avgMs` の読み手） |
 
 UI改修・データ改修・新規ファイルなし。実質50〜70行。
 
