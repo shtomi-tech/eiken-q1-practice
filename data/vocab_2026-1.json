@@ -345,6 +345,7 @@
   "idioms": [
     {
       "q": 11, "is_answer": true, "type": "idiom", "phrase": "as a general rule", "pos": "副詞句",
+      "coreImage": { "chain": [ { "term": "as", "gloss": "〜として" }, { "term": "general", "gloss": "一般的な" }, { "term": "rule", "gloss": "規則" }, { "gloss": "一般的な規則として述べる" } ] },
       "meaning": "概して、一般的に言えば",
       "etymology": "general（全般的な）+ rule（規則）→「全体に当てはまる決まりとして」。",
       "example": "As a general rule, people should drink eight glasses of water a day.",
@@ -353,6 +354,7 @@
     },
     {
       "q": 11, "is_answer": false, "type": "idiom", "phrase": "for a fresh start", "pos": "副詞句",
+      "coreImage": { "chain": [ { "term": "for", "gloss": "〜のために" }, { "term": "fresh", "gloss": "新鮮な" }, { "term": "start", "gloss": "始まり" }, { "gloss": "新しい出発のために" } ] },
       "meaning": "新たなスタートとして、心機一転",
       "etymology": "fresh（新しい）+ start（出発）。",
       "example": "She moved to a new city for a fresh start.",
@@ -361,6 +363,7 @@
     },
     {
       "q": 11, "is_answer": false, "type": "idiom", "phrase": "on a specific occasion", "pos": "副詞句",
+      "coreImage": { "chain": [ { "term": "on", "gloss": "〜の上で" }, { "term": "specific", "gloss": "特定の" }, { "term": "occasion", "gloss": "機会" }, { "gloss": "特定の機会に限って" } ] },
       "meaning": "特定の機会に",
       "etymology": "specific（特定の）+ occasion（場合、機会）。",
       "example": "This dress is only worn on a specific occasion.",
@@ -369,6 +372,7 @@
     },
     {
       "q": 11, "is_answer": false, "type": "idiom", "phrase": "in case of emergency", "pos": "副詞句",
+      "coreImage": { "chain": [ { "term": "in", "gloss": "中で" }, { "term": "case", "gloss": "場合" }, { "term": "emergency", "gloss": "緊急事態" }, { "gloss": "緊急事態の場合には" } ] },
       "meaning": "緊急時には、非常の場合に備えて",
       "etymology": "in case of（〜の場合に備えて）+ emergency（緊急事態）。",
       "example": "In case of emergency, break the glass and press the button.",
@@ -378,6 +382,7 @@
 
     {
       "q": 12, "is_answer": true, "type": "idiom", "phrase": "on one's own", "pos": "副詞句",
+      "coreImage": { "chain": [ { "term": "on", "gloss": "〜の上で" }, { "term": "one", "gloss": "人・もの" }, { "term": "own", "gloss": "自分自身の" }, { "gloss": "他に頼らず自力で" } ] },
       "meaning": "自分一人で、独力で",
       "etymology": "own（自分自身の）を使い「自分自身の力で」。",
       "example": "Now he has to do everything on his own, like cooking and cleaning.",
@@ -386,6 +391,7 @@
     },
     {
       "q": 12, "is_answer": false, "type": "idiom", "phrase": "on the air", "pos": "副詞句",
+      "coreImage": { "chain": [ { "term": "on", "gloss": "接して" }, { "term": "air", "gloss": "空気・電波" }, { "gloss": "電波に乗って放送中で" } ] },
       "meaning": "放送中で",
       "etymology": "air（電波）に乗って→「放送されて」。",
       "example": "The program is on the air every weekday morning.",
@@ -394,6 +400,7 @@
     },
     {
       "q": 12, "is_answer": false, "type": "idiom", "phrase": "at a distance", "pos": "副詞句",
+      "coreImage": { "chain": [ { "term": "at", "gloss": "一点で" }, { "term": "distance", "gloss": "距離" }, { "gloss": "距離を置いた位置で" } ] },
       "meaning": "離れて、遠くから",
       "etymology": "distance（距離）→「距離を置いて」。",
       "example": "From a distance, the mountain looked purple.",
@@ -402,6 +409,7 @@
     },
     {
       "q": 12, "is_answer": false, "type": "idiom", "phrase": "to one's surprise", "pos": "副詞句",
+      "coreImage": { "chain": [ { "term": "to", "gloss": "〜に向かって" }, { "term": "one", "gloss": "人" }, { "term": "surprise", "gloss": "驚き" }, { "gloss": "その人の驚きに至るほど" } ] },
       "meaning": "（人が）驚いたことに",
       "etymology": "「to + 所有格 + 感情名詞」で『〜したことに』。",
       "example": "To his surprise, the door was already open.",
@@ -411,6 +419,13 @@
 
     {
       "q": 13, "is_answer": true, "type": "idiom", "phrase": "go along with", "pos": "句動詞",
+      "coreImage": {
+        "particle": "along",
+        "chain": [
+          { "term": "go", "gloss": "進む" },
+          { "gloss": "流れに沿って一緒に進む" }
+        ]
+      },
       "meaning": "（案・人に）賛成する、従う",
       "etymology": "go along（一緒に進む）+ with →「（考えに）連れ立って進む」。",
       "example": "He could not go along with the plan to expand the office.",
@@ -419,6 +434,13 @@
     },
     {
       "q": 13, "is_answer": false, "type": "idiom", "phrase": "take away from", "pos": "句動詞",
+      "coreImage": {
+        "particle": "away",
+        "chain": [
+          { "term": "take", "gloss": "取る" },
+          { "gloss": "対象から離して価値を削る" }
+        ]
+      },
       "meaning": "〜の価値（魅力）を損なう／〜から取り去る",
       "etymology": "take away（取り去る）+ from。",
       "example": "The noise took away from our enjoyment of the concert.",
@@ -427,6 +449,14 @@
     },
     {
       "q": 13, "is_answer": false, "type": "idiom", "phrase": "bring out in", "pos": "句動詞",
+      "coreImage": {
+        "particle": "out",
+        "particleSense": "produce",
+        "chain": [
+          { "term": "bring", "gloss": "持ってくる" },
+          { "gloss": "外へ出して表に現す" }
+        ]
+      },
       "meaning": "（bring out で）引き出す、世に出す",
       "etymology": "bring out（引き出す、発売する）。",
       "example": "Praise can bring out the best in students.",
@@ -435,6 +465,14 @@
     },
     {
       "q": 13, "is_answer": false, "type": "idiom", "phrase": "watch out for", "pos": "句動詞",
+      "coreImage": {
+        "particle": "out",
+        "particleSense": "reserve",
+        "chain": [
+          { "term": "watch", "gloss": "見る" },
+          { "gloss": "外へ意識を向けて警戒する" }
+        ]
+      },
       "meaning": "〜に気をつける、用心する",
       "etymology": "watch out（用心する）+ for。",
       "example": "Watch out for cars when you cross the street.",
@@ -444,6 +482,7 @@
 
     {
       "q": 14, "is_answer": true, "type": "idiom", "phrase": "a series of", "pos": "名詞句",
+      "coreImage": { "chain": [ { "term": "series", "gloss": "連続" }, { "term": "of", "gloss": "〜の" }, { "gloss": "同種のものが続くまとまり" } ] },
       "meaning": "一連の、ひと続きの",
       "etymology": "series はラテン語 serere「つなぐ」< 連なったもの。",
       "example": "After a series of tests, the doctors discovered a rare illness.",
@@ -452,6 +491,7 @@
     },
     {
       "q": 14, "is_answer": false, "type": "idiom", "phrase": "the edge of", "pos": "名詞句",
+      "coreImage": { "chain": [ { "term": "edge", "gloss": "へり" }, { "term": "of", "gloss": "〜の" }, { "gloss": "ものの端にある部分" } ] },
       "meaning": "〜の端、縁",
       "etymology": "edge（端、縁）。",
       "example": "She stood at the edge of the cliff.",
@@ -460,6 +500,7 @@
     },
     {
       "q": 14, "is_answer": false, "type": "idiom", "phrase": "a member of", "pos": "名詞句",
+      "coreImage": { "chain": [ { "term": "member", "gloss": "構成員" }, { "term": "of", "gloss": "〜の" }, { "gloss": "集団を構成する一人" } ] },
       "meaning": "〜の一員、メンバー",
       "etymology": "member（構成員）。",
       "example": "She is a member of the tennis club.",
@@ -468,6 +509,7 @@
     },
     {
       "q": 14, "is_answer": false, "type": "idiom", "phrase": "the back of", "pos": "名詞句",
+      "coreImage": { "chain": [ { "term": "back", "gloss": "後ろ" }, { "term": "of", "gloss": "〜の" }, { "gloss": "対象の後ろ側" } ] },
       "meaning": "〜の後ろ、裏",
       "etymology": "back（後ろ、背）。",
       "example": "He sat at the back of the classroom.",
@@ -477,6 +519,7 @@
 
     {
       "q": 15, "is_answer": true, "type": "idiom", "phrase": "in other words", "pos": "副詞句",
+      "coreImage": { "chain": [ { "term": "in", "gloss": "中で" }, { "term": "other", "gloss": "別の" }, { "term": "word", "gloss": "言葉" }, { "gloss": "別の言葉に置き換えて" } ] },
       "meaning": "言い換えれば、つまり",
       "etymology": "other words（別の言葉）で→「別の言い方をすれば」。",
       "example": "In other words, we are going to be very busy!",
@@ -485,6 +528,7 @@
     },
     {
       "q": 15, "is_answer": false, "type": "idiom", "phrase": "in the beginning", "pos": "副詞句",
+      "coreImage": { "chain": [ { "term": "in", "gloss": "中で" }, { "term": "beginning", "gloss": "始まり" }, { "gloss": "始まりの時点では" } ] },
       "meaning": "最初は、初めのうちは",
       "etymology": "beginning（始まり）。",
       "example": "In the beginning, the work was difficult, but it got easier.",
@@ -493,6 +537,7 @@
     },
     {
       "q": 15, "is_answer": false, "type": "idiom", "phrase": "back and forth", "pos": "副詞句",
+      "coreImage": { "chain": [ { "term": "back", "gloss": "後ろへ" }, { "term": "and", "gloss": "そして" }, { "term": "forth", "gloss": "前へ" }, { "gloss": "前後を行き来して" } ] },
       "meaning": "行ったり来たり、前後に",
       "etymology": "back（後ろへ）and forth（前へ）。",
       "example": "He walked back and forth nervously.",
@@ -501,6 +546,7 @@
     },
     {
       "q": 15, "is_answer": false, "type": "idiom", "phrase": "on the contrary", "pos": "副詞句",
+      "coreImage": { "chain": [ { "term": "on", "gloss": "〜の上に" }, { "term": "contrary", "gloss": "反対" }, { "gloss": "反対の方向を示して" } ] },
       "meaning": "それどころか、（前言を否定して）逆に",
       "etymology": "contrary（反対の）はラテン語 contra「〜に反して」。",
       "example": "It wasn't boring; on the contrary, it was very exciting.",
@@ -510,6 +556,7 @@
 
     {
       "q": 16, "is_answer": true, "type": "idiom", "phrase": "distinct from", "pos": "形容詞句",
+      "coreImage": { "chain": [ { "term": "distinct", "gloss": "はっきり異なる" }, { "term": "from", "gloss": "〜から" }, { "gloss": "対象から分かれて別個で" } ] },
       "meaning": "〜とは異なる、別個の",
       "etymology": "distinct はラテン語 distinguere「区別する」< di-（分離）+ stinguere（刺し分ける）。",
       "example": "The two paintings looked distinct from each other at first.",
@@ -518,6 +565,7 @@
     },
     {
       "q": 16, "is_answer": false, "type": "idiom", "phrase": "composed of", "pos": "形容詞句",
+      "coreImage": { "chain": [ { "term": "composed", "gloss": "構成された" }, { "term": "of", "gloss": "〜から" }, { "gloss": "要素から組み立てられて" } ] },
       "meaning": "〜から構成されている",
       "etymology": "compose はラテン語 componere < com-（共に）+ ponere（置く）。「組み合わせて作る」。",
       "example": "Water is composed of hydrogen and oxygen.",
@@ -526,6 +574,7 @@
     },
     {
       "q": 16, "is_answer": false, "type": "idiom", "phrase": "absent from", "pos": "形容詞句",
+      "coreImage": { "chain": [ { "term": "absent", "gloss": "不在の" }, { "term": "from", "gloss": "〜から" }, { "gloss": "場所からいない状態で" } ] },
       "meaning": "〜を欠席して、〜にいない",
       "etymology": "absent はラテン語 absens < ab-（離れて）+ esse（ある）。",
       "example": "He was absent from school because of a cold.",
@@ -534,6 +583,7 @@
     },
     {
       "q": 16, "is_answer": false, "type": "idiom", "phrase": "threatening to", "pos": "形容詞句",
+      "coreImage": { "chain": [ { "term": "threatening", "gloss": "脅している" }, { "term": "to", "gloss": "〜する方向へ" }, { "gloss": "ある行為をすると脅して" } ] },
       "meaning": "〜すると脅して／〜しそうで",
       "etymology": "threaten（脅す、おそれがある）+ to do。",
       "example": "The dark clouds were threatening to bring rain.",
@@ -543,6 +593,14 @@
 
     {
       "q": 17, "is_answer": true, "type": "idiom", "phrase": "lay off", "pos": "句動詞",
+      "coreImage": {
+        "particle": "off",
+        "particleSense": "pull-away",
+        "chain": [
+          { "term": "lay", "gloss": "置く" },
+          { "gloss": "仕事から離して置く" }
+        ]
+      },
       "meaning": "（従業員を）一時解雇する、レイオフする",
       "etymology": "lay（置く）+ off（離して）→「仕事から離して置く」。日本語「レイオフ」の語源。",
       "example": "The company had to lay off some of its workers.",
@@ -551,6 +609,13 @@
     },
     {
       "q": 17, "is_answer": false, "type": "idiom", "phrase": "flip over", "pos": "句動詞",
+      "coreImage": {
+        "particle": "over",
+        "chain": [
+          { "term": "flip", "gloss": "ぱっと裏返す" },
+          { "gloss": "反対側へひっくり返す" }
+        ]
+      },
       "meaning": "ひっくり返る、裏返す",
       "etymology": "flip（パッと裏返す）+ over。",
       "example": "The pancake is ready to flip over.",
@@ -559,6 +624,13 @@
     },
     {
       "q": 17, "is_answer": false, "type": "idiom", "phrase": "bring about", "pos": "句動詞",
+      "coreImage": {
+        "particle": "about",
+        "chain": [
+          { "term": "bring", "gloss": "持ってくる" },
+          { "gloss": "周囲に変化を起こしてもたらす" }
+        ]
+      },
       "meaning": "引き起こす、もたらす",
       "etymology": "bring（もたらす）+ about（あたりに）→「生じさせる」。",
       "example": "New technology brought about big changes in our lives.",
@@ -567,6 +639,14 @@
     },
     {
       "q": 17, "is_answer": false, "type": "idiom", "phrase": "catch up", "pos": "句動詞",
+      "coreImage": {
+        "particle": "up",
+        "particleSense": "approach",
+        "chain": [
+          { "term": "catch", "gloss": "捕まえる" },
+          { "gloss": "上の位置まで追いつく" }
+        ]
+      },
       "meaning": "追いつく；（遅れを）取り戻す",
       "etymology": "catch（捕まえる）+ up（すっかり）→「先行者に追いつく」。",
       "example": "Study hard to catch up with your classmates.",

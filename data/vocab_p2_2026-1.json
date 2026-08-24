@@ -498,6 +498,7 @@
       "is_answer": false,
       "type": "idiom",
       "phrase": "next to",
+      "coreImage": { "chain": [ { "term": "next", "gloss": "次の" }, { "term": "to", "gloss": "〜に" }, { "gloss": "すぐ隣の位置に" } ] },
       "pos": "前置詞句",
       "meaning": "〜の隣に",
       "example": "The store is next to the station.",
@@ -510,6 +511,7 @@
       "is_answer": true,
       "type": "idiom",
       "phrase": "except for",
+      "coreImage": { "chain": [ { "term": "except", "gloss": "除いて" }, { "term": "for", "gloss": "〜について" }, { "gloss": "対象だけを除外して" } ] },
       "pos": "前置詞句",
       "meaning": "〜を除いて、〜以外は",
       "example": "Everyone came except for Ken.",
@@ -522,6 +524,7 @@
       "is_answer": false,
       "type": "idiom",
       "phrase": "across from",
+      "coreImage": { "chain": [ { "term": "across", "gloss": "横切って" }, { "term": "from", "gloss": "〜から" }, { "gloss": "向こう側の向かいに" } ] },
       "pos": "前置詞句",
       "meaning": "〜の向かいに",
       "example": "The gym is across from the theater.",
@@ -534,6 +537,7 @@
       "is_answer": false,
       "type": "idiom",
       "phrase": "up to",
+      "coreImage": { "chain": [ { "term": "up", "gloss": "上へ" }, { "term": "to", "gloss": "〜まで" }, { "gloss": "上限や範囲のところまで" } ] },
       "pos": "前置詞句",
       "meaning": "最大〜まで、〜次第で",
       "example": "You can choose up to three items.",
@@ -546,6 +550,14 @@
       "is_answer": false,
       "type": "idiom",
       "phrase": "get on",
+      "coreImage": {
+        "particle": "on",
+        "particleSense": "contact",
+        "chain": [
+          { "term": "get", "gloss": "到達する" },
+          { "gloss": "上に乗って接する" }
+        ]
+      },
       "pos": "句動詞",
       "meaning": "乗る、うまくやっていく",
       "example": "Get on the bus here.",
@@ -558,6 +570,14 @@
       "is_answer": false,
       "type": "idiom",
       "phrase": "take off",
+      "coreImage": {
+        "particle": "off",
+        "particleSense": "separate",
+        "chain": [
+          { "term": "take", "gloss": "取る" },
+          { "gloss": "元の場所から離す" }
+        ]
+      },
       "pos": "句動詞",
       "meaning": "脱ぐ、離陸する",
       "example": "Please take off your shoes.",
@@ -570,6 +590,14 @@
       "is_answer": false,
       "type": "idiom",
       "phrase": "give up",
+      "coreImage": {
+        "particle": "up",
+        "particleSense": "release",
+        "chain": [
+          { "term": "give", "gloss": "渡す" },
+          { "gloss": "手放してあきらめる" }
+        ]
+      },
       "pos": "句動詞",
       "meaning": "あきらめる",
       "example": "Do not give up.",
@@ -582,6 +610,14 @@
       "is_answer": true,
       "type": "idiom",
       "phrase": "look out",
+      "coreImage": {
+        "particle": "out",
+        "particleSense": "reserve",
+        "chain": [
+          { "term": "look", "gloss": "見る" },
+          { "gloss": "外へ意識を向けて警戒する" }
+        ]
+      },
       "pos": "句動詞",
       "meaning": "気をつける、注意する",
       "example": "Look out! There is a bee.",
@@ -594,6 +630,7 @@
       "is_answer": true,
       "type": "idiom",
       "phrase": "out of the question",
+      "coreImage": { "chain": [ { "term": "out", "gloss": "外へ" }, { "term": "of", "gloss": "〜から" }, { "term": "question", "gloss": "検討事項" }, { "gloss": "検討の範囲の外で" } ] },
       "pos": "慣用句",
       "meaning": "問題外で、不可能で",
       "example": "Buying a new phone is out of the question.",
@@ -606,6 +643,7 @@
       "is_answer": false,
       "type": "idiom",
       "phrase": "up in the air",
+      "coreImage": { "chain": [ { "term": "up", "gloss": "上へ" }, { "term": "in", "gloss": "中に" }, { "gloss": "空中に浮いて未定のまま" } ] },
       "pos": "慣用句",
       "meaning": "未定で、はっきりしていない",
       "example": "The plan is still up in the air.",
@@ -618,6 +656,7 @@
       "is_answer": false,
       "type": "idiom",
       "phrase": "in a good temper",
+      "coreImage": { "chain": [ { "term": "in", "gloss": "中に" }, { "term": "good", "gloss": "良い" }, { "term": "temper", "gloss": "機嫌" }, { "gloss": "良い機嫌の中にいて" } ] },
       "pos": "慣用句",
       "meaning": "機嫌がよくて",
       "example": "He was in a good temper today.",
@@ -642,6 +681,14 @@
       "is_answer": true,
       "type": "idiom",
       "phrase": "make up my mind",
+      "coreImage": {
+        "particle": "up",
+        "particleSense": "decide",
+        "chain": [
+          { "term": "make", "gloss": "作る" },
+          { "gloss": "考えを組み上げて決める" }
+        ]
+      },
       "pos": "動詞句",
       "meaning": "決心する、決める",
       "example": "I cannot make up my mind.",
@@ -654,6 +701,14 @@
       "is_answer": false,
       "type": "idiom",
       "phrase": "get off my back",
+      "coreImage": {
+        "particle": "off",
+        "particleSense": "pull-away",
+        "chain": [
+          { "term": "get", "gloss": "移る" },
+          { "gloss": "背中から離れて干渉をやめる" }
+        ]
+      },
       "pos": "慣用句",
       "meaning": "しつこく言うのをやめる",
       "example": "Please get off my back.",
@@ -666,6 +721,14 @@
       "is_answer": false,
       "type": "idiom",
       "phrase": "go on a voyage",
+      "coreImage": {
+        "particle": "on",
+        "particleSense": "continue",
+        "chain": [
+          { "term": "go", "gloss": "行く" },
+          { "gloss": "旅を続ける流れに乗る" }
+        ]
+      },
       "pos": "動詞句",
       "meaning": "航海に出る",
       "example": "They will go on a voyage.",
@@ -678,6 +741,14 @@
       "is_answer": false,
       "type": "idiom",
       "phrase": "put out the light",
+      "coreImage": {
+        "particle": "out",
+        "particleSense": "remove",
+        "chain": [
+          { "term": "put", "gloss": "置く" },
+          { "gloss": "明かりを外へ消して取り除く" }
+        ]
+      },
       "pos": "動詞句",
       "meaning": "明かりを消す",
       "example": "Put out the light before bed.",
@@ -690,6 +761,7 @@
       "is_answer": false,
       "type": "idiom",
       "phrase": "make a start on",
+      "coreImage": { "chain": [ { "term": "make", "gloss": "作る" }, { "term": "start", "gloss": "始まり" }, { "gloss": "対象に取りかかる始まりを作る" } ] },
       "pos": "動詞句",
       "meaning": "〜に取りかかる",
       "example": "Let us make a start on the project.",
@@ -702,6 +774,7 @@
       "is_answer": true,
       "type": "idiom",
       "phrase": "take a look at",
+      "coreImage": { "chain": [ { "term": "take", "gloss": "取る" }, { "term": "look", "gloss": "見ること" }, { "gloss": "対象をひと目見る" } ] },
       "pos": "動詞句",
       "meaning": "〜を見る、確認する",
       "example": "Take a look at several phones.",
@@ -714,6 +787,7 @@
       "is_answer": false,
       "type": "idiom",
       "phrase": "do a favor for",
+      "coreImage": { "chain": [ { "term": "do", "gloss": "する" }, { "term": "favor", "gloss": "親切な行為" }, { "gloss": "相手のために行う" } ] },
       "pos": "動詞句",
       "meaning": "〜のために親切なことをする",
       "example": "Can you do a favor for me?",
@@ -726,6 +800,7 @@
       "is_answer": false,
       "type": "idiom",
       "phrase": "have a word with",
+      "coreImage": { "chain": [ { "term": "have", "gloss": "持つ" }, { "term": "word", "gloss": "言葉" }, { "gloss": "相手と短く話す機会を持つ" } ] },
       "pos": "動詞句",
       "meaning": "〜と少し話をする",
       "example": "I need to have a word with you.",

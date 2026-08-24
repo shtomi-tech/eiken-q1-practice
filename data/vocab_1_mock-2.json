@@ -776,7 +776,18 @@
       "example": "The deadline crept up on us before we had finished the design.",
       "exampleTranslation": "設計を終える前に締め切りがいつの間にか迫ってきた。",
       "pos": "熟語",
-      "phrase": "crept up on"
+      "phrase": "crept up on",
+      "coreImage": {
+        "chain": [
+          { "term": "creep", "gloss": "忍び寄る" },
+          { "term": "up", "gloss": "近づいて上がる" },
+          { "term": "on", "gloss": "対象に向かって" },
+          { "gloss": "相手に少しずつ近づく" },
+          { "gloss": "徐々に近づいた、不意に襲った" }
+        ],
+        "particle": "up",
+        "particleSense": "approach"
+      }
     },
     {
       "q": 22,
@@ -785,7 +796,16 @@
       "example": "She chipped away at the mountain of paperwork every evening.",
       "exampleTranslation": "彼女は毎晩、山積みの書類に少しずつ取り組んだ。",
       "pos": "熟語",
-      "phrase": "chipped away at"
+      "phrase": "chipped away at",
+      "coreImage": {
+        "chain": [
+          { "term": "chip", "gloss": "少しずつ削る" },
+          { "term": "away", "gloss": "離れていく" },
+          { "gloss": "少しずつ外へ削り続ける" },
+          { "gloss": "少しずつ削った、地道に取り組んだ" }
+        ],
+        "particle": "away"
+      }
     },
     {
       "q": 22,
@@ -794,7 +814,17 @@
       "example": "Several companies cashed in on the sudden popularity of the sport.",
       "exampleTranslation": "いくつかの会社がそのスポーツの突然の人気を利用して利益を得た。",
       "pos": "熟語",
-      "phrase": "cashed in on"
+      "phrase": "cashed in on",
+      "coreImage": {
+        "chain": [
+          { "term": "cash", "gloss": "現金にする" },
+          { "term": "in", "gloss": "中へ取り込む" },
+          { "term": "on", "gloss": "対象に乗せる" },
+          { "gloss": "機会を取り込んで利益に変える" },
+          { "gloss": "〜を利用して利益を得た" }
+        ],
+        "particle": "in"
+      }
     },
     {
       "q": 22,
@@ -803,7 +833,17 @@
       "example": "He put in for a transfer to the company office overseas.",
       "exampleTranslation": "彼は海外の会社支社への異動を申請した。",
       "pos": "熟語",
-      "phrase": "put in for"
+      "phrase": "put in for",
+      "coreImage": {
+        "chain": [
+          { "term": "put", "gloss": "置く" },
+          { "term": "in", "gloss": "中へ入れる" },
+          { "term": "for", "gloss": "目的に向けて" },
+          { "gloss": "申請を中へ差し出す" },
+          { "gloss": "〜を申請した、応募した" }
+        ],
+        "particle": "in"
+      }
     },
     {
       "q": 23,
@@ -812,7 +852,16 @@
       "example": "The cup brimmed over when the waiter kept pouring coffee.",
       "exampleTranslation": "店員がコーヒーを注ぎ続けたので、カップからコーヒーがあふれた。",
       "pos": "熟語",
-      "phrase": "brimmed over"
+      "phrase": "brimmed over",
+      "coreImage": {
+        "chain": [
+          { "term": "brim", "gloss": "縁まで満たす" },
+          { "term": "over", "gloss": "境目を越えて" },
+          { "gloss": "縁を越えてあふれる" },
+          { "gloss": "あふれた、満ちあふれた" }
+        ],
+        "particle": "over"
+      }
     },
     {
       "q": 23,
@@ -821,7 +870,17 @@
       "example": "He copped out of the difficult task and left it to his teammate.",
       "exampleTranslation": "彼は難しい仕事から逃げて、チームメートに任せた。",
       "pos": "熟語",
-      "phrase": "copped out"
+      "phrase": "copped out",
+      "coreImage": {
+        "chain": [
+          { "term": "cop", "gloss": "つかむ・引き受ける" },
+          { "term": "out", "gloss": "外へ逃れる" },
+          { "gloss": "責任の外へ逃げる" },
+          { "gloss": "逃げた、責任を回避した" }
+        ],
+        "particle": "out",
+        "particleSense": "escape"
+      }
     },
     {
       "q": 23,
@@ -830,7 +889,17 @@
       "example": "After rising quickly, housing prices leveled off.",
       "exampleTranslation": "急上昇した後、住宅価格は横ばいになった。",
       "pos": "熟語",
-      "phrase": "leveled off"
+      "phrase": "leveled off",
+      "coreImage": {
+        "chain": [
+          { "term": "level", "gloss": "平らにする" },
+          { "term": "off", "gloss": "離れて弱まる" },
+          { "gloss": "上昇の勢いが離れて平らになる" },
+          { "gloss": "横ばいになった、安定した" }
+        ],
+        "particle": "off",
+        "particleSense": "weaken"
+      }
     },
     {
       "q": 23,
@@ -839,7 +908,17 @@
       "example": "The negotiator played the two suppliers off against each other.",
       "exampleTranslation": "交渉担当者は2社の供給業者を互いに競わせた。",
       "pos": "熟語",
-      "phrase": "played off"
+      "phrase": "played off",
+      "coreImage": {
+        "chain": [
+          { "term": "play", "gloss": "動かす・演じる" },
+          { "term": "off", "gloss": "離れた側へ" },
+          { "gloss": "二つの側を離れた位置で動かす" },
+          { "gloss": "対立させた、うまく利用した" }
+        ],
+        "particle": "off",
+        "particleSense": "separate"
+      }
     },
     {
       "q": 24,
@@ -848,7 +927,17 @@
       "example": "Too many approval steps are bogging down the construction project.",
       "exampleTranslation": "承認手続きが多すぎて建設計画の進行が遅れている。",
       "pos": "熟語",
-      "phrase": "bogging down"
+      "phrase": "bogging down",
+      "coreImage": {
+        "chain": [
+          { "term": "bog", "gloss": "沼にはめる" },
+          { "term": "down", "gloss": "下へ押さえつける" },
+          { "gloss": "動きを下へ沈めて止める" },
+          { "gloss": "動きを遅くする、停滞させる" }
+        ],
+        "particle": "down",
+        "particleSense": "reduce"
+      }
     },
     {
       "q": 24,
@@ -857,7 +946,17 @@
       "example": "The company is phasing out its least efficient products.",
       "exampleTranslation": "その会社は最も効率の悪い製品を段階的に廃止している。",
       "pos": "熟語",
-      "phrase": "phasing out"
+      "phrase": "phasing out",
+      "coreImage": {
+        "chain": [
+          { "term": "phase", "gloss": "段階を進める" },
+          { "term": "out", "gloss": "外へ取り除く" },
+          { "gloss": "段階を踏んで外へ出す" },
+          { "gloss": "段階的に廃止する" }
+        ],
+        "particle": "out",
+        "particleSense": "remove"
+      }
     },
     {
       "q": 24,
@@ -866,7 +965,17 @@
       "example": "The reporters were staking out the politician's office.",
       "exampleTranslation": "記者たちは政治家の事務所を張り込んでいた。",
       "pos": "熟語",
-      "phrase": "staking out"
+      "phrase": "staking out",
+      "coreImage": {
+        "chain": [
+          { "term": "stake", "gloss": "杭を打つ" },
+          { "term": "out", "gloss": "外へ線を引く" },
+          { "gloss": "杭で場所を外側から区切る" },
+          { "gloss": "見張る、場所を確保する" }
+        ],
+        "particle": "out",
+        "particleSense": "reserve"
+      }
     },
     {
       "q": 24,
@@ -875,7 +984,16 @@
       "example": "High walls were hemming in the small courtyard.",
       "exampleTranslation": "高い壁が小さな中庭を取り囲んでいた。",
       "pos": "熟語",
-      "phrase": "hemming in"
+      "phrase": "hemming in",
+      "coreImage": {
+        "chain": [
+          { "term": "hem", "gloss": "縁を囲う" },
+          { "term": "in", "gloss": "内側へ閉じ込める" },
+          { "gloss": "縁で内側を囲んで動けなくする" },
+          { "gloss": "取り囲む、行動を制限する" }
+        ],
+        "particle": "in"
+      }
     },
     {
       "q": 25,
@@ -884,7 +1002,17 @@
       "example": "The rain began to taper off before sunset.",
       "exampleTranslation": "日没前に雨が次第に弱まり始めた。",
       "pos": "熟語",
-      "phrase": "taper off"
+      "phrase": "taper off",
+      "coreImage": {
+        "chain": [
+          { "term": "taper", "gloss": "先細りにする" },
+          { "term": "off", "gloss": "離れて弱まる" },
+          { "gloss": "先細りになり、勢いが離れる" },
+          { "gloss": "次第に弱まる、減少する" }
+        ],
+        "particle": "off",
+        "particleSense": "weaken"
+      }
     },
     {
       "q": 25,
@@ -893,7 +1021,17 @@
       "example": "We need to work out a fair schedule for the whole team.",
       "exampleTranslation": "チーム全体のために公平な予定を決める必要がある。",
       "pos": "熟語",
-      "phrase": "work out"
+      "phrase": "work out",
+      "coreImage": {
+        "chain": [
+          { "term": "work", "gloss": "働かせる" },
+          { "term": "out", "gloss": "外へほどく" },
+          { "gloss": "働かせて問題を外へほどく" },
+          { "gloss": "解決する、うまくいく" }
+        ],
+        "particle": "out",
+        "particleSense": "resolve"
+      }
     },
     {
       "q": 25,
@@ -902,7 +1040,17 @@
       "example": "The searchers fanned out across the valley.",
       "exampleTranslation": "捜索隊は谷全体に散開した。",
       "pos": "熟語",
-      "phrase": "fan out"
+      "phrase": "fan out",
+      "coreImage": {
+        "chain": [
+          { "term": "fan", "gloss": "扇状に広げる" },
+          { "term": "out", "gloss": "外へ広がる" },
+          { "gloss": "中心から外へ扇状に広げる" },
+          { "gloss": "扇状に広がる、散開する" }
+        ],
+        "particle": "out",
+        "particleSense": "spread"
+      }
     },
     {
       "q": 25,
@@ -911,7 +1059,17 @@
       "example": "The alarm blared out across the quiet building.",
       "exampleTranslation": "警報が静かな建物全体に大音量で鳴り響いた。",
       "pos": "熟語",
-      "phrase": "blare out"
+      "phrase": "blare out",
+      "coreImage": {
+        "chain": [
+          { "term": "blare", "gloss": "大音量で鳴らす" },
+          { "term": "out", "gloss": "外へ音を出す" },
+          { "gloss": "音を外へ強く響かせる" },
+          { "gloss": "大音量で鳴り響く" }
+        ],
+        "particle": "out",
+        "particleSense": "express"
+      }
     }
   ]
 }

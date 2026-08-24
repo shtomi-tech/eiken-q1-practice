@@ -25,6 +25,7 @@ const flashCoreImageBody = extractFunctionBody(js, "flashCoreImage");
 const appendCheckFeedbackBody = extractFunctionBody(js, "appendCheckFeedback");
 const bootBody = extractFunctionBody(js, "boot");
 const loadDataBody = extractFunctionBody(js, "loadData");
+const loadPooledItemsBody = extractFunctionBody(js, "loadPooledItems");
 const assignParticleSlotsBody = extractFunctionBody(js, "assignParticleSlots");
 
 const coreImageBranch = buildFlashCardBody.indexOf("item.coreImage");
@@ -43,7 +44,12 @@ assert.ok(flashCoreImageBody.includes("particleMap"), "不変化詞パネルは�
 assert.ok(flashCoreImageBody.includes("particleSense"), "不変化詞パネルはparticleSenseを参照する必要があります");
 assert.ok(flashCoreImageBody.includes("core.siblings"), "coreImage.siblingsの例外上書きを参照する必要があります");
 assert.ok(flashCoreImageBody.includes("_particleSlot"), "仲間例の決定的な表示位置を参照する必要があります");
-assert.ok(flashCoreImageBody.includes("slot * 3"), "仲間例はslotに基づく決定的オフセットで選ぶ必要があります");
+assert.match(
+  flashCoreImageBody,
+  /filteredSiblings\[\(slot \+ k\) % filteredSiblings\.length\]/,
+  "仲間例はslotから1つずつ進む決定的オフセットで選ぶ必要があります",
+);
+assert.equal(flashCoreImageBody.includes("slot * 3"), false, "仲間例の選択で3刻みのオフセットを使ってはいけません");
 assert.equal(flashCoreImageBody.includes("Math.random"), false, "仲間例の表示に乱数を使ってはいけません");
 const overrideIdx = flashCoreImageBody.indexOf("core.siblings");
 const senseIdx = flashCoreImageBody.indexOf("particleSense");
@@ -54,6 +60,9 @@ assert.ok(flashCoreImageBody.includes("(particle || overrideSiblings)"), "辞書
 assert.ok(!flashCoreImageBody.includes("→"), "暗記カードの矢印はCSS疑似要素で表現し、JSテキストに持たせないでください");
 assert.ok(assignParticleSlotsBody.includes("_particleSlot"), "熟語へ実行時専用のparticle slotを付ける必要があります");
 assert.ok(loadDataBody.includes("assignParticleSlots(all)"), "loadDataは熟語へparticle slotを付ける必要があります");
+assert.match(loadDataBody, /fetch\(current\.vocabUrl,\s*\{\s*cache:\s*"no-store"\s*\}\)/, "通常学習の語彙JSONはキャッシュを使わず取得する必要があります");
+assert.match(loadDataBody, /fetch\(current\.questionsUrl,\s*\{\s*cache:\s*"no-store"\s*\}\)/, "通常学習の問題JSONはキャッシュを使わず取得する必要があります");
+assert.match(loadPooledItemsBody, /fetch\(DATASETS\[id\]\.vocabUrl,\s*\{\s*cache:\s*"no-store"\s*\}\)/, "意味復習用の語彙JSONはキャッシュを使わず取得する必要があります");
 
 assert.ok(appendCheckFeedbackBody.includes("item.coreImage"), "意味チェックのフィードバックにも coreImage を反映する必要があります");
 assert.ok(appendCheckFeedbackBody.includes("chain"), "フィードバックは chain を参照する必要があります");

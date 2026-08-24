@@ -406,6 +406,14 @@
 
     {
       "q": 13, "is_answer": false, "type": "idiom", "phrase": "show off", "pos": "句動詞",
+      "coreImage": {
+        "particle": "off",
+        "particleSense": "express",
+        "chain": [
+          { "term": "show", "gloss": "見せる" },
+          { "gloss": "外へ出して目立たせる" }
+        ]
+      },
       "meaning": "見せびらかす、誇示する",
       "etymology": "show（見せる）+ off（外へ）。外に向けて目立たせる。",
       "example": "He likes to show off his new watch.",
@@ -414,6 +422,13 @@
     },
     {
       "q": 13, "is_answer": false, "type": "idiom", "phrase": "put away", "pos": "句動詞",
+      "coreImage": {
+        "particle": "away",
+        "chain": [
+          { "term": "put", "gloss": "置く" },
+          { "gloss": "離れた場所へしまう" }
+        ]
+      },
       "meaning": "片付ける、蓄える",
       "etymology": "put（置く）+ away（離れた所へ）。しまい込むイメージ。",
       "example": "Please put away your toys.",
@@ -422,6 +437,14 @@
     },
     {
       "q": 13, "is_answer": true, "type": "idiom", "phrase": "live on", "pos": "句動詞",
+      "coreImage": {
+        "particle": "on",
+        "particleSense": "rely",
+        "chain": [
+          { "term": "live", "gloss": "生きる" },
+          { "gloss": "対象を頼りに生き続ける" }
+        ]
+      },
       "meaning": "〜を食べて生きる、〜で暮らす",
       "etymology": "live（生きる）+ on（支えとして）。生活のよりどころを表す。",
       "example": "They could barely live on the money they had left.",
@@ -430,6 +453,7 @@
     },
     {
       "q": 13, "is_answer": false, "type": "idiom", "phrase": "consist of", "pos": "句動詞",
+      "coreImage": { "chain": [ { "term": "consist", "gloss": "成り立つ" }, { "term": "of", "gloss": "〜から" }, { "gloss": "要素から全体が構成される" } ] },
       "meaning": "〜から成る、構成される",
       "etymology": "consist（成り立つ）+ of（材料・構成要素）。",
       "example": "The team consists of ten members.",
@@ -472,6 +496,7 @@
 
     {
       "q": 15, "is_answer": true, "type": "idiom", "phrase": "in search of", "pos": "前置詞句",
+      "coreImage": { "chain": [ { "term": "in", "gloss": "中で" }, { "term": "search", "gloss": "探すこと" }, { "gloss": "探している最中で" } ] },
       "meaning": "〜を探して、〜を求めて",
       "etymology": "search（探索）を名詞として使い、「探索の中で」から。",
       "example": "Clara went to the bookstore in search of a novel.",
@@ -480,6 +505,7 @@
     },
     {
       "q": 15, "is_answer": false, "type": "idiom", "phrase": "for fear of", "pos": "前置詞句",
+      "coreImage": { "chain": [ { "term": "for", "gloss": "〜のために" }, { "term": "fear", "gloss": "恐れ" }, { "gloss": "恐れを理由に避ける" } ] },
       "meaning": "〜を恐れて、〜しないように",
       "etymology": "fear（恐れ）のために、という構造。",
       "example": "She spoke quietly for fear of waking the baby.",
@@ -488,6 +514,7 @@
     },
     {
       "q": 15, "is_answer": false, "type": "idiom", "phrase": "on behalf of", "pos": "前置詞句",
+      "coreImage": { "chain": [ { "term": "on", "gloss": "〜の上に立って" }, { "term": "behalf", "gloss": "利益・代表" }, { "gloss": "他者を代表する立場で" } ] },
       "meaning": "〜を代表して、〜のために",
       "etymology": "behalf は「利益・側」を表す語。ある人の側に立つ表現。",
       "example": "I accepted the award on behalf of the team.",
@@ -496,6 +523,7 @@
     },
     {
       "q": 15, "is_answer": false, "type": "idiom", "phrase": "with regard to", "pos": "前置詞句",
+      "coreImage": { "chain": [ { "term": "with", "gloss": "〜とともに" }, { "term": "regard", "gloss": "考慮" }, { "gloss": "対象について考えると" } ] },
       "meaning": "〜に関して",
       "etymology": "regard（見る、考慮）を使い、「〜を見る観点で」。",
       "example": "We have no comments with regard to the plan.",
@@ -538,6 +566,7 @@
 
     {
       "q": 17, "is_answer": false, "type": "idiom", "phrase": "as fast as", "pos": "接続詞句",
+      "coreImage": { "chain": [ { "term": "as", "gloss": "同じ程度に" }, { "term": "fast", "gloss": "速く" }, { "gloss": "同じ速さの程度で" } ] },
       "meaning": "〜と同じくらい速く",
       "etymology": "as ... as の同等比較。fast（速い）を比べる形。",
       "example": "Run as fast as you can.",
@@ -546,6 +575,7 @@
     },
     {
       "q": 17, "is_answer": true, "type": "idiom", "phrase": "as far as", "pos": "接続詞句",
+      "coreImage": { "chain": [ { "term": "as", "gloss": "同じ程度に" }, { "term": "far", "gloss": "遠く" }, { "gloss": "範囲をそこまで広げて" } ] },
       "meaning": "〜する限りでは、〜まで",
       "etymology": "far（遠く、範囲）を使い、知識や関心の範囲を示す。",
       "example": "As far as I know, most people are planning to attend.",
@@ -554,6 +584,7 @@
     },
     {
       "q": 17, "is_answer": false, "type": "idiom", "phrase": "as long as", "pos": "接続詞句",
+      "coreImage": { "chain": [ { "term": "as", "gloss": "同じ程度に" }, { "term": "long", "gloss": "長く" }, { "gloss": "その長さ・条件の範囲で" } ] },
       "meaning": "〜する限り、〜でありさえすれば",
       "etymology": "long（長さ・期間）を使い、条件が続く範囲を表す。",
       "example": "You can stay here as long as you are quiet.",
@@ -562,6 +593,7 @@
     },
     {
       "q": 17, "is_answer": false, "type": "idiom", "phrase": "as well as", "pos": "接続詞句",
+      "coreImage": { "chain": [ { "term": "as", "gloss": "同じ程度に" }, { "term": "well", "gloss": "うまく" }, { "gloss": "同じように加えて" } ] },
       "meaning": "〜だけでなく、〜と同じくらい上手に",
       "etymology": "well（よく）を使った同等比較から、追加の意味にも広がった表現。",
       "example": "She speaks Spanish as well as English.",

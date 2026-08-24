@@ -776,7 +776,16 @@
       "example": "She decided to dabble in photography during the summer.",
       "exampleTranslation": "彼女は夏の間、写真撮影を少し始めることにした。",
       "pos": "熟語",
-      "phrase": "dabble in"
+      "phrase": "dabble in",
+      "coreImage": {
+        "chain": [
+          { "term": "dabble", "gloss": "水を軽くかき回す" },
+          { "term": "in", "gloss": "中へ入り込む" },
+          { "gloss": "一部だけ中へ手を入れて試す" },
+          { "gloss": "〜にちょっと手を出す" }
+        ],
+        "particle": "in"
+      }
     },
     {
       "q": 22,
@@ -785,7 +794,17 @@
       "example": "I promised not to let my team down.",
       "exampleTranslation": "私はチームを失望させないと約束した。",
       "pos": "熟語",
-      "phrase": "let down"
+      "phrase": "let down",
+      "coreImage": {
+        "chain": [
+          { "term": "let", "gloss": "許す・させる" },
+          { "term": "down", "gloss": "下へ落とす" },
+          { "gloss": "期待や支えを下へ落とす" },
+          { "gloss": "失望させる" }
+        ],
+        "particle": "down",
+        "particleSense": "lower"
+      }
     },
     {
       "q": 22,
@@ -794,7 +813,16 @@
       "example": "The speaker put across his idea in simple language.",
       "exampleTranslation": "話し手は自分の考えを簡単な言葉でうまく伝えた。",
       "pos": "熟語",
-      "phrase": "put across"
+      "phrase": "put across",
+      "coreImage": {
+        "chain": [
+          { "term": "put", "gloss": "置く" },
+          { "term": "across", "gloss": "向こう側へ渡す" },
+          { "gloss": "考えを相手側へ渡して置く" },
+          { "gloss": "うまく伝える、売り込む" }
+        ],
+        "particle": "across"
+      }
     },
     {
       "q": 22,
@@ -803,7 +831,17 @@
       "example": "The company farmed out the design work to a small studio.",
       "exampleTranslation": "その会社はデザイン作業を小さなスタジオに外注した。",
       "pos": "熟語",
-      "phrase": "farm out"
+      "phrase": "farm out",
+      "coreImage": {
+        "chain": [
+          { "term": "farm", "gloss": "農場で育てる" },
+          { "term": "out", "gloss": "外へ任せる" },
+          { "gloss": "仕事を外へ出して任せる" },
+          { "gloss": "外注する" }
+        ],
+        "particle": "out",
+        "particleSense": "delegate"
+      }
     },
     {
       "q": 23,
@@ -812,7 +850,16 @@
       "example": "While walking through the market, she stumbled upon an old map.",
       "exampleTranslation": "市場を歩いていると、彼女は古い地図を偶然見つけた。",
       "pos": "熟語",
-      "phrase": "stumbled upon"
+      "phrase": "stumbled upon",
+      "coreImage": {
+        "chain": [
+          { "term": "stumble", "gloss": "つまずく" },
+          { "term": "upon", "gloss": "その上・その場で" },
+          { "gloss": "つまずいた先で出会う" },
+          { "gloss": "偶然見つける" }
+        ],
+        "particle": "upon"
+      }
     },
     {
       "q": 23,
@@ -821,7 +868,17 @@
       "example": "The workers chipped off the old paint from the door.",
       "exampleTranslation": "作業員たちはドアから古い塗料を少しずつ剥がした。",
       "pos": "熟語",
-      "phrase": "chipped off"
+      "phrase": "chipped off",
+      "coreImage": {
+        "chain": [
+          { "term": "chip", "gloss": "少しずつ削る" },
+          { "term": "off", "gloss": "切り離して" },
+          { "gloss": "表面から小片を切り離す" },
+          { "gloss": "少しずつ削り取った、剥がした" }
+        ],
+        "particle": "off",
+        "particleSense": "separate"
+      }
     },
     {
       "q": 23,
@@ -830,7 +887,17 @@
       "example": "The coach marked out three players for special praise.",
       "exampleTranslation": "コーチは特に称賛する3人の選手を選び出した。",
       "pos": "熟語",
-      "phrase": "marked out"
+      "phrase": "marked out",
+      "coreImage": {
+        "chain": [
+          { "term": "mark", "gloss": "印を付ける" },
+          { "term": "out", "gloss": "外へ線を引く" },
+          { "gloss": "印で外側から区切って示す" },
+          { "gloss": "選び出した、目立たせた" }
+        ],
+        "particle": "out",
+        "particleSense": "reserve"
+      }
     },
     {
       "q": 23,
@@ -839,7 +906,16 @@
       "example": "The fans fawned over the actor outside the theater.",
       "exampleTranslation": "ファンたちは劇場の外でその俳優をちやほやした。",
       "pos": "熟語",
-      "phrase": "fawned over"
+      "phrase": "fawned over",
+      "coreImage": {
+        "chain": [
+          { "term": "fawn", "gloss": "子鹿のようにすり寄る" },
+          { "term": "over", "gloss": "上から覆うように" },
+          { "gloss": "相手の上に甘く寄りかかる" },
+          { "gloss": "へつらった、ちやほやした" }
+        ],
+        "particle": "over"
+      }
     },
     {
       "q": 24,
@@ -848,7 +924,17 @@
       "example": "The caterer laid on an excellent meal for the guests.",
       "exampleTranslation": "仕出し業者は客のために素晴らしい食事を用意した。",
       "pos": "熟語",
-      "phrase": "laid on"
+      "phrase": "laid on",
+      "coreImage": {
+        "chain": [
+          { "term": "lay", "gloss": "置く・載せる" },
+          { "term": "on", "gloss": "接触させて上に" },
+          { "gloss": "上に載せて加える" },
+          { "gloss": "加えた、施した" }
+        ],
+        "particle": "on",
+        "particleSense": "contact"
+      }
     },
     {
       "q": 24,
@@ -857,7 +943,17 @@
       "example": "The players were keyed up before the championship game.",
       "exampleTranslation": "選手たちは決勝戦を前に気持ちが高ぶっていた。",
       "pos": "熟語",
-      "phrase": "keyed up"
+      "phrase": "keyed up",
+      "coreImage": {
+        "chain": [
+          { "term": "key", "gloss": "鍵をかける・調整する" },
+          { "term": "up", "gloss": "上へ状態を動かす" },
+          { "gloss": "気持ちを上へ持ち上げて高める" },
+          { "gloss": "興奮して、高揚して" }
+        ],
+        "particle": "up",
+        "particleSense": "raise"
+      }
     },
     {
       "q": 24,
@@ -866,7 +962,17 @@
       "example": "We banked on good weather for the outdoor concert.",
       "exampleTranslation": "私たちは屋外コンサートのために良い天気を当てにした。",
       "pos": "熟語",
-      "phrase": "banked on"
+      "phrase": "banked on",
+      "coreImage": {
+        "chain": [
+          { "term": "bank", "gloss": "銀行に預ける" },
+          { "term": "on", "gloss": "対象に乗せる" },
+          { "gloss": "見込みを対象に預ける" },
+          { "gloss": "〜を当てにした" }
+        ],
+        "particle": "on",
+        "particleSense": "rely"
+      }
     },
     {
       "q": 24,
@@ -875,7 +981,17 @@
       "example": "The nurse held down the patient's arm during the procedure.",
       "exampleTranslation": "看護師は処置中、患者の腕を押さえた。",
       "pos": "熟語",
-      "phrase": "held down"
+      "phrase": "held down",
+      "coreImage": {
+        "chain": [
+          { "term": "hold", "gloss": "保持する" },
+          { "term": "down", "gloss": "下へ押さえる" },
+          { "gloss": "下へ押さえたまま保つ" },
+          { "gloss": "抑えた、押さえつけた" }
+        ],
+        "particle": "down",
+        "particleSense": "suppress"
+      }
     },
     {
       "q": 25,
@@ -884,7 +1000,17 @@
       "example": "The buyer backed out of the deal at the last minute.",
       "exampleTranslation": "買い手は土壇場でその取引から手を引いた。",
       "pos": "熟語",
-      "phrase": "backed out"
+      "phrase": "backed out",
+      "coreImage": {
+        "chain": [
+          { "term": "back", "gloss": "後ろへ下がる" },
+          { "term": "out", "gloss": "外へ引く" },
+          { "gloss": "後ろへ引いて外へ出る" },
+          { "gloss": "手を引いた、約束を撤回した" }
+        ],
+        "particle": "out",
+        "particleSense": "escape"
+      }
     },
     {
       "q": 25,
@@ -893,7 +1019,17 @@
       "example": "She flipped out when she saw the damage to her car.",
       "exampleTranslation": "彼女は自分の車の損傷を見てひどく取り乱した。",
       "pos": "熟語",
-      "phrase": "flipped out"
+      "phrase": "flipped out",
+      "coreImage": {
+        "chain": [
+          { "term": "flip", "gloss": "ひっくり返す" },
+          { "term": "out", "gloss": "外へ噴き出す" },
+          { "gloss": "感情を外へひっくり返す" },
+          { "gloss": "ひどく取り乱した、激怒した" }
+        ],
+        "particle": "out",
+        "particleSense": "express"
+      }
     },
     {
       "q": 25,
@@ -903,6 +1039,7 @@
       "exampleTranslation": "私たちのチームは1点差でかろうじて勝った。",
       "pos": "熟語",
       "phrase": "squeaked by"
+      ,"coreImage": { "particle": "by", "chain": [ { "term": "squeak", "gloss": "かろうじて通る" }, { "gloss": "そばをすり抜けて通過する" } ] }
     },
     {
       "q": 25,
@@ -911,7 +1048,16 @@
       "example": "It took a few days for the news to sink in.",
       "exampleTranslation": "その知らせが実感として理解されるまで数日かかった。",
       "pos": "熟語",
-      "phrase": "sank in"
+      "phrase": "sank in",
+      "coreImage": {
+        "chain": [
+          { "term": "sink", "gloss": "沈む" },
+          { "term": "in", "gloss": "内側へ入る" },
+          { "gloss": "意味が内側へ沈み込む" },
+          { "gloss": "理解される、実感される" }
+        ],
+        "particle": "in"
+      }
     }
   ]
 }

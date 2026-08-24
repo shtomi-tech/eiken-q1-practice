@@ -776,7 +776,16 @@
       "example": "I was roped into helping with the office party.",
       "exampleTranslation": "私はオフィスのパーティーの手伝いに無理やり引き込まれた。",
       "pos": "熟語",
-      "phrase": "roped into"
+      "phrase": "roped into",
+      "coreImage": {
+        "chain": [
+          { "term": "rope", "gloss": "ロープで引く" },
+          { "term": "into", "gloss": "中へ引き込む" },
+          { "gloss": "ロープで中へ引き入れる" },
+          { "gloss": "無理に引き込まれた" }
+        ],
+        "particle": "into"
+      }
     },
     {
       "q": 22,
@@ -785,7 +794,16 @@
       "example": "The planner factored in the possibility of heavy traffic.",
       "exampleTranslation": "その計画担当者は激しい渋滞の可能性を考慮に入れた。",
       "pos": "熟語",
-      "phrase": "factored in"
+      "phrase": "factored in",
+      "coreImage": {
+        "chain": [
+          { "term": "factor", "gloss": "要素として数える" },
+          { "term": "in", "gloss": "中へ含める" },
+          { "gloss": "計算の中へ要素を入れる" },
+          { "gloss": "考慮に入れた" }
+        ],
+        "particle": "in"
+      }
     },
     {
       "q": 22,
@@ -794,7 +812,17 @@
       "example": "The school frowned on students using phones in class.",
       "exampleTranslation": "その学校は授業中に生徒が携帯電話を使うことを認めなかった。",
       "pos": "熟語",
-      "phrase": "frowned on"
+      "phrase": "frowned on",
+      "coreImage": {
+        "chain": [
+          { "term": "frown", "gloss": "眉をひそめる" },
+          { "term": "on", "gloss": "対象に向ける" },
+          { "gloss": "対象に眉をひそめて向ける" },
+          { "gloss": "快く思わなかった、認めなかった" }
+        ],
+        "particle": "on",
+        "particleSense": "contact"
+      }
     },
     {
       "q": 22,
@@ -803,7 +831,17 @@
       "example": "The manager smoothed down the disagreement between the employees.",
       "exampleTranslation": "マネージャーは従業員同士の対立をなだめた。",
       "pos": "熟語",
-      "phrase": "smoothed down"
+      "phrase": "smoothed down",
+      "coreImage": {
+        "chain": [
+          { "term": "smooth", "gloss": "なめらかにする" },
+          { "term": "down", "gloss": "下へ落ち着かせる" },
+          { "gloss": "表面や対立を下へ平らにする" },
+          { "gloss": "なだめた、平らにした" }
+        ],
+        "particle": "down",
+        "particleSense": "reduce"
+      }
     },
     {
       "q": 23,
@@ -812,7 +850,17 @@
       "example": "The coach's speech fired up the team before the final.",
       "exampleTranslation": "コーチのスピーチは決勝を前にチームを奮起させた。",
       "pos": "熟語",
-      "phrase": "fire up"
+      "phrase": "fire up",
+      "coreImage": {
+        "chain": [
+          { "term": "fire", "gloss": "火をつける" },
+          { "term": "up", "gloss": "上へ勢いを高める" },
+          { "gloss": "火をつけて気持ちを上げる" },
+          { "gloss": "奮起させる、活気づける" }
+        ],
+        "particle": "up",
+        "particleSense": "raise"
+      }
     },
     {
       "q": 23,
@@ -821,7 +869,17 @@
       "example": "The audit was designed to root out financial fraud.",
       "exampleTranslation": "その監査は金融上の不正を根絶するために設計された。",
       "pos": "熟語",
-      "phrase": "root out"
+      "phrase": "root out",
+      "coreImage": {
+        "chain": [
+          { "term": "root", "gloss": "根を張る" },
+          { "term": "out", "gloss": "外へ取り除く" },
+          { "gloss": "根ごと外へ引き抜く" },
+          { "gloss": "根絶する、見つけ出す" }
+        ],
+        "particle": "out",
+        "particleSense": "remove"
+      }
     },
     {
       "q": 23,
@@ -830,7 +888,17 @@
       "example": "The audience lapped up the comedian's latest jokes.",
       "exampleTranslation": "観客はそのコメディアンの最新の冗談を喜んで受け入れた。",
       "pos": "熟語",
-      "phrase": "lap up"
+      "phrase": "lap up",
+      "coreImage": {
+        "chain": [
+          { "term": "lap", "gloss": "舌ですくう" },
+          { "term": "up", "gloss": "上へ取り込む" },
+          { "gloss": "すくい上げるように喜んで取り込む" },
+          { "gloss": "喜んで受け入れる、がつがつ食べる" }
+        ],
+        "particle": "up",
+        "particleSense": "complete"
+      }
     },
     {
       "q": 23,
@@ -839,7 +907,17 @@
       "example": "The recipe was passed down through four generations.",
       "exampleTranslation": "そのレシピは4世代にわたって受け継がれてきた。",
       "pos": "熟語",
-      "phrase": "pass down"
+      "phrase": "pass down",
+      "coreImage": {
+        "chain": [
+          { "term": "pass", "gloss": "渡す" },
+          { "term": "down", "gloss": "下の世代へ" },
+          { "gloss": "下へ順に渡していく" },
+          { "gloss": "受け継がせる、伝える" }
+        ],
+        "particle": "down",
+        "particleSense": "descend"
+      }
     },
     {
       "q": 24,
@@ -848,7 +926,17 @@
       "example": "He threw out his back while moving a heavy desk.",
       "exampleTranslation": "彼は重い机を動かしているときに腰を痛めた。",
       "pos": "熟語",
-      "phrase": "threw out"
+      "phrase": "threw out",
+      "coreImage": {
+        "chain": [
+          { "term": "throw", "gloss": "投げる" },
+          { "term": "out", "gloss": "外へ放り出す" },
+          { "gloss": "外へ投げ出す" },
+          { "gloss": "痛めた、捨てた" }
+        ],
+        "particle": "out",
+        "particleSense": "remove"
+      }
     },
     {
       "q": 24,
@@ -857,7 +945,16 @@
       "example": "They scraped together enough money to repair the roof.",
       "exampleTranslation": "彼らは屋根を修理するためのお金をかき集めた。",
       "pos": "熟語",
-      "phrase": "scraped together"
+      "phrase": "scraped together",
+      "coreImage": {
+        "chain": [
+          { "term": "scrape", "gloss": "こすり集める" },
+          { "term": "together", "gloss": "一つに集める" },
+          { "gloss": "少しずつこすって一つに寄せる" },
+          { "gloss": "かき集めた" }
+        ],
+        "particle": "together"
+      }
     },
     {
       "q": 24,
@@ -866,7 +963,17 @@
       "example": "The shortage pushed up the price of fresh vegetables.",
       "exampleTranslation": "不足によって新鮮な野菜の価格が押し上げられた。",
       "pos": "熟語",
-      "phrase": "pushed up"
+      "phrase": "pushed up",
+      "coreImage": {
+        "chain": [
+          { "term": "push", "gloss": "押す" },
+          { "term": "up", "gloss": "上へ押し上げる" },
+          { "gloss": "下から上へ押し上げる" },
+          { "gloss": "押し上げた" }
+        ],
+        "particle": "up",
+        "particleSense": "raise"
+      }
     },
     {
       "q": 24,
@@ -875,7 +982,16 @@
       "example": "The defenders forced back the attackers at the bridge.",
       "exampleTranslation": "守備側は橋で攻撃側を押し戻した。",
       "pos": "熟語",
-      "phrase": "forced back"
+      "phrase": "forced back",
+      "coreImage": {
+        "chain": [
+          { "term": "force", "gloss": "力をかける" },
+          { "term": "back", "gloss": "後ろへ戻す" },
+          { "gloss": "力で後ろへ押し戻す" },
+          { "gloss": "押し戻した" }
+        ],
+        "particle": "back"
+      }
     },
     {
       "q": 25,
@@ -884,7 +1000,17 @@
       "example": "A senior engineer is heading up the safety investigation.",
       "exampleTranslation": "上級技術者が安全調査を率いている。",
       "pos": "熟語",
-      "phrase": "heading up"
+      "phrase": "heading up",
+      "coreImage": {
+        "chain": [
+          { "term": "head", "gloss": "頭を向ける" },
+          { "term": "up", "gloss": "上へ向ける" },
+          { "gloss": "先頭へ向かって進める" },
+          { "gloss": "率いる" }
+        ],
+        "particle": "up",
+        "particleSense": "raise"
+      }
     },
     {
       "q": 25,
@@ -893,7 +1019,16 @@
       "example": "The detective was piecing together the events of the night.",
       "exampleTranslation": "探偵はその夜の出来事をつなぎ合わせていた。",
       "pos": "熟語",
-      "phrase": "piecing together"
+      "phrase": "piecing together",
+      "coreImage": {
+        "chain": [
+          { "term": "piece", "gloss": "小片にする" },
+          { "term": "together", "gloss": "一つに組み合わせる" },
+          { "gloss": "小片をつなぎ合わせる" },
+          { "gloss": "つなぎ合わせて理解する" }
+        ],
+        "particle": "together"
+      }
     },
     {
       "q": 25,
@@ -902,7 +1037,17 @@
       "example": "The guard stopped the thief by punching him out.",
       "exampleTranslation": "警備員は泥棒を殴り倒して止めた。",
       "pos": "熟語",
-      "phrase": "punching out"
+      "phrase": "punching out",
+      "coreImage": {
+        "chain": [
+          { "term": "punch", "gloss": "殴る" },
+          { "term": "out", "gloss": "外へ倒す" },
+          { "gloss": "外へ殴り出して倒す" },
+          { "gloss": "殴り倒す、退勤打刻する" }
+        ],
+        "particle": "out",
+        "particleSense": "remove"
+      }
     },
     {
       "q": 25,
@@ -911,7 +1056,17 @@
       "example": "The article was accused of stirring up public anger.",
       "exampleTranslation": "その記事は世論の怒りをかき立てたとして非難された。",
       "pos": "熟語",
-      "phrase": "stirring up"
+      "phrase": "stirring up",
+      "coreImage": {
+        "chain": [
+          { "term": "stir", "gloss": "かき混ぜる" },
+          { "term": "up", "gloss": "上へ勢いを高める" },
+          { "gloss": "中のものをかき混ぜて表へ動かす" },
+          { "gloss": "引き起こす、かき立てる" }
+        ],
+        "particle": "up",
+        "particleSense": "raise"
+      }
     }
   ]
 }

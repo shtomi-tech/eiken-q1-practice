@@ -464,6 +464,7 @@
       "etymology": "look（目を向ける）+ after（後を追って）。後を追って見守るで「世話をする」。",
       "type": "idiom",
       "phrase": "look after"
+      ,"coreImage": { "chain": [ { "term": "look", "gloss": "見る" }, { "term": "after", "gloss": "後を" }, { "gloss": "後を見守って世話をする" } ] }
     },
     {
       "q": 11,
@@ -475,6 +476,7 @@
       "etymology": "run（走る）+ into（中へ）。走ってぶつかるイメージから「偶然出会う」。",
       "type": "idiom",
       "phrase": "run into"
+      ,"coreImage": { "particle": "into", "chain": [ { "term": "run", "gloss": "走る" }, { "gloss": "中へ入り込む" } ] }
     },
     {
       "q": 11,
@@ -486,6 +488,8 @@
       "etymology": "turn（回す）+ down（下へ）。つまみを下げる＝音量を下げる、親指を下に向ける＝「断る」。",
       "type": "idiom",
       "phrase": "turn down"
+      ,"coreImage": { "particle": "down",
+        "particleSense": "reduce", "chain": [ { "term": "turn", "gloss": "向きを変える" }, { "gloss": "下げて断る" } ] }
     },
     {
       "q": 11,
@@ -497,6 +501,7 @@
       "etymology": "go（行く）+ over（上を一通り）。上をひと通りなぞるで「見直す・復習する」。",
       "type": "idiom",
       "phrase": "go over"
+      ,"coreImage": { "particle": "over", "chain": [ { "term": "go", "gloss": "進む" }, { "gloss": "上を越えて見直す" } ] }
     },
     {
       "q": 12,
@@ -508,6 +513,7 @@
       "etymology": "take back（持ち帰る）。店へ持ち帰るで「返品する」、言葉を引き戻すで「撤回する」。",
       "type": "idiom",
       "phrase": "take it back"
+      ,"coreImage": { "particle": "back", "chain": [ { "term": "take", "gloss": "取る" }, { "gloss": "元の場所へ戻す" } ] }
     },
     {
       "q": 12,
@@ -519,6 +525,7 @@
       "etymology": "fill（満たす）+ out（すみずみまで）。用紙のすみずみまで埋めるで「記入する」。",
       "type": "idiom",
       "phrase": "fill it out"
+      ,"coreImage": { "particle": "out", "particleSense": "produce", "chain": [ { "term": "fill", "gloss": "満たす" }, { "gloss": "外へ内容を出して書き上げる" } ] }
     },
     {
       "q": 12,
@@ -530,6 +537,7 @@
       "etymology": "put（置く）+ off（離して）。予定を先へ離して置くで「延期する」。",
       "type": "idiom",
       "phrase": "put it off"
+      ,"coreImage": { "particle": "off", "particleSense": "pull-away", "chain": [ { "term": "put", "gloss": "置く" }, { "gloss": "予定から離して先へ延ばす" } ] }
     },
     {
       "q": 12,
@@ -541,6 +549,7 @@
       "etymology": "give（与える）+ away（手放して）。手放して与えるで「ただであげる」。",
       "type": "idiom",
       "phrase": "give it away"
+      ,"coreImage": { "particle": "away", "chain": [ { "term": "give", "gloss": "与える" }, { "gloss": "手元から遠くへ渡す" } ] }
     },
     {
       "q": 13,
@@ -552,6 +561,7 @@
       "etymology": "look forward（前を見る）+ to（〜へ）。前方の予定を見るで「楽しみに待つ」。",
       "type": "idiom",
       "phrase": "look forward to"
+      ,"coreImage": { "particle": "forward", "chain": [ { "term": "look", "gloss": "見る" }, { "gloss": "前方の出来事を楽しみに待つ" } ] }
     },
     {
       "q": 13,
@@ -563,6 +573,7 @@
       "etymology": "rid（取り除かれた状態）にする。厄介なものを片づけるで「処分する」。",
       "type": "idiom",
       "phrase": "get rid of"
+      ,"coreImage": { "chain": [ { "term": "get", "gloss": "得る" }, { "term": "rid", "gloss": "取り除いた状態" }, { "term": "of", "gloss": "〜から" }, { "gloss": "対象を手元からなくす" } ] }
     },
     {
       "q": 13,
@@ -574,6 +585,7 @@
       "etymology": "set off（出発する）+ for（〜へ向けて）。動き出して目的地へ向かう。",
       "type": "idiom",
       "phrase": "set off for"
+      ,"coreImage": { "particle": "off", "particleSense": "separate", "chain": [ { "term": "set", "gloss": "定める" }, { "gloss": "その場から離れて出発する" } ] }
     },
     {
       "q": 13,
@@ -585,6 +597,7 @@
       "etymology": "run out（尽きる）+ of（〜が）。走り続けて外に出てしまう＝在庫が尽きる。",
       "type": "idiom",
       "phrase": "run out of"
+      ,"coreImage": { "particle": "out", "particleSense": "exhaust", "chain": [ { "term": "run", "gloss": "走る" }, { "gloss": "外へ出し切って尽きる" } ] }
     },
     {
       "q": 14,
@@ -596,6 +609,7 @@
       "etymology": "break（壊す）+ into（中へ）。壊して中へ入るで「侵入する」。",
       "type": "idiom",
       "phrase": "break into"
+      ,"coreImage": { "particle": "into", "chain": [ { "term": "break", "gloss": "破る" }, { "gloss": "中へ破って入り込む" } ] }
     },
     {
       "q": 14,
@@ -607,6 +621,7 @@
       "etymology": "carry（運ぶ）+ out（最後まで外へ）。計画を最後まで運びきるで「実行する」。",
       "type": "idiom",
       "phrase": "carry out"
+      ,"coreImage": { "particle": "out", "particleSense": "produce", "chain": [ { "term": "carry", "gloss": "運ぶ" }, { "gloss": "外へ運び出して実行する" } ] }
     },
     {
       "q": 14,
@@ -618,6 +633,7 @@
       "etymology": "pick（つまむ）+ up（上へ）。つまんで持ち上げるで「拾う・受け取る」。",
       "type": "idiom",
       "phrase": "pick up"
+      ,"coreImage": { "particle": "up", "particleSense": "raise", "chain": [ { "term": "pick", "gloss": "つまみ取る" }, { "gloss": "上へ拾い上げる" } ] }
     },
     {
       "q": 14,
@@ -629,6 +645,7 @@
       "etymology": "look（見る）+ for（求めて）。求めて目を向けるで「探す」。",
       "type": "idiom",
       "phrase": "look for"
+      ,"coreImage": { "chain": [ { "term": "look", "gloss": "見る" }, { "term": "for", "gloss": "〜を求めて" }, { "gloss": "対象を探し求める" } ] }
     },
     {
       "q": 15,
@@ -640,6 +657,7 @@
       "etymology": "take（受け取る）+ after（後に続いて）。親の特徴を受け継ぐで「似ている」。",
       "type": "idiom",
       "phrase": "take after"
+      ,"coreImage": { "chain": [ { "term": "take", "gloss": "取る" }, { "term": "after", "gloss": "後に続いて" }, { "gloss": "家族の特徴を受け継ぐ" } ] }
     },
     {
       "q": 15,
@@ -651,6 +669,7 @@
       "etymology": "come（来る）+ across（横切って）。歩いていて横切るように出くわす。",
       "type": "idiom",
       "phrase": "come across"
+      ,"coreImage": { "particle": "across", "chain": [ { "term": "come", "gloss": "来る" }, { "gloss": "境目を越えて偶然出会う" } ] }
     },
     {
       "q": 15,
@@ -662,6 +681,7 @@
       "etymology": "turn（変わる）+ into（〜の中へ）。別の状態の中へ変わる。",
       "type": "idiom",
       "phrase": "turn into"
+      ,"coreImage": { "particle": "into", "chain": [ { "term": "turn", "gloss": "向きを変える" }, { "gloss": "別の状態の中へ変わる" } ] }
     },
     {
       "q": 15,
@@ -673,6 +693,7 @@
       "etymology": "set（据える）+ up（立てて）。立てて据えるで「設置する・始める」。",
       "type": "idiom",
       "phrase": "set up"
+      ,"coreImage": { "particle": "up", "particleSense": "prepare", "chain": [ { "term": "set", "gloss": "置く" }, { "gloss": "上向きに整えて準備する" } ] }
     }
   ]
 }

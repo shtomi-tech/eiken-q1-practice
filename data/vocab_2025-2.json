@@ -340,6 +340,7 @@
   "idioms": [
     {
       "q": 11, "is_answer": false, "type": "idiom", "phrase": "dropped by", "pos": "句動詞",
+      "coreImage": { "particle": "by", "chain": [ { "term": "drop", "gloss": "立ち寄る" }, { "gloss": "そばを通って立ち寄る" } ] },
       "meaning": "立ち寄る",
       "etymology": "drop（ふらっと落ちる、立ち寄る）+ by（そばに）。",
       "example": "I dropped by the bakery on my way home.",
@@ -348,6 +349,14 @@
     },
     {
       "q": 11, "is_answer": false, "type": "idiom", "phrase": "came down", "pos": "句動詞",
+      "coreImage": {
+        "particle": "down",
+        "particleSense": "descend",
+        "chain": [
+          { "term": "come", "gloss": "来る" },
+          { "gloss": "下へ降りてくる" }
+        ]
+      },
       "meaning": "下りてくる、（雨などが）降る；（価格が）下がる",
       "etymology": "come（来る）+ down（下へ）。",
       "example": "The rain came down heavily all afternoon.",
@@ -356,6 +365,14 @@
     },
     {
       "q": 11, "is_answer": false, "type": "idiom", "phrase": "passed on", "pos": "句動詞",
+      "coreImage": {
+        "particle": "on",
+        "particleSense": "transmit",
+        "chain": [
+          { "term": "pass", "gloss": "通り渡す" },
+          { "gloss": "次の相手へ伝え渡す" }
+        ]
+      },
       "meaning": "伝える、渡す；（婉曲的に）亡くなる",
       "etymology": "pass（渡す）+ on（先へ）。",
       "example": "She passed on the message to her colleague.",
@@ -364,6 +381,14 @@
     },
     {
       "q": 11, "is_answer": true, "type": "idiom", "phrase": "went off", "pos": "句動詞",
+      "coreImage": {
+        "particle": "off",
+        "particleSense": "separate",
+        "chain": [
+          { "term": "go", "gloss": "進む・作動する" },
+          { "gloss": "離れた状態へ動き出す" }
+        ]
+      },
       "meaning": "（警報などが）鳴る、作動する；爆発する",
       "etymology": "go（作動する）+ off（突然、離れて）。「突然作動し始める」というイメージ。",
       "example": "The fire alarm suddenly went off during the meeting.",
@@ -373,6 +398,7 @@
 
     {
       "q": 12, "is_answer": false, "type": "idiom", "phrase": "in the old days", "pos": "副詞句",
+      "coreImage": { "chain": [ { "term": "in", "gloss": "中に" }, { "term": "old", "gloss": "古い" }, { "gloss": "過去の時代を指す" } ] },
       "meaning": "昔は、かつては",
       "etymology": "old（古い）+ days（日々）。",
       "example": "In the old days, people wrote letters instead of sending e-mails.",
@@ -381,6 +407,7 @@
     },
     {
       "q": 12, "is_answer": true, "type": "idiom", "phrase": "for the time being", "pos": "副詞句",
+      "coreImage": { "chain": [ { "term": "for", "gloss": "〜のために" }, { "term": "time", "gloss": "時間" }, { "gloss": "今の時間に限って続ける" } ] },
       "meaning": "当分の間、さしあたり",
       "etymology": "time being「今この時」。「今のところは」の意。",
       "example": "We'll stay at this hotel for the time being until we find an apartment.",
@@ -389,6 +416,7 @@
     },
     {
       "q": 12, "is_answer": false, "type": "idiom", "phrase": "up in the air", "pos": "形容詞句",
+      "coreImage": { "chain": [ { "term": "up", "gloss": "上へ" }, { "term": "in", "gloss": "中に" }, { "gloss": "空中に浮いて未定のまま" } ] },
       "meaning": "未定で、宙に浮いた状態で",
       "etymology": "文字通り「空中に浮いている」状態から、比喩的に「未確定な」の意に。",
       "example": "Our vacation plans are still up in the air.",
@@ -397,6 +425,7 @@
     },
     {
       "q": 12, "is_answer": false, "type": "idiom", "phrase": "at the same time", "pos": "副詞句",
+      "coreImage": { "chain": [ { "term": "at", "gloss": "一点で" }, { "term": "same", "gloss": "同じ" }, { "gloss": "同じ時点に重なる" } ] },
       "meaning": "同時に；とはいえ",
       "etymology": "same（同じ）+ time（時）。",
       "example": "She can cook dinner and talk on the phone at the same time.",
@@ -406,6 +435,7 @@
 
     {
       "q": 13, "is_answer": false, "type": "idiom", "phrase": "jealous of", "pos": "形容詞句",
+      "coreImage": { "chain": [ { "term": "jealous", "gloss": "嫉妬する" }, { "term": "of", "gloss": "〜について" }, { "gloss": "相手のものをねたむ状態になる" } ] },
       "meaning": "〜をねたんで、嫉妬して",
       "etymology": "jealous はギリシャ語 zēlos「熱情」に由来。",
       "example": "He felt jealous of his brother's success.",
@@ -414,6 +444,7 @@
     },
     {
       "q": 13, "is_answer": false, "type": "idiom", "phrase": "confident of", "pos": "形容詞句",
+      "coreImage": { "chain": [ { "term": "confident", "gloss": "確信している" }, { "term": "of", "gloss": "〜について" }, { "gloss": "対象について自信を持つ" } ] },
       "meaning": "〜を確信して",
       "etymology": "confident はラテン語 confidere「信頼する」< con- + fidere（信じる）。",
       "example": "She is confident of winning the competition.",
@@ -422,6 +453,7 @@
     },
     {
       "q": 13, "is_answer": false, "type": "idiom", "phrase": "limited to", "pos": "形容詞句",
+      "coreImage": { "chain": [ { "term": "limited", "gloss": "限られた" }, { "term": "to", "gloss": "〜へ" }, { "gloss": "範囲を対象までに絞る" } ] },
       "meaning": "〜に限られて",
       "etymology": "limit（限界）はラテン語 limes「境界」に由来。",
       "example": "Membership in the club is limited to students.",
@@ -430,6 +462,7 @@
     },
     {
       "q": 13, "is_answer": true, "type": "idiom", "phrase": "identical to", "pos": "形容詞句",
+      "coreImage": { "chain": [ { "term": "identical", "gloss": "同一の" }, { "term": "to", "gloss": "〜に" }, { "gloss": "対象と完全に重なる" } ] },
       "meaning": "〜と全く同じで",
       "etymology": "identical はラテン語 idem「同じもの」に由来。",
       "example": "Her handwriting is almost identical to her sister's.",
@@ -439,6 +472,7 @@
 
     {
       "q": 14, "is_answer": false, "type": "idiom", "phrase": "because of", "pos": "前置詞句",
+      "coreImage": { "chain": [ { "term": "because", "gloss": "なぜなら" }, { "term": "of", "gloss": "〜の" }, { "gloss": "理由として原因を示す" } ] },
       "meaning": "〜のために、〜の理由で",
       "etymology": "because（なぜなら）+ of。cause（原因）を含む語。",
       "example": "The game was canceled because of heavy rain.",
@@ -472,6 +506,13 @@
 
     {
       "q": 15, "is_answer": false, "type": "idiom", "phrase": "turn in", "pos": "句動詞",
+      "coreImage": {
+        "particle": "in",
+        "chain": [
+          { "term": "turn", "gloss": "向きを変える" },
+          { "gloss": "中へ差し出して提出する" }
+        ]
+      },
       "meaning": "提出する；（口語で）寝る",
       "etymology": "turn（向ける）+ in（中へ）。",
       "example": "Please turn in your homework by Friday.",
@@ -480,6 +521,14 @@
     },
     {
       "q": 15, "is_answer": false, "type": "idiom", "phrase": "cut off", "pos": "句動詞",
+      "coreImage": {
+        "particle": "off",
+        "particleSense": "separate",
+        "chain": [
+          { "term": "cut", "gloss": "切る" },
+          { "gloss": "切り離して遮断する" }
+        ]
+      },
       "meaning": "切り離す、遮断する",
       "etymology": "cut（切る）+ off（離して）。",
       "example": "The heavy snow cut off the village from the rest of the town.",
@@ -488,6 +537,14 @@
     },
     {
       "q": 15, "is_answer": true, "type": "idiom", "phrase": "feed on", "pos": "句動詞",
+      "coreImage": {
+        "particle": "on",
+        "particleSense": "contact",
+        "chain": [
+          { "term": "feed", "gloss": "食べさせる・食べる" },
+          { "gloss": "対象に接して栄養を得る" }
+        ]
+      },
       "meaning": "〜を食べて生きる、〜を常食とする",
       "etymology": "feed（食べる、食べ物を与える）+ on（〜の上で）。",
       "example": "Pandas feed mainly on bamboo.",
@@ -496,6 +553,14 @@
     },
     {
       "q": 15, "is_answer": false, "type": "idiom", "phrase": "hang on", "pos": "句動詞",
+      "coreImage": {
+        "particle": "on",
+        "particleSense": "contact",
+        "chain": [
+          { "term": "hang", "gloss": "ぶら下がる" },
+          { "gloss": "対象に接したまま待つ" }
+        ]
+      },
       "meaning": "待つ；しがみつく",
       "etymology": "hang（ぶら下がる）+ on（継続）。",
       "example": "Hang on a minute, I'll be right back.",
@@ -505,6 +570,7 @@
 
     {
       "q": 16, "is_answer": false, "type": "idiom", "phrase": "out of breath", "pos": "形容詞句",
+      "coreImage": { "chain": [ { "term": "out", "gloss": "外へ" }, { "term": "of", "gloss": "〜から" }, { "gloss": "息が外へ出尽くした状態" } ] },
       "meaning": "息切れして",
       "etymology": "out of（〜の外に）+ breath（息）。「息が切れた状態」。",
       "example": "After running up the stairs, he was out of breath.",
@@ -513,6 +579,7 @@
     },
     {
       "q": 16, "is_answer": false, "type": "idiom", "phrase": "against its will", "pos": "副詞句",
+      "coreImage": { "chain": [ { "term": "against", "gloss": "反して" }, { "term": "its", "gloss": "それの" }, { "gloss": "本人の意志に逆らって" } ] },
       "meaning": "意志に反して、いやいやながら",
       "etymology": "against（〜に反して）+ will（意志）。",
       "example": "The dog was taken to the vet against its will.",
@@ -521,6 +588,7 @@
     },
     {
       "q": 16, "is_answer": false, "type": "idiom", "phrase": "easy to use", "pos": "形容詞句",
+      "coreImage": { "chain": [ { "term": "easy", "gloss": "容易な" }, { "term": "to", "gloss": "〜することへ" }, { "gloss": "使う操作に無理がない" } ] },
       "meaning": "使いやすい",
       "etymology": "easy（容易な）+ to不定詞。",
       "example": "This new app is very easy to use.",
@@ -529,6 +597,7 @@
     },
     {
       "q": 16, "is_answer": true, "type": "idiom", "phrase": "free of charge", "pos": "形容詞句",
+      "coreImage": { "chain": [ { "term": "free", "gloss": "自由な・無料の" }, { "term": "of", "gloss": "〜を伴う" }, { "gloss": "料金を伴わない" } ] },
       "meaning": "無料で",
       "etymology": "free（無料の）+ of charge（料金の）。",
       "example": "The museum offers guided tours free of charge on Sundays.",
@@ -538,6 +607,7 @@
 
     {
       "q": 17, "is_answer": false, "type": "idiom", "phrase": "the other of", "pos": "名詞句",
+      "coreImage": { "chain": [ { "term": "other", "gloss": "もう一方の" }, { "term": "of", "gloss": "〜の中の" }, { "gloss": "二つのうち残った一方" } ] },
       "meaning": "（2つのうち）もう一方の",
       "etymology": "other（もう一方の）。通常は the other of the two のように使う。",
       "example": "One twin is quiet, and the other of the pair is very talkative.",
@@ -546,6 +616,7 @@
     },
     {
       "q": 17, "is_answer": false, "type": "idiom", "phrase": "the most of", "pos": "名詞句",
+      "coreImage": { "chain": [ { "term": "most", "gloss": "最も多くの部分" }, { "term": "of", "gloss": "〜の中の" }, { "gloss": "全体の大部分" } ] },
       "meaning": "（通例 the をつけず most of で）〜の大部分",
       "etymology": "most（最も多くの）+ of。慣用表現としては通常 the をつけず most of と用いる。",
       "example": "She made the most of her time abroad.",
@@ -554,6 +625,7 @@
     },
     {
       "q": 17, "is_answer": false, "type": "idiom", "phrase": "a kind of", "pos": "名詞句",
+      "coreImage": { "chain": [ { "term": "kind", "gloss": "種類" }, { "term": "of", "gloss": "〜の" }, { "gloss": "同じ種類に属する一つ" } ] },
       "meaning": "一種の",
       "etymology": "kind（種類）。ゲルマン語根で「生まれ、種類」を表す。",
       "example": "A dolphin is a kind of mammal, not a fish.",
@@ -562,6 +634,7 @@
     },
     {
       "q": 17, "is_answer": true, "type": "idiom", "phrase": "a number of", "pos": "名詞句",
+      "coreImage": { "chain": [ { "term": "number", "gloss": "数" }, { "term": "of", "gloss": "〜の" }, { "gloss": "まとまりとしてのかなりの数" } ] },
       "meaning": "いくつもの、多数の",
       "etymology": "number（数）。「かなりの数の」の意で複数名詞を修飾する。",
       "example": "There are a number of reasons why she decided to quit her job.",

@@ -776,7 +776,17 @@
       "example": "The company had to scale down the project because of budget cuts.",
       "exampleTranslation": "その会社は予算削減のため計画を縮小しなければならなかった。",
       "pos": "熟語",
-      "phrase": "scale down"
+      "phrase": "scale down",
+      "coreImage": {
+        "chain": [
+          { "term": "scale", "gloss": "規模を測る" },
+          { "term": "down", "gloss": "下げる・小さくする" },
+          { "gloss": "規模を下へ縮める" },
+          { "gloss": "縮小する" }
+        ],
+        "particle": "down",
+        "particleSense": "reduce"
+      }
     },
     {
       "q": 22,
@@ -785,7 +795,17 @@
       "example": "He finally owned up to breaking the window.",
       "exampleTranslation": "彼はついに窓を割ったことを白状した。",
       "pos": "熟語",
-      "phrase": "own up"
+      "phrase": "own up",
+      "coreImage": {
+        "chain": [
+          { "term": "own", "gloss": "自分のものと認める" },
+          { "term": "up", "gloss": "上へ表に出す" },
+          { "gloss": "認めることを表へ出す" },
+          { "gloss": "白状する、認める" }
+        ],
+        "particle": "up",
+        "particleSense": "admit"
+      }
     },
     {
       "q": 22,
@@ -794,7 +814,16 @@
       "example": "Please knock before you barge in on a meeting.",
       "exampleTranslation": "会議に割り込む前にノックしてください。",
       "pos": "熟語",
-      "phrase": "barge in"
+      "phrase": "barge in",
+      "coreImage": {
+        "chain": [
+          { "term": "barge", "gloss": "乱暴に押し進む" },
+          { "term": "in", "gloss": "中へ入り込む" },
+          { "gloss": "乱暴に中へ押し入る" },
+          { "gloss": "押しかける、割り込む" }
+        ],
+        "particle": "in"
+      }
     },
     {
       "q": 22,
@@ -803,7 +832,16 @@
       "example": "The company eventually knuckled under to public pressure.",
       "exampleTranslation": "その会社は最終的に世論の圧力に屈した。",
       "pos": "熟語",
-      "phrase": "knuckle under"
+      "phrase": "knuckle under",
+      "coreImage": {
+        "chain": [
+          { "term": "knuckle", "gloss": "げんこつを使う" },
+          { "term": "under", "gloss": "下に置く" },
+          { "gloss": "力の下へ身を置く" },
+          { "gloss": "屈服する、従う" }
+        ],
+        "particle": "under"
+      }
     },
     {
       "q": 23,
@@ -812,7 +850,16 @@
       "example": "The scientists puzzled over the strange results.",
       "exampleTranslation": "科学者たちは奇妙な結果に頭を悩ませた。",
       "pos": "熟語",
-      "phrase": "puzzle over"
+      "phrase": "puzzle over",
+      "coreImage": {
+        "chain": [
+          { "term": "puzzle", "gloss": "頭を悩ませる" },
+          { "term": "over", "gloss": "上から覆うように" },
+          { "gloss": "問題を頭の上に置いて考え続ける" },
+          { "gloss": "頭を悩ませる" }
+        ],
+        "particle": "over"
+      }
     },
     {
       "q": 23,
@@ -821,7 +868,17 @@
       "example": "The medicine helped stave off a serious infection.",
       "exampleTranslation": "その薬は深刻な感染症を食い止めるのに役立った。",
       "pos": "熟語",
-      "phrase": "stave off"
+      "phrase": "stave off",
+      "coreImage": {
+        "chain": [
+          { "term": "stave", "gloss": "棒で押し返す" },
+          { "term": "off", "gloss": "離れた側へ退ける" },
+          { "gloss": "迫るものを離れた場所へ押し返す" },
+          { "gloss": "食い止める、避ける" }
+        ],
+        "particle": "off",
+        "particleSense": "pull-away"
+      }
     },
     {
       "q": 23,
@@ -830,7 +887,17 @@
       "example": "The storm cooped us up indoors all weekend.",
       "exampleTranslation": "嵐のため私たちは週末ずっと屋内に閉じ込められた。",
       "pos": "熟語",
-      "phrase": "coop up"
+      "phrase": "coop up",
+      "coreImage": {
+        "chain": [
+          { "term": "coop", "gloss": "小屋に入れる" },
+          { "term": "up", "gloss": "上へ囲い込む" },
+          { "gloss": "囲いの中へ閉じ込める" },
+          { "gloss": "閉じ込める" }
+        ],
+        "particle": "up",
+        "particleSense": "contain"
+      }
     },
     {
       "q": 23,
@@ -839,7 +906,17 @@
       "example": "The factory cranks out hundreds of chairs every day.",
       "exampleTranslation": "その工場は毎日何百脚もの椅子を大量生産している。",
       "pos": "熟語",
-      "phrase": "crank out"
+      "phrase": "crank out",
+      "coreImage": {
+        "chain": [
+          { "term": "crank", "gloss": "ハンドルを回す" },
+          { "term": "out", "gloss": "外へ作り出す" },
+          { "gloss": "回し続けて外へ製品を出す" },
+          { "gloss": "大量に作る" }
+        ],
+        "particle": "out",
+        "particleSense": "produce"
+      }
     },
     {
       "q": 24,
@@ -848,7 +925,17 @@
       "example": "We squared up the bill before leaving the restaurant.",
       "exampleTranslation": "私たちはレストランを出る前に勘定を清算した。",
       "pos": "熟語",
-      "phrase": "squared up"
+      "phrase": "squared up",
+      "coreImage": {
+        "chain": [
+          { "term": "square", "gloss": "正方形にそろえる" },
+          { "term": "up", "gloss": "上へそろえる" },
+          { "gloss": "両側をそろえて正面に立つ" },
+          { "gloss": "勘定を清算した、対峙した" }
+        ],
+        "particle": "up",
+        "particleSense": "settle"
+      }
     },
     {
       "q": 24,
@@ -857,7 +944,17 @@
       "example": "The argument flared up again during the meeting.",
       "exampleTranslation": "会議中にその口論が再び激しくなった。",
       "pos": "熟語",
-      "phrase": "flared up"
+      "phrase": "flared up",
+      "coreImage": {
+        "chain": [
+          { "term": "flare", "gloss": "炎がぱっと広がる" },
+          { "term": "up", "gloss": "上へ勢いを高める" },
+          { "gloss": "炎や感情が上へ噴き上がる" },
+          { "gloss": "突然悪化した、燃え上がった" }
+        ],
+        "particle": "up",
+        "particleSense": "raise"
+      }
     },
     {
       "q": 24,
@@ -866,7 +963,16 @@
       "example": "The reporter poked around for evidence in the old warehouse.",
       "exampleTranslation": "記者は古い倉庫で証拠を求めてあちこち調べた。",
       "pos": "熟語",
-      "phrase": "poked around"
+      "phrase": "poked around",
+      "coreImage": {
+        "chain": [
+          { "term": "poke", "gloss": "つつく" },
+          { "term": "around", "gloss": "周囲へあちこちに" },
+          { "gloss": "周囲をつつきながら探る" },
+          { "gloss": "あちこち探った" }
+        ],
+        "particle": "around"
+      }
     },
     {
       "q": 24,
@@ -875,7 +981,16 @@
       "example": "She breezed in late and acted as if nothing had happened.",
       "exampleTranslation": "彼女は遅れて軽々と入ってきて、何も起きなかったかのように振る舞った。",
       "pos": "熟語",
-      "phrase": "breezed in"
+      "phrase": "breezed in",
+      "coreImage": {
+        "chain": [
+          { "term": "breeze", "gloss": "そよ風のように進む" },
+          { "term": "in", "gloss": "中へ入る" },
+          { "gloss": "軽やかに中へ入る" },
+          { "gloss": "軽々と入ってきた" }
+        ],
+        "particle": "in"
+      }
     },
     {
       "q": 25,
@@ -884,7 +999,17 @@
       "example": "Thick clouds blotted out the moon.",
       "exampleTranslation": "厚い雲が月を完全に覆い隠した。",
       "pos": "熟語",
-      "phrase": "blotted out"
+      "phrase": "blotted out",
+      "coreImage": {
+        "chain": [
+          { "term": "blot", "gloss": "染みを付ける" },
+          { "term": "out", "gloss": "外へ覆い隠す" },
+          { "gloss": "染みで外側から覆って見えなくする" },
+          { "gloss": "完全に覆い隠した" }
+        ],
+        "particle": "out",
+        "particleSense": "remove"
+      }
     },
     {
       "q": 25,
@@ -893,7 +1018,16 @@
       "example": "The seller strung us along for weeks without delivering the order.",
       "exampleTranslation": "その販売者は注文を届けないまま何週間も私たちを引き延ばした。",
       "pos": "熟語",
-      "phrase": "strung along"
+      "phrase": "strung along",
+      "coreImage": {
+        "chain": [
+          { "term": "string", "gloss": "糸でつなぐ" },
+          { "term": "along", "gloss": "線に沿って続ける" },
+          { "gloss": "糸を引くように沿って長引かせる" },
+          { "gloss": "だました、引き延ばした" }
+        ],
+        "particle": "along"
+      }
     },
     {
       "q": 25,
@@ -902,7 +1036,17 @@
       "example": "The travelers struck up a conversation on the train.",
       "exampleTranslation": "旅行者たちは列車の中で会話を始めた。",
       "pos": "熟語",
-      "phrase": "struck up"
+      "phrase": "struck up",
+      "coreImage": {
+        "chain": [
+          { "term": "strike", "gloss": "打つ" },
+          { "term": "up", "gloss": "上へ始める" },
+          { "gloss": "打ち鳴らして新しく始める" },
+          { "gloss": "始めた、築いた" }
+        ],
+        "particle": "up",
+        "particleSense": "raise"
+      }
     },
     {
       "q": 25,
@@ -911,7 +1055,17 @@
       "example": "A friendly server waited on us throughout the meal.",
       "exampleTranslation": "親切な店員が食事中ずっと私たちに給仕した。",
       "pos": "熟語",
-      "phrase": "waited on"
+      "phrase": "waited on",
+      "coreImage": {
+        "chain": [
+          { "term": "wait", "gloss": "待つ" },
+          { "term": "on", "gloss": "対象に接して" },
+          { "gloss": "相手のそばについて待つ" },
+          { "gloss": "給仕した、対応した" }
+        ],
+        "particle": "on",
+        "particleSense": "contact"
+      }
     }
   ]
 }

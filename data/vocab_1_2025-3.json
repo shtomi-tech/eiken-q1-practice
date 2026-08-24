@@ -740,6 +740,14 @@
       "is_answer": true,
       "meaning": "うとうとする",
       "phrase": "nod off",
+      "coreImage": {
+        "particle": "off",
+        "particleSense": "weaken",
+        "chain": [
+          { "term": "nod", "gloss": "うなずく" },
+          { "gloss": "意識が離れて眠りに落ちる" }
+        ]
+      },
       "pos": "熟語",
       "example": "I started to nod off during the long train ride.",
       "exampleTranslation": "長い列車の旅の途中で、私はうとうとし始めた。"
@@ -749,6 +757,14 @@
       "is_answer": false,
       "meaning": "黙る、静かにする",
       "phrase": "pipe down",
+      "coreImage": {
+        "particle": "down",
+        "particleSense": "reduce",
+        "chain": [
+          { "term": "pipe", "gloss": "管から音を出す" },
+          { "gloss": "音量を下げて静かになる" }
+        ]
+      },
       "pos": "熟語",
       "example": "The teacher asked the students to pipe down.",
       "exampleTranslation": "先生は生徒たちに静かにするよう求めた。"
@@ -758,6 +774,14 @@
       "is_answer": false,
       "meaning": "だらだら話し続ける",
       "phrase": "drone on",
+      "coreImage": {
+        "particle": "on",
+        "particleSense": "continue",
+        "chain": [
+          { "term": "drone", "gloss": "単調な音を出す" },
+          { "gloss": "そのまま続く" }
+        ]
+      },
       "pos": "熟語",
       "example": "The speaker continued to drone on about minor details.",
       "exampleTranslation": "話し手は細かな点について、だらだらと話し続けた。"
@@ -767,6 +791,14 @@
       "is_answer": false,
       "meaning": "次々と作り出す",
       "phrase": "crank out",
+      "coreImage": {
+        "particle": "out",
+        "particleSense": "produce",
+        "chain": [
+          { "term": "crank", "gloss": "ハンドルを回す" },
+          { "gloss": "外へ次々と出す" }
+        ]
+      },
       "pos": "熟語",
       "example": "The small factory can crank out hundreds of parts a day.",
       "exampleTranslation": "その小さな工場は1日に何百個もの部品を次々と作り出せる。"
@@ -776,6 +808,14 @@
       "is_answer": false,
       "meaning": "次第に弱まる",
       "phrase": "tail off",
+      "coreImage": {
+        "particle": "off",
+        "particleSense": "weaken",
+        "chain": [
+          { "term": "tail", "gloss": "尾を引く" },
+          { "gloss": "勢いが離れて弱まる" }
+        ]
+      },
       "pos": "熟語",
       "example": "The applause began to tail off as the lights came up.",
       "exampleTranslation": "照明が明るくなるにつれて、拍手は次第に弱まった。"
@@ -785,6 +825,14 @@
       "is_answer": false,
       "meaning": "（関係などを）修復する",
       "phrase": "patch up",
+      "coreImage": {
+        "particle": "up",
+        "particleSense": "complete",
+        "chain": [
+          { "term": "patch", "gloss": "つぎを当てて直す" },
+          { "gloss": "整った状態まで仕上げる" }
+        ]
+      },
       "pos": "熟語",
       "example": "The two friends managed to patch up their disagreement.",
       "exampleTranslation": "二人の友人は何とか意見の食い違いを修復した。"
@@ -794,6 +842,14 @@
       "is_answer": false,
       "meaning": "抑え込む、遮断する",
       "phrase": "choke off",
+      "coreImage": {
+        "particle": "off",
+        "particleSense": "separate",
+        "chain": [
+          { "term": "choke", "gloss": "息を詰まらせる" },
+          { "gloss": "流れを切って止める" }
+        ]
+      },
       "pos": "熟語",
       "example": "The new regulations could choke off investment in the region.",
       "exampleTranslation": "新しい規制はその地域への投資を抑え込む可能性がある。"
@@ -803,6 +859,14 @@
       "is_answer": true,
       "meaning": "白状する、認める",
       "phrase": "own up",
+      "coreImage": {
+        "particle": "up",
+        "particleSense": "admit",
+        "chain": [
+          { "term": "own", "gloss": "自分のものだと認める" },
+          { "gloss": "表に出して認める" }
+        ]
+      },
       "pos": "熟語",
       "example": "He refused to own up to the mistake.",
       "exampleTranslation": "彼はそのミスを認めようとしなかった。"
@@ -812,6 +876,14 @@
       "is_answer": false,
       "meaning": "もみ消す、黙らせる",
       "phrase": "hush up",
+      "coreImage": {
+        "particle": "up",
+        "particleSense": "contain",
+        "chain": [
+          { "term": "hush", "gloss": "静かにさせる" },
+          { "gloss": "表面に出ないように収める" }
+        ]
+      },
       "pos": "熟語",
       "example": "The company tried to hush up the safety violation.",
       "exampleTranslation": "その会社は安全規則違反をもみ消そうとした。"
@@ -821,6 +893,13 @@
       "is_answer": false,
       "meaning": "遅れをとる；支持する",
       "phrase": "get behind",
+      "coreImage": {
+        "particle": "behind",
+        "chain": [
+          { "term": "get", "gloss": "なる" },
+          { "gloss": "後ろの位置に入る" }
+        ]
+      },
       "pos": "熟語",
       "example": "The campaign needs volunteers to get behind its environmental goals.",
       "exampleTranslation": "その運動は環境目標を支持するボランティアを必要としている。"
@@ -830,6 +909,13 @@
       "is_answer": false,
       "meaning": "差し込む、接続する",
       "phrase": "plug in",
+      "coreImage": {
+        "particle": "in",
+        "chain": [
+          { "term": "plug", "gloss": "栓を差し込む" },
+          { "gloss": "中へ接続する" }
+        ]
+      },
       "pos": "熟語",
       "example": "Please plug in the printer before the presentation begins.",
       "exampleTranslation": "発表が始まる前にプリンターを接続してください。"
@@ -839,6 +925,14 @@
       "is_answer": true,
       "meaning": "外注する",
       "phrase": "farm out",
+      "coreImage": {
+        "particle": "out",
+        "particleSense": "delegate",
+        "chain": [
+          { "term": "farm", "gloss": "農場で扱う" },
+          { "gloss": "外へ委ねる" }
+        ]
+      },
       "pos": "熟語",
       "example": "The publisher decided to farm out the editing to a specialist.",
       "exampleTranslation": "出版社は編集作業を専門家に外注することに決めた。"
@@ -848,6 +942,13 @@
       "is_answer": false,
       "meaning": "傍観する",
       "phrase": "sit by",
+      "coreImage": {
+        "particle": "by",
+        "chain": [
+          { "term": "sit", "gloss": "座る" },
+          { "gloss": "そばに留まって何もしない" }
+        ]
+      },
       "pos": "熟語",
       "example": "We cannot sit by while the river is being polluted.",
       "exampleTranslation": "川が汚染されている間、私たちは傍観しているわけにはいかない。"
@@ -857,6 +958,13 @@
       "is_answer": false,
       "meaning": "飛び込む、すぐ取りかかる",
       "phrase": "dive in",
+      "coreImage": {
+        "particle": "in",
+        "chain": [
+          { "term": "dive", "gloss": "飛び込む" },
+          { "gloss": "中へ入り込む" }
+        ]
+      },
       "pos": "熟語",
       "example": "Once the instructions were clear, the students were eager to dive in.",
       "exampleTranslation": "説明が明確になると、生徒たちはすぐに取りかかりたがった。"
@@ -866,6 +974,13 @@
       "is_answer": false,
       "meaning": "反撃する",
       "phrase": "strike back",
+      "coreImage": {
+        "particle": "back",
+        "chain": [
+          { "term": "strike", "gloss": "打つ" },
+          { "gloss": "相手の側へ打ち返す" }
+        ]
+      },
       "pos": "熟語",
       "example": "The army warned that it would strike back if attacked.",
       "exampleTranslation": "軍は攻撃されたら反撃すると警告した。"
@@ -875,6 +990,14 @@
       "is_answer": true,
       "meaning": "うまくいく、結果が出る",
       "phrase": "pan out",
+      "coreImage": {
+        "particle": "out",
+        "particleSense": "resolve",
+        "chain": [
+          { "term": "pan", "gloss": "選別用の皿で洗う" },
+          { "gloss": "結果として外に現れる" }
+        ]
+      },
       "pos": "熟語",
       "example": "The plan did not pan out as we had hoped.",
       "exampleTranslation": "その計画は私たちが望んだようにはうまくいかなかった。"

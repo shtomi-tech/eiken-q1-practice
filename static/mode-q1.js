@@ -709,7 +709,7 @@ async function loadPooledItems(grade = currentGrade()) {
   if (cached) return cached;
   if (!pooledPromiseByGrade.has(grade)) {
     pooledPromiseByGrade.set(grade, Promise.all(
-      gradeDatasetIds(grade).map((id) => fetch(DATASETS[id].vocabUrl).then((r) => r.json()).then((vocab) => ({ id, vocab })))
+      gradeDatasetIds(grade).map((id) => fetch(DATASETS[id].vocabUrl, { cache: "no-store" }).then((r) => r.json()).then((vocab) => ({ id, vocab })))
     ).then((loaded) => {
       const items = [];
       const meaningPool = { word: [], idiom: [] };
@@ -1143,8 +1143,8 @@ async function loadData(datasetId = state.datasetId) {
 
   const current = dataset();
   const [vocab, qs] = await Promise.all([
-    fetch(current.vocabUrl).then((r) => r.json()),
-    fetch(current.questionsUrl).then((r) => r.json()),
+    fetch(current.vocabUrl, { cache: "no-store" }).then((r) => r.json()),
+    fetch(current.questionsUrl, { cache: "no-store" }).then((r) => r.json()),
   ]);
 
   const words = (vocab.words || []).map((w) => ({ ...w, type: "word" }));
@@ -2275,7 +2275,7 @@ function flashCoreImage(item) {
   const slot = Number.isInteger(item._particleSlot) ? item._particleSlot : 0;
   const visibleSiblings = filteredSiblings.length <= 3
     ? filteredSiblings
-    : [0, 1, 2].map((k) => filteredSiblings[(slot * 3 + k) % filteredSiblings.length]);
+    : [0, 1, 2].map((k) => filteredSiblings[(slot + k) % filteredSiblings.length]);
 
   if ((particle || overrideSiblings) && visibleSiblings.length) {
     const panel = el("div", { class: "particlePanel" });

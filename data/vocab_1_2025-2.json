@@ -740,6 +740,22 @@
       "is_answer": false,
       "meaning": "（金を）支払う",
       "phrase": "pony up",
+      "coreImage": {
+        "particle": "up",
+        "particleSense": "settle",
+        "chain": [
+          {
+            "term": "pony",
+            "gloss": "ポニー"
+          },
+          {
+            "gloss": "ポニーを買うように金を出す"
+          },
+          {
+            "gloss": "支払いのために金を出す"
+          }
+        ]
+      },
       "pos": "熟語",
       "example": "Everyone had to pony up ten dollars for the shared meal.",
       "exampleTranslation": "全員が食事代として10ドルずつ支払わなければならなかった。"
@@ -749,6 +765,22 @@
       "is_answer": true,
       "meaning": "本腰を入れて取り組む",
       "phrase": "buckle down",
+      "coreImage": {
+        "particle": "down",
+        "particleSense": "settle",
+        "chain": [
+          {
+            "term": "buckle",
+            "gloss": "締め具を締める"
+          },
+          {
+            "gloss": "気持ちを引き締めて向き合う"
+          },
+          {
+            "gloss": "気を引き締めて本腰を入れる"
+          }
+        ]
+      },
       "pos": "熟語",
       "example": "With the exam approaching, I decided to buckle down and study.",
       "exampleTranslation": "試験が近づいたので、私は本腰を入れて勉強することにした。"
@@ -758,6 +790,22 @@
       "is_answer": false,
       "meaning": "めちゃくちゃにする、失敗する",
       "phrase": "foul up",
+      "coreImage": {
+        "particle": "up",
+        "particleSense": "disrupt",
+        "chain": [
+          {
+            "term": "foul",
+            "gloss": "汚す"
+          },
+          {
+            "gloss": "手順を乱してしまう"
+          },
+          {
+            "gloss": "手順を乱して失敗させる"
+          }
+        ]
+      },
       "pos": "熟語",
       "example": "A single typo can foul up the entire order.",
       "exampleTranslation": "たった一つのタイプミスで注文全体がめちゃくちゃになることがある。"
@@ -767,6 +815,22 @@
       "is_answer": false,
       "meaning": "落胆させる、意気消沈させる",
       "phrase": "cast down",
+      "coreImage": {
+        "particle": "down",
+        "particleSense": "lower",
+        "chain": [
+          {
+            "term": "cast",
+            "gloss": "投げる"
+          },
+          {
+            "gloss": "気持ちを下へ落とす"
+          },
+          {
+            "gloss": "気持ちを落とし込んで落胆させる"
+          }
+        ]
+      },
       "pos": "熟語",
       "example": "The rejection cast her down, but she soon tried again.",
       "exampleTranslation": "不合格の知らせで彼女は落胆したが、すぐにもう一度挑戦した。"
@@ -776,6 +840,21 @@
       "is_answer": false,
       "meaning": "ふらりと入ってくる",
       "phrase": "breeze in",
+      "coreImage": {
+        "particle": "in",
+        "chain": [
+          {
+            "term": "breeze",
+            "gloss": "そよ風"
+          },
+          {
+            "gloss": "そよ風のように中へ入る"
+          },
+          {
+            "gloss": "ふらりと中へ入ってくる"
+          }
+        ]
+      },
       "pos": "熟語",
       "example": "She tends to breeze in late and act as if nothing has happened.",
       "exampleTranslation": "彼女は遅れてふらりと入ってきて、何事もなかったように振る舞いがちだ。"
@@ -785,6 +864,22 @@
       "is_answer": false,
       "meaning": "分岐する、枝分かれする",
       "phrase": "branch off",
+      "coreImage": {
+        "particle": "off",
+        "particleSense": "separate",
+        "chain": [
+          {
+            "term": "branch",
+            "gloss": "枝"
+          },
+          {
+            "gloss": "枝のように本道から分かれる"
+          },
+          {
+            "gloss": "本道から分かれて別方向へ進む"
+          }
+        ]
+      },
       "pos": "熟語",
       "example": "At the old bridge, the main trail begins to branch off toward the lake.",
       "exampleTranslation": "古い橋のところで、本道が湖に向かって分岐し始める。"
@@ -794,6 +889,22 @@
       "is_answer": true,
       "meaning": "厳しく取り締まる",
       "phrase": "crack down",
+      "coreImage": {
+        "particle": "down",
+        "particleSense": "suppress",
+        "chain": [
+          {
+            "term": "crack",
+            "gloss": "ひびを入れる"
+          },
+          {
+            "gloss": "力を加えて押さえ込む"
+          },
+          {
+            "gloss": "厳しく押さえ込んで取り締まる"
+          }
+        ]
+      },
       "pos": "熟語",
       "example": "The city promised to crack down on illegal dumping.",
       "exampleTranslation": "市は不法投棄を厳しく取り締まると約束した。"
@@ -803,6 +914,22 @@
       "is_answer": false,
       "meaning": "切り落とす",
       "phrase": "lop off",
+      "coreImage": {
+        "particle": "off",
+        "particleSense": "separate",
+        "chain": [
+          {
+            "term": "lop",
+            "gloss": "切り落とす"
+          },
+          {
+            "gloss": "余分な部分を切り離す"
+          },
+          {
+            "gloss": "余分な部分を切り離して落とす"
+          }
+        ]
+      },
       "pos": "熟語",
       "example": "The gardener used shears to lop off the dead branches.",
       "exampleTranslation": "庭師ははさみで枯れた枝を切り落とした。"
@@ -812,6 +939,22 @@
       "is_answer": false,
       "meaning": "くよくよ考える、詳しく論じる",
       "phrase": "dwell on",
+      "coreImage": {
+        "particle": "on",
+        "particleSense": "contact",
+        "chain": [
+          {
+            "term": "dwell",
+            "gloss": "とどまる"
+          },
+          {
+            "gloss": "意識を対象にとどめる"
+          },
+          {
+            "gloss": "対象に意識をとどめてくよくよ考える"
+          }
+        ]
+      },
       "pos": "熟語",
       "example": "Try not to dwell on a mistake you cannot change.",
       "exampleTranslation": "変えられない失敗について、くよくよ考えないようにしなさい。"
@@ -821,6 +964,22 @@
       "is_answer": false,
       "meaning": "次々にすらすら言う",
       "phrase": "reel off",
+      "coreImage": {
+        "particle": "off",
+        "particleSense": "separate",
+        "chain": [
+          {
+            "term": "reel",
+            "gloss": "リールから繰り出す"
+          },
+          {
+            "gloss": "次々と外へ繰り出す"
+          },
+          {
+            "gloss": "次々と外へ繰り出してすらすら言う"
+          }
+        ]
+      },
       "pos": "熟語",
       "example": "The contestant could reel off the names of every capital in Europe.",
       "exampleTranslation": "その出場者はヨーロッパのすべての首都の名前を次々とすらすら言えた。"
@@ -830,6 +989,22 @@
       "is_answer": true,
       "meaning": "（食事などを）急いで用意する",
       "phrase": "rustle up",
+      "coreImage": {
+        "particle": "up",
+        "particleSense": "prepare",
+        "chain": [
+          {
+            "term": "rustle",
+            "gloss": "急いで動かす"
+          },
+          {
+            "gloss": "材料をかき集める"
+          },
+          {
+            "gloss": "材料をかき集めて急いで用意する"
+          }
+        ]
+      },
       "pos": "熟語",
       "example": "I can rustle up a simple dinner before the guests arrive.",
       "exampleTranslation": "客が到着する前に、簡単な夕食なら急いで用意できる。"
@@ -839,6 +1014,22 @@
       "is_answer": false,
       "meaning": "急に持ち去る、引きずっていく",
       "phrase": "haul off",
+      "coreImage": {
+        "particle": "off",
+        "particleSense": "separate",
+        "chain": [
+          {
+            "term": "haul",
+            "gloss": "重い物を引く"
+          },
+          {
+            "gloss": "その場から引き離す"
+          },
+          {
+            "gloss": "その場から急に持ち去る"
+          }
+        ]
+      },
       "pos": "熟語",
       "example": "The workers used a crane to haul off the damaged vehicle.",
       "exampleTranslation": "作業員たちはクレーンを使って壊れた車を運び去った。"
@@ -848,6 +1039,21 @@
       "is_answer": false,
       "meaning": "浪費する",
       "phrase": "fritter away",
+      "coreImage": {
+        "particle": "away",
+        "chain": [
+          {
+            "term": "fritter",
+            "gloss": "少しずつ浪費する"
+          },
+          {
+            "gloss": "手元から少しずつ遠ざける"
+          },
+          {
+            "gloss": "少しずつ遠ざけて浪費する"
+          }
+        ]
+      },
       "pos": "熟語",
       "example": "He frittered away his savings on gadgets he rarely used.",
       "exampleTranslation": "彼はほとんど使わない機器に貯金を浪費した。"
@@ -857,6 +1063,22 @@
       "is_answer": false,
       "meaning": "だまし取る、ぼったくる",
       "phrase": "rip off",
+      "coreImage": {
+        "particle": "off",
+        "particleSense": "separate",
+        "chain": [
+          {
+            "term": "rip",
+            "gloss": "引き裂く"
+          },
+          {
+            "gloss": "相手から引き離して取る"
+          },
+          {
+            "gloss": "相手から不当に奪い取る"
+          }
+        ]
+      },
       "pos": "熟語",
       "example": "The shop tried to rip off the tourist.",
       "exampleTranslation": "その店は観光客からぼったくろうとした。"
@@ -866,6 +1088,22 @@
       "is_answer": false,
       "meaning": "偉そうに話す、意見をぶちまける",
       "phrase": "sound off",
+      "coreImage": {
+        "particle": "off",
+        "particleSense": "express",
+        "chain": [
+          {
+            "term": "sound",
+            "gloss": "音を出す"
+          },
+          {
+            "gloss": "外へ声を出して主張する"
+          },
+          {
+            "gloss": "外へ声を出して意見をぶちまける"
+          }
+        ]
+      },
       "pos": "熟語",
       "example": "He likes to sound off about politics at dinner.",
       "exampleTranslation": "彼は夕食時に政治について偉そうに意見をぶちまけるのが好きだ。",
@@ -876,6 +1114,22 @@
       "is_answer": true,
       "meaning": "不意に起こる",
       "phrase": "crop up",
+      "coreImage": {
+        "particle": "up",
+        "particleSense": "appear",
+        "chain": [
+          {
+            "term": "crop",
+            "gloss": "突然現れる"
+          },
+          {
+            "gloss": "表面にひょいと現れる"
+          },
+          {
+            "gloss": "問題などが突然現れる"
+          }
+        ]
+      },
       "pos": "熟語",
       "example": "Unexpected problems can crop up during any large project.",
       "exampleTranslation": "どんな大きな計画でも、予想外の問題が不意に起こることがある。"

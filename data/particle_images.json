@@ -14,22 +14,302 @@
       "senses": [
         {
           "id": "complete",
-          "label": "完全に・し尽くす",
+          "label": "完全に・し尽くして終える",
           "siblings": [
-            { "phrase": "eat up", "gloss": "食べ尽くす" },
-            { "phrase": "use up", "gloss": "使い切る" },
-            { "phrase": "fill up", "gloss": "満たす" },
-            { "phrase": "drink up", "gloss": "飲み干す" }
+            {
+              "phrase": "eat up",
+              "gloss": "食べ尽くす"
+            },
+            {
+              "phrase": "use up",
+              "gloss": "使い切る"
+            },
+            {
+              "phrase": "fill up",
+              "gloss": "満たす"
+            },
+            {
+              "phrase": "drink up",
+              "gloss": "飲み干す"
+            }
           ]
         },
         {
           "id": "raise",
           "label": "上へ・勢いを高める",
           "siblings": [
-            { "phrase": "stir up", "gloss": "かき立てる" },
-            { "phrase": "build up", "gloss": "高める" },
-            { "phrase": "fire up", "gloss": "活気づける" },
-            { "phrase": "pump up", "gloss": "高める" }
+            {
+              "phrase": "lift up",
+              "gloss": "持ち上げる・高める"
+            },
+            {
+              "phrase": "cheer up",
+              "gloss": "元気づける"
+            },
+            {
+              "phrase": "build up",
+              "gloss": "高める"
+            },
+            {
+              "phrase": "pump up",
+              "gloss": "高める"
+            },
+            {
+              "phrase": "rally up",
+              "gloss": "奮い立たせる"
+            },
+            {
+              "phrase": "stoke up",
+              "gloss": "かき立てる"
+            }
+          ]
+        },
+        {
+          "id": "approach",
+          "label": "近づいて上がる",
+          "siblings": [
+            {
+              "phrase": "come up",
+              "gloss": "近づいてくる"
+            },
+            {
+              "phrase": "walk up",
+              "gloss": "歩いて近づく"
+            },
+            {
+              "phrase": "move up",
+              "gloss": "上へ移動する"
+            },
+            {
+              "phrase": "sneak up",
+              "gloss": "こっそり近づく"
+            }
+          ]
+        },
+        {
+          "id": "admit",
+          "label": "隠さず表へ出して認める",
+          "siblings": [
+            {
+              "phrase": "fess up",
+              "gloss": "白状する"
+            },
+            {
+              "phrase": "speak up",
+              "gloss": "声を上げる"
+            },
+            {
+              "phrase": "open up",
+              "gloss": "打ち明ける"
+            }
+          ]
+        },
+        {
+          "id": "contain",
+          "label": "内側へ収めて表に出さない",
+          "siblings": [
+            {
+              "phrase": "shut up",
+              "gloss": "閉じ込める・黙らせる"
+            },
+            {
+              "phrase": "bottle up",
+              "gloss": "感情を抑え込む"
+            },
+            {
+              "phrase": "lock up",
+              "gloss": "閉じ込める"
+            },
+            {
+              "phrase": "seal up",
+              "gloss": "封をする"
+            },
+            {
+              "phrase": "close up",
+              "gloss": "閉じる"
+            },
+            {
+              "phrase": "button up",
+              "gloss": "口を閉じる"
+            }
+          ]
+        },
+        {
+          "id": "settle",
+          "label": "決めて・清算して片づける",
+          "siblings": [
+            {
+              "phrase": "add up",
+              "gloss": "合計して清算する"
+            },
+            {
+              "phrase": "settle up",
+              "gloss": "精算する"
+            },
+            {
+              "phrase": "pay up",
+              "gloss": "支払う"
+            },
+            {
+              "phrase": "clear up",
+              "gloss": "問題を片づける"
+            },
+            {
+              "phrase": "wrap up",
+              "gloss": "終えて片づける"
+            }
+          ]
+        },
+        {
+          "id": "prepare",
+          "label": "上向きに整えて用意する",
+          "siblings": [
+            {
+              "phrase": "line up",
+              "gloss": "整列させる"
+            },
+            {
+              "phrase": "gear up",
+              "gloss": "準備する"
+            },
+            {
+              "phrase": "draw up",
+              "gloss": "計画を作る"
+            },
+            {
+              "phrase": "fix up",
+              "gloss": "整える"
+            },
+            {
+              "phrase": "tidy up",
+              "gloss": "片づける"
+            },
+            {
+              "phrase": "lay up",
+              "gloss": "備えて蓄える"
+            }
+          ]
+        },
+        {
+          "id": "appear",
+          "label": "表面に現れる・上へ出てくる",
+          "siblings": [
+            {
+              "phrase": "show up",
+              "gloss": "現れる"
+            },
+            {
+              "phrase": "rise up",
+              "gloss": "上へ現れる"
+            },
+            {
+              "phrase": "pop up",
+              "gloss": "突然現れる"
+            },
+            {
+              "phrase": "spring up",
+              "gloss": "急に現れる"
+            },
+            {
+              "phrase": "flare up",
+              "gloss": "突然起こる"
+            }
+          ]
+        },
+        {
+          "id": "disrupt",
+          "label": "状態を乱して失敗させる",
+          "siblings": [
+            {
+              "phrase": "mess up",
+              "gloss": "台なしにする"
+            },
+            {
+              "phrase": "screw up",
+              "gloss": "しくじる"
+            },
+            {
+              "phrase": "mix up",
+              "gloss": "混同して乱す"
+            },
+            {
+              "phrase": "muck up",
+              "gloss": "めちゃくちゃにする"
+            },
+            {
+              "phrase": "botch up",
+              "gloss": "へまをして台なしにする"
+            }
+          ]
+        },
+        {
+          "id": "fabricate",
+          "label": "上へ作り上げてでっち上げる",
+          "siblings": [
+            {
+              "phrase": "make up",
+              "gloss": "作り上げる"
+            },
+            {
+              "phrase": "cook up",
+              "gloss": "でっち上げる"
+            },
+            {
+              "phrase": "dream up",
+              "gloss": "考え出す"
+            },
+            {
+              "phrase": "think up",
+              "gloss": "思いつく"
+            },
+            {
+              "phrase": "conjure up",
+              "gloss": "作り出す"
+            }
+          ]
+        },
+        {
+          "id": "release",
+          "label": "手放してあきらめる",
+          "siblings": [
+            {
+              "phrase": "let up",
+              "gloss": "力をゆるめる"
+            },
+            {
+              "phrase": "loosen up",
+              "gloss": "ゆるめる"
+            },
+            {
+              "phrase": "free up",
+              "gloss": "空ける・解放する"
+            },
+            {
+              "phrase": "yield up",
+              "gloss": "明け渡す"
+            }
+          ]
+        },
+        {
+          "id": "decide",
+          "label": "考えを組み上げて決める",
+          "siblings": [
+            {
+              "phrase": "weigh up",
+              "gloss": "比較検討する"
+            },
+            {
+              "phrase": "size up",
+              "gloss": "評価する"
+            },
+            {
+              "phrase": "sum up",
+              "gloss": "まとめる"
+            },
+            {
+              "phrase": "tally up",
+              "gloss": "合計して判断する"
+            }
           ]
         }
       ]
@@ -47,51 +327,260 @@
           "id": "social",
           "label": "こもらずに外へ出る",
           "siblings": [
-            { "phrase": "go out", "gloss": "出かける" },
-            { "phrase": "eat out", "gloss": "外食する" },
-            { "phrase": "ask out", "gloss": "誘う" },
-            { "phrase": "stay out", "gloss": "外にいる" },
-            { "phrase": "come out", "gloss": "外へ出る・現れる" }
+            {
+              "phrase": "go out",
+              "gloss": "出かける"
+            },
+            {
+              "phrase": "eat out",
+              "gloss": "外食する"
+            },
+            {
+              "phrase": "ask out",
+              "gloss": "誘う"
+            },
+            {
+              "phrase": "stay out",
+              "gloss": "外にいる"
+            },
+            {
+              "phrase": "come out",
+              "gloss": "外へ出る・現れる"
+            }
           ]
         },
         {
           "id": "escape",
-          "label": "状態の外へ出る",
+          "label": "重荷や状況の外へ逃れる",
           "siblings": [
-            { "phrase": "get out of", "gloss": "抜け出す" },
-            { "phrase": "grow out of", "gloss": "成長して卒業する" },
-            { "phrase": "talk out of", "gloss": "説得してやめさせる" },
-            { "phrase": "break out of", "gloss": "打ち破って抜け出す" }
+            {
+              "phrase": "get out of",
+              "gloss": "抜け出す"
+            },
+            {
+              "phrase": "grow out of",
+              "gloss": "成長して卒業する"
+            },
+            {
+              "phrase": "talk out of",
+              "gloss": "説得してやめさせる"
+            },
+            {
+              "phrase": "break out of",
+              "gloss": "打ち破って抜け出す"
+            },
+            {
+              "phrase": "opt out of",
+              "gloss": "参加を辞退する"
+            },
+            {
+              "phrase": "drop out",
+              "gloss": "脱落する・退学する"
+            }
           ]
         },
         {
           "id": "spread",
-          "label": "広げて全体に示す",
+          "label": "外へ広げて全体に示す",
           "siblings": [
-            { "phrase": "spread out", "gloss": "広げる" },
-            { "phrase": "point out", "gloss": "指摘する" },
-            { "phrase": "map out", "gloss": "計画を具体化する" },
-            { "phrase": "fan out", "gloss": "広がる・広げる" }
-          ]
-        },
-        {
-          "id": "withhold",
-          "label": "出さずに手元へ留める",
-          "siblings": [
-            { "phrase": "keep out", "gloss": "外に出さない" },
-            { "phrase": "leave out", "gloss": "省く" },
-            { "phrase": "shut out", "gloss": "締め出す" },
-            { "phrase": "lock out", "gloss": "締め出して入れない" }
+            {
+              "phrase": "write out",
+              "gloss": "書き出す"
+            },
+            {
+              "phrase": "map out",
+              "gloss": "計画を具体化する"
+            },
+            {
+              "phrase": "spell out",
+              "gloss": "詳しく説明する"
+            },
+            {
+              "phrase": "flare out",
+              "gloss": "外へ広がる"
+            },
+            {
+              "phrase": "split out",
+              "gloss": "分かれて出る"
+            },
+            {
+              "phrase": "stream out",
+              "gloss": "流れ出る"
+            }
           ]
         },
         {
           "id": "exhaust",
           "label": "最後まで出し切る",
           "siblings": [
-            { "phrase": "run out", "gloss": "使い果たす" },
-            { "phrase": "sell out", "gloss": "売り切る" },
-            { "phrase": "wear out", "gloss": "使い古す・疲れさせる" },
-            { "phrase": "burn out", "gloss": "燃え尽きる" }
+            {
+              "phrase": "run out",
+              "gloss": "使い果たす"
+            },
+            {
+              "phrase": "sell out",
+              "gloss": "売り切る"
+            },
+            {
+              "phrase": "wear out",
+              "gloss": "使い古す・疲れさせる"
+            },
+            {
+              "phrase": "burn out",
+              "gloss": "燃え尽きる"
+            }
+          ]
+        },
+        {
+          "id": "remove",
+          "label": "外へ取り除く・追い出す",
+          "siblings": [
+            {
+              "phrase": "cut out",
+              "gloss": "切り取る・取り除く"
+            },
+            {
+              "phrase": "rule out",
+              "gloss": "除外する"
+            },
+            {
+              "phrase": "stamp out",
+              "gloss": "根絶する"
+            },
+            {
+              "phrase": "weed out",
+              "gloss": "取り除く"
+            },
+            {
+              "phrase": "clear out",
+              "gloss": "一掃する"
+            },
+            {
+              "phrase": "drive out",
+              "gloss": "追い出す"
+            }
+          ]
+        },
+        {
+          "id": "reserve",
+          "label": "外へ線を引き、確保・警戒する",
+          "siblings": [
+            {
+              "phrase": "pick out",
+              "gloss": "選び出す"
+            },
+            {
+              "phrase": "set out",
+              "gloss": "配置する・明示する"
+            },
+            {
+              "phrase": "block out",
+              "gloss": "区切る・遮る"
+            },
+            {
+              "phrase": "keep out",
+              "gloss": "外に出さない"
+            },
+            {
+              "phrase": "carve out",
+              "gloss": "場所や時間を確保する"
+            },
+            {
+              "phrase": "single out",
+              "gloss": "選び出して目立たせる"
+            }
+          ]
+        },
+        {
+          "id": "resolve",
+          "label": "外へほどいて解決する",
+          "siblings": [
+            {
+              "phrase": "sort out",
+              "gloss": "整理して解決する"
+            },
+            {
+              "phrase": "figure out",
+              "gloss": "理解して解決する"
+            },
+            {
+              "phrase": "iron out",
+              "gloss": "問題を解消する"
+            },
+            {
+              "phrase": "straighten out",
+              "gloss": "整理する"
+            }
+          ]
+        },
+        {
+          "id": "express",
+          "label": "外へ出して目立たせる・声にする",
+          "siblings": [
+            {
+              "phrase": "mouth off",
+              "gloss": "生意気に口をきく"
+            },
+            {
+              "phrase": "spout off",
+              "gloss": "べらべら話す"
+            },
+            {
+              "phrase": "pop off",
+              "gloss": "勢いよく言い放つ"
+            }
+          ]
+        },
+        {
+          "id": "delegate",
+          "label": "外へ任せる・分配する",
+          "siblings": [
+            {
+              "phrase": "contract out",
+              "gloss": "外注する"
+            },
+            {
+              "phrase": "send out",
+              "gloss": "外へ出す"
+            },
+            {
+              "phrase": "parcel out",
+              "gloss": "分配する"
+            },
+            {
+              "phrase": "hand out",
+              "gloss": "配る"
+            }
+          ]
+        },
+        {
+          "id": "produce",
+          "label": "外へ作り出す・実行へ運ぶ",
+          "siblings": [
+            {
+              "phrase": "spit out",
+              "gloss": "吐き出す"
+            },
+            {
+              "phrase": "turn out",
+              "gloss": "生産する・判明する"
+            },
+            {
+              "phrase": "roll out",
+              "gloss": "新製品を出す"
+            },
+            {
+              "phrase": "print out",
+              "gloss": "印刷する"
+            },
+            {
+              "phrase": "push out",
+              "gloss": "押し出す"
+            },
+            {
+              "phrase": "pour out",
+              "gloss": "注ぎ出す"
+            }
           ]
         }
       ]
@@ -107,22 +596,98 @@
       "senses": [
         {
           "id": "separate",
-          "label": "切り離す・遮断する",
+          "label": "切り離して・片づけて離れた状態へ",
           "siblings": [
-            { "phrase": "cut off", "gloss": "遮断する" },
-            { "phrase": "shut off", "gloss": "電源を切る" },
-            { "phrase": "turn off", "gloss": "消す" },
-            { "phrase": "break off", "gloss": "中断する" }
+            {
+              "phrase": "slice off",
+              "gloss": "切り離す"
+            },
+            {
+              "phrase": "shut off",
+              "gloss": "電源を切る"
+            },
+            {
+              "phrase": "switch off",
+              "gloss": "電源を切る"
+            },
+            {
+              "phrase": "break off",
+              "gloss": "中断する"
+            },
+            {
+              "phrase": "kick off",
+              "gloss": "始める・蹴り出す"
+            },
+            {
+              "phrase": "head off",
+              "gloss": "出発する・阻止する"
+            }
           ]
         },
         {
           "id": "pull-away",
           "label": "働きかけて手を引かせる",
           "siblings": [
-            { "phrase": "pay off", "gloss": "金を渡して黙らせる" },
-            { "phrase": "call off", "gloss": "中止させる" },
-            { "phrase": "warn off", "gloss": "警告して手を引かせる" },
-            { "phrase": "put off", "gloss": "思いとどまらせる" }
+            {
+              "phrase": "pay off",
+              "gloss": "金を渡して黙らせる"
+            },
+            {
+              "phrase": "call off",
+              "gloss": "中止させる"
+            },
+            {
+              "phrase": "warn off",
+              "gloss": "警告して手を引かせる"
+            },
+            {
+              "phrase": "put off",
+              "gloss": "思いとどまらせる"
+            },
+            {
+              "phrase": "back off",
+              "gloss": "手を引く"
+            }
+          ]
+        },
+        {
+          "id": "weaken",
+          "label": "離れて弱まる",
+          "siblings": [
+            {
+              "phrase": "fall off",
+              "gloss": "減少する"
+            },
+            {
+              "phrase": "wear off",
+              "gloss": "効き目が薄れる"
+            },
+            {
+              "phrase": "cool off",
+              "gloss": "冷める"
+            },
+            {
+              "phrase": "die off",
+              "gloss": "次第に消える"
+            }
+          ]
+        },
+        {
+          "id": "express",
+          "label": "外へ出して目立たせる・声にする",
+          "siblings": [
+            {
+              "phrase": "mouth off",
+              "gloss": "生意気に口をきく"
+            },
+            {
+              "phrase": "spout off",
+              "gloss": "べらべら話す"
+            },
+            {
+              "phrase": "pop off",
+              "gloss": "勢いよく言い放つ"
+            }
           ]
         }
       ]
@@ -138,22 +703,106 @@
       "senses": [
         {
           "id": "contact",
-          "label": "接触して上に載る",
+          "label": "対象へ意識や作用を向けて接する",
           "siblings": [
-            { "phrase": "put on", "gloss": "身につける・載せる" },
-            { "phrase": "sit on", "gloss": "〜の上に座る" },
-            { "phrase": "hang on", "gloss": "つかまる" },
-            { "phrase": "lean on", "gloss": "〜に寄りかかる" }
+            {
+              "phrase": "touch on",
+              "gloss": "軽く触れる"
+            },
+            {
+              "phrase": "lean on",
+              "gloss": "〜に寄りかかる"
+            },
+            {
+              "phrase": "act on",
+              "gloss": "〜に作用する"
+            },
+            {
+              "phrase": "focus on",
+              "gloss": "〜に焦点を当てる"
+            },
+            {
+              "phrase": "base on",
+              "gloss": "〜に基づく"
+            },
+            {
+              "phrase": "comment on",
+              "gloss": "〜について論じる"
+            }
           ]
         },
         {
           "id": "rely",
           "label": "前提として頼る",
           "siblings": [
-            { "phrase": "rely on", "gloss": "頼る" },
-            { "phrase": "count on", "gloss": "当てにする" },
-            { "phrase": "depend on", "gloss": "依存する" },
-            { "phrase": "bank on", "gloss": "当てにする" }
+            {
+              "phrase": "rely on",
+              "gloss": "頼る"
+            },
+            {
+              "phrase": "count on",
+              "gloss": "当てにする"
+            },
+            {
+              "phrase": "depend on",
+              "gloss": "依存する"
+            },
+            {
+              "phrase": "hinge on",
+              "gloss": "〜次第である"
+            }
+          ]
+        },
+        {
+          "id": "continue",
+          "label": "そのまま続く流れに乗る",
+          "siblings": [
+            {
+              "phrase": "keep on",
+              "gloss": "続ける"
+            },
+            {
+              "phrase": "carry on",
+              "gloss": "続ける"
+            },
+            {
+              "phrase": "go on",
+              "gloss": "続く・続ける"
+            },
+            {
+              "phrase": "hold on",
+              "gloss": "待つ・つかまる"
+            },
+            {
+              "phrase": "press on",
+              "gloss": "先へ進み続ける"
+            }
+          ]
+        },
+        {
+          "id": "transmit",
+          "label": "次の相手へ渡して伝える",
+          "siblings": [
+            {
+              "phrase": "hand on",
+              "gloss": "次へ渡す"
+            },
+            {
+              "phrase": "pass it on",
+              "gloss": "それを次へ伝える"
+            },
+            {
+              "phrase": "send on",
+              "gloss": "先へ送る"
+            },
+            {
+              "phrase": "hand down",
+              "gloss": "後世へ伝える"
+            },
+            {
+              "phrase": "move on",
+              "gloss": "次へ移る"
+            }
           ]
         }
       ]
@@ -162,9 +811,12 @@
       "core": "越えて・覆うように",
       "note": "境目を越える、または上から覆うイメージ",
       "siblings": [
-        { "phrase": "take over", "gloss": "引き継ぐ" },
+        { "phrase": "roll over", "gloss": "転がる・ひっくり返る" },
         { "phrase": "get over", "gloss": "乗り越える" },
-        { "phrase": "look over", "gloss": "目を通す" }
+        { "phrase": "read over", "gloss": "読み返す" },
+        { "phrase": "start over", "gloss": "やり直す" },
+        { "phrase": "turn over", "gloss": "ひっくり返す" },
+        { "phrase": "hover over", "gloss": "上に浮かぶ" }
       ]
     },
     "down": {
@@ -172,17 +824,77 @@
       "note": "動きや勢いを下げ、落ち着かせるイメージ",
       "siblings": [
         { "phrase": "calm down", "gloss": "落ち着く" },
-        { "phrase": "turn down", "gloss": "断る・下げる" },
-        { "phrase": "write down", "gloss": "書き留める" }
+        { "phrase": "write down", "gloss": "書き留める" },
+        { "phrase": "take down", "gloss": "書き取る・下ろす" }
+      ],
+      "senses": [
+        {
+          "id": "suppress",
+          "label": "押さえつけて動きを止める",
+          "siblings": [
+            { "phrase": "keep down", "gloss": "抑えておく" },
+            { "phrase": "clamp down", "gloss": "厳しく取り締まる" },
+            { "phrase": "weigh down", "gloss": "重みで押さえる" },
+            { "phrase": "tie down", "gloss": "縛りつけて動けなくする" },
+            { "phrase": "pin down", "gloss": "押さえ込んで動かさない" }
+          ]
+        },
+        {
+          "id": "reduce",
+          "label": "勢いや量を下げる",
+          "siblings": [
+            { "phrase": "slow down", "gloss": "速度を落とす" },
+            { "phrase": "cool down", "gloss": "冷ます・落ち着かせる" },
+            { "phrase": "tone down", "gloss": "調子をやわらげる" },
+            { "phrase": "cut down", "gloss": "削減する" },
+            { "phrase": "wind down", "gloss": "徐々に終える" },
+            { "phrase": "water down", "gloss": "薄める・弱める" }
+          ]
+        },
+        {
+          "id": "lower",
+          "label": "気持ちや評価を下げる",
+          "siblings": [
+            { "phrase": "bring down", "gloss": "気分を落ち込ませる" },
+            { "phrase": "play down", "gloss": "軽く見せる" },
+            { "phrase": "run down", "gloss": "けなす・弱らせる" },
+            { "phrase": "talk down", "gloss": "見下して話す" }
+          ]
+        },
+        {
+          "id": "descend",
+          "label": "下へ移動する・下へ伝わる",
+          "siblings": [
+            { "phrase": "go down", "gloss": "下りる・下がる" },
+            { "phrase": "hand down", "gloss": "受け継がせる" },
+            { "phrase": "sit down", "gloss": "座る" },
+            { "phrase": "lie down", "gloss": "横になる" },
+            { "phrase": "step down", "gloss": "身を引く・辞任する" }
+          ]
+        },
+        {
+          "id": "settle",
+          "label": "腰を据えて落ち着ける",
+          "siblings": [
+            { "phrase": "settle down", "gloss": "落ち着く・身を固める" },
+            { "phrase": "knuckle down", "gloss": "本気で取り組む" },
+            { "phrase": "hunker down", "gloss": "腰を据える" },
+            { "phrase": "nail down", "gloss": "確定させる" },
+            { "phrase": "bed down", "gloss": "寝床に落ち着く" }
+          ]
+        }
       ]
     },
     "away": {
       "core": "離れて・消えていく",
       "note": "手元や元の状態から遠ざかり、見えなくなるイメージ",
       "siblings": [
-        { "phrase": "throw away", "gloss": "捨てる" },
-        { "phrase": "put away", "gloss": "片づける" },
-        { "phrase": "give away", "gloss": "譲る・ただで与える" }
+        { "phrase": "fade away", "gloss": "次第に消える" },
+        { "phrase": "wash away", "gloss": "洗い流す" },
+        { "phrase": "drift away", "gloss": "漂い去る" },
+        { "phrase": "melt away", "gloss": "溶けて消える" },
+        { "phrase": "die away", "gloss": "弱まって消える" },
+        { "phrase": "wear away", "gloss": "すり減らす" }
       ]
     },
     "up to": {
@@ -214,6 +926,162 @@
             { "phrase": "go up to", "gloss": "〜のところまで近づく" }
           ]
         }
+      ]
+    },
+    "in": {
+      "core": "内側へ・中に入った状態へ",
+      "note": "外側から中へ入り、内側に収めるイメージ",
+      "siblings": [
+        { "phrase": "come in", "gloss": "入ってくる" },
+        { "phrase": "go in", "gloss": "中へ入る" },
+        { "phrase": "take in", "gloss": "取り込む・理解する" },
+        { "phrase": "let in", "gloss": "中へ入れる" },
+        { "phrase": "join in", "gloss": "加わる" },
+        { "phrase": "lock in", "gloss": "固定する" }
+      ]
+    },
+    "back": {
+      "core": "後ろへ・元の状態へ",
+      "note": "離れた場所や元の状態へ戻すイメージ",
+      "siblings": [
+        { "phrase": "go back", "gloss": "戻る" },
+        { "phrase": "come back", "gloss": "戻ってくる" },
+        { "phrase": "give back", "gloss": "返す" },
+        { "phrase": "pay back", "gloss": "返済する・仕返しする" },
+        { "phrase": "hold back", "gloss": "抑える" },
+        { "phrase": "send back", "gloss": "送り返す" }
+      ]
+    },
+    "into": {
+      "core": "中へ入り込む・別の状態へ",
+      "note": "外から中へ入り、対象や状態に入り込むイメージ",
+      "siblings": [
+        { "phrase": "get into", "gloss": "入り込む・夢中になる" },
+        { "phrase": "look into", "gloss": "調査する" },
+        { "phrase": "talk into", "gloss": "説得してさせる" },
+        { "phrase": "fit into", "gloss": "うまく収まる" },
+        { "phrase": "dive into", "gloss": "熱心に取り組む" },
+        { "phrase": "pour into", "gloss": "大量に流れ込む" }
+      ]
+    },
+    "across": {
+      "core": "こちら側から向こうへ・伝わって",
+      "note": "境目を横切る、または情報が相手へ届くイメージ",
+      "siblings": [
+        { "phrase": "get across", "gloss": "伝わる・伝える" },
+        { "phrase": "run across", "gloss": "偶然見つける" },
+        { "phrase": "walk across", "gloss": "横切って歩く" },
+        { "phrase": "cut across", "gloss": "横切る" },
+        { "phrase": "brush across", "gloss": "横切って触れる" },
+        { "phrase": "drive across", "gloss": "車で横断する" }
+      ]
+    },
+    "together": {
+      "core": "ばらばらのものを一つに",
+      "note": "複数のものを集め、まとまりとして保つイメージ",
+      "siblings": [
+        { "phrase": "get together", "gloss": "集まる" },
+        { "phrase": "put together", "gloss": "組み立てる" },
+        { "phrase": "bring together", "gloss": "集める・結びつける" },
+        { "phrase": "hold together", "gloss": "一つに保つ" },
+        { "phrase": "work together", "gloss": "協力する" },
+        { "phrase": "stick together", "gloss": "団結する" }
+      ]
+    },
+    "along": {
+      "core": "線に沿って・一緒に進んで",
+      "note": "道筋や流れに沿って進めるイメージ",
+      "siblings": [
+        { "phrase": "come along", "gloss": "一緒に来る・進む" },
+        { "phrase": "get along", "gloss": "うまくやっていく" },
+        { "phrase": "move along", "gloss": "先へ進む" },
+        { "phrase": "bring along", "gloss": "連れてくる" },
+        { "phrase": "carry along", "gloss": "運んでいく" },
+        { "phrase": "drag along", "gloss": "引きずっていく" }
+      ]
+    },
+    "behind": {
+      "core": "後ろに置く・遅れた状態",
+      "note": "前に進むものの後ろに残るイメージ",
+      "siblings": [
+        { "phrase": "fall behind", "gloss": "遅れをとる" },
+        { "phrase": "leave behind", "gloss": "置き去りにする" },
+        { "phrase": "stay behind", "gloss": "後に残る" },
+        { "phrase": "lag behind", "gloss": "遅れる" },
+        { "phrase": "go behind", "gloss": "裏へ回る" },
+        { "phrase": "keep behind", "gloss": "後ろに置いておく" }
+      ]
+    },
+    "upon": {
+      "core": "上に接して・その時点で",
+      "note": "対象の上に置く、または出来事に出会うイメージ",
+      "siblings": [
+        { "phrase": "happen upon", "gloss": "偶然出会う" },
+        { "phrase": "come upon", "gloss": "偶然見つける" },
+        { "phrase": "look upon", "gloss": "見なす" },
+        { "phrase": "act upon", "gloss": "〜に基づいて行動する" },
+        { "phrase": "call upon", "gloss": "求める・訪ねる" },
+        { "phrase": "lean upon", "gloss": "頼る" }
+      ]
+    },
+    "under": {
+      "core": "下に置く・抑える",
+      "note": "上から覆い、力や影響の下に置くイメージ",
+      "siblings": [
+        { "phrase": "go under", "gloss": "倒産する・沈む" },
+        { "phrase": "come under", "gloss": "〜の対象になる" },
+        { "phrase": "fall under", "gloss": "〜の分類に入る" },
+        { "phrase": "put under", "gloss": "下に置く・麻酔をかける" },
+        { "phrase": "keep under", "gloss": "抑えておく" },
+        { "phrase": "come up under", "gloss": "〜の下から現れる" }
+      ]
+    },
+    "around": {
+      "core": "周囲へ・あちこちに",
+      "note": "中心の周りを動き、あちこちを探るイメージ",
+      "siblings": [
+        { "phrase": "get around", "gloss": "動き回る・広まる" },
+        { "phrase": "go around", "gloss": "歩き回る" },
+        { "phrase": "look around", "gloss": "見回す" },
+        { "phrase": "walk around", "gloss": "歩き回る" },
+        { "phrase": "fool around", "gloss": "ふざける" },
+        { "phrase": "shop around", "gloss": "あちこち比較する" }
+      ]
+    },
+    "by": {
+      "core": "そばを通って・そばに留まって",
+      "note": "対象のそばを通過したり、近くで状態を保ったりするイメージ",
+      "siblings": [
+        { "phrase": "pass by", "gloss": "通り過ぎる" },
+        { "phrase": "go by", "gloss": "通り過ぎる・時が過ぎる" },
+        { "phrase": "stand by", "gloss": "待機する" },
+        { "phrase": "get by", "gloss": "何とか切り抜ける" },
+        { "phrase": "scrape by", "gloss": "かろうじて通る" },
+        { "phrase": "sail by", "gloss": "そばを通り過ぎる" }
+      ]
+    },
+    "about": {
+      "core": "周囲をめぐって・話題として取り上げて",
+      "note": "対象の周りを考えたり、話題として扱ったりするイメージ",
+      "siblings": [
+        { "phrase": "ask about", "gloss": "〜について尋ねる" },
+        { "phrase": "care about", "gloss": "〜を気にかける" },
+        { "phrase": "worry about", "gloss": "〜を心配する" },
+        { "phrase": "think about", "gloss": "〜について考える" },
+        { "phrase": "talk about", "gloss": "〜について話す" },
+        { "phrase": "hear about", "gloss": "〜について聞く" }
+      ]
+    },
+    "forward": {
+      "core": "前へ進める・先へ",
+      "note": "先の段階へ押し出し、前進させるイメージ",
+      "siblings": [
+        { "phrase": "put forward", "gloss": "提案する" },
+        { "phrase": "bring forward", "gloss": "前へ持ち出す" },
+        { "phrase": "move forward", "gloss": "前進する" },
+        { "phrase": "go forward", "gloss": "先へ進む" },
+        { "phrase": "step forward", "gloss": "前へ出る" },
+        { "phrase": "carry forward", "gloss": "引き継いで進める" }
       ]
     }
   }

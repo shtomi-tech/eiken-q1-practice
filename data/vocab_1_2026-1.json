@@ -740,6 +740,13 @@
       "is_answer": true,
       "meaning": "共感する、～と自分を重ねる",
       "phrase": "identify with",
+      "coreImage": {
+        "chain": [
+          { "term": "identify", "gloss": "同一だと見なす" },
+          { "term": "with", "gloss": "〜とともに" },
+          { "gloss": "相手と自分を重ねる" }
+        ]
+      },
       "pos": "熟語",
       "example": "Many young readers identify with the hero's struggle.",
       "exampleTranslation": "多くの若い読者は主人公の苦闘に共感する。"
@@ -749,6 +756,13 @@
       "is_answer": false,
       "meaning": "引き寄せる、だます",
       "phrase": "reel in",
+      "coreImage": {
+        "particle": "in",
+        "chain": [
+          { "term": "reel", "gloss": "リールを巻く" },
+          { "gloss": "内側へ引き寄せる" }
+        ]
+      },
       "pos": "熟語",
       "example": "The advertisement was designed to reel in new customers.",
       "exampleTranslation": "その広告は新しい顧客を引き寄せるように作られていた。"
@@ -758,6 +772,14 @@
       "is_answer": false,
       "meaning": "片付ける、素早く終える",
       "phrase": "polish off",
+      "coreImage": {
+        "particle": "off",
+        "particleSense": "separate",
+        "chain": [
+          { "term": "polish", "gloss": "磨いて仕上げる" },
+          { "gloss": "残りを離して片付ける" }
+        ]
+      },
       "pos": "熟語",
       "example": "I need to polish off this report before lunch.",
       "exampleTranslation": "昼食前にこの報告書を仕上げなければならない。"
@@ -767,6 +789,14 @@
       "is_answer": false,
       "meaning": "意識を失う；停電する",
       "phrase": "black out",
+      "coreImage": {
+        "particle": "out",
+        "particleSense": "remove",
+        "chain": [
+          { "term": "black", "gloss": "黒く塗りつぶす" },
+          { "gloss": "外から見えない状態にする" }
+        ]
+      },
       "pos": "熟語",
       "example": "A power failure can black out the entire neighborhood.",
       "exampleTranslation": "停電によって近所全体が真っ暗になることがある。"
@@ -776,6 +806,14 @@
       "is_answer": false,
       "meaning": "現れる；音量を上げる",
       "phrase": "turn up",
+      "coreImage": {
+        "particle": "up",
+        "particleSense": "appear",
+        "chain": [
+          { "term": "turn", "gloss": "向きを変える" },
+          { "gloss": "上向きに現れる・高める" }
+        ]
+      },
       "pos": "熟語",
       "example": "Please turn up the volume so everyone can hear.",
       "exampleTranslation": "全員に聞こえるように音量を上げてください。",
@@ -786,6 +824,14 @@
       "is_answer": false,
       "meaning": "次第に好きになる、徐々に影響する",
       "phrase": "grow on",
+      "coreImage": {
+        "particle": "on",
+        "particleSense": "contact",
+        "chain": [
+          { "term": "grow", "gloss": "成長する" },
+          { "gloss": "対象に接する影響が積み重なる" }
+        ]
+      },
       "pos": "熟語",
       "example": "The song seemed strange at first, but it began to grow on me.",
       "exampleTranslation": "その歌は最初は変に思えたが、次第に好きになってきた。"
@@ -795,6 +841,13 @@
       "is_answer": false,
       "meaning": "組み込む",
       "phrase": "build in",
+      "coreImage": {
+        "particle": "in",
+        "chain": [
+          { "term": "build", "gloss": "組み立てる" },
+          { "gloss": "中に組み込む" }
+        ]
+      },
       "pos": "熟語",
       "example": "The designers decided to build in an emergency backup.",
       "exampleTranslation": "設計者たちは緊急時の予備機能を組み込むことにした。"
@@ -804,6 +857,14 @@
       "is_answer": true,
       "meaning": "大量に作り出す",
       "phrase": "churn out",
+      "coreImage": {
+        "particle": "out",
+        "particleSense": "produce",
+        "chain": [
+          { "term": "churn", "gloss": "かき混ぜて作る" },
+          { "gloss": "外へ大量に作り出す" }
+        ]
+      },
       "pos": "熟語",
       "example": "The factory can churn out thousands of bottles each day.",
       "exampleTranslation": "その工場は毎日何千本ものボトルを大量に作り出せる。"
@@ -813,6 +874,13 @@
       "is_answer": true,
       "meaning": "いじくり回す、改ざんする",
       "phrase": "tamper with",
+      "coreImage": {
+        "chain": [
+          { "term": "tamper", "gloss": "勝手にいじる" },
+          { "term": "with", "gloss": "対象に対して" },
+          { "gloss": "対象を不適切に変更する" }
+        ]
+      },
       "pos": "熟語",
       "example": "Do not tamper with the laboratory equipment.",
       "exampleTranslation": "実験室の装置をいじくり回さないでください。"
@@ -822,6 +890,14 @@
       "is_answer": false,
       "meaning": "弱まる、手加減する",
       "phrase": "ease off",
+      "coreImage": {
+        "particle": "off",
+        "particleSense": "weaken",
+        "chain": [
+          { "term": "ease", "gloss": "和らぐ" },
+          { "gloss": "勢いが離れて弱まる" }
+        ]
+      },
       "pos": "熟語",
       "example": "The rain should ease off by evening.",
       "exampleTranslation": "雨は夕方までには弱まるはずだ。"
@@ -831,6 +907,14 @@
       "is_answer": false,
       "meaning": "でっち上げる",
       "phrase": "trump up",
+      "coreImage": {
+        "particle": "up",
+        "particleSense": "fabricate",
+        "chain": [
+          { "term": "trump", "gloss": "切り札を出す" },
+          { "gloss": "表に持ち上げて作り上げる" }
+        ]
+      },
       "pos": "熟語",
       "example": "They tried to trump up a charge against the journalist.",
       "exampleTranslation": "彼らはそのジャーナリストに対する罪をでっち上げようとした。"
@@ -840,6 +924,14 @@
       "is_answer": false,
       "meaning": "新分野に進出する",
       "phrase": "branch out",
+      "coreImage": {
+        "particle": "out",
+        "particleSense": "spread",
+        "chain": [
+          { "term": "branch", "gloss": "枝分かれする" },
+          { "gloss": "外へ広がって新しい領域へ進む" }
+        ]
+      },
       "pos": "熟語",
       "example": "The family restaurant plans to branch out into catering.",
       "exampleTranslation": "その家族経営のレストランはケータリング業へ進出する計画だ。"
@@ -849,6 +941,14 @@
       "is_answer": false,
       "meaning": "少しずつ配る",
       "phrase": "dole out",
+      "coreImage": {
+        "particle": "out",
+        "particleSense": "delegate",
+        "chain": [
+          { "term": "dole", "gloss": "分け前を与える" },
+          { "gloss": "外へ少しずつ配る" }
+        ]
+      },
       "pos": "熟語",
       "example": "The charity will dole out blankets to families in need.",
       "exampleTranslation": "その慈善団体は困っている家族に毛布を少しずつ配る予定だ。"
@@ -858,6 +958,14 @@
       "is_answer": false,
       "meaning": "口をつぐむ",
       "phrase": "clam up",
+      "coreImage": {
+        "particle": "up",
+        "particleSense": "contain",
+        "chain": [
+          { "term": "clam", "gloss": "二枚貝を閉じる" },
+          { "gloss": "口を閉じて黙る" }
+        ]
+      },
       "pos": "熟語",
       "example": "He tends to clam up whenever the subject of money comes up.",
       "exampleTranslation": "彼はお金の話題が出るといつも口をつぐみがちだ。"
@@ -867,6 +975,14 @@
       "is_answer": false,
       "meaning": "（罰などを）与える",
       "phrase": "mete out",
+      "coreImage": {
+        "particle": "out",
+        "particleSense": "delegate",
+        "chain": [
+          { "term": "mete", "gloss": "割り当てる" },
+          { "gloss": "外へ与える" }
+        ]
+      },
       "pos": "熟語",
       "example": "The judge must mete out punishment fairly.",
       "exampleTranslation": "裁判官は公正に罰を与えなければならない。"
@@ -876,6 +992,14 @@
       "is_answer": true,
       "meaning": "勇気を奮い起こす",
       "phrase": "pluck up",
+      "coreImage": {
+        "particle": "up",
+        "particleSense": "raise",
+        "chain": [
+          { "term": "pluck", "gloss": "引き抜く" },
+          { "gloss": "気持ちを持ち上げて奮い起こす" }
+        ]
+      },
       "pos": "熟語",
       "example": "She had to pluck up the courage to speak in front of the crowd.",
       "exampleTranslation": "彼女は群衆の前で話すために勇気を奮い起こさなければならなかった。"
