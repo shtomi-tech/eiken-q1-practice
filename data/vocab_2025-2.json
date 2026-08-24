@@ -340,7 +340,7 @@
   "idioms": [
     {
       "q": 11, "is_answer": false, "type": "idiom", "phrase": "dropped by", "pos": "句動詞",
-      "coreImage": { "particle": "by", "chain": [ { "term": "drop", "gloss": "立ち寄る" }, { "gloss": "そばを通って立ち寄る" } ] },
+      "coreImage": { "particle": "by", "chain": [ { "term": "drop", "gloss": "立ち寄る" }, { "term": "by", "gloss": "そばへ立ち寄って" }, { "gloss": "そばを通って立ち寄る" } ] },
       "meaning": "立ち寄る",
       "etymology": "drop（ふらっと落ちる、立ち寄る）+ by（そばに）。",
       "example": "I dropped by the bakery on my way home.",
@@ -354,6 +354,7 @@
         "particleSense": "descend",
         "chain": [
           { "term": "come", "gloss": "来る" },
+          { "term": "down", "gloss": "下へ移動して" },
           { "gloss": "下へ降りてくる" }
         ]
       },
@@ -370,6 +371,7 @@
         "particleSense": "transmit",
         "chain": [
           { "term": "pass", "gloss": "通り渡す" },
+          { "term": "on", "gloss": "次の相手へ渡して" },
           { "gloss": "次の相手へ伝え渡す" }
         ]
       },
@@ -386,6 +388,7 @@
         "particleSense": "separate",
         "chain": [
           { "term": "go", "gloss": "進む・作動する" },
+          { "term": "off", "gloss": "離れた状態へ動いて" },
           { "gloss": "離れた状態へ動き出す" }
         ]
       },
@@ -510,6 +513,7 @@
         "particle": "in",
         "chain": [
           { "term": "turn", "gloss": "向きを変える" },
+          { "term": "in", "gloss": "中へ入って" },
           { "gloss": "中へ差し出して提出する" }
         ]
       },
@@ -526,6 +530,7 @@
         "particleSense": "separate",
         "chain": [
           { "term": "cut", "gloss": "切る" },
+          { "term": "off", "gloss": "本体から切り離して" },
           { "gloss": "切り離して遮断する" }
         ]
       },
@@ -542,6 +547,7 @@
         "particleSense": "contact",
         "chain": [
           { "term": "feed", "gloss": "食べさせる・食べる" },
+          { "term": "on", "gloss": "対象に向けて接して" },
           { "gloss": "対象に接して栄養を得る" }
         ]
       },
@@ -558,6 +564,7 @@
         "particleSense": "contact",
         "chain": [
           { "term": "hang", "gloss": "ぶら下がる" },
+          { "term": "on", "gloss": "対象に向けて接して" },
           { "gloss": "対象に接したまま待つ" }
         ]
       },

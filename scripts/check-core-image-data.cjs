@@ -52,6 +52,15 @@ function normalizedPhrase(value) {
   return String(value || "").toLowerCase().replace(/\s+/g, " ").trim();
 }
 
+function hasParticleTerm(chain, particle) {
+  const chainTokens = chain
+    .filter((step) => step && Object.prototype.hasOwnProperty.call(step, "term"))
+    .flatMap((step) => tokens(step.term));
+  const particleTokens = tokens(particle);
+  if (!particleTokens.length) return false;
+  return chainTokens.some((_, index) => particleTokens.every((token, offset) => chainTokens[index + offset] === token));
+}
+
 assert.ok(fs.existsSync(PARTICLE_PATH), "data/particle_images.json が必要です");
 assert.ok(fs.existsSync(MANIFEST_PATH), "data/manifest.json が必要です");
 assert.ok(fs.existsSync(PAGES_WORKFLOW_PATH), ".github/workflows/pages.yml が必要です");
@@ -101,6 +110,8 @@ for (const [particle, entry] of Object.entries(particleData.particles)) {
 }
 
 let coreImageCount = 0;
+let particleChainCount = 0;
+const particleChainLengths = new Map();
 const deliveryVocabFiles = new Set(
   Object.values(manifest.q1 || {})
     .map((dataset) => path.basename(dataset.vocabUrl || ""))
@@ -296,6 +307,10 @@ for (const fileName of vocabFiles) {
     assert.ok(image && typeof image === "object" && !Array.isArray(image), `${label}: coreImage が不正です`);
     assert.ok(Array.isArray(image.chain), `${label}: chain は配列である必要があります`);
     assert.ok(image.chain.length >= 2 && image.chain.length <= 5, `${label}: chain は2〜5要素である必要があります`);
+    if (image.particle != null) {
+      particleChainCount += 1;
+      particleChainLengths.set(image.chain.length, (particleChainLengths.get(image.chain.length) || 0) + 1);
+    }
     image.chain.forEach((step, index) => {
       assert.ok(step && typeof step === "object" && !Array.isArray(step), `${label}: chain[${index}] が不正です`);
       assertNonEmptyString(step.gloss, `${label}: chain[${index}].gloss`);
@@ -308,6 +323,12 @@ for (const fileName of vocabFiles) {
         );
       }
     });
+    if (image.particle != null) {
+      assert.ok(
+        hasParticleTerm(image.chain, image.particle),
+        `${label}: particle ${image.particle} をchainのtermステップに含めてください`,
+      );
+    }
     const lastStep = image.chain[image.chain.length - 1];
     assert.ok(!Object.prototype.hasOwnProperty.call(lastStep, "term"), `${label}: chain の最後は導出結果にしてください`);
     const particleEntry = image.particle != null ? particleData.particles[image.particle] : null;
@@ -398,6 +419,9 @@ for (const [key, locations] of senseSiblingLocations.entries()) {
 }
 
 assert.ok(coreImageCount > 0, "coreImage を持つ熟語が1件以上必要です");
+assert.equal(particleChainCount, 174, "particle付きcoreImageは174件である必要があります");
+assert.equal(particleChainLengths.get(2) || 0, 0, "particle付きcoreImageに2段chainを残さないでください");
+console.log(`particle chain coverage: ${particleChainCount}/174; lengths ${JSON.stringify(Object.fromEntries(particleChainLengths))}`);
 assert.equal(progressRows.length, 15, "manifest配信対象の熟語セットは15セットである必要があります");
 assert.equal(progressRows.reduce((sum, row) => sum + row.idioms, 0), 292, "manifest配信対象の熟語数は292件である必要があります");
 for (const row of progressRows) {
