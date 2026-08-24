@@ -10,6 +10,28 @@
         { "phrase": "eat up", "gloss": "食べ尽くす" },
         { "phrase": "use up", "gloss": "使い切る" },
         { "phrase": "fill up", "gloss": "満たす" }
+      ],
+      "senses": [
+        {
+          "id": "complete",
+          "label": "完全に・し尽くす",
+          "siblings": [
+            { "phrase": "eat up", "gloss": "食べ尽くす" },
+            { "phrase": "use up", "gloss": "使い切る" },
+            { "phrase": "fill up", "gloss": "満たす" },
+            { "phrase": "drink up", "gloss": "飲み干す" }
+          ]
+        },
+        {
+          "id": "raise",
+          "label": "上へ・勢いを高める",
+          "siblings": [
+            { "phrase": "stir up", "gloss": "かき立てる" },
+            { "phrase": "build up", "gloss": "高める" },
+            { "phrase": "fire up", "gloss": "活気づける" },
+            { "phrase": "pump up", "gloss": "高める" }
+          ]
+        }
       ]
     },
     "out": {
@@ -19,6 +41,59 @@
         { "phrase": "find out", "gloss": "調べて分かる" },
         { "phrase": "carry out", "gloss": "実行する" },
         { "phrase": "leave out", "gloss": "省く" }
+      ],
+      "senses": [
+        {
+          "id": "social",
+          "label": "こもらずに外へ出る",
+          "siblings": [
+            { "phrase": "go out", "gloss": "出かける" },
+            { "phrase": "eat out", "gloss": "外食する" },
+            { "phrase": "ask out", "gloss": "誘う" },
+            { "phrase": "stay out", "gloss": "外にいる" },
+            { "phrase": "come out", "gloss": "外へ出る・現れる" }
+          ]
+        },
+        {
+          "id": "escape",
+          "label": "状態の外へ出る",
+          "siblings": [
+            { "phrase": "get out of", "gloss": "抜け出す" },
+            { "phrase": "grow out of", "gloss": "成長して卒業する" },
+            { "phrase": "talk out of", "gloss": "説得してやめさせる" },
+            { "phrase": "break out of", "gloss": "打ち破って抜け出す" }
+          ]
+        },
+        {
+          "id": "spread",
+          "label": "広げて全体に示す",
+          "siblings": [
+            { "phrase": "spread out", "gloss": "広げる" },
+            { "phrase": "point out", "gloss": "指摘する" },
+            { "phrase": "map out", "gloss": "計画を具体化する" },
+            { "phrase": "fan out", "gloss": "広がる・広げる" }
+          ]
+        },
+        {
+          "id": "withhold",
+          "label": "出さずに手元へ留める",
+          "siblings": [
+            { "phrase": "keep out", "gloss": "外に出さない" },
+            { "phrase": "leave out", "gloss": "省く" },
+            { "phrase": "shut out", "gloss": "締め出す" },
+            { "phrase": "lock out", "gloss": "締め出して入れない" }
+          ]
+        },
+        {
+          "id": "exhaust",
+          "label": "最後まで出し切る",
+          "siblings": [
+            { "phrase": "run out", "gloss": "使い果たす" },
+            { "phrase": "sell out", "gloss": "売り切る" },
+            { "phrase": "wear out", "gloss": "使い古す・疲れさせる" },
+            { "phrase": "burn out", "gloss": "燃え尽きる" }
+          ]
+        }
       ]
     },
     "off": {
@@ -28,6 +103,28 @@
         { "phrase": "set off", "gloss": "出発する" },
         { "phrase": "cut off", "gloss": "遮断する" },
         { "phrase": "call off", "gloss": "中止する" }
+      ],
+      "senses": [
+        {
+          "id": "separate",
+          "label": "切り離す・遮断する",
+          "siblings": [
+            { "phrase": "cut off", "gloss": "遮断する" },
+            { "phrase": "shut off", "gloss": "電源を切る" },
+            { "phrase": "turn off", "gloss": "消す" },
+            { "phrase": "break off", "gloss": "中断する" }
+          ]
+        },
+        {
+          "id": "pull-away",
+          "label": "働きかけて手を引かせる",
+          "siblings": [
+            { "phrase": "pay off", "gloss": "金を渡して黙らせる" },
+            { "phrase": "call off", "gloss": "中止させる" },
+            { "phrase": "warn off", "gloss": "警告して手を引かせる" },
+            { "phrase": "put off", "gloss": "思いとどまらせる" }
+          ]
+        }
       ]
     },
     "on": {
@@ -37,6 +134,28 @@
         { "phrase": "go on", "gloss": "続ける" },
         { "phrase": "put on", "gloss": "身につける・作動させる" },
         { "phrase": "rely on", "gloss": "頼る" }
+      ],
+      "senses": [
+        {
+          "id": "contact",
+          "label": "接触して上に載る",
+          "siblings": [
+            { "phrase": "put on", "gloss": "身につける・載せる" },
+            { "phrase": "sit on", "gloss": "〜の上に座る" },
+            { "phrase": "hang on", "gloss": "つかまる" },
+            { "phrase": "lean on", "gloss": "〜に寄りかかる" }
+          ]
+        },
+        {
+          "id": "rely",
+          "label": "前提として頼る",
+          "siblings": [
+            { "phrase": "rely on", "gloss": "頼る" },
+            { "phrase": "count on", "gloss": "当てにする" },
+            { "phrase": "depend on", "gloss": "依存する" },
+            { "phrase": "bank on", "gloss": "当てにする" }
+          ]
+        }
       ]
     },
     "over": {
@@ -73,6 +192,28 @@
         { "phrase": "live up to", "gloss": "期待に応える" },
         { "phrase": "look up to", "gloss": "尊敬する" },
         { "phrase": "face up to", "gloss": "（困難を）直視する" }
+      ],
+      "senses": [
+        {
+          "id": "standard",
+          "label": "基準に達する",
+          "siblings": [
+            { "phrase": "live up to", "gloss": "期待に応える" },
+            { "phrase": "measure up to", "gloss": "基準に達する" },
+            { "phrase": "come up to", "gloss": "期待などに達する" },
+            { "phrase": "add up to", "gloss": "合計で〜になる" }
+          ]
+        },
+        {
+          "id": "confront",
+          "label": "相手に対して立つ",
+          "siblings": [
+            { "phrase": "face up to", "gloss": "直面する" },
+            { "phrase": "square up to", "gloss": "対決する" },
+            { "phrase": "step up to", "gloss": "〜に進み出る" },
+            { "phrase": "go up to", "gloss": "〜のところまで近づく" }
+          ]
+        }
       ]
     }
   }

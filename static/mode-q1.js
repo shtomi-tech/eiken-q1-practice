@@ -685,6 +685,20 @@ const pooledDataByGrade = new Map();    // grade -> {items, meaningPool}（解�
 function gradeDatasetIds(grade) {
   return Object.keys(DATASETS).filter((id) => gradeOf(id) === grade);
 }
+function assignParticleSlots(items) {
+  const slots = new Map();
+  for (const item of items) {
+    const core = item.type === "idiom" ? item.coreImage : null;
+    if (!core || !core.particle) continue;
+    const datasetId = item._datasetId || state.datasetId || "";
+    const senseId = core.particleSense || "";
+    const key = `${datasetId}:${core.particle}:${senseId}`;
+    const slot = slots.get(key) || 0;
+    item._particleSlot = slot;
+    slots.set(key, slot + 1);
+  }
+  return items;
+}
 // 同期的に使える解決済みプール。未読み込み・級不明のときは null。
 function pooledData(grade = currentGrade()) {
   return (grade && pooledDataByGrade.get(grade)) || null;
@@ -713,6 +727,7 @@ async function loadPooledItems(grade = currentGrade()) {
           meaningPool[it.type].push(it.meaning);
         }
       }
+      assignParticleSlots(items);
       return { items, meaningPool };
     }).catch((e) => {
       // 失敗したPromiseを残すと以後ずっと同じ失敗を返すため、再試行できるようにする。
@@ -1135,6 +1150,7 @@ async function loadData(datasetId = state.datasetId) {
   const words = (vocab.words || []).map((w) => ({ ...w, type: "word" }));
   const idioms = (vocab.idioms || []).map((i) => ({ ...i, type: "idiom" }));
   const all = words.concat(idioms);
+  assignParticleSlots(all);
 
   for (const it of all) {
     if (!state.itemsByQ[it.q]) state.itemsByQ[it.q] = [];
@@ -2241,21 +2257,48 @@ function flashCoreImage(item) {
 
   if (core.note) row.appendChild(el("p", { class: "coreChainNote" }, core.note));
 
+  const overrideSiblings = Array.isArray(core.siblings) ? core.siblings : null;
   const particle = core.particle ? particleMap[core.particle] : null;
-  if (particle) {
+  const particleSense = particle && Array.isArray(particle.senses) && core.particleSense
+    ? particle.senses.find((sense) => sense.id === core.particleSense)
+    : null;
+  const particleSenseLabel = particleSense ? particleSense.label : "";
+  const siblingPool = overrideSiblings
+    || (particleSense && particleSense.siblings)
+    || (particle && particle.siblings)
+    || [];
+  const ownPhrases = new Set([
+    normalizedSurface(surfaceOf(item)),
+    normalizedSurface((core.chain || []).filter((step) => step.term).map((step) => step.term).join(" ")),
+  ]);
+  const filteredSiblings = siblingPool.filter((sibling) => !ownPhrases.has(normalizedSurface(sibling.phrase)));
+  const slot = Number.isInteger(item._particleSlot) ? item._particleSlot : 0;
+  const visibleSiblings = filteredSiblings.length <= 3
+    ? filteredSiblings
+    : [0, 1, 2].map((k) => filteredSiblings[(slot * 3 + k) % filteredSiblings.length]);
+
+  if ((particle || overrideSiblings) && visibleSiblings.length) {
     const panel = el("div", { class: "particlePanel" });
-    panel.appendChild(el("p", { class: "particlePanelTitle" }, `「${core.particle}」のイメージは共通`));
-    const particleCore = el("p", { class: "particleCore" }, particle.core || "");
-    if (particle.note) particleCore.appendChild(document.createTextNode(` ／ ${particle.note}`));
-    panel.appendChild(particleCore);
-    const siblings = el("ul", { class: "particleSiblings" });
-    (particle.siblings || []).forEach((sibling) => {
-      siblings.appendChild(el("li", {},
+    const title = particleSenseLabel
+      ? `「${core.particle}」のイメージ：${particleSenseLabel}`
+      : particle
+        ? `「${core.particle}」のイメージは共通`
+        : "この熟語の仲間例";
+    panel.appendChild(el("p", { class: "particlePanelTitle" }, title));
+    const particleParts = particleSenseLabel ? [particleSenseLabel, particle.core || ""] : [particle?.core || ""];
+    if (particle?.note) particleParts.push(particle.note);
+    const particleDescription = particleParts.filter(Boolean);
+    if (particleDescription.length) {
+      panel.appendChild(el("p", { class: "particleCore" }, particleDescription.join(" ／ ")));
+    }
+    const siblingList = el("ul", { class: "particleSiblings" });
+    visibleSiblings.forEach((sibling) => {
+      siblingList.appendChild(el("li", {},
         el("strong", {}, sibling.phrase),
         el("span", {}, sibling.gloss),
       ));
     });
-    panel.appendChild(siblings);
+    panel.appendChild(siblingList);
     row.appendChild(panel);
   }
   return row;
