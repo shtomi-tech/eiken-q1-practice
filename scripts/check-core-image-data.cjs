@@ -241,6 +241,13 @@ for (const fileName of vocabFiles) {
 // assignParticleSlots() はスロットキーに datasetId を含むため、級プールでもスロットはセット単位で振られる。
 // この検査はその前提（級をまたいでスロットが連番にならないこと）が崩れていないことの確認であり、
 // 意図的にファイル単位の検査と同じ結果になる。
+for (const fileName of deliveryVocabFiles) {
+  assert.ok(
+    vocabFiles.includes(fileName),
+    `${fileName}: manifest が指す語彙ファイルが data/ にありません`,
+  );
+}
+
 const pooledByGrade = new Map();
 for (const [datasetId, dataset] of Object.entries(manifest.q1 || {})) {
   const match = datasetId.match(/^(eiken1|eiken2|eikenp1|eikenp2|eikentopic|iuhw)-/);
@@ -419,18 +426,21 @@ for (const [key, locations] of senseSiblingLocations.entries()) {
 }
 
 assert.ok(coreImageCount > 0, "coreImage を持つ熟語が1件以上必要です");
-assert.equal(particleChainCount, 174, "particle付きcoreImageは174件である必要があります");
+// 件数は固定しない。セットを追加しても落ちないよう、契約（1件ずつの構造）だけを検査して総数は記録に留める。
 assert.equal(particleChainLengths.get(2) || 0, 0, "particle付きcoreImageに2段chainを残さないでください");
-console.log(`particle chain coverage: ${particleChainCount}/174; lengths ${JSON.stringify(Object.fromEntries(particleChainLengths))}`);
-assert.equal(progressRows.length, 15, "manifest配信対象の熟語セットは15セットである必要があります");
-assert.equal(progressRows.reduce((sum, row) => sum + row.idioms, 0), 292, "manifest配信対象の熟語数は292件である必要があります");
+console.log(`particle chain coverage: ${particleChainCount} entries; lengths ${JSON.stringify(Object.fromEntries(particleChainLengths))}`);
+const deliveryIdiomTotal = progressRows.reduce((sum, row) => sum + row.idioms, 0);
+console.log(`core image delivery scope: ${progressRows.length} sets / ${deliveryIdiomTotal} idioms`);
 for (const row of progressRows) {
   console.log(`core image progress: ${row.fileName}: ${row.idioms} idioms / ${row.coreImage} coreImage`);
 }
 const uniqueCoreRows = [...uniqueDeliveryEntries.values()];
 const unannotatedRows = uniqueCoreRows.filter((row) => !row.hasCoreImage);
 for (const row of unannotatedRows) {
-  assert.ok(cReasons.has(normalizedPhrase(row.phrase)), `${row.phrase}: 未注釈の理由をC型一覧に記録してください`);
+  assert.ok(
+    cReasons.has(normalizedPhrase(row.phrase)),
+    `${row.phrase}: coreImage を付けるか、付けない理由を check-core-image-data.cjs の cReasons に追記してください（docs/CORE_IMAGE_AUTHORING.md 参照）`,
+  );
 }
 for (const phrase of cReasons.keys()) {
   assert.ok(
@@ -440,6 +450,5 @@ for (const phrase of cReasons.keys()) {
 }
 const particleBackedCount = uniqueCoreRows.filter((row) => row.hasCoreImage && row.item.coreImage.particle).length;
 const chainOnlyCount = uniqueCoreRows.filter((row) => row.hasCoreImage && !row.item.coreImage.particle).length;
-assert.equal(unannotatedRows.length, cReasons.size, "未注釈のC型熟語数が記録と一致していません");
 console.log(`core image unique categories: particle-backed ${particleBackedCount} / chain-only ${chainOnlyCount} / C ${unannotatedRows.length}`);
 console.log(`core image data contract: OK (${coreImageCount} entries)`);
