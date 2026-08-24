@@ -1,19 +1,144 @@
 {
   "meta": {
-    "note": "単語カードの語源パネル用。表示のみ。進捗キー・音声・選択肢には使わない。"
+    "note": "単語カードの語源パネル用。表示専用。進捗キー・音声・選択肢には使わない。段階1で語根20個と接辞15グループ以上を確定する。"
   },
   "roots": {
+    "spec": {
+      "gloss": "見る",
+      "origin": "ラテン語 specere",
+      "note": "目で見て、対象を見分けるイメージ。",
+      "variants": ["spic", "spect"]
+    },
+    "pos": {
+      "gloss": "置く",
+      "origin": "ラテン語 ponere",
+      "note": "ものを置いて、位置や状態を定めるイメージ。",
+      "variants": ["pon"]
+    },
+    "vert": {
+      "gloss": "回す・向ける",
+      "origin": "ラテン語 vertere",
+      "note": "向きを回して、別の方向へ向けるイメージ。",
+      "variants": ["vers"]
+    },
+    "fer": {
+      "gloss": "運ぶ",
+      "origin": "ラテン語 ferre",
+      "note": "ものを持って別の場所へ運ぶイメージ。"
+    },
+    "port": {
+      "gloss": "運ぶ",
+      "origin": "ラテン語 portare",
+      "note": "ものを運び、別の場所へ届けるイメージ。"
+    },
+    "luc": {
+      "gloss": "光",
+      "origin": "ラテン語 lux（lucis）",
+      "note": "光を当てて、見えるようにするイメージ。lucrativeは利益のlucrum由来で、この語根に含めない。",
+      "variants": ["lum", "lustr"]
+    },
+    "duc": {
+      "gloss": "導く",
+      "origin": "ラテン語 ducere",
+      "note": "引いて連れて行くイメージ。",
+      "variants": ["duct"]
+    },
+    "gress": {
+      "gloss": "歩む",
+      "origin": "ラテン語 gradi",
+      "note": "足を進め、歩いて通り抜けるイメージ。",
+      "variants": ["grad"]
+    },
     "voc": {
       "gloss": "呼ぶ・声",
       "origin": "ラテン語 vocare",
       "note": "声を出して呼ぶイメージ",
       "variants": ["vok"]
+    },
+    "scrib": {
+      "gloss": "書く",
+      "origin": "ラテン語 scribere",
+      "note": "文字を書き、記録として残すイメージ。",
+      "variants": ["script"]
+    },
+    "nunc": {
+      "gloss": "告げる",
+      "origin": "ラテン語 nuntiare",
+      "note": "知らせを声にして告げるイメージ。",
+      "variants": ["nounc"]
+    },
+    "ven": {
+      "gloss": "来る",
+      "origin": "ラテン語 venire",
+      "note": "こちらへ来て、出会うイメージ。",
+      "variants": ["vent"]
+    },
+    "ced": {
+      "gloss": "行く・譲る",
+      "origin": "ラテン語 cedere",
+      "note": "前へ進む、または場所を譲るイメージ。",
+      "variants": ["cess"]
+    },
+    "cap": {
+      "gloss": "取る",
+      "origin": "ラテン語 capere",
+      "note": "手を伸ばしてつかみ取るイメージ。caput由来のcapital・precipitation・escapeはこの語根に含めない。",
+      "variants": ["cept", "cip"]
+    },
+    "lect": {
+      "gloss": "集める・選ぶ",
+      "origin": "ラテン語 legere",
+      "note": "集めたものから選び取るイメージ。deflect・reflectはflect（曲げる）、relegationはlegare（送る）で、この語根に含めない。",
+      "variants": ["leg", "lig"]
+    },
+    "tract": {
+      "gloss": "引く",
+      "origin": "ラテン語 trahere",
+      "note": "力をかけて引き寄せるイメージ。"
+    },
+    "quir": {
+      "gloss": "求める",
+      "origin": "ラテン語 quaerere",
+      "note": "答えや情報を求めて探すイメージ。",
+      "variants": ["quis", "quest"]
+    },
+    "plac": {
+      "gloss": "なだめる・気に入る",
+      "origin": "ラテン語 placere",
+      "note": "相手をなだめ、気に入る状態にするイメージ。"
+    },
+    "cid": {
+      "gloss": "切る・落ちる",
+      "origin": "ラテン語 caedere / cadere",
+      "note": "切り分ける、または落ちることで状態が変わるイメージ。",
+      "variants": ["cis"]
+    },
+    "lev": {
+      "gloss": "軽い・上げる",
+      "origin": "ラテン語 levis / levare",
+      "note": "重さを軽くする、または持ち上げるイメージ。"
     }
   },
   "affixes": {
     "equi": { "gloss": "等しい", "kind": "prefix" },
     "e": { "gloss": "外へ", "kind": "prefix" },
     "ate": { "gloss": "〜にする（動詞化）", "kind": "suffix" },
-    "ative": { "gloss": "〜する性質の", "kind": "suffix" }
+    "ative": { "gloss": "〜する性質の", "kind": "suffix" },
+    "in": { "gloss": "中へ・否定", "kind": "prefix", "note": "場所なら「中へ」、否定なら「〜でない」の意味を選ぶ。b・m・pの前ではimになる。" },
+    "im": { "gloss": "中へ・否定", "kind": "prefix", "note": "inの異形。b・m・pの前で使う（impel・immigration）。意味の選び方はinと同じ。" },
+    "re": { "gloss": "再び・後ろへ", "kind": "prefix" },
+    "de": { "gloss": "下へ・離れて・完全に", "kind": "prefix" },
+    "con": { "gloss": "ともに・完全に", "kind": "prefix", "note": "b・m・pの前ではcomになる。" },
+    "com": { "gloss": "ともに・完全に", "kind": "prefix", "note": "conの異形。b・m・pの前で使う（commission・compose）。" },
+    "dis": { "gloss": "離れて・否定", "kind": "prefix" },
+    "pro": { "gloss": "前へ", "kind": "prefix" },
+    "ex": { "gloss": "外へ", "kind": "prefix", "note": "子音の前ではeになる（evoke・emanate）。" },
+    "sub": { "gloss": "下へ・副次的に", "kind": "prefix" },
+    "per": { "gloss": "通して・徹底的に", "kind": "prefix" },
+    "pre": { "gloss": "前もって", "kind": "prefix" },
+    "ion": { "gloss": "〜すること（名詞化）", "kind": "suffix" },
+    "ive": { "gloss": "〜する性質の", "kind": "suffix" },
+    "ous": { "gloss": "〜に満ちた", "kind": "suffix" },
+    "ify": { "gloss": "〜にする", "kind": "suffix" }
   }
 }

@@ -65,16 +65,29 @@ nonEmptyString(originsData.meta?.note, "word_origins.meta.note");
 assert.ok(rootsData.roots && typeof rootsData.roots === "object" && !Array.isArray(rootsData.roots), "roots 辞書が必要です");
 assert.ok(rootsData.affixes && typeof rootsData.affixes === "object" && !Array.isArray(rootsData.affixes), "affixes 辞書が必要です");
 assert.ok(originsData.origins && typeof originsData.origins === "object" && !Array.isArray(originsData.origins), "origins 辞書が必要です");
+assert.ok(Object.keys(rootsData.roots).length >= 20, "段階1では語根を20個以上登録してください");
+assert.ok(Object.keys(rootsData.affixes).length >= 15, "段階1では接辞を15個以上登録してください");
+
+// 段階1では辞書を先に確定させるため、originsから未参照の語根があっても正常です。
+const rootNames = new Set(Object.keys(rootsData.roots).map((root) => normalize(root)));
+const seenRootVariants = new Map();
 
 for (const [root, entry] of Object.entries(rootsData.roots)) {
   nonEmptyString(root, `roots.${root}`);
   assert.ok(entry && typeof entry === "object" && !Array.isArray(entry), `roots.${root} が不正です`);
   nonEmptyString(entry.gloss, `roots.${root}.gloss`);
   nonEmptyString(entry.origin, `roots.${root}.origin`);
-  if (entry.note != null) nonEmptyString(entry.note, `roots.${root}.note`);
+  nonEmptyString(entry.note, `roots.${root}.note`);
   if (entry.variants != null) {
     assert.ok(Array.isArray(entry.variants), `roots.${root}.variants は配列である必要があります`);
-    entry.variants.forEach((variant, index) => nonEmptyString(variant, `roots.${root}.variants[${index}]`));
+    entry.variants.forEach((variant, index) => {
+      const normalizedVariant = nonEmptyString(variant, `roots.${root}.variants[${index}]`).toLowerCase();
+      assert.notEqual(normalizedVariant, normalize(root), `${root}.variantsにroot自身を重複登録できません`);
+      assert.equal(rootNames.has(normalizedVariant), false, `${root}.variantsが他の語根キーと重複しています`);
+      const previousRoot = seenRootVariants.get(normalizedVariant);
+      assert.equal(previousRoot, undefined, `${root}.variantsが${previousRoot}のvariantsと重複しています`);
+      seenRootVariants.set(normalizedVariant, root);
+    });
   }
 }
 for (const [affix, entry] of Object.entries(rootsData.affixes)) {

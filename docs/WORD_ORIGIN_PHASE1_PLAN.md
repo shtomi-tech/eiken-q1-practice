@@ -3,7 +3,7 @@
 対象: `data/word_roots.json` / `scripts/check-word-origin-data.cjs` / `scripts/build_word_origin_stub.py`（新規）
 関連: [WORD_ORIGIN_PLAN.md](WORD_ORIGIN_PLAN.md)（全体計画）/ [WORD_ORIGIN_AUTHORING.md](WORD_ORIGIN_AUTHORING.md)（作成基準）/ [WORD_ORIGIN_FIX_PLAN.md](WORD_ORIGIN_FIX_PLAN.md)（段階0の手当て）
 前提: 段階0は `baf6fd4`「単語カードに語源表示を追加」でコミット済み（仕組み一式＋語根 `voc` の3語）
-状態: 未着手
+状態: 完了（2026-08-24）。接辞は `in`/`im`、`con`/`com` を独立エントリとして登録した
 
 ## 0. この段階でやること / やらないこと
 
