@@ -31,7 +31,7 @@ assert.ok(coreImageBranch !== -1, "buildFlashCard は coreImage を判定する�
 assert.ok(etymologyBranch !== -1, "buildFlashCard は単語の etymology 表示を維持する必要があります");
 assert.ok(coreImageBranch < etymologyBranch, "coreImage は etymology より先に評価する必要があります");
 
-for (const marker of ["coreChain", "coreChainStep", "coreChainTerm", "coreChainGloss", "coreChainResult"]) {
+for (const marker of ["coreChain", "coreChainStep", "coreChainTerm", "coreChainGloss"]) {
   assert.ok(flashCoreImageBody.includes(marker), `flashCoreImage に ${marker} が必要です`);
 }
 assert.ok(flashCoreImageBody.includes('el("ol"'), "核心イメージの連鎖は ol で表現する必要があります");
@@ -52,7 +52,6 @@ for (const selector of [
   ".coreChainStep",
   ".coreChainTerm",
   ".coreChainGloss",
-  ".coreChainResult",
   ".particlePanel",
   ".particleSiblings",
 ]) {

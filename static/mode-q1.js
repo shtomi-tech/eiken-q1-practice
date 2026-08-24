@@ -2239,10 +2239,6 @@ function flashCoreImage(item) {
   });
   row.appendChild(chain);
 
-  const terms = (core.chain || []).filter((step) => step.term).map((step) => step.term).join(" ");
-  const lastStep = (core.chain || [])[(core.chain || []).length - 1];
-  const result = lastStep && lastStep.gloss || item.meaning;
-  row.appendChild(el("p", { class: "coreChainResult" }, terms ? `${terms}（${result}）` : result));
   if (core.note) row.appendChild(el("p", { class: "coreChainNote" }, core.note));
 
   const particle = core.particle ? particleMap[core.particle] : null;
