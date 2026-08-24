@@ -77,6 +77,7 @@
 - **間隔復習カード（`.spacedReviewCard`）**: 通常学習カードの兄弟として置き、Clayの左4px罫だけで復習導線を示す。カード内のCTAは意味復習セッションだけを開始する
 - **問題セットUnitカード（`.datasetUnitCard`）**: Parchment地＋hairline枠、角丸md。現在選択中はInkの左4px罫＋Surface Strong地（`aria-current="true"`）、CLEAR済みはOKの左4px罫＋「✓ CLEAR」文言、要復習ありはClayの左4px罫＋「！要復習n問」文言。色だけに頼らず必ず文言を併記する。番号バッジは表示順であり永続IDではない
 - **熟語の核心イメージ（`.coreChain` `.particlePanel`）**: 熟語の暗記カードでは、意味の直下に構成語から中心義へ進む2〜5段の連鎖を置く。連鎖はParchment地＋hairline枠のステップで示し、最終ステップが中心義になるため結論行は置かない。不変化詞の共有イメージは開閉させず、mono見出し（`.particlePanelTitle`）付きで常に表示する。用法別データがある場合は見出しに用法名を出し、同じ不変化詞の全体像も説明文に残す。矢印はCSS疑似要素の装飾とし、読み上げ順に不要な記号を混ぜない。480px以下では縦積みに切り替える
+- **単語の語源表示（`.originChip` `.originDerivation` `.wordOriginPanel`）**: 単語の暗記カードでは、意味の直下・例文の前に置く。構成要素はチップ（`.originChip`）で横並びにし、`+` で連結する。チップは種別ラベル（接頭辞／語根／接尾辞）・綴り・訳の3段で、色だけで種別を区別しない。導出行（`.originDerivation`）はhairlineで区切った1行とし、矢印の後ろを中心義にする。語根パネル（`.wordOriginPanel`）は熟語の `.particlePanel` と同じ構造を流用し、見出しは「語根「〜」＝訳（出典）」、仲間語は最大3語とする。480px以下ではチップを縦積みにし、行間の `+` は残す
 - **強調タイル（`.hero` `.doneBanner` `.completionCard`）**: Ink地＋Parchment文字の反転表示、角丸lg。「学習フローの始まり」と「締めくくり」を示す
 - **選択肢（`.choiceBtn` `.dictChoice`）**: Paper地＋Ink文字＋hairline枠、角丸md。ホバー/選択でInk反転。正解＝OK色の2px枠、不正解＝NG色の2px枠（coral化しない。主要CTAとの混同を避けるため中立表現を維持）
 - **番号バッジ（`.key`）**: 24×24pxの円形（角丸pill）、currentColor枠

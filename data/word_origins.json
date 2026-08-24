@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "note": "キー = data/lemmas.json 適用後の原形（小文字）。表示のみ。"
+  },
+  "origins": {
+    "equivocate": {
+      "type": "A",
+      "root": "voc",
+      "parts": [
+        { "form": "equi", "kind": "prefix", "gloss": "等しい" },
+        { "form": "voc", "kind": "root", "gloss": "呼ぶ・声" },
+        { "form": "ate", "kind": "suffix", "gloss": "〜にする" }
+      ],
+      "derivation": "等しく聞こえる声を出す → 言葉を濁す"
+    },
+    "evocative": {
+      "type": "A",
+      "root": "voc",
+      "parts": [
+        { "form": "e", "kind": "prefix", "gloss": "外へ" },
+        { "form": "voc", "kind": "root", "gloss": "呼ぶ・声" },
+        { "form": "ative", "kind": "suffix", "gloss": "〜する性質の" }
+      ],
+      "derivation": "外へ声を呼び出す → 感情を喚起する"
+    },
+    "liaison": {
+      "type": "B",
+      "derivation": "フランス語 lier（結ぶ）から。人と人を結ぶ連絡役 → 連絡"
+    }
+  }
+}

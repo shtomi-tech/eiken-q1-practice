@@ -58,12 +58,59 @@ let ALL_DATASETS = {};
 let DEFAULT_DATASET_ID = null;
 let lemmaMap = {};
 let particleMap = {};
+let wordRoots = { roots: {}, affixes: {} };
+let wordOriginMap = {};
+let wordOriginRootIndex = new Map();
 let aiCheckEndpoint = "";
 async function loadManifest() {
   const manifest = await fetch(MANIFEST_URL, { cache: "no-store" }).then((r) => r.json());
   ALL_DATASETS = manifest.q1;
   DATASETS = ALL_DATASETS;
   DEFAULT_DATASET_ID = manifest.defaultDatasetId;
+}
+
+async function loadWordOriginData() {
+  wordRoots = { roots: {}, affixes: {} };
+  wordOriginMap = {};
+  wordOriginRootIndex = new Map();
+  try {
+    const response = await fetch("data/word_roots.json", { cache: "no-store" });
+    if (!response.ok) throw new Error(`word_roots.json: HTTP ${response.status}`);
+    const data = await response.json();
+    if (data && data.roots && typeof data.roots === "object" && !Array.isArray(data.roots)) {
+      wordRoots = {
+        roots: data.roots,
+        affixes: data.affixes && typeof data.affixes === "object" && !Array.isArray(data.affixes)
+          ? data.affixes
+          : {},
+      };
+    }
+  } catch (e) {
+    // 語源辞書が未配信でも、通常の単語カードはそのまま使える。
+  }
+  try {
+    const response = await fetch("data/word_origins.json", { cache: "no-store" });
+    if (!response.ok) throw new Error(`word_origins.json: HTTP ${response.status}`);
+    const data = await response.json();
+    if (data && data.origins && typeof data.origins === "object" && !Array.isArray(data.origins)) {
+      wordOriginMap = Object.fromEntries(
+        Object.entries(data.origins).map(([lemma, origin]) => [String(lemma).toLowerCase(), origin]),
+      );
+    }
+  } catch (e) {
+    // 語源辞書が未配信でも、通常の単語カードはそのまま使える。
+  }
+  for (const [lemma, origin] of Object.entries(wordOriginMap)) {
+    if (!origin || origin.type !== "A" || !origin.root) continue;
+    const rootEntry = wordRoots.roots[origin.root];
+    const rootForms = [origin.root, ...(Array.isArray(rootEntry?.variants) ? rootEntry.variants : [])];
+    rootForms.forEach((form) => {
+      const key = String(form).toLowerCase();
+      const lemmas = wordOriginRootIndex.get(key) || [];
+      if (!lemmas.includes(lemma)) lemmas.push(lemma);
+      wordOriginRootIndex.set(key, lemmas);
+    });
+  }
 }
 
 function applyGradeScope(gradeCode) {
@@ -112,10 +159,20 @@ const state = {
   userExamples: {},
 };
 
-const RESUMABLE_MODES = new Set(["learn", "review", "meaning", "final"]);
+const RESUME_STAGE_RULES = {
+  learn: ["flash", "check", "wrongReview", "practice", "done"],
+  review: ["practice", "done"],
+  meaning: ["check", "done"],
+  final: ["check", "done"],
+};
+const RESUMABLE_MODES = new Set(Object.keys(RESUME_STAGE_RULES));
 let resumeRecoveryMessage = "";
 let resumeUnavailable = false;
 let needsGradeChoice = false;
+
+function resumeStageAllowed(mode, stage) {
+  return Boolean(RESUME_STAGE_RULES[mode]?.includes(stage));
+}
 
 async function loadAiConfig() {
   aiCheckEndpoint = "";
@@ -349,6 +406,36 @@ function resolveItem(snapshot, pool) {
   }
   return candidates.find((item) => item.type === snapshot.type && surfaceOf(item) === snapshot.surface) || null;
 }
+function resumeIndexSupported(value, length, allowEnd = false) {
+  const index = Number(value);
+  const upperBound = allowEnd ? length : length - 1;
+  return Number.isInteger(index) && index >= 0 && index <= upperBound;
+}
+function resumeQuestionSupported(value) {
+  const q = Number(value);
+  return Number.isInteger(q) && Array.isArray(state.itemsByQ[q]) && state.itemsByQ[q].length > 0;
+}
+function resumeDataSupported(saved, items, checkOrder) {
+  if (!resumeStageAllowed(saved.mode, saved.stage)) return false;
+  if (saved.mode === "learn") {
+    if (!resumeQuestionSupported(saved.q) || !items.length) return false;
+    if (saved.stage === "flash") return resumeIndexSupported(saved.flashIdx, items.length);
+    if (["check", "wrongReview", "practice"].includes(saved.stage) && !checkOrder.length) return false;
+    if (["check", "wrongReview"].includes(saved.stage)
+      && !resumeIndexSupported(saved.checkIdx, checkOrder.length)) return false;
+    if (saved.stage === "wrongReview" && (!Array.isArray(saved.wrongLog) || !saved.wrongLog.length)) return false;
+    return true;
+  }
+  if (saved.mode === "review") {
+    const q = Number(saved.q);
+    return resumeQuestionSupported(q)
+      && items.length
+      && Array.isArray(saved.reviewQueue)
+      && saved.reviewQueue.some((candidate) => Number(candidate) === q);
+  }
+  if (!checkOrder.length) return false;
+  return saved.stage === "done" || resumeIndexSupported(saved.checkIdx, checkOrder.length);
+}
 function resumeDescription(resume) {
   if (!resume) return "";
   if (resume.mode === "learn") {
@@ -371,7 +458,9 @@ function resumeDescription(resume) {
 }
 function currentResume() {
   const resume = state.progress && state.progress.resume;
-  return resume && RESUMABLE_MODES.has(resume.mode) && !resumeUnavailable ? resume : null;
+  return resume && RESUMABLE_MODES.has(resume.mode)
+    && resumeStageAllowed(resume.mode, resume.stage)
+    && !resumeUnavailable ? resume : null;
 }
 function saveResume() {
   if (!session) return;
@@ -424,6 +513,11 @@ async function restoreSession() {
     resumeUnavailable = true;
     return false;
   }
+  if (!resumeStageAllowed(saved.mode, saved.stage)) {
+    resumeRecoveryMessage = "途中記録は保持していますが、対応していない状態のため自動再開できません。第1問から再開してください。";
+    resumeUnavailable = true;
+    return false;
+  }
   // プール済み「意味だけ演習」を再開する場合のみ、同じ級の全回プールを取得。
   // 取得失敗（オフライン等）は「対象が無い」と区別し、resumeを消さずに諦める。
   let pool = null;
@@ -436,7 +530,7 @@ async function restoreSession() {
   }
   const items = (saved.items || []).map((s) => resolveItem(s, pool)).filter(Boolean);
   let checkOrder = (saved.checkOrder || []).map((s) => resolveItem(s, pool)).filter(Boolean);
-  if ((saved.mode === "learn" && !items.length) || ((saved.mode === "meaning" || saved.mode === "final") && !checkOrder.length)) {
+  if (!resumeDataSupported(saved, items, checkOrder)) {
     resumeRecoveryMessage = "途中記録は保持していますが、現在の問題データと一致しないため自動再開できません。第1問から再開してください。";
     resumeUnavailable = true;
     return false;
@@ -699,6 +793,28 @@ function assignParticleSlots(items) {
   }
   return items;
 }
+function wordOriginLemma(item) {
+  if (!item || item.type !== "word") return "";
+  const surface = String(surfaceOf(item) || "").toLowerCase();
+  return String(lemmaMap[surface] || surface).toLowerCase();
+}
+function wordOriginFor(item) {
+  const lemma = wordOriginLemma(item);
+  return lemma ? wordOriginMap[lemma] || null : null;
+}
+function assignWordOriginSlots(items) {
+  const slots = new Map();
+  for (const item of items) {
+    const origin = wordOriginFor(item);
+    if (!origin || !origin.root) continue;
+    const datasetId = item._datasetId || state.datasetId || "";
+    const key = `${datasetId}:${origin.root}`;
+    const slot = slots.get(key) || 0;
+    item._wordOriginSlot = slot;
+    slots.set(key, slot + 1);
+  }
+  return items;
+}
 // 同期的に使える解決済みプール。未読み込み・級不明のときは null。
 function pooledData(grade = currentGrade()) {
   return (grade && pooledDataByGrade.get(grade)) || null;
@@ -728,6 +844,7 @@ async function loadPooledItems(grade = currentGrade()) {
         }
       }
       assignParticleSlots(items);
+      assignWordOriginSlots(items);
       return { items, meaningPool };
     }).catch((e) => {
       // 失敗したPromiseを残すと以後ずっと同じ失敗を返すため、再試行できるようにする。
@@ -1139,6 +1256,11 @@ async function loadData(datasetId = state.datasetId) {
   state.meaningPool = { word: [], idiom: [] };
   state.progress = loadProgress(datasetId);
   state.userExamples = loadUserExamples(datasetId);
+  const savedResume = state.progress.resume;
+  if (savedResume && (!RESUMABLE_MODES.has(savedResume.mode) || !resumeStageAllowed(savedResume.mode, savedResume.stage))) {
+    resumeRecoveryMessage = "以前の形式の途中記録は保持しています。現在の学習フローでは、第1問から再開してください。";
+    resumeUnavailable = true;
+  }
   try { localStorage.setItem(datasetStorageKey(), datasetId); } catch (e) { /* ignore */ }
 
   const current = dataset();
@@ -1151,6 +1273,7 @@ async function loadData(datasetId = state.datasetId) {
   const idioms = (vocab.idioms || []).map((i) => ({ ...i, type: "idiom" }));
   const all = words.concat(idioms);
   assignParticleSlots(all);
+  assignWordOriginSlots(all);
 
   for (const it of all) {
     if (!state.itemsByQ[it.q]) state.itemsByQ[it.q] = [];
@@ -1835,6 +1958,10 @@ function resetSessionScroll() {
 
 function startLearn(q) {
   const items = state.itemsByQ[q];
+  if (!Array.isArray(items) || !items.length) {
+    renderHome();
+    return false;
+  }
   session = {
     mode: "learn",
     q,
@@ -1851,6 +1978,7 @@ function startLearn(q) {
   };
   renderSession();
   resetSessionScroll();
+  return true;
 }
 
 function startReview() {
@@ -1953,6 +2081,10 @@ async function startMeaningPractice(dueOnly = true, queueOverride = null) {
 }
 
 function startFinalCheck() {
+  if (!finalUnlocked()) {
+    renderHome();
+    return false;
+  }
   const queue = shuffle(allVocabularyItems());
   session = {
     mode: "final",
@@ -1971,6 +2103,7 @@ function startFinalCheck() {
   };
   renderSession();
   resetSessionScroll();
+  return true;
 }
 
 function renderSession() {
@@ -2234,11 +2367,100 @@ function buildFlashCard(item) {
 
   const inner = el("div", { class: "flashBody" });
   inner.appendChild(flashRow("意味", item.meaning, "flashMeaning"));
-  if (item.coreImage) inner.appendChild(flashCoreImage(item));
-  else if (item.etymology) inner.appendChild(flashRow("語源・なりたち", item.etymology, "flashEtym"));
+  if (item.type === "word") {
+    const wordOrigin = flashWordOrigin(item);
+    if (wordOrigin) inner.appendChild(wordOrigin);
+  } else if (item.type === "idiom" && item.coreImage) {
+    inner.appendChild(flashCoreImage(item));
+  }
   if (item.example) inner.appendChild(flashExampleRow(item));
   card.appendChild(inner);
   return card;
+}
+
+function rotatingSiblingWindow(siblings, slot = 0) {
+  if (siblings.length <= 3) return siblings;
+  return [0, 1, 2].map((k) => siblings[(slot + k) % siblings.length]);
+}
+
+function wordOriginSiblingItems(item) {
+  const origin = wordOriginFor(item);
+  if (!origin || !origin.root) return [];
+  const ownLemma = wordOriginLemma(item);
+  const rootLemmas = new Set(wordOriginRootIndex.get(String(origin.root).toLowerCase()) || []);
+  const collect = (items) => {
+    const seen = new Set();
+    return items
+      .filter((candidate) => candidate && candidate.type === "word")
+      .filter((candidate) => {
+        const lemma = wordOriginLemma(candidate);
+        if (!lemma || lemma === ownLemma || !rootLemmas.has(lemma) || seen.has(lemma)) return false;
+        seen.add(lemma);
+        return true;
+      });
+  };
+  const currentItems = collect(allVocabularyItems());
+  if (currentItems.length) return currentItems;
+  const pooled = pooledData(currentGrade());
+  return collect(pooled?.items || []);
+}
+
+function originKindLabel(kind) {
+  return { prefix: "接頭辞", root: "語根", suffix: "接尾辞" }[kind] || "構成要素";
+}
+
+function flashWordOrigin(item) {
+  const origin = wordOriginFor(item);
+  if (!origin) return null;
+  const row = el("div", { class: "flashRow wordOriginRow" });
+  row.appendChild(el("strong", {}, "語源・なりたち"));
+
+  if (origin.type === "B") {
+    if (origin.derivation) row.appendChild(el("p", { class: "originDerivation" }, origin.derivation));
+    return row;
+  }
+  if (origin.type !== "A") return row;
+
+  if (Array.isArray(origin.parts) && origin.parts.length) {
+    const chips = el("div", { class: "originChips", "aria-label": "語源の構成" });
+    origin.parts.forEach((part, index) => {
+      if (index) chips.appendChild(el("span", { class: "originChipJoin", "aria-hidden": "true" }, "+"));
+      const kind = originKindLabel(part.kind);
+      chips.appendChild(el("span", {
+        class: `originChip originChip-${part.kind}`,
+        "aria-label": `${kind} ${part.form}：${part.gloss}`,
+      },
+      el("span", { class: "originChipKind" }, kind),
+      el("span", { class: "originChipForm" }, part.form),
+      el("span", { class: "originChipGloss" }, part.gloss)));
+    });
+    row.appendChild(chips);
+  }
+  if (origin.derivation) row.appendChild(el("p", { class: "originDerivation" }, origin.derivation));
+
+  const siblingItems = wordOriginSiblingItems(item);
+  const visibleSiblings = rotatingSiblingWindow(
+    siblingItems,
+    Number.isInteger(item._wordOriginSlot) ? item._wordOriginSlot : 0,
+  );
+  if (visibleSiblings.length) {
+    const rootEntry = wordRoots.roots[origin.root] || {};
+    const panel = el("div", { class: "particlePanel wordOriginPanel" });
+    const rootOrigin = rootEntry.origin ? `（${rootEntry.origin}）` : "";
+    panel.appendChild(el("p", { class: "particlePanelTitle" },
+      `語根「${origin.root}」＝${rootEntry.gloss || "共通の語根"}${rootOrigin}`));
+    if (rootEntry.note) panel.appendChild(el("p", { class: "particleCore" }, rootEntry.note));
+    const siblingList = el("ul", { class: "particleSiblings" });
+    visibleSiblings.forEach((sibling) => {
+      siblingList.appendChild(el("li", {},
+        el("strong", {}, wordOriginLemma(sibling) || surfaceOf(sibling)),
+        el("span", {}, sibling.meaning),
+      ));
+    });
+    panel.appendChild(siblingList);
+    row.appendChild(panel);
+  }
+  return row;
 }
 
 function flashCoreImage(item) {
@@ -2273,9 +2495,7 @@ function flashCoreImage(item) {
   ]);
   const filteredSiblings = siblingPool.filter((sibling) => !ownPhrases.has(normalizedSurface(sibling.phrase)));
   const slot = Number.isInteger(item._particleSlot) ? item._particleSlot : 0;
-  const visibleSiblings = filteredSiblings.length <= 3
-    ? filteredSiblings
-    : [0, 1, 2].map((k) => filteredSiblings[(slot + k) % filteredSiblings.length]);
+  const visibleSiblings = rotatingSiblingWindow(filteredSiblings, slot);
 
   if ((particle || overrideSiblings) && visibleSiblings.length) {
     const panel = el("div", { class: "particlePanel" });
@@ -2667,8 +2887,9 @@ function appendCheckFeedback(box, item, surface, correct, isCorrect) {
   if (item.coreImage && Array.isArray(item.coreImage.chain)) {
     fb.appendChild(el("p", { class: "trans coreImageFeedback" },
       item.coreImage.chain.map((step) => step.gloss).join(" → ")));
-  } else if (item.etymology) {
-    fb.appendChild(el("p", { class: "trans" }, item.etymology));
+  } else {
+    const origin = item.type === "word" ? wordOriginFor(item) : null;
+    if (origin?.derivation) fb.appendChild(el("p", { class: "trans" }, origin.derivation));
   }
   box.appendChild(fb);
 
@@ -2757,7 +2978,7 @@ function renderWrongReview(body) {
     card.classList.add("reviewCard");
     const wrongLine = el("div", { class: "flashRow" },
       el("strong", {}, "選んだ意味"),
-      el("div", { class: "flashEtym" }, picked + (owner ? `　→　これは「${surfaceOf(owner)}」の意味です` : "")),
+      el("div", { class: "wrongReviewMeaning" }, picked + (owner ? `　→　これは「${surfaceOf(owner)}」の意味です` : "")),
     );
     card.querySelector(".flashBody").appendChild(wrongLine);
     const checkBtn = el("button", { class: "ghost smallGhost reviewCheckBtn", type: "button" }, "確認した");
@@ -3007,6 +3228,7 @@ async function boot() {
     } catch (e) {
       particleMap = {};
     }
+    await loadWordOriginData();
     await loadAiConfig();
 
     // 旧準1級アプリのクラウド進捗は読み取り専用で一度だけ取り込む。

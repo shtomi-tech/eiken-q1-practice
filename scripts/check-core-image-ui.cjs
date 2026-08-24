@@ -22,6 +22,7 @@ function extractFunctionBody(source, name) {
 
 const buildFlashCardBody = extractFunctionBody(js, "buildFlashCard");
 const flashCoreImageBody = extractFunctionBody(js, "flashCoreImage");
+const rotatingSiblingWindowBody = extractFunctionBody(js, "rotatingSiblingWindow");
 const appendCheckFeedbackBody = extractFunctionBody(js, "appendCheckFeedback");
 const bootBody = extractFunctionBody(js, "boot");
 const loadDataBody = extractFunctionBody(js, "loadData");
@@ -30,9 +31,11 @@ const assignParticleSlotsBody = extractFunctionBody(js, "assignParticleSlots");
 
 const coreImageBranch = buildFlashCardBody.indexOf("item.coreImage");
 const etymologyBranch = buildFlashCardBody.indexOf("item.etymology");
+const wordOriginBranch = buildFlashCardBody.indexOf("flashWordOrigin");
 assert.ok(coreImageBranch !== -1, "buildFlashCard は coreImage を判定する必要があります");
-assert.ok(etymologyBranch !== -1, "buildFlashCard は単語の etymology 表示を維持する必要があります");
-assert.ok(coreImageBranch < etymologyBranch, "coreImage は etymology より先に評価する必要があります");
+assert.equal(etymologyBranch, -1, "buildFlashCard は旧etymology表示を使ってはいけません");
+assert.ok(wordOriginBranch !== -1, "buildFlashCard は単語の語源表示を判定する必要があります");
+assert.ok(buildFlashCardBody.includes('item.type === "idiom"'), "coreImageは熟語カードでだけ表示する必要があります");
 
 for (const marker of ["coreChain", "coreChainStep", "coreChainTerm", "coreChainGloss"]) {
   assert.ok(flashCoreImageBody.includes(marker), `flashCoreImage に ${marker} が必要です`);
@@ -44,12 +47,13 @@ assert.ok(flashCoreImageBody.includes("particleMap"), "不変化詞パネルは�
 assert.ok(flashCoreImageBody.includes("particleSense"), "不変化詞パネルはparticleSenseを参照する必要があります");
 assert.ok(flashCoreImageBody.includes("core.siblings"), "coreImage.siblingsの例外上書きを参照する必要があります");
 assert.ok(flashCoreImageBody.includes("_particleSlot"), "仲間例の決定的な表示位置を参照する必要があります");
+assert.ok(flashCoreImageBody.includes("rotatingSiblingWindow"), "仲間例のローテーションは共通関数を使う必要があります");
 assert.match(
-  flashCoreImageBody,
-  /filteredSiblings\[\(slot \+ k\) % filteredSiblings\.length\]/,
+  rotatingSiblingWindowBody,
+  /siblings\[\(slot \+ k\) % siblings\.length\]/,
   "仲間例はslotから1つずつ進む決定的オフセットで選ぶ必要があります",
 );
-assert.equal(flashCoreImageBody.includes("slot * 3"), false, "仲間例の選択で3刻みのオフセットを使ってはいけません");
+assert.equal(rotatingSiblingWindowBody.includes("slot * 3"), false, "仲間例の選択で3刻みのオフセットを使ってはいけません");
 assert.equal(flashCoreImageBody.includes("Math.random"), false, "仲間例の表示に乱数を使ってはいけません");
 const overrideIdx = flashCoreImageBody.indexOf("core.siblings");
 const senseIdx = flashCoreImageBody.indexOf("particleSense");

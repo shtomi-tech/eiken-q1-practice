@@ -50,6 +50,8 @@
 - 1級テーマ別5セット: `data/questions_topic_set-*.json` / `data/vocab_topic_set-*.json`
 - 国際医療福祉大学 基礎試験: `data/questions_iuhw_set-1.json` / `data/vocab_iuhw_set-1.json`
 - 熟語の核心イメージ共有辞書（表示専用）: `data/particle_images.json`
+- 単語の語根・接辞辞書（表示専用）: `data/word_roots.json`
+- 単語の語源分解（表示専用・原形キー）: `data/word_origins.json`
 - 問題セット一覧: `data/manifest.json` の `q1`
 
 準1級のQ1データは、全体過去問データから次で抽出します。
@@ -92,7 +94,7 @@ py -3 scripts/generate_tts_1.py --grade iuhw --round set-1
 
 ## 暗記カードの共通構成
 
-全級で、見出し語・発音記号・品詞・意味・語源（収録されている場合）・例文・例文の日本語訳を同じ順序で表示します。
+全級で、見出し語・発音記号・品詞・意味・語源（収録されている場合）・例文・例文の日本語訳を同じ順序で表示します。A型の語源はチップ・導出行・語根パネル、B型の語源は由来の一行として表示します。
 1級の例文は公式の設問文を流用せず、語句ごとに作成したオリジナル英文と日本語訳を表示します。
 
 ## 暗記カードの例文訳

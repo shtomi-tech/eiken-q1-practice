@@ -925,7 +925,58 @@ h2 {
   margin-bottom: 5px;
 }
 .flashMeaning { font-size: 19px; font-family: var(--serif); }
-.flashEtym { font-size: 14px; }
+.wrongReviewMeaning { font-size: 14px; }
+.originChips {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.originChip {
+  display: flex;
+  min-width: 78px;
+  max-width: 100%;
+  flex: 0 1 auto;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 8px;
+  row-gap: 2px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--parchment);
+  padding: 8px 10px;
+}
+.originChip-prefix { background: var(--surface-soft); }
+.originChip-root { background: var(--surface-strong); }
+.originChip-suffix { background: var(--surface-soft); }
+.originChipKind {
+  width: 100%;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .08em;
+}
+.originChipForm {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+.originChipGloss { color: var(--muted); font-size: 12px; }
+.originChipJoin {
+  align-self: center;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 14px;
+}
+.originDerivation {
+  margin: 12px 0 0;
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.wordOriginPanel { margin-top: 14px; }
 .coreChain {
   display: grid;
   grid-auto-flow: column;
@@ -1008,6 +1059,7 @@ h2 {
   gap: 2px;
 }
 .particleSiblings strong { font-size: 13px; }
+.wordOriginPanel .particleSiblings strong { text-transform: none; }
 .particleSiblings span { color: var(--muted); font-size: 12px; }
 .flashEx { font-size: 15px; }
 .flashEx em { font-style: normal; border-bottom: 2px solid var(--ink); padding: 0 2px; }
@@ -1015,6 +1067,14 @@ h2 {
 .flashExampleTranslationLabel { display: block; margin-bottom: 3px; font-family: var(--mono); font-size: 10px; letter-spacing: .12em; }
 
 @media (max-width: 480px) {
+  .originChips { gap: 6px; }
+  .originChip { min-width: min(78px, 100%); }
+  .originChipJoin {
+    flex-basis: 100%;
+    height: auto;
+    overflow: visible;
+    text-align: center;
+  }
   .coreChain {
     grid-auto-flow: row;
     grid-auto-columns: auto;
