@@ -3,7 +3,7 @@
 対象: `data/word_origins.json` / `scripts/check-word-origin-data.cjs`
 関連: [WORD_ORIGIN_PLAN.md](WORD_ORIGIN_PLAN.md)（全体計画）/ [WORD_ORIGIN_PHASE1_PLAN.md](WORD_ORIGIN_PHASE1_PLAN.md)（辞書の確定）/ [WORD_ORIGIN_AUTHORING.md](WORD_ORIGIN_AUTHORING.md)（作成基準）
 前提: 段階0＝`baf6fd4`（仕組み一式）、段階1＝`db3bdee`（語根20・接辞20の辞書）
-状態: 未着手
+状態: 完了（2026-08-25）
 
 ## 0. この段階のかたち
 

@@ -95,6 +95,11 @@ for (const [affix, entry] of Object.entries(rootsData.affixes)) {
   assert.ok(entry && typeof entry === "object" && !Array.isArray(entry), `affixes.${affix} が不正です`);
   nonEmptyString(entry.gloss, `affixes.${affix}.gloss`);
   assert.ok(["prefix", "suffix"].includes(entry.kind), `affixes.${affix}.kind はprefix/suffixである必要があります`);
+  if (entry.kind === "suffix") {
+    assert.match(affix, /^-.+/, `affixes.${affix}: suffixのキーは先頭ハイフン付きである必要があります`);
+  } else {
+    assert.doesNotMatch(affix, /^-/, `affixes.${affix}: prefixのキーにハイフンは付けません`);
+  }
 }
 
 const lemmaMap = Object.fromEntries(
@@ -113,13 +118,21 @@ for (const fileName of fs.readdirSync(DATA_DIR).filter((name) => /^vocab_.*\.jso
 }
 
 const cReasons = new Map([
-  ["thwart", "ゲルマン系の不透明語で、接辞＋語根の分解が学習上の助けにならない"],
-  ["balk", "ゲルマン系の不透明語で、綴りから安全な語根を取り出せない"],
+  ["thwart", "general: ゲルマン系の不透明語で、接辞＋語根の分解が学習上の助けにならない"],
+  ["balk", "general: ゲルマン系の不透明語で、綴りから安全な語根を取り出せない"],
 ]);
-for (const [lemma, reason] of cReasons) nonEmptyString(reason, `cReasons.${lemma}`);
+for (const [lemma, reason] of cReasons) {
+  nonEmptyString(reason, `cReasons.${lemma}`);
+  const reasonRoot = reason.split(":", 1)[0].trim();
+  assert.ok(
+    reasonRoot === "general" || Object.prototype.hasOwnProperty.call(rootsData.roots, reasonRoot),
+    `cReasons.${lemma} の理由には語根名またはgeneralを付けてください`,
+  );
+}
 
 const originEntries = Object.entries(originsData.origins);
 assert.ok(originEntries.length >= 3, "段階0ではパイロット語を3語以上登録してください");
+const aOriginsByRoot = new Map();
 for (const [lemma, origin] of originEntries) {
   assert.ok(vocabularyMeanings.has(lemma), `${lemma}: lemmas適用後の語彙データに存在しません`);
   assert.ok(origin && typeof origin === "object" && !Array.isArray(origin), `${lemma}: originが不正です`);
@@ -140,13 +153,24 @@ for (const [lemma, origin] of originEntries) {
       const form = nonEmptyString(part.form, `${label}.form`).toLowerCase();
       assert.ok(["prefix", "root", "suffix"].includes(part.kind), `${label}.kind が不正です`);
       nonEmptyString(part.gloss, `${label}.gloss`);
-      assert.ok(normalize(lemma).includes(normalize(form)), `${label}.form が原形の綴りに含まれていません`);
+      const spellingForm = form.replace(/^-/, "");
+      assert.ok(spellingForm, `${label}.form の綴り部分が空です`);
+      assert.ok(normalize(lemma).includes(normalize(spellingForm)), `${label}.form が原形の綴りに含まれていません`);
+      if (part.kind !== "root") {
+        assert.ok(
+          Object.prototype.hasOwnProperty.call(rootsData.affixes, form),
+          `${label}.form の接辞 ${form} がaffixes辞書にありません`,
+        );
+      }
       if (part.kind === "root") {
         rootPartCount += 1;
         assert.ok(rootForms.has(form), `${label}.form はrootまたはvariantsに一致する必要があります`);
       }
     });
     assert.ok(rootPartCount >= 1, `${lemma}: A型にはrootのpartsが1つ以上必要です`);
+    const rootLemmas = aOriginsByRoot.get(origin.root) || [];
+    rootLemmas.push(lemma);
+    aOriginsByRoot.set(origin.root, rootLemmas);
   } else {
     assert.equal(origin.parts, undefined, `${lemma}: B型にpartsは付けません`);
     assert.equal(origin.root, undefined, `${lemma}: B型にrootは付けません`);
@@ -156,6 +180,13 @@ for (const [lemma, origin] of originEntries) {
     vocabularyMeanings.get(lemma).some((meaning) => meaningOverlap(origin.derivation, meaning)),
     `${lemma}: derivationの末尾がvocab meaningの中心義と結び付いていません`,
   );
+}
+
+for (const [root, lemmas] of aOriginsByRoot) {
+  if (lemmas.length < 2) continue;
+  const reverseHits = originEntries.filter(([, origin]) => origin.type === "A" && origin.root === root);
+  assert.ok(reverseHits.length >= 2, `${root}: A型の仲間語逆引きが2語未満です`);
+  assert.ok(new Set(reverseHits.map(([lemma]) => lemma)).size >= 2, `${root}: A型の仲間語が重複しています`);
 }
 
 for (const [lemma, reason] of cReasons) {

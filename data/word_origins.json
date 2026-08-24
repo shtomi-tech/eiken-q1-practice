@@ -3,13 +3,552 @@
     "note": "キー = data/lemmas.json 適用後の原形（小文字）。表示のみ。"
   },
   "origins": {
+    "auspice": {
+      "type": "B",
+      "derivation": "鳥を観察して吉凶を読むことから → 吉兆"
+    },
+    "auspicious": {
+      "type": "B",
+      "derivation": "吉兆を観察して判断することから → 幸先のよい"
+    },
+    "inconspicuous": {
+      "type": "A",
+      "root": "spec",
+      "parts": [
+        { "form": "in", "kind": "prefix", "gloss": "否定" },
+        { "form": "con", "kind": "prefix", "gloss": "すっかり" },
+        { "form": "spic", "kind": "root", "gloss": "見る" },
+        { "form": "-ous", "kind": "suffix", "gloss": "〜に満ちた" }
+      ],
+      "derivation": "すっかり見える状態ではない → 目立たない"
+    },
+    "introspective": {
+      "type": "A",
+      "root": "spec",
+      "parts": [
+        { "form": "intro", "kind": "prefix", "gloss": "内側へ" },
+        { "form": "spect", "kind": "root", "gloss": "見る" },
+        { "form": "-ive", "kind": "suffix", "gloss": "〜する性質の" }
+      ],
+      "derivation": "自分の内側を見る → 内省的な"
+    },
+    "perspective": {
+      "type": "A",
+      "root": "spec",
+      "parts": [
+        { "form": "per", "kind": "prefix", "gloss": "通して" },
+        { "form": "spect", "kind": "root", "gloss": "見る" },
+        { "form": "-ive", "kind": "suffix", "gloss": "〜する性質の" }
+      ],
+      "derivation": "通して見る → 見方、観点"
+    },
+    "retrospect": {
+      "type": "A",
+      "root": "spec",
+      "parts": [
+        { "form": "retro", "kind": "prefix", "gloss": "後ろへ" },
+        { "form": "spect", "kind": "root", "gloss": "見る" }
+      ],
+      "derivation": "後ろを振り返って見る → 回顧"
+    },
+    "specimen": {
+      "type": "A",
+      "root": "spec",
+      "parts": [
+        { "form": "spec", "kind": "root", "gloss": "見る" },
+        { "form": "-men", "kind": "suffix", "gloss": "〜したもの" }
+      ],
+      "derivation": "見たものから取り出した標本 → 標本、見本"
+    },
+    "spectator": {
+      "type": "A",
+      "root": "spec",
+      "parts": [
+        { "form": "spect", "kind": "root", "gloss": "見る" },
+        { "form": "-ator", "kind": "suffix", "gloss": "〜する人" }
+      ],
+      "derivation": "見る人 → 観客、見物人"
+    },
+    "specter": {
+      "type": "A",
+      "root": "spec",
+      "parts": [
+        { "form": "spect", "kind": "root", "gloss": "見る" },
+        { "form": "-er", "kind": "suffix", "gloss": "〜する人" }
+      ],
+      "derivation": "見えるものとして現れる → 幽霊"
+    },
+    "suspect": {
+      "type": "A",
+      "root": "spec",
+      "parts": [
+        { "form": "sus", "kind": "prefix", "gloss": "下から" },
+        { "form": "spect", "kind": "root", "gloss": "見る" }
+      ],
+      "derivation": "下からじっと見る → 疑う"
+    },
+    "suspicion": {
+      "type": "A",
+      "root": "spec",
+      "parts": [
+        { "form": "sus", "kind": "prefix", "gloss": "下から" },
+        { "form": "spic", "kind": "root", "gloss": "見る" },
+        { "form": "-ion", "kind": "suffix", "gloss": "〜すること（名詞化）" }
+      ],
+      "derivation": "下からじっと見る → 疑い"
+    },
+    "composer": {
+      "type": "A",
+      "root": "pos",
+      "parts": [
+        { "form": "com", "kind": "prefix", "gloss": "ともに" },
+        { "form": "pos", "kind": "root", "gloss": "置く" },
+        { "form": "-er", "kind": "suffix", "gloss": "〜する人" }
+      ],
+      "derivation": "ともに置いて組み立てる → 作曲家"
+    },
+    "disposition": {
+      "type": "A",
+      "root": "pos",
+      "parts": [
+        { "form": "dis", "kind": "prefix", "gloss": "離れて" },
+        { "form": "pos", "kind": "root", "gloss": "置く" },
+        { "form": "-ion", "kind": "suffix", "gloss": "〜した状態" }
+      ],
+      "derivation": "離して置いた状態 → 気質、処分"
+    },
+    "juxtapose": {
+      "type": "A",
+      "root": "pos",
+      "parts": [
+        { "form": "juxta", "kind": "prefix", "gloss": "そばに" },
+        { "form": "pos", "kind": "root", "gloss": "置く" }
+      ],
+      "derivation": "そばに置く → 並置する"
+    },
+    "pose": {
+      "type": "B",
+      "derivation": "置いて姿勢を作ることから → ポーズをとった"
+    },
+    "position": {
+      "type": "A",
+      "root": "pos",
+      "parts": [
+        { "form": "pos", "kind": "root", "gloss": "置く" },
+        { "form": "-ion", "kind": "suffix", "gloss": "〜した状態" }
+      ],
+      "derivation": "置かれた場所や立場 → 地位、役職"
+    },
+    "postpone": {
+      "type": "A",
+      "root": "pos",
+      "parts": [
+        { "form": "post", "kind": "prefix", "gloss": "後へ" },
+        { "form": "pon", "kind": "root", "gloss": "置く" }
+      ],
+      "derivation": "後へ置く → 延期する"
+    },
+    "proponent": {
+      "type": "A",
+      "root": "pos",
+      "parts": [
+        { "form": "pro", "kind": "prefix", "gloss": "前へ" },
+        { "form": "pon", "kind": "root", "gloss": "置く" },
+        { "form": "-ent", "kind": "suffix", "gloss": "〜するもの・人" }
+      ],
+      "derivation": "前へ置いて主張する人 → 支持者、提唱者"
+    },
+    "propose": {
+      "type": "A",
+      "root": "pos",
+      "parts": [
+        { "form": "pro", "kind": "prefix", "gloss": "前へ" },
+        { "form": "pos", "kind": "root", "gloss": "置く" }
+      ],
+      "derivation": "前へ置いて示す → 提案した"
+    },
+    "repose": {
+      "type": "A",
+      "root": "pos",
+      "parts": [
+        { "form": "re", "kind": "prefix", "gloss": "再び" },
+        { "form": "pos", "kind": "root", "gloss": "置く" }
+      ],
+      "derivation": "再び置いて落ち着く → 休息、静けさ"
+    },
+    "suppose": {
+      "type": "A",
+      "root": "pos",
+      "parts": [
+        { "form": "sup", "kind": "prefix", "gloss": "下に" },
+        { "form": "pos", "kind": "root", "gloss": "置く" }
+      ],
+      "derivation": "下に置いて仮に考える → 〜だと思った"
+    },
+    "supposition": {
+      "type": "A",
+      "root": "pos",
+      "parts": [
+        { "form": "sup", "kind": "prefix", "gloss": "下に" },
+        { "form": "pos", "kind": "root", "gloss": "置く" },
+        { "form": "-ion", "kind": "suffix", "gloss": "〜した状態" }
+      ],
+      "derivation": "下に置いた仮の考え → 仮定、推測"
+    },
+    "avert": {
+      "type": "A",
+      "root": "vert",
+      "parts": [
+        { "form": "a", "kind": "prefix", "gloss": "離れて" },
+        { "form": "vert", "kind": "root", "gloss": "回す・向ける" }
+      ],
+      "derivation": "向きをそらす → 回避する"
+    },
+    "diverse": {
+      "type": "A",
+      "root": "vert",
+      "parts": [
+        { "form": "di", "kind": "prefix", "gloss": "分けて" },
+        { "form": "vers", "kind": "root", "gloss": "回す・向ける" }
+      ],
+      "derivation": "別々の方向に向いた → 多様な"
+    },
+    "diversify": {
+      "type": "A",
+      "root": "vert",
+      "parts": [
+        { "form": "di", "kind": "prefix", "gloss": "分けて" },
+        { "form": "vers", "kind": "root", "gloss": "回す・向ける" },
+        { "form": "-ify", "kind": "suffix", "gloss": "〜にする" }
+      ],
+      "derivation": "別々の方向へ向ける → 多様化する"
+    },
+    "diversity": {
+      "type": "A",
+      "root": "vert",
+      "parts": [
+        { "form": "di", "kind": "prefix", "gloss": "分けて" },
+        { "form": "vers", "kind": "root", "gloss": "回す・向ける" },
+        { "form": "-ity", "kind": "suffix", "gloss": "〜であること" }
+      ],
+      "derivation": "別々の方向へ向いた状態 → 多様性"
+    },
+    "invert": {
+      "type": "A",
+      "root": "vert",
+      "parts": [
+        { "form": "in", "kind": "prefix", "gloss": "中へ" },
+        { "form": "vert", "kind": "root", "gloss": "回す・向ける" }
+      ],
+      "derivation": "内側へ向きを回す → 逆さにする"
+    },
+    "revert": {
+      "type": "A",
+      "root": "vert",
+      "parts": [
+        { "form": "re", "kind": "prefix", "gloss": "元へ" },
+        { "form": "vert", "kind": "root", "gloss": "回す・向ける" }
+      ],
+      "derivation": "元へ向きを戻す → 元に戻った"
+    },
+    "subversive": {
+      "type": "A",
+      "root": "vert",
+      "parts": [
+        { "form": "sub", "kind": "prefix", "gloss": "下から" },
+        { "form": "vers", "kind": "root", "gloss": "回す・向ける" },
+        { "form": "-ive", "kind": "suffix", "gloss": "〜する性質の" }
+      ],
+      "derivation": "下から体制をひっくり返す → 体制転覆を企てる"
+    },
+    "universal": {
+      "type": "B",
+      "derivation": "一つの方向に向けられたことから → 普遍的な"
+    },
+    "vertical": {
+      "type": "A",
+      "root": "vert",
+      "parts": [
+        { "form": "vert", "kind": "root", "gloss": "回す・向ける" },
+        { "form": "-ical", "kind": "suffix", "gloss": "〜の性質の" }
+      ],
+      "derivation": "回転の軸に立つ → 垂直の"
+    },
+    "defer": {
+      "type": "A",
+      "root": "fer",
+      "parts": [
+        { "form": "de", "kind": "prefix", "gloss": "下へ・離れて" },
+        { "form": "fer", "kind": "root", "gloss": "運ぶ" }
+      ],
+      "derivation": "先へ回して運ぶ → 延期する"
+    },
+    "deferentially": {
+      "type": "B",
+      "derivation": "相手に身を低くして従うことから → 目上の人に敬意を払って"
+    },
+    "indifferently": {
+      "type": "B",
+      "derivation": "別々に運ぶことから → 無関心に"
+    },
+    "preferential": {
+      "type": "A",
+      "root": "fer",
+      "parts": [
+        { "form": "pre", "kind": "prefix", "gloss": "前もって" },
+        { "form": "fer", "kind": "root", "gloss": "運ぶ" },
+        { "form": "-ential", "kind": "suffix", "gloss": "〜に関する" }
+      ],
+      "derivation": "前に運ばれて選ばれる → 優遇の"
+    },
+    "proliferate": {
+      "type": "B",
+      "derivation": "子孫を生み出すことから → 急増する"
+    },
+    "referral": {
+      "type": "A",
+      "root": "fer",
+      "parts": [
+        { "form": "re", "kind": "prefix", "gloss": "後ろへ" },
+        { "form": "fer", "kind": "root", "gloss": "運ぶ" },
+        { "form": "-al", "kind": "suffix", "gloss": "〜に関する" }
+      ],
+      "derivation": "戻って運ばれることから → 紹介"
+    },
+    "suffer": {
+      "type": "A",
+      "root": "fer",
+      "parts": [
+        { "form": "suf", "kind": "prefix", "gloss": "下から" },
+        { "form": "fer", "kind": "root", "gloss": "運ぶ" }
+      ],
+      "derivation": "下から運ばれて耐える → 苦しむ"
+    },
+    "transfer": {
+      "type": "A",
+      "root": "fer",
+      "parts": [
+        { "form": "trans", "kind": "prefix", "gloss": "越えて" },
+        { "form": "fer", "kind": "root", "gloss": "運ぶ" }
+      ],
+      "derivation": "越えて運ぶ → 異動させた"
+    },
+    "deportation": {
+      "type": "A",
+      "root": "port",
+      "parts": [
+        { "form": "de", "kind": "prefix", "gloss": "離れて" },
+        { "form": "port", "kind": "root", "gloss": "運ぶ" },
+        { "form": "-ation", "kind": "suffix", "gloss": "〜すること" }
+      ],
+      "derivation": "離れた場所へ運ぶ → 強制送還"
+    },
+    "import": {
+      "type": "A",
+      "root": "port",
+      "parts": [
+        { "form": "im", "kind": "prefix", "gloss": "中へ" },
+        { "form": "port", "kind": "root", "gloss": "運ぶ" }
+      ],
+      "derivation": "中へ運ぶ → 輸入する"
+    },
+    "important": {
+      "type": "A",
+      "root": "port",
+      "parts": [
+        { "form": "im", "kind": "prefix", "gloss": "中へ" },
+        { "form": "port", "kind": "root", "gloss": "運ぶ" },
+        { "form": "-ant", "kind": "suffix", "gloss": "〜するもの・人" }
+      ],
+      "derivation": "中へ運ばれる価値がある → 重要な"
+    },
+    "portfolio": {
+      "type": "B",
+      "derivation": "持ち運ぶものから → 作品集"
+    },
+    "proportion": {
+      "type": "A",
+      "root": "port",
+      "parts": [
+        { "form": "pro", "kind": "prefix", "gloss": "前へ" },
+        { "form": "port", "kind": "root", "gloss": "運ぶ" },
+        { "form": "-ion", "kind": "suffix", "gloss": "〜すること" }
+      ],
+      "derivation": "前へ運んで関係づける → 割合"
+    },
+    "rapport": {
+      "type": "B",
+      "derivation": "関係を持ち帰ることから → 親密な関係"
+    },
+    "support": {
+      "type": "A",
+      "root": "port",
+      "parts": [
+        { "form": "sup", "kind": "prefix", "gloss": "下に" },
+        { "form": "port", "kind": "root", "gloss": "運ぶ" }
+      ],
+      "derivation": "下から運んで支える → 支える"
+    },
+    "elucidate": {
+      "type": "A",
+      "root": "luc",
+      "parts": [
+        { "form": "e", "kind": "prefix", "gloss": "外へ" },
+        { "form": "luc", "kind": "root", "gloss": "光" }
+      ],
+      "derivation": "外へ光を出す → 明らかにする"
+    },
+    "illuminate": {
+      "type": "A",
+      "root": "luc",
+      "parts": [
+        { "form": "il", "kind": "prefix", "gloss": "〜の上に" },
+        { "form": "lum", "kind": "root", "gloss": "光" },
+        { "form": "-ate", "kind": "suffix", "gloss": "〜にする" }
+      ],
+      "derivation": "光を当てる → 照らす"
+    },
+    "illustrate": {
+      "type": "A",
+      "root": "luc",
+      "parts": [
+        { "form": "il", "kind": "prefix", "gloss": "〜の上に" },
+        { "form": "lustr", "kind": "root", "gloss": "光" },
+        { "form": "-ate", "kind": "suffix", "gloss": "〜にする" }
+      ],
+      "derivation": "光を当てて示す → 説明する"
+    },
+    "illustrious": {
+      "type": "A",
+      "root": "luc",
+      "parts": [
+        { "form": "il", "kind": "prefix", "gloss": "〜の上に" },
+        { "form": "lustr", "kind": "root", "gloss": "光" },
+        { "form": "-ous", "kind": "suffix", "gloss": "〜に満ちた" }
+      ],
+      "derivation": "光り輝く → 著名な"
+    },
+    "lustrous": {
+      "type": "A",
+      "root": "luc",
+      "parts": [
+        { "form": "lustr", "kind": "root", "gloss": "光" },
+        { "form": "-ous", "kind": "suffix", "gloss": "〜に満ちた" }
+      ],
+      "derivation": "光沢を放つ → 光沢のある"
+    },
+    "translucent": {
+      "type": "A",
+      "root": "luc",
+      "parts": [
+        { "form": "trans", "kind": "prefix", "gloss": "越えて" },
+        { "form": "luc", "kind": "root", "gloss": "光" },
+        { "form": "-ent", "kind": "suffix", "gloss": "〜するもの・人" }
+      ],
+      "derivation": "光が通り抜ける → 半透明の"
+    },
+    "conductor": {
+      "type": "A",
+      "root": "duc",
+      "parts": [
+        { "form": "con", "kind": "prefix", "gloss": "ともに" },
+        { "form": "duct", "kind": "root", "gloss": "導く" },
+        { "form": "-or", "kind": "suffix", "gloss": "〜する人・もの" }
+      ],
+      "derivation": "ともに導く人 → 指揮者"
+    },
+    "deduce": {
+      "type": "A",
+      "root": "duc",
+      "parts": [
+        { "form": "de", "kind": "prefix", "gloss": "下へ・離れて" },
+        { "form": "duc", "kind": "root", "gloss": "導く" }
+      ],
+      "derivation": "下から導き出す → 推論して導き出した"
+    },
+    "product": {
+      "type": "A",
+      "root": "duc",
+      "parts": [
+        { "form": "pro", "kind": "prefix", "gloss": "前へ" },
+        { "form": "duct", "kind": "root", "gloss": "導く" }
+      ],
+      "derivation": "前へ導かれた結果 → 製品、産物"
+    },
+    "reduce": {
+      "type": "A",
+      "root": "duc",
+      "parts": [
+        { "form": "re", "kind": "prefix", "gloss": "後ろへ" },
+        { "form": "duc", "kind": "root", "gloss": "導く" }
+      ],
+      "derivation": "戻して導き下げる → 減らした"
+    },
+    "reduction": {
+      "type": "A",
+      "root": "duc",
+      "parts": [
+        { "form": "re", "kind": "prefix", "gloss": "後ろへ" },
+        { "form": "duc", "kind": "root", "gloss": "導く" },
+        { "form": "-ion", "kind": "suffix", "gloss": "〜すること" }
+      ],
+      "derivation": "戻して導き下げた結果 → 削減"
+    },
+    "aggression": {
+      "type": "A",
+      "root": "gress",
+      "parts": [
+        { "form": "ag", "kind": "prefix", "gloss": "〜へ向かって" },
+        { "form": "gress", "kind": "root", "gloss": "歩む" },
+        { "form": "-ion", "kind": "suffix", "gloss": "〜すること" }
+      ],
+      "derivation": "向かって歩み出る → 攻撃"
+    },
+    "digression": {
+      "type": "A",
+      "root": "gress",
+      "parts": [
+        { "form": "di", "kind": "prefix", "gloss": "分けて" },
+        { "form": "gress", "kind": "root", "gloss": "歩む" },
+        { "form": "-ion", "kind": "suffix", "gloss": "〜すること" }
+      ],
+      "derivation": "横へ歩み出る → 脱線"
+    },
+    "gradient": {
+      "type": "A",
+      "root": "gress",
+      "parts": [
+        { "form": "grad", "kind": "root", "gloss": "歩む" },
+        { "form": "-ent", "kind": "suffix", "gloss": "〜するもの" }
+      ],
+      "derivation": "歩みの段差 → 勾配"
+    },
+    "gradual": {
+      "type": "A",
+      "root": "gress",
+      "parts": [
+        { "form": "grad", "kind": "root", "gloss": "歩む" },
+        { "form": "-al", "kind": "suffix", "gloss": "〜の性質の" }
+      ],
+      "derivation": "歩みの段階を踏む → 徐々の"
+    },
+    "transgression": {
+      "type": "A",
+      "root": "gress",
+      "parts": [
+        { "form": "trans", "kind": "prefix", "gloss": "越えて" },
+        { "form": "gress", "kind": "root", "gloss": "歩む" },
+        { "form": "-ion", "kind": "suffix", "gloss": "〜すること" }
+      ],
+      "derivation": "越えて歩み出る → 違反"
+    },
     "equivocate": {
       "type": "A",
       "root": "voc",
       "parts": [
         { "form": "equi", "kind": "prefix", "gloss": "等しい" },
         { "form": "voc", "kind": "root", "gloss": "呼ぶ・声" },
-        { "form": "ate", "kind": "suffix", "gloss": "〜にする" }
+        { "form": "-ate", "kind": "suffix", "gloss": "〜にする" }
       ],
       "derivation": "等しく聞こえる声を出す → 言葉を濁す"
     },
@@ -19,9 +558,385 @@
       "parts": [
         { "form": "e", "kind": "prefix", "gloss": "外へ" },
         { "form": "voc", "kind": "root", "gloss": "呼ぶ・声" },
-        { "form": "ative", "kind": "suffix", "gloss": "〜する性質の" }
+        { "form": "-ative", "kind": "suffix", "gloss": "〜する性質の" }
       ],
       "derivation": "外へ声を呼び出す → 感情を喚起する"
+    },
+    "evoke": {
+      "type": "A",
+      "root": "voc",
+      "parts": [
+        { "form": "e", "kind": "prefix", "gloss": "外へ" },
+        { "form": "vok", "kind": "root", "gloss": "呼ぶ・声" }
+      ],
+      "derivation": "外へ声を呼び出す → 呼び起こした"
+    },
+    "revoke": {
+      "type": "A",
+      "root": "voc",
+      "parts": [
+        { "form": "re", "kind": "prefix", "gloss": "元へ" },
+        { "form": "vok", "kind": "root", "gloss": "呼ぶ・声" }
+      ],
+      "derivation": "声をかけて元へ引き戻す → 取り消す"
+    },
+    "ascribe": {
+      "type": "A",
+      "root": "scrib",
+      "parts": [
+        { "form": "a", "kind": "prefix", "gloss": "〜へ" },
+        { "form": "scrib", "kind": "root", "gloss": "書く" }
+      ],
+      "derivation": "〜に書き付ける → 帰する"
+    },
+    "prescription": {
+      "type": "A",
+      "root": "scrib",
+      "parts": [
+        { "form": "pre", "kind": "prefix", "gloss": "前もって" },
+        { "form": "script", "kind": "root", "gloss": "書く" },
+        { "form": "-ion", "kind": "suffix", "gloss": "〜すること" }
+      ],
+      "derivation": "前もって書いた指示 → 処方箋"
+    },
+    "proscribe": {
+      "type": "A",
+      "root": "scrib",
+      "parts": [
+        { "form": "pro", "kind": "prefix", "gloss": "前へ" },
+        { "form": "scrib", "kind": "root", "gloss": "書く" }
+      ],
+      "derivation": "前に書いて公示する → 禁止する"
+    },
+    "script": {
+      "type": "B",
+      "derivation": "書かれたものから → 台本"
+    },
+    "announcement": {
+      "type": "A",
+      "root": "nunc",
+      "parts": [
+        { "form": "an", "kind": "prefix", "gloss": "〜へ" },
+        { "form": "nounc", "kind": "root", "gloss": "告げる" },
+        { "form": "-ment", "kind": "suffix", "gloss": "〜すること・もの" }
+      ],
+      "derivation": "告げる行為 → 発表"
+    },
+    "enunciate": {
+      "type": "A",
+      "root": "nunc",
+      "parts": [
+        { "form": "e", "kind": "prefix", "gloss": "外へ" },
+        { "form": "nunc", "kind": "root", "gloss": "告げる" },
+        { "form": "-ate", "kind": "suffix", "gloss": "〜にする" }
+      ],
+      "derivation": "外へ明瞭に告げる → 明瞭に発音する"
+    },
+    "pronounce": {
+      "type": "A",
+      "root": "nunc",
+      "parts": [
+        { "form": "pro", "kind": "prefix", "gloss": "前へ" },
+        { "form": "nounc", "kind": "root", "gloss": "告げる" }
+      ],
+      "derivation": "前へ告げる → 発音する"
+    },
+    "renounce": {
+      "type": "A",
+      "root": "nunc",
+      "parts": [
+        { "form": "re", "kind": "prefix", "gloss": "取り消して" },
+        { "form": "nounc", "kind": "root", "gloss": "告げる" }
+      ],
+      "derivation": "取り消すと告げて手放す → 放棄する"
+    },
+    "contravene": {
+      "type": "A",
+      "root": "ven",
+      "parts": [
+        { "form": "contra", "kind": "prefix", "gloss": "反対に" },
+        { "form": "ven", "kind": "root", "gloss": "来る" }
+      ],
+      "derivation": "反対側へ来る → 違反する"
+    },
+    "convene": {
+      "type": "A",
+      "root": "ven",
+      "parts": [
+        { "form": "con", "kind": "prefix", "gloss": "ともに" },
+        { "form": "ven", "kind": "root", "gloss": "来る" }
+      ],
+      "derivation": "ともに来る → 招集した"
+    },
+    "event": {
+      "type": "A",
+      "root": "ven",
+      "parts": [
+        { "form": "e", "kind": "prefix", "gloss": "外へ" },
+        { "form": "vent", "kind": "root", "gloss": "来る" }
+      ],
+      "derivation": "外へ出て来たもの → 行事"
+    },
+    "venture": {
+      "type": "A",
+      "root": "ven",
+      "parts": [
+        { "form": "ven", "kind": "root", "gloss": "来る" },
+        { "form": "-ture", "kind": "suffix", "gloss": "〜すること・もの" }
+      ],
+      "derivation": "来るものを試す → 冒険"
+    },
+    "accede": {
+      "type": "A",
+      "root": "ced",
+      "parts": [
+        { "form": "ac", "kind": "prefix", "gloss": "〜へ・近くへ" },
+        { "form": "ced", "kind": "root", "gloss": "行く・譲る" }
+      ],
+      "derivation": "〜へ進んで同意する → 同意した"
+    },
+    "accessibility": {
+      "type": "A",
+      "root": "ced",
+      "parts": [
+        { "form": "ac", "kind": "prefix", "gloss": "〜へ・近くへ" },
+        { "form": "cess", "kind": "root", "gloss": "行く・譲る" },
+        { "form": "-ity", "kind": "suffix", "gloss": "〜できる性質" }
+      ],
+      "derivation": "近くへ進める状態 → アクセシビリティ"
+    },
+    "cessation": {
+      "type": "A",
+      "root": "ced",
+      "parts": [
+        { "form": "cess", "kind": "root", "gloss": "行く・譲る" },
+        { "form": "-ation", "kind": "suffix", "gloss": "〜すること" }
+      ],
+      "derivation": "進むのを止めること → 停止"
+    },
+    "successor": {
+      "type": "A",
+      "root": "ced",
+      "parts": [
+        { "form": "suc", "kind": "prefix", "gloss": "後から" },
+        { "form": "cess", "kind": "root", "gloss": "行く・譲る" },
+        { "form": "-or", "kind": "suffix", "gloss": "〜する人・もの" }
+      ],
+      "derivation": "後から続いて進む人 → 後継者"
+    },
+    "accept": {
+      "type": "A",
+      "root": "cap",
+      "parts": [
+        { "form": "ac", "kind": "prefix", "gloss": "〜へ・近くへ" },
+        { "form": "cept", "kind": "root", "gloss": "取る" }
+      ],
+      "derivation": "〜へ取る → 受け入れる"
+    },
+    "participant": {
+      "type": "A",
+      "root": "cap",
+      "parts": [
+        { "form": "cip", "kind": "root", "gloss": "取る" },
+        { "form": "-ant", "kind": "suffix", "gloss": "〜するもの・人" }
+      ],
+      "derivation": "一部を取って加わる人 → 参加者"
+    },
+    "perception": {
+      "type": "A",
+      "root": "cap",
+      "parts": [
+        { "form": "per", "kind": "prefix", "gloss": "通して" },
+        { "form": "cept", "kind": "root", "gloss": "取る" },
+        { "form": "-ion", "kind": "suffix", "gloss": "〜すること" }
+      ],
+      "derivation": "通して受け取ること → 認識"
+    },
+    "recipient": {
+      "type": "A",
+      "root": "cap",
+      "parts": [
+        { "form": "re", "kind": "prefix", "gloss": "再び" },
+        { "form": "cip", "kind": "root", "gloss": "取る" },
+        { "form": "-ent", "kind": "suffix", "gloss": "〜するもの" }
+      ],
+      "derivation": "再び受け取る人 → 受取人"
+    },
+    "collect": {
+      "type": "A",
+      "root": "lect",
+      "parts": [
+        { "form": "col", "kind": "prefix", "gloss": "ともに" },
+        { "form": "lect", "kind": "root", "gloss": "集める・選ぶ" }
+      ],
+      "derivation": "ともに集める → 集めた"
+    },
+    "eligible": {
+      "type": "A",
+      "root": "lect",
+      "parts": [
+        { "form": "e", "kind": "prefix", "gloss": "外へ" },
+        { "form": "lig", "kind": "root", "gloss": "集める・選ぶ" },
+        { "form": "-ible", "kind": "suffix", "gloss": "〜できる" }
+      ],
+      "derivation": "選び出す資格のある → 資格のある"
+    },
+    "lecture": {
+      "type": "A",
+      "root": "lect",
+      "parts": [
+        { "form": "lect", "kind": "root", "gloss": "集める・選ぶ" },
+        { "form": "-ure", "kind": "suffix", "gloss": "〜すること・もの" }
+      ],
+      "derivation": "集めて読み上げるもの → 講義"
+    },
+    "negligent": {
+      "type": "A",
+      "root": "lect",
+      "parts": [
+        { "form": "neg", "kind": "prefix", "gloss": "否定して" },
+        { "form": "lig", "kind": "root", "gloss": "集める・選ぶ" },
+        { "form": "-ent", "kind": "suffix", "gloss": "〜するもの・人" }
+      ],
+      "derivation": "注意を集めず放置する → 怠慢な"
+    },
+    "detract": {
+      "type": "A",
+      "root": "tract",
+      "parts": [
+        { "form": "de", "kind": "prefix", "gloss": "下へ・離れて" },
+        { "form": "tract", "kind": "root", "gloss": "引く" }
+      ],
+      "derivation": "離して引く → 損なった"
+    },
+    "extract": {
+      "type": "A",
+      "root": "tract",
+      "parts": [
+        { "form": "ex", "kind": "prefix", "gloss": "外へ" },
+        { "form": "tract", "kind": "root", "gloss": "引く" }
+      ],
+      "derivation": "外へ引き出す → 抽出する"
+    },
+    "subtract": {
+      "type": "A",
+      "root": "tract",
+      "parts": [
+        { "form": "sub", "kind": "prefix", "gloss": "下に" },
+        { "form": "tract", "kind": "root", "gloss": "引く" }
+      ],
+      "derivation": "下から引く → 引く"
+    },
+    "acquire": {
+      "type": "A",
+      "root": "quir",
+      "parts": [
+        { "form": "ac", "kind": "prefix", "gloss": "〜へ・近くへ" },
+        { "form": "quir", "kind": "root", "gloss": "求める" }
+      ],
+      "derivation": "〜へ求めに行く → 取得した"
+    },
+    "requirement": {
+      "type": "A",
+      "root": "quir",
+      "parts": [
+        { "form": "re", "kind": "prefix", "gloss": "再び" },
+        { "form": "quir", "kind": "root", "gloss": "求める" },
+        { "form": "-ment", "kind": "suffix", "gloss": "〜すること・もの" }
+      ],
+      "derivation": "再び求めること → 必要条件"
+    },
+    "requisite": {
+      "type": "A",
+      "root": "quir",
+      "parts": [
+        { "form": "re", "kind": "prefix", "gloss": "再び" },
+        { "form": "quis", "kind": "root", "gloss": "求める" },
+        { "form": "-ite", "kind": "suffix", "gloss": "〜されたもの" }
+      ],
+      "derivation": "再び求められるもの → 必須品"
+    },
+    "complacency": {
+      "type": "A",
+      "root": "plac",
+      "parts": [
+        { "form": "com", "kind": "prefix", "gloss": "ともに" },
+        { "form": "plac", "kind": "root", "gloss": "なだめる・気に入る" },
+        { "form": "-ency", "kind": "suffix", "gloss": "〜の状態" }
+      ],
+      "derivation": "ともに気に入って安心する → 自己満足"
+    },
+    "placate": {
+      "type": "A",
+      "root": "plac",
+      "parts": [
+        { "form": "plac", "kind": "root", "gloss": "なだめる・気に入る" },
+        { "form": "-ate", "kind": "suffix", "gloss": "〜にする" }
+      ],
+      "derivation": "気に入る状態にする → なだめた"
+    },
+    "placebo": {
+      "type": "B",
+      "derivation": "「私は喜ばせる」という由来から → 偽薬"
+    },
+    "coincidental": {
+      "type": "A",
+      "root": "cid",
+      "parts": [
+        { "form": "co", "kind": "prefix", "gloss": "ともに" },
+        { "form": "cid", "kind": "root", "gloss": "切る・落ちる" },
+        { "form": "-ent", "kind": "suffix", "gloss": "〜するもの・人" }
+      ],
+      "derivation": "ともに落ち合う → 偶然の"
+    },
+    "deciduous": {
+      "type": "A",
+      "root": "cid",
+      "parts": [
+        { "form": "de", "kind": "prefix", "gloss": "下へ・離れて" },
+        { "form": "cid", "kind": "root", "gloss": "切る・落ちる" },
+        { "form": "-ous", "kind": "suffix", "gloss": "〜の性質の" }
+      ],
+      "derivation": "下へ落ちる → 落葉性の"
+    },
+    "incisive": {
+      "type": "A",
+      "root": "cid",
+      "parts": [
+        { "form": "in", "kind": "prefix", "gloss": "中へ" },
+        { "form": "cis", "kind": "root", "gloss": "切る・落ちる" },
+        { "form": "-ive", "kind": "suffix", "gloss": "〜する性質の" }
+      ],
+      "derivation": "中へ切り込む → 鋭い"
+    },
+    "alleviate": {
+      "type": "A",
+      "root": "lev",
+      "parts": [
+        { "form": "al", "kind": "prefix", "gloss": "〜へ" },
+        { "form": "lev", "kind": "root", "gloss": "軽い・上げる" },
+        { "form": "-ate", "kind": "suffix", "gloss": "〜にする" }
+      ],
+      "derivation": "軽くする → 軽減した"
+    },
+    "elevate": {
+      "type": "A",
+      "root": "lev",
+      "parts": [
+        { "form": "e", "kind": "prefix", "gloss": "外へ" },
+        { "form": "lev", "kind": "root", "gloss": "軽い・上げる" },
+        { "form": "-ate", "kind": "suffix", "gloss": "〜にする" }
+      ],
+      "derivation": "上へ持ち上げる → 高める"
+    },
+    "levity": {
+      "type": "A",
+      "root": "lev",
+      "parts": [
+        { "form": "lev", "kind": "root", "gloss": "軽い・上げる" },
+        { "form": "-ity", "kind": "suffix", "gloss": "〜であること" }
+      ],
+      "derivation": "軽い態度 → 軽薄さ"
     },
     "liaison": {
       "type": "B",
