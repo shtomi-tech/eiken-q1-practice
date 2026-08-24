@@ -3,7 +3,7 @@
 対象: `data/word_roots.json` / `data/word_origins.json` / `scripts/check-word-origin-data.cjs`
 関連: [WORD_ORIGIN_PHASE2_PLAN.md](WORD_ORIGIN_PHASE2_PLAN.md)（第1波の投入）/ [WORD_ORIGIN_PHASE2_FIX_PLAN.md](WORD_ORIGIN_PHASE2_FIX_PLAN.md)/ [WORD_ORIGIN_AUTHORING.md](WORD_ORIGIN_AUTHORING.md)（作成基準）
 前提: 段階2＝`a649b42`（語根20個・A型94語・B型12語）
-状態: 未着手
+状態: 完了（2026-08-25）。13語根・A型42語・B型6語を追加し、段階3終了時点でA型136語・B型18語
 
 ## 0. 方針と、その根拠
 
@@ -72,7 +72,7 @@
 
 これらは語源的には確かに facere 系（-ify < -ficare）だが、**前半が別の語根**（clar / magn / null / typ …）で、その語根は辞書に無い。無理にA型にすると `clar` のような未登録の語根断片を接辞として登録することになり、段階2で直したばかりの誤りを再発させる。
 
-**方針**: `-ify` / `-fication` 語は**A型にしない**。代わりに接尾辞 `-ify` の `gloss` に由来を織り込み、カード上は接尾辞の説明として機能させる。
+**方針**: 前半が辞書に無い語根断片になる `-ify` / `-fication` 語は**A型にしない**（`clarify` `magnify` `nullify` など）。前半が登録済みの語根である語（`rectify`＝rect、`gratify`＝grat、`diversify`＝vers）はA型でよい。あわせて接尾辞 `-ify` の `gloss` に由来を織り込み、カード上は接尾辞の説明として機能させる。
 
 ```json
 "-ify": { "gloss": "〜にする（facere＝作る から）", "kind": "suffix" }
@@ -111,7 +111,7 @@
 ## 7. 合格条件
 
 - 13語根すべてでバッチが完了し、各候補が4分類のいずれかに落ちている。
-- `-ify` 語がA型に混ざっていない（3章）。
+- 前半が未登録の語根断片になる `-ify` 語がA型に混ざっていない（3章）。
 - `fac` `her` `reg` のような偽陽性の多い語根で、`note` に「含めない語」が書かれている。
 - A型の語根がすべて逆引き2語以上を保ち、`npm test` が通る。
 - 段階3終了時点のA型件数を README に記録し、打ち切り基準（0章）に照らして段階4の要否を判断する。

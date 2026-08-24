@@ -1,6 +1,6 @@
 {
   "meta": {
-    "note": "単語カードの語源パネル用。表示専用。進捗キー・音声・選択肢には使わない。段階1で語根20個と接辞15グループ以上を確定する。"
+    "note": "単語カードの語源パネル用。表示専用。進捗キー・音声・選択肢には使わない。段階3で語根33個まで拡張する。"
   },
   "roots": {
     "spec": {
@@ -117,6 +117,82 @@
       "gloss": "軽い・上げる",
       "origin": "ラテン語 levis / levare",
       "note": "重さを軽くする、または持ち上げるイメージ。"
+    },
+    "fac": {
+      "gloss": "作る・なす",
+      "origin": "ラテン語 facere",
+      "note": "ものを作り、行為を成し遂げるイメージ。desertification・ratificationのような-fication語は、未登録の前半まで分解しない。",
+      "variants": ["fect", "fic"]
+    },
+    "her": {
+      "gloss": "くっつく",
+      "origin": "ラテン語 haerere",
+      "note": "ものにくっつき、離れずにとどまるイメージ。heresy・synthesis・synthesize・inheritanceなど、綴りだけが似た語は含めない。",
+      "variants": ["hes"]
+    },
+    "reg": {
+      "gloss": "まっすぐにする・支配する",
+      "origin": "ラテン語 regere",
+      "note": "まっすぐ整え、規則によって導くイメージ。impregnable・insurrection・regurgitateは別語根なので含めない。",
+      "variants": ["rect"]
+    },
+    "nom": {
+      "gloss": "名前",
+      "origin": "ギリシャ語 onoma / ラテン語 nomen",
+      "note": "名前を付け、名前で呼ぶイメージ。",
+      "variants": ["nym"]
+    },
+    "gen": {
+      "gloss": "生む・種",
+      "origin": "ラテン語 gignere / genus",
+      "note": "生み出され、同じ種や系統につながるイメージ。",
+      "variants": ["gener"]
+    },
+    "sist": {
+      "gloss": "立つ",
+      "origin": "ラテン語 sistere / stare",
+      "note": "その場に立たせ、状態を保つイメージ。",
+      "variants": ["stit", "sta"]
+    },
+    "grat": {
+      "gloss": "喜ばせる・感謝",
+      "origin": "ラテン語 gratus / gratia",
+      "note": "喜びや好意を与え、ありがたく思うイメージ。",
+      "variants": ["grac"]
+    },
+    "log": {
+      "gloss": "言葉・話す",
+      "origin": "ギリシャ語 logos / ラテン語 loqui",
+      "note": "言葉を使って話し、考えを表すイメージ。",
+      "variants": ["loqu", "locut"]
+    },
+    "val": {
+      "gloss": "強い・価値がある",
+      "origin": "ラテン語 valere",
+      "note": "力があり、価値を持つイメージ。"
+    },
+    "vid": {
+      "gloss": "見える",
+      "origin": "ラテン語 videre",
+      "note": "視界に入り、見える状態になるイメージ。specは注意して見る語根で、視覚に入る語とは分ける。",
+      "variants": ["vis"]
+    },
+    "cord": {
+      "gloss": "心",
+      "origin": "ラテン語 cor / cordis",
+      "note": "心や気持ちの中心に関わるイメージ。"
+    },
+    "tang": {
+      "gloss": "触れる",
+      "origin": "ラテン語 tangere",
+      "note": "手や感覚で触れて確かめるイメージ。",
+      "variants": ["tact"]
+    },
+    "cur": {
+      "gloss": "走る",
+      "origin": "ラテン語 currere",
+      "note": "走って進み、流れや経過が続くイメージ。",
+      "variants": ["curr"]
     }
   },
   "affixes": {
@@ -139,7 +215,7 @@
     "-ion": { "gloss": "〜すること（名詞化）", "kind": "suffix" },
     "-ive": { "gloss": "〜する性質の", "kind": "suffix" },
     "-ous": { "gloss": "〜に満ちた", "kind": "suffix" },
-    "-ify": { "gloss": "〜にする", "kind": "suffix" },
+    "-ify": { "gloss": "〜にする（facere＝作る から）", "kind": "suffix" },
     "a": {
       "gloss": "〜へ・離れて",
       "kind": "prefix",
@@ -167,6 +243,15 @@
     "intro": { "gloss": "内側へ", "kind": "prefix" },
     "retro": { "gloss": "後ろへ", "kind": "prefix" },
     "trans": { "gloss": "越えて", "kind": "prefix" },
+    "dif": { "gloss": "離れて・否定", "kind": "prefix", "note": "disの異形。fの前で使う。" },
+    "super": { "gloss": "上に・超えて", "kind": "prefix" },
+    "sur": { "gloss": "上に", "kind": "prefix" },
+    "mis": { "gloss": "誤って", "kind": "prefix" },
+    "pseudo": { "gloss": "偽りの", "kind": "prefix" },
+    "auto": { "gloss": "自分で", "kind": "prefix" },
+    "ambi": { "gloss": "両方に", "kind": "prefix" },
+    "apo": { "gloss": "〜から離れて", "kind": "prefix" },
+    "oc": { "gloss": "向かって", "kind": "prefix", "note": "obの同化形。cの前で使う。" },
     "-al": { "gloss": "〜に関する", "kind": "suffix" },
     "-men": { "gloss": "〜したもの", "kind": "suffix" },
     "-ant": { "gloss": "〜するもの・人", "kind": "suffix" },
@@ -183,6 +268,9 @@
     "-ment": { "gloss": "〜すること・もの", "kind": "suffix" },
     "-or": { "gloss": "〜する人・もの", "kind": "suffix" },
     "-ture": { "gloss": "〜すること・もの", "kind": "suffix" },
-    "-ure": { "gloss": "〜すること・もの", "kind": "suffix" }
+    "-ure": { "gloss": "〜すること・もの", "kind": "suffix" },
+    "-ful": { "gloss": "〜に満ちた", "kind": "suffix" },
+    "-ize": { "gloss": "〜にする", "kind": "suffix" },
+    "-escence": { "gloss": "〜の過程・状態", "kind": "suffix" }
   }
 }

@@ -941,6 +941,427 @@
     "liaison": {
       "type": "B",
       "derivation": "フランス語 lier（結ぶ）から。人と人を結ぶ連絡役 → 連絡"
+    },
+    "defect": {
+      "type": "A",
+      "root": "fac",
+      "parts": [
+        { "form": "de", "kind": "prefix", "gloss": "離れて" },
+        { "form": "fect", "kind": "root", "gloss": "作る・なす" }
+      ],
+      "derivation": "離れて行為をなす → 離反すること"
+    },
+    "deficiency": {
+      "type": "A",
+      "root": "fac",
+      "parts": [
+        { "form": "de", "kind": "prefix", "gloss": "離れて" },
+        { "form": "fic", "kind": "root", "gloss": "作る・なす" },
+        { "form": "-ency", "kind": "suffix", "gloss": "〜の状態" }
+      ],
+      "derivation": "なすものが欠けた状態 → 不足、欠乏"
+    },
+    "difficulty": {
+      "type": "A",
+      "root": "fac",
+      "parts": [
+        { "form": "dif", "kind": "prefix", "gloss": "離れて" },
+        { "form": "fic", "kind": "root", "gloss": "作る・なす" }
+      ],
+      "derivation": "容易でない状態 → 困難、難しさ"
+    },
+    "faction": {
+      "type": "A",
+      "root": "fac",
+      "parts": [
+        { "form": "fac", "kind": "root", "gloss": "作る・なす" },
+        { "form": "-ion", "kind": "suffix", "gloss": "〜すること" }
+      ],
+      "derivation": "作ることから生じた集団 → 派閥"
+    },
+    "factor": {
+      "type": "A",
+      "root": "fac",
+      "parts": [
+        { "form": "fac", "kind": "root", "gloss": "作る・なす" },
+        { "form": "-or", "kind": "suffix", "gloss": "〜する人・もの" }
+      ],
+      "derivation": "事をなすもの → 要因"
+    },
+    "superficial": {
+      "type": "A",
+      "root": "fac",
+      "parts": [
+        { "form": "super", "kind": "prefix", "gloss": "上に" },
+        { "form": "fic", "kind": "root", "gloss": "作る・なす" },
+        { "form": "-al", "kind": "suffix", "gloss": "〜に関する" }
+      ],
+      "derivation": "上に作られた面の性質 → 表面的な"
+    },
+    "surface": {
+      "type": "A",
+      "root": "fac",
+      "parts": [
+        { "form": "sur", "kind": "prefix", "gloss": "上に" },
+        { "form": "fac", "kind": "root", "gloss": "作る・なす" }
+      ],
+      "derivation": "上に作られた面 → 表面"
+    },
+    "facade": {
+      "type": "B",
+      "derivation": "顔・正面として作られた面から → 外見、建物の正面"
+    },
+    "cohesive": {
+      "type": "A",
+      "root": "her",
+      "parts": [
+        { "form": "co", "kind": "prefix", "gloss": "ともに" },
+        { "form": "hes", "kind": "root", "gloss": "くっつく" },
+        { "form": "-ive", "kind": "suffix", "gloss": "〜する性質の" }
+      ],
+      "derivation": "ともにくっついている性質 → 結束した"
+    },
+    "hesitant": {
+      "type": "A",
+      "root": "her",
+      "parts": [
+        { "form": "hes", "kind": "root", "gloss": "くっつく" },
+        { "form": "-ant", "kind": "suffix", "gloss": "〜するもの・人" }
+      ],
+      "derivation": "立ち止まって動けない状態 → ためらいがちな"
+    },
+    "inherent": {
+      "type": "A",
+      "root": "her",
+      "parts": [
+        { "form": "in", "kind": "prefix", "gloss": "中へ" },
+        { "form": "her", "kind": "root", "gloss": "くっつく" },
+        { "form": "-ent", "kind": "suffix", "gloss": "〜するもの・人" }
+      ],
+      "derivation": "内側にくっついている性質 → 固有の、本来備わった"
+    },
+    "inherently": {
+      "type": "A",
+      "root": "her",
+      "parts": [
+        { "form": "in", "kind": "prefix", "gloss": "中へ" },
+        { "form": "her", "kind": "root", "gloss": "くっつく" },
+        { "form": "-ent", "kind": "suffix", "gloss": "〜するもの・人" }
+      ],
+      "derivation": "内側にくっついている性質で → 本質的に"
+    },
+    "deregulation": {
+      "type": "A",
+      "root": "reg",
+      "parts": [
+        { "form": "de", "kind": "prefix", "gloss": "離れて" },
+        { "form": "reg", "kind": "root", "gloss": "まっすぐにする・支配する" },
+        { "form": "-ation", "kind": "suffix", "gloss": "〜すること" }
+      ],
+      "derivation": "規制を外すこと → 規制緩和"
+    },
+    "direct": {
+      "type": "A",
+      "root": "reg",
+      "parts": [
+        { "form": "di", "kind": "prefix", "gloss": "離れて" },
+        { "form": "rect", "kind": "root", "gloss": "まっすぐにする・支配する" }
+      ],
+      "derivation": "まっすぐ導く → 直接の、まっすぐな"
+    },
+    "rectify": {
+      "type": "A",
+      "root": "reg",
+      "parts": [
+        { "form": "rect", "kind": "root", "gloss": "まっすぐにする・支配する" },
+        { "form": "-ify", "kind": "suffix", "gloss": "〜にする" }
+      ],
+      "derivation": "まっすぐにする → 訂正した、是正した"
+    },
+    "regime": {
+      "type": "B",
+      "derivation": "支配する規則から → 政権、体制"
+    },
+    "anonymous": {
+      "type": "A",
+      "root": "nom",
+      "parts": [
+        { "form": "nym", "kind": "root", "gloss": "名前" },
+        { "form": "-ous", "kind": "suffix", "gloss": "〜の性質の" }
+      ],
+      "derivation": "名前を隠した性質 → 匿名の、無名の"
+    },
+    "misnomer": {
+      "type": "A",
+      "root": "nom",
+      "parts": [
+        { "form": "mis", "kind": "prefix", "gloss": "誤って" },
+        { "form": "nom", "kind": "root", "gloss": "名前" },
+        { "form": "-er", "kind": "suffix", "gloss": "〜する人" }
+      ],
+      "derivation": "誤って名付けるもの → 誤った名称、誤称"
+    },
+    "nomination": {
+      "type": "A",
+      "root": "nom",
+      "parts": [
+        { "form": "nom", "kind": "root", "gloss": "名前" },
+        { "form": "-ation", "kind": "suffix", "gloss": "〜すること" }
+      ],
+      "derivation": "名前を挙げること → ノミネート、指名"
+    },
+    "pseudonym": {
+      "type": "A",
+      "root": "nom",
+      "parts": [
+        { "form": "pseudo", "kind": "prefix", "gloss": "偽りの" },
+        { "form": "nym", "kind": "root", "gloss": "名前" }
+      ],
+      "derivation": "偽りの名前 → 筆名、偽名"
+    },
+    "congeniality": {
+      "type": "A",
+      "root": "gen",
+      "parts": [
+        { "form": "con", "kind": "prefix", "gloss": "ともに" },
+        { "form": "gen", "kind": "root", "gloss": "生む・種" },
+        { "form": "-ity", "kind": "suffix", "gloss": "〜であること" }
+      ],
+      "derivation": "同じ種の仲間とともにある性質 → 親しみやすさ、気の合う性質"
+    },
+    "degenerate": {
+      "type": "A",
+      "root": "gen",
+      "parts": [
+        { "form": "de", "kind": "prefix", "gloss": "離れて" },
+        { "form": "gener", "kind": "root", "gloss": "生む・種" },
+        { "form": "-ate", "kind": "suffix", "gloss": "〜にする（動詞化）" }
+      ],
+      "derivation": "生まれの性質から離れて変化する → 悪化している、退化している"
+    },
+    "generosity": {
+      "type": "A",
+      "root": "gen",
+      "parts": [
+        { "form": "gener", "kind": "root", "gloss": "生む・種" },
+        { "form": "-ity", "kind": "suffix", "gloss": "〜であること" }
+      ],
+      "derivation": "生まれや家柄に表れる性質 → 寛大さ、気前の良さ"
+    },
+    "consistent": {
+      "type": "A",
+      "root": "sist",
+      "parts": [
+        { "form": "con", "kind": "prefix", "gloss": "ともに" },
+        { "form": "sist", "kind": "root", "gloss": "立つ" },
+        { "form": "-ent", "kind": "suffix", "gloss": "〜するもの・人" }
+      ],
+      "derivation": "ともに立ち続ける性質 → 一貫した、矛盾のない"
+    },
+    "destitute": {
+      "type": "A",
+      "root": "sist",
+      "parts": [
+        { "form": "de", "kind": "prefix", "gloss": "離れて" },
+        { "form": "stit", "kind": "root", "gloss": "立つ" }
+      ],
+      "derivation": "立つ場所から離された状態 → 貧困に陥った、無一文の"
+    },
+    "statement": {
+      "type": "A",
+      "root": "sist",
+      "parts": [
+        { "form": "sta", "kind": "root", "gloss": "立つ" },
+        { "form": "-ment", "kind": "suffix", "gloss": "〜すること・もの" }
+      ],
+      "derivation": "立てて述べたもの → 発言、声明、明細書"
+    },
+    "substitute": {
+      "type": "A",
+      "root": "sist",
+      "parts": [
+        { "form": "sub", "kind": "prefix", "gloss": "下へ・副次的に" },
+        { "form": "stit", "kind": "root", "gloss": "立つ" }
+      ],
+      "derivation": "下に立てて代わりに置く → 代用品、代理人"
+    },
+    "statue": {
+      "type": "B",
+      "derivation": "立てられたものから → 像、彫像"
+    },
+    "congratulate": {
+      "type": "A",
+      "root": "grat",
+      "parts": [
+        { "form": "con", "kind": "prefix", "gloss": "ともに" },
+        { "form": "grat", "kind": "root", "gloss": "喜ばせる・感謝" },
+        { "form": "-ate", "kind": "suffix", "gloss": "〜にする（動詞化）" }
+      ],
+      "derivation": "ともに喜ばせる → 祝う、祝辞を述べる"
+    },
+    "gratify": {
+      "type": "A",
+      "root": "grat",
+      "parts": [
+        { "form": "grat", "kind": "root", "gloss": "喜ばせる・感謝" },
+        { "form": "-ify", "kind": "suffix", "gloss": "〜にする" }
+      ],
+      "derivation": "喜ばせるようにする → 満足させる"
+    },
+    "graceful": {
+      "type": "A",
+      "root": "grat",
+      "parts": [
+        { "form": "grac", "kind": "root", "gloss": "喜ばせる・感謝" },
+        { "form": "-ful", "kind": "suffix", "gloss": "〜に満ちた" }
+      ],
+      "derivation": "喜ばせる魅力に満ちた → 優雅な"
+    },
+    "apologize": {
+      "type": "A",
+      "root": "log",
+      "parts": [
+        { "form": "apo", "kind": "prefix", "gloss": "〜から離れて" },
+        { "form": "log", "kind": "root", "gloss": "言葉・話す" },
+        { "form": "-ize", "kind": "suffix", "gloss": "〜にする" }
+      ],
+      "derivation": "言葉を離れて弁明する → 謝った"
+    },
+    "colloquial": {
+      "type": "A",
+      "root": "log",
+      "parts": [
+        { "form": "col", "kind": "prefix", "gloss": "ともに" },
+        { "form": "loqu", "kind": "root", "gloss": "言葉・話す" },
+        { "form": "-al", "kind": "suffix", "gloss": "〜に関する" }
+      ],
+      "derivation": "ともに話す性質 → 口語の、話し言葉の"
+    },
+    "elocution": {
+      "type": "A",
+      "root": "log",
+      "parts": [
+        { "form": "e", "kind": "prefix", "gloss": "外へ" },
+        { "form": "locut", "kind": "root", "gloss": "言葉・話す" },
+        { "form": "-ion", "kind": "suffix", "gloss": "〜すること（名詞化）" }
+      ],
+      "derivation": "外へ話すこと → 発音・朗読法"
+    },
+    "ambivalent": {
+      "type": "A",
+      "root": "val",
+      "parts": [
+        { "form": "ambi", "kind": "prefix", "gloss": "両方に" },
+        { "form": "val", "kind": "root", "gloss": "強い・価値がある" },
+        { "form": "-ent", "kind": "suffix", "gloss": "〜するもの・人" }
+      ],
+      "derivation": "両方の価値を持つ状態 → 相反する感情を抱く、どちらとも決めかねる"
+    },
+    "convalescence": {
+      "type": "A",
+      "root": "val",
+      "parts": [
+        { "form": "con", "kind": "prefix", "gloss": "ともに" },
+        { "form": "val", "kind": "root", "gloss": "強い・価値がある" },
+        { "form": "-escence", "kind": "suffix", "gloss": "〜の過程・状態" }
+      ],
+      "derivation": "力をともに取り戻す状態 → 回復期"
+    },
+    "value": {
+      "type": "B",
+      "derivation": "力や価値があることから → 価値、値打ち／重んじる"
+    },
+    "provision": {
+      "type": "A",
+      "root": "vid",
+      "parts": [
+        { "form": "pro", "kind": "prefix", "gloss": "前へ" },
+        { "form": "vis", "kind": "root", "gloss": "見える" },
+        { "form": "-ion", "kind": "suffix", "gloss": "〜すること（名詞化）" }
+      ],
+      "derivation": "先に見て備えること → 食料、備蓄；条項、備え"
+    },
+    "proviso": {
+      "type": "A",
+      "root": "vid",
+      "parts": [
+        { "form": "pro", "kind": "prefix", "gloss": "前へ" },
+        { "form": "vis", "kind": "root", "gloss": "見える" }
+      ],
+      "derivation": "先に見て条件を付けること → 条件、但し書き"
+    },
+    "visa": {
+      "type": "B",
+      "derivation": "見たもの、確認したものから → ビザ、査証"
+    },
+    "cordial": {
+      "type": "A",
+      "root": "cord",
+      "parts": [
+        { "form": "cord", "kind": "root", "gloss": "心" },
+        { "form": "-al", "kind": "suffix", "gloss": "〜に関する" }
+      ],
+      "derivation": "心のこもった性質 → 心のこもった、友好的な"
+    },
+    "cordially": {
+      "type": "A",
+      "root": "cord",
+      "parts": [
+        { "form": "cord", "kind": "root", "gloss": "心" },
+        { "form": "-al", "kind": "suffix", "gloss": "〜に関する" }
+      ],
+      "derivation": "心のこもった状態で → 心から、丁重に"
+    },
+    "discord": {
+      "type": "A",
+      "root": "cord",
+      "parts": [
+        { "form": "dis", "kind": "prefix", "gloss": "離れて" },
+        { "form": "cord", "kind": "root", "gloss": "心" }
+      ],
+      "derivation": "心が離れている状態 → 不和、意見の不一致"
+    },
+    "intangible": {
+      "type": "A",
+      "root": "tang",
+      "parts": [
+        { "form": "in", "kind": "prefix", "gloss": "否定" },
+        { "form": "tang", "kind": "root", "gloss": "触れる" },
+        { "form": "-ible", "kind": "suffix", "gloss": "〜できる" }
+      ],
+      "derivation": "触れることができない性質 → 無形の、触れられない"
+    },
+    "tangible": {
+      "type": "A",
+      "root": "tang",
+      "parts": [
+        { "form": "tang", "kind": "root", "gloss": "触れる" },
+        { "form": "-ible", "kind": "suffix", "gloss": "〜できる" }
+      ],
+      "derivation": "触れることができる性質 → 具体的で触れられる"
+    },
+    "incursion": {
+      "type": "A",
+      "root": "cur",
+      "parts": [
+        { "form": "in", "kind": "prefix", "gloss": "中へ" },
+        { "form": "cur", "kind": "root", "gloss": "走る" },
+        { "form": "-ion", "kind": "suffix", "gloss": "〜すること（名詞化）" }
+      ],
+      "derivation": "中へ走り込むこと → 侵入、襲撃"
+    },
+    "occur": {
+      "type": "A",
+      "root": "cur",
+      "parts": [
+        { "form": "oc", "kind": "prefix", "gloss": "向かって" },
+        { "form": "cur", "kind": "root", "gloss": "走る" }
+      ],
+      "derivation": "向かって走り合う → 起こる、生じる；（心に）浮かぶ"
+    },
+    "curriculum": {
+      "type": "B",
+      "derivation": "走る道筋から → カリキュラム"
     }
   }
 }
