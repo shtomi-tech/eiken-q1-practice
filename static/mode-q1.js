@@ -2243,8 +2243,8 @@ function flashCoreImage(item) {
 
   const particle = core.particle ? particleMap[core.particle] : null;
   if (particle) {
-    const panel = el("details", { class: "particlePanel" });
-    panel.appendChild(el("summary", {}, `「${core.particle}」のイメージは共通`));
+    const panel = el("div", { class: "particlePanel" });
+    panel.appendChild(el("p", { class: "particlePanelTitle" }, `「${core.particle}」のイメージは共通`));
     const particleCore = el("p", { class: "particleCore" }, particle.core || "");
     if (particle.note) particleCore.appendChild(document.createTextNode(` ／ ${particle.note}`));
     panel.appendChild(particleCore);

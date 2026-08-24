@@ -35,7 +35,8 @@ for (const marker of ["coreChain", "coreChainStep", "coreChainTerm", "coreChainG
   assert.ok(flashCoreImageBody.includes(marker), `flashCoreImage に ${marker} が必要です`);
 }
 assert.ok(flashCoreImageBody.includes('el("ol"'), "核心イメージの連鎖は ol で表現する必要があります");
-assert.ok(flashCoreImageBody.includes('el("details"'), "不変化詞パネルは details で表現する必要があります");
+assert.ok(!flashCoreImageBody.includes('el("details"'), "不変化詞パネルは開閉させず、常に表示する必要があります");
+assert.ok(flashCoreImageBody.includes("particlePanelTitle"), "不変化詞パネルには見出しが必要です");
 assert.ok(flashCoreImageBody.includes("particleMap"), "不変化詞パネルは共有辞書を参照する必要があります");
 assert.ok(!flashCoreImageBody.includes("→"), "暗記カードの矢印はCSS疑似要素で表現し、JSテキストに持たせないでください");
 
@@ -53,6 +54,7 @@ for (const selector of [
   ".coreChainTerm",
   ".coreChainGloss",
   ".particlePanel",
+  ".particlePanelTitle",
   ".particleSiblings",
 ]) {
   assert.ok(css.includes(selector), `CSSに ${selector} の規則が必要です`);

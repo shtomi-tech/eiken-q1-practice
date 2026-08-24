@@ -981,12 +981,9 @@ h2 {
   border-top: 1px solid var(--line);
   padding-top: 10px;
 }
-.particlePanel summary {
-  display: flex;
-  min-height: 44px;
-  align-items: center;
+.particlePanelTitle {
+  margin: 0;
   color: var(--ink);
-  cursor: pointer;
   font-family: var(--mono);
   font-size: 11px;
   letter-spacing: .08em;
