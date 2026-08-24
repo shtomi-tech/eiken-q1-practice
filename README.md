@@ -49,6 +49,7 @@
 - 1級テーマ別設問文: `data/topic_question_stems_1.json`（暗記カードの例文とは別データ）
 - 1級テーマ別5セット: `data/questions_topic_set-*.json` / `data/vocab_topic_set-*.json`
 - 国際医療福祉大学 基礎試験: `data/questions_iuhw_set-1.json` / `data/vocab_iuhw_set-1.json`
+- 熟語の核心イメージ共有辞書（表示専用）: `data/particle_images.json`
 - 問題セット一覧: `data/manifest.json` の `q1`
 
 準1級のQ1データは、全体過去問データから次で抽出します。

@@ -926,10 +926,119 @@ h2 {
 }
 .flashMeaning { font-size: 19px; font-family: var(--serif); }
 .flashEtym { font-size: 14px; }
+.coreChain {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  gap: 8px;
+  align-items: stretch;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.coreChainStep {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--parchment);
+  padding: 10px;
+}
+.coreChainStep + .coreChainStep::before {
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  color: var(--muted);
+  content: "→";
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1;
+  transform: translate(-50%, -50%);
+}
+.coreChainTerm {
+  font-family: var(--sans);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+.coreChainGloss {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+.coreChainResult {
+  margin: 12px 0 0;
+  border-radius: var(--r-md);
+  background: var(--ink);
+  color: var(--parchment);
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.45;
+  padding: 10px 12px;
+}
+.coreChainNote {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+.particlePanel {
+  margin-top: 14px;
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+}
+.particlePanel summary {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  color: var(--ink);
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .08em;
+}
+.particleCore {
+  margin: 10px 0 0;
+  font-family: var(--serif);
+  font-size: 16px;
+}
+.particleSiblings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.particleSiblings li {
+  display: flex;
+  min-width: min(100%, 160px);
+  flex-direction: column;
+  gap: 2px;
+}
+.particleSiblings strong { font-size: 13px; }
+.particleSiblings span { color: var(--muted); font-size: 12px; }
 .flashEx { font-size: 15px; }
 .flashEx em { font-style: normal; border-bottom: 2px solid var(--ink); padding: 0 2px; }
 .flashExampleTranslation { margin: 6px 0 0; color: var(--muted); font-size: 13px; }
 .flashExampleTranslationLabel { display: block; margin-bottom: 3px; font-family: var(--mono); font-size: 10px; letter-spacing: .12em; }
+
+@media (max-width: 480px) {
+  .coreChain {
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+  }
+  .coreChainStep + .coreChainStep::before {
+    top: -8px;
+    left: 50%;
+    content: "↓";
+    transform: translate(-50%, -50%);
+  }
+}
 .relatedWordList { display: grid; gap: 8px; }
 .relatedWord {
   display: flex;

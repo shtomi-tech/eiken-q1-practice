@@ -776,7 +776,16 @@
       "example": "The unused budget is carrying over to the next quarter.",
       "exampleTranslation": "未使用の予算は次の四半期へ持ち越される。",
       "pos": "熟語",
-      "phrase": "carrying over"
+      "phrase": "carrying over",
+      "coreImage": {
+        "chain": [
+          { "term": "carry", "gloss": "運ぶ" },
+          { "term": "over", "gloss": "越えて" },
+          { "gloss": "境目を越えて運ぶ" },
+          { "gloss": "持ち越す" }
+        ],
+        "particle": "over"
+      }
     },
     {
       "q": 22,
@@ -785,7 +794,16 @@
       "example": "The city is cracking down on illegal parking.",
       "exampleTranslation": "市は違法駐車を厳しく取り締まっている。",
       "pos": "熟語",
-      "phrase": "cracking down"
+      "phrase": "cracking down",
+      "coreImage": {
+        "chain": [
+          { "term": "crack", "gloss": "打ち砕く" },
+          { "term": "down", "gloss": "下へ・押さえつけて" },
+          { "gloss": "強く押さえ込む" },
+          { "gloss": "厳しく取り締まる" }
+        ],
+        "particle": "down"
+      }
     },
     {
       "q": 22,
@@ -794,7 +812,16 @@
       "example": "We spent the afternoon hanging out at the park.",
       "exampleTranslation": "私たちは午後を公園でぶらぶら過ごした。",
       "pos": "熟語",
-      "phrase": "hanging out"
+      "phrase": "hanging out",
+      "coreImage": {
+        "chain": [
+          { "term": "hang", "gloss": "ぶら下がる" },
+          { "term": "out", "gloss": "外へ・こもらずに" },
+          { "gloss": "こもらずに人と一緒にぶらぶら過ごす" },
+          { "gloss": "ぶらぶら過ごす、遊ぶ" }
+        ],
+        "particle": "out"
+      }
     },
     {
       "q": 22,
@@ -803,7 +830,16 @@
       "example": "Without proper care, the abandoned garden was wasting away.",
       "exampleTranslation": "適切な世話がなく、その放置された庭は衰えていった。",
       "pos": "熟語",
-      "phrase": "wasting away"
+      "phrase": "wasting away",
+      "coreImage": {
+        "chain": [
+          { "term": "waste", "gloss": "消耗する・衰える" },
+          { "term": "away", "gloss": "離れて消える" },
+          { "gloss": "少しずつ力を失う" },
+          { "gloss": "やせ衰える、衰弱する" }
+        ],
+        "particle": "away"
+      }
     },
     {
       "q": 23,
@@ -812,7 +848,17 @@
       "example": "You need to snap out of your gloomy mood and face the problem.",
       "exampleTranslation": "憂鬱な気分から立ち直って、問題に向き合う必要がある。",
       "pos": "熟語",
-      "phrase": "Snap out of"
+      "phrase": "Snap out of",
+      "coreImage": {
+        "chain": [
+          { "term": "snap", "gloss": "ぱっと弾く" },
+          { "term": "out", "gloss": "外へ" },
+          { "term": "of", "gloss": "〜から" },
+          { "gloss": "停滞した状態の外へぱっと出る" },
+          { "gloss": "ぼんやりした状態から立ち直る" }
+        ],
+        "particle": "out"
+      }
     },
     {
       "q": 23,
@@ -821,7 +867,16 @@
       "example": "The young player acted up to the high expectations placed on him.",
       "exampleTranslation": "その若い選手は寄せられた大きな期待に応えて行動した。",
       "pos": "熟語",
-      "phrase": "Act up to"
+      "phrase": "Act up to",
+      "coreImage": {
+        "chain": [
+          { "term": "act", "gloss": "行動する" },
+          { "term": "up to", "gloss": "基準まで" },
+          { "gloss": "基準に届くよう行動する" },
+          { "gloss": "期待に応えて行動する" }
+        ],
+        "particle": "up to"
+      }
     },
     {
       "q": 23,
@@ -830,7 +885,17 @@
       "example": "Please do not hold out on us when you know the answer.",
       "exampleTranslation": "答えを知っているなら、私たちに隠さないでください。",
       "pos": "熟語",
-      "phrase": "Hold out on"
+      "phrase": "Hold out on",
+      "coreImage": {
+        "chain": [
+          { "term": "hold", "gloss": "保持する" },
+          { "term": "out", "gloss": "外へ出したまま" },
+          { "term": "on", "gloss": "相手に対して" },
+          { "gloss": "手元に保持したまま出さない" },
+          { "gloss": "隠して与えない、出し惜しみする" }
+        ],
+        "particle": "out"
+      }
     },
     {
       "q": 23,
@@ -839,7 +904,16 @@
       "example": "She stood up to the bully and reported the incident.",
       "exampleTranslation": "彼女はいじめっ子に立ち向かい、その出来事を報告した。",
       "pos": "熟語",
-      "phrase": "Stand up to"
+      "phrase": "Stand up to",
+      "coreImage": {
+        "chain": [
+          { "term": "stand", "gloss": "立つ" },
+          { "term": "up to", "gloss": "〜に対して" },
+          { "gloss": "圧力に負けず立つ" },
+          { "gloss": "立ち向かう" }
+        ],
+        "particle": "up to"
+      }
     },
     {
       "q": 24,
@@ -848,7 +922,16 @@
       "example": "The lawyer laid out the risks before we signed the contract.",
       "exampleTranslation": "弁護士は私たちが契約に署名する前にリスクを説明した。",
       "pos": "熟語",
-      "phrase": "lay out"
+      "phrase": "lay out",
+      "coreImage": {
+        "chain": [
+          { "term": "lay", "gloss": "置く・並べる" },
+          { "term": "out", "gloss": "外へ広げる" },
+          { "gloss": "要素を広げて並べる" },
+          { "gloss": "説明する、明確に示す" }
+        ],
+        "particle": "out"
+      }
     },
     {
       "q": 24,
@@ -857,7 +940,16 @@
       "example": "The campaign tried to drum up support from local residents.",
       "exampleTranslation": "その運動は地元住民から支持を集めようとした。",
       "pos": "熟語",
-      "phrase": "drum up"
+      "phrase": "drum up",
+      "coreImage": {
+        "chain": [
+          { "term": "drum", "gloss": "太鼓を鳴らす" },
+          { "term": "up", "gloss": "上へ・盛り上げる" },
+          { "gloss": "何度も呼びかけて盛り上げる" },
+          { "gloss": "支持・仕事などをかき集める" }
+        ],
+        "particle": "up"
+      }
     },
     {
       "q": 24,
@@ -866,7 +958,16 @@
       "example": "After comparing several plans, we settled on the simplest one.",
       "exampleTranslation": "いくつかの計画を比較した後、私たちは最も簡単なものに決めた。",
       "pos": "熟語",
-      "phrase": "settle on"
+      "phrase": "settle on",
+      "coreImage": {
+        "chain": [
+          { "term": "settle", "gloss": "落ち着く" },
+          { "term": "on", "gloss": "〜の上に" },
+          { "gloss": "候補の一つに落ち着く" },
+          { "gloss": "〜に決める" }
+        ],
+        "particle": "on"
+      }
     },
     {
       "q": 24,
@@ -875,7 +976,16 @@
       "example": "Police sealed off the street after the accident.",
       "exampleTranslation": "警察は事故の後、その通りを封鎖した。",
       "pos": "熟語",
-      "phrase": "seal off"
+      "phrase": "seal off",
+      "coreImage": {
+        "chain": [
+          { "term": "seal", "gloss": "封をする" },
+          { "term": "off", "gloss": "切り離して" },
+          { "gloss": "封をして切り離す" },
+          { "gloss": "封鎖する、立ち入り禁止にする" }
+        ],
+        "particle": "off"
+      }
     },
     {
       "q": 25,
@@ -884,7 +994,16 @@
       "example": "We had not bargained on such a long delay.",
       "exampleTranslation": "私たちはこれほど長い遅延を予期していなかった。",
       "pos": "熟語",
-      "phrase": "bargained on"
+      "phrase": "bargained on",
+      "coreImage": {
+        "chain": [
+          { "term": "bargain", "gloss": "取引する" },
+          { "term": "on", "gloss": "〜を前提に" },
+          { "gloss": "起こると見込んで賭ける" },
+          { "gloss": "当てにした、予期した" }
+        ],
+        "particle": "on"
+      }
     },
     {
       "q": 25,
@@ -893,7 +1012,16 @@
       "example": "The company tried to buy off the witness with a large payment.",
       "exampleTranslation": "その会社は多額の支払いで証人を買収しようとした。",
       "pos": "熟語",
-      "phrase": "bought off"
+      "phrase": "bought off",
+      "coreImage": {
+        "chain": [
+          { "term": "buy", "gloss": "買う" },
+          { "term": "off", "gloss": "離れさせる" },
+          { "gloss": "金で味方から離す" },
+          { "gloss": "買収した、金で黙らせた" }
+        ],
+        "particle": "off"
+      }
     },
     {
       "q": 25,
@@ -902,7 +1030,16 @@
       "example": "She eked out a living by repairing old bicycles.",
       "exampleTranslation": "彼女は古い自転車を修理して、かろうじて生計を立てた。",
       "pos": "熟語",
-      "phrase": "eked out"
+      "phrase": "eked out",
+      "coreImage": {
+        "chain": [
+          { "term": "eke", "gloss": "補う・増やす" },
+          { "term": "out", "gloss": "外へ・最後まで" },
+          { "gloss": "少ないものを引き伸ばして使う" },
+          { "gloss": "かろうじて得た、やりくりした" }
+        ],
+        "particle": "out"
+      }
     },
     {
       "q": 25,
@@ -911,7 +1048,16 @@
       "example": "The children soaked up every detail of the science show.",
       "exampleTranslation": "子どもたちは科学ショーの細部をすべて吸収した。",
       "pos": "熟語",
-      "phrase": "soaked up"
+      "phrase": "soaked up",
+      "coreImage": {
+        "chain": [
+          { "term": "soak", "gloss": "浸す・吸い込む" },
+          { "term": "up", "gloss": "完全に" },
+          { "gloss": "中へ完全に吸い込む" },
+          { "gloss": "吸収した、十分に味わった" }
+        ],
+        "particle": "up"
+      }
     }
   ]
 }

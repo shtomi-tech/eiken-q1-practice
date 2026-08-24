@@ -57,6 +57,7 @@ let DATASETS = {};
 let ALL_DATASETS = {};
 let DEFAULT_DATASET_ID = null;
 let lemmaMap = {};
+let particleMap = {};
 let aiCheckEndpoint = "";
 async function loadManifest() {
   const manifest = await fetch(MANIFEST_URL, { cache: "no-store" }).then((r) => r.json());
@@ -2217,10 +2218,51 @@ function buildFlashCard(item) {
 
   const inner = el("div", { class: "flashBody" });
   inner.appendChild(flashRow("意味", item.meaning, "flashMeaning"));
-  if (item.etymology) inner.appendChild(flashRow("語源・なりたち", item.etymology, "flashEtym"));
+  if (item.coreImage) inner.appendChild(flashCoreImage(item));
+  else if (item.etymology) inner.appendChild(flashRow("語源・なりたち", item.etymology, "flashEtym"));
   if (item.example) inner.appendChild(flashExampleRow(item));
   card.appendChild(inner);
   return card;
+}
+
+function flashCoreImage(item) {
+  const core = item.coreImage;
+  const row = el("div", { class: "flashRow coreImageRow" });
+  row.appendChild(el("strong", {}, "核心イメージ"));
+
+  const chain = el("ol", { class: "coreChain", "aria-label": "意味の連鎖" });
+  (core.chain || []).forEach((step) => {
+    const contents = [];
+    if (step.term) contents.push(el("span", { class: "coreChainTerm" }, step.term));
+    contents.push(el("span", { class: "coreChainGloss" }, step.gloss));
+    chain.appendChild(el("li", { class: "coreChainStep" }, ...contents));
+  });
+  row.appendChild(chain);
+
+  const terms = (core.chain || []).filter((step) => step.term).map((step) => step.term).join(" ");
+  const lastStep = (core.chain || [])[(core.chain || []).length - 1];
+  const result = lastStep && lastStep.gloss || item.meaning;
+  row.appendChild(el("p", { class: "coreChainResult" }, terms ? `${terms}（${result}）` : result));
+  if (core.note) row.appendChild(el("p", { class: "coreChainNote" }, core.note));
+
+  const particle = core.particle ? particleMap[core.particle] : null;
+  if (particle) {
+    const panel = el("details", { class: "particlePanel" });
+    panel.appendChild(el("summary", {}, `「${core.particle}」のイメージは共通`));
+    const particleCore = el("p", { class: "particleCore" }, particle.core || "");
+    if (particle.note) particleCore.appendChild(document.createTextNode(` ／ ${particle.note}`));
+    panel.appendChild(particleCore);
+    const siblings = el("ul", { class: "particleSiblings" });
+    (particle.siblings || []).forEach((sibling) => {
+      siblings.appendChild(el("li", {},
+        el("strong", {}, sibling.phrase),
+        el("span", {}, sibling.gloss),
+      ));
+    });
+    panel.appendChild(siblings);
+    row.appendChild(panel);
+  }
+  return row;
 }
 
 function renderFlash(body) {
@@ -2583,7 +2625,12 @@ function appendCheckFeedback(box, item, surface, correct, isCorrect) {
     fb.appendChild(el("p", { class: "hint" },
       `出題から ${session.checkElapsed.toFixed(1)} 秒で解答${compare}`));
   }
-  if (item.etymology) fb.appendChild(el("p", { class: "trans" }, item.etymology));
+  if (item.coreImage && Array.isArray(item.coreImage.chain)) {
+    fb.appendChild(el("p", { class: "trans coreImageFeedback" },
+      item.coreImage.chain.map((step) => step.gloss).join(" → ")));
+  } else if (item.etymology) {
+    fb.appendChild(el("p", { class: "trans" }, item.etymology));
+  }
   box.appendChild(fb);
 
   const last = session.checkIdx === session.checkOrder.length - 1;
@@ -2909,6 +2956,17 @@ async function boot() {
         : {};
     } catch (e) {
       lemmaMap = {};
+    }
+    try {
+      const particleResponse = await fetch("data/particle_images.json", { cache: "no-store" });
+      if (!particleResponse.ok) throw new Error(`particle_images.json: HTTP ${particleResponse.status}`);
+      const particleData = await particleResponse.json();
+      particleMap = particleData && particleData.particles
+        && typeof particleData.particles === "object" && !Array.isArray(particleData.particles)
+        ? particleData.particles
+        : {};
+    } catch (e) {
+      particleMap = {};
     }
     await loadAiConfig();
 
