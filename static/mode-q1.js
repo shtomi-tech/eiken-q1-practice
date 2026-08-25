@@ -2383,26 +2383,32 @@ function rotatingSiblingWindow(siblings, slot = 0) {
   return [0, 1, 2].map((k) => siblings[(slot + k) % siblings.length]);
 }
 
+function sameStem(a, b) {
+  return a.startsWith(b) || b.startsWith(a) || a.slice(0, 5) === b.slice(0, 5);
+}
+
 function wordOriginSiblingItems(item) {
   const origin = wordOriginFor(item);
   if (!origin || !origin.root) return [];
   const ownLemma = wordOriginLemma(item);
-  const rootLemmas = new Set(wordOriginRootIndex.get(String(origin.root).toLowerCase()) || []);
-  const collect = (items) => {
-    const seen = new Set();
-    return items
-      .filter((candidate) => candidate && candidate.type === "word")
-      .filter((candidate) => {
-        const lemma = wordOriginLemma(candidate);
-        if (!lemma || lemma === ownLemma || !rootLemmas.has(lemma) || seen.has(lemma)) return false;
-        seen.add(lemma);
-        return true;
-      });
-  };
-  const currentItems = collect(allVocabularyItems());
-  if (currentItems.length) return currentItems;
-  const pooled = pooledData(currentGrade());
-  return collect(pooled?.items || []);
+  const rootLemmas = wordOriginRootIndex.get(String(origin.root).toLowerCase()) || [];
+  const currentLemmas = new Set(allVocabularyItems().map(wordOriginLemma));
+  return rootLemmas
+    .filter((lemma) => lemma !== ownLemma && wordOriginMap[lemma]?.type === "A")
+    .map((lemma, index) => ({
+      lemma,
+      gloss: wordOriginMap[lemma].gloss,
+      current: currentLemmas.has(lemma),
+      differentStem: !sameStem(ownLemma, lemma),
+      index,
+    }))
+    .filter((sibling) => sibling.gloss)
+    .sort((a, b) => (
+      Number(b.current) - Number(a.current)
+      || Number(b.differentStem) - Number(a.differentStem)
+      || a.index - b.index
+    ))
+    .map(({ lemma, gloss }) => ({ lemma, gloss }));
 }
 
 function originKindLabel(kind) {
@@ -2453,8 +2459,8 @@ function flashWordOrigin(item) {
     const siblingList = el("ul", { class: "particleSiblings" });
     visibleSiblings.forEach((sibling) => {
       siblingList.appendChild(el("li", {},
-        el("strong", {}, wordOriginLemma(sibling) || surfaceOf(sibling)),
-        el("span", {}, sibling.meaning),
+        el("strong", {}, sibling.lemma),
+        el("span", {}, sibling.gloss),
       ));
     });
     panel.appendChild(siblingList);

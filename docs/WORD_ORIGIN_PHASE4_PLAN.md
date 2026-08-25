@@ -3,7 +3,7 @@
 対象: `static/mode-q1.js` / `data/word_origins.json` / `scripts/check-word-origin-data.cjs` / `scripts/check-word-origin-ui.cjs` / `docs/WORD_ORIGIN_AUTHORING.md`
 関連: [WORD_ORIGIN_PLAN.md](WORD_ORIGIN_PLAN.md)（全体）/ [WORD_ORIGIN_PHASE3_PLAN.md](WORD_ORIGIN_PHASE3_PLAN.md)（語根の第2波）
 前提: 段階3＝`deb05fc`（語根33個・A型136語・B型18語）
-状態: 未着手
+状態: 完了（2026-08-25）。A型136語に短いglossを追加し、仲間語パネルを語源辞書ベースの級横断表示へ変更した
 
 ## 0. なぜデータではなく表示側を直すのか
 

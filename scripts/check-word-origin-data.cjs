@@ -186,6 +186,12 @@ for (const [lemma, origin] of originEntries) {
   assert.equal(cReasons.has(lemma), false, `${lemma}: C型一覧の語にoriginsを付けてはいけません`);
 
   if (origin.type === "A") {
+    const gloss = nonEmptyString(origin.gloss, `${lemma}.gloss`);
+    assert.ok(Array.from(gloss).length <= 16, `${lemma}.gloss は16文字以内にしてください`);
+    assert.ok(
+      vocabularyMeanings.get(lemma).some((meaning) => String(meaning).includes(gloss)),
+      `${lemma}.gloss は語彙データのmeaningの部分文字列である必要があります`,
+    );
     nonEmptyString(origin.root, `${lemma}.root`);
     const rootEntry = rootsData.roots[origin.root];
     assert.ok(rootEntry, `${lemma}: root ${origin.root} が辞書にありません`);

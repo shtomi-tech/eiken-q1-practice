@@ -57,9 +57,11 @@ assert.ok(flashWordOriginBody.includes("wordOriginSiblingItems"), "語根の仲�
 assert.ok(flashWordOriginBody.includes("particlePanel"), "仲間語パネルは既存particlePanelの構造を流用する必要があります");
 assert.ok(flashWordOriginBody.includes("wordOriginPanel"), "語根パネルを識別できるクラスが必要です");
 assert.ok(flashWordOriginBody.includes("type === \"B\""), "B型の語源を分解なしで表示できる必要があります");
-assert.ok(wordOriginSiblingsBody.includes("allVocabularyItems"), "現在のデータセットの語彙を仲間語候補に使う必要があります");
-assert.ok(wordOriginSiblingsBody.includes("pooledData"), "現在セットにない仲間語を全体プールから補う必要があります");
+assert.ok(wordOriginSiblingsBody.includes("wordOriginMap"), "仲間語候補は語源辞書を参照する必要があります");
+assert.equal(wordOriginSiblingsBody.includes("pooledData"), false, "仲間語候補は級別のpooledDataに依存してはいけません");
 assert.ok(wordOriginSiblingsBody.includes("wordOriginRootIndex"), "仲間語の逆引きはroot索引を使う必要があります");
+assert.ok(wordOriginSiblingsBody.includes("sameStem"), "仲間語の語幹変異形は後順位にする必要があります");
+assert.ok(flashWordOriginBody.includes("sibling.gloss"), "仲間語パネルは語源辞書の短いglossを表示する必要があります");
 assert.match(rotatingSiblingWindowBody, /siblings\[\(slot \+ k\) % siblings\.length\]/, "仲間語のローテーションは決定的なslotで行う必要があります");
 assert.equal(flashWordOriginBody.includes("Math.random"), false, "仲間語の表示に乱数を使ってはいけません");
 
