@@ -31,6 +31,7 @@ const finalUnlockedBody = extractFunctionBody(js, "finalUnlocked");
 const renderDoneBody = extractFunctionBody(js, "renderDone");
 const migrateBody = extractFunctionBody(js, "migrateLegacyPre1Progress");
 const currentResumeBody = extractFunctionBody(js, "currentResume");
+const resumableResumeBody = extractFunctionBody(js, "resumableResume");
 const answerBody = extractFunctionBody(js, "onPracticeAnswer");
 
 for (const marker of ["Q1_UNLEARNED", "Q1_FLASH", "Q1_MEANING_CHECK", "Q1_WRONG_REVIEW", "Q1_PRACTICE", "Q1_DONE"]) {
@@ -62,7 +63,8 @@ assert.match(js, /const RESUME_STAGE_RULES\s*=\s*\{/, "再開可能なmodeごと
 assert.match(js, /function resumeStageAllowed\(/, "未知のstageを弾く判定関数が必要です");
 assert.ok(restoreSessionBody.includes("resumeStageAllowed"), "restoreSessionは未対応stageを現行フローへ入れてはいけません");
 assert.ok(restoreSessionBody.includes("resumeUnavailable"), "再開できない記録は削除せず案内状態にする必要があります");
-assert.ok(currentResumeBody.includes("resumeStageAllowed"), "未対応stageを通常の再開CTAへ流してはいけません");
+assert.ok(resumableResumeBody.includes("resumeStageAllowed"), "未対応stageを通常の再開CTAへ流してはいけません");
+assert.ok(currentResumeBody.includes("resumableResume"), "currentResume()は共通の再開可能判定を使う必要があります");
 
 assert.ok(migrateBody.includes("eikenp1-"), "旧準1級進捗を現行datasetIdへ移す必要があります");
 assert.ok(migrateBody.includes('learned: true'), "旧回答済み設問をlearnedとして移行する必要があります");

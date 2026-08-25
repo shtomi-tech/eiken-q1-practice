@@ -728,11 +728,13 @@ function resumeDescription(resume) {
   if (resume.mode === "final") return `最終チェック ${Number(resume.checkIdx || 0) + 1}/${resume.checkOrder?.length || 1}`;
   return "学習の続き";
 }
-function currentResume() {
-  const resume = state.progress && state.progress.resume;
+function resumableResume(resume) {
   return resume && RESUMABLE_MODES.has(resume.mode)
-    && resumeStageAllowed(resume.mode, resume.stage)
-    && !resumeUnavailable ? resume : null;
+    && resumeStageAllowed(resume.mode, resume.stage) ? resume : null;
+}
+function currentResume() {
+  const resume = resumableResume(state.progress && state.progress.resume);
+  return resume && !resumeUnavailable ? resume : null;
 }
 function saveResume() {
   if (!session) return;
@@ -1856,23 +1858,30 @@ function renderHomeContent() {
 
   // おすすめ（主導線）＝状態に応じて1つだけ決める。詳細な進捗より先に置く。
   let primary;
+  let primaryIsReview = false;
   if (coreResume) {
     primary = {
       label: "続きから再開する",
       onclick: async () => { if (!(await restoreSession())) renderHome(); },
     };
+  // 完了画面の同じ優先順は renderDone() と scripts/check-unit-learning-ui.cjs で担保する。
+  } else if (reviewQs.length) {
+    primary = {
+      label: `間違えた${reviewQs.length}問を復習する`,
+      why: "間違えた設問です。忘れないうちに1問ずつ確認します。",
+      onclick: startReview,
+      secondary: nextQ ? {
+        label: `次の設問へ（第${nextQ}問） →`,
+        onclick: () => startLearn(nextQ),
+      } : null,
+    };
+    primaryIsReview = true;
   } else if (nextQ) {
     primary = {
       label: `第${nextQ}問を学習する`,
       // 初回訪問はheroで同じ3ステップを説明済みのため、ここでは重複させない
       why: isFirstVisit ? "" : "暗記カード → 意味確認 → 本番形式の3ステップで進みます。",
       onclick: () => startLearn(nextQ),
-    };
-  } else if (reviewQs.length) {
-    primary = {
-      label: `間違えた${reviewQs.length}問を復習する`,
-      why: "まちがえた設問をつぶすと、最終チェックが解放されます。",
-      onclick: startReview,
     };
   } else if (canStartFinal && !final.cleared) {
     primary = {
@@ -1894,8 +1903,15 @@ function renderHomeContent() {
   if (primary) {
     const rec = el("div", { class: "recommend" });
     rec.appendChild(el("p", { class: "recEyebrow" }, "▶ まずはここから"));
-    rec.appendChild(el("button", { class: "cta startCta", onclick: primary.onclick }, primary.label));
+    const primaryClass = ["cta", "startCta"];
+    if (primaryIsReview) primaryClass.push("reviewCta");
+    rec.appendChild(el("button", { class: primaryClass.join(" "), type: "button", onclick: primary.onclick }, primary.label));
     if (primary.why) rec.appendChild(el("p", { class: "recWhy" }, primary.why));
+    if (primary.secondary) {
+      rec.appendChild(el("div", { class: "actions" },
+        el("button", { class: "secondaryCta", type: "button", onclick: primary.secondary.onclick }, primary.secondary.label),
+      ));
+    }
     summary.appendChild(rec);
   } else {
     summary.appendChild(el("div", { class: "recommend" },
@@ -1922,7 +1938,15 @@ function renderHomeContent() {
   if (goalCard) home.appendChild(goalCard);
 
   if (grade) {
-    home.appendChild(meaningMission(meaningSummary, Boolean(pooled), meaningQueue, meaningItems, meaningResume ? resume : null, coreResume));
+    home.appendChild(meaningMission(
+      meaningSummary,
+      Boolean(pooled),
+      meaningQueue,
+      meaningItems,
+      meaningResume ? resume : null,
+      coreResume,
+      Boolean(primary),
+    ));
   }
 
   // 層2：問題セットUnitカード（独立section。同じ級の過去問・模試を進捗付きで一覧表示）
@@ -2136,18 +2160,25 @@ function vocabGoalCard(learned, ready) {
   prevTick.style.left = pct(goal.prev);
 
   const forecast = currentGrade() === "eiken1"
-    ? el("div", { class: "vocabForecast", "aria-labelledby": "vocabForecastTitle" })
+    ? (ready
+      // detailsにはroleが無くaria-labelledbyが効かないため、名前はsummary自身が持つ。
+      ? el("details", { class: "vocabForecast" })
+      : el("div", { class: "vocabForecast", "aria-labelledby": "vocabForecastTitle" }))
     : null;
   if (forecast) {
-    forecast.appendChild(el("h4", { id: "vocabForecastTitle" }, "このペースで学べる語句"));
     if (!ready) {
+      forecast.appendChild(el("h4", { id: "vocabForecastTitle" }, "このペースで学べる語句"));
       forecast.appendChild(el("p", { class: "hint" }, "英検1級通常問題の語句を読み込み中…"));
     } else {
       const goalForecast = vocabularyGoalForecast(new Date(), studyPlan || defaultStudyPlan(), learned);
       const periods = vocabularyForecast(studyPlan || defaultStudyPlan());
-      forecast.appendChild(el("p", { class: "vocabForecastLead" },
-        `このペースなら14,000語まであと${num(goalForecast.remainingVocabulary)}語`));
-      forecast.appendChild(el("p", { class: "hint" }, goalForecast.remainingVocabulary === 0
+      const forecastSummary = el("summary", { id: "vocabForecastTitle" },
+        el("span", { class: "vocabForecastSummaryTitle" }, "このペースで学べる語句"),
+        el("span", { class: "vocabForecastLead" },
+          `このペースなら14,000語まであと${num(goalForecast.remainingVocabulary)}語`),
+      );
+      forecast.appendChild(forecastSummary);
+      forecast.appendChild(el("p", { class: "hint vocabForecastDate" }, goalForecast.remainingVocabulary === 0
         ? "14,000語の目安に到達しています。"
         : `1日${num(goalForecast.dailyVocabulary)}語句で、${goalForecast.estimatedDate.toLocaleDateString("ja-JP", { year: "numeric", month: "long", day: "numeric" })}ごろ（あと${num(goalForecast.daysToGoal)}日）`));
       forecast.appendChild(el("div", { class: "vocabForecastGrid", "aria-label": "期間別の理論上の語句予測" },
@@ -2189,7 +2220,15 @@ function vocabGoalCard(learned, ready) {
   );
 }
 
-function meaningMission(summary, ready, nextQueue = [], learnedItems = [], meaningResume = null, coreResume = false) {
+function meaningMission(
+  summary,
+  ready,
+  nextQueue = [],
+  learnedItems = [],
+  meaningResume = null,
+  coreResume = false,
+  hasPrimaryCta = false,
+) {
   const total = summary.total;
   const learned = summary.learned;
   const due = summary.due;
@@ -2258,7 +2297,9 @@ function meaningMission(summary, ready, nextQueue = [], learnedItems = [], meani
     buttonAttrs.onclick = () => startMeaningPractice(true, nextQueue);
     if (remaining > 0) note = `今すぐ復習する${due}語句のうち、今回は${batch}語句を出題します。残り${remaining}語句は次回に回ります。`;
   }
-  if (coreResume) buttonAttrs.class = "secondaryCta meaningMissionCta";
+  // 1画面の塗りCTAは1つ。主CTAがある限り、間隔復習は二次操作に落とす。
+  // 主CTAが null（通常学習が終わり、間隔復習が実質の主導線になる分岐）のときだけ塗りのまま残す。
+  if (hasPrimaryCta) buttonAttrs.class = "secondaryCta meaningMissionCta";
   mission.appendChild(el("button", buttonAttrs, buttonLabel));
   if (note) mission.appendChild(el("p", { class: "hint" }, note));
   return mission;
@@ -2293,7 +2334,6 @@ function datasetSetLabel(datasetId, data) {
 }
 
 // 保存形式は変えず、Unitカード表示用の数値・状態だけを読み取り専用で算出する。
-// manifestに問題数・語句数が無いため、非アクティブなセットの総数は "—" とする（総数はアクティブなセットのみ確実に出せる）。
 function datasetSummary(datasetId, data) {
   const isCurrent = datasetId === state.datasetId;
   const progress = progressFor(datasetId);
@@ -2302,19 +2342,41 @@ function datasetSummary(datasetId, data) {
   const correctQuestions = units.filter((u) => u.solvedCorrect).length;
   const reviewQuestions = units.filter((u) => u.needsReview).length;
   const cleared = Boolean(progress && progress.finalCheck && progress.finalCheck.cleared);
-  const totalQuestions = isCurrent ? state.qList.length : null;
-  const totalVocabulary = isCurrent ? allVocabularyItems().length : null;
+  const resume = resumableResume(progress && progress.resume);
+  const hasResume = Boolean(resume && resume.stage !== "done");
+  const totalQuestions = isCurrent
+    ? state.qList.length
+    : (Number.isInteger(data.totalQuestions) ? data.totalQuestions : null);
+  const totalVocabulary = isCurrent
+    ? allVocabularyItems().length
+    : (Number.isInteger(data.totalVocabulary) ? data.totalVocabulary : null);
   let status = "notStarted";
   if (cleared) status = "cleared";
   else if (reviewQuestions > 0) status = "review";
   else if (learnedQuestions > 0) status = "inProgress";
-  return { totalQuestions, totalVocabulary, learnedQuestions, correctQuestions, reviewQuestions, cleared, status };
+  else if (hasResume) status = "resumable";
+  return {
+    totalQuestions,
+    totalVocabulary,
+    learnedQuestions,
+    correctQuestions,
+    reviewQuestions,
+    cleared,
+    resume,
+    hasResume,
+    status,
+  };
 }
 
 function datasetPrimaryLabel(summary, isCurrent) {
   if (summary.status === "cleared") return "もう一周する";
   if (summary.status === "review") return "復習する";
-  if (summary.status === "inProgress" || isCurrent) return "続きから";
+  const resumeQuestion = Number(summary.resume?.q);
+  const resumeLabel = Number.isInteger(resumeQuestion)
+    ? `続きから（第${resumeQuestion}問）`
+    : "続きから";
+  if (summary.status === "resumable") return resumeLabel;
+  if (summary.status === "inProgress" || isCurrent) return summary.hasResume ? resumeLabel : "続きから";
   return "この回を始める";
 }
 
@@ -2326,6 +2388,7 @@ function datasetUnitCard(id, data, index) {
   const totalQ = summary.totalQuestions != null ? summary.totalQuestions : "—";
   const totalV = summary.totalVocabulary != null ? summary.totalVocabulary : "—";
   const progressLine = `${summary.learnedQuestions} / ${totalQ}問`;
+  const resumeText = summary.hasResume ? `途中保存：${resumeDescription(summary.resume)}` : "";
   const cls = ["datasetUnitCard"];
   if (isCurrent) cls.push("current");
   if (summary.cleared) cls.push("cleared");
@@ -2333,6 +2396,7 @@ function datasetUnitCard(id, data, index) {
   const ariaParts = [datasetSetLabel(id, data), progressLine];
   if (summary.cleared) ariaParts.push("CLEAR");
   else if (summary.reviewQuestions > 0) ariaParts.push(`要復習${summary.reviewQuestions}問`);
+  if (resumeText) ariaParts.push(resumeText);
   ariaParts.push(label);
   const attrs = {
     class: cls.join(" "),
@@ -2352,6 +2416,7 @@ function datasetUnitCard(id, data, index) {
         : (summary.reviewQuestions > 0
           ? el("span", { class: "datasetUnitCardReview" }, `！要復習${summary.reviewQuestions}問`)
           : null),
+      summary.hasResume ? el("span", { class: "datasetUnitCardResume" }, resumeText) : null,
       el("span", { class: "datasetUnitCardAction" }, label),
     ),
     el("span", { class: "datasetUnitCardArrow", "aria-hidden": "true" }, "→"),

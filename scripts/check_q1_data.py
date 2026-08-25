@@ -89,7 +89,7 @@ def check_unique(values: list[tuple[str, str]], label: str) -> None:
         seen[key] = owner
 
 
-def check_dataset(dataset_id: str, meta: dict) -> dict[str, list[dict]]:
+def check_dataset(dataset_id: str, meta: dict) -> dict[str, object]:
     vocab_path = ROOT / meta["vocabUrl"]
     questions_path = ROOT / meta["questionsUrl"]
     if not vocab_path.is_file() or not questions_path.is_file():
@@ -227,6 +227,10 @@ def check_dataset(dataset_id: str, meta: dict) -> dict[str, list[dict]]:
         raise ValueError(f"{dataset_id}: 同じ語句が3問以上に登場します: {repeated}")
 
     print(f"{dataset_id}: {len(questions)} questions / {len(items)} words OK")
+    topic_rows["counts"] = {
+        "totalQuestions": len({int(item["q"]) for item in items}),
+        "totalVocabulary": len(items),
+    }
     return topic_rows
 
 
@@ -256,6 +260,15 @@ def check_topic_rows(topic_rows: dict[str, list[dict]]) -> None:
 
 
 def main() -> None:
+    import argparse
+
+    parser = argparse.ArgumentParser(description="英検Q1データ契約を検証します")
+    parser.add_argument(
+        "--update-manifest",
+        action="store_true",
+        help="語彙データから算出した総数をdata/manifest.jsonへ書き戻します",
+    )
+    args = parser.parse_args()
     manifest = load_json(DATA_DIR / "manifest.json")
     if set(manifest) != {"defaultDatasetId", "q1"}:
         raise ValueError(f"manifest にQ1以外の領域があります: {sorted(manifest)}")
@@ -268,12 +281,33 @@ def main() -> None:
         "translation_warnings": [],
         "mixed_questions": [],
     }
+    counts_by_dataset: dict[str, dict[str, int]] = {}
     for dataset_id, meta in q1.items():
         checked = check_dataset(dataset_id, meta)
         topic_rows["questions"].extend(checked["questions"])
         topic_rows["items"].extend(checked["items"])
         topic_rows["translation_warnings"].extend(checked["translation_warnings"])
         topic_rows["mixed_questions"].extend(checked["mixed_questions"])
+        counts_by_dataset[dataset_id] = checked["counts"]
+    if args.update_manifest:
+        for dataset_id, counts in counts_by_dataset.items():
+            q1[dataset_id]["totalQuestions"] = counts["totalQuestions"]
+            q1[dataset_id]["totalVocabulary"] = counts["totalVocabulary"]
+        (DATA_DIR / "manifest.json").write_text(
+            json.dumps(manifest, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+        print("manifest: counts updated")
+    else:
+        for dataset_id, counts in counts_by_dataset.items():
+            meta = q1[dataset_id]
+            for key in ("totalQuestions", "totalVocabulary"):
+                declared = meta.get(key)
+                expected = counts[key]
+                if isinstance(declared, bool) or not isinstance(declared, int) or declared != expected:
+                    raise ValueError(
+                        f"{dataset_id}: manifestの{key}={declared!r}は実データの{expected}と一致しません"
+                    )
     check_topic_rows(topic_rows)
     if topic_rows["translation_warnings"]:
         print(f"WARN: 設問文訳に正答meaningを含まない設問 {len(topic_rows['translation_warnings'])}件")
