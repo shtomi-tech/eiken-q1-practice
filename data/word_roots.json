@@ -1,6 +1,6 @@
 {
   "meta": {
-    "note": "単語カードの語源パネル用。表示専用。進捗キー・音声・選択肢には使わない。段階5バッチ3で語根84個まで拡張する。"
+    "note": "単語カードの語源パネル用。表示専用。進捗キー・音声・選択肢には使わない。段階5バッチ4で語根97個まで拡張する。"
   },
   "roots": {
     "spec": {
@@ -187,7 +187,7 @@
       "gloss": "触れる",
       "origin": "ラテン語 tangere",
       "note": "手や感覚で触れて確かめるイメージ。",
-      "variants": ["tact"]
+      "variants": ["tact", "tig"]
     },
     "cur": {
       "gloss": "走る",
@@ -359,7 +359,8 @@
     "sent": {
       "gloss": "感じる",
       "origin": "ラテン語 sentire",
-      "note": "感じ取ったことを心に受け止めるイメージ。sentiment・consensual。"
+      "note": "感じ取ったことを心に受け止めるイメージ。sentiment・consensual。",
+      "variants": ["sens"]
     },
     "sal": {
       "gloss": "跳ぶ",
@@ -375,7 +376,8 @@
     "ten": {
       "gloss": "保つ",
       "origin": "ラテン語 tenere",
-      "note": "手に持ち、状態を保つイメージ。tenure・retain。"
+      "note": "手に持ち、状態を保つイメージ。tenure・retain。",
+      "variants": ["tin"]
     },
     "trib": {
       "gloss": "割り当てる",
@@ -390,7 +392,8 @@
     "prim": {
       "gloss": "押す",
       "origin": "ラテン語 premere",
-      "note": "押さえつけて抑えるイメージ。oppress。primus（第一）由来の語は含めない。"
+      "note": "押さえつけて抑えるイメージ。oppress。primus（第一）由来の語は含めない。",
+      "variants": ["press"]
     },
     "fin": {
       "gloss": "境界・終わり",
@@ -458,6 +461,75 @@
       "gloss": "力",
       "origin": "ラテン語 -bilis",
       "note": "力があるかどうかに関わるイメージ。debility。"
+    },
+    "cili": {
+      "gloss": "呼び集める",
+      "origin": "ラテン語 concilium",
+      "note": "人を呼び集めて、会合を開くイメージ。council・reconcile。"
+    },
+    "cuss": {
+      "gloss": "揺さぶる",
+      "origin": "ラテン語 quatere",
+      "note": "強く揺さぶり、衝撃を与えるイメージ。percussion・discuss。"
+    },
+    "dens": {
+      "gloss": "濃い",
+      "origin": "ラテン語 densus",
+      "note": "ものが密集し、濃く詰まるイメージ。density・dense。"
+    },
+    "serv": {
+      "gloss": "保つ",
+      "origin": "ラテン語 servare",
+      "note": "状態を守り、そのまま保つイメージ。preserve・reserve。"
+    },
+    "solid": {
+      "gloss": "固い",
+      "origin": "ラテン語 solidus",
+      "note": "一つに固まり、しっかりした状態のイメージ。solid・solidify。"
+    },
+    "stell": {
+      "gloss": "星",
+      "origin": "ラテン語 stella",
+      "note": "夜空に輝く星のイメージ。stellar・interstellar。"
+    },
+    "trit": {
+      "gloss": "すりつぶす",
+      "origin": "ラテン語 terere",
+      "note": "こすって削り、細かくすりつぶすイメージ。attrition・detriment。"
+    },
+    "temp": {
+      "gloss": "軽んじる",
+      "origin": "ラテン語 temnere",
+      "note": "価値を低く見て軽んじるイメージ。contemptuous。tempus（時間）由来の語は含めない。"
+    },
+    "mand": {
+      "gloss": "委ねる",
+      "origin": "ラテン語 mandare",
+      "note": "相手に任せ、手渡して委ねるイメージ。command・demand。",
+      "variants": ["mend"]
+    },
+    "mit": {
+      "gloss": "送る",
+      "origin": "ラテン語 mittere",
+      "note": "ものを送り出すイメージ。emission・omit。",
+      "variants": ["miss"]
+    },
+    "mut": {
+      "gloss": "変える",
+      "origin": "ラテン語 mutare",
+      "note": "状態を変えたり、互いに交換したりするイメージ。mutation・mutual。"
+    },
+    "ple": {
+      "gloss": "満たす",
+      "origin": "ラテン語 plere",
+      "note": "中身を満たし、完全な状態にするイメージ。implement・supplement。",
+      "variants": ["plet"]
+    },
+    "plic": {
+      "gloss": "折る",
+      "origin": "ラテン語 plicare",
+      "note": "折り重ね、複雑に絡ませるイメージ。perplex・complicate。",
+      "variants": ["pli", "ply"]
     }
   },
   "affixes": {
