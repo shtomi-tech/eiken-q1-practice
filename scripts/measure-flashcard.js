@@ -44,9 +44,13 @@
 
   function pixelRect(element) {
     const rect = element.getBoundingClientRect();
+    const fixedParent = element.closest(".sessionActionBar");
+    const isViewportPositioned = getComputedStyle(element).position === "fixed"
+      || (fixedParent && getComputedStyle(fixedParent).position === "fixed");
+    const top = isViewportPositioned ? rect.top : rect.top + scrollY;
     return {
       l: Math.round(rect.left),
-      t: Math.round(rect.top + scrollY),
+      t: Math.round(top),
       w: Math.round(rect.width),
       h: Math.round(rect.height),
     };
@@ -92,6 +96,14 @@
   function currentNextButton() {
     const nav = document.querySelector(".flashNav");
     return nav ? nextButton(nav) : null;
+  }
+
+  function navTopInDocument(nav) {
+    const rect = nav.getBoundingClientRect();
+    const fixedParent = nav.closest(".sessionActionBar");
+    const isViewportPositioned = getComputedStyle(nav).position === "fixed"
+      || (fixedParent && getComputedStyle(fixedParent).position === "fixed");
+    return Math.round(isViewportPositioned ? rect.top : rect.top + scrollY);
   }
 
   // M12: 送り後に見出し語が画面内に収まっているか。
@@ -197,7 +209,7 @@
         mid: document.querySelector(".originChip")
           ? "語源"
           : (document.querySelector(".coreChain") ? "核心イメージ" : "なし"),
-        M1_navBelowFold: Math.round(nav.getBoundingClientRect().top + scrollY) - innerHeight,
+        M1_navBelowFold: navTopInDocument(nav) - innerHeight,
         M3_cardH: cardHeight,
         M4_rows: [...flash.querySelectorAll(".flashRow")].map((flashRow) => {
           const height = Math.round(flashRow.getBoundingClientRect().height);

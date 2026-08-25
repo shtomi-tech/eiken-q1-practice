@@ -378,9 +378,67 @@ h2 {
 .cta { border-radius: var(--r-md); font-weight: 600; }
 
 /* 前へ/次への誤タップ防止：両端に離し、主操作（次へ）を優先して大きくする */
-.flashNav { justify-content: space-between; gap: 24px; }
-.flashNav .cta { flex: 1 1 auto; min-width: min(100%, 220px); }
+.flashNav { justify-content: space-between; gap: 12px; }
+.flashNav .cta { flex: 1 1 auto; min-width: min(100%, 160px); }
 .flashNav .ghost { flex: 0 0 auto; }
+.flashNav .isGuarded { opacity: .6; cursor: default; }
+
+/* 暗記カードの送り操作は画面下部へ固定し、長い語源・核心イメージの途中でも操作できるようにする。 */
+#sessionPanel.hasActionBar { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
+.sessionActionBar {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  z-index: 6;
+  width: min(928px, calc(100vw - 32px));
+  transform: translateX(-50%);
+  background: var(--parchment);
+  border-top: 1px solid var(--line);
+  padding: 12px 0 max(12px, env(safe-area-inset-bottom));
+}
+.sessionActionBar .flashNav {
+  display: grid;
+  grid-template-columns: minmax(0, auto) auto minmax(0, auto);
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 0;
+  width: 100%;
+}
+.sessionActionBar .flashNav .ghost {
+  justify-self: start;
+  min-width: 0;
+  padding-inline: 10px;
+}
+.sessionActionBar .flashNav .cta {
+  justify-self: end;
+  flex: none;
+  min-width: min(100%, 160px);
+}
+/* カウンタは中央列に置く。絶対配置で重ねると、操作ボタンとの間隔が狭い画面幅で
+   ボタンの上に描画されてしまう（381〜433px幅で実測）。 */
+.flashNavCounter {
+  grid-column: 2;
+  justify-self: center;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .06em;
+  line-height: 1.4;
+  pointer-events: none;
+  white-space: nowrap;
+}
+/* 3つを1行へ収められない幅では、文字と余白を詰めて折り返しを避ける。 */
+@media (max-width: 460px) {
+  .sessionActionBar .flashNav { gap: 8px; }
+  .sessionActionBar .flashNav button {
+    font-size: 12px;
+    padding-inline: 6px;
+    white-space: nowrap;
+  }
+  .sessionActionBar .flashNav .cta { min-width: 0; }
+  .flashNavCounter { font-size: 10px; }
+}
 
 /* 回答後の主操作（次へ）を画面下部に固定し、連続演習での誤タップ・スクロール量を減らす */
 @media (max-width: 720px) {
@@ -659,8 +717,7 @@ h2 {
 }
 .sessionStickyBack { min-height: 44px; padding: 6px 12px; font-size: 12px; }
 .sessionStickyPos,
-.sessionStickyStage,
-.sessionStickyFlash {
+.sessionStickyStage {
   font-family: var(--mono);
   font-size: 11px;
   letter-spacing: .04em;
@@ -1063,7 +1120,15 @@ details.vocabForecast:not([open]) > :not(summary) { display: none; }
   color: var(--muted);
   margin-bottom: 5px;
 }
-.flashMeaning { font-size: 19px; font-family: var(--serif); }
+.flashMeaning,
+.flashExampleTranslation,
+.particlePanel p { max-inline-size: 34em; }
+.flashMeaning {
+  font-size: 22px;
+  font-family: var(--serif);
+  font-weight: 600;
+  line-height: 1.425;
+}
 .wrongReviewMeaning { font-size: 14px; }
 .originChips {
   display: flex;
@@ -1200,9 +1265,13 @@ details.vocabForecast:not([open]) > :not(summary) { display: none; }
 .particleSiblings strong { font-size: 13px; }
 .wordOriginPanel .particleSiblings strong { text-transform: none; }
 .particleSiblings span { color: var(--muted); font-size: 12px; }
-.flashEx { font-size: 15px; }
+.flashEx { max-inline-size: 58ch; font-size: 15px; }
 .flashEx em { font-style: normal; border-bottom: 2px solid var(--ink); padding: 0 2px; }
-.flashExampleTranslation { margin: 6px 0 0; color: var(--muted); font-size: 13px; }
+.flashExampleTranslation {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
 .flashExampleTranslationLabel { display: block; margin-bottom: 3px; font-family: var(--mono); font-size: 10px; letter-spacing: .12em; }
 
 @media (max-width: 480px) {
@@ -1315,13 +1384,6 @@ details.vocabForecast:not([open]) > :not(summary) { display: none; }
 .selfExampleSuggestion { font-family: var(--serif); font-size: 16px !important; }
 .selfExampleFeedbackText { color: var(--muted); }
 .selfExampleUnavailable { margin-bottom: 0; }
-
-.cardCounter {
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: .06em;
-  color: var(--muted);
-}
 
 /* ---- Quiz (check + practice) ---- */
 .quizBox { background: var(--parchment); border-radius: var(--r-lg); padding: 16px; animation: kContentEnter var(--motion-progress) var(--ease-spring-soft); }

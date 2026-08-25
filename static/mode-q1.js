@@ -2684,6 +2684,7 @@ function renderSession() {
   $("#homePanel").classList.add("hide");
   const panel = $("#sessionPanel");
   panel.classList.remove("hide");
+  panel.classList.toggle("hasActionBar", session.stage === "flash");
   panel.innerHTML = "";
 
   const isMeaning = session.mode === "meaning";
@@ -2733,14 +2734,10 @@ function sessionStickyNav(q, isReview, isMeaning, isFinal) {
   const stageLabel = {
     flash: "覚える", check: "確かめる", wrongReview: "復習", practice: "解く", done: "完了",
   }[session.stage] || "";
-  const flashLabel = (!isMeaning && !isFinal && !isReview && session.stage === "flash" && session.items)
-    ? `${(session.flashIdx || 0) + 1}/${session.items.length}語`
-    : "";
   return el("div", { class: "sessionStickyNav" },
     el("button", { class: "sessionStickyBack ghost", type: "button", onclick: () => { saveResume(); renderHome(); } }, "一覧へ"),
     el("span", { class: "sessionStickyPos" }, posLabel),
     el("span", { class: "sessionStickyStage" }, stageLabel),
-    flashLabel ? el("span", { class: "sessionStickyFlash" }, flashLabel) : null,
   );
 }
 
@@ -2951,6 +2948,15 @@ function buildFlashCard(item) {
   return card;
 }
 
+function scrollFlashCardIntoView() {
+  const flash = $("#sessionPanel .flash");
+  if (!flash) return;
+  const sticky = $("#sessionPanel .sessionStickyNav");
+  const stickyHeight = sticky ? sticky.getBoundingClientRect().height : 0;
+  const target = flash.getBoundingClientRect().top + window.scrollY - stickyHeight - 8;
+  window.scrollTo({ top: Math.max(0, target), left: 0, behavior: "auto" });
+}
+
 function rotatingSiblingWindow(siblings, slot = 0) {
   if (siblings.length <= 3) return siblings;
   return [0, 1, 2].map((k) => siblings[(slot + k) % siblings.length]);
@@ -3112,29 +3118,51 @@ function renderFlash(body) {
   body.appendChild(buildFlashCard(item));
 
   const nav = el("div", { class: "actions flashNav" });
+  const guardActive = flashNavLocked();
+  const guardedAttrs = (attrs) => guardActive
+    ? {
+        ...attrs,
+        class: `${attrs.class || ""} isGuarded`.trim(),
+        "aria-disabled": "true",
+      }
+    : attrs;
   const canGoBack = session.flashIdx > 0;
-  const prevAttrs = canGoBack ? { class: "ghost" } : { class: "ghost", disabled: "disabled" };
+  const prevAttrs = guardedAttrs(canGoBack ? { class: "ghost" } : { class: "ghost", disabled: "disabled" });
   prevAttrs.onclick = () => {
     if (!canGoBack || flashNavLocked()) return;
     armFlashNavGuard();
     session.flashIdx--;
     renderSession();
+    scrollFlashCardIntoView();
   };
-  nav.appendChild(el("button", prevAttrs, "← 前のカード"));
+  const previousButton = el("button", prevAttrs, "← 前のカード");
+  nav.appendChild(previousButton);
   const last = session.flashIdx === items.length - 1;
-  nav.appendChild(el("button", {
+  const nextButton = el("button", guardedAttrs({
     class: "cta",
     onclick: () => {
       if (flashNavLocked()) return;
       armFlashNavGuard();
       if (last) { session.stage = "check"; renderSession(); }
       else { session.flashIdx++; renderSession(); }
+      scrollFlashCardIntoView();
     },
-  }, last ? "意味チェックへ進む →" : "次のカード →"));
-  body.appendChild(nav);
-
-  body.appendChild(el("p", { class: "cardCounter", style: "margin-top:10px" },
+  }), last ? "意味チェックへ進む →" : "次のカード →");
+  nav.appendChild(el("span", { class: "flashNavCounter", "aria-live": "polite" },
     `カード ${session.flashIdx + 1} / ${items.length}`));
+  nav.appendChild(nextButton);
+  body.appendChild(el("div", { class: "sessionActionBar" }, nav));
+
+  if (guardActive) {
+    const remaining = Math.max(0, (session._flashNavReadyAt || 0) - performance.now());
+    setTimeout(() => {
+      [previousButton, nextButton].forEach((button) => {
+        if (!button.isConnected) return;
+        button.classList.remove("isGuarded");
+        button.removeAttribute("aria-disabled");
+      });
+    }, remaining);
+  }
 }
 
 function flashRow(labelText, text, cls) {
