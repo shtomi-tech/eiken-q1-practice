@@ -57,6 +57,11 @@ assert.ok(flashWordOriginBody.includes("wordOriginSiblingItems"), "語根の仲�
 assert.ok(flashWordOriginBody.includes("particlePanel"), "仲間語パネルは既存particlePanelの構造を流用する必要があります");
 assert.ok(flashWordOriginBody.includes("wordOriginPanel"), "語根パネルを識別できるクラスが必要です");
 assert.ok(flashWordOriginBody.includes("type === \"B\""), "B型の語源を分解なしで表示できる必要があります");
+const panelIdx = flashWordOriginBody.indexOf("wordOriginPanel");
+const siblingGateIdx = flashWordOriginBody.indexOf("visibleSiblings.length");
+assert.ok(panelIdx !== -1 && siblingGateIdx !== -1, "語根パネルと仲間語の分岐が必要です");
+assert.ok(panelIdx < siblingGateIdx, "語根パネルは仲間語の有無に関係なく描く必要があります");
+assert.ok(flashWordOriginBody.includes("particleSiblings"), "仲間語リストのクラスが必要です");
 assert.ok(wordOriginSiblingsBody.includes("wordOriginMap"), "仲間語候補は語源辞書を参照する必要があります");
 assert.equal(wordOriginSiblingsBody.includes("pooledData"), false, "仲間語候補は級別のpooledDataに依存してはいけません");
 assert.ok(wordOriginSiblingsBody.includes("wordOriginRootIndex"), "仲間語の逆引きはroot索引を使う必要があります");

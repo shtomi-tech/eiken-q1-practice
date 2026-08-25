@@ -3,7 +3,7 @@
 対象: `static/mode-q1.js` / `scripts/check-word-origin-ui.cjs` / `scripts/check-word-origin-data.cjs` / `scripts/build_word_origin_stub.py` / `docs/WORD_ORIGIN_AUTHORING.md` / `index.html` / `data/word_roots.json` / `data/word_origins.json`
 関連: [WORD_ORIGIN_PHASE5_PLAN.md](WORD_ORIGIN_PHASE5_PLAN.md)（方針と見込み）/ [WORD_ORIGIN_AUTHORING.md](WORD_ORIGIN_AUTHORING.md)（作成基準）
 前提: 段階4＝`bcfb4c0`。方針は `4e36e69` の段階5計画で確定
-状態: 未着手
+状態: バッチ0完了（2026-08-25）。作業1〜7を実装。データ投入バッチ1〜6は未着手。
 
 ## 0. 全体の順序
 
@@ -111,6 +111,15 @@ console.log(`word origin roots: ${Object.keys(rootsData.roots).length} roots / $
 ## 6. 作業6: キャッシュバスター
 
 `index.html` の `mode-q1.js?v=1.2.2` を `1.2.3` にする。`styles.css` は変更しないので据え置く。
+
+## 6b. 作業7: C型の記録を `data/word_origin_excluded.json` へ移す
+
+`cReasons` が `check-word-origin-data.cjs` の中のJS Mapにあるため、Python側のスタブから読めず、判定済みの語が候補に再登場していた（`--prefix in` の41語のうち5語）。
+
+- `data/word_origin_excluded.json` に `{ excluded: { <語根名 or general>: { <原形>: <理由> } } }` の形で移す。
+- 検査はこのファイルを読んで従来と同じ `cReasons` の Map を組み立てる。キーが語根名かgeneralであること、原形がグループ間で重複しないことを追加で検査する。
+- スタブは同じファイルを読み、判定済みの語を候補から外して末尾に「判定済み」として一覧する。
+- **Pagesのコピー対象にはしない**（アプリは読まない、作成用のデータ）。
 
 ## 7. バッチ0の検証
 

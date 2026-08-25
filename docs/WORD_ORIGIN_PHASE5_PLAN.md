@@ -3,7 +3,7 @@
 対象: `data/word_roots.json` / `data/word_origins.json` / `static/mode-q1.js` / `scripts/check-word-origin-ui.cjs` / `docs/WORD_ORIGIN_AUTHORING.md`
 関連: [WORD_ORIGIN_PHASE1_PLAN.md](WORD_ORIGIN_PHASE1_PLAN.md)（語根の要件を決めた回）/ [WORD_ORIGIN_PHASE4_PLAN.md](WORD_ORIGIN_PHASE4_PLAN.md)（級横断化）
 前提: 段階4＝`bcfb4c0`（語根33個・A型136語・B型18語・カバー率13.0%）
-状態: 未着手
+状態: バッチ0実装済み（2026-08-25、未コミット）。仲間語0でも語根パネルを表示し、接頭辞候補スタブと単発語根の作成基準を追加。
 
 ## 0. 方針変更
 

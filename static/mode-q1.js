@@ -2449,21 +2449,23 @@ function flashWordOrigin(item) {
     siblingItems,
     Number.isInteger(item._wordOriginSlot) ? item._wordOriginSlot : 0,
   );
-  if (visibleSiblings.length) {
-    const rootEntry = wordRoots.roots[origin.root] || {};
+  const rootEntry = wordRoots.roots[origin.root];
+  if (rootEntry) {
     const panel = el("div", { class: "particlePanel wordOriginPanel" });
     const rootOrigin = rootEntry.origin ? `（${rootEntry.origin}）` : "";
     panel.appendChild(el("p", { class: "particlePanelTitle" },
       `語根「${origin.root}」＝${rootEntry.gloss || "共通の語根"}${rootOrigin}`));
     if (rootEntry.note) panel.appendChild(el("p", { class: "particleCore" }, rootEntry.note));
-    const siblingList = el("ul", { class: "particleSiblings" });
-    visibleSiblings.forEach((sibling) => {
-      siblingList.appendChild(el("li", {},
-        el("strong", {}, sibling.lemma),
-        el("span", {}, sibling.gloss),
-      ));
-    });
-    panel.appendChild(siblingList);
+    if (visibleSiblings.length) {
+      const siblingList = el("ul", { class: "particleSiblings" });
+      visibleSiblings.forEach((sibling) => {
+        siblingList.appendChild(el("li", {},
+          el("strong", {}, sibling.lemma),
+          el("span", {}, sibling.gloss),
+        ));
+      });
+      panel.appendChild(siblingList);
+    }
     row.appendChild(panel);
   }
   return row;

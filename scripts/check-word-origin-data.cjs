@@ -7,6 +7,7 @@ const DATA_DIR = path.join(ROOT, "data");
 const LEMMA_PATH = path.join(DATA_DIR, "lemmas.json");
 const ROOTS_PATH = path.join(DATA_DIR, "word_roots.json");
 const ORIGINS_PATH = path.join(DATA_DIR, "word_origins.json");
+const EXCLUDED_PATH = path.join(DATA_DIR, "word_origin_excluded.json");
 const MANIFEST_PATH = path.join(DATA_DIR, "manifest.json");
 const PAGES_WORKFLOW_PATH = path.join(ROOT, ".github", "workflows", "pages.yml");
 
@@ -50,6 +51,7 @@ assert.equal(
 assert.ok(fs.existsSync(LEMMA_PATH), "data/lemmas.json が必要です");
 assert.ok(fs.existsSync(ROOTS_PATH), "data/word_roots.json が必要です");
 assert.ok(fs.existsSync(ORIGINS_PATH), "data/word_origins.json が必要です");
+assert.ok(fs.existsSync(EXCLUDED_PATH), "data/word_origin_excluded.json が必要です");
 assert.ok(fs.existsSync(MANIFEST_PATH), "data/manifest.json が必要です");
 assert.ok(fs.existsSync(PAGES_WORKFLOW_PATH), ".github/workflows/pages.yml が必要です");
 
@@ -117,55 +119,26 @@ for (const fileName of fs.readdirSync(DATA_DIR).filter((name) => /^vocab_.*\.jso
   }
 }
 
-const cReasons = new Map([
-  ["thwart", "general: ゲルマン系の不透明語で、接辞＋語根の分解が学習上の助けにならない"],
-  ["balk", "general: ゲルマン系の不透明語で、綴りから安全な語根を取り出せない"],
-  ["desertification", "fac: -ficationの接尾辞だけが一致し、前半を安全に分解できない"],
-  ["ratification", "fac: -ficationの接尾辞だけが一致し、前半を安全に分解できない"],
-  ["altogether", "her: all+togetherのゲルマン系語で、haerereの語根ではない"],
-  ["gather", "her: ゲルマン系の語で、haerereの語根ではない"],
-  ["heresy", "her: ギリシャ語 hairesis（選択）由来で、haerereの語根ではない"],
-  ["inheritance", "her: heres（相続人）由来で、haerere（くっつく）の語根ではない"],
-  ["philosopher", "her: ギリシャ語 philos+sophia由来で、haerereの語根ではない"],
-  ["synthesis", "her: ギリシャ語 syn+tithenai由来で、haerereの語根ではない"],
-  ["synthesize", "her: ギリシャ語 syn+tithenai由来で、haerereの語根ではない"],
-  ["tether", "her: ゲルマン系の語で、haerereの語根ではない"],
-  ["treacherous", "her: treachery系の語で、haerereの語根ではない"],
-  ["impregnable", "reg: prehendere（つかむ）由来で、regereの語根ではない"],
-  ["insurrection", "reg: surgere（立ち上がる）由来で、regereの語根ではない"],
-  ["regurgitate", "reg: gurges（渦・のど）由来で、regereの語根ではない"],
-  ["autonomy", "nom: nomos（法）由来で、nomen/onyma（名前）の語根ではない"],
-  ["economic", "nom: oikos+nomos（家の管理）由来で、名前の語根ではない"],
-  ["convergence", "gen: vergere（向かう）由来で、genusの語根ではない"],
-  ["divulgence", "gen: vulgare（公にする）由来で、genusの語根ではない"],
-  ["gently", "gen: gentilis由来だが、今回のgen語根として安全に分解できない"],
-  ["insurgent", "gen: surgere（立ち上がる）由来で、genusの語根ではない"],
-  ["pungent", "gen: pungere（刺す）由来で、genusの語根ではない"],
-  ["installer", "sist: stallum（席）由来で、stare/sistereの語根ではない"],
-  ["nostalgia", "sist: ギリシャ語 nostos+algos由来で、stareの語根ではない"],
-  ["painstaking", "sist: pain+stakeの英語の組み合わせで、stareの語根ではない"],
-  ["stake", "sist: ゲルマン系の語で、stareの語根ではない"],
-  ["stammer", "sist: ゲルマン系の語で、stareの語根ではない"],
-  ["stampede", "sist: スペイン語系の語で、stareの語根ではない"],
-  ["stand", "sist: 古英語由来で、stare/sistereの語根ではない"],
-  ["staunch", "sist: ゲルマン・フランス語系の語で、stareの語根ではない"],
-  ["immigration", "grat: migrare（移動する）由来で、gratusの語根ではない"],
-  ["backlog", "log: back+logの英語の組み合わせで、logos/loquiの語根ではない"],
-  ["log", "log: 木材を表すゲルマン系の語で、logos/loquiの語根ではない"],
-  ["cavalier", "val: caballus（馬）由来で、valereの語根ではない"],
-  ["rivalry", "val: rivus（小川）由来で、valereの語根ではない"],
-  ["upheaval", "val: heave（持ち上げる）由来で、valereの語根ではない"],
-  ["valley", "val: vallis（谷）由来で、valereの語根ではない"],
-  ["livid", "vid: lividus（青黒い）由来で、videreの語根ではない"],
-  ["divide", "vid: dividere（di-＋*videre＝分ける）由来で、videre（見る）の語根ではない"],
-  ["individual", "vid: individuus（分けられない）由来で、videre（見る）の語根ではない"],
-  ["accordingto", "cord: 語源表示対象外の句で、単語の語根カードには載せない"],
-  ["curfew", "cur: couvre-feu（火を覆う）由来で、currereの語根ではない"],
-  ["curly", "cur: curl系のゲルマン語で、currereの語根ではない"],
-  ["obscurity", "cur: obscurus（暗い）由来で、currereの語根ではない"],
-  ["security", "cur: securus（心配のない）由来で、currereの語根ではない"],
-  ["procure", "cur: procurare（pro＋curare＝世話する）由来で、currereの語根ではない"],
-]);
+const excludedData = readJson(EXCLUDED_PATH);
+nonEmptyString(excludedData.meta?.note, "word_origin_excluded.meta.note");
+assert.ok(
+  excludedData.excluded && typeof excludedData.excluded === "object" && !Array.isArray(excludedData.excluded),
+  "excluded 辞書が必要です",
+);
+// キー=語根名（またはgeneral）、値={ 原形: 理由 }。検査とスタブの両方がこのファイルを読む。
+const cReasons = new Map();
+for (const [group, words] of Object.entries(excludedData.excluded)) {
+  assert.ok(
+    group === "general" || Object.prototype.hasOwnProperty.call(rootsData.roots, group),
+    `excluded.${group}: キーは語根名かgeneralである必要があります`,
+  );
+  assert.ok(words && typeof words === "object" && !Array.isArray(words), `excluded.${group} が不正です`);
+  for (const [lemma, reason] of Object.entries(words)) {
+    nonEmptyString(reason, `excluded.${group}.${lemma}`);
+    assert.equal(cReasons.has(lemma), false, `excluded: ${lemma} が複数のグループに重複しています`);
+    cReasons.set(lemma, `${group}: ${reason}`);
+  }
+}
 for (const [lemma, reason] of cReasons) {
   nonEmptyString(reason, `cReasons.${lemma}`);
   const reasonRoot = reason.split(":", 1)[0].trim();
@@ -249,4 +222,6 @@ const pages = fs.readFileSync(PAGES_WORKFLOW_PATH, "utf8");
 assert.match(pages, /cp data\/word_roots\.json data\/word_origins\.json _site\/data\//, "Pagesで語源辞書をコピーする必要があります");
 assert.ok(manifest.q1 && typeof manifest.q1 === "object", "manifest.q1 が必要です");
 
+const singleRootCount = [...aOriginsByRoot.values()].filter((lemmas) => lemmas.length === 1).length;
+console.log(`word origin roots: ${Object.keys(rootsData.roots).length} roots / ${singleRootCount} single-word roots`);
 console.log(`word origin data contract: OK (${originEntries.length} origins / ${Object.keys(rootsData.roots).length} roots)`);
