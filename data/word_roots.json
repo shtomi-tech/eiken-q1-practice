@@ -1,6 +1,6 @@
 {
   "meta": {
-    "note": "単語カードの語源パネル用。表示専用。進捗キー・音声・選択肢には使わない。段階3で語根33個まで拡張する。"
+    "note": "単語カードの語源パネル用。表示専用。進捗キー・音声・選択肢には使わない。段階5バッチ1で語根54個まで拡張する。"
   },
   "roots": {
     "spec": {
@@ -47,7 +47,7 @@
       "gloss": "歩む",
       "origin": "ラテン語 gradi",
       "note": "足を進め、歩いて通り抜けるイメージ。",
-      "variants": ["grad"]
+      "variants": ["grad", "gred"]
     },
     "voc": {
       "gloss": "呼ぶ・声",
@@ -193,6 +193,114 @@
       "origin": "ラテン語 currere",
       "note": "走って進み、流れや経過が続くイメージ。",
       "variants": ["curr"]
+    },
+    "carcer": {
+      "gloss": "牢屋",
+      "origin": "ラテン語 carcer",
+      "note": "閉じた場所に収容するイメージ。incarceration。"
+    },
+    "clem": {
+      "gloss": "穏やか",
+      "origin": "ラテン語 clemens",
+      "note": "穏やかで、厳しくない状態のイメージ。clemency。"
+    },
+    "pet": {
+      "gloss": "求める",
+      "origin": "ラテン語 petere",
+      "note": "何かを求めて向かうイメージ。appetite・compete。"
+    },
+    "cumb": {
+      "gloss": "横たわる",
+      "origin": "ラテン語 cumbere",
+      "note": "横たわり、その上に重なるイメージ。succumb。"
+    },
+    "dic": {
+      "gloss": "言う",
+      "origin": "ラテン語 dicere",
+      "note": "言葉にして告げるイメージ。dictionary・verdict。",
+      "variants": ["dict"]
+    },
+    "cre": {
+      "gloss": "ふるい分ける",
+      "origin": "ラテン語 cernere",
+      "note": "見分けて、ふるい分けるイメージ。discretion・discreetly。"
+    },
+    "dol": {
+      "gloss": "痛む",
+      "origin": "ラテン語 dolere",
+      "note": "痛みや悲しみを感じるイメージ。condolence。"
+    },
+    "fall": {
+      "gloss": "だます",
+      "origin": "ラテン語 fallere",
+      "note": "人の判断を誤らせるイメージ。fallacy・false。"
+    },
+    "flu": {
+      "gloss": "流れる",
+      "origin": "ラテン語 fluere",
+      "note": "水や力が流れ込むイメージ。fluctuate・fluent。"
+    },
+    "fract": {
+      "gloss": "壊す",
+      "origin": "ラテン語 frangere",
+      "note": "固いものを折り、壊すイメージ。fragment・fragile。",
+      "variants": ["fring"]
+    },
+    "nat": {
+      "gloss": "生まれる",
+      "origin": "ラテン語 nasci",
+      "note": "生まれ、もともとの性質として現れるイメージ。native・nation。-ationだけの一致は含めない。"
+    },
+    "noc": {
+      "gloss": "害する",
+      "origin": "ラテン語 nocere",
+      "note": "害を与え、傷つけるイメージ。innocuous・obnoxious。"
+    },
+    "nov": {
+      "gloss": "新しい",
+      "origin": "ラテン語 novus",
+      "note": "新しく生まれ変わるイメージ。novel・renovate。"
+    },
+    "sign": {
+      "gloss": "印",
+      "origin": "ラテン語 signum",
+      "note": "印を付けて、意味を示すイメージ。assignment・consignment。"
+    },
+    "sip": {
+      "gloss": "味わう",
+      "origin": "ラテン語 sapere",
+      "note": "味を知り、賢く判断するイメージ。savory・sapient。"
+    },
+    "act": {
+      "gloss": "行う",
+      "origin": "ラテン語 agere",
+      "note": "動かし、行為として実行するイメージ。action・agent。"
+    },
+    "trep": {
+      "gloss": "おののく",
+      "origin": "ラテン語 trepidus",
+      "note": "恐れで身が震えるイメージ。trepidation。"
+    },
+    "tric": {
+      "gloss": "もつれ",
+      "origin": "ラテン語 tricae",
+      "note": "複雑に絡み、ほどきにくくなるイメージ。extricate。",
+      "variants": ["trig"]
+    },
+    "vad": {
+      "gloss": "行く",
+      "origin": "ラテン語 vadere",
+      "note": "ある方向へ進んで行くイメージ。evade・invasion。"
+    },
+    "vestig": {
+      "gloss": "足跡",
+      "origin": "ラテン語 vestigium",
+      "note": "残された足跡をたどって調べるイメージ。vestige。"
+    },
+    "vigor": {
+      "gloss": "活力",
+      "origin": "ラテン語 vigor",
+      "note": "力強く、生き生きしている状態のイメージ。vigorous。"
     }
   },
   "affixes": {
@@ -233,6 +341,7 @@
     "en": { "gloss": "中へ・完全に", "kind": "prefix" },
     "il": { "gloss": "中へ・上に", "kind": "prefix" },
     "intra": { "gloss": "内側へ", "kind": "prefix" },
+    "inter": { "gloss": "間の・相互に", "kind": "prefix" },
     "juxta": { "gloss": "そばに", "kind": "prefix" },
     "neg": { "gloss": "否定して", "kind": "prefix" },
     "post": { "gloss": "後へ", "kind": "prefix" },
@@ -258,12 +367,14 @@
     "-ator": { "gloss": "〜する人", "kind": "suffix" },
     "-ation": { "gloss": "〜すること", "kind": "suffix" },
     "-ency": { "gloss": "〜の状態", "kind": "suffix" },
+    "-ence": { "gloss": "〜の状態", "kind": "suffix" },
     "-ent": { "gloss": "〜するもの・人", "kind": "suffix" },
     "-ential": { "gloss": "〜に関する", "kind": "suffix" },
     "-er": { "gloss": "〜する人", "kind": "suffix" },
     "-ical": { "gloss": "〜の性質の", "kind": "suffix" },
     "-ible": { "gloss": "〜できる", "kind": "suffix" },
     "-ity": { "gloss": "〜であること", "kind": "suffix" },
+    "-id": { "gloss": "〜の性質の", "kind": "suffix" },
     "-ite": { "gloss": "〜されたもの", "kind": "suffix" },
     "-ment": { "gloss": "〜すること・もの", "kind": "suffix" },
     "-or": { "gloss": "〜する人・もの", "kind": "suffix" },
@@ -271,6 +382,7 @@
     "-ure": { "gloss": "〜すること・もの", "kind": "suffix" },
     "-ful": { "gloss": "〜に満ちた", "kind": "suffix" },
     "-ize": { "gloss": "〜にする", "kind": "suffix" },
+    "-ly": { "gloss": "〜な状態で", "kind": "suffix" },
     "-escence": { "gloss": "〜の過程・状態", "kind": "suffix" }
   }
 }

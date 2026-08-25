@@ -1498,6 +1498,310 @@
     "curriculum": {
       "type": "B",
       "derivation": "走る道筋から → カリキュラム"
+    },
+    "incarcerate": {
+      "type": "A",
+      "gloss": "投獄された",
+      "root": "carcer",
+      "parts": [
+        { "form": "in", "kind": "prefix", "gloss": "中へ" },
+        { "form": "carcer", "kind": "root", "gloss": "牢屋" },
+        { "form": "-ate", "kind": "suffix", "gloss": "〜にする（動詞化）" }
+      ],
+      "derivation": "牢屋の中へ入れる → 投獄された"
+    },
+    "inclement": {
+      "type": "A",
+      "gloss": "荒天の",
+      "root": "clem",
+      "parts": [
+        { "form": "in", "kind": "prefix", "gloss": "否定" },
+        { "form": "clem", "kind": "root", "gloss": "穏やか" },
+        { "form": "-ent", "kind": "suffix", "gloss": "〜するもの・人" }
+      ],
+      "derivation": "穏やかでない → 荒天の、厳しい"
+    },
+    "incompetent": {
+      "type": "A",
+      "gloss": "無能な",
+      "root": "pet",
+      "parts": [
+        { "form": "in", "kind": "prefix", "gloss": "否定" },
+        { "form": "com", "kind": "prefix", "gloss": "ともに" },
+        { "form": "pet", "kind": "root", "gloss": "求める" },
+        { "form": "-ent", "kind": "suffix", "gloss": "〜するもの・人" }
+      ],
+      "derivation": "求めることができない → 無能な"
+    },
+    "incumbent": {
+      "type": "A",
+      "gloss": "現職者",
+      "root": "cumb",
+      "parts": [
+        { "form": "in", "kind": "prefix", "gloss": "上に" },
+        { "form": "cumb", "kind": "root", "gloss": "横たわる" },
+        { "form": "-ent", "kind": "suffix", "gloss": "〜するもの・人" }
+      ],
+      "derivation": "上に横たわっている人 → 現職者"
+    },
+    "indictment": {
+      "type": "A",
+      "gloss": "起訴",
+      "root": "dic",
+      "parts": [
+        { "form": "in", "kind": "prefix", "gloss": "に対して" },
+        { "form": "dict", "kind": "root", "gloss": "言う" },
+        { "form": "-ment", "kind": "suffix", "gloss": "〜すること・もの" }
+      ],
+      "derivation": "言葉にして告発すること → 起訴、非難"
+    },
+    "indiscretion": {
+      "type": "A",
+      "gloss": "軽率な言動",
+      "root": "cre",
+      "parts": [
+        { "form": "in", "kind": "prefix", "gloss": "否定" },
+        { "form": "dis", "kind": "prefix", "gloss": "離れて" },
+        { "form": "cre", "kind": "root", "gloss": "ふるい分ける" },
+        { "form": "-ion", "kind": "suffix", "gloss": "〜すること（名詞化）" }
+      ],
+      "derivation": "ふるい分けずに行うこと → 軽率な言動、秘密漏洩"
+    },
+    "indolence": {
+      "type": "A",
+      "gloss": "怠惰",
+      "root": "dol",
+      "parts": [
+        { "form": "in", "kind": "prefix", "gloss": "否定" },
+        { "form": "dol", "kind": "root", "gloss": "痛む" },
+        { "form": "-ence", "kind": "suffix", "gloss": "〜の状態" }
+      ],
+      "derivation": "痛みを感じないことから → 怠惰"
+    },
+    "infallible": {
+      "type": "A",
+      "gloss": "絶対に間違いのない",
+      "root": "fall",
+      "parts": [
+        { "form": "in", "kind": "prefix", "gloss": "否定" },
+        { "form": "fall", "kind": "root", "gloss": "だます" },
+        { "form": "-ible", "kind": "suffix", "gloss": "〜できる" }
+      ],
+      "derivation": "だますことができない → 絶対に間違いのない"
+    },
+    "influence": {
+      "type": "A",
+      "gloss": "影響を与える",
+      "root": "flu",
+      "parts": [
+        { "form": "in", "kind": "prefix", "gloss": "中へ" },
+        { "form": "flu", "kind": "root", "gloss": "流れる" },
+        { "form": "-ence", "kind": "suffix", "gloss": "〜の状態" }
+      ],
+      "derivation": "中へ流れ込む力 → 影響を与える"
+    },
+    "infraction": {
+      "type": "A",
+      "gloss": "（規則の）違反",
+      "root": "fract",
+      "parts": [
+        { "form": "in", "kind": "prefix", "gloss": "中へ" },
+        { "form": "fract", "kind": "root", "gloss": "壊す" },
+        { "form": "-ion", "kind": "suffix", "gloss": "〜すること（名詞化）" }
+      ],
+      "derivation": "規則を壊すこと → （規則の）違反"
+    },
+    "infringe": {
+      "type": "A",
+      "gloss": "侵害する",
+      "root": "fract",
+      "parts": [
+        { "form": "in", "kind": "prefix", "gloss": "中へ" },
+        { "form": "fring", "kind": "root", "gloss": "壊す" }
+      ],
+      "derivation": "境界を壊して入り込む → 侵害する"
+    },
+    "ingredient": {
+      "type": "A",
+      "gloss": "材料",
+      "root": "gress",
+      "parts": [
+        { "form": "in", "kind": "prefix", "gloss": "中へ" },
+        { "form": "gred", "kind": "root", "gloss": "歩む" },
+        { "form": "-ent", "kind": "suffix", "gloss": "〜するもの・人" }
+      ],
+      "derivation": "中へ歩み入ったもの → 材料、成分"
+    },
+    "innately": {
+      "type": "A",
+      "gloss": "生まれつき",
+      "root": "nat",
+      "parts": [
+        { "form": "in", "kind": "prefix", "gloss": "中へ" },
+        { "form": "nat", "kind": "root", "gloss": "生まれる" },
+        { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で" }
+      ],
+      "derivation": "生まれつき備わっている状態で → 生まれつき、本質的に"
+    },
+    "international": {
+      "type": "A",
+      "gloss": "国際的な",
+      "root": "nat",
+      "parts": [
+        { "form": "inter", "kind": "prefix", "gloss": "間の" },
+        { "form": "nat", "kind": "root", "gloss": "生まれる" },
+        { "form": "-al", "kind": "suffix", "gloss": "〜に関する" }
+      ],
+      "derivation": "国と国の間に生まれた関係 → 国際的な"
+    },
+    "innocently": {
+      "type": "A",
+      "gloss": "無邪気に",
+      "root": "noc",
+      "parts": [
+        { "form": "in", "kind": "prefix", "gloss": "否定" },
+        { "form": "noc", "kind": "root", "gloss": "害する" },
+        { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で" }
+      ],
+      "derivation": "害のない状態で → 無邪気に、悪気なく"
+    },
+    "innovation": {
+      "type": "A",
+      "gloss": "技術革新",
+      "root": "nov",
+      "parts": [
+        { "form": "in", "kind": "prefix", "gloss": "中へ" },
+        { "form": "nov", "kind": "root", "gloss": "新しい" },
+        { "form": "-ation", "kind": "suffix", "gloss": "〜すること" }
+      ],
+      "derivation": "新しくすること → 技術革新"
+    },
+    "insignia": {
+      "type": "A",
+      "gloss": "記章",
+      "root": "sign",
+      "parts": [
+        { "form": "in", "kind": "prefix", "gloss": "中へ" },
+        { "form": "sign", "kind": "root", "gloss": "印" }
+      ],
+      "derivation": "印を付けたもの → 記章、徽章"
+    },
+    "insipid": {
+      "type": "A",
+      "gloss": "味気ない",
+      "root": "sip",
+      "parts": [
+        { "form": "in", "kind": "prefix", "gloss": "否定" },
+        { "form": "sip", "kind": "root", "gloss": "味わう" }
+      ],
+      "derivation": "味わうことができない → 味気ない、面白みのない"
+    },
+    "interact": {
+      "type": "A",
+      "gloss": "交流する",
+      "root": "act",
+      "parts": [
+        { "form": "inter", "kind": "prefix", "gloss": "間で" },
+        { "form": "act", "kind": "root", "gloss": "行う" }
+      ],
+      "derivation": "互いの間で行う → 交流する、相互に作用する"
+    },
+    "intrepid": {
+      "type": "A",
+      "gloss": "勇敢な",
+      "root": "trep",
+      "parts": [
+        { "form": "in", "kind": "prefix", "gloss": "否定" },
+        { "form": "trep", "kind": "root", "gloss": "おののく" },
+        { "form": "-id", "kind": "suffix", "gloss": "〜の性質の" }
+      ],
+      "derivation": "おののかない性質 → 勇敢な、恐れを知らない"
+    },
+    "intricate": {
+      "type": "A",
+      "gloss": "複雑な",
+      "root": "tric",
+      "parts": [
+        { "form": "in", "kind": "prefix", "gloss": "中へ" },
+        { "form": "tric", "kind": "root", "gloss": "もつれ" },
+        { "form": "-ate", "kind": "suffix", "gloss": "〜にする（動詞化）" }
+      ],
+      "derivation": "もつれさせた状態 → 複雑な、入り組んだ"
+    },
+    "intrigue": {
+      "type": "A",
+      "gloss": "陰謀",
+      "root": "tric",
+      "parts": [
+        { "form": "in", "kind": "prefix", "gloss": "中へ" },
+        { "form": "trig", "kind": "root", "gloss": "もつれ" }
+      ],
+      "derivation": "人をもつれた計画へ引き込む → 陰謀、興味"
+    },
+    "invader": {
+      "type": "A",
+      "gloss": "侵略者",
+      "root": "vad",
+      "parts": [
+        { "form": "in", "kind": "prefix", "gloss": "中へ" },
+        { "form": "vad", "kind": "root", "gloss": "行く" },
+        { "form": "-er", "kind": "suffix", "gloss": "〜する人" }
+      ],
+      "derivation": "中へ行く者 → 侵略者"
+    },
+    "investigation": {
+      "type": "A",
+      "gloss": "捜査",
+      "root": "vestig",
+      "parts": [
+        { "form": "in", "kind": "prefix", "gloss": "中へ" },
+        { "form": "vestig", "kind": "root", "gloss": "足跡" },
+        { "form": "-ation", "kind": "suffix", "gloss": "〜すること" }
+      ],
+      "derivation": "足跡をたどって調べること → 捜査"
+    },
+    "invigorate": {
+      "type": "A",
+      "gloss": "元気づけられた",
+      "root": "vigor",
+      "parts": [
+        { "form": "in", "kind": "prefix", "gloss": "中へ" },
+        { "form": "vigor", "kind": "root", "gloss": "活力" },
+        { "form": "-ate", "kind": "suffix", "gloss": "〜にする（動詞化）" }
+      ],
+      "derivation": "活力を与える → 元気づけられた、活気づいた"
+    },
+    "infiltrate": {
+      "type": "B",
+      "derivation": "こし器を通して入り込むことから → 潜入する、浸透する"
+    },
+    "insinuate": {
+      "type": "B",
+      "derivation": "曲がりくねった場所へ入り込ませることから → ほのめかす、巧みに入り込ませる"
+    },
+    "insolent": {
+      "type": "B",
+      "derivation": "慣れて遠慮なく振る舞うことから → 生意気な、横柄な"
+    },
+    "insulate": {
+      "type": "B",
+      "derivation": "島のように切り離すことから → 遮断する、断熱する"
+    },
+    "internal": {
+      "type": "B",
+      "derivation": "内側のことから → 内部の、内的な"
+    },
+    "increase": {
+      "type": "B",
+      "derivation": "成長することから → 増える、増やす"
+    },
+    "infatuated": {
+      "type": "B",
+      "derivation": "愚かな状態にされたことから → 夢中になった"
+    },
+    "indebted": {
+      "type": "B",
+      "derivation": "借金を負ったことから → 恩義がある、借りがある"
     }
   }
 }
