@@ -1802,6 +1802,228 @@
     "indebted": {
       "type": "B",
       "derivation": "借金を負ったことから → 恩義がある、借りがある"
+    },
+    "reclaim": {
+      "type": "A",
+      "gloss": "取り戻す",
+      "root": "claim",
+      "parts": [
+        { "form": "re", "kind": "prefix", "gloss": "元へ" },
+        { "form": "claim", "kind": "root", "gloss": "叫ぶ" }
+      ],
+      "derivation": "呼び戻して手元に取り戻す → 取り戻す、回収する"
+    },
+    "redundant": {
+      "type": "A",
+      "gloss": "余分な",
+      "root": "und",
+      "parts": [
+        { "form": "re", "kind": "prefix", "gloss": "再び" },
+        { "form": "und", "kind": "root", "gloss": "波" },
+        { "form": "-ant", "kind": "suffix", "gloss": "〜するもの・人" }
+      ],
+      "derivation": "波のようにあふれて余る → 余分な、冗長な、不要な"
+    },
+    "reflect": {
+      "type": "A",
+      "gloss": "反射する",
+      "root": "flect",
+      "parts": [
+        { "form": "re", "kind": "prefix", "gloss": "元へ" },
+        { "form": "flect", "kind": "root", "gloss": "曲げる" }
+      ],
+      "derivation": "曲げ返して光を戻す → 反射する、よく考える、反映する"
+    },
+    "rejection": {
+      "type": "A",
+      "gloss": "拒絶反応",
+      "root": "ject",
+      "parts": [
+        { "form": "re", "kind": "prefix", "gloss": "元へ" },
+        { "form": "ject", "kind": "root", "gloss": "投げる" },
+        { "form": "-ion", "kind": "suffix", "gloss": "〜すること（名詞化）" }
+      ],
+      "derivation": "投げ返して受け入れないこと → 拒絶反応"
+    },
+    "relieved": {
+      "type": "A",
+      "gloss": "安心した",
+      "root": "lev",
+      "parts": [
+        { "form": "re", "kind": "prefix", "gloss": "再び" },
+        { "form": "liev", "kind": "root", "gloss": "軽い・上げる" }
+      ],
+      "derivation": "重荷を持ち上げて軽くされた → 安心した"
+    },
+    "remedial": {
+      "type": "A",
+      "gloss": "改善の",
+      "root": "med",
+      "parts": [
+        { "form": "re", "kind": "prefix", "gloss": "再び" },
+        { "form": "med", "kind": "root", "gloss": "癒す" },
+        { "form": "-al", "kind": "suffix", "gloss": "〜に関する" }
+      ],
+      "derivation": "状態を治して改善する → 補習の、改善の"
+    },
+    "repatriation": {
+      "type": "A",
+      "gloss": "本国送還",
+      "root": "patri",
+      "parts": [
+        { "form": "re", "kind": "prefix", "gloss": "元へ" },
+        { "form": "patri", "kind": "root", "gloss": "父・祖国" },
+        { "form": "-ation", "kind": "suffix", "gloss": "〜すること" }
+      ],
+      "derivation": "祖国へ戻すこと → 本国送還"
+    },
+    "repeatedly": {
+      "type": "A",
+      "gloss": "繰り返し",
+      "root": "pet",
+      "parts": [
+        { "form": "re", "kind": "prefix", "gloss": "再び" },
+        { "form": "peat", "kind": "root", "gloss": "求める" },
+        { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で" }
+      ],
+      "derivation": "求める動作を再び行う状態で → 繰り返し、何度も"
+    },
+    "reprisal": {
+      "type": "A",
+      "gloss": "報復措置",
+      "root": "pris",
+      "parts": [
+        { "form": "re", "kind": "prefix", "gloss": "元へ" },
+        { "form": "pris", "kind": "root", "gloss": "つかむ" },
+        { "form": "-al", "kind": "suffix", "gloss": "〜に関する" }
+      ],
+      "derivation": "つかみ返すことから → 報復措置"
+    },
+    "reptile": {
+      "type": "A",
+      "gloss": "爬虫類",
+      "root": "rept",
+      "parts": [
+        { "form": "rept", "kind": "root", "gloss": "這う" },
+        { "form": "-ile", "kind": "suffix", "gloss": "〜するもの・〜の性質の" }
+      ],
+      "derivation": "這って進むもの → 爬虫類"
+    },
+    "repulse": {
+      "type": "A",
+      "gloss": "退けた",
+      "root": "puls",
+      "parts": [
+        { "form": "re", "kind": "prefix", "gloss": "元へ" },
+        { "form": "puls", "kind": "root", "gloss": "押す" }
+      ],
+      "derivation": "押し返して退ける → 反感を抱かせた、退けた"
+    },
+    "rescind": {
+      "type": "A",
+      "gloss": "取り消した",
+      "root": "scind",
+      "parts": [
+        { "form": "re", "kind": "prefix", "gloss": "元へ" },
+        { "form": "scind", "kind": "root", "gloss": "裂く" }
+      ],
+      "derivation": "切り離して無効にする → 取り消した"
+    },
+    "resentfully": {
+      "type": "A",
+      "gloss": "腹を立てて",
+      "root": "sent",
+      "parts": [
+        { "form": "re", "kind": "prefix", "gloss": "強く" },
+        { "form": "sent", "kind": "root", "gloss": "感じる" },
+        { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で" }
+      ],
+      "derivation": "強く感じて腹を立てている状態で → 腹を立てて、恨めしそうに"
+    },
+    "resilient": {
+      "type": "A",
+      "gloss": "回復力のある",
+      "root": "sal",
+      "parts": [
+        { "form": "re", "kind": "prefix", "gloss": "元へ" },
+        { "form": "sil", "kind": "root", "gloss": "跳ぶ" },
+        { "form": "-ent", "kind": "suffix", "gloss": "〜するもの・人" }
+      ],
+      "derivation": "跳ね返って元へ戻る性質 → 回復力のある、立ち直りの早い"
+    },
+    "resonate": {
+      "type": "A",
+      "gloss": "共鳴した",
+      "root": "son",
+      "parts": [
+        { "form": "re", "kind": "prefix", "gloss": "響き返す" },
+        { "form": "son", "kind": "root", "gloss": "響く" },
+        { "form": "-ate", "kind": "suffix", "gloss": "〜にする（動詞化）" }
+      ],
+      "derivation": "響き返して共鳴した → 共鳴した、響いた"
+    },
+    "retentive": {
+      "type": "A",
+      "gloss": "記憶力のよい",
+      "root": "ten",
+      "parts": [
+        { "form": "re", "kind": "prefix", "gloss": "保ち続ける" },
+        { "form": "ten", "kind": "root", "gloss": "保つ" },
+        { "form": "-ive", "kind": "suffix", "gloss": "〜する性質の" }
+      ],
+      "derivation": "しっかり保ち続ける性質 → 記憶力のよい、保持力のある"
+    },
+    "retribution": {
+      "type": "A",
+      "gloss": "報復",
+      "root": "trib",
+      "parts": [
+        { "form": "re", "kind": "prefix", "gloss": "返す" },
+        { "form": "trib", "kind": "root", "gloss": "割り当てる" },
+        { "form": "-ion", "kind": "suffix", "gloss": "〜すること（名詞化）" }
+      ],
+      "derivation": "割り当てを返すこと → 報復、仕返し"
+    },
+    "revelation": {
+      "type": "A",
+      "gloss": "啓示",
+      "root": "vel",
+      "parts": [
+        { "form": "re", "kind": "prefix", "gloss": "元へ" },
+        { "form": "vel", "kind": "root", "gloss": "覆う" },
+        { "form": "-ation", "kind": "suffix", "gloss": "〜すること" }
+      ],
+      "derivation": "覆いを外して明らかにすること → 啓示、暴露"
+    },
+    "reprimand": {
+      "type": "A",
+      "gloss": "叱責",
+      "root": "prim",
+      "parts": [
+        { "form": "re", "kind": "prefix", "gloss": "押し返す" },
+        { "form": "prim", "kind": "root", "gloss": "押す" }
+      ],
+      "derivation": "押さえつけて厳しく戒めること → 叱責、譴責"
+    },
+    "reasonable": {
+      "type": "B",
+      "derivation": "ratio（計算・理）にかなうことから → 手ごろな、妥当な"
+    },
+    "receipt": {
+      "type": "B",
+      "derivation": "受け取ったことの記録から → レシート、領収書"
+    },
+    "reciprocate": {
+      "type": "B",
+      "derivation": "互いに行き来することから → 返礼した、応じた"
+    },
+    "recover": {
+      "type": "B",
+      "derivation": "再び元の状態に戻ることから → 回復する、取り戻す"
+    },
+    "resources": {
+      "type": "B",
+      "derivation": "再び湧き上がるものから → 資源、人材"
     }
   }
 }

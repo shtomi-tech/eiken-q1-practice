@@ -1,6 +1,6 @@
 {
   "meta": {
-    "note": "単語カードの語源パネル用。表示専用。進捗キー・音声・選択肢には使わない。段階5バッチ1で語根54個まで拡張する。"
+    "note": "単語カードの語源パネル用。表示専用。進捗キー・音声・選択肢には使わない。段階5バッチ2で語根71個まで拡張する。"
   },
   "roots": {
     "spec": {
@@ -116,7 +116,8 @@
     "lev": {
       "gloss": "軽い・上げる",
       "origin": "ラテン語 levis / levare",
-      "note": "重さを軽くする、または持ち上げるイメージ。"
+      "note": "重さを軽くする、または持ち上げるイメージ。alleviate・elevate・relief。",
+      "variants": ["liev"]
     },
     "fac": {
       "gloss": "作る・なす",
@@ -207,7 +208,8 @@
     "pet": {
       "gloss": "求める",
       "origin": "ラテン語 petere",
-      "note": "何かを求めて向かうイメージ。appetite・compete。"
+      "note": "何かを求めて向かうイメージ。appetite・compete。",
+      "variants": ["peat"]
     },
     "cumb": {
       "gloss": "横たわる",
@@ -301,6 +303,94 @@
       "gloss": "活力",
       "origin": "ラテン語 vigor",
       "note": "力強く、生き生きしている状態のイメージ。vigorous。"
+    },
+    "claim": {
+      "gloss": "叫ぶ",
+      "origin": "ラテン語 clamare",
+      "note": "声に出して主張するイメージ。acclaim・proclaim。"
+    },
+    "und": {
+      "gloss": "波",
+      "origin": "ラテン語 unda",
+      "note": "波のようにあふれ、余るイメージ。inundate・abundant。"
+    },
+    "flect": {
+      "gloss": "曲げる",
+      "origin": "ラテン語 flectere",
+      "note": "向きを曲げて、跳ね返すイメージ。deflect・flexible。",
+      "variants": ["flex"]
+    },
+    "ject": {
+      "gloss": "投げる",
+      "origin": "ラテン語 jacere",
+      "note": "ものを投げ出し、遠ざけるイメージ。project・inject。"
+    },
+    "med": {
+      "gloss": "癒す",
+      "origin": "ラテン語 mederi",
+      "note": "必要な手当てをして、状態を治すイメージ。remedy・medical。"
+    },
+    "patri": {
+      "gloss": "父・祖国",
+      "origin": "ラテン語 patria",
+      "note": "父祖の土地を自分の国と捉えるイメージ。patriot・expatriate。"
+    },
+    "pris": {
+      "gloss": "つかむ",
+      "origin": "ラテン語 prehendere",
+      "note": "手でつかみ、取り返すイメージ。surprisingly・prison。"
+    },
+    "rept": {
+      "gloss": "這う",
+      "origin": "ラテン語 repere",
+      "note": "地面をはって進むイメージ。reptilian。"
+    },
+    "puls": {
+      "gloss": "押す",
+      "origin": "ラテン語 pellere",
+      "note": "力を加えて押し返すイメージ。impel・expel。",
+      "variants": ["pel"]
+    },
+    "scind": {
+      "gloss": "裂く",
+      "origin": "ラテン語 scindere",
+      "note": "切り裂いて、元の状態を断つイメージ。rescission。"
+    },
+    "sent": {
+      "gloss": "感じる",
+      "origin": "ラテン語 sentire",
+      "note": "感じ取ったことを心に受け止めるイメージ。sentiment・consensual。"
+    },
+    "sal": {
+      "gloss": "跳ぶ",
+      "origin": "ラテン語 salire",
+      "note": "跳ね返り、元の位置へ戻るイメージ。salient・assail。",
+      "variants": ["sil"]
+    },
+    "son": {
+      "gloss": "響く",
+      "origin": "ラテン語 sonare",
+      "note": "音を出し、響かせるイメージ。sonic・resonance。"
+    },
+    "ten": {
+      "gloss": "保つ",
+      "origin": "ラテン語 tenere",
+      "note": "手に持ち、状態を保つイメージ。tenure・retain。"
+    },
+    "trib": {
+      "gloss": "割り当てる",
+      "origin": "ラテン語 tribuere",
+      "note": "人や集団に分け与えるイメージ。contribute・tribute。"
+    },
+    "vel": {
+      "gloss": "覆う",
+      "origin": "ラテン語 velare",
+      "note": "覆いを外して、隠れたものを見せるイメージ。reveal・veil。"
+    },
+    "prim": {
+      "gloss": "押す",
+      "origin": "ラテン語 premere",
+      "note": "押さえつけて抑えるイメージ。oppress。primus（第一）由来の語は含めない。"
     }
   },
   "affixes": {
@@ -383,6 +473,7 @@
     "-ful": { "gloss": "〜に満ちた", "kind": "suffix" },
     "-ize": { "gloss": "〜にする", "kind": "suffix" },
     "-ly": { "gloss": "〜な状態で", "kind": "suffix" },
-    "-escence": { "gloss": "〜の過程・状態", "kind": "suffix" }
+    "-escence": { "gloss": "〜の過程・状態", "kind": "suffix" },
+    "-ile": { "gloss": "〜するもの・〜の性質の", "kind": "suffix" }
   }
 }
