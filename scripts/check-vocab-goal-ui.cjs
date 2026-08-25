@@ -43,6 +43,10 @@ assert.ok(body.includes("目安です"), "語彙数が目安である旨の注�
 assert.ok(body.includes('role: "progressbar"'), "バーは progressbar として読み上げ可能にする必要がある");
 assert.ok(body.includes('"aria-valuetext"'), "aria-valuetext で内訳を読み上げる必要がある");
 assert.ok(body.includes('"aria-hidden": "true"'), "装飾のハリネズミは支援技術から隠す必要がある");
+assert.ok(body.includes("vocabularyGoalForecast"), "1級の14,000語到達予想を既存カードへ追加する必要がある");
+assert.ok(body.includes("vocabularyForecast"), "1級の期間別語句予測を既存カードへ追加する必要がある");
+assert.ok(body.includes("現在、このアプリの英検1級通常問題には"), "収録語句数の注記を表示する必要がある");
+assert.ok(body.includes("1週間後") && body.includes("1年後"), "5期間の語句予測を表示する必要がある");
 
 const renderHome = js.slice(js.indexOf("function renderHomeContent("));
 assert.match(renderHome, /home\.appendChild\(goalCard\)/, "語彙目標カードはホーム直下へ追加する必要がある");

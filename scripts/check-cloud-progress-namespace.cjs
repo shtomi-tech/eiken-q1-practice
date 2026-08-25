@@ -14,4 +14,9 @@ assert.ok(
   source.includes("eiken_q1_student_"),
   "student-scoped localStorage prefix eiken_q1_student_ must remain",
 );
+assert.match(source, /function cloudMeta\(\)/, "cloudMeta() を一箇所へまとめる必要があります");
+assert.match(source, /studyPlanV1/, "cloudMetaへstudyPlanV1を含める必要があります");
+assert.match(source, /map\._meta = cloudMeta\(\)/, "フル保存payloadにもcloudMetaを含める必要があります");
+assert.match(source, /meta: cloudMeta\(\)/, "パッチ保存にもcloudMetaを含める必要があります");
+assert.match(source, /pendingCloudStudyPlan/, "クラウドから来た学習計画を検証前に捨てない必要があります");
 console.log("cloud progress namespace: OK");

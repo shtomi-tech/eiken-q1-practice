@@ -31,6 +31,7 @@ const finalUnlockedBody = extractFunctionBody(js, "finalUnlocked");
 const renderDoneBody = extractFunctionBody(js, "renderDone");
 const migrateBody = extractFunctionBody(js, "migrateLegacyPre1Progress");
 const currentResumeBody = extractFunctionBody(js, "currentResume");
+const answerBody = extractFunctionBody(js, "onPracticeAnswer");
 
 for (const marker of ["Q1_UNLEARNED", "Q1_FLASH", "Q1_MEANING_CHECK", "Q1_WRONG_REVIEW", "Q1_PRACTICE", "Q1_DONE"]) {
   assert.ok(spec.includes(marker), `状態仕様に ${marker} が必要です`);
@@ -66,6 +67,11 @@ assert.ok(currentResumeBody.includes("resumeStageAllowed"), "未対応stageを�
 assert.ok(migrateBody.includes("eikenp1-"), "旧準1級進捗を現行datasetIdへ移す必要があります");
 assert.ok(migrateBody.includes('learned: true'), "旧回答済み設問をlearnedとして移行する必要があります");
 assert.ok(migrateBody.includes("migrations"), "旧準1級進捗の移行を一度だけ記録する必要があります");
+
+assert.ok(answerBody.includes("firstAnsweredAt"), "本番形式の初回答時刻を保存する必要があります");
+assert.ok(answerBody.includes("isValidIsoDate"), "既存の有効な初回答時刻を保持する必要があります");
+assert.equal((answerBody.match(/u\.firstAnsweredAt\s*=/g) || []).length, 1, "初回答時刻は回答処理内の1箇所だけで設定する必要があります");
+assert.ok(answerBody.includes("u.lastAnsweredAt = answeredAt"), "最終回答時刻は従来どおり更新する必要があります");
 
 assert.match(packageJson.scripts.test, /node --check static\/app\.js/, "static/app.jsの構文検査をnpm testへ含める必要があります");
 assert.match(packageJson.scripts.test, /scripts\/check-state-transitions\.cjs/, "状態遷移検査をnpm testへ含める必要があります");

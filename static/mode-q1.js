@@ -42,6 +42,14 @@ const GRADE_PREFIXES = {
 };
 const GRADE_CHOICE_ORDER = ["pre2", "2", "pre1", "1", "iuhw"];
 const GRADE_LABELS = { pre2: "準2級", "2": "2級", pre1: "準1級", "1": "1級", iuhw: "医療福祉" };
+const STUDY_PLAN_KEY = "eiken_q1_study_plan_v1";
+const STUDY_PLAN_VERSION = 1;
+const STUDY_PLAN_TARGET_VOCABULARY = 14000;
+const STUDY_PLAN_BASE_VOCABULARY = 9000;
+const STUDY_PLAN_VOCABULARY_PER_QUESTION = 4;
+const STUDY_PLAN_FORECAST_DAYS = [7, 30, 90, 180, 365];
+let studyPlan = null;
+let pendingCloudStudyPlan = null;
 // 級ごとの語彙目標。英検公式は必要語彙数を公表していないため、95%カバー率解析
 // （ei-raku.com の推定 1,650/3,000/5,100/8,900/14,400）を生徒が扱いやすい丸い数字にした目安。
 // prev は「前の級までは習得済み」という前提の起点で、累計と差分（+1,500/+2,000/+4,000/+5,000）が一致するよう丸めてある。
@@ -62,6 +70,174 @@ let wordRoots = { roots: {}, affixes: {} };
 let wordOriginMap = {};
 let wordOriginRootIndex = new Map();
 let aiCheckEndpoint = "";
+
+function isValidIsoDate(value) {
+  return typeof value === "string"
+    && /^\d{4}-\d{2}-\d{2}T/.test(value)
+    && Number.isFinite(new Date(value).getTime());
+}
+
+function normalizeStudyPlan(candidate, limit = 1) {
+  const cap = Number.isInteger(limit) && limit > 0 ? limit : 1;
+  const fallback = {
+    version: STUDY_PLAN_VERSION,
+    questionGoal: cap,
+    dailyQuestionGoal: Math.min(8, cap),
+    weekStartsOn: 1,
+  };
+  const source = candidate && typeof candidate === "object" && !Array.isArray(candidate)
+    ? candidate
+    : {};
+  const integerInRange = (value, min, max) => Number.isInteger(value) && value >= min && value <= max;
+  return {
+    ...source,
+    version: source.version === STUDY_PLAN_VERSION ? STUDY_PLAN_VERSION : fallback.version,
+    questionGoal: integerInRange(source.questionGoal, 1, cap) ? source.questionGoal : fallback.questionGoal,
+    dailyQuestionGoal: integerInRange(source.dailyQuestionGoal, 1, cap)
+      ? source.dailyQuestionGoal
+      : fallback.dailyQuestionGoal,
+    weekStartsOn: integerInRange(source.weekStartsOn, 0, 6) ? source.weekStartsOn : fallback.weekStartsOn,
+  };
+}
+
+function startOfLocalDay(date = new Date()) {
+  const value = new Date(date);
+  value.setHours(0, 0, 0, 0);
+  return value;
+}
+
+function startOfWeek(date = new Date(), weekStartsOn = 1) {
+  const day = startOfLocalDay(date);
+  const start = Number.isInteger(weekStartsOn) && weekStartsOn >= 0 && weekStartsOn <= 6 ? weekStartsOn : 1;
+  const distance = (day.getDay() - start + 7) % 7;
+  day.setDate(day.getDate() - distance);
+  return day;
+}
+
+function nextWeekStart(date = new Date(), weekStartsOn = 1) {
+  const next = startOfWeek(date, weekStartsOn);
+  next.setDate(next.getDate() + 7);
+  return next;
+}
+
+function questionEntryId(entry) {
+  return `${entry.datasetId}:${Number(entry.q)}`;
+}
+
+function answeredQuestionEntries(entries = []) {
+  const unique = new Map();
+  entries.forEach((entry) => {
+    const unitState = entry && entry.unit;
+    if (!entry || !entry.datasetId || !Number.isInteger(Number(entry.q)) || !unitState) return;
+    const answered = isValidIsoDate(unitState.firstAnsweredAt)
+      || Number(unitState.attempts) > 0
+      || unitState.learned === true;
+    if (!answered) return;
+    const normalized = { ...entry, q: Number(entry.q) };
+    const key = questionEntryId(normalized);
+    if (!unique.has(key)) unique.set(key, normalized);
+  });
+  return [...unique.values()];
+}
+
+function calendarDaysUntil(start, end) {
+  const cursor = new Date(start);
+  let days = 0;
+  while (cursor < end && days < 8) {
+    days += 1;
+    cursor.setDate(cursor.getDate() + 1);
+  }
+  return Math.max(1, days);
+}
+
+function studyPlanSummary(now = new Date(), plan = {}, entries = []) {
+  const planLimit = Math.max(
+    1,
+    Number(plan?.questionGoal) || 1,
+    Number(plan?.dailyQuestionGoal) || 1,
+  );
+  const safe = normalizeStudyPlan(plan, planLimit);
+  const answered = answeredQuestionEntries(entries);
+  const todayStart = startOfLocalDay(now);
+  const tomorrowStart = new Date(todayStart);
+  tomorrowStart.setDate(tomorrowStart.getDate() + 1);
+  const weekStart = startOfWeek(now, safe.weekStartsOn);
+  const weekEnd = nextWeekStart(now, safe.weekStartsOn);
+  const inRange = (value, start, end) => {
+    if (!isValidIsoDate(value)) return false;
+    const timestamp = new Date(value).getTime();
+    return timestamp >= start.getTime() && timestamp < end.getTime();
+  };
+  const answeredToday = answered.filter((entry) => inRange(entry.unit.firstAnsweredAt, todayStart, tomorrowStart)).length;
+  const answeredThisWeek = answered.filter((entry) => inRange(entry.unit.firstAnsweredAt, weekStart, weekEnd)).length;
+  const weeklyGoal = safe.dailyQuestionGoal * 7;
+  const weeklyRemaining = Math.max(0, weeklyGoal - answeredThisWeek);
+  const daysRemainingIncludingToday = calendarDaysUntil(startOfLocalDay(now), weekEnd);
+  return {
+    questionGoal: safe.questionGoal,
+    dailyQuestionGoal: safe.dailyQuestionGoal,
+    weekStartsOn: safe.weekStartsOn,
+    answeredToday,
+    dailyRemaining: Math.max(0, safe.dailyQuestionGoal - answeredToday),
+    answeredThisWeek,
+    weeklyGoal,
+    weeklyRemaining,
+    daysRemainingIncludingToday,
+    adjustedDailyTarget: weeklyRemaining > 0 ? Math.ceil(weeklyRemaining / daysRemainingIncludingToday) : 0,
+    answeredOverall: answered.length,
+    overallRemaining: Math.max(0, safe.questionGoal - answered.length),
+    weekStart,
+    weekEnd,
+  };
+}
+
+function vocabularyForecast(plan = {}) {
+  const dailyVocabulary = Math.max(1, Number(plan.dailyQuestionGoal) || 1) * STUDY_PLAN_VOCABULARY_PER_QUESTION;
+  return STUDY_PLAN_FORECAST_DAYS.map((days) => ({ days, vocabulary: dailyVocabulary * days }));
+}
+
+function vocabularyGoalForecast(now = new Date(), plan = {}, learnedVocabulary = 0) {
+  const dailyVocabulary = Math.max(1, Number(plan.dailyQuestionGoal) || 1) * STUDY_PLAN_VOCABULARY_PER_QUESTION;
+  const currentVocabulary = Math.min(
+    STUDY_PLAN_TARGET_VOCABULARY,
+    STUDY_PLAN_BASE_VOCABULARY + Math.max(0, Number(learnedVocabulary) || 0),
+  );
+  const remainingVocabulary = Math.max(0, STUDY_PLAN_TARGET_VOCABULARY - currentVocabulary);
+  const daysToGoal = remainingVocabulary > 0 ? Math.ceil(remainingVocabulary / dailyVocabulary) : 0;
+  const estimatedDate = startOfLocalDay(now);
+  estimatedDate.setDate(estimatedDate.getDate() + daysToGoal);
+  return {
+    currentVocabulary,
+    remainingVocabulary,
+    dailyVocabulary,
+    daysToGoal,
+    estimatedDate,
+  };
+}
+
+function migrateFirstAnsweredAt(progress) {
+  if (!progress || typeof progress !== "object" || Array.isArray(progress)) return false;
+  if (progress.migrations?.studyPlanFirstAnsweredAtV1 === 1) return false;
+  const firstByQuestion = new Map();
+  (Array.isArray(progress.history) ? progress.history : []).forEach((event) => {
+    if (!event || event.kind !== "question" || !Number.isInteger(Number(event.q)) || !isValidIsoDate(event.at)) return;
+    const q = Number(event.q);
+    const current = firstByQuestion.get(q);
+    if (!current || new Date(event.at).getTime() < new Date(current).getTime()) firstByQuestion.set(q, event.at);
+  });
+  if (!progress.units || typeof progress.units !== "object" || Array.isArray(progress.units)) progress.units = {};
+  Object.entries(progress.units).forEach(([q, unitState]) => {
+    if (!unitState || typeof unitState !== "object" || isValidIsoDate(unitState.firstAnsweredAt)) return;
+    const firstAnsweredAt = firstByQuestion.get(Number(q));
+    if (firstAnsweredAt) unitState.firstAnsweredAt = firstAnsweredAt;
+  });
+  progress.migrations = {
+    ...(progress.migrations || {}),
+    studyPlanFirstAnsweredAtV1: 1,
+  };
+  return true;
+}
+
 async function loadManifest() {
   const manifest = await fetch(MANIFEST_URL, { cache: "no-store" }).then((r) => r.json());
   ALL_DATASETS = manifest.q1;
@@ -212,6 +388,61 @@ function gradeOf(datasetId) {
 function currentGrade() {
   return gradeOf(state.datasetId);
 }
+function studyPlanDatasetIds(grade = "eiken1") {
+  const source = Object.keys(ALL_DATASETS).length ? ALL_DATASETS : DATASETS;
+  return Object.keys(source).filter((id) => gradeOf(id) === grade && !datasetIsTopic(id));
+}
+function gradeQuestionEntries(grade = "eiken1") {
+  const ids = new Set(studyPlanDatasetIds(grade));
+  const entries = [];
+  const seen = new Set();
+  const add = (datasetId, q) => {
+    const numericQ = Number(q);
+    if (!ids.has(datasetId) || !Number.isInteger(numericQ)) return;
+    const key = `${datasetId}:${numericQ}`;
+    if (seen.has(key)) return;
+    seen.add(key);
+    const progress = progressFor(datasetId) || {};
+    entries.push({
+      datasetId,
+      q: numericQ,
+      unit: progress.units && progress.units[numericQ] && typeof progress.units[numericQ] === "object"
+        ? progress.units[numericQ]
+        : {},
+    });
+  };
+  const pooled = pooledData(grade);
+  if (pooled) {
+    pooled.items.forEach((item) => add(item._datasetId, item.q));
+  } else if (grade === currentGrade()) {
+    state.qList.forEach((q) => add(state.datasetId, q));
+  }
+  return entries.sort((a, b) => a.datasetId.localeCompare(b.datasetId) || a.q - b.q);
+}
+function gradeVocabularyItems(grade = "eiken1") {
+  const ids = new Set(studyPlanDatasetIds(grade));
+  const pooled = pooledData(grade);
+  if (pooled) return pooled.items.filter((item) => ids.has(item._datasetId));
+  if (grade === currentGrade()) return allVocabularyItems().map((item) => ({ ...item, _datasetId: state.datasetId }));
+  return [];
+}
+function learnedVocabularyCount(grade, entries = gradeQuestionEntries(grade)) {
+  const answeredIds = new Set(answeredQuestionEntries(entries).map(questionEntryId));
+  const seen = new Set();
+  gradeVocabularyItems(grade).forEach((item) => {
+    const datasetId = item._datasetId;
+    const q = Number(item.q);
+    if (!answeredIds.has(`${datasetId}:${q}`)) return;
+    seen.add(`${datasetId}:${itemKeyOf(item)}`);
+  });
+  return seen.size;
+}
+function studyPlanQuestionLimit() {
+  return Math.max(1, gradeQuestionEntries("eiken1").length);
+}
+function defaultStudyPlan() {
+  return normalizeStudyPlan(null, studyPlanQuestionLimit());
+}
 function datasetIsTopic(datasetId = state.datasetId) {
   return String(datasetId || "").startsWith("eikentopic-");
 }
@@ -253,7 +484,7 @@ function saveProgressFor(datasetId, progress) {
   if (cloud) cloud.queueSave({
     datasetId,
     progress,
-    meta: { lastDatasetId: state.datasetId },
+    meta: cloudMeta(),
   });
 }
 function progressKey(datasetId = state.datasetId) {
@@ -289,6 +520,47 @@ function loadProgress(datasetId = state.datasetId) {
       _recovery: { type: "corrupt-local-record", datasetId },
     };
   }
+}
+
+function readStudyPlanLocal() {
+  try {
+    const raw = localStorage.getItem(scopedStorageKey(STUDY_PLAN_KEY));
+    if (!raw) return null;
+    const value = JSON.parse(raw);
+    return value && typeof value === "object" && !Array.isArray(value) ? value : null;
+  } catch (e) {
+    return null;
+  }
+}
+function saveStudyPlan() {
+  if (!studyPlan) return;
+  try { localStorage.setItem(scopedStorageKey(STUDY_PLAN_KEY), JSON.stringify(studyPlan)); } catch (e) { /* ignore */ }
+}
+function loadStudyPlan() {
+  const limit = studyPlanQuestionLimit();
+  const local = readStudyPlanLocal();
+  const localPlan = local ? normalizeStudyPlan(local, limit) : null;
+  const cloudPlan = pendingCloudStudyPlan && typeof pendingCloudStudyPlan === "object" && !Array.isArray(pendingCloudStudyPlan)
+    ? normalizeStudyPlan(pendingCloudStudyPlan, limit)
+    : null;
+  studyPlan = sharedMode() && cloudPlan ? cloudPlan : (localPlan || defaultStudyPlan());
+  if (sharedMode() && cloudPlan) saveStudyPlan();
+  return studyPlan;
+}
+function migrateStudyPlanFirstAnswers() {
+  const changedDatasetIds = [];
+  studyPlanDatasetIds("eiken1").forEach((datasetId) => {
+    let raw = null;
+    try { raw = localStorage.getItem(progressKey(datasetId)); } catch (e) { /* ignore */ }
+    if (!raw) return;
+    const progress = loadProgress(datasetId);
+    if (!migrateFirstAnsweredAt(progress)) return;
+    try {
+      localStorage.setItem(progressKey(datasetId), JSON.stringify(progress));
+      changedDatasetIds.push(datasetId);
+    } catch (e) { /* 移行できなくても元データは残す */ }
+  });
+  return changedDatasetIds;
 }
 
 function readStoredObject(key) {
@@ -747,6 +1019,13 @@ let legacyPre1Cloud = null;
 let legacyPre1CloudProgress = null;
 let pendingCloudProgress = null;
 
+function cloudMeta() {
+  return {
+    lastDatasetId: state.datasetId,
+    ...(studyPlan ? { studyPlanV1: studyPlan } : {}),
+  };
+}
+
 function setShareStatus(message, tone = "") {
   const slot = $("#shareStatus");
   if (!slot) return;
@@ -769,6 +1048,7 @@ function collectAllProgress() {
     } catch (e) { /* ignore */ }
   });
   map[state.datasetId] = state.progress; // 直近のメモリ状態を優先
+  map._meta = cloudMeta();
   return map;
 }
 
@@ -978,6 +1258,15 @@ function meaningIntervalBreakdown(items) {
 // クラウドから来た進捗（{datasetId: progress}）を localStorage へ反映
 function applyCloudProgress(map) {
   if (!map || typeof map !== "object") return;
+  pendingCloudStudyPlan = map._meta && map._meta.studyPlanV1
+    && typeof map._meta.studyPlanV1 === "object"
+    && !Array.isArray(map._meta.studyPlanV1)
+    ? map._meta.studyPlanV1
+    : null;
+  if (studyPlan && pendingCloudStudyPlan) {
+    studyPlan = normalizeStudyPlan(pendingCloudStudyPlan, studyPlanQuestionLimit());
+    saveStudyPlan();
+  }
   const lastDatasetId = map._meta && typeof map._meta.lastDatasetId === "string"
     ? map._meta.lastDatasetId
     : "";
@@ -1309,6 +1598,183 @@ function renderHome() {
   // 同期処理のみ。await をまたぐとキャッシュが別パスへ漏れるので中で非同期処理を待たない。
   return withProgressReadCache(renderHomeContent);
 }
+function formatStudyPlanDate(date) {
+  return date.toLocaleDateString("ja-JP", { month: "numeric", day: "numeric" });
+}
+function studyPlanProgress(label, value, max, valueText, detail) {
+  const safeMax = Math.max(1, Number(max) || 1);
+  const safeValue = Math.max(0, Number(value) || 0);
+  const boundedValue = Math.min(safeValue, safeMax);
+  const track = el("div", {
+    class: "studyPlanProgress",
+    role: "progressbar",
+    "aria-label": label,
+    "aria-valuemin": "0",
+    "aria-valuemax": String(safeMax),
+    "aria-valuenow": String(boundedValue),
+    "aria-valuetext": valueText,
+  });
+  const fill = el("span", { class: "studyPlanProgressFill" });
+  fill.style.width = `${(boundedValue / safeMax) * 100}%`;
+  track.appendChild(fill);
+  return el("div", { class: "studyPlanMetric" },
+    el("div", { class: "studyPlanMetricHead" },
+      el("strong", {}, label),
+      el("span", { class: "studyPlanMetricValue" }, valueText),
+    ),
+    track,
+    el("p", { class: "studyPlanMetricDetail" }, detail),
+  );
+}
+function studyPlanPanel(entries = []) {
+  const plan = studyPlan || defaultStudyPlan();
+  const limit = studyPlanQuestionLimit();
+  const summary = studyPlanSummary(new Date(), plan, entries);
+  const num = (value) => Number(value).toLocaleString("ja-JP");
+  const weekEndDate = new Date(summary.weekEnd);
+  weekEndDate.setDate(weekEndDate.getDate() - 1);
+  const weekRange = `${formatStudyPlanDate(summary.weekStart)}〜${formatStudyPlanDate(weekEndDate)}`;
+  const totalStatus = summary.overallRemaining === 0 ? "✓ 総目標達成" : `あと${num(summary.overallRemaining)}問`;
+  const dailyStatus = summary.dailyRemaining === 0 ? "✓ 今日の目標達成" : `あと${num(summary.dailyRemaining)}問`;
+  const weeklyStatus = summary.weeklyRemaining === 0 ? "✓ 今週の目標達成" : `残り${num(summary.weeklyRemaining)}問`;
+  const panel = el("div", { class: "studyPlanPanel", "aria-labelledby": "studyPlanTitle" });
+  const settingsId = "studyPlanSettings";
+  const settingsToggle = el("button", {
+    class: "ghost studyPlanSettingsToggle",
+    type: "button",
+    "aria-expanded": "false",
+    "aria-controls": settingsId,
+  }, "学習目標を設定");
+  const settings = el("form", {
+    class: "studyPlanSettings hide",
+    id: settingsId,
+    "aria-labelledby": "studyPlanSettingsTitle",
+  });
+  const goalInput = el("input", {
+    type: "number",
+    min: "1",
+    max: String(limit),
+    value: String(plan.questionGoal),
+    inputmode: "numeric",
+  });
+  const dailyInput = el("input", {
+    type: "number",
+    min: "1",
+    max: String(limit),
+    value: String(plan.dailyQuestionGoal),
+    inputmode: "numeric",
+  });
+  const weekSelect = el("select", { name: "weekStartsOn" });
+  ["日曜日", "月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日"].forEach((label, day) => {
+    weekSelect.appendChild(el("option", { value: String(day) }, label));
+  });
+  weekSelect.value = String(plan.weekStartsOn);
+  const error = el("p", { class: "studyPlanFormError", role: "alert", "aria-live": "polite" });
+  function restoreSettingsForm() {
+    goalInput.value = String(plan.questionGoal);
+    dailyInput.value = String(plan.dailyQuestionGoal);
+    weekSelect.value = String(plan.weekStartsOn);
+    error.textContent = "";
+  }
+  const field = (label, input, hint) => el("label", { class: "studyPlanField" },
+    el("span", { class: "fieldLabel" }, label),
+    input,
+    el("span", { class: "studyPlanFieldHint" }, hint),
+  );
+  settings.appendChild(el("h4", { id: "studyPlanSettingsTitle" }, "学習目標の設定"));
+  settings.appendChild(el("p", { class: "hint" }, `総問題目標と1日の問題目標は1〜${num(limit)}問で設定できます。`));
+  settings.appendChild(el("div", { class: "studyPlanFields" },
+    field("総問題目標", goalInput, "このアプリで新規に解く総問題数"),
+    field("1日の問題目標", dailyInput, "週間目標はこの7倍"),
+    field("週の開始曜日", weekSelect, "日〜土から選択"),
+  ));
+  settings.appendChild(error);
+  settings.appendChild(el("div", { class: "actions studyPlanFormActions" },
+    el("button", { class: "cta", type: "submit" }, "保存"),
+    el("button", { class: "ghost", type: "button", onclick: () => {
+      restoreSettingsForm();
+      settings.classList.add("hide");
+      settingsToggle.setAttribute("aria-expanded", "false");
+      settingsToggle.focus();
+    } }, "キャンセル"),
+  ));
+  settings.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const questionGoal = Number(goalInput.value);
+    const dailyQuestionGoal = Number(dailyInput.value);
+    const weekStartsOn = Number(weekSelect.value);
+    const validInteger = (value, max) => Number.isInteger(value) && value >= 1 && value <= max;
+    if (!validInteger(questionGoal, limit) || !validInteger(dailyQuestionGoal, limit)
+      || !Number.isInteger(weekStartsOn) || weekStartsOn < 0 || weekStartsOn > 6) {
+      error.textContent = `総問題目標と1日の問題目標は1〜${num(limit)}問、週の開始曜日は日〜土から選んでください。`;
+      return;
+    }
+    studyPlan = normalizeStudyPlan({
+      ...plan,
+      questionGoal,
+      dailyQuestionGoal,
+      weekStartsOn,
+    }, limit);
+    saveStudyPlan();
+    if (cloud) cloud.queueSave({
+      datasetId: state.datasetId,
+      progress: state.progress,
+      meta: cloudMeta(),
+    });
+    renderHome();
+  });
+  settingsToggle.addEventListener("click", () => {
+    const open = settings.classList.contains("hide");
+    if (!open) {
+      restoreSettingsForm();
+      settings.classList.add("hide");
+      settingsToggle.setAttribute("aria-expanded", "false");
+      settingsToggle.focus();
+      return;
+    }
+    settings.classList.toggle("hide", !open);
+    settingsToggle.setAttribute("aria-expanded", String(open));
+    if (open) goalInput.focus();
+  });
+
+  panel.appendChild(el("div", { class: "studyPlanHead" },
+    el("div", {},
+      el("p", { class: "label" }, "学習目標"),
+      el("h3", { id: "studyPlanTitle" }, "今日と今週の新規問題"),
+    ),
+    settingsToggle,
+  ));
+  panel.appendChild(el("div", { class: "studyPlanMetrics" },
+    studyPlanProgress(
+      "総目標",
+      summary.answeredOverall,
+      plan.questionGoal,
+      `回答済み ${num(summary.answeredOverall)} / ${num(plan.questionGoal)}問`,
+      totalStatus,
+    ),
+    studyPlanProgress(
+      "今日",
+      summary.answeredToday,
+      plan.dailyQuestionGoal,
+      `${num(summary.answeredToday)} / ${num(plan.dailyQuestionGoal)}問`,
+      `${dailyStatus}・新規${num(summary.answeredToday * STUDY_PLAN_VOCABULARY_PER_QUESTION)}語句`,
+    ),
+    studyPlanProgress(
+      "今週",
+      summary.answeredThisWeek,
+      summary.weeklyGoal,
+      `${num(summary.answeredThisWeek)} / ${num(summary.weeklyGoal)}問`,
+      `${weekRange}・${weeklyStatus}`,
+    ),
+  ));
+  panel.appendChild(el("p", { class: "studyPlanAdjustment" },
+    summary.weeklyRemaining === 0
+      ? "✓ 今週の目標達成"
+      : `残り${num(summary.daysRemainingIncludingToday)}日なら、1日${num(summary.adjustedDailyTarget)}問`,
+  ));
+  panel.appendChild(settings);
+  return panel;
+}
 function renderHomeContent() {
   $("#sessionPanel").classList.add("hide");
   const home = $("#homePanel");
@@ -1333,6 +1799,7 @@ function renderHomeContent() {
   // （学習セッション中や級の切り替え後に、古い級の数字で画面が奪われないようにする）。
   if (grade && !pooledData(grade)) {
     loadPooledItems(grade).then(() => {
+      if (grade === "eiken1") loadStudyPlan();
       if (currentGrade() === grade && !$("#homePanel").classList.contains("hide")) renderHome();
     }).catch(() => { /* オフライン等。次の描画で再試行する。 */ });
   }
@@ -1341,6 +1808,8 @@ function renderHomeContent() {
   const meaningItems = pooled ? learnedPooledItems(pooled.items) : [];
   const meaningQueue = pooled ? meaningPracticeQueue(meaningItems, true) : [];
   const meaningDueCount = meaningSummary ? meaningSummary.due : 0;
+  const isStudyPlanGrade = currentGrade() === "eiken1";
+  const studyPlanEntries = isStudyPlanGrade ? gradeQuestionEntries("eiken1") : [];
   const isFirstVisit = learned === 0;
 
   // hero は初回訪問（まだ何も学習していない）時だけ表示し、今日の学習カードとの説明重複を避ける
@@ -1442,10 +1911,14 @@ function renderHomeContent() {
       ),
     ));
   }
+  if (isStudyPlanGrade) summary.appendChild(studyPlanPanel(studyPlanEntries));
   home.appendChild(summary);
 
   // 語彙目標カード（級単位。問題セットより上位の目標なので、セット一覧より前に置く）
-  const goalCard = grade ? vocabGoalCard(meaningSummary ? meaningSummary.learned : 0, Boolean(pooled)) : null;
+  const learnedVocabulary = isStudyPlanGrade
+    ? learnedVocabularyCount("eiken1", studyPlanEntries)
+    : (meaningSummary ? meaningSummary.learned : 0);
+  const goalCard = grade ? vocabGoalCard(learnedVocabulary, Boolean(pooled)) : null;
   if (goalCard) home.appendChild(goalCard);
 
   if (grade) {
@@ -1532,6 +2005,10 @@ function renderGradeChoice() {
       needsGradeChoice = false;
       state.datasetId = loadDatasetId();
       await loadData();
+      if (code === "1") {
+        try { await loadPooledItems("eiken1"); } catch (e) { /* ホーム描画後に再試行する */ }
+        loadStudyPlan();
+      }
       renderHome();
     },
   }, GRADE_LABELS[code] || code));
@@ -1647,6 +2124,7 @@ function vocabGoalCard(learned, ready) {
   const track = el("div", {
     class: "vgTrack",
     role: "progressbar",
+    "aria-label": `${dataset().shortLabel}の語彙目標進捗`,
     "aria-valuemin": "0",
     "aria-valuemax": String(goal.target),
     "aria-valuenow": String(value),
@@ -1656,6 +2134,35 @@ function vocabGoalCard(learned, ready) {
   const prevTick = el("span", { class: "vgTick vgTickMid" },
     el("strong", {}, num(goal.prev)), el("small", {}, goal.prevLabel));
   prevTick.style.left = pct(goal.prev);
+
+  const forecast = currentGrade() === "eiken1"
+    ? el("div", { class: "vocabForecast", "aria-labelledby": "vocabForecastTitle" })
+    : null;
+  if (forecast) {
+    forecast.appendChild(el("h4", { id: "vocabForecastTitle" }, "このペースで学べる語句"));
+    if (!ready) {
+      forecast.appendChild(el("p", { class: "hint" }, "英検1級通常問題の語句を読み込み中…"));
+    } else {
+      const goalForecast = vocabularyGoalForecast(new Date(), studyPlan || defaultStudyPlan(), learned);
+      const periods = vocabularyForecast(studyPlan || defaultStudyPlan());
+      forecast.appendChild(el("p", { class: "vocabForecastLead" },
+        `このペースなら14,000語まであと${num(goalForecast.remainingVocabulary)}語`));
+      forecast.appendChild(el("p", { class: "hint" }, goalForecast.remainingVocabulary === 0
+        ? "14,000語の目安に到達しています。"
+        : `1日${num(goalForecast.dailyVocabulary)}語句で、${goalForecast.estimatedDate.toLocaleDateString("ja-JP", { year: "numeric", month: "long", day: "numeric" })}ごろ（あと${num(goalForecast.daysToGoal)}日）`));
+      forecast.appendChild(el("div", { class: "vocabForecastGrid", "aria-label": "期間別の理論上の語句予測" },
+        ...periods.map(({ days, vocabulary }) => {
+          const label = { 7: "1週間後", 30: "1か月後", 90: "3か月後", 180: "半年後", 365: "1年後" }[days] || `${days}日後`;
+          return el("div", { class: "vocabForecastRow" },
+            el("span", {}, label),
+            el("strong", {}, `+${num(vocabulary)}語句`),
+          );
+        })),
+      );
+      forecast.appendChild(el("p", { class: "hint" },
+        `理論上の学習量です。現在、このアプリの英検1級通常問題には${num(gradeVocabularyItems("eiken1").length)}語句を収録しています。このアプリだけの収録数を超える予測を含みます。`));
+    }
+  }
 
   return el("section", { class: "card vocabGoalCard", "aria-labelledby": "vocabGoalTitle" },
     el("div", { class: "vgHead" },
@@ -1678,6 +2185,7 @@ function vocabGoalCard(learned, ready) {
     el("p", { class: "vgMessage" }, message),
     el("p", { class: "hint" },
       `${goal.prevLabel}までの${num(goal.prev)}語は習得済みとして計算しています。このアプリで学習した語句は${ready ? num(own) : "—"}語句。語彙数は目安です。`),
+    forecast,
   );
 }
 
@@ -3090,9 +3598,11 @@ function onPracticeAnswer(idx, box, choiceWrap, q_, items) {
   box.appendChild(fb);
 
   const u = unit(session.q);
+  const answeredAt = new Date().toISOString();
   u.learned = true;
   u.attempts += 1;
-  u.lastAnsweredAt = new Date().toISOString();
+  if (!isValidIsoDate(u.firstAnsweredAt)) u.firstAnsweredAt = answeredAt;
+  u.lastAnsweredAt = answeredAt;
   u.solvedCorrect = isCorrect;
   u.needsReview = !isCorrect;
   u.answerResult = isCorrect ? "correct" : "incorrect";
@@ -3255,7 +3765,7 @@ async function boot() {
       getPatch: () => ({
         datasetId: state.datasetId,
         progress: state.progress,
-        meta: { lastDatasetId: state.datasetId },
+        meta: cloudMeta(),
       }),
       applyLoaded: (progress) => { pendingCloudProgress = progress; },
       onStatus: setShareStatus,
@@ -3274,17 +3784,29 @@ async function boot() {
     const gradeCode = resolveGradeCode();
     needsGradeChoice = !applyGradeScope(gradeCode);
     state.datasetId = loadDatasetId();
+    const migratedStudyPlanDatasetIds = migrateStudyPlanFirstAnswers();
+
+    await loadData();
+    if (currentGrade() === "eiken1") {
+      try { await loadPooledItems("eiken1"); } catch (e) { /* 次のホーム描画で再試行する */ }
+      loadStudyPlan();
+    }
     if (migratedLegacy) {
       migratedLegacyDatasetIds.forEach((datasetId) => {
         cloud.queueSave({
           datasetId,
           progress: loadProgress(datasetId),
-          meta: { lastDatasetId: state.datasetId },
+          meta: cloudMeta(),
         });
       });
     }
-
-    await loadData();
+    migratedStudyPlanDatasetIds.forEach((datasetId) => {
+      if (cloud) cloud.queueSave({
+        datasetId,
+        progress: loadProgress(datasetId),
+        meta: cloudMeta(),
+      });
+    });
     if (window.EikenActiveAppId !== "q1") return;
     renderHome();
   } catch (e) {
