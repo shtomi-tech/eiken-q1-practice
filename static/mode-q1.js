@@ -1522,12 +1522,6 @@ function practiceChoiceMeanings(q_, items, selectedIdx) {
   section.appendChild(list);
   return section;
 }
-// 選んだ誤答の意味が本当はどの語句のものかを逆引き（混同ペアの可視化）
-function findOwnerOfMeaning(type, meaning, excludeItem) {
-  const pooled = session && session.mode === "meaning" ? pooledData() : null;
-  const pool = pooled ? learnedPooledItems(pooled.items) : allVocabularyItems();
-  return pool.find((it) => it !== excludeItem && it.type === type && it.meaning === meaning);
-}
 // 選択肢を描画した瞬間の時刻を記録し、直後の誤クリックを無視する
 function armChoiceGuard() { session._choicesReadyAt = performance.now() + CHOICE_GUARD_MS; }
 function choicesLocked() { return performance.now() < (session._choicesReadyAt || 0); }
@@ -3581,15 +3575,9 @@ function renderWrongReview(body) {
   updateReviewState();
 
   log.forEach((entry, i) => {
-    const { item, picked } = entry;
-    const owner = findOwnerOfMeaning(item.type, picked, item);
+    const { item } = entry;
     const card = buildFlashCard(item);
     card.classList.add("reviewCard");
-    const wrongLine = el("div", { class: "flashRow" },
-      el("strong", {}, "選んだ意味"),
-      el("div", { class: "wrongReviewMeaning" }, picked + (owner ? `　→　これは「${surfaceOf(owner)}」の意味です` : "")),
-    );
-    card.querySelector(".flashBody").appendChild(wrongLine);
     const checkBtn = el("button", { class: "ghost smallGhost reviewCheckBtn", type: "button" }, "確認した");
     if (checked.has(i)) {
       checkBtn.disabled = true;
