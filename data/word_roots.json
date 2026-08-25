@@ -1,6 +1,6 @@
 {
   "meta": {
-    "note": "単語カードの語源パネル用。表示専用。進捗キー・音声・選択肢には使わない。段階5バッチ2で語根71個まで拡張する。"
+    "note": "単語カードの語源パネル用。表示専用。進捗キー・音声・選択肢には使わない。段階5バッチ3で語根84個まで拡張する。"
   },
   "roots": {
     "spec": {
@@ -391,6 +391,73 @@
       "gloss": "押す",
       "origin": "ラテン語 premere",
       "note": "押さえつけて抑えるイメージ。oppress。primus（第一）由来の語は含めない。"
+    },
+    "fin": {
+      "gloss": "境界・終わり",
+      "origin": "ラテン語 finis",
+      "note": "境界を引いて、終わりや限界を定めるイメージ。define・infinite。"
+    },
+    "hydr": {
+      "gloss": "水",
+      "origin": "ギリシャ語 hydor",
+      "note": "水分を取り込み、または水素を表すイメージ。hydrogen・hydrant。"
+    },
+    "lud": {
+      "gloss": "遊ぶ・だます",
+      "origin": "ラテン語 ludere",
+      "note": "遊びのように相手を惑わせるイメージ。illusion・elude。",
+      "variants": ["lus"]
+    },
+    "dem": {
+      "gloss": "民衆",
+      "origin": "ギリシャ語 demos",
+      "note": "民衆や地域の人々を指すイメージ。epidemic・demographic。"
+    },
+    "prec": {
+      "gloss": "祈る・願う",
+      "origin": "ラテン語 precari",
+      "note": "願いを込めて祈るイメージ。pray・precarious。preci（価値）とは別語根。"
+    },
+    "preci": {
+      "gloss": "値段・価値",
+      "origin": "ラテン語 pretium",
+      "note": "ものの価値や価格を測るイメージ。price・appreciate。prec（祈る）とは別語根。"
+    },
+    "scend": {
+      "gloss": "登る",
+      "origin": "ラテン語 scandere",
+      "note": "高い方へ登り、そこから上下するイメージ。ascend・transcend。"
+    },
+    "terr": {
+      "gloss": "怖がらせる",
+      "origin": "ラテン語 terrere",
+      "note": "恐れを起こして人を遠ざけるイメージ。terror・terrify。terra（土地）由来の語は含めない。"
+    },
+    "ton": {
+      "gloss": "雷鳴",
+      "origin": "ラテン語 tonare",
+      "note": "雷のような大きな音を鳴らすイメージ。astonish・thunder。"
+    },
+    "vi": {
+      "gloss": "道",
+      "origin": "ラテン語 via",
+      "note": "道から外れたり、別の道を通ったりするイメージ。obvious・previous。"
+    },
+    "vot": {
+      "gloss": "誓う",
+      "origin": "ラテン語 vovere",
+      "note": "神や相手に誓いを立て、身をささげるイメージ。devotion・vote。",
+      "variants": ["vout"]
+    },
+    "decor": {
+      "gloss": "飾り",
+      "origin": "ラテン語 decus / decorare",
+      "note": "美しさや名誉を与える飾りのイメージ。decoration・decorum。"
+    },
+    "bil": {
+      "gloss": "力",
+      "origin": "ラテン語 -bilis",
+      "note": "力があるかどうかに関わるイメージ。debility。"
     }
   },
   "affixes": {
@@ -474,6 +541,7 @@
     "-ize": { "gloss": "〜にする", "kind": "suffix" },
     "-ly": { "gloss": "〜な状態で", "kind": "suffix" },
     "-escence": { "gloss": "〜の過程・状態", "kind": "suffix" },
-    "-ile": { "gloss": "〜するもの・〜の性質の", "kind": "suffix" }
+    "-ile": { "gloss": "〜するもの・〜の性質の", "kind": "suffix" },
+    "-cracy": { "gloss": "〜による支配", "kind": "suffix" }
   }
 }

@@ -3,7 +3,7 @@
 対象: `data/word_roots.json` / `data/word_origins.json` / `data/word_origin_excluded.json`
 関連: [WORD_ORIGIN_PHASE5_IMPL_PLAN.md](WORD_ORIGIN_PHASE5_IMPL_PLAN.md)（バッチ0＝仕組み）/ [WORD_ORIGIN_PHASE5_BATCH2_PLAN.md](WORD_ORIGIN_PHASE5_BATCH2_PLAN.md)（バッチ2）/ [WORD_ORIGIN_AUTHORING.md](WORD_ORIGIN_AUTHORING.md)（作成基準）
 前提: バッチ2＝`5d0075d`（語根71個・A型180語・B型31語・単発語根34個）
-状態: 未着手
+状態: 完了（2026-08-25）。A型15語・B型2語・C型1語を追加し、語根84個・A型195語・B型33語・単発語根45個
 
 ## 0. 対象
 

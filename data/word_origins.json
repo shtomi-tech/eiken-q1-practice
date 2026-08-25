@@ -2024,6 +2024,176 @@
     "resources": {
       "type": "B",
       "derivation": "再び湧き上がるものから → 資源、人材"
+    },
+    "deflect": {
+      "type": "A",
+      "gloss": "そらす",
+      "root": "flect",
+      "parts": [
+        { "form": "de", "kind": "prefix", "gloss": "離れて" },
+        { "form": "flect", "kind": "root", "gloss": "曲げる" }
+      ],
+      "derivation": "離れるように曲げる → そらす、かわす"
+    },
+    "definition": {
+      "type": "A",
+      "gloss": "定義",
+      "root": "fin",
+      "parts": [
+        { "form": "de", "kind": "prefix", "gloss": "完全に" },
+        { "form": "fin", "kind": "root", "gloss": "境界・終わり" },
+        { "form": "-ion", "kind": "suffix", "gloss": "〜すること（名詞化）" }
+      ],
+      "derivation": "境界をはっきり定めること → 定義"
+    },
+    "definitive": {
+      "type": "A",
+      "gloss": "決定的な",
+      "root": "fin",
+      "parts": [
+        { "form": "de", "kind": "prefix", "gloss": "完全に" },
+        { "form": "fin", "kind": "root", "gloss": "境界・終わり" },
+        { "form": "-ive", "kind": "suffix", "gloss": "〜する性質の" }
+      ],
+      "derivation": "境界を完全に定めた性質 → 決定的な、最終的な"
+    },
+    "dehydrate": {
+      "type": "A",
+      "gloss": "脱水した",
+      "root": "hydr",
+      "parts": [
+        { "form": "de", "kind": "prefix", "gloss": "離れて" },
+        { "form": "hydr", "kind": "root", "gloss": "水" },
+        { "form": "-ate", "kind": "suffix", "gloss": "〜にする（動詞化）" }
+      ],
+      "derivation": "水を取り去る → 脱水した"
+    },
+    "delusion": {
+      "type": "A",
+      "gloss": "妄想",
+      "root": "lud",
+      "parts": [
+        { "form": "de", "kind": "prefix", "gloss": "離れて" },
+        { "form": "lus", "kind": "root", "gloss": "遊ぶ・だます" },
+        { "form": "-ion", "kind": "suffix", "gloss": "〜すること（名詞化）" }
+      ],
+      "derivation": "遊びで判断をだますこと → 妄想、思い込み"
+    },
+    "democracy": {
+      "type": "A",
+      "gloss": "民主主義",
+      "root": "dem",
+      "parts": [
+        { "form": "dem", "kind": "root", "gloss": "民衆" },
+        { "form": "-cracy", "kind": "suffix", "gloss": "〜による支配" }
+      ],
+      "derivation": "民衆による支配 → 民主主義、民主制"
+    },
+    "deprecate": {
+      "type": "A",
+      "gloss": "非難する",
+      "root": "prec",
+      "parts": [
+        { "form": "de", "kind": "prefix", "gloss": "離れて" },
+        { "form": "prec", "kind": "root", "gloss": "祈る・願う" },
+        { "form": "-ate", "kind": "suffix", "gloss": "〜にする（動詞化）" }
+      ],
+      "derivation": "悪いことから離れるよう祈る → 非難する、価値を低く見る"
+    },
+    "depreciate": {
+      "type": "A",
+      "gloss": "価値を下げる",
+      "root": "preci",
+      "parts": [
+        { "form": "de", "kind": "prefix", "gloss": "下へ" },
+        { "form": "preci", "kind": "root", "gloss": "値段・価値" },
+        { "form": "-ate", "kind": "suffix", "gloss": "〜にする（動詞化）" }
+      ],
+      "derivation": "価値を下げる → 価値を下げる、減価する"
+    },
+    "descendant": {
+      "type": "A",
+      "gloss": "子孫",
+      "root": "scend",
+      "parts": [
+        { "form": "de", "kind": "prefix", "gloss": "下へ" },
+        { "form": "scend", "kind": "root", "gloss": "登る" },
+        { "form": "-ant", "kind": "suffix", "gloss": "〜するもの・人" }
+      ],
+      "derivation": "下へ降りてつながる者 → 子孫"
+    },
+    "deterrent": {
+      "type": "A",
+      "gloss": "抑止力",
+      "root": "terr",
+      "parts": [
+        { "form": "de", "kind": "prefix", "gloss": "離れて" },
+        { "form": "terr", "kind": "root", "gloss": "怖がらせる" },
+        { "form": "-ent", "kind": "suffix", "gloss": "〜するもの・人" }
+      ],
+      "derivation": "怖がらせて遠ざけるもの → 抑止力"
+    },
+    "detonate": {
+      "type": "A",
+      "gloss": "爆発させた",
+      "root": "ton",
+      "parts": [
+        { "form": "de", "kind": "prefix", "gloss": "強く" },
+        { "form": "ton", "kind": "root", "gloss": "雷鳴" },
+        { "form": "-ate", "kind": "suffix", "gloss": "〜にする（動詞化）" }
+      ],
+      "derivation": "雷鳴のように大きな音を出す → 爆発させた"
+    },
+    "devious": {
+      "type": "A",
+      "gloss": "ずる賢い",
+      "root": "vi",
+      "parts": [
+        { "form": "de", "kind": "prefix", "gloss": "離れて" },
+        { "form": "vi", "kind": "root", "gloss": "道" },
+        { "form": "-ous", "kind": "suffix", "gloss": "〜に満ちた" }
+      ],
+      "derivation": "道から外れた → ずる賢い、狡猾な"
+    },
+    "devoutly": {
+      "type": "A",
+      "gloss": "敬虔に",
+      "root": "vot",
+      "parts": [
+        { "form": "de", "kind": "prefix", "gloss": "完全に" },
+        { "form": "vout", "kind": "root", "gloss": "誓う" },
+        { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で" }
+      ],
+      "derivation": "誓いに身をささげる状態で → 敬虔に、心から"
+    },
+    "decorate": {
+      "type": "A",
+      "gloss": "飾る",
+      "root": "decor",
+      "parts": [
+        { "form": "decor", "kind": "root", "gloss": "飾り" },
+        { "form": "-ate", "kind": "suffix", "gloss": "〜にする（動詞化）" }
+      ],
+      "derivation": "飾りで美しくする → 飾る"
+    },
+    "debilitate": {
+      "type": "A",
+      "gloss": "弱らせる",
+      "root": "bil",
+      "parts": [
+        { "form": "de", "kind": "prefix", "gloss": "離れて" },
+        { "form": "bil", "kind": "root", "gloss": "力" },
+        { "form": "-ate", "kind": "suffix", "gloss": "〜にする（動詞化）" }
+      ],
+      "derivation": "力を奪って弱らせる → 弱らせる"
+    },
+    "demeanor": {
+      "type": "B",
+      "derivation": "minare（追い立てる）由来で、人を導き扱うことから → 態度、物腰"
+    },
+    "deteriorate": {
+      "type": "B",
+      "derivation": "deterior（より悪い）という語幹から → 悪化した"
     }
   }
 }
