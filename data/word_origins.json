@@ -2420,6 +2420,161 @@
         { "form": "press", "kind": "root", "gloss": "押す" }
       ],
       "derivation": "ともに押し込む → 圧縮する"
+    },
+    "discreetly": {
+      "type": "A",
+      "gloss": "慎重に",
+      "root": "cre",
+      "parts": [
+        { "form": "dis", "kind": "prefix", "gloss": "離れて" },
+        { "form": "cre", "kind": "root", "gloss": "ふるい分ける" },
+        { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で" }
+      ],
+      "derivation": "周囲から離して見分ける状態で → 慎重に、目立たないように"
+    },
+    "discretion": {
+      "type": "A",
+      "gloss": "慎重さ",
+      "root": "cre",
+      "parts": [
+        { "form": "dis", "kind": "prefix", "gloss": "離れて" },
+        { "form": "cre", "kind": "root", "gloss": "ふるい分ける" },
+        { "form": "-ion", "kind": "suffix", "gloss": "〜すること（名詞化）" }
+      ],
+      "derivation": "周囲から離して見分けること → 慎重さ、分別"
+    },
+    "discrimination": {
+      "type": "A",
+      "gloss": "差別",
+      "root": "crimin",
+      "parts": [
+        { "form": "dis", "kind": "prefix", "gloss": "離れて" },
+        { "form": "crimin", "kind": "root", "gloss": "ふるい分ける" },
+        { "form": "-ation", "kind": "suffix", "gloss": "〜すること" }
+      ],
+      "derivation": "ふるい分けて区別すること → 差別、識別、区別"
+    },
+    "disparity": {
+      "type": "A",
+      "gloss": "格差",
+      "root": "par",
+      "parts": [
+        { "form": "dis", "kind": "prefix", "gloss": "否定" },
+        { "form": "par", "kind": "root", "gloss": "等しい" },
+        { "form": "-ity", "kind": "suffix", "gloss": "〜であること" }
+      ],
+      "derivation": "等しい状態ではないこと → 格差"
+    },
+    "dispirit": {
+      "type": "A",
+      "gloss": "落胆させる",
+      "root": "spir",
+      "parts": [
+        { "form": "dis", "kind": "prefix", "gloss": "離れて" },
+        { "form": "spir", "kind": "root", "gloss": "息" }
+      ],
+      "derivation": "息や気力を離れさせる → 落胆させる"
+    },
+    "dissuade": {
+      "type": "A",
+      "gloss": "思いとどまらせる",
+      "root": "suad",
+      "parts": [
+        { "form": "dis", "kind": "prefix", "gloss": "離れて" },
+        { "form": "suad", "kind": "root", "gloss": "勧める" }
+      ],
+      "derivation": "勧めから遠ざける → 思いとどまらせる"
+    },
+    "distinction": {
+      "type": "A",
+      "gloss": "区別",
+      "root": "tinct",
+      "parts": [
+        { "form": "dis", "kind": "prefix", "gloss": "離れて" },
+        { "form": "tinct", "kind": "root", "gloss": "分ける・刺す" },
+        { "form": "-ion", "kind": "suffix", "gloss": "〜すること（名詞化）" }
+      ],
+      "derivation": "別々に印を付けること → 区別、卓越、名誉"
+    },
+    "distortion": {
+      "type": "A",
+      "gloss": "歪み",
+      "root": "tort",
+      "parts": [
+        { "form": "dis", "kind": "prefix", "gloss": "離れて" },
+        { "form": "tort", "kind": "root", "gloss": "ねじる" },
+        { "form": "-ion", "kind": "suffix", "gloss": "〜すること（名詞化）" }
+      ],
+      "derivation": "ねじれて別の形になったもの → 歪み、歪曲"
+    },
+    "distress": {
+      "type": "A",
+      "gloss": "苦悩",
+      "root": "string",
+      "parts": [
+        { "form": "dis", "kind": "prefix", "gloss": "離れて" },
+        { "form": "stress", "kind": "root", "gloss": "締める" }
+      ],
+      "derivation": "離れて引き締められた状態 → 苦悩、困窮"
+    },
+    "diagram": {
+      "type": "A",
+      "gloss": "図",
+      "root": "gram",
+      "parts": [
+        { "form": "dia", "kind": "prefix", "gloss": "通して" },
+        { "form": "gram", "kind": "root", "gloss": "書かれたもの" }
+      ],
+      "derivation": "線を通して書かれたもの → 図、図表"
+    },
+    "dilapidate": {
+      "type": "A",
+      "gloss": "荒廃した",
+      "root": "lapid",
+      "parts": [
+        { "form": "di", "kind": "prefix", "gloss": "離れて" },
+        { "form": "lapid", "kind": "root", "gloss": "石" },
+        { "form": "-ate", "kind": "suffix", "gloss": "〜にする（動詞化）" }
+      ],
+      "derivation": "石を離れた状態にして散らす → 荒廃した、ぼろぼろの"
+    },
+    "diminutive": {
+      "type": "A",
+      "gloss": "小さい",
+      "root": "min",
+      "parts": [
+        { "form": "di", "kind": "prefix", "gloss": "離れて" },
+        { "form": "min", "kind": "root", "gloss": "小さくする" },
+        { "form": "-ive", "kind": "suffix", "gloss": "〜する性質の" }
+      ],
+      "derivation": "小さくした性質の → 小さい、小柄な"
+    },
+    "divulgence": {
+      "type": "A",
+      "gloss": "漏洩",
+      "root": "vulg",
+      "parts": [
+        { "form": "di", "kind": "prefix", "gloss": "広く" },
+        { "form": "vulg", "kind": "root", "gloss": "大衆" },
+        { "form": "-ence", "kind": "suffix", "gloss": "〜の状態" }
+      ],
+      "derivation": "大衆に広く知らせること → 漏洩、暴露"
+    },
+    "disembark": {
+      "type": "B",
+      "derivation": "barque（船）由来のembarkにdis-が付いた語で、英語としての構成が自明なため → 下船する、降りる"
+    },
+    "dishevel": {
+      "type": "B",
+      "derivation": "chevel（髪）を乱す古フランス語由来で、英語に語根が残らないため → 乱れた、だらしのない"
+    },
+    "dispatch": {
+      "type": "B",
+      "derivation": "イタリア語 dispacciare（急がせる）由来で、ラテン語の語根に安全に還元できないため → 派遣した、発送した"
+    },
+    "distraught": {
+      "type": "B",
+      "derivation": "distract（気を散らす）の古い異形から → ひどく取り乱した"
     }
   }
 }

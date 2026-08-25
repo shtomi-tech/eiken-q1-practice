@@ -1,6 +1,6 @@
 {
   "meta": {
-    "note": "単語カードの語源パネル用。表示専用。進捗キー・音声・選択肢には使わない。段階5バッチ4で語根97個まで拡張する。"
+    "note": "単語カードの語源パネル用。表示専用。進捗キー・音声・選択肢には使わない。段階5バッチ5で語根108個まで拡張する。"
   },
   "roots": {
     "spec": {
@@ -530,6 +530,62 @@
       "origin": "ラテン語 plicare",
       "note": "折り重ね、複雑に絡ませるイメージ。perplex・complicate。",
       "variants": ["pli", "ply"]
+    },
+    "crimin": {
+      "gloss": "ふるい分ける・罪",
+      "origin": "ラテン語 crimen",
+      "note": "ふるい分けて、罪を判断するイメージ。crime・incriminate。cre（ふるい分ける）と同系だが、綴りが違うので別に立てている。"
+    },
+    "par": {
+      "gloss": "等しい",
+      "origin": "ラテン語 par",
+      "note": "同じ価値や条件で釣り合うイメージ。parity・compare。"
+    },
+    "spir": {
+      "gloss": "息",
+      "origin": "ラテン語 spirare",
+      "note": "息を吹き込み、生命や気力を与えるイメージ。inspire・respiratory。"
+    },
+    "suad": {
+      "gloss": "勧める",
+      "origin": "ラテン語 suadere",
+      "note": "よいものとして勧め、説得するイメージ。persuade。"
+    },
+    "tinct": {
+      "gloss": "分ける・刺す",
+      "origin": "ラテン語 stinguere",
+      "note": "印を刺して境界を分けるイメージ。distinguish・extinct。"
+    },
+    "tort": {
+      "gloss": "ねじる",
+      "origin": "ラテン語 torquere",
+      "note": "ねじって別の形に変えるイメージ。torture・retort。"
+    },
+    "string": {
+      "gloss": "締める",
+      "origin": "ラテン語 stringere",
+      "note": "強く引き締め、押しつけるイメージ。strict・restrict。",
+      "variants": ["stress", "strict"]
+    },
+    "gram": {
+      "gloss": "書かれたもの",
+      "origin": "ギリシャ語 gramma",
+      "note": "線や文字で書き表したもののイメージ。grammar・telegram。"
+    },
+    "lapid": {
+      "gloss": "石",
+      "origin": "ラテン語 lapis",
+      "note": "石を投げ、または宝石を磨くイメージ。lapidary。"
+    },
+    "min": {
+      "gloss": "小さくする",
+      "origin": "ラテン語 minuere",
+      "note": "大きさや量を小さくするイメージ。diminish・minimum。-mination の一致は含めない。"
+    },
+    "vulg": {
+      "gloss": "大衆",
+      "origin": "ラテン語 vulgus",
+      "note": "大衆に広く知らせ、一般化するイメージ。vulgar・divulge。"
     }
   },
   "affixes": {
@@ -567,6 +623,7 @@
     "col": { "gloss": "ともに", "kind": "prefix" },
     "contra": { "gloss": "反対に", "kind": "prefix" },
     "di": { "gloss": "分けて・離れて", "kind": "prefix" },
+    "dia": { "gloss": "通して", "kind": "prefix", "note": "ギリシャ語 dia 由来。" },
     "en": { "gloss": "中へ・完全に", "kind": "prefix" },
     "il": { "gloss": "中へ・上に", "kind": "prefix" },
     "intra": { "gloss": "内側へ", "kind": "prefix" },

@@ -3,7 +3,7 @@
 対象: `data/word_roots.json` / `data/word_origins.json` / `data/word_origin_excluded.json` / `data/lemmas.json`
 関連: [WORD_ORIGIN_PHASE5_IMPL_PLAN.md](WORD_ORIGIN_PHASE5_IMPL_PLAN.md)（バッチ0＝仕組み）/ [WORD_ORIGIN_PHASE5_BATCH4_PLAN.md](WORD_ORIGIN_PHASE5_BATCH4_PLAN.md)（バッチ4）/ [WORD_ORIGIN_AUTHORING.md](WORD_ORIGIN_AUTHORING.md)（作成基準）
 前提: バッチ4＝`a71e667`（語根97個・A型215語・B型36語・単発語根52個・カバー率21.2%）
-状態: 未着手
+状態: 完了（2026-08-25）。A型13語・B型4語・C型1語を追加し、語根108個・A型228語・B型40語・単発語根62個
 
 ## 0. 対象
 
