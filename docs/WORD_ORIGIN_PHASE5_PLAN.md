@@ -3,7 +3,7 @@
 対象: `data/word_roots.json` / `data/word_origins.json` / `static/mode-q1.js` / `scripts/check-word-origin-ui.cjs` / `docs/WORD_ORIGIN_AUTHORING.md`
 関連: [WORD_ORIGIN_PHASE1_PLAN.md](WORD_ORIGIN_PHASE1_PLAN.md)（語根の要件を決めた回）/ [WORD_ORIGIN_PHASE4_PLAN.md](WORD_ORIGIN_PHASE4_PLAN.md)（級横断化）
 前提: 段階4＝`bcfb4c0`（語根33個・A型136語・B型18語・カバー率13.0%）
-状態: バッチ5完了（2026-08-25）。`in-` `re-` `de-` `con-`/`com-` `dis-`/`di-` を投入し、語根108個・A型228語・B型40語（カバー率22.7%）。バッチ6は未着手
+状態: 完了（2026-08-25）。`in-` `re-` `de-` `con-`/`com-` `dis-`/`di-` `ex-`/`e-` を投入し、語根122個・A型245語・B型43語（カバー率24.3%）。当初見込み（A型240語前後・カバー率21%前後）に対し、実測はA型245語・カバー率24.3%となった。
 
 ## 0. 方針変更
 

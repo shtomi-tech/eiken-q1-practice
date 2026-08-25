@@ -1,6 +1,6 @@
 {
   "meta": {
-    "note": "単語カードの語源パネル用。表示専用。進捗キー・音声・選択肢には使わない。段階5バッチ5で語根108個まで拡張する。"
+    "note": "単語カードの語源パネル用。表示専用。進捗キー・音声・選択肢には使わない。段階5バッチ6で語根122個まで拡張する。"
   },
   "roots": {
     "spec": {
@@ -434,7 +434,7 @@
     "terr": {
       "gloss": "怖がらせる",
       "origin": "ラテン語 terrere",
-      "note": "恐れを起こして人を遠ざけるイメージ。terror・terrify。terra（土地）由来の語は含めない。"
+      "note": "恐れを起こして人を遠ざけるイメージ。terror・terrify。terra（土地）由来の語は含めない。terraとは別語根。"
     },
     "ton": {
       "gloss": "雷鳴",
@@ -586,6 +586,80 @@
       "gloss": "大衆",
       "origin": "ラテン語 vulgus",
       "note": "大衆に広く知らせ、一般化するイメージ。vulgar・divulge。"
+    },
+    "asper": {
+      "gloss": "粗い",
+      "origin": "ラテン語 asper",
+      "note": "表面や態度が粗く、厳しいイメージ。asperity・exasperation。"
+    },
+    "cruc": {
+      "gloss": "十字架",
+      "origin": "ラテン語 crux",
+      "note": "十字架にかけて苦痛を与えるイメージ。crucial・crucify。"
+    },
+    "empl": {
+      "gloss": "取り出す",
+      "origin": "ラテン語 emere",
+      "note": "外へ取り出し、例として示すイメージ。example・exemplify。"
+    },
+    "ped": {
+      "gloss": "足",
+      "origin": "ラテン語 pes / pedis",
+      "note": "足を進め、歩いて移動するイメージ。pedal・pedestrian。pedantic（ギリシャ語 paidos＝子ども）由来の語は含めない。"
+    },
+    "pend": {
+      "gloss": "量る・吊るす",
+      "origin": "ラテン語 pendere",
+      "note": "吊り下げて量り、重さや支出を測るイメージ。pending・suspend。",
+      "variants": ["pens"]
+    },
+    "plaud": {
+      "gloss": "打つ・拍手する",
+      "origin": "ラテン語 plaudere",
+      "note": "手を打って拍手し、音を立てて追い出すイメージ。applaud・plausible。",
+      "variants": ["plos", "plaus"]
+    },
+    "propri": {
+      "gloss": "自分のもの",
+      "origin": "ラテン語 proprius",
+      "note": "自分だけのものとして所有するイメージ。property・appropriate。"
+    },
+    "uber": {
+      "gloss": "豊か・乳房",
+      "origin": "ラテン語 uber",
+      "note": "乳房の豊かさから、実りや感情があふれるイメージ。exuberance。"
+    },
+    "man": {
+      "gloss": "流れる",
+      "origin": "ラテン語 manare",
+      "note": "液体や気体が外へ流れ出るイメージ。emanation。manu（手）由来の語は含めない。"
+    },
+    "labor": {
+      "gloss": "働く",
+      "origin": "ラテン語 laborare",
+      "note": "力を使って働き、手をかけて作り上げるイメージ。laborious・collaborate。"
+    },
+    "numer": {
+      "gloss": "数",
+      "origin": "ラテン語 numerus",
+      "note": "数を数え、順に並べるイメージ。numeral・innumerable。"
+    },
+    "nerv": {
+      "gloss": "筋・神経",
+      "origin": "ラテン語 nervus",
+      "note": "筋や神経が力を伝えるイメージ。nerve・nervous。"
+    },
+    "estim": {
+      "gloss": "評価する",
+      "origin": "ラテン語 aestimare",
+      "note": "価値を見積もり、評価するイメージ。estimate・estimation。",
+      "variants": ["steem"]
+    },
+    "terra": {
+      "gloss": "土地",
+      "origin": "ラテン語 terra",
+      "note": "地面や土地に関わるイメージ。territory・terrain。terr（怖がらせる）とは別語根。",
+      "variants": ["terrestr"]
     }
   },
   "affixes": {
@@ -602,6 +676,7 @@
     "dis": { "gloss": "離れて・否定", "kind": "prefix" },
     "pro": { "gloss": "前へ", "kind": "prefix" },
     "ex": { "gloss": "外へ", "kind": "prefix", "note": "子音の前ではeになる（evoke・emanate）。" },
+    "extra": { "gloss": "外の", "kind": "prefix", "note": "ラテン語 extra 由来。「外の」を表し、ex-とは異なる形。" },
     "sub": { "gloss": "下へ・副次的に", "kind": "prefix" },
     "per": { "gloss": "通して・徹底的に", "kind": "prefix" },
     "pre": { "gloss": "前もって", "kind": "prefix" },

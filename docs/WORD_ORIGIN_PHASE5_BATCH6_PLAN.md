@@ -3,7 +3,7 @@
 対象: `data/word_roots.json` / `data/word_origins.json` / `data/word_origin_excluded.json`
 関連: [WORD_ORIGIN_PHASE5_IMPL_PLAN.md](WORD_ORIGIN_PHASE5_IMPL_PLAN.md)（バッチ0＝仕組み）/ [WORD_ORIGIN_PHASE5_BATCH5_PLAN.md](WORD_ORIGIN_PHASE5_BATCH5_PLAN.md)（バッチ5）/ [WORD_ORIGIN_AUTHORING.md](WORD_ORIGIN_AUTHORING.md)（作成基準）
 前提: バッチ5＝`d9a38ef`（語根108個・A型228語・B型40語・単発語根62個・カバー率22.7%）
-状態: 未着手。**段階5の最終バッチ**
+状態: 完了（2026-08-25）。個別対象表を優先してA型17語・B型3語・C型1語を追加し、語根122個・A型245語・B型43語（カバー率24.3%）。冒頭の合計見込み（A型14語・新語根11個）と個別表（A型17語・新語根14個）に不整合があったため、個別表の対象を実装した。**段階5の最終バッチ**
 
 ## 0. 対象
 
