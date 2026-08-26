@@ -47,7 +47,7 @@ jobs:
       - name: Prepare static files
         run: |
           rm -rf _site
-          mkdir -p _site/static/vendor/harness _site/data _site/assets/audio/vocab
+          mkdir -p _site/static/vendor/harness _site/data _site/assets/audio/vocab _site/assets/audio/lemma
           cp index.html .nojekyll _site/
           cp static/app.js static/mode-q1.js static/styles.css static/config.json _site/static/
           cp static/vendor/harness/cloud.js _site/static/vendor/harness/
@@ -59,6 +59,12 @@ jobs:
           cp data/questions_topic_set-*.json data/vocab_topic_set-*.json _site/data/
           cp data/questions_iuhw_*.json data/vocab_iuhw_*.json _site/data/
           cp -R assets/audio/vocab/* _site/assets/audio/vocab/
+          cp -R assets/audio/lemma/* _site/assets/audio/lemma/
+          expected_lemma_audio_count=$(node -e 'const fs=require("fs"); const data=JSON.parse(fs.readFileSync("data/lemmas.json", "utf8")); console.log(Object.keys(data.entries || {}).length)')
+          lemma_audio_count=$(find assets/audio/lemma -type f -name '*.mp3' | wc -l)
+          site_lemma_audio_count=$(find _site/assets/audio/lemma -type f -name '*.mp3' | wc -l)
+          test "$lemma_audio_count" -eq "$expected_lemma_audio_count"
+          test "$site_lemma_audio_count" -eq "$expected_lemma_audio_count"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

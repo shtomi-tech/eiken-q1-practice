@@ -61,11 +61,12 @@ const VOCAB_GOALS = {
 };
 // 問題セット一覧は data/manifest.json（"q1"キー）から読み込む。
 // 回を追加するときはデータJSONを置いてmanifest.jsonに1エントリ足すだけでよく、このファイルの編集は不要。
-let DATASETS = {};
-let ALL_DATASETS = {};
-let DEFAULT_DATASET_ID = null;
-let lemmaMap = {};
-let particleMap = {};
+  let DATASETS = {};
+  let ALL_DATASETS = {};
+  let DEFAULT_DATASET_ID = null;
+  let lemmaMap = {};
+  let lemmaEntries = {};
+  let particleMap = {};
 let wordRoots = { roots: {}, affixes: {} };
 let wordOriginMap = {};
 let wordOriginRootIndex = new Map();
@@ -1122,7 +1123,7 @@ async function loadPooledItems(grade = currentGrade()) {
             seenTopicItems.add(key);
           }
           items.push(it);
-          meaningPool[it.type].push(it.meaning);
+          meaningPool[it.type].push(learningMeaningOf(it));
         }
       }
       assignParticleSlots(items);
@@ -1161,7 +1162,8 @@ function meaningPoolForItems(items) {
   const pool = { word: [], idiom: [] };
   for (const item of items) {
     if (!pool[item.type]) pool[item.type] = [];
-    if (item.meaning && !pool[item.type].includes(item.meaning)) pool[item.type].push(item.meaning);
+    const meaning = learningMeaningOf(item);
+    if (meaning && !pool[item.type].includes(meaning)) pool[item.type].push(meaning);
   }
   return pool;
 }
@@ -1172,14 +1174,15 @@ function meaningPoolForItems(items) {
 const MEANING_DISTRACTOR_MIN_POOL = 8;
 
 function meaningDistractors(item, count = 3) {
+  const correctMeaning = learningMeaningOf(item);
   const pooled = session.mode === "meaning" ? pooledData() : null;
   const learnedPool = pooled ? meaningPoolForItems(learnedPooledItems(pooled.items)) : state.meaningPool;
   const fullPool = pooled ? pooled.meaningPool : state.meaningPool;
-  const sameType = (pool) => (pool[item.type] || []).filter((m) => m && m !== item.meaning);
+  const sameType = (pool) => (pool[item.type] || []).filter((m) => m && m !== correctMeaning);
   const otherTypes = (pool) => Object.keys(pool)
     .filter((t) => t !== item.type)
     .reduce((acc, t) => acc.concat(pool[t] || []), [])
-    .filter((m) => m && m !== item.meaning);
+    .filter((m) => m && m !== correctMeaning);
 
   const candidates = [];
   const add = (list) => {
@@ -1319,6 +1322,30 @@ function shuffle(arr) {
   return a;
 }
 function surfaceOf(item) { return item.type === "idiom" ? item.phrase : item.word; }
+function canonicalHeadwordOf(item) {
+  const surface = surfaceOf(item);
+  if (!item || item.type !== "word") return surface;
+  return lemmaMap[String(surface || "").toLowerCase()] || surface;
+}
+function learningEntryOf(item) {
+  const headword = canonicalHeadwordOf(item);
+  const key = String(headword || "").toLowerCase();
+  const entry = lemmaEntries[key];
+  if (entry && typeof entry === "object") return entry;
+  return {
+    meaning: item?.meaning || "",
+    ipa: item?.ipa || "",
+    pos: item?.pos || "",
+    audio: "",
+    surfaces: [surfaceOf(item)],
+  };
+}
+function learningMeaningOf(item) { return learningEntryOf(item).meaning || item?.meaning || ""; }
+function learningIpaOf(item) { return learningEntryOf(item).ipa || item?.ipa || ""; }
+function learningPosOf(item) { return learningEntryOf(item).pos || item?.pos || ""; }
+function lemmaAudioPathOf(item) {
+  return learningEntryOf(item).audio || vocabularyAudioPath(item);
+}
 function normalizedSurface(value) {
   return String(value || "")
     .toLowerCase()
@@ -1439,7 +1466,7 @@ function playVocabAudio(path, button, text) {
   audio.play().catch(finish);
 }
 function buildVocabAudioButton(item, className = "flashListenButton") {
-  const surface = surfaceOf(item);
+  const surface = canonicalHeadwordOf(item);
   const audioButton = el("button", {
     class: className,
     type: "button",
@@ -1449,7 +1476,7 @@ function buildVocabAudioButton(item, className = "flashListenButton") {
   });
   audioButton.appendChild(el("span", { class: "audioIcon", "aria-hidden": "true" }, "▶"));
   audioButton.appendChild(el("span", { class: "audioLabel" }, " 音声"));
-  audioButton.addEventListener("click", () => playVocabAudio(vocabularyAudioPath(item), audioButton, surface));
+  audioButton.addEventListener("click", () => playVocabAudio(lemmaAudioPathOf(item), audioButton, surface));
   return audioButton;
 }
 function surfaceVariants(value) {
@@ -1563,7 +1590,7 @@ async function loadData(datasetId = state.datasetId) {
   for (const it of all) {
     if (!state.itemsByQ[it.q]) state.itemsByQ[it.q] = [];
     state.itemsByQ[it.q].push(it);
-    state.meaningPool[it.type].push(it.meaning);
+    state.meaningPool[it.type].push(learningMeaningOf(it));
   }
   for (const q of qs.questions) state.questions[q.q] = q;
 
@@ -2908,29 +2935,27 @@ function buildFlashCard(item) {
   const card = el("div", { class: "flash" });
   const head = el("div", { class: "flashHead" });
   const surface = surfaceOf(item);
-  const lemma = item.type === "word" ? lemmaMap[String(surface).toLowerCase()] : "";
+  const headword = canonicalHeadwordOf(item);
+  const learning = learningEntryOf(item);
   const wordLine = el("div", { class: "flashWordLine" },
-    el("div", { class: "flashWord" }, lemma || surface),
+    el("div", { class: "flashWord" }, headword),
   );
+  if (learning.ipa) wordLine.appendChild(el("div", { class: "flashIpa" }, learning.ipa));
+  if (vocabularyAudioEnabled(item)) wordLine.appendChild(buildVocabAudioButton(item));
   const headContent = el("div", {}, wordLine);
-  if (lemma) {
+  if (headword !== surface) {
     const lemmaNote = el("div", { class: "flashLemmaNote" },
       el("span", { class: "flashLemmaLabel" }, "出題形"),
       el("span", { class: "flashLemmaSurface" }, surface),
     );
-    if (item.ipa) lemmaNote.appendChild(el("span", { class: "flashIpa" }, item.ipa));
-    if (vocabularyAudioEnabled(item)) lemmaNote.appendChild(buildVocabAudioButton(item));
     headContent.appendChild(lemmaNote);
-  } else {
-    if (item.ipa) wordLine.appendChild(el("div", { class: "flashIpa" }, item.ipa));
-    if (vocabularyAudioEnabled(item)) wordLine.appendChild(buildVocabAudioButton(item));
   }
-  headContent.appendChild(el("div", { class: "flashPos" }, item.pos || ""));
+  headContent.appendChild(el("div", { class: "flashPos" }, learningPosOf(item)));
   head.appendChild(headContent);
   card.appendChild(head);
 
   const inner = el("div", { class: "flashBody" });
-  inner.appendChild(flashRow("意味", item.meaning, "flashMeaning"));
+  inner.appendChild(flashRow("意味", learning.meaning || item.meaning, "flashMeaning"));
   if (item.type === "word") {
     const wordOrigin = flashWordOrigin(item);
     if (wordOrigin) inner.appendChild(wordOrigin);
@@ -3399,7 +3424,8 @@ function appendStemWithBreaks(target, stem) {
 function renderCheck(body) {
   armChoiceGuard();
   const item = session.checkOrder[session.checkIdx];
-  const surface = surfaceOf(item);
+  const surface = canonicalHeadwordOf(item);
+  const correct = learningMeaningOf(item);
 
   body.appendChild(el("div", { class: "roundInfo" }, `4語句の意味確認 ${session.checkIdx + 1} / ${session.checkOrder.length}`));
 
@@ -3416,10 +3442,9 @@ function renderCheck(body) {
 
   // choices: correct meaning + 3 distractors of same type
   if (!session._checkChoices) {
-    session._checkChoices = shuffle([item.meaning, ...meaningDistractors(item)]);
+    session._checkChoices = shuffle([correct, ...meaningDistractors(item)]);
   }
   const choices = session._checkChoices;
-  const correct = item.meaning;
   const last = session.checkIdx === session.checkOrder.length - 1;
 
   const choiceWrap = el("div", { class: "choices" });
@@ -3813,8 +3838,12 @@ async function boot() {
       lemmaMap = lemmaData && lemmaData.lemmas && typeof lemmaData.lemmas === "object" && !Array.isArray(lemmaData.lemmas)
         ? lemmaData.lemmas
         : {};
+      lemmaEntries = lemmaData && lemmaData.entries && typeof lemmaData.entries === "object" && !Array.isArray(lemmaData.entries)
+        ? lemmaData.entries
+        : {};
     } catch (e) {
       lemmaMap = {};
+      lemmaEntries = {};
     }
     try {
       const particleResponse = await fetch("data/particle_images.json", { cache: "no-store" });

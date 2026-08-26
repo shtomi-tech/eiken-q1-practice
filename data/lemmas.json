@@ -1,7 +1,13 @@
 {
   "meta": {
-    "note": "フラッシュカード見出し用の原形マップ。キー=data/vocab_*.json の words[].word を小文字化したもの。値=原形・単数形。表示のみに使い、進捗キー・音声・問題選択肢には使わない。",
-    "scope": "words only (idioms は対象外)"
+    "schemaVersion": 2,
+    "note": "暗記カード・意味4択用の原形辞書。進捗キーと本番形式問題には使わない。",
+    "scope": "words only (idioms は対象外)",
+    "meaningReviewedEntries": 257,
+    "meaningReviewedSourceMeanings": 279,
+    "meaningReviewDigest": "090ed6e701c0d826f55da1e3490d68057f374b18cc8946ca0f3d8ff370e84772",
+    "posReviewedEntries": 257,
+    "reviewCommand": "py -3 scripts/build_lemma_entries.py --audit"
   },
   "lemmas": {
     "acceded": "accede",
@@ -263,5 +269,2600 @@
     "whined": "whine",
     "wondered": "wonder",
     "wrecked": "wreck"
+  },
+  "entries": {
+    "accede": {
+      "meaning": "同意する、就任する",
+      "ipa": "/æksˈid/",
+      "audio": "assets/audio/lemma/accede.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "acceded"
+      ],
+      "reviewed": true
+    },
+    "acclimate": {
+      "meaning": "慣らす、順応させる",
+      "ipa": "/ˈækləmeɪt/",
+      "audio": "assets/audio/lemma/acclimate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "acclimated"
+      ],
+      "reviewed": true
+    },
+    "acquiesce": {
+      "meaning": "黙って従う、同意する",
+      "ipa": "/ækwiˈɛs/",
+      "audio": "assets/audio/lemma/acquiesce.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "acquiescing"
+      ],
+      "reviewed": true
+    },
+    "acquire": {
+      "meaning": "取得する、身につける",
+      "ipa": "/əkwˈaɪɚ/",
+      "audio": "assets/audio/lemma/acquire.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "acquired"
+      ],
+      "reviewed": true
+    },
+    "affix": {
+      "meaning": "貼り付ける、付加する",
+      "ipa": "/ˈæfɪks/",
+      "audio": "assets/audio/lemma/affix.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "affixes"
+      ],
+      "reviewed": true
+    },
+    "alleviate": {
+      "meaning": "軽減する、和らげる",
+      "ipa": "/əlˈivieɪt/",
+      "audio": "assets/audio/lemma/alleviate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "alleviated"
+      ],
+      "reviewed": true
+    },
+    "apex": {
+      "meaning": "頂点",
+      "ipa": "/ˈeɪpɛks/",
+      "audio": "assets/audio/lemma/apex.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "apexes"
+      ],
+      "reviewed": true
+    },
+    "apologize": {
+      "meaning": "謝る",
+      "ipa": "/əpˈɑlədʒaɪz/",
+      "audio": "assets/audio/lemma/apologize.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "apologized"
+      ],
+      "reviewed": true
+    },
+    "appease": {
+      "meaning": "なだめる、満足させる",
+      "ipa": "/əpˈiz/",
+      "audio": "assets/audio/lemma/appease.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "appeased"
+      ],
+      "reviewed": true
+    },
+    "appraise": {
+      "meaning": "評価する、査定する",
+      "ipa": "/əpɹˈeɪz/",
+      "audio": "assets/audio/lemma/appraise.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "appraised"
+      ],
+      "reviewed": true
+    },
+    "avert": {
+      "meaning": "避ける、回避する",
+      "ipa": "/əvˈɝt/",
+      "audio": "assets/audio/lemma/avert.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "averted",
+        "averting"
+      ],
+      "reviewed": true
+    },
+    "balk": {
+      "meaning": "ためらう、難色を示す",
+      "ipa": "/bˈɔk/",
+      "audio": "assets/audio/lemma/balk.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "balked"
+      ],
+      "reviewed": true
+    },
+    "beckon": {
+      "meaning": "手招きする、呼び寄せる",
+      "ipa": "/bˈɛkən/",
+      "audio": "assets/audio/lemma/beckon.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "beckoned"
+      ],
+      "reviewed": true
+    },
+    "bellow": {
+      "meaning": "怒鳴る",
+      "ipa": "/bˈɛloʊ/",
+      "audio": "assets/audio/lemma/bellow.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "bellowed"
+      ],
+      "reviewed": true
+    },
+    "bequeath": {
+      "meaning": "遺贈する",
+      "ipa": "/bɪkwˈiθ/",
+      "audio": "assets/audio/lemma/bequeath.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "bequeathed"
+      ],
+      "reviewed": true
+    },
+    "blank": {
+      "meaning": "（記憶が）真っ白になる",
+      "ipa": "/blˈæŋk/",
+      "audio": "assets/audio/lemma/blank.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "blanked"
+      ],
+      "reviewed": true
+    },
+    "blanket": {
+      "meaning": "毛布",
+      "ipa": "/blˈæŋkət/",
+      "audio": "assets/audio/lemma/blanket.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "blankets"
+      ],
+      "reviewed": true
+    },
+    "bluff": {
+      "meaning": "はったりをかける",
+      "ipa": "/blˈəf/",
+      "audio": "assets/audio/lemma/bluff.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "bluffing"
+      ],
+      "reviewed": true
+    },
+    "bolt": {
+      "meaning": "急に走り去る",
+      "ipa": "/bˈoʊlt/",
+      "audio": "assets/audio/lemma/bolt.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "bolted"
+      ],
+      "reviewed": true
+    },
+    "bowl": {
+      "meaning": "ボウル、鉢",
+      "ipa": "/bˈoʊl/",
+      "audio": "assets/audio/lemma/bowl.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "bowls"
+      ],
+      "reviewed": true
+    },
+    "bulge": {
+      "meaning": "膨らむ、突き出る",
+      "ipa": "/bˈəldʒ/",
+      "audio": "assets/audio/lemma/bulge.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "bulged"
+      ],
+      "reviewed": true
+    },
+    "bungle": {
+      "meaning": "へまをする、しくじる",
+      "ipa": "/bˈəŋɡəl/",
+      "audio": "assets/audio/lemma/bungle.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "bungled"
+      ],
+      "reviewed": true
+    },
+    "busker": {
+      "meaning": "路上演奏者",
+      "ipa": "/bˈəskɚ/",
+      "audio": "assets/audio/lemma/busker.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "buskers"
+      ],
+      "reviewed": true
+    },
+    "buttress": {
+      "meaning": "支える、強化する；支え、補強",
+      "ipa": "/bˈətɹəs/",
+      "audio": "assets/audio/lemma/buttress.mp3",
+      "pos": "名詞・動詞",
+      "surfaces": [
+        "buttress",
+        "buttressing"
+      ],
+      "reviewed": true
+    },
+    "canter": {
+      "meaning": "馬が軽速歩する",
+      "ipa": "/kˈæntɚ/",
+      "audio": "assets/audio/lemma/canter.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "cantered"
+      ],
+      "reviewed": true
+    },
+    "canvass": {
+      "meaning": "戸別訪問で勧誘する、調査する",
+      "ipa": "/kˈænvəs/",
+      "audio": "assets/audio/lemma/canvass.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "canvassing"
+      ],
+      "reviewed": true
+    },
+    "capitalize": {
+      "meaning": "利用する、活用する",
+      "ipa": "/kˈæpətəlaɪz/",
+      "audio": "assets/audio/lemma/capitalize.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "capitalized"
+      ],
+      "reviewed": true
+    },
+    "character": {
+      "meaning": "登場人物、性格",
+      "ipa": "/kˈɛɹɪktɚ/",
+      "audio": "assets/audio/lemma/character.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "characters"
+      ],
+      "reviewed": true
+    },
+    "chuckle": {
+      "meaning": "くすくす笑う",
+      "ipa": "/tʃˈəkəl/",
+      "audio": "assets/audio/lemma/chuckle.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "chuckled"
+      ],
+      "reviewed": true
+    },
+    "clinch": {
+      "meaning": "勝ち取る、確定する",
+      "ipa": "/klˈɪntʃ/",
+      "audio": "assets/audio/lemma/clinch.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "clinched"
+      ],
+      "reviewed": true
+    },
+    "clobber": {
+      "meaning": "めちゃくちゃに打ち負かす",
+      "ipa": "/klˈɑbɚ/",
+      "audio": "assets/audio/lemma/clobber.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "clobbering"
+      ],
+      "reviewed": true
+    },
+    "coax": {
+      "meaning": "うまく説得する",
+      "ipa": "/kˈoʊks/",
+      "audio": "assets/audio/lemma/coax.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "coaxed"
+      ],
+      "reviewed": true
+    },
+    "collect": {
+      "meaning": "集める、落ち着かせる",
+      "ipa": "/kəlˈɛkt/",
+      "audio": "assets/audio/lemma/collect.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "collected"
+      ],
+      "reviewed": true
+    },
+    "commute": {
+      "meaning": "通勤する、（刑を）減刑する",
+      "ipa": "/kəmjˈut/",
+      "audio": "assets/audio/lemma/commute.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "commuted"
+      ],
+      "reviewed": true
+    },
+    "commuter": {
+      "meaning": "通勤者",
+      "ipa": "/kəmjˈutɚ/",
+      "audio": "assets/audio/lemma/commuter.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "commuter",
+        "commuters"
+      ],
+      "reviewed": true
+    },
+    "composer": {
+      "meaning": "作曲家",
+      "ipa": "/kəmpˈoʊzɚ/",
+      "audio": "assets/audio/lemma/composer.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "composers"
+      ],
+      "reviewed": true
+    },
+    "compound": {
+      "meaning": "悪化させる、複合する",
+      "ipa": "/kˈɑmpaʊnd/",
+      "audio": "assets/audio/lemma/compound.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "compounded"
+      ],
+      "reviewed": true
+    },
+    "conciliate": {
+      "meaning": "和解させる、懐柔する",
+      "ipa": "/kənsˈɪlieɪt/",
+      "audio": "assets/audio/lemma/conciliate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "conciliated"
+      ],
+      "reviewed": true
+    },
+    "concoct": {
+      "meaning": "でっち上げる、調合する",
+      "ipa": "/kənkˈɑkt/",
+      "audio": "assets/audio/lemma/concoct.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "concocted"
+      ],
+      "reviewed": true
+    },
+    "condense": {
+      "meaning": "凝縮する、短縮する",
+      "ipa": "/kəndˈɛns/",
+      "audio": "assets/audio/lemma/condense.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "condensed"
+      ],
+      "reviewed": true
+    },
+    "conserve": {
+      "meaning": "保存する、節約する",
+      "ipa": "/kənsˈɝv/",
+      "audio": "assets/audio/lemma/conserve.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "conserving"
+      ],
+      "reviewed": true
+    },
+    "consolidate": {
+      "meaning": "統合する、固める",
+      "ipa": "/kənsˈɑlɪdeɪt/",
+      "audio": "assets/audio/lemma/consolidate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "consolidated"
+      ],
+      "reviewed": true
+    },
+    "contort": {
+      "meaning": "ねじ曲げる、ゆがめる",
+      "ipa": "/kəntˈɔɹt/",
+      "audio": "assets/audio/lemma/contort.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "contorted"
+      ],
+      "reviewed": true
+    },
+    "convene": {
+      "meaning": "招集する、集まる",
+      "ipa": "/kənvˈin/",
+      "audio": "assets/audio/lemma/convene.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "convened"
+      ],
+      "reviewed": true
+    },
+    "corrode": {
+      "meaning": "腐食する、蝕む",
+      "ipa": "/kɚˈoʊd/",
+      "audio": "assets/audio/lemma/corrode.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "corroded"
+      ],
+      "reviewed": true
+    },
+    "cradle": {
+      "meaning": "抱える、そっと支える",
+      "ipa": "/kɹˈeɪdəl/",
+      "audio": "assets/audio/lemma/cradle.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "cradling"
+      ],
+      "reviewed": true
+    },
+    "curfew": {
+      "meaning": "門限、外出禁止令",
+      "ipa": "/kˈɝfju/",
+      "audio": "assets/audio/lemma/curfew.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "curfews"
+      ],
+      "reviewed": true
+    },
+    "danger": {
+      "meaning": "危険、危険性",
+      "ipa": "/dˈeɪndʒɚ/",
+      "audio": "assets/audio/lemma/danger.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "dangers"
+      ],
+      "reviewed": true
+    },
+    "dart": {
+      "meaning": "素早く走る、突進する",
+      "ipa": "/dˈɑɹt/",
+      "audio": "assets/audio/lemma/dart.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "darting"
+      ],
+      "reviewed": true
+    },
+    "debar": {
+      "meaning": "締め出す、資格を奪う",
+      "ipa": "/dɪbˈɑɹ/",
+      "audio": "assets/audio/lemma/debar.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "debarred"
+      ],
+      "reviewed": true
+    },
+    "debrief": {
+      "meaning": "任務後に事情聴取する",
+      "ipa": "/dɪbɹˈif/",
+      "audio": "assets/audio/lemma/debrief.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "debriefed"
+      ],
+      "reviewed": true
+    },
+    "decree": {
+      "meaning": "布告する、命令する",
+      "ipa": "/dɪkɹˈi/",
+      "audio": "assets/audio/lemma/decree.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "decrees"
+      ],
+      "reviewed": true
+    },
+    "deduce": {
+      "meaning": "推論して導き出す",
+      "ipa": "/dɪdˈus/",
+      "audio": "assets/audio/lemma/deduce.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "deduced"
+      ],
+      "reviewed": true
+    },
+    "defect": {
+      "meaning": "離反する",
+      "ipa": "/dˈifɛkt/",
+      "audio": "assets/audio/lemma/defect.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "defecting"
+      ],
+      "reviewed": true
+    },
+    "deflect": {
+      "meaning": "そらす、かわす",
+      "ipa": "/dɪflˈɛkt/",
+      "audio": "assets/audio/lemma/deflect.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "deflecting"
+      ],
+      "reviewed": true
+    },
+    "degenerate": {
+      "meaning": "悪化する、退化する",
+      "ipa": "/dɪdʒˈɛnɚət/",
+      "audio": "assets/audio/lemma/degenerate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "degenerating"
+      ],
+      "reviewed": true
+    },
+    "dehydrate": {
+      "meaning": "脱水する",
+      "ipa": "/dɪhˈaɪdɹeɪt/",
+      "audio": "assets/audio/lemma/dehydrate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "dehydrated"
+      ],
+      "reviewed": true
+    },
+    "deify": {
+      "meaning": "神格化する",
+      "ipa": "/dˈiəfaɪ/",
+      "audio": "assets/audio/lemma/deify.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "deified"
+      ],
+      "reviewed": true
+    },
+    "delusion": {
+      "meaning": "妄想、思い込み",
+      "ipa": "/dɪlˈuʒən/",
+      "audio": "assets/audio/lemma/delusion.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "delusions"
+      ],
+      "reviewed": true
+    },
+    "delve": {
+      "meaning": "掘り下げて調べる",
+      "ipa": "/dˈɛlv/",
+      "audio": "assets/audio/lemma/delve.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "delving"
+      ],
+      "reviewed": true
+    },
+    "deploy": {
+      "meaning": "配置する、展開する",
+      "ipa": "/dɪplˈɔɪ/",
+      "audio": "assets/audio/lemma/deploy.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "deployed"
+      ],
+      "reviewed": true
+    },
+    "depreciate": {
+      "meaning": "価値を下げる、減価する",
+      "ipa": "/dɪpɹˈiʃieɪt/",
+      "audio": "assets/audio/lemma/depreciate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "depreciating"
+      ],
+      "reviewed": true
+    },
+    "deteriorate": {
+      "meaning": "悪化する",
+      "ipa": "/dɪtˈɪɹiɚeɪt/",
+      "audio": "assets/audio/lemma/deteriorate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "deteriorated"
+      ],
+      "reviewed": true
+    },
+    "detonate": {
+      "meaning": "爆発させる",
+      "ipa": "/dˈɛtəneɪt/",
+      "audio": "assets/audio/lemma/detonate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "detonated"
+      ],
+      "reviewed": true
+    },
+    "detract": {
+      "meaning": "損なう、減じる",
+      "ipa": "/dɪtɹˈækt/",
+      "audio": "assets/audio/lemma/detract.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "detracted"
+      ],
+      "reviewed": true
+    },
+    "devour": {
+      "meaning": "むさぼり食う",
+      "ipa": "/dɪvˈaʊɚ/",
+      "audio": "assets/audio/lemma/devour.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "devouring"
+      ],
+      "reviewed": true
+    },
+    "dice": {
+      "meaning": "さいの目に切る",
+      "ipa": "/dˈaɪs/",
+      "audio": "assets/audio/lemma/dice.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "diced"
+      ],
+      "reviewed": true
+    },
+    "dilapidate": {
+      "meaning": "荒廃させる、ぼろぼろにする",
+      "ipa": "/dəlˈæpədeɪt/",
+      "audio": "assets/audio/lemma/dilapidate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "dilapidated"
+      ],
+      "reviewed": true
+    },
+    "disappear": {
+      "meaning": "消える、姿を消す",
+      "ipa": "/dɪsəpˈɪɹ/",
+      "audio": "assets/audio/lemma/disappear.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "disappear",
+        "disappeared"
+      ],
+      "reviewed": true
+    },
+    "disembark": {
+      "meaning": "下船する、降りる",
+      "ipa": "/dɪsɛmbˈɑɹk/",
+      "audio": "assets/audio/lemma/disembark.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "disembarking"
+      ],
+      "reviewed": true
+    },
+    "dishevel": {
+      "meaning": "乱す、だらしなくする",
+      "ipa": "/dɪʃˈɛvəl/",
+      "audio": "assets/audio/lemma/dishevel.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "disheveled"
+      ],
+      "reviewed": true
+    },
+    "disparity": {
+      "meaning": "格差",
+      "ipa": "/dɪspˈɛɹəti/",
+      "audio": "assets/audio/lemma/disparity.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "disparities"
+      ],
+      "reviewed": true
+    },
+    "dispatch": {
+      "meaning": "派遣する、発送する",
+      "ipa": "/dɪspˈætʃ/",
+      "audio": "assets/audio/lemma/dispatch.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "dispatched"
+      ],
+      "reviewed": true
+    },
+    "dispirit": {
+      "meaning": "落胆させる",
+      "ipa": "/dɪspˈɪɹɪt/",
+      "audio": "assets/audio/lemma/dispirit.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "dispirits"
+      ],
+      "reviewed": true
+    },
+    "dissect": {
+      "meaning": "解剖する",
+      "ipa": "/daɪsˈɛkt/",
+      "audio": "assets/audio/lemma/dissect.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "dissecting"
+      ],
+      "reviewed": true
+    },
+    "doom": {
+      "meaning": "運命づける、破滅する運命にする",
+      "ipa": "/dˈum/",
+      "audio": "assets/audio/lemma/doom.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "doomed"
+      ],
+      "reviewed": true
+    },
+    "dredge": {
+      "meaning": "さらう、掘り起こす",
+      "ipa": "/dɹˈɛdʒ/",
+      "audio": "assets/audio/lemma/dredge.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "dredged"
+      ],
+      "reviewed": true
+    },
+    "droop": {
+      "meaning": "うなだれる、しおれる",
+      "ipa": "/dɹˈup/",
+      "audio": "assets/audio/lemma/droop.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "drooping"
+      ],
+      "reviewed": true
+    },
+    "dupe": {
+      "meaning": "だます、だまされやすい人",
+      "ipa": "/dˈup/",
+      "audio": "assets/audio/lemma/dupe.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "duped"
+      ],
+      "reviewed": true
+    },
+    "emanate": {
+      "meaning": "発する、発生する",
+      "ipa": "/ˈɛməneɪt/",
+      "audio": "assets/audio/lemma/emanate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "emanated"
+      ],
+      "reviewed": true
+    },
+    "encrypt": {
+      "meaning": "暗号化する",
+      "ipa": "/ɛnkɹˈɪpt/",
+      "audio": "assets/audio/lemma/encrypt.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "encrypts"
+      ],
+      "reviewed": true
+    },
+    "enrapture": {
+      "meaning": "有頂天にする、夢中にさせる",
+      "ipa": "/ɛnɹˈæptʃɚ/",
+      "audio": "assets/audio/lemma/enrapture.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "enraptured"
+      ],
+      "reviewed": true
+    },
+    "enroll": {
+      "meaning": "登録する、入学する",
+      "ipa": "/ɛnɹˈoʊl/",
+      "audio": "assets/audio/lemma/enroll.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "enrolling"
+      ],
+      "reviewed": true
+    },
+    "entail": {
+      "meaning": "伴う、必要とする",
+      "ipa": "/ɛntˈeɪl/",
+      "audio": "assets/audio/lemma/entail.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "entailed"
+      ],
+      "reviewed": true
+    },
+    "enter": {
+      "meaning": "入る、入力する、参加する",
+      "ipa": "/ˈɛntɚ/",
+      "audio": "assets/audio/lemma/enter.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "enter",
+        "entered"
+      ],
+      "reviewed": true
+    },
+    "enumerate": {
+      "meaning": "列挙する",
+      "ipa": "/ɪnˈumɚeɪt/",
+      "audio": "assets/audio/lemma/enumerate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "enumerated"
+      ],
+      "reviewed": true
+    },
+    "envoy": {
+      "meaning": "使節、特使",
+      "ipa": "/ˈɛnvɔɪ/",
+      "audio": "assets/audio/lemma/envoy.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "envoy",
+        "envoys"
+      ],
+      "reviewed": true
+    },
+    "equivocate": {
+      "meaning": "言葉を濁す、曖昧に答える",
+      "ipa": "/ɪkwˈɪvəkeɪt/",
+      "audio": "assets/audio/lemma/equivocate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "equivocated"
+      ],
+      "reviewed": true
+    },
+    "esteem": {
+      "meaning": "尊敬、評価；尊敬する、評価する",
+      "ipa": "/əstˈim/",
+      "audio": "assets/audio/lemma/esteem.mp3",
+      "pos": "名詞・動詞",
+      "surfaces": [
+        "esteem",
+        "esteemed"
+      ],
+      "reviewed": true
+    },
+    "evade": {
+      "meaning": "免れる、回避する",
+      "ipa": "/ɪvˈeɪd/",
+      "audio": "assets/audio/lemma/evade.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "evaded"
+      ],
+      "reviewed": true
+    },
+    "evoke": {
+      "meaning": "呼び起こす、想起させる",
+      "ipa": "/ɪvˈoʊk/",
+      "audio": "assets/audio/lemma/evoke.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "evoked"
+      ],
+      "reviewed": true
+    },
+    "exhort": {
+      "meaning": "強く促す、激励する",
+      "ipa": "/ɪɡzˈɔɹt/",
+      "audio": "assets/audio/lemma/exhort.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "exhorts"
+      ],
+      "reviewed": true
+    },
+    "explosion": {
+      "meaning": "爆発",
+      "ipa": "/ɪksplˈoʊʒən/",
+      "audio": "assets/audio/lemma/explosion.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "explosions"
+      ],
+      "reviewed": true
+    },
+    "expound": {
+      "meaning": "詳しく説明する",
+      "ipa": "/ɪkspˈaʊnd/",
+      "audio": "assets/audio/lemma/expound.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "expounded"
+      ],
+      "reviewed": true
+    },
+    "expropriate": {
+      "meaning": "収用する",
+      "ipa": "/ɛkspɹˈoʊpɹieɪt/",
+      "audio": "assets/audio/lemma/expropriate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "expropriated"
+      ],
+      "reviewed": true
+    },
+    "extol": {
+      "meaning": "大いに褒める",
+      "ipa": "/ɪkstˈoʊl/",
+      "audio": "assets/audio/lemma/extol.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "extolled"
+      ],
+      "reviewed": true
+    },
+    "fabricate": {
+      "meaning": "でっち上げる、捏造する",
+      "ipa": "/fˈæbɹəkeɪt/",
+      "audio": "assets/audio/lemma/fabricate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "fabricating"
+      ],
+      "reviewed": true
+    },
+    "facade": {
+      "meaning": "外見、建物の正面",
+      "ipa": "/fəsˈɑd/",
+      "audio": "assets/audio/lemma/facade.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "facades"
+      ],
+      "reviewed": true
+    },
+    "faction": {
+      "meaning": "派閥",
+      "ipa": "/fˈækʃən/",
+      "audio": "assets/audio/lemma/faction.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "factions"
+      ],
+      "reviewed": true
+    },
+    "fare": {
+      "meaning": "うまくいく、進む",
+      "ipa": "/fˈɛɹ/",
+      "audio": "assets/audio/lemma/fare.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "fared"
+      ],
+      "reviewed": true
+    },
+    "faze": {
+      "meaning": "動じさせる",
+      "ipa": "/fˈeɪz/",
+      "audio": "assets/audio/lemma/faze.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "fazed"
+      ],
+      "reviewed": true
+    },
+    "ferment": {
+      "meaning": "発酵させる、発酵する",
+      "ipa": "/fɚmˈɛnt/",
+      "audio": "assets/audio/lemma/ferment.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "fermented"
+      ],
+      "reviewed": true
+    },
+    "figure": {
+      "meaning": "図、数字",
+      "ipa": "/fˈɪɡjɚ/",
+      "audio": "assets/audio/lemma/figure.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "figure",
+        "figures"
+      ],
+      "reviewed": true
+    },
+    "filter": {
+      "meaning": "ろ過する、選別する",
+      "ipa": "/fˈɪltɚ/",
+      "audio": "assets/audio/lemma/filter.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "filtered"
+      ],
+      "reviewed": true
+    },
+    "flap": {
+      "meaning": "ばたつく",
+      "ipa": "/flˈæp/",
+      "audio": "assets/audio/lemma/flap.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "flapped"
+      ],
+      "reviewed": true
+    },
+    "flourish": {
+      "meaning": "繁栄する、生い茂る",
+      "ipa": "/flˈɝɪʃ/",
+      "audio": "assets/audio/lemma/flourish.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "flourishing"
+      ],
+      "reviewed": true
+    },
+    "flout": {
+      "meaning": "公然と無視する、軽視する",
+      "ipa": "/flˈaʊt/",
+      "audio": "assets/audio/lemma/flout.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "flouted"
+      ],
+      "reviewed": true
+    },
+    "fluctuate": {
+      "meaning": "変動する",
+      "ipa": "/flˈəktʃəweɪt/",
+      "audio": "assets/audio/lemma/fluctuate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "fluctuated"
+      ],
+      "reviewed": true
+    },
+    "forecast": {
+      "meaning": "予報、予測する",
+      "ipa": "/fˈɔɹkæst/",
+      "audio": "assets/audio/lemma/forecast.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "forecast",
+        "forecasts"
+      ],
+      "reviewed": true
+    },
+    "fringe": {
+      "meaning": "周辺、縁",
+      "ipa": "/fɹˈɪndʒ/",
+      "audio": "assets/audio/lemma/fringe.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "fringes"
+      ],
+      "reviewed": true
+    },
+    "fumigate": {
+      "meaning": "燻蒸消毒する",
+      "ipa": "/fjˈuməɡeɪt/",
+      "audio": "assets/audio/lemma/fumigate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "fumigates"
+      ],
+      "reviewed": true
+    },
+    "gallery": {
+      "meaning": "美術館、展示室",
+      "ipa": "/ɡˈælɚi/",
+      "audio": "assets/audio/lemma/gallery.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "galleries"
+      ],
+      "reviewed": true
+    },
+    "glimmer": {
+      "meaning": "かすかな光、兆し",
+      "ipa": "/ɡlˈɪmɚ/",
+      "audio": "assets/audio/lemma/glimmer.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "glimmers"
+      ],
+      "reviewed": true
+    },
+    "glitch": {
+      "meaning": "小さな不具合、障害",
+      "ipa": "/ɡlˈɪtʃ/",
+      "audio": "assets/audio/lemma/glitch.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "glitches"
+      ],
+      "reviewed": true
+    },
+    "graft": {
+      "meaning": "接ぎ木する、移植する；汚職、贈収賄",
+      "ipa": "/ɡɹˈæft/",
+      "audio": "assets/audio/lemma/graft.mp3",
+      "pos": "名詞・動詞",
+      "surfaces": [
+        "graft",
+        "grafted"
+      ],
+      "reviewed": true
+    },
+    "gripe": {
+      "meaning": "不満、愚痴を言う",
+      "ipa": "/ɡɹˈaɪp/",
+      "audio": "assets/audio/lemma/gripe.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "gripes"
+      ],
+      "reviewed": true
+    },
+    "grouch": {
+      "meaning": "不平を言う人、不満",
+      "ipa": "/ɡɹˈaʊtʃ/",
+      "audio": "assets/audio/lemma/grouch.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "grouches"
+      ],
+      "reviewed": true
+    },
+    "haggle": {
+      "meaning": "値段を交渉する",
+      "ipa": "/hˈæɡəl/",
+      "audio": "assets/audio/lemma/haggle.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "haggling"
+      ],
+      "reviewed": true
+    },
+    "hasten": {
+      "meaning": "急ぐ、促進する",
+      "ipa": "/hˈeɪsən/",
+      "audio": "assets/audio/lemma/hasten.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "hastened"
+      ],
+      "reviewed": true
+    },
+    "hitch": {
+      "meaning": "障害、支障",
+      "ipa": "/hˈɪtʃ/",
+      "audio": "assets/audio/lemma/hitch.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "hitches"
+      ],
+      "reviewed": true
+    },
+    "hone": {
+      "meaning": "磨く、鍛える",
+      "ipa": "/hˈoʊn/",
+      "audio": "assets/audio/lemma/hone.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "honing"
+      ],
+      "reviewed": true
+    },
+    "illuminate": {
+      "meaning": "照らす、明らかにする",
+      "ipa": "/ɪlˈumɪnɪt/",
+      "audio": "assets/audio/lemma/illuminate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "illuminates"
+      ],
+      "reviewed": true
+    },
+    "impel": {
+      "meaning": "駆り立てる",
+      "ipa": "/ɪmpˈɛl/",
+      "audio": "assets/audio/lemma/impel.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "impelling"
+      ],
+      "reviewed": true
+    },
+    "implement": {
+      "meaning": "道具、器具；実行する",
+      "ipa": "/ˈɪmpləmənt/",
+      "audio": "assets/audio/lemma/implement.mp3",
+      "pos": "名詞・動詞",
+      "surfaces": [
+        "implement",
+        "implements"
+      ],
+      "reviewed": true
+    },
+    "implore": {
+      "meaning": "懇願する",
+      "ipa": "/ɪmplˈɔɹ/",
+      "audio": "assets/audio/lemma/implore.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "implored"
+      ],
+      "reviewed": true
+    },
+    "incarcerate": {
+      "meaning": "投獄する",
+      "ipa": "/ɪnkˈɑɹsɚeɪt/",
+      "audio": "assets/audio/lemma/incarcerate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "incarcerated"
+      ],
+      "reviewed": true
+    },
+    "individual": {
+      "meaning": "個人、個々の",
+      "ipa": "/ɪndəvˈɪdʒəwəl/",
+      "audio": "assets/audio/lemma/individual.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "individuals"
+      ],
+      "reviewed": true
+    },
+    "infringe": {
+      "meaning": "侵害する",
+      "ipa": "/ɪnfɹˈɪndʒ/",
+      "audio": "assets/audio/lemma/infringe.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "infringing"
+      ],
+      "reviewed": true
+    },
+    "ingredient": {
+      "meaning": "材料、成分",
+      "ipa": "/ɪnɡɹˈidiənt/",
+      "audio": "assets/audio/lemma/ingredient.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "ingredients"
+      ],
+      "reviewed": true
+    },
+    "inhale": {
+      "meaning": "吸い込む、吸入する",
+      "ipa": "/ɪnhˈeɪl/",
+      "audio": "assets/audio/lemma/inhale.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "inhale",
+        "inhaling"
+      ],
+      "reviewed": true
+    },
+    "insect": {
+      "meaning": "昆虫",
+      "ipa": "/ˈɪnsɛkt/",
+      "audio": "assets/audio/lemma/insect.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "insects"
+      ],
+      "reviewed": true
+    },
+    "installer": {
+      "meaning": "設置業者",
+      "ipa": "/ɪnstˈɔlɚ/",
+      "audio": "assets/audio/lemma/installer.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "installers"
+      ],
+      "reviewed": true
+    },
+    "invader": {
+      "meaning": "侵略者、侵入者",
+      "ipa": "/ɪnvˈeɪdɚ/",
+      "audio": "assets/audio/lemma/invader.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "invaders"
+      ],
+      "reviewed": true
+    },
+    "invigorate": {
+      "meaning": "活力を与える、元気づける",
+      "ipa": "/ɪnvˈɪɡɚɪt/",
+      "audio": "assets/audio/lemma/invigorate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "invigorated"
+      ],
+      "reviewed": true
+    },
+    "jilt": {
+      "meaning": "（恋人を）振る",
+      "ipa": "/dʒˈɪlt/",
+      "audio": "assets/audio/lemma/jilt.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "jilted"
+      ],
+      "reviewed": true
+    },
+    "juxtapose": {
+      "meaning": "並置する",
+      "ipa": "/dʒəkstəpˈoʊz/",
+      "audio": "assets/audio/lemma/juxtapose.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "juxtaposing"
+      ],
+      "reviewed": true
+    },
+    "ledger": {
+      "meaning": "元帳、台帳",
+      "ipa": "/lˈɛdʒɚ/",
+      "audio": "assets/audio/lemma/ledger.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "ledgers"
+      ],
+      "reviewed": true
+    },
+    "liaison": {
+      "meaning": "連絡、連携、協力関係；密通",
+      "ipa": "/liˈeɪzɑn/",
+      "audio": "assets/audio/lemma/liaison.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "liaison",
+        "liaisons"
+      ],
+      "reviewed": true
+    },
+    "log": {
+      "meaning": "記録する；丸太、記録",
+      "ipa": "/lˈɔɡ/",
+      "audio": "assets/audio/lemma/log.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "logs"
+      ],
+      "reviewed": true
+    },
+    "maneuver": {
+      "meaning": "（巧みな）動き、策略、軍事演習",
+      "ipa": "/mənˈuvɚ/",
+      "audio": "assets/audio/lemma/maneuver.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "maneuver",
+        "maneuvers"
+      ],
+      "reviewed": true
+    },
+    "market": {
+      "meaning": "市場、マーケット",
+      "ipa": "/mˈɑɹkət/",
+      "audio": "assets/audio/lemma/market.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "markets"
+      ],
+      "reviewed": true
+    },
+    "matriculate": {
+      "meaning": "入学手続きをする",
+      "ipa": "/mətɹˈɪkjəleɪt/",
+      "audio": "assets/audio/lemma/matriculate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "matriculating"
+      ],
+      "reviewed": true
+    },
+    "modulate": {
+      "meaning": "調整する、変調する",
+      "ipa": "/mˈɔdʒjuleɪt/",
+      "audio": "assets/audio/lemma/modulate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "modulated"
+      ],
+      "reviewed": true
+    },
+    "muddle": {
+      "meaning": "混乱させる、混ぜ合わせる",
+      "ipa": "/mˈədəl/",
+      "audio": "assets/audio/lemma/muddle.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "muddling"
+      ],
+      "reviewed": true
+    },
+    "mull": {
+      "meaning": "熟考する、思案する",
+      "ipa": "/mˈəl/",
+      "audio": "assets/audio/lemma/mull.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "mulled"
+      ],
+      "reviewed": true
+    },
+    "nomination": {
+      "meaning": "ノミネート、指名",
+      "ipa": "/nɑmənˈeɪʃən/",
+      "audio": "assets/audio/lemma/nomination.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "nominations"
+      ],
+      "reviewed": true
+    },
+    "nullify": {
+      "meaning": "無効にする",
+      "ipa": "/nˈələfaɪ/",
+      "audio": "assets/audio/lemma/nullify.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "nullified"
+      ],
+      "reviewed": true
+    },
+    "obliterate": {
+      "meaning": "完全に破壊する、消し去る",
+      "ipa": "/əblˈɪtɚeɪt/",
+      "audio": "assets/audio/lemma/obliterate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "obliterated"
+      ],
+      "reviewed": true
+    },
+    "omit": {
+      "meaning": "省く、記載しない",
+      "ipa": "/oʊmˈɪt/",
+      "audio": "assets/audio/lemma/omit.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "omits"
+      ],
+      "reviewed": true
+    },
+    "palace": {
+      "meaning": "宮殿",
+      "ipa": "/pˈæləs/",
+      "audio": "assets/audio/lemma/palace.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "palaces"
+      ],
+      "reviewed": true
+    },
+    "pamper": {
+      "meaning": "甘やかす",
+      "ipa": "/pˈæmpɚ/",
+      "audio": "assets/audio/lemma/pamper.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "pampered"
+      ],
+      "reviewed": true
+    },
+    "participant": {
+      "meaning": "参加者",
+      "ipa": "/pɑɹtˈɪsəpənt/",
+      "audio": "assets/audio/lemma/participant.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "participants"
+      ],
+      "reviewed": true
+    },
+    "pawn": {
+      "meaning": "質に入れる；質草、手先",
+      "ipa": "/pˈɔn/",
+      "audio": "assets/audio/lemma/pawn.mp3",
+      "pos": "名詞・動詞",
+      "surfaces": [
+        "pawn",
+        "pawned"
+      ],
+      "reviewed": true
+    },
+    "peddle": {
+      "meaning": "売り歩く、広める",
+      "ipa": "/pˈɛdəl/",
+      "audio": "assets/audio/lemma/peddle.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "peddled"
+      ],
+      "reviewed": true
+    },
+    "percolate": {
+      "meaning": "浸透する、ろ過する",
+      "ipa": "/pˈɝkəleɪt/",
+      "audio": "assets/audio/lemma/percolate.mp3",
+      "pos": "名詞・動詞",
+      "surfaces": [
+        "percolate",
+        "percolated"
+      ],
+      "reviewed": true
+    },
+    "perk": {
+      "meaning": "特典、福利厚生",
+      "ipa": "/pˈɝk/",
+      "audio": "assets/audio/lemma/perk.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "perks"
+      ],
+      "reviewed": true
+    },
+    "permeate": {
+      "meaning": "浸透する、行き渡る",
+      "ipa": "/pˈɝmieɪt/",
+      "audio": "assets/audio/lemma/permeate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "permeated"
+      ],
+      "reviewed": true
+    },
+    "perplex": {
+      "meaning": "困惑させる",
+      "ipa": "/pɚplˈɛks/",
+      "audio": "assets/audio/lemma/perplex.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "perplexed"
+      ],
+      "reviewed": true
+    },
+    "perspective": {
+      "meaning": "見方、観点",
+      "ipa": "/pɚspˈɛktɪv/",
+      "audio": "assets/audio/lemma/perspective.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "perspectives"
+      ],
+      "reviewed": true
+    },
+    "pique": {
+      "meaning": "興味をそそる、立腹させる",
+      "ipa": "/pˈik/",
+      "audio": "assets/audio/lemma/pique.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "piqued"
+      ],
+      "reviewed": true
+    },
+    "pitfall": {
+      "meaning": "落とし穴、潜在的な問題",
+      "ipa": "/pˈɪtfɔl/",
+      "audio": "assets/audio/lemma/pitfall.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "pitfalls"
+      ],
+      "reviewed": true
+    },
+    "placate": {
+      "meaning": "なだめる",
+      "ipa": "/plˈeɪkeɪt/",
+      "audio": "assets/audio/lemma/placate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "placated"
+      ],
+      "reviewed": true
+    },
+    "plantation": {
+      "meaning": "大農園",
+      "ipa": "/plæntˈeɪʃən/",
+      "audio": "assets/audio/lemma/plantation.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "plantations"
+      ],
+      "reviewed": true
+    },
+    "pledge": {
+      "meaning": "誓う、約束する",
+      "ipa": "/plˈɛdʒ/",
+      "audio": "assets/audio/lemma/pledge.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "pledging"
+      ],
+      "reviewed": true
+    },
+    "plummet": {
+      "meaning": "急落する",
+      "ipa": "/plˈəmət/",
+      "audio": "assets/audio/lemma/plummet.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "plummeted"
+      ],
+      "reviewed": true
+    },
+    "poach": {
+      "meaning": "密猟する、引き抜く",
+      "ipa": "/pˈoʊtʃ/",
+      "audio": "assets/audio/lemma/poach.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "poached"
+      ],
+      "reviewed": true
+    },
+    "policy": {
+      "meaning": "方針、政策",
+      "ipa": "/pˈɑləsi/",
+      "audio": "assets/audio/lemma/policy.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "policies"
+      ],
+      "reviewed": true
+    },
+    "ponder": {
+      "meaning": "熟考する",
+      "ipa": "/pˈɑndɚ/",
+      "audio": "assets/audio/lemma/ponder.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "pondering"
+      ],
+      "reviewed": true
+    },
+    "pose": {
+      "meaning": "ポーズをとる；（問題を）引き起こす",
+      "ipa": "/pˈoʊz/",
+      "audio": "assets/audio/lemma/pose.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "posed"
+      ],
+      "reviewed": true
+    },
+    "position": {
+      "meaning": "地位、役職",
+      "ipa": "/pəzˈɪʃən/",
+      "audio": "assets/audio/lemma/position.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "positions"
+      ],
+      "reviewed": true
+    },
+    "pretext": {
+      "meaning": "口実",
+      "ipa": "/pɹˈitɛkst/",
+      "audio": "assets/audio/lemma/pretext.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "pretexts"
+      ],
+      "reviewed": true
+    },
+    "proclaim": {
+      "meaning": "宣言する、公言する",
+      "ipa": "/pɹoʊklˈeɪm/",
+      "audio": "assets/audio/lemma/proclaim.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "proclaimed"
+      ],
+      "reviewed": true
+    },
+    "profess": {
+      "meaning": "公言する、称する",
+      "ipa": "/pɹəfˈɛs/",
+      "audio": "assets/audio/lemma/profess.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "professed"
+      ],
+      "reviewed": true
+    },
+    "proliferate": {
+      "meaning": "急増する",
+      "ipa": "/pɹoʊlˈɪfɚeɪt/",
+      "audio": "assets/audio/lemma/proliferate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "proliferating"
+      ],
+      "reviewed": true
+    },
+    "propose": {
+      "meaning": "提案する、申し込む",
+      "ipa": "/pɹəpˈoʊz/",
+      "audio": "assets/audio/lemma/propose.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "proposed"
+      ],
+      "reviewed": true
+    },
+    "proscribe": {
+      "meaning": "禁止する",
+      "ipa": "/pɹoʊskɹˈaɪb/",
+      "audio": "assets/audio/lemma/proscribe.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "proscribes"
+      ],
+      "reviewed": true
+    },
+    "provision": {
+      "meaning": "条項、備え；食料、備蓄",
+      "ipa": "/pɹəvˈɪʒən/",
+      "audio": "assets/audio/lemma/provision.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "provision",
+        "provisions"
+      ],
+      "reviewed": true
+    },
+    "proviso": {
+      "meaning": "条件、但し書き",
+      "ipa": "/pɹəvˈaɪzoʊ/",
+      "audio": "assets/audio/lemma/proviso.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "provisos"
+      ],
+      "reviewed": true
+    },
+    "purge": {
+      "meaning": "除去する、一掃する",
+      "ipa": "/pˈɝdʒ/",
+      "audio": "assets/audio/lemma/purge.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "purged"
+      ],
+      "reviewed": true
+    },
+    "puzzle": {
+      "meaning": "パズル、難問；困惑させる",
+      "ipa": "/pˈəzəl/",
+      "audio": "assets/audio/lemma/puzzle.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "puzzles"
+      ],
+      "reviewed": true
+    },
+    "quench": {
+      "meaning": "消す、癒やす",
+      "ipa": "/kwˈɛntʃ/",
+      "audio": "assets/audio/lemma/quench.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "quenched"
+      ],
+      "reviewed": true
+    },
+    "quiver": {
+      "meaning": "震える",
+      "ipa": "/kwˈɪvɚ/",
+      "audio": "assets/audio/lemma/quiver.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "quivered"
+      ],
+      "reviewed": true
+    },
+    "radiate": {
+      "meaning": "放射する、輝く",
+      "ipa": "/ɹˈeɪdiət/",
+      "audio": "assets/audio/lemma/radiate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "radiate",
+        "radiating"
+      ],
+      "reviewed": true
+    },
+    "rant": {
+      "meaning": "わめく、激しく不平を言う",
+      "ipa": "/ɹˈænt/",
+      "audio": "assets/audio/lemma/rant.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "ranted"
+      ],
+      "reviewed": true
+    },
+    "ray": {
+      "meaning": "光線",
+      "ipa": "/ɹˈeɪ/",
+      "audio": "assets/audio/lemma/ray.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "rays"
+      ],
+      "reviewed": true
+    },
+    "rebel": {
+      "meaning": "反抗する、反乱を起こす",
+      "ipa": "/ɹˈɛbəl/",
+      "audio": "assets/audio/lemma/rebel.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "rebelling"
+      ],
+      "reviewed": true
+    },
+    "reciprocate": {
+      "meaning": "返礼する、応じる",
+      "ipa": "/ɹɪsˈɪpɹəkeɪt/",
+      "audio": "assets/audio/lemma/reciprocate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "reciprocated"
+      ],
+      "reviewed": true
+    },
+    "rectify": {
+      "meaning": "訂正する、是正する",
+      "ipa": "/ɹˈɛktəfaɪ/",
+      "audio": "assets/audio/lemma/rectify.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "rectified"
+      ],
+      "reviewed": true
+    },
+    "reduce": {
+      "meaning": "減らす、縮小する",
+      "ipa": "/ɹədˈus/",
+      "audio": "assets/audio/lemma/reduce.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "reduce",
+        "reduced"
+      ],
+      "reviewed": true
+    },
+    "reduction": {
+      "meaning": "削減、縮小",
+      "ipa": "/ɹədˈəkʃən/",
+      "audio": "assets/audio/lemma/reduction.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "reductions"
+      ],
+      "reviewed": true
+    },
+    "regime": {
+      "meaning": "政権、体制",
+      "ipa": "/ɹəʒˈim/",
+      "audio": "assets/audio/lemma/regime.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "regimes"
+      ],
+      "reviewed": true
+    },
+    "regurgitate": {
+      "meaning": "吐き戻す、逆流させる",
+      "ipa": "/ɹɪɡˈɝdʒəteɪt/",
+      "audio": "assets/audio/lemma/regurgitate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "regurgitates"
+      ],
+      "reviewed": true
+    },
+    "relent": {
+      "meaning": "折れる、態度を和らげる",
+      "ipa": "/ɹɪlˈɛnt/",
+      "audio": "assets/audio/lemma/relent.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "relented"
+      ],
+      "reviewed": true
+    },
+    "relish": {
+      "meaning": "楽しむ、味わう",
+      "ipa": "/ɹˈɛlɪʃ/",
+      "audio": "assets/audio/lemma/relish.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "relishing"
+      ],
+      "reviewed": true
+    },
+    "renounce": {
+      "meaning": "放棄する、断念する",
+      "ipa": "/ɹɪnˈaʊns/",
+      "audio": "assets/audio/lemma/renounce.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "renouncing"
+      ],
+      "reviewed": true
+    },
+    "reprisal": {
+      "meaning": "報復措置",
+      "ipa": "/ɹipɹˈaɪzəl/",
+      "audio": "assets/audio/lemma/reprisal.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "reprisals"
+      ],
+      "reviewed": true
+    },
+    "repulse": {
+      "meaning": "反感を抱かせる、退ける",
+      "ipa": "/ɹipˈəls/",
+      "audio": "assets/audio/lemma/repulse.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "repulsed"
+      ],
+      "reviewed": true
+    },
+    "requisite": {
+      "meaning": "必要条件、必須品",
+      "ipa": "/ɹˈɛkwəzət/",
+      "audio": "assets/audio/lemma/requisite.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "requisites"
+      ],
+      "reviewed": true
+    },
+    "rescind": {
+      "meaning": "取り消す",
+      "ipa": "/ɹɪsˈɪnd/",
+      "audio": "assets/audio/lemma/rescind.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "rescinded"
+      ],
+      "reviewed": true
+    },
+    "resonate": {
+      "meaning": "共鳴する、響く",
+      "ipa": "/ɹˈɛzəneɪt/",
+      "audio": "assets/audio/lemma/resonate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "resonated"
+      ],
+      "reviewed": true
+    },
+    "revel": {
+      "meaning": "大いに楽しむ",
+      "ipa": "/ɹˈɛvəl/",
+      "audio": "assets/audio/lemma/revel.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "reveled"
+      ],
+      "reviewed": true
+    },
+    "revert": {
+      "meaning": "元に戻る",
+      "ipa": "/ɹɪvˈɝt/",
+      "audio": "assets/audio/lemma/revert.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "reverted"
+      ],
+      "reviewed": true
+    },
+    "rope": {
+      "meaning": "ロープ、綱",
+      "ipa": "/ɹˈoʊp/",
+      "audio": "assets/audio/lemma/rope.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "ropes"
+      ],
+      "reviewed": true
+    },
+    "sanctify": {
+      "meaning": "神聖化する、清める",
+      "ipa": "/sˈæŋktəfaɪ/",
+      "audio": "assets/audio/lemma/sanctify.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "sanctified"
+      ],
+      "reviewed": true
+    },
+    "sanctuary": {
+      "meaning": "聖域、保護区",
+      "ipa": "/sˈæŋktʃuɛɹi/",
+      "audio": "assets/audio/lemma/sanctuary.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "sanctuaries"
+      ],
+      "reviewed": true
+    },
+    "saturate": {
+      "meaning": "浸透させる、飽和させる",
+      "ipa": "/sˈætʃɚeɪt/",
+      "audio": "assets/audio/lemma/saturate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "saturated"
+      ],
+      "reviewed": true
+    },
+    "scamper": {
+      "meaning": "走り回る、ちょこちょこ走る、走り去る",
+      "ipa": "/skˈæmpɚ/",
+      "audio": "assets/audio/lemma/scamper.mp3",
+      "pos": "名詞・動詞",
+      "surfaces": [
+        "scamper",
+        "scampered"
+      ],
+      "reviewed": true
+    },
+    "scatter": {
+      "meaning": "まき散らす、散らばる",
+      "ipa": "/skˈætɚ/",
+      "audio": "assets/audio/lemma/scatter.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "scattering"
+      ],
+      "reviewed": true
+    },
+    "scowl": {
+      "meaning": "しかめ面をする",
+      "ipa": "/skˈaʊl/",
+      "audio": "assets/audio/lemma/scowl.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "scowling"
+      ],
+      "reviewed": true
+    },
+    "shear": {
+      "meaning": "刈り取る、切り落とす",
+      "ipa": "/ʃˈɪɹ/",
+      "audio": "assets/audio/lemma/shear.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "shearing"
+      ],
+      "reviewed": true
+    },
+    "shrug": {
+      "meaning": "肩をすくめる",
+      "ipa": "/ʃɹˈəɡ/",
+      "audio": "assets/audio/lemma/shrug.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "shrugs"
+      ],
+      "reviewed": true
+    },
+    "shuffle": {
+      "meaning": "混ぜる、とぼとぼ歩く",
+      "ipa": "/ʃˈəfəl/",
+      "audio": "assets/audio/lemma/shuffle.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "shuffled"
+      ],
+      "reviewed": true
+    },
+    "slant": {
+      "meaning": "傾ける、傾斜する、偏らせる",
+      "ipa": "/slˈænt/",
+      "audio": "assets/audio/lemma/slant.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "slanted",
+        "slanting"
+      ],
+      "reviewed": true
+    },
+    "slouch": {
+      "meaning": "前かがみでだらしなく座る",
+      "ipa": "/slˈaʊtʃ/",
+      "audio": "assets/audio/lemma/slouch.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "slouching"
+      ],
+      "reviewed": true
+    },
+    "snowball": {
+      "meaning": "雪だるま式に増える",
+      "ipa": "/snˈoʊbɔl/",
+      "audio": "assets/audio/lemma/snowball.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "snowballing"
+      ],
+      "reviewed": true
+    },
+    "soar": {
+      "meaning": "急上昇する、高く舞い上がる",
+      "ipa": "/sˈɔɹ/",
+      "audio": "assets/audio/lemma/soar.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "soaring"
+      ],
+      "reviewed": true
+    },
+    "socket": {
+      "meaning": "ソケット、受け口",
+      "ipa": "/sˈɑkət/",
+      "audio": "assets/audio/lemma/socket.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "sockets"
+      ],
+      "reviewed": true
+    },
+    "solicit": {
+      "meaning": "求める、懇願する、勧誘する",
+      "ipa": "/səlˈɪsɪt/",
+      "audio": "assets/audio/lemma/solicit.mp3",
+      "pos": "名詞・動詞",
+      "surfaces": [
+        "solicit",
+        "solicited"
+      ],
+      "reviewed": true
+    },
+    "solidify": {
+      "meaning": "固まる、強固にする",
+      "ipa": "/səlˈɪdəfaɪ/",
+      "audio": "assets/audio/lemma/solidify.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "solidifying"
+      ],
+      "reviewed": true
+    },
+    "spearhead": {
+      "meaning": "主導する",
+      "ipa": "/spˈɪɹhɛd/",
+      "audio": "assets/audio/lemma/spearhead.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "spearheaded"
+      ],
+      "reviewed": true
+    },
+    "splash": {
+      "meaning": "はねかける",
+      "ipa": "/splˈæʃ/",
+      "audio": "assets/audio/lemma/splash.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "splashed"
+      ],
+      "reviewed": true
+    },
+    "stake": {
+      "meaning": "賭け金、利害；賭ける",
+      "ipa": "/stˈeɪk/",
+      "audio": "assets/audio/lemma/stake.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "stakes"
+      ],
+      "reviewed": true
+    },
+    "stammer": {
+      "meaning": "どもる",
+      "ipa": "/stˈæmɚ/",
+      "audio": "assets/audio/lemma/stammer.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "stammered"
+      ],
+      "reviewed": true
+    },
+    "statue": {
+      "meaning": "像、彫像",
+      "ipa": "/stˈætʃu/",
+      "audio": "assets/audio/lemma/statue.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "statues"
+      ],
+      "reviewed": true
+    },
+    "sterilize": {
+      "meaning": "殺菌する、不妊にする",
+      "ipa": "/stˈɛɹəlaɪz/",
+      "audio": "assets/audio/lemma/sterilize.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "sterilized"
+      ],
+      "reviewed": true
+    },
+    "streak": {
+      "meaning": "疾走する",
+      "ipa": "/stɹˈik/",
+      "audio": "assets/audio/lemma/streak.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "streaking"
+      ],
+      "reviewed": true
+    },
+    "strut": {
+      "meaning": "気取って歩く",
+      "ipa": "/stɹˈət/",
+      "audio": "assets/audio/lemma/strut.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "strutted"
+      ],
+      "reviewed": true
+    },
+    "succumb": {
+      "meaning": "屈する、負ける",
+      "ipa": "/səkˈəm/",
+      "audio": "assets/audio/lemma/succumb.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "succumbed"
+      ],
+      "reviewed": true
+    },
+    "suggestion": {
+      "meaning": "提案",
+      "ipa": "/səɡdʒˈɛstʃən/",
+      "audio": "assets/audio/lemma/suggestion.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "suggestions"
+      ],
+      "reviewed": true
+    },
+    "suppose": {
+      "meaning": "〜だと思う、〜することになっている",
+      "ipa": "/səpˈoʊz/",
+      "audio": "assets/audio/lemma/suppose.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "supposed"
+      ],
+      "reviewed": true
+    },
+    "surmise": {
+      "meaning": "推測する",
+      "ipa": "/sɚmˈaɪz/",
+      "audio": "assets/audio/lemma/surmise.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "surmising"
+      ],
+      "reviewed": true
+    },
+    "swill": {
+      "meaning": "がぶ飲みする",
+      "ipa": "/swˈɪl/",
+      "audio": "assets/audio/lemma/swill.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "swilling"
+      ],
+      "reviewed": true
+    },
+    "synthesize": {
+      "meaning": "合成する、統合する",
+      "ipa": "/sˈɪnθəsaɪz/",
+      "audio": "assets/audio/lemma/synthesize.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "synthesized"
+      ],
+      "reviewed": true
+    },
+    "tarnish": {
+      "meaning": "変色させる、傷つける",
+      "ipa": "/tˈɑɹnɪʃ/",
+      "audio": "assets/audio/lemma/tarnish.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "tarnished"
+      ],
+      "reviewed": true
+    },
+    "teeter": {
+      "meaning": "危うく揺れる",
+      "ipa": "/tˈitɚ/",
+      "audio": "assets/audio/lemma/teeter.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "teetering"
+      ],
+      "reviewed": true
+    },
+    "tether": {
+      "meaning": "つなぎ留める",
+      "ipa": "/tˈɛðɚ/",
+      "audio": "assets/audio/lemma/tether.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "tethered"
+      ],
+      "reviewed": true
+    },
+    "thwart": {
+      "meaning": "妨げる",
+      "ipa": "/θwˈɔɹt/",
+      "audio": "assets/audio/lemma/thwart.mp3",
+      "pos": "名詞・動詞・形容詞・副詞",
+      "surfaces": [
+        "thwart",
+        "thwarted"
+      ],
+      "reviewed": true
+    },
+    "topple": {
+      "meaning": "倒す、倒れる",
+      "ipa": "/tˈɑpəl/",
+      "audio": "assets/audio/lemma/topple.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "toppled"
+      ],
+      "reviewed": true
+    },
+    "torment": {
+      "meaning": "苦しみ、苦痛；苦しめる",
+      "ipa": "/tˈɔɹmɛnt/",
+      "audio": "assets/audio/lemma/torment.mp3",
+      "pos": "名詞・動詞",
+      "surfaces": [
+        "torments"
+      ],
+      "reviewed": true
+    },
+    "tout": {
+      "meaning": "称賛して売り込む",
+      "ipa": "/tˈaʊt/",
+      "audio": "assets/audio/lemma/tout.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "touted"
+      ],
+      "reviewed": true
+    },
+    "trample": {
+      "meaning": "踏みつける、踏みにじる",
+      "ipa": "/tɹˈæmpəl/",
+      "audio": "assets/audio/lemma/trample.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "trampled"
+      ],
+      "reviewed": true
+    },
+    "transfer": {
+      "meaning": "異動させる、移す",
+      "ipa": "/tɹænsfˈɝ/",
+      "audio": "assets/audio/lemma/transfer.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "transferred"
+      ],
+      "reviewed": true
+    },
+    "trickle": {
+      "meaning": "少しずつ流れる",
+      "ipa": "/tɹˈɪkəl/",
+      "audio": "assets/audio/lemma/trickle.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "trickled"
+      ],
+      "reviewed": true
+    },
+    "trigger": {
+      "meaning": "引き起こす",
+      "ipa": "/tɹˈɪɡɚ/",
+      "audio": "assets/audio/lemma/trigger.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "triggering"
+      ],
+      "reviewed": true
+    },
+    "truncate": {
+      "meaning": "切り詰める、省略する",
+      "ipa": "/tɹˈəŋkeɪt/",
+      "audio": "assets/audio/lemma/truncate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "truncates"
+      ],
+      "reviewed": true
+    },
+    "twitch": {
+      "meaning": "ぴくぴく動く",
+      "ipa": "/twˈɪtʃ/",
+      "audio": "assets/audio/lemma/twitch.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "twitching"
+      ],
+      "reviewed": true
+    },
+    "typify": {
+      "meaning": "典型的に示す",
+      "ipa": "/tˈɪpəfaɪ/",
+      "audio": "assets/audio/lemma/typify.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "typifies"
+      ],
+      "reviewed": true
+    },
+    "venture": {
+      "meaning": "冒険；事業",
+      "ipa": "/vˈɛntʃɚ/",
+      "audio": "assets/audio/lemma/venture.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "ventures"
+      ],
+      "reviewed": true
+    },
+    "vestige": {
+      "meaning": "名残、痕跡",
+      "ipa": "/vˈɛstɪdʒ/",
+      "audio": "assets/audio/lemma/vestige.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "vestiges"
+      ],
+      "reviewed": true
+    },
+    "vie": {
+      "meaning": "競い合う",
+      "ipa": "/vˈaɪ/",
+      "audio": "assets/audio/lemma/vie.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "vying"
+      ],
+      "reviewed": true
+    },
+    "visa": {
+      "meaning": "ビザ、査証",
+      "ipa": "/vˈizə/",
+      "audio": "assets/audio/lemma/visa.mp3",
+      "pos": "名詞",
+      "surfaces": [
+        "visas"
+      ],
+      "reviewed": true
+    },
+    "wave": {
+      "meaning": "手を振る；波",
+      "ipa": "/wˈeɪv/",
+      "audio": "assets/audio/lemma/wave.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "waved"
+      ],
+      "reviewed": true
+    },
+    "wedge": {
+      "meaning": "差し込む、押し込む",
+      "ipa": "/wˈɛdʒ/",
+      "audio": "assets/audio/lemma/wedge.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "wedging"
+      ],
+      "reviewed": true
+    },
+    "whet": {
+      "meaning": "研ぐ、刺激する",
+      "ipa": "/wˈɛt/",
+      "audio": "assets/audio/lemma/whet.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "whetting"
+      ],
+      "reviewed": true
+    },
+    "whine": {
+      "meaning": "泣き言を言う、鼻にかかった声で鳴く",
+      "ipa": "/wˈaɪn/",
+      "audio": "assets/audio/lemma/whine.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "whined"
+      ],
+      "reviewed": true
+    },
+    "wonder": {
+      "meaning": "〜だろうかと思う、不思議に思う",
+      "ipa": "/wˈəndɚ/",
+      "audio": "assets/audio/lemma/wonder.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "wondered"
+      ],
+      "reviewed": true
+    },
+    "wreck": {
+      "meaning": "難破させる、破壊する",
+      "ipa": "/ɹˈɛk/",
+      "audio": "assets/audio/lemma/wreck.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "wrecked"
+      ],
+      "reviewed": true
+    }
   }
 }
