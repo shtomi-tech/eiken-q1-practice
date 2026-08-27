@@ -94,6 +94,8 @@ for (const selector of [
 }
 assert.match(cssRule(css, ".originChip"), /flex-wrap:\s*wrap/, "語源チップは折り返せる必要があります");
 assert.match(cssRule(css, ".originChipKind"), /width:\s*100%/, "種別ラベルは1行を占める必要があります");
+assert.doesNotMatch(cssRule(css, ".originDerivation"), /border-top\s*:/, "語源の導出文を独立した罫線で分けてはいけません");
+assert.doesNotMatch(cssRule(css, ".originDerivation"), /padding-top\s*:/, "語源の導出文に独立ブロック用の上余白を置いてはいけません");
 assert.match(css, /@media\s*\(max-width:\s*480px\)/, "モバイル用の語源レイアウト規則が必要です");
 assert.match(indexHtml, /static\/styles\.css\?v=[^"'\s]+/, "styles.cssのキャッシュバスターが必要です");
 assert.match(indexHtml, /static\/mode-q1\.js\?v=[^"'\s]+/, "mode-q1.jsのキャッシュバスターが必要です");
