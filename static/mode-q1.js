@@ -67,9 +67,7 @@ const VOCAB_GOALS = {
   let lemmaMap = {};
   let lemmaEntries = {};
   let particleMap = {};
-let wordRoots = { roots: {}, affixes: {} };
 let wordOriginMap = {};
-let wordOriginRootIndex = new Map();
 let aiCheckEndpoint = "";
 
 function isValidIsoDate(value) {
@@ -247,24 +245,7 @@ async function loadManifest() {
 }
 
 async function loadWordOriginData() {
-  wordRoots = { roots: {}, affixes: {} };
   wordOriginMap = {};
-  wordOriginRootIndex = new Map();
-  try {
-    const response = await fetch("data/word_roots.json", { cache: "no-store" });
-    if (!response.ok) throw new Error(`word_roots.json: HTTP ${response.status}`);
-    const data = await response.json();
-    if (data && data.roots && typeof data.roots === "object" && !Array.isArray(data.roots)) {
-      wordRoots = {
-        roots: data.roots,
-        affixes: data.affixes && typeof data.affixes === "object" && !Array.isArray(data.affixes)
-          ? data.affixes
-          : {},
-      };
-    }
-  } catch (e) {
-    // 語源辞書が未配信でも、通常の単語カードはそのまま使える。
-  }
   try {
     const response = await fetch("data/word_origins.json", { cache: "no-store" });
     if (!response.ok) throw new Error(`word_origins.json: HTTP ${response.status}`);
@@ -276,17 +257,6 @@ async function loadWordOriginData() {
     }
   } catch (e) {
     // 語源辞書が未配信でも、通常の単語カードはそのまま使える。
-  }
-  for (const [lemma, origin] of Object.entries(wordOriginMap)) {
-    if (!origin || origin.type !== "A" || !origin.root) continue;
-    const rootEntry = wordRoots.roots[origin.root];
-    const rootForms = [origin.root, ...(Array.isArray(rootEntry?.variants) ? rootEntry.variants : [])];
-    rootForms.forEach((form) => {
-      const key = String(form).toLowerCase();
-      const lemmas = wordOriginRootIndex.get(key) || [];
-      if (!lemmas.includes(lemma)) lemmas.push(lemma);
-      wordOriginRootIndex.set(key, lemmas);
-    });
   }
 }
 
@@ -1085,19 +1055,6 @@ function wordOriginFor(item) {
   const lemma = wordOriginLemma(item);
   return lemma ? wordOriginMap[lemma] || null : null;
 }
-function assignWordOriginSlots(items) {
-  const slots = new Map();
-  for (const item of items) {
-    const origin = wordOriginFor(item);
-    if (!origin || !origin.root) continue;
-    const datasetId = item._datasetId || state.datasetId || "";
-    const key = `${datasetId}:${origin.root}`;
-    const slot = slots.get(key) || 0;
-    item._wordOriginSlot = slot;
-    slots.set(key, slot + 1);
-  }
-  return items;
-}
 // 同期的に使える解決済みプール。未読み込み・級不明のときは null。
 function pooledData(grade = currentGrade()) {
   return (grade && pooledDataByGrade.get(grade)) || null;
@@ -1127,7 +1084,6 @@ async function loadPooledItems(grade = currentGrade()) {
         }
       }
       assignParticleSlots(items);
-      assignWordOriginSlots(items);
       return { items, meaningPool };
     }).catch((e) => {
       // 失敗したPromiseを残すと以後ずっと同じ失敗を返すため、再試行できるようにする。
@@ -1585,7 +1541,6 @@ async function loadData(datasetId = state.datasetId) {
   const idioms = (vocab.idioms || []).map((i) => ({ ...i, type: "idiom" }));
   const all = words.concat(idioms);
   assignParticleSlots(all);
-  assignWordOriginSlots(all);
 
   for (const it of all) {
     if (!state.itemsByQ[it.q]) state.itemsByQ[it.q] = [];
@@ -2981,34 +2936,6 @@ function rotatingSiblingWindow(siblings, slot = 0) {
   return [0, 1, 2].map((k) => siblings[(slot + k) % siblings.length]);
 }
 
-function sameStem(a, b) {
-  return a.startsWith(b) || b.startsWith(a) || a.slice(0, 5) === b.slice(0, 5);
-}
-
-function wordOriginSiblingItems(item) {
-  const origin = wordOriginFor(item);
-  if (!origin || !origin.root) return [];
-  const ownLemma = wordOriginLemma(item);
-  const rootLemmas = wordOriginRootIndex.get(String(origin.root).toLowerCase()) || [];
-  const currentLemmas = new Set(allVocabularyItems().map(wordOriginLemma));
-  return rootLemmas
-    .filter((lemma) => lemma !== ownLemma && wordOriginMap[lemma]?.type === "A")
-    .map((lemma, index) => ({
-      lemma,
-      gloss: wordOriginMap[lemma].gloss,
-      current: currentLemmas.has(lemma),
-      differentStem: !sameStem(ownLemma, lemma),
-      index,
-    }))
-    .filter((sibling) => sibling.gloss)
-    .sort((a, b) => (
-      Number(b.current) - Number(a.current)
-      || Number(b.differentStem) - Number(a.differentStem)
-      || a.index - b.index
-    ))
-    .map(({ lemma, gloss }) => ({ lemma, gloss }));
-}
-
 function originKindLabel(kind) {
   return { prefix: "接頭辞", root: "語根", suffix: "接尾辞" }[kind] || "構成要素";
 }
@@ -3041,32 +2968,6 @@ function flashWordOrigin(item) {
     row.appendChild(chips);
   }
   if (origin.derivation) row.appendChild(el("p", { class: "originDerivation" }, origin.derivation));
-
-  const siblingItems = wordOriginSiblingItems(item);
-  const visibleSiblings = rotatingSiblingWindow(
-    siblingItems,
-    Number.isInteger(item._wordOriginSlot) ? item._wordOriginSlot : 0,
-  );
-  const rootEntry = wordRoots.roots[origin.root];
-  // hidePanel: true の語根は、情報量を抑えるため語根パネル（語根名・注記・仲間語）を出さない。
-  if (rootEntry && rootEntry.hidePanel !== true) {
-    const panel = el("div", { class: "particlePanel wordOriginPanel" });
-    const rootOrigin = rootEntry.origin ? `（${rootEntry.origin}）` : "";
-    panel.appendChild(el("p", { class: "particlePanelTitle" },
-      `語根「${origin.root}」＝${rootEntry.gloss || "共通の語根"}${rootOrigin}`));
-    if (rootEntry.note) panel.appendChild(el("p", { class: "particleCore" }, rootEntry.note));
-    if (visibleSiblings.length) {
-      const siblingList = el("ul", { class: "particleSiblings" });
-      visibleSiblings.forEach((sibling) => {
-        siblingList.appendChild(el("li", {},
-          el("strong", {}, sibling.lemma),
-          el("span", {}, sibling.gloss),
-        ));
-      });
-      panel.appendChild(siblingList);
-    }
-    row.appendChild(panel);
-  }
   return row;
 }
 
