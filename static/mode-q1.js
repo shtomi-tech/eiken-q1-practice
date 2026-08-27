@@ -3048,7 +3048,8 @@ function flashWordOrigin(item) {
     Number.isInteger(item._wordOriginSlot) ? item._wordOriginSlot : 0,
   );
   const rootEntry = wordRoots.roots[origin.root];
-  if (rootEntry) {
+  // hidePanel: true の語根は、情報量を抑えるため語根パネル（語根名・注記・仲間語）を出さない。
+  if (rootEntry && rootEntry.hidePanel !== true) {
     const panel = el("div", { class: "particlePanel wordOriginPanel" });
     const rootOrigin = rootEntry.origin ? `（${rootEntry.origin}）` : "";
     panel.appendChild(el("p", { class: "particlePanelTitle" },

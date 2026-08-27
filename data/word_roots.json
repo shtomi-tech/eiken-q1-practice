@@ -1,6 +1,6 @@
 {
   "meta": {
-    "note": "単語カードの語源パネル用。表示専用。進捗キー・音声・選択肢には使わない。段階5バッチ6で語根122個まで拡張する。"
+    "note": "単語カードの語源パネル用。表示専用。進捗キー・音声・選択肢には使わない。段階5バッチ6で語根122個まで拡張する。hidePanel:true の語根はカード上の語根パネルを表示しない（分解チップは残る）。"
   },
   "roots": {
     "spec": {
@@ -129,7 +129,8 @@
       "gloss": "くっつく",
       "origin": "ラテン語 haerere",
       "note": "ものにくっつき、離れずにとどまるイメージ。heresy・synthesis・synthesize・inheritanceなど、綴りだけが似た語は含めない。",
-      "variants": ["hes"]
+      "variants": ["hes"],
+      "hidePanel": true
     },
     "reg": {
       "gloss": "まっすぐにする・支配する",
