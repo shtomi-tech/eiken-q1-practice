@@ -84,9 +84,11 @@ assert.ok(sessionStickyNavBody.includes("renderHome"), "sticky版にも一覧へ
 
 // --- 完了画面（Task8） ---
 assert.ok(
-  renderDoneBody.indexOf("pendingReviews.length") < renderDoneBody.lastIndexOf("startLearn(nextQ)"),
-  "誤答（復習待ち）がある場合は復習を主CTAに優先させる必要がある",
+  renderDoneBody.indexOf("startLearn(nextQ)") < renderDoneBody.lastIndexOf("startFinalCheck"),
+  "誤答専用復習を挟まず、次の設問から最終チェックへ進める必要がある",
 );
+assert.ok(!renderDoneBody.includes("pendingReviews"), "完了画面に誤答復習待ちの状態を残してはいけません");
+assert.ok(!renderDoneBody.includes("間違えた"), "完了画面に誤答問題の復習文言を残してはいけません");
 
 // --- CSS ---
 for (const cls of [".datasetUnitCard", ".datasetUnitGrid", ".qCardNumber", ".qCardMain", ".qCardArrow", ".questionFilterBar", ".sessionStickyNav"]) {

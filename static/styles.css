@@ -326,7 +326,6 @@ h2 {
   border-left: 4px solid var(--ink);
 }
 .datasetUnitCard.cleared { border-left: 4px solid var(--ok); }
-.datasetUnitCard.review { border-left: 4px solid var(--clay); }
 .datasetUnitCardNumber {
   flex: 0 0 auto;
   font-family: var(--mono);
@@ -343,12 +342,6 @@ h2 {
 }
 .datasetUnitCardClear {
   color: var(--ok-text);
-  font-family: var(--mono);
-  font-size: 11px;
-  font-weight: 600;
-}
-.datasetUnitCardReview {
-  color: var(--clay-hover);
   font-family: var(--mono);
   font-size: 11px;
   font-weight: 600;
@@ -666,10 +659,6 @@ h2 {
 .qCard:hover { background: var(--surface-soft); }
 .qCard.done { border-left: 4px solid var(--ok); }
 .qCard.inProgress { border-left: 4px solid var(--ink); }
-.qCard.review {
-  border-left: 4px solid var(--clay);
-  background: var(--surface-strong);
-}
 .qCardNumber {
   flex: 0 0 auto;
   font-family: var(--mono);
@@ -698,7 +687,6 @@ h2 {
 }
 .qCard.done .qstat { color: var(--ok-text); }
 .qCard.inProgress .qstat { color: var(--ink); }
-.qCard.review .qstat { color: var(--clay-hover); }
 .qCardArrow { flex: 0 0 auto; color: var(--muted); }
 
 /* ---- Session shell ---- */
@@ -755,7 +743,6 @@ h2 {
 .stagePill:last-child { border-right: 0; }
 .stagePill.active { background: var(--ink); color: var(--parchment); }
 .stagePill.cleared { color: var(--ok); }
-.reviewBar .stagePill.active { background: var(--clay); color: var(--parchment); }
 .meaningBar .stagePill { flex-basis: 50%; }
 
 .q1Progress {
@@ -1575,14 +1562,6 @@ details.vocabForecast:not([open]) > :not(summary) { display: none; }
   display: inline-block;
   animation: kStatusCheck var(--motion-completion) var(--ease-spring-soft);
 }
-
-.wrongReview { margin-top: 24px; border-top: 2px solid var(--ink); padding-top: 20px; }
-.wrongReview h3 { margin-top: 4px; }
-.wrongReview .flash { margin-top: 16px; }
-.wrongReview .flash:first-child { margin-top: 0; }
-.wrongReview .reviewCard.reviewCardDone { opacity: .55; }
-.reviewCheckBtn { margin: 14px 18px; }
-.reviewCountHint { margin-top: 16px; }
 
 .hide { display: none !important; }
 

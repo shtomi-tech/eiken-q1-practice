@@ -28,18 +28,15 @@ const cardBody = extractFunctionBody(js, "datasetUnitCard");
 const forecastBody = extractFunctionBody(js, "vocabGoalCard");
 const meaningMissionBody = extractFunctionBody(js, "meaningMission");
 
-const reviewBranch = renderHomeBody.indexOf("else if (reviewQs.length)");
 const nextBranch = renderHomeBody.indexOf("else if (nextQ)");
-assert.ok(reviewBranch !== -1, "ホームに復習優先の分岐が必要");
 assert.ok(nextBranch !== -1, "ホームに未学習設問の分岐が必要");
-assert.ok(reviewBranch < nextBranch, "ホームの復習分岐は次の設問分岐より前である必要がある");
-assert.ok(renderHomeBody.includes("間違えた設問です。忘れないうちに1問ずつ確認します。"), "復習主CTAの理由文が必要");
-assert.ok(renderHomeBody.includes("primaryIsReview"), "復習主CTAの状態を主CTAの見た目へ反映する必要がある");
+assert.ok(!renderHomeBody.includes("reviewQs"), "ホームに誤答問題の復習キューを残してはいけません");
+assert.ok(!renderHomeBody.includes("startReview"), "ホームに誤答問題の復習開始処理を残してはいけません");
+assert.ok(!renderHomeBody.includes("primaryIsReview"), "ホームに誤答復習専用の主CTA状態を残してはいけません");
+assert.ok(!renderHomeBody.includes("間違えた"), "ホームに誤答問題の復習文言を残してはいけません");
 // 1画面の塗りCTAは1つ。主CTAがある限り間隔復習は二次操作へ落とす。
 assert.ok(renderHomeBody.includes("Boolean(primary),"), "主CTAの有無を意味復習カードへ渡す必要がある");
 assert.ok(meaningMissionBody.includes("if (hasPrimaryCta) buttonAttrs.class = \"secondaryCta"), "主CTAがあるとき間隔復習CTAは二次操作にする必要がある");
-assert.ok(renderHomeBody.includes("secondaryCta"), "復習主CTAには未学習設問への二次CTAが必要");
-assert.ok(renderHomeBody.includes("reviewCta"), "復習主CTAはreviewCtaとして表示する必要がある");
 
 assert.ok(summaryBody.includes("hasResume"), "datasetSummary() に途中保存状態が必要");
 assert.ok(summaryBody.includes('status = "resumable"'), "学習済み0でも途中保存をresumableとして扱う必要がある");
