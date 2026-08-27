@@ -18,7 +18,7 @@ from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
-TARGET_PATTERN = re.compile(r"^vocab_(?:1_20\d{2}-\d+|pre1_20\d{2}-\d+|p2_mock-\d+)\.json$")
+TARGET_PATTERN = re.compile(r"^vocab_(?:1_(?:20\d{2}-\d+|mock-\d+)|pre1_20\d{2}-\d+|p2_mock-\d+)\.json$")
 POS_LABELS = {
     "n": "名詞",
     "v": "動詞",
@@ -73,7 +73,14 @@ CMU_TO_IPA = {
 }
 
 
-def target_paths() -> list[Path]:
+def target_paths(selected: str | None = None) -> list[Path]:
+    if selected:
+        path = Path(selected)
+        if not path.is_absolute():
+            path = ROOT / path
+        if not path.is_file() or not TARGET_PATTERN.match(path.name):
+            raise ValueError(f"発音補完の対象外または存在しないファイルです: {path}")
+        return [path]
     return sorted(path for path in DATA_DIR.glob("vocab*.json") if TARGET_PATTERN.match(path.name))
 
 
@@ -146,9 +153,10 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--dry-run", action="store_true", help="件数だけ確認して変更しない")
     parser.add_argument("--workers", type=int, default=8, help="Datamuseの同時取得数（既定: 8）")
+    parser.add_argument("--file", help="指定した語彙JSONだけを補完する")
     args = parser.parse_args()
 
-    loaded = [(path, json.loads(path.read_text(encoding="utf-8"))) for path in target_paths()]
+    loaded = [(path, json.loads(path.read_text(encoding="utf-8"))) for path in target_paths(args.file)]
     field_targets = {
         surface(item)
         for path, data in loaded

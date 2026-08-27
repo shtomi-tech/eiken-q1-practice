@@ -147,6 +147,8 @@ const cReasons = new Map([
   ["make an excuse", "動詞＋名詞の定型表現で、不変化詞の連鎖にならない"],
   ["make a start", "動詞＋名詞の定型表現で、不変化詞の連鎖にならない"],
   ["none of your business", "名詞句の定型表現で、動詞＋不変化詞ではない"],
+  ["come clean", "動詞＋形容詞の慣用表現で、構成語から核心イメージを安定して導けない"],
+  ["rooted for", "動詞＋前置詞の慣用表現で、構成語から応援する意味を直接導けない"],
 ]);
 const expected2025_2Terminals = new Map([
   ["pony up", "支払いのために金を出す"],
