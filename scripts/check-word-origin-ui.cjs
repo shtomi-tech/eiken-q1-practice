@@ -30,11 +30,8 @@ function extractFunctionBody(source, name) {
 
 const buildFlashCardBody = extractFunctionBody(js, "buildFlashCard");
 const flashWordOriginBody = extractFunctionBody(js, "flashWordOrigin");
-const rotatingSiblingWindowBody = extractFunctionBody(js, "rotatingSiblingWindow");
 const bootBody = extractFunctionBody(js, "boot");
 const loadWordOriginDataBody = extractFunctionBody(js, "loadWordOriginData");
-const loadDataBody = extractFunctionBody(js, "loadData");
-const loadPooledItemsBody = extractFunctionBody(js, "loadPooledItems");
 const appendCheckFeedbackBody = extractFunctionBody(js, "appendCheckFeedback");
 
 const meaningIndex = buildFlashCardBody.indexOf('flashRow("意味"');
@@ -54,18 +51,14 @@ for (const marker of ["wordOriginFor", "originChip", "originDerivation", "origin
 assert.ok(flashWordOriginBody.includes("type === \"B\""), "B型の語源を分解なしで表示できる必要があります");
 // 単語カードは情報量を抑えるため、語根パネル（語根名・注記・仲間語リスト）を出さない。
 assert.equal(flashWordOriginBody.includes("wordOriginPanel"), false, "単語カードに語根パネルを復活させてはいけません");
-assert.equal(flashWordOriginBody.includes("particleSiblings"), false, "単語カードに仲間語リストを復活させてはいけません");
 assert.equal(js.includes("wordOriginSiblingItems"), false, "語根パネル専用の逆引き関数を残してはいけません");
 assert.equal(js.includes("wordOriginRootIndex"), false, "語根パネル専用のroot索引を残してはいけません");
 assert.equal(css.includes(".wordOriginPanel"), false, "語根パネルのCSSを残してはいけません");
-assert.match(rotatingSiblingWindowBody, /siblings\[\(slot \+ k\) % siblings\.length\]/, "熟語の仲間語ローテーションは決定的なslotで行う必要があります");
 assert.equal(flashWordOriginBody.includes("Math.random"), false, "語源表示に乱数を使ってはいけません");
 
 assert.ok(bootBody.includes("loadWordOriginData"), "bootは語源辞書を初期化する必要があります");
 assert.ok(loadWordOriginDataBody.includes("word_origins.json"), "word_origins.jsonを読み込む必要があります");
 assert.ok(loadWordOriginDataBody.includes("catch"), "語源辞書が未配信でも起動を継続する必要があります");
-assert.ok(loadDataBody.includes("assignParticleSlots"), "通常学習の語彙へ熟語slotを付ける必要があります");
-assert.ok(loadPooledItemsBody.includes("assignParticleSlots"), "意味復習用の語彙へ熟語slotを付ける必要があります");
 assert.equal(appendCheckFeedbackBody.includes("item.etymology"), false, "フィードバックも旧etymology分岐を使ってはいけません");
 
 const isolatedFunctions = [

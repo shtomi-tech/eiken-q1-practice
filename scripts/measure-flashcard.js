@@ -234,7 +234,6 @@
           meaning: measureText(".flashMeaning"),
           ex: measureText(".flashEx"),
           exTr: measureText(".flashExampleTranslation"),
-          panel: measureText(".particlePanel p"),
         },
         M7_space: {
           edge: Math.round(flash.getBoundingClientRect().left),

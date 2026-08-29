@@ -72,7 +72,7 @@ assert.match(css, /\.flashNav \.isGuarded\s*\{[\s\S]*opacity:\s*\.6/);
 assert.match(css, /\.flashMeaning\s*\{[^}]*font-size:\s*(\d+)px[^}]*font-weight:\s*600/);
 const meaningSize = Number(css.match(/\.flashMeaning\s*\{[^}]*font-size:\s*(\d+)px/)[1]);
 assert.ok(meaningSize >= 22, "意味は22px以上である必要がある");
-assert.match(css, /\.flashMeaning,\s*\.flashExampleTranslation,\s*\.particlePanel p\s*\{[^}]*max-inline-size:\s*34em/);
+assert.match(css, /\.flashMeaning,\s*\.flashExampleTranslation\s*\{[^}]*max-inline-size:\s*34em/);
 const exampleWidth = Number(css.match(/\.flashEx\s*\{[^}]*max-inline-size:\s*(\d+)ch/)[1]);
 assert.ok(exampleWidth <= 70, "例文の行幅は70ch以下である必要がある");
 assert.ok(!css.includes(".sessionStickyFlash"), "未使用のsessionStickyFlash CSSを残さない");

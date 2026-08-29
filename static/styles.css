@@ -1119,8 +1119,7 @@ details.vocabForecast:not([open]) > :not(summary) { display: none; }
   margin-bottom: 5px;
 }
 .flashMeaning,
-.flashExampleTranslation,
-.particlePanel p { max-inline-size: 34em; }
+.flashExampleTranslation { max-inline-size: 34em; }
 .flashMeaning {
   font-size: 22px;
   font-family: var(--serif);
@@ -1225,39 +1224,6 @@ details.vocabForecast:not([open]) > :not(summary) { display: none; }
   color: var(--muted);
   font-size: 13px;
 }
-.particlePanel {
-  margin-top: 14px;
-  border-top: 1px solid var(--line);
-  padding-top: 10px;
-}
-.particlePanelTitle {
-  margin: 0;
-  color: var(--ink);
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: .08em;
-}
-.particleCore {
-  margin: 10px 0 0;
-  font-family: var(--serif);
-  font-size: 16px;
-}
-.particleSiblings {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin: 10px 0 0;
-  padding: 0;
-  list-style: none;
-}
-.particleSiblings li {
-  display: flex;
-  min-width: min(100%, 160px);
-  flex-direction: column;
-  gap: 2px;
-}
-.particleSiblings strong { font-size: 13px; }
-.particleSiblings span { color: var(--muted); font-size: 12px; }
 .flashEx { max-inline-size: 58ch; font-size: 15px; }
 .flashEx em { font-style: normal; border-bottom: 2px solid var(--ink); padding: 0 2px; }
 .flashExampleTranslation {
