@@ -7,7 +7,7 @@ import json
 import os
 from pathlib import Path
 
-from generate_tts_1 import DEFAULT_VOICE, request_audio
+from generate_tts_1 import DEFAULT_VOICE, audio_slug, request_audio
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -35,12 +35,32 @@ def main() -> int:
     parser.add_argument("--limit", type=int, help="先頭から指定件数だけ処理する")
     parser.add_argument("--force", action="store_true", help="既存音声を上書きする")
     parser.add_argument("--dry-run", action="store_true", help="Azureへ送信せず対象だけ確認する")
+    parser.add_argument(
+        "--flashcard-only",
+        action="store_true",
+        help="lemmas.jsonのflashcardLemmasにある表示用原形だけを処理する",
+    )
     args = parser.parse_args()
 
     data = json.loads(LEMMA_PATH.read_text(encoding="utf-8"))
-    entries = data.get("entries")
-    if not isinstance(entries, dict) or not entries:
-        raise SystemExit("data/lemmas.json に entries がありません")
+    if args.flashcard_only:
+        mapping = data.get("flashcardLemmas")
+        if not isinstance(mapping, dict) or not mapping:
+            raise SystemExit("data/lemmas.json に flashcardLemmas がありません")
+        lemmas = set()
+        for surface, value in mapping.items():
+            lemma = str(value or "").strip().lower()
+            if not lemma:
+                raise SystemExit(f"flashcardLemmasの原形が空です: {surface}")
+            lemmas.add(lemma)
+        entries = {
+            lemma: {"audio": f"assets/audio/lemma/{audio_slug(lemma)}.mp3"}
+            for lemma in sorted(lemmas)
+        }
+    else:
+        entries = data.get("entries")
+        if not isinstance(entries, dict) or not entries:
+            raise SystemExit("data/lemmas.json に entries がありません")
     jobs = sorted(entries.items())
     if args.limit:
         jobs = jobs[: args.limit]

@@ -1277,7 +1277,11 @@ function learningPosOf(item) { return learningEntryOf(item).pos || item?.pos || 
 function lemmaAudioPathOf(item, useFlashcardLemma = false) {
   if (useFlashcardLemma && item?.type === "word") {
     const surface = String(surfaceOf(item) || "").toLowerCase();
-    if (flashcardLemmaMap[surface]) return "";
+    const flashcardLemma = String(flashcardLemmaMap[surface] || "").trim().toLowerCase();
+    if (flashcardLemma) {
+      const entry = lemmaEntries[flashcardLemma];
+      return entry?.audio || `assets/audio/lemma/${audioSlug(flashcardLemma)}.mp3`;
+    }
   }
   return learningEntryOf(item).audio || vocabularyAudioPath(item);
 }
