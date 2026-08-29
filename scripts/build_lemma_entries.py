@@ -282,6 +282,7 @@ MEANING_OVERRIDES = {
     "wedge": "差し込む、押し込む",
     "whet": "研ぐ、刺激する",
     "whine": "泣き言を言う、鼻にかかった声で鳴く",
+    "waylay": "待ち伏せする",
     "wonder": "〜だろうかと思う、不思議に思う",
     "wreck": "難破させる、破壊する",
 }
@@ -300,7 +301,7 @@ POS_LABEL_ORDER = ("名詞", "動詞", "形容詞", "副詞", "前置詞", "代�
 # 語彙データまたは MEANING_OVERRIDES が変わると不一致になり、再確認なしでは
 # data/lemmas.json を再生成できない。値は audit_lemma_entries() の
 # meaningReviewDigest を確認した後にだけ更新する。
-REVIEWED_MEANING_DIGEST = "090ed6e701c0d826f55da1e3490d68057f374b18cc8946ca0f3d8ff370e84772"
+REVIEWED_MEANING_DIGEST = "690379f22d412ce608b000d98cace36b7631ee6737c4233287ef8674bcdfd5ce"
 
 
 def load_json(path: Path) -> dict[str, Any]:
