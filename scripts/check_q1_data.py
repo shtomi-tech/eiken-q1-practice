@@ -11,6 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 EXPECTED_IDS = {
+    "eiken5-2026-1",
     *(f"eiken2-{round_id}" for round_id in ("2026-1", "2025-3", "2025-2")),
     *(f"eikenp2-{round_id}" for round_id in ("2026-1", "2025-3", "2025-2")),
     *(f"eikenp1-{round_id}" for round_id in ("2026-1", "2025-3", "2025-2")),

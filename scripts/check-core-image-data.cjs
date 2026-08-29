@@ -221,7 +221,7 @@ for (const fileName of deliveryVocabFiles) {
 
 const pooledByGrade = new Map();
 for (const [datasetId, dataset] of Object.entries(manifest.q1 || {})) {
-  const match = datasetId.match(/^(eiken1|eiken2|eikenp1|eikenp2|eikentopic|iuhw)-/);
+  const match = datasetId.match(/^(eiken1|eiken2|eiken5|eikenp1|eikenp2|eikentopic|iuhw)-/);
   if (!match) continue;
   const vocabPath = path.join(DATA_DIR, path.basename(dataset.vocabUrl || ""));
   if (!fs.existsSync(vocabPath)) continue;

@@ -1,6 +1,6 @@
 # 英検 大問1 単語アプリ
 
-英検1級・2級・準2級・準1級の大問1（語彙）を扱う静的Webアプリです。各級の過去問3回分に加え、1級の模試第1回〜第6回、準2級の自作模試第1回〜第4回、国際医療福祉大学の総合型選抜基礎試験セットを収録しています（合計23セット）。準2級の自作模試と国際医療福祉大学セットは英検過去問を引用していません。
+英検5級・1級・2級・準2級・準1級の大問1（語彙）を扱う静的Webアプリです。5級の2026年度第1回、1級・2級・準2級・準1級の各級過去問3回分に加え、1級の模試第1回〜第6回、準2級の自作模試第1回〜第4回、国際医療福祉大学の総合型選抜基礎試験セットを収録しています（合計24セット）。準2級の自作模試と国際医療福祉大学セットは英検過去問を引用していません。
 
 ## 学習の流れ
 
@@ -23,6 +23,7 @@
 
 | 級 | 設問数（3回合計） | 対象語句の上限 |
 | --- | --- | --- |
+| 5級 | 15 | 60 |
 | 2級 | 51 | 204 |
 | 準2級 | 105 | 420 |
 | 準1級 | 54 | 216 |
@@ -46,6 +47,7 @@
 
 ## 対象データ
 
+- 5級: `data/questions_5_*.json` / `data/vocab_5_*.json`
 - 2級: `data/questions_*.json` / `data/vocab_*.json`
 - 準2級: `data/questions_p2_*.json` / `data/vocab_p2_*.json`
 - 準2級模試第1回: `data/questions_p2_mock-1.json` / `data/vocab_p2_mock-1.json`
@@ -92,6 +94,7 @@ $env:AZURE_SPEECH_KEY = "AzureポータルのKEY 1"
 $env:AZURE_SPEECH_REGION = "japaneast"
 py -3 scripts/generate_tts_1.py --grade 1 --round all
 py -3 scripts/generate_tts_1.py --grade 2 --round all
+py -3 scripts/generate_tts_1.py --grade 5 --round all
 py -3 scripts/generate_tts_1.py --grade pre1 --round all
 py -3 scripts/generate_tts_1.py --grade pre2 --round all
 py -3 scripts/generate_tts_1.py --grade iuhw --round set-1
@@ -142,7 +145,7 @@ py -3 scripts/add_example_translations.py
 
 ### 使用者ごとの級固定
 
-共有URLに `?g=pre2` / `?g=2` / `?g=pre1` / `?g=1` を付けると、その使用者の学習範囲を指定した級に固定します。URL指定は生徒別localStorageにも保存され、URLを外しても維持されます。指定がない場合は初回に級を選びます。
+共有URLに `?g=5` / `?g=pre2` / `?g=2` / `?g=pre1` / `?g=1` を付けると、その使用者の学習範囲を指定した級に固定します。URL指定は生徒別localStorageにも保存され、URLを外しても維持されます。指定がない場合は初回に級を選びます。
 
 固定中は他級の問題セットと復習期限を表示しません。他級の進捗は削除せずに残ります。URLに `g` がない場合だけ、ホーム最下部の「級を変更」から選び直せます。
 
@@ -161,7 +164,8 @@ py -3 scripts/add_example_translations.py
 - `static/vendor/harness/cloud.js`: 生徒別クラウド同期の生成物。直接編集しない
 - `scripts/build_q1_pre1_data.py`: 準1級Q1データの抽出
 - `scripts/build_q1_1_data.py`: 1級公式PDFから大問1を抽出
-- `scripts/enrich_flashcard_fields.py`: 1級・準1級の発音・品詞の補完
+- `scripts/build_q1_5_2026-1_data.py`: 5級2026年度第1回の大問1データ生成
+- `scripts/enrich_flashcard_fields.py`: 対象データの発音・品詞の補完
 - `scripts/curate_1_examples.py`: 1級のオリジナル例文・日本語訳の適用
 - `scripts/build_q1_mock_1_data.py`: 1級模試第1回の問題・語彙データ生成
 - `scripts/build_q1_mock_2_data.py`: 1級模試第2回の問題・語彙データ生成
@@ -173,7 +177,8 @@ py -3 scripts/add_example_translations.py
 - `scripts/build_q1_p2_mock_{2,3,4}_data.py`: 準2級自作模試第2回〜第4回の問題・語彙データ生成
 - `scripts/build_q1_iuhw_set_1_data.py`: 国際医療福祉大学セットの問題・語彙データ生成
 - `scripts/check_mock_6_data.py`: 1級模試第6回の内容・重複チェック
-- `scripts/check_q1_data.py`: 23セットのデータ契約チェック
+- `scripts/check_5_data.py`: 5級2026年度第1回大問1の内容・公式解答チェック
+- `scripts/check_q1_data.py`: 24セットのデータ契約チェック
 - `scripts/check_p2_mock_data.py`: 準2級自作模試（全回）の内容チェック
 
 このリポジトリは大問1専用です。大問2・3、リスニング、ライティング、言い換えのコード・教材・音声・生成スクリプトには依存しません。

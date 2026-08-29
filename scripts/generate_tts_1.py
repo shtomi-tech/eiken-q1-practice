@@ -17,6 +17,7 @@ AUDIO_ROOT = ROOT / "assets" / "audio" / "vocab"
 GRADE_CONFIG = {
     "1": {"pattern": "vocab_1_*.json", "filename": r"vocab_1_(.+)\.json", "folder": "1"},
     "2": {"pattern": "vocab_*.json", "filename": r"vocab_(\d{4}-\d+)\.json", "folder": "2"},
+    "5": {"pattern": "vocab_5_*.json", "filename": r"vocab_5_(\d{4}-\d+)\.json", "folder": "5"},
     "pre1": {"pattern": "vocab_pre1_*.json", "filename": r"vocab_pre1_(.+)\.json", "folder": "pre1"},
     "pre2": {"pattern": "vocab_p2_*.json", "filename": r"vocab_p2_(.+)\.json", "folder": "pre2"},
     "iuhw": {"pattern": "vocab_iuhw_*.json", "filename": r"vocab_iuhw_(set-\d+)\.json", "folder": "iuhw"},
@@ -147,7 +148,7 @@ def generate(args: argparse.Namespace) -> int:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--grade", choices=sorted(GRADE_CONFIG), default="1", help="1 / 2 / pre1 / pre2 / iuhw")
+    parser.add_argument("--grade", choices=sorted(GRADE_CONFIG), default="1", help="1 / 2 / 5 / pre1 / pre2 / iuhw")
     parser.add_argument("--round", dest="round_id", default="all", help="既存の回 / set-1〜set-5 / all")
     parser.add_argument("--limit", type=int, help="先頭から指定件数だけ処理する")
     parser.add_argument("--voice", default=os.environ.get("AZURE_SPEECH_VOICE", DEFAULT_VOICE))

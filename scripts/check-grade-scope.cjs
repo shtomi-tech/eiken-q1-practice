@@ -4,7 +4,7 @@ const vm = require("node:vm");
 
 const js = fs.readFileSync("static/mode-q1.js", "utf8");
 assert.match(js, /const GRADE_PREFIXES = \{/);
-assert.match(js, /const GRADE_CHOICE_ORDER = \["pre2", "2", "pre1", "1", "iuhw"\]/);
+assert.match(js, /const GRADE_CHOICE_ORDER = \["5", "pre2", "2", "pre1", "1", "iuhw"\]/);
 assert.match(js, /for \(const kind of \["過去問", "模試", "テーマ別", "基礎試験"\]\)/);
 assert.match(js, /function applyGradeScope\(/);
 assert.match(js, /function resolveGradeCode\(/);
@@ -31,6 +31,7 @@ vm.runInNewContext(`${source}\nglobalThis.app = EikenQ1App;`, sandbox);
 const scope = sandbox.app.__test;
 
 const datasets = {
+  "eiken5-2026-1": { label: "英検5級 2026年度第1回", shortLabel: "5級" },
   "eiken2-2026-1": {},
   "eikenp2-2026-1": {},
   "eikenp1-2026-1": {},
@@ -58,6 +59,12 @@ assert.equal(scope.defaultDatasetId(), "eikenp1-2026-1");
 assert.deepEqual(Array.from(scope.datasetGrades()), ["eikenp1"]);
 scope.setDataset("eikenp1-2026-1");
 assert.deepEqual(Array.from(scope.otherGradeDueCounts()), []);
+
+assert.equal(scope.applyGradeScope("5"), true, "5級へ絞り込める");
+assert.deepEqual(datasetIds(), ["eiken5-2026-1"]);
+assert.equal(scope.defaultDatasetId(), "eiken5-2026-1");
+scope.setDataset("eiken5-2026-1");
+assert.equal(scope.datasetHeadline(), "英検5級 大問1");
 
 assert.equal(scope.applyGradeScope("2"), true, "級変更時に元の全データから再絞り込みできる");
 assert.deepEqual(datasetIds(), ["eiken2-2026-1"]);

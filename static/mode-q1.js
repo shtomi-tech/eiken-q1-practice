@@ -30,18 +30,19 @@ function datasetStorageKey() {
 }
 // datasetId の級プレフィックス → 音声フォルダ名。級の判定・同一級のプール化にも使う。
 // ここに無いプレフィックスは「級不明」として扱い、意味練習のプール対象から外す。
-const GRADE_BY_PREFIX = { eiken1: "1", eiken2: "2", eikenp1: "pre1", eikenp2: "pre2", eikentopic: "topic", iuhw: "iuhw" };
+const GRADE_BY_PREFIX = { eiken1: "1", eiken2: "2", eikenp1: "pre1", eikenp2: "pre2", eiken5: "5", eikentopic: "topic", iuhw: "iuhw" };
 const DATASET_ID_RE = new RegExp(`^(${Object.keys(GRADE_BY_PREFIX).join("|")})-(\\d{4}-\\d+|mock-\\d+|set-\\d+)$`);
 const GRADE_KEY = "grade";
 const GRADE_PREFIXES = {
+  "5": ["eiken5"],
   pre2: ["eikenp2"],
   "2": ["eiken2"],
   pre1: ["eikenp1"],
   "1": ["eiken1"],
   iuhw: ["iuhw"],
 };
-const GRADE_CHOICE_ORDER = ["pre2", "2", "pre1", "1", "iuhw"];
-const GRADE_LABELS = { pre2: "準2級", "2": "2級", pre1: "準1級", "1": "1級", iuhw: "医療福祉" };
+const GRADE_CHOICE_ORDER = ["5", "pre2", "2", "pre1", "1", "iuhw"];
+const GRADE_LABELS = { "5": "5級", pre2: "準2級", "2": "2級", pre1: "準1級", "1": "1級", iuhw: "医療福祉" };
 const STUDY_PLAN_KEY = "eiken_q1_study_plan_v1";
 const STUDY_PLAN_VERSION = 1;
 const STUDY_PLAN_TARGET_VOCABULARY = 14000;
@@ -349,7 +350,7 @@ function datasetCleared(datasetId) {
   const saved = progressFor(datasetId);
   return Boolean(saved && saved.finalCheck && saved.finalCheck.cleared);
 }
-// datasetId から級プレフィックス（eiken1 / eiken2 / eikenp1 / eikenp2 / iuhw）を取り出す。
+// datasetId から級プレフィックス（eiken5 / eiken1 / eiken2 / eikenp1 / eikenp2 / iuhw）を取り出す。
 // 意味だけ練習の間隔反復（Leitner）とプール化は、この級単位で行う。
 function gradeOf(datasetId) {
   const match = DATASET_ID_RE.exec(datasetId || "");
@@ -872,7 +873,8 @@ function nextAverageMs(previousMs, ms) {
 }
 
 function itemKeyOf(item) {
-  return `${item.type}:${surfaceOf(item).toLowerCase()}`;
+  const stableKey = item?.itemKey || surfaceOf(item);
+  return `${item.type}:${String(stableKey || "").toLowerCase()}`;
 }
 // 読み取り専用。フィルタ/ソート/件数計算で使う（生成しない＝localStorageを汚さない）。
 function readItemState(progress, key) {
