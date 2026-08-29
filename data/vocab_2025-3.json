@@ -341,6 +341,13 @@
     {
       "q": 11, "is_answer": false, "type": "idiom", "phrase": "shake hands", "pos": "動詞句",
       "meaning": "握手する",
+      "coreImage": {
+        "chain": [
+          { "term": "shake", "gloss": "振る" },
+          { "term": "hands", "gloss": "互いの手" },
+          { "gloss": "互いの手を振り合って握手する" }
+        ]
+      },
       "etymology": "shake（振る）+ hands（手）。あいさつや合意の動作。",
       "example": "They shook hands after the meeting.",
       "exampleTranslation": "会談後、彼らは握手をした。",
@@ -349,6 +356,14 @@
     {
       "q": 11, "is_answer": false, "type": "idiom", "phrase": "give way", "pos": "動詞句",
       "meaning": "道を譲る、崩れる、屈する",
+      "coreImage": {
+        "chain": [
+          { "term": "give", "gloss": "与える" },
+          { "term": "way", "gloss": "道・進路" },
+          { "gloss": "進路を相手に渡して空ける" },
+          { "gloss": "道を譲る" }
+        ]
+      },
       "etymology": "way（道・進路）を give（与える）から「進路を譲る」。",
       "example": "Drivers must give way to pedestrians.",
       "exampleTranslation": "ドライバーは歩行者に道を譲らなければなりません。",
@@ -357,6 +372,14 @@
     {
       "q": 11, "is_answer": true, "type": "idiom", "phrase": "take pains", "pos": "動詞句",
       "meaning": "苦労する、骨を折る、努める",
+      "coreImage": {
+        "chain": [
+          { "term": "take", "gloss": "引き受ける" },
+          { "term": "pains", "gloss": "苦労・手間" },
+          { "gloss": "手間を引き受けて努力する" },
+          { "gloss": "苦労する、骨を折る、努める" }
+        ]
+      },
       "etymology": "pain（苦労）を take（引き受ける）という形で「手間を惜しまない」。",
       "example": "I took pains to study all the vocabulary every night.",
       "exampleTranslation": "私は毎晩すべての単語を勉強するのに苦労しました。",
@@ -365,6 +388,14 @@
     {
       "q": 11, "is_answer": false, "type": "idiom", "phrase": "make sense", "pos": "動詞句",
       "meaning": "意味をなす、理にかなう",
+      "coreImage": {
+        "chain": [
+          { "term": "make", "gloss": "作る" },
+          { "term": "sense", "gloss": "意味・道理" },
+          { "gloss": "意味が組み立てられて道理にかなう" },
+          { "gloss": "意味をなす、理にかなう" }
+        ]
+      },
       "etymology": "sense（意味・感覚）を make（作る）から「意味が成立する」。",
       "example": "Your explanation makes sense.",
       "exampleTranslation": "あなたの説明は理にかなっています。",
@@ -374,6 +405,14 @@
     {
       "q": 12, "is_answer": true, "type": "idiom", "phrase": "more or less", "pos": "副詞句",
       "meaning": "多かれ少なかれ、だいたい",
+      "coreImage": {
+        "chain": [
+          { "term": "more", "gloss": "より多く" },
+          { "term": "or", "gloss": "または" },
+          { "term": "less", "gloss": "より少なく" },
+          { "gloss": "多い方にも少ない方にも寄り切らず、だいたい" }
+        ]
+      },
       "etymology": "more（もっと）or less（少なく）で、細部の差をならして言う表現。",
       "example": "The two brothers were more or less the same size.",
       "exampleTranslation": "二人の兄弟はほぼ同じ身長でした。",
@@ -382,6 +421,14 @@
     {
       "q": 12, "is_answer": false, "type": "idiom", "phrase": "sooner or later", "pos": "副詞句",
       "meaning": "遅かれ早かれ、いつかは",
+      "coreImage": {
+        "chain": [
+          { "term": "sooner", "gloss": "より早く" },
+          { "term": "or", "gloss": "または" },
+          { "term": "later", "gloss": "より遅く" },
+          { "gloss": "早い時期でも遅い時期でも、いつかは" }
+        ]
+      },
       "etymology": "soon（早く）or later（遅く）で、時期はともかく起こるという意味。",
       "example": "Sooner or later, you will need to make a decision.",
       "exampleTranslation": "遅かれ早かれ、決断を下さなければなりません。",
@@ -390,6 +437,14 @@
     {
       "q": 12, "is_answer": false, "type": "idiom", "phrase": "day and night", "pos": "副詞句",
       "meaning": "昼も夜も、絶えず",
+      "coreImage": {
+        "chain": [
+          { "term": "day", "gloss": "昼" },
+          { "term": "and", "gloss": "そして" },
+          { "term": "night", "gloss": "夜" },
+          { "gloss": "昼も夜も途切れず続けて" }
+        ]
+      },
       "etymology": "day（昼）and night（夜）を並べ、ずっと続くことを表す。",
       "example": "The team worked day and night to finish the project.",
       "exampleTranslation": "チームはプロジェクトを完成させるために昼夜を問わず働きました。",
@@ -398,6 +453,14 @@
     {
       "q": 12, "is_answer": false, "type": "idiom", "phrase": "before and after", "pos": "副詞句",
       "meaning": "前後で、前と後に",
+      "coreImage": {
+        "chain": [
+          { "term": "before", "gloss": "前" },
+          { "term": "and", "gloss": "そして" },
+          { "term": "after", "gloss": "後" },
+          { "gloss": "前と後を並べて比べる" }
+        ]
+      },
       "etymology": "before（前）and after（後）。変化の比較でよく使う。",
       "example": "The photos show the room before and after the repair.",
       "exampleTranslation": "写真は改修前と改修後のお部屋です。",
@@ -467,6 +530,14 @@
     {
       "q": 14, "is_answer": false, "type": "idiom", "phrase": "bit by bit", "pos": "副詞句",
       "meaning": "少しずつ",
+      "coreImage": {
+        "chain": [
+          { "term": "bit", "gloss": "小片・少し" },
+          { "term": "by", "gloss": "〜ずつ" },
+          { "term": "bit", "gloss": "小片を重ねて" },
+          { "gloss": "少しずつ積み重ねて" }
+        ]
+      },
       "etymology": "bit（少し）を重ねて、段階的な変化を表す。",
       "example": "Bit by bit, she learned to speak Japanese.",
       "exampleTranslation": "少しずつ彼女は日本語を話せるようになりました。",
@@ -475,6 +546,14 @@
     {
       "q": 14, "is_answer": false, "type": "idiom", "phrase": "far and away", "pos": "副詞句",
       "meaning": "はるかに、断然",
+      "coreImage": {
+        "chain": [
+          { "term": "far", "gloss": "遠く" },
+          { "term": "and", "gloss": "そして" },
+          { "term": "away", "gloss": "離れて" },
+          { "gloss": "遠く離れるほど差が開いて、はるかに" }
+        ]
+      },
       "etymology": "far（遠く）+ away（離れて）で、差が大きいことを強める。",
       "example": "This is far and away the best restaurant in town.",
       "exampleTranslation": "これは町ではるかに最高のレストランです。",
@@ -483,6 +562,14 @@
     {
       "q": 14, "is_answer": false, "type": "idiom", "phrase": "all or nothing", "pos": "形容詞句・名詞句",
       "meaning": "全か無かの、一か八かの",
+      "coreImage": {
+        "chain": [
+          { "term": "all", "gloss": "全部" },
+          { "term": "or", "gloss": "または" },
+          { "term": "nothing", "gloss": "何もない" },
+          { "gloss": "全部かゼロかの二択にして" }
+        ]
+      },
       "etymology": "all（全部）or nothing（無）で中間がないこと。",
       "example": "It was an all-or-nothing decision.",
       "exampleTranslation": "それは全か無かの決断でした。",
@@ -491,6 +578,14 @@
     {
       "q": 14, "is_answer": true, "type": "idiom", "phrase": "safe and sound", "pos": "形容詞句",
       "meaning": "無事で、ぴんぴんして",
+      "coreImage": {
+        "chain": [
+          { "term": "safe", "gloss": "安全な" },
+          { "term": "and", "gloss": "そして" },
+          { "term": "sound", "gloss": "健全な" },
+          { "gloss": "安全で健全な状態で、無事に" }
+        ]
+      },
       "etymology": "safe（安全な）+ sound（健全な）。同じ意味を重ねて強調する表現。",
       "example": "The cat came home safe and sound.",
       "exampleTranslation": "猫は無事に帰ってきました。",
@@ -537,6 +632,14 @@
     {
       "q": 16, "is_answer": false, "type": "idiom", "phrase": "make a move", "pos": "動詞句",
       "meaning": "行動を起こす、動き出す",
+      "coreImage": {
+        "chain": [
+          { "term": "make", "gloss": "作る" },
+          { "term": "move", "gloss": "動き" },
+          { "gloss": "一つの動きを作って踏み出す" },
+          { "gloss": "行動を起こす、動き出す" }
+        ]
+      },
       "etymology": "move（動き）を make（作る）から「一歩動く」。",
       "example": "We should make a move before it gets dark.",
       "exampleTranslation": "暗くなる前に行動を起こさなければなりません。",
@@ -545,6 +648,13 @@
     {
       "q": 16, "is_answer": true, "type": "idiom", "phrase": "take a nap", "pos": "動詞句",
       "meaning": "昼寝をする、仮眠を取る",
+      "coreImage": {
+        "chain": [
+          { "term": "take", "gloss": "取る" },
+          { "term": "nap", "gloss": "短い眠り" },
+          { "gloss": "短い眠りを取る" }
+        ]
+      },
       "etymology": "nap（短い眠り）を take（取る）。",
       "example": "I think I'll take a nap this afternoon.",
       "exampleTranslation": "今日の午後は昼寝しようと思います。",
@@ -553,6 +663,14 @@
     {
       "q": 16, "is_answer": false, "type": "idiom", "phrase": "make a wish", "pos": "動詞句",
       "meaning": "願いごとをする",
+      "coreImage": {
+        "chain": [
+          { "term": "make", "gloss": "作る" },
+          { "term": "wish", "gloss": "願い" },
+          { "gloss": "心の中に願いを作る" },
+          { "gloss": "願いごとをする" }
+        ]
+      },
       "etymology": "wish（願い）を make（作る）から、心の中で願いを立てる。",
       "example": "Make a wish before you blow out the candles.",
       "exampleTranslation": "ろうそくの火を吹き消す前に願い事をしましょう。",
@@ -561,6 +679,14 @@
     {
       "q": 16, "is_answer": false, "type": "idiom", "phrase": "take a chance", "pos": "動詞句",
       "meaning": "思い切ってやってみる、賭けに出る",
+      "coreImage": {
+        "chain": [
+          { "term": "take", "gloss": "取る" },
+          { "term": "chance", "gloss": "機会・可能性" },
+          { "gloss": "不確かな機会をつかんで試す" },
+          { "gloss": "思い切ってやってみる、賭けに出る" }
+        ]
+      },
       "etymology": "chance（機会・可能性）を take（取る）。リスクを含む機会を選ぶこと。",
       "example": "He decided to take a chance and start a new business.",
       "exampleTranslation": "彼はチャンスを掴んで新しいビジネスを始めようと決心した。",

@@ -245,17 +245,6 @@
       ],
       "derivation": "別々の方向へ向ける → 多様化する"
     },
-    "diversity": {
-      "type": "A",
-      "gloss": "多様性",
-      "root": "vert",
-      "parts": [
-        { "form": "di", "kind": "prefix", "gloss": "分けて" },
-        { "form": "vers", "kind": "root", "gloss": "回す・向ける" },
-        { "form": "-ity", "kind": "suffix", "gloss": "〜であること" }
-      ],
-      "derivation": "別々の方向へ向いた状態 → 多様性"
-    },
     "invert": {
       "type": "A",
       "gloss": "逆さにする",
@@ -647,17 +636,6 @@
       ],
       "derivation": "〜に書き付ける → 帰する"
     },
-    "prescription": {
-      "type": "A",
-      "gloss": "処方箋",
-      "root": "scrib",
-      "parts": [
-        { "form": "pre", "kind": "prefix", "gloss": "前もって" },
-        { "form": "script", "kind": "root", "gloss": "書く" },
-        { "form": "-ion", "kind": "suffix", "gloss": "〜すること" }
-      ],
-      "derivation": "前もって書いた指示 → 処方箋"
-    },
     "proscribe": {
       "type": "A",
       "gloss": "禁止する",
@@ -763,17 +741,6 @@
         { "form": "ced", "kind": "root", "gloss": "行く・譲る" }
       ],
       "derivation": "〜へ進んで同意する → 同意した"
-    },
-    "accessibility": {
-      "type": "A",
-      "gloss": "アクセシビリティ",
-      "root": "ced",
-      "parts": [
-        { "form": "ac", "kind": "prefix", "gloss": "〜へ・近くへ" },
-        { "form": "cess", "kind": "root", "gloss": "行く・譲る" },
-        { "form": "-ity", "kind": "suffix", "gloss": "〜できる性質" }
-      ],
-      "derivation": "近くへ進める状態 → アクセシビリティ"
     },
     "cessation": {
       "type": "A",
@@ -1155,17 +1122,6 @@
       ],
       "derivation": "内側にくっついている性質で → 本質的に"
     },
-    "deregulation": {
-      "type": "A",
-      "gloss": "規制緩和",
-      "root": "reg",
-      "parts": [
-        { "form": "de", "kind": "prefix", "gloss": "離れて" },
-        { "form": "reg", "kind": "root", "gloss": "まっすぐにする・支配する" },
-        { "form": "-ation", "kind": "suffix", "gloss": "〜すること" }
-      ],
-      "derivation": "規制を外すこと → 規制緩和"
-    },
     "direct": {
       "type": "A",
       "gloss": "直接の",
@@ -1495,10 +1451,6 @@
       ],
       "derivation": "向かって走り合う → 起こる、生じる；（心に）浮かぶ"
     },
-    "curriculum": {
-      "type": "B",
-      "derivation": "走る道筋から → カリキュラム"
-    },
     "incarcerate": {
       "type": "A",
       "gloss": "投獄された",
@@ -1665,17 +1617,6 @@
       ],
       "derivation": "害のない状態で → 無邪気に、悪気なく"
     },
-    "innovation": {
-      "type": "A",
-      "gloss": "技術革新",
-      "root": "nov",
-      "parts": [
-        { "form": "in", "kind": "prefix", "gloss": "中へ" },
-        { "form": "nov", "kind": "root", "gloss": "新しい" },
-        { "form": "-ation", "kind": "suffix", "gloss": "〜すること" }
-      ],
-      "derivation": "新しくすること → 技術革新"
-    },
     "insignia": {
       "type": "A",
       "gloss": "記章",
@@ -1748,17 +1689,6 @@
         { "form": "-er", "kind": "suffix", "gloss": "〜する人" }
       ],
       "derivation": "中へ行く者 → 侵略者"
-    },
-    "investigation": {
-      "type": "A",
-      "gloss": "捜査",
-      "root": "vestig",
-      "parts": [
-        { "form": "in", "kind": "prefix", "gloss": "中へ" },
-        { "form": "vestig", "kind": "root", "gloss": "足跡" },
-        { "form": "-ation", "kind": "suffix", "gloss": "〜すること" }
-      ],
-      "derivation": "足跡をたどって調べること → 捜査"
     },
     "invigorate": {
       "type": "A",
@@ -1834,17 +1764,6 @@
       ],
       "derivation": "曲げ返して光を戻す → 反射する、よく考える、反映する"
     },
-    "rejection": {
-      "type": "A",
-      "gloss": "拒絶反応",
-      "root": "ject",
-      "parts": [
-        { "form": "re", "kind": "prefix", "gloss": "元へ" },
-        { "form": "ject", "kind": "root", "gloss": "投げる" },
-        { "form": "-ion", "kind": "suffix", "gloss": "〜すること（名詞化）" }
-      ],
-      "derivation": "投げ返して受け入れないこと → 拒絶反応"
-    },
     "relieved": {
       "type": "A",
       "gloss": "安心した",
@@ -1865,17 +1784,6 @@
         { "form": "-al", "kind": "suffix", "gloss": "〜に関する" }
       ],
       "derivation": "状態を治して改善する → 補習の、改善の"
-    },
-    "repatriation": {
-      "type": "A",
-      "gloss": "本国送還",
-      "root": "patri",
-      "parts": [
-        { "form": "re", "kind": "prefix", "gloss": "元へ" },
-        { "form": "patri", "kind": "root", "gloss": "父・祖国" },
-        { "form": "-ation", "kind": "suffix", "gloss": "〜すること" }
-      ],
-      "derivation": "祖国へ戻すこと → 本国送還"
     },
     "repeatedly": {
       "type": "A",
@@ -2121,17 +2029,6 @@
         { "form": "-ant", "kind": "suffix", "gloss": "〜するもの・人" }
       ],
       "derivation": "下へ降りてつながる者 → 子孫"
-    },
-    "deterrent": {
-      "type": "A",
-      "gloss": "抑止力",
-      "root": "terr",
-      "parts": [
-        { "form": "de", "kind": "prefix", "gloss": "離れて" },
-        { "form": "terr", "kind": "root", "gloss": "怖がらせる" },
-        { "form": "-ent", "kind": "suffix", "gloss": "〜するもの・人" }
-      ],
-      "derivation": "怖がらせて遠ざけるもの → 抑止力"
     },
     "detonate": {
       "type": "A",

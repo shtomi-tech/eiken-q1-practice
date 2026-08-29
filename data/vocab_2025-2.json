@@ -485,6 +485,7 @@
     {
       "q": 14, "is_answer": false, "type": "idiom", "phrase": "provided that", "pos": "接続詞句",
       "meaning": "〜という条件で、もし〜ならば",
+      "coreImage": { "chain": [ { "term": "provide", "gloss": "用意する・条件を整える" }, { "term": "that", "gloss": "その条件" }, { "gloss": "条件を満たす場合に限って" } ] },
       "etymology": "provide（用意する、条件をつける）の過去分詞から。「条件が満たされていれば」。",
       "example": "You can borrow my car provided that you return it by evening.",
       "exampleTranslation": "夕方までに返してくれれば、私の車を貸してもらえます。",
@@ -493,6 +494,7 @@
     {
       "q": 14, "is_answer": true, "type": "idiom", "phrase": "rather than", "pos": "接続詞句",
       "meaning": "〜よりむしろ、〜ではなく",
+      "coreImage": { "chain": [ { "term": "rather", "gloss": "むしろ" }, { "term": "than", "gloss": "〜より" }, { "gloss": "比べた上で一方を選び" } ] },
       "etymology": "rather（むしろ）+ than（〜より）。",
       "example": "She chose to walk rather than take the bus.",
       "exampleTranslation": "彼女はバスに乗らずに歩くことを選びました。",
@@ -501,6 +503,7 @@
     {
       "q": 14, "is_answer": false, "type": "idiom", "phrase": "even though", "pos": "接続詞句",
       "meaning": "たとえ〜でも、〜ではあるが",
+      "coreImage": { "chain": [ { "term": "even", "gloss": "〜でさえ" }, { "term": "though", "gloss": "〜だけれども" }, { "gloss": "逆の事実を認めた上で" } ] },
       "etymology": "even（たとえ〜でも）+ though（〜だけれども）。",
       "example": "Even though it was raining, they went for a walk.",
       "exampleTranslation": "雨が降っていたにもかかわらず、彼らは散歩に行きました。",

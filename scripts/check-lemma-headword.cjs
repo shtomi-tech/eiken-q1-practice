@@ -9,6 +9,9 @@ const data = JSON.parse(fs.readFileSync("data/lemmas.json", "utf8"));
 const pages = fs.readFileSync(".github/workflows/pages.yml", "utf8");
 const buildScript = fs.readFileSync("scripts/build_lemma_entries.py", "utf8");
 const allowMissingAudio = process.argv.includes("--allow-missing-audio");
+const flashcardLemmas = data.flashcardLemmas && typeof data.flashcardLemmas === "object" && !Array.isArray(data.flashcardLemmas)
+  ? data.flashcardLemmas
+  : {};
 
 function audioSlug(value) {
   return String(value || "")
@@ -62,6 +65,13 @@ const vocabWords = new Set();
 for (const name of fs.readdirSync("data").filter((value) => /^vocab_.*\.json$/.test(value))) {
   const vocab = JSON.parse(fs.readFileSync(path.join("data", name), "utf8"));
   for (const item of vocab.words || []) vocabWords.add(String(item.word || "").toLowerCase());
+}
+for (const [surface, lemma] of Object.entries(flashcardLemmas)) {
+  assert.equal(surface, surface.trim().toLowerCase(), `暗記カード原形キーが正規化されていない: ${surface}`);
+  assert.ok(typeof lemma === "string" && lemma.trim(), `暗記カード原形値が空: ${surface}`);
+  assert.equal(lemma, lemma.trim().toLowerCase(), `暗記カード原形値が正規化されていない: ${surface}`);
+  assert.notEqual(surface, lemma, `暗記カード原形マップに同じ語を入れない: ${surface}`);
+  assert.ok(vocabWords.has(surface), `暗記カード原形マップの出題形が語彙データにありません: ${surface}`);
 }
 for (const key of Object.keys(data.lemmas)) {
   assert.ok(vocabWords.has(key), `語彙データにない原形キー: ${key}`);
@@ -150,6 +160,8 @@ assert.match(pages, /lemma_audio_count|lemma_count|audio\/lemma/,
 
 const buildFlashCard = extractFunctionBody(js, "buildFlashCard");
 assert.match(buildFlashCard, /canonicalHeadwordOf/);
+assert.match(buildFlashCard, /flashcardLemmaMap/);
+assert.match(buildFlashCard, /buildVocabAudioButton\(item, "flashListenButton", true\)/);
 assert.match(buildFlashCard, /learningEntryOf/);
 assert.match(buildFlashCard, /learningPosOf/);
 assert.match(buildFlashCard, /flashLemmaNote/);
@@ -157,13 +169,19 @@ const renderCheck = extractFunctionBody(js, "renderCheck");
 assert.match(renderCheck, /canonicalHeadwordOf/);
 assert.match(renderCheck, /learningMeaningOf/);
 assert.match(extractFunctionBody(js, "meaningPoolForItems"), /learningMeaningOf/);
-assert.match(extractFunctionBody(js, "lemmaAudioPathOf"), /vocabularyAudioPath/);
+const lemmaAudioPath = extractFunctionBody(js, "lemmaAudioPathOf");
+assert.match(lemmaAudioPath, /vocabularyAudioPath/);
+assert.match(lemmaAudioPath, /useFlashcardLemma/);
+const vocabAudioButton = extractFunctionBody(js, "buildVocabAudioButton");
+assert.match(vocabAudioButton, /flashcardLemmaMap/);
+assert.match(vocabAudioButton, /useFlashcardLemma/);
 const boot = extractFunctionBody(js, "boot");
 assert.match(boot, /data\/lemmas\.json/);
 assert.match(boot, /lemmaEntries/);
+assert.match(boot, /flashcardLemmaMap/);
 
 for (const name of ["surfaceOf", "itemKeyOf", "vocabularyAudioPath"]) {
-  assert.doesNotMatch(extractFunctionBody(js, name), /lemmaMap|lemmaEntries|lemmas|canonicalHeadwordOf|learningEntryOf/,
+  assert.doesNotMatch(extractFunctionBody(js, name), /lemmaMap|lemmaEntries|flashcardLemmaMap|lemmas|canonicalHeadwordOf|learningEntryOf/,
     `${name} は原形マップを参照してはいけません`);
 }
 

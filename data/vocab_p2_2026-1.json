@@ -675,6 +675,15 @@
       "phrase": "none of your business",
       "pos": "慣用句",
       "meaning": "あなたには関係ないこと",
+      "coreImage": {
+        "chain": [
+          { "term": "none", "gloss": "どれもない" },
+          { "term": "of", "gloss": "〜の" },
+          { "term": "your", "gloss": "あなたの" },
+          { "term": "business", "gloss": "関わる事柄" },
+          { "gloss": "あなたが関わる範囲には一つもなく" }
+        ]
+      },
       "example": "That is none of your business.",
       "exampleTranslation": "それはあなたには関係ありません。",
       "etymology": "business は「関わること」。あなたの関わることではない。",

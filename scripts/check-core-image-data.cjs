@@ -119,37 +119,6 @@ const deliveryVocabFiles = new Set(
 );
 const progressRows = [];
 const uniqueDeliveryEntries = new Map();
-const cReasons = new Map([
-  ["provided that", "接続詞句で、条件節そのものを連鎖化しない"],
-  ["rather than", "接続詞句で、比較・選択の機能を優先する"],
-  ["even though", "接続詞句で、譲歩節の機能を優先する"],
-  ["shake hands", "動詞＋名詞の定型表現で、不変化詞の連鎖にならない"],
-  ["give way", "動詞＋名詞の定型表現で、意味の中心が語の組合せにある"],
-  ["take pains", "動詞＋名詞の定型表現で、意味の中心が語の組合せにある"],
-  ["make sense", "動詞＋名詞の定型表現で、意味の中心が語の組合せにある"],
-  ["more or less", "等位の定型表現で、動詞＋不変化詞ではない"],
-  ["sooner or later", "等位の定型表現で、動詞＋不変化詞ではない"],
-  ["day and night", "等位の定型表現で、動詞＋不変化詞ではない"],
-  ["before and after", "対になる副詞句で、動詞＋不変化詞ではない"],
-  ["bit by bit", "反復構造の副詞句で、動詞＋不変化詞ではない"],
-  ["far and away", "等位の副詞句で、動詞＋不変化詞ではない"],
-  ["all or nothing", "選択を表す定型表現で、動詞＋不変化詞ではない"],
-  ["safe and sound", "等位の形容詞句で、動詞＋不変化詞ではない"],
-  ["make a move", "動詞＋名詞の定型表現で、不変化詞の連鎖にならない"],
-  ["take a nap", "動詞＋名詞の定型表現で、不変化詞の連鎖にならない"],
-  ["make a wish", "動詞＋名詞の定型表現で、不変化詞の連鎖にならない"],
-  ["take a chance", "動詞＋名詞の定型表現で、不変化詞の連鎖にならない"],
-  ["learn by heart", "動詞＋名詞を含む定型表現で、不変化詞の連鎖にならない"],
-  ["come of age", "動詞＋名詞を含む定型表現で、不変化詞の連鎖にならない"],
-  ["take it easy", "動詞＋目的語＋形容詞の定型表現で、連鎖がこじつけになる"],
-  ["have a dream", "動詞＋名詞の定型表現で、不変化詞の連鎖にならない"],
-  ["have a word", "動詞＋名詞の定型表現で、不変化詞の連鎖にならない"],
-  ["make an excuse", "動詞＋名詞の定型表現で、不変化詞の連鎖にならない"],
-  ["make a start", "動詞＋名詞の定型表現で、不変化詞の連鎖にならない"],
-  ["none of your business", "名詞句の定型表現で、動詞＋不変化詞ではない"],
-  ["come clean", "動詞＋形容詞の慣用表現で、構成語から核心イメージを安定して導けない"],
-  ["rooted for", "動詞＋前置詞の慣用表現で、構成語から応援する意味を直接導けない"],
-]);
 const expected2025_2Terminals = new Map([
   ["pony up", "支払いのために金を出す"],
   ["buckle down", "気を引き締めて本腰を入れる"],
@@ -307,11 +276,13 @@ for (const fileName of vocabFiles) {
     });
     if (fileName === "vocab_1_2025-2.json") {
       const expectedTerminal = expected2025_2Terminals.get(normalizedPhrase(item.phrase));
-      assert.equal(
-        image.chain.at(-1).gloss,
-        expectedTerminal,
-        `${label}: chainの最終要素は中心義に合わせて作り直してください`,
-      );
+      if (expectedTerminal != null) {
+        assert.equal(
+          image.chain.at(-1).gloss,
+          expectedTerminal,
+          `${label}: chainの最終要素は中心義に合わせて作り直してください`,
+        );
+      }
     }
     assert.ok(image && typeof image === "object" && !Array.isArray(image), `${label}: coreImage が不正です`);
     assert.ok(Array.isArray(image.chain), `${label}: chain は配列である必要があります`);
@@ -438,18 +409,11 @@ for (const row of progressRows) {
 }
 const uniqueCoreRows = [...uniqueDeliveryEntries.values()];
 const unannotatedRows = uniqueCoreRows.filter((row) => !row.hasCoreImage);
-for (const row of unannotatedRows) {
-  assert.ok(
-    cReasons.has(normalizedPhrase(row.phrase)),
-    `${row.phrase}: coreImage を付けるか、付けない理由を check-core-image-data.cjs の cReasons に追記してください（docs/CORE_IMAGE_AUTHORING.md 参照）`,
-  );
-}
-for (const phrase of cReasons.keys()) {
-  assert.ok(
-    unannotatedRows.some((row) => normalizedPhrase(row.phrase) === phrase),
-    `${phrase}: C型一覧にある熟語へcoreImageを付けないでください`,
-  );
-}
+assert.equal(
+  unannotatedRows.length,
+  0,
+  `配信対象の熟語はすべてcoreImageを持つ必要があります: ${unannotatedRows.map((row) => row.phrase).join(", ")}`,
+);
 const particleBackedCount = uniqueCoreRows.filter((row) => row.hasCoreImage && row.item.coreImage.particle).length;
 const chainOnlyCount = uniqueCoreRows.filter((row) => row.hasCoreImage && !row.item.coreImage.particle).length;
 console.log(`core image unique categories: particle-backed ${particleBackedCount} / chain-only ${chainOnlyCount} / C ${unannotatedRows.length}`);

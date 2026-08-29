@@ -1152,7 +1152,15 @@
       "exampleTranslation": "その従業員はなくなったファイルについて白状することにした。",
       "etymology": "come（来る）＋clean（隠し事のない状態）から、白状する慣用表現。",
       "pos": "句動詞",
-      "phrase": "come clean"
+      "phrase": "come clean",
+      "coreImage": {
+        "chain": [
+          { "term": "come", "gloss": "来る" },
+          { "term": "clean", "gloss": "隠し事のない状態" },
+          { "gloss": "隠し事のない状態に出てきて" },
+          { "gloss": "白状する、隠し事を打ち明ける" }
+        ]
+      }
     },
     {
       "q": 24,
@@ -1192,7 +1200,15 @@
       "exampleTranslation": "町全体が決勝戦でその弱小チームを応援した。",
       "etymology": "root（根を張る）＋for（〜を支持して）から、応援する慣用表現。",
       "pos": "句動詞",
-      "phrase": "rooted for"
+      "phrase": "rooted for",
+      "coreImage": {
+        "chain": [
+          { "term": "root", "gloss": "根を張る" },
+          { "term": "for", "gloss": "〜を支持して" },
+          { "gloss": "支持する側に根を張って" },
+          { "gloss": "〜を応援した" }
+        ]
+      }
     },
     {
       "q": 24,

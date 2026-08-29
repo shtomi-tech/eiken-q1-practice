@@ -66,6 +66,7 @@ const VOCAB_GOALS = {
   let DEFAULT_DATASET_ID = null;
   let lemmaMap = {};
   let lemmaEntries = {};
+  let flashcardLemmaMap = {};
   let particleMap = {};
 let wordOriginMap = {};
 let aiCheckEndpoint = "";
@@ -1270,7 +1271,11 @@ function learningEntryOf(item) {
 function learningMeaningOf(item) { return learningEntryOf(item).meaning || item?.meaning || ""; }
 function learningIpaOf(item) { return learningEntryOf(item).ipa || item?.ipa || ""; }
 function learningPosOf(item) { return learningEntryOf(item).pos || item?.pos || ""; }
-function lemmaAudioPathOf(item) {
+function lemmaAudioPathOf(item, useFlashcardLemma = false) {
+  if (useFlashcardLemma && item?.type === "word") {
+    const surface = String(surfaceOf(item) || "").toLowerCase();
+    if (flashcardLemmaMap[surface]) return "";
+  }
   return learningEntryOf(item).audio || vocabularyAudioPath(item);
 }
 function normalizedSurface(value) {
@@ -1392,8 +1397,10 @@ function playVocabAudio(path, button, text) {
   }, { once: true });
   audio.play().catch(finish);
 }
-function buildVocabAudioButton(item, className = "flashListenButton") {
-  const surface = canonicalHeadwordOf(item);
+function buildVocabAudioButton(item, className = "flashListenButton", useFlashcardLemma = false) {
+  const surface = useFlashcardLemma && item?.type === "word"
+    ? flashcardLemmaMap[String(surfaceOf(item) || "").toLowerCase()] || canonicalHeadwordOf(item)
+    : canonicalHeadwordOf(item);
   const audioButton = el("button", {
     class: className,
     type: "button",
@@ -1403,7 +1410,7 @@ function buildVocabAudioButton(item, className = "flashListenButton") {
   });
   audioButton.appendChild(el("span", { class: "audioIcon", "aria-hidden": "true" }, "▶"));
   audioButton.appendChild(el("span", { class: "audioLabel" }, " 音声"));
-  audioButton.addEventListener("click", () => playVocabAudio(lemmaAudioPathOf(item), audioButton, surface));
+  audioButton.addEventListener("click", () => playVocabAudio(lemmaAudioPathOf(item, useFlashcardLemma), audioButton, surface));
   return audioButton;
 }
 function surfaceVariants(value) {
@@ -2780,13 +2787,16 @@ function buildFlashCard(item) {
   const card = el("div", { class: "flash" });
   const head = el("div", { class: "flashHead" });
   const surface = surfaceOf(item);
-  const headword = canonicalHeadwordOf(item);
+  const displayLemma = item.type === "word"
+    ? flashcardLemmaMap[String(surface || "").toLowerCase()]
+    : "";
+  const headword = displayLemma || canonicalHeadwordOf(item);
   const learning = learningEntryOf(item);
   const wordLine = el("div", { class: "flashWordLine" },
     el("div", { class: "flashWord" }, headword),
   );
   if (learning.ipa) wordLine.appendChild(el("div", { class: "flashIpa" }, learning.ipa));
-  if (vocabularyAudioEnabled(item)) wordLine.appendChild(buildVocabAudioButton(item));
+  if (vocabularyAudioEnabled(item)) wordLine.appendChild(buildVocabAudioButton(item, "flashListenButton", true));
   const headContent = el("div", {}, wordLine);
   if (headword !== surface) {
     const lemmaNote = el("div", { class: "flashLemmaNote" },
@@ -3529,9 +3539,14 @@ async function boot() {
       lemmaEntries = lemmaData && lemmaData.entries && typeof lemmaData.entries === "object" && !Array.isArray(lemmaData.entries)
         ? lemmaData.entries
         : {};
+      flashcardLemmaMap = lemmaData && lemmaData.flashcardLemmas
+        && typeof lemmaData.flashcardLemmas === "object" && !Array.isArray(lemmaData.flashcardLemmas)
+        ? lemmaData.flashcardLemmas
+        : {};
     } catch (e) {
       lemmaMap = {};
       lemmaEntries = {};
+      flashcardLemmaMap = {};
     }
     try {
       const particleResponse = await fetch("data/particle_images.json", { cache: "no-store" });
