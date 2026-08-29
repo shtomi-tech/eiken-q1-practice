@@ -592,6 +592,17 @@ h2 {
 }
 .meaningMissionCta { width: 100%; }
 
+.meaningWrongReview {
+  border-top: 2px solid var(--ink);
+  margin-top: 24px;
+  padding-top: 20px;
+}
+.meaningWrongReview .flash { margin-top: 16px; }
+.meaningWrongReview .flash:first-child { margin-top: 0; }
+.meaningReviewCard.meaningReviewCardDone { opacity: .55; }
+.meaningReviewCheckBtn { margin: 14px 18px; }
+.meaningReviewProgress { margin-top: 16px; }
+
 .settingRow {
   display: flex;
   align-items: center;

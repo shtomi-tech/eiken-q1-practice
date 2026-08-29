@@ -24,6 +24,8 @@ flowchart LR
   HOME[問題セット一覧] --> FLASH[STEP 1 暗記カード]
   FLASH --> MEANING[STEP 2 意味チェック]
   MEANING --> PRACTICE
+  MEANING --> MEANING_REVIEW[意味だけ復習・誤答見直し]
+  MEANING_REVIEW --> DONE
   PRACTICE --> DONE[設問完了]
   DONE --> HOME
   HOME --> FINAL[最終チェック]
@@ -47,10 +49,12 @@ flowchart LR
 
 | セッション | 開始条件 | 完了条件 |
 |---|---|---|
-| `Q1_MEANING` | 「間隔復習カード」から意味練習を選ぶ | 今回の最大30語句に回答。CLEAR判定は変更しない |
+| `Q1_MEANING` | 「間隔復習カード」から意味練習を選ぶ | 今回の最大30語句に回答。誤答があれば `Q1_MEANING_REVIEW` へ、なければ結果へ |
+| `Q1_MEANING_REVIEW` | 意味だけ復習で誤答した語句を暗記カードで確認する | 全件で「確認した」を押すと結果へ。途中状態は `meaningWrongItems` / `meaningWrongChecked` に保存 |
 | `Q1_FINAL` | 全設問に回答済み | 全語句の正答率80%以上 |
 
 `Q1_MEANING` は全級共通で、同じ級の3回分を1つのプールとして扱う。対象は通常学習で `learned=true` になった設問の語句だけで、正解するたびに 1日→3日→7日→14日 の間隔で次回へ回る（誤答で「要再確認」に戻る）。語句単位の状態は、その語句が属する回の進捗ブロック `items` に保存する。
+意味だけ復習で誤答した英単語・熟語は、同じセッションの最後に暗記カードで見直す。見直しの「確認した」は学習履歴へ記録するが、間隔の判定は意味チェックの誤答結果として扱い、通常学習の設問復習キューは作らない。
 
 ## 3. 完了条件
 
@@ -96,12 +100,13 @@ eiken_q1_progress_eikenp1-<roundId>.units[<q>]
 5. 旧形式の進捗移行は一度だけ行い、旧データは残す。
 6. `learned=true` だが正誤情報がない旧記録は `answerResult="unknown"` として表示し、誤答扱いにしない。
 7. 旧形式の `cumulativeCycle` や未対応の途中記録は削除せず、現行フローから参照しない。
+8. 意味だけ復習の誤答見直しを途中離脱した場合は、確認済みの語句を保持し、残りの確認後に結果へ進める。
 
 ## 7. 最低限の検証
 
 - `py -3 scripts/check_q1_data.py`
 - `node --check static/app.js`
 - `node --check static/mode-q1.js`
-- 初回起動、17セットの選択、途中再開、誤答後の通常遷移、最終チェック
+- 初回起動、17セットの選択、途中再開、意味だけ復習の誤答見直し、誤答後の通常遷移、最終チェック
 - 旧準1級ローカル／共有URL進捗の移行
 - GitHub Actions成功後の公開HTML・JS・CSS・JSONのHTTP確認

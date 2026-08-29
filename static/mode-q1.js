@@ -309,7 +309,7 @@ const state = {
 
 const RESUME_STAGE_RULES = {
   learn: ["flash", "check", "practice", "done"],
-  meaning: ["check", "done"],
+  meaning: ["check", "meaningReview", "done"],
   final: ["check", "done"],
 };
 const RESUMABLE_MODES = new Set(Object.keys(RESUME_STAGE_RULES));
@@ -658,7 +658,7 @@ function resumeQuestionSupported(value) {
   const q = Number(value);
   return Number.isInteger(q) && Array.isArray(state.itemsByQ[q]) && state.itemsByQ[q].length > 0;
 }
-function resumeDataSupported(saved, items, checkOrder) {
+function resumeDataSupported(saved, items, checkOrder, meaningWrongItems = []) {
   if (!resumeStageAllowed(saved.mode, saved.stage)) return false;
   if (saved.mode === "learn") {
     if (!resumeQuestionSupported(saved.q) || !items.length) return false;
@@ -666,6 +666,13 @@ function resumeDataSupported(saved, items, checkOrder) {
     if (["check", "practice"].includes(saved.stage) && !checkOrder.length) return false;
     if (saved.stage === "check" && !resumeIndexSupported(saved.checkIdx, checkOrder.length)) return false;
     return true;
+  }
+  if (saved.mode === "meaning" && saved.stage === "meaningReview") {
+    const checked = Array.isArray(saved.meaningWrongChecked) ? saved.meaningWrongChecked : [];
+    return checkOrder.length > 0
+      && Array.isArray(meaningWrongItems)
+      && meaningWrongItems.length > 0
+      && checked.every((index) => resumeIndexSupported(index, meaningWrongItems.length));
   }
   if (!checkOrder.length) return false;
   return saved.stage === "done" || resumeIndexSupported(saved.checkIdx, checkOrder.length);
@@ -682,6 +689,11 @@ function resumeDescription(resume) {
     return `第${resume.q}問・${stage}`;
   }
   if (resume.mode === "meaning") {
+    if (resume.stage === "meaningReview") {
+      const checked = Array.isArray(resume.meaningWrongChecked) ? resume.meaningWrongChecked.length : 0;
+      const total = Array.isArray(resume.meaningWrongItems) ? resume.meaningWrongItems.length : 0;
+      return `意味だけ復習・誤答見直し ${checked}/${total}`;
+    }
     const label = resume.dueOnly ? "意味だけ復習" : "全語句の意味確認";
     return `${label} ${Number(resume.checkIdx || 0) + 1}/${resume.checkOrder?.length || 1}`;
   }
@@ -714,6 +726,8 @@ function saveResume() {
     dueOnly: Boolean(session.dueOnly),
     meaningVersion: session.meaningVersion || null,
     meaningBatchSize: session.meaningBatchSize || null,
+    meaningWrongItems: (session.meaningWrongItems || []).map(itemSnapshot),
+    meaningWrongChecked: session.meaningWrongChecked || [],
     practiceAnswered: Boolean(session.practiceAnswered),
     practiceResult: session.practiceResult,
     checkChoices: session._checkChoices || null,
@@ -756,7 +770,8 @@ async function restoreSession() {
   }
   const items = (saved.items || []).map((s) => resolveItem(s, pool)).filter(Boolean);
   let checkOrder = (saved.checkOrder || []).map((s) => resolveItem(s, pool)).filter(Boolean);
-  if (!resumeDataSupported(saved, items, checkOrder)) {
+  const meaningWrongItems = (saved.meaningWrongItems || []).map((s) => resolveItem(s, pool)).filter(Boolean);
+  if (!resumeDataSupported(saved, items, checkOrder, meaningWrongItems)) {
     resumeRecoveryMessage = "途中記録は保持していますが、現在の問題データと一致しないため自動再開できません。第1問から再開してください。";
     resumeUnavailable = true;
     return false;
@@ -772,6 +787,8 @@ async function restoreSession() {
     q: saved.q == null ? null : Number(saved.q),
     items,
     checkOrder,
+    meaningWrongItems,
+    meaningWrongChecked: Array.isArray(saved.meaningWrongChecked) ? saved.meaningWrongChecked : [],
     _checkChoices: saved.checkChoices || null,
     // 旧途中保存のaudioElapsedLogも、現在の表示起点ログとして引き継ぐ。
     responseElapsedLog: Array.isArray(saved.responseElapsedLog)
@@ -2543,6 +2560,8 @@ async function startMeaningPractice(dueOnly = true, queueOverride = null) {
     checkIdx: 0,
     checkAnswered: false,
     meaningCorrect: 0,
+    meaningWrongItems: [],
+    meaningWrongChecked: [],
     dueOnly: Boolean(grade) && dueOnly,
     meaningVersion: grade ? MEANING_PROGRESS_VERSION : null,
     meaningBatchSize: grade ? MEANING_SESSION_SIZE : null,
@@ -2612,6 +2631,7 @@ function renderSession() {
 
   if (session.stage === "flash") renderFlash(body);
   else if (session.stage === "check") renderCheck(body);
+  else if (session.stage === "meaningReview") renderMeaningWrongReview(body);
   else if (session.stage === "practice") renderPractice(body);
   else if (session.stage === "done") renderDone(body);
 }
@@ -2619,11 +2639,17 @@ function renderSession() {
 // 元のitemHead/stageBar/q1Progressは残したまま、スクロール中も現在地が分かる補助バーを上に固定する。
 function sessionStickyNav(q, isMeaning, isFinal) {
   const total = state.qList.length;
-  const posLabel = isFinal || isMeaning
+  const reviewChecked = session.meaningWrongChecked?.length || 0;
+  const reviewTotal = session.meaningWrongItems?.length || 0;
+  const posLabel = isFinal
     ? `${session.checkIdx + 1} / ${session.checkOrder.length}`
-    : (q != null && total ? `第${state.qList.indexOf(q) + 1} / ${total}問` : "");
+    : isMeaning && session.stage === "meaningReview"
+      ? `見直し ${reviewChecked} / ${reviewTotal}`
+      : isMeaning
+        ? `${session.checkIdx + 1} / ${session.checkOrder.length}`
+        : (q != null && total ? `第${state.qList.indexOf(q) + 1} / ${total}問` : "");
   const stageLabel = {
-    flash: "覚える", check: "確かめる", practice: "解く", done: "完了",
+    flash: "覚える", check: "確かめる", meaningReview: "見直し", practice: "解く", done: "完了",
   }[session.stage] || "";
   return el("div", { class: "sessionStickyNav" },
     el("button", { class: "sessionStickyBack ghost", type: "button", onclick: () => { saveResume(); renderHome(); } }, "一覧へ"),
@@ -2635,7 +2661,7 @@ function sessionStickyNav(q, isMeaning, isFinal) {
 function sessionLabel(q, isIdiom, isMeaning, isFinal) {
   if (isFinal) return `最終チェック ${session.checkIdx + 1} / ${session.checkOrder.length}`;
   if (isMeaning) {
-    const label = "意味だけ復習";
+    const label = session.stage === "meaningReview" ? "意味だけ復習・見直し" : "意味だけ復習";
     return `${label} ${session.checkIdx + 1} / ${session.checkOrder.length}`;
   }
   return `第${q}問 ・ ${isIdiom ? "熟語" : "単語"}`;
@@ -2643,6 +2669,7 @@ function sessionLabel(q, isIdiom, isMeaning, isFinal) {
 
 function stageTitle(stage) {
   if (session && session.mode === "final") return `最終チェック${session.checkOrder.length}問`;
+  if (session && session.mode === "meaning" && session.stage === "meaningReview") return "間違えた語句を見直す";
   if (session && session.mode === "meaning") return `意味だけの復習（最大${MEANING_SESSION_SIZE}語句）`;
   return {
     flash: "STEP 1　覚える（暗記カード）",
@@ -2653,6 +2680,14 @@ function stageTitle(stage) {
 }
 
 function meaningBar() {
+  if (session.stage === "meaningReview") {
+    const total = session.meaningWrongItems?.length || 0;
+    const checked = session.meaningWrongChecked?.length || 0;
+    return el("div", { class: "stageBar meaningBar" },
+      el("div", { class: "stagePill active" }, `誤答 ${total}語句`),
+      el("div", { class: "stagePill" }, `確認済 ${checked} / ${total}`),
+    );
+  }
   const answered = session.checkIdx + (session.checkAnswered ? 1 : 0);
   const remaining = Math.max(0, session.checkOrder.length - answered);
   return el("div", { class: "stageBar meaningBar" },
@@ -3274,6 +3309,9 @@ function renderCheck(body) {
       }
       const isCorrect = m === correct;
       session.checkCorrect = isCorrect;
+      if (!isCorrect && session.mode === "meaning") {
+        (session.meaningWrongItems || (session.meaningWrongItems = [])).push(item);
+      }
       [...choiceWrap.children].forEach((c) => {
         c.disabled = true;
         const txt = c.querySelector("span:last-child").textContent;
@@ -3349,10 +3387,88 @@ function appendCheckFeedback(box, item, surface, correct, isCorrect) {
 }
 
 function afterCheckDestination() {
+  if (session.mode === "meaning" && session.stage === "meaningReview") return "done";
+  if (session.mode === "meaning" && session.meaningWrongItems?.length) return "meaningReview";
   return (session.mode === "meaning" || session.mode === "final") ? "done" : "practice";
 }
 function nextAfterCheckLabel() {
+  if (afterCheckDestination() === "meaningReview") return "間違えた語句を見直す →";
   return afterCheckDestination() === "done" ? "結果を見る →" : "本番形式の問題へ →";
+}
+
+/* ---- 意味だけ復習: 誤答語句の見直し ---- */
+function renderMeaningWrongReview(body) {
+  const items = session.meaningWrongItems || [];
+  const checked = new Set(session.meaningWrongChecked || []);
+  const nextLabel = "結果を見る →";
+  const lockedNextLabel = "すべて確認すると結果へ →";
+
+  body.appendChild(el("p", { class: "hint" }, "間違えた英単語・熟語を見直してください。読み終えたら「確認した」を押してください。"));
+
+  const listWrap = el("div", { class: "meaningWrongReview" });
+  const hint = el("p", {
+    id: "meaningWrongReviewProgress",
+    class: "hint meaningReviewProgress",
+    role: "status",
+    "aria-live": "polite",
+  });
+  const nextBtn = el("button", {
+    class: "cta",
+    disabled: "disabled",
+    "aria-describedby": "meaningWrongReviewProgress",
+    onclick: () => {
+      session.stage = "done";
+      renderSession();
+    },
+  }, lockedNextLabel);
+  const updateReviewState = () => {
+    const remaining = items.length - checked.size;
+    const complete = remaining === 0;
+    hint.textContent = complete
+      ? `見直し ${items.length}/${items.length}語句を確認済み`
+      : `見直し ${checked.size}/${items.length}語句を確認済み（残り${remaining}語句）`;
+    nextBtn.disabled = !complete;
+    nextBtn.textContent = complete ? nextLabel : lockedNextLabel;
+    const stickyPos = $("#sessionPanel .sessionStickyPos");
+    if (stickyPos) stickyPos.textContent = `見直し ${checked.size} / ${items.length}`;
+  };
+  updateReviewState();
+
+  items.forEach((item, index) => {
+    const card = buildFlashCard(item);
+    card.classList.add("meaningReviewCard");
+    const checkBtn = el("button", { class: "ghost smallGhost meaningReviewCheckBtn", type: "button" }, "確認した");
+    if (checked.has(index)) {
+      checkBtn.disabled = true;
+      checkBtn.textContent = "確認済み";
+      card.classList.add("meaningReviewCardDone");
+    }
+    checkBtn.addEventListener("click", () => {
+      if (checked.has(index)) return;
+      checked.add(index);
+      session.meaningWrongChecked = [...checked].sort((a, b) => a - b);
+      const datasetId = item._datasetId || state.datasetId;
+      const progress = progressFor(datasetId);
+      appendLearningHistory(progress, {
+        kind: "meaning-review",
+        type: item.type,
+        surface: surfaceOf(item),
+        result: "viewed",
+      });
+      saveProgressFor(datasetId, progress);
+      saveResume();
+      checkBtn.disabled = true;
+      checkBtn.textContent = "確認済み";
+      card.classList.add("meaningReviewCardDone");
+      updateReviewState();
+    });
+    card.appendChild(checkBtn);
+    listWrap.appendChild(card);
+  });
+
+  body.appendChild(hint);
+  body.appendChild(listWrap);
+  body.appendChild(el("div", { class: "actions" }, nextBtn));
 }
 
 function saveFinalResult() {

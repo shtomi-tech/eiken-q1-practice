@@ -24,6 +24,7 @@ function extractFunctionBody(source, name) {
 const meaningMissionBody = extractFunctionBody(js, "meaningMission");
 const intervalBreakdownBody = extractFunctionBody(js, "meaningIntervalBreakdown");
 const renderHomeBody = extractFunctionBody(js, "renderHomeContent");
+const meaningWrongReviewBody = extractFunctionBody(js, "renderMeaningWrongReview");
 
 // --- ホーム上のカード境界とCTA所属 ---
 assert.ok(
@@ -100,6 +101,12 @@ assert.ok(
 assert.ok(meaningMissionBody.includes("間隔復習"), "meaningMission() は「間隔復習」ラベルを描画する必要がある");
 assert.ok(meaningMissionBody.includes("意味だけ復習"), "meaningMission() は「意味だけ復習」見出しを描画する必要がある");
 assert.ok(!meaningMissionBody.includes("中心学習"), "旧ラベル「中心学習」は meaningMission() から除去済みである必要がある");
+
+// --- 意味だけ復習の誤答見直し ---
+assert.ok(js.includes('meaning: ["check", "meaningReview", "done"]') && js.includes('return "meaningReview"'), "意味復習の誤答時に見直しstageへ遷移できる必要がある");
+assert.ok(meaningWrongReviewBody.includes("buildFlashCard"), "誤答した単語・熟語を暗記カードで見直せる必要がある");
+assert.ok(meaningWrongReviewBody.includes("すべて確認すると結果へ"), "全件確認後に結果へ進む導線が必要");
+assert.ok(meaningWrongReviewBody.includes("saveResume"), "誤答語句の確認状態を途中保存する必要がある");
 
 // --- 英検固有仕様の維持 ---
 assert.match(js, /const MEANING_SESSION_SIZE = 30;/, "MEANING_SESSION_SIZE は30のまま維持する");
@@ -188,7 +195,7 @@ assert.ok(
 );
 
 // --- CSS ---
-for (const cls of [".spacedReviewCard", ".meaningMissionMetrics", ".meaningMissionCta", ".meaningMissionInterval", ".meaningMissionOtherGrade"]) {
+for (const cls of [".spacedReviewCard", ".meaningMissionMetrics", ".meaningMissionCta", ".meaningMissionInterval", ".meaningMissionOtherGrade", ".meaningWrongReview", ".meaningReviewCheckBtn"]) {
   assert.ok(css.includes(cls), `CSSに ${cls} の規則が必要`);
 }
 assert.ok(!css.includes(".meaningMission {"), "旧入れ子パネル用のmeaningMissionルート規則は削除する必要がある");

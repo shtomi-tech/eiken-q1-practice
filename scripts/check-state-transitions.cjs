@@ -25,9 +25,11 @@ const startLearnBody = extractFunctionBody(js, "startLearn");
 const startMeaningBody = extractFunctionBody(js, "startMeaningPractice");
 const startFinalBody = extractFunctionBody(js, "startFinalCheck");
 const renderSessionBody = extractFunctionBody(js, "renderSession");
+const saveResumeBody = extractFunctionBody(js, "saveResume");
 const restoreSessionBody = extractFunctionBody(js, "restoreSession");
 const finalUnlockedBody = extractFunctionBody(js, "finalUnlocked");
 const renderDoneBody = extractFunctionBody(js, "renderDone");
+const renderMeaningReviewBody = extractFunctionBody(js, "renderMeaningWrongReview");
 const migrateBody = extractFunctionBody(js, "migrateLegacyPre1Progress");
 const currentResumeBody = extractFunctionBody(js, "currentResume");
 const resumableResumeBody = extractFunctionBody(js, "resumableResume");
@@ -48,12 +50,19 @@ assert.ok(startLearnBody.includes("checkOrder"), "通常学習は意味確認順
 assert.ok(startMeaningBody.includes('mode: "meaning"'), "意味復習はmeaningモードで開始する必要があります");
 assert.ok(startMeaningBody.includes('stage: "check"'), "意味復習はcheckから開始する必要があります");
 assert.ok(startMeaningBody.includes("MEANING_SESSION_SIZE"), "意味復習は最大件数を使う必要があります");
+assert.ok(startMeaningBody.includes("meaningWrongItems"), "意味復習は誤答語句の見直し状態を初期化する必要があります");
 assert.ok(startFinalBody.includes('mode: "final"'), "最終チェックはfinalモードで開始する必要があります");
 assert.ok(startFinalBody.includes("finalUnlocked"), "最終チェック開始時にも解放条件を検査する必要があります");
 
 for (const stage of ["flash", "check", "practice", "done"]) {
   assert.ok(renderSessionBody.includes(`session.stage === "${stage}"`) || renderSessionBody.includes(`stage === "${stage}"`), `renderSessionに${stage}の描画分岐が必要です`);
 }
+assert.ok(renderSessionBody.includes('session.stage === "meaningReview"'), "意味復習には誤答語句の見直し描画分岐が必要です");
+assert.ok(renderMeaningReviewBody.includes("buildFlashCard"), "誤答語句の見直しは暗記カードを表示する必要があります");
+assert.ok(renderMeaningReviewBody.includes("確認した"), "誤答語句の見直しには確認操作が必要です");
+assert.ok(renderMeaningReviewBody.includes("meaningWrongChecked"), "誤答語句の確認状態を保存する必要があります");
+assert.ok(saveResumeBody.includes("meaningWrongItems"), "意味復習の誤答語句を途中保存へ含める必要があります");
+assert.ok(restoreSessionBody.includes("meaningWrongItems"), "意味復習の誤答語句を途中再開時に復元する必要があります");
 assert.ok(finalUnlockedBody.includes("every"), "最終チェックは全設問を確認する必要があります");
 assert.ok(finalUnlockedBody.includes("learned"), "最終チェックは全設問の回答済み状態を解放条件に使う必要があります");
 assert.ok(renderDoneBody.includes("clearResume"), "完了画面で再開記録を削除する必要があります");
