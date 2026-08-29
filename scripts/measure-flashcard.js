@@ -206,7 +206,7 @@
         vw: innerWidth,
         vh: innerHeight,
         word: word ? word.textContent : null,
-        mid: document.querySelector(".originChip")
+        mid: document.querySelector(".originChain") || document.querySelector(".originChip")
           ? "語源"
           : (document.querySelector(".coreChain") ? "核心イメージ" : "なし"),
         M1_navBelowFold: navTopInDocument(nav) - innerHeight,

@@ -42,6 +42,43 @@ function meaningOverlap(derivation, meaning) {
   return false;
 }
 
+function validateOriginChain(chain, label) {
+  assert.ok(Array.isArray(chain), `${label} はchain配列が必要です`);
+  assert.ok(chain.length >= 2 && chain.length <= 5, `${label} は2〜5段にしてください`);
+  chain.forEach((step, index) => {
+    const stepLabel = `${label}[${index}]`;
+    assert.ok(step && typeof step === "object" && !Array.isArray(step), `${stepLabel} が不正です`);
+    if (step.term !== undefined) nonEmptyString(step.term, `${stepLabel}.term`);
+    nonEmptyString(step.gloss, `${stepLabel}.gloss`);
+  });
+  const finalStep = chain.at(-1);
+  assert.equal(
+    Object.prototype.hasOwnProperty.call(finalStep, "term"),
+    false,
+    `${label} の最終段にはtermを付けず、中心義だけを置いてください`,
+  );
+  assert.doesNotMatch(finalStep.gloss, /(?:→|->)/, `${label} の最終段には導出矢印を入れず、中心義だけを置いてください`);
+}
+
+function validateOriginSources(sources, label) {
+  assert.ok(Array.isArray(sources), `${label} はsources配列が必要です`);
+  assert.ok(sources.length >= 2, `${label} は複数サイトのURLが必要です`);
+  const urls = sources.map((source, index) => {
+    const value = nonEmptyString(source, `${label}[${index}]`);
+    let parsed;
+    try {
+      parsed = new URL(value);
+    } catch (error) {
+      assert.fail(`${label}[${index}] は有効なURLにしてください`);
+    }
+    assert.ok(["http:", "https:"].includes(parsed.protocol), `${label}[${index}] はhttp(s) URLにしてください`);
+    return { value, host: parsed.hostname };
+  });
+  assert.equal(new Set(urls.map(({ value }) => value)).size, urls.length, `${label} に同じURLを重複登録できません`);
+  assert.ok(new Set(urls.map(({ host }) => host)).size >= 2, `${label} は2サイト以上を参照してください`);
+  return urls.map(({ value }) => value);
+}
+
 assert.equal(
   meaningOverlap("適当 → した", "統合した、固めた"),
   false,
@@ -156,6 +193,22 @@ for (const [lemma, origin] of originEntries) {
   assert.ok(origin && typeof origin === "object" && !Array.isArray(origin), `${lemma}: originが不正です`);
   assert.ok(["A", "B"].includes(origin.type), `${lemma}: 段階0のtypeはAまたはBです`);
   nonEmptyString(origin.derivation, `${lemma}.derivation`);
+  if (origin.source !== undefined) {
+    nonEmptyString(origin.source, `${lemma}.source`);
+    assert.match(origin.source, /^https?:\/\/\S+$/, `${lemma}.source は有効なURLにしてください`);
+  }
+  if (origin.sources !== undefined) {
+    const sources = validateOriginSources(origin.sources, `${lemma}.sources`);
+    if (origin.source !== undefined) assert.ok(sources.includes(origin.source), `${lemma}.source はsourcesにも含めてください`);
+  }
+  if (origin.chain !== undefined) {
+    validateOriginChain(origin.chain, `${lemma}.chain`);
+    const finalGloss = normalize(origin.chain.at(-1).gloss);
+    assert.ok(
+      vocabularyMeanings.get(lemma).some((meaning) => normalize(meaning) === finalGloss),
+      `${lemma}.chainの最終段はvocab meaningと一致させてください`,
+    );
+  }
   assert.equal(cReasons.has(lemma), false, `${lemma}: C型一覧の語にoriginsを付けてはいけません`);
 
   if (origin.type === "A") {
@@ -206,6 +259,20 @@ for (const [lemma, origin] of originEntries) {
   );
 }
 
+const mock6ManifestEntry = manifest.q1["eiken1-mock-6"];
+assert.ok(mock6ManifestEntry && mock6ManifestEntry.vocabUrl, "英検1級模試第6回のvocabUrlが必要です");
+const mock6Vocab = readJson(path.resolve(ROOT, mock6ManifestEntry.vocabUrl));
+assert.equal(mock6Vocab.words?.length, 84, "英検1級模試第6回は84語を対象にしてください");
+for (const item of mock6Vocab.words) {
+  const surface = String(item.word || "").toLowerCase();
+  const lemma = lemmaMap[surface] || surface;
+  const origin = originsData.origins[lemma];
+  assert.ok(origin, `mock-6 ${surface}: 語源データが必要です`);
+  nonEmptyString(origin.source, `mock-6 ${surface}.source`);
+  validateOriginSources(origin.sources, `mock-6 ${surface}.sources`);
+  validateOriginChain(origin.chain, `mock-6 ${surface}.chain`);
+}
+
 for (const [root, lemmas] of aOriginsByRoot) {
   if (lemmas.length < 2) continue;
   const reverseHits = originEntries.filter(([, origin]) => origin.type === "A" && origin.root === root);
@@ -224,4 +291,5 @@ assert.ok(manifest.q1 && typeof manifest.q1 === "object", "manifest.q1 が必要
 
 const singleRootCount = [...aOriginsByRoot.values()].filter((lemmas) => lemmas.length === 1).length;
 console.log(`word origin roots: ${Object.keys(rootsData.roots).length} roots / ${singleRootCount} single-word roots`);
+console.log(`mock-6 word origin chain: OK (${mock6Vocab.words.length} words)`);
 console.log(`word origin data contract: OK (${originEntries.length} origins / ${Object.keys(rootsData.roots).length} roots)`);

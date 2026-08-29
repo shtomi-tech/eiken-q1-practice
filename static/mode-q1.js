@@ -2856,7 +2856,20 @@ function flashWordOrigin(item) {
   const origin = wordOriginFor(item);
   if (!origin) return null;
   const row = el("div", { class: "flashRow wordOriginRow" });
-  row.appendChild(el("strong", {}, "語源・なりたち"));
+  row.appendChild(el("strong", {}, Array.isArray(origin.chain) ? "語源のイメージ" : "語源・なりたち"));
+
+  if (Array.isArray(origin.chain) && origin.chain.length) {
+    const chain = el("ol", { class: "coreChain originChain", "aria-label": "語源の連鎖" });
+    origin.chain.forEach((step) => {
+      const contents = [];
+      if (step.term) contents.push(el("span", { class: "coreChainTerm" }, step.term));
+      contents.push(el("span", { class: "coreChainGloss" }, step.gloss));
+      chain.appendChild(el("li", { class: "coreChainStep" }, ...contents));
+    });
+    row.appendChild(chain);
+    if (origin.note) row.appendChild(el("p", { class: "coreChainNote" }, origin.note));
+    return row;
+  }
 
   if (origin.type === "B") {
     if (origin.derivation) row.appendChild(el("p", { class: "originDerivation" }, origin.derivation));

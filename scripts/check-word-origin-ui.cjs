@@ -45,7 +45,7 @@ assert.equal(buildFlashCardBody.includes("item.etymology"), false, "単語カー
 assert.equal(js.includes("flashEtym"), false, "旧flashEtymクラスを残してはいけません");
 assert.equal(css.includes(".flashEtym"), false, "旧flashEtymルールを残してはいけません");
 
-for (const marker of ["wordOriginFor", "originChip", "originDerivation", "originChipKind", "originChipForm", "originChipGloss"]) {
+for (const marker of ["wordOriginFor", "originChain", "coreChain", 'el("ol"', "originChip", "originDerivation", "originChipKind", "originChipForm", "originChipGloss"]) {
   assert.ok(flashWordOriginBody.includes(marker), `flashWordOrigin に ${marker} が必要です`);
 }
 assert.ok(flashWordOriginBody.includes("type === \"B\""), "B型の語源を分解なしで表示できる必要があります");
