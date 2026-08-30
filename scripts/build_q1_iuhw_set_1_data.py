@@ -1,10 +1,10 @@
 """国際医療福祉大学の基礎試験セットをQ1形式のJSONへ出力する。
 
-収録語彙は docs/IUHW_BASIC_EXAM_SET_PLAN.md で確定した60語（WORD_LIST）に固定する。
-60語は出題英文（正誤判定の選択肢文）から抜き出した語で、名詞32・形容詞17・動詞7・その他4と
-品詞が偏っている。全問を「正答と同一品詞の4択」で組むことはできないため、
+収録語彙は docs/IUHW_BASIC_EXAM_SET_PLAN.md で確定した60語句（WORD_LIST）に固定する。
+60語句は出題英文（正誤判定の選択肢文）から抜き出したもので、単語58語は名詞32・形容詞17・動詞7・その他2、
+熟語2件と品詞が偏っている。全問を「正答と同一品詞の4択」で組むことはできないため、
 - 空所に入れたときに文法的に成立する語形を choices に置き、
-- 学習見出し語（words[].word）は WORD_LIST の原形のままにする
+- 学習見出し語（words[].word / idioms[].phrase）は WORD_LIST の原形のままにする
 という二層構造にしている（choices と見出し語の対応は check_q1_data.py と同じ活用照合で検証する）。
 """
 
@@ -17,12 +17,13 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from check_q1_data import surfaces_match  # noqa: E402  同じ活用照合を使い回す
+from q1_iuhw_etymology import ETYMOLOGY  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 ROUND_ID = "set-1"
 
-# 見出し語 -> (意味, 品詞, 例文, 例文訳)
+# 見出し語句 -> (意味, 品詞, 例文, 例文訳)
 WORD_LIST = {
     "immigration": ("移民（の流入）", "名詞", "Immigration has brought many young researchers to the country's universities.", "移民の流入によって、多くの若い研究者がその国の大学へやって来た。"),
     "creation": ("創出、生み出すこと", "名詞", "The creation of new knowledge often depends on international cooperation.", "新しい知識の創出は、しばしば国際的な協力に依存している。"),
@@ -100,7 +101,25 @@ WORD_LIST = {
     "in place": ("整備されている", "熟語", "Support programs for foreign workers are already in place.", "外国人労働者への支援制度はすでに整備されている。"),
 }
 
-# choices は空所に入れたときの語形、items は WORD_LIST の見出し語（同じ並び）。
+# 熟語カードに表示する核心イメージ。単語の語源辞書とは別の表示経路を使う。
+IDIOM_CORE_IMAGES = {
+    "according to": {
+        "chain": [
+            {"term": "according", "gloss": "一致して"},
+            {"term": "to", "gloss": "基準・情報に沿って"},
+            {"gloss": "基準や情報に合わせて、〜によれば"},
+        ]
+    },
+    "in place": {
+        "chain": [
+            {"term": "in", "gloss": "中に"},
+            {"term": "place", "gloss": "所定の場所・状態"},
+            {"gloss": "必要な位置・状態に置かれて、整備されている"},
+        ]
+    },
+}
+
+# choices は空所に入れたときの語形、items は WORD_LIST の見出し語句（同じ並び）。
 QUESTIONS = [
     {
         "stem": "The report treats ( ) as an important factor in producing advanced knowledge, because researchers from abroad bring new ideas.",
@@ -219,14 +238,21 @@ def occurrences(text: str, needle: str) -> int:
 
 
 def write_json(path: Path, value: dict) -> None:
-    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    newline = "\r\n" if path.exists() and b"\r\n" in path.read_bytes() else "\n"
+    content = json.dumps(value, ensure_ascii=False, indent=2) + "\n"
+    if newline == "\r\n":
+        content = content.replace("\n", "\r\n")
+    path.write_bytes(content.encode("utf-8"))
 
 
 def build() -> tuple[dict, dict]:
     if len(WORD_LIST) != 60:
-        raise ValueError(f"見出し語は60語である必要があります: {len(WORD_LIST)}")
+        raise ValueError(f"見出し語句は60件である必要があります: {len(WORD_LIST)}")
     if len(QUESTIONS) != 15:
         raise ValueError("IUHWセットは15問である必要があります")
+    idiom_keys = {item for item in WORD_LIST if " " in item}
+    if idiom_keys != set(IDIOM_CORE_IMAGES):
+        raise ValueError(f"熟語の核心イメージ定義が一致しません: {sorted(idiom_keys ^ set(IDIOM_CORE_IMAGES))}")
 
     used = [item for question in QUESTIONS for item in question["items"]]
     if len(used) != len(set(used)):
@@ -253,7 +279,7 @@ def build() -> tuple[dict, dict]:
         details = [WORD_LIST[item] for item in items]
         if len({detail[0] for detail in details}) != 4:
             raise ValueError(f"同一設問内で意味が重複しています: {items}")
-        # 60語は出題英文由来で品詞が偏っており（名詞32・形容詞17・動詞7・その他4）、
+        # 60語句は出題英文由来で品詞が偏っており（単語58語、熟語2件）、
         # 全問を同一品詞では組めない。正答と同じ品詞が2件以上あるか、
         # 空所に入る語形が揃っている設問だけを許し、混在の件数を上限で押さえる。
         answer_pos = details[question["answerIndex"]][1]
@@ -273,8 +299,8 @@ def build() -> tuple[dict, dict]:
         "grade": "国際医療福祉大学",
         "round": ROUND_ID,
         "section": "基礎試験 英語（選択肢文の語彙）",
-        "source": "出題英文から抜き出した60語の学習用自作文（原文未収録）",
-        "counts": {"questions": 15, "words": 60, "idioms": 0, "total": 60},
+        "source": "出題英文から抜き出した60語句の学習用自作文（原文未収録）",
+        "counts": {"questions": 15, "words": len(WORD_LIST) - len(idiom_keys), "idioms": len(idiom_keys), "total": len(WORD_LIST)},
     }
     question_data = {
         "meta": meta,
@@ -290,27 +316,45 @@ def build() -> tuple[dict, dict]:
         ],
     }
     words = []
+    idioms = []
     for q, question in enumerate(QUESTIONS, start=1):
         for index, item in enumerate(question["items"]):
             meaning, pos, example, example_translation = WORD_LIST[item]
-            words.append({
-                "q": q,
-                "word": item,
-                "is_answer": index == question["answerIndex"],
-                "pos": pos,
-                "meaning": meaning,
-                "example": example,
-                "exampleTranslation": example_translation,
-            })
+            if item in idiom_keys:
+                idioms.append({
+                    "q": q,
+                    "is_answer": index == question["answerIndex"],
+                    "type": "idiom",
+                    "phrase": item,
+                    "pos": pos,
+                    "coreImage": IDIOM_CORE_IMAGES[item],
+                    "meaning": meaning,
+                    "example": example,
+                    "exampleTranslation": example_translation,
+                })
+            else:
+                word_data = {
+                    "q": q,
+                    "word": item,
+                    "is_answer": index == question["answerIndex"],
+                    "pos": pos,
+                    "meaning": meaning,
+                    "example": example,
+                    "exampleTranslation": example_translation,
+                }
+                if item in ETYMOLOGY:
+                    word_data["etymology"] = ETYMOLOGY[item]
+                words.append(word_data)
     print(f"品詞混在の設問: {mixed}/15")
-    return {"meta": meta, "words": words, "idioms": []}, question_data
+    return {"meta": meta, "words": words, "idioms": idioms}, question_data
 
 
 def main() -> int:
     vocab, questions = build()
     write_json(DATA_DIR / f"vocab_iuhw_{ROUND_ID}.json", vocab)
     write_json(DATA_DIR / f"questions_iuhw_{ROUND_ID}.json", questions)
-    print(f"生成: {len(questions['questions'])}問 / {len(vocab['words'])}語")
+    counts = vocab["meta"]["counts"]
+    print(f"生成: {len(questions['questions'])}問 / {counts['total']}語句（単語{counts['words']}・熟語{counts['idioms']}）")
     return 0
 
 

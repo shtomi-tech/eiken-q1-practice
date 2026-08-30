@@ -32,6 +32,7 @@ function hasKanji(value) {
 function meaningOverlap(derivation, meaning) {
   const tail = normalize(String(derivation).split(/(?:→|->)/).at(-1));
   const source = normalize(meaning);
+  if (tail === source) return true;
   if (source.length === 1 && hasKanji(source)) return tail.includes(source);
   for (let length = Math.min(6, source.length); length >= 2; length -= 1) {
     for (let start = 0; start + length <= source.length; start += 1) {
@@ -84,6 +85,11 @@ assert.equal(
   meaningOverlap("適当 → した", "統合した、固めた"),
   false,
   "意味の活用語尾だけではderivationを通してはいけません",
+);
+assert.equal(
+  meaningOverlap("kite → たこ", "たこ"),
+  true,
+  "短いひらがなの意味も完全一致なら許可してください",
 );
 
 assert.ok(fs.existsSync(LEMMA_PATH), "data/lemmas.json が必要です");

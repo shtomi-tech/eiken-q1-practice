@@ -30,10 +30,11 @@ assert.equal(buildFlashCardBody.includes("item.etymology"), false, "単語カー
 assert.equal(js.includes("flashEtym"), false, "旧flashEtymクラスを残してはいけません");
 assert.equal(css.includes(".flashEtym"), false, "旧flashEtymルールを残してはいけません");
 
-for (const marker of ["wordOriginFor", "originChain", "coreChain", 'el("ol"', "originChip", "originDerivation", "originChipKind", "originChipForm", "originChipGloss"]) {
+for (const marker of ["wordOriginFor", "originChain", "coreChain", 'el("ol"', "originChip", "originChip-summary", "originDerivation", "originChipKind", "originChipForm", "originChipGloss"]) {
   assert.ok(flashWordOriginBody.includes(marker), `flashWordOrigin に ${marker} が必要です`);
 }
 assert.ok(flashWordOriginBody.includes("type === \"B\""), "B型の語源を分解なしで表示できる必要があります");
+assert.ok(flashWordOriginBody.includes("originChips"), "B型もA型風の語源チップ枠で表示する必要があります");
 // 単語カードは情報量を抑えるため、語根パネル（語根名・注記・仲間語リスト）を出さない。
 assert.equal(flashWordOriginBody.includes("wordOriginPanel"), false, "単語カードに語根パネルを復活させてはいけません");
 assert.equal(js.includes("wordOriginSiblingItems"), false, "語根パネル専用の逆引き関数を残してはいけません");
@@ -66,11 +67,13 @@ for (const selector of [
   ".originChipKind",
   ".originChipForm",
   ".originChipGloss",
+  ".originChip-summary",
   ".originDerivation",
 ]) {
   cssRule(css, selector);
 }
 assert.match(cssRule(css, ".originChip"), /flex-wrap:\s*wrap/, "語源チップは折り返せる必要があります");
+assert.match(cssRule(css, ".originChip-summary"), /flex:\s*1\s+1\s+100%/, "B型の概要チップは語源ブロック幅で表示する必要があります");
 assert.match(cssRule(css, ".originChipKind"), /width:\s*100%/, "種別ラベルは1行を占める必要があります");
 assert.doesNotMatch(cssRule(css, ".originDerivation"), /border-top\s*:/, "語源の導出文を独立した罫線で分けてはいけません");
 assert.doesNotMatch(cssRule(css, ".originDerivation"), /padding-top\s*:/, "語源の導出文に独立ブロック用の上余白を置いてはいけません");

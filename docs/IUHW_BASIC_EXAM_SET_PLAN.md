@@ -10,11 +10,11 @@
 
 国際医療福祉大学 総合型選抜 入試の基礎試験を1セット追加する。
 **本文（passage）は日本語で、英語は正誤判定の選択肢文だけ**という出題形式のため、
-英語部分に出る語彙60語を学習対象にする。英検以外の初のセットになる。
+英語部分に出る語彙60語句（単語58語・熟語2件）を学習対象にする。英検以外の初のセットになる。
 
 出典の扱い: 設問文は実際の選択肢文をもとにするが、空所化のため最小限の書き換えを行う。
 日本語本文は収録しない。著作権上の懸念が出た場合は、設問文を全面的に自作文へ差し替える
-（語彙60語とダミー配置はそのまま使える）。
+（語彙60語句とダミー配置はそのまま使える）。
 
 ## 1. IDと命名
 
@@ -34,8 +34,8 @@
 
 既存契約（[check_q1_data.py:91](../scripts/check_q1_data.py)）は
 **1設問 = 4選択肢 = 語彙4件（うち `is_answer` 1件）**。
-60語 = **15問 × 4択**でちょうど収まる。易しい語（`male` / `figure` / `table` など）は
-正答にせずダミー専用として収録し、60語すべてを意味チェック・間隔復習の対象にする。
+60語句 = **15問 × 4択**でちょうど収まる。易しい語（`male` / `figure` / `table` など）は
+正答にせずダミー専用として収録し、60語句すべてを意味チェック・間隔復習の対象にする。
 
 | Q | 空所（正答） | 元になる選択肢文の題材 |
 | --- | --- | --- |
@@ -77,7 +77,7 @@
    JSON 2本を出力する。[build_q1_p2_mock_1_data.py](../scripts/build_q1_p2_mock_1_data.py)
    と同型。正本がこの1ファイルに集約され、再生成できる。
 2. `data/questions_iuhw_set-1.json` / `data/vocab_iuhw_set-1.json` — 生成物（コミットする）。
-3. `assets/audio/vocab/iuhw/set-1/*.mp3` — 60語のTTS（6節）。
+3. `assets/audio/vocab/iuhw/set-1/` — 60語句のTTS（単語58件・熟語2件）。
 4. `data/manifest.json` / `static/mode-q1.js` / 各チェックスクリプト / `README.md` の追記。
 
 ### 3.1 データ形式
@@ -86,10 +86,12 @@
 
 ```json
 { "meta": { "grade": "国際医療福祉大学", "round": "set-1", "section": "基礎試験 英語（選択肢文の語彙）",
-            "source": "...", "counts": { "words": 60, "idioms": 0, "total": 60 } },
+            "source": "...", "counts": { "words": 58, "idioms": 2, "total": 60 } },
   "words": [ { "q": 1, "word": "immigration", "is_answer": true, "pos": "名詞",
                "meaning": "移民（の流入）", "example": "...", "exampleTranslation": "..." } ],
-  "idioms": [] }
+  "idioms": [ { "q": 15, "is_answer": false, "type": "idiom", "phrase": "according to", "pos": "熟語",
+                "meaning": "〜によれば", "example": "...", "exampleTranslation": "...",
+                "coreImage": { "chain": [ ... ] } } ] }
 ```
 
 `questions_iuhw_set-1.json`
@@ -102,7 +104,7 @@
 ```
 
 `example` / `exampleTranslation` / `pos` は必須チェック対象ではないが、
-暗記カードUIが使うため60語すべてに入れる。
+暗記カードUIが使うため60語句すべてに入れる。
 
 ## 4. コード変更（[static/mode-q1.js](../static/mode-q1.js)）
 
@@ -147,7 +149,8 @@ py -3 scripts/generate_tts_1.py --grade iuhw --round set-1 --dry-run
 py -3 scripts/generate_tts_1.py --grade iuhw --round set-1
 ```
 
-出力先は `assets/audio/vocab/iuhw/set-1/<slug>.mp3`（60ファイル、熟語なし）。
+出力先は単語が `assets/audio/vocab/iuhw/set-1/<slug>.mp3`、熟語が
+`assets/audio/vocab/iuhw/set-1/idiom/<slug>.mp3`（計60ファイル）。
 MP3が無い間はブラウザ内蔵音声にフォールバックする（[mode-q1.js:1005](../static/mode-q1.js)）ため、
 音声生成はデータ投入後に独立して実施できる。
 
@@ -166,7 +169,7 @@ MP3が無い間はブラウザ内蔵音声にフォールバックする（[mode
   （`eiken_q1_progress_iuhw-set-1`）は引き継がれない。**IDを後から変えるなら早いほうがよい。**
 - `shortLabel` 「医療福祉」は級ラベルの位置に出る。他大学セットが増えたら
   「大学入試」等の上位カテゴリへの再設計を検討する（今回はしない）。
-- 語彙60語は選択肢文由来のため、`work` / `show` などの超基礎語は除外済み。
+- 語彙60語句は選択肢文由来のため、`work` / `show` などの超基礎語は除外済み。
 
 ## 9. 実装メモ（2026-08-20）
 
