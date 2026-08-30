@@ -70,7 +70,6 @@ flowchart LR
 |---|---|---|
 | 問題セット | `eiken_q1_dataset` | 現在選択中の級・回 |
 | 大問1進捗 | `eiken_q1_progress_<datasetId>` | 問題別進捗、意味だけ復習の語句状態、学習履歴、最終チェック、再開。旧形式の項目も削除せず保持 |
-| 自作英文 | `eiken_q1_examples_<datasetId>` | 語句別の下書き・AIチェック結果 |
 | 旧Q1互換 | `eiken2_q1_v1` | 旧Q1のデフォルトセットだけを読むための後方互換 |
 
 クラウド読込時は `{ datasetId: progress }` の形を使う。独立版と総合版のQ1は同一のこの形式を使い、`app_save_progress_dataset` で `app='eiken2-q1'` の行に対して現在の回だけを送信し、Supabase側で既存の別回とマージする。`_meta.lastDatasetId` に最後に選んだ回を保存するため、別端末でも同じ回から再開できる。旧 `app='eiken-q1-practice'` 行は読み書きしないが削除しない。

@@ -1,7 +1,7 @@
 const assert = require("node:assert/strict");
-const fs = require("node:fs");
+const { appJs } = require("./lib/app-source.cjs");
 
-const source = fs.readFileSync("static/mode-q1.js", "utf8");
+const source = appJs();
 
 const matches = source.match(/const APP_ID = "([^"]*)";/g) || [];
 assert.equal(matches.length, 1, `expected exactly 1 APP_ID declaration, found ${matches.length}`);

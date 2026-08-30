@@ -103,7 +103,6 @@ MOTION_INTENSITY: 3（既定UIに一貫した押下感・状態変化を与え�
 | 対象 | 状態 | 表現 |
 | --- | --- | --- |
 | 語彙音声 | idle / loading / playing / error | ラベル文言＋`data-audio-state`。playing中は装飾Equalizer Bars（`aria-hidden`） |
-| 自作例文チェック | idle / submitting / ok / revise / error | `data-submit-state`。submitting中はボタンdisabled＋小さいloader。okはSuccess Check、reviseは既存の焦茶静的状態、errorは赤い左罫線＋再試行案内 |
 | 語彙目標のハリネズミ（`.vgHedgehog`） | 停止 / 歩行 | `data-walking`。実績が1語句以上で520ms・steps(2)の上下2フレーム歩行（transformのみ）。reduced-motionでは静止した状態を表示する |
 | 保存状態（`#shareStatus`） | local（非表示）/ syncing / saved / error | harnessの`tone`(`ok`/`syncing`/`ng`)をそのまま利用。syncingはloader、savedは一度だけcheck、errorは静的`!` |
 

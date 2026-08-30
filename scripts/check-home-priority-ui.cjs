@@ -1,25 +1,10 @@
 const assert = require("node:assert/strict");
-const fs = require("node:fs");
+const { appCss, appJs, extractFunctionBody, readJson } = require("./lib/app-source.cjs");
 
-const js = fs.readFileSync("static/mode-q1.js", "utf8");
-const css = fs.readFileSync("static/styles.css", "utf8");
-const manifest = JSON.parse(fs.readFileSync("data/manifest.json", "utf8"));
+const js = appJs();
+const css = appCss();
+const manifest = readJson("data/manifest.json");
 
-function extractFunctionBody(source, name) {
-  const start = source.indexOf(`function ${name}(`);
-  assert.ok(start !== -1, `function ${name}( が見つからない`);
-  const braceStart = source.indexOf("{", start);
-  assert.ok(braceStart !== -1, `${name} の開始 { が見つからない`);
-  let depth = 0;
-  for (let i = braceStart; i < source.length; i += 1) {
-    if (source[i] === "{") depth += 1;
-    else if (source[i] === "}") {
-      depth -= 1;
-      if (depth === 0) return source.slice(start, i + 1);
-    }
-  }
-  throw new Error(`${name} の閉じ } が見つからない`);
-}
 
 const renderHomeBody = extractFunctionBody(js, "renderHomeContent");
 const summaryBody = extractFunctionBody(js, "datasetSummary");

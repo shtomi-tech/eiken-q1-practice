@@ -1,25 +1,10 @@
 const assert = require("node:assert/strict");
-const fs = require("node:fs");
+const { appCss, appJs, extractFunctionBody } = require("./lib/app-source.cjs");
 
-const js = fs.readFileSync("static/mode-q1.js", "utf8");
-const css = fs.readFileSync("static/styles.css", "utf8");
+const js = appJs();
+const css = appCss();
 
 // meaningMission() 本体を波括弧の対応で抜き出す（次の関数名に依存しない）。
-function extractFunctionBody(source, name) {
-  const start = source.indexOf(`function ${name}(`);
-  assert.ok(start !== -1, `function ${name}( が見つからない`);
-  const braceStart = source.indexOf("{", start);
-  assert.ok(braceStart !== -1, `${name} の開始 { が見つからない`);
-  let depth = 0;
-  for (let i = braceStart; i < source.length; i++) {
-    if (source[i] === "{") depth++;
-    else if (source[i] === "}") {
-      depth--;
-      if (depth === 0) return source.slice(start, i + 1);
-    }
-  }
-  throw new Error(`${name} の閉じ } が見つからない`);
-}
 
 const meaningMissionBody = extractFunctionBody(js, "meaningMission");
 const intervalBreakdownBody = extractFunctionBody(js, "meaningIntervalBreakdown");

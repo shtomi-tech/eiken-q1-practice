@@ -1,23 +1,9 @@
 const assert = require("node:assert/strict");
-const fs = require("node:fs");
+const { appCss, appJs, extractFunctionBody } = require("./lib/app-source.cjs");
 
-const js = fs.readFileSync("static/mode-q1.js", "utf8");
-const css = fs.readFileSync("static/styles.css", "utf8");
+const js = appJs();
+const css = appCss();
 
-function extractFunctionBody(source, name) {
-  const start = source.indexOf(`function ${name}(`);
-  assert.ok(start !== -1, `function ${name}( が見つからない`);
-  const braceStart = source.indexOf("{", start);
-  let depth = 0;
-  for (let i = braceStart; i < source.length; i += 1) {
-    if (source[i] === "{") depth += 1;
-    else if (source[i] === "}") {
-      depth -= 1;
-      if (depth === 0) return source.slice(start, i + 1);
-    }
-  }
-  throw new Error(`${name} の閉じ } が見つからない`);
-}
 
 const home = extractFunctionBody(js, "renderHomeContent");
 const studyPanel = extractFunctionBody(js, "studyPlanPanel");

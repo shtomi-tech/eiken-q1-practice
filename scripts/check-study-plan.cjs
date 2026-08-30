@@ -1,8 +1,8 @@
 const assert = require("node:assert/strict");
-const fs = require("node:fs");
 const vm = require("node:vm");
+const { appJs } = require("./lib/app-source.cjs");
 
-const js = fs.readFileSync("static/mode-q1.js", "utf8");
+const js = appJs();
 const exposed = [
   "normalizeStudyPlan",
   "isValidIsoDate",

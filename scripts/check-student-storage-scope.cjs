@@ -1,11 +1,8 @@
 const assert = require("node:assert/strict");
-const fs = require("node:fs");
 const vm = require("node:vm");
+const { appJsWithTestExports } = require("./lib/app-source.cjs");
 
-const source = fs.readFileSync("static/mode-q1.js", "utf8").replace(
-  "return { mount, handleKey };",
-  "return { mount, handleKey, __test: { setStudent: (id) => { storageStudentId = id; }, scopedStorageKey } };",
-);
+const source = appJsWithTestExports("{ setStudent: (id) => { storageStudentId = id; }, scopedStorageKey }");
 const sandbox = { URLSearchParams, encodeURIComponent };
 vm.runInNewContext(`${source}\nglobalThis.app = EikenQ1App;`, sandbox);
 

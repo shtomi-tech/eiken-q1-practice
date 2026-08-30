@@ -2,12 +2,13 @@ const assert = require("node:assert/strict");
 const crypto = require("node:crypto");
 const fs = require("node:fs");
 const path = require("node:path");
+const { appCss, appJs, extractFunctionBody, readJson, readText } = require("./lib/app-source.cjs");
 
-const js = fs.readFileSync("static/mode-q1.js", "utf8");
-const css = fs.readFileSync("static/styles.css", "utf8");
-const data = JSON.parse(fs.readFileSync("data/lemmas.json", "utf8"));
-const pages = fs.readFileSync(".github/workflows/pages.yml", "utf8");
-const buildScript = fs.readFileSync("scripts/build_lemma_entries.py", "utf8");
+const js = appJs();
+const css = appCss();
+const data = readJson("data/lemmas.json");
+const pages = readText(".github/workflows/pages.yml");
+const buildScript = readText("scripts/build_lemma_entries.py");
 const allowMissingAudio = process.argv.includes("--allow-missing-audio");
 const flashcardLemmas = data.flashcardLemmas && typeof data.flashcardLemmas === "object" && !Array.isArray(data.flashcardLemmas)
   ? data.flashcardLemmas
@@ -35,21 +36,6 @@ function normalizeMeaning(value) {
     .replace(/^[ 、]+|[ 、]+$/g, "");
 }
 
-function extractFunctionBody(source, name) {
-  const start = source.indexOf(`function ${name}(`);
-  assert.ok(start !== -1, `function ${name}( が見つからない`);
-  const braceStart = source.indexOf("{", start);
-  assert.ok(braceStart !== -1, `${name} の開始 { が見つからない`);
-  let depth = 0;
-  for (let i = braceStart; i < source.length; i++) {
-    if (source[i] === "{") depth++;
-    if (source[i] === "}") {
-      depth--;
-      if (depth === 0) return source.slice(start, i + 1);
-    }
-  }
-  assert.fail(`${name} の本体を閉じる } が見つからない`);
-}
 
 assert.equal(data.meta?.schemaVersion, 2, "lemmas.json はschemaVersion 2である必要があります");
 assert.ok(data.lemmas && typeof data.lemmas === "object" && !Array.isArray(data.lemmas));

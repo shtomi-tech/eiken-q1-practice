@@ -1,9 +1,9 @@
 const assert = require("node:assert/strict");
-const fs = require("node:fs");
 const vm = require("node:vm");
+const { appCss, appJs } = require("./lib/app-source.cjs");
 
-const js = fs.readFileSync("static/mode-q1.js", "utf8");
-const css = fs.readFileSync("static/styles.css", "utf8");
+const js = appJs();
+const css = appCss();
 
 const block = js.match(/const VOCAB_GOALS = \{[\s\S]*?\n\};/);
 assert.ok(block, "VOCAB_GOALS の定義が見つからない");

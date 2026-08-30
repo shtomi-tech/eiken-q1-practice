@@ -1,25 +1,10 @@
 const assert = require("node:assert/strict");
-const fs = require("node:fs");
+const { appJs, extractFunctionBody, readJson, readText } = require("./lib/app-source.cjs");
 
-const js = fs.readFileSync("static/mode-q1.js", "utf8");
-const spec = fs.readFileSync("docs/STATE_TRANSITIONS.md", "utf8");
-const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8"));
+const js = appJs();
+const spec = readText("docs/STATE_TRANSITIONS.md");
+const packageJson = readJson("package.json");
 
-function extractFunctionBody(source, name) {
-  const start = source.indexOf(`function ${name}(`);
-  assert.ok(start !== -1, `function ${name}( が見つからない`);
-  const braceStart = source.indexOf("{", start);
-  assert.ok(braceStart !== -1, `${name} の開始 { が見つからない`);
-  let depth = 0;
-  for (let i = braceStart; i < source.length; i += 1) {
-    if (source[i] === "{") depth += 1;
-    else if (source[i] === "}") {
-      depth -= 1;
-      if (depth === 0) return source.slice(start, i + 1);
-    }
-  }
-  throw new Error(`${name} の閉じ } が見つからない`);
-}
 
 const startLearnBody = extractFunctionBody(js, "startLearn");
 const startMeaningBody = extractFunctionBody(js, "startMeaningPractice");

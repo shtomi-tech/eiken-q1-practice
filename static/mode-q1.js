@@ -5,13 +5,15 @@
    学習フロー：暗記カード → 理解チェック → 本番演習（設問ごと）
    ※ 間隔反復（Leitner）は全級の「意味だけ練習」に対応。進捗は localStorage に保存。
    kobun-vocab と同じ方式で IIFE に閉じ、{ mount, handleKey } のみを公開する。
+
+   ※ このファイルは static/src/*.js から生成される。直接編集しないこと。
+      編集は static/src/ 側で行い、`npm run build` で再生成する。
    ============================================================ */
 
 const EikenQ1App = (function () {
 
 const LEGACY_STORE_KEY = "eiken2_q1_v1";
 const STORE_PREFIX = "eiken_q1_progress_";
-const EXAMPLE_STORE_PREFIX = "eiken_q1_examples_";
 const DATASET_KEY = "eiken_q1_dataset";
 const LEGACY_PRE1_PROGRESS_KEY = "eiken_pre1_progress_v1";
 const LEGACY_PRE1_ROUND_KEY = "eiken_pre1_round";
@@ -69,7 +71,6 @@ const VOCAB_GOALS = {
   let lemmaEntries = {};
   let flashcardLemmaMap = {};
 let wordOriginMap = {};
-let aiCheckEndpoint = "";
 
 function isValidIsoDate(value) {
   return typeof value === "string"
@@ -277,7 +278,7 @@ function applyGradeScope(gradeCode) {
 function resolveGradeCode() {
   const fromUrl = new URLSearchParams(window.location.search).get("g") || "";
   if (GRADE_PREFIXES[fromUrl]) {
-    try { localStorage.setItem(scopedStorageKey(GRADE_KEY), fromUrl); } catch (e) { /* ignore */ }
+    writeStored(scopedStorageKey(GRADE_KEY), fromUrl);
     return fromUrl;
   }
   try {
@@ -304,7 +305,6 @@ const state = {
   qList: [],      // [1..n]
   meaningPool: { word: [], idiom: [] }, // ダミー用の意味プール
   progress: { units: {} },
-  userExamples: {},
 };
 
 const RESUME_STAGE_RULES = {
@@ -320,22 +320,17 @@ let needsGradeChoice = false;
 function resumeStageAllowed(mode, stage) {
   return Boolean(RESUME_STAGE_RULES[mode]?.includes(stage));
 }
-
-async function loadAiConfig() {
-  aiCheckEndpoint = "";
-  try {
-    const response = await fetch("static/config.json", { cache: "no-store" });
-    if (!response.ok) return;
-    const config = await response.json();
-    if (config && typeof config.aiCheckEndpoint === "string") {
-      aiCheckEndpoint = config.aiCheckEndpoint.trim();
-    }
-  } catch (e) {
-    // AI未設定でも、通常の語彙演習と下書き保存は続けられる。
-  }
-}
-
 /* ---- progress (localStorage) ---- */
+// localStorage への書き込みは失敗しても学習を止めない（容量超過・プライベートモード等）。
+function writeStored(key, value) {
+  try { localStorage.setItem(key, value); } catch (e) { /* ignore */ }
+}
+function writeStoredJson(key, value) {
+  writeStored(key, JSON.stringify(value));
+}
+function removeStored(key) {
+  try { localStorage.removeItem(key); } catch (e) { /* ignore */ }
+}
 function loadDatasetId() {
   try {
     const id = localStorage.getItem(datasetStorageKey());
@@ -451,7 +446,7 @@ function progressFor(datasetId) {
 }
 function saveProgressFor(datasetId, progress) {
   if (datasetId === state.datasetId) { saveProgress(); return; }
-  try { localStorage.setItem(progressKey(datasetId), JSON.stringify(progress)); } catch (e) { /* ignore */ }
+  writeStoredJson(progressKey(datasetId), progress);
   if (cloud) cloud.queueSave({
     datasetId,
     progress,
@@ -505,7 +500,7 @@ function readStudyPlanLocal() {
 }
 function saveStudyPlan() {
   if (!studyPlan) return;
-  try { localStorage.setItem(scopedStorageKey(STUDY_PLAN_KEY), JSON.stringify(studyPlan)); } catch (e) { /* ignore */ }
+  writeStoredJson(scopedStorageKey(STUDY_PLAN_KEY), studyPlan);
 }
 function loadStudyPlan() {
   const limit = studyPlanQuestionLimit();
@@ -602,36 +597,8 @@ function migrateLegacyPre1Progress(legacyStore) {
   } catch (e) { /* ignore */ }
   return changed;
 }
-function examplesKey(datasetId = state.datasetId) {
-  return scopedStorageKey(EXAMPLE_STORE_PREFIX + datasetId);
-}
-function loadUserExamples(datasetId = state.datasetId) {
-  try {
-    const raw = localStorage.getItem(examplesKey(datasetId));
-    if (!raw) return {};
-    const parsed = JSON.parse(raw);
-    return parsed && typeof parsed === "object" ? parsed : {};
-  } catch (e) {
-    return {};
-  }
-}
-function saveUserExamples() {
-  try {
-    localStorage.setItem(examplesKey(), JSON.stringify(state.userExamples));
-  } catch (e) { /* ignore */ }
-}
-function exampleItemKey(item) {
-  return `${item.type}:${item.q}:${surfaceOf(item).toLowerCase()}`;
-}
-function userExampleRecord(item) {
-  const key = exampleItemKey(item);
-  if (!state.userExamples[key] || typeof state.userExamples[key] !== "object") {
-    state.userExamples[key] = { draft: "", feedback: null, updatedAt: null };
-  }
-  return state.userExamples[key];
-}
 function saveProgress() {
-  try { localStorage.setItem(progressKey(), JSON.stringify(state.progress)); } catch (e) { /* ignore */ }
+  writeStoredJson(progressKey(), state.progress);
   if (cloud) cloud.queueSave();
 }
 function itemSnapshot(item) {
@@ -1207,11 +1174,11 @@ function applyCloudProgress(map) {
     ? map._meta.lastDatasetId
     : "";
   if (lastDatasetId && DATASETS[lastDatasetId]) {
-    try { localStorage.setItem(datasetStorageKey(), lastDatasetId); } catch (e) { /* ignore */ }
+    writeStored(datasetStorageKey(), lastDatasetId);
   }
   Object.entries(map).forEach(([id, prog]) => {
     if (DATASETS[id] && prog && typeof prog === "object") {
-      try { localStorage.setItem(progressKey(id), JSON.stringify(prog)); } catch (e) { /* ignore */ }
+      writeStoredJson(progressKey(id), prog);
     }
   });
 }
@@ -1272,7 +1239,6 @@ function learningEntryOf(item) {
   };
 }
 function learningMeaningOf(item) { return learningEntryOf(item).meaning || item?.meaning || ""; }
-function learningIpaOf(item) { return learningEntryOf(item).ipa || item?.ipa || ""; }
 function learningPosOf(item) { return learningEntryOf(item).pos || item?.pos || ""; }
 function lemmaAudioPathOf(item, useFlashcardLemma = false) {
   if (useFlashcardLemma && item?.type === "word") {
@@ -1508,13 +1474,12 @@ async function loadData(datasetId = state.datasetId) {
   state.qList = [];
   state.meaningPool = { word: [], idiom: [] };
   state.progress = loadProgress(datasetId);
-  state.userExamples = loadUserExamples(datasetId);
   const savedResume = state.progress.resume;
   if (savedResume && (!RESUMABLE_MODES.has(savedResume.mode) || !resumeStageAllowed(savedResume.mode, savedResume.stage))) {
     resumeRecoveryMessage = "以前の形式の途中記録は保持しています。現在の学習フローでは、第1問から再開してください。";
     resumeUnavailable = true;
   }
-  try { localStorage.setItem(datasetStorageKey(), datasetId); } catch (e) { /* ignore */ }
+  writeStored(datasetStorageKey(), datasetId);
 
   const current = dataset();
   const [vocab, qs] = await Promise.all([
@@ -1950,7 +1915,7 @@ function renderHomeContent() {
           type: "button",
           onclick: () => {
             if (!confirm("学習する級を変更します。現在の級以外の進捗も消えません。変更しますか？")) return;
-            try { localStorage.removeItem(scopedStorageKey(GRADE_KEY)); } catch (e) { /* ignore */ }
+            removeStored(scopedStorageKey(GRADE_KEY));
             needsGradeChoice = true;
             renderHome();
           },
@@ -1967,7 +1932,7 @@ function renderGradeChoice() {
     class: "datasetGradeChoice",
     type: "button",
     onclick: async () => {
-      try { localStorage.setItem(scopedStorageKey(GRADE_KEY), code); } catch (e) { /* ignore */ }
+      writeStored(scopedStorageKey(GRADE_KEY), code);
       if (!applyGradeScope(code)) return;
       needsGradeChoice = false;
       state.datasetId = loadDatasetId();
@@ -3002,197 +2967,6 @@ function flashExampleRow(item) {
   return row;
 }
 
-function flashRelatedRow(item) {
-  const row = el("div", { class: "flashRow flashRelated" });
-  row.appendChild(el("strong", {}, "関連語"));
-  const list = el("div", { class: "relatedWordList" });
-  item.relatedWords.forEach((related) => {
-    const relation = related.relation === "word_family" ? "語族" : (related.relation || "関連語");
-    const chip = el("div", { class: "relatedWord" },
-      el("span", { class: "relatedWordSurface" }, related.word || ""),
-      el("span", { class: "relatedWordMeaning" }, `${related.meaning || ""}（${relation}）`),
-    );
-    list.appendChild(chip);
-  });
-  row.appendChild(list);
-  return row;
-}
-
-function countEnglishWords(text) {
-  return String(text || "").trim().split(/\s+/).filter(Boolean).length;
-}
-
-function validateSelfExample(item, sentence) {
-  const text = String(sentence || "").trim();
-  if (!text) return "まず自作英文を入力してください。";
-  if (text.length > 280) return "英文は280文字以内で入力してください。";
-  const target = surfaceOf(item).toLowerCase();
-  if (!text.toLowerCase().includes(target)) return `「${surfaceOf(item)}」を含む英文にしてください。`;
-  return "";
-}
-
-const SELF_EXAMPLE_BUTTON_LABEL = {
-  idle: "AIでチェック",
-  submitting: "確認中…",
-  ok: "AIでチェック",
-  revise: "AIでチェック",
-  error: "AIでチェック",
-};
-function setSelfExampleButtonState(button, stateName) {
-  if (!button) return;
-  button.dataset.submitState = stateName;
-  const spinner = button.querySelector(".submitSpinner");
-  if (stateName === "submitting") {
-    if (!spinner) button.insertBefore(el("span", { class: "submitSpinner", "aria-hidden": "true" }), button.firstChild);
-  } else if (spinner) {
-    spinner.remove();
-  }
-  const labelNode = button.querySelector(".submitLabel");
-  if (labelNode) labelNode.textContent = SELF_EXAMPLE_BUTTON_LABEL[stateName] || SELF_EXAMPLE_BUTTON_LABEL.idle;
-}
-function renderSelfExampleFeedback(host, feedback) {
-  host.innerHTML = "";
-  if (!feedback) return;
-  const verdict = feedback.verdict === "ok" ? "ok" : "revise";
-  const title = verdict === "ok" ? "使い方を確認しました" : "少し見直してみましょう";
-  const box = el("div", { class: `selfExampleFeedback ${verdict}`, role: "status" },
-    el("p", { class: "selfExampleFeedbackTitle" }, title),
-  );
-  if (feedback.meaningFit) box.appendChild(el("p", {}, `意味との一致：${feedback.meaningFit === "good" ? "よく合っています" : "要確認"}`));
-  if (feedback.grammar?.status) box.appendChild(el("p", {}, `文法：${feedback.grammar.status === "ok" ? "問題ありません" : "要確認"}`));
-  if (feedback.explanationJa) box.appendChild(el("p", { class: "selfExampleFeedbackText" }, feedback.explanationJa));
-  if (feedback.suggestedSentence) {
-    box.appendChild(el("p", { class: "selfExampleSuggestionLabel" }, "より自然な例"));
-    box.appendChild(el("p", { class: "selfExampleSuggestion" }, feedback.suggestedSentence));
-  }
-  if (feedback.nextHint) box.appendChild(el("p", { class: "selfExampleFeedbackText" }, `次の一手：${feedback.nextHint}`));
-  host.appendChild(box);
-}
-function renderSelfExampleError(host) {
-  host.innerHTML = "";
-  host.appendChild(el("div", { class: "selfExampleFeedback error", role: "alert" },
-    el("p", { class: "selfExampleFeedbackTitle" }, "送信できませんでした"),
-    el("p", { class: "selfExampleFeedbackText" }, "通信状況を確認して、もう一度お試しください。下書きは保存されています。"),
-  ));
-}
-
-async function checkSelfExample(item, textarea, checkButton, status, feedbackHost) {
-  const sentence = textarea.value.trim();
-  const validationMessage = validateSelfExample(item, sentence);
-  if (validationMessage) {
-    status.textContent = validationMessage;
-    status.className = "selfExampleStatus ng";
-    return;
-  }
-  if (!aiCheckEndpoint) {
-    status.textContent = "AIチェックの接続設定がまだありません。下書きは保存できます。";
-    status.className = "selfExampleStatus";
-    return;
-  }
-
-  const record = userExampleRecord(item);
-  record.draft = sentence;
-  record.feedback = null;
-  record.updatedAt = new Date().toISOString();
-  saveUserExamples();
-  checkButton.disabled = true;
-  setSelfExampleButtonState(checkButton, "submitting");
-  status.textContent = "AIが英文を確認しています…";
-  status.className = "selfExampleStatus";
-  feedbackHost.innerHTML = "";
-  try {
-    const response = await fetch(aiCheckEndpoint, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        word: surfaceOf(item),
-        meaning: item.meaning,
-        partOfSpeech: item.pos || "",
-        sentence,
-        learnerLevel: dataset().shortLabel,
-      }),
-    });
-    const payload = await response.json().catch(() => ({}));
-    if (!response.ok || !payload.feedback) throw new Error(payload.error || `HTTP ${response.status}`);
-    record.feedback = payload.feedback;
-    record.checkedAt = new Date().toISOString();
-    saveUserExamples();
-    renderSelfExampleFeedback(feedbackHost, record.feedback);
-    setSelfExampleButtonState(checkButton, record.feedback.verdict === "ok" ? "ok" : "revise");
-    status.textContent = "チェック結果を保存しました。";
-    status.className = "selfExampleStatus ok";
-  } catch (error) {
-    setSelfExampleButtonState(checkButton, "error");
-    renderSelfExampleError(feedbackHost);
-    status.textContent = "AIチェックに失敗しました。";
-    status.className = "selfExampleStatus ng";
-    console.error(error);
-  } finally {
-    checkButton.disabled = false;
-  }
-}
-
-function buildSelfExamplePanel(item) {
-  const record = userExampleRecord(item);
-  const panel = el("section", { class: "selfExamplePanel", "aria-labelledby": `self-example-${item.q}` });
-  panel.appendChild(el("div", { class: "selfExampleHead" },
-    el("div", {},
-      el("p", { class: "label" }, "OUTPUT PRACTICE"),
-      el("h3", { id: `self-example-${item.q}` }, "自作英文を作る"),
-    ),
-    el("span", { class: "selfExampleTag" }, "任意・保存できます"),
-  ));
-  panel.appendChild(el("p", { class: "selfExamplePrompt" }, `「${surfaceOf(item)}」を使って、あなた自身の英文を1文作ってみましょう。`));
-  const textareaId = `self-example-input-${item.q}`;
-  const label = el("label", { class: "fieldLabel", for: textareaId }, "自作英文");
-  const textarea = el("textarea", {
-    id: textareaId,
-    rows: "4",
-    maxlength: "280",
-    placeholder: `例：I used ${surfaceOf(item)} to explain the idea.`,
-  });
-  textarea.value = record.draft || "";
-  label.appendChild(textarea);
-  panel.appendChild(label);
-  const status = el("p", { class: "selfExampleStatus", role: "status", "aria-live": "polite" });
-  const count = el("span", { class: "selfExampleCount" }, `${countEnglishWords(record.draft)} words`);
-  const meta = el("div", { class: "selfExampleMeta" }, count, status);
-  panel.appendChild(meta);
-  const feedbackHost = el("div", { class: "selfExampleFeedbackHost" });
-  renderSelfExampleFeedback(feedbackHost, record.feedback);
-  panel.appendChild(feedbackHost);
-  const saveButton = el("button", { class: "ghost", type: "button" }, "下書きを保存");
-  const checkButton = aiCheckEndpoint
-    ? el("button", { class: "cta", type: "button", "data-submit-state": "idle" }, el("span", { class: "submitLabel" }, "AIでチェック"))
-    : el("button", { class: "cta", type: "button", disabled: "disabled" }, "AIチェックは未設定");
-  const actions = el("div", { class: "selfExampleActions" }, saveButton, checkButton);
-  panel.appendChild(actions);
-  if (!aiCheckEndpoint) panel.appendChild(el("p", { class: "hint selfExampleUnavailable" }, "AI接続後にチェックが使えるようになります。下書き保存は利用できます。"));
-
-  function saveDraft() {
-    const current = userExampleRecord(item);
-    current.draft = textarea.value;
-    current.updatedAt = new Date().toISOString();
-    saveUserExamples();
-    status.textContent = "下書きを保存しました。";
-    status.className = "selfExampleStatus ok";
-  }
-  textarea.addEventListener("input", () => {
-    const current = userExampleRecord(item);
-    current.draft = textarea.value;
-    current.feedback = null;
-    current.updatedAt = new Date().toISOString();
-    saveUserExamples();
-    count.textContent = `${countEnglishWords(textarea.value)} words`;
-    feedbackHost.innerHTML = "";
-    if (aiCheckEndpoint) setSelfExampleButtonState(checkButton, "idle");
-    status.textContent = "入力を保存中";
-    status.className = "selfExampleStatus";
-  });
-  saveButton.addEventListener("click", saveDraft);
-  checkButton.addEventListener("click", () => checkSelfExample(item, textarea, checkButton, status, feedbackHost));
-  return panel;
-}
 
 function appendStemWithBreaks(target, stem) {
   const lines = stem
@@ -3618,7 +3392,6 @@ async function boot() {
       flashcardLemmaMap = {};
     }
     await loadWordOriginData();
-    await loadAiConfig();
 
     // 旧準1級アプリのクラウド進捗は読み取り専用で一度だけ取り込む。
     legacyPre1Cloud = createCloud({

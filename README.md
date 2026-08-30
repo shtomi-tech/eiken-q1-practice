@@ -137,10 +137,9 @@ py -3 scripts/add_example_translations.py
 
 ## モーション・状態表示
 
-正誤判定、進捗・残数、語彙音声、自作例文チェック、保存状態には短い状態変化を付けています（詳細は `DESIGN.md` のモーション節）。
+正誤判定、進捗・残数、語彙音声、保存状態には短い状態変化を付けています（詳細は `DESIGN.md` のモーション節）。
 
 - 語彙音声ボタンは `data-audio-state="idle|loading|playing|error"` で状態を持ち、ラベル文言でも状態を示します。
-- 自作例文チェックのボタンは `data-submit-state="idle|submitting|ok|revise|error"` で状態を持ち、送信中は二重送信を防ぐため無効化されます。
 - 保存状態（画面右上）はローカル保存中は非表示、クラウド同期時のみ「保存中／保存済み／失敗」をアイコンと文言で表示します。
 - OS・ブラウザの「アニメーションを減らす」設定（`prefers-reduced-motion: reduce`）が有効な場合、装飾アニメーションはすべて停止し、状態を示す文言・記号はそのまま表示されます。
 
@@ -166,13 +165,14 @@ py -3 scripts/add_example_translations.py
 
 - `eiken_q1_dataset`
 - `eiken_q1_progress_<datasetId>`
-- `eiken_q1_examples_<datasetId>`
 - `eiken_q1_study_plan_v1`
 - 旧Q1互換: `eiken2_q1_v1`
 
 ## 構成
 
-- `static/mode-q1.js`: 全級共通の大問1ロジック
+- `static/src/*.js`: 全級共通の大問1ロジックの正本（領域ごとに分割）
+- `static/mode-q1.js`: `static/src/*.js` の結合結果。**生成物なので直接編集しない**
+- `scripts/build-mode-q1.cjs`: 上記の結合ビルド（`npm run build`）
 - `static/app.js`: Q1アプリの起動だけを担当する薄いシェル
 - `static/vendor/harness/cloud.js`: 生徒別クラウド同期の生成物。直接編集しない
 - `scripts/build_q1_pre1_data.py`: 準1級Q1データの抽出

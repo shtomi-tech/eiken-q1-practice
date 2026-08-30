@@ -1,8 +1,8 @@
 const assert = require("node:assert/strict");
-const fs = require("node:fs");
 const vm = require("node:vm");
+const { appJs } = require("./lib/app-source.cjs");
 
-const js = fs.readFileSync("static/mode-q1.js", "utf8");
+const js = appJs();
 assert.match(js, /const GRADE_PREFIXES = \{/);
 assert.match(js, /const GRADE_CHOICE_ORDER = \["5", "pre2", "2", "pre1", "1", "iuhw"\]/);
 assert.match(js, /for \(const kind of \["過去問", "模試", "テーマ別", "基礎試験"\]\)/);
