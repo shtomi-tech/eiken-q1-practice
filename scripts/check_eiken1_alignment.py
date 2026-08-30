@@ -1,4 +1,4 @@
-"""英検1級・2級・準1級セットを模試第6回の品質基準で検査する。
+"""英検1級・2級・準2級・準1級セットを模試第6回の品質基準で検査する。
 
 問題の内容・ID・進捗キーを変更せず、既存セットの問題文訳・語句カードに
 必要なメタデータ、語源、核心イメージ、原形音声、表層音声が揃っているかを確認する。
@@ -20,7 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 VOCAB_AUDIO_DIR = ROOT / "assets" / "audio" / "vocab"
 LEMMA_AUDIO_DIR = ROOT / "assets" / "audio" / "lemma"
-VOCAB_AUDIO_GRADE = {"eiken1": "1", "eiken2": "2", "eikenp1": "pre1"}
+VOCAB_AUDIO_GRADE = {"eiken1": "1", "eiken2": "2", "eikenp2": "pre2", "eikenp1": "pre1"}
 WORD_RE = re.compile(r"[A-Za-z]+(?:[-'][A-Za-z]+)*")
 BLANK_RE = re.compile(r"(?:\(\s*\)|（\s*）)")
 TRANSLATION_BLANK_RE = BLANK_RE
@@ -117,12 +117,19 @@ def expected_audio_path(dataset_id: str, item: dict[str, Any]) -> Path:
     return VOCAB_AUDIO_DIR / VOCAB_AUDIO_GRADE[prefix] / round_id / subdir / f"{audio_slug(surface)}.mp3"
 
 
+def default_audio_required(dataset_id: str) -> bool:
+    prefix, round_id = dataset_id.split("-", 1)
+    if prefix in {"eiken1", "eiken2"}:
+        return True
+    return prefix == "eikenp2" and not round_id.startswith("mock-")
+
+
 def collect_issues(dataset_id: str, require_audio: bool | None = None) -> list[str]:
     prefix = dataset_id.split("-", 1)[0]
     if prefix not in VOCAB_AUDIO_GRADE:
         raise ValueError(f"対応していない級のdatasetIdです: {dataset_id}")
     if require_audio is None:
-        require_audio = prefix in {"eiken1", "eiken2"}
+        require_audio = default_audio_required(dataset_id)
     entry = manifest_entry(dataset_id)
     questions_path = data_path(str(entry["questionsUrl"]))
     vocab_path = data_path(str(entry["vocabUrl"]))
@@ -250,11 +257,11 @@ def main() -> int:
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--dataset-id", required=True, help="例: eiken1-mock-1 / eiken2-2026-1 / eikenp1-2026-1")
+    parser.add_argument("--dataset-id", required=True, help="例: eiken1-mock-1 / eiken2-2026-1 / eikenp2-2026-1 / eikenp1-2026-1")
     parser.add_argument(
         "--require-audio",
         action="store_true",
-        help="表層MP3も必須にする（1級・2級は省略時も必須、準1級はブラウザ音声を許容）",
+        help="表層MP3も必須にする（1級・2級・準2級は省略時も必須、準1級はブラウザ音声を許容）",
     )
     parser.add_argument(
         "--audit",
@@ -263,10 +270,10 @@ def main() -> int:
     )
     args = parser.parse_args()
     if not any(args.dataset_id.startswith(f"{prefix}-") for prefix in VOCAB_AUDIO_GRADE):
-        parser.error("eiken1-、eiken2-、または eikenp1- のdatasetIdを指定してください")
+        parser.error("eiken1-、eiken2-、eikenp2-、または eikenp1- のdatasetIdを指定してください")
     try:
         prefix = args.dataset_id.split("-", 1)[0]
-        issues = collect_issues(args.dataset_id, require_audio=args.require_audio or prefix in {"eiken1", "eiken2"})
+        issues = collect_issues(args.dataset_id, require_audio=args.require_audio or default_audio_required(args.dataset_id))
     except (KeyError, TypeError, ValueError, FileNotFoundError, json.JSONDecodeError) as error:
         print(f"{args.dataset_id}: 検査自体を実行できません: {error}", file=sys.stderr)
         return 1
