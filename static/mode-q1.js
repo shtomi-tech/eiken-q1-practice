@@ -2560,7 +2560,7 @@ function renderSession() {
   const q = session.q;
   const isIdiom = !isMeaning && !isFinal && session.items[0].type === "idiom";
 
-  // 長いカードをスクロールしても現在地・戻る操作を見失わないための補助バー（元のヘッダーは残す）
+  // 長いカードをスクロールしても現在地・戻る操作を見失わないための補助バー
   panel.appendChild(sessionStickyNav(q, isMeaning, isFinal));
 
   // header
@@ -2570,7 +2570,6 @@ function renderSession() {
        el("h2", {}, stageTitle(session.stage)),
        el("p", { class: "sessionState" }, "現在地はこの端末に保存済み"),
      ),
-    el("button", { class: "ghost", onclick: () => { saveResume(); renderHome(); } }, "一覧へ戻る"),
   ));
 
   // stage bar
@@ -3365,7 +3364,6 @@ function renderDone(body) {
   }, "一覧へ戻る"));
   body.appendChild(actions);
 }
-
 /* ============================================================
    boot / mount（kobun-vocab と同じ: 初回のみ boot、以降はタブ復帰で renderHome のみ）
    ============================================================ */

@@ -33,6 +33,9 @@
 
 * { box-sizing: border-box; }
 
+/* 縦スクロールバーの有無でページレールが横移動しないよう、幅を常に確保する。 */
+html { scrollbar-gutter: stable; }
+
 /* 参照: DESIGN.md モーション節。durationはCSS変数のみを使う（reduced-motionで一括無効化するため）。 */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -157,6 +160,7 @@ h1 {
   font-weight: 600;
   border-radius: var(--r-md);
   padding: 6px 14px;
+  text-wrap: balance;
 }
 
 h2 {
@@ -165,6 +169,7 @@ h2 {
   font-size: 24px;
   font-weight: 600;
   line-height: 1.4;
+  text-wrap: balance;
 }
 
 .shareStatus {
@@ -382,7 +387,7 @@ h2 {
   left: 50%;
   bottom: 0;
   z-index: 6;
-  width: min(928px, calc(100vw - 32px));
+  width: min(928px, calc(100% - 32px));
   transform: translateX(-50%);
   background: var(--parchment);
   border-top: 1px solid var(--line);
