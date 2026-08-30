@@ -29,6 +29,9 @@ assert.ok(!datasetPickerBody.includes('el("select"'), "問題セットのselect�
 assert.ok(datasetUnitCardBody.includes("switchDataset("), "Unitカードのクリックは switchDataset() を呼ぶ必要がある");
 assert.ok(datasetUnitCardBody.includes("aria-current"), "現在のセットのUnitカードは aria-current を持つ必要がある");
 assert.ok(datasetUnitCardBody.includes("CLEAR"), "CLEAR済みセットは文言でCLEARを示す必要がある");
+assert.ok(datasetUnitCardBody.includes("summary.hasResume"), "途中保存がある現在Unitは再開状態を判定する必要がある");
+assert.ok(datasetUnitCardBody.includes("restoreSession()"), "途中保存がある現在Unitカードから再開できる必要がある");
+assert.ok(datasetUnitCardBody.includes("startLearn(nextQ)"), "保存のない現在Unitカードから学習を開始できる必要がある");
 assert.ok(datasetUnitCardsBody.includes("過去問") && datasetUnitCardsBody.includes("模試"), "過去問・模試の小見出しが必要");
 
 // --- 問題カード（Task4） ---
@@ -41,6 +44,7 @@ assert.ok(renderHomeBody.includes("buildQuestionCard("), "renderHomeContent は 
 // --- フィルター（Task5） ---
 assert.ok(questionFilterBarBody.includes("aria-pressed"), "フィルターボタンは aria-pressed を使う必要がある");
 assert.ok(questionFilterBarBody.includes('role: "group"'), "状態・種別フィルターは別グループのrole=groupにする必要がある");
+assert.ok(questionFilterBarBody.includes("filterGroupLabel"), "状態・種別フィルターには視覚ラベルが必要");
 assert.ok(js.includes("すべて表示"), "フィルター0件時の復帰操作「すべて表示」が必要");
 assert.ok(js.includes("questionFilters"), "表示専用の questionFilters state が必要");
 
@@ -72,11 +76,14 @@ assert.ok(
   renderDoneBody.indexOf("startLearn(nextQ)") < renderDoneBody.lastIndexOf("startFinalCheck"),
   "誤答専用復習を挟まず、次の設問から最終チェックへ進める必要がある",
 );
+assert.ok(renderDoneBody.includes("この設問をもう一度学ぶ"), "誤答後は同じ設問へ戻る二次CTAが必要");
+assert.ok(renderDoneBody.includes("session.meaningCorrect < session.checkOrder.length"), "意味確認の誤答を再学習CTAの表示条件に含める必要がある");
+assert.ok(renderDoneBody.includes("startLearn(q)"), "同じ設問の再学習CTAは現在の設問を開始する必要がある");
 assert.ok(!renderDoneBody.includes("pendingReviews"), "完了画面に誤答復習待ちの状態を残してはいけません");
 assert.ok(!renderDoneBody.includes("間違えた"), "完了画面に誤答問題の復習文言を残してはいけません");
 
 // --- CSS ---
-for (const cls of [".datasetUnitCard", ".datasetUnitGrid", ".qCardNumber", ".qCardMain", ".qCardArrow", ".questionFilterBar", ".sessionStickyNav"]) {
+for (const cls of [".datasetUnitCard", ".datasetUnitGrid", ".qCardNumber", ".qCardMain", ".qCardArrow", ".questionFilterBar", ".filterGroupLabel", ".sessionStickyNav"]) {
   assert.ok(css.includes(cls), `CSSに ${cls} の規則が必要`);
 }
 assert.match(css, /@media \(max-width: 720px\)/, "720px以下のレスポンシブ規則が必要");

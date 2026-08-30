@@ -933,7 +933,7 @@ function renderDone(body) {
         "もう一度、意味だけの復習をする"));
     }
   } else {
-    // 誤答の専用復習は行わず、次の設問→最終チェック→一覧の順へ進む。
+    // 誤答の専用復習は行わず、次の設問への導線を主CTAにする。
     const nextQ = state.qList.find((qq) => !unit(qq).learned);
     if (nextQ) {
       actions.appendChild(el("button", { class: "cta", onclick: () => startLearn(nextQ) }, `次の設問へ（第${nextQ}問） →`));
@@ -941,6 +941,13 @@ function renderDone(body) {
       actions.appendChild(el("button", { class: "cta finalCta", onclick: startFinalCheck }, "最終チェックへ →"));
     } else {
       actions.appendChild(el("button", { class: "cta", onclick: renderHome }, "次の学習を選ぶ →"));
+    }
+    if (q != null && (session.meaningCorrect < session.checkOrder.length || session.practiceResult === false)) {
+      actions.appendChild(el("button", {
+        class: "secondaryCta",
+        type: "button",
+        onclick: () => startLearn(q),
+      }, "この設問をもう一度学ぶ"));
     }
   }
   actions.appendChild(el("button", {

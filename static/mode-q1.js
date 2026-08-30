@@ -2006,7 +2006,9 @@ function buildQuestionCard(q) {
 }
 
 function questionFilterBar(counts) {
-  const statusGroup = el("div", { class: "filterGroup", role: "group", "aria-label": "状態で絞り込む" });
+  const statusGroup = el("div", { class: "filterGroup", role: "group", "aria-label": "状態で絞り込む" },
+    el("span", { class: "filterGroupLabel", "aria-hidden": "true" }, "状態"),
+  );
   for (const key of ["all", "notStarted", "inProgress", "done"]) {
     statusGroup.appendChild(el("button", {
       class: "filterChip",
@@ -2015,7 +2017,9 @@ function questionFilterBar(counts) {
       onclick: () => { questionFilters.status = key; const y = window.scrollY; renderHome(); window.scrollTo(0, y); },
     }, `${QUESTION_STATUS_LABELS[key]} ${counts.status[key]}`));
   }
-  const typeGroup = el("div", { class: "filterGroup", role: "group", "aria-label": "種別で絞り込む" });
+  const typeGroup = el("div", { class: "filterGroup", role: "group", "aria-label": "種別で絞り込む" },
+    el("span", { class: "filterGroupLabel", "aria-hidden": "true" }, "種別"),
+  );
   for (const key of ["all", "word", "idiom"]) {
     typeGroup.appendChild(el("button", {
       class: "filterChip",
@@ -2272,14 +2276,14 @@ function datasetSummary(datasetId, data) {
   };
 }
 
-function datasetPrimaryLabel(summary, isCurrent) {
+function datasetPrimaryLabel(summary) {
   if (summary.status === "cleared") return "もう一周する";
   const resumeQuestion = Number(summary.resume?.q);
   const resumeLabel = Number.isInteger(resumeQuestion)
     ? `続きから再開する（第${resumeQuestion}問）`
     : "続きから再開する";
   if (summary.status === "resumable") return resumeLabel;
-  if (summary.status === "inProgress" || isCurrent) return summary.hasResume ? resumeLabel : "続きから再開する";
+  if (summary.status === "inProgress" && summary.hasResume) return resumeLabel;
   return "この回を始める";
 }
 
@@ -2287,7 +2291,7 @@ function datasetPrimaryLabel(summary, isCurrent) {
 function datasetUnitCard(id, data, index) {
   const isCurrent = id === state.datasetId;
   const summary = datasetSummary(id, data);
-  const label = datasetPrimaryLabel(summary, isCurrent);
+  const label = datasetPrimaryLabel(summary);
   const totalQ = summary.totalQuestions != null ? summary.totalQuestions : "—";
   const totalV = summary.totalVocabulary != null ? summary.totalVocabulary : "—";
   const progressLine = `${summary.learnedQuestions} / ${totalQ}問`;
@@ -2303,7 +2307,18 @@ function datasetUnitCard(id, data, index) {
     class: cls.join(" "),
     type: "button",
     "aria-label": ariaParts.join("・"),
-    onclick: () => { if (!isCurrent) switchDataset(id); },
+    onclick: async () => {
+      if (!isCurrent) {
+        switchDataset(id);
+        return;
+      }
+      if (summary.hasResume) {
+        if (!(await restoreSession())) renderHome();
+        return;
+      }
+      const nextQ = state.qList.find((q) => !unit(q).learned) || state.qList[0];
+      if (nextQ != null) startLearn(nextQ);
+    },
   };
   if (isCurrent) attrs["aria-current"] = "true";
   return el("button", attrs,
@@ -3347,7 +3362,7 @@ function renderDone(body) {
         "もう一度、意味だけの復習をする"));
     }
   } else {
-    // 誤答の専用復習は行わず、次の設問→最終チェック→一覧の順へ進む。
+    // 誤答の専用復習は行わず、次の設問への導線を主CTAにする。
     const nextQ = state.qList.find((qq) => !unit(qq).learned);
     if (nextQ) {
       actions.appendChild(el("button", { class: "cta", onclick: () => startLearn(nextQ) }, `次の設問へ（第${nextQ}問） →`));
@@ -3355,6 +3370,13 @@ function renderDone(body) {
       actions.appendChild(el("button", { class: "cta finalCta", onclick: startFinalCheck }, "最終チェックへ →"));
     } else {
       actions.appendChild(el("button", { class: "cta", onclick: renderHome }, "次の学習を選ぶ →"));
+    }
+    if (q != null && (session.meaningCorrect < session.checkOrder.length || session.practiceResult === false)) {
+      actions.appendChild(el("button", {
+        class: "secondaryCta",
+        type: "button",
+        onclick: () => startLearn(q),
+      }, "この設問をもう一度学ぶ"));
     }
   }
   actions.appendChild(el("button", {

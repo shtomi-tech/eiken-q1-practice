@@ -617,6 +617,14 @@ h2 {
   gap: 8px;
   margin: 14px 0;
 }
+.filterGroupLabel {
+  flex: 0 0 100%;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
 .filterGroup { display: flex; flex-wrap: wrap; gap: 6px; }
 .filterChip {
   min-height: 44px;
