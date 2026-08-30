@@ -1,6 +1,6 @@
 # 英検 大問1 単語アプリ
 
-英検5級・1級・2級・準2級・準1級の大問1（語彙）を扱う静的Webアプリです。5級の2026年度第1回、1級・2級・準2級・準1級の各級過去問3回分に加え、1級の模試第1回〜第6回、準2級の自作模試第1回〜第4回、国際医療福祉大学の総合型選抜基礎試験セットを収録しています（合計24セット）。準2級の自作模試と国際医療福祉大学セットは英検過去問を引用していません。
+英検5級・1級・2級・準2級・準1級の大問1（語彙）を扱う静的Webアプリです。5級の2026年度第1回、1級・2級・準2級・準1級の各級過去問3回分に加え、1級の模試第1回〜第7回、準2級の自作模試第1回〜第4回、国際医療福祉大学の総合型選抜基礎試験セットを収録しています（合計25セット）。準2級の自作模試と国際医療福祉大学セットは英検過去問を引用していません。
 
 ## 学習の流れ
 
@@ -27,16 +27,16 @@
 | 2級 | 51 | 204 |
 | 準2級 | 105 | 420 |
 | 準1級 | 54 | 216 |
-| 1級（模試第1回〜第6回を含む） | 216 | 864 |
+| 1級（模試第1回〜第7回を含む） | 241 | 964 |
 | 医療福祉 基礎試験 | 15 | 60 |
 
 語句ごとの復習間隔は、その語句が属する回の進捗（`eiken_q1_progress_<datasetId>` の `items`）に保存します。級をまたいで混ざることはありません。
 
 ## 1級の日次・週次学習目標
 
-1級の通常問題（過去問3回分と模試第1回〜第6回）では、ホームの「今日の学習」カードに新規問題の学習計画を表示できます。新規問題は、本番形式4択へ初めて回答した `(datasetId, q)` の組です。正誤は問わず、同じ問題の解き直し・意味だけ復習は日次・週次・総問題数へ重複加算しません。
+1級の通常問題（過去問3回分と模試第1回〜第7回）では、ホームの「今日の学習」カードに新規問題の学習計画を表示できます。新規問題は、本番形式4択へ初めて回答した `(datasetId, q)` の組です。正誤は問わず、同じ問題の解き直し・意味だけ復習は日次・週次・総問題数へ重複加算しません。
 
-- 総問題目標の初期値は、manifest配下の現在の1級通常問題数です。現在は216問・864語句です。
+- 総問題目標の初期値は、manifest配下の現在の1級通常問題数です。現在は241問・964語句です。
 - 1日の問題目標の初期値は8問、週間目標はその7倍です。週の開始曜日は日曜〜土曜から選べます。
 - 日次・週次の実績は、設問の初回答時刻 `firstAnsweredAt` を利用者のローカル日付へ戻して集計します。既存履歴から補完できる場合は最古の設問回答時刻を使い、日時不明の旧回答は総数だけに含めます。
 - 週の残り日数へ再配分する値は、`ceil(週間残数 / 今週の残り日数)` です。未達分を翌週へ自動繰越はしません。
@@ -60,16 +60,18 @@
 - 1級模試第4回: `data/questions_1_mock-4.json` / `data/vocab_1_mock-4.json`
 - 1級模試第5回: `data/questions_1_mock-5.json` / `data/vocab_1_mock-5.json`
 - 1級模試第6回: `data/questions_1_mock-6.json` / `data/vocab_1_mock-6.json`
+- 1級模試第7回: `data/questions_1_mock-7.json` / `data/vocab_1_mock-7.json`
 - 国際医療福祉大学 基礎試験: `data/questions_iuhw_set-1.json` / `data/vocab_iuhw_set-1.json`
 - 熟語の核心イメージ共有辞書（データ検査・作成補助用。UIには表示しない）: `data/particle_images.json`
 - 単語の語根・接辞辞書（表示専用）: `data/word_roots.json`
 - 単語の語源分解（表示専用・原形キー）: `data/word_origins.json`
 - 問題セット一覧: `data/manifest.json` の `q1`
 
-1級の模試第1回〜第6回と公式過去問3回分は、模試25問/100語句・公式22問/88語句の形式差を保ったまま、共通検査で第6回の完成条件を確認できます。
+1級の模試第1回〜第7回と公式過去問3回分は、模試25問/100語句・公式22問/88語句の形式差を保ったまま、共通検査で第6回の完成条件を確認できます。第7回も表層音声と暗記カード用原形音声の生成済みデータを含むため、専用検査を通常モードで実行できます。
 
 ```powershell
 py -3 scripts/check_eiken1_alignment.py --dataset-id eiken1-mock-6
+py -3 scripts/check_mock_7_data.py
 py -3 scripts/check_eiken1_alignment.py --dataset-id eiken1-2026-1
 py -3 scripts/check_eiken1_alignment.py --dataset-id eikenp1-2026-1
 ```
@@ -118,6 +120,8 @@ py -3 scripts/generate_tts_1.py --grade iuhw --round set-1
 
 生成先は単語が `assets/audio/vocab/<級>/<回>/`、熟語が `assets/audio/vocab/<級>/<回>/idiom/` です。生成済みの単語・熟語は暗記カードと意味チェックで「音声」ボタンから再生できます。
 準1級はMP3がない場合も、暗記カードの「音声」ボタンからブラウザ標準の英語音声を再生します。
+
+暗記カードで表示する原形MP3は、`py -3 scripts/generate_lemma_tts.py --flashcard-only` で `assets/audio/lemma/` に生成します。
 
 ## 暗記カードの共通構成
 
@@ -194,14 +198,17 @@ py -3 scripts/add_example_translations.py
 - `scripts/build_q1_mock_4_data.py`: 1級模試第4回の問題・語彙データ生成
 - `scripts/build_q1_mock_5_data.py`: 1級模試第5回の問題・語彙データ生成
 - `scripts/build_q1_mock_6_data.py`: 1級模試第6回の問題・語彙データ生成
+- `scripts/build_q1_mock_7_data.py`: 1級模試第7回の問題・語彙データ生成
 - `scripts/build_q1_p2_mock_1_data.py`: 準2級自作模試第1回の問題・語彙データ生成
 - `scripts/build_q1_p2_mock_{2,3,4}_data.py`: 準2級自作模試第2回〜第4回の問題・語彙データ生成
 - `scripts/build_q1_iuhw_set_1_data.py`: 国際医療福祉大学セットの問題・語彙データ生成
 - `scripts/check_mock_6_data.py`: 1級模試第6回の内容・重複チェック
+- `scripts/check_mock_7_data.py`: 1級模試第7回の内容・重複・音声チェック
+- `scripts/sync_q1_mock_7_origins.py`: 1級模試第7回の語源表示辞書への反映
 - `scripts/q1_mock_etymology.py` / `scripts/q1_official_etymology.py`: 1級各セットの語源入力データ
 - `scripts/sync_q1_mock_origins.py` / `scripts/sync_q1_official_origins.py`: 語源表示辞書への反映
 - `scripts/check_5_data.py`: 5級2026年度第1回大問1の内容・公式解答チェック
-- `scripts/check_q1_data.py`: 24セットのデータ契約チェック
+- `scripts/check_q1_data.py`: 25セットのデータ契約チェック
 - `scripts/check_p2_mock_data.py`: 準2級自作模試（全回）の内容チェック
 
 このリポジトリは大問1専用です。大問2・3、リスニング、ライティング、言い換えのコード・教材・音声・生成スクリプトには依存しません。
