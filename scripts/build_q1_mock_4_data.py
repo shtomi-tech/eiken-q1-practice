@@ -3,12 +3,17 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
+from q1_mock_core_images import CORE_IMAGES_BY_ROUND
+from q1_mock_etymology import ETYMOLOGY_BY_ROUND
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 ROUND_ID = "mock-4"
+CORE_IMAGES = CORE_IMAGES_BY_ROUND[ROUND_ID]
+ETYMOLOGY = ETYMOLOGY_BY_ROUND[ROUND_ID]
 
 
 QUESTIONS = [
@@ -50,7 +55,7 @@ DETAILS = {
     "nonchalantly": ("平然と、無頓着に", "副詞", "She nonchalantly mentioned that she had won the contest.", "彼女はコンテストに勝ったことを平然と口にした。"),
     "ascetically": ("禁欲的に", "副詞", "The monk lived ascetically in a small mountain hut.", "その修道士は山の小屋で禁欲的に暮らした。"),
     "novice": ("初心者", "名詞", "As a novice, he made several mistakes with the equipment.", "初心者だった彼は、その機器の扱いでいくつかミスをした。"),
-    "connoisseur": ("鑑識家、目利き", "名詞", "The connoisseur recognized the painting's value immediately.", "その目利きはその絵の価値をすぐに見抜いた。"),
+    "connoisseur": ("鑑識家、目利き", "名詞", "The connoisseur recognized the painting's value immediately after examining its brushwork.", "その目利きは筆遣いを調べた後、その絵の価値をすぐに見抜いた。"),
     "pushover": ("押しに弱い人、簡単に負かせる人", "名詞", "Do not mistake her kindness for being a pushover.", "彼女の親切さを押しに弱いことと勘違いしてはいけない。"),
     "bigot": ("偏狭な人、偏見を持つ人", "名詞", "The speaker criticized the bigot who refused to listen to other views.", "その話し手は、他人の意見を聞こうとしない偏狭な人を批判した。"),
     "stampede": ("群衆の殺到、暴走", "名詞", "The sudden noise caused a stampede near the stadium entrance.", "突然の音がスタジアム入口付近で群衆の殺到を引き起こした。"),
@@ -67,33 +72,33 @@ DETAILS = {
     "muddling": ("混乱させる、混ぜ合わせる", "動詞", "Muddling the two instructions will only cause mistakes.", "二つの指示を混同すると、間違いを招くだけだ。"),
     "pry": ("詮索する", "動詞", "I do not want to pry into your private affairs.", "あなたの私事を詮索したくはない。"),
     "cogitate": ("熟考する", "動詞", "He went for a walk to cogitate on the difficult decision.", "彼は難しい決断について熟考するため散歩に出た。"),
-    "writhe": ("身もだえする", "動詞", "The injured animal writhed in pain on the ground.", "けがをした動物は地面で痛みに身もだえした。"),
+    "writhe": ("身もだえする", "動詞", "The injured animal may writhe in pain on the ground.", "けがをした動物は地面で痛みに身もだえするかもしれない。"),
     "consort": ("交際する、付き合う", "動詞", "The prince was warned not to consort with criminals.", "王子は犯罪者と付き合わないよう警告された。"),
     "complacency": ("自己満足、油断", "名詞", "Complacency can be dangerous after a few successful years.", "数年うまくいった後の油断は危険なことがある。"),
     "echelon": ("階層、段階", "名詞", "She reached the highest echelon of the organization.", "彼女はその組織の最高階層に到達した。"),
     "vicinity": ("近辺", "名詞", "There are several cafés in the vicinity of the station.", "駅の近辺にはカフェがいくつかある。"),
     "rupture": ("破裂、断絶", "名詞", "The rupture in the pipe flooded the basement.", "パイプの破裂で地下室が水浸しになった。"),
-    "disdain": ("軽蔑する", "動詞", "She disdains people who abuse their authority.", "彼女は権力を乱用する人々を軽蔑している。"),
-    "expedite": ("促進する、処理を早める", "動詞", "The clerk expedited the delivery because the customer was leaving town.", "店員は顧客が町を離れる予定だったので配送を早めた。"),
+    "disdain": ("軽蔑する", "動詞", "She openly expressed disdain for people who abuse their authority.", "彼女は権力を乱用する人々への軽蔑を公然と表した。"),
+    "expedite": ("促進する、処理を早める", "動詞", "The clerk will expedite the delivery because the customer is leaving town.", "店員は顧客が町を離れる予定なので配送を早める。"),
     "shackle": ("束縛する、足かせを付ける", "動詞", "Debt can shackle a family for many years.", "借金は家族を何年も束縛することがある。"),
     "annex": ("併合する、付属させる", "動詞", "The city voted to annex the neighboring village.", "その市は隣接する村を併合することを採決した。"),
     "agnostic": ("不可知論の、不可知論者", "形容詞", "He remained agnostic about whether the rumor was true.", "そのうわさが本当かどうかについて、彼は判断を保留した。"),
-    "distraught": ("ひどく取り乱した", "形容詞", "The distraught parent called the police immediately.", "ひどく取り乱した親はすぐに警察へ電話した。"),
+    "distraught": ("ひどく取り乱した", "形容詞", "The distraught parent called the police immediately after the child disappeared.", "子どもが姿を消した後、ひどく取り乱した親はすぐに警察へ電話した。"),
     "enamored": ("夢中になった、気に入った", "形容詞", "The visitors were enamored with the quiet village.", "訪問者たちは静かな村をとても気に入った。"),
-    "remedial": ("補習の、改善の", "形容詞", "The school offers remedial classes in mathematics.", "その学校は数学の補習授業を行っている。"),
+    "remedial": ("補習の、改善の", "形容詞", "The school offers remedial classes in mathematics for students who need additional practice.", "その学校は、追加練習を必要とする生徒に数学の補習授業を行っている。"),
     "tacit": ("暗黙の", "形容詞", "There was a tacit agreement not to discuss the incident.", "その出来事について話さないという暗黙の了解があった。"),
     "tangible": ("具体的で触れられる", "形容詞", "The project has produced tangible benefits for local residents.", "その計画は地元住民に具体的な利益をもたらした。"),
     "rueful": ("後悔している、悲しげな", "形容詞", "He gave a rueful smile after breaking the vase.", "花瓶を割った後、彼は後悔したように微笑んだ。"),
     "devout": ("敬虔な", "形容詞", "She is a devout member of her local church.", "彼女は地元の教会の敬虔な信者だ。"),
-    "cordial": ("心のこもった、友好的な", "形容詞", "The two leaders exchanged cordial greetings.", "二人の指導者は心のこもった挨拶を交わした。"),
-    "impassive": ("無表情な、感情を示さない", "形容詞", "The witness remained impassive throughout the trial.", "その証人は裁判中ずっと無表情だった。"),
-    "elaborate": ("精巧な、詳しい", "形容詞", "The museum displayed an elaborate mechanical clock.", "その博物館には精巧な機械時計が展示されていた。"),
+    "cordial": ("心のこもった、友好的な", "形容詞", "The two leaders exchanged cordial greetings before beginning their difficult negotiations.", "二人の指導者は難しい交渉を始める前に、心のこもった挨拶を交わした。"),
+    "impassive": ("無表情な、感情を示さない", "形容詞", "The witness remained impassive throughout the trial despite the prosecutor's accusations.", "その証人は検察官の非難にもかかわらず、裁判中ずっと無表情だった。"),
+    "elaborate": ("精巧な、詳しい", "形容詞", "The museum displayed an elaborate mechanical clock that visitors could observe closely.", "その博物館には、訪問客が間近で見られる精巧な機械時計が展示されていた。"),
     "flippant": ("軽薄な、ぞんざいな", "形容詞", "His flippant response upset the people in the room.", "彼の軽薄な返答はその場にいた人々を怒らせた。"),
     "banter": ("冗談の言い合い", "名詞", "Friendly banter made the long meeting more enjoyable.", "気軽な冗談の言い合いで、長い会議がより楽しくなった。"),
     "jeer": ("あざけり、嘲笑", "名詞", "The player ignored the jeer from the opposing fans.", "その選手は相手チームのファンからの嘲笑を無視した。"),
     "indolence": ("怠惰", "名詞", "His indolence kept him from completing the project on time.", "彼の怠惰のため、計画を期限までに終えられなかった。"),
     "boon": ("恩恵、ありがたいもの", "名詞", "The new train line has been a boon to commuters.", "新しい鉄道路線は通勤者にとって大きな恩恵になった。"),
-    "dormant": ("休眠中の、活動していない", "形容詞", "The volcano has been dormant for centuries.", "その火山は何世紀も活動を休止している。"),
+    "dormant": ("休眠中の、活動していない", "形容詞", "The volcano has been dormant for centuries, but scientists continue to monitor it.", "その火山は何世紀も活動を休止しているが、科学者たちは監視を続けている。"),
     "pivotal": ("極めて重要な", "形容詞", "Her advice played a pivotal role in my decision.", "彼女の助言は私の決断で極めて重要な役割を果たした。"),
     "resilient": ("回復力のある、立ち直りの早い", "形容詞", "Children can be remarkably resilient after difficult experiences.", "子どもたちはつらい経験の後でも驚くほど立ち直りが早いことがある。"),
     "arid": ("乾燥した", "形容詞", "Few crops can survive in such an arid region.", "そのように乾燥した地域では、ほとんど作物が育たない。"),
@@ -102,8 +107,8 @@ DETAILS = {
     "esteemed": ("尊敬された、評価された", "動詞", "The professor is esteemed by students around the world.", "その教授は世界中の学生から尊敬されている。"),
     "thwarted": ("妨げた、阻止した", "動詞", "The police thwarted the robbery before anyone was hurt.", "警察は誰もけがをする前に強盗を阻止した。"),
     "flapped": ("ばたついた", "動詞", "The loose sign flapped in the strong wind.", "固定のゆるい看板が強風でばたついた。"),
-    "nullified": ("無効にした", "動詞", "The court nullified the unfair contract.", "裁判所はその不公平な契約を無効にした。"),
-    "solicited": ("求めた、勧誘した", "動詞", "The charity solicited donations from local businesses.", "その慈善団体は地元企業に寄付を募った。"),
+    "nullified": ("無効にした", "動詞", "The court nullified the unfair contract after finding evidence of coercion.", "裁判所は強制の証拠を見つけた後、その不公平な契約を無効にした。"),
+    "solicited": ("求めた、勧誘した", "動詞", "The charity solicited donations from local businesses to rebuild the damaged shelter.", "その慈善団体は損傷した避難所を再建するため、地元企業に寄付を募った。"),
     "pawned": ("質に入れた", "動詞", "He pawned his watch to pay the unexpected bill.", "彼は予想外の請求を払うため時計を質に入れた。"),
     "depreciating": ("価値を下げる、減価する", "動詞", "The company is depreciating the equipment over five years.", "その会社は5年間で設備を減価償却している。"),
     "clobbering": ("めちゃくちゃに打ち負かす", "動詞", "The champion is clobbering every opponent this season.", "その王者は今季、対戦相手を次々に圧倒している。"),
@@ -118,28 +123,28 @@ DETAILS = {
     "salvo": ("一斉射撃、連発", "名詞", "The team opened the debate with a salvo of sharp questions.", "そのチームは鋭い質問の連発で討論を始めた。"),
     "transgression": ("違反、罪", "名詞", "The school treated cheating as a serious transgression.", "その学校はカンニングを重大な違反として扱った。"),
     "vying": ("競い合う", "動詞", "Several companies are vying for the government contract.", "いくつかの会社が政府契約をめぐって競い合っている。"),
-    "proliferating": ("急増する", "動詞", "False stories are proliferating on social media.", "ソーシャルメディア上で偽の情報が急増している。"),
-    "soaring": ("急上昇する、高く舞い上がる", "動詞", "Soaring energy prices are hurting small businesses.", "急上昇するエネルギー価格が中小企業を苦しめている。"),
+    "proliferating": ("急増する", "動詞", "False stories are proliferating on social media faster than fact-checkers can respond.", "ソーシャルメディア上で、事実確認担当者が対応できるより速く偽の情報が急増している。"),
+    "soaring": ("急上昇する、高く舞い上がる", "動詞", "Soaring energy prices are hurting small businesses that cannot raise their fees.", "急上昇するエネルギー価格が、料金を上げられない中小企業を苦しめている。"),
     "snowballing": ("雪だるま式に増える", "動詞", "The costs kept snowballing after the construction began.", "建設が始まった後、費用は雪だるま式に増え続けた。"),
-    "invigorated": ("活気づけられた", "形容詞", "A short walk left her feeling invigorated.", "短い散歩で彼女は活力を取り戻した。"),
+    "invigorated": ("活気づけられた", "形容詞", "A short walk left her feeling invigorated before the afternoon meeting began.", "午後の会議が始まる前に、短い散歩で彼女は活力を取り戻した。"),
     "dredged": ("さらった、掘り起こした", "動詞", "The workers dredged the river to remove the mud.", "作業員たちは泥を取り除くため川をさらった。"),
-    "saturated": ("浸透した、飽和した", "形容詞", "The market is saturated with similar products.", "市場は似たような製品で飽和している。"),
+    "saturated": ("浸透した、飽和した", "形容詞", "The market is saturated with similar products, so the company needs a new strategy.", "市場は似たような製品で飽和しているため、その会社には新しい戦略が必要だ。"),
     "infatuated": ("夢中になった", "形容詞", "He became infatuated with the singer after seeing her perform.", "彼は彼女の演奏を見て、その歌手に夢中になった。"),
     "roped into": ("無理に引き込まれた", "熟語", "I was roped into helping with the office party.", "私はオフィスのパーティーの手伝いに無理やり引き込まれた。"),
     "factored in": ("考慮に入れた", "熟語", "The planner factored in the possibility of heavy traffic.", "その計画担当者は激しい渋滞の可能性を考慮に入れた。"),
     "frowned on": ("快く思わなかった、認めなかった", "熟語", "The school frowned on students using phones in class.", "その学校は授業中に生徒が携帯電話を使うことを認めなかった。"),
     "smoothed down": ("なだめた、平らにした", "熟語", "The manager smoothed down the disagreement between the employees.", "マネージャーは従業員同士の対立をなだめた。"),
-    "fire up": ("奮起させる、活気づける", "熟語", "The coach's speech fired up the team before the final.", "コーチのスピーチは決勝を前にチームを奮起させた。"),
+    "fire up": ("奮起させる、活気づける", "熟語", "The coach's speech will fire up the team before the final.", "コーチのスピーチは決勝を前にチームを奮起させるだろう。"),
     "root out": ("根絶する、見つけ出す", "熟語", "The audit was designed to root out financial fraud.", "その監査は金融上の不正を根絶するために設計された。"),
-    "lap up": ("喜んで受け入れる、がつがつ食べる", "熟語", "The audience lapped up the comedian's latest jokes.", "観客はそのコメディアンの最新の冗談を喜んで受け入れた。"),
-    "pass down": ("受け継がせる、伝える", "熟語", "The recipe was passed down through four generations.", "そのレシピは4世代にわたって受け継がれてきた。"),
+    "lap up": ("喜んで受け入れる、がつがつ食べる", "熟語", "The audience will lap up the comedian's latest jokes during the televised show.", "観客はテレビ放送中、そのコメディアンの最新の冗談を喜んで受け入れるだろう。"),
+    "pass down": ("受け継がせる、伝える", "熟語", "The family will pass down the recipe through four generations.", "その家族は4世代にわたってそのレシピを受け継がせるだろう。"),
     "threw out": ("痛めた、捨てた", "熟語", "He threw out his back while moving a heavy desk.", "彼は重い机を動かしているときに腰を痛めた。"),
     "scraped together": ("かき集めた", "熟語", "They scraped together enough money to repair the roof.", "彼らは屋根を修理するためのお金をかき集めた。"),
     "pushed up": ("押し上げた", "熟語", "The shortage pushed up the price of fresh vegetables.", "不足によって新鮮な野菜の価格が押し上げられた。"),
     "forced back": ("押し戻した", "熟語", "The defenders forced back the attackers at the bridge.", "守備側は橋で攻撃側を押し戻した。"),
     "heading up": ("率いる", "熟語", "A senior engineer is heading up the safety investigation.", "上級技術者が安全調査を率いている。"),
     "piecing together": ("つなぎ合わせて理解する", "熟語", "The detective was piecing together the events of the night.", "探偵はその夜の出来事をつなぎ合わせていた。"),
-    "punching out": ("殴り倒す、退勤打刻する", "熟語", "The guard stopped the thief by punching him out.", "警備員は泥棒を殴り倒して止めた。"),
+    "punching out": ("殴り倒す、退勤打刻する", "熟語", "The guard stopped the thief by punching out the attacker.", "警備員は攻撃者を殴り倒して泥棒を止めた。"),
     "stirring up": ("引き起こす、かき立てる", "熟語", "The article was accused of stirring up public anger.", "その記事は世論の怒りをかき立てたとして非難された。"),
 }
 
@@ -157,6 +162,26 @@ def build() -> tuple[dict, dict]:
     missing = sorted(set(choices) - set(DETAILS))
     if missing:
         raise ValueError(f"語句情報がありません: {missing}")
+    missing_etymology = sorted(set(choices) - set(ETYMOLOGY))
+    if missing_etymology:
+        raise ValueError(f"語源情報がありません: {missing_etymology}")
+    missing_core_image = sorted({phrase for phrase in choices if " " in phrase} - set(CORE_IMAGES))
+    if missing_core_image:
+        raise ValueError(f"熟語の核心イメージがありません: {missing_core_image}")
+
+    blank_re = re.compile(r"\(\s*\)|（\s*）")
+    for index, question in enumerate(QUESTIONS, start=1):
+        if len(question["choices"]) != 4 or question["answerIndex"] not in range(4):
+            raise ValueError(f"Q{index}の4択または正答位置が不正です")
+        if len(blank_re.findall(question["stem"])) != 1:
+            raise ValueError(f"Q{index}の空所が1か所ではありません")
+        if any(
+            re.search(rf"\b{re.escape(choice)}\b", question["stem"], flags=re.IGNORECASE)
+            for choice in question["choices"]
+        ):
+            raise ValueError(f"Q{index}の選択肢が設問文に含まれています")
+        if blank_re.search(question["translation"]):
+            raise ValueError(f"Q{index}の和訳に空所記号があります")
 
     meta = {
         "grade": "英検1級",
@@ -183,10 +208,12 @@ def build() -> tuple[dict, dict]:
                 "meaning": meaning,
                 "example": example,
                 "exampleTranslation": example_translation,
+                "etymology": ETYMOLOGY[choice],
                 "pos": pos,
             }
             if " " in choice:
                 item["phrase"] = choice
+                item["coreImage"] = CORE_IMAGES[choice]
                 idioms.append(item)
             else:
                 item["word"] = choice

@@ -22,6 +22,8 @@ from build_pre1_data import (  # noqa: E402 - 既存PDF抽出ヘルパーを再�
     parse_choices,
     parse_numbered_blocks,
 )
+from q1_official_core_images import CORE_IMAGES_BY_ROUND  # noqa: E402
+from q1_official_etymology import ETYMOLOGY_BY_ROUND  # noqa: E402
 
 
 ROOT = SCRIPTS_DIR.parent
@@ -393,7 +395,11 @@ def write_json(path: Path, value: dict) -> None:
 
 def clean_choice(value: str) -> str:
     # ページ末尾の案内文が、最後の選択肢の抽出範囲に入ることがある。
-    value = re.split(r"To complete each item|Read each passage", value, maxsplit=1)[0]
+    value = re.split(
+        r"To complete each item|Read each passage|20\d{2}年度|copyright|無断転載",
+        value,
+        maxsplit=1,
+    )[0]
     return clean_text(value)
 
 
@@ -436,6 +442,14 @@ def build_round(round_id: str) -> tuple[dict, dict]:
     missing = sorted(surfaces - set(MEANINGS))
     if missing:
         raise ValueError(f"{round_id}: gloss未登録: {missing}")
+    etymology = ETYMOLOGY_BY_ROUND[round_id]
+    missing_etymology = sorted(surfaces - set(etymology))
+    if missing_etymology:
+        raise ValueError(f"{round_id}: 語源情報がありません: {missing_etymology}")
+    core_images = CORE_IMAGES_BY_ROUND[round_id]
+    missing_core_image = sorted({phrase for phrase in surfaces if " " in phrase} - set(core_images))
+    if missing_core_image:
+        raise ValueError(f"{round_id}: 熟語の核心イメージがありません: {missing_core_image}")
 
     words = []
     idioms = []
@@ -445,10 +459,12 @@ def build_round(round_id: str) -> tuple[dict, dict]:
                 "q": question["q"],
                 "is_answer": index == question["answerIndex"],
                 "meaning": MEANINGS[choice],
+                "etymology": etymology[choice],
             }
             if " " in choice:
                 item["phrase"] = choice
                 item["pos"] = "熟語"
+                item["coreImage"] = core_images[choice]
                 idioms.append(item)
             else:
                 item["word"] = choice

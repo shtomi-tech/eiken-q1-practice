@@ -144,15 +144,14 @@ def main() -> None:
                 fail(f"1級既存語句と重複しています: {surface} / {existing_grade[variant]}")
 
     core_count = sum(bool(item.get("coreImage")) for item in vocab.get("idioms", []))
-    if core_count != 14:
+    if core_count != 16:
         fail(f"核心イメージの付与数が想定と違います: {core_count}")
-    c_phrases = {"come clean", "rooted for"}
-    if {item_surface(item) for item in vocab.get("idioms", []) if not item.get("coreImage")} != c_phrases:
-        fail("C型熟語の集合が不正です")
+    if any(not item.get("coreImage") for item in vocab.get("idioms", [])):
+        fail("熟語16件すべてに核心イメージが必要です")
 
     print(f"{DATASET_ID}: 25 questions / 100 items OK")
     print(f"answer positions: {dict(sorted(answer_positions.items()))}")
-    print(f"core images: {core_count} / 16 idioms; C: {', '.join(sorted(c_phrases))}")
+    print(f"core images: {core_count} / 16 idioms")
 
 
 if __name__ == "__main__":

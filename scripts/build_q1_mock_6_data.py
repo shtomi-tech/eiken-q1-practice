@@ -508,12 +508,25 @@ CORE_IMAGES = {
         ],
         "particle": "by",
     },
+    "come clean": {
+        "chain": [
+            {"term": "come", "gloss": "来る"},
+            {"term": "clean", "gloss": "隠し事のない状態"},
+            {"gloss": "隠し事のない状態に出てきて"},
+            {"gloss": "白状する、隠し事を打ち明ける"},
+        ],
+    },
+    "rooted for": {
+        "chain": [
+            {"term": "root", "gloss": "根を張る"},
+            {"term": "for", "gloss": "〜を支持して"},
+            {"gloss": "支持する側に根を張って"},
+            {"gloss": "〜を応援した"},
+        ],
+    },
 }
 
-C_PHRASES = {
-    "come clean": "動詞＋形容詞の慣用表現で、構成語から核心イメージを安定して導けない",
-    "rooted for": "動詞＋前置詞の慣用表現で、構成語から「応援する」の意味を直接導けない",
-}
+C_PHRASES = {}
 
 
 def write_json(path: Path, value: dict) -> None:

@@ -3,12 +3,17 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
+from q1_mock_core_images import CORE_IMAGES_BY_ROUND
+from q1_mock_etymology import ETYMOLOGY_BY_ROUND
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 ROUND_ID = "mock-2"
+CORE_IMAGES = CORE_IMAGES_BY_ROUND[ROUND_ID]
+ETYMOLOGY = ETYMOLOGY_BY_ROUND[ROUND_ID]
 
 
 QUESTIONS = [
@@ -178,14 +183,14 @@ DETAILS = {
     "canvassing": ("戸別訪問による勧誘、調査", "動詞", "The volunteers spent the weekend canvassing for votes.", "ボランティアたちは週末を投票の戸別勧誘に費やした。"),
     "impelling": ("駆り立てる", "動詞", "A desire to help others was impelling her to study medicine.", "人を助けたいという思いが彼女を医学の勉強へ駆り立てていた。"),
     "honing": ("磨く、鍛える", "動詞", "He is honing his presentation skills before the conference.", "彼は会議を前にプレゼンテーション能力を磨いている。"),
-    "rigorous": ("厳格な、厳密な", "形容詞", "The laboratory follows rigorous safety procedures.", "その研究所は厳格な安全手順に従っている。"),
-    "perplexed": ("困惑した", "形容詞", "The unexpected result left the researchers perplexed.", "予想外の結果に研究者たちは困惑した。"),
+    "rigorous": ("厳格な、厳密な", "形容詞", "The laboratory follows rigorous safety procedures during every experiment.", "その研究所は、あらゆる実験で厳格な安全手順に従っている。"),
+    "perplexed": ("困惑した", "形容詞", "The unexpected result left the researchers perplexed after weeks of careful testing.", "何週間も注意深く検査した後も、予想外の結果に研究者たちは困惑した。"),
     "insurgent": ("反乱者、反政府の", "名詞・形容詞", "The army negotiated with insurgent groups for a temporary cease-fire.", "軍は一時停戦のため反政府勢力と交渉した。"),
     "sedate": ("静かな、落ち着いた", "形容詞", "The hotel has a sedate atmosphere that suits business travelers.", "そのホテルにはビジネス客に合う落ち着いた雰囲気がある。"),
     "palliative": ("緩和的な、苦痛を和らげる", "形容詞", "The treatment was palliative rather than a cure for the disease.", "その治療は病気を治すものではなく、苦痛を和らげるものだった。"),
     "sinister": ("不吉な、邪悪な", "形容詞", "The abandoned house had a sinister appearance after sunset.", "その廃屋は日没後、不吉な外観を見せた。"),
     "colloquial": ("口語の、話し言葉の", "形容詞", "The textbook explains several colloquial expressions used by teenagers.", "その教科書は若者が使う口語表現をいくつか説明している。"),
-    "destitute": ("貧困に陥った、無一文の", "形容詞", "The charity provides meals for destitute families.", "その慈善団体は困窮した家庭に食事を提供している。"),
+    "destitute": ("貧困に陥った、無一文の", "形容詞", "The charity provides hot meals for destitute families during the winter months.", "その慈善団体は冬の間、困窮した家庭に温かい食事を提供している。"),
     "arcane": ("難解な、一般には知られていない", "形容詞", "Only a few specialists understand the arcane rules of the old game.", "その古いゲームの難解な規則を理解している専門家はほとんどいない。"),
     "inclement": ("荒天の、厳しい", "形容詞", "The flight was canceled because of inclement weather.", "悪天候のため、その便は欠航になった。"),
     "benevolent": ("慈悲深い、善意の", "形容詞", "A benevolent donor paid for the children's medical treatment.", "慈悲深い寄付者が子どもたちの治療費を支払った。"),
@@ -199,7 +204,7 @@ DETAILS = {
     "adulation": ("過度な称賛", "名詞", "The actor became uncomfortable with the constant adulation from fans.", "その俳優はファンから絶えず過剰な称賛を受けることに居心地の悪さを感じた。"),
     "abomination": ("忌まわしいもの、嫌悪すべきもの", "名詞", "The environmental group called the illegal dump an abomination.", "環境団体はその不法投棄場を忌まわしいものだと呼んだ。"),
     "ranted": ("わめいた、激しく不平を言った", "動詞", "He ranted about the unfair rule for nearly an hour.", "彼はその不公平な規則について1時間近くわめいた。"),
-    "strutted": ("気取って歩いた", "動詞", "The peacock strutted proudly across the garden.", "そのクジャクは庭を誇らしげに歩いた。"),
+    "strutted": ("気取って歩いた", "動詞", "The peacock strutted proudly across the garden while visitors watched from behind the fence.", "訪問客が柵の後ろから見守る中、そのクジャクは庭を誇らしげに歩いた。"),
     "poached": ("密猟した、引き抜いた", "動詞", "The rangers arrested hunters who had poached rare animals.", "レンジャーは希少動物を密猟した猟師たちを逮捕した。"),
     "shuffled": ("混ぜた、とぼとぼ歩いた", "動詞", "The tired passengers shuffled slowly toward the exit.", "疲れた乗客たちは出口へゆっくりとぼとぼ歩いた。"),
     "constellation": ("星座、一群", "名詞", "A constellation of small firms now supports the local industry.", "現在では小企業の一群が地域産業を支えている。"),
@@ -208,9 +213,9 @@ DETAILS = {
     "headway": ("進展、前進", "名詞", "The research team is finally making headway on the vaccine.", "研究チームはようやくワクチン開発を進展させている。"),
     "insinuate": ("ほのめかす、巧みに入り込ませる", "動詞", "He tried to insinuate that the manager had made a mistake.", "彼は管理職が間違いを犯したとほのめかそうとした。"),
     "decant": ("液体を別容器へ移す", "動詞", "Please decant the wine carefully so the sediment stays in the bottle.", "沈殿物が瓶に残るよう、ワインを注意深く別容器へ移してください。"),
-    "deprecate": ("非難する、価値を低く見る", "動詞", "The director deprecated the use of fear in advertising.", "その監督は広告で恐怖を使うことを非難した。"),
+    "deprecate": ("非難する、価値を低く見る", "動詞", "The director may deprecate the use of fear in advertising.", "その監督は広告で恐怖を使うことを非難するかもしれない。"),
     "dislodge": ("取り除く、追い出す", "動詞", "The dentist used a tool to dislodge the piece of food.", "歯科医は器具を使って食べ物のかけらを取り除いた。"),
-    "layover": ("乗り継ぎ待ち", "名詞", "We had a five-hour layover in Singapore.", "私たちはシンガポールで5時間の乗り継ぎ待ちをした。"),
+    "layover": ("乗り継ぎ待ち", "名詞", "We had a five-hour layover in Singapore before catching our connecting flight.", "私たちは乗り継ぎ便に乗る前、シンガポールで5時間待った。"),
     "vigil": ("夜通しの見守り、徹夜の祈り", "名詞", "The family held a vigil beside the patient's bed.", "家族は患者のベッドのそばで夜通し見守った。"),
     "convalescence": ("回復期", "名詞", "She spent several weeks in convalescence after the operation.", "彼女は手術後、数週間を回復期として過ごした。"),
     "stint": ("一定期間の仕事、任期", "名詞", "His stint as a teacher changed the way he viewed education.", "教師としての一定期間の仕事が、彼の教育観を変えた。"),
@@ -247,7 +252,7 @@ DETAILS = {
     "requisites": ("必要条件、必須品", "名詞", "A valid passport and visa are requisites for the journey.", "有効なパスポートとビザはその旅行の必要条件だ。"),
     "facades": ("外見、建物の正面", "名詞", "Behind the elegant facades, many buildings needed major repairs.", "優雅な外観の裏で、多くの建物は大規模な修理を必要としていた。"),
     "foist": ("押しつける、だます", "動詞", "The seller tried to foist an outdated computer on an inexperienced buyer.", "その販売員は古いコンピューターを経験の浅い買い手に押しつけようとした。"),
-    "muffle": ("音を消す、包んで覆う", "動詞", "Thick curtains muffled the noise from the busy street.", "厚いカーテンが大通りの騒音を和らげた。"),
+    "muffle": ("音を消す、包んで覆う", "動詞", "Thick curtains can muffle the noise from the busy street.", "厚いカーテンは大通りの騒音を和らげることができる。"),
     "enunciate": ("明瞭に発音する", "動詞", "Please enunciate each word so the recording is clear.", "録音が明瞭になるよう、一語一語をはっきり発音してください。"),
     "ascribe": ("帰する、原因を〜に求める", "動詞", "Scientists ascribe the decline in fish to warmer ocean temperatures.", "科学者たちは魚の減少の原因を海水温の上昇に求めている。"),
     "crept up on": ("徐々に近づいた、不意に襲った", "熟語", "The deadline crept up on us before we had finished the design.", "設計を終える前に締め切りがいつの間にか迫ってきた。"),
@@ -256,16 +261,16 @@ DETAILS = {
     "put in for": ("〜を申請した、応募した", "熟語", "He put in for a transfer to the company office overseas.", "彼は海外の会社支社への異動を申請した。"),
     "brimmed over": ("あふれた、満ちあふれた", "熟語", "The cup brimmed over when the waiter kept pouring coffee.", "店員がコーヒーを注ぎ続けたので、カップからコーヒーがあふれた。"),
     "copped out": ("逃げた、責任を回避した", "熟語", "He copped out of the difficult task and left it to his teammate.", "彼は難しい仕事から逃げて、チームメートに任せた。"),
-    "leveled off": ("横ばいになった、安定した", "熟語", "After rising quickly, housing prices leveled off.", "急上昇した後、住宅価格は横ばいになった。"),
-    "played off": ("対立させた、うまく利用した", "熟語", "The negotiator played the two suppliers off against each other.", "交渉担当者は2社の供給業者を互いに競わせた。"),
+    "leveled off": ("横ばいになった、安定した", "熟語", "After rising quickly, housing prices finally leveled off near the end of the year.", "急上昇した後、住宅価格は年末近くになってようやく横ばいになった。"),
+    "played off": ("対立させた、うまく利用した", "熟語", "The negotiator played off the two suppliers against each other during the contract talks.", "交渉担当者は契約協議中、2社の供給業者を互いに競わせた。"),
     "bogging down": ("動きを遅くする、停滞させる", "熟語", "Too many approval steps are bogging down the construction project.", "承認手続きが多すぎて建設計画の進行が遅れている。"),
     "phasing out": ("段階的に廃止する", "熟語", "The company is phasing out its least efficient products.", "その会社は最も効率の悪い製品を段階的に廃止している。"),
     "staking out": ("見張る、場所を確保する", "熟語", "The reporters were staking out the politician's office.", "記者たちは政治家の事務所を張り込んでいた。"),
     "hemming in": ("取り囲む、行動を制限する", "熟語", "High walls were hemming in the small courtyard.", "高い壁が小さな中庭を取り囲んでいた。"),
     "taper off": ("次第に弱まる、減少する", "熟語", "The rain began to taper off before sunset.", "日没前に雨が次第に弱まり始めた。"),
     "work out": ("解決する、うまくいく", "熟語", "We need to work out a fair schedule for the whole team.", "チーム全体のために公平な予定を決める必要がある。"),
-    "fan out": ("扇状に広がる、散開する", "熟語", "The searchers fanned out across the valley.", "捜索隊は谷全体に散開した。"),
-    "blare out": ("大音量で鳴り響く", "熟語", "The alarm blared out across the quiet building.", "警報が静かな建物全体に大音量で鳴り響いた。"),
+    "fan out": ("扇状に広がる、散開する", "熟語", "The searchers will fan out across the valley before darkness makes the work dangerous.", "暗くなって作業が危険になる前に、捜索隊は谷全体に散開する。"),
+    "blare out": ("大音量で鳴り響く", "熟語", "The alarm began to blare out across the quiet building.", "警報が静かな建物全体に大音量で鳴り響き始めた。"),
 }
 
 
@@ -282,6 +287,26 @@ def build() -> tuple[dict, dict]:
     missing = sorted(set(choices) - set(DETAILS))
     if missing:
         raise ValueError(f"語句情報がありません: {missing}")
+    missing_etymology = sorted(set(choices) - set(ETYMOLOGY))
+    if missing_etymology:
+        raise ValueError(f"語源情報がありません: {missing_etymology}")
+    missing_core_image = sorted({phrase for phrase in choices if " " in phrase} - set(CORE_IMAGES))
+    if missing_core_image:
+        raise ValueError(f"熟語の核心イメージがありません: {missing_core_image}")
+
+    blank_re = re.compile(r"\(\s*\)|（\s*）")
+    for index, question in enumerate(QUESTIONS, start=1):
+        if len(question["choices"]) != 4 or question["answerIndex"] not in range(4):
+            raise ValueError(f"Q{index}の4択または正答位置が不正です")
+        if len(blank_re.findall(question["stem"])) != 1:
+            raise ValueError(f"Q{index}の空所が1か所ではありません")
+        if any(
+            re.search(rf"\b{re.escape(choice)}\b", question["stem"], flags=re.IGNORECASE)
+            for choice in question["choices"]
+        ):
+            raise ValueError(f"Q{index}の選択肢が設問文に含まれています")
+        if blank_re.search(question["translation"]):
+            raise ValueError(f"Q{index}の和訳に空所記号があります")
 
     meta = {
         "grade": "英検1級",
@@ -308,10 +333,12 @@ def build() -> tuple[dict, dict]:
                 "meaning": meaning,
                 "example": example,
                 "exampleTranslation": example_translation,
+                "etymology": ETYMOLOGY[choice],
                 "pos": pos,
             }
             if " " in choice:
                 item["phrase"] = choice
+                item["coreImage"] = CORE_IMAGES[choice]
                 idioms.append(item)
             else:
                 item["word"] = choice

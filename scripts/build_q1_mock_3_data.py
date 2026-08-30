@@ -3,12 +3,17 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
+from q1_mock_core_images import CORE_IMAGES_BY_ROUND
+from q1_mock_etymology import ETYMOLOGY_BY_ROUND
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 ROUND_ID = "mock-3"
+CORE_IMAGES = CORE_IMAGES_BY_ROUND[ROUND_ID]
+ETYMOLOGY = ETYMOLOGY_BY_ROUND[ROUND_ID]
 
 
 QUESTIONS = [
@@ -176,7 +181,7 @@ DETAILS = {
     "oblivious": ("気づかない、無頓着な", "形容詞", "He was oblivious to the warning signs around him.", "彼は周囲の警告サインに気づいていなかった。"),
     "regimes": ("政権、体制", "名詞", "Several regimes have changed since the country gained independence.", "その国が独立して以来、いくつもの政権が変わった。"),
     "glimmers": ("かすかな光、兆し", "名詞", "There were glimmers of hope after the negotiations resumed.", "交渉が再開された後、かすかな希望の兆しが見えた。"),
-    "liaisons": ("連絡、協力関係", "名詞", "The school maintains liaisons with local businesses.", "その学校は地元企業と連絡・協力関係を保っている。"),
+    "liaisons": ("連絡、協力関係", "名詞", "The school maintains liaisons with local businesses to arrange student internships.", "その学校は学生のインターンシップを手配するため、地元企業と連絡・協力関係を保っている。"),
     "glitches": ("小さな不具合、障害", "名詞", "The new software still has a few glitches.", "新しいソフトウェアにはまだいくつかの小さな不具合がある。"),
     "debarred": ("締め出した、資格を奪った", "動詞", "The athlete was debarred from the competition for cheating.", "その選手は不正行為のため大会への参加資格を奪われた。"),
     "spearheaded": ("主導した", "動詞", "Dr. Lee spearheaded the campaign to clean the river.", "リー博士は川をきれいにする運動を主導した。"),
@@ -186,57 +191,57 @@ DETAILS = {
     "onset": ("始まり、発症", "名詞", "The medicine should be taken at the onset of symptoms.", "その薬は症状が出始めた時に服用すべきだ。"),
     "gradient": ("勾配、傾斜", "名詞", "The road has a steep gradient near the mountain pass.", "その道路は山道の近くで急な勾配になっている。"),
     "jab": ("突き、注射", "名詞", "The nurse gave me a jab before the trip.", "看護師は旅行前に私に予防接種をした。"),
-    "stakes": ("賭け金、利害", "名詞", "The stakes are high in this election.", "今回の選挙は利害が大きくかかっている。"),
-    "sanctuaries": ("聖域、保護区", "名詞", "The islands provide sanctuaries for endangered birds.", "その島々は絶滅危惧種の鳥の保護区になっている。"),
+    "stakes": ("賭け金、利害", "名詞", "The stakes are high in this election because the result will affect public funding.", "この選挙は結果が公的資金に影響するため、利害が大きくかかっている。"),
+    "sanctuaries": ("聖域、保護区", "名詞", "The islands provide sanctuaries for endangered birds that lose habitat elsewhere.", "その島々は、他の場所で生息地を失った絶滅危惧種の鳥の保護区になっている。"),
     "shrugs": ("肩をすくめること", "名詞", "His repeated shrugs showed that he had no answer.", "彼が何度も肩をすくめたことは、答えがないことを示していた。"),
     "factions": ("派閥", "名詞", "Two factions within the party disagreed over the proposal.", "党内の二つの派閥がその提案をめぐって意見を異にした。"),
     "somberly": ("重苦しく、厳粛に", "副詞", "The mayor somberly announced the loss of the rescue team.", "市長は救助隊の犠牲を重苦しく発表した。"),
     "idly": ("何もせず、ぼんやりと", "副詞", "The passengers idly watched the rain through the windows.", "乗客たちは窓越しに雨をぼんやり眺めていた。"),
-    "flagrantly": ("露骨に、甚だしく", "副詞", "The company flagrantly ignored the safety regulations.", "その会社は安全規則を露骨に無視した。"),
-    "inherently": ("本質的に", "副詞", "The task is not inherently difficult.", "その仕事は本質的に難しいわけではない。"),
-    "sanctified": ("神聖化した、清めた", "動詞", "The priest sanctified the new chapel.", "司祭は新しい礼拝堂を聖別した。"),
-    "convened": ("招集した、集まった", "動詞", "The committee convened to discuss the emergency.", "委員会は緊急事態について話し合うため招集された。"),
+    "flagrantly": ("露骨に、甚だしく", "副詞", "The company flagrantly ignored the safety regulations despite repeated official warnings.", "その会社は、当局から繰り返し警告されたにもかかわらず、安全規則を露骨に無視した。"),
+    "inherently": ("本質的に", "副詞", "The task is not inherently difficult, but it requires patience and careful planning.", "その仕事は本質的に難しいわけではないが、忍耐と綿密な計画が必要だ。"),
+    "sanctified": ("神聖化した、清めた", "動詞", "The priest sanctified the new chapel during a ceremony attended by village residents.", "司祭は村民が出席した式典で新しい礼拝堂を聖別した。"),
+    "convened": ("招集した、集まった", "動詞", "The committee convened to discuss the emergency after receiving the latest report.", "委員会は最新の報告を受けた後、緊急事態について話し合うため集まった。"),
     "detracted": ("損なった、減じた", "動詞", "The minor error detracted from an otherwise excellent report.", "その小さな誤りが、他は優れた報告書の価値を損なった。"),
     "bequeathed": ("遺贈した", "動詞", "She bequeathed her house to the local museum.", "彼女は自宅を地元の博物館に遺贈した。"),
     "slanting": ("斜めに傾ける、傾斜する", "動詞", "The slanting rain made it hard to see the road.", "斜めに降る雨のため、道路が見えにくかった。"),
-    "inhaling": ("吸い込むこと", "動詞", "Inhaling smoke can damage the lungs.", "煙を吸い込むと肺を傷めることがある。"),
-    "deflecting": ("そらす、かわす", "動詞", "The shield is designed for deflecting heat.", "その盾は熱をそらすために設計されている。"),
-    "whetting": ("研ぐ、刺激する", "動詞", "The preview whetted the audience's appetite for the film.", "予告編は観客の映画への期待をかき立てた。"),
+    "inhaling": ("吸い込むこと", "動詞", "Inhaling smoke can damage the lungs and increase the risk of serious disease.", "煙を吸い込むと肺を傷め、深刻な病気のリスクを高めることがある。"),
+    "deflecting": ("そらす、かわす", "動詞", "The shield is designed for deflecting intense heat from the spacecraft.", "その盾は宇宙船からの強烈な熱をそらすために設計されている。"),
+    "whetting": ("研ぐ、刺激する", "動詞", "The preview was whetting the audience's appetite for the film before its release.", "その予告編は公開前から観客の映画への期待をかき立てていた。"),
     "sumptuous": ("豪華な", "形容詞", "The hotel served a sumptuous dinner to its guests.", "そのホテルは宿泊客に豪華な夕食を出した。"),
-    "transient": ("一時的な、つかの間の", "形容詞", "The shelter offers beds for transient workers.", "その施設は一時的な労働者にベッドを提供する。"),
+    "transient": ("一時的な、つかの間の", "形容詞", "The shelter offers beds for transient workers who need housing between contracts.", "その施設は、契約と契約の間に住まいを必要とする一時的な労働者にベッドを提供する。"),
     "mundane": ("ありふれた、退屈な", "形容詞", "She wanted a break from her mundane office routine.", "彼女はありふれた事務仕事の日課から離れたかった。"),
-    "pessimistic": ("悲観的な", "形容詞", "His pessimistic forecast discouraged the investors.", "彼の悲観的な予測は投資家たちを落胆させた。"),
+    "pessimistic": ("悲観的な", "形容詞", "His pessimistic forecast discouraged investors who had expected a strong recovery.", "力強い回復を期待していた投資家たちは、彼の悲観的な予測に落胆した。"),
     "lenient": ("寛大な、厳しくない", "形容詞", "The judge was lenient because it was the student's first offense.", "裁判官は生徒の初犯だったので寛大だった。"),
     "frantic": ("取り乱した、必死の", "形容詞", "The frantic mother searched every room in the house.", "取り乱した母親は家中の部屋を探した。"),
-    "ascetic": ("禁欲的な", "形容詞", "The ascetic monk owned almost nothing.", "その禁欲的な修道士はほとんど何も所有していなかった。"),
+    "ascetic": ("禁欲的な", "形容詞", "The ascetic monk owned almost nothing and spent most days in silent prayer.", "その禁欲的な修道士はほとんど何も所有せず、ほとんどの日を静かな祈りに費やした。"),
     "livid": ("激怒した、青ざめた", "形容詞", "She was livid when she discovered the missing files.", "彼女はなくなったファイルに気づいて激怒した。"),
-    "fared": ("うまくいった、進んだ", "動詞", "How did you fare on the difficult examination?", "難しい試験の出来はどうでしたか。"),
+    "fared": ("うまくいった、進んだ", "動詞", "She fared well on the difficult examination compared with her classmates.", "彼女はクラスメートと比べて、難しい試験でよい成績を収めた。"),
     "compounded": ("悪化させた、複合した", "動詞", "The delay compounded the problems caused by the storm.", "遅れが嵐による問題をさらに悪化させた。"),
     "succumbed": ("屈した、負けた", "動詞", "He finally succumbed to pressure from his colleagues.", "彼はついに同僚からの圧力に屈した。"),
-    "corroded": ("腐食した、蝕んだ", "動詞", "Salt water corroded the metal railing.", "塩水が金属の手すりを腐食させた。"),
-    "disembarking": ("下船する、降りる", "動詞", "Passengers were disembarking from the ferry.", "乗客たちはフェリーから降りていた。"),
+    "corroded": ("腐食した、蝕んだ", "動詞", "Salt water corroded the metal railing after years of exposure to the sea.", "何年も海にさらされた後、塩水が金属の手すりを腐食させた。"),
+    "disembarking": ("下船する、降りる", "動詞", "Passengers were disembarking from the ferry when the crew announced a delay.", "乗客がフェリーから降りているとき、乗組員が遅延を発表した。"),
     "acquiescing": ("黙って従う、同意する", "動詞", "By acquiescing to the demand, he avoided a public dispute.", "その要求に黙って応じることで、彼は公の争いを避けた。"),
     "delving": ("掘り下げて調べる", "動詞", "The journalist is delving into the history of the company.", "その記者は会社の歴史を深く調べている。"),
     "infringing": ("侵害する", "動詞", "The new rule risks infringing on workers' rights.", "その新しい規則は労働者の権利を侵害する恐れがある。"),
     "coronation": ("戴冠式", "名詞", "The coronation attracted visitors from around the world.", "その戴冠式には世界中から観光客が集まった。"),
     "vogue": ("流行", "名詞", "Short videos came into vogue among younger users.", "短い動画が若い利用者の間で流行した。"),
     "maneuver": ("巧みな操作、策略", "名詞", "The pilot performed a difficult maneuver in the narrow valley.", "パイロットは狭い谷で難しい操作を行った。"),
-    "protocol": ("手順、規定", "名詞", "The laboratory follows a strict safety protocol.", "その研究所は厳格な安全手順に従っている。"),
+    "protocol": ("手順、規定", "名詞", "The laboratory follows a strict safety protocol during every chemical experiment.", "その研究所は、化学実験のたびに厳格な安全手順に従っている。"),
     "abort": ("中止する", "動詞", "The pilot had to abort the landing because of strong winds.", "強風のためパイロットは着陸を中止しなければならなかった。"),
     "reclaim": ("取り戻す、回収する", "動詞", "The city plans to reclaim the polluted land for a park.", "市は汚染された土地を公園として再生する計画だ。"),
     "pinpoint": ("正確に突き止める", "動詞", "Investigators could not pinpoint the source of the leak.", "捜査員たちは漏れの発生源を正確に突き止められなかった。"),
     "insulate": ("遮断する、断熱する", "動詞", "These materials insulate the house from outside noise.", "これらの素材は家を外部の騒音から遮断する。"),
     "exemplary": ("模範的な", "形容詞", "The nurse was praised for her exemplary care of patients.", "その看護師は患者への模範的なケアを称賛された。"),
-    "haggard": ("やつれた、疲れ果てた", "形容詞", "After the long journey, he looked haggard.", "長旅の後、彼はやつれて見えた。"),
+    "haggard": ("やつれた、疲れ果てた", "形容詞", "After the long journey, he looked haggard and needed several hours of sleep.", "長旅の後、彼はやつれて見え、数時間眠る必要があった。"),
     "insipid": ("味気ない、面白みのない", "形容詞", "The speech was so insipid that few people remembered it.", "そのスピーチはあまりに味気なく、覚えている人はほとんどいなかった。"),
     "petulant": ("すねた、不機嫌な", "形容詞", "The petulant child complained about every small inconvenience.", "そのすねた子どもは小さな不便についていちいち不満を言った。"),
     "envoy": ("特使", "名詞", "The envoy delivered a message from the president.", "その特使は大統領からのメッセージを届けた。"),
     "allegory": ("寓話、寓意的な物語", "名詞", "The novel is an allegory about the dangers of political power.", "その小説は政治権力の危険性についての寓話だ。"),
     "gall": ("厚かましさ", "名詞", "He had the gall to blame me for his own mistake.", "彼は自分のミスを私のせいにする厚かましさがあった。"),
     "intrigue": ("陰謀、興味", "名詞", "The mystery and intrigue kept readers turning the pages.", "謎と陰謀が読者にページをめくらせ続けた。"),
-    "reprisals": ("報復措置", "名詞", "The rebels feared reprisals after the attack.", "反乱軍は攻撃後の報復を恐れた。"),
+    "reprisals": ("報復措置", "名詞", "The rebels feared reprisals after the attack on the government convoy.", "反乱軍は政府の輸送隊を攻撃した後の報復を恐れた。"),
     "provisos": ("条件、但し書き", "名詞", "She accepted the offer with two important provisos.", "彼女は二つの重要な条件付きでその申し出を受け入れた。"),
-    "apexes": ("頂点", "名詞", "The two mountains have sharp, snow-covered apexes.", "その二つの山には雪に覆われた鋭い頂がある。"),
+    "apexes": ("頂点", "名詞", "The two mountains have sharp, snow-covered apexes that remain visible from town.", "その二つの山には鋭く雪に覆われた頂があり、町からも見える。"),
     "fringes": ("周辺、縁", "名詞", "Small villages lie on the fringes of the forest.", "小さな村々が森の周辺に位置している。"),
     "onslaught": ("猛攻、猛襲", "名詞", "The town prepared for an onslaught of winter storms.", "その町は冬の嵐の猛襲に備えた。"),
     "archipelago": ("群島", "名詞", "The country is made up of a beautiful tropical archipelago.", "その国は美しい熱帯の群島から成っている。"),
@@ -251,9 +256,9 @@ DETAILS = {
     "dainty": ("繊細な、可憐な", "形容詞", "The child carefully held the dainty porcelain cup.", "その子は繊細な磁器のカップを注意深く持った。"),
     "introspective": ("内省的な", "形容詞", "Her introspective journal helped her understand her feelings.", "内省的な日記を書くことで、彼女は自分の気持ちを理解できた。"),
     "dabble in": ("〜にちょっと手を出す", "熟語", "She decided to dabble in photography during the summer.", "彼女は夏の間、写真撮影を少し始めることにした。"),
-    "let down": ("失望させる", "熟語", "I promised not to let my team down.", "私はチームを失望させないと約束した。"),
+    "let down": ("失望させる", "熟語", "I promised that I would not let my team down during the crisis.", "私は危機の間、チームを失望させないと約束した。"),
     "put across": ("うまく伝える、売り込む", "熟語", "The speaker put across his idea in simple language.", "話し手は自分の考えを簡単な言葉でうまく伝えた。"),
-    "farm out": ("外注する", "熟語", "The company farmed out the design work to a small studio.", "その会社はデザイン作業を小さなスタジオに外注した。"),
+    "farm out": ("外注する", "熟語", "The company will farm out the design work to a small studio.", "その会社はデザイン作業を小さなスタジオに外注する。"),
     "stumbled upon": ("偶然見つける", "熟語", "While walking through the market, she stumbled upon an old map.", "市場を歩いていると、彼女は古い地図を偶然見つけた。"),
     "chipped off": ("少しずつ削り取った、剥がした", "熟語", "The workers chipped off the old paint from the door.", "作業員たちはドアから古い塗料を少しずつ剥がした。"),
     "marked out": ("選び出した、目立たせた", "熟語", "The coach marked out three players for special praise.", "コーチは特に称賛する3人の選手を選び出した。"),
@@ -265,7 +270,7 @@ DETAILS = {
     "backed out": ("手を引いた、約束を撤回した", "熟語", "The buyer backed out of the deal at the last minute.", "買い手は土壇場でその取引から手を引いた。"),
     "flipped out": ("ひどく取り乱した、激怒した", "熟語", "She flipped out when she saw the damage to her car.", "彼女は自分の車の損傷を見てひどく取り乱した。"),
     "squeaked by": ("かろうじて通過した、勝った", "熟語", "Our team squeaked by with a one-point victory.", "私たちのチームは1点差でかろうじて勝った。"),
-    "sank in": ("理解される、実感される", "熟語", "It took a few days for the news to sink in.", "その知らせが実感として理解されるまで数日かかった。"),
+    "sank in": ("理解される、実感される", "熟語", "The seriousness of the news finally sank in after several days.", "数日後、その知らせの深刻さがようやく実感として理解された。"),
 }
 
 
@@ -282,6 +287,26 @@ def build() -> tuple[dict, dict]:
     missing = sorted(set(choices) - set(DETAILS))
     if missing:
         raise ValueError(f"語句情報がありません: {missing}")
+    missing_etymology = sorted(set(choices) - set(ETYMOLOGY))
+    if missing_etymology:
+        raise ValueError(f"語源情報がありません: {missing_etymology}")
+    missing_core_image = sorted({phrase for phrase in choices if " " in phrase} - set(CORE_IMAGES))
+    if missing_core_image:
+        raise ValueError(f"熟語の核心イメージがありません: {missing_core_image}")
+
+    blank_re = re.compile(r"\(\s*\)|（\s*）")
+    for index, question in enumerate(QUESTIONS, start=1):
+        if len(question["choices"]) != 4 or question["answerIndex"] not in range(4):
+            raise ValueError(f"Q{index}の4択または正答位置が不正です")
+        if len(blank_re.findall(question["stem"])) != 1:
+            raise ValueError(f"Q{index}の空所が1か所ではありません")
+        if any(
+            re.search(rf"\b{re.escape(choice)}\b", question["stem"], flags=re.IGNORECASE)
+            for choice in question["choices"]
+        ):
+            raise ValueError(f"Q{index}の選択肢が設問文に含まれています")
+        if blank_re.search(question["translation"]):
+            raise ValueError(f"Q{index}の和訳に空所記号があります")
 
     meta = {
         "grade": "英検1級",
@@ -308,10 +333,12 @@ def build() -> tuple[dict, dict]:
                 "meaning": meaning,
                 "example": example,
                 "exampleTranslation": example_translation,
+                "etymology": ETYMOLOGY[choice],
                 "pos": pos,
             }
             if " " in choice:
                 item["phrase"] = choice
+                item["coreImage"] = CORE_IMAGES[choice]
                 idioms.append(item)
             else:
                 item["word"] = choice

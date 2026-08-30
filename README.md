@@ -66,6 +66,15 @@
 - 単語の語源分解（表示専用・原形キー）: `data/word_origins.json`
 - 問題セット一覧: `data/manifest.json` の `q1`
 
+1級の模試第1回〜第6回と公式過去問3回分は、模試25問/100語句・公式22問/88語句の形式差を保ったまま、共通検査で第6回の完成条件を確認できます。
+
+```powershell
+py -3 scripts/check_eiken1_alignment.py --dataset-id eiken1-mock-6
+py -3 scripts/check_eiken1_alignment.py --dataset-id eiken1-2026-1
+```
+
+全セットの独立レビュー結果は `docs/EIKEN1_ALIGNMENT_REVIEW.md` に記録しています。
+
 準1級のQ1データは、全体過去問データから次で抽出します。
 
 ```powershell
@@ -73,8 +82,12 @@ py -3 scripts/build_q1_pre1_data.py
 py -3 scripts/build_q1_1_data.py
 py -3 scripts/enrich_flashcard_fields.py
 py -3 scripts/curate_1_examples.py
+py -3 scripts/curate_1_etymology.py
 py -3 scripts/check_q1_data.py
 ```
+
+1級公式過去問の入力PDFは `data/eiken_1/<round>/problem.pdf` と
+`answer.pdf` に置きます。このフォルダは `.gitignore` 対象で、PDFを公開物へ含めません。
 
 ## 起動
 
@@ -108,7 +121,7 @@ py -3 scripts/generate_tts_1.py --grade iuhw --round set-1
 全級で、見出し語・発音記号・品詞・意味・例文・例文の日本語訳を同じ順序で表示します。熟語の暗記カードは、意味・核心イメージの連鎖・例文の3ブロックで表示し、不変化詞の共有イメージや仲間例のパネルは表示しません。単語の語源は収録されている場合に表示し、語源チェーンがある語は熟語と同じ連鎖カード、従来のA型はチップと導出文、B型は由来の一行として表示します（語根そのものの解説パネルは表示しません）。
 1級の例文は公式の設問文を流用せず、語句ごとに作成したオリジナル英文と日本語訳を表示します。
 
-語源データは語根122個、A型236語、B型126語を収録しています。英検1級模試第6回では、84語すべてにEtymonline・Merriam-Webster・Collins等を照合した語源チェーンを付け、参照URLを語ごとに記録しています。その他のセットは全語をカバーする機能ではなく、語根から中心義を思い出せる語に限定しています。
+語源データは語根122個、A型236語、B型483語を収録しています。英検1級模試第6回では、84語すべてにEtymonline・Merriam-Webster・Collins等を照合した語源チェーンを付け、参照URLを語ごとに記録しています。その他の1級セットも、語源説明またはC型の除外理由を各語に付けています。
 
 ## 暗記カードの例文訳
 
@@ -164,9 +177,12 @@ py -3 scripts/add_example_translations.py
 - `static/vendor/harness/cloud.js`: 生徒別クラウド同期の生成物。直接編集しない
 - `scripts/build_q1_pre1_data.py`: 準1級Q1データの抽出
 - `scripts/build_q1_1_data.py`: 1級公式PDFから大問1を抽出
+- `scripts/build_pre1_data.py`: 1級公式PDFのページ・設問・解答キー抽出ヘルパー
 - `scripts/build_q1_5_2026-1_data.py`: 5級2026年度第1回の大問1データ生成
 - `scripts/enrich_flashcard_fields.py`: 対象データの発音・品詞の補完
 - `scripts/curate_1_examples.py`: 1級のオリジナル例文・日本語訳の適用
+- `scripts/curate_1_etymology.py`: 1級の語源説明の適用
+- `scripts/check_eiken1_alignment.py`: 1級全セットの語句・例文・語源・原形音声の整合検査
 - `scripts/build_q1_mock_1_data.py`: 1級模試第1回の問題・語彙データ生成
 - `scripts/build_q1_mock_2_data.py`: 1級模試第2回の問題・語彙データ生成
 - `scripts/build_q1_mock_3_data.py`: 1級模試第3回の問題・語彙データ生成
@@ -177,6 +193,8 @@ py -3 scripts/add_example_translations.py
 - `scripts/build_q1_p2_mock_{2,3,4}_data.py`: 準2級自作模試第2回〜第4回の問題・語彙データ生成
 - `scripts/build_q1_iuhw_set_1_data.py`: 国際医療福祉大学セットの問題・語彙データ生成
 - `scripts/check_mock_6_data.py`: 1級模試第6回の内容・重複チェック
+- `scripts/q1_mock_etymology.py` / `scripts/q1_official_etymology.py`: 1級各セットの語源入力データ
+- `scripts/sync_q1_mock_origins.py` / `scripts/sync_q1_official_origins.py`: 語源表示辞書への反映
 - `scripts/check_5_data.py`: 5級2026年度第1回大問1の内容・公式解答チェック
 - `scripts/check_q1_data.py`: 24セットのデータ契約チェック
 - `scripts/check_p2_mock_data.py`: 準2級自作模試（全回）の内容チェック

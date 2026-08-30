@@ -32,6 +32,7 @@ function hasKanji(value) {
 function meaningOverlap(derivation, meaning) {
   const tail = normalize(String(derivation).split(/(?:→|->)/).at(-1));
   const source = normalize(meaning);
+  if (source.length === 1 && hasKanji(source)) return tail.includes(source);
   for (let length = Math.min(6, source.length); length >= 2; length -= 1) {
     for (let start = 0; start + length <= source.length; start += 1) {
       const slice = source.slice(start, start + length);

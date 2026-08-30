@@ -26,4 +26,4 @@
 
 第5回の表層音声100件と、暗記カードで使用する原形音声44件を確認した。不足していた `shearing.mp3` と `waylay.mp3` はAzure Speechで生成済みである。
 
-完了後は `py -3 scripts/check_mock_5_alignment.py` と `npm test` を実行する。
+完了時検証として `py -3 scripts/check_mock_5_alignment.py` と `npm test` を実行し、いずれも通過した。
