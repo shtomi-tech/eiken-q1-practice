@@ -1,4 +1,4 @@
-"""Q1用29データセットの最低限の契約を検証する。"""
+"""Q1用データセットの最低限の契約を検証する。"""
 
 from __future__ import annotations
 
@@ -23,6 +23,7 @@ EXPECTED_IDS = {
     "eiken1-mock-5",
     "eiken1-mock-6",
     "eiken1-mock-7",
+    "eiken1-mock-8",
     "eikenp2-mock-1",
     "eikenp2-mock-2",
     "eikenp2-mock-3",
