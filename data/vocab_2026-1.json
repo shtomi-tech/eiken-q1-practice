@@ -1,27 +1,54 @@
 {
   "meta": {
     "exam": "英検2級 2026年度第1回 一次試験",
-    "section": "Reading 大問1（空所補充）",
+    "section": "Reading 大問1（語句空所補充）",
     "source_pdf": "2026-1-1ji-2kyu.pdf",
     "note": "正解は公式解答（2026年度第1回）と照合済み。語源は定説に基づき、学習に効く範囲で簡潔化。",
-    "counts": { "words": 40, "idioms": 28, "total": 68 }
+    "counts": {
+      "words": 40,
+      "idioms": 28,
+      "total": 68
+    },
+    "grade": "英検2級",
+    "round": "2026-1",
+    "source": "英検公式の公開過去問PDFを、学習用JSONへ大問1だけ構造化",
+    "source_problem_url": "https://www.eiken.or.jp/eiken/exam/kakomon/2026-1-1ji-2kyu.pdf",
+    "source_answer_url": "https://www.eiken.or.jp/eiken/result/pdf/202601F2kyu.pdf"
   },
   "words": [
     {
-      "q": 1, "is_answer": true, "word": "bride", "ipa": "/braɪd/", "pos": "名詞",
+      "q": 1,
+      "is_answer": true,
+      "word": "bride",
+      "ipa": "/braɪd/",
+      "pos": "名詞",
       "meaning": "花嫁、新婦",
       "etymology": "古英語 brȳd「花嫁」。ゲルマン系の語で bridal（婚礼の＝bride+ale宴）, bridegroom（花婿）と同系。",
       "example": "In many countries, the bride wears a white dress at a wedding.",
       "exampleTranslation": "多くの国では、花嫁は結婚式で白いドレスを着ます。",
       "collocation": "the bride and groom（新郎新婦） / a blushing bride",
       "relatedWords": [
-        { "word": "bridal", "pos": "形容詞", "meaning": "花嫁の、結婚式の", "relation": "word_family" },
-        { "word": "bridegroom", "pos": "名詞", "meaning": "花婿、新郎", "relation": "word_family" }
+        {
+          "word": "bridal",
+          "pos": "形容詞",
+          "meaning": "花嫁の、結婚式の",
+          "relation": "word_family"
+        },
+        {
+          "word": "bridegroom",
+          "pos": "名詞",
+          "meaning": "花婿、新郎",
+          "relation": "word_family"
+        }
       ],
       "selfExampleEnabled": true
     },
     {
-      "q": 1, "is_answer": false, "word": "lawyer", "ipa": "/ˈlɔːjər/", "pos": "名詞",
+      "q": 1,
+      "is_answer": false,
+      "word": "lawyer",
+      "ipa": "/ˈlɔːjər/",
+      "pos": "名詞",
       "meaning": "弁護士、法律家",
       "etymology": "law（法）+ -yer（…する人）。law は古ノルド語 lag「定められたもの」が語源。",
       "example": "She hired a lawyer to help with the contract.",
@@ -29,7 +56,11 @@
       "collocation": "hire a lawyer / a defense lawyer（弁護人）"
     },
     {
-      "q": 1, "is_answer": false, "word": "warrior", "ipa": "/ˈwɔːriər/", "pos": "名詞",
+      "q": 1,
+      "is_answer": false,
+      "word": "warrior",
+      "ipa": "/ˈwɔːriər/",
+      "pos": "名詞",
       "meaning": "戦士、武人",
       "etymology": "古北仏語 werreior < werre「戦争」。現代英語 war と同根で「戦争をする人」。",
       "example": "The ancient warrior carried a sword and shield.",
@@ -37,16 +68,23 @@
       "collocation": "a brave warrior / a fierce warrior"
     },
     {
-      "q": 1, "is_answer": false, "word": "surgeon", "ipa": "/ˈsɜːrdʒən/", "pos": "名詞",
+      "q": 1,
+      "is_answer": false,
+      "word": "surgeon",
+      "ipa": "/ˈsɜːrdʒən/",
+      "pos": "名詞",
       "meaning": "外科医",
       "etymology": "ギリシャ語 kheir「手」+ ergon「仕事」→ kheirourgia「手で行う技＝手術」。chiro-(手)・energy(ergon=仕事)と同根。",
-      "example": "The surgeon performed the operation carefully.",
-      "exampleTranslation": "外科医は慎重に手術を行った。",
+      "example": "The surgeon performed the operation carefully in the city hospital yesterday.",
+      "exampleTranslation": "外科医は昨日、市立病院で慎重に手術を行いました。",
       "collocation": "a heart surgeon / a brain surgeon"
     },
-
     {
-      "q": 2, "is_answer": true, "word": "globe", "ipa": "/ɡloʊb/", "pos": "名詞",
+      "q": 2,
+      "is_answer": true,
+      "word": "globe",
+      "ipa": "/ɡloʊb/",
+      "pos": "名詞",
       "meaning": "地球儀、球体、地球",
       "etymology": "ラテン語 globus「球、塊」。global, globalization と同根。",
       "example": "The teacher asked her students to find Argentina on a globe.",
@@ -54,7 +92,11 @@
       "collocation": "a globe of the world / around the globe（世界中で）"
     },
     {
-      "q": 2, "is_answer": false, "word": "branch", "ipa": "/bræntʃ/", "pos": "名詞",
+      "q": 2,
+      "is_answer": false,
+      "word": "branch",
+      "ipa": "/bræntʃ/",
+      "pos": "名詞",
       "meaning": "枝；支店、部門",
       "etymology": "後期ラテン語 branca「（動物の）足」→「枝分かれするもの」。",
       "example": "A small bird sat on the branch of the tree.",
@@ -62,7 +104,11 @@
       "collocation": "a branch office（支店） / the branches of a tree"
     },
     {
-      "q": 2, "is_answer": false, "word": "scale", "ipa": "/skeɪl/", "pos": "名詞",
+      "q": 2,
+      "is_answer": false,
+      "word": "scale",
+      "ipa": "/skeɪl/",
+      "pos": "名詞",
       "meaning": "規模；目盛り；はかり；うろこ",
       "etymology": "古ノルド語 skál「ボウル、はかりの皿」。天秤の皿→「はかり・目盛り」。",
       "example": "They built the model on a large scale.",
@@ -70,16 +116,23 @@
       "collocation": "on a large scale / a pay scale（賃金表）"
     },
     {
-      "q": 2, "is_answer": false, "word": "trail", "ipa": "/treɪl/", "pos": "名詞",
+      "q": 2,
+      "is_answer": false,
+      "word": "trail",
+      "ipa": "/treɪl/",
+      "pos": "名詞",
       "meaning": "（山などの）小道；跡、痕跡",
       "etymology": "古フランス語 trailler「引きずる」。引きずった跡→「小道・痕跡」。",
       "example": "We followed the mountain trail to the top.",
       "exampleTranslation": "私たちは頂上まで山道をたどりました。",
       "collocation": "a hiking trail / leave a trail（跡を残す）"
     },
-
     {
-      "q": 3, "is_answer": true, "word": "difficulty", "ipa": "/ˈdɪfɪkəlti/", "pos": "名詞",
+      "q": 3,
+      "is_answer": true,
+      "word": "difficulty",
+      "ipa": "/ˈdɪfɪkəlti/",
+      "pos": "名詞",
       "meaning": "困難、難しさ；苦労",
       "etymology": "ラテン語 difficultas < dis-（否定）+ facilis（容易な＝facile）。「容易でないこと」。",
       "example": "She can already read the newspaper without any difficulty.",
@@ -87,7 +140,11 @@
       "collocation": "with difficulty（やっとのことで） / have difficulty (in) doing"
     },
     {
-      "q": 3, "is_answer": false, "word": "glory", "ipa": "/ˈɡlɔːri/", "pos": "名詞",
+      "q": 3,
+      "is_answer": false,
+      "word": "glory",
+      "ipa": "/ˈɡlɔːri/",
+      "pos": "名詞",
       "meaning": "栄光、名誉",
       "etymology": "ラテン語 gloria「名声、栄誉」。glorious（輝かしい）と同根。",
       "example": "The team won glory by winning the championship.",
@@ -95,7 +152,11 @@
       "collocation": "win glory / in all its glory（最盛の状態で）"
     },
     {
-      "q": 3, "is_answer": false, "word": "balance", "ipa": "/ˈbæləns/", "pos": "名詞",
+      "q": 3,
+      "is_answer": false,
+      "word": "balance",
+      "ipa": "/ˈbæləns/",
+      "pos": "名詞",
       "meaning": "均衡、バランス；（口座の）残高",
       "etymology": "ラテン語 bilanx「2つの皿の（天秤）」< bi-（2）+ lanx（皿）。",
       "example": "She lost her balance and fell off the bike.",
@@ -103,16 +164,23 @@
       "collocation": "keep/lose one's balance / a good balance between A and B"
     },
     {
-      "q": 3, "is_answer": false, "word": "priority", "ipa": "/praɪˈɔːrəti/", "pos": "名詞",
+      "q": 3,
+      "is_answer": false,
+      "word": "priority",
+      "ipa": "/praɪˈɔːrəti/",
+      "pos": "名詞",
       "meaning": "優先、優先事項",
       "etymology": "ラテン語 prior「前の、先の」。prior（事前の）と同根で「先んじること」。",
-      "example": "Safety is our top priority.",
-      "exampleTranslation": "安全は私たちの最優先事項です。",
+      "example": "During the emergency, protecting children became our top priority.",
+      "exampleTranslation": "緊急事態の間、子どもたちを守ることが私たちの最優先事項になりました。",
       "collocation": "a top priority / give priority to（〜を優先する）"
     },
-
     {
-      "q": 4, "is_answer": true, "word": "tendency", "ipa": "/ˈtendənsi/", "pos": "名詞",
+      "q": 4,
+      "is_answer": true,
+      "word": "tendency",
+      "ipa": "/ˈtendənsi/",
+      "pos": "名詞",
       "meaning": "傾向、性向、癖",
       "etymology": "ラテン語 tendere「伸ばす、向かう」。tend, extend, tension と同根で「ある方向へ向かう性質」。",
       "example": "You have a tendency to be quiet when you're worried.",
@@ -120,32 +188,47 @@
       "collocation": "have a tendency to do / a growing tendency"
     },
     {
-      "q": 4, "is_answer": false, "word": "discrimination", "ipa": "/dɪˌskrɪməˈneɪʃən/", "pos": "名詞",
+      "q": 4,
+      "is_answer": false,
+      "word": "discrimination",
+      "ipa": "/dɪˌskrɪməˈneɪʃən/",
+      "pos": "名詞",
       "meaning": "差別；識別、区別",
       "etymology": "ラテン語 discriminare「区別する」< dis-（分離）+ crimen（区別・判断）。",
-      "example": "Laws protect people from discrimination.",
-      "exampleTranslation": "法律は人々を差別から守ります。",
+      "example": "Strong laws should protect every worker from discrimination at work.",
+      "exampleTranslation": "強い法律は、職場であらゆる労働者を差別から守るべきです。",
       "collocation": "racial discrimination / discrimination against（〜に対する差別）"
     },
     {
-      "q": 4, "is_answer": false, "word": "shelter", "ipa": "/ˈʃeltər/", "pos": "名詞",
+      "q": 4,
+      "is_answer": false,
+      "word": "shelter",
+      "ipa": "/ˈʃeltər/",
+      "pos": "名詞",
       "meaning": "避難所、シェルター；保護",
       "etymology": "古英語起源で「盾でできた囲い（shield+troop）」が変化したとする説が有力。",
-      "example": "They found shelter from the heavy rain.",
-      "exampleTranslation": "彼らは大雨から避難できる場所を見つけた。",
+      "example": "The hikers found shelter from the heavy rain inside an old cabin.",
+      "exampleTranslation": "ハイカーたちは激しい雨から逃れるため、古い小屋の中に避難場所を見つけました。",
       "collocation": "take shelter（避難する） / an animal shelter"
     },
     {
-      "q": 4, "is_answer": false, "word": "content", "ipa": "/ˈkɑːntent/", "pos": "名詞",
+      "q": 4,
+      "is_answer": false,
+      "word": "content",
+      "ipa": "/ˈkɑːntent/",
+      "pos": "名詞",
       "meaning": "中身、内容（複数形 contents）／（形）満足して",
       "etymology": "ラテン語 contentus「含まれた；満足した」< continere（含む）= con- + tenere（保つ）。",
       "example": "The content of the message was very important.",
       "exampleTranslation": "メッセージの内容は非常に重要でした。",
       "collocation": "table of contents（目次） / be content with（〜に満足する）"
     },
-
     {
-      "q": 5, "is_answer": true, "word": "foster", "ipa": "/ˈfɔːstər/", "pos": "動詞",
+      "q": 5,
+      "is_answer": true,
+      "word": "foster",
+      "ipa": "/ˈfɔːstər/",
+      "pos": "動詞",
       "meaning": "（能力・感情などを）育む、促進する／里子として育てる",
       "etymology": "古英語 fōstrian「養い育てる」< fōstor「食べ物・養育」。food と同じ語根 *fōd-。",
       "example": "Teachers try to foster leadership qualities in their students.",
@@ -153,32 +236,47 @@
       "collocation": "foster creativity / foster growth / a foster family（里親家庭）"
     },
     {
-      "q": 5, "is_answer": false, "word": "hate", "ipa": "/heɪt/", "pos": "動詞",
+      "q": 5,
+      "is_answer": false,
+      "word": "hate",
+      "ipa": "/heɪt/",
+      "pos": "動詞",
       "meaning": "憎む、ひどく嫌う",
       "etymology": "古英語 hatian「憎む」。ゲルマン系の基本語。",
-      "example": "He hates getting up early in the morning.",
-      "exampleTranslation": "彼は朝早く起きるのが嫌いです。",
+      "example": "I hate getting up early on cold winter mornings.",
+      "exampleTranslation": "私は寒い冬の朝に早起きするのが嫌いです。",
       "collocation": "hate doing / a hate crime（憎悪犯罪）"
     },
     {
-      "q": 5, "is_answer": false, "word": "divide", "ipa": "/dɪˈvaɪd/", "pos": "動詞",
+      "q": 5,
+      "is_answer": false,
+      "word": "divide",
+      "ipa": "/dɪˈvaɪd/",
+      "pos": "動詞",
       "meaning": "分ける、分割する；割り算する",
       "etymology": "ラテン語 dividere「分ける」。division, individual（これ以上分けられない＝個人）と同根。",
-      "example": "We divided the cake into eight pieces.",
-      "exampleTranslation": "私たちはケーキを8つの部分に分けました。",
+      "example": "Please divide the cake into eight equal pieces for the children.",
+      "exampleTranslation": "子どもたちのために、そのケーキを8つの同じ大きさに分けてください。",
       "collocation": "divide into（〜に分ける） / divide A by B（AをBで割る）"
     },
     {
-      "q": 5, "is_answer": false, "word": "pronounce", "ipa": "/prəˈnaʊns/", "pos": "動詞",
+      "q": 5,
+      "is_answer": false,
+      "word": "pronounce",
+      "ipa": "/prəˈnaʊns/",
+      "pos": "動詞",
       "meaning": "発音する；宣言する",
       "etymology": "ラテン語 pronuntiare < pro-（前へ）+ nuntiare（告げる＝announce）。",
-      "example": "How do you pronounce this word?",
-      "exampleTranslation": "この単語はどう発音しますか?",
+      "example": "Can you pronounce this difficult word clearly for the class?",
+      "exampleTranslation": "この難しい単語をクラスのみんなにはっきり発音できますか。",
       "collocation": "pronounce a word / pronounce clearly"
     },
-
     {
-      "q": 6, "is_answer": true, "word": "typical", "ipa": "/ˈtɪpɪkəl/", "pos": "形容詞",
+      "q": 6,
+      "is_answer": true,
+      "word": "typical",
+      "ipa": "/ˈtɪpɪkəl/",
+      "pos": "形容詞",
       "meaning": "典型的な、いつも通りの",
       "etymology": "ギリシャ語 typos「型、刻印」。type（型）と同根で「型にはまった」。",
       "example": "On a typical Saturday night, they order pizza and watch TV.",
@@ -186,7 +284,11 @@
       "collocation": "a typical example / typical of（〜に特有の）"
     },
     {
-      "q": 6, "is_answer": false, "word": "gradual", "ipa": "/ˈɡrædʒuəl/", "pos": "形容詞",
+      "q": 6,
+      "is_answer": false,
+      "word": "gradual",
+      "ipa": "/ˈɡrædʒuəl/",
+      "pos": "形容詞",
       "meaning": "徐々の、段階的な",
       "etymology": "ラテン語 gradus「歩み、段階」。grade, gradually と同根。",
       "example": "There was a gradual change in the weather.",
@@ -194,24 +296,35 @@
       "collocation": "a gradual increase / a gradual process"
     },
     {
-      "q": 6, "is_answer": false, "word": "chemical", "ipa": "/ˈkemɪkəl/", "pos": "形容詞",
+      "q": 6,
+      "is_answer": false,
+      "word": "chemical",
+      "ipa": "/ˈkemɪkəl/",
+      "pos": "形容詞",
       "meaning": "化学の／（名）化学物質",
       "etymology": "alchemy（錬金術）に由来。chemistry（化学）と同根。",
-      "example": "The factory uses several dangerous chemicals.",
-      "exampleTranslation": "工場ではいくつかの危険な化学物質が使用されています。",
+      "example": "The factory stores each dangerous chemical in a locked cabinet.",
+      "exampleTranslation": "その工場は危険な化学物質を一つずつ鍵のかかった戸棚に保管しています。",
       "collocation": "a chemical reaction（化学反応） / chemical products"
     },
     {
-      "q": 6, "is_answer": false, "word": "false", "ipa": "/fɔːls/", "pos": "形容詞",
+      "q": 6,
+      "is_answer": false,
+      "word": "false",
+      "ipa": "/fɔːls/",
+      "pos": "形容詞",
       "meaning": "誤った、偽の",
       "etymology": "ラテン語 falsus < fallere「だます、誤らせる」。fault, fail と関連。",
       "example": "Decide whether each sentence is true or false.",
       "exampleTranslation": "それぞれの文が真か偽かを判断します。",
       "collocation": "true or false / a false name（偽名）"
     },
-
     {
-      "q": 7, "is_answer": true, "word": "weep", "ipa": "/wiːp/", "pos": "動詞",
+      "q": 7,
+      "is_answer": true,
+      "word": "weep",
+      "ipa": "/wiːp/",
+      "pos": "動詞",
       "meaning": "（涙を流して）泣く、すすり泣く",
       "etymology": "古英語 wēpan「泣く」。泣き声を写した擬音語的起源とされる。cry より文語的。",
       "example": "When the movie ended, many people began to weep.",
@@ -219,15 +332,23 @@
       "collocation": "weep for joy / weep over a loss"
     },
     {
-      "q": 7, "is_answer": false, "word": "occur", "ipa": "/əˈkɜːr/", "pos": "動詞",
+      "q": 7,
+      "is_answer": false,
+      "word": "occur",
+      "ipa": "/əˈkɜːr/",
+      "pos": "動詞",
       "meaning": "起こる、生じる；（心に）浮かぶ",
       "etymology": "ラテン語 occurrere < ob-（向かって）+ currere（走る＝current）。「目の前に走り出る」。",
-      "example": "The accident occurred late at night.",
-      "exampleTranslation": "事故は深夜に発生した。",
+      "example": "Serious accidents can occur when drivers ignore warning signs.",
+      "exampleTranslation": "運転手が警告標識を無視すると、重大な事故が起こることがあります。",
       "collocation": "occur to someone（〜の心に浮かぶ） / frequently occur"
     },
     {
-      "q": 7, "is_answer": false, "word": "swell", "ipa": "/swel/", "pos": "動詞",
+      "q": 7,
+      "is_answer": false,
+      "word": "swell",
+      "ipa": "/swel/",
+      "pos": "動詞",
       "meaning": "膨らむ、腫れる",
       "etymology": "古英語 swellan「膨れる」。ゲルマン系の基本語。",
       "example": "Her ankle began to swell after the fall.",
@@ -235,49 +356,71 @@
       "collocation": "swell up（腫れ上がる） / a swelling river"
     },
     {
-      "q": 7, "is_answer": false, "word": "tap", "ipa": "/tæp/", "pos": "動詞",
+      "q": 7,
+      "is_answer": false,
+      "word": "tap",
+      "ipa": "/tæp/",
+      "pos": "動詞",
       "meaning": "（指などで）軽くたたく／（名）蛇口",
       "etymology": "「軽くたたく」は擬音的な古フランス語 taper から。",
-      "example": "She tapped him gently on the shoulder.",
-      "exampleTranslation": "彼女は彼の肩をそっとたたきました。",
+      "example": "Please tap the screen twice to open the application.",
+      "exampleTranslation": "アプリケーションを開くには、画面を2回タップしてください。",
       "collocation": "tap on（〜を軽くたたく） / tap water（水道水）"
     },
-
     {
-      "q": 8, "is_answer": true, "word": "illustrate", "ipa": "/ˈɪləstreɪt/", "pos": "動詞",
+      "q": 8,
+      "is_answer": true,
+      "word": "illustrate",
+      "ipa": "/ˈɪləstreɪt/",
+      "pos": "動詞",
       "meaning": "（例などで）説明する、明らかにする；挿絵を入れる",
       "etymology": "ラテン語 illustrare「光を当てる、明らかにする」< in- + lustrare（照らす）。lustre（光沢）と同根。",
-      "example": "He wanted to illustrate how cells work.",
-      "exampleTranslation": "彼は細胞がどのように機能するかを説明したかったのです。",
+      "example": "The diagram will illustrate how cells work inside the human body.",
+      "exampleTranslation": "その図は細胞が人体の中でどのように働くかを説明します。",
       "collocation": "illustrate a point / an illustrated book"
     },
     {
-      "q": 8, "is_answer": false, "word": "occupy", "ipa": "/ˈɑːkjupaɪ/", "pos": "動詞",
+      "q": 8,
+      "is_answer": false,
+      "word": "occupy",
+      "ipa": "/ˈɑːkjupaɪ/",
+      "pos": "動詞",
       "meaning": "占める、占領する；（人を）従事させる",
       "etymology": "ラテン語 occupare < ob- + capere（つかむ＝capture）。「つかんで占有する」。",
-      "example": "These books occupy the whole shelf.",
-      "exampleTranslation": "これらの本が棚全体を占めています。",
+      "example": "These large boxes occupy the whole shelf in our storage room.",
+      "exampleTranslation": "これらの大きな箱は、倉庫の棚全体を占めています。",
       "collocation": "occupy space / be occupied with（〜に没頭している）"
     },
     {
-      "q": 8, "is_answer": false, "word": "polish", "ipa": "/ˈpɑːlɪʃ/", "pos": "動詞",
+      "q": 8,
+      "is_answer": false,
+      "word": "polish",
+      "ipa": "/ˈpɑːlɪʃ/",
+      "pos": "動詞",
       "meaning": "磨く；（技などを）洗練する",
       "etymology": "ラテン語 polire「磨く、滑らかにする」。",
-      "example": "He polished his shoes until they shone.",
-      "exampleTranslation": "彼は靴がピカピカになるまで磨いた。",
+      "example": "She will polish the silver dishes before the formal dinner.",
+      "exampleTranslation": "彼女は正式な夕食会の前に銀の食器を磨くでしょう。",
       "collocation": "polish shoes / polish up（磨きをかける）"
     },
     {
-      "q": 8, "is_answer": false, "word": "congratulate", "ipa": "/kənˈɡrætʃəleɪt/", "pos": "動詞",
+      "q": 8,
+      "is_answer": false,
+      "word": "congratulate",
+      "ipa": "/kənˈɡrætʃəleɪt/",
+      "pos": "動詞",
       "meaning": "祝う、祝辞を述べる",
       "etymology": "ラテン語 congratulari < con-（共に）+ gratus（喜ばしい＝grateful, grace）。",
-      "example": "We congratulated her on passing the exam.",
-      "exampleTranslation": "私たちは彼女が試験に合格したことを祝いました。",
+      "example": "We will congratulate her on passing the exam after the ceremony.",
+      "exampleTranslation": "式典の後、私たちは試験に合格した彼女を祝福します。",
       "collocation": "congratulate someone on（〜のことで人を祝う）"
     },
-
     {
-      "q": 9, "is_answer": true, "word": "barely", "ipa": "/ˈberli/", "pos": "副詞",
+      "q": 9,
+      "is_answer": true,
+      "word": "barely",
+      "ipa": "/ˈberli/",
+      "pos": "副詞",
       "meaning": "かろうじて、やっと（〜ない）",
       "etymology": "bare（むき出しの、わずかな）+ -ly。「ぎりぎりむき出しの状態で」→「かろうじて」。",
       "example": "The Green Wolves barely won the game in the last seconds.",
@@ -285,15 +428,23 @@
       "collocation": "barely enough / can barely see / barely escape"
     },
     {
-      "q": 9, "is_answer": false, "word": "secretly", "ipa": "/ˈsiːkrətli/", "pos": "副詞",
+      "q": 9,
+      "is_answer": false,
+      "word": "secretly",
+      "ipa": "/ˈsiːkrətli/",
+      "pos": "副詞",
       "meaning": "こっそりと、密かに",
       "etymology": "secret + -ly。secret はラテン語 secretus < se-（離して）+ cernere（分ける）。",
-      "example": "She secretly planned a surprise party.",
-      "exampleTranslation": "彼女は密かにサプライズパーティーを計画した。",
+      "example": "She secretly planned a surprise party for her father's birthday.",
+      "exampleTranslation": "彼女は父親の誕生日のために、秘密裏にサプライズパーティーを計画しました。",
       "collocation": "secretly hope / meet secretly"
     },
     {
-      "q": 9, "is_answer": false, "word": "gently", "ipa": "/ˈdʒentli/", "pos": "副詞",
+      "q": 9,
+      "is_answer": false,
+      "word": "gently",
+      "ipa": "/ˈdʒentli/",
+      "pos": "副詞",
       "meaning": "やさしく、穏やかに",
       "etymology": "gentle + -ly。gentle はラテン語 gentilis「同じ氏族の、高貴な」→「上品な、穏やかな」。",
       "example": "He gently closed the door so as not to wake the baby.",
@@ -301,32 +452,47 @@
       "collocation": "gently push / speak gently"
     },
     {
-      "q": 9, "is_answer": false, "word": "repeatedly", "ipa": "/rɪˈpiːtɪdli/", "pos": "副詞",
+      "q": 9,
+      "is_answer": false,
+      "word": "repeatedly",
+      "ipa": "/rɪˈpiːtɪdli/",
+      "pos": "副詞",
       "meaning": "繰り返し、何度も",
       "etymology": "repeat + -ly。repeat はラテン語 repetere < re-（再び）+ petere（求める）。",
-      "example": "She repeatedly checked her phone for messages.",
-      "exampleTranslation": "彼女は何度も携帯電話にメッセージがないかチェックしました。",
+      "example": "She repeatedly checked her phone for messages during the long meeting.",
+      "exampleTranslation": "彼女は長い会議中、メッセージがないか携帯電話を何度も確認しました。",
       "collocation": "repeatedly fail / warn repeatedly"
     },
-
     {
-      "q": 10, "is_answer": true, "word": "frown", "ipa": "/fraʊn/", "pos": "動詞",
+      "q": 10,
+      "is_answer": true,
+      "word": "frown",
+      "ipa": "/fraʊn/",
+      "pos": "動詞",
       "meaning": "顔をしかめる、眉をひそめる",
       "etymology": "古フランス語 froignier「鼻にしわを寄せて顔をしかめる」。",
-      "example": "The students frowned when they heard about the test.",
-      "exampleTranslation": "学生たちはテストのことを聞くと眉をひそめた。",
+      "example": "The students frown whenever teachers announce an unexpected test.",
+      "exampleTranslation": "教師が予想外のテストを発表すると、学生たちはいつも顔をしかめます。",
       "collocation": "frown at（〜に顔をしかめる） / frown upon（〜に難色を示す）"
     },
     {
-      "q": 10, "is_answer": false, "word": "slip", "ipa": "/slɪp/", "pos": "動詞",
+      "q": 10,
+      "is_answer": false,
+      "word": "slip",
+      "ipa": "/slɪp/",
+      "pos": "動詞",
       "meaning": "滑る；そっと動く・抜け出す",
       "etymology": "中英語 slippen「滑る」。ゲルマン系の語。",
-      "example": "She slipped on the icy road.",
-      "exampleTranslation": "彼女は凍った道路で滑ってしまいました。",
+      "example": "Drivers may slip on the icy road during winter storms.",
+      "exampleTranslation": "冬の嵐の間、運転手は凍った道路で滑ることがあります。",
       "collocation": "slip on（〜で滑る） / slip away（こっそり去る）"
     },
     {
-      "q": 10, "is_answer": false, "word": "guess", "ipa": "/ɡes/", "pos": "動詞",
+      "q": 10,
+      "is_answer": false,
+      "word": "guess",
+      "ipa": "/ɡes/",
+      "pos": "動詞",
       "meaning": "推測する、言い当てる",
       "etymology": "中英語 gessen（北欧語起源）「見当をつける」。",
       "example": "Can you guess the answer to this riddle?",
@@ -334,18 +500,44 @@
       "collocation": "guess right / I guess so（たぶんね）"
     },
     {
-      "q": 10, "is_answer": false, "word": "crawl", "ipa": "/krɔːl/", "pos": "動詞",
+      "q": 10,
+      "is_answer": false,
+      "word": "crawl",
+      "ipa": "/krɔːl/",
+      "pos": "動詞",
       "meaning": "はう、ゆっくり進む",
       "etymology": "古ノルド語 krafla「手足を使って這う」。",
-      "example": "The baby crawled across the floor.",
-      "exampleTranslation": "赤ん坊は床を這って横切った。",
+      "example": "The baby began to crawl across the floor toward his mother.",
+      "exampleTranslation": "赤ちゃんは母親に向かって床をはい始めました。",
       "collocation": "crawl on the floor / traffic crawls（渋滞でのろのろ進む）"
     }
   ],
   "idioms": [
     {
-      "q": 11, "is_answer": true, "type": "idiom", "phrase": "as a general rule", "pos": "副詞句",
-      "coreImage": { "chain": [ { "term": "as", "gloss": "〜として" }, { "term": "general", "gloss": "一般的な" }, { "term": "rule", "gloss": "規則" }, { "gloss": "一般的な規則として述べる" } ] },
+      "q": 11,
+      "is_answer": true,
+      "type": "idiom",
+      "phrase": "as a general rule",
+      "pos": "副詞句",
+      "coreImage": {
+        "chain": [
+          {
+            "term": "as",
+            "gloss": "〜として"
+          },
+          {
+            "term": "general",
+            "gloss": "一般的な"
+          },
+          {
+            "term": "rule",
+            "gloss": "規則"
+          },
+          {
+            "gloss": "一般的な規則として述べる"
+          }
+        ]
+      },
       "meaning": "概して、一般的に言えば",
       "etymology": "general（全般的な）+ rule（規則）→「全体に当てはまる決まりとして」。",
       "example": "As a general rule, people should drink eight glasses of water a day.",
@@ -353,8 +545,30 @@
       "collocation": "文頭で一般論を述べるときに使う"
     },
     {
-      "q": 11, "is_answer": false, "type": "idiom", "phrase": "for a fresh start", "pos": "副詞句",
-      "coreImage": { "chain": [ { "term": "for", "gloss": "〜のために" }, { "term": "fresh", "gloss": "新鮮な" }, { "term": "start", "gloss": "始まり" }, { "gloss": "新しい出発のために" } ] },
+      "q": 11,
+      "is_answer": false,
+      "type": "idiom",
+      "phrase": "for a fresh start",
+      "pos": "副詞句",
+      "coreImage": {
+        "chain": [
+          {
+            "term": "for",
+            "gloss": "〜のために"
+          },
+          {
+            "term": "fresh",
+            "gloss": "新鮮な"
+          },
+          {
+            "term": "start",
+            "gloss": "始まり"
+          },
+          {
+            "gloss": "新しい出発のために"
+          }
+        ]
+      },
       "meaning": "新たなスタートとして、心機一転",
       "etymology": "fresh（新しい）+ start（出発）。",
       "example": "She moved to a new city for a fresh start.",
@@ -362,8 +576,30 @@
       "collocation": "make a fresh start（再出発する）"
     },
     {
-      "q": 11, "is_answer": false, "type": "idiom", "phrase": "on a specific occasion", "pos": "副詞句",
-      "coreImage": { "chain": [ { "term": "on", "gloss": "〜の上で" }, { "term": "specific", "gloss": "特定の" }, { "term": "occasion", "gloss": "機会" }, { "gloss": "特定の機会に限って" } ] },
+      "q": 11,
+      "is_answer": false,
+      "type": "idiom",
+      "phrase": "on a specific occasion",
+      "pos": "副詞句",
+      "coreImage": {
+        "chain": [
+          {
+            "term": "on",
+            "gloss": "〜の上で"
+          },
+          {
+            "term": "specific",
+            "gloss": "特定の"
+          },
+          {
+            "term": "occasion",
+            "gloss": "機会"
+          },
+          {
+            "gloss": "特定の機会に限って"
+          }
+        ]
+      },
       "meaning": "特定の機会に",
       "etymology": "specific（特定の）+ occasion（場合、機会）。",
       "example": "This dress is only worn on a specific occasion.",
@@ -371,27 +607,88 @@
       "collocation": "on this occasion（この機会に）"
     },
     {
-      "q": 11, "is_answer": false, "type": "idiom", "phrase": "in case of emergency", "pos": "副詞句",
-      "coreImage": { "chain": [ { "term": "in", "gloss": "中で" }, { "term": "case", "gloss": "場合" }, { "term": "emergency", "gloss": "緊急事態" }, { "gloss": "緊急事態の場合には" } ] },
+      "q": 11,
+      "is_answer": false,
+      "type": "idiom",
+      "phrase": "in case of emergency",
+      "pos": "副詞句",
+      "coreImage": {
+        "chain": [
+          {
+            "term": "in",
+            "gloss": "中で"
+          },
+          {
+            "term": "case",
+            "gloss": "場合"
+          },
+          {
+            "term": "emergency",
+            "gloss": "緊急事態"
+          },
+          {
+            "gloss": "緊急事態の場合には"
+          }
+        ]
+      },
       "meaning": "緊急時には、非常の場合に備えて",
       "etymology": "in case of（〜の場合に備えて）+ emergency（緊急事態）。",
       "example": "In case of emergency, break the glass and press the button.",
       "exampleTranslation": "緊急の場合はガラスを割ってボタンを押してください。",
       "collocation": "in case of fire（火災の際は）"
     },
-
     {
-      "q": 12, "is_answer": true, "type": "idiom", "phrase": "on one's own", "pos": "副詞句",
-      "coreImage": { "chain": [ { "term": "on", "gloss": "〜の上で" }, { "term": "one", "gloss": "人・もの" }, { "term": "own", "gloss": "自分自身の" }, { "gloss": "他に頼らず自力で" } ] },
+      "q": 12,
+      "is_answer": true,
+      "type": "idiom",
+      "phrase": "on one's own",
+      "pos": "副詞句",
+      "coreImage": {
+        "chain": [
+          {
+            "term": "on",
+            "gloss": "〜の上で"
+          },
+          {
+            "term": "one",
+            "gloss": "人・もの"
+          },
+          {
+            "term": "own",
+            "gloss": "自分自身の"
+          },
+          {
+            "gloss": "他に頼らず自力で"
+          }
+        ]
+      },
       "meaning": "自分一人で、独力で",
       "etymology": "own（自分自身の）を使い「自分自身の力で」。",
-      "example": "Now he has to do everything on his own, like cooking and cleaning.",
-      "exampleTranslation": "今では、料理や掃除などすべてを自分でやらなければなりません。",
+      "example": "The expression on one's own means doing something without help from others.",
+      "exampleTranslation": "「on one's own」という表現は、他人の助けなしに何かをすることを意味します。",
       "collocation": "live on one's own（一人暮らしをする）"
     },
     {
-      "q": 12, "is_answer": false, "type": "idiom", "phrase": "on the air", "pos": "副詞句",
-      "coreImage": { "chain": [ { "term": "on", "gloss": "接して" }, { "term": "air", "gloss": "空気・電波" }, { "gloss": "電波に乗って放送中で" } ] },
+      "q": 12,
+      "is_answer": false,
+      "type": "idiom",
+      "phrase": "on the air",
+      "pos": "副詞句",
+      "coreImage": {
+        "chain": [
+          {
+            "term": "on",
+            "gloss": "接して"
+          },
+          {
+            "term": "air",
+            "gloss": "空気・電波"
+          },
+          {
+            "gloss": "電波に乗って放送中で"
+          }
+        ]
+      },
       "meaning": "放送中で",
       "etymology": "air（電波）に乗って→「放送されて」。",
       "example": "The program is on the air every weekday morning.",
@@ -399,32 +696,83 @@
       "collocation": "go on the air（放送を始める）"
     },
     {
-      "q": 12, "is_answer": false, "type": "idiom", "phrase": "at a distance", "pos": "副詞句",
-      "coreImage": { "chain": [ { "term": "at", "gloss": "一点で" }, { "term": "distance", "gloss": "距離" }, { "gloss": "距離を置いた位置で" } ] },
+      "q": 12,
+      "is_answer": false,
+      "type": "idiom",
+      "phrase": "at a distance",
+      "pos": "副詞句",
+      "coreImage": {
+        "chain": [
+          {
+            "term": "at",
+            "gloss": "一点で"
+          },
+          {
+            "term": "distance",
+            "gloss": "距離"
+          },
+          {
+            "gloss": "距離を置いた位置で"
+          }
+        ]
+      },
       "meaning": "離れて、遠くから",
       "etymology": "distance（距離）→「距離を置いて」。",
-      "example": "From a distance, the mountain looked purple.",
-      "exampleTranslation": "遠くから見ると山は紫色に見えました。",
+      "example": "At a distance, the mountain looked purple beneath the evening sky.",
+      "exampleTranslation": "遠くから見ると、その山は夕空の下で紫色に見えました。",
       "collocation": "keep someone at a distance（人とよそよそしくする）"
     },
     {
-      "q": 12, "is_answer": false, "type": "idiom", "phrase": "to one's surprise", "pos": "副詞句",
-      "coreImage": { "chain": [ { "term": "to", "gloss": "〜に向かって" }, { "term": "one", "gloss": "人" }, { "term": "surprise", "gloss": "驚き" }, { "gloss": "その人の驚きに至るほど" } ] },
+      "q": 12,
+      "is_answer": false,
+      "type": "idiom",
+      "phrase": "to one's surprise",
+      "pos": "副詞句",
+      "coreImage": {
+        "chain": [
+          {
+            "term": "to",
+            "gloss": "〜に向かって"
+          },
+          {
+            "term": "one",
+            "gloss": "人"
+          },
+          {
+            "term": "surprise",
+            "gloss": "驚き"
+          },
+          {
+            "gloss": "その人の驚きに至るほど"
+          }
+        ]
+      },
       "meaning": "（人が）驚いたことに",
       "etymology": "「to + 所有格 + 感情名詞」で『〜したことに』。",
-      "example": "To his surprise, the door was already open.",
-      "exampleTranslation": "驚いたことに、ドアはすでに開いていました。",
+      "example": "To one's surprise, the quiet village becomes lively after sunset.",
+      "exampleTranslation": "驚いたことに、静かな村は日没後に活気づきます。",
       "collocation": "to one's joy / to one's disappointment"
     },
-
     {
-      "q": 13, "is_answer": true, "type": "idiom", "phrase": "go along with", "pos": "句動詞",
+      "q": 13,
+      "is_answer": true,
+      "type": "idiom",
+      "phrase": "go along with",
+      "pos": "句動詞",
       "coreImage": {
         "particle": "along",
         "chain": [
-          { "term": "go", "gloss": "進む" },
-          { "term": "along", "gloss": "流れに沿って" },
-          { "gloss": "流れに沿って一緒に進む" }
+          {
+            "term": "go",
+            "gloss": "進む"
+          },
+          {
+            "term": "along",
+            "gloss": "流れに沿って"
+          },
+          {
+            "gloss": "流れに沿って一緒に進む"
+          }
         ]
       },
       "meaning": "（案・人に）賛成する、従う",
@@ -434,47 +782,83 @@
       "collocation": "go along with a plan / go along with someone"
     },
     {
-      "q": 13, "is_answer": false, "type": "idiom", "phrase": "take away from", "pos": "句動詞",
+      "q": 13,
+      "is_answer": false,
+      "type": "idiom",
+      "phrase": "take away from",
+      "pos": "句動詞",
       "coreImage": {
         "particle": "away",
         "chain": [
-          { "term": "take", "gloss": "取る" },
-          { "term": "away", "gloss": "手元から遠ざけて" },
-          { "gloss": "対象から離して価値を削る" }
+          {
+            "term": "take",
+            "gloss": "取る"
+          },
+          {
+            "term": "away",
+            "gloss": "手元から遠ざけて"
+          },
+          {
+            "gloss": "対象から離して価値を削る"
+          }
         ]
       },
       "meaning": "〜の価値（魅力）を損なう／〜から取り去る",
       "etymology": "take away（取り去る）+ from。",
-      "example": "The noise took away from our enjoyment of the concert.",
-      "exampleTranslation": "騒音のせいで私たちはコンサートを楽しむことができなくなった。",
+      "example": "Loud noise can take away from the enjoyment of a concert.",
+      "exampleTranslation": "大きな音はコンサートを楽しむことの妨げになる場合があります。",
       "collocation": "take away from the value of"
     },
     {
-      "q": 13, "is_answer": false, "type": "idiom", "phrase": "bring out in", "pos": "句動詞",
+      "q": 13,
+      "is_answer": false,
+      "type": "idiom",
+      "phrase": "bring out in",
+      "pos": "句動詞",
       "coreImage": {
         "particle": "out",
         "particleSense": "produce",
         "chain": [
-          { "term": "bring", "gloss": "持ってくる" },
-          { "term": "out", "gloss": "外へ作り出して" },
-          { "gloss": "外へ出して表に現す" }
+          {
+            "term": "bring",
+            "gloss": "持ってくる"
+          },
+          {
+            "term": "out",
+            "gloss": "外へ作り出して"
+          },
+          {
+            "gloss": "外へ出して表に現す"
+          }
         ]
       },
       "meaning": "（bring out で）引き出す、世に出す",
       "etymology": "bring out（引き出す、発売する）。",
-      "example": "Praise can bring out the best in students.",
-      "exampleTranslation": "褒めることで生徒の能力を最大限に引き出すことができます。",
+      "example": "The teacher knows how to bring out in students a love of science.",
+      "exampleTranslation": "その教師は、生徒たちの中に科学への愛情を引き出す方法を知っています。",
       "collocation": "bring out the best in（〜の長所を引き出す）"
     },
     {
-      "q": 13, "is_answer": false, "type": "idiom", "phrase": "watch out for", "pos": "句動詞",
+      "q": 13,
+      "is_answer": false,
+      "type": "idiom",
+      "phrase": "watch out for",
+      "pos": "句動詞",
       "coreImage": {
         "particle": "out",
         "particleSense": "reserve",
         "chain": [
-          { "term": "watch", "gloss": "見る" },
-          { "term": "out", "gloss": "外へ線を引いて" },
-          { "gloss": "外へ意識を向けて警戒する" }
+          {
+            "term": "watch",
+            "gloss": "見る"
+          },
+          {
+            "term": "out",
+            "gloss": "外へ線を引いて"
+          },
+          {
+            "gloss": "外へ意識を向けて警戒する"
+          }
         ]
       },
       "meaning": "〜に気をつける、用心する",
@@ -483,10 +867,27 @@
       "exampleTranslation": "道路を渡るときは車に注意してください。",
       "collocation": "watch out for danger"
     },
-
     {
-      "q": 14, "is_answer": true, "type": "idiom", "phrase": "a series of", "pos": "名詞句",
-      "coreImage": { "chain": [ { "term": "series", "gloss": "連続" }, { "term": "of", "gloss": "〜の" }, { "gloss": "同種のものが続くまとまり" } ] },
+      "q": 14,
+      "is_answer": true,
+      "type": "idiom",
+      "phrase": "a series of",
+      "pos": "名詞句",
+      "coreImage": {
+        "chain": [
+          {
+            "term": "series",
+            "gloss": "連続"
+          },
+          {
+            "term": "of",
+            "gloss": "〜の"
+          },
+          {
+            "gloss": "同種のものが続くまとまり"
+          }
+        ]
+      },
       "meaning": "一連の、ひと続きの",
       "etymology": "series はラテン語 serere「つなぐ」< 連なったもの。",
       "example": "After a series of tests, the doctors discovered a rare illness.",
@@ -494,8 +895,26 @@
       "collocation": "a series of events / a series of problems"
     },
     {
-      "q": 14, "is_answer": false, "type": "idiom", "phrase": "the edge of", "pos": "名詞句",
-      "coreImage": { "chain": [ { "term": "edge", "gloss": "へり" }, { "term": "of", "gloss": "〜の" }, { "gloss": "ものの端にある部分" } ] },
+      "q": 14,
+      "is_answer": false,
+      "type": "idiom",
+      "phrase": "the edge of",
+      "pos": "名詞句",
+      "coreImage": {
+        "chain": [
+          {
+            "term": "edge",
+            "gloss": "へり"
+          },
+          {
+            "term": "of",
+            "gloss": "〜の"
+          },
+          {
+            "gloss": "ものの端にある部分"
+          }
+        ]
+      },
       "meaning": "〜の端、縁",
       "etymology": "edge（端、縁）。",
       "example": "She stood at the edge of the cliff.",
@@ -503,8 +922,26 @@
       "collocation": "on the edge of（〜の瀬戸際で）"
     },
     {
-      "q": 14, "is_answer": false, "type": "idiom", "phrase": "a member of", "pos": "名詞句",
-      "coreImage": { "chain": [ { "term": "member", "gloss": "構成員" }, { "term": "of", "gloss": "〜の" }, { "gloss": "集団を構成する一人" } ] },
+      "q": 14,
+      "is_answer": false,
+      "type": "idiom",
+      "phrase": "a member of",
+      "pos": "名詞句",
+      "coreImage": {
+        "chain": [
+          {
+            "term": "member",
+            "gloss": "構成員"
+          },
+          {
+            "term": "of",
+            "gloss": "〜の"
+          },
+          {
+            "gloss": "集団を構成する一人"
+          }
+        ]
+      },
       "meaning": "〜の一員、メンバー",
       "etymology": "member（構成員）。",
       "example": "She is a member of the tennis club.",
@@ -512,18 +949,57 @@
       "collocation": "a member of staff / a member of the family"
     },
     {
-      "q": 14, "is_answer": false, "type": "idiom", "phrase": "the back of", "pos": "名詞句",
-      "coreImage": { "chain": [ { "term": "back", "gloss": "後ろ" }, { "term": "of", "gloss": "〜の" }, { "gloss": "対象の後ろ側" } ] },
+      "q": 14,
+      "is_answer": false,
+      "type": "idiom",
+      "phrase": "the back of",
+      "pos": "名詞句",
+      "coreImage": {
+        "chain": [
+          {
+            "term": "back",
+            "gloss": "後ろ"
+          },
+          {
+            "term": "of",
+            "gloss": "〜の"
+          },
+          {
+            "gloss": "対象の後ろ側"
+          }
+        ]
+      },
       "meaning": "〜の後ろ、裏",
       "etymology": "back（後ろ、背）。",
       "example": "He sat at the back of the classroom.",
       "exampleTranslation": "彼は教室の後ろに座っていました。",
       "collocation": "the back of one's hand / at the back of"
     },
-
     {
-      "q": 15, "is_answer": true, "type": "idiom", "phrase": "in other words", "pos": "副詞句",
-      "coreImage": { "chain": [ { "term": "in", "gloss": "中で" }, { "term": "other", "gloss": "別の" }, { "term": "word", "gloss": "言葉" }, { "gloss": "別の言葉に置き換えて" } ] },
+      "q": 15,
+      "is_answer": true,
+      "type": "idiom",
+      "phrase": "in other words",
+      "pos": "副詞句",
+      "coreImage": {
+        "chain": [
+          {
+            "term": "in",
+            "gloss": "中で"
+          },
+          {
+            "term": "other",
+            "gloss": "別の"
+          },
+          {
+            "term": "word",
+            "gloss": "言葉"
+          },
+          {
+            "gloss": "別の言葉に置き換えて"
+          }
+        ]
+      },
       "meaning": "言い換えれば、つまり",
       "etymology": "other words（別の言葉）で→「別の言い方をすれば」。",
       "example": "In other words, we are going to be very busy!",
@@ -531,8 +1007,26 @@
       "collocation": "言い換え・要約を導く定型表現"
     },
     {
-      "q": 15, "is_answer": false, "type": "idiom", "phrase": "in the beginning", "pos": "副詞句",
-      "coreImage": { "chain": [ { "term": "in", "gloss": "中で" }, { "term": "beginning", "gloss": "始まり" }, { "gloss": "始まりの時点では" } ] },
+      "q": 15,
+      "is_answer": false,
+      "type": "idiom",
+      "phrase": "in the beginning",
+      "pos": "副詞句",
+      "coreImage": {
+        "chain": [
+          {
+            "term": "in",
+            "gloss": "中で"
+          },
+          {
+            "term": "beginning",
+            "gloss": "始まり"
+          },
+          {
+            "gloss": "始まりの時点では"
+          }
+        ]
+      },
       "meaning": "最初は、初めのうちは",
       "etymology": "beginning（始まり）。",
       "example": "In the beginning, the work was difficult, but it got easier.",
@@ -540,27 +1034,84 @@
       "collocation": "at the beginning of（〜の初めに）"
     },
     {
-      "q": 15, "is_answer": false, "type": "idiom", "phrase": "back and forth", "pos": "副詞句",
-      "coreImage": { "chain": [ { "term": "back", "gloss": "後ろへ" }, { "term": "and", "gloss": "そして" }, { "term": "forth", "gloss": "前へ" }, { "gloss": "前後を行き来して" } ] },
+      "q": 15,
+      "is_answer": false,
+      "type": "idiom",
+      "phrase": "back and forth",
+      "pos": "副詞句",
+      "coreImage": {
+        "chain": [
+          {
+            "term": "back",
+            "gloss": "後ろへ"
+          },
+          {
+            "term": "and",
+            "gloss": "そして"
+          },
+          {
+            "term": "forth",
+            "gloss": "前へ"
+          },
+          {
+            "gloss": "前後を行き来して"
+          }
+        ]
+      },
       "meaning": "行ったり来たり、前後に",
       "etymology": "back（後ろへ）and forth（前へ）。",
-      "example": "He walked back and forth nervously.",
-      "exampleTranslation": "彼は緊張しながら行ったり来たりした。",
+      "example": "The discussion moved back and forth before the committee reached a decision.",
+      "exampleTranslation": "委員会が決定に達するまで、議論は行ったり来たりしました。",
       "collocation": "go back and forth / move back and forth"
     },
     {
-      "q": 15, "is_answer": false, "type": "idiom", "phrase": "on the contrary", "pos": "副詞句",
-      "coreImage": { "chain": [ { "term": "on", "gloss": "〜の上に" }, { "term": "contrary", "gloss": "反対" }, { "gloss": "反対の方向を示して" } ] },
+      "q": 15,
+      "is_answer": false,
+      "type": "idiom",
+      "phrase": "on the contrary",
+      "pos": "副詞句",
+      "coreImage": {
+        "chain": [
+          {
+            "term": "on",
+            "gloss": "〜の上に"
+          },
+          {
+            "term": "contrary",
+            "gloss": "反対"
+          },
+          {
+            "gloss": "反対の方向を示して"
+          }
+        ]
+      },
       "meaning": "それどころか、（前言を否定して）逆に",
       "etymology": "contrary（反対の）はラテン語 contra「〜に反して」。",
       "example": "It wasn't boring; on the contrary, it was very exciting.",
       "exampleTranslation": "退屈ではなかった。逆にとても刺激的でした。",
       "collocation": "前文を否定して反対のことを述べる表現"
     },
-
     {
-      "q": 16, "is_answer": true, "type": "idiom", "phrase": "distinct from", "pos": "形容詞句",
-      "coreImage": { "chain": [ { "term": "distinct", "gloss": "はっきり異なる" }, { "term": "from", "gloss": "〜から" }, { "gloss": "対象から分かれて別個で" } ] },
+      "q": 16,
+      "is_answer": true,
+      "type": "idiom",
+      "phrase": "distinct from",
+      "pos": "形容詞句",
+      "coreImage": {
+        "chain": [
+          {
+            "term": "distinct",
+            "gloss": "はっきり異なる"
+          },
+          {
+            "term": "from",
+            "gloss": "〜から"
+          },
+          {
+            "gloss": "対象から分かれて別個で"
+          }
+        ]
+      },
       "meaning": "〜とは異なる、別個の",
       "etymology": "distinct はラテン語 distinguere「区別する」< di-（分離）+ stinguere（刺し分ける）。",
       "example": "The two paintings looked distinct from each other at first.",
@@ -568,17 +1119,53 @@
       "collocation": "be distinct from / distinct differences"
     },
     {
-      "q": 16, "is_answer": false, "type": "idiom", "phrase": "composed of", "pos": "形容詞句",
-      "coreImage": { "chain": [ { "term": "composed", "gloss": "構成された" }, { "term": "of", "gloss": "〜から" }, { "gloss": "要素から組み立てられて" } ] },
+      "q": 16,
+      "is_answer": false,
+      "type": "idiom",
+      "phrase": "composed of",
+      "pos": "形容詞句",
+      "coreImage": {
+        "chain": [
+          {
+            "term": "composed",
+            "gloss": "構成された"
+          },
+          {
+            "term": "of",
+            "gloss": "〜から"
+          },
+          {
+            "gloss": "要素から組み立てられて"
+          }
+        ]
+      },
       "meaning": "〜から構成されている",
       "etymology": "compose はラテン語 componere < com-（共に）+ ponere（置く）。「組み合わせて作る」。",
-      "example": "Water is composed of hydrogen and oxygen.",
-      "exampleTranslation": "水は水素と酸素で構成されています。",
+      "example": "The machine is composed of several parts that work together.",
+      "exampleTranslation": "その機械は、一緒に動くいくつかの部品で構成されています。",
       "collocation": "be composed of（= consist of）"
     },
     {
-      "q": 16, "is_answer": false, "type": "idiom", "phrase": "absent from", "pos": "形容詞句",
-      "coreImage": { "chain": [ { "term": "absent", "gloss": "不在の" }, { "term": "from", "gloss": "〜から" }, { "gloss": "場所からいない状態で" } ] },
+      "q": 16,
+      "is_answer": false,
+      "type": "idiom",
+      "phrase": "absent from",
+      "pos": "形容詞句",
+      "coreImage": {
+        "chain": [
+          {
+            "term": "absent",
+            "gloss": "不在の"
+          },
+          {
+            "term": "from",
+            "gloss": "〜から"
+          },
+          {
+            "gloss": "場所からいない状態で"
+          }
+        ]
+      },
       "meaning": "〜を欠席して、〜にいない",
       "etymology": "absent はラテン語 absens < ab-（離れて）+ esse（ある）。",
       "example": "He was absent from school because of a cold.",
@@ -586,24 +1173,53 @@
       "collocation": "be absent from work / be absent from class"
     },
     {
-      "q": 16, "is_answer": false, "type": "idiom", "phrase": "threatening to", "pos": "形容詞句",
-      "coreImage": { "chain": [ { "term": "threatening", "gloss": "脅している" }, { "term": "to", "gloss": "〜する方向へ" }, { "gloss": "ある行為をすると脅して" } ] },
+      "q": 16,
+      "is_answer": false,
+      "type": "idiom",
+      "phrase": "threatening to",
+      "pos": "形容詞句",
+      "coreImage": {
+        "chain": [
+          {
+            "term": "threatening",
+            "gloss": "脅している"
+          },
+          {
+            "term": "to",
+            "gloss": "〜する方向へ"
+          },
+          {
+            "gloss": "ある行為をすると脅して"
+          }
+        ]
+      },
       "meaning": "〜すると脅して／〜しそうで",
       "etymology": "threaten（脅す、おそれがある）+ to do。",
       "example": "The dark clouds were threatening to bring rain.",
       "exampleTranslation": "暗い雲が雨をもたらす恐れがありました。",
       "collocation": "threaten to do（〜すると脅す／〜しそうだ）"
     },
-
     {
-      "q": 17, "is_answer": true, "type": "idiom", "phrase": "lay off", "pos": "句動詞",
+      "q": 17,
+      "is_answer": true,
+      "type": "idiom",
+      "phrase": "lay off",
+      "pos": "句動詞",
       "coreImage": {
         "particle": "off",
         "particleSense": "pull-away",
         "chain": [
-          { "term": "lay", "gloss": "置く" },
-          { "term": "off", "gloss": "働きかけて手を引かせて" },
-          { "gloss": "仕事から離して置く" }
+          {
+            "term": "lay",
+            "gloss": "置く"
+          },
+          {
+            "term": "off",
+            "gloss": "働きかけて手を引かせて"
+          },
+          {
+            "gloss": "仕事から離して置く"
+          }
         ]
       },
       "meaning": "（従業員を）一時解雇する、レイオフする",
@@ -613,46 +1229,82 @@
       "collocation": "lay off staff / be laid off（解雇される）"
     },
     {
-      "q": 17, "is_answer": false, "type": "idiom", "phrase": "flip over", "pos": "句動詞",
+      "q": 17,
+      "is_answer": false,
+      "type": "idiom",
+      "phrase": "flip over",
+      "pos": "句動詞",
       "coreImage": {
         "particle": "over",
         "chain": [
-          { "term": "flip", "gloss": "ぱっと裏返す" },
-          { "term": "over", "gloss": "上を越えて" },
-          { "gloss": "反対側へひっくり返す" }
+          {
+            "term": "flip",
+            "gloss": "ぱっと裏返す"
+          },
+          {
+            "term": "over",
+            "gloss": "上を越えて"
+          },
+          {
+            "gloss": "反対側へひっくり返す"
+          }
         ]
       },
       "meaning": "ひっくり返る、裏返す",
       "etymology": "flip（パッと裏返す）+ over。",
-      "example": "The pancake is ready to flip over.",
-      "exampleTranslation": "パンケーキはひっくり返す準備ができています。",
+      "example": "Please flip over the card to read the information on the back.",
+      "exampleTranslation": "裏の情報を読むために、そのカードを裏返してください。",
       "collocation": "flip over a card（カードを裏返す）"
     },
     {
-      "q": 17, "is_answer": false, "type": "idiom", "phrase": "bring about", "pos": "句動詞",
+      "q": 17,
+      "is_answer": false,
+      "type": "idiom",
+      "phrase": "bring about",
+      "pos": "句動詞",
       "coreImage": {
         "particle": "about",
         "chain": [
-          { "term": "bring", "gloss": "持ってくる" },
-          { "term": "about", "gloss": "周囲に変化を起こして" },
-          { "gloss": "周囲に変化を起こしてもたらす" }
+          {
+            "term": "bring",
+            "gloss": "持ってくる"
+          },
+          {
+            "term": "about",
+            "gloss": "周囲に変化を起こして"
+          },
+          {
+            "gloss": "周囲に変化を起こしてもたらす"
+          }
         ]
       },
       "meaning": "引き起こす、もたらす",
       "etymology": "bring（もたらす）+ about（あたりに）→「生じさせる」。",
-      "example": "New technology brought about big changes in our lives.",
-      "exampleTranslation": "新しいテクノロジーは私たちの生活に大きな変化をもたらしました。",
+      "example": "The new policy may bring about positive changes in our community.",
+      "exampleTranslation": "その新しい方針は、地域社会に前向きな変化をもたらすかもしれません。",
       "collocation": "bring about change / bring about a result"
     },
     {
-      "q": 17, "is_answer": false, "type": "idiom", "phrase": "catch up", "pos": "句動詞",
+      "q": 17,
+      "is_answer": false,
+      "type": "idiom",
+      "phrase": "catch up",
+      "pos": "句動詞",
       "coreImage": {
         "particle": "up",
         "particleSense": "approach",
         "chain": [
-          { "term": "catch", "gloss": "捕まえる" },
-          { "term": "up", "gloss": "近づいて上へ" },
-          { "gloss": "上の位置まで追いつく" }
+          {
+            "term": "catch",
+            "gloss": "捕まえる"
+          },
+          {
+            "term": "up",
+            "gloss": "近づいて上へ"
+          },
+          {
+            "gloss": "上の位置まで追いつく"
+          }
         ]
       },
       "meaning": "追いつく；（遅れを）取り戻す",
