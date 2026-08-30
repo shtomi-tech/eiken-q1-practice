@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "eiken-q1-practice",
+      "runtimeExecutable": "py",
+      "runtimeArgs": ["-3", "-m", "http.server", "8062", "--bind", "127.0.0.1"],
+      "port": 8062
+    }
+  ]
+}

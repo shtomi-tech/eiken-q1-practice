@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>英検2級 大問1 1か月学習計画</title>
+  <style>
+    :root {
+      --ink: #28251f;
+      --muted: #625e56;
+      --line: #d9d2c7;
+      --paper: #fcfbf8;
+      --wash: #f1eee8;
+      --green: #3f665c;
+      --green-pale: #e8efec;
+      --amber: #7e4f19;
+      --amber-pale: #f5ecdf;
+      --violet: #655e8a;
+      --violet-pale: #eeecf5;
+      --rose: #a34d52;
+      --rose-pale: #f5e9e9;
+    }
+
+    @page { size: A4 landscape; margin: 0; }
+
+    * { box-sizing: border-box; }
+
+    html { background: #d8d3ca; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #d8d3ca;
+      font-family: "Yu Gothic UI", "Meiryo", sans-serif;
+      line-height: 1.45;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .sheet {
+      position: relative;
+      width: 297mm;
+      min-height: 210mm;
+      margin: 16px auto;
+      padding: 11mm 13mm 9mm;
+      background: var(--paper);
+      box-shadow: 0 8px 30px rgba(40, 37, 31, .12);
+      page-break-after: always;
+    }
+
+    .sheet:last-of-type { page-break-after: auto; }
+
+    .kicker,
+    .label,
+    th,
+    .page-code,
+    .set-name {
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .kicker {
+      margin: 0 0 3mm;
+      color: var(--muted);
+      font-size: 9px;
+      font-weight: 700;
+    }
+
+    .title-row {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 12mm;
+      padding-bottom: 4mm;
+      border-bottom: 1px solid var(--ink);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 27px;
+      line-height: 1;
+      letter-spacing: -.04em;
+    }
+
+    .subtitle {
+      margin: 2mm 0 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .page-code {
+      color: var(--green);
+      font-size: 10px;
+      font-weight: 800;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .page-code strong {
+      display: block;
+      margin-top: 1mm;
+      color: var(--ink);
+      font-size: 17px;
+      letter-spacing: -.02em;
+      text-transform: none;
+    }
+
+    .student-line {
+      display: flex;
+      gap: 10mm;
+      margin: 3mm 0 4mm;
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    .blank {
+      display: inline-block;
+      min-width: 42mm;
+      border-bottom: 1px solid var(--muted);
+      color: var(--ink);
+    }
+
+    .legend-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.12fr 1.18fr 1.28fr;
+      gap: 5mm;
+      margin-bottom: 5mm;
+    }
+
+    .sheet:first-of-type .legend-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .legend {
+      min-height: 27mm;
+      padding: 3mm 3.5mm;
+      background: var(--wash);
+      border-top: 3px solid var(--green);
+    }
+
+    .legend:nth-child(2) { border-top-color: var(--amber); }
+    .legend:nth-child(3) { border-top-color: var(--violet); }
+    .legend:nth-child(4) { border-top-color: var(--rose); }
+
+    .legend h2 {
+      margin: 0 0 1.5mm;
+      font-size: 11px;
+      line-height: 1.2;
+    }
+
+    .legend p,
+    .legend ol {
+      margin: 0;
+      color: #514d46;
+      font-size: 9.5px;
+    }
+
+    .legend ol {
+      padding-left: 4.5mm;
+    }
+
+    .legend li + li { margin-top: .6mm; }
+
+    .legend strong { color: var(--ink); }
+
+    .small-note {
+      margin-top: 1.3mm !important;
+      color: var(--muted) !important;
+      font-size: 8.5px !important;
+    }
+
+    .plan-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 1.3mm;
+      table-layout: fixed;
+      font-size: 10.5px;
+    }
+
+    .plan-table col.day { width: 8%; }
+    .plan-table col.new { width: 35%; }
+    .plan-table col.review { width: 42%; }
+    .plan-table col.time { width: 15%; }
+
+    .plan-table th {
+      padding: 0 3mm 2mm;
+      border-bottom: 1px solid var(--ink);
+      color: var(--muted);
+      font-size: 8.5px;
+      text-align: left;
+    }
+
+    .plan-table th:last-child,
+    .plan-table td:last-child { text-align: right; }
+
+    .plan-table td {
+      height: 8.8mm;
+      padding: 1.7mm 3mm;
+      vertical-align: middle;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .plan-table tbody tr:last-child td { border-bottom-color: var(--ink); }
+
+    .day-cell {
+      display: flex;
+      align-items: center;
+      gap: 2.5mm;
+    }
+
+    .day-number {
+      display: inline-grid;
+      width: 7mm;
+      height: 7mm;
+      place-items: center;
+      border: 1px solid var(--ink);
+      border-radius: 50%;
+      font-size: 10px;
+      font-weight: 800;
+    }
+
+    .check-box {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1;
+    }
+
+    .new-cell,
+    .review-cell,
+    .time-cell { line-height: 1.25; }
+
+    .new-cell strong,
+    .review-cell strong {
+      display: inline-block;
+      margin-right: 2mm;
+      font-size: 11px;
+    }
+
+    .set-name {
+      display: inline-block;
+      margin-right: 2mm;
+      padding: .7mm 1.7mm;
+      border-radius: 999px;
+      color: var(--green);
+      background: var(--green-pale);
+      font-size: 8px;
+      font-weight: 800;
+    }
+
+    .set-name.old {
+      color: var(--amber);
+      background: var(--amber-pale);
+    }
+
+    .subline {
+      display: block;
+      margin-top: .6mm;
+      color: var(--muted);
+      font-size: 8.5px;
+    }
+
+    .review-cell strong { color: var(--violet); }
+
+    .review-cell .subline { color: #625d78; }
+
+    .time-cell {
+      color: var(--muted);
+      font-size: 9px;
+    }
+
+    .time-cell strong {
+      display: block;
+      color: var(--ink);
+      font-size: 10.5px;
+    }
+
+    .rest-day td {
+      background: var(--rose-pale);
+      border-bottom-color: #dfc4c6;
+    }
+
+    .rest-day td:first-child { border-left: 3px solid var(--rose); }
+
+    .footer {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 8mm;
+      margin-top: 4mm;
+      color: var(--muted);
+      font-size: 8.5px;
+    }
+
+    .footer p { margin: 0; }
+
+    .footer .page-number {
+      white-space: nowrap;
+      font-size: 9px;
+    }
+
+    .notes {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 5mm;
+      margin-top: 5mm;
+    }
+
+    .note-box {
+      padding: 3mm 3.5mm;
+      background: var(--wash);
+      border-left: 3px solid var(--green);
+    }
+
+    .note-box:nth-child(2) { border-left-color: var(--amber); }
+    .note-box:nth-child(3) { border-left-color: var(--violet); }
+
+    .note-box h2 {
+      margin: 0 0 1mm;
+      font-size: 10.5px;
+    }
+
+    .note-box p {
+      margin: 0;
+      color: #514d46;
+      font-size: 9px;
+    }
+
+    .screen-note {
+      width: min(297mm, calc(100% - 32px));
+      margin: 14px auto -4px;
+      color: #514d46;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    @media print {
+      html,
+      body { background: #fff; }
+
+      .screen-note { display: none; }
+
+      .sheet {
+        margin: 0;
+        width: 297mm;
+        height: 210mm;
+        min-height: 210mm;
+        max-height: 210mm;
+        padding: 7mm 10mm 5mm;
+        overflow: hidden;
+        box-shadow: none;
+      }
+
+      .kicker { margin-bottom: 1.5mm; font-size: 7.5px; }
+      .title-row { gap: 8mm; padding-bottom: 2mm; }
+      h1 { font-size: 21px; }
+      .subtitle { margin-top: 1mm; font-size: 9px; }
+      .page-code { font-size: 7.5px; }
+      .page-code strong { font-size: 13px; }
+      .student-line { gap: 8mm; margin: 1.5mm 0 2mm; font-size: 8px; }
+      .blank { min-width: 35mm; }
+
+      .legend-grid { gap: 3mm; margin-bottom: 2.5mm; }
+      .legend { min-height: 0; padding: 1.8mm 2.5mm; border-top-width: 2px; }
+      .legend h2 { margin-bottom: .8mm; font-size: 8.5px; }
+      .legend p,
+      .legend ol { font-size: 7.3px; }
+      .legend ol { padding-left: 3.5mm; }
+      .legend li + li { margin-top: .25mm; }
+      .small-note { margin-top: .6mm !important; font-size: 6.5px !important; }
+
+      .plan-table { border-spacing: 0; font-size: 8.1px; }
+      .plan-table th { padding: 0 2mm 1mm; font-size: 7px; }
+      .plan-table td { height: 6.2mm; padding: 1mm 2mm; }
+      .day-cell { gap: 1.5mm; }
+      .day-number { width: 5.5mm; height: 5.5mm; font-size: 8px; }
+      .check-box { font-size: 10px; }
+      .new-cell strong,
+      .review-cell strong { margin-right: 1mm; font-size: 8.4px; }
+      .set-name { margin-right: 1mm; padding: .35mm 1mm; font-size: 6.2px; }
+      .subline { margin-top: .25mm; font-size: 6.6px; }
+      .time-cell { font-size: 7px; }
+      .time-cell strong { font-size: 8.2px; }
+
+      .footer { margin-top: 1.5mm; font-size: 6.5px; }
+      .footer .page-number { font-size: 7px; }
+      .notes { gap: 3mm; margin-top: 2.5mm; }
+      .note-box { padding: 1.8mm 2.5mm; border-left-width: 2px; }
+      .note-box h2 { margin-bottom: .5mm; font-size: 8.5px; }
+      .note-box p { font-size: 7px; }
+    }
+
+    @media screen and (max-width: 900px) {
+      .sheet {
+        width: calc(100% - 24px);
+        min-height: auto;
+        margin: 12px;
+        padding: 22px 18px;
+      }
+
+      .legend-grid,
+      .notes { grid-template-columns: 1fr 1fr; }
+
+      .sheet:first-of-type .legend-grid { grid-template-columns: 1fr 1fr; }
+
+      .plan-table { min-width: 760px; }
+
+      .sheet { overflow-x: auto; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+  <p class="screen-note">印刷時は「A4・横向き・背景のグラフィックを印刷」を選んでください。</p>
+
+  <section class="sheet" role="region" aria-label="Day 1 - 15 学習計画" tabindex="0">
+    <p class="kicker">英検2級 / 大問1 / 3回分を使う30日プラン</p>
+    <div class="title-row">
+      <div>
+        <h1 id="plan-title-1">1か月学習計画</h1>
+        <p class="subtitle">204語句・51問・平均15分／日</p>
+      </div>
+      <div class="page-code">PLAN A<strong>Day 1 - 15</strong></div>
+    </div>
+
+    <div class="student-line" aria-label="記入欄">
+      <span>氏名 <span class="blank"></span></span>
+      <span>開始日 <span class="blank"></span></span>
+      <span>級設定　□ 2級</span>
+    </div>
+
+    <section class="legend-grid">
+      <div class="legend">
+        <h2>時間の目安</h2>
+        <p><strong>新規</strong> 1語句 ≈ 1分</p>
+        <p><strong>復習</strong> 1語句 ≈ 20秒</p>
+        <p class="small-note">2問＝8語句を新規の基本単位にします。</p>
+      </div>
+      <div class="legend">
+        <h2>1日の順番</h2>
+        <ol>
+          <li><strong>間隔復習</strong> 期限分を先に</li>
+          <li><strong>新規</strong> 表の問題を学習</li>
+          <li><strong>誤答</strong> 残れば確認して終了</li>
+        </ol>
+        <p class="small-note">間隔はアプリの1・3・7・14日を使います。</p>
+      </div>
+      <div class="legend">
+        <h2>アプリでの操作</h2>
+        <p><strong>暗記カード → 意味確認 → 本番形式</strong></p>
+        <p>誤答が出たら、表示された語句を確認してから次へ。</p>
+        <p class="small-note">PDFの前日・前々日復習は、アプリの間隔復習へ置き換えます。</p>
+      </div>
+    </section>
+
+    <table class="plan-table">
+      <colgroup>
+        <col class="day"><col class="new"><col class="review"><col class="time">
+      </colgroup>
+      <thead>
+        <tr><th>Day</th><th>新規　問題セット・範囲</th><th>復習　毎日行うこと</th><th>合計の目安</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><div class="day-cell"><span class="day-number">1</span><span class="check-box">□</span></div></td><td class="new-cell"><span class="set-name">2026年度第1回</span><strong>第1 - 2問</strong><span class="subline">8語句</span></td><td class="review-cell"><strong>間隔復習</strong>期限が来た語句を先に<span class="subline">初日は期限分なし。新規の流れを覚える。</span></td><td class="time-cell"><strong>8 - 10分</strong>新規中心</td></tr>
+        <tr><td><div class="day-cell"><span class="day-number">2</span><span class="check-box">□</span></div></td><td class="new-cell"><span class="set-name">2026年度第1回</span><strong>第3 - 4問</strong><span class="subline">8語句</span></td><td class="review-cell"><strong>間隔復習</strong>期限分を口頭で思い出してから選ぶ<span class="subline">前日に学んだ語句が復習対象になります。</span></td><td class="time-cell"><strong>12 - 15分</strong>復習 + 新規</td></tr>
+        <tr><td><div class="day-cell"><span class="day-number">3</span><span class="check-box">□</span></div></td><td class="new-cell"><span class="set-name">2026年度第1回</span><strong>第5 - 6問</strong><span class="subline">8語句</span></td><td class="review-cell"><strong>間隔復習</strong>期限分。誤答はその場でカード確認<span class="subline">間違いを隠したまま先へ進まない。</span></td><td class="time-cell"><strong>12 - 15分</strong>復習 + 新規</td></tr>
+        <tr><td><div class="day-cell"><span class="day-number">4</span><span class="check-box">□</span></div></td><td class="new-cell"><span class="set-name">2026年度第1回</span><strong>第7 - 8問</strong><span class="subline">8語句</span></td><td class="review-cell"><strong>間隔復習</strong>期限分を先に行う<span class="subline">答えを選ぶ前に、意味を小声でもよいので言う。</span></td><td class="time-cell"><strong>12 - 15分</strong>復習 + 新規</td></tr>
+        <tr><td><div class="day-cell"><span class="day-number">5</span><span class="check-box">□</span></div></td><td class="new-cell"><span class="set-name">2026年度第1回</span><strong>第9 - 10問</strong><span class="subline">8語句</span></td><td class="review-cell"><strong>間隔復習</strong>期限分。正解でも遅かった語句は再確認<span class="subline">速さより、意味を正確に思い出すことを優先。</span></td><td class="time-cell"><strong>12 - 15分</strong>復習 + 新規</td></tr>
+        <tr><td><div class="day-cell"><span class="day-number">6</span><span class="check-box">□</span></div></td><td class="new-cell"><span class="set-name">2026年度第1回</span><strong>第11 - 12問</strong><span class="subline">8語句</span></td><td class="review-cell"><strong>間隔復習</strong>期限分を先に行う<span class="subline">途中で止めても、現在地は端末に保存されます。</span></td><td class="time-cell"><strong>12 - 15分</strong>復習 + 新規</td></tr>
+        <tr><td><div class="day-cell"><span class="day-number">7</span><span class="check-box">□</span></div></td><td class="new-cell"><span class="set-name">2026年度第1回</span><strong>第13 - 14問</strong><span class="subline">8語句</span></td><td class="review-cell"><strong>間隔復習</strong>期限分。間違えた語句は確認済みにする<span class="subline">必要なら新規は1問に減らしてよい。</span></td><td class="time-cell"><strong>12 - 15分</strong>調整可</td></tr>
+        <tr><td><div class="day-cell"><span class="day-number">8</span><span class="check-box">□</span></div></td><td class="new-cell"><span class="set-name">2026年度第1回</span><strong>第15 - 16問</strong><span class="subline">8語句</span></td><td class="review-cell"><strong>間隔復習</strong>期限分を先に行う<span class="subline">ここまでで第1回の大半を終える。</span></td><td class="time-cell"><strong>12 - 15分</strong>復習 + 新規</td></tr>
+        <tr><td><div class="day-cell"><span class="day-number">9</span><span class="check-box">□</span></div></td><td class="new-cell"><span class="set-name">2026年度第1回</span><strong>第17問</strong><span class="subline">4語句・第1回終了</span></td><td class="review-cell"><strong>間隔復習</strong>期限分。終われば問題セットを切り替える<span class="subline">ホームの「問題セット」から2025年度第3回へ。</span></td><td class="time-cell"><strong>7 - 12分</strong>切替確認</td></tr>
+        <tr><td><div class="day-cell"><span class="day-number">10</span><span class="check-box">□</span></div></td><td class="new-cell"><span class="set-name old">2025年度第3回</span><strong>第1 - 2問</strong><span class="subline">8語句</span></td><td class="review-cell"><strong>間隔復習</strong>期限分を先に行う<span class="subline">級を2級のままにして、セットだけ切り替える。</span></td><td class="time-cell"><strong>12 - 15分</strong>復習 + 新規</td></tr>
+        <tr><td><div class="day-cell"><span class="day-number">11</span><span class="check-box">□</span></div></td><td class="new-cell"><span class="set-name old">2025年度第3回</span><strong>第3 - 4問</strong><span class="subline">8語句</span></td><td class="review-cell"><strong>間隔復習</strong>期限分。正解の意味を声に出して確認<span class="subline">選択肢4つを、正解だけでなく全て確認する。</span></td><td class="time-cell"><strong>12 - 15分</strong>復習 + 新規</td></tr>
+        <tr><td><div class="day-cell"><span class="day-number">12</span><span class="check-box">□</span></div></td><td class="new-cell"><span class="set-name old">2025年度第3回</span><strong>第5 - 6問</strong><span class="subline">8語句</span></td><td class="review-cell"><strong>間隔復習</strong>期限分を先に行う<span class="subline">誤答が出たら、復習対象として残す。</span></td><td class="time-cell"><strong>12 - 15分</strong>復習 + 新規</td></tr>
+        <tr><td><div class="day-cell"><span class="day-number">13</span><span class="check-box">□</span></div></td><td class="new-cell"><span class="set-name old">2025年度第3回</span><strong>第7 - 8問</strong><span class="subline">8語句</span></td><td class="review-cell"><strong>間隔復習</strong>期限分。急がず、意味を先に言う<span class="subline">制限時間の練習ではなく、思い出す練習。</span></td><td class="time-cell"><strong>12 - 15分</strong>復習 + 新規</td></tr>
+        <tr><td><div class="day-cell"><span class="day-number">14</span><span class="check-box">□</span></div></td><td class="new-cell"><span class="set-name old">2025年度第3回</span><strong>第9 - 10問</strong><span class="subline">8語句</span></td><td class="review-cell"><strong>間隔復習</strong>期限分を先に行う<span class="subline">期限分が多い日は、新規を1問に減らしてよい。</span></td><td class="time-cell"><strong>12 - 15分</strong>調整可</td></tr>
+        <tr><td><div class="day-cell"><span class="day-number">15</span><span class="check-box">□</span></div></td><td class="new-cell"><span class="set-name old">2025年度第3回</span><strong>第11 - 12問</strong><span class="subline">8語句</span></td><td class="review-cell"><strong>間隔復習</strong>期限分。復習を優先して終える<span class="subline">予定どおり進まなくても、次の日に詰め込まない。</span></td><td class="time-cell"><strong>12 - 15分</strong>復習 + 新規</td></tr>
+      </tbody>
+    </table>
+
+    <div class="footer">
+      <p>※ 新規の問題は、アプリの「暗記カード → 意味確認 → 本番形式」を最後まで行ったものを1単位とします。</p>
+      <p class="page-number">英検2級 大問1・1か月学習計画　1 / 2</p>
+    </div>
+  </section>
+
+  <section class="sheet" role="region" aria-label="Day 16 - 30 学習計画" tabindex="0">
+    <p class="kicker">英検2級 / 大問1 / 3回分を使う30日プラン</p>
+    <div class="title-row">
+      <div>
+        <h1 id="plan-title-2">1か月学習計画</h1>
+        <p class="subtitle">204語句・51問・平均15分／日</p>
+      </div>
+      <div class="page-code">PLAN A<strong>Day 16 - 30</strong></div>
+    </div>
+
+    <section class="legend-grid">
+      <div class="legend">
+        <h2>今日の優先順位</h2>
+        <p><strong>期限分の復習 → 新規 → 誤答確認</strong></p>
+        <p class="small-note">ホームの「意味だけ復習」から開始します。</p>
+      </div>
+      <div class="legend">
+        <h2>間隔復習</h2>
+        <p>アプリが表示する期限分を復習します。</p>
+        <p class="small-note">1回の出題は最大30語句。途中で止めても再開できます。</p>
+      </div>
+      <div class="legend">
+        <h2>新規の単位</h2>
+        <p><strong>1問 = 4語句</strong>。通常は2問、期限分が多い日は1問。</p>
+        <p class="small-note">学習量を詰めて遅れを取り戻そうとしない。</p>
+      </div>
+      <div class="legend">
+        <h2>最終確認</h2>
+        <p>全204語句の「最終チェック」は続きから進めます。</p>
+        <p class="small-note">80%以上をCLEARの目安にします。</p>
+      </div>
+    </section>
+
+    <table class="plan-table">
+      <colgroup>
+        <col class="day"><col class="new"><col class="review"><col class="time">
+      </colgroup>
+      <thead>
+        <tr><th>Day</th><th>新規　問題セット・範囲</th><th>復習　毎日行うこと</th><th>合計の目安</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><div class="day-cell"><span class="day-number">16</span><span class="check-box">□</span></div></td><td class="new-cell"><span class="set-name old">2025年度第3回</span><strong>第13 - 14問</strong><span class="subline">8語句</span></td><td class="review-cell"><strong>間隔復習</strong>期限分を先に行う<span class="subline">間違えた語句は表示された説明を読む。</span></td><td class="time-cell"><strong>12 - 15分</strong>復習 + 新規</td></tr>
+        <tr><td><div class="day-cell"><span class="day-number">17</span><span class="check-box">□</span></div></td><td class="new-cell"><span class="set-name old">2025年度第3回</span><strong>第15 - 16問</strong><span class="subline">8語句</span></td><td class="review-cell"><strong>間隔復習</strong>期限分。正解する前に意味を言う<span class="subline">第3回の最後の2問まで進める。</span></td><td class="time-cell"><strong>12 - 15分</strong>復習 + 新規</td></tr>
+        <tr><td><div class="day-cell"><span class="day-number">18</span><span class="check-box">□</span></div></td><td class="new-cell"><span class="set-name old">2025年度第3回</span><strong>第17問</strong><span class="subline">4語句・第3回終了</span></td><td class="review-cell"><strong>間隔復習</strong>期限分。終われば問題セットを切り替える<span class="subline">ホームの「問題セット」から2025年度第2回へ。</span></td><td class="time-cell"><strong>7 - 12分</strong>切替確認</td></tr>
+        <tr><td><div class="day-cell"><span class="day-number">19</span><span class="check-box">□</span></div></td><td class="new-cell"><span class="set-name old">2025年度第2回</span><strong>第1 - 2問</strong><span class="subline">8語句</span></td><td class="review-cell"><strong>間隔復習</strong>期限分を先に行う<span class="subline">級は2級のまま。セットだけ切り替える。</span></td><td class="time-cell"><strong>12 - 15分</strong>復習 + 新規</td></tr>
+        <tr><td><div class="day-cell"><span class="day-number">20</span><span class="check-box">□</span></div></td><td class="new-cell"><span class="set-name old">2025年度第2回</span><strong>第3 - 4問</strong><span class="subline">8語句</span></td><td class="review-cell"><strong>間隔復習</strong>期限分。全選択肢の意味を確認<span class="subline">正解した語句も、言えなければ要再確認。</span></td><td class="time-cell"><strong>12 - 15分</strong>復習 + 新規</td></tr>
+        <tr><td><div class="day-cell"><span class="day-number">21</span><span class="check-box">□</span></div></td><td class="new-cell"><span class="set-name old">2025年度第2回</span><strong>第5 - 6問</strong><span class="subline">8語句</span></td><td class="review-cell"><strong>間隔復習</strong>期限分を先に行う<span class="subline">迷った語句は、答えを選ぶ前にカードへ戻る。</span></td><td class="time-cell"><strong>12 - 15分</strong>復習 + 新規</td></tr>
+        <tr><td><div class="day-cell"><span class="day-number">22</span><span class="check-box">□</span></div></td><td class="new-cell"><span class="set-name old">2025年度第2回</span><strong>第7 - 8問</strong><span class="subline">8語句</span></td><td class="review-cell"><strong>間隔復習</strong>期限分。誤答を優先する<span class="subline">復習が多ければ新規は1問に調整。</span></td><td class="time-cell"><strong>12 - 15分</strong>調整可</td></tr>
+        <tr><td><div class="day-cell"><span class="day-number">23</span><span class="check-box">□</span></div></td><td class="new-cell"><span class="set-name old">2025年度第2回</span><strong>第9 - 10問</strong><span class="subline">8語句</span></td><td class="review-cell"><strong>間隔復習</strong>期限分を先に行う<span class="subline">速さは、意味を崩さず答えられる範囲で。</span></td><td class="time-cell"><strong>12 - 15分</strong>復習 + 新規</td></tr>
+        <tr><td><div class="day-cell"><span class="day-number">24</span><span class="check-box">□</span></div></td><td class="new-cell"><span class="set-name old">2025年度第2回</span><strong>第11 - 12問</strong><span class="subline">8語句</span></td><td class="review-cell"><strong>間隔復習</strong>期限分。途中保存を使ってよい<span class="subline">1回で終わらない場合は、次回「続きから再開」。</span></td><td class="time-cell"><strong>12 - 15分</strong>復習 + 新規</td></tr>
+        <tr><td><div class="day-cell"><span class="day-number">25</span><span class="check-box">□</span></div></td><td class="new-cell"><span class="set-name old">2025年度第2回</span><strong>第13 - 14問</strong><span class="subline">8語句</span></td><td class="review-cell"><strong>間隔復習</strong>期限分を先に行う<span class="subline">新規の残りを見ながら、無理のない速度で進める。</span></td><td class="time-cell"><strong>12 - 15分</strong>復習 + 新規</td></tr>
+        <tr><td><div class="day-cell"><span class="day-number">26</span><span class="check-box">□</span></div></td><td class="new-cell"><span class="set-name old">2025年度第2回</span><strong>第15 - 16問</strong><span class="subline">8語句</span></td><td class="review-cell"><strong>間隔復習</strong>期限分。誤答があれば復習演習へ<span class="subline">あと1問で第2回が終了します。</span></td><td class="time-cell"><strong>12 - 15分</strong>復習 + 新規</td></tr>
+        <tr><td><div class="day-cell"><span class="day-number">27</span><span class="check-box">□</span></div></td><td class="new-cell"><span class="set-name old">2025年度第2回</span><strong>第17問</strong><span class="subline">4語句・204語句の新規終了</span></td><td class="review-cell"><strong>間隔復習</strong>期限分。誤答問題があれば先に復習<span class="subline">最終チェックの解放条件を整える日。</span></td><td class="time-cell"><strong>7 - 15分</strong>仕上げ</td></tr>
+        <tr class="rest-day"><td><div class="day-cell"><span class="day-number">28</span><span class="check-box">□</span></div></td><td class="new-cell"><strong>新規なし</strong><span class="subline">間隔復習と誤答確認に集中</span></td><td class="review-cell"><strong>間隔復習 + 最終チェック開始</strong><span class="subline">最終チェックが未解放なら、誤答問題を先に完了する。</span></td><td class="time-cell"><strong>15分</strong>全体確認</td></tr>
+        <tr class="rest-day"><td><div class="day-cell"><span class="day-number">29</span><span class="check-box">□</span></div></td><td class="new-cell"><strong>新規なし</strong><span class="subline">最終チェックの続きを行う</span></td><td class="review-cell"><strong>最終チェック</strong>前回の位置から再開<span class="subline">204語句を一度に終わらせる必要はありません。</span></td><td class="time-cell"><strong>15分</strong>続きから</td></tr>
+        <tr class="rest-day"><td><div class="day-cell"><span class="day-number">30</span><span class="check-box">□</span></div></td><td class="new-cell"><strong>新規なし</strong><span class="subline">結果を確認して次の課題を決める</span></td><td class="review-cell"><strong>最終チェック完了</strong>80%以上を目標にする<span class="subline">未達なら誤答語句を中心に、次の30日へつなぐ。</span></td><td class="time-cell"><strong>15分</strong>結果確認</td></tr>
+      </tbody>
+    </table>
+
+    <section class="notes" aria-label="計画の使い方">
+      <div class="note-box">
+        <h2>復習が多い日の扱い</h2>
+        <p>期限分が多く15分を超えそうなら、新規を2問から1問へ減らします。予定を取り戻すために、翌日3問へ増やしません。</p>
+      </div>
+      <div class="note-box">
+        <h2>途中で終わるとき</h2>
+        <p>画面の「一覧へ戻る」またはブラウザを閉じて構いません。次回はホームの「続きから再開する」を使います。</p>
+      </div>
+      <div class="note-box">
+        <h2>1か月後の目安</h2>
+        <p>3回分の新規204語句を一巡し、間隔復習を経験し、最終チェック80%以上を目指します。満点を急がない。</p>
+      </div>
+    </section>
+
+    <div class="footer">
+      <p>計画の順番：2026年度第1回 → 2025年度第3回 → 2025年度第2回。アプリの問題セット名に合わせて選びます。</p>
+      <p class="page-number">英検2級 大問1・1か月学習計画　2 / 2</p>
+    </div>
+  </section>
+  </main>
+</body>
+</html>
