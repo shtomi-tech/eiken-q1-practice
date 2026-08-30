@@ -24,6 +24,7 @@ EXPECTED_IDS = {
     "eiken1-mock-6",
     "eiken1-mock-7",
     "eiken1-mock-8",
+    "eiken1-mock-9",
     "eikenp2-mock-1",
     "eikenp2-mock-2",
     "eikenp2-mock-3",
