@@ -189,7 +189,7 @@ function sessionStickyNav(q, isMeaning, isFinal) {
     flash: "覚える", check: "確かめる", meaningReview: "見直し", practice: "解く", done: "完了",
   }[session.stage] || "";
   return el("div", { class: "sessionStickyNav" },
-    el("button", { class: "sessionStickyBack ghost", type: "button", onclick: () => { saveResume(); renderHome(); } }, "一覧へ"),
+    el("button", { class: "sessionStickyBack ghost", type: "button", onclick: () => { saveResume(); renderHome(); } }, "一覧へ戻る"),
     el("span", { class: "sessionStickyPos" }, posLabel),
     el("span", { class: "sessionStickyStage" }, stageLabel),
   );

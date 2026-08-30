@@ -757,10 +757,10 @@ function datasetPrimaryLabel(summary, isCurrent) {
   if (summary.status === "cleared") return "もう一周する";
   const resumeQuestion = Number(summary.resume?.q);
   const resumeLabel = Number.isInteger(resumeQuestion)
-    ? `続きから（第${resumeQuestion}問）`
-    : "続きから";
+    ? `続きから再開する（第${resumeQuestion}問）`
+    : "続きから再開する";
   if (summary.status === "resumable") return resumeLabel;
-  if (summary.status === "inProgress" || isCurrent) return summary.hasResume ? resumeLabel : "続きから";
+  if (summary.status === "inProgress" || isCurrent) return summary.hasResume ? resumeLabel : "続きから再開する";
   return "この回を始める";
 }
 
@@ -893,4 +893,3 @@ function finalUnlocked() {
   return state.qList.length > 0
     && state.qList.every((q) => unit(q).learned);
 }
-

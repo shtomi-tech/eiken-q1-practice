@@ -508,10 +508,15 @@ h2 {
 .spacedReviewCard {
   border-left: 4px solid var(--clay);
 }
-.spacedReviewCard h3 {
+.spacedReviewCard h3,
+.vgHead h3,
+.studyPlanHead h3 {
   font-family: var(--serif);
   font-size: 22px;
+  font-weight: 600;
   line-height: 1.35;
+}
+.spacedReviewCard h3 {
   margin: 0;
 }
 .meaningMissionLead {
@@ -741,7 +746,7 @@ h2 {
 }
 .stagePill:last-child { border-right: 0; }
 .stagePill.active { background: var(--ink); color: var(--parchment); }
-.stagePill.cleared { color: var(--ok); }
+.stagePill.cleared { color: var(--ok-text); }
 .meaningBar .stagePill { flex-basis: 50%; }
 
 .q1Progress {
