@@ -71,14 +71,17 @@
 ```powershell
 py -3 scripts/check_eiken1_alignment.py --dataset-id eiken1-mock-6
 py -3 scripts/check_eiken1_alignment.py --dataset-id eiken1-2026-1
+py -3 scripts/check_eiken1_alignment.py --dataset-id eikenp1-2026-1
 ```
 
-全セットの独立レビュー結果は `docs/EIKEN1_ALIGNMENT_REVIEW.md` に記録しています。
+1級・準1級の各セットは、公式形式の件数を保ったまま、問題文訳・語句メタデータ・例文・語源・IPA・正答フラグの共通整合検査を実行できます。全1級セットの独立レビュー結果は `docs/EIKEN1_ALIGNMENT_REVIEW.md`、準1級の整合記録は `docs/EIKENP1_ALIGNMENT.md` に記録しています。
 
 準1級のQ1データは、全体過去問データから次で抽出します。
 
 ```powershell
 py -3 scripts/build_q1_pre1_data.py
+# 既存の生成JSONだけへ整合情報を再適用する場合
+py -3 scripts/curate_pre1_data.py
 py -3 scripts/build_q1_1_data.py
 py -3 scripts/enrich_flashcard_fields.py
 py -3 scripts/curate_1_examples.py
@@ -182,7 +185,9 @@ py -3 scripts/add_example_translations.py
 - `scripts/enrich_flashcard_fields.py`: 対象データの発音・品詞の補完
 - `scripts/curate_1_examples.py`: 1級のオリジナル例文・日本語訳の適用
 - `scripts/curate_1_etymology.py`: 1級の語源説明の適用
-- `scripts/check_eiken1_alignment.py`: 1級全セットの語句・例文・語源・原形音声の整合検査
+- `scripts/check_eiken1_alignment.py`: 1級・準1級全セットの語句・例文・語源・原形音声の整合検査
+- `scripts/q1_pre1_metadata.py`: 準1級の設問文訳・例文補正・出典メタデータの正本
+- `scripts/curate_pre1_data.py`: 準1級の既存生成JSONへの整合情報の再適用
 - `scripts/build_q1_mock_1_data.py`: 1級模試第1回の問題・語彙データ生成
 - `scripts/build_q1_mock_2_data.py`: 1級模試第2回の問題・語彙データ生成
 - `scripts/build_q1_mock_3_data.py`: 1級模試第3回の問題・語彙データ生成

@@ -1,8 +1,16 @@
 {
   "meta": {
-    "grade": "準1級",
+    "grade": "英検準1級",
     "round": "2025-3",
-    "source": "data/pre1_*.json から大問1だけを抽出した共通Q1データ"
+    "section": "Reading 大問1（語句空所補充）",
+    "source": "英検公式の公開過去問PDFを、学習用JSONへ大問1だけ構造化",
+    "source_problem_url": "https://www.eiken.or.jp/eiken/exam/kakomon/2025-3-1ji-p1kyu.pdf",
+    "source_answer_url": "https://www.eiken.or.jp/eiken/result/pdf/202503Fp1kyu.pdf",
+    "counts": {
+      "words": 72,
+      "idioms": 0,
+      "total": 72
+    }
   },
   "questions": [
     {
@@ -14,7 +22,8 @@
         "wrecked",
         "commuted"
       ],
-      "answerIndex": 0
+      "answerIndex": 0,
+      "translation": "刑務所から脱走した男たちは3週間にわたり警察から逃れていたが、ついに捕まり、連れ戻された。"
     },
     {
       "q": 2,
@@ -25,7 +34,8 @@
         "maneuvers",
         "perspectives"
       ],
-      "answerIndex": 3
+      "answerIndex": 3,
+      "translation": "その小説が魅力的だったのは、同じ物語をいくつかの異なる観点から描いていたからだ。登場人物はそれぞれ、出来事を大きく異なる見方で捉えていた。"
     },
     {
       "q": 3,
@@ -36,7 +46,8 @@
         "spacious",
         "compliant"
       ],
-      "answerIndex": 2
+      "answerIndex": 2,
+      "translation": "そのアパートの寝室はかなり広々としていたが、台所とダイニングルームは狭かったので、夫婦は借りないことにした。"
     },
     {
       "q": 4,
@@ -47,7 +58,8 @@
         "radiating",
         "solidifying"
       ],
-      "answerIndex": 0
+      "answerIndex": 0,
+      "translation": "大学は来月、次の学期にそこへ入学することを考えている高校卒業予定者向けのイベントを開く。"
     },
     {
       "q": 5,
@@ -58,7 +70,8 @@
         "obstruct",
         "compress"
       ],
-      "answerIndex": 3
+      "answerIndex": 3,
+      "translation": "実際の戦闘はほぼ1週間続いたが、作家は小説をより劇的にするため、すべての出来事を1日に圧縮することにした。"
     },
     {
       "q": 6,
@@ -69,7 +82,8 @@
         "leniency",
         "rivalry"
       ],
-      "answerIndex": 3
+      "answerIndex": 3,
+      "translation": "隣り合う2つのチームの競争意識は非常に強い。時には選手同士が試合中にけんかまでした。"
     },
     {
       "q": 7,
@@ -80,7 +94,8 @@
         "tentative",
         "universal"
       ],
-      "answerIndex": 2
+      "answerIndex": 2,
+      "translation": "A: ジョージ、春休みはどこかへ行くの？ B: スペインを訪れる仮の計画はあるけど、まだ何も予約していないよ。"
     },
     {
       "q": 8,
@@ -91,7 +106,8 @@
         "esteem",
         "distress"
       ],
-      "answerIndex": 1
+      "answerIndex": 1,
+      "translation": "医学生は人間の解剖学を学ぶのに多くの時間を費やす。体の最も小さな部分についても用語を暗記しなければならない。"
     },
     {
       "q": 9,
@@ -102,7 +118,8 @@
         "hazard",
         "ascent"
       ],
-      "answerIndex": 3
+      "answerIndex": 3,
+      "translation": "山を登るのに2日かかった一方で、登山者たちは12時間未満で下山できた。"
     },
     {
       "q": 10,
@@ -113,7 +130,8 @@
         "subside",
         "preside"
       ],
-      "answerIndex": 1
+      "answerIndex": 1,
+      "translation": "2機の戦闘機は非常に近くを飛んでいたため、片方の操縦士は衝突するのではないかと心配した。"
     },
     {
       "q": 11,
@@ -124,7 +142,8 @@
         "unfold",
         "bundle"
       ],
-      "answerIndex": 0
+      "answerIndex": 0,
+      "translation": "技術者はねじを慎重に外した後、コンピューターから電源装置を切り離し、新しいものに交換することができた。"
     },
     {
       "q": 12,
@@ -135,7 +154,8 @@
         "autonomy",
         "conservation"
       ],
-      "answerIndex": 2
+      "answerIndex": 2,
+      "translation": "会社は営業担当者に日々の仕事について自主性を与えた。今では、経営陣の承認を得なくても自分で決定できる。"
     },
     {
       "q": 13,
@@ -146,7 +166,8 @@
         "cosmopolitan",
         "menacing"
       ],
-      "answerIndex": 2
+      "answerIndex": 2,
+      "translation": "ニュー・クロワ市は国際的な文化で知られている。世界中から人々が移り住み、多様なレストランや地区で有名だ。"
     },
     {
       "q": 14,
@@ -157,7 +178,8 @@
         "gleam",
         "sizzle"
       ],
-      "answerIndex": 2
+      "answerIndex": 2,
+      "translation": "その少女は母親からもらった新しい子犬について祖母に話すとき、目をきらりと輝かせていた。とても幸せなのは明らかだった。"
     },
     {
       "q": 15,
@@ -168,7 +190,8 @@
         "pass on",
         "wipe out"
       ],
-      "answerIndex": 1
+      "answerIndex": 1,
+      "translation": "子どもたちは空腹だったので、その夫婦は最寄りの町へ向かうことにした。そこならレストランが見つかると思ったのだ。"
     },
     {
       "q": 16,
@@ -179,7 +202,8 @@
         "take on",
         "size up"
       ],
-      "answerIndex": 2
+      "answerIndex": 2,
+      "translation": "ジュリアは息子のロブが家でもっと責任を引き受けられる年齢になったと考え、週末にする仕事を2つ追加で与えることにした。"
     },
     {
       "q": 17,
@@ -190,7 +214,8 @@
         "turn up",
         "rule out"
       ],
-      "answerIndex": 3
+      "answerIndex": 3,
+      "translation": "会社はまず他の選択肢をすべて試したいと考えているが、売上不振が続けば人員削減の可能性を排除することはできない。"
     },
     {
       "q": 18,
@@ -201,7 +226,8 @@
         "stick around",
         "bear up"
       ],
-      "answerIndex": 2
+      "answerIndex": 2,
+      "translation": "映画スターはインタビュー後もその場に残るよう記者に頼んだ。残ってくれれば、独占記事を提供すると約束した。"
     }
   ]
 }

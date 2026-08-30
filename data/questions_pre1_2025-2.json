@@ -1,8 +1,16 @@
 {
   "meta": {
-    "grade": "準1級",
+    "grade": "英検準1級",
     "round": "2025-2",
-    "source": "data/pre1_*.json から大問1だけを抽出した共通Q1データ"
+    "section": "Reading 大問1（語句空所補充）",
+    "source": "英検公式の公開過去問PDFを、学習用JSONへ大問1だけ構造化",
+    "source_problem_url": "https://www.eiken.or.jp/eiken/exam/kakomon/2025-2-1ji-p1kyu.pdf",
+    "source_answer_url": "https://www.eiken.or.jp/eiken/result/pdf/202502Fp1kyu.pdf",
+    "counts": {
+      "words": 72,
+      "idioms": 0,
+      "total": 72
+    }
   },
   "questions": [
     {
@@ -14,7 +22,8 @@
         "ambitious",
         "remote"
       ],
-      "answerIndex": 3
+      "answerIndex": 3,
+      "translation": "その夫婦は、田舎の家があまりにも辺鄙だったので、買わないことにした。最寄りの町までは車で2時間以上かかった。"
     },
     {
       "q": 2,
@@ -25,7 +34,8 @@
         "audible",
         "eligible"
       ],
-      "answerIndex": 2
+      "answerIndex": 2,
+      "translation": "犬は人間と比べて聴覚に優れている。人には聞こえないが、犬には聞き取れる音がたくさんある。"
     },
     {
       "q": 3,
@@ -36,7 +46,8 @@
         "composers",
         "installers"
       ],
-      "answerIndex": 1
+      "answerIndex": 1,
+      "translation": "新しい高速道路は、郊外から車で通勤する人々にとって有益なはずだ。市内へ車で入るのに必要な時間は10パーセント短くなると予想されている。"
     },
     {
       "q": 4,
@@ -47,7 +58,8 @@
         "fragment",
         "molecule"
       ],
-      "answerIndex": 0
+      "answerIndex": 0,
+      "translation": "ロジャーは販売1件ごとに20パーセントの手数料を得ていたため、できるだけ多くの車を売ろうと躍起だった。彼はその余分なお金で世界中を旅行するつもりだった。"
     },
     {
       "q": 5,
@@ -58,7 +70,8 @@
         "oversight",
         "perception"
       ],
-      "answerIndex": 1
+      "answerIndex": 1,
+      "translation": "医師はエマに、働きすぎで疲労に苦しんでいると告げた。しかし、休みを取り、十分に休養すれば、すぐに回復するだろうと言った。"
     },
     {
       "q": 6,
@@ -69,7 +82,8 @@
         "abruptly",
         "timidly"
       ],
-      "answerIndex": 2
+      "answerIndex": 2,
+      "translation": "ケビンは、前のトラックが突然停止したとき、危うくトラックに突っ込むところだった。彼は急ブレーキを踏み、どうにか衝突を避けた。"
     },
     {
       "q": 7,
@@ -80,7 +94,8 @@
         "tolerate",
         "humiliate"
       ],
-      "answerIndex": 2
+      "answerIndex": 2,
+      "translation": "教授はクラスに、遅刻を容認しないと告げた。時間どおりに提出されなかったレポートには不合格の評価を付けると言った。"
     },
     {
       "q": 8,
@@ -91,7 +106,8 @@
         "graceful",
         "hesitant"
       ],
-      "answerIndex": 0
+      "answerIndex": 0,
+      "translation": "太陽は地球から見ると小さく見えるかもしれないが、実際には巨大だ。事実、太陽は太陽系のどの惑星よりも何倍も大きい。"
     },
     {
       "q": 9,
@@ -102,7 +118,8 @@
         "plead",
         "accommodate"
       ],
-      "answerIndex": 3
+      "answerIndex": 3,
+      "translation": "A: マジード、会議室Bには何人収容できるか、もう一度教えて。B: 15人だから、今日の会議には大丈夫なはずだ。"
     },
     {
       "q": 10,
@@ -113,7 +130,8 @@
         "blissful",
         "fainthearted"
       ],
-      "answerIndex": 1
+      "answerIndex": 1,
+      "translation": "会社の社長は、人員削減の理由について率直ではなかった。尋ねられても、曖昧な答えしかせず、直接的な発言を避けた。"
     },
     {
       "q": 11,
@@ -124,7 +142,8 @@
         "perilous",
         "doomed"
       ],
-      "answerIndex": 1
+      "answerIndex": 1,
+      "translation": "その政治家は誰にも借りがないと主張したが、実際には選挙運動を支援するために多くの企業から寄付を受け取っていた。"
     },
     {
       "q": 12,
@@ -135,7 +154,8 @@
         "acquaint",
         "escort"
       ],
-      "answerIndex": 3
+      "answerIndex": 3,
+      "translation": "保護者は、子どもたちを学校のダンスパーティーへ送り迎えするよう求められた。夕方に開催されるため、学校当局は子どもたちが一人で行くことを望まなかった。"
     },
     {
       "q": 13,
@@ -146,7 +166,8 @@
         "relegation",
         "batch"
       ],
-      "answerIndex": 3
+      "answerIndex": 3,
+      "translation": "そのクッキー工場は、砂糖の代わりに塩を使ったクッキーを1バッチ作ってしまった。工場はその全ロットを廃棄しなければならなかった。"
     },
     {
       "q": 14,
@@ -157,7 +178,8 @@
         "acquired",
         "posed"
       ],
-      "answerIndex": 1
+      "answerIndex": 1,
+      "translation": "戦争についてのそのドキュメンタリーは非常に力強く、視聴者の中に強い悲しみと怒りの感情を呼び起こした。"
     },
     {
       "q": 15,
@@ -168,7 +190,8 @@
         "figure on",
         "make do"
       ],
-      "answerIndex": 2
+      "answerIndex": 2,
+      "translation": "旅行代理店は、その格安航空会社の便が時間どおりに運航すると当てにしないよう夫婦に警告した。便はしばしば遅延または欠航になっていた。"
     },
     {
       "q": 16,
@@ -179,7 +202,8 @@
         "get over",
         "snap up"
       ],
-      "answerIndex": 1
+      "answerIndex": 1,
+      "translation": "その国の軍は、敵の偵察用ドローンが国防に関する情報を集める前に、それを撃墜することができた。"
     },
     {
       "q": 17,
@@ -190,7 +214,8 @@
         "tear down",
         "free up"
       ],
-      "answerIndex": 2
+      "answerIndex": 2,
+      "translation": "市は古い劇場を取り壊し、同じ場所に新しい劇場を建てる計画だが、多くの住民はその計画に不満を抱いている。"
     },
     {
       "q": 18,
@@ -201,7 +226,8 @@
         "die away",
         "lay out"
       ],
-      "answerIndex": 0
+      "answerIndex": 0,
+      "translation": "A: ジェーン、山頂から下りるのにどのくらいかかるの？ B: 約3時間だけど、ゆっくり歩けばもっとかかるよ。"
     }
   ]
 }

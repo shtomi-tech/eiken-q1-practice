@@ -1,8 +1,16 @@
 {
   "meta": {
-    "grade": "準1級",
+    "grade": "英検準1級",
     "round": "2026-1",
-    "source": "data/pre1_*.json から大問1だけを抽出した共通Q1データ"
+    "section": "Reading 大問1（語句空所補充）",
+    "source": "英検公式の公開過去問PDFを、学習用JSONへ大問1だけ構造化",
+    "source_problem_url": "https://www.eiken.or.jp/eiken/exam/kakomon/2026-1-1ji-p1kyu.pdf",
+    "source_answer_url": "https://www.eiken.or.jp/eiken/result/pdf/202601Fp1kyu.pdf",
+    "counts": {
+      "words": 72,
+      "idioms": 0,
+      "total": 72
+    }
   },
   "questions": [
     {
@@ -14,7 +22,8 @@
         "equation",
         "forecast"
       ],
-      "answerIndex": 1
+      "answerIndex": 1,
+      "translation": "細胞がどのように機能するかを説明するため、生物の教師はその細胞のすべての部分を示す詳細な図を黒板に描いた。"
     },
     {
       "q": 2,
@@ -25,7 +34,8 @@
         "redundant",
         "drastic"
       ],
-      "answerIndex": 2
+      "answerIndex": 2,
+      "translation": "A: あなたの作文のこの文は余分じゃないかな。 B: ああ、そうだね。前の段落で私が言ったこととほとんど同じだ。"
     },
     {
       "q": 3,
@@ -36,7 +46,8 @@
         "subtract",
         "censor"
       ],
-      "answerIndex": 3
+      "answerIndex": 3,
+      "translation": "一部の国では、政府が批判を公表されないようにするため、メディアを検閲している。"
     },
     {
       "q": 4,
@@ -47,7 +58,8 @@
         "bouncer",
         "successor"
       ],
-      "answerIndex": 1
+      "answerIndex": 1,
+      "translation": "奨学金は条件を満たす学生だけが利用できる。受取人は優秀な成績を収め、低所得の家庭の出身でなければならない。"
     },
     {
       "q": 5,
@@ -58,7 +70,8 @@
         "conserving",
         "renouncing"
       ],
-      "answerIndex": 1
+      "answerIndex": 1,
+      "translation": "科学者は、専門家たちが実験を再現しようとしたものの同じ結果を出せなかった後、データを捏造したとして非難された。"
     },
     {
       "q": 6,
@@ -69,7 +82,8 @@
         "cavity",
         "citation"
       ],
-      "answerIndex": 3
+      "answerIndex": 3,
+      "translation": "先週、警察官はハビエルを止め、制限速度を超えて運転したとして交通違反切符を渡した。"
     },
     {
       "q": 7,
@@ -80,7 +94,8 @@
         "turbulence",
         "conjecture"
       ],
-      "answerIndex": 2
+      "answerIndex": 2,
+      "translation": "乱気流が予想されたため、機長はシートベルト着用サインを点灯し、乗客全員に席へ戻るよう求めた。"
     },
     {
       "q": 8,
@@ -91,7 +106,8 @@
         "barren",
         "coincidental"
       ],
-      "answerIndex": 2
+      "answerIndex": 2,
+      "translation": "数年間ほとんど雨が降らなかった後、その地域は木や他の植物が生き残れない不毛の荒れ地になった。"
     },
     {
       "q": 9,
@@ -102,7 +118,8 @@
         "vast",
         "vital"
       ],
-      "answerIndex": 0
+      "answerIndex": 0,
+      "translation": "サイモンがロープを引っ張ると、ロープは突然たるんだ。反対側で結び目がほどけたに違いないと彼は気づいた。"
     },
     {
       "q": 10,
@@ -113,7 +130,8 @@
         "emission",
         "deficiency"
       ],
-      "answerIndex": 3
+      "answerIndex": 3,
+      "translation": "患者はビタミン不足と診断された。医師は、ビタミンの濃度が再び正常になるまでサプリメントを摂る必要があると述べた。"
     },
     {
       "q": 11,
@@ -124,7 +142,8 @@
         "scattering",
         "drooping"
       ],
-      "answerIndex": 0
+      "answerIndex": 0,
+      "translation": "ターニャは新しい学校に入ったときは内気で緊張しているようだったが、今では社交面でうまくいっており、たくさんの友人ができた。"
     },
     {
       "q": 12,
@@ -135,7 +154,8 @@
         "blockade",
         "portfolio"
       ],
-      "answerIndex": 3
+      "answerIndex": 3,
+      "translation": "美術を学ぶ学生は自分の作品集を画廊の経営者に見せた。それには絵画、デッサン、写真の作例が含まれていた。"
     },
     {
       "q": 13,
@@ -146,7 +166,8 @@
         "carve",
         "yield"
       ],
-      "answerIndex": 0
+      "answerIndex": 0,
+      "translation": "教師は生徒に作文を短くするよう頼んだ。元の長さの半分ほどにすべきだと言った。"
     },
     {
       "q": 14,
@@ -157,7 +178,8 @@
         "extract",
         "impart"
       ],
-      "answerIndex": 2
+      "answerIndex": 2,
+      "translation": "患者はあまりにも痛がっていたので、歯科医はその患者の損傷した歯を抜くしかなかった。"
     },
     {
       "q": 15,
@@ -168,7 +190,8 @@
         "went under",
         "lived off"
       ],
-      "answerIndex": 2
+      "answerIndex": 2,
+      "translation": "その会社は金融危機に大きな打撃を受け、ほとんど倒産したが、現在は回復して再び利益を上げている。"
     },
     {
       "q": 16,
@@ -179,7 +202,8 @@
         "take off",
         "fall out"
       ],
-      "answerIndex": 0
+      "answerIndex": 0,
+      "translation": "警察官は、その男の話がつじつまの合わないことから、男を怪しいと思った。男は後に警察にうそをついていたことが分かった。"
     },
     {
       "q": 17,
@@ -190,7 +214,8 @@
         "drop out",
         "follow up"
       ],
-      "answerIndex": 0
+      "answerIndex": 0,
+      "translation": "患者は誰にも気づかれずに病院からこっそり立ち去ろうとしたが、看護師に見つかり、止められた。"
     },
     {
       "q": 18,
@@ -201,7 +226,8 @@
         "fell through",
         "ate up"
       ],
-      "answerIndex": 3
+      "answerIndex": 3,
+      "translation": "A: 会議の準備が予想以上に長くかかった。 B: ああ、予算の確認に午後の大半を取られたね。"
     }
   ]
 }

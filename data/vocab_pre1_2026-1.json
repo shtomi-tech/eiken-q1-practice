@@ -1,8 +1,16 @@
 {
   "meta": {
-    "grade": "準1級",
+    "grade": "英検準1級",
     "round": "2026-1",
-    "source": "data/pre1_*.json から大問1だけを抽出した共通Q1データ"
+    "section": "Reading 大問1（語句空所補充）",
+    "source": "英検公式の公開過去問PDFを、学習用JSONへ大問1だけ構造化",
+    "source_problem_url": "https://www.eiken.or.jp/eiken/exam/kakomon/2026-1-1ji-p1kyu.pdf",
+    "source_answer_url": "https://www.eiken.or.jp/eiken/result/pdf/202601Fp1kyu.pdf",
+    "counts": {
+      "words": 72,
+      "idioms": 0,
+      "total": 72
+    }
   },
   "words": [
     {
@@ -13,7 +21,8 @@
       "exampleTranslation": "丘の上の古い墓地には 2 世紀前の墓があります。",
       "pos": "名詞",
       "q": 1,
-      "ipa": "/sˈɛmətɛɹi/"
+      "ipa": "/sˈɛmətɛɹi/",
+      "is_answer": false
     },
     {
       "word": "diagram",
@@ -23,7 +32,8 @@
       "exampleTranslation": "先生は血液が心臓をどのように流れるかを黒板に図を書きました。",
       "pos": "名詞",
       "q": 1,
-      "ipa": "/dˈaɪəɡɹæm/"
+      "ipa": "/dˈaɪəɡɹæm/",
+      "is_answer": true
     },
     {
       "word": "equation",
@@ -33,7 +43,8 @@
       "exampleTranslation": "彼女は片側の x を分離することによって方程式を解きました。",
       "pos": "名詞",
       "q": 1,
-      "ipa": "/ɪkwˈeɪʒən/"
+      "ipa": "/ɪkwˈeɪʒən/",
+      "is_answer": false
     },
     {
       "word": "forecast",
@@ -44,7 +55,8 @@
       "pos": "名詞",
       "collocation": "weather forecast",
       "q": 1,
-      "ipa": "/fˈɔɹkæst/"
+      "ipa": "/fˈɔɹkæst/",
+      "is_answer": false
     },
     {
       "word": "possessive",
@@ -54,7 +66,8 @@
       "exampleTranslation": "彼はガールフレンドに対して独占欲が強くなり、彼女が他の友達と時間を過ごすのを好まなかった。",
       "pos": "形容詞",
       "q": 2,
-      "ipa": "/pəzˈɛsɪv/"
+      "ipa": "/pəzˈɛsɪv/",
+      "is_answer": false
     },
     {
       "word": "horizontal",
@@ -64,7 +77,8 @@
       "exampleTranslation": "カットを開始する前に、ボードを水平に置きます。",
       "pos": "形容詞",
       "q": 2,
-      "ipa": "/hɔɹəzˈɑntəl/"
+      "ipa": "/hɔɹəzˈɑntəl/",
+      "is_answer": false
     },
     {
       "word": "redundant",
@@ -74,7 +88,8 @@
       "exampleTranslation": "あなたのエッセイのこの文は冗長です。あなたはすでに前の段落で同じことを言いました。",
       "pos": "形容詞",
       "q": 2,
-      "ipa": "/ɹɪdˈəndənt/"
+      "ipa": "/ɹɪdˈəndənt/",
+      "is_answer": true
     },
     {
       "word": "drastic",
@@ -84,17 +99,19 @@
       "exampleTranslation": "同社は従業員の3分の1を解雇するなど、コスト削減のため思い切った措置を講じた。",
       "pos": "形容詞",
       "q": 2,
-      "ipa": "/dɹˈæstɪk/"
+      "ipa": "/dɹˈæstɪk/",
+      "is_answer": false
     },
     {
       "word": "haul",
       "meaning": "引っ張る、(重い物を)運ぶ",
       "etymology": "「引く」を意味する hale の異形。古フランス語 haler(ゲルマン語起源)経由。",
-      "example": "The fishermen hauled the nets onto the deck.",
-      "exampleTranslation": "漁師たちは網を甲板に引き上げた。",
+      "example": "The fishermen will haul the heavy nets onto the deck before sunset.",
+      "exampleTranslation": "漁師たちは日没前に、重い網を甲板へ引き上げる。",
       "pos": "動詞",
       "q": 3,
-      "ipa": "/hˈɔl/"
+      "ipa": "/hˈɔl/",
+      "is_answer": false
     },
     {
       "word": "envy",
@@ -104,27 +121,30 @@
       "exampleTranslation": "3か国語を流暢に話せる人がうらやましいです。",
       "pos": "動詞",
       "q": 3,
-      "ipa": "/ˈɛnvi/"
+      "ipa": "/ˈɛnvi/",
+      "is_answer": false
     },
     {
       "word": "subtract",
       "meaning": "引く、減じる",
       "etymology": "ラテン語 subtrahere「下に引く」。sub-「下に」+ trahere「引く」。",
-      "example": "If you subtract 15 from 40, you get 25.",
-      "exampleTranslation": "40から15を引くと25になります。",
+      "example": "Students should subtract the smaller number from the larger number carefully.",
+      "exampleTranslation": "生徒は小さい数を大きい数から注意深く引くべきだ。",
       "pos": "動詞",
       "q": 3,
-      "ipa": "/səbtɹˈækt/"
+      "ipa": "/səbtɹˈækt/",
+      "is_answer": false
     },
     {
       "word": "censor",
       "meaning": "検閲する",
       "etymology": "ラテン語 censere「評価する、判定する」。古代ローマの風紀監督官 censor に由来。",
-      "example": "The government censored the film before allowing it to be shown in theaters.",
-      "exampleTranslation": "政府はこの映画を劇場で上映する前に検閲した。",
+      "example": "Some governments censor online reports that criticize their official policies.",
+      "exampleTranslation": "政府の公式政策を批判するオンライン報道を検閲する政府もある。",
       "pos": "動詞",
       "q": 3,
-      "ipa": "/sˈɛnsɚ/"
+      "ipa": "/sˈɛnsɚ/",
+      "is_answer": true
     },
     {
       "word": "referral",
@@ -134,7 +154,8 @@
       "exampleTranslation": "医師は私に専門医の診察を受けるよう紹介してくれました。",
       "pos": "名詞",
       "q": 4,
-      "ipa": "/ɹɪfˈɝəl/"
+      "ipa": "/ɹɪfˈɝəl/",
+      "is_answer": false
     },
     {
       "word": "recipient",
@@ -144,7 +165,8 @@
       "exampleTranslation": "彼女は優れた学業成績により奨学金を受け取っていた。",
       "pos": "名詞",
       "q": 4,
-      "ipa": "/ɹəsˈɪpiənt/"
+      "ipa": "/ɹəsˈɪpiənt/",
+      "is_answer": true
     },
     {
       "word": "bouncer",
@@ -155,27 +177,30 @@
       "pos": "名詞",
       "etymologyUncertain": true,
       "q": 4,
-      "ipa": "/bˈaʊnsɚ/"
+      "ipa": "/bˈaʊnsɚ/",
+      "is_answer": false
     },
     {
       "word": "successor",
       "meaning": "後継者",
       "etymology": "ラテン語 succedere「後に続く」(sub-+cedere「行く」)の派生語。",
-      "example": "The CEO announced his successor before retiring.",
-      "exampleTranslation": "CEOは退任する前に後任を発表した。",
+      "example": "The board will introduce the CEO's successor at the annual meeting.",
+      "exampleTranslation": "取締役会は年次会議で、最高経営責任者の後任を紹介する。",
       "pos": "名詞",
       "q": 4,
-      "ipa": "/səksˈɛsɚ/"
+      "ipa": "/səksˈɛsɚ/",
+      "is_answer": false
     },
     {
       "word": "triggering",
       "meaning": "引き起こす(こと)",
       "etymology": "trigger はオランダ語 trekker(trekken「引く」)から。",
-      "example": "Loud noises can trigger a panic attack in some people.",
-      "exampleTranslation": "大きな騒音は、人によってはパニック発作を引き起こす可能性があります。",
+      "example": "Triggering a panic attack is a serious risk for vulnerable patients.",
+      "exampleTranslation": "パニック発作を引き起こすことは、影響を受けやすい患者にとって重大なリスクだ。",
       "pos": "動詞(-ing)",
       "q": 5,
-      "ipa": "/tɹˈɪɡɚɪŋ/"
+      "ipa": "/tɹˈɪɡɚɪŋ/",
+      "is_answer": false
     },
     {
       "word": "fabricating",
@@ -185,7 +210,8 @@
       "exampleTranslation": "証人は自分の話の一部を捏造したことを認めた。",
       "pos": "動詞(-ing)",
       "q": 5,
-      "ipa": "/fˈæbɹɪkeɪtɪŋ/"
+      "ipa": "/fˈæbɹɪkeɪtɪŋ/",
+      "is_answer": true
     },
     {
       "word": "conserving",
@@ -195,17 +221,19 @@
       "exampleTranslation": "干ばつの間、私たちはシャワーの時間を短くすることで水を節約しています。",
       "pos": "動詞(-ing)",
       "q": 5,
-      "ipa": "/kənsˈɝvɪŋ/"
+      "ipa": "/kənsˈɝvɪŋ/",
+      "is_answer": false
     },
     {
       "word": "renouncing",
       "meaning": "放棄する(こと)、断念する(こと)",
       "etymology": "ラテン語 renuntiare「拒否を宣言する」。re-+nuntiare「知らせる」(nuntius「使者」)。",
-      "example": "He renounced his claim to the family business.",
-      "exampleTranslation": "彼は家業に対する権利を放棄した。",
+      "example": "Renouncing the inheritance allowed him to avoid a complicated legal dispute.",
+      "exampleTranslation": "相続を放棄することで、彼は複雑な法的争いを避けることができた。",
       "pos": "動詞(-ing)",
       "q": 5,
-      "ipa": "/ɹɪnˈaʊnsɪŋ/"
+      "ipa": "/ɹɪnˈaʊnsɪŋ/",
+      "is_answer": false
     },
     {
       "word": "ransom",
@@ -215,7 +243,8 @@
       "exampleTranslation": "誘拐犯は人質の解放のために多額の身代金を要求した。",
       "pos": "名詞",
       "q": 6,
-      "ipa": "/ɹˈænsəm/"
+      "ipa": "/ɹˈænsəm/",
+      "is_answer": false
     },
     {
       "word": "specimen",
@@ -225,7 +254,8 @@
       "exampleTranslation": "生物学者は研究のために珍しい植物の標本を集めました。",
       "pos": "名詞",
       "q": 6,
-      "ipa": "/spˈɛsəmən/"
+      "ipa": "/spˈɛsəmən/",
+      "is_answer": false
     },
     {
       "word": "cavity",
@@ -235,7 +265,8 @@
       "exampleTranslation": "歯医者は私の奥歯の1本に小さな虫歯を見つけました。",
       "pos": "名詞",
       "q": 6,
-      "ipa": "/kˈævəti/"
+      "ipa": "/kˈævəti/",
+      "is_answer": false
     },
     {
       "word": "citation",
@@ -245,7 +276,8 @@
       "exampleTranslation": "教授は学生たちに、使用したすべての情報源に適切な引用を含めるように求めました。",
       "pos": "名詞",
       "q": 6,
-      "ipa": "/saɪtˈeɪʃən/"
+      "ipa": "/saɪtˈeɪʃən/",
+      "is_answer": true
     },
     {
       "word": "distortion",
@@ -255,7 +287,8 @@
       "exampleTranslation": "古い鏡は私の映りに奇妙な歪みを生み出しました。",
       "pos": "名詞",
       "q": 7,
-      "ipa": "/dɪstˈɔɹʃən/"
+      "ipa": "/dɪstˈɔɹʃən/",
+      "is_answer": false
     },
     {
       "word": "generosity",
@@ -265,7 +298,8 @@
       "exampleTranslation": "地元の慈善活動に対する彼女の寛大さは広く賞賛されました。",
       "pos": "名詞",
       "q": 7,
-      "ipa": "/dʒɛnɚˈɑsəti/"
+      "ipa": "/dʒɛnɚˈɑsəti/",
+      "is_answer": false
     },
     {
       "word": "turbulence",
@@ -275,7 +309,8 @@
       "exampleTranslation": "飛行機は乱気流域を通過する際に激しく揺れた。",
       "pos": "名詞",
       "q": 7,
-      "ipa": "/tˈɝbjələns/"
+      "ipa": "/tˈɝbjələns/",
+      "is_answer": true
     },
     {
       "word": "conjecture",
@@ -285,7 +320,8 @@
       "exampleTranslation": "実際の証拠がないため、彼の理論は単なる推測です。",
       "pos": "名詞",
       "q": 7,
-      "ipa": "/kəndʒˈɛktʃɚ/"
+      "ipa": "/kəndʒˈɛktʃɚ/",
+      "is_answer": false
     },
     {
       "word": "nutritious",
@@ -295,7 +331,8 @@
       "exampleTranslation": "栄養価の高い朝食は、朝の集中力を高めるのに役立ちます。",
       "pos": "形容詞",
       "q": 8,
-      "ipa": "/nutɹˈɪʃəs/"
+      "ipa": "/nutɹˈɪʃəs/",
+      "is_answer": false
     },
     {
       "word": "diverse",
@@ -305,7 +342,8 @@
       "exampleTranslation": "この都市には多様な人々が住んでおり、60 か国以上からの住民が住んでいます。",
       "pos": "形容詞",
       "q": 8,
-      "ipa": "/daɪvˈɝs/"
+      "ipa": "/daɪvˈɝs/",
+      "is_answer": false
     },
     {
       "word": "barren",
@@ -316,7 +354,8 @@
       "pos": "形容詞",
       "etymologyUncertain": true,
       "q": 8,
-      "ipa": "/bˈæɹən/"
+      "ipa": "/bˈæɹən/",
+      "is_answer": true
     },
     {
       "word": "coincidental",
@@ -326,7 +365,8 @@
       "exampleTranslation": "私たちが同じホテルに泊まっていたのは全くの偶然でした。",
       "pos": "形容詞",
       "q": 8,
-      "ipa": "/koʊɪnsədˈɛntəl/"
+      "ipa": "/koʊɪnsədˈɛntəl/",
+      "is_answer": false
     },
     {
       "word": "slack",
@@ -336,7 +376,8 @@
       "exampleTranslation": "近くに新しいモールがオープンして以来、ビジネスは低迷している。",
       "pos": "形容詞",
       "q": 9,
-      "ipa": "/slˈæk/"
+      "ipa": "/slˈæk/",
+      "is_answer": true
     },
     {
       "word": "sparse",
@@ -346,7 +387,8 @@
       "exampleTranslation": "この人里離れた山間部では人口は非常にまばらです。",
       "pos": "形容詞",
       "q": 9,
-      "ipa": "/spˈɑɹs/"
+      "ipa": "/spˈɑɹs/",
+      "is_answer": false
     },
     {
       "word": "vast",
@@ -356,17 +398,19 @@
       "exampleTranslation": "見渡す限り広大な砂漠が広がっていた。",
       "pos": "形容詞",
       "q": 9,
-      "ipa": "/vˈæst/"
+      "ipa": "/vˈæst/",
+      "is_answer": false
     },
     {
       "word": "vital",
       "meaning": "極めて重要な、生命の",
       "etymology": "ラテン語 vitalis(vita「生命」)から。",
-      "example": "Clean water is vital for human health.",
-      "exampleTranslation": "きれいな水は人間の健康にとって不可欠です。",
+      "example": "Reliable electricity is vital for hospitals that provide emergency care.",
+      "exampleTranslation": "信頼できる電力は、救急医療を提供する病院に不可欠だ。",
       "pos": "形容詞",
       "q": 9,
-      "ipa": "/vˈaɪtəl/"
+      "ipa": "/vˈaɪtəl/",
+      "is_answer": false
     },
     {
       "word": "descendant",
@@ -376,7 +420,8 @@
       "exampleTranslation": "彼女は町の創設者の一人の直系の子孫です。",
       "pos": "名詞",
       "q": 10,
-      "ipa": "/dɪsˈɛndənt/"
+      "ipa": "/dɪsˈɛndənt/",
+      "is_answer": false
     },
     {
       "word": "triumph",
@@ -386,18 +431,20 @@
       "exampleTranslation": "チャンピオンシップの優勝はチームにとって大きな勝利でした。",
       "pos": "名詞",
       "q": 10,
-      "ipa": "/tɹˈaɪəmf/"
+      "ipa": "/tɹˈaɪəmf/",
+      "is_answer": false
     },
     {
       "word": "emission",
       "meaning": "排出、放出",
       "etymology": "ラテン語 emittere「送り出す」(e-+mittere「送る」)から。",
-      "example": "The new law aims to reduce carbon emissions from factories.",
-      "exampleTranslation": "新しい法律は工場からの二酸化炭素排出量を削減することを目的としています。",
+      "example": "The factory reduced its carbon emission after installing new filters.",
+      "exampleTranslation": "その工場は新しいフィルターを設置した後、炭素排出量を減らした。",
       "pos": "名詞",
       "collocation": "carbon emission",
       "q": 10,
-      "ipa": "/ɪmˈɪʃən/"
+      "ipa": "/ɪmˈɪʃən/",
+      "is_answer": false
     },
     {
       "word": "deficiency",
@@ -407,7 +454,8 @@
       "exampleTranslation": "ビタミンD欠乏症は、時間の経過とともに骨を弱める可能性があります。",
       "pos": "名詞",
       "q": 10,
-      "ipa": "/dɪfˈɪʃənsi/"
+      "ipa": "/dɪfˈɪʃənsi/",
+      "is_answer": true
     },
     {
       "word": "flourishing",
@@ -417,18 +465,20 @@
       "exampleTranslation": "その小さなパン屋は昨年オープンして以来、繁盛しています。",
       "pos": "動詞(-ing)",
       "q": 11,
-      "ipa": "/flˈɝɪʃɪŋ/"
+      "ipa": "/flˈɝɪʃɪŋ/",
+      "is_answer": true
     },
     {
       "word": "pledging",
       "meaning": "誓う(こと)、約束する(こと)",
       "etymology": "古フランス語 plege「保証、担保」。フランク語起源とされる。",
-      "example": "Every member pledged to attend the meeting.",
-      "exampleTranslation": "メンバー全員が会議に出席することを約束した。",
+      "example": "Pledging support for the project required a formal statement from the union.",
+      "exampleTranslation": "その計画への支持を約束するには、組合による正式な声明が必要だった。",
       "pos": "動詞(-ing)",
       "etymologyUncertain": true,
       "q": 11,
-      "ipa": "/plˈɛdʒɪŋ/"
+      "ipa": "/plˈɛdʒɪŋ/",
+      "is_answer": false
     },
     {
       "word": "scattering",
@@ -439,7 +489,8 @@
       "pos": "動詞(-ing)",
       "etymologyUncertain": true,
       "q": 11,
-      "ipa": "/skˈætɚɪŋ/"
+      "ipa": "/skˈætɚɪŋ/",
+      "is_answer": false
     },
     {
       "word": "drooping",
@@ -449,7 +500,8 @@
       "exampleTranslation": "夏の暑さで花がしぼんでしまいました。",
       "pos": "動詞(-ing)",
       "q": 11,
-      "ipa": "/dɹˈupɪŋ/"
+      "ipa": "/dɹˈupɪŋ/",
+      "is_answer": false
     },
     {
       "word": "reptile",
@@ -459,7 +511,8 @@
       "exampleTranslation": "ヘビとトカゲはどちらも爬虫類の一種です。",
       "pos": "名詞",
       "q": 12,
-      "ipa": "/ɹˈɛptaɪl/"
+      "ipa": "/ɹˈɛptaɪl/",
+      "is_answer": false
     },
     {
       "word": "glacier",
@@ -469,7 +522,8 @@
       "exampleTranslation": "気温の温暖化により、氷河は過去50年間で大幅に後退した。",
       "pos": "名詞",
       "q": 12,
-      "ipa": "/ɡlˈeɪʃɚ/"
+      "ipa": "/ɡlˈeɪʃɚ/",
+      "is_answer": false
     },
     {
       "word": "blockade",
@@ -479,7 +533,8 @@
       "exampleTranslation": "海軍は物資が港に届かないように封鎖を敷いた。",
       "pos": "名詞",
       "q": 12,
-      "ipa": "/blɑkˈeɪd/"
+      "ipa": "/blɑkˈeɪd/",
+      "is_answer": false
     },
     {
       "word": "portfolio",
@@ -490,57 +545,63 @@
       "pos": "名詞",
       "collocation": "investment portfolio",
       "q": 12,
-      "ipa": "/pɔɹtfˈoʊlioʊ/"
+      "ipa": "/pɔɹtfˈoʊlioʊ/",
+      "is_answer": true
     },
     {
       "word": "abbreviate",
       "meaning": "短縮する、略す",
       "etymology": "ラテン語 abbreviare。ab-+brevis「短い」。",
-      "example": "'Doctor' is often abbreviated to 'Dr.' in writing.",
-      "exampleTranslation": "「ドクター」は「ドクター」と略されることが多いです。書面で。",
+      "example": "Editors often abbreviate long technical terms in newspaper headlines.",
+      "exampleTranslation": "編集者は新聞の見出しで、長い専門用語を略すことが多い。",
       "pos": "動詞",
       "q": 13,
-      "ipa": "/əbɹˈivieɪt/"
+      "ipa": "/əbɹˈivieɪt/",
+      "is_answer": true
     },
     {
       "word": "attest",
       "meaning": "証明する、証言する",
       "etymology": "ラテン語 attestari。ad-+testari「証言する」(testis「証人」)。",
-      "example": "Several colleagues can attest to her honesty.",
-      "exampleTranslation": "何人かの同僚が彼女の誠実さを証明できます。",
+      "example": "Several colleagues can attest to her honesty during the difficult investigation.",
+      "exampleTranslation": "困難な調査の間、何人かの同僚が彼女の誠実さを証明できる。",
       "pos": "動詞",
       "q": 13,
-      "ipa": "/ətˈɛst/"
+      "ipa": "/ətˈɛst/",
+      "is_answer": false
     },
     {
       "word": "carve",
       "meaning": "彫る、切り分ける",
       "etymology": "古英語 ceorfan「切る」。ゲルマン語起源。",
-      "example": "He carved a small wooden bird for his daughter.",
-      "exampleTranslation": "彼は娘のために小さな木で鳥を彫りました。",
+      "example": "The artist will carve a detailed pattern into the wooden panel.",
+      "exampleTranslation": "その芸術家は木製パネルに細かな模様を彫る。",
       "pos": "動詞",
       "q": 13,
-      "ipa": "/kˈɑɹv/"
+      "ipa": "/kˈɑɹv/",
+      "is_answer": false
     },
     {
       "word": "yield",
       "meaning": "産出する、譲る、屈する",
       "etymology": "古英語 gieldan「支払う、報いる」。ゲルマン語起源。",
-      "example": "The field yielded a record harvest this year.",
-      "exampleTranslation": "その畑では今年記録的な収穫があった。",
+      "example": "The fertile field may yield a larger harvest after careful irrigation.",
+      "exampleTranslation": "その肥沃な畑は、注意深く灌漑すればより多くの収穫をもたらすかもしれない。",
       "pos": "動詞",
       "q": 13,
-      "ipa": "/jˈild/"
+      "ipa": "/jˈild/",
+      "is_answer": false
     },
     {
       "word": "radiate",
       "meaning": "放射する、輝く",
       "etymology": "ラテン語 radiare(radius「光線、車輪の輻」)から。",
-      "example": "The stove radiated heat throughout the small cabin.",
-      "exampleTranslation": "ストーブは小さな船室全体に熱を放射しました。",
+      "example": "The stove can radiate enough heat to warm the small cabin.",
+      "exampleTranslation": "そのストーブは、小さな小屋を暖めるのに十分な熱を放射できる。",
       "pos": "動詞",
       "q": 14,
-      "ipa": "/ɹˈeɪdiət/"
+      "ipa": "/ɹˈeɪdiət/",
+      "is_answer": false
     },
     {
       "word": "magnify",
@@ -550,7 +611,8 @@
       "exampleTranslation": "顕微鏡は細胞を実際のサイズの最大 1,000 倍まで拡大できます。",
       "pos": "動詞",
       "q": 14,
-      "ipa": "/mˈæɡnəfaɪ/"
+      "ipa": "/mˈæɡnəfaɪ/",
+      "is_answer": false
     },
     {
       "word": "extract",
@@ -560,7 +622,8 @@
       "exampleTranslation": "歯医者は親知らずを2本抜歯しなければなりませんでした。",
       "pos": "動詞",
       "q": 14,
-      "ipa": "/ˈɛkstɹækt/"
+      "ipa": "/ˈɛkstɹækt/",
+      "is_answer": true
     },
     {
       "word": "impart",
@@ -570,17 +633,19 @@
       "exampleTranslation": "その老教師は自分の知恵を若い職員に伝えようとした。",
       "pos": "動詞",
       "q": 14,
-      "ipa": "/ɪmpˈɑɹt/"
+      "ipa": "/ɪmpˈɑɹt/",
+      "is_answer": false
     },
     {
       "word": "sank in",
       "meaning": "徐々に理解される、しみ込む",
       "etymology": "sink(古英語 sincan「沈む」)+ in。",
-      "example": "It took a few days for the bad news to sink in.",
-      "exampleTranslation": "悪い知らせが浸透するまでに数日かかりました。",
+      "example": "The seriousness of the announcement slowly sank in during the meeting.",
+      "exampleTranslation": "会議中、その発表の重大さが徐々に理解されていった。",
       "pos": "句動詞",
       "q": 15,
-      "ipa": "/sˈæŋkɪn/"
+      "ipa": "/sˈæŋkɪn/",
+      "is_answer": false
     },
     {
       "word": "let out",
@@ -590,7 +655,8 @@
       "exampleTranslation": "彼女はクモを見て悲鳴を上げた。",
       "pos": "句動詞",
       "q": 15,
-      "ipa": "/lˈɛtˈaʊt/"
+      "ipa": "/lˈɛtˈaʊt/",
+      "is_answer": false
     },
     {
       "word": "went under",
@@ -600,7 +666,8 @@
       "exampleTranslation": "経済不況で多くの小さな商店が潰れました。",
       "pos": "句動詞",
       "q": 15,
-      "ipa": "/wˈɛntəndɚ/"
+      "ipa": "/wˈɛntəndɚ/",
+      "is_answer": true
     },
     {
       "word": "lived off",
@@ -610,7 +677,8 @@
       "exampleTranslation": "彼は職を失った後、ほぼ1年間貯蓄を切り崩して暮らした。",
       "pos": "句動詞",
       "q": 15,
-      "ipa": "/lˈaɪvdɔf/"
+      "ipa": "/lˈaɪvdɔf/",
+      "is_answer": false
     },
     {
       "word": "add up",
@@ -620,7 +688,8 @@
       "exampleTranslation": "彼の話はまったくつじつまが合わない。何かが足りない。",
       "pos": "句動詞",
       "q": 16,
-      "ipa": "/ˈædˈəp/"
+      "ipa": "/ˈædˈəp/",
+      "is_answer": true
     },
     {
       "word": "read into",
@@ -630,57 +699,63 @@
       "exampleTranslation": "彼の沈黙を深読みしないでください。彼はおそらくただ疲れているだけだろう。",
       "pos": "句動詞",
       "q": 16,
-      "ipa": "/ɹˈɛdɪntu/"
+      "ipa": "/ɹˈɛdɪntu/",
+      "is_answer": false
     },
     {
       "word": "take off",
       "meaning": "離陸する、急成長する、脱ぐ",
       "etymology": "take「取る」+ off。",
-      "example": "Sales took off after the product was featured on TV.",
-      "exampleTranslation": "テレビで紹介されてから売れ行きが好調。",
+      "example": "The new product could take off after a successful television campaign.",
+      "exampleTranslation": "その新製品は、テレビキャンペーンが成功すれば急速に売れるかもしれない。",
       "pos": "句動詞",
       "q": 16,
-      "ipa": "/tˈeɪkˈɔf/"
+      "ipa": "/tˈeɪkˈɔf/",
+      "is_answer": false
     },
     {
       "word": "fall out",
       "meaning": "仲たがいする、抜け落ちる",
       "etymology": "fall「落ちる」+ out。",
-      "example": "The two old friends fell out over a business disagreement.",
-      "exampleTranslation": "二人の古い友人は仕事上の意見の相違で仲たがいした。",
+      "example": "The two partners might fall out over the terms of the contract.",
+      "exampleTranslation": "その2人の共同経営者は、契約条件をめぐって仲たがいするかもしれない。",
       "pos": "句動詞",
       "q": 16,
-      "ipa": "/fˈɔlˈaʊt/"
+      "ipa": "/fˈɔlˈaʊt/",
+      "is_answer": false
     },
     {
       "word": "slip away",
       "meaning": "こっそり立ち去る、過ぎ去る",
       "etymology": "slip「滑る、こっそり動く」+ away。",
-      "example": "He slipped away from the party without saying goodbye.",
-      "exampleTranslation": "彼は別れも言わずにパーティーから抜け出した。",
+      "example": "The suspect tried to slip away before the security guard noticed him.",
+      "exampleTranslation": "容疑者は警備員に気づかれる前に、こっそり立ち去ろうとした。",
       "pos": "句動詞",
       "q": 17,
-      "ipa": "/slˈɪpəwˈeɪ/"
+      "ipa": "/slˈɪpəwˈeɪ/",
+      "is_answer": true
     },
     {
       "word": "tear up",
       "meaning": "引き裂く、(契約などを)破棄する",
       "etymology": "tear「引き裂く」+ up。",
-      "example": "She tore up the letter without reading it.",
-      "exampleTranslation": "彼女はその手紙を読まずに破り捨てた。",
+      "example": "She decided to tear up the outdated agreement after consulting her lawyer.",
+      "exampleTranslation": "彼女は弁護士に相談した後、古い契約書を破棄することに決めた。",
       "pos": "句動詞",
       "q": 17,
-      "ipa": "/tˈɛɹˈəp/"
+      "ipa": "/tˈɛɹˈəp/",
+      "is_answer": false
     },
     {
       "word": "drop out",
       "meaning": "中途退学する、脱落する",
       "etymology": "drop「落ちる」+ out。",
-      "example": "He dropped out of college to start his own business.",
-      "exampleTranslation": "彼は自分のビジネスを始めるために大学を中退しました。",
+      "example": "Some students drop out when financial problems make university unaffordable.",
+      "exampleTranslation": "経済的な問題で大学に通えなくなると、中退する学生もいる。",
       "pos": "句動詞",
       "q": 17,
-      "ipa": "/dɹˈɑpˈaʊt/"
+      "ipa": "/dɹˈɑpˈaʊt/",
+      "is_answer": false
     },
     {
       "word": "follow up",
@@ -690,7 +765,8 @@
       "exampleTranslation": "医師は私に、1か月後に血液検査を行うように言いました。",
       "pos": "句動詞",
       "q": 17,
-      "ipa": "/fˈɑloʊəp/"
+      "ipa": "/fˈɑloʊəp/",
+      "is_answer": false
     },
     {
       "word": "fed off",
@@ -700,7 +776,8 @@
       "exampleTranslation": "その噂は人々の恐怖を煽り、すぐに広まりました。",
       "pos": "句動詞",
       "q": 18,
-      "ipa": "/fˈɛdɔf/"
+      "ipa": "/fˈɛdɔf/",
+      "is_answer": false
     },
     {
       "word": "burnt out",
@@ -710,7 +787,8 @@
       "exampleTranslation": "彼女は何か月も残業を続けた後、完全に燃え尽き果ててしまったように感じた。",
       "pos": "句動詞",
       "q": 18,
-      "ipa": "/bˈɝntaʊt/"
+      "ipa": "/bˈɝntaʊt/",
+      "is_answer": false
     },
     {
       "word": "fell through",
@@ -720,7 +798,8 @@
       "exampleTranslation": "飛行機がキャンセルされたため、私たちの休暇の計画は崩れてしまいました。",
       "pos": "句動詞",
       "q": 18,
-      "ipa": "/fˈɛlθɹu/"
+      "ipa": "/fˈɛlθɹu/",
+      "is_answer": false
     },
     {
       "word": "ate up",
@@ -730,7 +809,8 @@
       "exampleTranslation": "長い通勤で 1 日の 2 時間が費やされました。",
       "pos": "句動詞",
       "q": 18,
-      "ipa": "/ˈeɪtəp/"
+      "ipa": "/ˈeɪtəp/",
+      "is_answer": true
     }
   ],
   "idioms": []

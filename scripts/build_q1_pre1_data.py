@@ -5,6 +5,8 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from q1_pre1_metadata import apply_round
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
@@ -84,6 +86,7 @@ def extract_round(round_id: str) -> None:
         DATA_DIR / f"questions_pre1_{round_id}.json",
         {"meta": meta, "questions": normalized_questions},
     )
+    apply_round(round_id)
     print(f"{round_id}: 18 questions / 72 words")
 
 
