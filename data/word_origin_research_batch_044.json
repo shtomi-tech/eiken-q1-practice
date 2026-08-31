@@ -1,0 +1,969 @@
+{
+  "meta": {
+    "batchId": "batch-044",
+    "note": "未確認B型の次の25語。出典が示す派生関係と表面形が対応する11語をA型へ、単純語・複合語・活用形・借用語の形態が英語の部品として安全に切れない14語はB型に残す。"
+  },
+  "dictionary": {
+    "roots": {
+      "donat": {
+        "gloss": "与える・贈る",
+        "origin": "ラテン語 donare / donum",
+        "note": "贈る動作を表す語幹。donationではdonatとして現れ、donateは後の逆成。"
+      },
+      "charit": {
+        "gloss": "愛・慈善",
+        "origin": "ラテン語 caritas / 古フランス語 charité",
+        "note": "愛や慈善を表す語幹。charityではcharitとして現れる。"
+      },
+      "apart": {
+        "gloss": "分けられた・離れた",
+        "origin": "イタリア語 appartimento / appartere / ラテン語 pars",
+        "note": "分けられた場所というイメージ。apartmentではapartとして表面化する。"
+      },
+      "tour": {
+        "gloss": "巡回する・旅行する",
+        "origin": "フランス語 tour",
+        "note": "見物しながら巡る旅行。touristは旅行する人を表す。"
+      },
+      "elevat": {
+        "gloss": "持ち上げる・高くする",
+        "origin": "ラテン語 elevare",
+        "note": "上へ持ち上げる動作。elevatorではelevatとして現れる。"
+      },
+      "danger": {
+        "gloss": "危険・害を及ぼす力",
+        "origin": "古フランス語 danger",
+        "note": "害を及ぼす力や危険。dangerousの基体。"
+      },
+      "peace": {
+        "gloss": "平和・穏やかさ",
+        "origin": "古フランス語 pais / ラテン語 pacem",
+        "note": "争いのない穏やかな状態。peacefulの基体。"
+      },
+      "comfort": {
+        "gloss": "慰め・安楽",
+        "origin": "古フランス語 conforter / ラテン語 confortare",
+        "note": "力を与えて慰めることから、心身の快適さへつながる。comfortableの基体。"
+      }
+    },
+    "affixes": {
+      "-ist": {
+        "gloss": "〜する人・専門家",
+        "kind": "suffix",
+        "note": "職業・立場・思想などに関わる人を表す接尾辞。touristではtourをする人。"
+      }
+    }
+  },
+  "entries": {
+    "donation": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "donat（与える・贈る）＋-ion（〜すること） → 与えること、寄付",
+        "gloss": "寄付",
+        "root": "donat",
+        "parts": [
+          { "form": "donat", "kind": "root", "gloss": "与える・贈る" },
+          { "form": "-ion", "kind": "suffix", "gloss": "〜すること（名詞化）" }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/donation",
+          "https://www.merriam-webster.com/dictionary/donation"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/donation", "note": "donationを古フランス語 donacion、ラテン語 donationem・donare・donumに遡らせる。donateは後の逆成と説明されるため、表示上の基体はdonatとした。" },
+          { "url": "https://www.merriam-webster.com/dictionary/donation", "note": "donationの現代語義として、金銭や物を贈ること、寄付を確認した。" }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": ["donation", "donacion", "donationem", "donare", "donum", "-ion"],
+        "historicalPath": [
+          "ラテン語 donare / donum（与える、贈り物）",
+          "ラテン語 donationem（贈ること）",
+          "古フランス語 donacion",
+          "英語 donation（寄付）"
+        ],
+        "components": [
+          { "form": "donat", "kind": "base", "gloss": "与える・贈る" },
+          { "form": "-ion", "kind": "suffix", "gloss": "名詞化" }
+        ],
+        "rootCandidates": ["donat", "do"],
+        "semanticBridge": "与える動作から、金銭や物を与える行為、つまり寄付を表す名詞になった。",
+        "summary": "donationはdonare・donumに由来するdonat語幹と名詞化の-ionに対応する。donateが逆成である点を踏まえ、donateではなくdonatとしてA型にする。",
+        "confidence": "high"
+      }
+    },
+    "charity": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "charit（愛・慈善）＋-y（状態・性質） → 愛を施すこと、慈善",
+        "gloss": "慈善",
+        "root": "charit",
+        "parts": [
+          { "form": "charit", "kind": "root", "gloss": "愛・慈善" },
+          { "form": "-y", "kind": "suffix", "gloss": "〜の性質をもつ" }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/charity",
+          "https://www.merriam-webster.com/dictionary/charity"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/charity", "note": "charityを古フランス語 charité、ラテン語 caritatem・caritas、さらにcarus（愛しい）に遡らせる。慈善団体・制度の意味の発達も示す。" },
+          { "url": "https://www.merriam-webster.com/dictionary/charity", "note": "charityの現代語義として、困窮者への援助、慈善行為、慈善団体を確認した。" }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": ["charity", "charité", "caritatem", "caritas", "carus", "-y"],
+        "historicalPath": [
+          "ラテン語 carus（愛しい）から caritas（愛、慈愛）",
+          "ラテン語 caritatem",
+          "古フランス語 charité",
+          "英語 charity（慈善、慈善団体）"
+        ],
+        "components": [
+          { "form": "charit", "kind": "base", "gloss": "愛・慈善" },
+          { "form": "-y", "kind": "suffix", "gloss": "状態・性質" }
+        ],
+        "rootCandidates": ["charit", "car"],
+        "semanticBridge": "愛や慈愛から、他者を助ける行為・制度としての慈善、さらに慈善団体の意味へ広がった。",
+        "summary": "charityはラテン語caritasから古フランス語charitéを経た語で、表面上のcharit語幹と-yに対応させてA型にする。語頭の綴り変化を含むため確信度は中とする。",
+        "confidence": "medium"
+      }
+    },
+    "fundraiser": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "fund（資金）とraiser（集める人・もの）からなる複合表現。資金を集める活動や催し → 募金活動、資金集めの催し"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/fund",
+          "https://www.merriam-webster.com/dictionary/fundraiser"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/fund", "note": "fundの語源と、資金・基金を表す現代語義を確認した。" },
+          { "url": "https://www.merriam-webster.com/dictionary/fundraiser", "note": "fundraiserを資金を集める人、または資金集めの催しと定義している。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["fundraiser", "fund", "raise", "-er"],
+        "historicalPath": [
+          "fund（資金、基金）",
+          "raise（集める、増やす）",
+          "fund＋raiserという英語の複合表現",
+          "fundraiser（募金活動・資金集めの催し）"
+        ],
+        "components": [
+          { "form": "fund", "kind": "compound", "gloss": "資金" },
+          { "form": "raiser", "kind": "compound", "gloss": "集める人・もの" }
+        ],
+        "rootCandidates": ["fund", "rais"],
+        "semanticBridge": "資金を集めるという複合的な行為から、資金集めをする人や催しを表す語になった。",
+        "summary": "fundraiserはfundとraiserを組み合わせた透明な複合表現であり、ユーザー指定どおり語根部品を表示しないB型にする。",
+        "confidence": "high"
+      }
+    },
+    "recipe": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語の命令形recipe「取れ・受け取れ」が処方箋の指示を経て、料理の作り方を指す語になった → レシピ、調理法"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/recipe",
+          "https://www.merriam-webster.com/dictionary/recipe"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/recipe", "note": "recipeをラテン語 recipere（受け取る）の命令形「取れ」に遡らせ、処方の指示から料理の調理法へ意味が移った経路を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/recipe", "note": "recipeの現代語義として、料理の材料と手順、または薬の処方を確認した。" }
+        ],
+        "originLanguage": "ラテン語・英語",
+        "etymons": ["recipe", "recipere", "recipe（取れ）"],
+        "historicalPath": [
+          "ラテン語 recipere（受け取る）",
+          "ラテン語 recipe（取れ、受け取れ）",
+          "医療上の処方・指示の冒頭語",
+          "料理の材料と手順を示す英語 recipe"
+        ],
+        "components": [
+          { "form": "recipe", "kind": "base", "gloss": "取れ・処方" }
+        ],
+        "rootCandidates": ["cip", "rec"],
+        "semanticBridge": "処方箋で「これを取れ」と指示する語から、薬や料理で何を用いるかを示す手順全体を表すようになった。",
+        "summary": "recipeはラテン語命令形に由来する借用語で、英語の接頭辞・語根へ安全に分けられないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "flavor": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "におい・香りを表す語から、嗅覚と結び付いた味わいを表す語へ意味が広がった → 味、風味"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/flavor",
+          "https://www.merriam-webster.com/dictionary/flavor"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/flavor", "note": "flavorを古フランス語 flaor、俗ラテン語flator（吹くもの、香り）に遡らせ、においから味・風味へ意味が発達した経路を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/flavor", "note": "flavorの現代語義として、味覚・嗅覚による風味や独特の性質を確認した。" }
+        ],
+        "originLanguage": "古フランス語・俗ラテン語・英語",
+        "etymons": ["flavor", "flaor", "flator", "flare"],
+        "historicalPath": [
+          "俗ラテン語 flator（香り、吹くもの）",
+          "古フランス語 flaor（におい、嗅覚）",
+          "中英語 flavor（香り）",
+          "英語 flavor（味、風味）"
+        ],
+        "components": [
+          { "form": "flavor", "kind": "base", "gloss": "香り・風味" }
+        ],
+        "rootCandidates": ["flav", "bhle"],
+        "semanticBridge": "香りから、香りと味覚が合わさった食べ物の風味を表すようになった。",
+        "summary": "flavorは古フランス語・俗ラテン語からの借用と意味拡張で、英語の語根と接辞の組み合わせとしては扱わないB型にする。",
+        "confidence": "high"
+      }
+    },
+    "plate": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "平らな金属片を表す語から、食事を載せる平たい器へ意味が広がった → 皿"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/plate",
+          "https://www.merriam-webster.com/dictionary/plate"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/plate", "note": "plateを古フランス語 plate、ラテン語系のplata（平たい金属片）に遡らせ、浅い皿の意味が後に生じたことを示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/plate", "note": "plateの現代語義として、食物を載せる平たい器を確認した。" }
+        ],
+        "originLanguage": "古フランス語・中世ラテン語・英語",
+        "etymons": ["plate", "plata", "platys"],
+        "historicalPath": [
+          "古フランス語 plate（薄い金属片）",
+          "中世ラテン語 plata（板、金属片）",
+          "英語 plate（平たい金属板）",
+          "食卓用の平たい器、皿"
+        ],
+        "components": [
+          { "form": "plate", "kind": "base", "gloss": "平たい板・皿" }
+        ],
+        "rootCandidates": ["plat"],
+        "semanticBridge": "平たい板や金属片から、食物を載せる平たい器、皿の意味になった。",
+        "summary": "plateは借用語の語史と意味拡張が中心で、英語の表面形を接辞付きのA型に切る根拠はないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "oven": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 ofenから続く、熱を連続的に放射して食物を焼く炉・容器を表す語 → オーブン"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/oven",
+          "https://www.merriam-webster.com/dictionary/oven"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/oven", "note": "ovenを古英語 ofen、ゲルマン祖語 *ukhnaz、印欧祖語の調理鍋の語根に遡らせる。" },
+          { "url": "https://www.merriam-webster.com/dictionary/oven", "note": "ovenの現代語義として、食物を焼いたり加熱したりする閉じた装置を確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン祖語・英語",
+        "etymons": ["oven", "ofen", "*ukhnaz", "*aukw-"],
+        "historicalPath": [
+          "印欧祖語 *aukw-（調理鍋）",
+          "ゲルマン祖語 *ukhnaz",
+          "古英語 ofen（炉、オーブン）",
+          "英語 oven（オーブン）"
+        ],
+        "components": [
+          { "form": "oven", "kind": "base", "gloss": "炉・加熱器" }
+        ],
+        "rootCandidates": ["oven", "aukw"],
+        "semanticBridge": "食物を加熱する炉や容器から、現代の調理用オーブンを表す語になった。",
+        "summary": "ovenは古いゲルマン系の単純語で、英語の接辞による分解はないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "apartment": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "apart（分けられた・離れた）＋-ment（〜すること・もの） → 区切られた住居、アパート",
+        "gloss": "アパート",
+        "root": "apart",
+        "parts": [
+          { "form": "apart", "kind": "root", "gloss": "分けられた・離れた" },
+          { "form": "-ment", "kind": "suffix", "gloss": "〜すること・もの" }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/apartment",
+          "https://www.merriam-webster.com/dictionary/apartment"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/apartment", "note": "apartmentをフランス語 appartement、イタリア語 appartimento「分けられた場所」、appartire／parteに遡らせる。" },
+          { "url": "https://www.merriam-webster.com/dictionary/apartment", "note": "apartmentの現代語義として、独立して住むための部屋・住居単位を確認した。" }
+        ],
+        "originLanguage": "ラテン語・イタリア語・フランス語・英語",
+        "etymons": ["apartment", "appartement", "appartimento", "appartere", "parte", "-ment"],
+        "historicalPath": [
+          "ラテン語 pars / parte（部分、分けられた場所）",
+          "イタリア語 appartimento（分けられた場所）",
+          "フランス語 appartement",
+          "英語 apartment（区切られた住居）"
+        ],
+        "components": [
+          { "form": "apart", "kind": "base", "gloss": "分けられた・離れた" },
+          { "form": "-ment", "kind": "suffix", "gloss": "もの・場所" }
+        ],
+        "rootCandidates": ["apart", "part"],
+        "semanticBridge": "一つの家の中で分けられた部屋から、独立して暮らせる区切られた住居単位の意味になった。",
+        "summary": "apartmentはappartimentoという「分けられた場所」の語に由来し、表面上のapart＋-mentで学習用に対応づけられるため、確信度を中としたA型にする。",
+        "confidence": "medium"
+      }
+    },
+    "landlord": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "land（土地）とlord（主人）からなる複合表現。土地や建物を所有して貸す人 → 家主、大家"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/landlord",
+          "https://www.merriam-webster.com/dictionary/landlord"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/landlord", "note": "landlordをlandとlordからなる英語の複合語として確認した。" },
+          { "url": "https://www.merriam-webster.com/dictionary/landlord", "note": "landlordの現代語義として、賃貸物件の所有者・貸主を確認した。" }
+        ],
+        "originLanguage": "古英語・英語",
+        "etymons": ["landlord", "land", "lord"],
+        "historicalPath": [
+          "land（土地、建物）",
+          "lord（主人、所有者）",
+          "land＋lordという英語の複合表現",
+          "landlord（家主、大家）"
+        ],
+        "components": [
+          { "form": "land", "kind": "compound", "gloss": "土地・建物" },
+          { "form": "lord", "kind": "compound", "gloss": "主人・所有者" }
+        ],
+        "rootCandidates": ["land", "lord"],
+        "semanticBridge": "土地や建物の主人という複合的な関係から、賃貸する所有者を表す語になった。",
+        "summary": "landlordはland＋lordの透明な複合表現であり、ユーザー指定どおり個別語根を表示しないB型にする。",
+        "confidence": "high"
+      }
+    },
+    "tourist": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "tour（巡回する・旅行する）＋-ist（〜する人・専門家） → 旅行する人、観光客",
+        "gloss": "観光客",
+        "root": "tour",
+        "parts": [
+          { "form": "tour", "kind": "root", "gloss": "巡回する・旅行する" },
+          { "form": "-ist", "kind": "suffix", "gloss": "〜する人・専門家" }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/tourist",
+          "https://www.merriam-webster.com/dictionary/tourist"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/tourist", "note": "touristをtour＋-istと明記し、楽しみのために旅行して見物する人の意味を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/tourist", "note": "touristの現代語義として、観光や楽しみのために旅行する人を確認した。" }
+        ],
+        "originLanguage": "フランス語・英語",
+        "etymons": ["tourist", "tour", "-ist"],
+        "historicalPath": [
+          "フランス語 tour（巡回、旅行）",
+          "英語 tour（旅行、見物の巡回）",
+          "tour＋-ist（旅行する人）",
+          "英語 tourist（観光客）"
+        ],
+        "components": [
+          { "form": "tour", "kind": "base", "gloss": "旅行・巡回" },
+          { "form": "-ist", "kind": "suffix", "gloss": "〜する人" }
+        ],
+        "rootCandidates": ["tour"],
+        "semanticBridge": "見物のために巡回する旅行から、その旅行をする人、観光客を表す名詞になった。",
+        "summary": "touristは出典にtour＋-istの構成が明記されているため、今回追加する-ist接尾辞を使ったA型にする。",
+        "confidence": "high"
+      }
+    },
+    "elevator": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "elevat（持ち上げる・高くする）＋-or（〜する人・もの） → 人や物を持ち上げるもの、エレベーター",
+        "gloss": "エレベーター",
+        "root": "elevat",
+        "parts": [
+          { "form": "elevat", "kind": "root", "gloss": "持ち上げる・高くする" },
+          { "form": "-or", "kind": "suffix", "gloss": "〜する人・もの" }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/elevator",
+          "https://www.merriam-webster.com/dictionary/elevator"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/elevator", "note": "elevatorをラテン語 elevator「持ち上げる者」、elevareの過去分詞語幹からの動作主名詞と説明している。機械式昇降機の意味も確認できる。" },
+          { "url": "https://www.merriam-webster.com/dictionary/elevator", "note": "elevatorの現代語義として、人や物を上下させる装置を確認した。" }
+        ],
+        "originLanguage": "ラテン語・英語",
+        "etymons": ["elevator", "elevare", "elevat-", "-or"],
+        "historicalPath": [
+          "ラテン語 elevare（持ち上げる、高くする）",
+          "ラテン語 elevator（持ち上げる者）",
+          "英語 elevator（持ち上げるもの）",
+          "機械式の昇降装置、エレベーター"
+        ],
+        "components": [
+          { "form": "elevat", "kind": "base", "gloss": "持ち上げる" },
+          { "form": "-or", "kind": "suffix", "gloss": "動作主・道具" }
+        ],
+        "rootCandidates": ["elevat", "lev"],
+        "semanticBridge": "上へ持ち上げる動作から、人や物を上下に運ぶ装置を表す語になった。",
+        "summary": "elevatorはelevareに由来する語幹elevatと動作主接尾辞-orに対応するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "bridge": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "木材や梁を置いて渡る構造を表すゲルマン系の単純語から、川や道路を越える橋を表す → 橋"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/bridge",
+          "https://www.merriam-webster.com/dictionary/bridge"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/bridge", "note": "bridgeを古英語 brycge、ゲルマン祖語 *brugjo、梁・丸太を表す印欧祖語語根に遡らせる。" },
+          { "url": "https://www.merriam-webster.com/dictionary/bridge", "note": "bridgeの現代語義として、谷や水域などを越えて通行するための構造物を確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン祖語・英語",
+        "etymons": ["bridge", "brigge", "brycge", "*brugjo", "*bhru"],
+        "historicalPath": [
+          "印欧祖語 *bhru（丸太、梁）",
+          "ゲルマン祖語 *brugjo",
+          "古英語 brycge",
+          "英語 bridge（橋）"
+        ],
+        "components": [
+          { "form": "bridge", "kind": "base", "gloss": "橋・梁" }
+        ],
+        "rootCandidates": ["brug", "bhru"],
+        "semanticBridge": "梁や丸太を置いて渡る構造から、川や谷を越えるための橋を表す語になった。",
+        "summary": "bridgeはゲルマン系の単純語で、英語の接辞による分解はないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "park": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "動物を狩るために囲った土地を表す語から、囲われた緑地・公園を表す語へ広がった → 公園"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/park",
+          "https://www.merriam-webster.com/dictionary/park"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/park", "note": "parkを古フランス語 parc、囲われた狩猟地に遡らせ、ゲルマン系の囲い・柵の語との関係を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/park", "note": "parkの現代語義として、公共のレクリエーション用の広い緑地や区域を確認した。" }
+        ],
+        "originLanguage": "古フランス語・ゲルマン系・英語",
+        "etymons": ["park", "parc", "*parruk", "parricus"],
+        "historicalPath": [
+          "ゲルマン系 *parruk（囲い、囲われた土地）",
+          "中世ラテン語 parricus",
+          "古フランス語 parc（狩猟用の囲い地）",
+          "英語 park（公園）"
+        ],
+        "components": [
+          { "form": "park", "kind": "base", "gloss": "囲われた土地・公園" }
+        ],
+        "rootCandidates": ["park", "parr"],
+        "semanticBridge": "狩猟用に囲った土地から、緑地やレクリエーションのために整えた公園へ意味が広がった。",
+        "summary": "parkは借用とゲルマン系語源の単純語で、英語の接辞付きA型として扱わないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "intersection": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "inter（間で）＋sect（切る）＋-ion（〜すること） → 道が切り合う場所、交差点",
+        "gloss": "交差点",
+        "root": "sect",
+        "parts": [
+          { "form": "inter", "kind": "prefix", "gloss": "間の・相互に" },
+          { "form": "sect", "kind": "root", "gloss": "切る・分ける" },
+          { "form": "-ion", "kind": "suffix", "gloss": "〜すること（名詞化）" }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/intersection",
+          "https://www.merriam-webster.com/dictionary/intersection"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/intersection", "note": "intersectionをラテン語 intersectionem・intersecare（切り分ける）に遡らせ、inter-＋secareの構成と交差点の意味を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/intersection", "note": "intersectionの現代語義として、二つ以上の道路が交わる場所を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["intersection", "intersectionem", "intersecare", "inter-", "secare", "-ion"],
+        "historicalPath": [
+          "ラテン語 inter-（間で）＋secare（切る）",
+          "ラテン語 intersecare / intersectio（切り交わること）",
+          "フランス語 intersection",
+          "英語 intersection（交差点）"
+        ],
+        "components": [
+          { "form": "inter", "kind": "prefix", "gloss": "間で" },
+          { "form": "sect", "kind": "base", "gloss": "切る・分ける" },
+          { "form": "-ion", "kind": "suffix", "gloss": "行為・状態" }
+        ],
+        "rootCandidates": ["sect", "sek"],
+        "semanticBridge": "線や道が互いに切り合う行為から、道が交わる場所、交差点を表す名詞になった。",
+        "summary": "intersectionはinter-＋secare＋-ionに直接対応し、既存のinter・sect・-ionを再利用できるためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "sidewalk": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "side（側）とwalk（歩くこと）からなる複合表現。道路の側を歩くための通路 → 歩道"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/sidewalk",
+          "https://www.merriam-webster.com/dictionary/sidewalk"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/sidewalk", "note": "sidewalkをsideとwalkからなる複合表現とし、道路の側の歩行者用通路という意味を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/sidewalk", "note": "sidewalkの現代語義として、道路脇の歩行者用の舗装路を確認した。" }
+        ],
+        "originLanguage": "古英語・英語",
+        "etymons": ["sidewalk", "side", "walk"],
+        "historicalPath": [
+          "side（側、横）",
+          "walk（歩くこと、通路）",
+          "side＋walkという英語の複合表現",
+          "sidewalk（歩道）"
+        ],
+        "components": [
+          { "form": "side", "kind": "compound", "gloss": "側" },
+          { "form": "walk", "kind": "compound", "gloss": "歩くこと・通路" }
+        ],
+        "rootCandidates": ["side", "walk"],
+        "semanticBridge": "道路の側を歩くための通路という複合的な意味から、歩道を表す語になった。",
+        "summary": "sidewalkはside＋walkの複合表現であり、ユーザー指定に従って語根部品を表示しないB型にする。",
+        "confidence": "high"
+      }
+    },
+    "ancient": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "「前に・以前に」を表す語から、遠い過去から続くものを表す形容詞になった → 古代の、非常に古い"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/ancient",
+          "https://www.merriam-webster.com/dictionary/ancient"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/ancient", "note": "ancientを古フランス語 ancien、俗ラテン語 *anteanus「以前からの」、ラテン語 ante「前に」に遡らせる。" },
+          { "url": "https://www.merriam-webster.com/dictionary/ancient", "note": "ancientの現代語義として、遠い過去に属すること、非常に古いことを確認した。" }
+        ],
+        "originLanguage": "ラテン語・俗ラテン語・古フランス語・英語",
+        "etymons": ["ancient", "ancien", "*anteanus", "ante"],
+        "historicalPath": [
+          "ラテン語 ante（前に、以前に）",
+          "俗ラテン語 *anteanus（以前からの）",
+          "古フランス語 ancien",
+          "英語 ancient（古代の、非常に古い）"
+        ],
+        "components": [
+          { "form": "ancient", "kind": "base", "gloss": "古い・以前からの" }
+        ],
+        "rootCandidates": ["ante", "anc"],
+        "semanticBridge": "以前から存在するものという意味から、遠い過去に属するもの、古代のものを表すようになった。",
+        "summary": "ancientはフランス語・ラテン語由来の借用語で、綴りを英語の接辞列として安全に分解できないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "modern": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語で「今、たった今」を表す語から、現在の時代に属するものを表す形容詞になった → 現代的な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/modern",
+          "https://www.merriam-webster.com/dictionary/modern"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/modern", "note": "modernをラテン語 modernus・modoに遡らせ、現在の時代に関する意味の発達を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/modern", "note": "modernの現代語義として、現在または最近の時代に属すること、現代的なことを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["modern", "modernus", "modo"],
+        "historicalPath": [
+          "ラテン語 modo（今、たった今）",
+          "ラテン語 modernus（現在の）",
+          "フランス語 moderne",
+          "英語 modern（現代の、現代的な）"
+        ],
+        "components": [
+          { "form": "modern", "kind": "base", "gloss": "現在の・現代の" }
+        ],
+        "rootCandidates": ["mod"],
+        "semanticBridge": "現在を指す語から、現在の時代に属するもの、現代的なものを表す形容詞になった。",
+        "summary": "modernはラテン語由来の借用語で、表面のmod＋-ernを英語の確実な派生として扱わないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "dangerous": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "danger（危険）＋-ous（〜に満ちた） → 危険に満ちた、危険な",
+        "gloss": "危険な",
+        "root": "danger",
+        "parts": [
+          { "form": "danger", "kind": "root", "gloss": "危険・害を及ぼす力" },
+          { "form": "-ous", "kind": "suffix", "gloss": "〜に満ちた" }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/dangerous",
+          "https://www.merriam-webster.com/dictionary/dangerous"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/dangerous", "note": "dangerousを古フランス語 dangeros、danger「害を及ぼす力、危険」からの形容詞と説明している。現代の危険・安全でない意味も確認できる。" },
+          { "url": "https://www.merriam-webster.com/dictionary/dangerous", "note": "dangerousの現代語義として、危害を与えるおそれがあること、危険なことを確認した。" }
+        ],
+        "originLanguage": "古フランス語・英語",
+        "etymons": ["dangerous", "dangeros", "danger", "-ous"],
+        "historicalPath": [
+          "古フランス語 danger（害を及ぼす力、危険）",
+          "古フランス語 dangeros（危険を含む）",
+          "英語 dangerous（扱いにくい、危険な）",
+          "現代英語 dangerous（危険な）"
+        ],
+        "components": [
+          { "form": "danger", "kind": "base", "gloss": "危険" },
+          { "form": "-ous", "kind": "suffix", "gloss": "性質をもつ" }
+        ],
+        "rootCandidates": ["danger"],
+        "semanticBridge": "害を及ぼす力や危険から、危険を含む性質をもつものを表す形容詞になった。",
+        "summary": "dangerousはdangerに形容詞接尾辞-ousが付いた関係を出典と表面形の双方で確認できるためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "peaceful": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "peace（平和・穏やかさ）＋-ful（〜に満ちた） → 平和に満ちた、平和な",
+        "gloss": "平和な",
+        "root": "peace",
+        "parts": [
+          { "form": "peace", "kind": "root", "gloss": "平和・穏やかさ" },
+          { "form": "-ful", "kind": "suffix", "gloss": "〜に満ちた" }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/peaceful",
+          "https://www.merriam-webster.com/dictionary/peaceful"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/peaceful", "note": "peacefulをpeace＋-fulと明記し、平和に満ちた・穏やかな意味を示している。peaceは古フランス語 pais・ラテン語 pacemに遡る。" },
+          { "url": "https://www.merriam-webster.com/dictionary/peaceful", "note": "peacefulの現代語義として、争いがなく穏やかで静かなことを確認した。" }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": ["peaceful", "peace", "pais", "pacem", "-ful"],
+        "historicalPath": [
+          "ラテン語 pacem（平和、協定）",
+          "古フランス語 pais",
+          "英語 peace（平和、穏やかさ）",
+          "peace＋-ful → peaceful（平和な）"
+        ],
+        "components": [
+          { "form": "peace", "kind": "base", "gloss": "平和" },
+          { "form": "-ful", "kind": "suffix", "gloss": "〜に満ちた" }
+        ],
+        "rootCandidates": ["peace", "pac"],
+        "semanticBridge": "平和そのものから、平和に満ちて争いのない状態を表す形容詞になった。",
+        "summary": "peacefulはpeace＋-fulという出典に明記された派生であり、既存の-fulを再利用してA型にする。",
+        "confidence": "high"
+      }
+    },
+    "convenient": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "con（ともに）＋ven（来る）＋-ient（〜する性質の） → 都合よく合う、便利な",
+        "gloss": "便利な",
+        "root": "ven",
+        "parts": [
+          { "form": "con", "kind": "prefix", "gloss": "ともに・完全に" },
+          { "form": "ven", "kind": "root", "gloss": "来る" },
+          { "form": "-ient", "kind": "suffix", "gloss": "〜する性質の" }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/convenience",
+          "https://www.merriam-webster.com/dictionary/convenient"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/convenience", "note": "convenientの語源に当たるconvenientia・convenireを、com／con-＋venire（来る）として説明し、合う・適する意味を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/convenient", "note": "convenientの現代語義として、都合がよく使いやすいこと、便利なことを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["convenient", "convenientia", "convenire", "con-", "venire", "-ient"],
+        "historicalPath": [
+          "ラテン語 con-（ともに）＋venire（来る）",
+          "ラテン語 convenire（ともに来る、合う、適する）",
+          "ラテン語 convenientia / フランス語 convenient",
+          "英語 convenient（便利な、都合のよい）"
+        ],
+        "components": [
+          { "form": "con", "kind": "prefix", "gloss": "ともに" },
+          { "form": "ven", "kind": "base", "gloss": "来る" },
+          { "form": "-ient", "kind": "suffix", "gloss": "性質を表す" }
+        ],
+        "rootCandidates": ["ven", "gwa"],
+        "semanticBridge": "物事がともに来てうまく合うことから、目的に合って使いやすい、便利なという意味になった。",
+        "summary": "convenientはcon-＋venireに由来し、表面形con・ven・-ientが語内に対応するため、既存辞書を使ってA型にする。",
+        "confidence": "high"
+      }
+    },
+    "comfortable": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "comfort（慰め・安楽）＋-able（〜できる・〜に値する） → 安楽にできる、快適な",
+        "gloss": "快適な",
+        "root": "comfort",
+        "parts": [
+          { "form": "comfort", "kind": "root", "gloss": "慰め・安楽" },
+          { "form": "-able", "kind": "suffix", "gloss": "〜できる・〜に値する" }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/comfortable",
+          "https://www.merriam-webster.com/dictionary/comfortable"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/comfortable", "note": "comfortableを古フランス語 confortableからの語とし、comforterと- ableの関係、精神的な慰めから身体的な快適さへの意味発達を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/comfortable", "note": "comfortableの現代語義として、身体的・精神的に快適で苦痛がないことを確認した。" }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": ["comfortable", "confortable", "conforter", "confortare", "fortis", "-able"],
+        "historicalPath": [
+          "ラテン語 confortare（大いに強くする）",
+          "古フランス語 conforter（慰める、力づける）",
+          "英語 comfort（慰め、安楽）",
+          "comfort＋-able → comfortable（快適な）"
+        ],
+        "components": [
+          { "form": "comfort", "kind": "base", "gloss": "慰め・安楽" },
+          { "form": "-able", "kind": "suffix", "gloss": "〜できる" }
+        ],
+        "rootCandidates": ["comfort", "fort"],
+        "semanticBridge": "慰めや力づけを与えることから、心身が安楽に過ごせる状態、快適なという意味になった。",
+        "summary": "comfortableはcomfortに- ableが付いた派生であることを出典で確認でき、表面形も対応するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "surprising": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "surpriseから作られた現在分詞形・形容詞。予想外に現れることから → 驚くべき、意外な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/surprising",
+          "https://www.merriam-webster.com/dictionary/surprising"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/surprising", "note": "surprisingをsurpriseの現在分詞形からできた形容詞と明記し、予想外に現れる・驚かせる意味を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/surprising", "note": "surprisingの現代語義として、驚きを引き起こすこと、意外なことを確認した。" }
+        ],
+        "originLanguage": "古フランス語・英語",
+        "etymons": ["surprising", "surprise", "surprisen", "surprendre", "-ing"],
+        "historicalPath": [
+          "古フランス語 surprendre（不意に捕らえる、驚かせる）",
+          "英語 surprise（驚かせる、驚き）",
+          "surpriseの現在分詞 surprising",
+          "英語 surprising（驚くべき、意外な）"
+        ],
+        "components": [
+          { "form": "surprise", "kind": "base", "gloss": "驚かせる・驚き" },
+          { "form": "-ing", "kind": "inflection", "gloss": "現在分詞・形容詞化" }
+        ],
+        "rootCandidates": ["prise", "prehend"],
+        "semanticBridge": "不意に捕らえる・驚かせる動作から、そのような驚きを引き起こす性質を表す形容詞になった。",
+        "summary": "surprisingはsurpriseの現在分詞形であり、今回のA型語根再構成では活用語尾を語源接辞として扱わずB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "necessary": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "necess（避けられない・必要な）＋-ary（〜に関する） → 避けられないもの、必要な",
+        "gloss": "必要な",
+        "root": "necess",
+        "parts": [
+          { "form": "necess", "kind": "root", "gloss": "避けられない・必要な" },
+          { "form": "-ary", "kind": "suffix", "gloss": "〜に関する" }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/necessary",
+          "https://www.merriam-webster.com/dictionary/necessary"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/necessary", "note": "necessaryを古フランス語 necessaire、ラテン語 necessarius・necesseに遡らせ、避けられない・不可欠な意味を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/necessary", "note": "necessaryの現代語義として、必要で欠かせないことを確認した。" }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": ["necessary", "necessarie", "necessaire", "necessarius", "necesse", "-ary"],
+        "historicalPath": [
+          "ラテン語 ne cesse / necesse（避けられない、退けない）",
+          "ラテン語 necessarius（不可欠な）",
+          "古フランス語 necessaire",
+          "英語 necess＋-ary → necessary（必要な）"
+        ],
+        "components": [
+          { "form": "necess", "kind": "base", "gloss": "避けられない" },
+          { "form": "-ary", "kind": "suffix", "gloss": "〜に関する" }
+        ],
+        "rootCandidates": ["necess", "ced"],
+        "semanticBridge": "避けたり退いたりできない状態から、なくてはならない、必要なという意味になった。",
+        "summary": "necessaryは既に登録済みのnecess語根と-ary接尾辞が表面形に対応し、意味も直接つながるためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "proud": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 prud「勇敢な・立派な」から、自己評価が高く誇りをもつ状態を表す語へ意味が変化した → 誇りに思う、誇らしげな"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/proud",
+          "https://www.merriam-webster.com/dictionary/proud"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/proud", "note": "proudを古英語 prud・古フランス語 prud／prouz、後期ラテン語 prodeに遡らせ、勇敢・立派から高い自己評価への意味変化を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/proud", "note": "proudの現代語義として、自分や関係する人・物の価値を高く評価して満足する状態を確認した。" }
+        ],
+        "originLanguage": "古英語・古フランス語・後期ラテン語・英語",
+        "etymons": ["proud", "prud", "prouz", "prode", "prodesse"],
+        "historicalPath": [
+          "後期ラテン語 prode（有用な、利益になる）",
+          "古フランス語 prud / prouz（勇敢な、立派な）",
+          "古英語 prud（立派な、傲慢な）",
+          "英語 proud（誇りに思う、誇らしげな）"
+        ],
+        "components": [
+          { "form": "proud", "kind": "base", "gloss": "立派な・誇り高い" }
+        ],
+        "rootCandidates": ["prud", "pro"],
+        "semanticBridge": "立派で勇敢な性質から、自分の価値を高く評価して誇りに思う状態を表すようになった。",
+        "summary": "proudは古フランス語・ラテン語からの単純な借用語で、表面形を英語のpro＋-udとして分解しないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "empty": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語で「暇な・占められていない」を表した語から、容器や場所に何もない状態へ意味が広がった → 空の、誰もいない"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/empty",
+          "https://www.merriam-webster.com/dictionary/empty"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/empty", "note": "emptyを古英語 æmettig・æmetta「暇、余暇」に遡らせ、暇で占められていない意味から空の意味へ発達したと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/empty", "note": "emptyの現代語義として、中身がないこと、人や物が存在しないことを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン祖語・英語",
+        "etymons": ["empty", "æmettig", "æmetta", "*e-mot-ja-", "*mot-"],
+        "historicalPath": [
+          "古英語 æmetta（暇、余暇）",
+          "古英語 æmettig（暇な、占められていない）",
+          "人や場所が占められていない状態",
+          "英語 empty（空の、誰もいない）"
+        ],
+        "components": [
+          { "form": "empty", "kind": "base", "gloss": "空の・占められていない" }
+        ],
+        "rootCandidates": ["emet", "mot"],
+        "semanticBridge": "人が暇で何にも占められていない状態から、容器や場所に何もない状態を表すようになった。",
+        "summary": "emptyは古英語の語史と意味変化をもつ単純語で、英語の接辞による表面分解は成立しないためB型にする。",
+        "confidence": "high"
+      }
+    }
+  }
+}

@@ -1,0 +1,897 @@
+{
+  "meta": {
+    "batchId": "batch-034",
+    "note": "未確認B型の次の25語。語源が現代語の表面形に安定して残る語はA型へ、単純語・不規則変化・複合語・表面形に分解を置けない語はB型に残す。"
+  },
+  "dictionary": {
+    "roots": {
+      "stat": {
+        "gloss": "立つ・立てる",
+        "origin": "ラテン語 stare / statio",
+        "note": "立ってとどまる場所や位置のイメージ。station。"
+      },
+      "libr": {
+        "gloss": "本・紙",
+        "origin": "ラテン語 liber / librarium",
+        "note": "本や書物を収めるもののイメージ。library。"
+      }
+    }
+  },
+  "entries": {
+    "books": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "bookの複数形。古英語 bōc（本、書物）に由来する。 → 本、書籍"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/book",
+          "https://www.merriam-webster.com/dictionary/book"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/book", "note": "bookを中英語 bok・古英語 bōc、ゲルマン語系の本・文字板に遡らせ、複数形 books は語形変化として扱えることを確認した。" },
+          { "url": "https://www.merriam-webster.com/dictionary/book", "note": "bookの現代語義として、本や書籍などのまとまった著作を確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["book", "bok", "bōc", "*bokiz", "*bek-"],
+        "historicalPath": [
+          "ゲルマン祖語 *bokiz（本、文字板）",
+          "古英語 bōc",
+          "中英語 bok / book",
+          "英語 book → books（複数形）"
+        ],
+        "components": [
+          { "form": "book", "kind": "word", "gloss": "本" },
+          { "form": "-s", "kind": "inflection", "gloss": "複数" }
+        ],
+        "rootCandidates": ["bok", "beech"],
+        "semanticBridge": "文字を書く材料や本を表す古い語が、現代の書籍を表す語として続いている。",
+        "summary": "booksはbookの複数形で、語源的な語根・接辞の派生語ではないためB型に残す。",
+        "confidence": "high",
+        "notes": "複数語尾 -s は語源分解として表示しない。"
+      }
+    },
+    "teeth": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "toothの不規則な複数形。古英語 tōth に由来し、母音変化で teeth になった。 → 歯"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/tooth",
+          "https://www.merriam-webster.com/dictionary/tooth"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/tooth", "note": "toothを中英語 toth・古英語 tōth、ゲルマン祖語 *tanthu-に遡らせ、teethは古いi-mutationによる不規則複数と確認した。" },
+          { "url": "https://www.merriam-webster.com/dictionary/tooth", "note": "toothの現代語義として、口の中で食物をかむ硬い器官を確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["tooth", "toth", "tōth", "*tanthu-", "*dent-"],
+        "historicalPath": [
+          "インド・ヨーロッパ祖語 *dent-（歯）との対応",
+          "ゲルマン祖語 *tanthu-",
+          "古英語 tōth・中英語 toth",
+          "英語 tooth → teeth（母音変化による複数形）"
+        ],
+        "components": [
+          { "form": "tooth", "kind": "word", "gloss": "歯" },
+          { "form": "i-mutation", "kind": "inflection", "gloss": "母音変化" }
+        ],
+        "rootCandidates": ["dent", "tanth"],
+        "semanticBridge": "歯を表す古いゲルマン語が保たれ、複数形では後続音の影響による母音変化が残った。",
+        "summary": "teethはtoothの不規則複数形で、現代語の表面形に安定した語根・接辞分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "dentは比較語源上の候補であり、teethの表示用語根には採用しない。"
+      }
+    },
+    "fruits": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "fruitの複数形。古フランス語 fruit、ラテン語 fructus（収穫、産物）に由来する。 → 果物"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/fruit",
+          "https://www.merriam-webster.com/dictionary/fruit"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/fruit", "note": "fruitを古フランス語 fruit、ラテン語 fructus・frui（楽しむ、収穫する）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/fruit", "note": "fruitの現代語義として、植物の食用になる実、または成果・産物を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["fruit", "frut", "fructus", "frui", "*bhrug-"],
+        "historicalPath": [
+          "インド・ヨーロッパ祖語 *bhrug-（楽しむ、利用する）",
+          "ラテン語 frui / fructus（楽しむ、収穫、産物）",
+          "古フランス語 fruit・中英語 fruit",
+          "英語 fruit → fruits（複数形）"
+        ],
+        "components": [
+          { "form": "fruit", "kind": "word", "gloss": "果実、産物" },
+          { "form": "-s", "kind": "inflection", "gloss": "複数" }
+        ],
+        "rootCandidates": ["fruct", "bhrug"],
+        "semanticBridge": "収穫物や産物を表す語から、植物の実、さらに努力の成果を表す語へ意味が広がった。",
+        "summary": "fruitsはfruitの複数形で、ラテン語由来の語源は記録できるが表面形を安全に分解できないためB型に残す。",
+        "confidence": "high",
+        "notes": "複数語尾 -s は語源分解として表示しない。"
+      }
+    },
+    "people": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 pople、ラテン語 populus（人々、民衆）に由来する。 → 人々"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/people",
+          "https://www.merriam-webster.com/dictionary/people"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/people", "note": "peopleをアングロフレンチ・古フランス語 peple / pople、ラテン語 populusに遡らせ、populus自体の起源は不明と説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/people", "note": "peopleの現代語義として、個々の人間の集まり、民族、住民などを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["people", "peple", "pople", "populus", "folk"],
+        "historicalPath": [
+          "ラテン語 populus（民、国民、群衆）",
+          "古フランス語 pople / peupel",
+          "中英語 peple",
+          "英語 people（人々、住民）"
+        ],
+        "components": [
+          { "form": "populus", "kind": "word", "gloss": "人々、民" }
+        ],
+        "rootCandidates": ["popul"],
+        "semanticBridge": "国家の民や群衆を表す語が、個々の人間の集まりや住民一般を表す語になった。",
+        "summary": "peopleはフランス語を経た借用語で、ラテン語のpopulusは表面形にそのまま残らないためB型に残す。",
+        "confidence": "high",
+        "notes": "popul-をpeopleの表示用語根としては扱わない。"
+      }
+    },
+    "fork": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 forca、ラテン語 furca（分岐した道具）に由来する。 → フォーク"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/fork",
+          "https://www.merriam-webster.com/dictionary/fork"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/fork", "note": "forkを古英語 forca / force、ラテン語 furcaからのゲルマン語借用とし、furcaのさらに古い起源は不確かと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/fork", "note": "forkの現代語義として、二本以上に分かれる形や、食器のフォークを確認した。" }
+        ],
+        "originLanguage": "ラテン語・古英語・英語",
+        "etymons": ["fork", "forca", "force", "furca"],
+        "historicalPath": [
+          "ラテン語 furca（熊手状の道具、分岐）",
+          "古英語 forca / force",
+          "中英語 fork",
+          "英語 fork（分岐、フォーク）"
+        ],
+        "components": [
+          { "form": "furca", "kind": "word", "gloss": "分岐した道具" }
+        ],
+        "rootCandidates": ["furc"],
+        "semanticBridge": "枝分かれした形の道具から、分岐そのもの、さらに食事用の先端が分かれた道具へ意味が広がった。",
+        "summary": "forkは古い借用語・単純語で、furcaの語源を現代英語の表面形に安全に分解できないためB型に残す。",
+        "confidence": "high",
+        "notes": "forkをfor＋-kなどに分ける綴り合わせは採用しない。"
+      }
+    },
+    "dictionary": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "辞書",
+        "root": "dic",
+        "parts": [
+          { "form": "dict", "kind": "root", "gloss": "言う" },
+          { "form": "-ion", "kind": "suffix", "gloss": "〜すること" },
+          { "form": "-ary", "kind": "suffix", "gloss": "〜に関する" }
+        ],
+        "derivation": "dict（話す・示す）＋-ion（〜すること）＋-ary（〜に関する） → 言葉を集めたもの、辞書"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/dictionary",
+          "https://www.merriam-webster.com/dictionary/dictionary"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/dictionary", "note": "dictionaryを中世ラテン語 dictionarium / dictionarius、ラテン語 dictio（語、表現）・dicere（話す、述べる）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/dictionary", "note": "dictionaryの現代語義として、語の意味や用法を説明する参考書・資料を確認した。" }
+        ],
+        "originLanguage": "ラテン語・中世ラテン語・フランス語・英語",
+        "etymons": ["dictionary", "dictionarium", "dictionarius", "dictio", "dicere", "-arium", "-ary"],
+        "historicalPath": [
+          "ラテン語 dicere（話す、述べる）・dictio（言葉、表現）",
+          "中世ラテン語 dictionarium / dictionarius（言葉に関するもの）",
+          "英語 diction＋-ary の形に定着",
+          "英語 dictionary（辞書）"
+        ],
+        "components": [
+          { "form": "dictio / dict", "kind": "base", "gloss": "言葉、述べる" },
+          { "form": "-arium / -ary", "kind": "suffix", "gloss": "場所・関係" }
+        ],
+        "rootCandidates": ["dict", "deik"],
+        "semanticBridge": "言葉として述べられた表現から、言葉を集めて説明する資料、辞書へ意味が具体化した。",
+        "summary": "dictionaryはdict（話す・示す）に名詞化・関係を表す要素が続く形として、表面形に沿ったA型を設定できる。",
+        "confidence": "high",
+        "notes": "ラテン語の語尾をそのまま表示せず、英語表面形のdict＋-ion＋-aryにそろえる。"
+      }
+    },
+    "kite": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "鳥の名 kite（トビ）から、鳥のように空中を滑る玩具の名になった。語源は古英語 cytaで、起源は模倣音の可能性がある。 → たこ"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/kite",
+          "https://www.merriam-webster.com/dictionary/kite"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/kite", "note": "kiteを古英語 cyta（トビ）に遡らせ、玩具のkiteは鳥のように浮かぶことから名付けられたと説明している。鳥名の起源は模倣音の可能性がある。" },
+          { "url": "https://www.merriam-webster.com/dictionary/kite", "note": "kiteの現代語義として、糸で空に揚げる軽い玩具と、猛禽類のトビを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["kite", "cyta", "cyte"],
+        "historicalPath": [
+          "古英語 cyta（トビ）",
+          "中英語 kite（鳥の名）",
+          "鳥の飛び方に基づく玩具の比喩",
+          "英語 kite（たこ）"
+        ],
+        "components": [
+          { "form": "cyta", "kind": "word", "gloss": "トビ" }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "空中を滑る鳥の名前が、同じように風を受けて浮かぶ玩具の名前へ転用された。",
+        "summary": "kiteは鳥名から玩具名へ転用された単純語で、現代英語の表面形に安全な語根・接辞分解を設定しないためB型に残す。",
+        "confidence": "medium",
+        "notes": "鳥名の起源に模倣音説があるため、確定した語根として表示しない。"
+      }
+    },
+    "racket": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "騒音を表す racket は模倣音の可能性があり、スポーツ用具の racket はフランス語 raquette などを経た別経路で、起源に不確かさが残る。 → ラケット"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/racket",
+          "https://www.merriam-webster.com/dictionary/racket"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/racket", "note": "騒音のracketを16世紀の語で、おそらく模倣音と説明し、スポーツ用具のracketはracquet・フランス語 rachette などを経る別系統としている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/racket", "note": "racketの現代語義として、騒音、詐欺的な商売、テニスなどで使う打具を確認した。" }
+        ],
+        "originLanguage": "英語・フランス語・借用語系",
+        "etymons": ["racket", "racquet", "raquette", "rachette"],
+        "historicalPath": [
+          "英語 racket（騒音、模倣音の可能性）",
+          "フランス語 raquette / 中英語・近代英語 racquet（スポーツ用具）",
+          "英語 racket（騒音・ラケット）"
+        ],
+        "components": [
+          { "form": "racket", "kind": "word", "gloss": "騒音、打具" },
+          { "form": "raquette", "kind": "word", "gloss": "ラケット" }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "騒がしい音を表す語とスポーツ用具を表す語が同じ綴りに集まり、現代では文脈で意味を区別する。",
+        "summary": "racketは異なる語源経路と不確かな借用関係があり、現代語の表面形に一つの安定した分解を置けないためB型に残す。",
+        "confidence": "medium",
+        "notes": "騒音のracketと用具のracketを一つの語根で説明しない。"
+      }
+    },
+    "sleep": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 slæpan、ゲルマン祖語 *slēpanan に由来する。 → 眠る"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/sleep",
+          "https://www.merriam-webster.com/dictionary/sleep"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/sleep", "note": "sleepを中英語 slepen・古英語 slæpan、ゲルマン祖語 *slēpanan、PIE *sleb-に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/sleep", "note": "sleepの現代語義として、意識的な活動が休止する状態、またはその状態になることを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["sleep", "slepen", "slæpan", "*slēpanan", "*sleb-", "*swep-"],
+        "historicalPath": [
+          "インド・ヨーロッパ祖語 *sleb-（弱る、眠る）",
+          "ゲルマン祖語 *slēpanan",
+          "古英語 slæpan・中英語 slepen",
+          "英語 sleep（眠る）"
+        ],
+        "components": [
+          { "form": "slæpan", "kind": "word", "gloss": "眠る、休む" }
+        ],
+        "rootCandidates": ["sleb", "sleg"],
+        "semanticBridge": "眠りに入ること、休止していることを表す古い語が、現代の睡眠を表す動詞と名詞に続いている。",
+        "summary": "sleepは古いゲルマン語系の単純語で、現代語の表面形に安定した語根・接辞分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "sl-を接頭辞として扱わず、比較語源上の候補だけを記録する。"
+      }
+    },
+    "drink": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 drincan、ゲルマン祖語 *drenkanan に由来し、さらに古い起源は不確かである。 → 飲む"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/drink",
+          "https://www.merriam-webster.com/dictionary/drink"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/drink", "note": "drinkを古英語 drincan、ゲルマン祖語 *drenkananに遡らせ、さらに「引く」意味との関係が考えられるが起源は確定しないと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/drink", "note": "drinkの現代語義として、液体を飲み込むこと、また飲み物を確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["drink", "drincan", "*drenkanan", "*dhrengh-"],
+        "historicalPath": [
+          "ゲルマン祖語 *drenkanan（飲む）",
+          "古英語 drincan",
+          "中英語 drinken / drinken",
+          "英語 drink（飲む、飲み物）"
+        ],
+        "components": [
+          { "form": "drincan", "kind": "word", "gloss": "飲む" }
+        ],
+        "rootCandidates": ["drenk"],
+        "semanticBridge": "液体を口から取り込む動作を表す古いゲルマン語が、飲み物や酒を表す名詞にも広がった。",
+        "summary": "drinkは古いゲルマン語系の単純語で、語源の起源にも不確かさがあり、表面形を分解しないためB型に残す。",
+        "confidence": "medium",
+        "notes": "drinkをdr＋-inkなどに分ける綴り合わせは採用しない。"
+      }
+    },
+    "arrive": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 ariver、俗ラテン語 *arripare、ラテン語 ad ripam（岸へ）に由来する。 → 到着する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/arrive",
+          "https://www.merriam-webster.com/dictionary/arrive"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/arrive", "note": "arriveを古フランス語 ariver、俗ラテン語 *arripare、ラテン語 ad ripam（岸へ）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/arrive", "note": "arriveの現代語義として、目的地や場所に到達することを確認した。" }
+        ],
+        "originLanguage": "ラテン語・俗ラテン語・フランス語・英語",
+        "etymons": ["arrive", "ariver", "*arripare", "ad", "ripa"],
+        "historicalPath": [
+          "ラテン語 ad ripam（岸へ）",
+          "俗ラテン語 *arripare",
+          "古フランス語 ariver・中英語 ariven",
+          "英語 arrive（到着する）"
+        ],
+        "components": [
+          { "form": "ad ripam", "kind": "phrase", "gloss": "岸へ" }
+        ],
+        "rootCandidates": ["rip"],
+        "semanticBridge": "船が岸に着くことから、一般に目的地へ着くことを表す動詞へ意味が広がった。",
+        "summary": "arriveにはad＋ripaという深い語源があるが、現代英語のarriveにその要素が表面形として保たれていないためB型に残す。",
+        "confidence": "high",
+        "notes": "ar-を接頭辞、riveを語根とする表面分解は採用しない。"
+      }
+    },
+    "talk": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "中英語 talken に由来し、taleと関係する可能性があるが、語末の -k は古い反復・指小形成とも考えられる。 → 話す"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/talk",
+          "https://www.merriam-webster.com/dictionary/talk"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/talk", "note": "talkを中英語 talkenに遡らせ、taleとの関係や、語末のkをもつ反復・指小形成の可能性を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/talk", "note": "talkの現代語義として、言葉を発すること、会話すること、話し合いを確認した。" }
+        ],
+        "originLanguage": "中英語・ゲルマン語系・英語",
+        "etymons": ["talk", "talken", "tale", "talu"],
+        "historicalPath": [
+          "ゲルマン語系のtaleに関係する語という説",
+          "中英語 talken",
+          "英語 talk（話す、会話）"
+        ],
+        "components": [
+          { "form": "talken", "kind": "word", "gloss": "話す" },
+          { "form": "-k", "kind": "suffix", "gloss": "古い形成要素の可能性" }
+        ],
+        "rootCandidates": ["tal"],
+        "semanticBridge": "言葉や物語に関係する古い語から、言葉を発して会話する動作を表す語へ定着した。",
+        "summary": "talkはtaleとの関係や語末形成に説が分かれ、現代語の表面形に安定した分解を設定しないためB型に残す。",
+        "confidence": "medium",
+        "notes": "talkをtal＋-kと断定せず、関係説だけを記録する。"
+      }
+    },
+    "pool": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 pol（小さな水域、流れの深く静かな場所）に由来する。 → プール"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/pool",
+          "https://www.merriam-webster.com/dictionary/pool"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/pool", "note": "水域のpoolを古英語 pol、ゲルマン語系 *pōl-に遡らせ、起源は不確かで基層語の可能性があると説明している。賭け金やビリヤードのpoolは別経路である。" },
+          { "url": "https://www.merriam-webster.com/dictionary/pool", "note": "poolの現代語義として、水のたまった場所、泳ぐための施設、共同資金や集団を確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["pool", "pol", "*pōl-", "poel", "pful"],
+        "historicalPath": [
+          "ゲルマン語系 *pōl-（水たまり）",
+          "古英語 pol",
+          "中英語 pool",
+          "英語 pool（池、プール）"
+        ],
+        "components": [
+          { "form": "pol", "kind": "word", "gloss": "水域" }
+        ],
+        "rootCandidates": ["pol"],
+        "semanticBridge": "静かな水たまりを表す語が、人工的な水泳施設や、比喩的な共同の集まりを表す語へ広がった。",
+        "summary": "poolは古い単純語で起源も不確かであり、現代語の表面形に安定した語根・接辞分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "ビリヤードのpoolや共同資金のpoolまで一つの語源で説明しない。"
+      }
+    },
+    "station": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "駅",
+        "root": "stat",
+        "parts": [
+          { "form": "stat", "kind": "root", "gloss": "立つ・立てる" },
+          { "form": "-ion", "kind": "suffix", "gloss": "〜すること・状態" }
+        ],
+        "derivation": "stat（立つ・立てる）＋-ion（〜すること・状態） → 立ってとどまる場所、駅"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/station",
+          "https://www.merriam-webster.com/dictionary/station"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/station", "note": "stationを古フランス語 stacion、ラテン語 stationem / statio（立つこと、位置、軍事拠点）に遡らせ、stare（立つ）との関係を説明している。停車場所の意味は後に発達した。" },
+          { "url": "https://www.merriam-webster.com/dictionary/station", "note": "stationの現代語義として、列車などの停車駅、特定の任務のための場所、位置・身分を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["station", "stacion", "statio", "stare", "*sta-", "-ion"],
+        "historicalPath": [
+          "インド・ヨーロッパ祖語 *sta-（立つ、固くする）",
+          "ラテン語 stare（立つ）・statio（立つこと、位置）",
+          "古フランス語 stacion・中英語 stacioun",
+          "英語 stat＋-ion → station（位置、停車場所、駅）"
+        ],
+        "components": [
+          { "form": "statio / stat", "kind": "base", "gloss": "立つ、位置" },
+          { "form": "-io / -ion", "kind": "suffix", "gloss": "行為・状態" }
+        ],
+        "rootCandidates": ["stat", "sta"],
+        "semanticBridge": "立っている位置や任務の拠点から、乗り物が立ち止まる場所、駅へ意味が具体化した。",
+        "summary": "stationはstat（立つ・立てる）＋-ionとして表面形に沿ったA型を設定できる。",
+        "confidence": "high",
+        "notes": "stat語根と既存の-ion接尾辞を再利用する。"
+      }
+    },
+    "library": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "図書館",
+        "root": "libr",
+        "parts": [
+          { "form": "libr", "kind": "root", "gloss": "本・紙" },
+          { "form": "-ary", "kind": "suffix", "gloss": "〜に関する" }
+        ],
+        "derivation": "libr（本・紙）＋-ary（〜に関する） → 本を収める場所、図書館"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/library",
+          "https://www.merriam-webster.com/dictionary/library"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/library", "note": "libraryをアングロフレンチ・古フランス語 librarie、ラテン語 librarium / librarius、liber（本、紙、羊皮紙）に遡らせている。liberはもともと木の内皮も表した。" },
+          { "url": "https://www.merriam-webster.com/dictionary/library", "note": "libraryの現代語義として、書物を保管し利用に供する場所・部屋・機関を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["library", "librarie", "librarium", "librarius", "liber", "-ary"],
+        "historicalPath": [
+          "ラテン語 liber（本、紙、羊皮紙）",
+          "ラテン語 librarium / librarius（本の保管場所・本に関する）",
+          "古フランス語 librarie・中英語 librairie",
+          "英語 libr＋-ary → library（図書館）"
+        ],
+        "components": [
+          { "form": "liber / libr", "kind": "base", "gloss": "本、紙" },
+          { "form": "-arium / -ary", "kind": "suffix", "gloss": "場所・関係" }
+        ],
+        "rootCandidates": ["libr", "liber"],
+        "semanticBridge": "本や書写材料を表す語から、本を保管・利用する場所を表す語へ意味が具体化した。",
+        "summary": "libraryはlibr（本・紙）＋-aryとして表面形に沿ったA型を設定できる。",
+        "confidence": "high",
+        "notes": "libr語根と既存の-ary接尾辞を再利用する。"
+      }
+    },
+    "mountain": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 montaigne、俗ラテン語 *montanea、ラテン語 mons（山）に由来する。 → 山"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/mountain",
+          "https://www.merriam-webster.com/dictionary/mountain"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/mountain", "note": "mountainを古フランス語 montaigne、俗ラテン語 *montanea、ラテン語 montanus / monsに遡らせ、PIE *men-との関係を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/mountain", "note": "mountainの現代語義として、周囲より高く大きくそびえる自然の地形を確認した。" }
+        ],
+        "originLanguage": "ラテン語・俗ラテン語・フランス語・英語",
+        "etymons": ["mountain", "montaine", "*montanea", "montanus", "mons", "*men-"],
+        "historicalPath": [
+          "インド・ヨーロッパ祖語 *men-（突き出る、そびえる）という関係説",
+          "ラテン語 mons / montanus（山、山の）",
+          "俗ラテン語 *montanea・古フランス語 montaigne",
+          "英語 mountain（山）"
+        ],
+        "components": [
+          { "form": "montanea / mons", "kind": "word", "gloss": "山、山地" }
+        ],
+        "rootCandidates": ["mont", "men"],
+        "semanticBridge": "山を表すラテン語系の語が、フランス語を経て自然の高い地形を表す英語になった。",
+        "summary": "mountainはmontとの関係はあるが、英語の-ainを安定した接尾辞として扱えないためB型に残す。",
+        "confidence": "high",
+        "notes": "mount＋-ainという綴り合わせは採用しない。"
+      }
+    },
+    "fast": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 fæst、ゲルマン祖語 *fastu-（固い、しっかりした）に由来し、速いという意味は後に発達した。 → 速い"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/fast",
+          "https://www.merriam-webster.com/dictionary/fast"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/fast", "note": "fastを古英語 fæst、ゲルマン祖語 *fastu-（固く固定された、安全な）に遡らせ、速いという意味が「しっかり、力強く」から発達したと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/fast", "note": "fastの現代語義として、速度が速いこと、固く固定されていること、断食など複数の意味を確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["fast", "fæst", "*fastu-", "*past-"],
+        "historicalPath": [
+          "インド・ヨーロッパ祖語 *past-（固い、堅固な）という関係説",
+          "ゲルマン祖語 *fastu-",
+          "古英語 fæst（固い、確かな）",
+          "英語 fast（速い、固い、しっかり）"
+        ],
+        "components": [
+          { "form": "fæst", "kind": "word", "gloss": "固い、確かな" }
+        ],
+        "rootCandidates": ["past"],
+        "semanticBridge": "固くしっかりしていることから、力強く進むこと、さらに速度が速いことへ意味が発達した。",
+        "summary": "fastは古い単純語で、固い・速い・断食するなどの意味が一語に重なっており、表面形を分解しないためB型に残す。",
+        "confidence": "high",
+        "notes": "fastをfa＋-stなどに分ける綴り合わせは採用しない。"
+      }
+    },
+    "cold": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 cald / ceald、ゲルマン祖語 *kaldjon に由来する。 → 冷たい、寒い"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/cold",
+          "https://www.merriam-webster.com/dictionary/cold"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/cold", "note": "coldを古英語 cald / ceald、ゲルマン祖語 *kaldjon、PIE *gel-（冷たい、凍る）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/cold", "note": "coldの現代語義として、温度が低いこと、寒さ、感情的な冷たさなどを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["cold", "cald", "ceald", "*kaldjon", "*gel-"],
+        "historicalPath": [
+          "インド・ヨーロッパ祖語 *gel-（冷たい、凍る）",
+          "ゲルマン祖語 *kaldjon",
+          "古英語 cald / ceald",
+          "英語 cold（冷たい、寒い）"
+        ],
+        "components": [
+          { "form": "cald", "kind": "word", "gloss": "冷たい、寒い" }
+        ],
+        "rootCandidates": ["gel", "kald"],
+        "semanticBridge": "低い温度や凍る状態を表す古い語が、身体感覚、天候、態度の冷たさを表す語へ広がった。",
+        "summary": "coldは古いゲルマン語系の単純語で、現代語の表面形に安定した語根・接辞分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "col-を語根、-dを接尾辞とする表面分解は採用しない。"
+      }
+    },
+    "young": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 geong、ゲルマン祖語 *junga-（若い）に由来する。 → 若い"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/young",
+          "https://www.merriam-webster.com/dictionary/young"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/young", "note": "youngを中英語 yong・古英語 geong、ゲルマン祖語 *junga-、PIE *yeu-に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/young", "note": "youngの現代語義として、年齢が低いこと、発達や経験が初期段階であることを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["young", "yong", "geong", "*junga-", "*yeu-"],
+        "historicalPath": [
+          "インド・ヨーロッパ祖語 *yeu-（生命力、若さ）という関係説",
+          "ゲルマン祖語 *junga-",
+          "古英語 geong・中英語 yong",
+          "英語 young（若い）"
+        ],
+        "components": [
+          { "form": "geong", "kind": "word", "gloss": "若い" }
+        ],
+        "rootCandidates": ["yeu", "jung"],
+        "semanticBridge": "若さや生命力を表す古い語が、年齢の低さだけでなく、新しい・未経験の意味にも広がった。",
+        "summary": "youngは古いゲルマン語系の単純語で、現代語の表面形に安定した語根・接辞分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "y-を接頭辞、-oungを語根とする綴り合わせは採用しない。"
+      }
+    },
+    "tall": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "中英語 tal（見栄えのよい、勇敢な）を経て、古英語 getæl（素早い、活発な）に関係する。 → 背が高い、高い"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/tall",
+          "https://www.merriam-webster.com/dictionary/tall"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/tall", "note": "tallを中英語 tal（見栄えのよい、勇敢な）、古英語 getæl（素早い、活発な）、ゲルマン語系 *(ge)-tala-に関係づけている。身長の意味は後に発達した。" },
+          { "url": "https://www.merriam-webster.com/dictionary/tall", "note": "tallの現代語義として、身長や縦方向の寸法が大きいこと、細長いことを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・中英語・英語",
+        "etymons": ["tall", "tal", "getæl", "*(ge)-tala-", "tals"],
+        "historicalPath": [
+          "古英語 getæl（素早い、活発な）",
+          "中英語 tal（見栄えのよい、勇敢な、大きい）",
+          "近代英語 tall（大きい、身長が高い）",
+          "英語 tall（背が高い、高い）"
+        ],
+        "components": [
+          { "form": "getæl / tal", "kind": "word", "gloss": "活発、見栄えがよい" }
+        ],
+        "rootCandidates": ["tal"],
+        "semanticBridge": "見栄えのよさや大きさを表す形容詞が、人物や物の縦方向の大きさ、身長の高さを表す語へ変化した。",
+        "summary": "tallは意味の変化を経た古い単純語で、現代語の表面形に安定した語根・接辞分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "tallをta＋-llなどに分ける綴り合わせは採用しない。"
+      }
+    },
+    "know": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 cnawan、ゲルマン祖語 *knew-、インド・ヨーロッパ祖語 *gno-（知る）に由来する。 → 知っている、分かる"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/know",
+          "https://www.merriam-webster.com/dictionary/know"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/know", "note": "knowを古英語 cnawan、ゲルマン祖語 *knew-、PIE *gno-（知る）に遡らせ、認識・理解の意味の広がりを説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/know", "note": "knowの現代語義として、事実を認識すること、知識や経験があること、理解することを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・古英語・ゲルマン語系・英語",
+        "etymons": ["know", "cnawan", "*knew-", "*gno-", "gnoscere"],
+        "historicalPath": [
+          "インド・ヨーロッパ祖語 *gno-（知る）",
+          "ゲルマン祖語 *knew-",
+          "古英語 cnawan",
+          "英語 know（知る、理解する）"
+        ],
+        "components": [
+          { "form": "cnawan", "kind": "word", "gloss": "認識する、知る" }
+        ],
+        "rootCandidates": ["gno", "knew"],
+        "semanticBridge": "同一のものだと認識することから、事実を知ること、経験や方法を理解することへ意味が広がった。",
+        "summary": "knowは古いゲルマン語系の単純語で、先頭のkは発音されず表面形にも接辞分解がないためB型に残す。",
+        "confidence": "high",
+        "notes": "k-を接頭辞として扱わず、*gno-は比較語源上の候補として記録する。"
+      }
+    },
+    "leave": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 læfan（残す、残るようにする）から、残して去るという意味を経て「去る、出発する」になった。 → 去る、出発する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/leave",
+          "https://www.merriam-webster.com/dictionary/leave"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/leave", "note": "leave動詞を古英語 læfan（残す、残るようにする）、ゲルマン祖語 *laibjanan、PIE *leip-に遡らせ、「残して去る」から出発の意味が発達したと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/leave", "note": "leaveの現代語義として、場所を去ること、残すこと、許可を与えることを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・古英語・ゲルマン語系・英語",
+        "etymons": ["leave", "læfan", "*laibjanan", "*liban", "*leip-"],
+        "historicalPath": [
+          "インド・ヨーロッパ祖語 *leip-（付着する、残る）",
+          "ゲルマン祖語 *laibjanan（残す、残るようにする）",
+          "古英語 læfan",
+          "英語 leave（残す、去る、出発する）"
+        ],
+        "components": [
+          { "form": "læfan", "kind": "word", "gloss": "残す、残るようにする" }
+        ],
+        "rootCandidates": ["leip", "lib"],
+        "semanticBridge": "人や物をその場に残すことから、自分がその場を残して離れること、去ることへ意味が発達した。",
+        "summary": "leaveは古い単純語で、「残す」と「去る」の意味が同じ語に重なっているため、現代語の表面形を分解せずB型に残す。",
+        "confidence": "high",
+        "notes": "leaveをlea＋-veなどに分けず、leave名詞（許可）も同一の表示用分解にまとめない。"
+      }
+    },
+    "take": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語末期 tacan、古ノルド語 taka（つかむ、取る）に由来する。 → 取る、持っていく"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/take",
+          "https://www.merriam-webster.com/dictionary/take"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/take", "note": "takeを中英語 taken・古英語末期 tacan、古ノルド語 taka（つかむ、取る）に遡らせ、ゲルマン語根 *tak-のさらに古い起源は不確かと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/take", "note": "takeの現代語義として、手に取ること、運ぶこと、受け取ること、広い慣用的用法を確認した。" }
+        ],
+        "originLanguage": "古英語・古ノルド語・ゲルマン語系・英語",
+        "etymons": ["take", "taken", "tacan", "taka", "*takan-", "*tak-"],
+        "historicalPath": [
+          "ゲルマン語根 *tak-（取る、触れる）という再構形",
+          "古ノルド語 taka",
+          "古英語末期 tacan・中英語 taken",
+          "英語 take（取る、持っていく）"
+        ],
+        "components": [
+          { "form": "taka", "kind": "word", "gloss": "つかむ、取る" }
+        ],
+        "rootCandidates": ["tak"],
+        "semanticBridge": "手でつかむ動作から、物を手元に得ること、運ぶこと、受け取ることへ意味が広がった。",
+        "summary": "takeは北欧語由来の単純語で、語源上の*tak-も現代語の接辞分解には当たらないためB型に残す。",
+        "confidence": "high",
+        "notes": "takeをta＋-keなどに分ける綴り合わせは採用しない。"
+      }
+    },
+    "eat": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 etan、ゲルマン祖語 *etan、インド・ヨーロッパ祖語 *ed-（食べる）に由来する。 → 食べる"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/eat",
+          "https://www.merriam-webster.com/dictionary/eat"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/eat", "note": "eatを中英語 eten・古英語 etan、ゲルマン祖語 *etan、PIE *ed-（食べる）に遡らせている。腐食する・夢中にさせる比喩義も後に発達した。" },
+          { "url": "https://www.merriam-webster.com/dictionary/eat", "note": "eatの現代語義として、食物を口に入れてかむ・飲み込むこと、比喩的な消耗を確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・古英語・ゲルマン語系・英語",
+        "etymons": ["eat", "eten", "etan", "*etan", "*ed-"],
+        "historicalPath": [
+          "インド・ヨーロッパ祖語 *ed-（食べる）",
+          "ゲルマン祖語 *etan",
+          "古英語 etan・中英語 eten",
+          "英語 eat（食べる）"
+        ],
+        "components": [
+          { "form": "etan", "kind": "word", "gloss": "食べる" }
+        ],
+        "rootCandidates": ["ed", "et"],
+        "semanticBridge": "食物を取り込む基本動作から、物を徐々に消耗させること、心を悩ませることへ比喩的に広がった。",
+        "summary": "eatは古いゲルマン語系の単純語で、現代語の表面形に安定した語根・接辞分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "e-を接頭辞、-atを語根とする綴り合わせは採用しない。"
+      }
+    },
+    "look": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 locian、ウェストゲルマン語系 *lokjan（見る、注視する）に由来する。語源は不明で、ブリトン語 lagud（目）との関係が提案されている。 → 見る"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/look",
+          "https://www.merriam-webster.com/dictionary/look"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/look", "note": "lookを古英語 locian、ウェストゲルマン語系 *lokjanに遡らせるが、語源は不明で、ブリトン語 lagud（目）との関係が提案されている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/look", "note": "lookの現代語義として、目を向けて見ること、外見、調べることなどを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["look", "locian", "*lokjan", "lokon", "lagud"],
+        "historicalPath": [
+          "ゲルマン語系 *lokjan（見る、注視する）",
+          "古英語 locian",
+          "中英語 loken / looken",
+          "英語 look（見る、外見、調べる）"
+        ],
+        "components": [
+          { "form": "locian", "kind": "word", "gloss": "見る、注視する" }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "目を使って見る動作から、外見、注意を向けること、調べることへ意味が広がった。",
+        "summary": "lookは語源不明の可能性を含む古い単純語で、現代語の表面形に安定した語根・接辞分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "lo-を接頭辞や語根として扱わず、lagud説も確定した分解には使わない。"
+      }
+    }
+  }
+}

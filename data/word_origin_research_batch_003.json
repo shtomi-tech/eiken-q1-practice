@@ -1,0 +1,994 @@
+{
+  "meta": {
+    "batchId": "batch-003",
+    "note": "未確認B型の先頭25語。語源と表示形が対応する8語をA型へ昇格し、必要な語根・接辞を辞書へ追加する。"
+  },
+  "dictionary": {
+    "roots": {
+      "celer": {
+        "gloss": "速い",
+        "origin": "ラテン語 celer",
+        "note": "速さ・急ぐことのイメージ。accelerate。"
+      },
+      "insul": {
+        "gloss": "島",
+        "origin": "ラテン語 insula",
+        "note": "周囲から離れた島のイメージ。insular・insulate。"
+      },
+      "method": {
+        "gloss": "道筋・方法",
+        "origin": "ギリシャ語 methodos",
+        "note": "目的へ向かう道筋や手順のイメージ。methodical。"
+      },
+      "mechan": {
+        "gloss": "機械・仕組み",
+        "origin": "ギリシャ語 mēkhanē",
+        "note": "道具や機械、工夫された仕組みのイメージ。mechanical。"
+      },
+      "leth": {
+        "gloss": "死",
+        "origin": "ラテン語 lethum / letum",
+        "note": "死や致命性を表す語幹。語源上の最終起源には不確かな点がある。lethal。"
+      },
+      "laud": {
+        "gloss": "ほめる",
+        "origin": "ラテン語 laudare",
+        "note": "価値を認めて高くほめるイメージ。laudable。"
+      },
+      "emul": {
+        "gloss": "競いまねる",
+        "origin": "ラテン語 aemulus",
+        "note": "相手に並ぶ、あるいは上回ろうとまねるイメージ。emulation。"
+      }
+    },
+    "affixes": {
+      "-ar": {
+        "gloss": "〜に関する",
+        "kind": "suffix"
+      },
+      "-able": {
+        "gloss": "〜できる・〜に値する",
+        "kind": "suffix"
+      }
+    }
+  },
+  "entries": {
+    "accelerate": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "加速する、促進する",
+        "root": "celer",
+        "parts": [
+          {"form": "ac", "kind": "prefix", "gloss": "〜へ・近くへ"},
+          {"form": "celer", "kind": "root", "gloss": "速い"},
+          {"form": "-ate", "kind": "suffix", "gloss": "〜にする（動詞化）"}
+        ],
+        "derivation": "ac-（〜へ・近くへ）＋celer（速い）＋-ate（〜にする） → 加速する、促進する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/accelerate",
+          "https://www.merriam-webster.com/dictionary/accelerate"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/accelerate",
+            "note": "accelerateをラテン語 accelerare、ad（〜へ）＋celerare（急ぐ）、celer（速い）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/accelerate",
+            "note": "accelerateの速度を速める・進行を促進するという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": ["accelerare", "ad", "celerare", "celer"],
+        "historicalPath": ["ラテン語 celer（速い）", "ラテン語 celerare（急ぐ）", "ラテン語 accelerare", "英語 accelerate"],
+        "components": [
+          {"form": "ad- / ac-", "kind": "prefix", "gloss": "〜へ・近くへ", "display": false},
+          {"form": "celer", "kind": "root", "gloss": "速い", "display": false},
+          {"form": "-ate", "kind": "suffix", "gloss": "動詞化", "display": false}
+        ],
+        "rootCandidates": ["celer"],
+        "semanticBridge": "速い状態へ近づけることから、速度を上げること、さらに進行を促すことへ広がった。",
+        "summary": "accelerateは速いを表すラテン語celerに、〜へを表す要素と動詞化要素が加わった語である。",
+        "confidence": "high",
+        "notes": "ad-がcの前でac-になる音変化を含むが、表示形ac・celer・-ateとして安全に対応する。"
+      }
+    },
+    "soothe": {
+      "display": {
+        "type": "B",
+        "derivation": "古英語 soðian（真実だと示す）に由来。安心させる言葉から意味が広がり → なだめる、和らげる"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/soothe",
+          "https://www.merriam-webster.com/dictionary/soothe"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/soothe",
+            "note": "sootheを中英語 sothen、古英語 soðian（真実だと示す）、soð（真実）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/soothe",
+            "note": "sootheの人や動物を落ち着かせる、痛みなどを和らげるという語義を確認した。"
+          }
+        ],
+        "originLanguage": "古英語",
+        "etymons": ["soðian", "soð", "sothen"],
+        "historicalPath": ["古英語 soð（真実）", "古英語 soðian（真実だと示す）", "中英語 sothen", "英語 soothe"],
+        "components": [
+          {"form": "soðian", "kind": "base", "gloss": "真実だと示す", "display": false}
+        ],
+        "rootCandidates": ["sooth"],
+        "semanticBridge": "相手の言うことを真実だと認めて安心させることから、気持ちや痛みを静めることへ意味が広がった。",
+        "summary": "sootheは古英語の『真実だと示す』という意味を起点に、なだめる・和らげるを表す。",
+        "confidence": "high",
+        "notes": "語源は明瞭だが、現行A型のラテン語系root・接辞表示へ安全に変換できないためB型を維持する。"
+      }
+    },
+    "mumble": {
+      "display": {
+        "type": "B",
+        "derivation": "中英語 momelen（口の中で食べる・つぶやく）に由来。口を閉じたような音から → ぼそぼそ言う"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/mumble",
+          "https://www.merriam-webster.com/dictionary/mumble"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/mumble",
+            "note": "mumbleを中英語 momelen、mum（口を閉じて黙る・不明瞭な音）の頻度形とし、-b-は語源的でない可能性を示している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/mumble",
+            "note": "mumbleの不明瞭な低い声で話すという語義を確認した。"
+          }
+        ],
+        "originLanguage": "中英語・擬音語的表現",
+        "etymons": ["momelen", "mum", "mumble"],
+        "historicalPath": ["中英語 momelen", "mum（黙る・口を閉じた音）", "英語 mumble"],
+        "components": [
+          {"form": "mum", "kind": "base", "gloss": "黙る・不明瞭な音", "display": false}
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "口を閉じたまま出す不明瞭な音から、低く不明瞭に話す動作を表すようになった。",
+        "summary": "mumbleは口を閉じたような音を表す中英語・擬音語的な形から、ぼそぼそ言う意味になった。",
+        "confidence": "medium",
+        "notes": "-b-が非語源的とされるため、綴りから語根や接辞を作らない。"
+      }
+    },
+    "dodge": {
+      "display": {
+        "type": "B",
+        "derivation": "語源・初期の意味が不確かな語。急に身をかわす動きから → 素早く避ける"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/dodge",
+          "https://www.merriam-webster.com/dictionary/dodge"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/dodge",
+            "note": "dodgeの起源と意味の発展は不明確で、北部方言dodd（軽く突く）との関係が提案されている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/dodge",
+            "note": "dodgeの素早く動いて避ける、責任などを逃れるという語義を確認した。"
+          }
+        ],
+        "originLanguage": "英語（起源不確定）",
+        "etymons": ["dodge", "dodd"],
+        "historicalPath": ["中英語・北部方言 dodge / dodd（提案）", "英語 dodge"],
+        "components": [],
+        "rootCandidates": [],
+        "semanticBridge": "急に横へ動くという初期の動きから、攻撃・責任・質問などをかわす意味へ広がった。",
+        "summary": "dodgeは起源が確定していない語で、急に身をかわすことから避ける意味になった。",
+        "confidence": "low",
+        "notes": "起源不確定のため、表示用の語根分解は作成しない。"
+      }
+    },
+    "distended": {
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 distendere（離して伸ばす）に由来。外へ引き伸ばされた状態から → 膨張した"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/distend",
+          "https://www.merriam-webster.com/dictionary/distend"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/distend",
+            "note": "distendをラテン語 distendere、dis-（離れて）＋tendere（伸ばす）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/distend",
+            "note": "distendの膨らませる・伸び広がるという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": ["distendere", "dis-", "tendere", "distended"],
+        "historicalPath": ["ラテン語 tendere（伸ばす）", "ラテン語 distendere（離して伸ばす）", "英語 distend", "distended"],
+        "components": [
+          {"form": "dis-", "kind": "prefix", "gloss": "離れて", "display": false},
+          {"form": "tendere", "kind": "root", "gloss": "伸ばす", "display": false},
+          {"form": "-ed", "kind": "inflection", "gloss": "過去・状態", "display": false}
+        ],
+        "rootCandidates": ["tend"],
+        "semanticBridge": "物を互いに離すように伸ばすことから、内部が押し広げられて膨張した状態を表すようになった。",
+        "summary": "distendedは『離して伸ばす』というラテン語から、膨張した状態を表す。",
+        "confidence": "high",
+        "notes": "語彙形が過去分詞で、英語の-edを現在のA型辞書に加える対象外とした。"
+      }
+    },
+    "blared": {
+      "display": {
+        "type": "B",
+        "derivation": "中英語 bleren（泣きわめく）に由来する擬音語的な語から → （音を）大音量で鳴らした"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/blare",
+          "https://www.merriam-webster.com/dictionary/blare"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/blare",
+            "note": "blareを中英語 bleren、未記録の古英語形または中期オランダ語 bleren（鳴く・叫ぶ）に関わる擬音語と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/blare",
+            "note": "blareの大きく不快な音を出すという動詞と名詞の語義を確認した。"
+          }
+        ],
+        "originLanguage": "中英語・中期オランダ語（擬音語的）",
+        "etymons": ["bleren", "blare", "blared"],
+        "historicalPath": ["中英語 bleren（泣きわめく）", "英語 blare", "blared"],
+        "components": [
+          {"form": "blare", "kind": "base", "gloss": "大きな音を出す", "display": false},
+          {"form": "-ed", "kind": "inflection", "gloss": "過去", "display": false}
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "泣き声・叫び声のような音から、ラッパや機械が大音量で鳴ることへ意味が広がった。",
+        "summary": "blaredはblareの過去形で、大音量の音を出したことを表す。blareは擬音語的で確定した語根を持たない。",
+        "confidence": "medium",
+        "notes": "-edは英語の屈折であり、語源辞書のrootには含めない。"
+      }
+    },
+    "perused": {
+      "display": {
+        "type": "B",
+        "derivation": "per-（完全に）＋use（使う・扱う）を背景に、詳しく通読することから → 熟読した、ざっと調べた"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/peruse",
+          "https://www.merriam-webster.com/dictionary/peruse"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/peruse",
+            "note": "peruseをper-（完全に）＋useと説明し、詳しく読む意味と後の『ざっと読む』意味を示している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/peruse",
+            "note": "peruseの熟読する・注意深く調べる、または文脈によりざっと読むという語義を確認した。"
+          }
+        ],
+        "originLanguage": "英語（フランス語・ラテン語系要素を含む）",
+        "etymons": ["per-", "use", "usus", "uti"],
+        "historicalPath": ["ラテン語 per（完全に・通して）", "古フランス語 user", "英語 peruse", "perused"],
+        "components": [
+          {"form": "per-", "kind": "prefix", "gloss": "完全に・通して", "display": false},
+          {"form": "use", "kind": "base", "gloss": "使う・扱う", "display": false},
+          {"form": "-ed", "kind": "inflection", "gloss": "過去", "display": false}
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "文章を完全に扱う・通して見るという構成から、文章を熟読し調べる意味へ定着した。",
+        "summary": "perusedはperuseの過去形で、per-とuseを背景に文章を熟読・調査したことを表す。",
+        "confidence": "high",
+        "notes": "useの最終起源に不確かな点があるため、現行A型のrootへは昇格させない。"
+      }
+    },
+    "savored": {
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 savorer、ラテン語 sapor（味）に由来。味やよさをじっくり感じることから → 味わった、満喫した"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/savor",
+          "https://www.merriam-webster.com/dictionary/savor"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/savor",
+            "note": "savorを古フランス語 savor、ラテン語 sapor・sapere（味がする、味わう）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/savor",
+            "note": "savorの味・香り、味わう・満喫するという名詞・動詞の語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（古フランス語経由）",
+        "etymons": ["sapor", "sapere", "savor", "savorer"],
+        "historicalPath": ["ラテン語 sapor（味）", "古フランス語 savor / savorer", "英語 savor", "savored"],
+        "components": [
+          {"form": "sapor", "kind": "root-candidate", "gloss": "味・味わう", "display": false},
+          {"form": "-ed", "kind": "inflection", "gloss": "過去", "display": false}
+        ],
+        "rootCandidates": ["sap"],
+        "semanticBridge": "味を感じることから、食べ物の味わい、さらに経験や時間を十分に楽しむことへ広がった。",
+        "summary": "savoredはsavorの過去形で、味を表すラテン語を起点に味わった・満喫したを表す。",
+        "confidence": "high",
+        "notes": "sap語根候補はあるが、savorの語形成全体を現行A型の綴り分解へ変換しない。"
+      }
+    },
+    "contours": {
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 contornare（周囲を回る）を起点とするフランス語から → 周囲をめぐる線、輪郭、等高線"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/contour",
+          "https://www.merriam-webster.com/dictionary/contour"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/contour",
+            "note": "contourをフランス語 contour、イタリア語・中世ラテン語 contornare、com-＋tornareに遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/contour",
+            "note": "contourの輪郭・等高線・輪郭を描くという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（フランス語・イタリア語経由）",
+        "etymons": ["contour", "contornare", "com-", "tornare"],
+        "historicalPath": ["ラテン語 tornare（回す・ろくろで形作る）", "ラテン語 contornare（周囲を回る）", "フランス語 contour", "英語 contour / contours"],
+        "components": [
+          {"form": "con-", "kind": "prefix-candidate", "gloss": "ともに・周囲に", "display": false},
+          {"form": "tornare", "kind": "root", "gloss": "回る・形作る", "display": false},
+          {"form": "-s", "kind": "inflection", "gloss": "複数", "display": false}
+        ],
+        "rootCandidates": ["torn"],
+        "semanticBridge": "物の周囲を回る線から、図形や地形の外形を示す線、等高線へ専門化した。",
+        "summary": "contoursはcontourの複数形で、周囲を回るというラテン語を起点に輪郭・等高線を表す。",
+        "confidence": "high",
+        "notes": "con-が英語の綴りで連続しないため、con＋tornのA型表示にはしない。"
+      }
+    },
+    "epitaphs": {
+      "display": {
+        "type": "B",
+        "derivation": "ギリシャ語 epitaphion（葬儀で語られる言葉）に由来。墓の上に記す言葉から → 墓碑銘"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/epitaph",
+          "https://www.merriam-webster.com/dictionary/epitaph"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/epitaph",
+            "note": "epitaphを古フランス語・中世ラテン語 epitaphium、ギリシャ語 epitaphion、epi（上・際）＋taphos（墓）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/epitaph",
+            "note": "epitaphの墓碑や記念碑に刻む銘文という語義を確認した。"
+          }
+        ],
+        "originLanguage": "ギリシャ語（ラテン語・フランス語経由）",
+        "etymons": ["epitaphion", "epi", "taphos", "taphē"],
+        "historicalPath": ["ギリシャ語 taphos（墓）", "ギリシャ語 epitaphion（葬儀の言葉）", "中世ラテン語 epitaphium", "英語 epitaph / epitaphs"],
+        "components": [
+          {"form": "epi-", "kind": "prefix", "gloss": "上・〜の際に", "display": false},
+          {"form": "taphos", "kind": "root", "gloss": "墓", "display": false},
+          {"form": "-s", "kind": "inflection", "gloss": "複数", "display": false}
+        ],
+        "rootCandidates": ["taph"],
+        "semanticBridge": "墓の上や葬儀の際に語られる言葉から、墓や記念碑に刻む短い銘文を表すようになった。",
+        "summary": "epitaphsはepitaphの複数形で、墓の上で語られる言葉を起点に墓碑銘を表す。",
+        "confidence": "high",
+        "notes": "taphosの語源に不確かな点があるため、ギリシャ語複合語を英語A型へ変換しない。"
+      }
+    },
+    "strata": {
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 stratum（広げられたもの）に由来。広げて重ねた一枚の層から → 層、階層"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/stratum",
+          "https://www.merriam-webster.com/dictionary/stratum"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/stratum",
+            "note": "stratumをラテン語 stratum（広げられたもの・敷物）、sternere（広げる・横たえる）に遡らせ、strataを複数形と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/stratum",
+            "note": "stratumの地層・層・社会階層という語義と、複数形strataを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": ["stratum", "stratus", "sternere", "strata"],
+        "historicalPath": ["ラテン語 sternere（広げる・横たえる）", "ラテン語 stratum（広げられたもの）", "英語 stratum", "ラテン語式複数 strata"],
+        "components": [
+          {"form": "sternere", "kind": "root", "gloss": "広げる・横たえる", "display": false},
+          {"form": "-a", "kind": "inflection", "gloss": "ラテン語式複数", "display": false}
+        ],
+        "rootCandidates": ["stern"],
+        "semanticBridge": "広げて敷いたものが、地面や社会の中で重なった層を表すようになった。",
+        "summary": "strataはstratumのラテン語式複数形で、広げて敷いたものから層・階層を表す。",
+        "confidence": "high",
+        "notes": "strataは原形・複数形ともにラテン語の形を保持するため、英語接辞のA型表示を作らない。"
+      }
+    },
+    "amalgams": {
+      "display": {
+        "type": "B",
+        "derivation": "アラビア語 al-malgham（軟らかくする塗り薬）を起点とする語から → 異なるものを混ぜた混合物、融合体"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/amalgam",
+          "https://www.merriam-webster.com/dictionary/amalgam"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/amalgam",
+            "note": "amalgamを古フランス語・中世ラテン語 amalgama、アラビア語 al-malghamに遡らせ、さらにギリシャ語 malagma（軟らかくする物質）との関係を示している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/amalgam",
+            "note": "amalgamの水銀合金と、異質なものの混合・融合という語義を確認した。"
+          }
+        ],
+        "originLanguage": "アラビア語（ギリシャ語系の説あり）",
+        "etymons": ["al-malgham", "amalgama", "malagma", "malakos"],
+        "historicalPath": ["アラビア語 al-malgham（軟らかい塗り薬）", "中世ラテン語 amalgama", "古フランス語 amalgame", "英語 amalgam / amalgams"],
+        "components": [
+          {"form": "al-malgham", "kind": "base", "gloss": "軟らかくする塗り薬", "display": false},
+          {"form": "-s", "kind": "inflection", "gloss": "複数", "display": false}
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "金属を軟らかく混ぜた物質から、異なる要素を混ぜ合わせたもの一般を表すようになった。",
+        "summary": "amalgamsはamalgamの複数形で、アラビア語系の語を起点に混合物・融合体を表す。",
+        "confidence": "high",
+        "notes": "借用経路と語源説が複数あるため、英語の語根分解は表示しない。"
+      }
+    },
+    "uncouth": {
+      "display": {
+        "type": "B",
+        "derivation": "古英語 uncuð（知られていない、見慣れない）に由来。un-（否定）＋cūþ（知られた）から意味が広がり → 無作法な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/uncouth",
+          "https://www.merriam-webster.com/dictionary/uncouth"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/uncouth",
+            "note": "uncouthを古英語 uncuð、un-＋cuð、cunnan（知る）の過去分詞に遡らせ、未知・見慣れないから粗野・無作法へ意味が広がったと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/uncouth",
+            "note": "uncouthの無作法な・粗野なという語義を確認した。"
+          }
+        ],
+        "originLanguage": "古英語（ゲルマン系）",
+        "etymons": ["uncuð", "un-", "cuð", "cunnan"],
+        "historicalPath": ["古英語 cunnan（知る）", "古英語 cuð（知られた）", "古英語 uncuð（未知の・見慣れない）", "英語 uncouth"],
+        "components": [
+          {"form": "un-", "kind": "prefix", "gloss": "〜でない", "display": false},
+          {"form": "cuð", "kind": "base", "gloss": "知られた・慣れた", "display": false}
+        ],
+        "rootCandidates": ["gnos"],
+        "semanticBridge": "知られていない・見慣れないものという意味が、社会的な作法に慣れておらず粗野だという評価へ変化した。",
+        "summary": "uncouthは『知られていない・見慣れない』という古英語から、無作法で粗野な意味になった。",
+        "confidence": "high",
+        "notes": "cunnanは知る語源だが、uncouthの綴りから現行A型の語根を安全に表示できないためB型を維持する。"
+      }
+    },
+    "decorous": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "礼儀正しい、上品な",
+        "root": "decor",
+        "parts": [
+          {"form": "decor", "kind": "root", "gloss": "飾り・ふさわしさ"},
+          {"form": "-ous", "kind": "suffix", "gloss": "〜の性質をもつ"}
+        ],
+        "derivation": "decor（ふさわしく飾る）＋-ous（〜の性質をもつ） → 礼儀正しい、上品な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/decorous",
+          "https://www.merriam-webster.com/dictionary/decorous"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/decorous",
+            "note": "decorousをラテン語 decorus（ふさわしい・上品な）、decus/decorare（飾る・美しくする）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/decorous",
+            "note": "decorousの礼儀正しい・適切な・上品なという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": ["decorus", "decus", "decorare", "-ous"],
+        "historicalPath": ["ラテン語 decus（飾り・名誉）", "ラテン語 decorus（ふさわしい・美しい）", "英語 decorous"],
+        "components": [
+          {"form": "decor", "kind": "root", "gloss": "飾り・ふさわしさ", "display": false},
+          {"form": "-ous", "kind": "suffix", "gloss": "〜の性質をもつ", "display": false}
+        ],
+        "rootCandidates": ["decor"],
+        "semanticBridge": "ふさわしく美しく整えることから、場や社会的基準にかなった礼儀正しい状態を表すようになった。",
+        "summary": "decorousはdecor系の語幹に-ousが付いた語で、ふさわしく整った、礼儀正しい意味を表す。",
+        "confidence": "high",
+        "notes": "既存のdecor rootと-ous接辞に対応し、語源・綴り・意味が揃うためA型へ昇格する。"
+      }
+    },
+    "insular": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "島の；偏狭な、閉鎖的な",
+        "root": "insul",
+        "parts": [
+          {"form": "insul", "kind": "root", "gloss": "島"},
+          {"form": "-ar", "kind": "suffix", "gloss": "〜に関する"}
+        ],
+        "derivation": "insul（島）＋-ar（〜に関する） → 島の；偏狭な、閉鎖的な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/insular",
+          "https://www.merriam-webster.com/dictionary/insular"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/insular",
+            "note": "insularを後期ラテン語 insularis、ラテン語 insula（島）に遡らせ、孤立から偏狭の比喩へ展開したと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/insular",
+            "note": "insularの島に関する、外部との交流がなく偏狭なという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": ["insularis", "insula", "-aris"],
+        "historicalPath": ["ラテン語 insula（島）", "ラテン語 insularis（島の）", "英語 insular"],
+        "components": [
+          {"form": "insula / insul", "kind": "root", "gloss": "島", "display": false},
+          {"form": "-ar", "kind": "suffix", "gloss": "〜に関する", "display": false}
+        ],
+        "rootCandidates": ["insul"],
+        "semanticBridge": "島のように外界から切り離された状態から、交流がなく視野の狭い状態を表す比喩へ広がった。",
+        "summary": "insularは島を表すラテン語insulに形容詞接尾辞が付いた語で、島の、転じて偏狭な意味を表す。",
+        "confidence": "high",
+        "notes": "insulateと共通するinsula系の根拠があり、insul・-arの綴りも一致するためA型へ昇格する。"
+      }
+    },
+    "methodical": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "几帳面な、手順を踏む",
+        "root": "method",
+        "parts": [
+          {"form": "method", "kind": "root", "gloss": "道筋・方法"},
+          {"form": "-ical", "kind": "suffix", "gloss": "〜に関する"}
+        ],
+        "derivation": "method（道筋・方法）＋-ical（〜に関する） → 几帳面な、手順を踏む"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/methodical",
+          "https://www.merriam-webster.com/dictionary/methodical"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/methodical",
+            "note": "methodicalをフランス語 methodique、後期ラテン語 methodicus、ギリシャ語 methodikos・methodosに遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/methodical",
+            "note": "methodicalの方法に沿った、系統的で秩序立ったという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ギリシャ語（ラテン語・フランス語経由）",
+        "etymons": ["methodos", "meta", "hodos", "methodikos", "-ical"],
+        "historicalPath": ["ギリシャ語 hodos（道）", "ギリシャ語 methodos（追究の道・方法）", "フランス語 methodique", "英語 methodical"],
+        "components": [
+          {"form": "method", "kind": "root", "gloss": "道筋・方法", "display": false},
+          {"form": "-ical", "kind": "suffix", "gloss": "〜に関する", "display": false}
+        ],
+        "rootCandidates": ["method"],
+        "semanticBridge": "目的へ向かう道筋や方法を重視することから、手順を守り系統的に進める性質へ広がった。",
+        "summary": "methodicalは方法・道筋を表すmethodに-icalが付いた語で、几帳面で手順を踏む意味を表す。",
+        "confidence": "high",
+        "notes": "method＋-icalが現在の綴り・意味にそのまま対応するためA型へ昇格する。"
+      }
+    },
+    "mechanically": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "機械的に、無意識に",
+        "root": "mechan",
+        "parts": [
+          {"form": "mechan", "kind": "root", "gloss": "機械・仕組み"},
+          {"form": "-al", "kind": "suffix", "gloss": "〜に関する"},
+          {"form": "-ly", "kind": "suffix", "gloss": "〜な状態で"}
+        ],
+        "derivation": "mechan（機械・仕組み）＋-al（〜に関する）＋-ly（〜な状態で） → 機械的に、無意識に"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/mechanical",
+          "https://www.merriam-webster.com/dictionary/mechanical"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/mechanical",
+            "note": "mechanicalをmechanic＋-al、mechanicをラテン語 mechanicus・ギリシャ語 mēkhanikos、mēkhanē（道具・機械）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/mechanical",
+            "note": "mechanicalの機械に関する、機械のように自動的なという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ギリシャ語（ラテン語経由）",
+        "etymons": ["mēkhanē", "mēkhanikos", "mechanicus", "-al", "-ly"],
+        "historicalPath": ["ギリシャ語 mēkhanē（道具・機械）", "ラテン語 mechanicus", "英語 mechanical", "mechanically"],
+        "components": [
+          {"form": "mēkhanē / mechan", "kind": "root", "gloss": "機械・仕組み", "display": false},
+          {"form": "-al", "kind": "suffix", "gloss": "〜に関する", "display": false},
+          {"form": "-ly", "kind": "suffix", "gloss": "副詞化", "display": false}
+        ],
+        "rootCandidates": ["mechan"],
+        "semanticBridge": "道具や機械に関する性質から、機械のように自動的で、人間らしい意識を欠く動作を表すようになった。",
+        "summary": "mechanicallyは機械を表すmechanに-al・-lyが付いた副詞で、機械的に・無意識にを表す。",
+        "confidence": "high",
+        "notes": "語彙形mechanicallyにmechan・al・lyが連続して現れ、派生関係も確認できるためA型へ昇格する。"
+      }
+    },
+    "lethally": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "致死的に",
+        "root": "leth",
+        "parts": [
+          {"form": "leth", "kind": "root", "gloss": "死"},
+          {"form": "-al", "kind": "suffix", "gloss": "〜に関する"},
+          {"form": "-ly", "kind": "suffix", "gloss": "〜な状態で"}
+        ],
+        "derivation": "leth（死）＋-al（〜に関する）＋-ly（〜な状態で） → 致死的に"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/lethal",
+          "https://www.merriam-webster.com/dictionary/lethal"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/lethal",
+            "note": "lethalを後期ラテン語 lethalis、ラテン語 letalis/lethum（死）に遡らせている。最終起源には不確かな点がある。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/lethal",
+            "note": "lethalの死をもたらす・致命的なという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（ギリシャ語の影響を受けた形）",
+        "etymons": ["lethalis", "letalis", "lethum", "-al", "-ly"],
+        "historicalPath": ["ラテン語 lethum / letum（死）", "後期ラテン語 lethalis", "英語 lethal", "lethally"],
+        "components": [
+          {"form": "lethum / leth", "kind": "root", "gloss": "死", "display": false},
+          {"form": "-al", "kind": "suffix", "gloss": "〜に関する", "display": false},
+          {"form": "-ly", "kind": "suffix", "gloss": "副詞化", "display": false}
+        ],
+        "rootCandidates": ["leth"],
+        "semanticBridge": "死に関する性質から、死をもたらす性質、さらにその方法や程度を表す副詞へ展開した。",
+        "summary": "lethallyは死を表すlethに-al・-lyが付いた副詞で、致死的にを表す。最終語源には不確かさが残る。",
+        "confidence": "medium",
+        "notes": "最終起源の不確かさを辞書注記に残したうえで、leth・-al・-lyの表示対応だけを採用する。"
+      }
+    },
+    "ruefully": {
+      "display": {
+        "type": "B",
+        "derivation": "rue（後悔する）＋-ful＋-ly。後悔や悲しみに満ちた様子から → 後悔して、申し訳なさそうに"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/ruefully",
+          "https://www.merriam-webster.com/dictionary/rueful"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/ruefully",
+            "note": "ruefullyをrueful＋-ly、ruefulをrue＋-fulに遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/rueful",
+            "note": "ruefulの悲しみ・後悔を表すという語義を確認した。"
+          }
+        ],
+        "originLanguage": "古英語・古フランス語系",
+        "etymons": ["rue", "rueful", "-ful", "-ly"],
+        "historicalPath": ["古英語・中英語 rue（後悔する・悲しむ）", "英語 rueful", "ruefully"],
+        "components": [
+          {"form": "rue", "kind": "base", "gloss": "後悔する・悲しむ", "display": false},
+          {"form": "-ful", "kind": "suffix", "gloss": "〜に満ちた", "display": false},
+          {"form": "-ly", "kind": "suffix", "gloss": "副詞化", "display": false}
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "悲しみや後悔を感じることから、その感情が表情や態度に出ている様子を表す副詞になった。",
+        "summary": "ruefullyはruefulの副詞形で、後悔や悲しみをにじませてという意味を表す。",
+        "confidence": "medium",
+        "notes": "rueの古い語源経路をさらに英語rootへ還元せず、派生接辞を含むB型説明にする。"
+      }
+    },
+    "coarsely": {
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 cours（普通の・粗い）を背景に、粗い布から品のない意味へ → 粗野に、下品に"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/coarse",
+          "https://www.merriam-webster.com/dictionary/coarse"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/coarse",
+            "note": "coarseを中英語 cors、古フランス語 coursとし、粗い布・普通のものから粗野・下品へ意味が展開したと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/coarse",
+            "note": "coarseの粒や質が粗い、態度・言葉が粗野で下品なという語義を確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語系（語源に不確かな点あり）",
+        "etymons": ["cors", "cours", "coarse", "-ly"],
+        "historicalPath": ["古フランス語 cours（普通の・粗い）", "中英語 cors", "英語 coarse", "coarsely"],
+        "components": [
+          {"form": "coarse", "kind": "base", "gloss": "粗い・粗野な", "display": false},
+          {"form": "-ly", "kind": "suffix", "gloss": "副詞化", "display": false}
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "布や物の質感が粗いことから、態度・言葉・表現が洗練されず下品であることへ広がった。",
+        "summary": "coarselyはcoarseの副詞形で、粗い・粗野な状態でという意味を表す。",
+        "confidence": "medium",
+        "notes": "coarseの語源に複数説があるため、英語の語根表示を確定しない。"
+      }
+    },
+    "kindred": {
+      "display": {
+        "type": "B",
+        "derivation": "古英語 kinraden（血族・家系）に由来。kin（親族）＋-rede（関係）を背景に → 同類の、共通点のある"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/kindred",
+          "https://www.merriam-webster.com/dictionary/kindred"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/kindred",
+            "note": "kindredを古英語 kinraden、kin＋-redeに遡らせ、17世紀のdは音声上の理由による非語源的な挿入の可能性を示している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/kindred",
+            "note": "kindredの血縁者・同類の・共通の性質をもつという語義を確認した。"
+          }
+        ],
+        "originLanguage": "古英語・ゲルマン系",
+        "etymons": ["kinraden", "kin", "-rede", "kindred"],
+        "historicalPath": ["古英語 cynn（家族・種族）", "古英語 kinraden（血族）", "中英語 kindred", "英語 kindred"],
+        "components": [
+          {"form": "kin", "kind": "root", "gloss": "親族・同類", "display": false},
+          {"form": "-rede", "kind": "suffix-candidate", "gloss": "関係・状態", "display": false}
+        ],
+        "rootCandidates": ["gen"],
+        "semanticBridge": "同じ家系・血筋に属することから、血縁でなくても性質や考えが似た同類を表すようになった。",
+        "summary": "kindredは親族・家系を表す古英語の複合語から、同類の・共通点のあるという意味へ広がった。",
+        "confidence": "high",
+        "notes": "語末dが非語源的とされ、-redeも現代英語接辞ではないためB型を維持する。"
+      }
+    },
+    "germane": {
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 germanus（同じ両親をもつ）に由来。近い血縁関係から、話題に密接に関係する意味へ → 密接に関係のある"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/germane",
+          "https://www.merriam-webster.com/dictionary/germane"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/germane",
+            "note": "germaneをラテン語 germanus（同じ両親をもつ）に遡らせ、血縁的な近さから関連性の意味へ比喩化したと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/germane",
+            "note": "germaneの事柄に密接に関係する・適切なという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": ["germanus", "germen", "germane"],
+        "historicalPath": ["ラテン語 germanus（同じ親をもつ・本来の）", "中英語 germain", "英語 germane", "関連性の比喩的用法"],
+        "components": [
+          {"form": "germanus", "kind": "base", "gloss": "同じ両親をもつ", "display": false}
+        ],
+        "rootCandidates": ["germ"],
+        "semanticBridge": "血縁的に近い関係から、話題や事柄が互いに近く、直接関係しているという意味へ広がった。",
+        "summary": "germaneは同じ両親をもつことを表すラテン語を起点に、密接に関係のあるという意味になった。",
+        "confidence": "high",
+        "notes": "germenとの関係に不確かな点があり、現行gen rootへ綴りだけで統合しない。"
+      }
+    },
+    "seditious": {
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 seditiosus（不和・反乱に満ちた）に由来。seditio（離れて進むこと、反乱）から → 扇動的な、反政府的な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/seditious",
+          "https://www.merriam-webster.com/dictionary/seditious"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/seditious",
+            "note": "seditiousを古フランス語 sedicios、ラテン語 seditiosus・seditio（内乱・反乱）に遡らせている。seditioはsed-（離れて）＋itio（行くこと）と説明される。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/seditious",
+            "note": "seditiousの反乱を扇動する・政府への反抗を促すという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（古フランス語経由）",
+        "etymons": ["seditiosus", "seditio", "sed-", "itio", "ire"],
+        "historicalPath": ["ラテン語 ire（行く）", "ラテン語 seditio（離れて進むこと・反乱）", "古フランス語 sedicios", "英語 seditious"],
+        "components": [
+          {"form": "sed-", "kind": "prefix", "gloss": "離れて", "display": false},
+          {"form": "itio", "kind": "root", "gloss": "行くこと", "display": false},
+          {"form": "-ous", "kind": "suffix", "gloss": "〜に満ちた", "display": false}
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "集団が秩序から離れて進むことが、国家への反乱やそれを扇動する言動を表すようになった。",
+        "summary": "seditiousは反乱・内乱を表すラテン語から、反政府的で扇動的な意味になった。",
+        "confidence": "high",
+        "notes": "ラテン語の構成要素は確認できるが、英語seditiousの綴り・接辞境界が一致しないためB型を維持する。"
+      }
+    },
+    "laudable": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "称賛に値する",
+        "root": "laud",
+        "parts": [
+          {"form": "laud", "kind": "root", "gloss": "ほめる"},
+          {"form": "-able", "kind": "suffix", "gloss": "〜に値する"}
+        ],
+        "derivation": "laud（ほめる）＋-able（〜に値する） → 称賛に値する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/laudable",
+          "https://www.merriam-webster.com/dictionary/laudable"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/laudable",
+            "note": "laudableを古フランス語 laudable、ラテン語 laudabilis、laudare（ほめる）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/laudable",
+            "note": "laudableの称賛に値する・立派なという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（古フランス語経由）",
+        "etymons": ["laudabilis", "laudare", "laus", "-able"],
+        "historicalPath": ["ラテン語 laus（ほめ言葉・名声）", "ラテン語 laudare（ほめる）", "古フランス語 laudable", "英語 laudable"],
+        "components": [
+          {"form": "laudare / laud", "kind": "root", "gloss": "ほめる", "display": false},
+          {"form": "-able", "kind": "suffix", "gloss": "〜に値する", "display": false}
+        ],
+        "rootCandidates": ["laud"],
+        "semanticBridge": "高くほめる行為から、その評価を受けるだけの価値があるという形容へ展開した。",
+        "summary": "laudableは『ほめる』laudに- ableが付いた語で、称賛に値するを表す。",
+        "confidence": "high",
+        "notes": "laud rootと新規- able接辞が綴り・意味・語源に対応するためA型へ昇格する。"
+      }
+    },
+    "emulation": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "模倣、競争心",
+        "root": "emul",
+        "parts": [
+          {"form": "emul", "kind": "root", "gloss": "競いまねる"},
+          {"form": "-ation", "kind": "suffix", "gloss": "〜すること"}
+        ],
+        "derivation": "emul（競いまねる）＋-ation（名詞化） → 模倣、競争心"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/emulation",
+          "https://www.merriam-webster.com/dictionary/emulation"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/emulation",
+            "note": "emulationをフランス語 émulation、ラテン語 aemulatio・aemulari・aemulus（競う・まねる）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/emulation",
+            "note": "emulationの他者に並ぶ・上回るための模倣的な競争という語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（フランス語経由）",
+        "etymons": ["aemulus", "aemulari", "aemulatio", "-ation"],
+        "historicalPath": ["ラテン語 aemulus（競う・まねる）", "ラテン語 aemulari", "ラテン語 aemulatio", "フランス語 émulation", "英語 emulation"],
+        "components": [
+          {"form": "aemulus / emul", "kind": "root", "gloss": "競いまねる", "display": false},
+          {"form": "-ation", "kind": "suffix", "gloss": "行為・状態", "display": false}
+        ],
+        "rootCandidates": ["emul"],
+        "semanticBridge": "相手をまねて同じ水準、さらに上の水準を目指す行為から、模倣を伴う競争心・競争を表すようになった。",
+        "summary": "emulationは競いまねるaemulus系の語幹に-ationが付いた名詞で、模倣と競争心を表す。",
+        "confidence": "high",
+        "notes": "emul・-ationが英語の綴りと意味に対応するためA型へ昇格する。"
+      }
+    }
+  }
+}

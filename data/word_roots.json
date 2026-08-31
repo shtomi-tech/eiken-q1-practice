@@ -529,7 +529,7 @@
       "gloss": "折る",
       "origin": "ラテン語 plicare",
       "note": "折り重ね、複雑に絡ませるイメージ。perplex・complicate。",
-      "variants": ["pli", "ply"]
+      "variants": ["pli", "ply", "plex"]
     },
     "crimin": {
       "gloss": "ふるい分ける・罪",
@@ -660,6 +660,2396 @@
       "origin": "ラテン語 terra",
       "note": "地面や土地に関わるイメージ。territory・terrain。terr（怖がらせる）とは別語根。",
       "variants": ["terrestr"]
+    },
+    "surg": {
+      "gloss": "立ち上がる",
+      "origin": "ラテン語 surgere",
+      "note": "再び立ち上がり、回復するイメージ。resurgence・resurgent。"
+    },
+    "celer": {
+      "gloss": "速い",
+      "origin": "ラテン語 celer",
+      "note": "速さ・急ぐことのイメージ。accelerate。"
+    },
+    "insul": {
+      "gloss": "島",
+      "origin": "ラテン語 insula",
+      "note": "周囲から離れた島のイメージ。insular・insulate。"
+    },
+    "method": {
+      "gloss": "道筋・方法",
+      "origin": "ギリシャ語 methodos",
+      "note": "目的へ向かう道筋や手順のイメージ。methodical。"
+    },
+    "mechan": {
+      "gloss": "機械・仕組み",
+      "origin": "ギリシャ語 mēkhanē",
+      "note": "道具や機械、工夫された仕組みのイメージ。mechanical。"
+    },
+    "leth": {
+      "gloss": "死",
+      "origin": "ラテン語 lethum / letum",
+      "note": "死や致命性を表す語幹。語源上の最終起源には不確かな点がある。lethal。"
+    },
+    "laud": {
+      "gloss": "ほめる",
+      "origin": "ラテン語 laudare",
+      "note": "価値を認めて高くほめるイメージ。laudable。"
+    },
+    "emul": {
+      "gloss": "競いまねる",
+      "origin": "ラテン語 aemulus",
+      "note": "相手に並ぶ、あるいは上回ろうとまねるイメージ。emulation。"
+    },
+    "mon": {
+      "gloss": "知らせる・警告する",
+      "origin": "ラテン語 monere",
+      "note": "前もって知らせ、注意を促すイメージ。premonition・monition。"
+    },
+    "sequ": {
+      "gloss": "追う",
+      "origin": "ラテン語 sequi",
+      "note": "後を追い、追跡するイメージ。persecution・sequence。",
+      "variants": ["secut"]
+    },
+    "fort": {
+      "gloss": "強い",
+      "origin": "ラテン語 fortis",
+      "note": "強く、しっかりした状態のイメージ。fortify・fortress。"
+    },
+    "mass": {
+      "gloss": "かたまり・積み上げる",
+      "origin": "フランス語 masse（ラテン語 massa）",
+      "note": "ものを一つの塊に集めるイメージ。amass。"
+    },
+    "stow": {
+      "gloss": "置く・場所",
+      "origin": "古英語 stow（場所）",
+      "note": "物を適切な場所に置くイメージ。bestow・stow。"
+    },
+    "sharp": {
+      "gloss": "鋭い",
+      "origin": "古英語 scearp / ゲルマン系",
+      "note": "切れ味や知覚が鋭いイメージ。sharpen。"
+    },
+    "vinc": {
+      "gloss": "打ち勝つ",
+      "origin": "ラテン語 vincere",
+      "note": "相手に勝ち、外へ追い出すイメージ。evict・convince。",
+      "variants": ["vict"]
+    },
+    "satis": {
+      "gloss": "十分・満たす",
+      "origin": "ラテン語 satis",
+      "note": "必要な量を満たして十分にするイメージ。satisfy・insatiable。",
+      "variants": ["sati"]
+    },
+    "trench": {
+      "gloss": "切る・溝",
+      "origin": "古フランス語 trenchier（切る）",
+      "note": "地面を切って細長い溝を作るイメージ。entrench。"
+    },
+    "celebr": {
+      "gloss": "人が集まる・盛んな",
+      "origin": "ラテン語 celeber",
+      "note": "人が多く集まり、盛んであるイメージ。celebrate・celebrity。"
+    },
+    "ambul": {
+      "gloss": "歩く",
+      "origin": "ラテン語 ambulare",
+      "note": "歩いて通り、あちこち移動するイメージ。perambulate・amble。"
+    },
+    "ard": {
+      "gloss": "燃える",
+      "origin": "ラテン語 ardere",
+      "note": "火が燃え、情熱が高まるイメージ。ardor・ardent。"
+    },
+    "acu": {
+      "gloss": "鋭い・尖らせる",
+      "origin": "ラテン語 acuere / acus",
+      "note": "針先のように鋭くするイメージ。acuity・acute。"
+    },
+    "cand": {
+      "gloss": "白く輝く",
+      "origin": "ラテン語 candere",
+      "note": "白く輝き、隠し立てがないイメージ。candor・candid。"
+    },
+    "auster": {
+      "gloss": "厳しい・乾いた",
+      "origin": "ギリシャ語 austeros / ラテン語 austerus",
+      "note": "乾いて厳しい、余分なもののない状態のイメージ。austerity。"
+    },
+    "rid": {
+      "gloss": "笑う",
+      "origin": "ラテン語 ridere",
+      "note": "笑って相手をからかうイメージ。derision・risible。",
+      "variants": ["ris"]
+    },
+    "rog": {
+      "gloss": "尋ねる・求める",
+      "origin": "ラテン語 rogare",
+      "note": "相手に求め、要求するイメージ。arrogance・interrogate。"
+    },
+    "sag": {
+      "gloss": "鋭く感じ取る",
+      "origin": "ラテン語 sagax / sagire",
+      "note": "感覚を鋭く働かせ、見抜くイメージ。sagacious・sagacity。"
+    },
+    "form": {
+      "gloss": "形づくる・形",
+      "origin": "ラテン語 forma / formare",
+      "note": "形を作り、外形を定めるイメージ。deform・formation。"
+    },
+    "nomad": {
+      "gloss": "放浪する人",
+      "origin": "ギリシャ語 nomas / nomados",
+      "note": "牧草地を求めて移動する人のイメージ。nomadic。"
+    },
+    "marg": {
+      "gloss": "縁・境界",
+      "origin": "ラテン語 margo",
+      "note": "中心から外れた縁や境界のイメージ。marginal・margin。"
+    },
+    "past": {
+      "gloss": "食べさせる・放牧する",
+      "origin": "ラテン語 pascere / pastus",
+      "note": "動物を食べさせ、牧草地で養うイメージ。pasture・pastor。"
+    },
+    "crypt": {
+      "gloss": "隠す・秘密",
+      "origin": "ギリシャ語 kryptos",
+      "note": "見えないように隠すイメージ。encrypt・cryptic。"
+    },
+    "fix": {
+      "gloss": "固定する",
+      "origin": "ラテン語 figere",
+      "note": "ものを留め、動かないように固定するイメージ。affix・fix。"
+    },
+    "crank": {
+      "gloss": "曲がる・ねじれ",
+      "origin": "古英語系・ゲルマン系",
+      "note": "曲がったもの、ねじれた判断や気分のイメージ。cranky。"
+    },
+    "fiend": {
+      "gloss": "敵・悪魔",
+      "origin": "古英語 feond / ゲルマン系 < PIE *pe(i)-",
+      "note": "敵や悪魔を表すイメージ。fiendish。"
+    },
+    "matricul": {
+      "gloss": "名簿・登録",
+      "origin": "ラテン語 matricula",
+      "note": "登録名簿に名前を載せるイメージ。matriculate。"
+    },
+    "pass": {
+      "gloss": "通る・歩む",
+      "origin": "ラテン語 passus / pandere",
+      "note": "歩み、通り抜けるイメージ。impasseではフランス語passeの基体として現れる。"
+    },
+    "fus": {
+      "gloss": "注ぐ・溶かす",
+      "origin": "ラテン語 fundere / fusus",
+      "note": "液体を注ぎ、ものを溶かすイメージ。infuse・fusion。"
+    },
+    "mutin": {
+      "gloss": "反乱する",
+      "origin": "フランス語 mutin / mutiner < ラテン語 movere",
+      "note": "権威に逆らい、反乱するイメージ。mutinous・mutiny。"
+    },
+    "relent": {
+      "gloss": "和らぐ",
+      "origin": "古フランス語 relenter < ラテン語 lentus",
+      "note": "硬さや厳しさが溶けて、手加減するイメージ。relent・unrelenting。"
+    },
+    "foot": {
+      "gloss": "足・長さの単位",
+      "origin": "古英語 fot / ゲルマン系 < PIE *ped-",
+      "note": "足の長さを基準に量るイメージ。footage。ラテン語pedの語彙とは基体を分けて登録する。"
+    },
+    "esthet": {
+      "gloss": "感じる・知覚する",
+      "origin": "ギリシャ語 aisthesis / aisthanesthai",
+      "note": "感覚や知覚を働かせるイメージ。anesthetic。"
+    },
+    "ordin": {
+      "gloss": "順序・整える",
+      "origin": "ラテン語 ordo / ordinare",
+      "note": "ものを整然と並べ、秩序を定めるイメージ。ordinance。"
+    },
+    "coc": {
+      "gloss": "煮る・熟す",
+      "origin": "ラテン語 coquere / praecox",
+      "note": "熱を加えて熟させるイメージ。precocious。"
+    },
+    "scrupul": {
+      "gloss": "小石・心の引っかかり",
+      "origin": "ラテン語 scrupulus / scrupus",
+      "note": "靴の中の小石のような不安や良心の痛みのイメージ。scrupulous。"
+    },
+    "cant": {
+      "gloss": "歌う",
+      "origin": "ラテン語 cantare / PIE *kan-",
+      "note": "声に出して歌い、呪文を唱えるイメージ。enchant。chantは英語側の対応形。",
+      "variants": ["chant"]
+    },
+    "clud": {
+      "gloss": "閉じる",
+      "origin": "ラテン語 claudere",
+      "note": "入口を閉じ、外から入れないようにするイメージ。preclusion。clusは語形変化。",
+      "variants": ["clus"]
+    },
+    "hort": {
+      "gloss": "励ます・促す",
+      "origin": "ラテン語 hortari / PIE *gher-",
+      "note": "相手を励まして行動を促すイメージ。exhort。"
+    },
+    "typ": {
+      "gloss": "形・型",
+      "origin": "ギリシャ語 typos / typtein",
+      "note": "打った跡や形から、代表的な型を表すイメージ。typify。"
+    },
+    "omin": {
+      "gloss": "前兆",
+      "origin": "ラテン語 omen / ominari",
+      "note": "未来を示す前兆を見て、悪い兆しとして嫌うイメージ。abominable。"
+    },
+    "brief": {
+      "gloss": "短い・要点",
+      "origin": "古フランス語 brief / ラテン語 brevis",
+      "note": "短い要約や要点を伝えるイメージ。debrief。"
+    },
+    "pertin": {
+      "gloss": "関係する",
+      "origin": "ラテン語 pertinere",
+      "note": "主題に関係し、適切な範囲に属するイメージ。impertinent・pertinent。"
+    },
+    "torr": {
+      "gloss": "乾かす・焦がす",
+      "origin": "ラテン語 torrere",
+      "note": "熱で乾かし、焼けるほど熱くするイメージ。torrid。"
+    },
+    "resolut": {
+      "gloss": "解く・決める",
+      "origin": "ラテン語 resolvere / resolutus",
+      "note": "結び目をほどき、問題を分解して決定するイメージ。irresolute。"
+    },
+    "rudiment": {
+      "gloss": "基礎・初歩",
+      "origin": "ラテン語 rudimentum / rudis",
+      "note": "まだ十分に発達していない初期段階や基本原理のイメージ。rudimentary。"
+    },
+    "stipul": {
+      "gloss": "約束・契約",
+      "origin": "ラテン語 stipulari / stipulatio",
+      "note": "条件を取り決め、約束するイメージ。stipulation。語源の細部には不確かさがある。"
+    },
+    "not": {
+      "gloss": "印をつける",
+      "origin": "ラテン語 notare / nota",
+      "note": "印や記号を付けて、注意すべきことを記録するイメージ。annotation。"
+    },
+    "hast": {
+      "gloss": "急ぐ",
+      "origin": "古フランス語 haste / haster",
+      "note": "急いで進め、急がせるイメージ。hasten。"
+    },
+    "capital": {
+      "gloss": "主要な・資本",
+      "origin": "ラテン語 capitalis / caput",
+      "note": "頭・頂点にあるものから、主要なものや資本を表すイメージ。capitalize。"
+    },
+    "fluct": {
+      "gloss": "波打つ・変動する",
+      "origin": "ラテン語 fluctus / fluctuare",
+      "note": "波のように上下し、一定しないイメージ。fluctuate。"
+    },
+    "penit": {
+      "gloss": "後悔する",
+      "origin": "ラテン語 paenitere / paenitens",
+      "note": "行いを悔い、改めようとするイメージ。penitent。"
+    },
+    "studi": {
+      "gloss": "熱意・学ぶ",
+      "origin": "ラテン語 studium / studere",
+      "note": "熱心に取り組み、学習へ力を注ぐイメージ。studious。"
+    },
+    "cerebr": {
+      "gloss": "脳",
+      "origin": "ラテン語 cerebrum",
+      "note": "脳や知性に関わるイメージ。cerebral。"
+    },
+    "spill": {
+      "gloss": "こぼす・流す",
+      "origin": "古英語 spillan / ゲルマン系 *spilthjan",
+      "note": "中身を外へ流し、こぼすイメージ。spillage。"
+    },
+    "audac": {
+      "gloss": "大胆な",
+      "origin": "ラテン語 audax / audere",
+      "note": "恐れず試みる、大胆に行動するイメージ。audacity。"
+    },
+    "hash": {
+      "gloss": "細かく刻む",
+      "origin": "フランス語 hacher",
+      "note": "材料を細かく刻んで作り直すイメージ。rehash。"
+    },
+    "trunc": {
+      "gloss": "切り取る",
+      "origin": "ラテン語 truncus / truncare",
+      "note": "幹や先端を切り取り、短くするイメージ。truncate。"
+    },
+    "fumig": {
+      "gloss": "煙・煙で処理する",
+      "origin": "ラテン語 fumus / fumigare",
+      "note": "煙を使って処理するイメージ。fumigate・fumigation。英語fumigateはfumigationからの逆形成という経路も記録する。"
+    },
+    "sud": {
+      "gloss": "汗・にじみ出る",
+      "origin": "ラテン語 sudare / sudor",
+      "note": "汗や液体が外へにじみ出るイメージ。exudeではsの脱落した表面形udを使う。",
+      "variants": ["ud"]
+    },
+    "imper": {
+      "gloss": "命令・支配",
+      "origin": "ラテン語 imperium / imperare",
+      "note": "命令して支配する権力のイメージ。imperious。"
+    },
+    "surmount": {
+      "gloss": "乗り越える",
+      "origin": "古フランス語 surmonter",
+      "note": "障害や山の上へ出て乗り越えるイメージ。insurmountable。"
+    },
+    "sen": {
+      "gloss": "老い",
+      "origin": "ラテン語 senex / senilis",
+      "note": "年を重ねた状態や老年に関する性質のイメージ。senile。"
+    },
+    "don": {
+      "gloss": "与える・贈り物",
+      "origin": "ラテン語 donare / donum",
+      "note": "贈り物を与え、相手の罪を免じるイメージ。condone・donate。"
+    },
+    "mort": {
+      "gloss": "死",
+      "origin": "ラテン語 mors / mortis",
+      "note": "死や死に至る状態のイメージ。mortify・mortal。"
+    },
+    "err": {
+      "gloss": "さまよう・外れる",
+      "origin": "ラテン語 errare",
+      "note": "道から外れてさまようイメージ。aberration・errant。"
+    },
+    "ort": {
+      "gloss": "生まれる・立ち上がる",
+      "origin": "ラテン語 oriri / ortus",
+      "note": "生まれたり、立ち上がったりするイメージ。abortではabortusの語幹ortを表面表示に採用する。"
+    },
+    "quies": {
+      "gloss": "静けさ・休息",
+      "origin": "ラテン語 quies / quiescere",
+      "note": "静かに休み、抵抗せず従うイメージ。acquiesce・quiescent。"
+    },
+    "adul": {
+      "gloss": "へつらう",
+      "origin": "ラテン語 adulari / adulatio",
+      "note": "相手にお世辞を言い、過度に持ち上げるイメージ。adulation。"
+    },
+    "gnost": {
+      "gloss": "知る",
+      "origin": "ギリシャ語 gnōstos / gignōskein",
+      "note": "知識や認識に関するイメージ。agnostic・gnostic。"
+    },
+    "allege": {
+      "gloss": "申し立てる",
+      "origin": "ラテン語 allegare",
+      "note": "根拠として言い立て、申し立てるイメージ。allegedly・allege。"
+    },
+    "appar": {
+      "gloss": "現れる",
+      "origin": "ラテン語 apparere",
+      "note": "目の前に現れ、見えるようになるイメージ。apparition・appear。"
+    },
+    "ascet": {
+      "gloss": "鍛錬・禁欲",
+      "origin": "ギリシャ語 askētēs / askein",
+      "note": "訓練や鍛錬によって自分を律するイメージ。ascetic・ascetically。"
+    },
+    "astute": {
+      "gloss": "抜け目のない",
+      "origin": "ラテン語 astutus / astus",
+      "note": "巧妙で鋭く、自分の利益を見抜くイメージ。astutely。さらに深い語源には不確かさがある。"
+    },
+    "vol": {
+      "gloss": "望む・意志",
+      "origin": "ラテン語 velle / volens",
+      "note": "よく望み、善意を向けるイメージ。benevolent。"
+    },
+    "queath": {
+      "gloss": "言う・遺贈する",
+      "origin": "古英語 cweðan / bequeath",
+      "note": "言葉にして宣言し、遺言によって財産を残すイメージ。bequeath。"
+    },
+    "blasphem": {
+      "gloss": "悪く語る・冒涜する",
+      "origin": "ギリシャ語 blasphēmein / blasphēmia",
+      "note": "神聖なものについて悪く語るイメージ。blasphemy。"
+    },
+    "blunt": {
+      "gloss": "鈍い・率直な",
+      "origin": "中英語 blunt / blont",
+      "note": "鋭さがなく鈍い状態から、遠回しにせず率直な話し方へ意味が広がる。bluntly。"
+    },
+    "cogit": {
+      "gloss": "考える・思案する",
+      "origin": "ラテン語 cogitare",
+      "note": "心の中で何度も動かし、真剣に考えるイメージ。cogitate。"
+    },
+    "sort": {
+      "gloss": "分け前・運命",
+      "origin": "ラテン語 sors / sortis",
+      "note": "同じ分け前や運命を共有するイメージ。consort。"
+    },
+    "coron": {
+      "gloss": "冠・花輪",
+      "origin": "ラテン語 corona / coronare",
+      "note": "冠を授け、王として認めるイメージ。coronation。"
+    },
+    "rod": {
+      "gloss": "かじる・削る",
+      "origin": "ラテン語 rodere",
+      "note": "少しずつかじり取って表面を削るイメージ。corrode・rodent。"
+    },
+    "culmin": {
+      "gloss": "頂点・最高潮",
+      "origin": "ラテン語 culmen / culminare",
+      "note": "山や天体が最も高い点に達するイメージ。culmination。"
+    },
+    "bar": {
+      "gloss": "棒・障壁",
+      "origin": "古フランス語 barre",
+      "note": "棒や障壁で通行をふさぐイメージ。debar。"
+    },
+    "ploy": {
+      "gloss": "折る・広げる",
+      "origin": "古フランス語 desploiier / ラテン語 plicare",
+      "note": "折りたたんだものをほどいて広げるイメージ。deploy。英語表面のployを表示用の変化形として採用する。"
+    },
+    "vor": {
+      "gloss": "飲み込む",
+      "origin": "ラテン語 vorare",
+      "note": "食物を飲み込み、すっかり消費するイメージ。devour。英語表面ではvourとなる。",
+      "variants": ["vour"]
+    },
+    "lodge": {
+      "gloss": "宿・泊まる",
+      "origin": "古フランス語 loge / logier",
+      "note": "宿や休む場所に入り、そこから追い出すイメージ。dislodge。"
+    },
+    "sect": {
+      "gloss": "切る・分ける",
+      "origin": "ラテン語 secare / sectus",
+      "note": "切り分けて別々の部分にするイメージ。dissect・section。"
+    },
+    "dorm": {
+      "gloss": "眠る",
+      "origin": "ラテン語 dormire",
+      "note": "眠って動かない、活動を止めているイメージ。dormant・dormitory。"
+    },
+    "amor": {
+      "gloss": "愛",
+      "origin": "ラテン語 amor / amare",
+      "note": "愛によって心をつかまれ、夢中になるイメージ。enamored。"
+    },
+    "flagr": {
+      "gloss": "燃える・目立つ",
+      "origin": "ラテン語 flagrare",
+      "note": "燃え上がるほど明白で、目立つイメージ。flagrantly。"
+    },
+    "flip": {
+      "gloss": "軽く動く・軽口",
+      "origin": "英語 flip（語源は擬音的）",
+      "note": "軽く弾く動きや軽口から、軽薄でぞんざいな態度を表す。flippant。",
+      "variants": ["flipp"]
+    },
+    "idl": {
+      "gloss": "何もしない",
+      "origin": "古英語 īdel / idle",
+      "note": "空で何もせず、活動していないイメージ。idly。"
+    },
+    "hale": {
+      "gloss": "息をする",
+      "origin": "ラテン語 halare",
+      "note": "息や空気を取り込むイメージ。inhale。"
+    },
+    "leni": {
+      "gloss": "柔らかくする",
+      "origin": "ラテン語 lenire / lenis",
+      "note": "硬さや厳しさを和らげるイメージ。lenient。"
+    },
+    "magnanim": {
+      "gloss": "大きな心・寛大な",
+      "origin": "ラテン語 magnanimus",
+      "note": "magnus（大きい）とanimus（心・魂）が結び付いた語幹。magnanimous。"
+    },
+    "modul": {
+      "gloss": "尺度・調整する",
+      "origin": "ラテン語 modulus / modulari",
+      "note": "基準となる尺度に合わせて調整するイメージ。modulate。"
+    },
+    "passiv": {
+      "gloss": "苦しむ・受ける",
+      "origin": "ラテン語 pati / passivus",
+      "note": "作用を自分から行わず、影響を受けるイメージ。impassive。既存のpass（通る）とは別の語源として扱う。"
+    },
+    "null": {
+      "gloss": "無・ゼロ",
+      "origin": "ラテン語 nullus",
+      "note": "何もない・無効な状態のイメージ。nullify。"
+    },
+    "obliv": {
+      "gloss": "忘れる・意識しない",
+      "origin": "ラテン語 oblivisci / obliviosus",
+      "note": "忘れて意識から外れるイメージ。oblivious。深い語源には不確かな点がある。"
+    },
+    "palli": {
+      "gloss": "覆う・和らげる",
+      "origin": "ラテン語 palliare / pallium",
+      "note": "痛みや問題を覆って和らげるイメージ。palliative。"
+    },
+    "pauc": {
+      "gloss": "少ない",
+      "origin": "ラテン語 paucus / paucitas",
+      "note": "数や量が少ないイメージ。paucity。"
+    },
+    "pedant": {
+      "gloss": "学者ぶる人",
+      "origin": "イタリア語 pedante / フランス語 pédant",
+      "note": "教師・学者から、知識をひけらかし細部にこだわる人へ意味が広がった。pedantic。"
+    },
+    "for": {
+      "gloss": "穴をあける",
+      "origin": "ラテン語 forare",
+      "note": "通り抜ける穴をあけるイメージ。perforation。"
+    },
+    "pessimist": {
+      "gloss": "最悪と見る人",
+      "origin": "フランス語 pessimiste / ラテン語 pessimus",
+      "note": "最悪を予想する人から、悲観的な性質へつながる。pessimistic。"
+    },
+    "petul": {
+      "gloss": "怒りっぽい・すねる",
+      "origin": "ラテン語 petulans / petere",
+      "note": "攻撃的・生意気な態度から、すねて不機嫌な態度へ意味が移った。petulant。"
+    },
+    "pivot": {
+      "gloss": "軸・転換する",
+      "origin": "フランス語 pivot",
+      "note": "回転の中心軸から、方向を転換する中心点へ意味が広がった。pivot・pivotal。"
+    },
+    "ponder": {
+      "gloss": "重さを量る・考える",
+      "origin": "ラテン語 ponderare / pondus",
+      "note": "物の重さを量ることから、考えを慎重に量るイメージへ。ponderous。"
+    },
+    "text": {
+      "gloss": "織る・組み立てる",
+      "origin": "ラテン語 texere",
+      "note": "前に織って覆い、表向きの口実を作るイメージ。pretext。"
+    },
+    "bound": {
+      "gloss": "跳ねる・弾む",
+      "origin": "古フランス語 bondir",
+      "note": "跳ね返るイメージ。rebound。"
+    },
+    "rigor": {
+      "gloss": "硬い・厳しい",
+      "origin": "ラテン語 rigor / rigere",
+      "note": "硬く厳しい状態から、厳格・厳密な性質へ。rigorous。"
+    },
+    "rupt": {
+      "gloss": "壊す・破る",
+      "origin": "ラテン語 rumpere / ruptus",
+      "note": "割れて切れるイメージ。rupture。"
+    },
+    "sanct": {
+      "gloss": "神聖な",
+      "origin": "ラテン語 sanctus",
+      "note": "神聖なものとして分け、清めるイメージ。sanctify・sanctuary。"
+    },
+    "satur": {
+      "gloss": "満たす",
+      "origin": "ラテン語 satur / saturare",
+      "note": "いっぱいに満たすイメージ。saturate。"
+    },
+    "sed": {
+      "gloss": "座る・落ち着く",
+      "origin": "ラテン語 sedere / sedare",
+      "note": "座って静まり、落ち着かせるイメージ。sedate。"
+    },
+    "somber": {
+      "gloss": "暗い・影の",
+      "origin": "フランス語 sombre / 後期ラテン語 subumbrare",
+      "note": "影の下にある暗さから、重苦しい気分へ。somberly。"
+    },
+    "sumpt": {
+      "gloss": "取る・費やす",
+      "origin": "ラテン語 sumere / sumptus",
+      "note": "物を取り、費用を使うことから、費用のかかった豪華さへ。sumptuous。"
+    },
+    "trem": {
+      "gloss": "震える",
+      "origin": "ラテン語 tremere",
+      "note": "震えや身震いのイメージ。tremor。"
+    },
+    "abash": {
+      "gloss": "恥じさせる・動揺させる",
+      "origin": "古フランス語 esbaer / abaissier",
+      "note": "強い感情で平静を失わせ、恥じ入らせるイメージ。unabashedly。"
+    },
+    "wield": {
+      "gloss": "力を振るう・扱う",
+      "origin": "古英語 wieldan / wealdan",
+      "note": "力を支配して道具などを扱うイメージ。unwieldy。"
+    },
+    "vicin": {
+      "gloss": "近い・近隣の",
+      "origin": "ラテン語 vicinus / vicus",
+      "note": "近隣の集落にいるイメージ。vicinity。"
+    },
+    "vigil": {
+      "gloss": "見張る・目覚めている",
+      "origin": "ラテン語 vigil / vigilare",
+      "note": "眠らず見張るイメージ。vigilant。"
+    },
+    "climate": {
+      "gloss": "気候・地域",
+      "origin": "フランス語 climat / ギリシャ語 klima",
+      "note": "一定の地域・気候に慣らすイメージ。acclimate。"
+    },
+    "alacr": {
+      "gloss": "快活な・敏捷な",
+      "origin": "ラテン語 alacer / alacritas",
+      "note": "生き生きと素早いイメージ。alacrity。語源のさらに深い関係には不確かさがある。"
+    },
+    "pac": {
+      "gloss": "平和・結びつける",
+      "origin": "ラテン語 pax / pacare",
+      "note": "平和な状態へ導き、争いを静めるイメージ。appease。表面形peasを異形として扱う。",
+      "variants": ["peas"]
+    },
+    "assassin": {
+      "gloss": "暗殺者",
+      "origin": "アラビア語 ḥashshāshīn / 中世ラテン語 assassin",
+      "note": "秘密裏に人を殺す者から、暗殺することへ。assassination。"
+    },
+    "little": {
+      "gloss": "小さい・少なくする",
+      "origin": "古英語 lytl / lytlian",
+      "note": "小さくするイメージ。belittle。"
+    },
+    "moan": {
+      "gloss": "嘆く・うめく",
+      "origin": "古英語 mānan / mænan",
+      "note": "悲しみを声に出すイメージ。bemoan。"
+    },
+    "brusque": {
+      "gloss": "粗い・ぶっきらぼうな",
+      "origin": "フランス語 brusque / イタリア語 brusco",
+      "note": "荒く急な態度から、そっけなくぶっきらぼうな性質へ。brusquely。"
+    },
+    "caust": {
+      "gloss": "焼く・焦がす",
+      "origin": "ギリシャ語 kaiein / kaustikos",
+      "note": "焼くように痛烈な、辛辣なイメージ。caustic。"
+    },
+    "cens": {
+      "gloss": "評価・判断する",
+      "origin": "ラテン語 censere / census",
+      "note": "価値を判断することから、非難・譴責へ。censure。"
+    },
+    "lat": {
+      "gloss": "運ぶ・持たれる",
+      "origin": "ラテン語 ferre / latus",
+      "note": "物をいっしょに運び、持ち寄るイメージ。collate。"
+    },
+    "coct": {
+      "gloss": "煮る・調理する",
+      "origin": "ラテン語 coquere / coctus",
+      "note": "材料を混ぜて煮ることから、話や物をでっち上げるイメージへ。concoct。"
+    },
+    "cred": {
+      "gloss": "信じる",
+      "origin": "ラテン語 credere",
+      "note": "信じることから、信用・信憑性へ。credence。"
+    },
+    "dei": {
+      "gloss": "神",
+      "origin": "ラテン語 deus / deificare",
+      "note": "神にするイメージ。deify。"
+    },
+    "dubi": {
+      "gloss": "疑う",
+      "origin": "ラテン語 dubius / dubitare",
+      "note": "二つの可能性の間で疑うイメージ。dubious。"
+    },
+    "centr": {
+      "gloss": "中心",
+      "origin": "ギリシャ語 kentron",
+      "note": "中心から外れた位置・性質のイメージ。eccentric。"
+    },
+    "embezzle": {
+      "gloss": "横領する・盗む",
+      "origin": "アングロ・フレンチ enbesiler / 古フランス語 besillier",
+      "note": "人の財産を密かに持ち去るイメージ。embezzlement。"
+    },
+    "rapt": {
+      "gloss": "運び去る・心を奪う",
+      "origin": "ラテン語 rapere / raptus",
+      "note": "突然奪い去ることから、心を奪われ夢中になる意味へ。enrapture。"
+    },
+    "tail": {
+      "gloss": "切る・形を定める",
+      "origin": "古フランス語 taillier / 後期ラテン語 taliare",
+      "note": "entailのtailは動物の尾ではなく、財産の継承を切り分けて制限する語源。"
+    },
+    "treat": {
+      "gloss": "扱う・交渉する・懇願する",
+      "origin": "ラテン語 tractare / 古フランス語 traiter",
+      "note": "扱う・交渉することから、相手に強く求める意味へ。entreat・entreaty。"
+    },
+    "tol": {
+      "gloss": "持ち上げる・運ぶ",
+      "origin": "ラテン語 tollere / PIE *tele-",
+      "note": "持ち上げて高くするイメージ。extol。ラテン語tollereに対応する表面形tol。",
+      "variants": ["toll"]
+    },
+    "fortuit": {
+      "gloss": "偶然・思いがけないこと",
+      "origin": "ラテン語 fortuitus / fors",
+      "note": "運や偶然に起きること。fortuitous。"
+    },
+    "futil": {
+      "gloss": "漏れる・空しい",
+      "origin": "ラテン語 futilis / fundere",
+      "note": "漏れて空になるイメージから、役に立たない・むなしい意味へ。futility。"
+    },
+    "germin": {
+      "gloss": "芽を出す",
+      "origin": "ラテン語 germinare / germen",
+      "note": "芽や新しい成長の始まり。germination。"
+    },
+    "griev": {
+      "gloss": "重く苦しませる",
+      "origin": "ラテン語 gravare / 古フランス語 grever",
+      "note": "人を苦しませ、重荷を負わせるイメージ。grievance。"
+    },
+    "heed": {
+      "gloss": "注意・気に留める",
+      "origin": "古英語 hēdan / reccan",
+      "note": "注意を向けること。heedless。"
+    },
+    "plor": {
+      "gloss": "泣く・叫ぶ",
+      "origin": "ラテン語 plorare",
+      "note": "泣き叫びながら強く願うイメージ。plorareの深い語源は不明。",
+      "variants": ["plore"]
+    },
+    "lank": {
+      "gloss": "細長い・やせた",
+      "origin": "古英語 hlanc / 中英語 lank",
+      "note": "細長くやせた形のイメージ。lanky。"
+    },
+    "lucr": {
+      "gloss": "利益・もうけ",
+      "origin": "ラテン語 lucrum / lucrari",
+      "note": "利益を得るイメージ。lucrative。"
+    },
+    "nebul": {
+      "gloss": "雲・霧",
+      "origin": "ラテン語 nebula / ギリシャ語 nephos",
+      "note": "雲や霧で輪郭がぼやけるイメージ。nebulous。"
+    },
+    "liter": {
+      "gloss": "文字・書く",
+      "origin": "ラテン語 littera",
+      "note": "文字の上から書いて消すイメージ。obliterate。"
+    },
+    "orn": {
+      "gloss": "飾る・装備する",
+      "origin": "ラテン語 ornare / ornamentum",
+      "note": "物を飾り整えるイメージ。ornate。"
+    },
+    "col": {
+      "gloss": "こす・通す",
+      "origin": "ラテン語 colare",
+      "note": "液体をこして通すイメージ。percolate。"
+    },
+    "enn": {
+      "gloss": "年",
+      "origin": "ラテン語 annus / perennis",
+      "note": "perennialでは、annus（年）が語幹の表面形ennとして現れる。長い期間を通すイメージ。",
+      "variants": ["ann"]
+    },
+    "plant": {
+      "gloss": "植える・植物",
+      "origin": "ラテン語 planta / plantare",
+      "note": "地面に植えるイメージ。plantation。"
+    },
+    "por": {
+      "gloss": "通路・小さな穴",
+      "origin": "ギリシャ語 poros / ラテン語 porus",
+      "note": "物が通り抜ける小さな穴や通路のイメージ。porous。"
+    },
+    "poster": {
+      "gloss": "後の・後に続く",
+      "origin": "ラテン語 posterus / post",
+      "note": "後に続くもの、未来の人々のイメージ。posterity。"
+    },
+    "varic": {
+      "gloss": "またぐ・道を外れる",
+      "origin": "ラテン語 varicare / varus",
+      "note": "脚をまたいでまっすぐな道から外れるイメージ。prevarication。"
+    },
+    "provinc": {
+      "gloss": "地方・管轄",
+      "origin": "ラテン語 provincia / provincialis",
+      "note": "特定の地方や管轄に属するイメージ。provincial。"
+    },
+    "sequent": {
+      "gloss": "続く",
+      "origin": "ラテン語 sequi / sequens",
+      "note": "後に続く順序のイメージ。sequentially。"
+    },
+    "slender": {
+      "gloss": "細長い・ほっそりした",
+      "origin": "古フランス語 esclendre / アングロ・フレンチ esclendre",
+      "note": "細く長い形のイメージ。slenderly。"
+    },
+    "soc": {
+      "gloss": "鋤先・くぼみ",
+      "origin": "古フランス語 soc / ケルト語 *sukko-",
+      "note": "鋤先や受けるくぼみのイメージ。socket。"
+    },
+    "solv": {
+      "gloss": "ゆるめる・解放する",
+      "origin": "ラテン語 solvere",
+      "note": "束縛や義務を解いて自由にするイメージ。solvency。"
+    },
+    "surreptitious": {
+      "gloss": "秘密の・ひそかな",
+      "origin": "ラテン語 surrepticius / surripere",
+      "note": "密かに奪い去ることから、秘密裏に行う性質へ。surreptitiously。"
+    },
+    "tedi": {
+      "gloss": "退屈・うんざり",
+      "origin": "ラテン語 taedium / taediosus",
+      "note": "疲れやうんざりする感覚。tedious。"
+    },
+    "tenu": {
+      "gloss": "細い・薄い",
+      "origin": "ラテン語 tenuis",
+      "note": "薄く実体に乏しいイメージ。tenuous。"
+    },
+    "tor": {
+      "gloss": "ねじる・苦しめる",
+      "origin": "ラテン語 torquere / tormentum",
+      "note": "ねじることから、苦痛を与えることへ。torment。"
+    },
+    "assum": {
+      "gloss": "引き受ける・思い込む",
+      "origin": "ラテン語 assumere / sumere",
+      "note": "自分のものとして取り上げるイメージ。unassuming。"
+    },
+    "rul": {
+      "gloss": "規則・統制する",
+      "origin": "古フランス語 rule / ラテン語 regula",
+      "note": "規則に従わせるイメージ。unruly。"
+    },
+    "vir": {
+      "gloss": "男性・男らしい",
+      "origin": "ラテン語 vir",
+      "note": "成人男性や男性的な力のイメージ。virile。"
+    },
+    "vivac": {
+      "gloss": "生き生きした・活発な",
+      "origin": "ラテン語 vivax / vivere",
+      "note": "生命力にあふれたイメージ。vivacious。"
+    },
+    "abras": {
+      "gloss": "こする・削る",
+      "origin": "ラテン語 abradere / abrasus",
+      "note": "表面をこすり取るイメージ。abrasion。"
+    },
+    "tain": {
+      "gloss": "保つ・控える",
+      "origin": "ラテン語 tenere / abstinere",
+      "note": "離れた状態を保つイメージ。abstain。tenereの表面形tainとして扱う。"
+    },
+    "tune": {
+      "gloss": "音を合わせる・調和する",
+      "origin": "中英語 tune / アングロ・フレンチ tun",
+      "note": "音を正しく合わせ、調和させるイメージ。attune。"
+    },
+    "tire": {
+      "gloss": "装備・衣服",
+      "origin": "古フランス語 tire / アングロ・フレンチ tir",
+      "note": "身に着ける装備や衣服のイメージ。attire。"
+    },
+    "combust": {
+      "gloss": "焼き尽くす",
+      "origin": "ラテン語 comburere / combustus",
+      "note": "火で完全に焼き尽くすイメージ。combustion。"
+    },
+    "cert": {
+      "gloss": "争う・力を尽くす",
+      "origin": "ラテン語 certare / certus",
+      "note": "力を合わせたり争ったりするイメージ。concerted。"
+    },
+    "condemn": {
+      "gloss": "非難する・有罪とする",
+      "origin": "ラテン語 condemnare / damnare",
+      "note": "罪に定め、非難するイメージ。condemnation。"
+    },
+    "found": {
+      "gloss": "注ぐ・混ぜる",
+      "origin": "ラテン語 fundere / confundere",
+      "note": "物を混ぜ合わせて秩序を崩すイメージ。confounded。"
+    },
+    "contempl": {
+      "gloss": "よく見る・考える",
+      "origin": "ラテン語 contemplari / templum",
+      "note": "注意深く見つめ、思いを巡らすイメージ。contemplative。"
+    },
+    "decim": {
+      "gloss": "十・十分の一に分ける",
+      "origin": "ラテン語 decem / decimare",
+      "note": "十を基準に分けるイメージ。decimation。"
+    },
+    "defer": {
+      "gloss": "運ぶ・譲る",
+      "origin": "ラテン語 deferre",
+      "note": "判断を相手にゆだねるイメージ。deferential。"
+    },
+    "nomin": {
+      "gloss": "名・名づける",
+      "origin": "ラテン語 nomen / nominare",
+      "note": "名前を付けることから、宗派や額面を表す名前へ。denominations。"
+    },
+    "spis": {
+      "gloss": "見る・見下す",
+      "origin": "ラテン語 specere / despicere",
+      "note": "見下ろして判断するイメージ。despised。"
+    },
+    "destitut": {
+      "gloss": "置き去りにする・奪う",
+      "origin": "ラテン語 destituere / destitutus",
+      "note": "支えを失い、何もない状態に置かれるイメージ。destitution。"
+    },
+    "lut": {
+      "gloss": "洗う・溶かす",
+      "origin": "ラテン語 luere / diluere",
+      "note": "水で薄めて濃さを下げるイメージ。dilute。"
+    },
+    "discern": {
+      "gloss": "区別する・見分ける",
+      "origin": "ラテン語 discernere",
+      "note": "分けて見分けるイメージ。discernible。"
+    },
+    "verg": {
+      "gloss": "向く・傾く",
+      "origin": "ラテン語 vergere",
+      "note": "別々の方向へ向かうイメージ。divergence。"
+    },
+    "eloqu": {
+      "gloss": "言葉に表す",
+      "origin": "ラテン語 eloqui",
+      "note": "考えを外へ言葉として出すイメージ。eloquent。"
+    },
+    "bitter": {
+      "gloss": "苦い・苦々しい",
+      "origin": "古英語 biter / bitter",
+      "note": "苦い味から、心の苦々しさへ。embittered。"
+    },
+    "emin": {
+      "gloss": "突き出る・目立つ",
+      "origin": "ラテン語 eminere",
+      "note": "高く突き出て目立つイメージ。eminent。"
+    },
+    "exquisite": {
+      "gloss": "注意深く選び抜く",
+      "origin": "ラテン語 exquirere / exquisitus",
+      "note": "探し出して選び抜かれたイメージ。exquisitely。"
+    },
+    "dit": {
+      "gloss": "引き渡す・与える",
+      "origin": "ラテン語 tradere / dare",
+      "note": "相手へ引き渡すイメージを、extraditeの表面語幹ditへ正規化。"
+    },
+    "frivol": {
+      "gloss": "軽薄な・取るに足りない",
+      "origin": "ラテン語 frivolus",
+      "note": "価値がなく軽いものというイメージ。frivolity。"
+    },
+    "genial": {
+      "gloss": "陽気な・親しみやすい",
+      "origin": "ラテン語 genialis / genius",
+      "note": "人を楽しくさせる性質から、愛想のよさへ。genially。"
+    },
+    "hibernat": {
+      "gloss": "冬・冬を過ごす",
+      "origin": "ラテン語 hibernus / hibernare",
+      "note": "冬の間じっと過ごすイメージ。hibernating。"
+    },
+    "pun": {
+      "gloss": "罰・処罰",
+      "origin": "ラテン語 poena / impunitas",
+      "note": "罰がない状態を表す。impunity。"
+    },
+    "exor": {
+      "gloss": "説得する・動かす",
+      "origin": "ラテン語 exorare / exorabilis",
+      "note": "願って相手を動かすイメージ。inexorably。"
+    },
+    "jubil": {
+      "gloss": "歓喜の叫びをあげる",
+      "origin": "ラテン語 iubilare",
+      "note": "喜びを声に出して叫ぶイメージ。jubilant。"
+    },
+    "fusc": {
+      "gloss": "暗くする・曖昧にする",
+      "origin": "ラテン語 fuscus / fuscare",
+      "note": "暗くして見えにくくするイメージ。obfuscating。"
+    },
+    "mod": {
+      "gloss": "尺度・方法・流行",
+      "origin": "ラテン語 modus",
+      "note": "適切な尺度や方法から、流行の型へ。outmoded。"
+    },
+    "pontific": {
+      "gloss": "教皇・司祭らしく振る舞う",
+      "origin": "ラテン語 pontifex / pontificare",
+      "note": "教皇のように権威をもって話すイメージ。pontificating。"
+    },
+    "butt": {
+      "gloss": "打つ・押し返す",
+      "origin": "古フランス語 boter / ゲルマン語系 buttan",
+      "note": "突いて押し返すイメージ。rebuttals。"
+    },
+    "loc": {
+      "gloss": "場所・置く",
+      "origin": "ラテン語 locus / locare",
+      "note": "ものをある場所へ置くイメージ。relocated。"
+    },
+    "minisc": {
+      "gloss": "心に思い出す",
+      "origin": "ラテン語 minisci / mens",
+      "note": "心の中で再び思い起こすイメージ。reminiscent。"
+    },
+    "nunci": {
+      "gloss": "知らせる・告げる",
+      "origin": "ラテン語 nuntiare / nuntius",
+      "note": "知らせを運び、宣言するイメージ。renunciation。"
+    },
+    "prud": {
+      "gloss": "慎み深い・潔癖な",
+      "origin": "フランス語 prude / 古フランス語 preux",
+      "note": "慎み深さを過度に示すイメージ。prudish。"
+    },
+    "verber": {
+      "gloss": "打つ・むち",
+      "origin": "ラテン語 verber / verberare",
+      "note": "打ち返して反射させるイメージ。reverberating。"
+    },
+    "scandal": {
+      "gloss": "つまずき・非難の原因",
+      "origin": "ギリシャ語 skandalon / ラテン語 scandalum",
+      "note": "人をつまずかせるものから醜聞へ。scandalous。"
+    },
+    "slugg": {
+      "gloss": "怠ける・鈍い",
+      "origin": "中英語 slugge",
+      "note": "動きや心の鈍さのイメージ。sluggish。"
+    },
+    "slumb": {
+      "gloss": "うとうと眠る",
+      "origin": "古英語 sluma / ゲルマン語系 slumen",
+      "note": "軽い眠りを反復するイメージ。slumber。"
+    },
+    "spurious": {
+      "gloss": "偽の・正統でない",
+      "origin": "ラテン語 spurius",
+      "note": "正統な出所をもたないイメージ。spuriously。"
+    },
+    "temer": {
+      "gloss": "盲目的な・無謀な",
+      "origin": "ラテン語 temere / temeritas",
+      "note": "考えずに行動するイメージ。temerity。"
+    },
+    "trepid": {
+      "gloss": "震える・おびえる",
+      "origin": "ラテン語 trepidus / trepidare",
+      "note": "恐怖で震え動くイメージ。trepidation。"
+    },
+    "founded": {
+      "gloss": "基礎を置く・設立する",
+      "origin": "古フランス語 fonder / ラテン語 fundare",
+      "note": "土台を置いて成り立たせるイメージ。unfounded。既存のfound（注ぐ）とは区別する。"
+    },
+    "scath": {
+      "gloss": "傷つける・害する",
+      "origin": "古ノルド語 skaða",
+      "note": "傷や損害を与えるイメージ。unscathed。"
+    },
+    "viol": {
+      "gloss": "力で傷つける・侵害する",
+      "origin": "ラテン語 violare / vis",
+      "note": "力を加えて権利や身体を侵害するイメージ。violations。"
+    },
+    "virtu": {
+      "gloss": "徳・力・卓越",
+      "origin": "ラテン語 virtus / vir",
+      "note": "人としての力や卓越から道徳的な徳へ。virtuous。"
+    },
+    "ami": {
+      "gloss": "友・愛する",
+      "origin": "ラテン語 amicus / amare",
+      "note": "友への愛情から親しみやすさへ。amiable。"
+    },
+    "oner": {
+      "gloss": "負担・重荷",
+      "origin": "ラテン語 onus / oneris",
+      "note": "重荷を負わせるイメージ。onerous。"
+    },
+    "sporad": {
+      "gloss": "散らす・まばらな",
+      "origin": "ギリシャ語 spora / sporadikos",
+      "note": "種をまくように散らばるイメージ。sporadic。"
+    },
+    "congru": {
+      "gloss": "合う・調和する",
+      "origin": "ラテン語 congruere / congruus",
+      "note": "互いに合って調和するイメージ。incongruous。"
+    },
+    "mantle": {
+      "gloss": "外套・覆う",
+      "origin": "古フランス語 mantel / ラテン語 mantellum",
+      "note": "外套で覆うイメージから、装備を取り外す意味へ。dismantled。"
+    },
+    "vil": {
+      "gloss": "価値の低い・卑しい",
+      "origin": "ラテン語 vilis",
+      "note": "価値を低く見るイメージ。reviled。"
+    },
+    "sail": {
+      "gloss": "跳びかかる・攻撃する",
+      "origin": "ラテン語 salire / assalire",
+      "note": "相手へ跳びかかるイメージ。assailed。"
+    },
+    "furtive": {
+      "gloss": "盗みの・こっそりした",
+      "origin": "ラテン語 furtivus / furtum",
+      "note": "人目を避けて盗むイメージから、こっそりした様子へ。furtively。"
+    },
+    "chronic": {
+      "gloss": "時間の・長く続く",
+      "origin": "ギリシャ語 khronos / khronikos",
+      "note": "長い時間にわたるイメージ。chronically。"
+    },
+    "autonomous": {
+      "gloss": "自分の法をもつ・自律した",
+      "origin": "ギリシャ語 autos / nomos",
+      "note": "自分自身の法で動くイメージ。autonomously。"
+    },
+    "equit": {
+      "gloss": "等しい・公平な",
+      "origin": "ラテン語 aequus / aequitas",
+      "note": "偏りなく等しく扱うイメージ。equitably。"
+    },
+    "complex": {
+      "gloss": "ともに編む・組み合わせる",
+      "origin": "ラテン語 complecti / complexus",
+      "note": "複数のものを一緒に編み合わせるイメージ。complexions。"
+    },
+    "tone": {
+      "gloss": "音調・色調",
+      "origin": "ギリシャ語 tonos / ラテン語 tonus",
+      "note": "音や色の基調となる調子。undertones。"
+    },
+    "stitut": {
+      "gloss": "立てる・元に戻す",
+      "origin": "ラテン語 statuere / restituere",
+      "note": "元の位置に立て直すイメージ。restitution。"
+    },
+    "van": {
+      "gloss": "空の・むなしい",
+      "origin": "ラテン語 vanus",
+      "note": "中身が空で価値がないイメージ。vanity。"
+    },
+    "ambigu": {
+      "gloss": "両方向へ動く・曖昧な",
+      "origin": "ラテン語 ambigere / ambiguus",
+      "note": "複数の解釈の間を揺れ動くイメージ。ambiguity。"
+    },
+    "errone": {
+      "gloss": "さまよう・誤った",
+      "origin": "ラテン語 errare / erroneus",
+      "note": "道から外れてさまようイメージから誤りへ。erroneous。"
+    },
+    "pernici": {
+      "gloss": "破壊・死に関する",
+      "origin": "ラテン語 pernicies / perniciosus",
+      "note": "破壊や死をもたらすイメージ。pernicious。"
+    },
+    "phet": {
+      "gloss": "話す・告げる",
+      "origin": "ギリシャ語 phēnai / prophētēs",
+      "note": "前もって語り告げるイメージ。prophets。"
+    },
+    "mir": {
+      "gloss": "見る・反射する",
+      "origin": "フランス語 mirer / ラテン語 mirare",
+      "note": "像を見たり反射させたりするイメージ。mirage。"
+    },
+    "plat": {
+      "gloss": "平らな・広い",
+      "origin": "古フランス語 plat / ギリシャ語 platys",
+      "note": "平らに広がる土地のイメージ。plateau。"
+    },
+    "bucol": {
+      "gloss": "牛飼い・牧歌の",
+      "origin": "ギリシャ語 boukolos / bu kolikos",
+      "note": "牛飼いの生活から田園的なイメージへ。bucolic。"
+    },
+    "accent": {
+      "gloss": "印を付ける・強調する",
+      "origin": "ラテン語 accentus / accentuare",
+      "note": "声にアクセントを置いて目立たせるイメージ。accentuate。"
+    },
+    "hib": {
+      "gloss": "抑える・つかむ",
+      "origin": "ラテン語 habere / inhibere",
+      "note": "中にとどめて押さえるイメージ。inhibit。"
+    },
+    "tens": {
+      "gloss": "伸ばす・張る",
+      "origin": "ラテン語 tendere / praetendere",
+      "note": "前へ伸ばし、そこから主張するイメージ。pretensions。"
+    },
+    "tribul": {
+      "gloss": "打ち砕く・苦しめる",
+      "origin": "ラテン語 tribulum / tribulare",
+      "note": "脱穀板で穀物を打ち砕くイメージから、苦難へつながる。tribulations。"
+    },
+    "aug": {
+      "gloss": "増やす・大きくする",
+      "origin": "ラテン語 augere / augmentare",
+      "note": "量や力を大きくするイメージ。augment。"
+    },
+    "dexter": {
+      "gloss": "右・巧みな",
+      "origin": "ラテン語 dexter / dexteritas",
+      "note": "右手の巧みさから、手先の器用さへつながる。dexterity。"
+    },
+    "arid": {
+      "gloss": "乾いた",
+      "origin": "ラテン語 aridus / ariditas",
+      "note": "水分がなく乾いた状態。aridity。"
+    },
+    "wail": {
+      "gloss": "嘆く・泣き悲しむ",
+      "origin": "古英語・中英語 wail / wailen",
+      "note": "嘆き声を上げる動作。bewail。"
+    },
+    "linqu": {
+      "gloss": "残す・離れる",
+      "origin": "ラテン語 linquere / relinquere",
+      "note": "後に残して離れるイメージから、手放す意味へつながる。relinquish。"
+    },
+    "avaric": {
+      "gloss": "貪欲な",
+      "origin": "ラテン語 avarus / avaritia",
+      "note": "財産を過度に欲しがる性質。avaricious。"
+    },
+    "venture": {
+      "gloss": "危険を冒す・冒険",
+      "origin": "ラテン語 adventura / 古フランス語 aventure",
+      "note": "起こりうることへ踏み出すイメージ。venturesome。"
+    },
+    "summ": {
+      "gloss": "合計・頂点",
+      "origin": "ラテン語 summa / consummare",
+      "note": "全体の頂点・完成に達するイメージ。consummate。"
+    },
+    "amateur": {
+      "gloss": "愛好家・素人",
+      "origin": "フランス語 amateur / ラテン語 amare",
+      "note": "専門職ではなく、好んで行う人。amateurish。"
+    },
+    "ign": {
+      "gloss": "生まれ・性質",
+      "origin": "ラテン語 -gnus / gignere",
+      "note": "生まれつきの性質を表す要素。malignant。"
+    },
+    "neuro": {
+      "gloss": "神経",
+      "origin": "ギリシャ語 neuron / neuro-",
+      "note": "神経や神経系に関するイメージ。neurotic。"
+    },
+    "murk": {
+      "gloss": "暗がり・濁った暗さ",
+      "origin": "古ノルド語 myrkr / 中英語 murk",
+      "note": "光がなく、暗く見えにくい状態。murky。"
+    },
+    "ostraciz": {
+      "gloss": "陶片で追放する",
+      "origin": "ギリシャ語 ostrakizein / ostrakon",
+      "note": "陶片への投票で人を追放するイメージ。ostracizing。"
+    },
+    "bridl": {
+      "gloss": "手綱・抑える",
+      "origin": "古英語 bridel / bridlian",
+      "note": "手綱で馬を制御し、行動を抑えるイメージ。bridling。"
+    },
+    "pulveriz": {
+      "gloss": "粉にする",
+      "origin": "後期ラテン語 pulverizare / pulvis",
+      "note": "粉やほこりにまで細かくするイメージ。pulverizing。"
+    },
+    "reft": {
+      "gloss": "奪う・取り去る",
+      "origin": "古英語 reafian / bereft",
+      "note": "reaveの過去分詞に現れる表面形。奪われた状態へつながる。bereft。"
+    },
+    "plod": {
+      "gloss": "打つ・内側へ押す",
+      "origin": "ラテン語 plodere / implodere",
+      "note": "内側へ打ち込んでつぶすイメージ。implode。"
+    },
+    "crep": {
+      "gloss": "音を立てる・食い違う",
+      "origin": "ラテン語 crepare / discrepere",
+      "note": "音や性質が一致せず、違いが生じるイメージ。discrepancies。"
+    },
+    "add": {
+      "gloss": "加える・付ける",
+      "origin": "ラテン語 addere",
+      "note": "何かを別のものへ付け加えるイメージ。addendum。"
+    },
+    "monstr": {
+      "gloss": "示す・怪物",
+      "origin": "ラテン語 monstrum / monere",
+      "note": "異常なものが警告やしるしとして現れるイメージ。monstrosity。"
+    },
+    "calibr": {
+      "gloss": "目盛り・規格を調整する",
+      "origin": "フランス語 calibre / ラテン語系",
+      "note": "基準となる目盛りや規格に合わせるイメージ。calibrated。"
+    },
+    "paint": {
+      "gloss": "塗る・描く",
+      "origin": "ラテン語 pingere / 古フランス語 peint",
+      "note": "表面に色を付けて描くイメージ。repainted。"
+    },
+    "spers": {
+      "gloss": "散らす・広げる",
+      "origin": "ラテン語 spargere / dispersus",
+      "note": "あちこちへ撒き散らすイメージ。dispersed。"
+    },
+    "nigr": {
+      "gloss": "黒い・暗い",
+      "origin": "ラテン語 niger / denigrare",
+      "note": "黒くすることから、価値を暗く低く見る意味へつながる。denigrated。"
+    },
+    "struct": {
+      "gloss": "組み立てる・建てる",
+      "origin": "ラテン語 struere / obstructus",
+      "note": "積み上げて構造を作るイメージ。obstructed。"
+    },
+    "stealth": {
+      "gloss": "盗み・ひそかな動き",
+      "origin": "古英語 stælþ / steal",
+      "note": "人目を避けて盗むような動き。stealthily。"
+    },
+    "part": {
+      "gloss": "分ける・部分",
+      "origin": "ラテン語 pars / partire",
+      "note": "全体を分けた一部分、または分ける動作。impartially。"
+    },
+    "arbitr": {
+      "gloss": "判断する・裁定する",
+      "origin": "ラテン語 arbitrari / arbiter",
+      "note": "第三者として判断を下すイメージ。arbitration。"
+    },
+    "obliqu": {
+      "gloss": "斜め・曲がった",
+      "origin": "ラテン語 obliquus",
+      "note": "まっすぐでなく斜めに向くイメージ。obliquity。"
+    },
+    "rust": {
+      "gloss": "田舎・農村",
+      "origin": "ラテン語 rus / rusticus",
+      "note": "都市に対する田園や農村のイメージ。rustic。"
+    },
+    "pastor": {
+      "gloss": "羊飼い・牧歌",
+      "origin": "ラテン語 pastor / pascere",
+      "note": "羊を養う牧者から、田園的・牧歌的なイメージへ。pastoral。"
+    },
+    "delet": {
+      "gloss": "破壊する・有害な",
+      "origin": "ギリシャ語 dēlētēr / dēlētērios",
+      "note": "破壊するもの、害を与えるもののイメージ。deleterious。"
+    },
+    "stagn": {
+      "gloss": "止まる・よどむ",
+      "origin": "ラテン語 stagnare / stagnum",
+      "note": "水が流れずよどむことから、動きが止まる意味へ。stagnation。"
+    },
+    "soci": {
+      "gloss": "仲間・結び付く",
+      "origin": "ラテン語 socius / associare",
+      "note": "仲間として結び付くイメージ。disassociate。"
+    },
+    "vindic": {
+      "gloss": "主張する・正当化する",
+      "origin": "ラテン語 vindicare / vindex",
+      "note": "権利を主張し、正しいものとして守るイメージ。vindicate。"
+    },
+    "path": {
+      "gloss": "感じる・苦しむ",
+      "origin": "ギリシャ語 pathos / sympatheia",
+      "note": "他者と感情や苦痛をともに感じるイメージ。sympathies。"
+    },
+    "riv": {
+      "gloss": "流れ・流れ出る",
+      "origin": "ラテン語 rivus / derivare",
+      "note": "流れ出たものから、由来や引き出す意味へ。derived。"
+    },
+    "loin": {
+      "gloss": "遠い・遠くへ",
+      "origin": "古フランス語 loing / ラテン語 longe",
+      "note": "遠くへ取り去るイメージ。purloined。"
+    },
+    "bed": {
+      "gloss": "置く・埋め込む場所",
+      "origin": "古英語 bedd / embed",
+      "note": "何かを置き、固定する土台や場所。embedded。"
+    },
+    "cavern": {
+      "gloss": "洞窟・空洞",
+      "origin": "ラテン語 caverna / cavus",
+      "note": "内部が空洞になった大きな穴。cavernous。"
+    },
+    "rang": {
+      "gloss": "整える・並べる",
+      "origin": "フランス語 ranger / deranger",
+      "note": "整った位置から外すイメージ。deranged。"
+    },
+    "lic": {
+      "gloss": "誘う・引き寄せる",
+      "origin": "ラテン語 lacere / delicere",
+      "note": "人を引き寄せる魅力から、繊細で扱いに注意が要る意味へ。delicate。"
+    },
+    "hedon": {
+      "gloss": "快楽・喜び",
+      "origin": "ギリシャ語 hēdonē",
+      "note": "快楽や喜びを重視するイメージ。hedonistic。"
+    },
+    "moll": {
+      "gloss": "柔らかい・穏やかにする",
+      "origin": "ラテン語 mollis / mollificare",
+      "note": "硬さをなくして柔らかくするイメージ。mollify。"
+    },
+    "tard": {
+      "gloss": "遅い・遅らせる",
+      "origin": "ラテン語 tardus / retardare",
+      "note": "動きを遅くするイメージ。retard。"
+    },
+    "croach": {
+      "gloss": "鉤・引っ掛ける",
+      "origin": "古フランス語 encrochier / 古ノルド語 krokr",
+      "note": "鉤で引っ掛けて取り込むイメージから、徐々に侵食する意味へ。encroach。"
+    },
+    "penur": {
+      "gloss": "欠乏・貧困",
+      "origin": "ラテン語 penuria",
+      "note": "必要なものが足りない状態から、極端な倹約へつながる。penurious。"
+    },
+    "ventur": {
+      "gloss": "冒険・危険を冒す",
+      "origin": "ラテン語 adventura / 古フランス語 aventure",
+      "note": "起こりうる危険へ踏み出すイメージ。adventurous。"
+    },
+    "master": {
+      "gloss": "主人・熟達する",
+      "origin": "古フランス語 maistre / ラテン語 magister",
+      "note": "支配する主人から、技術を完全に身につけた人へ。masterful。"
+    },
+    "eager": {
+      "gloss": "鋭い・熱望する",
+      "origin": "古フランス語 aigre / ラテン語 acer",
+      "note": "鋭く激しい性質から、強く望む意味へ。eagerness。"
+    },
+    "vuls": {
+      "gloss": "引き裂く・引き離す",
+      "origin": "ラテン語 vellere / revulsus",
+      "note": "何かを引きはがすイメージから、強い嫌悪による後退へ。revulsion。"
+    },
+    "sili": {
+      "gloss": "跳ね返る・飛び戻る",
+      "origin": "ラテン語 salire / resilire",
+      "note": "後ろへ跳ね戻るイメージから、困難から回復する力へ。resilience。"
+    },
+    "tribut": {
+      "gloss": "割り当てる・与える",
+      "origin": "ラテン語 tribuere / attribuere",
+      "note": "何かを相手へ割り当てて与えるイメージ。attribute。"
+    },
+    "ter": {
+      "gloss": "おびえさせる",
+      "origin": "ラテン語 terrere / deterrere",
+      "note": "恐怖を与えて思いとどまらせるイメージ。deter。"
+    },
+    "slack": {
+      "gloss": "ゆるい・たるませる",
+      "origin": "古英語 slæc / slack",
+      "note": "張りつめていない状態から、力や速度を弱める意味へ。slacken。"
+    },
+    "tegr": {
+      "gloss": "完全な・一体にする",
+      "origin": "ラテン語 integer / integrare",
+      "note": "欠けていない完全な状態へまとめるイメージ。integrate。"
+    },
+    "thrift": {
+      "gloss": "繁栄・倹約",
+      "origin": "古ノルド語 þrift / thrive",
+      "note": "繁栄することから、資源を節約してうまく暮らすことへ。thrifty。"
+    },
+    "dent": {
+      "gloss": "歯・切れ込み",
+      "origin": "ラテン語 dens / dentis",
+      "note": "歯の形に切り込むイメージから、字下げやへこみへ。indent(ed)。"
+    },
+    "agit": {
+      "gloss": "動かす・揺さぶる",
+      "origin": "ラテン語 agitare / agere",
+      "note": "前後に動かすことから、心や社会を揺さぶる状態へ。agitation。"
+    },
+    "ascens": {
+      "gloss": "登る・上へ進む",
+      "origin": "ラテン語 ascendere / ascensio",
+      "note": "上へ登る動作を表す表面幹。ascensionの上昇・即位につながる。"
+    },
+    "pand": {
+      "gloss": "広げる・伸ばす",
+      "origin": "ラテン語 pandere",
+      "note": "折りたたまれたものを外へ広げるイメージ。expand。"
+    },
+    "qual": {
+      "gloss": "どのような・性質",
+      "origin": "ラテン語 qualis",
+      "note": "性質を与え、資格づける意味へ。qualify。"
+    },
+    "occup": {
+      "gloss": "占める・つかむ",
+      "origin": "ラテン語 occupare / capere",
+      "note": "場所や時間をつかんで占めるイメージ。occupation。"
+    },
+    "verb": {
+      "gloss": "言葉・話す",
+      "origin": "ラテン語 verbum",
+      "note": "前へ出された言葉から、ことわざへ。proverb。"
+    },
+    "flat": {
+      "gloss": "平らな・広げる",
+      "origin": "古ノルド語 flatr",
+      "note": "平らな状態から、平らにする動詞へ。flatten。"
+    },
+    "mise": {
+      "gloss": "送る・言い送る",
+      "origin": "ラテン語 mittere / promissum",
+      "note": "promiseに現れる表面幹。前もって言い送るイメージ。"
+    },
+    "rest": {
+      "gloss": "立ち止まる・残る",
+      "origin": "ラテン語 restare / stare",
+      "note": "arrestに現れる表面幹。英語rest（休む）との同一視はしない。"
+    },
+    "appear": {
+      "gloss": "現れる・見える",
+      "origin": "ラテン語 apparere / 古フランス語 aparoir",
+      "note": "見える状態になること。disappearではこの基体が否定される。"
+    },
+    "cent": {
+      "gloss": "新しい・新鮮な",
+      "origin": "ラテン語 recens / PIE *ken-",
+      "note": "recentに現れる表面幹。通貨のcent（百）とは別で、新鮮・新しい意味。"
+    },
+    "necess": {
+      "gloss": "避けられない・必要な",
+      "origin": "ラテン語 necesse / necessarius",
+      "note": "退く余地がない状態から、必要な・必然的な意味へ。necessarily。"
+    },
+    "surpris": {
+      "gloss": "不意に捕える・驚かせる",
+      "origin": "古フランス語 surprise / surprendre",
+      "note": "不意に捕えることから、驚かせる・意外なことへ。surprisingly。"
+    },
+    "faith": {
+      "gloss": "信頼・忠実さ",
+      "origin": "ラテン語 fides / fidere",
+      "note": "信頼や誠実さを満たす性質から、忠実にという副詞へ。faithfully。"
+    },
+    "pollut": {
+      "gloss": "汚す・汚染する",
+      "origin": "ラテン語 polluere / pollutio",
+      "note": "汚すことから、環境などを汚染することへ。pollution。"
+    },
+    "mix": {
+      "gloss": "混ぜる",
+      "origin": "ラテン語 mixtus / PIE *meik-",
+      "note": "異なるものを一つに混ぜるイメージ。mixture。"
+    },
+    "ill": {
+      "gloss": "悪い・病気の",
+      "origin": "古ノルド語 illr",
+      "note": "悪い状態から、健康でない状態へ。illness。"
+    },
+    "judg": {
+      "gloss": "判断する・裁く",
+      "origin": "ラテン語 iudicare / 古フランス語 juger",
+      "note": "法や事実について判断することから、判断・判決へ。judgment。"
+    },
+    "elast": {
+      "gloss": "伸びる・戻る",
+      "origin": "ギリシャ語 elastos / elaunein",
+      "note": "引き伸ばしたものが戻る性質。elastic。"
+    },
+    "up": {
+      "gloss": "上・上へ",
+      "origin": "古英語 up",
+      "note": "上の位置を表す語から、より上のupperへ。"
+    },
+    "ist": {
+      "gloss": "立つ・現れる",
+      "origin": "ラテン語 sistere / existere",
+      "note": "前へ立ち現れる表面幹。exist。"
+    },
+    "sid": {
+      "gloss": "座る・前に座る",
+      "origin": "ラテン語 sedere / praesidere",
+      "note": "前に座って人を導くことから、presidentの地位へ。"
+    },
+    "pan": {
+      "gloss": "牧神Pan・恐怖を起こすもの",
+      "origin": "ギリシャ語 Pan / panikos",
+      "note": "panicのPanは牧神の名で、台所用品のpanとは別。Panが起こすとされた突然の恐怖につながる。"
+    },
+    "view": {
+      "gloss": "見る・調べる",
+      "origin": "ラテン語 videre / 古フランス語 veue",
+      "note": "見て確認する基体。reviewでは再び見る意味になる。"
+    },
+    "loyal": {
+      "gloss": "忠実な・誠実な",
+      "origin": "ラテン語 legalis / 古フランス語 loial",
+      "note": "法にかなった、誠実な性質から忠実なという意味へ。loyalty。"
+    },
+    "weal": {
+      "gloss": "幸福・繁栄",
+      "origin": "古英語 wela / 西ゲルマン語系 *welon-",
+      "note": "well-beingや繁栄を表す表面幹。wealthでは抽象名詞接尾辞と結び付く。"
+    },
+    "ignor": {
+      "gloss": "知らない・気づかない",
+      "origin": "ラテン語 ignorare / ignorantia",
+      "note": "ignoranceに現れる表面幹。深い語源ではin-とgnarusの関係があるが、表示はignor＋-anceとする。"
+    },
+    "pover": {
+      "gloss": "貧しい・乏しい",
+      "origin": "ラテン語 pauper / 古フランス語 povre",
+      "note": "povertyに現れるフランス語由来の表面幹。poorと同系だが、綴りの変化を経ている。"
+    },
+    "thank": {
+      "gloss": "感謝・よい思い",
+      "origin": "古英語 þancian / ゲルマン語系 *thankoz",
+      "note": "感謝や思いを表す基体。thankful・thankfullyの基礎になる。"
+    },
+    "tradition": {
+      "gloss": "受け渡された教え・慣習",
+      "origin": "ラテン語 traditio / tradere",
+      "note": "後世へ手渡されたものを表す基体。traditionallyでは形容詞・副詞接尾辞が続く。"
+    },
+    "law": {
+      "gloss": "法律・定め",
+      "origin": "古ノルド語 lagu / ゲルマン語系 *lagam",
+      "note": "定められた規則を表す基体。lawyerはlawに職業を表す接尾辞が付いた形。"
+    },
+    "prior": {
+      "gloss": "前の・先の",
+      "origin": "ラテン語 prior / pri",
+      "note": "時間や順序で前にあることから、重要度が先に置かれる優先へ。priority。"
+    },
+    "tend": {
+      "gloss": "伸ばす・向ける",
+      "origin": "ラテン語 tendere",
+      "note": "ある方向へ伸びたり向かったりするイメージ。tendency。"
+    },
+    "chemic": {
+      "gloss": "化学・錬金術の",
+      "origin": "中世ラテン語 alchimicus / 古フランス語 chimique",
+      "note": "alchemyに由来するchemicに-alが付き、化学に関する意味になる。chemical。"
+    },
+    "bare": {
+      "gloss": "むき出しの・わずかな",
+      "origin": "古英語 bær / ゲルマン語系 *bazaz",
+      "note": "覆いがない状態から、余分なものがほとんどない、かろうじての意味へ。barely。"
+    },
+    "secret": {
+      "gloss": "隠された・秘密の",
+      "origin": "ラテン語 secretus / secernere",
+      "note": "他から分けて隠された状態を表す基体。secretly。"
+    },
+    "stat": {
+      "gloss": "立つ・立てる",
+      "origin": "ラテン語 stare / statio",
+      "note": "立ってとどまる場所や位置のイメージ。station。"
+    },
+    "libr": {
+      "gloss": "本・紙",
+      "origin": "ラテン語 liber / librarium",
+      "note": "本や書物を収めるもののイメージ。library。"
+    },
+    "creat": {
+      "gloss": "生み出す",
+      "origin": "ラテン語 creare / creatio",
+      "note": "何かを作り、存在させるイメージ。creation。"
+    },
+    "fisc": {
+      "gloss": "国庫・財政",
+      "origin": "ラテン語 fiscus",
+      "note": "国の金庫や公的な財源のイメージ。fiscal。"
+    },
+    "vari": {
+      "gloss": "変化・多様",
+      "origin": "ラテン語 varius / variare",
+      "note": "異なる状態や変化を表すイメージ。various。"
+    },
+    "medic": {
+      "gloss": "医療・治す",
+      "origin": "ラテン語 medicus / mederi",
+      "note": "病気を治療する人や行為のイメージ。medical。"
+    },
+    "stud": {
+      "gloss": "学ぶ・熱心に取り組む",
+      "origin": "ラテン語 studere / studium",
+      "note": "何かに熱心に取り組み、学ぶイメージ。student。"
+    },
+    "profess": {
+      "gloss": "公言する・宣言する",
+      "origin": "ラテン語 profiteri / professus",
+      "note": "公に言い表すことから、職業や専門性を表すイメージ。professional。"
+    },
+    "doc": {
+      "gloss": "教える・示す",
+      "origin": "ラテン語 docere",
+      "note": "知識を教え、分からせるイメージ。doctor。"
+    },
+    "mov": {
+      "gloss": "動かす",
+      "origin": "ラテン語 movere",
+      "note": "前へ動かし、進めるイメージ。promoteではmotの形で現れる。",
+      "variants": ["mot"]
+    },
+    "tot": {
+      "gloss": "全部・全体",
+      "origin": "ラテン語 totus",
+      "note": "一つ残らず全体を表すイメージ。total。"
+    },
+    "funct": {
+      "gloss": "果たす・実行する",
+      "origin": "ラテン語 fungi / functus",
+      "note": "役割や仕事を果たすイメージ。function。"
+    },
+    "strength": {
+      "gloss": "力・強さ",
+      "origin": "古英語 strengþu / ゲルマン語系 *strangitho",
+      "note": "強い状態や力を表す基体。strengthen。"
+    },
+    "grow": {
+      "gloss": "成長する・増える",
+      "origin": "古英語 growan / ゲルマン語系 *gro-",
+      "note": "大きくなり、発達するイメージ。growth。"
+    },
+    "doctor": {
+      "gloss": "教師・博士",
+      "origin": "ラテン語 doctor / docere",
+      "note": "教える人、学識を持つ人のイメージ。doctoral。"
+    },
+    "quick": {
+      "gloss": "生き生きした・速い",
+      "origin": "古英語 cwic / ゲルマン語系 *kwikwaz",
+      "note": "生命力があり、動きが速いイメージ。quickly。"
+    },
+    "suggest": {
+      "gloss": "示唆する・提案する",
+      "origin": "ラテン語 suggerere / suggestus",
+      "note": "考えを心の前に出して示すイメージ。suggestion。"
+    },
+    "fortun": {
+      "gloss": "運・運命",
+      "origin": "ラテン語 fortuna",
+      "note": "運命や幸運を表す基体。unfortunately。"
+    },
+    "awe": {
+      "gloss": "畏怖・深い敬意",
+      "origin": "古ノルド語 agi / ゲルマン語系 *agiz-",
+      "note": "恐れと敬意が入り混じる感情。awfulではawの形で現れる。",
+      "variants": ["aw"]
+    },
+    "brave": {
+      "gloss": "勇敢な",
+      "origin": "フランス語 brave / イタリア語 bravo",
+      "note": "勇気を示す基体。bravely。"
+    },
+    "hard": {
+      "gloss": "固い・困難な",
+      "origin": "古英語 heard / ゲルマン語系 *hardu-",
+      "note": "固さや努力の大きさを表す基体。hardly。"
+    },
+    "seri": {
+      "gloss": "重い・重要な",
+      "origin": "ラテン語 serius / seriosus",
+      "note": "重みがあり重要であるイメージ。serious。"
+    },
+    "stead": {
+      "gloss": "場所・安定",
+      "origin": "古英語 stede / ゲルマン語系 *stadi-",
+      "note": "一定の場所にしっかり立つイメージ。steady。"
+    },
+    "care": {
+      "gloss": "心配・注意",
+      "origin": "古英語 caru / cearu・ゲルマン語系 *karō",
+      "note": "心にかかる心配や、そこから生じる注意のイメージ。careful。"
+    },
+    "vey": {
+      "gloss": "見る・調べる",
+      "origin": "古フランス語 veoir / ラテン語 videre",
+      "note": "surveyではフランス語経由のveyの形で現れる。"
+    },
+    "fail": {
+      "gloss": "欠ける・失敗する",
+      "origin": "古フランス語 falir / ラテン語 fallere",
+      "note": "目的を達成できず欠けるイメージ。failure。"
+    },
+    "loud": {
+      "gloss": "音が大きい",
+      "origin": "古英語 hlud / ゲルマン語系 *hludaz",
+      "note": "聞こえるほど音が大きいイメージ。loudly。"
+    },
+    "guilt": {
+      "gloss": "罪・有罪",
+      "origin": "古英語 gylt",
+      "note": "犯罪や道徳的な落ち度。guiltyでは現代綴りのguiltの形で現れる。"
+    },
+    "absolute": {
+      "gloss": "制限のない・完全な",
+      "origin": "ラテン語 absolutus / absolvere",
+      "note": "束縛から解かれ、条件に制限されないイメージ。absolutely。"
+    },
+    "rare": {
+      "gloss": "まれな・薄い",
+      "origin": "ラテン語 rarus / 古フランス語 rer",
+      "note": "密度が低く、数が少ないイメージ。rarely。"
+    },
+    "separate": {
+      "gloss": "分ける・離す",
+      "origin": "ラテン語 separare / 古フランス語 severer",
+      "note": "互いに離して別々にするイメージ。separately。"
+    },
+    "wood": {
+      "gloss": "木・木材",
+      "origin": "古英語 wudu / ゲルマン語系 *widu-",
+      "note": "木や木材を表す基体。wooden。"
+    },
+    "bor": {
+      "gloss": "穴をあける・退屈にする",
+      "origin": "古英語 borian / bore",
+      "note": "boringではboreの語末eが落ちた表面形。穴をあける意味から退屈にさせる意味も生じた。"
+    },
+    "tempt": {
+      "gloss": "試す・試みる",
+      "origin": "ラテン語 temptare / tentare",
+      "note": "試してみる、働きかけるイメージ。attempt。"
+    },
+    "gage": {
+      "gloss": "質・担保",
+      "origin": "古フランス語 gage / ゲルマン語系 *wadiare",
+      "note": "約束の担保を置くイメージ。engage。"
+    },
+    "assign": {
+      "gloss": "割り当てる・印を付ける",
+      "origin": "ラテン語 assignare / 古フランス語 assigner",
+      "note": "対象に印を付けて割り当てるイメージ。assignment。"
+    },
+    "afford": {
+      "gloss": "成し遂げる・余裕がある",
+      "origin": "古英語 geforðian / 中英語 aforth",
+      "note": "物事を前へ進めて成し遂げることから、費用を負担できる余裕の意味へ広がった。affordable。"
+    },
+    "color": {
+      "gloss": "色・外観",
+      "origin": "ラテン語 color / 古フランス語 color",
+      "note": "見える色や外観を表す基体。colorful。"
+    },
+    "lug": {
+      "gloss": "ゆっくり引きずる",
+      "origin": "スカンジナビア語系 lugga / 英語 lug",
+      "note": "重い物を力をかけて引きずる動作。luggage。"
+    },
+    "temper": {
+      "gloss": "ほどよく混ぜる・調整する",
+      "origin": "ラテン語 temperare",
+      "note": "物を適切な割合に混ぜ、極端さを調整するイメージ。temperature。"
+    },
+    "fam": {
+      "gloss": "話す・評判",
+      "origin": "ラテン語 fama / インド・ヨーロッパ祖語 *bha-",
+      "note": "人々に語られることから評判・名声につながる基体。famous。"
+    },
+    "gar": {
+      "gloss": "保護する・置く",
+      "origin": "古フランス語 garer / garir、ゲルマン語系 *war-",
+      "note": "車や船を保護して置くイメージ。garageでは表面形garとして現れる。"
+    },
+    "pair": {
+      "gloss": "準備する・整える",
+      "origin": "ラテン語 parare",
+      "note": "repairではラテン語parareに対応する表面形pairとして表示する。英語pair（二つ組）とは別の語源。"
+    },
+    "entr": {
+      "gloss": "入る",
+      "origin": "古フランス語 entrer、ラテン語 intrare",
+      "note": "中へ入る動作。entranceでは表面形entrとして現れる。"
+    },
+    "count": {
+      "gloss": "数える・計算する",
+      "origin": "ラテン語 computare / 古フランス語 compter",
+      "note": "数え上げて計算するイメージ。discountではdis-と結び付く。"
+    },
+    "fold": {
+      "gloss": "折る・曲げる",
+      "origin": "古英語 faldan / ゲルマン語系 *falthan",
+      "note": "物を折り重ねる動作。folderは「折るもの・折る人」から書類入れへ発達した。"
+    },
+    "appoint": {
+      "gloss": "定める・整える",
+      "origin": "古フランス語 apointer / à point",
+      "note": "事柄を一点に定めて整えるイメージ。appointmentの予定・約束につながる。"
+    },
+    "mess": {
+      "gloss": "送る・伝える",
+      "origin": "ラテン語 missus / mittere、古フランス語 message",
+      "note": "messageでは古フランス語の表面語幹messとして表示する。英語mess（混乱）とは別の語源。"
+    },
+    "visit": {
+      "gloss": "訪れる・見に行く",
+      "origin": "ラテン語 visitare / 古フランス語 visiter",
+      "note": "人や場所を訪ねて見る動作。visitorは訪れる人。"
+    },
+    "priv": {
+      "gloss": "分ける・個人のものにする",
+      "origin": "ラテン語 privare / privus",
+      "note": "公のものから分けられた個人の領域というイメージ。private。"
+    },
+    "pati": {
+      "gloss": "耐える・苦しむ",
+      "origin": "ラテン語 pati",
+      "note": "苦痛や困難に耐える動作。patientは耐えられる性質を表す。"
+    },
+    "curi": {
+      "gloss": "注意深く尋ねる・知りたがる",
+      "origin": "ラテン語 curiosus / cura",
+      "note": "注意を向けて知ろうとする性質。curiousでは表面形curiとして現れる。"
+    },
+    "use": {
+      "gloss": "使う・役立てる",
+      "origin": "ラテン語 usus / uti、古フランス語 us",
+      "note": "何かを目的のために使うこと。usefulは使う価値があることを表す。"
+    },
+    "avail": {
+      "gloss": "役立つ・有効である",
+      "origin": "古フランス語 aveilir / ラテン語 valere",
+      "note": "価値や効力があって役立つこと。availableは利用できる状態を表す。"
+    },
+    "us": {
+      "gloss": "使用・習慣",
+      "origin": "ラテン語 usus / uti",
+      "note": "使うことや繰り返された習慣。usualでは表面形usとして現れる。"
+    },
+    "place": {
+      "gloss": "置く・場所を定める",
+      "origin": "古フランス語 placer / ラテン語 platea",
+      "note": "特定の場所に置き、位置を定めること。replaceは元の位置へ置くこと。"
+    },
+    "commend": {
+      "gloss": "託す・ほめる",
+      "origin": "ラテン語 commendare",
+      "note": "相手に託し、価値あるものとして示すこと。recommendは強く勧めること。"
+    },
+    "tect": {
+      "gloss": "覆う・隠す",
+      "origin": "ラテン語 tegere",
+      "note": "前に覆いを置いて守るイメージ。protectではtectとして現れる。"
+    },
+    "turn": {
+      "gloss": "回す・向きを変える",
+      "origin": "古フランス語 torner / ラテン語 tornare",
+      "note": "向きを変えて戻す動作。returnは元へ向きを戻すこと。"
+    },
+    "pare": {
+      "gloss": "整える・準備する",
+      "origin": "古フランス語 parer / ラテン語 parare",
+      "note": "前もって整え、使える状態にすること。prepareではpareとして現れる。"
+    },
+    "donat": {
+      "gloss": "与える・贈る",
+      "origin": "ラテン語 donare / donum",
+      "note": "贈る動作を表す語幹。donationではdonatとして現れ、donateは後の逆成。"
+    },
+    "charit": {
+      "gloss": "愛・慈善",
+      "origin": "ラテン語 caritas / 古フランス語 charité",
+      "note": "愛や慈善を表す語幹。charityではcharitとして現れる。"
+    },
+    "apart": {
+      "gloss": "分けられた・離れた",
+      "origin": "イタリア語 appartimento / appartere / ラテン語 pars",
+      "note": "分けられた場所というイメージ。apartmentではapartとして表面化する。"
+    },
+    "tour": {
+      "gloss": "巡回する・旅行する",
+      "origin": "フランス語 tour",
+      "note": "見物しながら巡る旅行。touristは旅行する人を表す。"
+    },
+    "elevat": {
+      "gloss": "持ち上げる・高くする",
+      "origin": "ラテン語 elevare",
+      "note": "上へ持ち上げる動作。elevatorではelevatとして現れる。"
+    },
+    "danger": {
+      "gloss": "危険・害を及ぼす力",
+      "origin": "古フランス語 danger",
+      "note": "害を及ぼす力や危険。dangerousの基体。"
+    },
+    "peace": {
+      "gloss": "平和・穏やかさ",
+      "origin": "古フランス語 pais / ラテン語 pacem",
+      "note": "争いのない穏やかな状態。peacefulの基体。"
+    },
+    "comfort": {
+      "gloss": "慰め・安楽",
+      "origin": "古フランス語 conforter / ラテン語 confortare",
+      "note": "力を与えて慰めることから、心身の快適さへつながる。comfortableの基体。"
+    },
+    "cover": {
+      "gloss": "覆う・隠す",
+      "origin": "ラテン語 cooperire / 古フランス語 covrir",
+      "note": "覆いをかけて隠す動作。discoverではdis-によって覆いを取る意味になる。"
+    },
+    "clin": {
+      "gloss": "横たわる・傾く",
+      "origin": "ギリシャ語 klinein / klinē",
+      "note": "横たわる場所や傾きに関わる語根。clinicでは診療の場を表す語に現れる。"
+    },
+    "drive": {
+      "gloss": "動かす・駆り立てる",
+      "origin": "古英語 drifan / ゲルマン祖語 *dreibanan",
+      "note": "人や物を動かし、前へ進ませる動作。driverは運転する人。"
+    },
+    "dam": {
+      "gloss": "損害・害",
+      "origin": "古フランス語 dam / ラテン語 damnum",
+      "note": "失われたものや害を表す語幹。damageではdamとして現れる。"
+    },
+    "ptom": {
+      "gloss": "落ちる・起こる",
+      "origin": "ギリシャ語 piptein / ptōma",
+      "note": "落ちる・起こることを表す語幹。symptomではsyn-の後のptomとして現れる。"
+    },
+    "fact": {
+      "gloss": "する・作る",
+      "origin": "ラテン語 facere / factus",
+      "note": "行為や制作を表す語根。factoryでは物を作る場所へつながる。"
+    },
+    "equip": {
+      "gloss": "備える・装備する",
+      "origin": "古フランス語 esquiper / フランス語 équiper",
+      "note": "目的のために必要なものを備える動作。equipmentの基体。"
+    },
+    "work": {
+      "gloss": "働く・作業する",
+      "origin": "古英語 wyrcan / ゲルマン祖語 *wurkjanan",
+      "note": "努力して作業する動作。workerは働く人。"
+    },
+    "regul": {
+      "gloss": "規則・定規",
+      "origin": "ラテン語 regula",
+      "note": "基準となる線や規則。regularでは規則に沿った状態を表す。"
+    },
+    "success": {
+      "gloss": "うまく進む・成功",
+      "origin": "ラテン語 succedere / successus",
+      "note": "後に続いてうまく進むこと。successfulの基体。"
+    },
+    "health": {
+      "gloss": "全体・健康",
+      "origin": "古英語 hælþ / ゲルマン祖語 *hailitho",
+      "note": "欠けるところなく健全な状態。healthyの基体。"
+    },
+    "tempor": {
+      "gloss": "時間・季節",
+      "origin": "ラテン語 tempus / temporis",
+      "note": "時間の長さや季節。temporaryでは限られた時間を表す。"
+    },
+    "valu": {
+      "gloss": "価値をつける・価値",
+      "origin": "古フランス語 valuer / ラテン語 valere",
+      "note": "価値や有用性を表す語幹。valuableではvaluとして現れる。"
+    },
+    "nounce": {
+      "gloss": "知らせる・報告する",
+      "origin": "ラテン語 nuntiare / nuntius",
+      "note": "知らせを伝える動作。announceでは語頭の同化後のnounceとして現れる。"
+    },
+    "get": {
+      "gloss": "つかむ・得る",
+      "origin": "古ノルド語 geta / ゲルマン祖語 *getan",
+      "note": "つかみ取ること。forgetではfor-によって「つかみ損なう」意味へつながる。"
+    },
+    "stock": {
+      "gloss": "木の幹・かたまり",
+      "origin": "古英語 stocc / ゲルマン祖語 *stauk-",
+      "note": "木の幹や太いかたまり。stockyでは太くずんぐりした形へつながる。"
+    },
+    "cheer": {
+      "gloss": "表情・元気",
+      "origin": "古フランス語 chiere / 後期ラテン語 cara",
+      "note": "顔の表情から心の元気・陽気さへ意味が広がった。cheeryの基体。"
+    },
+    "ambit": {
+      "gloss": "周りを歩く・活動範囲",
+      "origin": "ラテン語 ambire / ambitio",
+      "note": "周囲を回って求める動作から、野心や活動範囲へつながる。ambitiousではambitとして現れる。"
+    },
+    "aud": {
+      "gloss": "聞く・知覚する",
+      "origin": "ラテン語 audire",
+      "note": "音を聞き取る動作。audibleではaudとして現れる。"
+    },
+    "frag": {
+      "gloss": "折る・壊す",
+      "origin": "ラテン語 frangere / fragmentum",
+      "note": "壊れて分かれた小片。fragmentではfragとして現れる。"
+    },
+    "appeal": {
+      "gloss": "呼びかける・魅力",
+      "origin": "ラテン語 appellare / 古フランス語 apeler",
+      "note": "相手へ呼びかけることから、心を引き付ける魅力へ意味が広がった。"
+    },
+    "timid": {
+      "gloss": "恐れる・臆病な",
+      "origin": "ラテン語 timere / timidus",
+      "note": "恐れやすい性質。timidlyではtimidとして現れる。"
+    },
+    "clar": {
+      "gloss": "明るい・明確な",
+      "origin": "ラテン語 clarus",
+      "note": "光や音が明瞭であること。clarifyではclarとして現れる。"
+    },
+    "toler": {
+      "gloss": "耐える・支える",
+      "origin": "ラテン語 tolerare",
+      "note": "重さや苦痛を耐え忍ぶ動作。tolerateではtolerとして現れる。"
+    },
+    "humili": {
+      "gloss": "低くする・地面",
+      "origin": "ラテン語 humilis / humus",
+      "note": "地面に低くするイメージ。humiliateではhumiliとして現れる。"
+    },
+    "commod": {
+      "gloss": "適した・便利な",
+      "origin": "ラテン語 commodus",
+      "note": "具合がよく適していること。accommodateではcommodとして現れる。"
+    },
+    "bliss": {
+      "gloss": "幸福・喜び",
+      "origin": "古英語 blis / ゲルマン祖語 *blithsjo",
+      "note": "完全な幸福や喜び。blissfulの基体。"
+    },
+    "peril": {
+      "gloss": "危険・試み",
+      "origin": "古フランス語 peril / ラテン語 periculum",
+      "note": "危険や試練。perilousの基体。"
+    },
+    "point": {
+      "gloss": "点・尖る",
+      "origin": "ラテン語 punctum / 古フランス語 point",
+      "note": "尖った点や到達点。appointでは一点に定めるイメージになる。"
+    },
+    "quaint": {
+      "gloss": "知る・なじみのある",
+      "origin": "ラテン語 cognoscere / 古フランス語 coint",
+      "note": "知識を得て知り合いになる意味に関わる語幹。acquaintではquaintとして現れる。"
+    },
+    "steril": {
+      "gloss": "不毛な・生殖しない",
+      "origin": "ラテン語 sterilis",
+      "note": "生産や生殖がない状態。sterilizeの基体。"
+    },
+    "natur": {
+      "gloss": "生まれ・自然",
+      "origin": "ラテン語 natura / nasci",
+      "note": "生まれたもの・自然。supernaturalでは自然を表す。"
+    },
+    "coward": {
+      "gloss": "勇気のない人",
+      "origin": "古フランス語 couard / coart",
+      "note": "危険に尾を巻く臆病者。cowardlyの基体。"
+    },
+    "spac": {
+      "gloss": "空間・広がり",
+      "origin": "ラテン語 spatium",
+      "note": "空間や余裕。spaciousではspacとして現れる。"
+    },
+    "roll": {
+      "gloss": "巻物・名簿",
+      "origin": "古フランス語 rolle / ラテン語 rotulus",
+      "note": "記録を書いた巻物や名簿。enrollでは名簿へ記す意味になる。"
+    },
+    "bel": {
+      "gloss": "戦う",
+      "origin": "ラテン語 bellare / bellum",
+      "note": "反対して戦うこと。rebelではbelとして現れる。"
+    },
+    "radi": {
+      "gloss": "光線・車輪の spoke",
+      "origin": "ラテン語 radius",
+      "note": "中心から伸びる光線や車輪の spoke。radiateの基体。"
+    },
+    "forge": {
+      "gloss": "形作る・偽造する",
+      "origin": "古フランス語 forge / ラテン語 fabrica",
+      "note": "作業場で形作ることから、偽造することへつながる。"
+    },
+    "candid": {
+      "gloss": "白い・率直な",
+      "origin": "ラテン語 candidus / candere",
+      "note": "白く輝くことから、隠し立てのない率直さ、候補者へつながる。"
+    },
+    "nutrit": {
+      "gloss": "養う・育てる",
+      "origin": "ラテン語 nutrire / nutrix",
+      "note": "養い育てること。nutritiousではnutritとして現れる。"
+    },
+    "tom": {
+      "gloss": "切る",
+      "origin": "ギリシャ語 temnein / tomē",
+      "note": "切り開いて調べる動作。anatomyではtomとして現れる。"
+    },
+    "tentat": {
+      "gloss": "試す・触れて確かめる",
+      "origin": "ラテン語 tentare / tentatus",
+      "note": "試しに触れて確かめる動作。tentativeではtentatとして現れる。"
+    },
+    "warrant": {
+      "gloss": "守る・保証する",
+      "origin": "ゲルマン祖語 *war- / 古フランス語 warant",
+      "note": "守り保証する約束。warrantyの基体。"
+    },
+    "bide": {
+      "gloss": "待つ・とどまる",
+      "origin": "古英語 bīdan / ゲルマン語系",
+      "note": "待ち続けてとどまる動作。abideではa-と結び付く。"
+    },
+    "caut": {
+      "gloss": "用心する・警戒する",
+      "origin": "ラテン語 cavere / cautus",
+      "note": "危険を前もって警戒すること。precautionではcautとして現れる。"
+    },
+    "gloom": {
+      "gloss": "暗がり・憂鬱",
+      "origin": "英語 gloom（語源未詳）",
+      "note": "暗さや心の沈み。gloomyの基体。"
+    },
+    "menac": {
+      "gloss": "脅す・危険を示す",
+      "origin": "古フランス語 menacier / ラテン語 minacia",
+      "note": "脅しや危険を示す動作。menacingではmenacとして現れる。"
+    },
+    "equat": {
+      "gloss": "等しくする",
+      "origin": "ラテン語 aequare / aequatio",
+      "note": "等しい状態にすること。equationではequatとして現れる。"
+    },
+    "possess": {
+      "gloss": "所有する",
+      "origin": "ラテン語 possidere / possessus",
+      "note": "物を自分のものとして持つこと。possessiveの基体。"
+    },
+    "horizont": {
+      "gloss": "境界・水平線",
+      "origin": "ギリシャ語 horizon / horizein",
+      "note": "視界を区切る境界線・水平線。horizontalではhorizontとして現れる。"
+    },
+    "drast": {
+      "gloss": "行う・実行する",
+      "origin": "ギリシャ語 dran / drāō",
+      "note": "行動や実行に関わる語幹。drasticではdrastとして現れる。"
+    },
+    "bounc": {
+      "gloss": "跳ねる・強く打つ",
+      "origin": "英語 bounce / オランダ語 bonzen（諸説）",
+      "note": "跳ねる・強く打つ動作。bouncerでは語末eを落としたbouncとして現れる。"
+    },
+    "fabric": {
+      "gloss": "作る・形作る",
+      "origin": "ラテン語 fabrica / fabricare",
+      "note": "作業場で物を形作ること。fabricateの基体。"
+    },
+    "cavit": {
+      "gloss": "空洞・空っぽ",
+      "origin": "ラテン語 cavus / cavitas",
+      "note": "内部が空になった状態。cavityではcavitとして現れる。"
+    },
+    "cit": {
+      "gloss": "呼ぶ・促す",
+      "origin": "ラテン語 citare / ciēre",
+      "note": "人を呼び出し、動かすこと。citationではcitとして現れる。"
+    },
+    "turbul": {
+      "gloss": "かき乱す・動揺させる",
+      "origin": "ラテン語 turba / turbulentus",
+      "note": "群衆や騒ぎのように状態をかき乱すこと。turbulenceではturbulとして現れる。"
+    },
+    "vit": {
+      "gloss": "生命・生きる",
+      "origin": "ラテン語 vita / vivere",
+      "note": "生きていることや生命に関わる語幹。vitalではvitとして現れる。"
+    },
+    "brevi": {
+      "gloss": "短い",
+      "origin": "ラテン語 brevis",
+      "note": "長さや分量が短いこと。abbreviateではbreviとして現れる。"
+    },
+    "test": {
+      "gloss": "証言する・証人",
+      "origin": "ラテン語 testis / testari",
+      "note": "証人として事実を確認すること。attestではtestとして現れる。"
+    },
+    "magn": {
+      "gloss": "大きい・偉大な",
+      "origin": "ラテン語 magnus",
+      "note": "大きさや偉大さ。magnifyではmagnとして現れる。"
     }
   },
   "affixes": {
@@ -746,6 +3136,68 @@
     "-ly": { "gloss": "〜な状態で", "kind": "suffix" },
     "-escence": { "gloss": "〜の過程・状態", "kind": "suffix" },
     "-ile": { "gloss": "〜するもの・〜の性質の", "kind": "suffix" },
-    "-cracy": { "gloss": "〜による支配", "kind": "suffix" }
+    "-cracy": { "gloss": "〜による支配", "kind": "suffix" },
+    "-ar": { "gloss": "〜に関する", "kind": "suffix" },
+    "-able": { "gloss": "〜できる・〜に値する", "kind": "suffix" },
+    "be": { "gloss": "対象に向けて・〜にする", "kind": "prefix", "note": "古英語 be-。bestowでは物を置く方向を示す。" },
+    "-ition": { "gloss": "〜すること・状態", "kind": "suffix", "note": "ラテン語由来の名詞化要素。premonition。" },
+    "-en": { "gloss": "〜にする", "kind": "suffix", "note": "形容詞や名詞から動詞を作る。sharpen。" },
+    "-iz": { "gloss": "〜にする（-izeの接続形）", "kind": "suffix", "note": "-ationの前で現れるnaturalizeの接続形。naturalization。" },
+    "-ance": { "gloss": "〜すること・状態", "kind": "suffix", "note": "動詞・形容詞から状態を表す名詞を作る。arrogance。" },
+    "-ic": { "gloss": "〜に関する・〜の性質の", "kind": "suffix", "note": "名詞などから形容詞を作る。nomadic。" },
+    "-y": { "gloss": "〜の性質をもつ", "kind": "suffix", "note": "名詞などから性質を表す形容詞を作る。cranky。" },
+    "un": { "gloss": "〜でない", "kind": "prefix", "note": "否定を表す接頭辞。unrelenting。" },
+    "-ish": { "gloss": "〜のような", "kind": "suffix", "note": "名詞などから、その性質をもつ形容詞を作る。fiendish。" },
+    "-age": { "gloss": "〜の量・状態", "kind": "suffix", "note": "基体が表す量や状態を表す名詞を作る。footage。" },
+    "om": { "gloss": "強く・向かって", "kind": "prefix", "note": "ラテン語ob-がmの前で同化した形。omit。" },
+    "ab": { "gloss": "離れて", "kind": "prefix", "note": "分離や遠ざかることを表す接頭辞。abominable。" },
+    "ir": { "gloss": "〜でない", "kind": "prefix", "note": "in-がrの前で同化した否定接頭辞。irresolute・irrepressible。" },
+    "-ary": { "gloss": "〜に関する", "kind": "suffix", "note": "基体に関係する形容詞を作る接尾辞。rudimentary。" },
+    "bene": { "gloss": "よく・善く", "kind": "prefix", "note": "ラテン語beneに由来する善意・良さを表す要素。benevolent。" },
+    "ec": { "gloss": "外へ", "kind": "prefix", "note": "ギリシャ語 ek-の同化形。cの前でecになる。eccentric。" },
+    "-itude": { "gloss": "性質・状態", "kind": "suffix", "note": "語幹から性質や状態を表す名詞を作る形。fortitude。" },
+    "-less": { "gloss": "〜のない", "kind": "suffix", "note": "古英語 -leas に由来し、『〜を欠く』性質を表す。heedless。" },
+    "mal": { "gloss": "悪く・悪い", "kind": "prefix", "note": "ラテン語 male / mal- に由来し、悪い・不完全な意味を加える。malevolent。" },
+    "ob": { "gloss": "〜に対して・上に", "kind": "prefix", "note": "ラテン語 ob- に由来し、〜に向かって・対しての意味を表す。obliterate。" },
+    "-ial": { "gloss": "〜に関する", "kind": "suffix", "note": "名詞や語幹に関係する形容詞を作る。provincial・sequential。" },
+    "-et": { "gloss": "小さいもの", "kind": "suffix", "note": "フランス語などで小さいものを表す指小辞。socket。" },
+    "-ing": { "gloss": "〜している性質", "kind": "suffix", "note": "動詞から動作中の性質を表す形を作る。unassuming。" },
+    "-ious": { "gloss": "〜の性質の", "kind": "suffix", "note": "ラテン語系の語幹から性質を表す形容詞を作る表面形。vivacious。" },
+    "abs": { "gloss": "離れて", "kind": "prefix", "note": "ab-がtの前で現れる同化形。abstain。" },
+    "as": { "gloss": "〜へ（ad-の同化形）", "kind": "prefix", "note": "ad-がsc-の前で同化した表面形。ascend。" },
+    "em": { "gloss": "〜にする・中へ", "kind": "prefix", "note": "en-がbの前で同化した表面形。embittered。" },
+    "-ably": { "gloss": "〜できる様子で", "kind": "suffix", "note": "-ableと-lyが連続した副詞の表面形。inexorably。" },
+    "out": { "gloss": "外れて・時代を越えて", "kind": "prefix", "note": "英語out-。基準や流行の外に出ることを表す。outmoded。" },
+    "under": { "gloss": "下に・隠れた部分に", "kind": "prefix", "note": "英語under-。表面の下にある基調を表す。undertones。" },
+    "-eau": { "gloss": "小さいもの・形", "kind": "suffix", "note": "フランス語の指小形で、platから小さな平らな土地を表す。plateau。" },
+    "-uate": { "gloss": "〜にする（動詞化）", "kind": "suffix", "note": "ラテン語系の語幹から動詞を作る表面形。accentuate。" },
+    "-some": { "gloss": "〜の性質をもつ", "kind": "suffix", "note": "名詞や動詞から、その性質をもつ形容詞を作る。venturesome。" },
+    "-otic": { "gloss": "〜に関する・〜の状態", "kind": "suffix", "note": "ギリシャ語系の語幹から、状態や関係を表す形容詞を作る。neurotic。" },
+    "-atory": { "gloss": "〜に関する・〜する性質の", "kind": "suffix", "note": "ラテン語系の動詞から、関係や性質を表す形容詞を作る。derogatory・laudatory。" },
+    "-endum": { "gloss": "〜されるもの", "kind": "suffix", "note": "ラテン語の『〜されるべきもの』を表す形。addendum。" },
+    "-acle": { "gloss": "〜するもの・道具", "kind": "suffix", "note": "ラテン語系の名詞で、行為やその結果・道具を表す。spectacles。" },
+    "-acious": { "gloss": "〜の性質の", "kind": "suffix", "note": "ラテン語系の語幹から、性質を表す形容詞を作る。fallacious。" },
+    "sym": { "gloss": "ともに", "kind": "prefix", "note": "ギリシャ語 syn-のp音前の表面形。sympathies。" },
+    "pur": { "gloss": "前へ・遠くへ", "kind": "prefix", "note": "ラテン語 pro-の古フランス語系の表面形。purloined。" },
+    "-istic": { "gloss": "〜主義の・〜に関する", "kind": "suffix", "note": "思想や性質に関する形容詞を作る。hedonistic。" },
+    "ben": { "gloss": "よく・良く", "kind": "prefix", "note": "ラテン語 bene（よく）の表面形。benign。" },
+    "-atic": { "gloss": "〜の性質の・〜に関する", "kind": "suffix", "note": "ラテン語系の語幹から性質を表す形容詞を作る。erratic。" },
+    "-ness": { "gloss": "〜である状態", "kind": "suffix", "note": "形容詞から状態や性質を表す名詞を作る。eagerness。" },
+    "at": { "gloss": "〜へ・〜に加えて", "kind": "prefix", "note": "ラテン語 ad-がt音前で現れる表面形。attribute。" },
+    "-ient": { "gloss": "〜する性質の", "kind": "suffix", "note": "ラテン語系の動詞から性質を表す形容詞を作る表面形。subservient。" },
+    "ar": { "gloss": "〜へ・〜に向けて", "kind": "prefix", "note": "arrestではラテン語 ad- が語中で同化した表面形。" },
+    "-arily": { "gloss": "〜な方法で", "kind": "suffix", "note": "-aryで終わる形容詞を副詞化する表面形。necessarily。" },
+    "-th": { "gloss": "状態を表す名詞", "kind": "suffix", "note": "wealthではwealに付いて、幸福・繁栄の状態を表す。healthなどにも見られる。" },
+    "-ty": { "gloss": "性質・状態", "kind": "suffix", "note": "ラテン語・フランス語系の抽象名詞接尾辞。loyalty・povertyに現れる。" },
+    "-yer": { "gloss": "〜に関わる職業の人", "kind": "suffix", "note": "-ierの英語化・綴り変異。lawyerでは法律に関わる人を表す。" },
+    "-ual": { "gloss": "〜に関する", "kind": "suffix" },
+    "-ature": { "gloss": "〜すること・結果", "kind": "suffix", "note": "ラテン語 -atura 系の名詞要素。temperatureでは調整された状態・性質を表す。" },
+    "-ist": { "gloss": "〜する人・専門家", "kind": "suffix", "note": "職業・立場・思想などに関わる人を表す接尾辞。touristではtourをする人。" },
+    "-ine": { "gloss": "〜に関する・物質を表す", "kind": "suffix", "note": "ラテン語系の名詞・形容詞に現れる表面形。medicineでは医療に関わる語を作る。" },
+    "-ory": { "gloss": "〜に関する場所・性質", "kind": "suffix", "note": "行為や機能に関わる形容詞・名詞を作る接尾辞。factoryでは作る場所を表す。" },
+    "for": { "gloss": "離れて・誤って", "kind": "prefix", "note": "古英語のfor-。getと結び付き、つかみ損なう・心から失う意味を作る。" },
+    "-ery": { "gloss": "行為・結果", "kind": "suffix", "note": "行為・結果や、その行為に関わるものを表す接尾辞。forgery。" },
+    "-acy": { "gloss": "〜の状態", "kind": "suffix", "note": "抽象的な状態を表す接尾辞。candidacy。" },
+    "ana": { "gloss": "上へ・通して", "kind": "prefix", "note": "ギリシャ語ana-に由来し、上へ・通しての意味を表す。anatomy。" }
   }
 }

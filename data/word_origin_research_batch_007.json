@@ -1,0 +1,1838 @@
+{
+  "meta": {
+    "batchId": "batch-007",
+    "note": "未確認B型の先頭25語。単一基体・語源不確かな語はB型に残し、綴りと形成が対応する語だけA型へ昇格する。複合表現は熟語表示の扱いに合わせる。"
+  },
+  "dictionary": {
+    "roots": {
+      "fiend": {
+        "gloss": "敵・悪魔",
+        "origin": "古英語 feond / ゲルマン系 < PIE *pe(i)-",
+        "note": "敵や悪魔を表すイメージ。fiendish。"
+      },
+      "matricul": {
+        "gloss": "名簿・登録",
+        "origin": "ラテン語 matricula",
+        "note": "登録名簿に名前を載せるイメージ。matriculate。"
+      },
+      "pass": {
+        "gloss": "通る・歩む",
+        "origin": "ラテン語 passus / pandere",
+        "note": "歩み、通り抜けるイメージ。impasseではフランス語passeの基体として現れる。"
+      },
+      "fus": {
+        "gloss": "注ぐ・溶かす",
+        "origin": "ラテン語 fundere / fusus",
+        "note": "液体を注ぎ、ものを溶かすイメージ。infuse・fusion。"
+      },
+      "mutin": {
+        "gloss": "反乱する",
+        "origin": "フランス語 mutin / mutiner < ラテン語 movere",
+        "note": "権威に逆らい、反乱するイメージ。mutinous・mutiny。"
+      },
+      "relent": {
+        "gloss": "和らぐ",
+        "origin": "古フランス語 relenter < ラテン語 lentus",
+        "note": "硬さや厳しさが溶けて、手加減するイメージ。relent・unrelenting。"
+      },
+      "foot": {
+        "gloss": "足・長さの単位",
+        "origin": "古英語 fot / ゲルマン系 < PIE *ped-",
+        "note": "足の長さを基準に量るイメージ。footage。ラテン語pedの語彙とは基体を分けて登録する。"
+      }
+    },
+    "affixes": {
+      "un": {
+        "gloss": "〜でない",
+        "kind": "prefix",
+        "note": "否定を表す接頭辞。unrelenting。"
+      },
+      "-ish": {
+        "gloss": "〜のような",
+        "kind": "suffix",
+        "note": "名詞などから、その性質をもつ形容詞を作る。fiendish。"
+      },
+      "-age": {
+        "gloss": "〜の量・状態",
+        "kind": "suffix",
+        "note": "基体が表す量や状態を表す名詞を作る。footage。"
+      }
+    }
+  },
+  "entries": {
+    "clinch": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "clench",
+            "gloss": "しっかり固定する"
+          },
+          {
+            "term": "clinch",
+            "gloss": "決定的に確定する"
+          },
+          {
+            "gloss": "勝ち取った、確定した"
+          }
+        ],
+        "derivation": "釘の先を折り返して固定する動作から、勝負や議論を決定的に確定する意味へ → 勝ち取った、確定した",
+        "source": "https://www.etymonline.com/word/clinch",
+        "sources": [
+          "https://www.etymonline.com/word/clinch",
+          "https://www.merriam-webster.com/dictionary/clinch"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/clinch",
+          "https://www.merriam-webster.com/dictionary/clinch"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/clinch",
+            "note": "clinchを1560年代のclenchの変種とし、clenchを古英語clencan（しっかり保持する）・clingan（しがみつく）に関連づけている。釘を固定する意味から、勝負や議論を決着させる意味が発達した。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/clinch",
+            "note": "clinchの釘などを折り返して固定する、議論を決着させる、勝利を確実にするという語義と、clenchの変化形という語源欄を確認した。"
+          }
+        ],
+        "originLanguage": "英語（古英語系・ゲルマン系）",
+        "etymons": [
+          "clinch",
+          "clench",
+          "clencan",
+          "clingan"
+        ],
+        "historicalPath": [
+          "英語 clinch（clenchの変種）",
+          "古英語 clencan（しっかり保持する）",
+          "古英語 clingan（しがみつく）",
+          "英語 clinch（勝負や議論を確定する）"
+        ],
+        "components": [
+          {
+            "form": "clinch",
+            "kind": "base",
+            "gloss": "固定する",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "釘の先を折って動かないようにする動作が、勝負や議論を最後に固定して決着させる意味へ広がった。",
+        "summary": "clinchはclenchの変種として、固定する動作から勝負などを確定する意味になった。",
+        "confidence": "high",
+        "notes": "現在のclinchは単一基体として扱い、clench・clinganを英語表示の語根へ無理に分解しない。"
+      }
+    },
+    "fiendish": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "極悪な",
+        "root": "fiend",
+        "parts": [
+          {
+            "form": "fiend",
+            "kind": "root",
+            "gloss": "敵・悪魔"
+          },
+          {
+            "form": "-ish",
+            "kind": "suffix",
+            "gloss": "〜のような"
+          }
+        ],
+        "derivation": "fiend（敵・悪魔）＋-ish（〜のような） → 極悪な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/fiendish",
+          "https://www.merriam-webster.com/dictionary/fiendish"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/fiendish",
+            "note": "fiendishをfiend＋-ishと説明し、fiendを古英語feond（敵）・ゲルマン系の*fijand-（憎む、敵意をもつ）に遡らせている。さらにPIE *pe(i)-（傷つける）との関係を示している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/fiendish",
+            "note": "fiendishの極悪な、残酷な、非常に悪い・難しいという語義を確認した。"
+          }
+        ],
+        "originLanguage": "古英語（ゲルマン系）",
+        "etymons": [
+          "fiend",
+          "feond",
+          "feogan",
+          "*fijand-",
+          "-ish",
+          "*pe(i)-"
+        ],
+        "historicalPath": [
+          "PIE *pe(i)-（傷つける）",
+          "ゲルマン系 *fijand-（憎む、敵意をもつ）",
+          "古英語 feond（敵）",
+          "英語 fiend（敵、悪魔）",
+          "英語 fiendish（悪魔のような、極悪な）"
+        ],
+        "components": [
+          {
+            "form": "fiend",
+            "kind": "base",
+            "gloss": "敵・悪魔",
+            "display": false
+          },
+          {
+            "form": "-ish",
+            "kind": "suffix",
+            "gloss": "〜のような",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "fiend"
+        ],
+        "semanticBridge": "敵や悪魔を指すfiendに、〜のようなを表す- ishが付き、悪魔のように残酷な性質を表すようになった。",
+        "summary": "fiendishは、fiend（敵・悪魔）＋-ish（〜のような）から、極悪な・非常に難しいを表す。",
+        "confidence": "high",
+        "notes": "fiendは既存のfriendと関係するが、現在の英語表示ではfiendを独立した語根として登録する。"
+      }
+    },
+    "teeter": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "titter",
+            "gloss": "不安定に動く"
+          },
+          {
+            "term": "teeter",
+            "gloss": "上下に揺れる"
+          },
+          {
+            "gloss": "危うく揺れている"
+          }
+        ],
+        "derivation": "倒れそうな状態で不安定に揺れ続けることから → 危うく揺れている",
+        "source": "https://www.etymonline.com/word/teeter",
+        "sources": [
+          "https://www.etymonline.com/word/teeter",
+          "https://www.merriam-webster.com/dictionary/teeter"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/teeter",
+          "https://www.merriam-webster.com/dictionary/teeter"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/teeter",
+            "note": "teeterを1843年の語として、古いtitter（不安定に動く）の変形と説明し、北欧系の可能性と古ノルド語titra（震える、揺れる）を示している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/teeter",
+            "note": "teeterの上下に動く、左右に揺れる、均衡を失いそうになるという語義を確認した。"
+          }
+        ],
+        "originLanguage": "英語（スカンディナヴィア系の可能性）",
+        "etymons": [
+          "teeter",
+          "titter",
+          "titra",
+          "*ti-tra-"
+        ],
+        "historicalPath": [
+          "古い英語 titter（不安定に動く）",
+          "北欧系の可能性がある titra（震える、揺れる）",
+          "英語 teeter（上下・左右に揺れる）",
+          "英語 teetering（危うく揺れている）"
+        ],
+        "components": [
+          {
+            "form": "teeter",
+            "kind": "base",
+            "gloss": "揺れる",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "不安定に小刻みに動くことが、倒れる寸前の状態で揺れ続ける意味になった。",
+        "summary": "teeteringは、起源に諸説あるteeterから、危うく揺れているという意味になった。",
+        "confidence": "medium",
+        "notes": "北欧語との関係は可能性として扱われているため、英語の接頭辞・語根へ分解しない。"
+      }
+    },
+    "twitch": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "twiccian",
+            "gloss": "つまむ・引く"
+          },
+          {
+            "term": "twitch",
+            "gloss": "急にぴくっと動く"
+          },
+          {
+            "gloss": "ぴくぴく動く"
+          }
+        ],
+        "derivation": "急に引っ張ったり小刻みに動いたりすることから → ぴくぴく動く",
+        "source": "https://www.etymonline.com/word/twitch",
+        "sources": [
+          "https://www.etymonline.com/word/twitch",
+          "https://www.merriam-webster.com/dictionary/twitch"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/twitch",
+          "https://www.merriam-webster.com/dictionary/twitch"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/twitch",
+            "note": "twitchを中英語twicchen、古英語twiccian（つまむ、つかむ）に遡らせ、ゲルマン系の*twikjon-を関連語として示している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/twitch",
+            "note": "twitchの急に引く、ぴくぴく動く、筋肉が収縮するという語義と、古英語twiccianに関係するという語源欄を確認した。"
+          }
+        ],
+        "originLanguage": "英語（古英語・ゲルマン系）",
+        "etymons": [
+          "twicchen",
+          "twiccian",
+          "*twikjon-",
+          "twick"
+        ],
+        "historicalPath": [
+          "古英語 twiccian（つまむ、つかむ）",
+          "中英語 twicchen（急に引く）",
+          "英語 twitch（ぴくっと動く、引く）",
+          "英語 twitching（ぴくぴく動く）"
+        ],
+        "components": [
+          {
+            "form": "twitch",
+            "kind": "base",
+            "gloss": "急に引く・動く",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "急に引っ張る動きが、身体の一部や筋肉が短く急に動く意味へ発達した。",
+        "summary": "twitchingは、古英語twiccianに遡るtwitchから、ぴくぴく動くという意味になった。",
+        "confidence": "high",
+        "notes": "単一のゲルマン系基体で、語源上の分解可能な英語接辞はない。"
+      }
+    },
+    "matriculate": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "入学手続きをする",
+        "root": "matricul",
+        "parts": [
+          {
+            "form": "matricul",
+            "kind": "root",
+            "gloss": "名簿・登録"
+          },
+          {
+            "form": "-ate",
+            "kind": "suffix",
+            "gloss": "〜する（動詞化）"
+          }
+        ],
+        "derivation": "matricul（登録名簿）＋-ate（〜する） → 名簿に登録して入学手続きをする"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/matriculate",
+          "https://www.merriam-webster.com/dictionary/matriculate"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/matriculate",
+            "note": "matriculateを後期ラテン語matriculatus、matriculare（登録する）に遡らせ、ラテン語matricula（公的な登録簿）、matrix（名簿・母体）を経路として示している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/matriculate",
+            "note": "matriculateの大学などへ入学登録する、構成員として登録されるという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（古フランス語・後期ラテン語系）",
+        "etymons": [
+          "matriculatus",
+          "matriculare",
+          "matricula",
+          "matrix",
+          "mater"
+        ],
+        "historicalPath": [
+          "ラテン語 matrix（名簿、母体）",
+          "ラテン語 matricula（小さな名簿、登録簿）",
+          "後期ラテン語 matriculare（登録する）",
+          "後期ラテン語 matriculatus",
+          "英語 matriculate（入学登録する）"
+        ],
+        "components": [
+          {
+            "form": "matricula",
+            "kind": "base",
+            "gloss": "登録簿",
+            "display": false
+          },
+          {
+            "form": "-ate",
+            "kind": "suffix",
+            "gloss": "〜する（動詞化）",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "matricul"
+        ],
+        "semanticBridge": "名簿に名前を登録することが、大学などの構成員として正式に入学手続きをする意味になった。",
+        "summary": "matriculateは、登録簿を表すラテン語matriculaから、名簿に登録して入学手続きをする意味になった。",
+        "confidence": "high",
+        "notes": "matricul＋-ateは、後期ラテン語matriculareを英語の表示単位へ正規化したもの。"
+      }
+    },
+    "shear": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "sceran",
+            "gloss": "切る・刈る"
+          },
+          {
+            "term": "shear",
+            "gloss": "刃物で切り取る"
+          },
+          {
+            "gloss": "刈り取る、切り落とす"
+          }
+        ],
+        "derivation": "刃物で表面のものを切り取る動作から → 刈り取る、切り落とす",
+        "source": "https://www.etymonline.com/word/shear",
+        "sources": [
+          "https://www.etymonline.com/word/shear",
+          "https://www.merriam-webster.com/dictionary/shear"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/shear",
+          "https://www.merriam-webster.com/dictionary/shear"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/shear",
+            "note": "shearを古英語sceran・scieran（切る、刈る）、ゲルマン系*skero、PIE *sker-（切る）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/shear",
+            "note": "shearの羊毛などを刈る、切り落とす、切断するという語義を確認した。"
+          }
+        ],
+        "originLanguage": "古英語（ゲルマン系）",
+        "etymons": [
+          "shear",
+          "sceran",
+          "scieran",
+          "*skero",
+          "*sker-"
+        ],
+        "historicalPath": [
+          "PIE *sker-（切る）",
+          "ゲルマン系 *skero（切る）",
+          "古英語 sceran / scieran（切る、刈る）",
+          "中英語 sheren",
+          "英語 shear（刈り取る、切り落とす）"
+        ],
+        "components": [
+          {
+            "form": "shear",
+            "kind": "base",
+            "gloss": "切る・刈る",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "切るという単純な動作が、とくに羊毛や表面のものを刃物で刈り取る意味へ定着した。",
+        "summary": "shearは、切るを表す古英語・ゲルマン系の単一基体から、刈り取る・切り落とすを表す。",
+        "confidence": "high",
+        "notes": "単一基体のため、PIE *sker-を英語のA型表示へ直接分解しない。"
+      }
+    },
+    "impasse": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "行き詰まり",
+        "root": "pass",
+        "parts": [
+          {
+            "form": "im",
+            "kind": "prefix",
+            "gloss": "〜でない"
+          },
+          {
+            "form": "pass",
+            "kind": "root",
+            "gloss": "通る"
+          }
+        ],
+        "derivation": "im-（〜でない）＋pass（通る） → 通り抜けられない状態、行き詰まり"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/impasse",
+          "https://www.merriam-webster.com/dictionary/impasse"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/impasse",
+            "note": "impasseをフランス語impasse（通れない道、袋小路）、in-（〜でない）＋passe（通過）に分け、passeをpasser、ラテン語passus（歩み）へ関連づけている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/impasse",
+            "note": "impasseの進展や解決ができない行き詰まり、袋小路という語義を確認した。"
+          }
+        ],
+        "originLanguage": "フランス語（ラテン語経由）",
+        "etymons": [
+          "impasse",
+          "in-",
+          "passe",
+          "passer",
+          "passus",
+          "*pete-"
+        ],
+        "historicalPath": [
+          "ラテン語 passus（歩み、歩幅）",
+          "フランス語 passer（通る）",
+          "フランス語 passe（通過）",
+          "フランス語 impasse（通れない道、袋小路）",
+          "英語 impasse（行き詰まり）"
+        ],
+        "components": [
+          {
+            "form": "in-",
+            "kind": "prefix",
+            "gloss": "〜でない",
+            "display": false
+          },
+          {
+            "form": "passe",
+            "kind": "base",
+            "gloss": "通過",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "pass"
+        ],
+        "semanticBridge": "通ることができない道という文字どおりの構造から、議論や交渉が先へ進まない行き詰まりへ意味が広がった。",
+        "summary": "impasseは、否定のin-と通過を表すpasseから、行き詰まり・袋小路を表す。",
+        "confidence": "high",
+        "notes": "フランス語のin-が英語表示でim-に同化し、passe/passusに対応する英語側のroot表示をpassとした。"
+      }
+    },
+    "banish": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "ban",
+            "gloss": "公に命じる"
+          },
+          {
+            "term": "banir",
+            "gloss": "追放を命じる"
+          },
+          {
+            "gloss": "追放する"
+          }
+        ],
+        "derivation": "公の命令や禁止によって共同体の外へ追い出すことから → 追放する",
+        "source": "https://www.etymonline.com/word/banish",
+        "sources": [
+          "https://www.etymonline.com/word/banish",
+          "https://www.merriam-webster.com/dictionary/banish"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/banish",
+          "https://www.merriam-webster.com/dictionary/banish"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/banish",
+            "note": "banishを古フランス語banir（宣言する、追放する）、ゲルマン系の*banjan（罰を伴って命じる）に遡らせ、ban（公に命じる）との関係を示している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/banish",
+            "note": "banishの人を場所や共同体から追い出す、追放するという語義を確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語（ゲルマン系）",
+        "etymons": [
+          "banish",
+          "banir",
+          "banniss-",
+          "*bannjan",
+          "bannan",
+          "*bha-"
+        ],
+        "historicalPath": [
+          "PIE *bha-（話す、告げる）",
+          "ゲルマン系 bannan（公に命じる、禁止する）",
+          "古フランス語 banir（追放を宣言する）",
+          "英語 banish（追放する）"
+        ],
+        "components": [
+          {
+            "form": "banish",
+            "kind": "base",
+            "gloss": "追放する",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "公に発せられた命令や禁止が、共同体から人を追い出す法的・政治的な行為を表すようになった。",
+        "summary": "banishは、公の命令や禁止を表すゲルマン系の語から、追放するを表す。",
+        "confidence": "high",
+        "notes": "ban＋-ishに見えるが、末尾の- ishは形容詞接尾辞ではなく、古フランス語banirの語形に含まれるためA型にはしない。"
+      }
+    },
+    "stump": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "stump",
+            "gloss": "切り株・残った部分"
+          },
+          {
+            "term": "stump",
+            "gloss": "障害物で進行を止める"
+          },
+          {
+            "gloss": "困らせる、困惑させる"
+          }
+        ],
+        "derivation": "切り株などの障害物につまずいて進めなくなる比喩から → 困らせる、困惑させる",
+        "source": "https://www.etymonline.com/word/stump",
+        "sources": [
+          "https://www.etymonline.com/word/stump",
+          "https://www.merriam-webster.com/dictionary/stump"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/stump",
+          "https://www.merriam-webster.com/dictionary/stump"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/stump",
+            "note": "stumpを中低ドイツ語stump・中期オランダ語stomp、ゲルマン系*stubb-に関係づけ、切断された手足や木の残部を表す名詞から、障害物で進行を止める動詞へ発達したと説明している。PIE *stebh-説には異論も記録されている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/stump",
+            "note": "stumpの切り株、残った部分、難問で人を困らせるという名詞・動詞の語義を確認した。"
+          }
+        ],
+        "originLanguage": "英語（ゲルマン系、語源に異説あり）",
+        "etymons": [
+          "stump",
+          "stump",
+          "stomp",
+          "*stubb-",
+          "*stumb-",
+          "*stebh-"
+        ],
+        "historicalPath": [
+          "ゲルマン系 *stubb- / *stumb-（切り取られた残部）",
+          "中低ドイツ語 stump・中期オランダ語 stomp",
+          "英語 stump（切り株、残った部分）",
+          "英語 stump（障害物で進行を止める、困らせる）"
+        ],
+        "components": [
+          {
+            "form": "stump",
+            "kind": "base",
+            "gloss": "残った部分・障害物",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "切り株のように進行を止める障害物が、思考や回答を止めて人を困惑させるものの比喩になった。",
+        "summary": "stumpは、切り株や切断後の残部を表すゲルマン系の語から、困らせる・困惑させるを表す。",
+        "confidence": "medium",
+        "notes": "PIE語根への復元に異論があるため、stumpを単一基体のB型として扱う。"
+      }
+    },
+    "infuse": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "吹き込む",
+        "root": "fus",
+        "parts": [
+          {
+            "form": "in",
+            "kind": "prefix",
+            "gloss": "中へ"
+          },
+          {
+            "form": "fus",
+            "kind": "root",
+            "gloss": "注ぐ"
+          }
+        ],
+        "derivation": "in-（中へ）＋fus（注ぐ） → 中へ注ぎ入れ、性質や感情を吹き込む"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/infuse",
+          "https://www.merriam-webster.com/dictionary/infuse"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/infuse",
+            "note": "infuseをラテン語infusus、infundere（中へ注ぐ）に遡らせ、in-（中へ）＋fundere（注ぐ、溶かす）と説明している。fundereはPIE *gheu-（注ぐ）に関連する。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/infuse",
+            "note": "infuseの液体を注ぎ入れる、性質や感情を吹き込む、思想を浸透させるという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": [
+          "infuse",
+          "infusus",
+          "infundere",
+          "in-",
+          "fundere",
+          "fusus",
+          "*gheu-"
+        ],
+        "historicalPath": [
+          "PIE *gheu-（注ぐ）",
+          "ラテン語 fundere（注ぐ、溶かす）",
+          "ラテン語 infundere（中へ注ぐ）",
+          "ラテン語 infusus",
+          "英語 infuse（注ぎ入れる、吹き込む）"
+        ],
+        "components": [
+          {
+            "form": "in-",
+            "kind": "prefix",
+            "gloss": "中へ",
+            "display": false
+          },
+          {
+            "form": "fundere",
+            "kind": "base",
+            "gloss": "注ぐ",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "fus"
+        ],
+        "semanticBridge": "液体を中へ注ぎ入れる動作が、性質・感情・思想などを人や物に吹き込む意味へ広がった。",
+        "summary": "infuseは、in-（中へ）＋fundere（注ぐ）を起点に、吹き込む・注入するを表す。",
+        "confidence": "high",
+        "notes": "ラテン語fundereの英語側の形fusをrootに採用し、将来のfusion・diffuse系との照合に備える。"
+      }
+    },
+    "prudent": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "providere",
+            "gloss": "先を見て備える"
+          },
+          {
+            "term": "prudens",
+            "gloss": "先を見通す"
+          },
+          {
+            "gloss": "慎重な、用心深い"
+          }
+        ],
+        "derivation": "先の状況を見通して備え、判断することから → 慎重な、用心深い",
+        "source": "https://www.etymonline.com/word/prudent",
+        "sources": [
+          "https://www.etymonline.com/word/prudent",
+          "https://www.merriam-webster.com/dictionary/prudent"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/prudent",
+          "https://www.merriam-webster.com/dictionary/prudent"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/prudent",
+            "note": "prudentを古フランス語prudent、ラテン語prudens（知識がある、先見の明がある）に遡らせ、providere（先を見る、備える）の縮約形と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/prudent",
+            "note": "prudentの判断が慎重で賢明な、危険や出費を避けるという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（古フランス語経由）",
+        "etymons": [
+          "prudent",
+          "prudens",
+          "providens",
+          "providere",
+          "pro",
+          "videre",
+          "*weid-"
+        ],
+        "historicalPath": [
+          "PIE *weid-（見る）",
+          "ラテン語 videre（見る）",
+          "ラテン語 providere（先を見る、備える）",
+          "ラテン語 prudens（先を見通す、賢明な）",
+          "英語 prudent（慎重な、用心深い）"
+        ],
+        "components": [
+          {
+            "form": "providere",
+            "kind": "base",
+            "gloss": "先を見る・備える",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "先を見通して備える知恵が、危険や損失を避けて慎重に判断する性質を表すようになった。",
+        "summary": "prudentは、先を見る・備えるというラテン語を起点に、慎重で用心深いを表す。",
+        "confidence": "high",
+        "notes": "providereの内部構造は明らかだが、prudentの英語表面に対応する接頭辞＋rootの綴りが弱いためB型を維持する。"
+      }
+    },
+    "mutinous": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "反乱の",
+        "root": "mutin",
+        "parts": [
+          {
+            "form": "mutin",
+            "kind": "root",
+            "gloss": "反乱する"
+          },
+          {
+            "form": "-ous",
+            "kind": "suffix",
+            "gloss": "〜の性質をもつ"
+          }
+        ],
+        "derivation": "mutin（反乱する）＋-ous（〜の性質をもつ） → 反乱の"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/mutinous",
+          "https://www.merriam-webster.com/dictionary/mutinous"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/mutinous",
+            "note": "mutinousをmutine＋-ousと説明し、mutineをフランス語mutiner（反乱する）、meutin・meute、ラテン語movere（動かす）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/mutinous",
+            "note": "mutinousの反乱に加わる、反抗的な、命令に従わないという語義を確認した。"
+          }
+        ],
+        "originLanguage": "フランス語（ラテン語経由）",
+        "etymons": [
+          "mutinous",
+          "mutine",
+          "mutiner",
+          "meutin",
+          "meute",
+          "*movita",
+          "movere",
+          "*meue-",
+          "-ous"
+        ],
+        "historicalPath": [
+          "PIE *meue-（押し離す、動かす）",
+          "ラテン語 movere（動かす）",
+          "フランス語 meute（反乱、蜂起）・mutiner（反乱する）",
+          "英語 mutine（反乱する）",
+          "英語 mutinous（反乱の、反抗的な）"
+        ],
+        "components": [
+          {
+            "form": "mutine",
+            "kind": "base",
+            "gloss": "反乱する",
+            "display": false
+          },
+          {
+            "form": "-ous",
+            "kind": "suffix",
+            "gloss": "〜の性質をもつ",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "mutin"
+        ],
+        "semanticBridge": "権威に対して反乱する基体に、〜の性質をもつを表す-ousが付き、反抗的・反乱的な性質を表すようになった。",
+        "summary": "mutinousは、mutin（反乱する）＋-ous（〜の性質をもつ）から、反乱の・反抗的なを表す。",
+        "confidence": "high",
+        "notes": "既存のmut（変える）とは語源が異なるため統合せず、mutinを独立したrootとして登録する。"
+      }
+    },
+    "unrelenting": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "容赦ない",
+        "root": "relent",
+        "parts": [
+          {
+            "form": "un",
+            "kind": "prefix",
+            "gloss": "〜でない"
+          },
+          {
+            "form": "relent",
+            "kind": "root",
+            "gloss": "和らぐ"
+          }
+        ],
+        "derivation": "un-（〜でない）＋relent（和らぐ） → 態度や勢いを和らげず、容赦ない"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/unrelenting",
+          "https://www.merriam-webster.com/dictionary/unrelenting"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/unrelenting",
+            "note": "unrelentingをun-（〜でない）＋relentの現在分詞と説明し、relentを古フランス語relenter、ラテン語lentus（ゆっくりした、粘りのある）に関係づけている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/unrelenting",
+            "note": "unrelentingの厳しく続く、敵意や勢いを弱めない、容赦ないという語義を確認した。"
+          }
+        ],
+        "originLanguage": "英語（古フランス語・ラテン語系の基体）",
+        "etymons": [
+          "unrelenting",
+          "un-",
+          "relent",
+          "relenter",
+          "lentus",
+          "*ne-"
+        ],
+        "historicalPath": [
+          "ラテン語 lentus（ゆっくりした、柔らかな）",
+          "古フランス語 relenter（溶ける、和らぐ）",
+          "英語 relent（態度を和らげる、手加減する）",
+          "英語 unrelenting（和らげない、容赦ない）"
+        ],
+        "components": [
+          {
+            "form": "un-",
+            "kind": "prefix",
+            "gloss": "〜でない",
+            "display": false
+          },
+          {
+            "form": "relent",
+            "kind": "base",
+            "gloss": "和らぐ・手加減する",
+            "display": false
+          },
+          {
+            "form": "-ing",
+            "kind": "inflection",
+            "gloss": "現在分詞",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "relent"
+        ],
+        "semanticBridge": "厳しさが溶けて和らぐrelentを否定し、態度や攻撃の勢いを弱めず続ける性質を表すようになった。",
+        "summary": "unrelentingは、un-（〜でない）＋relent（和らぐ）から、容赦なく絶え間ないを表す。",
+        "confidence": "medium",
+        "notes": "relentの直系語源には不確かな部分があるが、un-＋relent＋-ingという英語側の形成は明瞭。-ingは屈折語尾としてA型表示から省略する。"
+      }
+    },
+    "gait": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "gata",
+            "gloss": "道・通路"
+          },
+          {
+            "term": "gait",
+            "gloss": "歩くこと・歩み"
+          },
+          {
+            "gloss": "歩き方、足取り"
+          }
+        ],
+        "derivation": "道を進む歩みから、歩くときの身体の運び方へ → 歩き方、足取り",
+        "source": "https://www.etymonline.com/word/gait",
+        "sources": [
+          "https://www.etymonline.com/word/gait",
+          "https://www.merriam-webster.com/dictionary/gait"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/gait",
+          "https://www.merriam-webster.com/dictionary/gait"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/gait",
+            "note": "gaitを中英語gate（歩くこと、道）から、古ノルド語gata（道、通路）、ゲルマン系*gatwon（進むこと）に遡らせている。歩き方の意味は15世紀半ばから生じた。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/gait",
+            "note": "gaitの歩き方、歩行の様子、動物の足取りという語義を確認した。"
+          }
+        ],
+        "originLanguage": "スカンディナヴィア系（ゲルマン系）",
+        "etymons": [
+          "gait",
+          "gate",
+          "gata",
+          "*gatwon",
+          "*ghe-"
+        ],
+        "historicalPath": [
+          "古ノルド語 gata（道、通路）",
+          "ゲルマン系 *gatwon（進むこと）",
+          "中英語 gate（歩くこと、道）",
+          "英語 gait（歩き方、足取り）"
+        ],
+        "components": [
+          {
+            "form": "gait",
+            "kind": "base",
+            "gloss": "歩み・歩き方",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "道を進むことを表す語が、進むときの足の運び方や身体の姿勢を表す名詞になった。",
+        "summary": "gaitは、道や進むことを表す北欧系の語から、歩き方・足取りを表す。",
+        "confidence": "medium",
+        "notes": "単一基体で、PIE *ghe-への接続も可能性に留まるためA型分解はしない。"
+      }
+    },
+    "feud": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "faide",
+            "gloss": "争い・敵意"
+          },
+          {
+            "term": "feud",
+            "gloss": "長く続く敵対"
+          },
+          {
+            "gloss": "確執、長期の争い"
+          }
+        ],
+        "derivation": "敵意や報復を伴う争いが続く状態から → 確執、長期の争い",
+        "source": "https://www.etymonline.com/word/feud",
+        "sources": [
+          "https://www.etymonline.com/word/feud",
+          "https://www.merriam-webster.com/dictionary/feud"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/feud",
+          "https://www.merriam-webster.com/dictionary/feud"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/feud",
+            "note": "feudを北イングランド・スコットランドのfedeから、古フランス語または古英語を介してゲルマン系*faihitho（敵意、争い）に遡らせている。foeとの関係は可能性として記載される。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/feud",
+            "note": "feudの長期間続く敵対、家族や集団間の争いという名詞・動詞の語義を確認した。"
+          }
+        ],
+        "originLanguage": "ゲルマン系（古フランス語経由の可能性）",
+        "etymons": [
+          "feud",
+          "fede",
+          "faide",
+          "*faihitho",
+          "*faiho-",
+          "foe"
+        ],
+        "historicalPath": [
+          "ゲルマン系 *faiho-（敵対的な）",
+          "ゲルマン系 *faihitho（敵意、争い）",
+          "古フランス語・古英語の fede / faide（争い、報復）",
+          "英語 feud（長期の確執）"
+        ],
+        "components": [
+          {
+            "form": "feud",
+            "kind": "base",
+            "gloss": "敵対・争い",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "敵意や報復を伴う争いが、一時的な衝突ではなく家族・氏族などの間で長期化する状態を表すようになった。",
+        "summary": "feudは、敵意や争いを表すゲルマン系の語から、長期の確執を表す。",
+        "confidence": "medium",
+        "notes": "語源形の綴りが英語feudと一致する分解単位を作らないためB型を維持する。"
+      }
+    },
+    "whim": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "whimwham",
+            "gloss": "気まぐれな品物"
+          },
+          {
+            "term": "whim",
+            "gloss": "突然の思いつき"
+          },
+          {
+            "gloss": "気まぐれ"
+          }
+        ],
+        "derivation": "突然浮かぶ思いつきや気まぐれな空想から → 気まぐれ",
+        "source": "https://www.etymonline.com/word/whim",
+        "sources": [
+          "https://www.etymonline.com/word/whim",
+          "https://www.merriam-webster.com/dictionary/whim"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/whim",
+          "https://www.merriam-webster.com/dictionary/whim"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/whim",
+            "note": "whimを1640年代のwhimwham（気まぐれな品物）の短縮形、またはwhimsyの短縮形と説明している。whimwham自体の起源は不明で、北欧語との関係は推測に留まる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/whim",
+            "note": "whimの理由のない突然の思いつき、気まぐれ、空想という語義を確認した。"
+          }
+        ],
+        "originLanguage": "英語（起源不明）",
+        "etymons": [
+          "whim",
+          "whimwham",
+          "whimsy",
+          "hvima"
+        ],
+        "historicalPath": [
+          "中英語以降のwhimwham（気まぐれな品物、玩具）",
+          "英語 whim / whimsy（空想、気まぐれ）",
+          "英語 whim（突然の思いつき）"
+        ],
+        "components": [
+          {
+            "form": "whim",
+            "kind": "base",
+            "gloss": "気まぐれな思いつき",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "気まぐれな物や空想を指す語が、心に突然生じる思いつきやその場の気分を表すようになった。",
+        "summary": "whimは、起源不明のwhimwham・whimsyと同じ語群から、気まぐれや突然の思いつきを表す。",
+        "confidence": "low",
+        "notes": "語源が不明で、北欧語説も確定していないため、語根辞書へ登録しない。"
+      }
+    },
+    "rig": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "rig",
+            "gloss": "船を装備する"
+          },
+          {
+            "term": "rig",
+            "gloss": "必要な装置を備えたもの"
+          },
+          {
+            "gloss": "装置、仕掛け"
+          }
+        ],
+        "derivation": "船に必要な索具や装備を取り付けることから、装備一式や仕掛けを表す名詞へ → 装置、仕掛け",
+        "source": "https://www.etymonline.com/word/rig",
+        "sources": [
+          "https://www.etymonline.com/word/rig",
+          "https://www.merriam-webster.com/dictionary/rig"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/rig",
+          "https://www.merriam-webster.com/dictionary/rig"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/rig",
+            "note": "rigを15世紀末の航海語（船に必要な索具を取り付ける）とし、デンマーク語・ノルウェー語rigge、スウェーデン語riggaなど北欧語源を候補に挙げる。PIE *reig-（結ぶ）説は可能性に留まる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/rig",
+            "note": "rigの装備する、仕掛ける、装置・設備一式、船の帆装という語義と、装備を表す航海由来の用法を確認した。"
+          }
+        ],
+        "originLanguage": "英語（スカンディナヴィア系の可能性）",
+        "etymons": [
+          "rig",
+          "rigge",
+          "rigga",
+          "*reig-"
+        ],
+        "historicalPath": [
+          "北欧語 rigge / rigga（装備する、馬具を付ける）",
+          "英語 rig（船に索具を取り付ける）",
+          "英語 rig（装備、装置、仕掛け）"
+        ],
+        "components": [
+          {
+            "form": "rig",
+            "kind": "base",
+            "gloss": "装備する・仕掛ける",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "船を出すための装備を取り付ける動作から、装備一式や特定の用途のための仕掛けを指す名詞へ広がった。",
+        "summary": "rigは、船を装備する航海語から、装置・仕掛けや装備一式を表す。",
+        "confidence": "medium",
+        "notes": "語源が不確かで、装置のrigと不正操作のrigにも語源の分岐があるため、単一基体のB型にする。"
+      }
+    },
+    "wayward": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "aweiward",
+            "gloss": "道から外れた"
+          },
+          {
+            "term": "wayward",
+            "gloss": "正しい方向から外れた"
+          },
+          {
+            "gloss": "気まぐれな、手に負えない"
+          }
+        ],
+        "derivation": "進むべき道から外れた状態から、気まぐれで扱いにくい性質へ → 気まぐれな、手に負えない",
+        "source": "https://www.etymonline.com/word/wayward",
+        "sources": [
+          "https://www.etymonline.com/word/wayward",
+          "https://www.merriam-webster.com/dictionary/wayward"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/wayward",
+          "https://www.merriam-webster.com/dictionary/wayward"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/wayward",
+            "note": "waywardを14世紀のaweiward（turned away）の短縮形とし、away＋-ward（〜の方向へ）に関係づけている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/wayward",
+            "note": "waywardの正しい道や期待される行動から外れた、気まぐれな、扱いにくいという語義を確認した。"
+          }
+        ],
+        "originLanguage": "英語（ゲルマン系）",
+        "etymons": [
+          "wayward",
+          "aweiward",
+          "away",
+          "-ward",
+          "*wer-"
+        ],
+        "historicalPath": [
+          "古英語系 away（離れて）",
+          "ゲルマン系 -ward（〜の方向へ）",
+          "中英語 aweiward（道から外れた）",
+          "英語 wayward（気まぐれな、手に負えない）"
+        ],
+        "components": [
+          {
+            "form": "away",
+            "kind": "base",
+            "gloss": "離れて",
+            "display": false
+          },
+          {
+            "form": "-ward",
+            "kind": "suffix",
+            "gloss": "〜の方向へ",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "本来の道から離れる方向へ向いた状態が、他人の期待に従わず気まぐれに振る舞う性質を表すようになった。",
+        "summary": "waywardは、道から外れる方向を表す古い複合的な表現から、気まぐれで手に負えないを表す。",
+        "confidence": "high",
+        "notes": "way＋-wardの形成は見えるが、複合的な表現は熟語表示の扱いに合わせ、A型の語根分解は行わない。"
+      }
+    },
+    "spellbound": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "spell",
+            "gloss": "呪文"
+          },
+          {
+            "term": "bound",
+            "gloss": "縛られた"
+          },
+          {
+            "gloss": "魅了された"
+          }
+        ],
+        "derivation": "呪文に縛りつけられたように注意や心を奪われることから → 魅了された",
+        "source": "https://www.etymonline.com/word/spellbound",
+        "sources": [
+          "https://www.etymonline.com/word/spellbound",
+          "https://www.merriam-webster.com/dictionary/spellbound"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/spellbound",
+          "https://www.merriam-webster.com/dictionary/spellbound"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/spellbound",
+            "note": "spellboundをspell（呪文）＋bound（bindの過去分詞形、縛られた）から成る1742年の複合語として説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/spellbound",
+            "note": "spellboundの強く魅了された、注意を完全に奪われたという語義を確認した。"
+          }
+        ],
+        "originLanguage": "英語の複合語（ゲルマン系）",
+        "etymons": [
+          "spellbound",
+          "spell",
+          "bound",
+          "bind",
+          "*bhendh-"
+        ],
+        "historicalPath": [
+          "古英語 spell（物語、呪文）",
+          "古英語 bindan（縛る）",
+          "英語 bound（縛られた）",
+          "英語 spellbound（呪文に縛られたような、魅了された）"
+        ],
+        "components": [
+          {
+            "form": "spell",
+            "kind": "base",
+            "gloss": "呪文",
+            "display": false
+          },
+          {
+            "form": "bound",
+            "kind": "base",
+            "gloss": "縛られた",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "呪文によって身体や心を縛られたように、対象へ意識を完全に引きつけられた状態を表す。",
+        "summary": "spellboundはspell（呪文）とbound（縛られた）の複合語から、魅了されたを表す。",
+        "confidence": "high",
+        "notes": "複合語は熟語表示の扱いに合わせ、bindを単一の語根としてA型表示しない。"
+      }
+    },
+    "blister": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "blestre",
+            "gloss": "水ぶくれ・ふくらみ"
+          },
+          {
+            "term": "blister",
+            "gloss": "皮膚のふくらみ"
+          },
+          {
+            "gloss": "水ぶくれ"
+          }
+        ],
+        "derivation": "皮膚にできる液体を含んだふくらみから → 水ぶくれ",
+        "source": "https://www.etymonline.com/word/blister",
+        "sources": [
+          "https://www.etymonline.com/word/blister",
+          "https://www.merriam-webster.com/dictionary/blister"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/blister",
+          "https://www.merriam-webster.com/dictionary/blister"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/blister",
+            "note": "blisterを古フランス語blestre、北欧語blastrまたは中期オランダ語blysterに関係づけ、PIE *bhlei-（吹く、膨らむ）・*bhel-を候補としている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/blister",
+            "note": "blisterの皮膚にできる液体入りの水ぶくれ、膨らませる、ひどく苦しめるという語義を確認した。"
+          }
+        ],
+        "originLanguage": "英語（古フランス語・スカンディナヴィア系の可能性）",
+        "etymons": [
+          "blister",
+          "blestre",
+          "blastr",
+          "blyster",
+          "*bhlei-",
+          "*bhel-"
+        ],
+        "historicalPath": [
+          "古フランス語 blestre（ふくらみ、水ぶくれ）または北欧・オランダ語系の語",
+          "PIE *bhlei-（吹く、膨らむ）説",
+          "英語 blister（皮膚の水ぶくれ）"
+        ],
+        "components": [
+          {
+            "form": "blister",
+            "kind": "base",
+            "gloss": "膨らみ・水ぶくれ",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "吹いて膨らむものを指す語が、皮膚上に生じる液体入りのふくらみを表すようになった。",
+        "summary": "blisterは、ふくらみを表す語から、水ぶくれを表すようになったが、起源には諸説ある。",
+        "confidence": "low",
+        "notes": "複数の借用・同系語説があり、英語の確定した語根・接辞分解は行わない。"
+      }
+    },
+    "footage": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "映像",
+        "root": "foot",
+        "parts": [
+          {
+            "form": "foot",
+            "kind": "root",
+            "gloss": "足・長さの単位"
+          },
+          {
+            "form": "-age",
+            "kind": "suffix",
+            "gloss": "〜の量・状態"
+          }
+        ],
+        "derivation": "foot（フィート）＋-age（量・集合） → 長さで数えたフィルム、映像"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/footage",
+          "https://www.merriam-webster.com/dictionary/footage"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/footage",
+            "note": "footageをfoot（長さの単位としての足）＋-ageと説明し、1916年にフィルムの長さを表す語として使われたとしている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/footage",
+            "note": "footageの映画・テレビなどで使われるフィルムや録画映像、フィートで測った長さという語義を確認した。"
+          }
+        ],
+        "originLanguage": "英語（ゲルマン系の基体）",
+        "etymons": [
+          "footage",
+          "foot",
+          "-age",
+          "fot",
+          "*fōts",
+          "*ped-"
+        ],
+        "historicalPath": [
+          "PIE *ped-（足）",
+          "ゲルマン系 *fōts",
+          "古英語 fot（足、長さの単位）",
+          "英語 foot＋-age（フィートで測った量）",
+          "英語 footage（フィルム、映像）"
+        ],
+        "components": [
+          {
+            "form": "foot",
+            "kind": "base",
+            "gloss": "足・長さの単位",
+            "display": false
+          },
+          {
+            "form": "-age",
+            "kind": "suffix",
+            "gloss": "量・状態",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "foot"
+        ],
+        "semanticBridge": "フィルムをフィート単位の長さで数えたことから、撮影されたフィルムや録画映像そのものを指すようになった。",
+        "summary": "footageは、foot（足・フィート）＋-age（量・状態）から、フィルムの長さ、さらに映像を表す。",
+        "confidence": "high",
+        "notes": "英語の基体footをそのままrootにし、ラテン語pedとの語源的な同祖関係だけでpedへ統合しない。"
+      }
+    },
+    "moratorium": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "mora",
+            "gloss": "遅延・休止"
+          },
+          {
+            "term": "moratorium",
+            "gloss": "支払いを延期する許可"
+          },
+          {
+            "gloss": "一時停止、停止期間"
+          }
+        ],
+        "derivation": "決定や支払いを一時的に遅らせる措置から → 一時停止、停止期間",
+        "source": "https://www.etymonline.com/word/moratorium",
+        "sources": [
+          "https://www.etymonline.com/word/moratorium",
+          "https://www.merriam-webster.com/dictionary/moratorium"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/moratorium",
+          "https://www.merriam-webster.com/dictionary/moratorium"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/moratorium",
+            "note": "moratoriumを後期ラテン語moratorius（遅らせる傾向のある）、ラテン語morari（遅らせる）、mora（休止、遅延）に遡らせ、PIE *morh-（妨げる、遅らせる）を示している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/moratorium",
+            "note": "moratoriumの活動や義務を一時停止・延期する期間や措置という語義を確認した。"
+          }
+        ],
+        "originLanguage": "後期ラテン語",
+        "etymons": [
+          "moratorium",
+          "moratorius",
+          "morari",
+          "mora",
+          "*morh-"
+        ],
+        "historicalPath": [
+          "PIE *morh-（妨げる、遅らせる）",
+          "ラテン語 mora（休止、遅延）",
+          "ラテン語 morari（遅らせる）",
+          "後期ラテン語 moratorius（遅らせる）",
+          "英語 moratorium（一時停止、停止期間）"
+        ],
+        "components": [
+          {
+            "form": "morari",
+            "kind": "base",
+            "gloss": "遅らせる",
+            "display": false
+          },
+          {
+            "form": "-orium",
+            "kind": "suffix",
+            "gloss": "場所・手段",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "支払いなどを遅らせる法的な許可が、活動や義務を意図的に止める一般的な措置へ広がった。",
+        "summary": "moratoriumは、遅延や休止を表すラテン語から、一時停止や停止期間を表す。",
+        "confidence": "high",
+        "notes": "ラテン語内部の形態素は明らかだが、英語moratoriumの表面に対応するA型分解は複雑なためB型を維持する。"
+      }
+    },
+    "snare": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "snara",
+            "gloss": "わな・縄"
+          },
+          {
+            "term": "snare",
+            "gloss": "輪にした縄で捕らえる"
+          },
+          {
+            "gloss": "わな、罠にかけるもの"
+          }
+        ],
+        "derivation": "輪にした縄で動物を捕らえる仕掛けから → わな、罠にかけるもの",
+        "source": "https://www.etymonline.com/word/snare",
+        "sources": [
+          "https://www.etymonline.com/word/snare",
+          "https://www.merriam-webster.com/dictionary/snare"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/snare",
+          "https://www.merriam-webster.com/dictionary/snare"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/snare",
+            "note": "snareを古英語snearu、古ノルド語snara（わな、輪縄）、ゲルマン系*snarkhoに関係づけ、動物を捕らえるわなから比喩的な罠へ広がったと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/snare",
+            "note": "snareの動物を捕らえるわな、罠にかけるもの、ドラムの弦という語義を確認した。"
+          }
+        ],
+        "originLanguage": "古英語・スカンディナヴィア系（ゲルマン系）",
+        "etymons": [
+          "snare",
+          "snearu",
+          "snara",
+          "soenri",
+          "*snarkho"
+        ],
+        "historicalPath": [
+          "ゲルマン系 *snarkho（ねじった縄）",
+          "古ノルド語 snara（わな、輪縄）",
+          "古英語 snearu（わな）",
+          "英語 snare（わな、罠にかける）"
+        ],
+        "components": [
+          {
+            "form": "snare",
+            "kind": "base",
+            "gloss": "わな・縄",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "輪にして張った縄で獲物を絡め取る具体的な仕掛けが、相手を逃げられなくする状況や策略の比喩になった。",
+        "summary": "snareは、縄やわなを表すゲルマン系の語から、罠にかけるものを表す。",
+        "confidence": "medium",
+        "notes": "古英語・北欧語の同系語は確認できるが、英語表面での接辞分解は行わない。"
+      }
+    },
+    "revel": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "reveler",
+            "gloss": "騒いで楽しむ"
+          },
+          {
+            "term": "revel",
+            "gloss": "騒がしく祝う"
+          },
+          {
+            "gloss": "大いに楽しんだ"
+          }
+        ],
+        "derivation": "祝宴で騒ぎ、喜びを表すことから → 大いに楽しんだ",
+        "source": "https://www.etymonline.com/word/revel",
+        "sources": [
+          "https://www.etymonline.com/word/revel",
+          "https://www.merriam-webster.com/dictionary/revel"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/revel",
+          "https://www.merriam-webster.com/dictionary/revel"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/revel",
+            "note": "revelを古フランス語revel・resvel（娯楽、祝宴）、reveler / rebeller（乱れる、陽気に騒ぐ）に遡らせ、ラテン語rebellare（反乱する）との関係を示している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/revel",
+            "note": "revelの騒がしい祝宴に参加する、大いに楽しむという動詞・名詞の語義を確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語（ラテン語経由）",
+        "etymons": [
+          "revel",
+          "reveler",
+          "resvel",
+          "rebeller",
+          "rebellare"
+        ],
+        "historicalPath": [
+          "ラテン語 rebellare（反乱する）",
+          "古フランス語 reveler / rebeller（乱れる、騒ぐ）",
+          "古フランス語 revel（騒がしい楽しみ）",
+          "英語 revel（大いに楽しむ）"
+        ],
+        "components": [
+          {
+            "form": "revel",
+            "kind": "base",
+            "gloss": "騒いで楽しむ",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "反乱や騒乱を指す語が、騒がしく陽気に祝う行為を表す意味へ転じ、さらに大いに楽しむ意味になった。",
+        "summary": "revelは、騒乱・騒がしい祝宴を表す古フランス語から、大いに楽しむを表す。",
+        "confidence": "high",
+        "notes": "既存表示にあったrevelare（明らかにする）ではなく、reveler・rebellare系の経路へ修正した。"
+      }
+    },
+    "bellow": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "bylgan",
+            "gloss": "大声で鳴く"
+          },
+          {
+            "term": "bellow",
+            "gloss": "動物のように轟く声を出す"
+          },
+          {
+            "gloss": "怒鳴った"
+          }
+        ],
+        "derivation": "動物が轟くような声を出すことから、人が大声で怒鳴る意味へ → 怒鳴った",
+        "source": "https://www.etymonline.com/word/bellow",
+        "sources": [
+          "https://www.etymonline.com/word/bellow",
+          "https://www.merriam-webster.com/dictionary/bellow"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/bellow",
+          "https://www.merriam-webster.com/dictionary/bellow"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/bellow",
+            "note": "bellowを古英語bylgan（大声で鳴く）に遡らせ、動物の鳴き声を表す擬音的なPIE *bhel-（音を立てる、轟く）に関係づけている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/bellow",
+            "note": "bellowの牛などが大声で鳴く、人が低く大声で叫ぶ・怒鳴るという語義を確認した。"
+          }
+        ],
+        "originLanguage": "英語（古英語・擬音的）",
+        "etymons": [
+          "bellow",
+          "bylgan",
+          "*bhel-"
+        ],
+        "historicalPath": [
+          "擬音的なPIE *bhel-（音を立てる、轟く）",
+          "古英語 bylgan（大声で鳴く）",
+          "英語 bellow（動物が轟く声を出す）",
+          "英語 bellow（人が怒鳴る）"
+        ],
+        "components": [
+          {
+            "form": "bellow",
+            "kind": "base",
+            "gloss": "轟くように鳴く",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "動物の低く大きな鳴き声を表す語が、人間の響き渡る叫びや怒鳴り声にも使われるようになった。",
+        "summary": "bellowは、動物の轟く声を表す古英語・擬音的な語から、怒鳴るを表す。",
+        "confidence": "medium",
+        "notes": "擬音的な起源を含む単一基体のため、語根辞書へ登録しない。"
+      }
+    }
+  }
+}

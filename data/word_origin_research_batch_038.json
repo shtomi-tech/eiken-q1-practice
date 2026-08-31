@@ -1,0 +1,579 @@
+{
+  "meta": {
+    "batchId": "batch-038",
+    "note": "未確認B型の次の25語。表面形に語根と接辞の対応がある語はA型へ、単純借用語・語形変化・複合語・語源が不確実な語はB型に残す。"
+  },
+  "dictionary": {
+    "roots": {
+      "seri": {
+        "gloss": "重い・重要な",
+        "origin": "ラテン語 serius / seriosus",
+        "note": "重みがあり重要であるイメージ。serious。"
+      },
+      "stead": {
+        "gloss": "場所・安定",
+        "origin": "古英語 stede / ゲルマン語系 *stadi-",
+        "note": "一定の場所にしっかり立つイメージ。steady。"
+      },
+      "care": {
+        "gloss": "心配・注意",
+        "origin": "古英語 caru / cearu・ゲルマン語系 *karō",
+        "note": "心にかかる心配や、そこから生じる注意のイメージ。careful。"
+      }
+    }
+  },
+  "entries": {
+    "ray": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古フランス語 rai、ラテン語 radius（光線、車輪のスポーク）に由来する。 → 光線" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/ray", "https://www.merriam-webster.com/dictionary/ray"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/ray", "note": "光線のrayを古フランス語 rai、ラテン語 radius（光線、棒、スポーク）に遡らせている。魚のrayには別の語源経路がある。" },
+          { "url": "https://www.merriam-webster.com/dictionary/ray", "note": "rayの現代語義として、光の細い線、放射線、魚のエイなどを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["ray", "rai", "radius", "radix"],
+        "historicalPath": ["ラテン語 radius（光線、棒、スポーク）", "古フランス語 rai", "中英語 rai / ray", "英語 ray（光線）"],
+        "components": [{ "form": "radius", "kind": "word", "gloss": "光線、棒" }],
+        "rootCandidates": ["rad"],
+        "semanticBridge": "車輪の中心から伸びる棒や光の線から、放射状に進む光線、放射線、さらに魚のエイへ用法が広がった。",
+        "summary": "rayはフランス語・ラテン語を経た単純な借用語で、radiusの語根を現代英語の表面形に分解しないためB型に残す。",
+        "confidence": "high",
+        "notes": "rayをra＋-yなどに分ける綴り合わせは採用しない。"
+      }
+    },
+    "serious": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "深刻な",
+        "root": "seri",
+        "parts": [
+          { "form": "seri", "kind": "root", "gloss": "重い・重要な" },
+          { "form": "-ous", "kind": "suffix", "gloss": "〜の性質の" }
+        ],
+        "derivation": "seri（重い・重要な）＋-ous（〜の性質の） → 重みがあり重要な、深刻な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/serious", "https://www.merriam-webster.com/dictionary/serious"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/serious", "note": "seriousを中英語 seryows、古フランス語 serios、後期ラテン語 seriosus、ラテン語 serius（重い、重要な、深刻な）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/serious", "note": "seriousの現代語義として、まじめな、重要な、深刻な、危険な結果を伴うことを確認した。語源はseryowsからseriosus・seriusへの経路を示している。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・中英語・英語",
+        "etymons": ["serious", "seryows", "serios", "seriosus", "serius", "*sehro-", "-ous"],
+        "historicalPath": ["ラテン語 serius（重い、重要な）・seriosus", "古フランス語 serios", "中英語 seryows", "英語 seri＋-ous → serious（深刻な、まじめな）"],
+        "components": [{ "form": "serius / seri", "kind": "base", "gloss": "重い、重要な" }, { "form": "-ous", "kind": "suffix", "gloss": "〜の性質の" }],
+        "rootCandidates": ["seri", "sehro"],
+        "semanticBridge": "物理的な重さから重要さ・重大さへ意味が移り、軽口ではないまじめな態度や深刻な事態を表すようになった。",
+        "summary": "seriousはseri（重い・重要な）＋-ousとして表面形に沿ったA型を設定できる。",
+        "confidence": "high",
+        "notes": "seriousとseriesの語源的な混同説は別に記録し、表示上はserius由来のseriにそろえる。"
+      }
+    },
+    "steady": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "安定した",
+        "root": "stead",
+        "parts": [
+          { "form": "stead", "kind": "root", "gloss": "場所・安定" },
+          { "form": "-y", "kind": "suffix", "gloss": "〜の性質をもつ" }
+        ],
+        "derivation": "stead（場所・安定）＋-y（〜の性質をもつ） → しっかり定まった、安定した"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/steady", "https://www.merriam-webster.com/dictionary/steady"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/steady", "note": "steadyをstead＋形容詞接尾辞-yと説明し、steadを古英語 stede、ゲルマン語系 *stadi-、PIE *sta-（立つ）に結び付けている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/steady", "note": "steadyの現代語義として、固定された、規則的な、安定した、着実なことを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・古英語・ゲルマン語系・英語",
+        "etymons": ["steady", "stead", "stede", "*stadi-", "*sta-", "-y"],
+        "historicalPath": ["PIE *sta-（立つ）", "ゲルマン語系 *stadi-・古英語 stede（場所、安定）", "英語 stead", "英語 stead＋-y → steady（安定した）"],
+        "components": [{ "form": "stead", "kind": "base", "gloss": "場所、安定" }, { "form": "-y", "kind": "suffix", "gloss": "〜の性質をもつ" }],
+        "rootCandidates": ["stead", "sta"],
+        "semanticBridge": "一定の場所にしっかり立つことから、揺れずに固定された状態、規則的で着実な状態へ意味が広がった。",
+        "summary": "steadyはstead＋-yとして出典が直接支えるA型を設定できる。",
+        "confidence": "high",
+        "notes": "既存の-y接尾辞を再利用し、stead語根を登録する。"
+      }
+    },
+    "careful": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "注意深い",
+        "root": "care",
+        "parts": [
+          { "form": "care", "kind": "root", "gloss": "心配・注意" },
+          { "form": "-ful", "kind": "suffix", "gloss": "〜に満ちた" }
+        ],
+        "derivation": "care（心配・注意）＋-ful（〜に満ちた） → 注意を十分に払う、注意深い"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/careful", "https://www.merriam-webster.com/dictionary/careful"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/careful", "note": "carefulを古英語 cearful、care＋-fulと説明し、careを古英語 caru / cearu、ゲルマン語系 *karōに遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/careful", "note": "carefulの現代語義として、用心深い、注意を払う、誤りを避けるために入念なことを確認した。語源はcare entryを参照している。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["careful", "care", "cearful", "caru", "cearu", "*karō", "-ful"],
+        "historicalPath": ["ゲルマン語系 *karō（嘆き、心配）", "古英語 caru / cearu（心配、注意）", "英語 care", "英語 care＋-ful → careful（注意深い）"],
+        "components": [{ "form": "care", "kind": "base", "gloss": "心配、注意" }, { "form": "-ful", "kind": "suffix", "gloss": "〜に満ちた" }],
+        "rootCandidates": ["care", "kar"],
+        "semanticBridge": "心にかかる心配から、対象に注意を向けることへ意味が広がり、注意に満ちた態度を表す形容詞になった。",
+        "summary": "carefulはcare＋-fulとして出典が直接支えるA型を設定できる。",
+        "confidence": "high",
+        "notes": "既存の-ful接尾辞を再利用し、care語根を登録する。"
+      }
+    },
+    "blush": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 blyscan、ゲルマン祖語 *blisk-（輝く、燃える）に由来し、赤く輝くことから赤面の意味になった。 → 赤面する" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/blush", "https://www.merriam-webster.com/dictionary/blush"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/blush", "note": "blushを中英語 bluschen、古英語 blyscan、ゲルマン祖語 *blisk-（輝く、燃える）、PIE *bhel-に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/blush", "note": "blushの現代語義として、恥ずかしさなどで顔が赤くなること、顔の赤みを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・古英語・ゲルマン語系・中英語・英語",
+        "etymons": ["blush", "bluschen", "blyscan", "blyse", "*blisk-", "*bhel-"],
+        "historicalPath": ["PIE *bhel-（輝く、燃える）", "ゲルマン祖語 *blisk-", "古英語 blyscan", "中英語 bluschen → 英語 blush（赤面する）"],
+        "components": [{ "form": "blyscan / blush", "kind": "word", "gloss": "輝く、赤くなる" }],
+        "rootCandidates": ["bhel", "blisk"],
+        "semanticBridge": "光って燃えるように赤くなることから、感情によって顔が赤くなること、さらにその赤みへ意味が広がった。",
+        "summary": "blushは古いゲルマン語系の単純語で、深い語根が表面形に安定して残らないためB型に残す。",
+        "confidence": "high",
+        "notes": "blu＋-shなどの綴り合わせは採用しない。"
+      }
+    },
+    "base": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古フランス語 bas、ラテン語 basis、ギリシャ語 basis（足を置く所、土台）に由来する。 → 拠点を置く、本拠地とする" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/base", "https://www.merriam-webster.com/dictionary/base"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/base", "note": "baseを古フランス語 bas、ラテン語 basis、ギリシャ語 basis（足を置く所、土台）に遡らせ、基礎・軍事拠点・動詞の用法を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/base", "note": "baseの現代語義として、土台、基礎、軍事拠点、何かを基礎づけることを確認した。" }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・フランス語・英語",
+        "etymons": ["base", "bas", "basis", "bainein", "*gwa-"],
+        "historicalPath": ["PIE *gwa-（行く、来る）", "ギリシャ語 basis（足を置く所、土台）", "ラテン語 basis", "古フランス語 bas → 英語 base（基礎、拠点、基礎づける）"],
+        "components": [{ "form": "basis", "kind": "word", "gloss": "足を置く所、土台" }],
+        "rootCandidates": ["gwa", "ba"],
+        "semanticBridge": "足を置いて立つ土台から、建物や議論の基礎、作戦の拠点、さらに基礎づける動作へ意味が広がった。",
+        "summary": "baseはギリシャ語・ラテン語・フランス語を経た単純語で、basisを英語のbase＋接辞に分解しないためB型に残す。",
+        "confidence": "high",
+        "notes": "bas＋-eなどの綴り合わせは採用しない。"
+      }
+    },
+    "bend": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 bendan（弓を曲げる、拘束する）、ゲルマン祖語 *band-、PIE *bhendh-（結ぶ）に由来する。 → 曲げる" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/bend", "https://www.merriam-webster.com/dictionary/bend"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/bend", "note": "bendを古英語 bendan、bindanの使役形、ゲルマン語系 *band-、PIE *bhendh-（結ぶ）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/bend", "note": "bendの現代語義として、曲げる、方向を変える、従わせることを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・古英語・ゲルマン語系・英語",
+        "etymons": ["bend", "bendan", "bindan", "*band-", "*bhendh-"],
+        "historicalPath": ["PIE *bhendh-（結ぶ）", "ゲルマン語系 *band-", "古英語 bendan（弓を曲げる、縛る）", "英語 bend（曲げる）"],
+        "components": [{ "form": "bendan", "kind": "word", "gloss": "曲げる、拘束する" }],
+        "rootCandidates": ["bhendh", "band"],
+        "semanticBridge": "弓をひもで張って曲げることから、物を曲げること、方向を変えること、比喩的に人を従わせることへ意味が広がった。",
+        "summary": "bendは古英語・ゲルマン語系の単純語で、bindとの関係は語源的な親族関係であり、英語表面形の派生分解ではないためB型に残す。",
+        "confidence": "high",
+        "notes": "ben＋-dなどの綴り合わせは採用しない。"
+      }
+    },
+    "broadcast": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "broad（広く）＋cast（投げる、まく）からなる英語の複合語。種を広くまく意味から放送・広報へ発達した。 → 放送する" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/broadcast", "https://www.merriam-webster.com/dictionary/broadcast"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/broadcast", "note": "broadcastをbroad＋castからなる語とし、地面に種を広くまく意味から、広く行き渡らせる意味、ラジオなどの放送へ発達した経路を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/broadcast", "note": "broadcastの現代語義として、ラジオ・テレビなどで情報を広く伝えること、広く発表することを確認した。" }
+        ],
+        "originLanguage": "古英語・中英語・英語・北欧語系",
+        "etymons": ["broadcast", "broad", "cast", "kasta", "*braid-", "*kast"],
+        "historicalPath": ["英語 broad（広い）＋cast（投げる、まく）", "18世紀の農業用法 broadcast（種を広くまく）", "比喩的な拡散用法", "英語 broadcast（放送する）"],
+        "components": [{ "form": "broad", "kind": "word", "gloss": "広く" }, { "form": "cast", "kind": "word", "gloss": "投げる、まく" }],
+        "rootCandidates": ["braid", "kast"],
+        "semanticBridge": "種を広い範囲へ投げまくことから、情報や電波を広く行き渡らせることへ意味が移った。",
+        "summary": "broadcastはbroad＋castの複合語であり、複合表現を熟語側に合わせる方針のためB型に残す。",
+        "confidence": "high",
+        "notes": "複合要素をA型の語根・接辞チップとして表示しない。"
+      }
+    },
+    "hurt": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古フランス語 hurter（突く、衝突する）に由来するが、さらに古い起源は不確実である。 → 傷つけた" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/hurt", "https://www.merriam-webster.com/dictionary/hurt"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/hurt", "note": "hurtを古フランス語 hurter（突く、衝突する）に遡らせ、フランク語 *hurtやケルト語起源などの説があるが確定しないと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/hurt", "note": "hurtの現代語義として、身体や感情を傷つけること、痛みを感じることを確認した。" }
+        ],
+        "originLanguage": "フランス語・ゲルマン語系・英語・語源不確定",
+        "etymons": ["hurt", "hurter", "heurter", "*hurt", "hrutr"],
+        "historicalPath": ["古フランス語 hurter（突く、衝突する）", "中英語 hurt（傷つける）", "英語 hurt（傷つける、痛む）"],
+        "components": [{ "form": "hurter", "kind": "word", "gloss": "突く、衝突する" }],
+        "rootCandidates": ["hurt"],
+        "semanticBridge": "物理的に衝突して傷を負わせることから、身体・感情・評判に害を与えること、さらに痛みを感じることへ広がった。",
+        "summary": "hurtは語源の最終段階が不確実な単純語で、現代英語の表面形に安定した語根・接辞分解を置かないためB型に残す。",
+        "confidence": "high",
+        "notes": "hur＋-tなどの綴り合わせは採用しない。"
+      }
+    },
+    "blank": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古フランス語 blanc、フランク語系 *blank（白い、輝く）に由来する。白い状態から空白の意味へ広がった。 → 記憶が真っ白になった" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/blank", "https://www.merriam-webster.com/dictionary/blank"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/blank", "note": "blankを古フランス語 blanc、フランク語系 *blank、ゲルマン祖語 *blangkaz、PIE *bhel-（輝く、燃える）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/blank", "note": "blankの現代語義として、空白の、表情のない、記憶が抜けた状態を確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ゲルマン語系・フランス語・英語",
+        "etymons": ["blank", "blanc", "*blank", "*blangkaz", "*bhel-"],
+        "historicalPath": ["PIE *bhel-（輝く、白く輝く）", "ゲルマン祖語 *blangkaz", "フランク語系 *blank", "古フランス語 blanc → 英語 blank（白い、空白の）"],
+        "components": [{ "form": "blanc / blank", "kind": "word", "gloss": "白い、輝く" }],
+        "rootCandidates": ["bhel", "blank"],
+        "semanticBridge": "白く輝いて何も書かれていない状態から、紙面や場所の空白、表情や記憶に内容がない状態へ意味が広がった。",
+        "summary": "blankはフランス語・ゲルマン語系の単純語で、深いbhel語根を現代英語のblankに分解しないためB型に残す。",
+        "confidence": "high",
+        "notes": "blan＋-kなどの綴り合わせは採用しない。"
+      }
+    },
+    "wave": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 wafian（揺れる、波打つ）、ゲルマン祖語 *wab- に由来する。名詞のwaveには別の古英語系統もある。 → 手を振った" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/wave", "https://www.merriam-webster.com/dictionary/wave"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/wave", "note": "動詞waveを中英語 waven、古英語 wafian、ゲルマン祖語 *wab-に遡らせ、名詞waveは古英語 wagianを経た別経路もあると説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/wave", "note": "waveの現代語義として、前後に動かすこと、手を振って合図すること、波を確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・中英語・英語",
+        "etymons": ["wave", "waven", "wafian", "wagian", "*wab-", "*wag-"],
+        "historicalPath": ["ゲルマン語系 *wab- / *wag-（前後に動く）", "古英語 wafian・wagian", "中英語 waven / wave", "英語 wave（揺れる、手を振る、波）"],
+        "components": [{ "form": "wafian / wagian", "kind": "word", "gloss": "揺れる、動かす" }],
+        "rootCandidates": ["wab", "wag"],
+        "semanticBridge": "物が前後に揺れる動きから、水面の起伏、旗や手を振る合図、さらに物理学の波へ意味が広がった。",
+        "summary": "waveは複数の古英語・ゲルマン語系経路が関わる単純語で、表面形に安定した語根・接辞分解を置かないためB型に残す。",
+        "confidence": "high",
+        "notes": "wav＋-eなどの綴り合わせは採用しない。"
+      }
+    },
+    "steam": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 steam、ゲルマン祖語 *staumaz（蒸気）に由来するが、さらに古い起源は不明である。 → 蒸気で調理する、蒸す" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/steam", "https://www.merriam-webster.com/dictionary/steam"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/steam", "note": "steamを古英語 steam、ゲルマン祖語 *staumaz（蒸気）に遡らせるが、語源はunknownと記載している。動詞は名詞から生じた。" },
+          { "url": "https://www.merriam-webster.com/dictionary/steam", "note": "steamの現代語義として、水の気体、蒸気で処理・調理することを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語・語源不確定",
+        "etymons": ["steam", "stēm", "staumaz"],
+        "historicalPath": ["ゲルマン祖語 *staumaz（蒸気）", "古英語 steam", "中英語 stēm", "英語 steam（蒸気、蒸気で調理する）"],
+        "components": [{ "form": "steam", "kind": "word", "gloss": "蒸気" }],
+        "rootCandidates": ["staum"],
+        "semanticBridge": "熱せられた物から出る蒸気から、水の気体、蒸気動力、蒸気で処理・調理する動作へ用法が広がった。",
+        "summary": "steamは古いゲルマン語系の単純語で、語源のさらに古い段階も不明なためB型に残す。",
+        "confidence": "high",
+        "notes": "stea＋-mなどの綴り合わせは採用しない。"
+      }
+    },
+    "mail": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "郵便のmailは古フランス語 male（袋）に由来し、金属のmail（鎖かたびら）には別の語源がある。 → 郵送する" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/mail", "https://www.merriam-webster.com/dictionary/mail"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/mail", "note": "郵便のmailを古フランス語 male（財布、袋）、フランク語系・ゲルマン祖語 *malho-、PIE *molko-（皮、袋）に遡らせ、鎖かたびらのmailはラテン語 maculaに由来する別語と説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/mail", "note": "mailの現代語義として、郵便物、郵便制度、郵送すること、鎖かたびらを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ゲルマン語系・フランス語・英語",
+        "etymons": ["mail", "male", "*malho-", "*molko-", "maille", "macula"],
+        "historicalPath": ["PIE *molko-（皮、袋）", "ゲルマン語系 *malho-・古フランス語 male（袋）", "英語 mail（袋、郵便）", "別経路の古フランス語 maille / ラテン語 macula（鎖の網目）"],
+        "components": [{ "form": "male / mail", "kind": "word", "gloss": "袋、郵便" }, { "form": "maille", "kind": "word", "gloss": "網目、鎖かたびら" }],
+        "rootCandidates": ["molko", "malho", "macul"],
+        "semanticBridge": "袋に入れた携行品から手紙の袋、郵便物・郵便制度・郵送する動作へ意味が広がった。鎖かたびらは別系統である。",
+        "summary": "mailは同綴に複数の語源経路を含む単純語で、郵便の意味を一つの表面分解に固定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "ma＋-ilなどの綴り合わせは採用しない。"
+      }
+    },
+    "float": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 flotian、ゲルマン祖語 *flotan（浮く）に由来し、PIE *pleu-（流れる）と関係する。 → 浮く、浮かべる" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/float", "https://www.merriam-webster.com/dictionary/float"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/float", "note": "floatを古英語 flotian、ゲルマン祖語 *flotan、PIE *plud-、*pleu-（流れる）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/float", "note": "floatの現代語義として、水面に浮く、浮かべる、漂うことを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・古英語・ゲルマン語系・英語",
+        "etymons": ["float", "flotian", "*flotan", "*plud-", "*pleu-"],
+        "historicalPath": ["PIE *pleu-（流れる）・*plud-", "ゲルマン祖語 *flotan", "古英語 flotian", "英語 float（浮く、浮かべる）"],
+        "components": [{ "form": "flotian / float", "kind": "word", "gloss": "浮く、漂う" }],
+        "rootCandidates": ["pleu", "plud"],
+        "semanticBridge": "流れる水面に乗って休むことから、空中や水中を漂うこと、物を浮かべること、金融の発行などへ用法が広がった。",
+        "summary": "floatは古英語・ゲルマン語系の単純語で、深いpleu語根を現代英語のfloatに分解しないためB型に残す。",
+        "confidence": "high",
+        "notes": "flo＋-atなどの綴り合わせは採用しない。"
+      }
+    },
+    "feed": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 fedan、ゲルマン祖語 *fodjan、PIE *pa-（食べさせる）に由来する。 → 食べ物を与える" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/feed", "https://www.merriam-webster.com/dictionary/feed"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/feed", "note": "feedを古英語 fedan、ゲルマン祖語 *fodjan、PIE *pa-（食べさせる）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/feed", "note": "feedの現代語義として、食物を与える、食べる、供給する、機械へ材料を送ることを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・古英語・ゲルマン語系・英語",
+        "etymons": ["feed", "fedan", "*fodjan", "*pa-"],
+        "historicalPath": ["PIE *pa-（食べさせる）", "ゲルマン祖語 *fodjan", "古英語 fedan", "中英語 feden → 英語 feed（食べさせる、供給する）"],
+        "components": [{ "form": "fedan / feed", "kind": "word", "gloss": "食べさせる、養う" }],
+        "rootCandidates": ["pa", "fod"],
+        "semanticBridge": "生物に食物を与え養うことから、動物が食べること、機械や組織へ物資・情報を供給することへ意味が広がった。",
+        "summary": "feedは古いゲルマン語系の単純語で、語源上のpa語根が表面形に残らないためB型に残す。",
+        "confidence": "high",
+        "notes": "fee＋-dなどの綴り合わせは採用しない。"
+      }
+    },
+    "share": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 scearu（切り分けた部分）、sceran（切る）、ゲルマン祖語 *skeraz、PIE *sker-（切る）に由来する。 → 共有する、分ける" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/share", "https://www.merriam-webster.com/dictionary/share"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/share", "note": "shareを古英語 scearu（切り分けた部分）、sceran（切る）、ゲルマン祖語 *skeraz、PIE *sker-に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/share", "note": "shareの現代語義として、分け前、共同所有の一部、他者と分ける・共有することを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・古英語・ゲルマン語系・英語",
+        "etymons": ["share", "scearu", "sceran", "*skeraz", "*sker-"],
+        "historicalPath": ["PIE *sker-（切る）", "ゲルマン祖語 *skeraz", "古英語 scearu（切り分けた部分）", "中英語 share → 英語 share（分け前、共有する）"],
+        "components": [{ "form": "scearu / share", "kind": "word", "gloss": "切り分けた部分" }],
+        "rootCandidates": ["sker"],
+        "semanticBridge": "全体から切り分けた部分から、共同所有の分け前、さらにその一部を他者と分ける行為へ意味が広がった。",
+        "summary": "shareは古英語由来の単純語で、深いsker語根を現代英語のshareに分解しないためB型に残す。",
+        "confidence": "high",
+        "notes": "shar＋-eなどの綴り合わせは採用しない。"
+      }
+    },
+    "chew": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 ceowan、ゲルマン語系 *keuwwan に由来し、PIE *gyeu-（かむ）と関係する。 → かむ" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/chew", "https://www.merriam-webster.com/dictionary/chew"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/chew", "note": "chewを中英語 cheuen、古英語 ceowan、ゲルマン語系 *keuwwan、PIE *gyeu-（かむ）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/chew", "note": "chewの現代語義として、歯でかみ砕くこと、比喩的に問題をよく考えることを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・古英語・ゲルマン語系・中英語・英語",
+        "etymons": ["chew", "cheuen", "ceowan", "*keuwwan", "*gyeu-"],
+        "historicalPath": ["PIE *gyeu-（かむ）", "ゲルマン語系 *keuwwan", "古英語 ceowan", "中英語 cheuen → 英語 chew（かむ）"],
+        "components": [{ "form": "ceowan / chew", "kind": "word", "gloss": "かむ" }],
+        "rootCandidates": ["gyeu", "keuw"],
+        "semanticBridge": "食物を歯でかみ砕くことから、比喩的に考えを何度も検討すること、議論することへ用法が広がった。",
+        "summary": "chewは古英語・ゲルマン語系の単純語で、深いgyeu語根を表面形に分解しないためB型に残す。",
+        "confidence": "high",
+        "notes": "che＋-wなどの綴り合わせは採用しない。"
+      }
+    },
+    "bounce": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "中英語 bounsen（強く打つ）に由来し、オランダ語・低地ドイツ語系または擬音語の可能性がある。boundの影響も受けた。 → 弾ませる、跳ねる" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/bounce", "https://www.merriam-webster.com/dictionary/bounce"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/bounce", "note": "bounceを中英語 bounsen（強く打つ）に遡らせ、オランダ語 bonzen、低地ドイツ語 bunsen、擬音語などを候補とし、boundの影響も説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/bounce", "note": "bounceの現代語義として、跳ね返る、弾ませる、勢いよく動くことを確認した。" }
+        ],
+        "originLanguage": "中英語・オランダ語系・低地ドイツ語系・英語・語源不確定",
+        "etymons": ["bounce", "bounsen", "bonzen", "bunsen", "bound"],
+        "historicalPath": ["中英語 bounsen（強く打つ）", "英語 bounce（打ち付ける）", "boundの意味・綴りの影響", "英語 bounce（跳ねる、弾ませる）"],
+        "components": [{ "form": "bounsen / bounce", "kind": "word", "gloss": "強く打つ、跳ねる" }],
+        "rootCandidates": ["bonz", "buns"],
+        "semanticBridge": "物を強く打つことから、球などが跳ね返ること、物を弾ませること、勢いよく回復することへ意味が広がった。",
+        "summary": "bounceは語源に複数の可能性があり、boundとの関係も影響であって安定した派生ではないためB型に残す。",
+        "confidence": "medium",
+        "notes": "boun＋-ceなどの綴り合わせは採用しない。"
+      }
+    },
+    "skill": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古ノルド語 skil（区別、理解、能力）に由来し、物事を見分ける力から技能の意味へ発達した。 → 技術、技能、腕前" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/skill", "https://www.merriam-webster.com/dictionary/skill"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/skill", "note": "skillを古ノルド語 skil（区別、識別、判断）・skiljaに遡らせ、実践的な知識・能力の意味へ発達したと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/skill", "note": "skillの現代語義として、訓練や経験で得た能力、何かを上手に行う力を確認した。" }
+        ],
+        "originLanguage": "古ノルド語・ゲルマン語系・英語",
+        "etymons": ["skill", "skil", "skilja", "*skaljo-", "*skel-"],
+        "historicalPath": ["PIE *skel-（切る、分ける）", "ゲルマン語系 *skaljo-", "古ノルド語 skil（区別、理解）", "中英語 skill → 英語 skill（技能、腕前）"],
+        "components": [{ "form": "skil", "kind": "word", "gloss": "区別、理解、能力" }],
+        "rootCandidates": ["skel", "skil"],
+        "semanticBridge": "物事を区別して理解する力から、学習や訓練で身につけた実践的な能力・技能へ意味が広がった。",
+        "summary": "skillは古ノルド語由来の単純語で、skel語根を現代英語のskillに安定して分解しないためB型に残す。",
+        "confidence": "high",
+        "notes": "ski＋-llなどの綴り合わせは採用しない。"
+      }
+    },
+    "audio": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "ラテン語 audire（聞く）に由来する語形成要素 audio- から独立した英語名詞になった。 → 音声、オーディオ" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/audio", "https://www.merriam-webster.com/dictionary/audio"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/audio", "note": "audioを1930年代に音や録音信号を表す名詞としてaudio-から抽出した語とし、audio-をラテン語 audire（聞く）、PIE *au-（知覚する）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/audio", "note": "audioの現代語義として、音、音声信号、音響機器に関する形容詞・名詞を確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・英語",
+        "etymons": ["audio", "audio-", "audire", "*au-"],
+        "historicalPath": ["PIE *au-（知覚する）", "ラテン語 audire（聞く）", "英語の語形成要素 audio-", "英語 audio（音声、録音音）"],
+        "components": [{ "form": "audire / audio-", "kind": "word-forming element", "gloss": "聞く、音声" }],
+        "rootCandidates": ["au", "aud"],
+        "semanticBridge": "聞くことを表すラテン語から、音や聴覚に関する語形成要素となり、録音・伝送された音声そのものを表す名詞へ独立した。",
+        "summary": "audioはaudio-という語形成要素から抽出された単純語で、aud＋-ioという英語の接辞分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "audioの語末-ioを表示用接尾辞として扱わない。"
+      }
+    },
+    "joy": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古フランス語 joie、ラテン語 gaudia / gaudium（喜び）に由来する。 → 喜び、うれしさ" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/joy", "https://www.merriam-webster.com/dictionary/joy"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/joy", "note": "joyを古フランス語 joie、ラテン語 gaudia / gaudium、gaudere（喜ぶ）、PIE *gau-（喜ぶ）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/joy", "note": "joyの現代語義として、強い幸福や喜びの感情、喜びを与えるものを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・英語",
+        "etymons": ["joy", "joie", "gaudia", "gaudium", "gaudere", "*gau-"],
+        "historicalPath": ["PIE *gau-（喜ぶ）", "ラテン語 gaudere・gaudium（喜び）", "古フランス語 joie", "中英語 joye → 英語 joy（喜び）"],
+        "components": [{ "form": "gaudium / joie", "kind": "word", "gloss": "喜び、楽しみ" }],
+        "rootCandidates": ["gau", "gaud"],
+        "semanticBridge": "喜ぶという感情から、心の中の強い喜び、さらに喜びをもたらす人や物へ意味が広がった。",
+        "summary": "joyはフランス語を経たラテン語系の単純語で、gaud語根が表面形に残らないためB型に残す。",
+        "confidence": "high",
+        "notes": "jo＋-yなどの綴り合わせは採用しない。"
+      }
+    },
+    "rent": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "家賃のrentは古フランス語 rente、ラテン語系 *rendita（返されたもの）に由来する。裂け目のrentと動詞rentには別のrend系統もある。 → 家賃、賃貸料／賃借りする" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/rent", "https://www.merriam-webster.com/dictionary/rent"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/rent", "note": "家賃のrentを古フランス語 rente、俗ラテン語 *rendita、rendre（返す）に遡らせ、裂け目のrentはrenden / rendの過去形系統と区別している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/rent", "note": "rentの現代語義として、財産使用の対価、賃借りすること、裂け目・裂くことを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・中英語・英語",
+        "etymons": ["rent", "rente", "*rendita", "rendre", "renden", "rend"],
+        "historicalPath": ["俗ラテン語 *rendita（返されたもの）", "古フランス語 rente（支払い、収入）", "中英語 rent（地代、収入）", "英語 rent（家賃、賃借りする）", "別経路のrent（裂け目）"],
+        "components": [{ "form": "rente / rendita", "kind": "word", "gloss": "支払い、収入" }, { "form": "rend", "kind": "word", "gloss": "裂く" }],
+        "rootCandidates": ["rend", "red", "do"],
+        "semanticBridge": "定期的に支払われる収入から財産使用料へ意味が具体化した。裂け目を表すrentは「裂く」rendの別系統である。",
+        "summary": "rentは同綴に家賃・裂け目・裂くの複数経路があり、単一の表面分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "ren＋-tなどの綴り合わせは採用しない。"
+      }
+    },
+    "shadow": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 sceadu（影、日陰）の斜格形から生じ、shadeと同語源である。 → 影、日陰" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/shadow", "https://www.merriam-webster.com/dictionary/shadow"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/shadow", "note": "shadowを中英語 shadwe、古英語 sceadwe / sceaduwe、sceadu（影、日陰）の斜格形に遡らせ、shadeとの関係を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/shadow", "note": "shadowの現代語義として、光を遮ってできる暗い像、日陰、追跡する人、影をつけることを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・中英語・英語",
+        "etymons": ["shadow", "shadwe", "sceadwe", "sceadu", "skadus"],
+        "historicalPath": ["ゲルマン語系 *skadus（影、日陰）", "古英語 sceadu（影、日陰）・斜格 sceadwe", "中英語 shadwe", "英語 shadow（影、日陰）"],
+        "components": [{ "form": "sceadu / shadwe", "kind": "word", "gloss": "影、日陰" }],
+        "rootCandidates": ["skad"],
+        "semanticBridge": "光を遮ってできる暗い像から、日陰、実体のないもの、付き従う人や追跡者、比喩的な前兆へ意味が広がった。",
+        "summary": "shadowは古英語の斜格形から生じた単純語で、深いゲルマン語根を現代表面形に分解しないためB型に残す。",
+        "confidence": "high",
+        "notes": "shad＋-owなどの綴り合わせは採用しない。"
+      }
+    },
+    "talent": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古フランス語 talent、ラテン語 talentum、ギリシャ語 talanton（重さ、貨幣単位）に由来し、聖書のたとえから才能の意味になった。 → 才能、素質" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/talent", "https://www.merriam-webster.com/dictionary/talent"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/talent", "note": "talentを古フランス語 talent、ラテン語 talentum、ギリシャ語 talanton（秤、重さ、貨幣）に遡らせ、聖書のtalentから自然な能力の意味が発達したと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/talent", "note": "talentの現代語義として、特別な能力や素質、能力のある人々を確認した。" }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・フランス語・英語",
+        "etymons": ["talent", "talentum", "talanton", "*tele-"],
+        "historicalPath": ["PIE *tele-（持ち上げる、支える、重さを量る）", "ギリシャ語 talanton（秤、重さ、貨幣）", "ラテン語 talentum・古フランス語 talent", "英語 talent（意欲、財産、能力、才能）"],
+        "components": [{ "form": "talanton / talentum", "kind": "word", "gloss": "重さ、貨幣、才能" }],
+        "rootCandidates": ["tele", "tal"],
+        "semanticBridge": "重さや貨幣単位から、聖書で人に託された財産、さらに本人が伸ばせる自然な能力・才能へ意味が広がった。",
+        "summary": "talentはギリシャ語・ラテン語・フランス語を経た単純な借用語で、talantonを現代英語のtal＋-entに分解しないためB型に残す。",
+        "confidence": "high",
+        "notes": "tal＋-entなどの綴り合わせは採用しない。"
+      }
+    },
+    "pattern": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古フランス語 patron（保護者、模型、型）の現代英語での変形で、patronと同語源の二重語である。 → 模様、型、パターン" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/pattern", "https://www.merriam-webster.com/dictionary/pattern"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/pattern", "note": "patternをpatronの現代英語での変形とし、古フランス語 patron、ラテン語 patronus（保護者、模型、型）に由来する経路を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/pattern", "note": "patternの現代語義として、繰り返される模様、製作の型、行動や事象の型を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["pattern", "patron", "patronus", "pater"],
+        "historicalPath": ["ラテン語 pater（父）・patronus（保護者、模型）", "古フランス語 patron（保護者、型）", "英語 patron", "英語 pattern（patronの変形、型、模様）"],
+        "components": [{ "form": "patron", "kind": "word", "gloss": "保護者、模型、型" }],
+        "rootCandidates": ["patr"],
+        "semanticBridge": "保護者や手本となる模型から、製作のための型、繰り返される模様、行動や出来事の型へ意味が広がった。",
+        "summary": "patternはpatronの変形として定着した単純語で、patr語根を英語表面形のpatternに直接分解しないためB型に残す。",
+        "confidence": "high",
+        "notes": "pat＋-ternなどの綴り合わせは採用しない。"
+      }
+    }
+  }
+}

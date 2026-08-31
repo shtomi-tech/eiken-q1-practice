@@ -1,0 +1,569 @@
+{
+  "meta": {
+    "batchId": "batch-035",
+    "note": "未確認B型の次の25語。基本語・機能語・代名詞・語形変化はB型に残し、表面形に安定した派生を持つcreationとfiscalをA型へ移す。"
+  },
+  "dictionary": {
+    "roots": {
+      "creat": {
+        "gloss": "生み出す",
+        "origin": "ラテン語 creare / creatio",
+        "note": "何かを作り、存在させるイメージ。creation。"
+      },
+      "fisc": {
+        "gloss": "国庫・財政",
+        "origin": "ラテン語 fiscus",
+        "note": "国の金庫や公的な財源のイメージ。fiscal。"
+      }
+    }
+  },
+  "entries": {
+    "see": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 seon、ゲルマン祖語 *sehwanan（見る、認識する）に由来する。 → 見る、分かる" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/see", "https://www.merriam-webster.com/dictionary/see"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/see", "note": "seeを中英語 sēn・古英語 seon、ゲルマン祖語 *sehwananに遡らせ、目で見ることから理解・経験・訪問へ意味が広がったと説明している。PIE *sekw-との関係には異論もある。" },
+          { "url": "https://www.merriam-webster.com/dictionary/see", "note": "seeの現代語義として、目で見ること、理解すること、会うこと、確かめることを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["see", "sēn", "seon", "*sehwanan", "*sekw-"],
+        "historicalPath": ["古英語 seon（目で見る、理解する）", "ゲルマン祖語 *sehwanan", "中英語 sēn", "英語 see（見る、分かる）"],
+        "components": [{ "form": "seon", "kind": "word", "gloss": "見る、認識する" }],
+        "rootCandidates": ["seh", "sekw"],
+        "semanticBridge": "目で対象を認識することから、頭で理解すること、経験すること、会って確かめることへ意味が広がった。",
+        "summary": "seeは古い単純語で、比較語源にも異論があり、現代語の表面形に安定した語根・接辞分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "seeをse＋-eなどに分けず、PIE語根説も表示用分解には使わない。"
+      }
+    },
+    "play": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 plegan / plegian、ゲルマン祖語 *plegōjanan（身の回りのことをする）に由来する。 → 遊ぶ、する" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/play", "https://www.merriam-webster.com/dictionary/play"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/play", "note": "playを中英語 pleien・古英語 plegan / plegian、ゲルマン祖語 *plegōjananに遡らせるが、最終的な語源と音の変化は不確かと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/play", "note": "playの現代語義として、遊ぶこと、競技に参加すること、演じること、機械などを動かすことを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・中英語・英語",
+        "etymons": ["play", "pleien", "plegan", "plegian", "*plegōjanan", "plight"],
+        "historicalPath": ["ゲルマン祖語 *plegōjanan（身の回りのことをする）", "古英語 plegan / plegian", "中英語 pleien", "英語 play（遊ぶ、演じる、作動する）"],
+        "components": [{ "form": "plegan", "kind": "word", "gloss": "活動する、遊ぶ" }],
+        "rootCandidates": ["pleg"],
+        "semanticBridge": "身の回りの活動に従事することから、子どもの遊び、競技、演技、機械の作動へ意味が広がった。",
+        "summary": "playは古いゲルマン語系の単純語で、語源の最終的な説明にも不確かさがあるためB型に残す。",
+        "confidence": "high",
+        "notes": "playをpl＋-ayなどに分けず、plightとの関係も表示用分解には使わない。"
+      }
+    },
+    "under": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 under、ゲルマン祖語 *under-、インド・ヨーロッパ祖語 *ndher-（下に）に由来する。 → 〜の下に" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/under", "https://www.merriam-webster.com/dictionary/under"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/under", "note": "underを古英語 under、ゲルマン祖語 *under-、PIE *ndher-（下に）に遡らせ、位置・支配・基準未満などの用法を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/under", "note": "underの現代語義として、下の位置、支配下、数量や年齢の未満などを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・古英語・ゲルマン語系・英語",
+        "etymons": ["under", "*under-", "*ndher-", "inferus", "infra"],
+        "historicalPath": ["PIE *ndher-（下に）", "ゲルマン祖語 *under-", "古英語 under", "英語 under（下に、〜未満）"],
+        "components": [{ "form": "under", "kind": "word", "gloss": "下に、下で" }],
+        "rootCandidates": ["ndher"],
+        "semanticBridge": "物理的に下にある位置から、支配や条件の下、さらに基準より少ない状態へ意味が広がった。",
+        "summary": "underは機能語としての単純な前置詞・副詞であり、接頭辞としての用法も含めて表示用の語根・接辞分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "underをun＋-derなどに分けず、understandの複合要素もこの語単体のA型表示には使わない。"
+      }
+    },
+    "with": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 wiþ、ゲルマン祖語 *withro-（反対に、向かいに）に由来し、共に・用いての意味へ広がった。 → 〜と一緒に" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/with", "https://www.merriam-webster.com/dictionary/with"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/with", "note": "withを古英語 wiþ、ゲルマン祖語 *withro-（反対に、向かいに）に結び付け、対抗・近接などから現代の共同行為の用法へ変化した経路を確認した。" },
+          { "url": "https://www.merriam-webster.com/dictionary/with", "note": "withの現代語義として、同伴、道具・手段、関連、対立などの関係を確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["with", "wiþ", "*withro-", "wither", "against"],
+        "historicalPath": ["ゲルマン祖語 *withro-（向かいに、反対に）", "古英語 wiþ", "中英語 with", "英語 with（〜と共に、〜を用いて）"],
+        "components": [{ "form": "wiþ", "kind": "word", "gloss": "向かいに、反対に" }],
+        "rootCandidates": ["withr"],
+        "semanticBridge": "向かい合う関係や近接を表す語から、同伴、道具、関連を表す広い前置詞へ意味が変化した。",
+        "summary": "withは古い機能語で、現代語の表面形に安定した接辞分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "withをwi＋-thなどに分ける綴り合わせは採用しない。"
+      }
+    },
+    "about": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 abutan / onbutan に由来する複合・縮約形で、周囲・近くから「〜について」の意味へ広がった。 → 〜について" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/about", "https://www.merriam-webster.com/dictionary/about"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/about", "note": "aboutを古英語 abutan、さらに on＋by＋utan（外側）に関係する複合・縮約形と説明し、周囲・近接・およその数量・事柄についての用法を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/about", "note": "aboutの現代語義として、周囲、近く、程度、話題・関連を表す用法を確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["about", "abutan", "onbutan", "on", "by", "utan", "out"],
+        "historicalPath": ["古英語 onbutan / abutan（外側の周りに）", "中英語 aboute", "英語 about（周囲に、近く、〜について）"],
+        "components": [
+          { "form": "on", "kind": "base", "gloss": "上・接触" },
+          { "form": "by", "kind": "base", "gloss": "そばに" },
+          { "form": "out", "kind": "base", "gloss": "外側" }
+        ],
+        "rootCandidates": ["ambhi", "an"],
+        "semanticBridge": "外側を回る位置関係から、周囲・近接・およその程度、さらに話題との関連を表す用法へ広がった。",
+        "summary": "aboutは古英語の複合・縮約から生じた機能語であり、複合表現は熟語側に合わせる方針のためB型に残す。",
+        "confidence": "high",
+        "notes": "on＋by＋outを現代英語のA型チップとして表示しない。"
+      }
+    },
+    "at": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 æt、ゲルマン祖語 *at、インド・ヨーロッパ祖語 *ad-（〜へ、近くに）に由来する。 → 〜で、〜に" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/at", "https://www.merriam-webster.com/dictionary/at"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/at", "note": "atを古英語 æt、ゲルマン祖語 *at、PIE *ad-（〜へ、近くに）に遡らせ、場所・時点・関係など多様な用法を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/at", "note": "atの現代語義として、場所・時刻・目標・状態などを示す用法を確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・古英語・ゲルマン語系・英語",
+        "etymons": ["at", "æt", "*at", "*ad-"],
+        "historicalPath": ["PIE *ad-（〜へ、近くに）", "ゲルマン祖語 *at", "古英語 æt", "英語 at（〜で、〜に）"],
+        "components": [{ "form": "æt", "kind": "word", "gloss": "〜へ、近くに" }],
+        "rootCandidates": ["ad"],
+        "semanticBridge": "ある場所や対象の近くへ向かう関係から、位置・時刻・状態などを示す機能語へ発達した。",
+        "summary": "atは短い機能語であり、語源上のadとの関係を現代英語のA型分解として表示しないためB型に残す。",
+        "confidence": "high",
+        "notes": "atをa＋-tなどに分ける綴り合わせは採用しない。"
+      }
+    },
+    "go": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 gan、ウェストゲルマン語系 *gaian（進む、歩く、去る）に由来する。 → 行く" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/go", "https://www.merriam-webster.com/dictionary/go"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/go", "note": "goを古英語 gan、ウェストゲルマン語系 *gaian、PIE *ghē-に遡らせ、過去形 wentが別動詞wendenから入った不規則な歴史も説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/go", "note": "goの現代語義として、移動すること、出発すること、進行・成立することなど広い用法を確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・古英語・ゲルマン語系・英語",
+        "etymons": ["go", "gan", "*gaian", "*ghē-", "went", "wenden"],
+        "historicalPath": ["PIE *ghē-（放す、去る）という関係説", "ゲルマン語系 *gaian", "古英語 gan", "英語 go（行く、進む）"],
+        "components": [{ "form": "gan", "kind": "word", "gloss": "進む、行く" }],
+        "rootCandidates": ["ghe"],
+        "semanticBridge": "歩いて進み、そこから離れる動作から、出来事の進行、状態の変化、売れることなどへ意味が広がった。",
+        "summary": "goは古い単純語で、過去形wentも別語源の不規則形であるため、現代語の表面形を分解せずB型に残す。",
+        "confidence": "high",
+        "notes": "goをg＋-oなどに分けず、wentをgoの語源分解に含めない。"
+      }
+    },
+    "want": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古ノルド語 vanta、ゲルマン祖語 *wanen に由来し、「不足する」から「望む」へ意味が変化した。 → 欲しい、望む" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/want", "https://www.merriam-webster.com/dictionary/want"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/want", "note": "wantを中英語 wanten・古ノルド語 vanta、ゲルマン祖語 *wanen、PIE *weno-に遡らせ、「不足する」から「欲する」への意味変化を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/want", "note": "wantの現代語義として、必要とすること、欠けていること、望むことを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・古ノルド語・ゲルマン語系・英語",
+        "etymons": ["want", "wanten", "vanta", "*wanen", "*weno-", "*eue-"],
+        "historicalPath": ["PIE *weno-（不足する、手放す）という関係説", "ゲルマン祖語 *wanen", "古ノルド語 vanta・中英語 wanten", "英語 want（不足する、望む）"],
+        "components": [{ "form": "vanta", "kind": "word", "gloss": "不足する、望む" }],
+        "rootCandidates": ["wan", "eue"],
+        "semanticBridge": "不足や欠如を表す語から、欠けているものを必要とすること、さらに望みを持つことへ意味が広がった。",
+        "summary": "wantは北欧語由来の単純語で、現代語の表面形に安定した語根・接辞分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "wantをwan＋-tなどに分ける綴り合わせは採用しない。"
+      }
+    },
+    "close": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古フランス語 clos / clore、ラテン語 clausus / claudere（閉じる）に由来する。 → 閉じる" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/close", "https://www.merriam-webster.com/dictionary/close"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/close", "note": "closeを古フランス語 clos・clore、ラテン語 clausus・claudereに遡らせ、閉じる・近い・終えるなどの関連する用法を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/close", "note": "closeの現代語義として、閉じること、距離が近いこと、終了することを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["close", "clos", "clore", "clausus", "claudere"],
+        "historicalPath": ["ラテン語 claudere（閉じる）・clausus（閉じられた）", "古フランス語 clos / clore", "中英語 closen", "英語 close（閉じる、近い、終える）"],
+        "components": [{ "form": "clausus / clos", "kind": "word", "gloss": "閉じられた、閉じる" }],
+        "rootCandidates": ["clud", "claus"],
+        "semanticBridge": "閉じて境界を作ることから、距離が近いこと、関係が密なこと、活動を終えることへ意味が広がった。",
+        "summary": "closeはフランス語を経た単純な借用・派生群で、現代英語のcloseに安定した接辞分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "clos＋-eやcl＋-oseなどの綴り合わせは採用しない。"
+      }
+    },
+    "after": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 æfter、of（離れて）と比較級要素 -ter に関係し、もともと「より遠くに」の意味だった。 → 〜の後に" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/after", "https://www.merriam-webster.com/dictionary/after"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/after", "note": "afterを古英語 æfter、of（離れて）＋比較級接尾辞に関係づけ、もともとの「より遠くに」から時間的な後、追随の意味へ変化したと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/after", "note": "afterの現代語義として、時間・位置の後、追随、模倣などの用法を確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["after", "æfter", "of", "-ter", "eptir", "apotero"],
+        "historicalPath": ["ゲルマン語系 *af / of（離れて）＋比較級要素", "古英語 æfter", "中英語 after", "英語 after（後に、後で）"],
+        "components": [{ "form": "æfter", "kind": "word", "gloss": "後ろに、後で" }, { "form": "-ter", "kind": "historical", "gloss": "比較の要素" }],
+        "rootCandidates": ["apo"],
+        "semanticBridge": "空間的により遠い位置を表す語から、時間的に後であること、追いかけること、模倣することへ意味が広がった。",
+        "summary": "afterには歴史的な構成要素が考えられるが、ofが表面形に残らず、機能語としてのA型表示に適さないためB型に残す。",
+        "confidence": "high",
+        "notes": "af＋-terを現代英語の安定した語根・接辞分解として表示しない。"
+      }
+    },
+    "down": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "方向の down は古英語 ofdune（丘から下へ）の縮約で、羽毛の down は古ノルド語由来の別語である。 → 〜を下って、下へ" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/down", "https://www.merriam-webster.com/dictionary/down"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/down", "note": "方向のdownを古英語 ofdune（丘から下へ）に遡らせ、丘を表すdunとの関係を示す。一方、羽毛のdownは古ノルド語 dunnで起源不明と説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/down", "note": "downの現代語義として、下方への移動、気分の落ち込み、鳥の柔らかな羽毛など複数の用法を確認した。" }
+        ],
+        "originLanguage": "古英語・古ノルド語・ゲルマン語系・英語",
+        "etymons": ["down", "ofdune", "dune", "dun", "dunn"],
+        "historicalPath": ["古英語 ofdune（丘から下へ）", "中英語 doun / down", "英語 down（下へ、下方に）", "別語のdown（羽毛）"],
+        "components": [{ "form": "ofdune", "kind": "phrase", "gloss": "丘から下へ" }, { "form": "dunn", "kind": "word", "gloss": "羽毛" }],
+        "rootCandidates": ["dun", "dheue"],
+        "semanticBridge": "丘から低い方へ移動する関係から、下方・低下・落ち込みなどを表す副詞・前置詞へ広がった。",
+        "summary": "downは異なる語源の同綴語を含み、方向の語も縮約形であるため、現代語の表面形を一つのA型に分解せずB型に残す。",
+        "confidence": "high",
+        "notes": "d＋-ownなどに分けず、羽毛のdownを方向のdownと同じ語根で扱わない。"
+      }
+    },
+    "on": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 on / an、ゲルマン祖語 *ana、インド・ヨーロッパ祖語 *an-（上に、接して）に由来する。 → 〜の上に、〜に接して" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/on", "https://www.merriam-webster.com/dictionary/on"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/on", "note": "onを古英語 on / an、ゲルマン祖語 *ana、PIE *an-（上に、接して）に遡らせ、接触位置・方向・作動中などの用法を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/on", "note": "onの現代語義として、上に接する位置、作動状態、時間・話題・進行を示す用法を確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・古英語・ゲルマン語系・英語",
+        "etymons": ["on", "an", "*ana", "*an-"],
+        "historicalPath": ["PIE *an-（上に、接して）", "ゲルマン祖語 *ana", "古英語 on / an", "英語 on（上に、接して、作動中）"],
+        "components": [{ "form": "on", "kind": "word", "gloss": "上に、接して" }],
+        "rootCandidates": ["an"],
+        "semanticBridge": "物の上に接している位置から、時間・話題・活動の継続や作動状態を示す機能語へ広がった。",
+        "summary": "onは短い機能語であり、語源上のanとの関係を現代英語のA型分解として表示しないためB型に残す。",
+        "confidence": "high",
+        "notes": "onをo＋-nなどに分ける綴り合わせは採用しない。"
+      }
+    },
+    "sing": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 singan、ゲルマン祖語 *sengwan、インド・ヨーロッパ祖語 *sengwh-（歌う）に由来する。 → 歌う" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/sing", "https://www.merriam-webster.com/dictionary/sing"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/sing", "note": "singを中英語 singen・古英語 singan、ゲルマン祖語 *sengwan、PIE *sengwh-に遡らせ、歌うことから鳥の声や告白の俗語までの意味を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/sing", "note": "singの現代語義として、音楽的な声を出すこと、歌で表現することを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・古英語・ゲルマン語系・英語",
+        "etymons": ["sing", "singen", "singan", "*sengwan", "*sengwh-"],
+        "historicalPath": ["PIE *sengwh-（歌う、呪文を唱える）", "ゲルマン祖語 *sengwan", "古英語 singan・中英語 singen", "英語 sing（歌う）"],
+        "components": [{ "form": "singan", "kind": "word", "gloss": "歌う、唱える" }],
+        "rootCandidates": ["sengwh"],
+        "semanticBridge": "声を音楽的に出す動作から、鳥や動物の声、熱心に語ること、罪を白状することへ意味が広がった。",
+        "summary": "singは古いゲルマン語系の単純語で、現代語の表面形に安定した語根・接辞分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "singをsin＋-gなどに分けず、sang・sungの語形変化も表示用分解には使わない。"
+      }
+    },
+    "wake": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 wacan（目覚める）と wacian（起きている）が中英語で合流した語。 → 起きる、目を覚ます" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/wake", "https://www.merriam-webster.com/dictionary/wake"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/wake", "note": "wake動詞を古英語 wacan と wacian、ゲルマン祖語 *wakojanan、PIE *weg-に遡らせ、目覚める・起こすの用法を説明している。航跡や通夜のwakeは別の意味の経路も持つ。" },
+          { "url": "https://www.merriam-webster.com/dictionary/wake", "note": "wakeの現代語義として、眠りから目覚めること、起こすこと、航跡、通夜を確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・古英語・ゲルマン語系・英語",
+        "etymons": ["wake", "wacan", "wacian", "*wakojanan", "*weg-"],
+        "historicalPath": ["PIE *weg-（強い、生き生きしている）", "ゲルマン祖語 *wakojanan", "古英語 wacan / wacian", "中英語で合流 → 英語 wake"],
+        "components": [{ "form": "wacan / wacian", "kind": "word", "gloss": "目覚める、起きている" }],
+        "rootCandidates": ["weg", "wak"],
+        "semanticBridge": "眠りから意識を取り戻すことから、他者を起こすことへ広がり、名詞では航跡や通夜の意味も発達した。",
+        "summary": "wakeは複数の古英語動詞が合流した単純語で、同綴の名詞にも別経路があるためB型に残す。",
+        "confidence": "high",
+        "notes": "wakeをwa＋-keなどに分けず、wakeの名詞義を一つの語根でまとめない。"
+      }
+    },
+    "his": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 he の属格 his、ゲルマン祖語 *hisa に由来する。 → 彼の" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/his", "https://www.merriam-webster.com/dictionary/his"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/his", "note": "hisを古英語 heの属格、ゲルマン祖語 *hisaに遡らせ、もともと中性の所有形にも使われたことや、he・himとの古英語の格体系を確認した。" },
+          { "url": "https://www.merriam-webster.com/dictionary/his", "note": "hisの現代語義として、男性または男性的な対象に属することを示す所有形を確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["his", "he", "*hisa", "*hi-", "*ko-"],
+        "historicalPath": ["PIE *ki- / *ko-（これ、ここ）との関係説", "ゲルマン祖語 *hi- / *hisa", "古英語 he・his・himの格体系", "英語 his（彼の）"],
+        "components": [{ "form": "his", "kind": "inflectedPronoun", "gloss": "heの属格" }],
+        "rootCandidates": ["hi", "ko"],
+        "semanticBridge": "三人称男性代名詞の属格形が、現代英語で男性対象の所有を表す語として固定した。",
+        "summary": "hisは代名詞の格・所有形であり、語根と接辞の派生語ではないためB型に残す。",
+        "confidence": "high",
+        "notes": "hisをhi＋-sの派生語として表示せず、-sは歴史的な格・所有形の一部として扱う。"
+      }
+    },
+    "he": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 he、ゲルマン祖語 *hi-、インド・ヨーロッパ祖語 *ki- に由来する。 → 彼は" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/he", "https://www.merriam-webster.com/dictionary/he"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/he", "note": "heを古英語 he、ゲルマン祖語 *hi-、PIE *ki- / *ko-に遡らせ、古英語のhe・hine・his・himという格体系を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/he", "note": "heの現代語義として、男性または男性とみなされる人を指す三人称単数代名詞を確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・古英語・ゲルマン語系・英語",
+        "etymons": ["he", "*hi-", "*ki-", "*ko-", "hine", "his", "him"],
+        "historicalPath": ["PIE *ki- / *ko-（これ、ここ）", "ゲルマン祖語 *hi-", "古英語 he", "英語 he（彼は）"],
+        "components": [{ "form": "he", "kind": "word", "gloss": "三人称男性" }],
+        "rootCandidates": ["hi", "ko"],
+        "semanticBridge": "指示語系の古い形から、男性を指す三人称単数の主格代名詞へ定着した。",
+        "summary": "heは代名詞の基本語で、現代語の表面形に語根・接辞の派生を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "h-を接頭辞として扱わない。"
+      }
+    },
+    "him": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 him、ゲルマン祖語 *hi- に由来し、もとは he の与格形で、後に男性対格にも広がった。 → 彼を、彼に" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/him", "https://www.merriam-webster.com/dictionary/him"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/him", "note": "himを古英語 him、ゲルマン祖語 *hi-に遡らせ、もとはheの男性・中性与格形で、10世紀以降に男性対格としてhineを置き換えたと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/him", "note": "himの現代語義として、男性または男性とみなされる人を指す目的格・斜格形を確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["him", "he", "*hi-", "hine", "-m"],
+        "historicalPath": ["ゲルマン祖語 *hi-", "古英語 him（与格）・hine（対格）", "中英語でhimが男性対格にも拡大", "英語 him（彼を、彼に）"],
+        "components": [{ "form": "him", "kind": "inflectedPronoun", "gloss": "heの斜格形" }],
+        "rootCandidates": ["hi"],
+        "semanticBridge": "三人称男性代名詞の格変化形が、現代英語の目的語・間接目的語を示す形に固定した。",
+        "summary": "himは代名詞の格形で、-mを接尾辞とする派生語ではないためB型に残す。",
+        "confidence": "high",
+        "notes": "himをhi＋-mの語源表示として分解しない。"
+      }
+    },
+    "us": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 us、ゲルマン語系の複数一人称代名詞に由来し、インド・ヨーロッパ祖語 *nes- と関係する。 → 私たちを、私たちに" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/us", "https://www.merriam-webster.com/dictionary/us"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/us", "note": "usを古英語 us、ゲルマン語系の複数人称代名詞に遡らせ、PIE *nes-（一人称複数の斜格）とラテン語 nosなどとの対応を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/us", "note": "usの現代語義として、話し手を含む複数人を指すweの目的格・斜格形を確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・古英語・ゲルマン語系・英語",
+        "etymons": ["us", "*nes-", "nos", "we", "uns"],
+        "historicalPath": ["PIE *nes-（一人称複数の斜格）", "古英語 us", "中英語 us", "英語 us（私たちを、私たちに）"],
+        "components": [{ "form": "us", "kind": "inflectedPronoun", "gloss": "weの斜格形" }],
+        "rootCandidates": ["nes"],
+        "semanticBridge": "話し手を含む複数を表す代名詞の斜格形が、目的語や間接目的語の位置に定着した。",
+        "summary": "usはweの格形で、語源上の比較形を現代英語の語根・接辞表示にしないためB型に残す。",
+        "confidence": "high",
+        "notes": "usをu＋-sなどに分けず、-sを複数・格の表面接辞として表示しない。"
+      }
+    },
+    "i": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 ic、ゲルマン祖語 *ek、インド・ヨーロッパ祖語 *eg-（私）に由来する。 → 私は、私が" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/I", "https://www.merriam-webster.com/dictionary/I"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/I", "note": "Iを古英語 ic、ゲルマン祖語 *ek、PIE *eg-に遡らせ、12世紀以降の短縮と、単独文字を読み違えないための大文字化を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/I", "note": "Iの現代語義として、話し手自身を指す一人称単数主格代名詞を確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・古英語・ゲルマン語系・英語",
+        "etymons": ["I", "ic", "*ek", "*eg-", "ego"],
+        "historicalPath": ["PIE *eg-（私）", "ゲルマン祖語 *ek", "古英語 ic", "中英語で短縮 → 英語 I（私は、私が）"],
+        "components": [{ "form": "ic", "kind": "word", "gloss": "私" }],
+        "rootCandidates": ["eg"],
+        "semanticBridge": "話し手を指す古い一人称代名詞が、短縮と表記上の独立を経て現在のIになった。",
+        "summary": "Iは代名詞の基本語で、短縮・表記変化による成立であり、現代語の表面形をA型分解しないためB型に残す。",
+        "confidence": "high",
+        "notes": "大文字Iを接頭辞や語根として扱わない。"
+      }
+    },
+    "my": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 min（私の、私のもの）が短縮した形で、名詞の前に置く所有形として定着した。 → 私の" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/my", "https://www.merriam-webster.com/dictionary/my"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/my", "note": "myを古英語 min、ゲルマン祖語 *minaz、meの基体に遡らせ、名詞前のmineが中英語以降短縮してmyになったと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/my", "note": "myの現代語義として、話し手に属することを名詞の前で示す所有限定詞を確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["my", "mi", "mine", "min", "*minaz", "me"],
+        "historicalPath": ["ゲルマン祖語 *minaz（私の）", "古英語 min / mine", "中英語 mi（名詞前で短縮）", "英語 my（私の）"],
+        "components": [{ "form": "min / mine", "kind": "word", "gloss": "私の、私のもの" }],
+        "rootCandidates": ["me", "min"],
+        "semanticBridge": "一人称代名詞の所有形が、名詞の前では短いmyとして、名詞単独ではmineとして使い分けられるようになった。",
+        "summary": "myはmineの短縮・用法分化による所有形で、語根と接辞の派生語ではないためB型に残す。",
+        "confidence": "high",
+        "notes": "myをm＋-yに分けず、mineとの関係を語源的な接辞分解として表示しない。"
+      }
+    },
+    "me": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 me / mec、ゲルマン祖語 *meke / *mes、インド・ヨーロッパ祖語 *me- に由来する。 → 私を、私に" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/me", "https://www.merriam-webster.com/dictionary/me"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/me", "note": "meを古英語の与格me・対格me/mec、ゲルマン祖語 *meke / *mes、PIE *me-に遡らせ、Iの斜格形としての関係を確認した。" },
+          { "url": "https://www.merriam-webster.com/dictionary/me", "note": "meの現代語義として、話し手自身を指す一人称単数の目的格・斜格形を確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・古英語・ゲルマン語系・英語",
+        "etymons": ["me", "mec", "*meke", "*mes", "*me-", "I"],
+        "historicalPath": ["PIE *me-（一人称単数の斜格）", "ゲルマン祖語 *meke / *mes", "古英語 me / mec", "英語 me（私を、私に）"],
+        "components": [{ "form": "me", "kind": "inflectedPronoun", "gloss": "Iの斜格形" }],
+        "rootCandidates": ["me", "eg"],
+        "semanticBridge": "話し手を指す一人称代名詞の斜格形が、目的語・間接目的語の位置に定着した。",
+        "summary": "meはIの格形であり、語根と接辞の派生語ではないためB型に残す。",
+        "confidence": "high",
+        "notes": "meをm＋-eなどに分けず、PIEの斜格語根を表示用語根にしない。"
+      }
+    },
+    "mine": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 min、ゲルマン祖語 *minaz（私の、私のもの）に由来する。 → 私のもの" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/mine", "https://www.merriam-webster.com/dictionary/mine"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/mine", "note": "所有代名詞mineを古英語 min、ゲルマン祖語 *minaz、meの基体に遡らせ、名詞前ではmyに置き換えられた経路を確認した。採掘坑のmineは別語源である。" },
+          { "url": "https://www.merriam-webster.com/dictionary/mine", "note": "mineの現代語義として、話し手に属するものを名詞なしで示す所有代名詞と、採掘坑などの別義を確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["mine", "min", "*minaz", "me", "my"],
+        "historicalPath": ["ゲルマン祖語 *minaz（私の）", "古英語 min", "中英語 mine", "英語 mine（私のもの）"],
+        "components": [{ "form": "min", "kind": "word", "gloss": "私の、私のもの" }],
+        "rootCandidates": ["me", "min"],
+        "semanticBridge": "一人称の所有を表す形が、名詞の前ではmy、名詞を省略した単独形ではmineとして定着した。",
+        "summary": "mineは所有代名詞の基本語で、採掘坑のmineという別語もあるため、語根・接辞分解を設定せずB型に残す。",
+        "confidence": "high",
+        "notes": "所有のmineと採掘坑のmineを同じ語源で扱わず、my＋-neの分解も採用しない。"
+      }
+    },
+    "studying": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "study（学ぶ、勉強する）に現在分詞語尾 -ing が付いた形。studyは古フランス語 estudier、ラテン語 studere に由来する。 → 勉強している（現在分詞）" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/study", "https://www.merriam-webster.com/dictionary/study"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/study", "note": "studyを中英語 studyen・古フランス語 estudier、ラテン語 studere（熱心に取り組む）に遡らせ、勉強・考察・研究の意味を説明している。studyingは現在分詞形である。" },
+          { "url": "https://www.merriam-webster.com/dictionary/study", "note": "studyの現代語義として、学ぶこと、詳しく調べること、勉強することを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・中英語・英語",
+        "etymons": ["studying", "study", "studien", "estudier", "studere", "-ing"],
+        "historicalPath": ["ラテン語 studere（熱心に取り組む）", "古フランス語 estudier・中英語 studyen", "英語 study", "英語 study＋-ing → studying"],
+        "components": [{ "form": "study", "kind": "word", "gloss": "学ぶ、勉強する" }, { "form": "-ing", "kind": "inflection", "gloss": "現在分詞" }],
+        "rootCandidates": ["stud"],
+        "semanticBridge": "何かに熱心に取り組むことから、知識を得るために学ぶこと、詳しく調べることへ意味が具体化した。",
+        "summary": "studyingはstudyの現在分詞で、-ingは語源的な派生接辞ではなく語形変化として扱うためB型に残す。",
+        "confidence": "high",
+        "notes": "studyをstud＋-y、-ingを表示用接尾辞としてA型にしない。"
+      }
+    },
+    "creation": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "創出",
+        "root": "creat",
+        "parts": [
+          { "form": "creat", "kind": "root", "gloss": "生み出す" },
+          { "form": "-ion", "kind": "suffix", "gloss": "〜すること" }
+        ],
+        "derivation": "creat（生み出す）＋-ion（〜すること） → 生み出すこと、創出"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/creation", "https://www.merriam-webster.com/dictionary/creation"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/creation", "note": "creationを古フランス語 creacion、ラテン語 creationem / creatio、creare（作る、生み出す）に遡らせ、創造の行為と創造されたものの意味を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/creation", "note": "creationの現代語義として、何かを創出する行為・過程、創出されたものを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・英語",
+        "etymons": ["creation", "creacion", "creationem", "creatio", "creare", "*ker-", "-ion"],
+        "historicalPath": ["PIE *ker-（成長する）", "ラテン語 creare（作る、生み出す）・creatio（創出）", "古フランス語 creacion", "英語 creat＋-ion → creation（創出）"],
+        "components": [{ "form": "creare / creat", "kind": "base", "gloss": "作る、生み出す" }, { "form": "-io / -ion", "kind": "suffix", "gloss": "行為・結果" }],
+        "rootCandidates": ["creat", "ker"],
+        "semanticBridge": "成長させる・生み出す動作から、何かを存在させる行為と、その結果できたものへ意味が広がった。",
+        "summary": "creationはcreat（生み出す）＋-ionとして表面形に沿ったA型を設定できる。",
+        "confidence": "high",
+        "notes": "既存のcernere由来のcre語根と混同せず、create / creatio由来のcreat語根を新規登録する。"
+      }
+    },
+    "fiscal": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "財政の",
+        "root": "fisc",
+        "parts": [
+          { "form": "fisc", "kind": "root", "gloss": "国庫・財政" },
+          { "form": "-al", "kind": "suffix", "gloss": "〜に関する" }
+        ],
+        "derivation": "fisc（国庫・財政）＋-al（〜に関する） → 国庫に関する、財政の"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/fiscal", "https://www.merriam-webster.com/dictionary/fiscal"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/fiscal", "note": "fiscalをフランス語 fiscal、後期ラテン語 fiscalis、ラテン語 fiscus（国庫、もとは金袋）に遡らせ、公共収入や財政に関する意味を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/fiscal", "note": "fiscalの現代語義として、政府の収入・支出や財政に関すること、会計年度に関することを確認した。" }
+        ],
+        "originLanguage": "ラテン語・後期ラテン語・フランス語・英語",
+        "etymons": ["fiscal", "fiscalis", "fiscus", "-al"],
+        "historicalPath": ["ラテン語 fiscus（国庫、金袋）", "後期ラテン語 fiscalis（国庫に属する）", "フランス語 fiscal", "英語 fisc＋-al → fiscal（財政の）"],
+        "components": [{ "form": "fiscus / fisc", "kind": "base", "gloss": "国庫、財政" }, { "form": "-alis / -al", "kind": "suffix", "gloss": "〜に関する" }],
+        "rootCandidates": ["fisc"],
+        "semanticBridge": "金銭を保管する袋・国庫から、国家の収入や支出に関する財政の意味へ具体化した。",
+        "summary": "fiscalはfisc（国庫・財政）＋-alとして表面形に沿ったA型を設定できる。",
+        "confidence": "high",
+        "notes": "fisc語根と既存の-al接尾辞を新たに組み合わせる。"
+      }
+    }
+  }
+}

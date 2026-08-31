@@ -67,6 +67,8 @@
 - 熟語の核心イメージ共有辞書（データ検査・作成補助用。UIには表示しない）: `data/particle_images.json`
 - 単語の語根・接辞辞書（表示専用）: `data/word_roots.json`
 - 単語の語源分解（表示専用・原形キー）: `data/word_origins.json`
+- 単語語源の個別再調査台帳（authoring正本）: `data/word_origin_research.json`
+- 個別再調査バッチの記録: `data/word_origin_research_batch_*.json`
 - 問題セット一覧: `data/manifest.json` の `q1`
 
 1級の模試第1回〜第9回と公式過去問3回分は、模試25問/100語句・公式22問/88語句の形式差を保ったまま、共通検査で第6回の完成条件を確認できます。第7回〜第9回は表層音声と暗記カード用原形音声の生成済みデータを含むため、専用検査を通常モードで実行できます。
@@ -138,7 +140,17 @@ py -3 scripts/generate_tts_1.py --grade iuhw --round set-1
 全級で、見出し語・発音記号・品詞・意味・例文・例文の日本語訳を同じ順序で表示します。熟語の暗記カードは、意味・核心イメージの連鎖・例文の3ブロックで表示し、不変化詞の共有イメージや仲間例のパネルは表示しません。単語の語源は収録されている場合に表示し、語源チェーンがある語は熟語と同じ連鎖カード、A型とB型の未チェーン語はチップと導出文の同じブロックで表示します（B型の概要チップは形態素分解を意味しません。語根そのものの解説パネルは表示しません）。
 1級の例文は公式の設問文を流用せず、語句ごとに作成したオリジナル英文と日本語訳を表示します。
 
-語源データは語根122個、A型236語、B型1,255語を収録しています。英検1級模試第6回では、84語すべてにEtymonline・Merriam-Webster・Collins等を照合した語源チェーンを付け、参照URLを語ごとに記録しています。その他の1級セットも、語源説明またはC型の除外理由を各語に付けています。
+語源データは語根597個、A型832語、B型659語を収録しています。英検1級模試第6回では、84語すべてにEtymonline・Merriam-Webster・Collins等を照合した語源チェーンを付け、参照URLを語ごとに記録しています。その他の1級セットも、語源説明またはC型の除外理由を各語に付けています。
+
+1,255語のB型は、`word_origin_research.json`で原形ごとに再調査状況・出典・語源経路・語根候補を管理します。確認済みデータを追加するときは、バッチJSONを作成して次を実行します。
+
+```powershell
+node scripts/apply-word-origin-research-batch.cjs data/word_origin_research_batch_001.json
+node scripts/rebuild-word-origin-dictionaries.cjs --write
+node scripts/check-word-origin-research.cjs
+```
+
+再調査対象1,255語はすべて確認済みです。`npm test`では台帳と表示用辞書の投影一致も検査します。
 
 ## 暗記カードの例文訳
 
@@ -201,6 +213,9 @@ py -3 scripts/add_example_translations.py
 - `scripts/curate_1_etymology.py`: 1級の語源説明の適用
 - `scripts/q1_iuhw_etymology.py`: 国際医療福祉大学セットの語源注記の正本
 - `scripts/sync_vocab_etymology_origins.py`: 既存の単語語源注記を表示用辞書へ同期
+- `scripts/rebuild-word-origin-dictionaries.cjs`: 語源再調査台帳から表示用辞書を再生成
+- `scripts/apply-word-origin-research-batch.cjs`: 個別再調査バッチを台帳へ適用
+- `scripts/check-word-origin-research.cjs`: 1,255語の調査状況・出典・原形対応を検査
 - `scripts/check_eiken1_alignment.py`: 1級・2級・準2級・準1級全セットの語句・例文・語源・原形音声の整合検査
 - `scripts/q1_eiken2_metadata.py`: 2級の例文補正・正答フラグ・出典メタデータの正本
 - `scripts/curate_eiken2_data.py`: 2級の既存生成JSONへの整合情報の再適用

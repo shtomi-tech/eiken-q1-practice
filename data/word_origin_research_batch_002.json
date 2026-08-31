@@ -1,0 +1,921 @@
+{
+  "meta": {
+    "batchId": "batch-002",
+    "note": "未確認B型の先頭25語。語根・接辞と綴りが根拠付きで対応する語だけA型へ昇格する。"
+  },
+  "dictionary": {
+    "roots": {
+      "surg": {
+        "gloss": "立ち上がる",
+        "origin": "ラテン語 surgere",
+        "note": "再び立ち上がり、回復するイメージ。resurgence・resurgent。"
+      }
+    }
+  },
+  "entries": {
+    "reasonable": {
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 ratio（計算・理性）を起点に、ratus（考え、計算した）から → 手ごろな、妥当な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/reasonable",
+          "https://www.merriam-webster.com/dictionary/reasonable"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/reasonable",
+            "note": "reasonableを古フランス語 raisonable、ラテン語 rationabilis・ratio、ratus・reriに遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/reasonable",
+            "note": "reasonableの理性的・妥当な・手ごろなという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（古フランス語経由）",
+        "etymons": ["raisonable", "rationabilis", "ratio", "ratus", "reri"],
+        "historicalPath": ["ラテン語 reri（考える・計算する）", "ラテン語 ratio（計算・理性）", "古フランス語 raisonable", "英語 reasonable"],
+        "components": [
+          {"form": "ratio", "kind": "base", "gloss": "計算・理性", "display": false},
+          {"form": "-able", "kind": "suffix", "gloss": "〜できる・性質の", "display": false}
+        ],
+        "rootCandidates": ["rat"],
+        "semanticBridge": "理性にかなうという評価が、常識に合う妥当さ、さらに価格や量が手ごろであることへ広がった。",
+        "summary": "reasonableは計算・理性を表すラテン語ratioから、理にかなった、妥当な、手ごろなという意味になった。",
+        "confidence": "high",
+        "notes": "ratを語根候補とするが、現行辞書に同名の確定rootがないためB型を維持する。"
+      }
+    },
+    "receipt": {
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 recepta（受け取ったもの）に由来。recipere（受け取る・取り戻す）から → レシート、領収書"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/receipt",
+          "https://www.merriam-webster.com/dictionary/receipt"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/receipt",
+            "note": "receiptを古フランス語 receite、ラテン語 recepta（受け取ったもの）、recipereに遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/receipt",
+            "note": "receiptが受領の記録を表し、かつてrecipeと同じく処方・調合法を指したことを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（フランス語経由）",
+        "etymons": ["recepta", "recipere", "capere", "receite"],
+        "historicalPath": ["ラテン語 recipere（受け取る・取り戻す）", "ラテン語 recepta（受け取ったもの）", "古フランス語 receite", "英語 receipt"],
+        "components": [
+          {"form": "re-", "kind": "prefix", "gloss": "戻って", "display": false},
+          {"form": "capere", "kind": "root", "gloss": "取る", "display": false}
+        ],
+        "rootCandidates": ["cap"],
+        "semanticBridge": "何かを受け取ったという事実や記録が、商品や金銭を受領した証明書を指すようになった。",
+        "summary": "receiptは『受け取ったもの』を表すラテン語から、受領の記録であるレシート・領収書を表す。",
+        "confidence": "high",
+        "notes": "recipereのcipと英語receiptのceiptは対応するが、屈折・綴りの変化をA型の単純分解にしない。"
+      }
+    },
+    "reciprocate": {
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 reciprocare（前後に動く、返す）に由来。reciprocus（同じ道を戻る、交互の）から → 返礼した、応じた"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/reciprocate",
+          "https://www.merriam-webster.com/dictionary/reciprocate"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/reciprocate",
+            "note": "reciprocateをreciprocationからの逆成、またはラテン語 reciprocatus・reciprocareに遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/reciprocate",
+            "note": "reciprocateをラテン語 reciprocare（前後に動く）に結び付け、互いに返す意味を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": ["reciprocare", "reciprocus", "reciprocation"],
+        "historicalPath": ["ラテン語 reciprocus（同じ道を戻る・交互の）", "ラテン語 reciprocare（前後に動く）", "英語 reciprocation", "逆成 reciprocate"],
+        "components": [
+          {"form": "reciprocus", "kind": "base", "gloss": "交互の・戻る", "display": false},
+          {"form": "-ate", "kind": "suffix", "gloss": "動詞化", "display": false}
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "前後に行き来する動きが、受けた行為や感情を同じように返すことへ比喩化した。",
+        "summary": "reciprocateは前後に動くラテン語を起点とし、相手に返礼する・応じるという意味になった。",
+        "confidence": "high",
+        "notes": "reciprocus内部のre/pro要素は語源上説明できるが、英語の透明な接辞分解として表示しない。"
+      }
+    },
+    "recover": {
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 recovrerを経てラテン語 recuperare（取り戻す、回復する）に由来 → 回復する、取り戻す"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/recover",
+          "https://www.merriam-webster.com/dictionary/recover"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/recover",
+            "note": "recoverを古フランス語 recovrer、ラテン語 recuperare（取り戻す・回復する）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/recover",
+            "note": "recoverの取り戻す・正常な状態に戻す・回復するという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（古フランス語経由）",
+        "etymons": ["recuperare", "recovrer", "recover"],
+        "historicalPath": ["ラテン語 recuperare（取り戻す）", "古フランス語 recovrer", "中英語 recoveren", "英語 recover"],
+        "components": [
+          {"form": "re-", "kind": "prefix", "gloss": "再び・戻って", "display": false},
+          {"form": "recuperare", "kind": "base", "gloss": "取り戻す・回復する", "display": false}
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "失ったものを取り戻す意味から、健康・力・正常な状態を再び得る意味へ広がった。",
+        "summary": "recoverは『取り戻す・回復する』というラテン語を起点に、物や健康を元に戻す意味になった。",
+        "confidence": "high",
+        "notes": "re-の存在は明瞭だが、残りの語幹が英語の現行root辞書と対応しないためB型を維持する。"
+      }
+    },
+    "resources": {
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 resourse（助け・源）に由来。古フランス語 resourdre（再び立ち上がる）・ラテン語 resurgereから → 資源、人材"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/resource",
+          "https://www.merriam-webster.com/dictionary/resource"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/resource",
+            "note": "resourceをフランス語 resourse、古フランス語 resourdre、ラテン語 resurgere（再び立ち上がる）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/resource",
+            "note": "resourceの助け・手段・資源という語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（古フランス語・フランス語経由）",
+        "etymons": ["resourse", "resourdre", "resurgere", "resource"],
+        "historicalPath": ["ラテン語 surgere（立ち上がる）", "ラテン語 resurgere（再び立ち上がる）", "古フランス語 resourdre", "フランス語 resourse", "英語 resource"],
+        "components": [
+          {"form": "re-", "kind": "prefix", "gloss": "再び", "display": false},
+          {"form": "surgere", "kind": "root", "gloss": "立ち上がる", "display": false}
+        ],
+        "rootCandidates": ["surg"],
+        "semanticBridge": "困ったときに再び立ち上がる助けという意味から、利用できる手段・資源・人材へ広がった。",
+        "summary": "resourcesは、再び立ち上がることを表すラテン語を起点に、利用できる資源や人材を表す。",
+        "confidence": "high",
+        "notes": "複数形resourcesは原形resourceへ正規化して調査する。resurgereの語根候補はresurgenceと共通化する。"
+      }
+    },
+    "demeanor": {
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 demener（導く・扱う）に由来。ラテン語 minari（脅す・追い立てる）を背景に → 態度、物腰"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/demeanor",
+          "https://www.merriam-webster.com/dictionary/demeanor"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/demeanor",
+            "note": "demeanorを中英語 demean/demeinen、古フランス語 demener、ラテン語 minariに遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/demeanor",
+            "note": "demeanorの態度・物腰・振る舞いという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（古フランス語経由）",
+        "etymons": ["demener", "demeinen", "minari", "demeanure"],
+        "historicalPath": ["ラテン語 minari（脅す・追い立てる）", "古フランス語 demener（導く・扱う）", "中英語 demenure", "英語 demeanor"],
+        "components": [
+          {"form": "de-", "kind": "prefix", "gloss": "完全に", "display": false},
+          {"form": "mener", "kind": "base", "gloss": "導く・扱う", "display": false}
+        ],
+        "rootCandidates": ["men"],
+        "semanticBridge": "人を導き扱う様子という意味が、その人の外に表れる振る舞い・物腰を指す名詞になった。",
+        "summary": "demeanorは人を導き扱うことを表す古フランス語を経て、態度や物腰を表すようになった。",
+        "confidence": "high",
+        "notes": "現代英語のdemean（品位を下げる）と同一視せず、古いdemenerの経路を採用する。"
+      }
+    },
+    "deteriorate": {
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 deterior（より悪い、低い）に由来。deteriorare（悪化させる・悪くなる）から → 悪化した"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/deteriorate",
+          "https://www.merriam-webster.com/dictionary/deteriorate"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/deteriorate",
+            "note": "deteriorateを後期ラテン語 deterioratus、deteriorare、deterior（より悪い）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/deteriorate",
+            "note": "deteriorateの品質・状態が悪化するという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": ["deterior", "deteriorare", "deterioratus"],
+        "historicalPath": ["ラテン語 deterior（より悪い・低い）", "ラテン語 deteriorare", "後期ラテン語 deterioratus", "英語 deteriorate"],
+        "components": [
+          {"form": "deterior", "kind": "base", "gloss": "より悪い・低い", "display": false},
+          {"form": "-ate", "kind": "suffix", "gloss": "動詞化", "display": false}
+        ],
+        "rootCandidates": ["deterior"],
+        "semanticBridge": "より低い・悪い状態になるという比較の意味が、品質や状態が悪化する動詞になった。",
+        "summary": "deteriorateは『より悪い・低い』というラテン語から、悪化する・悪化させる意味になった。",
+        "confidence": "high",
+        "notes": "deteriorを語源上の語幹として記録するが、既存root辞書の短い語根には割り当てない。"
+      }
+    },
+    "connoisseur": {
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 connoisseur（鑑識家）に由来。ラテン語 cognoscere（知る・認識する）から → 鑑識家、目利き"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/connoisseur",
+          "https://www.merriam-webster.com/dictionary/connoisseur"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/connoisseur",
+            "note": "connoisseurをフランス語・古フランス語 conoistre、ラテン語 cognoscere、con-＋gnoscereに遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/connoisseur",
+            "note": "connoisseurの芸術・食・ワインなどの目利きという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（フランス語経由）",
+        "etymons": ["connoisseur", "conoistre", "cognoscere", "gnoscere"],
+        "historicalPath": ["ラテン語 gnoscere（認識する・知る）", "ラテン語 cognoscere", "古フランス語 conoistre", "フランス語 connoisseur", "英語 connoisseur"],
+        "components": [
+          {"form": "con-", "kind": "prefix", "gloss": "ともに・完全に", "display": false},
+          {"form": "gnoscere", "kind": "root", "gloss": "知る", "display": false}
+        ],
+        "rootCandidates": ["gnos"],
+        "semanticBridge": "よく知り、見分ける人という原義が、芸術や味の細かな違いを判断できる専門家を指すようになった。",
+        "summary": "connoisseurは『知る・認識する』ラテン語から、知識と判断力をもつ鑑識家・目利きを表す。",
+        "confidence": "high",
+        "notes": "綴りのconnoisを現行英語のcon＋noiseとは解釈しない。"
+      }
+    },
+    "complaint": {
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 complainte（嘆き）に由来。ラテン語 com-（強意）＋plangere（胸を打って嘆く）から → 苦情、不満"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/complaint",
+          "https://www.merriam-webster.com/dictionary/complaint"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/complaint",
+            "note": "complaintを古フランス語 complainte、complaindre、俗ラテン語 *complangere、ラテン語 com-＋plangereに遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/complaint",
+            "note": "complaintの不満・苦情・正式な申し立てという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（古フランス語経由）",
+        "etymons": ["complaindre", "complangere", "com-", "plangere"],
+        "historicalPath": ["ラテン語 plangere（胸を打って嘆く）", "俗ラテン語 *complangere", "古フランス語 complainte", "英語 complaint"],
+        "components": [
+          {"form": "com-", "kind": "prefix", "gloss": "強く・ともに", "display": false},
+          {"form": "plangere", "kind": "root", "gloss": "嘆く", "display": false}
+        ],
+        "rootCandidates": ["plang"],
+        "semanticBridge": "苦痛を嘆き訴える行為が、満たされないことへの不満、さらに公的な苦情や申し立てへ広がった。",
+        "summary": "complaintは胸を打って嘆くラテン語を起点に、苦情や不満を表す語になった。",
+        "confidence": "high",
+        "notes": "plangereは有力な語根候補だが、現行辞書のplaudなどと混同しない。"
+      }
+    },
+    "compound": {
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 componere（ともに置く）に由来。com-（ともに）＋ponere（置く）から → 悪化させた、複合した"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/compound",
+          "https://www.merriam-webster.com/dictionary/compound"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/compound",
+            "note": "動詞・形容詞のcompoundを古フランス語 compondre、ラテン語 componere、com-＋ponereに遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/compound",
+            "note": "compoundの組み合わせる・複合した・悪化させるという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（古フランス語経由）",
+        "etymons": ["componere", "com-", "ponere", "compondre"],
+        "historicalPath": ["ラテン語 ponere（置く）", "ラテン語 componere（ともに置く）", "古フランス語 compondre", "英語 compound"],
+        "components": [
+          {"form": "com-", "kind": "prefix", "gloss": "ともに", "display": false},
+          {"form": "ponere", "kind": "root", "gloss": "置く", "display": false}
+        ],
+        "rootCandidates": ["pos"],
+        "semanticBridge": "複数のものをともに置いて組み合わせることから、複合したもの、さらに問題を重ねて悪化させることへ広がった。",
+        "summary": "compoundは『ともに置く』というラテン語から、複合する・複合した、さらに悪化させる意味になった。",
+        "confidence": "high",
+        "notes": "compoundにはマレー語kampong由来の『囲い地』という別語源もあるため、今回のmeaningに対応する動詞・形容詞系だけを採用する。"
+      }
+    },
+    "disembark": {
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 desembarquer（船から陸へ下ろす）に由来。des-（離れて）＋embarquer（船に乗せる）から → 下船する、降りる"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/disembark",
+          "https://www.merriam-webster.com/dictionary/disembark"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/disembark",
+            "note": "disembarkをフランス語 desembarquer、des-＋embarquerに遡らせ、embarkをen-＋barqueと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/disembark",
+            "note": "disembarkの船から降りる・上陸するという語義を確認した。"
+          }
+        ],
+        "originLanguage": "フランス語（ラテン語系要素を含む）",
+        "etymons": ["desembarquer", "des-", "embarquer", "barque"],
+        "historicalPath": ["フランス語 embarquer（船に乗せる）", "フランス語 desembarquer（船から降ろす）", "英語 disembark"],
+        "components": [
+          {"form": "des-", "kind": "prefix", "gloss": "離れて・反対に", "display": false},
+          {"form": "barque", "kind": "base", "gloss": "小舟", "display": false}
+        ],
+        "rootCandidates": ["barc"],
+        "semanticBridge": "船に乗せる動作の反対方向、つまり船から陸へ移す動作を表す語になった。",
+        "summary": "disembarkは船に乗せるembarquerに離脱を表す要素が加わり、下船する・上陸する意味になった。",
+        "confidence": "high",
+        "notes": "barqueはフランス語の借用語で、英語のroot辞書へ即時に追加しない。"
+      }
+    },
+    "dishevel": {
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 descheveler（髪を乱す）に由来。des-（離れて）＋chevel（髪）から → 乱れた、だらしのない"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/disheveled",
+          "https://www.merriam-webster.com/dictionary/dishevel"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/disheveled",
+            "note": "disheveledを古フランス語 deschevele/descheveler、des-＋chevel、ラテン語 capillus（髪）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/dishevel",
+            "note": "dishevelの髪や服装を乱すという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（古フランス語経由）",
+        "etymons": ["descheveler", "des-", "chevel", "capillus"],
+        "historicalPath": ["ラテン語 capillus（髪）", "古フランス語 chevel（髪）", "古フランス語 descheveler", "英語 dishevel / disheveled"],
+        "components": [
+          {"form": "des-", "kind": "prefix", "gloss": "離れて・乱して", "display": false},
+          {"form": "chevel", "kind": "base", "gloss": "髪", "display": false}
+        ],
+        "rootCandidates": ["capill"],
+        "semanticBridge": "髪を頭からばらばらにすることから、髪だけでなく服装や外見全体が乱れた状態へ広がった。",
+        "summary": "dishevelは髪を乱す古フランス語から、乱れた・だらしのない状態を表す語になった。",
+        "confidence": "high",
+        "notes": "台帳キーは原形dishevel、語彙の表面形は過去分詞disheveledとして管理する。"
+      }
+    },
+    "dispatch": {
+      "display": {
+        "type": "B",
+        "derivation": "スペイン語 despachar／イタリア語 dispacciare（急がせる）に由来。前半のdis-以外の語源は不確かで → 派遣した、発送した"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/dispatch",
+          "https://www.merriam-webster.com/dictionary/dispatch"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/dispatch",
+            "note": "dispatchをスペイン語 despacharまたは同系のイタリア語 dispacciareに遡らせ、後半の正確な起源は不確かと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/dispatch",
+            "note": "dispatchの急いで送る・派遣する・処理するという語義を確認した。"
+          }
+        ],
+        "originLanguage": "スペイン語・イタリア語",
+        "etymons": ["despachar", "dispacciare", "dis-", "pactare"],
+        "historicalPath": ["スペイン語 despachar / イタリア語 dispacciare", "英語 dispatch（動詞）", "英語 dispatch（名詞）"],
+        "components": [
+          {"form": "dis-", "kind": "prefix-candidate", "gloss": "離れて・完全に", "display": false},
+          {"form": "-patch", "kind": "uncertain", "gloss": "語源不確定", "display": false}
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "急いで送り出すことから、派遣・発送、仕事を素早く終えること、古くは殺して始末することへ意味が広がった。",
+        "summary": "dispatchはロマンス諸語の『急がせる』系の語から入り、後半の語源は確定していない。",
+        "confidence": "medium",
+        "notes": "語源の不確かさを隠さず、dis-＋patchを確定した英語形態素として表示しない。"
+      }
+    },
+    "distraught": {
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 distrahere（別々の方向へ引く）に由来。dis-（離れて）＋trahere（引く）から → ひどく取り乱した"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/distraught",
+          "https://www.merriam-webster.com/dictionary/distraught"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/distraught",
+            "note": "distraughtをdistractの古い形、ラテン語 distractus・distrahere、dis-＋trahereに遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/distraught",
+            "note": "distraughtのひどく取り乱した・狂乱したという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（中英語経由）",
+        "etymons": ["distrahere", "distractus", "dis-", "trahere"],
+        "historicalPath": ["ラテン語 trahere（引く）", "ラテン語 distrahere（別々に引く）", "中英語 distracten / distraught", "英語 distraught"],
+        "components": [
+          {"form": "dis-", "kind": "prefix", "gloss": "離れて・別々に", "display": false},
+          {"form": "trahere", "kind": "root", "gloss": "引く", "display": false}
+        ],
+        "rootCandidates": ["tract"],
+        "semanticBridge": "心や注意が複数の方向へ引き裂かれたイメージから、激しく動揺した状態を表すようになった。",
+        "summary": "distraughtは『別々の方向へ引く』ラテン語から、ひどく取り乱した状態を表す。",
+        "confidence": "high",
+        "notes": "trahereと英語tractの語族関係はあるが、distraughtの綴りにはtractが現れないためB型を維持する。"
+      }
+    },
+    "extraneous": {
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 extraneus（外部の、異質な）に由来。extra（外に）から → 余分な、無関係な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/extraneous",
+          "https://www.merriam-webster.com/dictionary/extraneous"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/extraneous",
+            "note": "extraneousをラテン語 extraneus（外部の・異質な）、extra（外側に）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/extraneous",
+            "note": "extraneousの本質に属さない・余分な・無関係なという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": ["extraneus", "extra", "exterus"],
+        "historicalPath": ["ラテン語 exterus（外側の）", "ラテン語 extra（外に）", "ラテン語 extraneus（外部の）", "英語 extraneous"],
+        "components": [
+          {"form": "extra-", "kind": "prefix", "gloss": "外の・余分な", "display": false},
+          {"form": "-aneous", "kind": "suffix-candidate", "gloss": "〜に関する", "display": false}
+        ],
+        "rootCandidates": ["extra"],
+        "semanticBridge": "外部にある・本質の外にあるという意味から、対象に属さず余分で無関係なものを表すようになった。",
+        "summary": "extraneousは『外部の・異質な』というラテン語から、余分な・無関係な意味になった。",
+        "confidence": "high",
+        "notes": "extra-は辞書にあるが、extraneous全体の語尾を英語のsuffixとしてA型表示しない。"
+      }
+    },
+    "expound": {
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 exponere（外へ置く、示す）に由来。ex-（外へ）＋ponere（置く）から → 詳しく説明した"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/expound",
+          "https://www.merriam-webster.com/dictionary/expound"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/expound",
+            "note": "expoundを古フランス語 espondre、ラテン語 exponere、ex-＋ponereに遡らせ、-dは語源的でないと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/expound",
+            "note": "expoundの詳しく説明する・意味を明らかにするという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（古フランス語経由）",
+        "etymons": ["exponere", "ex-", "ponere", "espondre"],
+        "historicalPath": ["ラテン語 ponere（置く）", "ラテン語 exponere（外へ置く・示す）", "古フランス語 espondre", "英語 expound"],
+        "components": [
+          {"form": "ex-", "kind": "prefix", "gloss": "外へ・明らかに", "display": false},
+          {"form": "ponere", "kind": "root", "gloss": "置く", "display": false}
+        ],
+        "rootCandidates": ["pos"],
+        "semanticBridge": "内容を外へ置いて人に見せるイメージから、内容や意味を詳しく示して説明することになった。",
+        "summary": "expoundは『外へ置く・示す』というラテン語から、内容を詳しく説明する意味になった。",
+        "confidence": "high",
+        "notes": "英語expoundの綴りではponが連続しないうえ、語末dも非語源的なのでB型を維持する。"
+      }
+    },
+    "escaped": {
+      "display": {
+        "type": "B",
+        "derivation": "俗ラテン語 *excappare（外套から抜け出す）に由来。ex-（外へ）＋cappa（外套）から → 逃げた、脱出した"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/escape",
+          "https://www.merriam-webster.com/dictionary/escape"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/escape",
+            "note": "escapeを古フランス語 escaper、俗ラテン語 *excappare、ex-＋後期ラテン語 cappa（外套）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/escape",
+            "note": "escapeの拘束から逃げる・危険を免れるという語義を確認した。"
+          }
+        ],
+        "originLanguage": "俗ラテン語（古フランス語経由）",
+        "etymons": ["excappare", "ex-", "cappa", "escaper"],
+        "historicalPath": ["後期ラテン語 cappa（外套）", "俗ラテン語 *excappare（外套から抜け出す）", "古フランス語 escaper", "英語 escape / escaped"],
+        "components": [
+          {"form": "ex-", "kind": "prefix", "gloss": "外へ", "display": false},
+          {"form": "cappa", "kind": "root", "gloss": "外套", "display": false}
+        ],
+        "rootCandidates": ["capp"],
+        "semanticBridge": "追跡者に外套だけを残して抜け出すという比喩から、拘束・危険・不快な経験から逃れる意味へ広がった。",
+        "summary": "escapedは外套から抜け出すという俗ラテン語の比喩を起点に、逃げた・脱出したを表す。",
+        "confidence": "high",
+        "notes": "cappaは英語capの語源だが、現行root cap（capere＝取る）とは別系統なのでA型へ寄せない。"
+      }
+    },
+    "billowing": {
+      "display": {
+        "type": "B",
+        "derivation": "古ノルド語 bylgja（波）を経て、ゲルマン語の「膨らむ」語根に由来。波のように膨らむことから → （煙などが）渦巻きながら広がる"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/billow",
+          "https://www.merriam-webster.com/dictionary/billow"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/billow",
+            "note": "billowを古ノルド語 bylgja（波）、ゲルマン祖語 *bulgjan、印欧祖語 *bhelgh-（膨らむ）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/billow",
+            "note": "billowの大波・波のように膨らむという名詞・動詞の語義を確認した。"
+          }
+        ],
+        "originLanguage": "古ノルド語・ゲルマン諸語",
+        "etymons": ["bylgja", "*bulgjan", "*bhelgh-", "billow"],
+        "historicalPath": ["印欧祖語 *bhelgh-（膨らむ）", "ゲルマン祖語 *bulgjan", "古ノルド語 bylgja", "英語 billow / billowing"],
+        "components": [
+          {"form": "bylgja", "kind": "base", "gloss": "波", "display": false},
+          {"form": "-ing", "kind": "inflection", "gloss": "進行・動作", "display": false}
+        ],
+        "rootCandidates": ["bulg"],
+        "semanticBridge": "海の大波が上下に膨らむ様子から、煙や布が大きく波打ちながら広がる様子へ広がった。",
+        "summary": "billowingは波・膨らみを表すゲルマン系の語を起点に、煙などが渦巻きながら広がる様子を表す。",
+        "confidence": "high",
+        "notes": "ゲルマン系の語源で、現在のラテン語系root辞書へ無理に統合しない。"
+      }
+    },
+    "wrangling": {
+      "display": {
+        "type": "B",
+        "derivation": "低地ドイツ語 wrangeln（争う、組み合う）に由来。曲げる・ねじる語根と関連し → 議論する、交渉する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/wrangle",
+          "https://www.merriam-webster.com/dictionary/wrangle"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/wrangle",
+            "note": "wrangleを低地ドイツ語 wrangeln、低地ドイツ語 wringen、ゲルマン祖語 *wrang-、印欧祖語 *wer-に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/wrangle",
+            "note": "wrangleの口論する・議論する・家畜を扱うという語義を確認した。"
+          }
+        ],
+        "originLanguage": "低地ドイツ語（ゲルマン系）",
+        "etymons": ["wrangeln", "wringen", "*wrang-", "*wer-"],
+        "historicalPath": ["印欧祖語 *wer-（曲げる・回す）", "ゲルマン祖語 *wrang-", "低地ドイツ語 wrangeln", "英語 wrangle / wrangling"],
+        "components": [
+          {"form": "wrangeln", "kind": "base", "gloss": "争う・組み合う", "display": false},
+          {"form": "-ing", "kind": "inflection", "gloss": "動作", "display": false}
+        ],
+        "rootCandidates": ["wrang"],
+        "semanticBridge": "力を込めて組み合う動きから、言葉をぶつけ合って議論・交渉する意味へ展開した。",
+        "summary": "wranglingは争う・組み合うという低地ドイツ語を起点に、議論や交渉を表す。",
+        "confidence": "high",
+        "notes": "曲げる語根との関係は示唆されるが、英語のver/vert系rootへ同一視しない。"
+      }
+    },
+    "embarking": {
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 embarquer（船に乗せる）に由来。en-（中へ）＋barque（小舟）から → 乗り出す、着手する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/embark",
+          "https://www.merriam-webster.com/dictionary/embark"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/embark",
+            "note": "embarkをフランス語 embarquer、en-（中へ）＋barque（小舟）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/embark",
+            "note": "embarkの船に乗る・計画や仕事に着手するという語義を確認した。"
+          }
+        ],
+        "originLanguage": "フランス語（ゲルマン系借用語を含む）",
+        "etymons": ["embarquer", "en-", "barque", "bark"],
+        "historicalPath": ["フランス語 barque（小舟）", "フランス語 embarquer（船に乗せる）", "英語 embark", "embarking"],
+        "components": [
+          {"form": "em-", "kind": "prefix", "gloss": "中へ", "display": false},
+          {"form": "barque", "kind": "base", "gloss": "小舟", "display": false},
+          {"form": "-ing", "kind": "inflection", "gloss": "進行・動作", "display": false}
+        ],
+        "rootCandidates": ["barc"],
+        "semanticBridge": "船に乗り込むことから、比喩的に新しい計画・仕事・活動へ乗り出すことを表すようになった。",
+        "summary": "embarkingは船に乗るembarkの現在分詞で、実際の乗船から新しい活動への着手へ意味が広がった。",
+        "confidence": "high",
+        "notes": "表面形embarkingは原形embarkへ正規化して調査する。-ingは語源でなく英語の屈折。"
+      }
+    },
+    "rambling": {
+      "display": {
+        "type": "B",
+        "derivation": "英語 ramble（気ままに歩き回る）からの現在分詞。古いromen／romblenまたはオランダ語系とされ、語源は確定しない → とりとめのない"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/ramble",
+          "https://www.merriam-webster.com/dictionary/ramble"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/ramble",
+            "note": "rambleを中英語ramblen、romenの頻度形、または中期オランダ語rammelenとの関係が考えられる不確かな語源として説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/ramble",
+            "note": "rambleの歩き回る・話や文章がとりとめなく続くという語義を確認した。"
+          }
+        ],
+        "originLanguage": "中英語・ゲルマン系（不確定）",
+        "etymons": ["ramblen", "romen", "romblen", "rammelen"],
+        "historicalPath": ["中英語 ramblen / romblen", "英語 ramble（歩き回る）", "英語 rambling（とりとめのない）"],
+        "components": [
+          {"form": "ramble", "kind": "base", "gloss": "歩き回る", "display": false},
+          {"form": "-ing", "kind": "inflection", "gloss": "性質・動作", "display": false}
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "道筋を定めず歩き回ることから、話や文章が主題から外れながら続くことへ比喩化した。",
+        "summary": "ramblingはrambleの現在分詞で、とりとめなく歩き回る・話すという意味を表す。ramble自体の語源は確定しない。",
+        "confidence": "medium",
+        "notes": "語源不確定の語を綴りから分解せず、現在分詞の英語上の形だけを記録する。"
+      }
+    },
+    "predilection": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "特に好む傾向",
+        "root": "lect",
+        "parts": [
+          {"form": "pre", "kind": "prefix", "gloss": "前もって"},
+          {"form": "lect", "kind": "root", "gloss": "選ぶ"},
+          {"form": "-ion", "kind": "suffix", "gloss": "〜すること（名詞化）"}
+        ],
+        "derivation": "pre-（前もって）＋lect（選び取る）＋-ion（名詞化） → 特に好む傾向"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/predilection",
+          "https://www.merriam-webster.com/dictionary/predilection"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/predilection",
+            "note": "predilectionをフランス語 prédilection、後期ラテン語 praedilectus、prae＋diligereに遡らせている。diligereは選ぶ・評価する意味をもつ。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/predilection",
+            "note": "predilectionの特定のものを好む傾向という語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（フランス語経由）",
+        "etymons": ["praedilectus", "prediligere", "prae", "diligere", "legere"],
+        "historicalPath": ["ラテン語 legere（選ぶ・集める）", "ラテン語 diligere（選び、重んじる）", "ラテン語 prediligere（他より先に好む）", "フランス語 prédilection", "英語 predilection"],
+        "components": [
+          {"form": "prae / pre-", "kind": "prefix", "gloss": "前もって", "display": false},
+          {"form": "diligere / lect", "kind": "root", "gloss": "選ぶ・好む", "display": false},
+          {"form": "-ion", "kind": "suffix", "gloss": "行為・状態", "display": false}
+        ],
+        "rootCandidates": ["lect"],
+        "semanticBridge": "他のものより先に選び、価値を認めて好むことが、特定のものへの強い好み・傾向を表す名詞になった。",
+        "summary": "predilectionは『前もって選び好む』というラテン語を起点とし、lect語根とpre-・-ionの対応を安全に表示できる。",
+        "confidence": "high",
+        "notes": "英語の綴りpredilectionにpre・lect・ionが連続して現れ、既存のlect rootと辞書接辞に対応するためA型へ昇格する。"
+      }
+    },
+    "depreciation": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "価値の下落、減価償却",
+        "root": "preci",
+        "parts": [
+          {"form": "de", "kind": "prefix", "gloss": "下へ・低く"},
+          {"form": "preci", "kind": "root", "gloss": "値段・価値"},
+          {"form": "-ation", "kind": "suffix", "gloss": "〜すること"}
+        ],
+        "derivation": "de-（下へ・低く）＋preci（値段・価値）＋-ation（名詞化） → 価値の下落、減価償却"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/depreciation",
+          "https://www.merriam-webster.com/dictionary/depreciation"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/depreciation",
+            "note": "depreciationをdepreciateからの名詞とし、depreciateをラテン語 depretiare、de-＋pretium（価格）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/depreciation",
+            "note": "depreciationの価値低下・減価償却という語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（フランス語経由）",
+        "etymons": ["depretiare", "de-", "pretium", "depreciate"],
+        "historicalPath": ["ラテン語 pretium（価格）", "ラテン語 depretiare（価格を下げる）", "英語 depreciate", "英語 depreciation"],
+        "components": [
+          {"form": "de-", "kind": "prefix", "gloss": "下へ・低く", "display": false},
+          {"form": "pretium / preci", "kind": "root", "gloss": "値段・価値", "display": false},
+          {"form": "-ation", "kind": "suffix", "gloss": "行為・状態", "display": false}
+        ],
+        "rootCandidates": ["preci"],
+        "semanticBridge": "価格を下げることから、物の価値が下がること、さらに会計上の減価償却を表すようになった。",
+        "summary": "depreciationは価格・価値を下げるラテン語から、価値の下落と減価償却を表す。綴りもde・preci・ationに対応する。",
+        "confidence": "high",
+        "notes": "既存のpreci rootとde・-ation辞書に対応し、語源と表面形が一致するためA型へ昇格する。"
+      }
+    },
+    "countenance": {
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 contenance（態度・外見）に由来。ラテン語 continentia（自分を保つこと）、continere（保つ・囲む）から → 顔つき、表情；容認"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/countenance",
+          "https://www.merriam-webster.com/dictionary/countenance"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/countenance",
+            "note": "countenanceを古フランス語 contenance、ラテン語 continentia・continere、com-＋tenereに遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/countenance",
+            "note": "countenanceの顔つき・表情と、動詞として支持・容認する意味を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（古フランス語経由）",
+        "etymons": ["contenance", "continentia", "continere", "com-", "tenere"],
+        "historicalPath": ["ラテン語 tenere（保つ・持つ）", "ラテン語 continere（ともに保つ・囲む）", "ラテン語 continentia", "古フランス語 contenance", "英語 countenance"],
+        "components": [
+          {"form": "con-", "kind": "prefix", "gloss": "ともに", "display": false},
+          {"form": "tenere", "kind": "root", "gloss": "保つ", "display": false},
+          {"form": "-ance", "kind": "suffix-candidate", "gloss": "状態・行為", "display": false}
+        ],
+        "rootCandidates": ["ten"],
+        "semanticBridge": "自分を保つ態度や外見を表す語から、心の状態を映す顔つき、さらに支持して受け入れる行為へ意味が広がった。",
+        "summary": "countenanceは自分を保つことを表すラテン語を起点に、顔つき・表情、そして容認を表すようになった。",
+        "confidence": "high",
+        "notes": "語源上con-＋tenereは確認できるが、英語countenanceではconが連続せず、-anceも現行辞書未登録のためB型を維持する。"
+      }
+    },
+    "resurgence": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "復活、再興",
+        "root": "surg",
+        "parts": [
+          {"form": "re", "kind": "prefix", "gloss": "再び"},
+          {"form": "surg", "kind": "root", "gloss": "立ち上がる"},
+          {"form": "-ence", "kind": "suffix", "gloss": "〜の状態"}
+        ],
+        "derivation": "re-（再び）＋surg（立ち上がる）＋-ence（状態） → 復活、再興"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/resurgence",
+          "https://www.merriam-webster.com/dictionary/resurgence"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/resurgence",
+            "note": "resurgenceをresurgent＋-ence、resurgentをラテン語 resurgere、re-＋surgereに遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/resurgence",
+            "note": "resurgenceの復活・再興という語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": ["resurgere", "re-", "surgere", "resurgent", "-ence"],
+        "historicalPath": ["ラテン語 surgere（立ち上がる）", "ラテン語 resurgere（再び立ち上がる）", "英語 resurgent", "英語 resurgence"],
+        "components": [
+          {"form": "re-", "kind": "prefix", "gloss": "再び", "display": false},
+          {"form": "surgere / surg", "kind": "root", "gloss": "立ち上がる", "display": false},
+          {"form": "-ence", "kind": "suffix", "gloss": "状態", "display": false}
+        ],
+        "rootCandidates": ["surg"],
+        "semanticBridge": "一度衰えたものが再び立ち上がることから、活動・勢力・人気などの復活や再興を表すようになった。",
+        "summary": "resurgenceは『再び立ち上がる』というラテン語から、復活・再興を表す。綴りもre・surg・-enceに対応する。",
+        "confidence": "high",
+        "notes": "resourcesと共通するsurgere系の根拠があり、surg rootを新規登録してA型へ昇格する。"
+      }
+    }
+  }
+}

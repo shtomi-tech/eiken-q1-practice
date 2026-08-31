@@ -1,0 +1,1543 @@
+{
+  "meta": {
+    "batchId": "batch-019",
+    "note": "未確認B型の次の25語。英語表面の語根・接辞と個別に確認した語源経路が対応する語はA型へ、借用語・複合表現・語源の不確かな語はB型に残す。"
+  },
+  "dictionary": {
+    "roots": {
+      "provinc": {
+        "gloss": "地方・管轄",
+        "origin": "ラテン語 provincia / provincialis",
+        "note": "特定の地方や管轄に属するイメージ。provincial。"
+      },
+      "sequent": {
+        "gloss": "続く",
+        "origin": "ラテン語 sequi / sequens",
+        "note": "後に続く順序のイメージ。sequentially。"
+      },
+      "slender": {
+        "gloss": "細長い・ほっそりした",
+        "origin": "古フランス語 esclendre / アングロ・フレンチ esclendre",
+        "note": "細く長い形のイメージ。slenderly。"
+      },
+      "soc": {
+        "gloss": "鋤先・くぼみ",
+        "origin": "古フランス語 soc / ケルト語 *sukko-",
+        "note": "鋤先や受けるくぼみのイメージ。socket。"
+      },
+      "solv": {
+        "gloss": "ゆるめる・解放する",
+        "origin": "ラテン語 solvere",
+        "note": "束縛や義務を解いて自由にするイメージ。solvency。"
+      },
+      "surreptitious": {
+        "gloss": "秘密の・ひそかな",
+        "origin": "ラテン語 surrepticius / surripere",
+        "note": "密かに奪い去ることから、秘密裏に行う性質へ。surreptitiously。"
+      },
+      "tedi": {
+        "gloss": "退屈・うんざり",
+        "origin": "ラテン語 taedium / taediosus",
+        "note": "疲れやうんざりする感覚。tedious。"
+      },
+      "tenu": {
+        "gloss": "細い・薄い",
+        "origin": "ラテン語 tenuis",
+        "note": "薄く実体に乏しいイメージ。tenuous。"
+      }
+    },
+    "affixes": {
+      "-ial": {
+        "gloss": "〜に関する",
+        "kind": "suffix",
+        "note": "名詞や語幹に関係する形容詞を作る。provincial・sequential。"
+      },
+      "-et": {
+        "gloss": "小さいもの",
+        "kind": "suffix",
+        "note": "フランス語などで小さいものを表す指小辞。socket。"
+      }
+    }
+  },
+  "entries": {
+    "provincial": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "地方の",
+        "root": "provinc",
+        "parts": [
+          {
+            "form": "provinc",
+            "kind": "root",
+            "gloss": "地方・管轄"
+          },
+          {
+            "form": "-ial",
+            "kind": "suffix",
+            "gloss": "〜に関する"
+          }
+        ],
+        "derivation": "provinc（地方・管轄）＋-ial（〜に関する） → 地方の；視野の狭い"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/provincial",
+          "https://www.merriam-webster.com/dictionary/provincial"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/provincial",
+            "note": "provincialを古フランス語 provincial、ラテン語 provincialis（地方・管轄に属する）、provinciaに遡らせている。地方的という意味から視野の狭いという意味が発達した。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/provincial",
+            "note": "provincialの現代語義として、地方に関することと、視野が狭く都会的洗練に欠けることを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "provincial",
+          "provincialis",
+          "provincia",
+          "-ial"
+        ],
+        "historicalPath": [
+          "ラテン語 provincia（地方、管轄）",
+          "ラテン語 provincialis（地方に属する）",
+          "古フランス語 provincial",
+          "英語 provincial（地方の、視野の狭い）"
+        ],
+        "components": [
+          {
+            "form": "provincia",
+            "kind": "base",
+            "gloss": "地方・管轄"
+          },
+          {
+            "form": "-ial",
+            "kind": "suffix",
+            "gloss": "〜に関する"
+          }
+        ],
+        "rootCandidates": [
+          "provinc"
+        ],
+        "semanticBridge": "特定の地方や管轄に属することから、その地方に限られた視野や都会的洗練の不足を表す意味へ広がった。",
+        "summary": "provincialはprovinc（地方・管轄）＋-ialで、地方の、さらに視野の狭いという意味になる。",
+        "confidence": "high",
+        "notes": "provinciaの深い語源には議論があるが、provincialisからprovincialへの派生と-ialの表面対応は明確なためA型にする。"
+      }
+    },
+    "purge": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 purger、ラテン語 purgare（清める、取り除く）から英語へ。purus（純粋な）とagere（動かす、行う）に関係する → 除去した、一掃した"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/purge",
+          "https://www.merriam-webster.com/dictionary/purge"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/purge",
+            "note": "purgeをアングロ・フレンチ purger、古フランス語 purgier、ラテン語 purgareに遡らせ、purus（純粋な）とagereの語根に関係づけている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/purge",
+            "note": "purgeの現代語義として、不要なものを取り除く、一掃することを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "purge",
+          "purger",
+          "purgare",
+          "purus",
+          "agere"
+        ],
+        "historicalPath": [
+          "ラテン語 purus（純粋な）＋agere（動かす、行う）",
+          "ラテン語 purgare（清める、取り除く）",
+          "古フランス語 purger",
+          "英語 purge・purged（除去する、一掃した）"
+        ],
+        "components": [
+          {
+            "form": "purgare",
+            "kind": "base",
+            "gloss": "清める・取り除く"
+          }
+        ],
+        "rootCandidates": [
+          "purg"
+        ],
+        "semanticBridge": "不純物や罪を清めて取り除くことから、不要な人や物を一掃する意味へ広がった。",
+        "summary": "purgeはラテン語purgareを経た借用語で、不要なものを除去することを表す。",
+        "confidence": "high",
+        "notes": "purus＋agereという語源経路は確認できるが、英語表面のpurgedを現在のA型語根・接辞へ自然に分解できないためB型に残す。"
+      }
+    },
+    "quarantine": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "イタリア語 quaranta giorni（40日間、文字通り『40日の期間』）から英語へ。感染の疑いがある船を40日間隔離したことに由来 → 隔離"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/quarantine",
+          "https://www.merriam-webster.com/dictionary/quarantine"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/quarantine",
+            "note": "quarantineをイタリア語 quaranta giorni（40日間）、ラテン語 quadraginta（40）に遡らせ、船を40日間隔離した制度から生じた語と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/quarantine",
+            "note": "quarantineの現代語義として、病気の拡大を防ぐため人や動物を隔離することを確認した。"
+          }
+        ],
+        "originLanguage": "イタリア語・ラテン語・英語",
+        "etymons": [
+          "quarantine",
+          "quaranta giorni",
+          "quaranta",
+          "quadraginta",
+          "quattuor"
+        ],
+        "historicalPath": [
+          "ラテン語 quadraginta（40）",
+          "イタリア語 quaranta giorni（40日間）",
+          "英語 quarantine（隔離期間、隔離）"
+        ],
+        "components": [
+          {
+            "form": "quaranta giorni",
+            "kind": "phrase",
+            "gloss": "40日間"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "感染の疑いがある船を40日間待機させる制度の名称が、病気の拡大を防ぐ隔離一般を表すようになった。",
+        "summary": "quarantineは『40日間』を意味するイタリア語の表現から、隔離を表す語になった。",
+        "confidence": "high",
+        "notes": "語源が数字を含む表現であり、複合表現はユーザー指定に合わせてB型に残す。"
+      }
+    },
+    "quench": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "中英語 quenchen、古英語 acwencan（火や光を消す）から発達。ゲルマン祖語の語に由来するが、さらに確かな同族関係は不明 → 消した、癒やした"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/quench",
+          "https://www.merriam-webster.com/dictionary/quench"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/quench",
+            "note": "quenchを中英語 quenchen、古英語 acwencan、ゲルマン祖語 *kwenkjananに遡らせ、ゲルマン語派外の確かな同族語はないとしている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/quench",
+            "note": "quenchの現代語義として、火や光を消すこと、渇きや欲求を満たして静めることを確認した。"
+          }
+        ],
+        "originLanguage": "古英語・中英語・英語",
+        "etymons": [
+          "quench",
+          "quenchen",
+          "acwencan",
+          "*kwenkjanan"
+        ],
+        "historicalPath": [
+          "古英語 acwencan（消す）",
+          "中英語 quenchen（火や光を消す）",
+          "英語 quench・quenched（消す、癒やす）"
+        ],
+        "components": [
+          {
+            "form": "acwencan",
+            "kind": "base",
+            "gloss": "消す"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "火や光を消すことから、渇き・欲望・怒りなどを静める意味へ比喩的に広がった。",
+        "summary": "quenchは古英語から続くゲルマン系の語で、消す・渇きを癒やすことを表す。",
+        "confidence": "high",
+        "notes": "語源経路は確認できるが、英語表面のquenchを安定した語根・接辞へ分解できないためB型に残す。"
+      }
+    },
+    "query": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 quaere（尋ねよ、調べよ。quaerere『探す、尋ねる』の命令形）から英語へ。綴りはinquiryの影響を受けた → 質問、疑問"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/query",
+          "https://www.merriam-webster.com/dictionary/query"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/query",
+            "note": "queryをラテン語 quaere（尋ねよ）に遡らせ、quaerere（探す、尋ねる）の命令形が質問を示す注記から名詞化したと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/query",
+            "note": "queryの現代語義として、質問や疑問、情報を求める問いを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・英語",
+        "etymons": [
+          "query",
+          "quaere",
+          "quaerere",
+          "*kwo-"
+        ],
+        "historicalPath": [
+          "ラテン語 quaerere（探す、尋ねる）",
+          "ラテン語 quaere（尋ねよ）",
+          "英語 query（質問、疑問）"
+        ],
+        "components": [
+          {
+            "form": "quaere",
+            "kind": "base",
+            "gloss": "尋ねよ・調べよ"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "質問を促すラテン語の注記が名詞として扱われ、情報を求める問いや疑問を表すようになった。",
+        "summary": "queryはラテン語quaereをもとにした語で、質問や疑問を表す。",
+        "confidence": "high",
+        "notes": "quaereからqueryへの綴りの変化があり、英語表面を現在のA型語根へ自然に対応させないためB型に残す。"
+      }
+    },
+    "redeem": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 redimer、ラテン語 redimere（買い戻す）から英語へ。red-（戻って）＋emere（買う）に由来し、償う・救う意味へ広がった → 償う、買い戻す"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/redeem",
+          "https://www.merriam-webster.com/dictionary/redeem"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/redeem",
+            "note": "redeemを古フランス語 redimer、ラテン語 redimereに遡らせ、red-（戻って）＋emere（取る、買う）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/redeem",
+            "note": "redeemの現代語義として、買い戻すこと、罪や過失を償うことを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "redeem",
+          "redimer",
+          "redimere",
+          "red-",
+          "emere",
+          "*em-"
+        ],
+        "historicalPath": [
+          "ラテン語 emere（買う、得る）",
+          "ラテン語 redimere（買い戻す）",
+          "古フランス語 redimer",
+          "英語 redeem（償う、買い戻す）"
+        ],
+        "components": [
+          {
+            "form": "red-",
+            "kind": "prefix",
+            "gloss": "戻って"
+          },
+          {
+            "form": "emere",
+            "kind": "base",
+            "gloss": "買う・得る"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "代価を払って取り戻すことから、罪や過失の結果から人を救い、償う意味へ広がった。",
+        "summary": "redeemはラテン語redimereを経た借用語で、買い戻す・償うことを表す。",
+        "confidence": "high",
+        "notes": "歴史的にはred-＋emereだが、redeemの英語表面をre＋deemと表示すると別語源のdeemを誤って接続するためB型に残す。"
+      }
+    },
+    "ridge": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 hrycg（人や動物の背）から古ノルド語 hryggrの影響を受けて英語へ。背の隆起に似た地形を表すようになった → 尾根、隆起部"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/ridge",
+          "https://www.merriam-webster.com/dictionary/ridge"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/ridge",
+            "note": "ridgeを中英語 rigge、古英語 hrycg、古ノルド語 hryggr（背、尾根）に遡らせ、深い関係は不確かとしている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/ridge",
+            "note": "ridgeの現代語義として、細長く高くなった土地や物の隆起部を確認した。"
+          }
+        ],
+        "originLanguage": "古英語・古ノルド語・中英語・英語",
+        "etymons": [
+          "ridge",
+          "rigge",
+          "hrycg",
+          "hryggr",
+          "*hruggin"
+        ],
+        "historicalPath": [
+          "古英語 hrycg（背、背骨）",
+          "古ノルド語 hryggr（背、尾根）",
+          "中英語 rigge",
+          "英語 ridge（尾根、隆起部）"
+        ],
+        "components": [
+          {
+            "form": "hrycg",
+            "kind": "base",
+            "gloss": "背・背骨"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "人や動物の背の盛り上がりから、屋根や土地などにある細長い隆起部を表すようになった。",
+        "summary": "ridgeは『背』を表す古英語・古ノルド語系の語から、尾根や隆起部を表す語になった。",
+        "confidence": "high",
+        "notes": "語形変化と同族関係に不確かさがあり、英語表面を語根・接辞の組合せとして表示しないためB型に残す。"
+      }
+    },
+    "rife": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 rife（豊富な、広く行き渡った）からゲルマン祖語を経て英語へ。広く存在するという意味になった → はびこった、満ちた"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/rife",
+          "https://www.merriam-webster.com/dictionary/rife"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/rife",
+            "note": "rifeを古英語 rife（豊富な、広く行き渡った）、ゲルマン祖語 *rif-に遡らせ、印欧祖語 *rei-との関係は推定としている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/rife",
+            "note": "rifeの現代語義として、好ましくないものが広く存在しはびこっていることを確認した。"
+          }
+        ],
+        "originLanguage": "古英語・ゲルマン祖語・英語",
+        "etymons": [
+          "rife",
+          "*rif-",
+          "*rei-"
+        ],
+        "historicalPath": [
+          "古英語 rife（豊富な、広く行き渡った）",
+          "ゲルマン祖語 *rif-",
+          "英語 rife（はびこった、満ちた）"
+        ],
+        "components": [
+          {
+            "form": "rife",
+            "kind": "base",
+            "gloss": "豊富な・広く行き渡った"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "豊富で広く見られる状態から、特に好ましくないものがはびこる状態を表すようになった。",
+        "summary": "rifeは古英語から続く語で、広く存在し満ちていることを表す。",
+        "confidence": "high",
+        "notes": "単純な語根語で接辞分解の根拠がなく、深い語源も推定を含むためB型に残す。"
+      }
+    },
+    "rotund": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 rotundus（丸い、球形の）から英語へ。rota（車輪）と関係し、丸い形や豊かな響きを表すようになった → 丸々とした、太った"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/rotund",
+          "https://www.merriam-webster.com/dictionary/rotund"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/rotund",
+            "note": "rotundをラテン語 rotundus（転がる、丸い、球形の）、rota（車輪）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/rotund",
+            "note": "rotundの現代語義として、丸みを帯びた体つきや豊かでよく響く声を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・英語",
+        "etymons": [
+          "rotund",
+          "rotundus",
+          "rota",
+          "*ret-"
+        ],
+        "historicalPath": [
+          "印欧祖語 *ret-（走る、回る、転がる）",
+          "ラテン語 rota（車輪）・rotundus（丸い）",
+          "英語 rotund（丸々とした）"
+        ],
+        "components": [
+          {
+            "form": "rotundus",
+            "kind": "base",
+            "gloss": "丸い・球形の"
+          }
+        ],
+        "rootCandidates": [
+          "rotund"
+        ],
+        "semanticBridge": "車輪のように丸い形から、丸々とした体つきや、口を丸くして響かせるような声の性質へ意味が広がった。",
+        "summary": "rotundはラテン語rotundusを受け継ぎ、丸々としたことを表す。",
+        "confidence": "high",
+        "notes": "rotundusからの借用語で、英語表面に明確な派生接辞がないためB型に残す。"
+      }
+    },
+    "saturation": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "飽和",
+        "root": "satur",
+        "parts": [
+          {
+            "form": "satur",
+            "kind": "root",
+            "gloss": "満たす"
+          },
+          {
+            "form": "-ation",
+            "kind": "suffix",
+            "gloss": "〜すること"
+          }
+        ],
+        "derivation": "satur（満たす）＋-ation（〜すること） → 満たしきった状態、飽和"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/saturation",
+          "https://www.merriam-webster.com/dictionary/saturation"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/saturation",
+            "note": "saturationを英語saturateから、または後期ラテン語 saturationem（満たすこと）から作られた名詞と説明し、saturare（満たす）に結び付けている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/saturation",
+            "note": "saturationの現代語義として、液体や物質をこれ以上受け入れられないほど満たす状態、化学・色彩上の飽和を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "saturation",
+          "saturate",
+          "saturationem",
+          "saturatio",
+          "saturare",
+          "satur",
+          "-ation"
+        ],
+        "historicalPath": [
+          "ラテン語 satur（満ちた）・saturare（満たす）",
+          "ラテン語 saturationem（満たすこと）",
+          "英語 saturate（満たす）",
+          "英語 saturation（飽和）"
+        ],
+        "components": [
+          {
+            "form": "saturare",
+            "kind": "base",
+            "gloss": "満たす"
+          },
+          {
+            "form": "-ation",
+            "kind": "suffix",
+            "gloss": "行為・状態"
+          }
+        ],
+        "rootCandidates": [
+          "satur"
+        ],
+        "semanticBridge": "いっぱいに満たす動作から、これ以上受け入れられないほど満ちた状態、飽和を表す名詞になった。",
+        "summary": "saturationはsatur（満たす）＋-ationで、飽和や過密な状態を表す。",
+        "confidence": "high",
+        "notes": "既存のsatur語根と-ationを再利用でき、saturationの表面にも対応するためA型にする。"
+      }
+    },
+    "sentiment": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "感情",
+        "root": "sent",
+        "parts": [
+          {
+            "form": "sent",
+            "kind": "root",
+            "gloss": "感じる"
+          },
+          {
+            "form": "-ment",
+            "kind": "suffix",
+            "gloss": "〜すること・もの"
+          }
+        ],
+        "derivation": "sent（感じる）＋-ment（〜すること・もの） → 感じたこと、感情"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/sentiment",
+          "https://www.merriam-webster.com/dictionary/sentiment"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/sentiment",
+            "note": "sentimentを古フランス語 sentement、直接には中世ラテン語 sentimentum（感情、意見）、ラテン語 sentire（感じる）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/sentiment",
+            "note": "sentimentの現代語義として、感情や心情、何かについての意見・考えを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "sentiment",
+          "sentement",
+          "sentimentum",
+          "sentire",
+          "-ment"
+        ],
+        "historicalPath": [
+          "ラテン語 sentire（感じる）",
+          "中世ラテン語 sentimentum（感情、意見）",
+          "古フランス語 sentement",
+          "英語 sentiment（感情、意見）"
+        ],
+        "components": [
+          {
+            "form": "sentire",
+            "kind": "base",
+            "gloss": "感じる"
+          },
+          {
+            "form": "-ment",
+            "kind": "suffix",
+            "gloss": "行為・結果"
+          }
+        ],
+        "rootCandidates": [
+          "sent"
+        ],
+        "semanticBridge": "感じ取ることから、心に生じた感情や、感情を帯びた意見・考えを表す名詞になった。",
+        "summary": "sentimentはsent（感じる）＋-mentの表面対応で、感情や意見を表す。",
+        "confidence": "high",
+        "notes": "sentire系の語幹を既存のsent語根へ正規化し、-mentと対応させるためA型にする。"
+      }
+    },
+    "sequentially": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "順番に",
+        "root": "sequent",
+        "parts": [
+          {
+            "form": "sequent",
+            "kind": "root",
+            "gloss": "続く"
+          },
+          {
+            "form": "-ial",
+            "kind": "suffix",
+            "gloss": "〜に関する"
+          },
+          {
+            "form": "-ly",
+            "kind": "suffix",
+            "gloss": "〜な状態で"
+          }
+        ],
+        "derivation": "sequent（続く）＋-ial（〜に関する）＋-ly（〜な状態で） → 順番に"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/sequential",
+          "https://www.merriam-webster.com/dictionary/sequentially"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/sequential",
+            "note": "sequentialを後期ラテン語 sequentia（連続、後に続くこと）＋-alとし、sequentiaをラテン語 sequi（続く）に結び付けている。sequentiallyはその副詞形である。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/sequentially",
+            "note": "sequentiallyの現代語義として、順序に従って、一つずつ順番に行うことを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "sequentially",
+          "sequential",
+          "sequentia",
+          "sequi",
+          "-al",
+          "-ly"
+        ],
+        "historicalPath": [
+          "ラテン語 sequi（続く）・sequentia（連続）",
+          "英語 sequential（順序に続く）",
+          "英語 sequentially（順番に）"
+        ],
+        "components": [
+          {
+            "form": "sequentia",
+            "kind": "base",
+            "gloss": "連続・続くこと"
+          },
+          {
+            "form": "-al",
+            "kind": "suffix",
+            "gloss": "〜に関する"
+          },
+          {
+            "form": "-ly",
+            "kind": "suffix",
+            "gloss": "〜な状態で"
+          }
+        ],
+        "rootCandidates": [
+          "sequent"
+        ],
+        "semanticBridge": "後に続くことを表す語から、一定の順序で続く性質、さらにその順番に行う様子を表す副詞になった。",
+        "summary": "sequentiallyはsequent（続く）＋-ial＋-lyで、順番にという意味になる。",
+        "confidence": "high",
+        "notes": "歴史的にはsequentia＋-al＋-lyだが、英語表面のsequent・ial・lyへ正規化できるためA型にする。"
+      }
+    },
+    "slenderly": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "細長く",
+        "root": "slender",
+        "parts": [
+          {
+            "form": "slender",
+            "kind": "root",
+            "gloss": "細長い・ほっそりした"
+          },
+          {
+            "form": "-ly",
+            "kind": "suffix",
+            "gloss": "〜な状態で"
+          }
+        ],
+        "derivation": "slender（細長い・ほっそりした）＋-ly（〜な状態で） → 細長く、ほっそりと"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/slender",
+          "https://www.merriam-webster.com/dictionary/slenderly"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/slender",
+            "note": "slenderを古フランス語 esclendre・アングロ・フレンチ esclendre（細い、細長い）に遡らせ、さらに古い関係には不確かさがあるとしている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/slenderly",
+            "note": "slenderlyの現代語義として、細長い・ほっそりした様子であることを確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語・アングロ・フレンチ・英語",
+        "etymons": [
+          "slenderly",
+          "slender",
+          "esclendre",
+          "-ly"
+        ],
+        "historicalPath": [
+          "古フランス語 esclendre（細い、細長い）",
+          "英語 slender（細長い、ほっそりした）",
+          "英語 slenderly（細長く、ほっそりと）"
+        ],
+        "components": [
+          {
+            "form": "slender",
+            "kind": "base",
+            "gloss": "細長い・ほっそりした"
+          },
+          {
+            "form": "-ly",
+            "kind": "suffix",
+            "gloss": "〜な状態で"
+          }
+        ],
+        "rootCandidates": [
+          "slender"
+        ],
+        "semanticBridge": "細長い性質を表す形容詞slenderに様態を表す-lyが付き、細長い・ほっそりした様子を表す副詞になった。",
+        "summary": "slenderlyはslender（細長い）＋-lyで、細長く・ほっそりとという意味になる。",
+        "confidence": "high",
+        "notes": "古い語源の最深部には不確かさがあるが、slender＋-lyという英語上の派生は明確なためA型にする。"
+      }
+    },
+    "socket": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "受け口",
+        "root": "soc",
+        "parts": [
+          {
+            "form": "soc",
+            "kind": "root",
+            "gloss": "鋤先・くぼみ"
+          },
+          {
+            "form": "-et",
+            "kind": "suffix",
+            "gloss": "小さいもの"
+          }
+        ],
+        "derivation": "soc（鋤先・くぼみ）＋-et（小さいもの） → 物を受ける小さなくぼみ、受け口"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/socket",
+          "https://www.merriam-webster.com/dictionary/socket"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/socket",
+            "note": "socketをアングロ・フレンチ soket（槍先、鋤先）、古フランス語 socの指小形とし、ケルト語 *sukko-（鋤先）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/socket",
+            "note": "socketの現代語義として、別の物を受けて保持する中空の部分や電気の差し込み口を確認した。"
+          }
+        ],
+        "originLanguage": "ケルト語・ラテン語・古フランス語・アングロ・フレンチ・英語",
+        "etymons": [
+          "socket",
+          "soket",
+          "soc",
+          "*soccus",
+          "*sukko-",
+          "-et"
+        ],
+        "historicalPath": [
+          "ケルト語 *sukko-（鋤先）",
+          "古フランス語 soc（鋤先）",
+          "アングロ・フレンチ soket（小さな鋤先）",
+          "英語 socket（物を受けるくぼみ）"
+        ],
+        "components": [
+          {
+            "form": "soc",
+            "kind": "base",
+            "gloss": "鋤先・くぼみ"
+          },
+          {
+            "form": "-et",
+            "kind": "suffix",
+            "gloss": "小さいもの"
+          }
+        ],
+        "rootCandidates": [
+          "soc"
+        ],
+        "semanticBridge": "鋤先のような形をした小さな部分を表す語が、物を受けて保持するくぼみや差し込み口を表すようになった。",
+        "summary": "socketはsoc（鋤先・くぼみ）＋-etの指小形として、物を受ける小さなくぼみを表す。",
+        "confidence": "medium",
+        "notes": "英語のsocketにはsoket由来のkが残るため表面形は完全一致しないが、socの指小形という出典上の構造をA型風に表示する。"
+      }
+    },
+    "solvency": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "支払い能力",
+        "root": "solv",
+        "parts": [
+          {
+            "form": "solv",
+            "kind": "root",
+            "gloss": "ゆるめる・解放する"
+          },
+          {
+            "form": "-ency",
+            "kind": "suffix",
+            "gloss": "〜の状態"
+          }
+        ],
+        "derivation": "solv（ゆるめる・解放する）＋-ency（〜の状態） → 債務を解消できる状態、支払い能力"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/solvency",
+          "https://www.merriam-webster.com/dictionary/solvency"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/solvency",
+            "note": "solvencyをsolvent＋抽象名詞接尾辞-cyからなる語とし、solventをラテン語 solvere（ゆるめる、解放する、義務を果たす）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/solvency",
+            "note": "solvencyの現代語義として、すべての正当な債務を支払える状態・能力を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "solvency",
+          "solvent",
+          "solvere",
+          "-ency",
+          "-cy",
+          "*leu-"
+        ],
+        "historicalPath": [
+          "ラテン語 solvere（ゆるめる、解放する、義務を果たす）",
+          "フランス語 solvent",
+          "英語 solvent（支払い可能な）",
+          "英語 solvency（支払い能力）"
+        ],
+        "components": [
+          {
+            "form": "solvere",
+            "kind": "base",
+            "gloss": "解放する・義務を果たす"
+          },
+          {
+            "form": "-ency",
+            "kind": "suffix",
+            "gloss": "状態・能力"
+          }
+        ],
+        "rootCandidates": [
+          "solv"
+        ],
+        "semanticBridge": "束縛を解くことから債務を果たして義務から解放されることへ意味が広がり、支払い可能な状態を表すようになった。",
+        "summary": "solvencyはsolv（義務を果たして解放する）＋-encyで、支払い能力を表す。",
+        "confidence": "high",
+        "notes": "solvereを英語表面のsolvへ正規化し、solvencyの-encyと対応させるためA型にする。"
+      }
+    },
+    "spar": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "動詞spar（打ち合う、軽く争う）は中英語 sparren（打つ、突く）から発達したが、語源は不確か。名詞spar（梁、船の帆柱）とは別系列の可能性がある → つばぜり合いをする、軽く争う"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/spar",
+          "https://www.merriam-webster.com/dictionary/spar"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/spar",
+            "note": "sparの動詞を中英語 sparren（急ぐ、打つ、突く）に遡らせ、フランス語・イタリア語由来など複数の説を挙げるが、語源は確定していない。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/spar",
+            "note": "sparの現代語義として、ボクシングの練習や軽い打ち合い、言葉の応酬を確認した。"
+          }
+        ],
+        "originLanguage": "中英語・フランス語・イタリア語・英語",
+        "etymons": [
+          "spar",
+          "sparren",
+          "esparer",
+          "sparare",
+          "parare"
+        ],
+        "historicalPath": [
+          "中英語 sparren（打つ、突く）",
+          "英語 spar（打ち合う、軽く争う）"
+        ],
+        "components": [
+          {
+            "form": "sparren",
+            "kind": "base",
+            "gloss": "打つ・突く"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "攻撃と防御の動作を軽く繰り返すことから、ボクシングの練習や軽い議論の応酬を表すようになった。",
+        "summary": "sparは語源に複数説がある動詞で、軽く打ち合う・争うことを表す。",
+        "confidence": "low",
+        "notes": "同形の名詞sparとの関係も一義的でなく、語源と英語表面の対応を確定できないためB型に残す。"
+      }
+    },
+    "spurious": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 spurius（非嫡出の、偽の）から英語へ。さらにエトルリア語 spuralとの関係が推定される → 偽の、根拠のない"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/spurious",
+          "https://www.merriam-webster.com/dictionary/spurious"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/spurious",
+            "note": "spuriousをラテン語 spurius（非嫡出の、偽の）に遡らせ、名詞『非嫡出子』から生じた語で、spural（公の）との関係は推定としている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/spurious",
+            "note": "spuriousの現代語義として、見かけだけで本物でないこと、根拠や出所が偽っていることを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・エトルリア語・英語",
+        "etymons": [
+          "spurious",
+          "spurius",
+          "spural"
+        ],
+        "historicalPath": [
+          "ラテン語 spurius（非嫡出の、偽の）",
+          "英語 spurious（偽の、根拠のない）"
+        ],
+        "components": [
+          {
+            "form": "spurius",
+            "kind": "base",
+            "gloss": "非嫡出の・偽の"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "正当な出生でないことから、正当な出所をもたず本物ではないことを表す比喩的な意味になった。",
+        "summary": "spuriousはラテン語spuriusから、偽の・根拠のないという意味になった。",
+        "confidence": "high",
+        "notes": "単純な借用語で、英語表面に確かな派生接辞がないためB型に残す。"
+      }
+    },
+    "suave": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 suavis（快い、甘い）から英語へ。インド・ヨーロッパ祖語 *swād-（甘い、快い）と関係する → 洗練された、物腰の柔らかな"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/suave",
+          "https://www.merriam-webster.com/dictionary/suave"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/suave",
+            "note": "suaveをラテン語 suavis（快い、甘い）に遡らせ、印欧祖語 *swād-（甘い、快い）と関係づけている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/suave",
+            "note": "suaveの現代語義として、洗練され感じがよく、物腰が柔らかなことを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "suave",
+          "suavis",
+          "*swād-"
+        ],
+        "historicalPath": [
+          "印欧祖語 *swād-（甘い、快い）",
+          "ラテン語 suavis（快い、甘い）",
+          "英語 suave（洗練された、物腰の柔らかな）"
+        ],
+        "components": [
+          {
+            "form": "suavis",
+            "kind": "base",
+            "gloss": "快い・甘い"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "感覚的に快く甘いことから、人の態度や話し方が感じよく洗練されていることを表すようになった。",
+        "summary": "suaveはラテン語suavisから、人当たりがよく洗練されたという意味になった。",
+        "confidence": "high",
+        "notes": "単純な借用語で英語表面の接辞分解がないためB型に残す。"
+      }
+    },
+    "sully": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 souiller（汚す）、古フランス語 soillierから英語へ。古英語sylianの影響や混同も考えられる → 汚す、傷つける"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/sully",
+          "https://www.merriam-webster.com/dictionary/sully"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/sully",
+            "note": "sullyをフランス語 souiller、古フランス語 soillier（汚す）に遡らせ、古英語 sylianとの影響・混同の可能性も示している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/sully",
+            "note": "sullyの現代語義として、物や評判を汚す、傷つけることを確認した。"
+          }
+        ],
+        "originLanguage": "古英語・古フランス語・フランス語・英語",
+        "etymons": [
+          "sully",
+          "souiller",
+          "soillier",
+          "sylian"
+        ],
+        "historicalPath": [
+          "古フランス語 soillier（汚す）",
+          "フランス語 souiller",
+          "英語 sully（汚す、傷つける）"
+        ],
+        "components": [
+          {
+            "form": "souiller",
+            "kind": "base",
+            "gloss": "汚す"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "表面を汚すことから、名誉や評判を損なうことを表す比喩的な意味へ広がった。",
+        "summary": "sullyはフランス語souillerを経た語で、物や評判を汚すことを表す。",
+        "confidence": "high",
+        "notes": "借用と古英語の影響が重なり、英語表面を既存の語根・接辞へ分解できないためB型に残す。"
+      }
+    },
+    "surreptitiously": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "こっそりと",
+        "root": "surreptitious",
+        "parts": [
+          {
+            "form": "surreptitious",
+            "kind": "root",
+            "gloss": "秘密の・ひそかな"
+          },
+          {
+            "form": "-ly",
+            "kind": "suffix",
+            "gloss": "〜な状態で"
+          }
+        ],
+        "derivation": "surreptitious（秘密の・ひそかな）＋-ly（〜な状態で） → こっそりと"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/surreptitious",
+          "https://www.merriam-webster.com/dictionary/surreptitiously"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/surreptitious",
+            "note": "surreptitiousをラテン語 surrepticius（盗まれた、秘密の）、surripere（密かに奪う）に遡らせ、sub（下から、密かに）＋rapere（奪う）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/surreptitiously",
+            "note": "surreptitiouslyの現代語義として、秘密に、気づかれないように行うことを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "surreptitiously",
+          "surreptitious",
+          "surrepticius",
+          "surripere",
+          "sub",
+          "rapere",
+          "-ly"
+        ],
+        "historicalPath": [
+          "ラテン語 sub（下から、密かに）＋rapere（奪う）",
+          "ラテン語 surrepticius（秘密の、ひそかな）",
+          "英語 surreptitious（秘密の）",
+          "英語 surreptitiously（こっそりと）"
+        ],
+        "components": [
+          {
+            "form": "surreptitious",
+            "kind": "base",
+            "gloss": "秘密の・ひそかな"
+          },
+          {
+            "form": "-ly",
+            "kind": "suffix",
+            "gloss": "様態を表す"
+          }
+        ],
+        "rootCandidates": [
+          "surreptitious"
+        ],
+        "semanticBridge": "密かに奪い去ることから秘密裏に行う性質を表す形容詞になり、そこからこっそり行う様子を表す副詞になった。",
+        "summary": "surreptitiouslyはsurreptitious（秘密の）＋-lyで、こっそりとという意味になる。",
+        "confidence": "high",
+        "notes": "深いラテン語の構造は別途記録し、英語表面ではsurreptitious＋-lyという明確な派生をA型として表示する。"
+      }
+    },
+    "tarnish": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 ternir（光沢を鈍らせる）から英語へ。ゲルマン語源との関係が提案されるが形・意味・時期に難点がある → 変色した、傷ついた"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/tarnish",
+          "https://www.merriam-webster.com/dictionary/tarnish"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/tarnish",
+            "note": "tarnishを中英語 ternishen、古フランス語 ternir・terne（鈍い、暗い）に遡らせ、ゲルマン語源説には形・意味・時期の問題があると説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/tarnish",
+            "note": "tarnishの現代語義として、金属の光沢や自然な色を失わせること、名誉を傷つけることを確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語・ゲルマン語・中英語・英語",
+        "etymons": [
+          "tarnish",
+          "ternishen",
+          "ternir",
+          "terne",
+          "*darnjaz"
+        ],
+        "historicalPath": [
+          "古フランス語 ternir（光沢を鈍らせる）",
+          "中英語 ternishen（変色する）",
+          "英語 tarnish・tarnished（変色した、傷ついた）"
+        ],
+        "components": [
+          {
+            "form": "ternir",
+            "kind": "base",
+            "gloss": "光沢を鈍らせる"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "金属の光沢を鈍らせることから、物の自然な色や人の名誉を損なうことを表すようになった。",
+        "summary": "tarnishは古フランス語ternirを経た語で、変色や評判の傷を表す。",
+        "confidence": "medium",
+        "notes": "語源説に難点があり、tarnishedの-edを除いても安定した英語表面の派生構造がないためB型に残す。"
+      }
+    },
+    "tedious": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "退屈な",
+        "root": "tedi",
+        "parts": [
+          {
+            "form": "tedi",
+            "kind": "root",
+            "gloss": "退屈・うんざり"
+          },
+          {
+            "form": "-ous",
+            "kind": "suffix",
+            "gloss": "〜に満ちた"
+          }
+        ],
+        "derivation": "tedi（退屈・うんざり）＋-ous（〜に満ちた） → 退屈な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/tedious",
+          "https://www.merriam-webster.com/dictionary/tedious"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/tedious",
+            "note": "tediousを古フランス語 tedieus、後期ラテン語 taediosus、ラテン語 taedium（疲れ、嫌悪）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/tedious",
+            "note": "tediousの現代語義として、長く続き疲れさせるほど退屈なことを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "tedious",
+          "tedieus",
+          "taediosus",
+          "taedium",
+          "-ous"
+        ],
+        "historicalPath": [
+          "ラテン語 taedium（疲れ、嫌悪）・taediosus（うんざりさせる）",
+          "古フランス語 tedieus",
+          "英語 tedious（退屈な）"
+        ],
+        "components": [
+          {
+            "form": "taedium",
+            "kind": "base",
+            "gloss": "疲れ・うんざり"
+          },
+          {
+            "form": "-ous",
+            "kind": "suffix",
+            "gloss": "〜に満ちた"
+          }
+        ],
+        "rootCandidates": [
+          "tedi"
+        ],
+        "semanticBridge": "疲れや嫌悪を感じさせる性質から、時間や作業が長く続いて退屈なことを表す形容詞になった。",
+        "summary": "tediousはtedi（退屈・うんざり）＋-ousの表面対応で、退屈なという意味になる。",
+        "confidence": "high",
+        "notes": "taediosusの語幹を英語表面のtediへ正規化し、-ousと対応させるためA型にする。語群のさらに深い語源は不確かである。"
+      }
+    },
+    "tempest": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 tempeste、ラテン語 tempestas（嵐、天候、季節）から英語へ。tempus（時間、季節）から天候、悪天候、嵐へ意味が変化した → 暴風雨、激動"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/tempest",
+          "https://www.merriam-webster.com/dictionary/tempest"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/tempest",
+            "note": "tempestを古フランス語 tempeste、俗ラテン語 *tempesta、ラテン語 tempestas（嵐、天候、季節）、tempus（時間、季節）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/tempest",
+            "note": "tempestの現代語義として、激しい嵐や暴風雨、比喩的な騒乱を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "tempest",
+          "tempeste",
+          "tempestas",
+          "tempus",
+          "*tempos-"
+        ],
+        "historicalPath": [
+          "ラテン語 tempus（時間、季節）",
+          "ラテン語 tempestas（天候、嵐）",
+          "古フランス語 tempeste",
+          "英語 tempest（暴風雨、激動）"
+        ],
+        "components": [
+          {
+            "form": "tempestas",
+            "kind": "base",
+            "gloss": "天候・嵐"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "時間や季節を表す語が天候を表すようになり、さらに悪天候・嵐、比喩的な激動を表すようになった。",
+        "summary": "tempestはラテン語tempestasを経た語で、暴風雨や激しい騒乱を表す。",
+        "confidence": "high",
+        "notes": "ラテン語の派生名詞を受け継いだ借用語で、英語表面の明確な接辞分解がないためB型に残す。"
+      }
+    },
+    "tenuous": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "希薄な",
+        "root": "tenu",
+        "parts": [
+          {
+            "form": "tenu",
+            "kind": "root",
+            "gloss": "細い・薄い"
+          },
+          {
+            "form": "-ous",
+            "kind": "suffix",
+            "gloss": "〜に満ちた"
+          }
+        ],
+        "derivation": "tenu（細い・薄い）＋-ous（〜に満ちた） → 薄く実体に乏しい、希薄な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/tenuous",
+          "https://www.merriam-webster.com/dictionary/tenuous"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/tenuous",
+            "note": "tenuousをラテン語 tenuis（細い、薄い、希薄な）から生じた語とし、英語では-ousを伴う不規則な形と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/tenuous",
+            "note": "tenuousの現代語義として、厚み・濃さ・実体・重要性が乏しいことを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "tenuous",
+          "tenuis",
+          "-ous",
+          "*ten-"
+        ],
+        "historicalPath": [
+          "印欧祖語 *ten-（伸ばす）",
+          "ラテン語 tenuis（細い、薄い）",
+          "英語 tenuous（希薄な、かすかな）"
+        ],
+        "components": [
+          {
+            "form": "tenuis",
+            "kind": "base",
+            "gloss": "細い・薄い"
+          },
+          {
+            "form": "-ous",
+            "kind": "suffix",
+            "gloss": "〜の性質の"
+          }
+        ],
+        "rootCandidates": [
+          "tenu"
+        ],
+        "semanticBridge": "物理的に薄く細いことから、根拠・関係・重要性などが弱く実体に乏しいことを表すようになった。",
+        "summary": "tenuousはtenu（細い・薄い）＋-ousの正規化表示で、希薄な・かすかなという意味になる。",
+        "confidence": "high",
+        "notes": "出典が英語形を不規則形成とする点を注記したうえで、tenuisの語幹と-ousが表面上対応するためA型にする。"
+      }
+    },
+    "tenure": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "在職期間",
+        "root": "ten",
+        "parts": [
+          {
+            "form": "ten",
+            "kind": "root",
+            "gloss": "保つ"
+          },
+          {
+            "form": "-ure",
+            "kind": "suffix",
+            "gloss": "状態・結果"
+          }
+        ],
+        "derivation": "ten（保つ）＋-ure（状態・結果） → 地位や職を保つ期間、在職期間"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/tenure",
+          "https://www.merriam-webster.com/dictionary/tenure"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/tenure",
+            "note": "tenureをアングロ・フレンチ・古フランス語 tenure、tenir（保つ）、ラテン語 tenere（保つ、持つ）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/tenure",
+            "note": "tenureの現代語義として、地位や職を保つ期間、特に大学などでの終身在職権を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・アングロ・フレンチ・英語",
+        "etymons": [
+          "tenure",
+          "tenir",
+          "tenere",
+          "*ten-",
+          "-ure"
+        ],
+        "historicalPath": [
+          "印欧祖語 *ten-（伸ばす、保つ）",
+          "ラテン語 tenere（保つ、持つ）",
+          "古フランス語 tenir・tenure",
+          "英語 tenure（保有、在職期間）"
+        ],
+        "components": [
+          {
+            "form": "tenere",
+            "kind": "base",
+            "gloss": "保つ・持つ"
+          },
+          {
+            "form": "-ure",
+            "kind": "suffix",
+            "gloss": "状態・結果"
+          }
+        ],
+        "rootCandidates": [
+          "ten"
+        ],
+        "semanticBridge": "何かを保ち持ち続けることから、土地や地位を保有すること、さらにその地位を保つ期間を表すようになった。",
+        "summary": "tenureはten（保つ）＋-ureの表面対応で、在職期間や保有期間を表す。",
+        "confidence": "high",
+        "notes": "既存のten語根と-ureを再利用でき、tenureの語源と英語表面の両方に対応するためA型にする。"
+      }
+    }
+  }
+}

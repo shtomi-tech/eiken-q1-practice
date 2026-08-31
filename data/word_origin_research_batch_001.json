@@ -1,0 +1,1035 @@
+{
+  "meta": {
+    "batchId": "batch-001",
+    "note": "B型の個別再調査第1バッチ。語源経路を確認したが、現行のA型表示規約に安全に落とせない語はB型のまま保持する。"
+  },
+  "entries": {
+    "auspice": {
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 auspicium（鳥の動きから吉凶を読むこと）に由来。auspex（鳥を観察する人）から → 後援、吉兆"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.merriam-webster.com/dictionary/auspice",
+          "https://www.dictionary.com/browse/auspice"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.merriam-webster.com/dictionary/auspice",
+            "note": "auspiceをラテン語 auspicium、さらに auspex と avis/specere に結び付けている。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/auspice",
+            "note": "auspiciumの語源と、鳥を観察して吉凶を読む意味の経路を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（中世フランス語経由）",
+        "etymons": ["auspicium", "auspex", "avis", "specere"],
+        "historicalPath": ["ラテン語 auspicium", "ラテン語 auspex（鳥を観察する人）", "英語 auspice"],
+        "components": [
+          {"form": "avis", "kind": "root", "gloss": "鳥", "display": false},
+          {"form": "specere", "kind": "root", "gloss": "見る・観察する", "display": false},
+          {"form": "-ium", "kind": "suffix", "gloss": "名詞化", "display": false}
+        ],
+        "rootCandidates": ["av", "spec"],
+        "semanticBridge": "鳥の動きを観察して吉凶を判断する行為が、吉兆や後援のもとで行うことへ広がった。",
+        "summary": "auspiceは鳥占いを表すラテン語を起点とし、吉兆と後援の意味を持つようになった。",
+        "confidence": "high",
+        "notes": "avis/specereは語源上の構成要素だが、現行の単一語根A型へは変換しない。"
+      }
+    },
+    "auspicious": {
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 auspicium（鳥の飛び方で吉凶を占うこと）＋-ousに由来 → 幸先のよい、縁起のよい"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/auspicious",
+          "https://www.merriam-webster.com/dictionary/auspicious"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/auspicious",
+            "note": "auspiciousをauspicium、auspex、鳥を表す語と観察を表す語に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/auspicious",
+            "note": "ラテン語 auspicium と接尾辞 -ous による形を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": ["auspicium", "auspex", "-ous"],
+        "historicalPath": ["ラテン語 auspicium", "英語 auspice", "auspic(e) + -ous → auspicious"],
+        "components": [
+          {"form": "auspic-", "kind": "base", "gloss": "吉兆を読むこと", "display": false},
+          {"form": "-ous", "kind": "suffix", "gloss": "〜の性質をもつ", "display": false}
+        ],
+        "rootCandidates": ["spec"],
+        "semanticBridge": "鳥占いによって示される吉兆が、出来事の先行きがよいという形容へ一般化した。",
+        "summary": "auspiciousは鳥占い・吉兆を意味するauspiciumに形容詞接尾辞が付いた語である。",
+        "confidence": "high",
+        "notes": "auspic-全体を語根として表示できるが、既存A型の単一rootとpartsの規約には未接続。"
+      }
+    },
+    "pose": {
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 pausare（止まる、休む）を起点に古フランス語 poser（置く）へ → ポーズをとった、(問題を)引き起こした"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/pose",
+          "https://www.merriam-webster.com/dictionary/pose"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/pose",
+            "note": "姿勢・置く意味のposeを古フランス語 poser、後期ラテン語 pausareに遡らせ、ponereとは語源的に別と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/pose",
+            "note": "poserとVulgar Latin pausareからの語源、および別語源の『問題を出す』意味を確認した。"
+          }
+        ],
+        "originLanguage": "後期ラテン語（古フランス語経由）",
+        "etymons": ["pausare", "poser", "appose", "oppose"],
+        "historicalPath": ["後期ラテン語 pausare（止まる・休む）", "古フランス語 poser（置く）", "英語 pose"],
+        "components": [
+          {"form": "pausare", "kind": "base", "gloss": "止まる・休む", "display": false},
+          {"form": "poser", "kind": "base", "gloss": "置く", "display": false}
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "止めて置くという意味から、身体を特定の位置に置くこと、さらに別系統で問題を提示することへ分化した。",
+        "summary": "poseの姿勢・置く意味はpausareとposerに由来する。問題を出す意味はappose/opposeの短縮で、ponere由来とみなさない。",
+        "confidence": "high",
+        "notes": "既存表示で混同しやすいponereを語根候補から除外した。"
+      }
+    },
+    "universal": {
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 universus（全体の、すべて一つになった）に由来。一つに向きを変えたイメージから → 普遍的な、万国共通の"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/universal",
+          "https://www.merriam-webster.com/dictionary/universal"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/universal",
+            "note": "universalをラテン語 universalis、universus（一つにされた全体）に遡らせ、unusとvertereの構成を説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/universal",
+            "note": "universalの語義とラテン語系の形を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（古フランス語経由）",
+        "etymons": ["universus", "unus", "vertere", "-alis"],
+        "historicalPath": ["ラテン語 universus（全体の）", "ラテン語 universalis", "古フランス語 universel", "英語 universal"],
+        "components": [
+          {"form": "unus", "kind": "root", "gloss": "一つ", "display": false},
+          {"form": "vertere", "kind": "root", "gloss": "向きを変える", "display": false},
+          {"form": "-alis", "kind": "suffix", "gloss": "〜に関する", "display": false}
+        ],
+        "rootCandidates": ["vert"],
+        "semanticBridge": "ばらばらのものが一つの全体としてまとめられたイメージから、全体に及ぶ・例外なく共通する意味になった。",
+        "summary": "universalは『一つにされた全体』を表すラテン語から、普遍的・万国共通の意味へ展開した。",
+        "confidence": "high",
+        "notes": "unusとvertereの二要素があるため、単一語根A型ではなくB型の詳しい語源説明に置く。"
+      }
+    },
+    "deferentially": {
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 déférence（服従・敬意）を経た deferential に副詞 -ly が付いた → 目上の人に敬意を払って"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/deferential",
+          "https://www.merriam-webster.com/dictionary/deferential"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/deferential",
+            "note": "deferentialをdeference、フランス語 déférence・déférer（従う）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/deferential",
+            "note": "deferentiallyをdeferentialの副詞形として確認し、defer/deference系の語源を確認した。"
+          }
+        ],
+        "originLanguage": "フランス語・ラテン語",
+        "etymons": ["déférence", "déférer", "deferre", "-ly"],
+        "historicalPath": ["ラテン語 deferre（下へ運ぶ・譲る）", "フランス語 déférer / déférence", "英語 deferential", "deferentially"],
+        "components": [
+          {"form": "de-", "kind": "prefix", "gloss": "下へ・離れて", "display": false},
+          {"form": "ferre", "kind": "root", "gloss": "運ぶ", "display": false},
+          {"form": "-ly", "kind": "suffix", "gloss": "副詞化", "display": false}
+        ],
+        "rootCandidates": ["fer"],
+        "semanticBridge": "相手に譲る・従う態度が、目上の相手への敬意を示す態度へ定着した。",
+        "summary": "deferentiallyはdeferentialに副詞接尾辞-lyが付いた語で、相手に譲り従う態度から敬意を表す意味になった。",
+        "confidence": "medium",
+        "notes": "英語の表面形だけをde-＋ferとしてA型表示せず、派生段階をB型に残す。"
+      }
+    },
+    "indifferently": {
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 indifferentem（違いのない）を起点に indifferent＋-ly → 無関心に"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/indifferently",
+          "https://www.merriam-webster.com/dictionary/indifferent"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/indifferently",
+            "note": "indifferentlyをindifferent＋-lyとし、indifferentをラテン語 indifferentem、in-＋differreに遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/indifferent",
+            "note": "indifferentの語源と、differre（別々に運ぶ）を背景とする形を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": ["indifferentem", "in-", "differre", "ferre", "-ly"],
+        "historicalPath": ["ラテン語 differre（別々に運ぶ・異なる）", "ラテン語 indifferentem（違いのない）", "英語 indifferent", "indifferently"],
+        "components": [
+          {"form": "in-", "kind": "prefix", "gloss": "否定", "display": false},
+          {"form": "differre", "kind": "base", "gloss": "違う・別々に運ぶ", "display": false},
+          {"form": "-ly", "kind": "suffix", "gloss": "副詞化", "display": false}
+        ],
+        "rootCandidates": ["fer"],
+        "semanticBridge": "違いがない・区別しないという意味が、関心を向けずどちらでもよい態度へつながった。",
+        "summary": "indifferentlyはindifferentの副詞形で、ラテン語の『違いがない』という意味から無関心な態度を表す。",
+        "confidence": "high",
+        "notes": "differreのferを候補として記録するが、英語のin-＋differentをそのままA型の語根分解にはしない。"
+      }
+    },
+    "proliferate": {
+      "display": {
+        "type": "B",
+        "derivation": "proliferationからの逆成。ラテン語 proles（子孫）＋ferre（運ぶ・生む）を背景に → 急増する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/proliferate",
+          "https://www.merriam-webster.com/dictionary/proliferate"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/proliferate",
+            "note": "proliferateを1850年代の生物学用語とし、proles（子孫）＋ferre（運ぶ・生む）を説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/proliferate",
+            "note": "proliferateがproliferationからの逆成であることと、proles・-ferの構成を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（フランス語経由）",
+        "etymons": ["proles", "ferre", "proliferation", "-ate"],
+        "historicalPath": ["ラテン語 proles（子孫）＋ferre（運ぶ・生む）", "フランス語 prolifération", "英語 proliferation", "逆成 proliferate"],
+        "components": [
+          {"form": "proles", "kind": "root", "gloss": "子孫", "display": false},
+          {"form": "ferre", "kind": "root", "gloss": "運ぶ・生む", "display": false},
+          {"form": "-ate", "kind": "suffix", "gloss": "動詞化", "display": false}
+        ],
+        "rootCandidates": ["fer"],
+        "semanticBridge": "子孫を生み出すという生物学的な増殖から、物事が急速に増える一般的な意味へ広がった。",
+        "summary": "proliferateはproliferationからの逆成で、子孫を生むイメージを背景に急増する意味を持つ。",
+        "confidence": "high",
+        "notes": "逆成語なので、英語の語尾を機械的にラテン語由来の接辞として扱わない。"
+      }
+    },
+    "portfolio": {
+      "display": {
+        "type": "B",
+        "derivation": "イタリア語 portafoglio（紙を運ぶもの）に由来。portare（運ぶ）＋foglio（紙・葉）から → 作品集、資産構成、書類ばさみ"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/portfolio",
+          "https://www.merriam-webster.com/dictionary/portfolio"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/portfolio",
+            "note": "portfolioをイタリア語 portafoglio、portare（運ぶ）＋foglio（紙・葉）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/portfolio",
+            "note": "portfolioの作品集・資産構成などの現代の語義を確認した。"
+          }
+        ],
+        "originLanguage": "イタリア語（ラテン語系）",
+        "etymons": ["portafoglio", "portare", "foglio", "folium"],
+        "historicalPath": ["イタリア語 portare（運ぶ）＋foglio（紙）", "イタリア語 portafoglio", "英語 portfolio"],
+        "components": [
+          {"form": "portare", "kind": "root", "gloss": "運ぶ", "display": false},
+          {"form": "foglio", "kind": "root", "gloss": "紙・葉", "display": false}
+        ],
+        "rootCandidates": ["port"],
+        "semanticBridge": "紙を運ぶためのケースが、入れている作品・資産のまとまり、さらにその管理対象を表すようになった。",
+        "summary": "portfolioはイタリア語で『紙を運ぶもの』を表した複合語から、作品集や資産構成の意味へ展開した。",
+        "confidence": "high",
+        "notes": "複合語であり、portだけを見せるA型にはせず、複合表現としてB型の由来を説明する。"
+      }
+    },
+    "rapport": {
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 rapport（持ち帰って伝えるもの）に由来。ラテン語 portare（運ぶ）を背景に → 親密な関係、意思疎通"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/rapport",
+          "https://www.merriam-webster.com/grammar/rapport-vs-report-usage-difference"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/rapport",
+            "note": "rapportをフランス語 rapporter、さらにラテン語 apportare・portare（運ぶ）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/grammar/rapport-vs-report-usage-difference",
+            "note": "rapportとreportが『持ち帰る』意味のフランス語動詞とラテン語 portareを共有することを確認した。"
+          }
+        ],
+        "originLanguage": "フランス語（ラテン語経由）",
+        "etymons": ["rapport", "rapporter", "apportare", "portare"],
+        "historicalPath": ["ラテン語 apportare（運び寄せる）", "フランス語 rapporter（持ち帰る・報告する）", "フランス語 rapport", "英語 rapport"],
+        "components": [
+          {"form": "re-", "kind": "prefix", "gloss": "再び・戻って", "display": false},
+          {"form": "portare", "kind": "root", "gloss": "運ぶ", "display": false}
+        ],
+        "rootCandidates": ["port"],
+        "semanticBridge": "持ち帰って伝える・応答する関係という原義から、人と人の間の調和した応答関係へ意味が専門化した。",
+        "summary": "rapportは『持ち帰る・応答する』を表すフランス語を起点に、親密な関係や意思疎通を表す。",
+        "confidence": "high",
+        "notes": "re-＋portを英語の透明な接頭辞・語根として扱わず、フランス語の複合経路を優先する。"
+      }
+    },
+    "script": {
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 scriptum（書かれたもの）に由来。scribere（書く）から → 台本、脚本"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/script",
+          "https://www.merriam-webster.com/dictionary/script"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/script",
+            "note": "scriptをラテン語 scriptum（書かれたもの）、scribere（書く）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/script",
+            "note": "scriptの中英語・アングロフランス語経由と、ラテン語 scriptum/scribereの経路を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（古フランス語経由）",
+        "etymons": ["scriptum", "scribere", "*skribh-"],
+        "historicalPath": ["ラテン語 scribere（書く）", "ラテン語 scriptum（書かれたもの）", "古フランス語 script", "英語 script"],
+        "components": [
+          {"form": "scribere", "kind": "root", "gloss": "書く", "display": false},
+          {"form": "scriptum", "kind": "participle", "gloss": "書かれたもの", "display": false}
+        ],
+        "rootCandidates": ["scrib"],
+        "semanticBridge": "書かれたもの全般を指した語が、演劇・映画などで読むために書かれた台詞や指示のまとまりを指すようになった。",
+        "summary": "scriptは『書かれたもの』を意味するラテン語scriptumから、台本・脚本の意味へ定着した。",
+        "confidence": "high",
+        "notes": "scrib語根の候補は強いが、現行A型が複数partsを要求するためB型で保持する。"
+      }
+    },
+    "placebo": {
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 placebo（私は喜ばせる）に由来。患者を喜ばせるための治療という意味を経て → 偽薬"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/placebo",
+          "https://www.merriam-webster.com/wordplay/placebo-word-origin"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/placebo",
+            "note": "placeboをラテン語『私は喜ばせる』、placere（喜ばせる）の未来形に遡らせ、宗教歌・追従者・医学用語の経路を示している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/wordplay/placebo-word-origin",
+            "note": "placeboの語源が祈りの冒頭句にあり、患者を喜ばせる治療を経て偽薬となった経路を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": ["placebo", "placere"],
+        "historicalPath": ["ラテン語 placebo（私は喜ばせる）", "宗教歌・祈りの名称", "追従者を指す用法", "医学用語 placebo"],
+        "components": [
+          {"form": "placere", "kind": "root", "gloss": "喜ばせる", "display": false},
+          {"form": "placebo", "kind": "verb-form", "gloss": "私は喜ばせるだろう", "display": false}
+        ],
+        "rootCandidates": ["plac"],
+        "semanticBridge": "患者を実際の薬効ではなく安心や満足によって喜ばせる治療という歴史的用法から、薬効のない偽薬を表すようになった。",
+        "summary": "placeboはラテン語『私は喜ばせる』という動詞形から、患者を満足させるだけの治療、そして偽薬を表す語になった。",
+        "confidence": "high",
+        "notes": "動詞の活用形を英語の接辞分解へ置き換えず、意味の変遷を中心に記録する。"
+      }
+    },
+    "liaison": {
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 liaison（結びつき）に由来。ラテン語 ligare（結ぶ）から → 連絡、連携；密通"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/liaison",
+          "https://www.merriam-webster.com/dictionary/liaison"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/liaison",
+            "note": "liaisonをフランス語 liaison、後期ラテン語 ligationem、ligare（結ぶ）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/liaison",
+            "note": "liaisonの連絡・連携・親密な関係の語義を確認した。"
+          }
+        ],
+        "originLanguage": "フランス語（ラテン語経由）",
+        "etymons": ["liaison", "ligationem", "ligare", "*leig-"],
+        "historicalPath": ["ラテン語 ligare（結ぶ）", "後期ラテン語 ligationem", "フランス語 liaison", "英語 liaison"],
+        "components": [
+          {"form": "ligare", "kind": "root", "gloss": "結ぶ", "display": false},
+          {"form": "-ion", "kind": "suffix", "gloss": "行為・結果", "display": false}
+        ],
+        "rootCandidates": ["lig"],
+        "semanticBridge": "物を結び付ける行為から、人・組織をつなぐ連絡関係、さらに秘密の男女関係へ意味が広がった。",
+        "summary": "liaisonは『結ぶ』を表すラテン語を起点に、連絡・連携、そして密通を表す。",
+        "confidence": "high",
+        "notes": "フランス語の綴りから英語の接辞を推定せず、ligareを語根候補として記録する。"
+      }
+    },
+    "facade": {
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 façade（建物の正面）に由来。イタリア語 faccia（顔）から → 外見、建物の正面"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/facade",
+          "https://www.merriam-webster.com/dictionary/facade"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/facade",
+            "note": "facadeをフランス語 façade、イタリア語 facciata/faccia、俗ラテン語 *faciaに遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/facade",
+            "note": "facadeの建物の正面と比喩的な外見という語義を確認した。"
+          }
+        ],
+        "originLanguage": "フランス語・イタリア語（ラテン語系）",
+        "etymons": ["façade", "facciata", "faccia", "*facia"],
+        "historicalPath": ["俗ラテン語 *facia（顔）", "イタリア語 faccia / facciata", "フランス語 façade", "英語 facade"],
+        "components": [
+          {"form": "faccia", "kind": "base", "gloss": "顔・正面", "display": false}
+        ],
+        "rootCandidates": ["fac"],
+        "semanticBridge": "人の顔を正面として見る比喩から、建物の正面、さらに内実を隠す外見という意味になった。",
+        "summary": "facadeは顔を表すイタリア語を経て建物の正面を指し、比喩的に外見を表す。",
+        "confidence": "high",
+        "notes": "フランス語・イタリア語の借用経路があるため、facを見せる単純なA型にはしない。"
+      }
+    },
+    "regime": {
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 régime、ラテン語 regimen（導く規則・統治）を経て → 政権、体制"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/regime",
+          "https://www.merriam-webster.com/grammar/differences-usage-regimen-regiment-regime"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/regime",
+            "note": "regimeをフランス語 régime、ラテン語 regimen（統治・指導）、regere（導く）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/grammar/differences-usage-regimen-regiment-regime",
+            "note": "regime・regimen・regimentがラテン語 regere（rule）を共有することと各語の意味を確認した。"
+          }
+        ],
+        "originLanguage": "フランス語（ラテン語経由）",
+        "etymons": ["régime", "regimen", "regere", "*reg-"],
+        "historicalPath": ["ラテン語 regere（導く・支配する）", "ラテン語 regimen（統治）", "フランス語 régime", "英語 regime"],
+        "components": [
+          {"form": "regere", "kind": "root", "gloss": "導く・支配する", "display": false},
+          {"form": "-men", "kind": "suffix", "gloss": "結果・手段", "display": false}
+        ],
+        "rootCandidates": ["reg"],
+        "semanticBridge": "人を導き統治する行為から、統治の仕組みや政権そのものを指すようになった。",
+        "summary": "regimeは『導く・支配する』ラテン語から、統治の方法・政権・体制を表すフランス語経由の語である。",
+        "confidence": "high",
+        "notes": "regimen/regimentとの語族関係を確認したが、英語の接辞分解としては表示しない。"
+      }
+    },
+    "statue": {
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 statua（立てられたもの）に由来。statuere（立てる）・stare（立つ）を背景に → 像、彫像"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/statue",
+          "https://www.merriam-webster.com/dictionary/statue"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/statue",
+            "note": "statueをラテン語 statua（立てられたもの）、statuere（立てる）、stare（立つ）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/statue",
+            "note": "中英語・アングロフランス語 statueからラテン語 statua/statuereへの経路を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（古フランス語経由）",
+        "etymons": ["statua", "statuere", "stare", "*sta-"],
+        "historicalPath": ["ラテン語 stare（立つ）", "ラテン語 statuere（立てる）", "ラテン語 statua（立てられたもの）", "英語 statue"],
+        "components": [
+          {"form": "sta-", "kind": "root", "gloss": "立つ", "display": false},
+          {"form": "-tua", "kind": "derivative", "gloss": "立てられたもの", "display": false}
+        ],
+        "rootCandidates": ["sta"],
+        "semanticBridge": "立てられた物体という原義が、人物や神を立体的に表す像へ具体化した。",
+        "summary": "statueは『立てられたもの』を意味するラテン語から、像・彫像を表す。",
+        "confidence": "high",
+        "notes": "staを語根候補に記録するが、statuaの語尾を英語の接辞として説明しない。"
+      }
+    },
+    "value": {
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 value（価値・値段）を経て、ラテン語 valere（強い・価値がある）に由来 → 価値、値打ち／重んじる"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/value",
+          "https://www.merriam-webster.com/dictionary/value"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/value",
+            "note": "valueを古フランス語 value/valoir、ラテン語 valere（強い・価値がある）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/value",
+            "note": "valueの価格・価値・重んじるという名詞・動詞の語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（古フランス語経由）",
+        "etymons": ["value", "valoir", "valere", "*wal-"],
+        "historicalPath": ["ラテン語 valere（強い・価値がある）", "古フランス語 valoir / value", "英語 value"],
+        "components": [
+          {"form": "valere", "kind": "root", "gloss": "強い・価値がある", "display": false}
+        ],
+        "rootCandidates": ["val"],
+        "semanticBridge": "力がある・値打ちがあるという評価から、価格や重要性、さらに大切にする行為を表すようになった。",
+        "summary": "valueは『強い・価値がある』というラテン語を起点に、価値・価格・重んじるという意味を持つ。",
+        "confidence": "high",
+        "notes": "valueは単一の語根候補は明瞭だが、既存A型の表示条件を満たす複数partsがないためB型とする。"
+      }
+    },
+    "visa": {
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 visa、ラテン語 charta visa（確認された書類）に由来。videre（見る）から → ビザ、査証（複数）"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/visa",
+          "https://www.merriam-webster.com/dictionary/visa"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/visa",
+            "note": "visaをフランス語 visa、ラテン語 charta visa（見られ確認された紙）と videre（見る）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/visa",
+            "note": "visaの査証という語義と、単数形・複数形の用法を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（フランス語経由）",
+        "etymons": ["visa", "charta visa", "videre", "*weid-"],
+        "historicalPath": ["ラテン語 videre（見る）", "ラテン語 charta visa（確認された書類）", "フランス語 visa", "英語 visa"],
+        "components": [
+          {"form": "visa", "kind": "participle", "gloss": "見られた・確認された", "display": false},
+          {"form": "videre", "kind": "root", "gloss": "見る", "display": false}
+        ],
+        "rootCandidates": ["vid"],
+        "semanticBridge": "確認済みの書類という原義から、入国や滞在を認める証明書を表すようになった。",
+        "summary": "visaは『確認された書類』を意味するラテン語句を起点に、入国査証を表す。",
+        "confidence": "high",
+        "notes": "visaの綴りを英語のvis＋aと分解せず、ラテン語の過去分詞を記録する。"
+      }
+    },
+    "infiltrate": {
+      "display": {
+        "type": "B",
+        "derivation": "in-（中へ）＋filtrate（こす・ろ過する）を背景に、フィルターを通り抜けることから → 潜入する、浸透する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/fr/word/infiltrate",
+          "https://www.merriam-webster.com/dictionary/infiltrate"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/fr/word/infiltrate",
+            "note": "infiltrateのin-とfiltrateの関係、filtrateがfiltrationまたはfiltrum（ろ過器）に関わる逆成・派生であることを確認した。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/infiltrate",
+            "note": "infiltrateの潜入・浸透という語義を確認した。"
+          }
+        ],
+        "originLanguage": "英語・フランス語（中世ラテン語系）",
+        "etymons": ["in-", "filtrate", "filtrum", "filtration"],
+        "historicalPath": ["中世ラテン語 filtrum（フェルト製のろ過器）", "filtrate / filtration", "英語 infiltrate"],
+        "components": [
+          {"form": "in-", "kind": "prefix", "gloss": "中へ", "display": false},
+          {"form": "filtr-", "kind": "root-candidate", "gloss": "ろ過する・通す", "display": false}
+        ],
+        "rootCandidates": ["filtr"],
+        "semanticBridge": "ろ過材を通り抜ける動きが、場所や組織の内部へ少しずつ入り込むことの比喩になった。",
+        "summary": "infiltrateはin-とfiltrate系の語を背景に、フィルターを通り抜けるイメージから潜入・浸透を表す。",
+        "confidence": "medium",
+        "notes": "filtrateの形成史に逆成説があるため、filtrを確定語根として辞書へ追加しない。"
+      }
+    },
+    "insinuate": {
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 insinuare（曲げた場所へ入り込ませる）に由来。in-（中へ）＋sinus（曲がり・入り組んだ所）から → ほのめかす、巧みに入り込ませる"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/insinuate",
+          "https://www.merriam-webster.com/dictionary/insinuate"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/insinuate",
+            "note": "insinuateをラテン語 insinuatus/insinuare、in-＋sinuare、sinus（曲がり）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/insinuate",
+            "note": "in-（中へ）＋sinuare（曲げる）から、ほのめかす・入り込ませる意味に至る経路を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": ["insinuare", "sinuare", "sinus", "in-"],
+        "historicalPath": ["ラテン語 sinus（曲がり・入り組んだ所）", "ラテン語 sinuare（曲げる）", "ラテン語 insinuare", "英語 insinuate"],
+        "components": [
+          {"form": "in-", "kind": "prefix", "gloss": "中へ", "display": false},
+          {"form": "sinu-", "kind": "root", "gloss": "曲がり・入り組み", "display": false},
+          {"form": "-ate", "kind": "suffix", "gloss": "動詞化", "display": false}
+        ],
+        "rootCandidates": ["sinu"],
+        "semanticBridge": "曲がった場所の内部へ入り込ませる動きが、直接言わずに意味を入り込ませる『ほのめかす』へ比喩化した。",
+        "summary": "insinuateは曲がりくねった内部へ入り込ませるラテン語から、ほのめかす・巧みに入り込ませる意味になった。",
+        "confidence": "high",
+        "notes": "in-＋sinuの対応は語源的に確認できるが、既存A型のroot辞書には未登録。"
+      }
+    },
+    "insolent": {
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 insolens（慣れていない、身の程をわきまえない）に由来。in-（否定）＋solere（慣れる）から → 生意気な、横柄な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/insolent",
+          "https://www.merriam-webster.com/dictionary/insolent"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/insolent",
+            "note": "insolentをラテン語 insolens、in-＋solere（慣れる）に遡らせ、別の語源推測を退けている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/insolent",
+            "note": "insolentをinsolensの現在分詞形から説明し、solereとの関係を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（古フランス語経由）",
+        "etymons": ["insolens", "solere", "in-"],
+        "historicalPath": ["ラテン語 solere（慣れる）", "ラテン語 insolens（慣れていない・度を越す）", "古フランス語 insolent", "英語 insolent"],
+        "components": [
+          {"form": "in-", "kind": "prefix", "gloss": "否定", "display": false},
+          {"form": "solere", "kind": "root", "gloss": "慣れる", "display": false},
+          {"form": "-ent", "kind": "suffix", "gloss": "性質を示す", "display": false}
+        ],
+        "rootCandidates": ["sol"],
+        "semanticBridge": "慣例に従わない・度を越すという意味が、他人への態度が横柄で生意気だという評価に特化した。",
+        "summary": "insolentは『慣れていない・慣例に従わない』というラテン語から、生意気で横柄な意味になった。",
+        "confidence": "high",
+        "notes": "語源辞典が退けている別説を採用せず、solere経路だけを記録する。"
+      }
+    },
+    "insulate": {
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 insulatus（島のようにされたもの）、insula（島）に由来。周囲から切り離すことから → 遮断する、断熱する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/insulate",
+          "https://www.merriam-webster.com/dictionary/insulate"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/insulate",
+            "note": "insulateを後期ラテン語 insulatus、insula（島）に遡らせ、孤立させる意味から断熱へ広がった経路を示している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/insulate",
+            "note": "insulaに由来し、周囲から切り離す・熱や電気を通さないという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": ["insulatus", "insula", "-ate"],
+        "historicalPath": ["ラテン語 insula（島）", "後期ラテン語 insulatus（島のようにされた）", "英語 insulate"],
+        "components": [
+          {"form": "insula", "kind": "root", "gloss": "島", "display": false},
+          {"form": "-ate", "kind": "suffix", "gloss": "動詞化", "display": false}
+        ],
+        "rootCandidates": ["insul"],
+        "semanticBridge": "島のように周囲から離れた状態が、外部との接触・熱・電気などを遮る状態へ一般化した。",
+        "summary": "insulateは『島のようにする』というラテン語から、周囲との接触を遮断する・断熱する意味になった。",
+        "confidence": "high",
+        "notes": "insulateをin-＋sulateと誤分解せず、insula全体を語源上の中心とする。"
+      }
+    },
+    "internal": {
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 internus（内側の、内向きの）に由来 → 内部の、内的な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/internal",
+          "https://www.merriam-webster.com/dictionary/internal"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/internal",
+            "note": "internalを中世ラテン語 internalis、ラテン語 internus（内側の）とinter系の形に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/internal",
+            "note": "internalの内部の・内的なという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（中世ラテン語経由）",
+        "etymons": ["internalis", "internus", "inter", "*en-ter-"],
+        "historicalPath": ["印欧祖語 *en-ter-（内部に）", "ラテン語 internus", "中世ラテン語 internalis", "英語 internal"],
+        "components": [
+          {"form": "inter-", "kind": "root-candidate", "gloss": "内部・間", "display": false},
+          {"form": "-al", "kind": "suffix", "gloss": "〜に関する", "display": false}
+        ],
+        "rootCandidates": ["inter"],
+        "semanticBridge": "内部・内側を表すラテン語が、物理的な内部から組織や考えの内側に関する意味へ広がった。",
+        "summary": "internalはラテン語internusを起点とし、内部の・内的なという意味を持つ。",
+        "confidence": "high",
+        "notes": "inter-＋-alのような英語の機械的分解を、語源の確定表示としては採用しない。"
+      }
+    },
+    "increase": {
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 increscere（成長する、増大する）に由来。in-（中へ・増して）＋crescere（成長する）から → 増える、増やす"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/increase",
+          "https://www.merriam-webster.com/dictionary/increase"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/increase",
+            "note": "increaseを古フランス語 enc(re)istre、ラテン語 increscere、in-＋crescere（成長する）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/increase",
+            "note": "ラテン語 increscereとcrescereの経路、および名詞・動詞の語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（古フランス語経由）",
+        "etymons": ["increscere", "in-", "crescere", "*ker-"],
+        "historicalPath": ["ラテン語 crescere（成長する）", "ラテン語 increscere（増大する）", "古フランス語 encreistre", "英語 increase"],
+        "components": [
+          {"form": "in-", "kind": "prefix", "gloss": "中へ・増して", "display": false},
+          {"form": "crescere", "kind": "root", "gloss": "成長する", "display": false}
+        ],
+        "rootCandidates": ["cres"],
+        "semanticBridge": "成長して大きくなる動きが、数量・程度・規模が増えること、またそれを増やすことへ広がった。",
+        "summary": "increaseは『成長して増大する』というラテン語を起点に、増える・増やすを表す。",
+        "confidence": "high",
+        "notes": "cresは有力な語根候補だが、現行辞書での表示登録は別バッチで監査する。"
+      }
+    },
+    "infatuated": {
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 infatuare（愚かにする）に由来。in-（中へ）＋fatuus（愚かな）から → 夢中になった"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/infatuate",
+          "https://www.merriam-webster.com/dictionary/infatuate"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/infatuate",
+            "note": "infatuateをラテン語 infatuatus/infatuare、in-＋fatuus（愚かな）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/infatuate",
+            "note": "infatuateの語源と、強い恋愛感情で判断力を失う意味を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": ["infatuare", "fatuus", "in-", "-ate"],
+        "historicalPath": ["ラテン語 fatuus（愚かな）", "ラテン語 infatuare（愚かにする）", "英語 infatuate", "infatuated"],
+        "components": [
+          {"form": "in-", "kind": "prefix", "gloss": "中へ・状態にする", "display": false},
+          {"form": "fatuus", "kind": "root", "gloss": "愚かな", "display": false},
+          {"form": "-ate", "kind": "suffix", "gloss": "動詞化", "display": false}
+        ],
+        "rootCandidates": ["fatu"],
+        "semanticBridge": "愚かな状態にするという原義が、恋愛感情などによって冷静な判断を失った状態を表すようになった。",
+        "summary": "infatuatedは『愚かにされた』というラテン語を起点に、夢中で判断力を失った状態を表す。",
+        "confidence": "high",
+        "notes": "infatuatedの-edは英語の屈折であり、語源上の-ateと混同しない。"
+      }
+    },
+    "indebted": {
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 endetter（借金を負わせる）に由来。en-（中に）＋dette（負債）から → 恩義がある、借りがある"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/indebted",
+          "https://www.merriam-webster.com/dictionary/indebted"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/indebted",
+            "note": "indebtedを中英語 endetted、古フランス語 endeter、en-＋dette（負債）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/indebted",
+            "note": "古フランス語 endettéとdebt/detteの関係、および恩義の比喩的用法を確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語（ラテン語経由）",
+        "etymons": ["endetter", "dette", "debitum", "en-"],
+        "historicalPath": ["ラテン語 debitum（負債）", "古フランス語 dette / endetter", "中英語 endetted", "英語 indebted"],
+        "components": [
+          {"form": "en-", "kind": "prefix", "gloss": "状態に入れる", "display": false},
+          {"form": "dette", "kind": "base", "gloss": "負債", "display": false},
+          {"form": "-ed", "kind": "suffix", "gloss": "状態を表す", "display": false}
+        ],
+        "rootCandidates": ["debt"],
+        "semanticBridge": "金銭的な負債を負う状態から、受けた恩や助けを返す義務があるという比喩的な意味へ広がった。",
+        "summary": "indebtedは負債を負った状態を表す語から、恩義がある・借りがあるという意味にもなった。",
+        "confidence": "high",
+        "notes": "debtはラテン語系の借用語であり、英語のin-＋debtを単純な語根学習表示にしない。"
+      }
+    },
+    "economic": {
+      "display": {
+        "type": "B",
+        "derivation": "ギリシャ語 oikonomikos（家の管理に関する）に由来。oikos（家）＋nomos（管理・規則）を背景に → 経済の"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/economic",
+          "https://www.merriam-webster.com/dictionary/economic"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/economic",
+            "note": "economicをギリシャ語 oikonomikos、oikonomos（管理者）、oikos（家）とnomos（管理）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/economic",
+            "note": "oikonomikosとoikonomos＋-ikosの語源、およびeconomicの語義を確認した。"
+          }
+        ],
+        "originLanguage": "ギリシャ語（ラテン語・フランス語経由）",
+        "etymons": ["oikonomikos", "oikonomos", "oikos", "nomos", "-ikos"],
+        "historicalPath": ["ギリシャ語 oikos（家）＋nomos（管理・規則）", "ギリシャ語 oikonomos（家の管理者）", "ギリシャ語 oikonomikos", "英語 economic"],
+        "components": [
+          {"form": "oikos", "kind": "root", "gloss": "家", "display": false},
+          {"form": "nomos", "kind": "root", "gloss": "管理・規則", "display": false},
+          {"form": "-ikos", "kind": "suffix", "gloss": "〜に関する", "display": false}
+        ],
+        "rootCandidates": ["nom"],
+        "semanticBridge": "家を管理することが、社会全体の資源や財の管理へ拡張され、経済に関する意味になった。",
+        "summary": "economicは『家の管理』を表すギリシャ語を起点に、社会の資源・財に関する意味へ広がった。",
+        "confidence": "high",
+        "notes": "oikosとnomosの複合なので、nomだけを表示するA型にはしない。"
+      }
+    },
+    "immigration": {
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 immigrare（中へ移り住む）に由来。in-（中へ）＋migrare（移る）から → 移民（の流入）"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/immigration",
+          "https://www.merriam-webster.com/dictionary/immigrate"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/immigration",
+            "note": "immigrationをimmigrateからの名詞とし、ラテン語 immigratus/immigrare、in-＋migrare（移る）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/immigrate",
+            "note": "immigrateの中へ移り住む意味と、immigrationとの派生関係を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（フランス語経由）",
+        "etymons": ["immigrare", "in-", "migrare", "-tion"],
+        "historicalPath": ["ラテン語 migrare（移る）", "ラテン語 immigrare（中へ移り住む）", "英語 immigrate", "immigration"],
+        "components": [
+          {"form": "in-", "kind": "prefix", "gloss": "中へ", "display": false},
+          {"form": "migrare", "kind": "root", "gloss": "移る", "display": false},
+          {"form": "-tion", "kind": "suffix", "gloss": "行為・状態", "display": false}
+        ],
+        "rootCandidates": ["migr"],
+        "semanticBridge": "ある場所へ中に入って移り住む動きが、移民が流入する現象・制度を指す名詞になった。",
+        "summary": "immigrationは『中へ移る』というラテン語から、移民の流入・移住を表す名詞になった。",
+        "confidence": "high",
+        "notes": "immigrationは派生名詞なので、語源の確認と英語の接尾辞表示を分けて保持する。"
+      }
+    },
+    "individual": {
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 individuus（分けられない）に由来。in-（否定）＋dividuus（分けられる）から → 個人（複数）"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/individual",
+          "https://www.merriam-webster.com/dictionary/individual"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/individual",
+            "note": "individualを中世ラテン語 individualis、ラテン語 individuus（分けられない）、in-＋dividuus/dividereに遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/individual",
+            "note": "individualの個別の・個人という語義と、individu(u)s・dividereの語源を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（中世ラテン語経由）",
+        "etymons": ["individualis", "individuus", "dividuus", "dividere", "in-"],
+        "historicalPath": ["ラテン語 dividere（分ける）", "ラテン語 individuus（分けられない）", "中世ラテン語 individualis", "英語 individual", "individuals"],
+        "components": [
+          {"form": "in-", "kind": "prefix", "gloss": "否定", "display": false},
+          {"form": "dividere", "kind": "root", "gloss": "分ける", "display": false},
+          {"form": "-al", "kind": "suffix", "gloss": "〜に関する", "display": false},
+          {"form": "-s", "kind": "inflection", "gloss": "複数", "display": false}
+        ],
+        "rootCandidates": ["divid"],
+        "semanticBridge": "分けられない一単位という原義が、他と区別される一人の人を指す名詞へ定着し、学習データのindividualsはその複数形である。",
+        "summary": "individualは『分けられない一単位』を意味するラテン語から、個人・個別の意味になった。表面形individualsは複数形で、原形はindividual。",
+        "confidence": "high",
+        "notes": "語彙台帳ではindividualsをindividualへ正規化して管理する。複数語尾-sは語源辞書の語根には含めない。"
+      }
+    },
+    "security": {
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 securitas（心配や危険から解放された状態）に由来。se（〜から離れて）＋cura（心配）を背景に → 保障、安全"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/security",
+          "https://www.collinsdictionary.com/dictionary/english/security"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/security",
+            "note": "securityを古フランス語 seurté/securite、ラテン語 securitas・securus、se-＋curaに遡らせている。"
+          },
+          {
+            "url": "https://www.collinsdictionary.com/dictionary/english/security",
+            "note": "securityを中英語 securite、ラテン語 securitas・securusに結び付けている。"
+          }
+        ],
+        "originLanguage": "ラテン語（古フランス語経由）",
+        "etymons": ["securitas", "securus", "se-", "cura"],
+        "historicalPath": ["ラテン語 cura（心配・世話）", "ラテン語 securus（心配から離れた）", "ラテン語 securitas", "古フランス語 securite", "英語 security"],
+        "components": [
+          {"form": "se-", "kind": "prefix", "gloss": "〜から離れて", "display": false},
+          {"form": "cura", "kind": "root", "gloss": "心配・世話", "display": false},
+          {"form": "-itas", "kind": "suffix", "gloss": "状態・性質", "display": false}
+        ],
+        "rootCandidates": ["cur"],
+        "semanticBridge": "心配や危険から離れている状態が、安全そのもの、危険を防ぐ仕組み、金融上の保障へ意味を広げた。",
+        "summary": "securityは『心配から解放された状態』を表すラテン語から、安全・保障を表す語になった。",
+        "confidence": "high",
+        "notes": "seを英語の一般的接頭辞として扱わず、ラテン語securusの構成として記録する。"
+      }
+    }
+  }
+}

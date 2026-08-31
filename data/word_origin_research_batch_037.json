@@ -1,0 +1,690 @@
+{
+  "meta": {
+    "batchId": "batch-037",
+    "note": "未確認B型の次の25語。表面形に語根と接辞が確認できる派生語はA型へ、複合語・単純借用語・語形変化はB型に残す。"
+  },
+  "dictionary": {
+    "roots": {
+      "funct": {
+        "gloss": "果たす・実行する",
+        "origin": "ラテン語 fungi / functus",
+        "note": "役割や仕事を果たすイメージ。function。"
+      },
+      "strength": {
+        "gloss": "力・強さ",
+        "origin": "古英語 strengþu / ゲルマン語系 *strangitho",
+        "note": "強い状態や力を表す基体。strengthen。"
+      },
+      "grow": {
+        "gloss": "成長する・増える",
+        "origin": "古英語 growan / ゲルマン語系 *gro-",
+        "note": "大きくなり、発達するイメージ。growth。"
+      },
+      "doctor": {
+        "gloss": "教師・博士",
+        "origin": "ラテン語 doctor / docere",
+        "note": "教える人、学識を持つ人のイメージ。doctoral。"
+      },
+      "quick": {
+        "gloss": "生き生きした・速い",
+        "origin": "古英語 cwic / ゲルマン語系 *kwikwaz",
+        "note": "生命力があり、動きが速いイメージ。quickly。"
+      },
+      "suggest": {
+        "gloss": "示唆する・提案する",
+        "origin": "ラテン語 suggerere / suggestus",
+        "note": "考えを心の前に出して示すイメージ。suggestion。"
+      },
+      "fortun": {
+        "gloss": "運・運命",
+        "origin": "ラテン語 fortuna",
+        "note": "運命や幸運を表す基体。unfortunately。"
+      },
+      "awe": {
+        "gloss": "畏怖・深い敬意",
+        "origin": "古ノルド語 agi / ゲルマン語系 *agiz-",
+        "note": "恐れと敬意が入り混じる感情。awfulではawの形で現れる。",
+        "variants": ["aw"]
+      },
+      "brave": {
+        "gloss": "勇敢な",
+        "origin": "フランス語 brave / イタリア語 bravo",
+        "note": "勇気を示す基体。bravely。"
+      },
+      "hard": {
+        "gloss": "固い・困難な",
+        "origin": "古英語 heard / ゲルマン語系 *hardu-",
+        "note": "固さや努力の大きさを表す基体。hardly。"
+      }
+    }
+  },
+  "entries": {
+    "ties": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "tieの複数形。古英語 teag、ゲルマン祖語 *taugo（ひも、帯）に由来し、結びつきや血縁の意味へ広がった。 → つながり（血縁・地縁）" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/tie", "https://www.merriam-webster.com/dictionary/tie"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/tie", "note": "tieを中英語 tie・古英語 teag、ゲルマン祖語 *taugoに遡らせ、ひもで結ぶことから拘束・血縁・競技の同点へ意味が広がったと説明している。tiesは複数形である。" },
+          { "url": "https://www.merriam-webster.com/dictionary/tie", "note": "tieの現代語義として、結ぶもの、結びつき、同点などを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["ties", "tie", "teag", "tigan", "*taugo", "*deuk-"],
+        "historicalPath": ["PIE *deuk-（導く、引く）との関係説", "ゲルマン祖語 *taugo", "古英語 teag・中英語 tie", "英語 tie → ties（複数形）"],
+        "components": [{ "form": "tie", "kind": "word", "gloss": "結ぶもの、つながり" }, { "form": "-s", "kind": "inflection", "gloss": "複数" }],
+        "rootCandidates": ["deuk", "taug"],
+        "semanticBridge": "ひもで物を結ぶことから、物事や人の結びつき、血縁・地縁、競技の同点へ意味が広がった。",
+        "summary": "tiesはtieの複数形で、語源的な語根・接辞の派生語ではないためB型に残す。",
+        "confidence": "high",
+        "notes": "複数語尾 -s は語源分解として表示しない。"
+      }
+    },
+    "function": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "機能",
+        "root": "funct",
+        "parts": [
+          { "form": "funct", "kind": "root", "gloss": "果たす・実行する" },
+          { "form": "-ion", "kind": "suffix", "gloss": "〜すること" }
+        ],
+        "derivation": "funct（果たす・実行する）＋-ion（〜すること） → 果たす働き、機能"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/function", "https://www.merriam-webster.com/dictionary/function"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/function", "note": "functionをフランス語 fonction、ラテン語 functionem / functio、funct-（fungiの過去分詞語幹）に遡らせ、役割・働きの意味を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/function", "note": "functionの現代語義として、果たす働き・目的、数学やコンピューターでの機能を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["function", "fonction", "functionem", "functio", "fungi", "funct-", "-ion"],
+        "historicalPath": ["ラテン語 fungi（果たす、実行する）", "ラテン語 functio（実行、役割）", "フランス語 fonction", "英語 funct＋-ion → function（機能）"],
+        "components": [{ "form": "funct- / fungi", "kind": "base", "gloss": "果たす、実行する" }, { "form": "-ion", "kind": "suffix", "gloss": "行為・結果" }],
+        "rootCandidates": ["funct", "bhung"],
+        "semanticBridge": "役割を果たし実行することから、物や制度が果たす働き・目的、数学的な対応関係へ意味が広がった。",
+        "summary": "functionはfunct（果たす・実行する）＋-ionとして表面形に沿ったA型を設定できる。",
+        "confidence": "high",
+        "notes": "funct語根と既存の-ion接尾辞を新規に組み合わせる。"
+      }
+    },
+    "strengthen": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "強化",
+        "root": "strength",
+        "parts": [
+          { "form": "strength", "kind": "root", "gloss": "力・強さ" },
+          { "form": "-en", "kind": "suffix", "gloss": "〜にする" }
+        ],
+        "derivation": "strength（力・強さ）＋-en（〜にする） → 強くする、強化する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/strengthen", "https://www.merriam-webster.com/dictionary/strengthen"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/strengthen", "note": "strengthenをstrength＋-enと明示し、-enを形容詞・名詞から動詞を作る古英語系の形成要素として説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/strengthen", "note": "strengthenの現代語義として、強くすること、強まること、主張などを補強することを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["strengthen", "strength", "strengþu", "*strangitho", "-en", "*strenk-"],
+        "historicalPath": ["古英語 strengþu（強さ）", "中英語 strengthe / strength", "英語 strength＋-en", "英語 strengthen（強化する）"],
+        "components": [{ "form": "strength", "kind": "base", "gloss": "強さ、力" }, { "form": "-en", "kind": "suffix", "gloss": "〜にする" }],
+        "rootCandidates": ["strength", "strenk"],
+        "semanticBridge": "強い状態・力を表す名詞から、何かを強くする動作や強まる変化を表す動詞へ作られた。",
+        "summary": "strengthenはstrength＋-enとして出典が直接支えるA型を設定できる。",
+        "confidence": "high",
+        "notes": "既存の-en接尾辞を再利用する。"
+      }
+    },
+    "number": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古フランス語 nombre、ラテン語 numerus（数、量）に由来する。 → 数" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/number", "https://www.merriam-webster.com/dictionary/number"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/number", "note": "numberをアングロフレンチ・古フランス語 noumbre / nombre、ラテン語 numerusに遡らせ、数量・数字・番号などの意味を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/number", "note": "numberの現代語義として、数、数量、数字、番号、数えることを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["number", "noumbre", "nombre", "numerus", "*nem-"],
+        "historicalPath": ["ラテン語 numerus（数、量）", "古フランス語 nombre", "中英語 noumbre / number", "英語 number（数、番号）"],
+        "components": [{ "form": "numerus", "kind": "word", "gloss": "数、量" }],
+        "rootCandidates": ["nem"],
+        "semanticBridge": "数量のまとまりから、数を表す記号、番号、雑誌の号、電話番号などへ意味が広がった。",
+        "summary": "numberはフランス語を経た単純な借用語で、numerusの語根が表面形に残らないためB型に残す。",
+        "confidence": "high",
+        "notes": "num＋-berなどの綴り合わせは採用しない。"
+      }
+    },
+    "figure": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古フランス語 figure、ラテン語 figura（形、姿、図）に由来する。 → 図、数字" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/figure", "https://www.merriam-webster.com/dictionary/figure"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/figure", "note": "figureを古フランス語 figure、ラテン語 figura、PIE *dheigh-（形作る）に遡らせ、姿・図・数字・比喩的な人物の意味を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/figure", "note": "figureの現代語義として、図形・図表、数字、人物、姿を確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・英語",
+        "etymons": ["figure", "figura", "figurer", "*dheigh-"],
+        "historicalPath": ["PIE *dheigh-（形作る、建てる）", "ラテン語 figura（形、図）", "古フランス語 figure", "英語 figure（図、数字、人物）"],
+        "components": [{ "form": "figura", "kind": "word", "gloss": "形、図" }],
+        "rootCandidates": ["dheigh"],
+        "semanticBridge": "形作られた姿や図から、数字を表す記号、図表、作品中の人物や特徴へ意味が広がった。",
+        "summary": "figureはラテン語・フランス語を経た単純な借用語で、figuraの語根を現代英語の表面形に分解しないためB型に残す。",
+        "confidence": "high",
+        "notes": "fig＋-ureなどの綴り合わせは採用しない。"
+      }
+    },
+    "treatment": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "待遇",
+        "root": "treat",
+        "parts": [
+          { "form": "treat", "kind": "root", "gloss": "扱う・交渉する" },
+          { "form": "-ment", "kind": "suffix", "gloss": "〜すること・もの" }
+        ],
+        "derivation": "treat（扱う・交渉する）＋-ment（〜すること・もの） → 扱い方・処置・待遇"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/treatment", "https://www.merriam-webster.com/dictionary/treatment"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/treatment", "note": "treatmentをtreat＋-mentと明示し、treatを古フランス語 traitier・ラテン語 tractare（扱う、取り扱う）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/treatment", "note": "treatmentの現代語義として、人や物への扱い、医療上の処置、作品の扱い方を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["treatment", "treat", "traitier", "tractare", "trahere", "-ment"],
+        "historicalPath": ["ラテン語 tractare（扱う、引く）", "古フランス語 traitier", "英語 treat", "英語 treat＋-ment → treatment（扱い、待遇、処置）"],
+        "components": [{ "form": "treat", "kind": "base", "gloss": "扱う、交渉する" }, { "form": "-ment", "kind": "suffix", "gloss": "行為・結果" }],
+        "rootCandidates": ["tract"],
+        "semanticBridge": "物事を扱い処理することから、人への待遇、病気への処置、作品や問題の扱い方へ意味が広がった。",
+        "summary": "treatmentはtreat＋-mentとして出典が直接支えるA型を設定できる。",
+        "confidence": "high",
+        "notes": "既存のtreat語根と-ment接尾辞を再利用する。"
+      }
+    },
+    "growth": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "成長",
+        "root": "grow",
+        "parts": [
+          { "form": "grow", "kind": "root", "gloss": "成長する・増える" },
+          { "form": "-th", "kind": "suffix", "gloss": "状態を表す名詞" }
+        ],
+        "derivation": "grow（成長する・増える）＋-th（状態を表す名詞） → 成長すること、成長"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/growth", "https://www.merriam-webster.com/dictionary/growth"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/growth", "note": "growthをgrow＋-thと明示し、growを古英語 growan、ゲルマン語系 *gro-、PIE *ghre-に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/growth", "note": "growthの現代語義として、成長する過程・結果、増加・発達を確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・古英語・ゲルマン語系・英語",
+        "etymons": ["growth", "grow", "growan", "*gro-", "*ghre-", "-th"],
+        "historicalPath": ["PIE *ghre-（成長する、緑になる）", "古英語 growan", "中英語 grouen / grow", "英語 grow＋-th → growth（成長）"],
+        "components": [{ "form": "grow", "kind": "base", "gloss": "成長する、増える" }, { "form": "-th", "kind": "suffix", "gloss": "状態" }],
+        "rootCandidates": ["ghre"],
+        "semanticBridge": "大きくなり発達する動作から、その過程や結果としての成長、経済などの増加へ意味が広がった。",
+        "summary": "growthはgrow＋-thとして出典が直接支えるA型を設定できる。",
+        "confidence": "high",
+        "notes": "既存の-th接尾辞を再利用する。"
+      }
+    },
+    "doctoral": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "博士課程の",
+        "root": "doctor",
+        "parts": [
+          { "form": "doctor", "kind": "root", "gloss": "教師・博士" },
+          { "form": "-al", "kind": "suffix", "gloss": "〜に関する" }
+        ],
+        "derivation": "doctor（教師・博士）＋-al（〜に関する） → 博士・博士号に関する、博士課程の"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/doctoral", "https://www.merriam-webster.com/dictionary/doctoral"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/doctoral", "note": "doctoralをdoctor＋-alと明示し、doctorを古フランス語 doctour・ラテン語 doctor、docere（教える）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/doctoral", "note": "doctoralの現代語義として、博士号・博士課程・博士に関係することを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["doctoral", "doctor", "doctour", "docere", "-al"],
+        "historicalPath": ["ラテン語 docere（教える）・doctor（教師、学者）", "古フランス語 doctour", "英語 doctor", "英語 doctor＋-al → doctoral（博士課程の）"],
+        "components": [{ "form": "doctor", "kind": "base", "gloss": "教師、博士" }, { "form": "-al", "kind": "suffix", "gloss": "〜に関する" }],
+        "rootCandidates": ["doc", "dek"],
+        "semanticBridge": "教える人・学識ある人を表す語から博士号を持つ人を表す語となり、博士号や博士課程に関する形容詞へ作られた。",
+        "summary": "doctoralはdoctor＋-alとして出典が直接支えるA型を設定できる。",
+        "confidence": "high",
+        "notes": "doctorを基体として登録し、既存の-al接尾辞を再利用する。"
+      }
+    },
+    "female": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古フランス語 femelle、後期ラテン語 femella、ラテン語 femina（女性）に由来する。 → 女性の" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/female", "https://www.merriam-webster.com/dictionary/female"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/female", "note": "femaleを古フランス語 femelle、後期ラテン語 femella、ラテン語 feminaに遡らせ、英語でmaleとの類推による綴り変化が起きたと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/female", "note": "femaleの現代語義として、女性の性別、人や動物の雌を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・中英語・英語",
+        "etymons": ["female", "femelle", "femella", "femina", "*dhe(i)-", "male"],
+        "historicalPath": ["ラテン語 femina（女性）・femella（若い女性）", "後期ラテン語 femella", "古フランス語 femelle・中英語 femele", "英語 female（男性との類推を受けた綴り）"],
+        "components": [{ "form": "femella / femina", "kind": "word", "gloss": "女性、雌" }],
+        "rootCandidates": ["dhei"],
+        "semanticBridge": "女性や雌を表すラテン語系の語が、英語で性別を示す形容詞・名詞へ定着した。",
+        "summary": "femaleはフランス語・ラテン語由来の単純語で、綴りもmaleとの類推を受けているため、安定したA型分解を設定せずB型に残す。",
+        "confidence": "high",
+        "notes": "fem＋-aleなどの綴り合わせは採用しない。"
+      }
+    },
+    "table": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古フランス語 table、古英語 tabele、ラテン語 tabula（板、書き板、一覧表）に由来する。 → 表" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/table", "https://www.merriam-webster.com/dictionary/table"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/table", "note": "tableを古フランス語 table、古英語 tabele、ラテン語 tabula（板、書き板、一覧表）に遡らせ、家具や表の意味を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/table", "note": "tableの現代語義として、平らな家具、一覧表、議題に提出することなどを確認した。" }
+        ],
+        "originLanguage": "ラテン語・古英語・フランス語・英語",
+        "etymons": ["table", "tabele", "tabula", "tabal"],
+        "historicalPath": ["ラテン語 tabula（板、書き板、一覧表）", "古英語 tabele・古フランス語 table", "中英語 table", "英語 table（机、表）"],
+        "components": [{ "form": "tabula", "kind": "word", "gloss": "板、一覧表" }],
+        "rootCandidates": ["tab"],
+        "semanticBridge": "平らな板から、食卓や机、情報を整理して載せる表へ意味が広がった。",
+        "summary": "tableはラテン語・フランス語を経た単純な借用語で、tabulaの語根を現代英語の表面形に分解しないためB型に残す。",
+        "confidence": "high",
+        "notes": "tabl＋-eなどの綴り合わせは採用しない。"
+      }
+    },
+    "quickly": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "早く",
+        "root": "quick",
+        "parts": [
+          { "form": "quick", "kind": "root", "gloss": "生き生きした・速い" },
+          { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で" }
+        ],
+        "derivation": "quick（生き生きした・速い）＋-ly（〜な状態で） → 速い状態で、早く"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/quickly", "https://www.merriam-webster.com/dictionary/quickly"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/quickly", "note": "quicklyをquick＋-lyとして確認し、quickを古英語 cwic、ゲルマン祖語 *kwikwaz（生きている）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/quickly", "note": "quicklyの現代語義として、短時間で・速い速度で行うことを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・古英語・ゲルマン語系・英語",
+        "etymons": ["quickly", "quick", "cwic", "*kwikwaz", "*gwei-", "-ly"],
+        "historicalPath": ["PIE *gwei-（生きる）", "ゲルマン祖語 *kwikwaz", "古英語 cwic・中英語 quik", "英語 quick＋-ly → quickly（早く）"],
+        "components": [{ "form": "quick", "kind": "base", "gloss": "生きている、速い" }, { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で" }],
+        "rootCandidates": ["gwei"],
+        "semanticBridge": "生命力があり活発なことから、動きや反応が速いこと、さらにそのように行うことへ意味が広がった。",
+        "summary": "quicklyはquick＋-lyとして表面形に沿ったA型を設定できる。",
+        "confidence": "high",
+        "notes": "quick語根と既存の-ly接尾辞を新規に組み合わせる。"
+      }
+    },
+    "benefits": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "benefitの複数形。古フランス語 benfet、ラテン語 benefactum（よい行為）に由来し、恩恵・利益から給付の意味へ広がった。 → 給付、恩恵" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/benefit", "https://www.merriam-webster.com/dictionary/benefit"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/benefit", "note": "benefitを古フランス語 benfet、ラテン語 benefactum、bene（よく）＋facere（する）に遡らせ、benefitsは複数形であると確認した。" },
+          { "url": "https://www.merriam-webster.com/dictionary/benefit", "note": "benefitの現代語義として、利益・恩恵、雇用などに伴う給付を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["benefits", "benefit", "benfet", "benefactum", "bene", "facere", "-s"],
+        "historicalPath": ["ラテン語 bene facere（よく行う）", "ラテン語 benefactum（よい行為）", "古フランス語 benfet・中英語 benefit", "英語 benefit → benefits（複数形）"],
+        "components": [{ "form": "bene facere", "kind": "phrase", "gloss": "よく行う" }, { "form": "-s", "kind": "inflection", "gloss": "複数" }],
+        "rootCandidates": ["bene", "dhe"],
+        "semanticBridge": "よい行為から、その行為がもたらす利益・恩恵、さらに制度上受け取る給付へ意味が広がった。",
+        "summary": "benefitsはbenefitの複数形で、bene＋facereという複合的な語源もあるため、複合表現をB型にそろえる方針でB型に残す。",
+        "confidence": "high",
+        "notes": "bene＋facere＋-sをA型の表面分解として表示しない。"
+      }
+    },
+    "architect": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "フランス語 architecte、ラテン語 architectus、ギリシャ語 arkhitekton（主任の建築家）に由来する。 → 建築家" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/architect", "https://www.merriam-webster.com/dictionary/architect"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/architect", "note": "architectをフランス語 architecte・ラテン語 architectus・ギリシャ語 arkhitekton（主任＋建築家）に遡らせ、arkhi-＋tektonの複合を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/architect", "note": "architectの現代語義として、建物を設計し建設を監督する専門家、計画を作る人を確認した。" }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・フランス語・英語",
+        "etymons": ["architect", "architecte", "architectus", "arkhitekton", "arkhi-", "tekton"],
+        "historicalPath": ["ギリシャ語 arkhē（首位、主任）＋tekton（建築家、大工）", "ラテン語 architectus", "フランス語 architecte", "英語 architect（建築家）"],
+        "components": [{ "form": "arkhi-", "kind": "base", "gloss": "主任、第一" }, { "form": "tekton", "kind": "base", "gloss": "建築家、大工" }],
+        "rootCandidates": ["arch", "teks"],
+        "semanticBridge": "主任の建築家という複合語から、建物を設計する専門家、さらに計画を立てる人へ意味が広がった。",
+        "summary": "architectはarkhi-＋tektonの複合語であり、複合表現を熟語側に合わせる方針のためB型に残す。",
+        "confidence": "high",
+        "notes": "複合要素をA型の語根・接辞チップとして表示しない。"
+      }
+    },
+    "engineer": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古フランス語 engigneor、後期ラテン語 ingeniare、ingenium（生まれつきの能力、機械）に由来する。 → 技術者、エンジニア" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/engineer", "https://www.merriam-webster.com/dictionary/engineer"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/engineer", "note": "engineerを中英語 enginour・古フランス語 engigneor、後期ラテン語 ingeniare・ingeniumに遡らせ、軍事機械の製作者から技術者へ意味が広がったと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/engineer", "note": "engineerの現代語義として、機械・構造物を設計する技術者、巧みに計画・操作する人を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・中英語・英語",
+        "etymons": ["engineer", "engigneor", "ingeniare", "ingenium", "in-", "gignere"],
+        "historicalPath": ["ラテン語 ingenium（生来の能力、機械）", "後期ラテン語 ingeniare", "古フランス語 engigneor・中英語 enginour", "英語 engineer（技術者）"],
+        "components": [{ "form": "ingenium", "kind": "word", "gloss": "能力、機械" }],
+        "rootCandidates": ["gene", "engine"],
+        "semanticBridge": "軍事用の機械を作る人から、機械や公共施設を設計する専門家、さらに巧みに計画する人へ意味が広がった。",
+        "summary": "engineerはフランス語を経た借用語で、ingeniumの構成要素が英語の表面形に残らないためB型に残す。",
+        "confidence": "high",
+        "notes": "engin＋-eerなどの表面分解は採用しない。"
+      }
+    },
+    "astronaut": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "ギリシャ語 astro-（星）＋nautēs（船乗り）からなる複合語で、宇宙を航行する人を表す。 → 宇宙飛行士" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/astronaut", "https://www.merriam-webster.com/dictionary/astronaut"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/astronaut", "note": "astronautをastro-（星）＋ギリシャ語 nautēs（船乗り）からなる複合語と説明し、1929年の宇宙旅行者の用法を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/astronaut", "note": "astronautの現代語義として、宇宙船で宇宙空間を飛行する人を確認した。" }
+        ],
+        "originLanguage": "ギリシャ語・英語",
+        "etymons": ["astronaut", "astro-", "astron", "nautēs", "*ster-", "*nau-"],
+        "historicalPath": ["ギリシャ語 astron（星）＋nautēs（船乗り）", "英語の科学語彙 astro-＋-naut", "1929年ごろ astronaut", "英語 astronaut（宇宙飛行士）"],
+        "components": [{ "form": "astro-", "kind": "base", "gloss": "星、宇宙" }, { "form": "nautēs", "kind": "base", "gloss": "船乗り" }],
+        "rootCandidates": ["ster", "nau"],
+        "semanticBridge": "星の領域を航行する船乗りという比喩的な複合から、宇宙船で宇宙を飛行する人を表す語へ定着した。",
+        "summary": "astronautはastro-＋nautēsの複合語であり、複合表現を熟語側に合わせる方針のためB型に残す。",
+        "confidence": "high",
+        "notes": "複合要素をA型の語根・接辞チップとして表示しない。"
+      }
+    },
+    "character": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古フランス語 caratere、ラテン語 character、ギリシャ語 kharaktēr（刻印、印）に由来する。 → 登場人物、性格" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/character", "https://www.merriam-webster.com/dictionary/character"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/character", "note": "characterを古フランス語 caratere、ラテン語 character、ギリシャ語 kharaktēr（刻印、印）に遡らせ、刻印から特徴・性格・登場人物へ意味が広がったと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/character", "note": "characterの現代語義として、性格・特徴、文字、物語の登場人物を確認した。" }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・フランス語・英語",
+        "etymons": ["character", "caratere", "kharaktēr", "kharassein", "kharax"],
+        "historicalPath": ["ギリシャ語 kharax（尖った杭）・kharassein（刻む）", "ギリシャ語 kharaktēr（刻印、特徴）", "ラテン語 character・古フランス語 caratere", "英語 character（特徴、人物、文字）"],
+        "components": [{ "form": "kharaktēr", "kind": "word", "gloss": "刻印、印" }],
+        "rootCandidates": ["gher"],
+        "semanticBridge": "物に刻まれた印から、人や物を特徴づける性質、文字、物語上の人物へ意味が広がった。",
+        "summary": "characterはギリシャ語・ラテン語・フランス語を経た単純な借用語で、kharaktērの構成を英語表面形に分解しないためB型に残す。",
+        "confidence": "high",
+        "notes": "char＋-acterなどの綴り合わせは採用しない。"
+      }
+    },
+    "puzzle": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "1590年代の動詞 puzzle（困惑させる、難問で悩ませる）から生じ、poseとの関係が推測されるが確定していない。 → パズル、難問" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/puzzle", "https://www.merriam-webster.com/dictionary/puzzle"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/puzzle", "note": "puzzleを16世紀末の動詞 pusle / puzzle（困惑させる）に遡らせ、poseの古い意味からの反復形成の可能性を示しているが確定はしていない。" },
+          { "url": "https://www.merriam-webster.com/dictionary/puzzle", "note": "puzzleの現代語義として、解くのが難しい問題や玩具、困惑させることを確認した。" }
+        ],
+        "originLanguage": "中英語以降の英語・語源不確定",
+        "etymons": ["puzzle", "pusle", "pose", "nuzzle"],
+        "historicalPath": ["16世紀末の英語 pusle / puzzle（困惑させる）", "英語 puzzle（困惑した状態）", "17〜19世紀の難問・知恵の玩具", "英語 puzzle（パズル、難問）"],
+        "components": [{ "form": "puzzle", "kind": "word", "gloss": "困惑させる、難問" }],
+        "rootCandidates": [],
+        "semanticBridge": "人を困惑させる動作から、困惑した状態、解くことで知恵を試す問題や玩具へ意味が広がった。",
+        "summary": "puzzleは語源に推定が含まれる単純語で、現代語の表面形に安定した語根・接辞分解を設定しないためB型に残す。",
+        "confidence": "medium",
+        "notes": "puz＋-zleなどの綴り合わせは採用しない。"
+      }
+    },
+    "suggestion": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "提案",
+        "root": "suggest",
+        "parts": [
+          { "form": "suggest", "kind": "root", "gloss": "示唆する・提案する" },
+          { "form": "-ion", "kind": "suffix", "gloss": "〜すること" }
+        ],
+        "derivation": "suggest（示唆する・提案する）＋-ion（〜すること） → 提案、示唆"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/suggestion", "https://www.merriam-webster.com/dictionary/suggestion"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/suggestion", "note": "suggestionを古フランス語 suggestioun、ラテン語 suggestionem / suggestio、suggerere（下から運ぶ、示唆する）に遡らせ、suggest＋-ionの行為名詞として説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/suggestion", "note": "suggestionの現代語義として、考えを提案すること、提案された考え、暗示を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["suggestion", "suggestioun", "suggestio", "suggestus", "suggerere", "-ion"],
+        "historicalPath": ["ラテン語 sub-（下から）＋gerere（運ぶ）", "ラテン語 suggerere / suggestio（示唆、提案）", "古フランス語 suggestioun", "英語 suggest＋-ion → suggestion（提案）"],
+        "components": [{ "form": "suggest", "kind": "base", "gloss": "示唆する、提案する" }, { "form": "-ion", "kind": "suffix", "gloss": "行為・結果" }],
+        "rootCandidates": ["sug", "gest", "ag"],
+        "semanticBridge": "下から物を運び上げることから、心の前に考えを出すこと、さらにその提案や暗示へ意味が広がった。",
+        "summary": "suggestionはsuggest＋-ionとして表面形に沿ったA型を設定できる。",
+        "confidence": "high",
+        "notes": "suggest語根と既存の-ion接尾辞を再利用し、深いsub＋gerere分解は表示しない。"
+      }
+    },
+    "forecast": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "fore（前もって）＋cast（投げる、見積もる）からなる英語の複合語で、将来を予測する意味へ発達した。 → 予報、予測" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/forecast", "https://www.merriam-webster.com/dictionary/forecast"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/forecast", "note": "forecastをfore-＋castからなる語とし、castの計画・見積もりの意味から予測へ発達した経路を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/forecast", "note": "forecastの現代語義として、将来の出来事や天候を予測すること・予測値を確認した。" }
+        ],
+        "originLanguage": "古英語・中英語・英語・北欧語系",
+        "etymons": ["forecast", "fore-", "cast", "kasta", "*fore", "*kast"],
+        "historicalPath": ["英語 fore-（前もって）＋cast（投げる、計算する）", "中英語 forecast（計画、予見）", "近代英語の予測用法", "英語 forecast（予報、予測）"],
+        "components": [{ "form": "fore-", "kind": "word", "gloss": "前もって" }, { "form": "cast", "kind": "word", "gloss": "投げる、見積もる" }],
+        "rootCandidates": ["per", "kast"],
+        "semanticBridge": "前もって考えを投げ出し計画することから、将来の出来事を見積もること、特に天候を予報することへ意味が広がった。",
+        "summary": "forecastはfore＋castの複合語であり、複合表現を熟語側に合わせる方針のためB型に残す。",
+        "confidence": "high",
+        "notes": "複合要素をA型の語根・接辞チップとして表示しない。"
+      }
+    },
+    "unfortunately": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "不運にも",
+        "root": "fortun",
+        "parts": [
+          { "form": "un", "kind": "prefix", "gloss": "〜でない" },
+          { "form": "fortun", "kind": "root", "gloss": "運・運命" },
+          { "form": "-ate", "kind": "suffix", "gloss": "〜にする・〜の状態にする" },
+          { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で" }
+        ],
+        "derivation": "un-（〜でない）＋fortun（運・運命）＋-ate（〜の状態にする）＋-ly（〜な状態で） → 幸運でない状態で、不運にも"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/unfortunately", "https://www.merriam-webster.com/dictionary/unfortunately"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/unfortunately", "note": "unfortunatelyをunfortunate＋-ly、unfortunateをun-＋fortunateと説明し、fortuneをラテン語 fortuna（運命、幸運）に結び付けている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/unfortunately", "note": "unfortunatelyの現代語義として、残念ながら・不運にもという副詞の用法を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["unfortunately", "unfortunate", "un-", "fortunate", "fortune", "fortuna", "-ate", "-ly"],
+        "historicalPath": ["ラテン語 fortuna（運命、幸運）", "古フランス語 fortune・英語 fortune", "英語 fortunate → un-fortunate", "英語 unfortunate＋-ly → unfortunately（不運にも）"],
+        "components": [{ "form": "un-", "kind": "prefix", "gloss": "否定" }, { "form": "fortun / fortune", "kind": "base", "gloss": "運、運命" }, { "form": "-ate", "kind": "suffix", "gloss": "〜の状態にする" }, { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で" }],
+        "rootCandidates": ["fort", "fer"],
+        "semanticBridge": "運命・幸運を表す語に「でない」を加え、幸運でない状態を表し、さらにその状態で起きることを述べる副詞になった。",
+        "summary": "unfortunatelyはun-＋fortun＋-ate＋-lyとして表面形に沿ったA型を設定できる。",
+        "confidence": "high",
+        "notes": "既存のun接頭辞・-ate接尾辞・-ly接尾辞を再利用し、fortun語根を登録する。"
+      }
+    },
+    "awfully": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "ひどく",
+        "root": "awe",
+        "parts": [
+          { "form": "aw", "kind": "root", "gloss": "畏怖・深い敬意" },
+          { "form": "-ful", "kind": "suffix", "gloss": "〜に満ちた" },
+          { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で" }
+        ],
+        "derivation": "aw（畏怖・深い敬意）＋-ful（〜に満ちた）＋-ly（〜な状態で） → 畏怖を起こすように、ひどく・非常に"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/awful", "https://www.merriam-webster.com/dictionary/awfully"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/awful", "note": "awfulを中英語 agheful / aueful、awe＋-fulと説明し、awfullyをawful＋-lyとして、畏怖を起こす意味から強調副詞へ変化したと示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/awfully", "note": "awfullyの現代語義として、ひどく・非常に、また畏怖を起こすようにという用法を確認した。" }
+        ],
+        "originLanguage": "古ノルド語・ゲルマン語系・中英語・英語",
+        "etymons": ["awfully", "awful", "aueful", "agheful", "awe", "agi", "-ful", "-ly"],
+        "historicalPath": ["古ノルド語 agi / ゲルマン語系 *agiz-（恐れ）", "中英語 awe / aue", "英語 awe＋-ful → awful", "英語 awful＋-ly → awfully（ひどく、非常に）"],
+        "components": [{ "form": "awe / aw", "kind": "base", "gloss": "畏怖、敬意" }, { "form": "-ful", "kind": "suffix", "gloss": "〜に満ちた" }, { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で" }],
+        "rootCandidates": ["agh"],
+        "semanticBridge": "恐れと敬意を起こすほどの状態から、ひどい状態、さらに程度が非常に大きいことを強調する副詞へ意味が弱まり変化した。",
+        "summary": "awfullyはaw（aweの表面variant）＋-ful＋-lyとして表面形に沿ったA型を設定できる。",
+        "confidence": "high",
+        "notes": "awe語根の表面variant aw、既存の-ful・-ly接尾辞を使用する。"
+      }
+    },
+    "bravely": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "勇敢に",
+        "root": "brave",
+        "parts": [
+          { "form": "brave", "kind": "root", "gloss": "勇敢な" },
+          { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で" }
+        ],
+        "derivation": "brave（勇敢な）＋-ly（〜な状態で） → 勇敢な態度で、勇敢に"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/brave", "https://www.merriam-webster.com/dictionary/bravely"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/brave", "note": "braveをフランス語 brave、イタリア語 bravoに遡らせ、勇敢な意味を確認している。語源の最終形には複数説がある。" },
+          { "url": "https://www.merriam-webster.com/dictionary/bravely", "note": "bravelyの現代語義として、勇気をもって・恐れずに行うことを確認した。" }
+        ],
+        "originLanguage": "イタリア語・フランス語・英語",
+        "etymons": ["bravely", "brave", "bravo", "braver", "bravus", "-ly"],
+        "historicalPath": ["イタリア語 bravo（勇敢な、もとは野蛮な）", "フランス語 brave", "英語 brave", "英語 brave＋-ly → bravely（勇敢に）"],
+        "components": [{ "form": "brave", "kind": "base", "gloss": "勇敢な" }, { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で" }],
+        "rootCandidates": ["prav"],
+        "semanticBridge": "勇敢さを示す形容詞から、そのような態度や方法で行動することを表す副詞へ作られた。",
+        "summary": "bravelyはbrave＋-lyとして表面形に沿ったA型を設定できる。",
+        "confidence": "high",
+        "notes": "brave語根と既存の-ly接尾辞を登録する。語源の深い経路は確定形と分けて記録する。"
+      }
+    },
+    "hardly": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "ほとんど〜ない",
+        "root": "hard",
+        "parts": [
+          { "form": "hard", "kind": "root", "gloss": "固い・困難な" },
+          { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で" }
+        ],
+        "derivation": "hard（固い・困難な）＋-ly（〜な状態で） → 困難な程度で、かろうじて・ほとんど〜ない"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/hard", "https://www.merriam-webster.com/dictionary/hardly"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/hard", "note": "hardを古英語 heard、ゲルマン祖語 *hardu-、PIE *kar-に遡らせ、hardlyをhard＋-lyとして説明している。ほとんど〜ないの意味は「かろうじて」から発達した。" },
+          { "url": "https://www.merriam-webster.com/dictionary/hardly", "note": "hardlyの現代語義として、ほとんど〜ない、かろうじて、めったに〜ないを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・古英語・ゲルマン語系・英語",
+        "etymons": ["hardly", "hard", "heard", "*hardu-", "*kortu-", "*kar-", "-ly"],
+        "historicalPath": ["PIE *kar-（固い）", "ゲルマン祖語 *hardu-", "古英語 heard・中英語 hard", "英語 hard＋-ly → hardly（かろうじて、ほとんど〜ない）"],
+        "components": [{ "form": "hard", "kind": "base", "gloss": "固い、困難な" }, { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で" }],
+        "rootCandidates": ["kar"],
+        "semanticBridge": "困難な状態で行うことから、十分にはできない・かろうじてという程度を表し、現代の「ほとんど〜ない」へ意味が変化した。",
+        "summary": "hardlyはhard＋-lyとして表面形に沿ったA型を設定できる。",
+        "confidence": "high",
+        "notes": "hard語根と既存の-ly接尾辞を登録する。"
+      }
+    },
+    "bowl": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 bolla、ゲルマン祖語 *bul-（丸い容器）に由来する。球や競技のbowlには別のフランス語系統もある。 → ボウル、鉢" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/bowl", "https://www.merriam-webster.com/dictionary/bowl"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/bowl", "note": "容器のbowlを古英語 bolla、ゲルマン祖語 *bul-、PIE *bhel-（膨らむ）に遡らせ、球・ボウリングのbowlには別経路があると説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/bowl", "note": "bowlの現代語義として、液体や食物を入れる丸い容器、球を転がす競技や投球を確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・古英語・ゲルマン語系・フランス語・英語",
+        "etymons": ["bowl", "bolla", "*bul-", "*bhel-", "boule", "bulla"],
+        "historicalPath": ["ゲルマン語系 *bul-（丸い容器）", "古英語 bolla", "中英語 bowl（容器）", "別経路の古フランス語 boule / ラテン語 bulla（球）"],
+        "components": [{ "form": "bolla", "kind": "word", "gloss": "丸い容器" }, { "form": "boule", "kind": "word", "gloss": "球" }],
+        "rootCandidates": ["bhel"],
+        "semanticBridge": "丸い容器から、球形の競技用具、球を転がす競技や投球の動作へ意味が広がった。",
+        "summary": "bowlは同綴に複数の語源経路を含む単純語で、表面形に一つの安定した分解を置けないためB型に残す。",
+        "confidence": "high",
+        "notes": "bow＋-lなどの綴り合わせは採用しない。"
+      }
+    },
+    "rope": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 rap、ゲルマン祖語 *raipaz（太いひも、綱）に由来する。 → ロープ、綱" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/rope", "https://www.merriam-webster.com/dictionary/rope"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/rope", "note": "ropeを中英語 rop・古英語 rap、ゲルマン祖語 *raipazに遡らせ、太いひも・綱から比喩的な拘束や航海用法へ広がったと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/rope", "note": "ropeの現代語義として、繊維をより合わせた長いひも、結ぶ・引くための綱を確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["rope", "rop", "rap", "*raipaz", "reif"],
+        "historicalPath": ["ゲルマン祖語 *raipaz（ひも、綱）", "古英語 rap", "中英語 rop", "英語 rope（ロープ、綱）"],
+        "components": [{ "form": "rap", "kind": "word", "gloss": "太いひも、綱" }],
+        "rootCandidates": ["raip"],
+        "semanticBridge": "物を結びつけたり引いたりする太いひもから、航海・拘束・比喩的な限界を表す語へ用法が広がった。",
+        "summary": "ropeは古いゲルマン語系の単純語で、現代語の表面形に安定した語根・接辞分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "rop＋-eなどの綴り合わせは採用しない。"
+      }
+    }
+  }
+}

@@ -1,0 +1,1847 @@
+{
+  "meta": {
+    "batchId": "batch-027",
+    "note": "未確認B型の次の25語。出典が英語表面の語根・接辞対応を支える語はA型へ、借用語・不規則な表面変化・表面分解が不安定な語はB型に残す。"
+  },
+  "dictionary": {
+    "roots": {
+      "add": {
+        "gloss": "加える・付ける",
+        "origin": "ラテン語 addere",
+        "note": "何かを別のものへ付け加えるイメージ。addendum。"
+      },
+      "monstr": {
+        "gloss": "示す・怪物",
+        "origin": "ラテン語 monstrum / monere",
+        "note": "異常なものが警告やしるしとして現れるイメージ。monstrosity。"
+      },
+      "calibr": {
+        "gloss": "目盛り・規格を調整する",
+        "origin": "フランス語 calibre / ラテン語系",
+        "note": "基準となる目盛りや規格に合わせるイメージ。calibrated。"
+      },
+      "paint": {
+        "gloss": "塗る・描く",
+        "origin": "ラテン語 pingere / 古フランス語 peint",
+        "note": "表面に色を付けて描くイメージ。repainted。"
+      },
+      "spers": {
+        "gloss": "散らす・広げる",
+        "origin": "ラテン語 spargere / dispersus",
+        "note": "あちこちへ撒き散らすイメージ。dispersed。"
+      },
+      "nigr": {
+        "gloss": "黒い・暗い",
+        "origin": "ラテン語 niger / denigrare",
+        "note": "黒くすることから、価値を暗く低く見る意味へつながる。denigrated。"
+      },
+      "struct": {
+        "gloss": "組み立てる・建てる",
+        "origin": "ラテン語 struere / obstructus",
+        "note": "積み上げて構造を作るイメージ。obstructed。"
+      },
+      "stealth": {
+        "gloss": "盗み・ひそかな動き",
+        "origin": "古英語 stælþ / steal",
+        "note": "人目を避けて盗むような動き。stealthily。"
+      },
+      "part": {
+        "gloss": "分ける・部分",
+        "origin": "ラテン語 pars / partire",
+        "note": "全体を分けた一部分、または分ける動作。impartially。"
+      },
+      "arbitr": {
+        "gloss": "判断する・裁定する",
+        "origin": "ラテン語 arbitrari / arbiter",
+        "note": "第三者として判断を下すイメージ。arbitration。"
+      },
+      "obliqu": {
+        "gloss": "斜め・曲がった",
+        "origin": "ラテン語 obliquus",
+        "note": "まっすぐでなく斜めに向くイメージ。obliquity。"
+      },
+      "rust": {
+        "gloss": "田舎・農村",
+        "origin": "ラテン語 rus / rusticus",
+        "note": "都市に対する田園や農村のイメージ。rustic。"
+      }
+    },
+    "affixes": {
+      "-endum": {
+        "gloss": "〜されるもの",
+        "kind": "suffix",
+        "note": "ラテン語の『〜されるべきもの』を表す形。addendum。"
+      },
+      "-acle": {
+        "gloss": "〜するもの・道具",
+        "kind": "suffix",
+        "note": "ラテン語系の名詞で、行為やその結果・道具を表す。spectacles。"
+      }
+    }
+  },
+  "entries": {
+    "addendum": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "付録、追補",
+        "root": "add",
+        "parts": [
+          {
+            "form": "add",
+            "kind": "root",
+            "gloss": "加える・付ける"
+          },
+          {
+            "form": "-endum",
+            "kind": "suffix",
+            "gloss": "〜されるもの"
+          }
+        ],
+        "derivation": "add（加える・付ける）＋-endum（〜されるもの） → 付け加えられるもの、付録、追補"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/addendum",
+          "https://www.merriam-webster.com/dictionary/addendum"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/addendum",
+            "note": "addendumをラテン語 addendum（付け加えられるもの）、addere（加える、付ける）の中性形に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/addendum",
+            "note": "addendumの現代語義として、文書などに後から付け加える付録・追補を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・英語",
+        "etymons": [
+          "addendum",
+          "addendus",
+          "addere",
+          "ad",
+          "-endum"
+        ],
+        "historicalPath": [
+          "ラテン語 ad（〜へ）＋-dere（置く、付ける）",
+          "ラテン語 addere（加える、付ける）",
+          "ラテン語 addendum（付け加えられるもの）",
+          "英語 addendum（付録、追補）"
+        ],
+        "components": [
+          {
+            "form": "addere",
+            "kind": "base",
+            "gloss": "加える・付ける"
+          },
+          {
+            "form": "-endum",
+            "kind": "suffix",
+            "gloss": "〜されるもの"
+          }
+        ],
+        "rootCandidates": [
+          "add"
+        ],
+        "semanticBridge": "何かに付け加えられるものというラテン語の文法形から、文書の末尾に加える付録や追補を表すようになった。",
+        "summary": "addendumはadd（加える）＋-endum（〜されるもの）で、付録・追補を表す。",
+        "confidence": "high",
+        "notes": "ラテン語のgerundive形を、語源表示用のadd＋-endumとして示す。"
+      }
+    },
+    "monstrosity": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "怪物のようなもの、ひどく醜いもの",
+        "root": "monstr",
+        "parts": [
+          {
+            "form": "monstr",
+            "kind": "root",
+            "gloss": "示す・怪物"
+          },
+          {
+            "form": "-ity",
+            "kind": "suffix",
+            "gloss": "〜であること"
+          }
+        ],
+        "derivation": "monstr（示す・怪物）＋-ity（〜であること） → 怪物のようなもの、ひどく醜いもの"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/monstrosity",
+          "https://www.merriam-webster.com/dictionary/monstrosity"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/monstrosity",
+            "note": "monstrosityを後期ラテン語 monstrositas、ラテン語 monstrum（しるし、異常な形、怪物）に遡らせ、monere（警告する）との関係を説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/monstrosity",
+            "note": "monstrosityの現代語義として、怪物のようなもの、ひどく異常・醜いものを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "monstrosity",
+          "monstrositas",
+          "monstrosus",
+          "monstrum",
+          "monere",
+          "-ity"
+        ],
+        "historicalPath": [
+          "ラテン語 monere（警告する、知らせる）",
+          "ラテン語 monstrum（警告となる異常なもの、怪物）",
+          "後期ラテン語 monstrositas・フランス語 monstruosité",
+          "英語 monstrosity（怪物のようなもの、ひどく醜いもの）"
+        ],
+        "components": [
+          {
+            "form": "monstrum",
+            "kind": "base",
+            "gloss": "しるし・怪物"
+          },
+          {
+            "form": "-ity",
+            "kind": "suffix",
+            "gloss": "状態・性質"
+          }
+        ],
+        "rootCandidates": [
+          "monstr"
+        ],
+        "semanticBridge": "神や自然からの警告と考えられた異常なものから、怪物のように異常でひどく醜いものを表す意味になった。",
+        "summary": "monstrosityはmonstr（異常なもの・怪物）＋-ityで、怪物のようなものやひどく醜いものを表す。",
+        "confidence": "high",
+        "notes": "monstrumの英語表面形monstrと既存の-ity接尾辞を用いる。"
+      }
+    },
+    "appendage": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "付属物、付加物",
+        "root": "pend",
+        "parts": [
+          {
+            "form": "pend",
+            "kind": "root",
+            "gloss": "量る・吊るす"
+          },
+          {
+            "form": "-age",
+            "kind": "suffix",
+            "gloss": "〜の量・状態"
+          }
+        ],
+        "derivation": "pend（吊るす・付ける）＋-age（〜の状態） → 何かに付いている付属物、付加物"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/appendage",
+          "https://www.merriam-webster.com/dictionary/appendage"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/appendage",
+            "note": "appendageをappend＋-ageと説明し、appendを古フランス語 apendre、ラテン語 appendere（吊るす、付ける）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/appendage",
+            "note": "appendageの現代語義として、主なものに付属する部分・付加物を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "appendage",
+          "append",
+          "ap(p)endre",
+          "appendere",
+          "ad",
+          "pendere",
+          "-age"
+        ],
+        "historicalPath": [
+          "ラテン語 ad（〜へ）＋pendere（吊るす、付ける）",
+          "ラテン語 appendere・古フランス語 apendre（付ける、吊るす）",
+          "英語 append（付け加える）＋-age",
+          "英語 appendage（付属物、付加物）"
+        ],
+        "components": [
+          {
+            "form": "pendere",
+            "kind": "base",
+            "gloss": "吊るす・付ける"
+          },
+          {
+            "form": "-age",
+            "kind": "suffix",
+            "gloss": "状態・結果"
+          }
+        ],
+        "rootCandidates": [
+          "pend"
+        ],
+        "semanticBridge": "何かに吊り下げたり付け加えたりするものから、主な部分に付属する部分や付加物を表す意味になった。",
+        "summary": "appendageはpend（吊るす・付ける）＋-ageで、付属物・付加物を表す。",
+        "confidence": "high",
+        "notes": "既存のpend語根と-age接尾辞を再利用し、appendのad-表面形は表示上省く。"
+      }
+    },
+    "infringement": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "侵害",
+        "root": "fract",
+        "parts": [
+          {
+            "form": "in",
+            "kind": "prefix",
+            "gloss": "中へ・上に"
+          },
+          {
+            "form": "fring",
+            "kind": "root",
+            "gloss": "壊す・破る"
+          },
+          {
+            "form": "-ment",
+            "kind": "suffix",
+            "gloss": "〜すること・もの"
+          }
+        ],
+        "derivation": "in-（中へ・上に）＋fring（壊す・破る）＋-ment（〜すること） → 権利や規則を破る侵害"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/infringement",
+          "https://www.merriam-webster.com/dictionary/infringement"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/infringement",
+            "note": "infringementをinfringeの名詞形として扱い、infringeをラテン語 infringere（壊す、破る）・in-＋frangereに遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/infringement",
+            "note": "infringementの現代語義として、権利・法律・規則などの侵害を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "infringement",
+          "infringe",
+          "infringere",
+          "in-",
+          "frangere",
+          "-ment"
+        ],
+        "historicalPath": [
+          "ラテン語 in-（上に、〜へ）＋frangere（壊す、破る）",
+          "ラテン語 infringere（破る、侵害する）",
+          "古フランス語 enfraindre・英語 infringe",
+          "英語 infringement（侵害）"
+        ],
+        "components": [
+          {
+            "form": "in-",
+            "kind": "prefix",
+            "gloss": "上に・〜へ"
+          },
+          {
+            "form": "frangere",
+            "kind": "base",
+            "gloss": "壊す・破る"
+          },
+          {
+            "form": "-ment",
+            "kind": "suffix",
+            "gloss": "行為・結果"
+          }
+        ],
+        "rootCandidates": [
+          "fract"
+        ],
+        "semanticBridge": "規則や境界を壊して踏み越えることから、権利・法律・特許などを侵害することを表すようになった。",
+        "summary": "infringementはin-＋fring（壊す・破る）＋-mentで、権利や規則の侵害を表す。",
+        "confidence": "high",
+        "notes": "既存のfract語根に登録された表面形fringを再利用する。"
+      }
+    },
+    "exonerated": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "無実を証明された、潔白にされた",
+        "root": "oner",
+        "parts": [
+          {
+            "form": "ex",
+            "kind": "prefix",
+            "gloss": "外へ"
+          },
+          {
+            "form": "oner",
+            "kind": "root",
+            "gloss": "負担・重荷"
+          },
+          {
+            "form": "-ate",
+            "kind": "suffix",
+            "gloss": "〜にする（動詞化）"
+          }
+        ],
+        "derivation": "ex-（外へ）＋oner（負担・重荷）＋-ate（〜にする） → 責任の重荷を外して無実を証明された、潔白にされた"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/exonerate",
+          "https://www.merriam-webster.com/dictionary/exonerated"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/exonerate",
+            "note": "exonerateをラテン語 exonerare（重荷を下ろす）・onus（負担）に遡らせ、ex-（外へ）との構成を説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/exonerated",
+            "note": "exoneratedの現代語義として、罪や責任がないと証明され潔白にされたことを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "exonerated",
+          "exonerate",
+          "exonerare",
+          "ex-",
+          "onus",
+          "onĕris"
+        ],
+        "historicalPath": [
+          "ラテン語 ex-（外へ）＋onus / oneris（負担、重荷）",
+          "ラテン語 exonerare（重荷を下ろす）",
+          "フランス語 exonérer・英語 exonerate",
+          "英語 exonerated（潔白にされた）"
+        ],
+        "components": [
+          {
+            "form": "ex-",
+            "kind": "prefix",
+            "gloss": "外へ"
+          },
+          {
+            "form": "onus",
+            "kind": "base",
+            "gloss": "負担・重荷"
+          },
+          {
+            "form": "-ate",
+            "kind": "suffix",
+            "gloss": "〜にする"
+          }
+        ],
+        "rootCandidates": [
+          "oner"
+        ],
+        "semanticBridge": "責任という重荷を外へ下ろすことから、罪や責任を免れたと証明され潔白になる意味になった。",
+        "summary": "exoneratedはex-＋oner（重荷）＋-ateで、無実を証明され潔白にされたという意味になる。",
+        "confidence": "high",
+        "notes": "既存のoner語根とex接頭辞・-ate接尾辞を再利用し、過去形のdは表示上省く。"
+      }
+    },
+    "calibrated": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "調整した、較正した",
+        "root": "calibr",
+        "parts": [
+          {
+            "form": "calibr",
+            "kind": "root",
+            "gloss": "目盛り・規格を調整する"
+          },
+          {
+            "form": "-ate",
+            "kind": "suffix",
+            "gloss": "〜にする（動詞化）"
+          }
+        ],
+        "derivation": "calibr（目盛り・規格を調整する）＋-ate（〜にする） → 基準に合わせて調整した、較正した"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/calibrate",
+          "https://www.merriam-webster.com/dictionary/calibrated"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/calibrate",
+            "note": "calibrateをcaliber（銃口径、基準となる尺度）から作られた語として説明し、フランス語 calibreに遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/calibrated",
+            "note": "calibratedの現代語義として、機器などを基準に合わせて調整・較正したことを確認した。"
+          }
+        ],
+        "originLanguage": "フランス語・英語・ラテン語系",
+        "etymons": [
+          "calibrated",
+          "calibrate",
+          "caliber",
+          "calibre",
+          "-ate"
+        ],
+        "historicalPath": [
+          "フランス語 calibre（口径、尺度）",
+          "英語 caliber / calibre（基準となる大きさ、尺度）",
+          "英語 calibrate（基準に合わせて調整する）",
+          "英語 calibrated（調整した、較正した）"
+        ],
+        "components": [
+          {
+            "form": "caliber",
+            "kind": "base",
+            "gloss": "尺度・口径"
+          },
+          {
+            "form": "-ate",
+            "kind": "suffix",
+            "gloss": "〜にする"
+          }
+        ],
+        "rootCandidates": [
+          "calibr"
+        ],
+        "semanticBridge": "銃口径などの基準となる尺度から、機器や測定値を基準に合わせて調整する意味になった。",
+        "summary": "calibratedはcalibr（尺度・基準）＋-ateで、基準に合わせて調整した・較正したという意味になる。",
+        "confidence": "medium",
+        "notes": "caliber系の表面形calibrと-ate接尾辞を表示し、過去形のdは省く。"
+      }
+    },
+    "repainted": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "塗り直した",
+        "root": "paint",
+        "parts": [
+          {
+            "form": "re",
+            "kind": "prefix",
+            "gloss": "再び"
+          },
+          {
+            "form": "paint",
+            "kind": "root",
+            "gloss": "塗る・描く"
+          }
+        ],
+        "derivation": "re-（再び）＋paint（塗る・描く） → 再び塗って、塗り直した"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/repaint",
+          "https://www.merriam-webster.com/dictionary/repainted"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/repaint",
+            "note": "repaintをre-＋paintとして説明し、paintを古フランス語 peint・ラテン語 pingere（描く、色を付ける）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/repainted",
+            "note": "repaintedの現代語義として、表面をもう一度塗ったことを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "repainted",
+          "repaint",
+          "re-",
+          "paint",
+          "peint",
+          "pingere"
+        ],
+        "historicalPath": [
+          "ラテン語 pingere（描く、色を付ける）",
+          "古フランス語 peint・英語 paint（塗る、描く）",
+          "英語 re-（再び）＋paint（塗る）",
+          "英語 repainted（塗り直した）"
+        ],
+        "components": [
+          {
+            "form": "re-",
+            "kind": "prefix",
+            "gloss": "再び"
+          },
+          {
+            "form": "paint",
+            "kind": "base",
+            "gloss": "塗る・描く"
+          }
+        ],
+        "rootCandidates": [
+          "paint"
+        ],
+        "semanticBridge": "色を付ける動作をもう一度行うことから、表面を塗り直す意味になった。",
+        "summary": "repaintedはre-＋paint（塗る・描く）で、塗り直したという意味になる。",
+        "confidence": "high",
+        "notes": "過去形の-edは表示上省く。"
+      }
+    },
+    "vilified": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 vilis（価値の低い、卑しい）からvilifyを経て、激しく非難する意味になった。 → 激しく非難された、中傷された"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/vilify",
+          "https://www.merriam-webster.com/dictionary/vilified"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/vilify",
+            "note": "vilifyをラテン語 vilificare（価値を下げる）・vilis（価値の低い）に遡らせ、vilifyから非難の意味が発達したと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/vilified",
+            "note": "vilifiedの現代語義として、激しく非難された・中傷されたことを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "vilified",
+          "vilify",
+          "vilificare",
+          "vilis"
+        ],
+        "historicalPath": [
+          "ラテン語 vilis（価値の低い、卑しい）",
+          "ラテン語 vilificare（価値を下げる）",
+          "フランス語 vilifier・英語 vilify（けなす、中傷する）",
+          "英語 vilified（激しく非難された）"
+        ],
+        "components": [
+          {
+            "form": "vilified",
+            "kind": "word",
+            "gloss": "激しく非難された"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "価値を低くすることから、人物や行動をひどく悪く言い、激しく非難する意味になった。",
+        "summary": "vilifiedは語源の経路は明確だが、vilifyのyがiに変わる表面形に安定した語根・接辞分解を割り当てずB型に残す。",
+        "confidence": "high",
+        "notes": "vil＋-ifyをそのまま表示すると現形vilifiedの綴りと一致しないため、無理にA型化しない。"
+      }
+    },
+    "dispersed": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "分散させた、分散した",
+        "root": "spers",
+        "parts": [
+          {
+            "form": "dis",
+            "kind": "prefix",
+            "gloss": "離れて・あちこちへ"
+          },
+          {
+            "form": "spers",
+            "kind": "root",
+            "gloss": "散らす・広げる"
+          }
+        ],
+        "derivation": "dis-（離れて・あちこちへ）＋spers（散らす・広げる） → あちこちへ散らし、分散させた、分散した"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/disperse",
+          "https://www.merriam-webster.com/dictionary/dispersed"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/disperse",
+            "note": "disperseをラテン語 dispergere（撒き散らす）・dis-（離れて）＋spargere（撒く）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/dispersed",
+            "note": "dispersedの現代語義として、広い範囲に分散した・分散させたことを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "dispersed",
+          "disperse",
+          "dispersus",
+          "dispergere",
+          "dis-",
+          "spargere"
+        ],
+        "historicalPath": [
+          "ラテン語 dis-（離れて）＋spargere（撒く、散らす）",
+          "ラテン語 dispergere・dispersus（撒き散らす、分散した）",
+          "フランス語 disperser・英語 disperse",
+          "英語 dispersed（分散した、分散させた）"
+        ],
+        "components": [
+          {
+            "form": "dis-",
+            "kind": "prefix",
+            "gloss": "離れて・あちこちへ"
+          },
+          {
+            "form": "spargere",
+            "kind": "base",
+            "gloss": "撒く・散らす"
+          }
+        ],
+        "rootCandidates": [
+          "spers"
+        ],
+        "semanticBridge": "物をあちこちへ撒き散らすことから、人・光・情報などが広い範囲へ分散する意味になった。",
+        "summary": "dispersedはdis-＋spers（散らす・広げる）で、分散した・分散させたという意味になる。",
+        "confidence": "medium",
+        "notes": "spargere系の表面形spersを語根として表示する。"
+      }
+    },
+    "attacked": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "イタリア語 attaccare（取り付ける、攻撃する）を経て、攻撃する意味になった。 → 攻撃した"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/attack",
+          "https://www.merriam-webster.com/dictionary/attacked"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/attack",
+            "note": "attackを古フランス語・イタリア語 attaccare（取り付ける、結び付ける、攻撃する）に遡らせ、語源上の結合から攻撃の意味へ発達したと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/attacked",
+            "note": "attackedの現代語義として、相手を攻撃したことを確認した。"
+          }
+        ],
+        "originLanguage": "イタリア語・古フランス語・英語",
+        "etymons": [
+          "attacked",
+          "attack",
+          "attaccare",
+          "attachier"
+        ],
+        "historicalPath": [
+          "イタリア語 attaccare（取り付ける、結び付ける）",
+          "古フランス語 attachier / attaque",
+          "英語 attack（攻撃する）",
+          "英語 attacked（攻撃した）"
+        ],
+        "components": [
+          {
+            "form": "attack",
+            "kind": "word",
+            "gloss": "攻撃する"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "相手に取り付く・結び付く動作から、相手へ攻撃を加える意味へ変化した。",
+        "summary": "attackedは借用語の歴史的な意味変化は確認できるが、at＋tackの表面分解を出典が支えないためB型に残す。",
+        "confidence": "medium",
+        "notes": "英語のat接頭辞とtack語根の組み合わせとは扱わない。"
+      }
+    },
+    "denigrated": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "けなした、軽視した",
+        "root": "nigr",
+        "parts": [
+          {
+            "form": "de",
+            "kind": "prefix",
+            "gloss": "下へ・完全に"
+          },
+          {
+            "form": "nigr",
+            "kind": "root",
+            "gloss": "黒い・暗い"
+          },
+          {
+            "form": "-ate",
+            "kind": "suffix",
+            "gloss": "〜にする（動詞化）"
+          }
+        ],
+        "derivation": "de-（下へ・完全に）＋nigr（黒い・暗い）＋-ate（〜にする） → 価値を暗く低く見て、けなした、軽視した"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/denigrate",
+          "https://www.merriam-webster.com/dictionary/denigrated"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/denigrate",
+            "note": "denigrateをラテン語 denigrare（黒くする、汚す）・de-（完全に）＋niger（黒い）に遡らせ、比喩的な軽視の意味を説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/denigrated",
+            "note": "denigratedの現代語義として、価値を低く評価しけなしたことを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "denigrated",
+          "denigrate",
+          "denigrare",
+          "de-",
+          "niger"
+        ],
+        "historicalPath": [
+          "ラテン語 de-（完全に、下へ）＋niger（黒い）",
+          "ラテン語 denigrare（黒くする、汚す）",
+          "フランス語 dénigrer・英語 denigrate（けなす、軽視する）",
+          "英語 denigrated（けなした、軽視した）"
+        ],
+        "components": [
+          {
+            "form": "de-",
+            "kind": "prefix",
+            "gloss": "完全に・下へ"
+          },
+          {
+            "form": "niger",
+            "kind": "base",
+            "gloss": "黒い"
+          },
+          {
+            "form": "-ate",
+            "kind": "suffix",
+            "gloss": "〜にする"
+          }
+        ],
+        "rootCandidates": [
+          "nigr"
+        ],
+        "semanticBridge": "黒く汚すことから、相手の価値や評判を暗く低く見せ、けなす意味になった。",
+        "summary": "denigratedはde-＋nigr（黒い・暗い）＋-ateで、けなした・軽視したという意味になる。",
+        "confidence": "high",
+        "notes": "過去形のdは表示上省く。"
+      }
+    },
+    "obstructed": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "妨げた、ふさいだ",
+        "root": "struct",
+        "parts": [
+          {
+            "form": "ob",
+            "kind": "prefix",
+            "gloss": "〜に対して・上に"
+          },
+          {
+            "form": "struct",
+            "kind": "root",
+            "gloss": "組み立てる・建てる"
+          }
+        ],
+        "derivation": "ob-（〜に対して・上に）＋struct（組み立てる・建てる） → 前に構造物を置いて妨げた、ふさいだ"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/obstruct",
+          "https://www.merriam-webster.com/dictionary/obstructed"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/obstruct",
+            "note": "obstructをラテン語 obstruere（ふさぐ、建てて前を塞ぐ）・ob-（前に）＋struere（建てる）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/obstructed",
+            "note": "obstructedの現代語義として、通路や進行を妨げた・ふさいだことを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "obstructed",
+          "obstruct",
+          "obstruere",
+          "ob-",
+          "struere"
+        ],
+        "historicalPath": [
+          "ラテン語 ob-（前に、対して）＋struere（建てる、組み立てる）",
+          "ラテン語 obstruere（前に建ててふさぐ）",
+          "古フランス語 obstruer・英語 obstruct（妨げる、ふさぐ）",
+          "英語 obstructed（妨げた、ふさいだ）"
+        ],
+        "components": [
+          {
+            "form": "ob-",
+            "kind": "prefix",
+            "gloss": "前に・対して"
+          },
+          {
+            "form": "struere",
+            "kind": "base",
+            "gloss": "建てる・組み立てる"
+          }
+        ],
+        "rootCandidates": [
+          "struct"
+        ],
+        "semanticBridge": "進路の前に構造物を建てて塞ぐことから、物理的・比喩的に進行を妨げる意味になった。",
+        "summary": "obstructedはob-＋struct（建てる・ふさぐ）で、妨げた・ふさいだという意味になる。",
+        "confidence": "high",
+        "notes": "過去形の-edは表示上省く。"
+      }
+    },
+    "stealthily": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "こっそりと",
+        "root": "stealth",
+        "parts": [
+          {
+            "form": "stealth",
+            "kind": "root",
+            "gloss": "盗み・ひそかな動き"
+          },
+          {
+            "form": "-ly",
+            "kind": "suffix",
+            "gloss": "〜な状態で"
+          }
+        ],
+        "derivation": "stealth（盗み・ひそかな動き）＋-ly（〜な状態で） → 盗むように人目を避けて、こっそりと"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/stealth",
+          "https://www.merriam-webster.com/dictionary/stealthily"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/stealth",
+            "note": "stealthを古英語 stælþ（盗み、秘密の行動）・steal（盗む）に関係づけ、人目を避ける意味へ発達したと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/stealthily",
+            "note": "stealthilyの現代語義として、見つからないようにこっそりと行うことを確認した。"
+          }
+        ],
+        "originLanguage": "古英語・中英語・英語",
+        "etymons": [
+          "stealthily",
+          "stealth",
+          "stælþ",
+          "steal",
+          "-ly"
+        ],
+        "historicalPath": [
+          "古英語 steal（盗む）・stælþ（盗み、秘密の行動）",
+          "中英語 stelthe・英語 stealth（人目を避けること）",
+          "英語 stealth＋-ly（こっそりと）"
+        ],
+        "components": [
+          {
+            "form": "stealth",
+            "kind": "base",
+            "gloss": "秘密の行動"
+          },
+          {
+            "form": "-ly",
+            "kind": "suffix",
+            "gloss": "〜な状態で"
+          }
+        ],
+        "rootCandidates": [
+          "stealth"
+        ],
+        "semanticBridge": "盗みのように人目を避ける行動から、見つからないようにこっそり行う様子を表す副詞になった。",
+        "summary": "stealthilyはstealth（ひそかな行動）＋-lyで、こっそりとという意味になる。",
+        "confidence": "high",
+        "notes": "stealthilyの語尾-lyを既存の副詞接尾辞として表示する。"
+      }
+    },
+    "persistently": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "しつこく、粘り強く",
+        "root": "sist",
+        "parts": [
+          {
+            "form": "per",
+            "kind": "prefix",
+            "gloss": "徹底的に・通して"
+          },
+          {
+            "form": "sist",
+            "kind": "root",
+            "gloss": "立つ・保つ"
+          },
+          {
+            "form": "-ly",
+            "kind": "suffix",
+            "gloss": "〜な状態で"
+          }
+        ],
+        "derivation": "per-（徹底的に・通して）＋sist（立つ・保つ）＋-ly（〜な状態で） → 立ち続けるように、しつこく、粘り強く"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/persist",
+          "https://www.merriam-webster.com/dictionary/persistently"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/persist",
+            "note": "persistをラテン語 persistere（しっかり立つ、持ちこたえる）・per-（徹底的に）＋sistere（立たせる）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/persistently",
+            "note": "persistentlyの現代語義として、しつこく・粘り強く続ける様子を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "persistently",
+          "persist",
+          "persistere",
+          "per-",
+          "sistere",
+          "-ly"
+        ],
+        "historicalPath": [
+          "ラテン語 per-（徹底的に）＋sistere（立たせる、立つ）",
+          "ラテン語 persistere（しっかり立ち続ける、持ちこたえる）",
+          "古フランス語 persister・英語 persist（続く、固執する）",
+          "英語 persistently（しつこく、粘り強く）"
+        ],
+        "components": [
+          {
+            "form": "per-",
+            "kind": "prefix",
+            "gloss": "徹底的に"
+          },
+          {
+            "form": "sistere",
+            "kind": "base",
+            "gloss": "立つ・保つ"
+          },
+          {
+            "form": "-ly",
+            "kind": "suffix",
+            "gloss": "副詞化"
+          }
+        ],
+        "rootCandidates": [
+          "sist"
+        ],
+        "semanticBridge": "しっかり立ち続けて持ちこたえることから、困難があっても粘り強く続ける様子を表すようになった。",
+        "summary": "persistentlyはper-＋sist（立ち続ける）＋-lyで、しつこく・粘り強くという意味になる。",
+        "confidence": "high",
+        "notes": "既存のsist語根とper接頭辞・-ly接尾辞を再利用する。"
+      }
+    },
+    "independently": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "独立して、自力で",
+        "root": "pend",
+        "parts": [
+          {
+            "form": "in",
+            "kind": "prefix",
+            "gloss": "否定"
+          },
+          {
+            "form": "de",
+            "kind": "prefix",
+            "gloss": "下に・〜から"
+          },
+          {
+            "form": "pend",
+            "kind": "root",
+            "gloss": "吊るす・頼る"
+          },
+          {
+            "form": "-ly",
+            "kind": "suffix",
+            "gloss": "〜な状態で"
+          }
+        ],
+        "derivation": "in-（否定）＋de-（下に・〜から）＋pend（吊るす・頼る）＋-ly（〜な状態で） → 他にぶら下がらず、独立して、自力で"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/independent",
+          "https://www.merriam-webster.com/dictionary/independently"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/independent",
+            "note": "independentをin-（〜でない）＋dependentとして説明し、dependentをラテン語 dependere（〜からぶら下がる）・de-＋pendereに遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/independently",
+            "note": "independentlyの現代語義として、他人の助けや支配なしに独立して・自力で行うことを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "independently",
+          "independent",
+          "in-",
+          "dependent",
+          "dependere",
+          "de-",
+          "pendere",
+          "-ly"
+        ],
+        "historicalPath": [
+          "ラテン語 de-（下に、〜から）＋pendere（吊るす）",
+          "ラテン語 dependere（〜からぶら下がる、頼る）",
+          "英語 dependent（依存した）にin-（否定）が付いたindependent",
+          "英語 independently（独立して、自力で）"
+        ],
+        "components": [
+          {
+            "form": "in-",
+            "kind": "prefix",
+            "gloss": "否定"
+          },
+          {
+            "form": "de-",
+            "kind": "prefix",
+            "gloss": "下に・〜から"
+          },
+          {
+            "form": "pendere",
+            "kind": "base",
+            "gloss": "吊るす・頼る"
+          },
+          {
+            "form": "-ly",
+            "kind": "suffix",
+            "gloss": "副詞化"
+          }
+        ],
+        "rootCandidates": [
+          "pend"
+        ],
+        "semanticBridge": "何かから吊り下がって頼る状態を否定することから、他に依存せず独立して自力で行う意味になった。",
+        "summary": "independentlyはin-＋de-＋pend（吊るす・頼る）＋-lyで、独立して・自力でという意味になる。",
+        "confidence": "high",
+        "notes": "既存のpend語根とin・de接頭辞、-ly接尾辞を再利用する。"
+      }
+    },
+    "impartially": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "公平に",
+        "root": "part",
+        "parts": [
+          {
+            "form": "im",
+            "kind": "prefix",
+            "gloss": "否定"
+          },
+          {
+            "form": "part",
+            "kind": "root",
+            "gloss": "分ける・部分"
+          },
+          {
+            "form": "-ial",
+            "kind": "suffix",
+            "gloss": "〜に関する"
+          },
+          {
+            "form": "-ly",
+            "kind": "suffix",
+            "gloss": "〜な状態で"
+          }
+        ],
+        "derivation": "im-（否定）＋part（分ける・部分）＋-ial（〜に関する）＋-ly（〜な状態で） → 一方に偏らず、公平に"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/impartial",
+          "https://www.merriam-webster.com/dictionary/impartially"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/impartial",
+            "note": "impartialをim-（〜でない）＋partialとして説明し、partialをラテン語 partialis、pars（部分）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/impartially",
+            "note": "impartiallyの現代語義として、一方に肩入れせず公平に行うことを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "impartially",
+          "impartial",
+          "im-",
+          "partial",
+          "partialis",
+          "pars",
+          "-ly"
+        ],
+        "historicalPath": [
+          "ラテン語 pars（部分）・partialis（部分に関する）",
+          "フランス語 partial（偏った）・英語 partial",
+          "英語 im-（否定）＋partial（偏った）＝impartial",
+          "英語 impartially（公平に）"
+        ],
+        "components": [
+          {
+            "form": "im-",
+            "kind": "prefix",
+            "gloss": "否定"
+          },
+          {
+            "form": "pars",
+            "kind": "base",
+            "gloss": "部分・側"
+          },
+          {
+            "form": "-ial",
+            "kind": "suffix",
+            "gloss": "関係"
+          },
+          {
+            "form": "-ly",
+            "kind": "suffix",
+            "gloss": "副詞化"
+          }
+        ],
+        "rootCandidates": [
+          "part"
+        ],
+        "semanticBridge": "一つの部分や側に偏ることを否定し、どの側にも偏らず公平に扱う意味になった。",
+        "summary": "impartiallyはim-＋part（部分・側）＋-ial＋-lyで、公平にという意味になる。",
+        "confidence": "high",
+        "notes": "im-はin-の表面同化形。partialのpart＋-ialと副詞の-lyを表示する。"
+      }
+    },
+    "hues": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 hue（色、外観）に由来し、色の種類や色合いを表す。 → 色合い"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/hue",
+          "https://www.merriam-webster.com/dictionary/hues"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/hue",
+            "note": "hueを古フランス語 hue（色、外観）に遡らせ、さらに叫び声・外見に関する語との関係には複数の説明があると示している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/hues",
+            "note": "huesの現代語義として、色の種類や色合いを確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語・英語",
+        "etymons": [
+          "hues",
+          "hue"
+        ],
+        "historicalPath": [
+          "古フランス語 hue（色、外観）",
+          "中英語 hue（色、外観）",
+          "英語 hue（色合い）"
+        ],
+        "components": [
+          {
+            "form": "hue",
+            "kind": "word",
+            "gloss": "色・外観"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "物の外観を示す色から、色相や色合いそのものを表す意味になった。",
+        "summary": "huesは借用語の由来は確認できるが、hue＋複数語尾以外の安定した表面分解を作りにくいためB型に残す。",
+        "confidence": "medium",
+        "notes": "複数形のsを接辞として扱わない。"
+      }
+    },
+    "ornaments": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "装飾品",
+        "root": "orn",
+        "parts": [
+          {
+            "form": "orn",
+            "kind": "root",
+            "gloss": "飾る・装備する"
+          },
+          {
+            "form": "-ment",
+            "kind": "suffix",
+            "gloss": "〜すること・もの"
+          }
+        ],
+        "derivation": "orn（飾る・装備する）＋-ment（〜すること・もの） → 飾るためのもの、装飾品"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/ornament",
+          "https://www.merriam-webster.com/dictionary/ornaments"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/ornament",
+            "note": "ornamentをラテン語 ornamentum（装飾、装備）・ornare（飾る、装備する）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/ornaments",
+            "note": "ornamentsの現代語義として、物を飾る装飾品や装飾を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "ornaments",
+          "ornament",
+          "ornamentum",
+          "ornare",
+          "-ment"
+        ],
+        "historicalPath": [
+          "ラテン語 ornare（飾る、装備する）",
+          "ラテン語 ornamentum（装飾、装飾品）",
+          "古フランス語 ornement・英語 ornament（装飾、装飾品）",
+          "英語 ornaments（装飾品）"
+        ],
+        "components": [
+          {
+            "form": "ornare",
+            "kind": "base",
+            "gloss": "飾る・装備する"
+          },
+          {
+            "form": "-ment",
+            "kind": "suffix",
+            "gloss": "結果・もの"
+          }
+        ],
+        "rootCandidates": [
+          "orn"
+        ],
+        "semanticBridge": "物を飾り整えることから、飾るために加える物や装飾品を表す意味になった。",
+        "summary": "ornamentsはorn（飾る・装備する）＋-mentで、装飾品を表す。",
+        "confidence": "high",
+        "notes": "既存のorn語根と-ment接尾辞を再利用し、複数形のsは省く。"
+      }
+    },
+    "spectacles": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "眼鏡、保護眼鏡",
+        "root": "spec",
+        "parts": [
+          {
+            "form": "spect",
+            "kind": "root",
+            "gloss": "見る"
+          },
+          {
+            "form": "-acle",
+            "kind": "suffix",
+            "gloss": "〜するもの・道具"
+          }
+        ],
+        "derivation": "spect（見る）＋-acle（〜するもの・道具） → 見るための道具である眼鏡、保護眼鏡"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/spectacle",
+          "https://www.merriam-webster.com/dictionary/spectacles"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/spectacle",
+            "note": "spectacleをラテン語 spectaculum（見世物、見るためのもの）・specere（見る）に遡らせ、眼鏡の意味は複数形から発達したと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/spectacles",
+            "note": "spectaclesの現代語義として、眼鏡・保護眼鏡と、見世物の意味を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "spectacles",
+          "spectacle",
+          "spectaculum",
+          "specere",
+          "-acle"
+        ],
+        "historicalPath": [
+          "ラテン語 specere（見る）",
+          "ラテン語 spectaculum（見るためのもの、見世物）",
+          "フランス語 spectacle・英語 spectacle（見世物）",
+          "英語 spectacles（眼鏡、保護眼鏡）"
+        ],
+        "components": [
+          {
+            "form": "specere",
+            "kind": "base",
+            "gloss": "見る"
+          },
+          {
+            "form": "-acle",
+            "kind": "suffix",
+            "gloss": "もの・道具"
+          }
+        ],
+        "rootCandidates": [
+          "spec"
+        ],
+        "semanticBridge": "見るためのもの・見られるものという意味から、見るために顔へ装着する眼鏡を複数形で表すようになった。",
+        "summary": "spectaclesはspect（見る）＋-acleで、見るための道具である眼鏡・保護眼鏡を表す。",
+        "confidence": "high",
+        "notes": "既存のspec語根に登録された表面形spectを再利用し、複数形のsは省く。"
+      }
+    },
+    "prophecies": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ギリシャ語 prophēteia（神の意志を語ること）から、未来を告げる予言を表す。 → 予言"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/prophecy",
+          "https://www.merriam-webster.com/dictionary/prophecies"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/prophecy",
+            "note": "prophecyを古フランス語 prophecie、ラテン語 prophetia、ギリシャ語 prophēteia（神の意志を語ること）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/prophecies",
+            "note": "propheciesの現代語義として、未来の出来事や神意を告げる予言を確認した。"
+          }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・古フランス語・英語",
+        "etymons": [
+          "prophecies",
+          "prophecy",
+          "prophēteia",
+          "prophētēs",
+          "pro-",
+          "phēnai"
+        ],
+        "historicalPath": [
+          "ギリシャ語 pro-（前もって）＋phēnai（語る）",
+          "ギリシャ語 prophētēs / prophēteia（前もって語る人・こと）",
+          "ラテン語 prophetia・古フランス語 prophecie",
+          "英語 prophecy（予言）・prophecies（予言）"
+        ],
+        "components": [
+          {
+            "form": "prophēteia",
+            "kind": "word",
+            "gloss": "神意を語ること"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "神意を前もって語ることから、未来の出来事を告げる予言を表す意味になった。",
+        "summary": "propheciesは語源の経路は明確だが、prophet系の語幹が複数の綴り変化を経るため、表面分解を固定せずB型に残す。",
+        "confidence": "high",
+        "notes": "既存のphet語根を機械的に当てはめず、propheciesのphe／cies変化をB型として扱う。"
+      }
+    },
+    "arbitration": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "仲裁",
+        "root": "arbitr",
+        "parts": [
+          {
+            "form": "arbitr",
+            "kind": "root",
+            "gloss": "判断する・裁定する"
+          },
+          {
+            "form": "-ation",
+            "kind": "suffix",
+            "gloss": "〜すること"
+          }
+        ],
+        "derivation": "arbitr（判断する・裁定する）＋-ation（〜すること） → 当事者の間に判断を置く仲裁"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/arbitration",
+          "https://www.merriam-webster.com/dictionary/arbitration"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/arbitration",
+            "note": "arbitrationをラテン語 arbitratio（判断、裁定）・arbitrari（判断する）・arbiter（判断者）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/arbitration",
+            "note": "arbitrationの現代語義として、第三者が争いを裁定する仲裁を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "arbitration",
+          "arbitratio",
+          "arbitrari",
+          "arbiter",
+          "-ation"
+        ],
+        "historicalPath": [
+          "ラテン語 arbiter（判断者）・arbitrari（判断する）",
+          "ラテン語 arbitratio（判断、裁定）",
+          "フランス語 arbitration・英語 arbitration（仲裁）"
+        ],
+        "components": [
+          {
+            "form": "arbitrari",
+            "kind": "base",
+            "gloss": "判断する・裁定する"
+          },
+          {
+            "form": "-ation",
+            "kind": "suffix",
+            "gloss": "行為・状態"
+          }
+        ],
+        "rootCandidates": [
+          "arbitr"
+        ],
+        "semanticBridge": "争いに対して判断を下すことから、当事者の間に第三者が入り結論を出す仲裁を表すようになった。",
+        "summary": "arbitrationはarbitr（判断する・裁定する）＋-ationで、仲裁を表す。",
+        "confidence": "high",
+        "notes": "arbitrari系の表面形arbitrと既存の-ation接尾辞を使う。"
+      }
+    },
+    "conceit": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 conceit（考え、概念）・ラテン語 conceptus（取りまとめられたもの）から、うぬぼれや思い上がりの意味へ広がった。 → うぬぼれ、思い上がり"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/conceit",
+          "https://www.merriam-webster.com/dictionary/conceit"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/conceit",
+            "note": "conceitを古フランス語 conceit（概念、考え）・ラテン語 conceptus、concipere（ともに取り上げる、考える）に遡らせ、自己評価の意味への変化を説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/conceit",
+            "note": "conceitの現代語義として、過度な自己評価によるうぬぼれと、文学上の巧みな着想を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・中英語・英語",
+        "etymons": [
+          "conceit",
+          "conceit",
+          "conceptus",
+          "concipere",
+          "con-",
+          "capere"
+        ],
+        "historicalPath": [
+          "ラテン語 con-（ともに）＋capere（取る、つかむ）",
+          "ラテン語 concipere・conceptus（取りまとめて考える、概念）",
+          "古フランス語 conceit・中英語 conceit（考え、概念）",
+          "英語 conceit（着想、うぬぼれ）"
+        ],
+        "components": [
+          {
+            "form": "conceit",
+            "kind": "word",
+            "gloss": "考え・うぬぼれ"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "取りまとめられた考えや着想から、特に自分について抱く過度に高い考え、うぬぼれの意味へ分化した。",
+        "summary": "conceitは語源の経路と意味変化は確認できるが、conceptus系の表面変化が大きいためB型に残す。",
+        "confidence": "medium",
+        "notes": "con＋ceitや既存のcap語根を綴りだけで割り当てない。"
+      }
+    },
+    "pronunciation": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "発音",
+        "root": "nunci",
+        "parts": [
+          {
+            "form": "pro",
+            "kind": "prefix",
+            "gloss": "前へ・公に"
+          },
+          {
+            "form": "nunci",
+            "kind": "root",
+            "gloss": "知らせる・告げる"
+          },
+          {
+            "form": "-ation",
+            "kind": "suffix",
+            "gloss": "〜すること"
+          }
+        ],
+        "derivation": "pro-（前へ・公に）＋nunci（知らせる・告げる）＋-ation（〜すること） → 声に出して公に告げる発音"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/pronunciation",
+          "https://www.merriam-webster.com/dictionary/pronunciation"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/pronunciation",
+            "note": "pronunciationを古フランス語 prononciation、ラテン語 pronuntiationem・pronuntiare（公に告げる）に遡らせ、pro-＋nuntiareの関係を示している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/pronunciation",
+            "note": "pronunciationの現代語義として、語を声に出すときの音の仕方・発音を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "pronunciation",
+          "prononciation",
+          "pronuntiatio",
+          "pronuntiare",
+          "pro-",
+          "nuntiare"
+        ],
+        "historicalPath": [
+          "ラテン語 pro-（前へ、公に）＋nuntiare（知らせる、告げる）",
+          "ラテン語 pronuntiare・pronuntiatio（公に告げる、発声）",
+          "古フランス語 prononciation・英語 pronunciation（発音）"
+        ],
+        "components": [
+          {
+            "form": "pro-",
+            "kind": "prefix",
+            "gloss": "前へ・公に"
+          },
+          {
+            "form": "nuntiare",
+            "kind": "base",
+            "gloss": "知らせる・告げる"
+          },
+          {
+            "form": "-ation",
+            "kind": "suffix",
+            "gloss": "行為・状態"
+          }
+        ],
+        "rootCandidates": [
+          "nunci"
+        ],
+        "semanticBridge": "知らせを公に声に出して告げることから、語や音をどのように発声するかという発音の意味になった。",
+        "summary": "pronunciationはpro-＋nunci（告げる）＋-ationで、発音を表す。",
+        "confidence": "high",
+        "notes": "既存のnunci語根とpro接頭辞・-ation接尾辞を再利用する。"
+      }
+    },
+    "obliquity": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "斜め、偏り、婉曲さ",
+        "root": "obliqu",
+        "parts": [
+          {
+            "form": "obliqu",
+            "kind": "root",
+            "gloss": "斜め・曲がった"
+          },
+          {
+            "form": "-ity",
+            "kind": "suffix",
+            "gloss": "〜であること"
+          }
+        ],
+        "derivation": "obliqu（斜め・曲がった）＋-ity（〜であること） → まっすぐでない斜め、偏り、婉曲さ"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/obliquity",
+          "https://www.merriam-webster.com/dictionary/obliquity"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/obliquity",
+            "note": "obliquityをラテン語 obliquitas（斜め、曲がり）・obliquus（斜めの、曲がった）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/obliquity",
+            "note": "obliquityの現代語義として、斜めであること、道徳的な偏り、婉曲な表現を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "obliquity",
+          "obliquitas",
+          "obliquus",
+          "-ity"
+        ],
+        "historicalPath": [
+          "ラテン語 obliquus（斜めの、曲がった）",
+          "ラテン語 obliquitas（斜め、曲がり）",
+          "フランス語 obliquité・英語 obliquity（斜め、偏り、婉曲さ）"
+        ],
+        "components": [
+          {
+            "form": "obliquus",
+            "kind": "base",
+            "gloss": "斜め・曲がった"
+          },
+          {
+            "form": "-ity",
+            "kind": "suffix",
+            "gloss": "性質・状態"
+          }
+        ],
+        "rootCandidates": [
+          "obliqu"
+        ],
+        "semanticBridge": "物理的にまっすぐでないことから、判断や態度の偏り、直接的でない婉曲さまで表すようになった。",
+        "summary": "obliquityはobliqu（斜め・曲がった）＋-ityで、斜め・偏り・婉曲さを表す。",
+        "confidence": "high",
+        "notes": "ラテン語obliquitasの英語表面形obliquと既存の-ity接尾辞を使う。"
+      }
+    },
+    "rustic": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "田舎風の、素朴な",
+        "root": "rust",
+        "parts": [
+          {
+            "form": "rust",
+            "kind": "root",
+            "gloss": "田舎・農村"
+          },
+          {
+            "form": "-ic",
+            "kind": "suffix",
+            "gloss": "〜に関する・〜の性質の"
+          }
+        ],
+        "derivation": "rust（田舎・農村）＋-ic（〜に関する・〜の性質の） → 田舎に関する、田舎風の、素朴な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/rustic",
+          "https://www.merriam-webster.com/dictionary/rustic"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/rustic",
+            "note": "rusticをラテン語 rusticus（田舎の、農村の）・rus（田舎、開けた土地）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/rustic",
+            "note": "rusticの現代語義として、田舎に関すること、素朴で洗練されていないことを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "rustic",
+          "rusticus",
+          "rus",
+          "-ic"
+        ],
+        "historicalPath": [
+          "ラテン語 rus（田舎、開けた土地）",
+          "ラテン語 rusticus（田舎の、農村の）",
+          "フランス語 rustique・英語 rustic（田舎風の、素朴な）"
+        ],
+        "components": [
+          {
+            "form": "rus",
+            "kind": "base",
+            "gloss": "田舎・農村"
+          },
+          {
+            "form": "-ic",
+            "kind": "suffix",
+            "gloss": "関係・性質"
+          }
+        ],
+        "rootCandidates": [
+          "rust"
+        ],
+        "semanticBridge": "都市ではなく田舎や農村に関することから、素朴で飾り気がなく、洗練されていない様子を表すようになった。",
+        "summary": "rusticはrust（田舎・農村）＋-icで、田舎風の・素朴なという意味になる。",
+        "confidence": "high",
+        "notes": "rus系の英語表面形rustと-ic接尾辞を表示する。"
+      }
+    }
+  }
+}

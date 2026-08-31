@@ -1,0 +1,1019 @@
+{
+  "meta": {
+    "batchId": "batch-032",
+    "note": "未確認B型の次の25語。語源が表面形の派生を支える語はA型へ移し、単純借用・不確かな語源・表面分解が安定しない語はB型に残す。"
+  },
+  "dictionary": {
+    "roots": {
+      "pan": {
+        "gloss": "牧神Pan・恐怖を起こすもの",
+        "origin": "ギリシャ語 Pan / panikos",
+        "note": "panicのPanは牧神の名で、台所用品のpanとは別。Panが起こすとされた突然の恐怖につながる。"
+      },
+      "view": {
+        "gloss": "見る・調べる",
+        "origin": "ラテン語 videre / 古フランス語 veue",
+        "note": "見て確認する基体。reviewでは再び見る意味になる。"
+      },
+      "loyal": {
+        "gloss": "忠実な・誠実な",
+        "origin": "ラテン語 legalis / 古フランス語 loial",
+        "note": "法にかなった、誠実な性質から忠実なという意味へ。loyalty。"
+      },
+      "weal": {
+        "gloss": "幸福・繁栄",
+        "origin": "古英語 wela / 西ゲルマン語系 *welon-",
+        "note": "well-beingや繁栄を表す表面幹。wealthでは抽象名詞接尾辞と結び付く。"
+      },
+      "ignor": {
+        "gloss": "知らない・気づかない",
+        "origin": "ラテン語 ignorare / ignorantia",
+        "note": "ignoranceに現れる表面幹。深い語源ではin-とgnarusの関係があるが、表示はignor＋-anceとする。"
+      },
+      "pover": {
+        "gloss": "貧しい・乏しい",
+        "origin": "ラテン語 pauper / 古フランス語 povre",
+        "note": "povertyに現れるフランス語由来の表面幹。poorと同系だが、綴りの変化を経ている。"
+      },
+      "thank": {
+        "gloss": "感謝・よい思い",
+        "origin": "古英語 þancian / ゲルマン語系 *thankoz",
+        "note": "感謝や思いを表す基体。thankful・thankfullyの基礎になる。"
+      },
+      "tradition": {
+        "gloss": "受け渡された教え・慣習",
+        "origin": "ラテン語 traditio / tradere",
+        "note": "後世へ手渡されたものを表す基体。traditionallyでは形容詞・副詞接尾辞が続く。"
+      },
+      "law": {
+        "gloss": "法律・定め",
+        "origin": "古ノルド語 lagu / ゲルマン語系 *lagam",
+        "note": "定められた規則を表す基体。lawyerはlawに職業を表す接尾辞が付いた形。"
+      }
+    },
+    "affixes": {
+      "-th": {
+        "gloss": "状態を表す名詞",
+        "kind": "suffix",
+        "note": "wealthではwealに付いて、幸福・繁栄の状態を表す。healthなどにも見られる。"
+      },
+      "-ty": {
+        "gloss": "性質・状態",
+        "kind": "suffix",
+        "note": "ラテン語・フランス語系の抽象名詞接尾辞。loyalty・povertyに現れる。"
+      },
+      "-yer": {
+        "gloss": "〜に関わる職業の人",
+        "kind": "suffix",
+        "note": "-ierの英語化・綴り変異。lawyerでは法律に関わる人を表す。"
+      }
+    }
+  },
+  "entries": {
+    "panic": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "パニックになる",
+        "root": "pan",
+        "parts": [
+          { "form": "pan", "kind": "root", "gloss": "牧神Pan・恐怖を起こすもの" },
+          { "form": "-ic", "kind": "suffix", "gloss": "〜に関する" }
+        ],
+        "derivation": "pan（牧神Pan）＋-ic（〜に関する） → Panが起こすとされた突然の恐怖、パニックになる"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/panic",
+          "https://www.merriam-webster.com/dictionary/panic"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/panic", "note": "panicをフランス語 panique・ギリシャ語 panikon（Panに関する）に遡らせ、牧神Panが突然の恐怖を起こすとされたことを説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/panic", "note": "panicの現代語義として、突然で圧倒的な恐怖や、パニックになる動詞用法を確認し、語源をGreek panikos（Panの）としている。" }
+        ],
+        "originLanguage": "ギリシャ語・フランス語・英語",
+        "etymons": ["panic", "panique", "panikon", "panikos", "Pan", "-ic"],
+        "historicalPath": [
+          "ギリシャ語 Pan（牧神）",
+          "ギリシャ語 panikos（Panに関する、Panが起こす恐怖の）",
+          "フランス語 panique・英語 panic（突然の恐怖）",
+          "英語 panic（パニックになる）"
+        ],
+        "components": [
+          { "form": "Pan", "kind": "base", "gloss": "牧神、恐怖を起こす神" },
+          { "form": "-ikos", "kind": "suffix", "gloss": "〜に関する" }
+        ],
+        "rootCandidates": ["pan"],
+        "semanticBridge": "牧神Panが人や群れに突然の恐怖を与えるという信仰から、理由のない圧倒的な恐怖、さらにその状態になる動詞へ広がった。",
+        "summary": "panicはPan（牧神）＋-ic（〜に関する）に由来し、Panが起こすとされた恐怖からパニックになるという意味になった。",
+        "confidence": "high",
+        "notes": "Pan由来の語源とpanicの表面形が対応するためA型にする。英語panとは別語。",
+        "batch": "batch-032"
+      }
+    },
+    "fly": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 flēogan、ゲルマン語系 *fleuganに由来し、空中を移動する動作を表した。 → 飛ぶ、飛行機で行く"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/fly",
+          "https://www.merriam-webster.com/dictionary/fly"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/fly", "note": "flyを古英語 fleogan・ゲルマン祖語 *fleugan、さらに空中を動く意味の語根に遡らせている。flyとfleeの歴史的な混同にも触れている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/fly", "note": "flyの現代語義として、空中を移動すること、飛行機で移動することを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["fly", "flēogan", "*fleugan", "*pleu-"],
+        "historicalPath": [
+          "ゲルマン語系 *fleugan（空中を動く）",
+          "古英語 flēogan",
+          "中英語 flien・英語 fly（飛ぶ）",
+          "英語 fly（飛行機で行く）"
+        ],
+        "components": [
+          { "form": "flēogan", "kind": "word", "gloss": "飛ぶ" }
+        ],
+        "rootCandidates": ["pleu"],
+        "semanticBridge": "空中を移動する基本動作から、飛行機で移動する意味や、速く動く比喩的な用法へ広がった。",
+        "summary": "flyは古いゲルマン語系の単純な動詞で、現代語の表面形に安定した接頭辞・接尾辞分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "fly＋語形変化のような分析は語源分解として表示しない。"
+        ,"batch": "batch-032"
+      }
+    },
+    "swim": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 swimman、ゲルマン祖語 *swimjanに由来し、水中を進む動作を表した。 → 泳ぐ"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/swim",
+          "https://www.merriam-webster.com/dictionary/swim"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/swim", "note": "swimを古英語 swimman・ゲルマン祖語 *swimjan、インド・ヨーロッパ祖語 *swem-に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/swim", "note": "swimの現代語義として、水中を自分の力で進むことや、その関連用法を確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["swim", "swimman", "*swimjan", "*swem-"],
+        "historicalPath": [
+          "インド・ヨーロッパ祖語 *swem-（動く、泳ぐ）",
+          "ゲルマン祖語 *swimjan",
+          "古英語 swimman・中英語 swimmen",
+          "英語 swim（泳ぐ）"
+        ],
+        "components": [
+          { "form": "swimman", "kind": "word", "gloss": "泳ぐ" }
+        ],
+        "rootCandidates": ["swem"],
+        "semanticBridge": "水中を進む基本動作から、泳ぐように動くことや、物事が浮かぶ比喩へ広がった。",
+        "summary": "swimは古いゲルマン語系の単純な動詞で、現代語の表面形に安定した接辞分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "swim＋語形変化のような分析は語源分解として表示しない。",
+        "batch": "batch-032"
+      }
+    },
+    "review": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "見直す",
+        "root": "view",
+        "parts": [
+          { "form": "re", "kind": "prefix", "gloss": "再び" },
+          { "form": "view", "kind": "root", "gloss": "見る・調べる" }
+        ],
+        "derivation": "re-（再び）＋view（見る・調べる） → もう一度見る、見直す"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/review",
+          "https://www.merriam-webster.com/dictionary/review"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/review", "note": "reviewを古フランス語 reveue・ラテン語 revidereに遡らせ、re-（再び）＋videre（見る）および英語re-viewの関係を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/review", "note": "reviewの現代語義として、もう一度調べること、復習すること、批評することを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["review", "re-", "view", "revidere", "videre", "*weid-"],
+        "historicalPath": [
+          "インド・ヨーロッパ祖語 *weid-（見る）",
+          "ラテン語 revidere（再び見る）",
+          "古フランス語 reveue・英語 review（再点検）",
+          "英語 review（見直す、復習する）"
+        ],
+        "components": [
+          { "form": "re-", "kind": "prefix", "gloss": "再び" },
+          { "form": "videre / view", "kind": "base", "gloss": "見る" }
+        ],
+        "rootCandidates": ["view", "vid"],
+        "semanticBridge": "一度見たものをもう一度見ることから、内容を確認・修正するために見直すこと、学習内容を復習することへ広がった。",
+        "summary": "reviewはre-（再び）＋view（見る）で、もう一度見ることから見直す・復習するという意味になる。",
+        "confidence": "high",
+        "notes": "表示では英語の表面形に合わせてviewを語根とし、深い語源のvidereとの関係は研究欄に残す。",
+        "batch": "batch-032"
+      }
+    },
+    "tie": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 teag／tigan、ゲルマン語系 *taugoに由来し、結び付ける動作を表した。 → 結ぶ、縛る"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/tie",
+          "https://www.merriam-webster.com/dictionary/tie"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/tie", "note": "tieを古英語 teag・tigan、ゲルマン祖語 *taugo、インド・ヨーロッパ祖語 *deuk-に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/tie", "note": "tieの現代語義として、紐などで結ぶこと、関係を結び付けることを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["tie", "teag", "tigan", "*taugo", "*deuk-"],
+        "historicalPath": [
+          "インド・ヨーロッパ祖語 *deuk-（導く、引く）",
+          "ゲルマン語系 *taugo",
+          "古英語 teag／tigan・中英語 tien",
+          "英語 tie（結ぶ）"
+        ],
+        "components": [
+          { "form": "tigan", "kind": "word", "gloss": "結ぶ" }
+        ],
+        "rootCandidates": ["deuk"],
+        "semanticBridge": "物を引き寄せて結び付ける動作から、人や物事の関係を結ぶこと、競技で同点になることへ広がった。",
+        "summary": "tieは古いゲルマン語系の単純な動詞で、現代語の表面形に安定した接辞分解を設定しないためB型に残す。",
+        "confidence": "medium",
+        "notes": "語源上の引く・導くという関係は確認できるが、表示用の英語の語根・接辞には変換しない。",
+        "batch": "batch-032"
+      }
+    },
+    "earn": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 earnian（働いて得る、値する）、ゲルマン語系 *aznonに由来する。 → 稼ぐ、得る"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/earn",
+          "https://www.merriam-webster.com/dictionary/earn"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/earn", "note": "earnを古英語 earnian（値する、労働して得る）、ゲルマン祖語 *aznon、収穫・労働に関わる語へ遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/earn", "note": "earnの現代語義として、労働や活動の対価として金銭・報酬を得ることを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["earn", "earnian", "*aznon", "*azno", "*es-en-"],
+        "historicalPath": [
+          "インド・ヨーロッパ祖語 *es-en-（収穫、落ちる）",
+          "ゲルマン語系 *azno（労働、畑仕事）・*aznon（働いて得る）",
+          "古英語 earnian（値する、稼ぐ）",
+          "英語 earn（稼ぐ、得る）"
+        ],
+        "components": [
+          { "form": "earnian", "kind": "word", "gloss": "働いて得る、値する" }
+        ],
+        "rootCandidates": ["es"],
+        "semanticBridge": "収穫や労働の対価として得ることから、働いて金銭や評価を得ること、さらに値することへ広がった。",
+        "summary": "earnは古いゲルマン語系の単純な動詞で、現代語の表面形に安定した接辞分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "earn＋語形変化のような分析は語源分解として表示しない。",
+        "batch": "batch-032"
+      }
+    },
+    "hire": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 hyrian、ゲルマン祖語 *hurjanに由来し、賃金を払って雇う・借りる動作を表した。 → 雇う、借りる"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/hire",
+          "https://www.merriam-webster.com/dictionary/hire"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/hire", "note": "hireを古英語 hyrian（サービスに賃金を払う、雇う）、ゲルマン祖語 *hurjanに遡らせ、語源は不確かとも記している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/hire", "note": "hireの現代語義として、賃金を払って人を雇うこと、料金を払って物を借りることを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["hire", "hyrian", "*hurjan", "*hurja-"],
+        "historicalPath": [
+          "ゲルマン祖語 *hurjan（雇う、賃金を払う）",
+          "古英語 hyrian（雇う、借りる）",
+          "中英語 huren／hire",
+          "英語 hire（雇う、借りる）"
+        ],
+        "components": [
+          { "form": "hyrian", "kind": "word", "gloss": "雇う、賃金を払う" }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "仕事やサービスの対価を支払うことから、人を雇うことと物を料金で借りることの両方へ広がった。",
+        "summary": "hireは語源が不確かな古いゲルマン語系の単純語で、現代語の表面形に安定した接辞分解を設定しないためB型に残す。",
+        "confidence": "medium",
+        "notes": "hire＋語形変化のような分析は語源分解として表示しない。",
+        "batch": "batch-032"
+      }
+    },
+    "pour": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "語源は不確かで、古フランス語 purer・ラテン語 purareに由来する可能性がある。 → 注ぐ、激しく降る"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/pour",
+          "https://www.merriam-webster.com/dictionary/pour"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/pour", "note": "pourは語源不明としたうえで、フランダース方言の古フランス語 purer、ラテン語 purare（清める）に由来する可能性を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/pour", "note": "pourの現代語義として、液体などを流し出す・注ぐこと、雨などが激しく降ることを確認した。" }
+        ],
+        "originLanguage": "不確か・古フランス語／ラテン語の可能性・英語",
+        "etymons": ["pour", "purer", "purare", "purus"],
+        "historicalPath": [
+          "中世英語 pouren（注ぐ）",
+          "古フランス語 purer（ふるいにかける、注ぎ出す）の可能性",
+          "ラテン語 purare / purusとの関連の可能性",
+          "英語 pour（注ぐ、激しく降る）"
+        ],
+        "components": [
+          { "form": "purer", "kind": "word", "gloss": "注ぎ出す" }
+        ],
+        "rootCandidates": ["pur"],
+        "semanticBridge": "容器から液体や粒状物を流し出す動作から、液体が流れ出ること、さらに雨が激しく降ることへ広がった。",
+        "summary": "pourは語源経路に不確かさがあり、現代語の表面形へ安全な語根・接辞分解を設定できないためB型に残す。",
+        "confidence": "low",
+        "notes": "pureとの綴りの類似だけでpur語根を表示しない。",
+        "batch": "batch-032"
+      }
+    },
+    "fortune": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 fortune、ラテン語 fortuna（運命、幸運）に由来し、人生の運や財産を表すようになった。 → 幸運、財産"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/fortune",
+          "https://www.merriam-webster.com/dictionary/fortune"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/fortune", "note": "fortuneを古フランス語 fortune・ラテン語 fortuna、fors（運、偶然）に遡らせ、財産の意味が人生の境遇から発展したと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/fortune", "note": "fortuneの現代語義として、幸運・運命・大きな財産を確認し、語源をLatin fortunaとしている。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["fortune", "fortune", "fortuna", "fors", "fortis"],
+        "historicalPath": [
+          "ラテン語 fors（偶然、運）・fortuna（運命、幸運）",
+          "古フランス語 fortune（運、幸不幸）",
+          "中英語 fortune（運命、幸運）",
+          "英語 fortune（幸運、財産）"
+        ],
+        "components": [
+          { "form": "fortuna", "kind": "word", "gloss": "運命、幸運" }
+        ],
+        "rootCandidates": ["fors", "bher"],
+        "semanticBridge": "偶然によって定まる人生の運から、よい運、さらにその人の境遇を示す財産へ意味が広がった。",
+        "summary": "fortuneはラテン語fortunaに由来する単純な借用語で、既存のfort（強い）とは別系統のためB型に残す。",
+        "confidence": "high",
+        "notes": "fortunaのfortを英語fortや既存のfort語根と同一視しない。",
+        "batch": "batch-032"
+      }
+    },
+    "loyalty": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "忠誠",
+        "root": "loyal",
+        "parts": [
+          { "form": "loyal", "kind": "root", "gloss": "忠実な・誠実な" },
+          { "form": "-ty", "kind": "suffix", "gloss": "性質・状態" }
+        ],
+        "derivation": "loyal（忠実な）＋-ty（性質・状態） → 忠実な性質、忠誠"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/loyalty",
+          "https://www.merriam-webster.com/dictionary/loyalty"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/loyalty", "note": "loyaltyを古フランス語 loialte・loial、ラテン語 legalemに遡らせ、語尾を-tyと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/loyalty", "note": "loyaltyの現代語義として、個人や組織への忠実さ・献身を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["loyalty", "loialte", "loial", "legalem", "lex", "-ty"],
+        "historicalPath": [
+          "ラテン語 lex / legalis（法律、法にかなった）",
+          "古フランス語 loial（誠実な、忠実な）",
+          "古フランス語 loialte・英語 loyal（忠実な）",
+          "英語 loyal＋-ty → loyalty（忠誠）"
+        ],
+        "components": [
+          { "form": "loial", "kind": "base", "gloss": "忠実な、誠実な" },
+          { "form": "-te / -ty", "kind": "suffix", "gloss": "性質・状態" }
+        ],
+        "rootCandidates": ["loyal", "legal"],
+        "semanticBridge": "法にかなった誠実さを表す形容詞から、人や組織に対する忠実な性質・献身を表す抽象名詞へ広がった。",
+        "summary": "loyaltyはloyal（忠実な）＋-ty（性質・状態）で、忠実な性質、忠誠という意味になる。",
+        "confidence": "high",
+        "notes": "-ty接尾辞を新規登録し、loyalを表面上の語根として表示する。",
+        "batch": "batch-032"
+      }
+    },
+    "wealth": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "富",
+        "root": "weal",
+        "parts": [
+          { "form": "weal", "kind": "root", "gloss": "幸福・繁栄" },
+          { "form": "-th", "kind": "suffix", "gloss": "状態を表す名詞" }
+        ],
+        "derivation": "weal（幸福・繁栄）＋-th（状態を表す名詞） → 豊かな状態、富"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/wealth",
+          "https://www.merriam-webster.com/dictionary/wealth"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/wealth", "note": "wealthを中英語 welth、古英語 wela／wele（幸福、繁栄）に結び付け、healthとの類推および-th接尾辞を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/wealth", "note": "wealthの現代語義として、豊富な資産・物質的な繁栄を確認した。" }
+        ],
+        "originLanguage": "古英語・中英語・ゲルマン語系・英語",
+        "etymons": ["wealth", "welth", "wele", "wela", "-th"],
+        "historicalPath": [
+          "古英語 wela（富、幸福、繁栄）",
+          "中英語 wele（幸福、繁栄）",
+          "中英語 welth（幸福な状態、物質的な豊かさ）",
+          "英語 weal＋-th → wealth（富、豊かさ）"
+        ],
+        "components": [
+          { "form": "wele / weal", "kind": "base", "gloss": "幸福、繁栄" },
+          { "form": "-th", "kind": "suffix", "gloss": "状態を表す名詞" }
+        ],
+        "rootCandidates": ["weal", "wel"],
+        "semanticBridge": "幸福や繁栄の状態を表す語から、物質や資産が豊富な状態、富へ意味が具体化した。",
+        "summary": "wealthはweal（幸福・繁栄）＋-th（状態を表す名詞）で、豊かな状態、富という意味になる。",
+        "confidence": "medium",
+        "notes": "語源資料がhealthとの類推を示すため、-thを表示するが、単純な現代英語の接尾辞として過度に一般化しない。",
+        "batch": "batch-032"
+      }
+    },
+    "rage": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 rage、ラテン語 rabies（狂気、激怒）に由来し、激しい怒りや熱情を表すようになった。 → 激怒、怒り"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/rage",
+          "https://www.merriam-webster.com/dictionary/rage"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/rage", "note": "rageを古フランス語 rage・中世ラテン語 rabia・ラテン語 rabies（狂気、激怒）に遡らせ、rabere（狂う、わめく）との関係を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/rage", "note": "rageの現代語義として、制御できない激しい怒りや、激しく続く動作を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["rage", "raige", "rabia", "rabies", "rabere", "*rebh-"],
+        "historicalPath": [
+          "ラテン語 rabere（狂う、わめく）・rabies（狂気、激怒）",
+          "中世ラテン語 rabia",
+          "古フランス語 rage・中英語 rage",
+          "英語 rage（激怒、怒り）"
+        ],
+        "components": [
+          { "form": "rabies", "kind": "word", "gloss": "狂気、激怒" }
+        ],
+        "rootCandidates": ["rab"],
+        "semanticBridge": "狂気や激しい熱情を表す語から、人の激怒や嵐・火などの激しい動きへ意味が広がった。",
+        "summary": "rageはフランス語を経たラテン語系の単純な借用語で、現代語の表面形に安全な語根・接辞分解を設定しないためB型に残す。",
+        "confidence": "medium",
+        "notes": "rabiesとの関係は記録するが、rabを表示用の英語語根としては採用しない。",
+        "batch": "batch-032"
+      }
+    },
+    "ignorance": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "無知",
+        "root": "ignor",
+        "parts": [
+          { "form": "ignor", "kind": "root", "gloss": "知らない・気づかない" },
+          { "form": "-ance", "kind": "suffix", "gloss": "〜すること・状態" }
+        ],
+        "derivation": "ignor（知らない・気づかない）＋-ance（〜すること・状態） → 知らない状態、無知"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/ignorance",
+          "https://www.merriam-webster.com/dictionary/ignorance"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/ignorance", "note": "ignoranceを古フランス語 ignorance・ラテン語 ignorantia（知識の不足）に遡らせ、ignorare（知らない、気づかない）との関係を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/ignorance", "note": "ignoranceの現代語義として、知識や情報が不足している状態を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["ignorance", "ignorantia", "ignorare", "ignorant", "in-", "gnarus", "-ance"],
+        "historicalPath": [
+          "ラテン語 in-（〜でない）＋gnarus（知っている）",
+          "ラテン語 ignorare（知らない、気づかない）",
+          "ラテン語 ignorantia・古フランス語 ignorance",
+          "英語 ignorance（無知、知らないこと）"
+        ],
+        "components": [
+          { "form": "ignorare", "kind": "base", "gloss": "知らない、気づかない" },
+          { "form": "-antia", "kind": "suffix", "gloss": "状態" }
+        ],
+        "rootCandidates": ["ignor", "gnor"],
+        "semanticBridge": "知っていない状態を表す動詞から、知識や情報が欠けている状態を表す名詞へ広がった。",
+        "summary": "ignoranceはignor（知らない）＋-ance（状態）で、知らない状態、無知という意味になる。",
+        "confidence": "high",
+        "notes": "表示ではignor＋-anceとし、in-＋gnarusという深い語源分解は研究欄に残す。",
+        "batch": "batch-032"
+      }
+    },
+    "poverty": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "貧困",
+        "root": "pover",
+        "parts": [
+          { "form": "pover", "kind": "root", "gloss": "貧しい・乏しい" },
+          { "form": "-ty", "kind": "suffix", "gloss": "性質・状態" }
+        ],
+        "derivation": "pover（貧しい・乏しい）＋-ty（性質・状態） → 貧しい状態、貧困"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/poverty",
+          "https://www.merriam-webster.com/dictionary/poverty"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/poverty", "note": "povertyを古フランス語 poverte・ラテン語 paupertatem、pauper（貧しい）に遡らせ、-ty接尾辞との関係も示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/poverty", "note": "povertyの現代語義として、物質的な資源や金銭が不足している状態を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["poverty", "poverte", "paupertatem", "pauper", "-ty", "*pau-", "*pere-"],
+        "historicalPath": [
+          "ラテン語 pauper（貧しい、乏しい）",
+          "ラテン語 paupertas / paupertatem（貧困）",
+          "古フランス語 poverte・中英語 poverty",
+          "英語 poverty（貧困、欠乏）"
+        ],
+        "components": [
+          { "form": "pauper / pover", "kind": "base", "gloss": "貧しい、乏しい" },
+          { "form": "-ty", "kind": "suffix", "gloss": "性質・状態" }
+        ],
+        "rootCandidates": ["pover", "pau"],
+        "semanticBridge": "貧しく乏しい状態を表す形容詞・語幹から、金銭や生活資源が欠けた状態を表す名詞へ広がった。",
+        "summary": "povertyはpover（貧しい・乏しい）＋-ty（性質・状態）として表面分解でき、貧困という意味になる。",
+        "confidence": "medium",
+        "notes": "poverは古フランス語由来の表面幹で、英語poorとの綴りの差は歴史的な変化として扱う。",
+        "batch": "batch-032"
+      }
+    },
+    "thankfully": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "ありがたいことに",
+        "root": "thank",
+        "parts": [
+          { "form": "thank", "kind": "root", "gloss": "感謝・よい思い" },
+          { "form": "-ful", "kind": "suffix", "gloss": "〜に満ちた" },
+          { "form": "-ly", "kind": "suffix", "gloss": "〜な様子で" }
+        ],
+        "derivation": "thank（感謝）＋-ful（〜に満ちた）＋-ly（〜な様子で） → 感謝に満ちた様子で、ありがたいことに"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/thankful",
+          "https://www.merriam-webster.com/dictionary/thankfully"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/thankful", "note": "thankfulをthank＋-fulと説明し、thankを古英語 þancian・ゲルマン語系 *thankozに遡らせている。thankfullyが古英語からあることも確認した。" },
+          { "url": "https://www.merriam-webster.com/dictionary/thankfully", "note": "thankfullyの現代語義として、幸運や感謝を表す文修飾副詞の用法を確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["thankfully", "thankful", "thank", "þancian", "*thankoz", "-ful", "-ly"],
+        "historicalPath": [
+          "ゲルマン語系 *thankoz（思い、感謝）",
+          "古英語 þancian（感謝する）・英語 thank",
+          "英語 thank＋-ful → thankful（感謝に満ちた）",
+          "英語 thankful＋-ly → thankfully（ありがたいことに）"
+        ],
+        "components": [
+          { "form": "thank", "kind": "base", "gloss": "感謝、よい思い" },
+          { "form": "-ful", "kind": "suffix", "gloss": "満ちた" },
+          { "form": "-ly", "kind": "suffix", "gloss": "副詞化" }
+        ],
+        "rootCandidates": ["thank"],
+        "semanticBridge": "感謝を表す基体に『満ちた』を加え、さらにその状態であることを示す副詞になった。",
+        "summary": "thankfullyはthank（感謝）＋-ful＋-lyで、感謝に満ちた様子で、ありがたいことにという意味になる。",
+        "confidence": "high",
+        "notes": "既存の-ful/-ly接尾辞を再利用する。",
+        "batch": "batch-032"
+      }
+    },
+    "traditionally": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "伝統的に",
+        "root": "tradition",
+        "parts": [
+          { "form": "tradition", "kind": "root", "gloss": "受け渡された教え・慣習" },
+          { "form": "-al", "kind": "suffix", "gloss": "〜に関する" },
+          { "form": "-ly", "kind": "suffix", "gloss": "〜な様子で" }
+        ],
+        "derivation": "tradition（受け渡された慣習）＋-al（〜に関する）＋-ly（〜な様子で） → 伝統に関する様子で、伝統的に"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/traditional",
+          "https://www.merriam-webster.com/dictionary/traditionally"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/traditional", "note": "traditionalをtradition＋-alと説明し、traditionをラテン語 traditio・tradere（手渡す）に遡らせている。traditionallyも関連語として示される。" },
+          { "url": "https://www.merriam-webster.com/dictionary/traditionally", "note": "traditionallyの現代語義として、伝統や慣習に従う方法で、昔から行われてきた方法で、という用法を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["traditionally", "traditional", "tradition", "traditio", "tradere", "trans-", "dare", "-al", "-ly"],
+        "historicalPath": [
+          "ラテン語 trans-（越えて）＋dare（与える）",
+          "ラテン語 tradere / traditio（手渡すこと、受け継がれた教え）",
+          "英語 tradition＋-al → traditional（伝統に関する）",
+          "英語 traditional＋-ly → traditionally（伝統的に）"
+        ],
+        "components": [
+          { "form": "tradition", "kind": "base", "gloss": "受け継がれた慣習" },
+          { "form": "-al", "kind": "suffix", "gloss": "〜に関する" },
+          { "form": "-ly", "kind": "suffix", "gloss": "副詞化" }
+        ],
+        "rootCandidates": ["tradition", "tradit"],
+        "semanticBridge": "人から人へ手渡された教えや慣習を表す語から、その伝統に従う性質、さらにその方法で行う副詞へ発達した。",
+        "summary": "traditionallyはtradition（受け渡された慣習）＋-al＋-lyで、伝統的に、昔からという意味になる。",
+        "confidence": "high",
+        "notes": "表示では学習上の基体としてtraditionを用い、tradereまでの深い語源は研究欄に記録する。",
+        "batch": "batch-032"
+      }
+    },
+    "bride": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 bryd、ゲルマン祖語 *bruthizに由来し、結婚する女性を表した。 → 花嫁、新婦"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/bride",
+          "https://www.merriam-webster.com/dictionary/bride"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/bride", "note": "brideを古英語 bryd・ゲルマン祖語 *bruthiz（結婚する女性）に遡らせ、語源は不確かと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/bride", "note": "brideの現代語義として、結婚したばかりまたは結婚予定の女性を確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["bride", "bryd", "*bruthiz", "*bhreu-"],
+        "historicalPath": [
+          "ゲルマン祖語 *bruthiz（結婚する女性）",
+          "古英語 bryd",
+          "中英語 bride",
+          "英語 bride（花嫁、新婦）"
+        ],
+        "components": [
+          { "form": "bryd", "kind": "word", "gloss": "花嫁" }
+        ],
+        "rootCandidates": ["bhreu"],
+        "semanticBridge": "夫の家に入る新婦を表す古い語から、結婚したばかりの女性や結婚予定の女性を表す現代語へ続いている。",
+        "summary": "brideは古いゲルマン語系の単純語で、語源も不確かなため、現代語の表面形に語根・接辞分解を設定せずB型に残す。",
+        "confidence": "medium",
+        "notes": "brewingやcookingに関わるPIE語根説は可能性として記録するが、表示用の分解には使わない。",
+        "batch": "batch-032"
+      }
+    },
+    "lawyer": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "弁護士",
+        "root": "law",
+        "parts": [
+          { "form": "law", "kind": "root", "gloss": "法律・定め" },
+          { "form": "-yer", "kind": "suffix", "gloss": "〜に関わる職業の人" }
+        ],
+        "derivation": "law（法律）＋-yer（〜に関わる職業の人） → 法律に携わる人、弁護士"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/lawyer",
+          "https://www.merriam-webster.com/dictionary/lawyer"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/lawyer", "note": "lawyerを中英語 lawe（法律）＋-iereに分け、-yerは後の綴りとして説明している。lawは古ノルド語 lagu（定め）に遡る。" },
+          { "url": "https://www.merriam-webster.com/dictionary/lawyer", "note": "lawyerの現代語義として、法律を専門とし法的助言や法廷活動を行う人を確認した。" }
+        ],
+        "originLanguage": "古ノルド語・フランス語・中英語・英語",
+        "etymons": ["lawyer", "law", "lawe", "lagu", "-ier", "-yer"],
+        "historicalPath": [
+          "古ノルド語 lagu（定め、法律）",
+          "中英語 lawe（法律）",
+          "中英語 lawe＋-iere → lauier / lawer（法律家）",
+          "英語 law＋-yer → lawyer（弁護士）"
+        ],
+        "components": [
+          { "form": "law", "kind": "base", "gloss": "法律" },
+          { "form": "-iere / -yer", "kind": "suffix", "gloss": "職業に関わる人" }
+        ],
+        "rootCandidates": ["law", "lag"],
+        "semanticBridge": "定められた規則を表すlawから、その法律を専門に扱う職業の人を表す語になった。",
+        "summary": "lawyerはlaw（法律）＋-yer（職業に関わる人）で、法律に携わる人、弁護士という意味になる。",
+        "confidence": "high",
+        "notes": "-yerは中英語-ierの英語化した表面形として登録する。",
+        "batch": "batch-032"
+      }
+    },
+    "warrior": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 guerroieor／古北フランス語 werreier（戦争をする者）に由来し、戦う人を表した。 → 戦士、武人"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/warrior",
+          "https://www.merriam-webster.com/dictionary/warrior"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/warrior", "note": "warriorを古北フランス語 werreier・古フランス語 guerroieor（戦争をする者）に遡らせ、warとの関係を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/warrior", "note": "warriorの現代語義として、戦争や戦闘に従事する人を確認した。" }
+        ],
+        "originLanguage": "ゲルマン語系・古フランス語・英語",
+        "etymons": ["warrior", "werreier", "guerroieor", "werre", "war"],
+        "historicalPath": [
+          "ゲルマン語系 *werra（混乱、争い）",
+          "古フランス語 guerre / werre（戦争）",
+          "古フランス語 guerroieor（戦争をする者）",
+          "英語 warrior（戦士、武人）"
+        ],
+        "components": [
+          { "form": "werre", "kind": "base", "gloss": "戦争" },
+          { "form": "-eor", "kind": "suffix", "gloss": "〜する人" }
+        ],
+        "rootCandidates": ["war", "wer"],
+        "semanticBridge": "争いや戦争をする人を表すフランス語の職業名から、戦闘に従事する人、特に勇敢な戦士を表す語へ定着した。",
+        "summary": "warriorはwarに関係するが、フランス語の動詞・行為者形成を経て綴りも変化しているため、単純なwar＋接尾辞として表示せずB型に残す。",
+        "confidence": "high",
+        "notes": "war＋-orのような表面上の分解は、実際の古フランス語形成を十分に表さないため採用しない。",
+        "batch": "batch-032"
+      }
+    },
+    "surgeon": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語・ラテン語を経て、ギリシャ語 kheirourgos（手で行う仕事をする人）に由来する。 → 外科医"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/surgeon",
+          "https://www.merriam-webster.com/dictionary/surgeon"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/surgeon", "note": "surgeonを古フランス語 surgien・ラテン語 chirurgia・ギリシャ語 kheirourgos（手の仕事をする人）に遡らせ、kheir（手）＋ergon（仕事）を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/surgeon", "note": "surgeonの現代語義として、手術を行う医師を確認し、Greek cheirourgos（手で働く人）に由来することを確認した。" }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・フランス語・英語",
+        "etymons": ["surgeon", "surgien", "chirurgia", "kheirourgos", "kheir", "ergon"],
+        "historicalPath": [
+          "ギリシャ語 kheir（手）＋ergon（仕事）",
+          "ギリシャ語 kheirourgos（手で仕事をする人）・chirurgia（外科）",
+          "ラテン語 chirurgia・古フランス語 surgien",
+          "英語 surgeon（外科医）"
+        ],
+        "components": [
+          { "form": "kheir", "kind": "root", "gloss": "手" },
+          { "form": "ergon", "kind": "root", "gloss": "仕事" }
+        ],
+        "rootCandidates": ["chirurg", "kheir", "erg"],
+        "semanticBridge": "手を使う仕事をする人というギリシャ語の構成から、手術によって治療する医師を表す語へ発達した。",
+        "summary": "surgeonは語源上は手＋仕事の複合だが、現代のsurgeonにはその構成要素が表面上残らず、既存のsurg（立ち上がる）とも別系統なのでB型に残す。",
+        "confidence": "high",
+        "notes": "surgの綴りが見えることだけを理由に、surg（立ち上がる）語根へ接続しない。",
+        "batch": "batch-032"
+      }
+    },
+    "globe": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 globe、ラテン語 globus（丸い塊、球）に由来する。 → 地球儀、球体、地球"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/globe",
+          "https://www.merriam-webster.com/dictionary/globe"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/globe", "note": "globeを古フランス語 globe・ラテン語 globus（丸い塊、球）に遡らせ、土の塊を表すglebaとの関係は可能性としている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/globe", "note": "globeの現代語義として、球体、地球儀、地球を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["globe", "globus", "gleba", "glomus"],
+        "historicalPath": [
+          "ラテン語 globus（丸い塊、球）",
+          "古フランス語 globe",
+          "中英語 globe（大きな塊、球）",
+          "英語 globe（球体、地球儀、地球）"
+        ],
+        "components": [
+          { "form": "globus", "kind": "word", "gloss": "丸い塊、球" }
+        ],
+        "rootCandidates": ["glob"],
+        "semanticBridge": "丸い塊や球を表す語から、人工の地球儀、さらに地球そのものを表す語へ意味が広がった。",
+        "summary": "globeはラテン語由来の単純な借用語で、現代語の表面形に接辞を伴う安定した分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "globを表示用語根として登録せず、globalなど関連語の基体と混同しない。",
+        "batch": "batch-032"
+      }
+    },
+    "branch": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 branche、後期ラテン語 branca（足跡、爪）に由来し、枝分かれした形を表すようになった。 → 枝；支店、部門"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/branch",
+          "https://www.merriam-webster.com/dictionary/branch"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/branch", "note": "branchを古フランス語 branche・後期ラテン語 branca（足跡、爪）に遡らせ、形の類似から枝の意味につながったと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/branch", "note": "branchの現代語義として、木の枝、分岐、組織の支店や部門を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["branch", "branche", "branca"],
+        "historicalPath": [
+          "後期ラテン語 branca（足跡、爪）",
+          "古フランス語 branche（枝、分枝）",
+          "中英語 braunch（木の枝、分岐）",
+          "英語 branch（枝、支店、部門）"
+        ],
+        "components": [
+          { "form": "branca", "kind": "word", "gloss": "足跡、爪" }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "爪や足跡の形との類似から木の枝を表す語となり、さらに分岐する組織や支店へ比喩的に広がった。",
+        "summary": "branchは語源上の形の連想で成立したフランス語系の単純借用語で、表面形に安全な接辞分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "branchをbran＋chなどに分ける綴り合わせは採用しない。",
+        "batch": "batch-032"
+      }
+    },
+    "scale": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "魚や蛇のうろこ、はかり、目盛り、登る動作には複数の語源経路があり、ゲルマン語系 *skalaやラテン語 scalaに関係する。 → 規模；目盛り；はかり；うろこ"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/scale",
+          "https://www.merriam-webster.com/dictionary/scale"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/scale", "note": "scaleについて、うろこ・はかり・目盛り・登る動作を別々に説明し、ゲルマン語系 *skalaとラテン語 scala、PIE語根との関係を整理している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/scale", "note": "scaleの現代語義として、測定の目盛り・規模・はかり・魚のうろこを確認した。" }
+        ],
+        "originLanguage": "ゲルマン語系・ラテン語・フランス語・英語",
+        "etymons": ["scale", "skala", "scala", "scandere", "*skel-", "*skand-"],
+        "historicalPath": [
+          "ゲルマン語系 *skala（殻、うろこ、器）／ラテン語 scala（はしご）",
+          "古フランス語 escale・中英語 scale",
+          "はかり・目盛り・登る動作へそれぞれ意味が展開",
+          "英語 scale（規模、目盛り、はかり、うろこ）"
+        ],
+        "components": [
+          { "form": "skala", "kind": "word", "gloss": "殻、うろこ、器" },
+          { "form": "scala", "kind": "word", "gloss": "はしご" }
+        ],
+        "rootCandidates": ["skel", "skand"],
+        "semanticBridge": "殻や半分に割れた器、はしごなどの形・機能から、うろこ、はかり、段階的な目盛りや規模の意味が分岐した。",
+        "summary": "scaleは同形の語に複数の語源経路と語義が重なっているため、単一の表面語根・接辞へまとめずB型に残す。",
+        "confidence": "high",
+        "notes": "一つのscaleにうろこ・はかり・登る・規模を無理に同じ語根として表示しない。",
+        "batch": "batch-032"
+      }
+    },
+    "trail": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 trailler、さらにラテン語 trahere（引く）に関係する可能性があり、引きずることから道筋を表すようになった。 → 小道、登山道"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/trail",
+          "https://www.merriam-webster.com/dictionary/trail"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/trail", "note": "trailを古フランス語 trailler（引く、獲物の匂いを追う）に遡らせ、俗ラテン語 *tragulare・ラテン語 trahere（引く）との関係は一般に想定されるが確定的でないと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/trail", "note": "trailの現代語義として、歩いた跡・動物の痕跡・未開地の道、後ろから追うことを確認した。" }
+        ],
+        "originLanguage": "ラテン語の可能性・フランス語・英語",
+        "etymons": ["trail", "trailer", "trailler", "*tragulare", "trahere", "*tragh-"],
+        "historicalPath": [
+          "ラテン語 trahere（引く）との関係が想定される",
+          "古フランス語 trailler（引きずる、匂いを追う）",
+          "中英語 trailen（衣服などを後ろに引く）",
+          "英語 trail（跡、小道、後を追う）"
+        ],
+        "components": [
+          { "form": "trailler", "kind": "word", "gloss": "引きずる、追う" }
+        ],
+        "rootCandidates": ["trag", "tract"],
+        "semanticBridge": "後ろへ引きずることや獲物の匂いを追うことから、通った跡、自然にできた道、人や物の後を追うことへ広がった。",
+        "summary": "trailはフランス語由来でラテン語との関係にも不確かさがあり、現代語の表面形に安全な語根・接辞分解を設定しないためB型に残す。",
+        "confidence": "medium",
+        "notes": "trailとtractの関係は研究候補として残すが、同一語根として表示しない。",
+        "batch": "batch-032"
+      }
+    },
+    "glory": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 glorie、ラテン語 gloria（名声、賞賛）に由来する。 → 栄光、名誉"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/glory",
+          "https://www.merriam-webster.com/dictionary/glory"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/glory", "note": "gloryを古フランス語 glorie・ラテン語 gloria（名声、賞賛）に遡らせ、さらに知識・名声の語源説は学説が分かれると説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/glory", "note": "gloryの現代語義として、名誉・賞賛・輝かしい状態や、栄誉を与える動詞用法を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["glory", "glorie", "gloria", "doxa", "*gnor-"],
+        "historicalPath": [
+          "ラテン語 gloria（名声、賞賛、名誉）",
+          "古フランス語 glorie",
+          "中英語 gloire（神の栄光、世俗の名誉）",
+          "英語 glory（栄光、名誉）"
+        ],
+        "components": [
+          { "form": "gloria", "kind": "word", "gloss": "名声、賞賛" }
+        ],
+        "rootCandidates": ["glor", "gnor"],
+        "semanticBridge": "神や人に向けられる賞賛・名声から、輝かしい名誉や壮大さ、さらに誇るという動詞の意味へ広がった。",
+        "summary": "gloryはラテン語由来の単純な借用語で、語源説にも不確かさがあるため、現代語の表面形に安全な接辞分解を設定せずB型に残す。",
+        "confidence": "medium",
+        "notes": "glorifyなど関連語の存在だけでgloryをglor＋接辞と表示しない。",
+        "batch": "batch-032"
+      }
+    }
+  }
+}

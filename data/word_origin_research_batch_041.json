@@ -1,0 +1,747 @@
+{
+  "meta": {
+    "batchId": "batch-041",
+    "note": "未確認B型の次の25語。出典が表面形の語幹と接辞の対応を直接支える語はA型へ、複合語・活用形・単純借用語・語形上の不確実性がある語はB型に残す。"
+  },
+  "dictionary": {
+    "roots": {
+      "assign": {
+        "gloss": "割り当てる・印を付ける",
+        "origin": "ラテン語 assignare / 古フランス語 assigner",
+        "note": "対象に印を付けて割り当てるイメージ。assignment。"
+      },
+      "afford": {
+        "gloss": "成し遂げる・余裕がある",
+        "origin": "古英語 geforðian / 中英語 aforth",
+        "note": "物事を前へ進めて成し遂げることから、費用を負担できる余裕の意味へ広がった。affordable。"
+      },
+      "color": {
+        "gloss": "色・外観",
+        "origin": "ラテン語 color / 古フランス語 color",
+        "note": "見える色や外観を表す基体。colorful。"
+      },
+      "lug": {
+        "gloss": "ゆっくり引きずる",
+        "origin": "スカンジナビア語系 lugga / 英語 lug",
+        "note": "重い物を力をかけて引きずる動作。luggage。"
+      },
+      "temper": {
+        "gloss": "ほどよく混ぜる・調整する",
+        "origin": "ラテン語 temperare",
+        "note": "物を適切な割合に混ぜ、極端さを調整するイメージ。temperature。"
+      },
+      "fam": {
+        "gloss": "話す・評判",
+        "origin": "ラテン語 fama / インド・ヨーロッパ祖語 *bha-",
+        "note": "人々に語られることから評判・名声につながる基体。famous。"
+      }
+    },
+    "affixes": {
+      "-ature": {
+        "gloss": "〜すること・結果",
+        "kind": "suffix",
+        "note": "ラテン語 -atura 系の名詞要素。temperatureでは調整された状態・性質を表す。"
+      }
+    }
+  },
+  "entries": {
+    "ache": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 acan（痛む）・æce（痛み）に由来する。綴りはギリシャ語由来と誤解されて変化した。 → 痛む、うずく"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/ache",
+          "https://www.merriam-webster.com/dictionary/ache"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/ache", "note": "acheを動詞では中英語 aken・古英語 acan、名詞では古英語 æceに遡らせ、動詞と名詞の発音・綴りが変化した経緯を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/ache", "note": "acheの現代語義として、鈍く続く痛み、痛むこと、切望することを確認し、語源を古英語 acan・æceとしている。" }
+        ],
+        "originLanguage": "古英語・中英語・英語・語源一部不確定",
+        "etymons": ["ache", "aken", "acan", "æce", "*akanan", "*ag-es-"],
+        "historicalPath": ["古英語 acan（継続して痛む）・æce（痛み）", "中英語 aken / ache", "英語 ache（痛む、うずく）", "痛みから切望・心の苦痛へ比喩的に拡張"],
+        "components": [{ "form": "acan / æce", "kind": "word", "gloss": "痛む、痛み" }],
+        "rootCandidates": ["akan", "agh"],
+        "semanticBridge": "身体の継続的な痛みから、悲しみや不安による心の痛み、さらに強い切望を表す用法へ広がった。",
+        "summary": "acheは古英語系の単純語で、語源と現代の表面形を安定した語根・接辞へ分解しないためB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "push": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 poulser、ラテン語 pulsare（打つ、押す）に由来する。 → 押す"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/push",
+          "https://www.merriam-webster.com/dictionary/push"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/push", "note": "pushを中英語 pushen、古フランス語 poulser、ラテン語 pulsare（打つ、押す）、pellere（押す、駆り立てる）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/push", "note": "pushの現代語義として、力を加えて動かすこと、前進させること、促すことを確認し、古フランス語・ラテン語の経路を示している。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・中英語・英語",
+        "etymons": ["push", "pushen", "poulser", "pulsare", "pellere", "*pel-"],
+        "historicalPath": ["PIE *pel-（突く、打つ、駆り立てる）", "ラテン語 pellere / pulsare", "古フランス語 poulser", "中英語 pushen・英語 push（押す、進める）"],
+        "components": [{ "form": "pulsare / poulser", "kind": "word", "gloss": "打つ、押す" }],
+        "rootCandidates": ["pel", "puls"],
+        "semanticBridge": "物理的に押して動かすことから、計画や人を前へ進めること、販売や主張を強く促すことへ意味が広がった。",
+        "summary": "pushはフランス語・ラテン語を経た単純語で、pulsareの語根を現代英語のpushに分解しないためB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "assignment": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "課題、宿題",
+        "root": "assign",
+        "parts": [
+          { "form": "assign", "kind": "root", "gloss": "割り当てる・印を付ける" },
+          { "form": "-ment", "kind": "suffix", "gloss": "〜すること・もの" }
+        ],
+        "derivation": "assign（割り当てる・印を付ける）＋-ment（〜すること・もの） → 割り当てられた仕事・課題"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/assignment",
+          "https://www.merriam-webster.com/dictionary/assignment"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/assignment", "note": "assignmentを古フランス語 assignement、後期ラテン語 assignamentum、ラテン語 assignare（割り当てる、賞を与える）に遡らせ、課題の意味が後に発達したと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/assignment", "note": "assignmentの現代語義として、割り当てる行為、指定された仕事・宿題、任務や財産の移転を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・中英語・英語",
+        "etymons": ["assignment", "assignement", "assignamentum", "assignare", "ad-", "signare", "signum", "-ment"],
+        "historicalPath": ["ラテン語 ad-（〜へ）＋signare（印を付ける）", "ラテン語 assignare（割り当てる、指定する）", "古フランス語 assigner / assignement", "英語 assign＋-ment → assignment（割り当て、課題）"],
+        "components": [{ "form": "assignare / assign", "kind": "base", "gloss": "割り当てる、指定する" }, { "form": "-ment", "kind": "suffix", "gloss": "行為・結果" }],
+        "rootCandidates": ["assign", "sign"],
+        "semanticBridge": "対象を指定して割り当てる行為から、割り当てられた任務・仕事、特に学習者に与える宿題へ意味が具体化した。",
+        "summary": "assignmentはassign＋-mentとして表面形と出典が対応するためA型に設定できる。",
+        "confidence": "high"
+      }
+    },
+    "deadline": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "dead（越えてはならない）＋line（線）からなる複合語。越えてはならない線から「締め切り」の意味になった。 → 締め切り"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/deadline",
+          "https://www.merriam-webster.com/dictionary/deadline"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/deadline", "note": "deadlineをdead＋lineの複合語とし、1919年ごろの米国新聞用語で「時間制限」を表したと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/deadline", "note": "deadlineの現代語義として、何かを完了・提出しなければならない最終時点や期限を確認した。" }
+        ],
+        "originLanguage": "古英語・ラテン語・英語",
+        "etymons": ["deadline", "dead", "line", "dau-", "linea"],
+        "historicalPath": ["南北戦争期の dead line（越えてはならない線）", "dead＋lineの複合語", "新聞用語の deadline（最終時点）", "英語 deadline（締め切り、期限）"],
+        "components": [{ "form": "dead + line", "kind": "compound", "gloss": "越えてはならない線" }],
+        "rootCandidates": ["dheu", "lin"],
+        "semanticBridge": "物理的に越えてはならない境界線から、仕事や原稿を受け付ける最終時点を表す比喩へ発達した。",
+        "summary": "deadlineはdead＋lineの複合語であり、複合表現をB型にそろえる方針に従ってB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "attitude": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 attitude、イタリア語 attitudine、後期ラテン語 aptitudo（適性）に由来する。姿勢から考え方や態度の意味へ広がった。 → 態度"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/attitude",
+          "https://www.merriam-webster.com/dictionary/attitude"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/attitude", "note": "attitudeをフランス語 attitude、イタリア語 attitudine、後期ラテン語 aptitudo（適性）に遡らせ、像や絵画の姿勢から心の状態を示す態度へ意味が一般化したと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/attitude", "note": "attitudeの現代語義として、特定の人や物事に対する考え方・感じ方、身体や物の姿勢を確認した。" }
+        ],
+        "originLanguage": "ラテン語・イタリア語・フランス語・英語",
+        "etymons": ["attitude", "attitudine", "aptitudo", "aptus"],
+        "historicalPath": ["ラテン語 aptus（適した、結び付いた）・aptitudo（適性）", "イタリア語 attitudine（姿勢、性質）", "フランス語 attitude", "英語 attitude（姿勢、態度、考え方）"],
+        "components": [{ "form": "attitudine / aptitudo", "kind": "word", "gloss": "姿勢、適性" }],
+        "rootCandidates": ["apt", "tud"],
+        "semanticBridge": "身体や像の姿勢から、姿勢が示す心の状態、さらに人や物事に対する考え方・感じ方へ意味が広がった。",
+        "summary": "attitudeはaptitudeとの二重語に近いフランス語・イタリア語系の単純語で、表面形に安定した語根・接辞分解を置かないためB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "affordable": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "手頃な、買いやすい",
+        "root": "afford",
+        "parts": [
+          { "form": "afford", "kind": "root", "gloss": "成し遂げる・余裕がある" },
+          { "form": "-able", "kind": "suffix", "gloss": "〜できる・〜に値する" }
+        ],
+        "derivation": "afford（成し遂げる・費用を負担できる）＋-able（〜できる） → 費用を負担できる、手頃な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/affordable",
+          "https://www.merriam-webster.com/dictionary/affordable"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/affordable", "note": "affordableをafford＋-ableと明示し、affordを古英語 geforðian（前へ進める、成し遂げる）から、費用を負担できる意味へ遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/affordable", "note": "affordableの現代語義として、費用が高すぎず購入・負担できることを確認し、語源をafford＋-ableとしている。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・中英語・フランス語的再分析・英語",
+        "etymons": ["affordable", "afford", "aforth", "geforðian", "forð", "a-", "-able"],
+        "historicalPath": ["古英語 ge-（完了）＋forðian（前へ進める）", "中英語 aforth → afford", "費用を負担できる意味への発達", "英語 afford＋-able → affordable（手頃な）"],
+        "components": [{ "form": "afford", "kind": "base", "gloss": "費用を負担できる" }, { "form": "-able", "kind": "suffix", "gloss": "〜できる" }],
+        "rootCandidates": ["forth", "ford"],
+        "semanticBridge": "物事を前へ進めて成し遂げることから、何かをするための余裕があること、特に費用を負担できることへ意味が変化した。",
+        "summary": "affordableはafford＋-ableとして出典が直接支えるA型を設定できる。",
+        "confidence": "high"
+      }
+    },
+    "colorful": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "色鮮やかな",
+        "root": "color",
+        "parts": [
+          { "form": "color", "kind": "root", "gloss": "色・外観" },
+          { "form": "-ful", "kind": "suffix", "gloss": "〜に満ちた" }
+        ],
+        "derivation": "color（色・外観）＋-ful（〜に満ちた） → 色に満ちた、色鮮やかな"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/colorful",
+          "https://www.merriam-webster.com/dictionary/colorful"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/colorful", "note": "colorfulをcolor＋-fulと明示し、colorを古フランス語 color・ラテン語 color、さらに「覆う」と関係する語に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/colorful", "note": "colorfulの現代語義として、目立つ色をもつこと、変化や興味に富むことを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・英語",
+        "etymons": ["colorful", "color", "color", "colos", "*kel-", "-ful"],
+        "historicalPath": ["PIE *kel-（覆う、隠す）", "ラテン語 color（色、外観）", "古フランス語 color・英語 color", "英語 color＋-ful → colorful（色鮮やかな、興味深い）"],
+        "components": [{ "form": "color", "kind": "base", "gloss": "色、外観" }, { "form": "-ful", "kind": "suffix", "gloss": "〜に満ちた" }],
+        "rootCandidates": ["kel", "col"],
+        "semanticBridge": "色や外観を表す語から、色が豊かで目立つこと、さらに内容や表現が変化に富み興味深いことへ意味が広がった。",
+        "summary": "colorfulはcolor＋-fulとして出典が直接支えるA型を設定できる。",
+        "confidence": "high"
+      }
+    },
+    "formal": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "正式な、きちんとした",
+        "root": "form",
+        "parts": [
+          { "form": "form", "kind": "root", "gloss": "形・形式" },
+          { "form": "-al", "kind": "suffix", "gloss": "〜に関する" }
+        ],
+        "derivation": "form（形・形式）＋-al（〜に関する） → 決まった形式に関する、正式な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/formal",
+          "https://www.merriam-webster.com/dictionary/formal"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/formal", "note": "formalを古フランス語 formal・ラテン語 formalis、forma（形、形式）に遡らせ、認められた形式に従う意味へ発達したと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/formal", "note": "formalの現代語義として、形式・慣習・儀礼に従うこと、公式・正式であることを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["formal", "formalis", "forma", "-alis", "-al"],
+        "historicalPath": ["ラテン語 forma（形、形式）", "ラテン語 formalis（形に関する）", "古フランス語 formal", "英語 form＋-al → formal（形式に沿った、正式な）"],
+        "components": [{ "form": "forma / form", "kind": "base", "gloss": "形、形式" }, { "form": "-alis / -al", "kind": "suffix", "gloss": "〜に関する" }],
+        "rootCandidates": ["form"],
+        "semanticBridge": "物の形や形式から、決まった手順・儀礼に従うこと、さらに公式で改まった性質へ意味が広がった。",
+        "summary": "formalは既存のform語根＋-alとして表面形に沿ったA型を設定できる。",
+        "confidence": "high"
+      }
+    },
+    "route": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "アングロフランス語 rute、俗ラテン語 *rupta（切り開かれた道）に由来する。 → 道順、経路"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/route",
+          "https://www.merriam-webster.com/dictionary/route"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/route", "note": "routeを古フランス語 rute、ラテン語 rupta（力で開かれた道）、rumpere（破る、切り開く）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/route", "note": "routeの現代語義として、旅行や行動のために選ばれた道・経路・進路を確認し、俗ラテン語 *ruptaに由来するとしている。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・中英語・英語",
+        "etymons": ["route", "rute", "rupta", "rumpere", "*runp-"],
+        "historicalPath": ["PIE *runp-（破る、切る）", "ラテン語 rumpere・rupta via（切り開かれた道）", "古フランス語 rute", "中英語 route・英語 route（道、経路）"],
+        "components": [{ "form": "rupta via / rute", "kind": "word", "gloss": "切り開かれた道" }],
+        "rootCandidates": ["rup", "rupt"],
+        "semanticBridge": "障害物を切り開いて作った道から、一般の旅行経路、さらに目的へ至る方法や通信を振り分ける経路へ意味が広がった。",
+        "summary": "routeはフランス語を経た単純な借用語で、ruptaの語根を現代英語のrouteに分解しないためB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "border": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 bordeure、ゲルマン語系 *bord（側、縁）に由来する。縁から都市や国の境界の意味になった。 → 国境"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/border",
+          "https://www.merriam-webster.com/dictionary/border"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/border", "note": "borderを中英語 bordure、古フランス語 bordeure、フランク語系 *bordまたは古英語 bord（側、縁）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/border", "note": "borderの現代語義として、外縁、装飾的な縁、都市や国の境界を確認し、古フランス語 bordeure・ゲルマン語系に由来するとしている。" }
+        ],
+        "originLanguage": "ゲルマン語系・フランス語・中英語・英語",
+        "etymons": ["border", "bordure", "bordeure", "bord", "board"],
+        "historicalPath": ["ゲルマン語系 *bord（側、縁）", "古フランス語 bordeure（縁、盾の縁取り）", "中英語 bordure → border", "英語 border（縁、境界、国境）"],
+        "components": [{ "form": "bordeure / bord", "kind": "word", "gloss": "縁、側" }],
+        "rootCandidates": ["bord"],
+        "semanticBridge": "物の側や縁から、地面や地域の端、都市・国家を分ける境界、さらに境界に接することへ意味が広がった。",
+        "summary": "borderはフランス語の語尾変化を経た単純語で、bord＋-erなどの綴り合わせを採用しないためB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "vehicle": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 véhicule、ラテン語 vehiculum（運ぶ手段）に由来する。 → 乗り物、車両"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/vehicle",
+          "https://www.merriam-webster.com/dictionary/vehicle"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/vehicle", "note": "vehicleをフランス語 véhicule、ラテン語 vehiculum（運搬手段）、vehere（運ぶ）、PIE *wegh-（移動する、運ぶ）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/vehicle", "note": "vehicleの現代語義として、エネルギーを力や運動に変える機械、陸上を運ぶ車両、目的を実現する手段を確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・英語",
+        "etymons": ["vehicle", "véhicule", "vehiculum", "vehere", "*wegh-"],
+        "historicalPath": ["PIE *wegh-（行く、動かす、運ぶ）", "ラテン語 vehere / vehiculum（運ぶ、運搬手段）", "フランス語 véhicule", "英語 vehicle（乗り物、媒介手段）"],
+        "components": [{ "form": "vehiculum / véhicule", "kind": "word", "gloss": "運搬手段" }],
+        "rootCandidates": ["wegh", "veh"],
+        "semanticBridge": "物を運ぶ手段から、乗客や貨物を運ぶ車両、さらに薬を運ぶ媒体や目的を達成する手段へ意味が広がった。",
+        "summary": "vehicleはラテン語・フランス語を経た単純な借用語で、vehereの語根を現代英語のvehicleに分解しないためB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "luggage": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "荷物",
+        "root": "lug",
+        "parts": [
+          { "form": "lug", "kind": "root", "gloss": "ゆっくり引きずる" },
+          { "form": "-age", "kind": "suffix", "gloss": "〜の量・状態" }
+        ],
+        "derivation": "lug（ゆっくり引きずる）＋-age（〜の量・状態） → 引きずって運ぶ物、荷物"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/luggage",
+          "https://www.merriam-webster.com/dictionary/luggage"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/luggage", "note": "luggageをlug（引きずる）＋-ageと明示し、文字通り「引きずらなければならないもの」と説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/luggage", "note": "luggageの現代語義として、旅行者が持ち運ぶ衣類や荷物を確認し、lugからの派生語として扱っている。" }
+        ],
+        "originLanguage": "スカンジナビア語系・フランス語・英語",
+        "etymons": ["luggage", "lug", "lugga", "-age", "-aticum"],
+        "historicalPath": ["スカンジナビア語系 lugga（髪などを引く）", "英語 lug（ゆっくり引きずる）", "英語 lug＋-age → luggage", "重く価値の低い運搬物から旅行者の荷物へ意味が具体化"],
+        "components": [{ "form": "lug", "kind": "base", "gloss": "引きずる" }, { "form": "-age", "kind": "suffix", "gloss": "量・状態" }],
+        "rootCandidates": ["lug"],
+        "semanticBridge": "重い物を引きずって運ぶ動作から、そのように運ばれる物、さらに旅行者が持ち歩く荷物を表す名詞へ作られた。",
+        "summary": "luggageはlug＋-ageと出典が明示しているためA型に設定できる。",
+        "confidence": "high"
+      }
+    },
+    "borrowed": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "borrow（借りる）の過去形。古英語 borgian（保つ、保証する）に由来する。 → 借りた"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/borrow",
+          "https://www.merriam-webster.com/dictionary/borrow"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/borrow", "note": "borrowを中英語 borwen、古英語 borgian、beorgan（守る、保つ）に遡らせ、借りたものを返す・保証する関係を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/borrow", "note": "borrowの現代語義として、返す意図をもって一時的に受け取ること、他の言語や人から取り入れることを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・中英語・英語",
+        "etymons": ["borrowed", "borrow", "borwen", "borgian", "beorgan", "*berg-", "-ed"],
+        "historicalPath": ["古英語 borgian（保証する、保つ）", "中英語 borwen", "英語 borrow（借りる）", "borrowの過去分詞・形容詞 borrowed（借りた）"],
+        "components": [{ "form": "borrow", "kind": "word", "gloss": "借りる" }, { "form": "-ed", "kind": "inflection", "gloss": "過去・完了" }],
+        "rootCandidates": ["berg", "borg"],
+        "semanticBridge": "返却を前提に一時的に受け取る動作から、他人の表現や文化を取り入れることへ用法が広がり、その過去分詞が「借りた」を表す。",
+        "summary": "borrowedはborrowの活用形であり、接辞による新しい語源派生として扱わずB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "painted": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "paint（描く、塗る）の過去形・過去分詞。ラテン語 pingere（描く、色を付ける）に由来する。 → 描いた、塗った"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/paint",
+          "https://www.merriam-webster.com/dictionary/paint"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/paint", "note": "paintを古フランス語 peintier・peindre、ラテン語 pingere（描く、色を付ける）、PIE *peig-（切る、印を付ける）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/paint", "note": "paintの現代語義として、顔料や色を表面に塗ること、線や色で描くこと、塗料を確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・中英語・英語",
+        "etymons": ["painted", "paint", "peinten", "peindre", "pingere", "*peig-", "-ed"],
+        "historicalPath": ["PIE *peig-（切る、印を付ける）", "ラテン語 pingere（描く、染める）", "古フランス語 peintier・中英語 painten", "英語 paint → painted（描いた、塗った）"],
+        "components": [{ "form": "paint", "kind": "word", "gloss": "描く、塗る" }, { "form": "-ed", "kind": "inflection", "gloss": "過去・完了" }],
+        "rootCandidates": ["peig", "ping"],
+        "semanticBridge": "切り目や印を付ける動作から、色を付けて飾る・描く動作へ発達し、その過去分詞が「描いた、塗った」を表す。",
+        "summary": "paintedはpaintの活用形であり、接辞による新しい語源派生として扱わずB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "neighbor": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 neah（近い）＋gebur（住む人）の複合語。近くに住む人から「近所の人」になった。 → 近所の人"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/neighbor",
+          "https://www.merriam-webster.com/dictionary/neighbor"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/neighbor", "note": "neighborを古英語 neahgebur（近くに住む人）、neah（近い）＋gebur（住人）に遡らせ、ゲルマン諸語に広く見られる複合語と説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/neighbor", "note": "neighborの現代語義として、近くに住む人、隣接する人や場所を確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・古英語・ゲルマン語系・英語",
+        "etymons": ["neighbor", "neahgebur", "neah", "gebur", "*bheue-"],
+        "historicalPath": ["PIE *bheue-（存在する、成長する）", "古英語 neah（近い）＋gebur（住む人）", "古英語 neahgebur → 中英語 neighebor", "英語 neighbor（近所の人、隣接する）"],
+        "components": [{ "form": "neah + gebur", "kind": "compound", "gloss": "近くに住む人" }],
+        "rootCandidates": ["neah", "bur", "bheue"],
+        "semanticBridge": "近い場所に住む人を表す複合語から、近隣の住民、さらに隣接する場所や関係を表す語へ用法が広がった。",
+        "summary": "neighborは古英語の複合語であり、複合表現をB型にそろえる方針に従ってB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "prize": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 pris（価値、報酬）の綴りが変化した語。別語源の「力ずくで得たもの」のprizeもある。 → 賞"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/prize",
+          "https://www.merriam-webster.com/dictionary/prize"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/prize", "note": "賞のprizeを中英語 prise、古フランス語 pris（価格、価値、報酬）に遡らせ、別語源の「力ずくで得たもの」のprizeも区別している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/prize", "note": "prizeの現代語義として、競争や努力の報酬・勝利のしるし、価値を高く評価することを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・中英語・英語",
+        "etymons": ["prize", "prise", "pris", "pretium", "*pret-yo-"],
+        "historicalPath": ["PIE *pret-（売買する、価値）", "ラテン語 pretium（価値、報酬）", "古フランス語 pris", "中英語 prise → 英語 prize（賞、価値を高く評価する）"],
+        "components": [{ "form": "pris / prise", "kind": "word", "gloss": "価値、報酬" }],
+        "rootCandidates": ["pret", "pris"],
+        "semanticBridge": "物の価値や報酬から、競争で得る勝利のしるし、さらに努力する価値のあるものを表す語へ広がった。",
+        "summary": "prizeは古フランス語の音形・綴りの変化を経た単純語で、表面形に安定した語根・接辞分解を置かないためB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "wallet": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "中英語 walet（袋、背負い袋）に由来する。起源は不確実で、巻くことを表すゲルマン語系との関係が提案されている。 → 財布"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/wallet",
+          "https://www.merriam-webster.com/dictionary/wallet"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/wallet", "note": "walletを中英語 waletに遡らせ、古北フランス語の推定形またはゲルマン語系 *wall-（巻く）から来た可能性を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/wallet", "note": "walletの現代語義として、旅行用の袋、紙幣やカードを入れる折りたたみ式の財布、デジタル財布を確認した。" }
+        ],
+        "originLanguage": "ゲルマン語系・フランス語・中英語・英語・語源不確定",
+        "etymons": ["wallet", "walet", "*walet", "*wall-", "*wel-"],
+        "historicalPath": ["中英語 walet（袋、背負い袋）", "古北フランス語の推定形またはゲルマン語系の語", "英語 wallet（旅行用の袋）", "紙幣・カードを入れる平たい財布へ意味が具体化"],
+        "components": [{ "form": "walet", "kind": "word", "gloss": "袋、背負い袋" }],
+        "rootCandidates": ["wel", "wall"],
+        "semanticBridge": "旅行者が持ち歩く袋から、紙幣やカードを収納する折りたたみ式の財布、さらに情報や暗号資産を保存するデジタル機能へ用法が広がった。",
+        "summary": "walletは起源が不確実な単純語で、wall＋-etなどの綴り合わせを採用しないためB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "pillow": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "中英語 pilwe、古英語 pyle、ラテン語 pulvinus（小さなクッション）に由来する。 → 枕"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/pillow",
+          "https://www.merriam-webster.com/dictionary/pillow"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/pillow", "note": "pillowを中英語 pilwe、古英語 pyle、ゲルマン語系 *pulwi(n)、ラテン語 pulvinus（小さなクッション）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/pillow", "note": "pillowの現代語義として、横たわる人の頭を支えるクッション、枕の上に置く・休む動詞用法を確認した。" }
+        ],
+        "originLanguage": "ラテン語・ゲルマン語系・古英語・中英語・英語",
+        "etymons": ["pillow", "pilwe", "pyle", "*pulwi(n)", "pulvinus"],
+        "historicalPath": ["ラテン語 pulvinus（小さなクッション）", "ゲルマン語系 *pulwi(n)", "古英語 pyle・中英語 pilwe", "英語 pillow（枕、枕のような支え）"],
+        "components": [{ "form": "pulvinus / pilwe", "kind": "word", "gloss": "クッション、枕" }],
+        "rootCandidates": ["pulvin", "pulw"],
+        "semanticBridge": "柔らかい小さなクッションから、頭を支える寝具一般、さらに枕のように支える動作へ用法が広がった。",
+        "summary": "pillowは古い借用語がゲルマン語・英語で音形変化した単純語で、表面形に安定した語根・接辞分解を置かないためB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "engine": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 engin、ラテン語 ingenium（生来の能力、機械）に由来する。能力や巧みな仕掛けから機械の意味になった。 → エンジン"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/engine",
+          "https://www.merriam-webster.com/dictionary/engine"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/engine", "note": "engineを古フランス語 engin、ラテン語 ingenium（生来の性質、能力、策略、戦争用機械）に遡らせ、in＋gignere（生む）という深い構成にも触れている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/engine", "note": "engineの現代語義として、エネルギーを機械的な力へ変える機械、機関車、目的を実現する手段を確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・英語",
+        "etymons": ["engine", "engin", "ingenium", "in-", "gignere", "*gene-"],
+        "historicalPath": ["PIE *gene-（生む、産む）", "ラテン語 ingenium（生来の能力、性質）", "古フランス語 engin（巧知、策略、機械）", "英語 engine（仕掛け、機械、動力機関）"],
+        "components": [{ "form": "ingenium / engin", "kind": "word", "gloss": "生来の能力、仕掛け" }],
+        "rootCandidates": ["gen", "gene"],
+        "semanticBridge": "生来の能力や巧みな仕掛けから、戦争用の機械、さらにエネルギーを動力へ変える機関や目的を生み出すものへ意味が広がった。",
+        "summary": "engineはin＋gignereという深い語源はあるが、現代英語のengineにそのまま対応する表面分解ではないためB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "habit": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 habit、ラテン語 habitus（状態、服装、習慣）に由来し、habere（持つ、保つ）と関係する。 → 習慣"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/habit",
+          "https://www.merriam-webster.com/dictionary/habit"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/habit", "note": "habitを古フランス語 habit、ラテン語 habitus（状態、態度、外見、服装）、habere（持つ、保つ）に遡らせ、服装・状態から習慣へ意味が発達したと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/habit", "note": "habitの現代語義として、繰り返して身についた行動様式、習慣、衣服・服装を確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・英語",
+        "etymons": ["habit", "habitus", "habere", "*ghabh-"],
+        "historicalPath": ["PIE *ghabh-（与える、受け取る、保つ）", "ラテン語 habere（持つ）・habitus（状態、服装）", "古フランス語 habit", "英語 habit（服装、繰り返す行動、習慣）"],
+        "components": [{ "form": "habitus / habit", "kind": "word", "gloss": "状態、服装、習慣" }],
+        "rootCandidates": ["ghabh", "hab"],
+        "semanticBridge": "身につけている状態や服装から、身体・精神の状態、繰り返し続ける行動様式へ意味が広がった。",
+        "summary": "habitはラテン語・フランス語を経た単純語で、habereの語根を現代英語のhabitに分解しないためB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "temperature": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "温度",
+        "root": "temper",
+        "parts": [
+          { "form": "temper", "kind": "root", "gloss": "ほどよく混ぜる・調整する" },
+          { "form": "-ature", "kind": "suffix", "gloss": "〜すること・結果" }
+        ],
+        "derivation": "temper（ほどよく混ぜて調整する）＋-ature（〜すること・結果） → 調整された状態、温度"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/temperature",
+          "https://www.merriam-webster.com/dictionary/temperature"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/temperature", "note": "temperatureをラテン語 temperatura（適切な割合に混ぜること、調整）・temperare（混ぜる、抑える）に遡らせ、熱・冷の程度の科学的意味が後に発達したと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/temperature", "note": "temperatureの現代語義として、一定の尺度で測る暑さ・寒さの程度、身体の熱、発熱を確認し、temperatura＋-uraの語源を示している。" }
+        ],
+        "originLanguage": "ラテン語・英語",
+        "etymons": ["temperature", "temperatura", "temperatus", "temperare", "-ura", "-ature"],
+        "historicalPath": ["ラテン語 temperare（適切な割合に混ぜる、調整する）", "ラテン語 temperatura（調整、適切な割合）", "英語 temperature（調整された状態）", "熱さ・冷たさの程度を表す科学用語へ具体化"],
+        "components": [{ "form": "temperare / temper", "kind": "base", "gloss": "混ぜる、調整する" }, { "form": "-ura / -ature", "kind": "suffix", "gloss": "行為・結果" }],
+        "rootCandidates": ["temper", "temp"],
+        "semanticBridge": "物質を適切な割合に混ぜて均衡させることから、物や身体の状態、さらに熱さ・冷たさを数値で表す温度へ意味が具体化した。",
+        "summary": "temperatureはtemper＋-atureという表面形に、ラテン語 temperatura＋-ura の出典が対応するためA型に設定できる。",
+        "confidence": "high"
+      }
+    },
+    "nervous": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "緊張した",
+        "root": "nerv",
+        "parts": [
+          { "form": "nerv", "kind": "root", "gloss": "筋・神経" },
+          { "form": "-ous", "kind": "suffix", "gloss": "〜の性質の" }
+        ],
+        "derivation": "nerv（筋・神経）＋-ous（〜の性質の） → 神経に関する、神経が高ぶった、緊張した"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/nervous",
+          "https://www.merriam-webster.com/dictionary/nervous"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/nervous", "note": "nervousをラテン語 nervosus（筋の多い、活力のある）、nervus（筋、神経）に遡らせ、神経に関する意味から不安・緊張の意味へ発達したと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/nervous", "note": "nervousの現代語義として、神経に関すること、興奮しやすい・不安なことを確認し、nervus＋-ousの語源を示している。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・中英語・英語",
+        "etymons": ["nervous", "nervosus", "nervus", "*sneu-", "-ous"],
+        "historicalPath": ["PIE *(s)neu-（腱、筋）", "ラテン語 nervus / nervosus（筋、神経の）", "アングロフランス語 nervous・中英語", "英語 nerv＋-ous → nervous（神経質な、緊張した）"],
+        "components": [{ "form": "nervus / nerv", "kind": "base", "gloss": "筋、神経" }, { "form": "-ous", "kind": "suffix", "gloss": "〜の性質の" }],
+        "rootCandidates": ["nerv", "sneu"],
+        "semanticBridge": "筋や神経に関する性質から活力・神経の状態を表し、そこから不安や緊張を示す形容詞へ意味が広がった。",
+        "summary": "nervousは既存のnerv語根＋-ousとして表面形に沿ったA型を設定できる。",
+        "confidence": "high"
+      }
+    },
+    "silent": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 silentem / silens（静かな、黙っている）、silere（静かである）に由来する。 → 静かな、無言の"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/silent",
+          "https://www.merriam-webster.com/dictionary/silent"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/silent", "note": "silentをラテン語 silentem / silens（静かな、穏やかな）、silere（静かである、黙る）の現在分詞に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/silent", "note": "silentの現代語義として、発話がないこと、音がないこと、文字が発音されないことを確認し、ラテン語 silens・silereの語源を示している。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["silent", "silentem", "silens", "silere", "-ent"],
+        "historicalPath": ["ラテン語 silere（静かである、黙る）", "ラテン語 silens / silentem（静かな、黙っている）", "古フランス語 silenceとの語族・英語 silent", "英語 sil＋-ent → silent（静かな、無言の）"],
+        "components": [{ "form": "silere / sil", "kind": "base", "gloss": "静かである、黙る" }, { "form": "-ent", "kind": "suffix", "gloss": "〜している性質" }],
+        "rootCandidates": ["sil"],
+        "semanticBridge": "発話を控えて静かであることから、周囲に音がないこと、さらに文字が発音されないことへ意味が広がった。",
+        "summary": "silentはラテン語の現在分詞に由来する単純な借用語で、表面形に安定した英語の語根・接辞分解を置かないためB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "famous": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "有名な",
+        "root": "fam",
+        "parts": [
+          { "form": "fam", "kind": "root", "gloss": "話す・評判" },
+          { "form": "-ous", "kind": "suffix", "gloss": "〜の性質の" }
+        ],
+        "derivation": "fam（話す・評判）＋-ous（〜の性質の） → 人々に語られている、評判の高い、有名な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/famous",
+          "https://www.merriam-webster.com/dictionary/famous"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/famous", "note": "famousをアングロフランス語 famous・古フランス語 fameus、ラテン語 famosus・fama、PIE *bha-（話す、言う）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/famous", "note": "famousの現代語義として、広く知られ称賛されていること、また悪名高いことを確認し、ラテン語 fama・famosusの経路を示している。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・英語",
+        "etymons": ["famous", "fameus", "famosus", "fama", "*bha-", "-ous"],
+        "historicalPath": ["PIE *bha-（話す、言う）", "ラテン語 fama（評判、名声）・famosus（広く語られた）", "古フランス語 fameus", "英語 fam＋-ous → famous（有名な、評判の高い）"],
+        "components": [{ "form": "fama / fam", "kind": "base", "gloss": "評判、名声" }, { "form": "-ous", "kind": "suffix", "gloss": "〜の性質の" }],
+        "rootCandidates": ["bha", "fam"],
+        "semanticBridge": "人々に語られることから評判や名声が生じ、広く知られていること、さらに文脈によっては悪名高いことを表すようになった。",
+        "summary": "famousはfam＋-ousとして表面形と出典が対応するためA型に設定できる。",
+        "confidence": "high"
+      }
+    },
+    "label": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "中英語、アングロフランス語 labelle（衣服に付けた帯・布片）に由来する。布片から表示札の意味へ広がった。 → ラベル、表示"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/label",
+          "https://www.merriam-webster.com/dictionary/label"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/label", "note": "labelを中英語 label、古フランス語 label・lambel・labeau（衣服のリボン、布片）に遡らせ、布片や封印を保持する帯から識別用の札へ意味が広がったと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/label", "note": "labelの現代語義として、識別・説明のために貼る紙や布、商品名、分類する動詞用法を確認した。" }
+        ],
+        "originLanguage": "ゲルマン語系・フランス語・中英語・英語・語源一部不確定",
+        "etymons": ["label", "labelle", "lambel", "labeau", "*labba", "*lapp-"],
+        "historicalPath": ["ゲルマン語系と推定される布片の語", "古フランス語 label / lambel（リボン、布片）", "中英語 label（衣服や文書に付ける帯）", "英語 label（識別用の札、分類する）"],
+        "components": [{ "form": "labelle / lambel", "kind": "word", "gloss": "帯、布片" }],
+        "rootCandidates": ["lapp", "labba"],
+        "semanticBridge": "衣服から垂れる細い帯や文書の封印を支える布片から、物の性質や行き先を示す紙札、さらに分類・命名する動作へ意味が広がった。",
+        "summary": "labelはフランス語系の単純語で起源にも不確定さがあるため、lab＋-elなどの綴り合わせを採用せずB型に残す。",
+        "confidence": "high"
+      }
+    }
+  }
+}

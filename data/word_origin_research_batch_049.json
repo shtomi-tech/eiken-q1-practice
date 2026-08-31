@@ -1,0 +1,1558 @@
+{
+  "meta": {
+    "batchId": "batch-049",
+    "note": "未確認B型の次の25語。出典が支える表面形の派生だけをA型にし、借用語・単純語・不規則な語形・複合語はB型に残す。"
+  },
+  "dictionary": {
+    "roots": {
+      "bide": {
+        "gloss": "待つ・とどまる",
+        "origin": "古英語 bīdan / ゲルマン語系",
+        "note": "待ち続けてとどまる動作。abideではa-と結び付く。"
+      },
+      "caut": {
+        "gloss": "用心する・警戒する",
+        "origin": "ラテン語 cavere / cautus",
+        "note": "危険を前もって警戒すること。precautionではcautとして現れる。"
+      },
+      "gloom": {
+        "gloss": "暗がり・憂鬱",
+        "origin": "英語 gloom（語源未詳）",
+        "note": "暗さや心の沈み。gloomyの基体。"
+      },
+      "menac": {
+        "gloss": "脅す・危険を示す",
+        "origin": "古フランス語 menacier / ラテン語 minacia",
+        "note": "脅しや危険を示す動作。menacingではmenacとして現れる。"
+      },
+      "equat": {
+        "gloss": "等しくする",
+        "origin": "ラテン語 aequare / aequatio",
+        "note": "等しい状態にすること。equationではequatとして現れる。"
+      },
+      "possess": {
+        "gloss": "所有する",
+        "origin": "ラテン語 possidere / possessus",
+        "note": "物を自分のものとして持つこと。possessiveの基体。"
+      },
+      "horizont": {
+        "gloss": "境界・水平線",
+        "origin": "ギリシャ語 horizon / horizein",
+        "note": "視界を区切る境界線・水平線。horizontalではhorizontとして現れる。"
+      },
+      "drast": {
+        "gloss": "行う・実行する",
+        "origin": "ギリシャ語 dran / drāō",
+        "note": "行動や実行に関わる語幹。drasticではdrastとして現れる。"
+      }
+    },
+    "affixes": {}
+  },
+  "entries": {
+    "ascent": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ascendから作られた不規則な名詞形。上へ登る動作 → 上昇、登ること"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/ascent",
+          "https://www.merriam-webster.com/dictionary/ascent"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/ascent",
+            "note": "ascentはascendをもとに作られた名詞で、ascend自体はラテン語 ascendere（上へ登る）に由来する。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/ascent",
+            "note": "ascentの現代語義と、ascendからの不規則な語形成であることを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "ascent",
+          "ascend",
+          "ascendere",
+          "ad-",
+          "scandere"
+        ],
+        "historicalPath": [
+          "ラテン語 ad-（〜へ）＋scandere（登る）",
+          "ラテン語 ascendere（上へ登る）",
+          "英語 ascend（登る）",
+          "ascendをもとにした不規則な名詞 ascent（上昇）"
+        ],
+        "components": [
+          {
+            "form": "ascent",
+            "kind": "base",
+            "gloss": "上昇・登ること"
+          }
+        ],
+        "rootCandidates": [
+          "ascend",
+          "scand"
+        ],
+        "semanticBridge": "上へ登る動作から、上昇することや登る行為を表す名詞になった。",
+        "summary": "ascentはascendからの不規則な名詞形で、現代英語のa＋scendという対応を安全に示せないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "abide": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "a（完全に・外へ向かって）＋bide（待つ・とどまる） → 待ち続けてとどまる、従う・耐える",
+        "gloss": "従う、耐える",
+        "root": "bide",
+        "parts": [
+          {
+            "form": "a",
+            "kind": "prefix",
+            "gloss": "完全に・外へ向かって"
+          },
+          {
+            "form": "bide",
+            "kind": "root",
+            "gloss": "待つ・とどまる"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/abide",
+          "https://www.merriam-webster.com/dictionary/abide"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/abide",
+            "note": "abideを古英語 abidan に遡らせ、a-系の接頭辞とbidan（待つ、とどまる）の関係を説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/abide",
+            "note": "abideの現代語義として、耐える、異議なく受け入れる、とどまることを確認した。"
+          }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": [
+          "abide",
+          "abidan",
+          "bidan",
+          "bide",
+          "a-"
+        ],
+        "historicalPath": [
+          "古英語 bīdan（待つ、とどまる）",
+          "a-（完了・外向きの意味をもつ接頭辞）＋bīdan",
+          "古英語 abīdan / 中英語 abiden",
+          "英語 abide（とどまる、耐える、従う）"
+        ],
+        "components": [
+          {
+            "form": "a",
+            "kind": "prefix",
+            "gloss": "完全に・外へ向かって"
+          },
+          {
+            "form": "bide",
+            "kind": "base",
+            "gloss": "待つ・とどまる"
+          }
+        ],
+        "rootCandidates": [
+          "bide",
+          "bidan"
+        ],
+        "semanticBridge": "待ち続けてその場にとどまることから、困難や決定を受け入れて耐える意味へ発達した。",
+        "summary": "abideは古英語のa-＋bidanに由来し、現代の表面形a＋bideに対応するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "collide": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 collidere（共に打つ）。com-（共に）＋laedere（打つ・傷つける）に由来する借用語 → 衝突する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/collide",
+          "https://www.merriam-webster.com/dictionary/collide"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/collide",
+            "note": "collideをラテン語 collidere「共に打つ」、com-＋laedere「打つ・傷つける」に遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/collide",
+            "note": "collideの現代語義として、物や人が激しくぶつかることを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・英語",
+        "etymons": [
+          "collide",
+          "collidere",
+          "com-",
+          "laedere"
+        ],
+        "historicalPath": [
+          "ラテン語 com-（共に）＋laedere（打つ、傷つける）",
+          "ラテン語 collidere（共に打つ）",
+          "英語 collide（衝突する）"
+        ],
+        "components": [
+          {
+            "form": "collide",
+            "kind": "base",
+            "gloss": "衝突する"
+          }
+        ],
+        "rootCandidates": [
+          "laed",
+          "lid"
+        ],
+        "semanticBridge": "互いに打ち合うことから、物体や意見などが衝突する意味になった。",
+        "summary": "collideはラテン語由来の借用語で、laedereの語根が現代の表面形に安全に対応しないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "subside": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "sub（下へ）＋sid（座る・前に座る） → 下へ沈んで落ち着く、治まる・沈静化する",
+        "gloss": "治まる、沈静化する",
+        "root": "sid",
+        "parts": [
+          {
+            "form": "sub",
+            "kind": "prefix",
+            "gloss": "下へ"
+          },
+          {
+            "form": "sid",
+            "kind": "root",
+            "gloss": "座る・落ち着く"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/subside",
+          "https://www.merriam-webster.com/dictionary/subside"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/subside",
+            "note": "subsideをラテン語 subsidere「座る、沈む、落ち着く」、sub-＋sidereに遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/subside",
+            "note": "subsideの現代語義として、液面や感情・風などが下がり、治まることを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・英語",
+        "etymons": [
+          "subside",
+          "subsidere",
+          "sub-",
+          "sidere",
+          "sedere"
+        ],
+        "historicalPath": [
+          "ラテン語 sub-（下に）＋sidere（座る、落ち着く）",
+          "ラテン語 subsidere（下へ沈む、落ち着く）",
+          "英語 subside（沈む、治まる）"
+        ],
+        "components": [
+          {
+            "form": "sub",
+            "kind": "prefix",
+            "gloss": "下へ"
+          },
+          {
+            "form": "sid",
+            "kind": "base",
+            "gloss": "座る・落ち着く"
+          }
+        ],
+        "rootCandidates": [
+          "sid",
+          "sed"
+        ],
+        "semanticBridge": "下へ沈んで動きが止まることから、騒ぎや感情が穏やかになり、治まる意味になった。",
+        "summary": "subsideはsub-＋sidereに由来し、表面形sub＋sidに対応するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "preside": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "pre（前に）＋sid（座る・前に座る） → 前に座って会を導く、議長を務める・司会する",
+        "gloss": "議長を務める、司会する",
+        "root": "sid",
+        "parts": [
+          {
+            "form": "pre",
+            "kind": "prefix",
+            "gloss": "前に"
+          },
+          {
+            "form": "sid",
+            "kind": "root",
+            "gloss": "座る・前に座る"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/preside",
+          "https://www.merriam-webster.com/dictionary/preside"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/preside",
+            "note": "presideをフランス語 présider、ラテン語 praesidere「前に座って監督する」、prae-＋sedereに遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/preside",
+            "note": "presideの現代語義として、会議や組織を指揮・監督することを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "preside",
+          "présider",
+          "praesidere",
+          "prae-",
+          "sedere"
+        ],
+        "historicalPath": [
+          "ラテン語 prae-（前に）＋sedere（座る）",
+          "ラテン語 praesidere（前に座って監督する）",
+          "フランス語 présider",
+          "英語 preside（議長を務める）"
+        ],
+        "components": [
+          {
+            "form": "pre",
+            "kind": "prefix",
+            "gloss": "前に"
+          },
+          {
+            "form": "sid",
+            "kind": "base",
+            "gloss": "座る・前に座る"
+          }
+        ],
+        "rootCandidates": [
+          "sid",
+          "sed"
+        ],
+        "semanticBridge": "人々の前に座って会を監督することから、議長として会議を導く意味になった。",
+        "summary": "presideはprae-＋sedereに由来し、既存のpre接頭辞とsid語根が表面形に対応するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "detach": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 détacher。des-（離れて）＋attachier（取り付ける）に由来する → 切り離す、分離する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/detach",
+          "https://www.merriam-webster.com/dictionary/detach"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/detach",
+            "note": "detachをフランス語 détacher、古フランス語 destachier、des-＋attachierに遡らせる。attachierのさらに古い語源には不確かさがある。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/detach",
+            "note": "detachの現代語義として、取り付けられたものを外し分離することを確認した。"
+          }
+        ],
+        "originLanguage": "フランス語・古フランス語・英語",
+        "etymons": [
+          "detach",
+          "détacher",
+          "destachier",
+          "des-",
+          "attachier"
+        ],
+        "historicalPath": [
+          "古フランス語 attachier（取り付ける）",
+          "des-（離れて）＋attachier",
+          "フランス語 détacher",
+          "英語 detach（切り離す）"
+        ],
+        "components": [
+          {
+            "form": "detach",
+            "kind": "base",
+            "gloss": "切り離す"
+          }
+        ],
+        "rootCandidates": [
+          "tach",
+          "stak"
+        ],
+        "semanticBridge": "取り付けたものを反対方向へ外すことから、物・人・部隊を分離する意味になった。",
+        "summary": "detachはフランス語のdes-＋attachierに由来するが、現代英語のde＋tachという表面分解は安全でないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "tame": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 tam「飼いならされた」。ゲルマン語系の単純語 → 飼いならす"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/tame",
+          "https://www.merriam-webster.com/dictionary/tame"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/tame",
+            "note": "tameを古英語 tam・ゲルマン祖語 *tamazに遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/tame",
+            "note": "tameの現代語義として、野生でない、飼いならす、従順にすることを確認した。"
+          }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": [
+          "tame",
+          "tam",
+          "*tamaz"
+        ],
+        "historicalPath": [
+          "ゲルマン祖語 *tamaz（飼いならされた、従順な）",
+          "古英語 tam",
+          "英語 tame（飼いならされた、飼いならす）"
+        ],
+        "components": [
+          {
+            "form": "tame",
+            "kind": "base",
+            "gloss": "飼いならす・従順な"
+          }
+        ],
+        "rootCandidates": [
+          "tam"
+        ],
+        "semanticBridge": "野生でなく従順な状態を表す語から、動物などをその状態にする動詞へ広がった。",
+        "summary": "tameはゲルマン語系の単純語で、英語の接辞による分解はないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "unfold": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "un（反対に・ほどいて）＋fold（折る・曲げる） → 折り目を反対に開く、広げる・展開する",
+        "gloss": "広げる、(事態が)展開する",
+        "root": "fold",
+        "parts": [
+          {
+            "form": "un",
+            "kind": "prefix",
+            "gloss": "反対に・ほどいて"
+          },
+          {
+            "form": "fold",
+            "kind": "root",
+            "gloss": "折る・曲げる"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/unfold",
+          "https://www.merriam-webster.com/dictionary/unfold"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/unfold",
+            "note": "unfoldを古英語 unfealdan、un-＋foldに遡らせ、折り目を開く意味と比喩的な展開の意味を説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/unfold",
+            "note": "unfoldの現代語義として、折りたたんだものを開くことと、事態が明らかになることを確認した。"
+          }
+        ],
+        "originLanguage": "古英語・英語",
+        "etymons": [
+          "unfold",
+          "unfealdan",
+          "un-",
+          "fold",
+          "fealdan"
+        ],
+        "historicalPath": [
+          "古英語 fealdan（折る）",
+          "un-（反対に、元に戻す）＋fold",
+          "古英語 unfealdan / 中英語 unfolden",
+          "英語 unfold（広げる、展開する）"
+        ],
+        "components": [
+          {
+            "form": "un",
+            "kind": "prefix",
+            "gloss": "反対に・ほどいて"
+          },
+          {
+            "form": "fold",
+            "kind": "base",
+            "gloss": "折る・曲げる"
+          }
+        ],
+        "rootCandidates": [
+          "fold",
+          "falth"
+        ],
+        "semanticBridge": "折り重なったものを開くことから、隠れていた事実や出来事が展開する意味になった。",
+        "summary": "unfoldは古英語以来のun-＋foldという透明な派生で、表面形にも対応するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "bundle": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "束を表すゲルマン語系の語。bind（結ぶ）に関係する一まとまり → 束ねる、まとめる"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/bundle",
+          "https://www.merriam-webster.com/dictionary/bundle"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/bundle",
+            "note": "bundleを中期オランダ語 bondel、または古英語 byndele（結ぶこと）に関係づけ、bindと同じ語根に結び付ける。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/bundle",
+            "note": "bundleの現代語義として、物を一つにまとめたもの、一度に扱う量、束ねることを確認した。"
+          }
+        ],
+        "originLanguage": "中期オランダ語・古英語・ゲルマン語系・英語",
+        "etymons": [
+          "bundle",
+          "bondel",
+          "byndele",
+          "bind",
+          "*bund-"
+        ],
+        "historicalPath": [
+          "ゲルマン語系 *bund-（結ぶ）に関係する語",
+          "中期オランダ語 bondel / 古英語 byndele",
+          "英語 bundle（束、一まとまり）",
+          "名詞から動詞「束ねる」へ広がった"
+        ],
+        "components": [
+          {
+            "form": "bundle",
+            "kind": "base",
+            "gloss": "束・一まとまり"
+          }
+        ],
+        "rootCandidates": [
+          "bund",
+          "bhendh"
+        ],
+        "semanticBridge": "結ばれた一まとまりから、物や人を一つにまとめたもの、または束ねる動作を表すようになった。",
+        "summary": "bundleはゲルマン語系の単純語・借用語で、英語の接辞による表面分解はないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "ransom": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 ranson、ラテン語 redemptionem（買い戻し・救済）から。捕虜の解放金 → 身代金"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/ransom",
+          "https://www.merriam-webster.com/dictionary/ransom"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/ransom",
+            "note": "ransomを古フランス語 ranson、ラテン語 redemptionem・redimere（買い戻す）に遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/ransom",
+            "note": "ransomの現代語義として、捕虜や拘束された人を解放するための金銭を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "ransom",
+          "ranson",
+          "redemptionem",
+          "redimere",
+          "red-",
+          "emere"
+        ],
+        "historicalPath": [
+          "ラテン語 red-（戻す）＋emere（買う）",
+          "ラテン語 redimere / redemptionem（買い戻し、救済）",
+          "古フランス語 ranson",
+          "英語 ransom（身代金、買い戻す）"
+        ],
+        "components": [
+          {
+            "form": "ransom",
+            "kind": "base",
+            "gloss": "身代金・買い戻し"
+          }
+        ],
+        "rootCandidates": [
+          "redim",
+          "em"
+        ],
+        "semanticBridge": "人を買い戻して解放するための金銭から、捕虜などの解放に支払う身代金を表すようになった。",
+        "summary": "ransomはフランス語を経たラテン語系の借用語で、現代英語の接辞分解ができないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "precaution": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "pre（前もって）＋caut（用心する・警戒する）＋-ion（〜すること） → 前もって警戒すること、予防措置・用心",
+        "gloss": "予防措置、用心",
+        "root": "caut",
+        "parts": [
+          {
+            "form": "pre",
+            "kind": "prefix",
+            "gloss": "前もって"
+          },
+          {
+            "form": "caut",
+            "kind": "root",
+            "gloss": "用心する・警戒する"
+          },
+          {
+            "form": "-ion",
+            "kind": "suffix",
+            "gloss": "〜すること"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/precaution",
+          "https://www.merriam-webster.com/dictionary/precaution"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/precaution",
+            "note": "precautionをフランス語 précaution、ラテン語 praecautio・praecavere、prae（前に）＋cavere（警戒する）に遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/precaution",
+            "note": "precautionの現代語義として、危険や問題を防ぐために前もって取る措置を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "precaution",
+          "précaution",
+          "praecautio",
+          "praecavere",
+          "prae",
+          "cavere",
+          "cautus"
+        ],
+        "historicalPath": [
+          "ラテン語 prae-（前もって）＋cavere（警戒する）",
+          "ラテン語 praecavere / praecautio（前もって警戒すること）",
+          "フランス語 précaution",
+          "英語 pre＋caut＋-ion → precaution（予防措置）"
+        ],
+        "components": [
+          {
+            "form": "pre",
+            "kind": "prefix",
+            "gloss": "前もって"
+          },
+          {
+            "form": "caut",
+            "kind": "base",
+            "gloss": "用心する・警戒する"
+          },
+          {
+            "form": "-ion",
+            "kind": "suffix",
+            "gloss": "行為・結果"
+          }
+        ],
+        "rootCandidates": [
+          "caut",
+          "cav"
+        ],
+        "semanticBridge": "危険を前もって警戒することから、被害を防ぐために先に取る措置を表すようになった。",
+        "summary": "precautionはprae-＋cavereに由来するcautus系の語幹が表面形cautとして現れ、pre＋caut＋-ionに対応するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "gloomy": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "gloom（暗がり・憂鬱）＋-y（〜の性質をもつ） → 暗い性質の、陰気な・憂鬱な",
+        "gloss": "陰気な、憂鬱な",
+        "root": "gloom",
+        "parts": [
+          {
+            "form": "gloom",
+            "kind": "root",
+            "gloss": "暗がり・憂鬱"
+          },
+          {
+            "form": "-y",
+            "kind": "suffix",
+            "gloss": "〜の性質をもつ"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/gloomy",
+          "https://www.merriam-webster.com/dictionary/gloomy"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/gloomy",
+            "note": "gloomyはおそらく英語 gloom からの派生で、暗さから心の沈みを表す比喩的な意味をもつ。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/gloomy",
+            "note": "gloomyの現代語義として、暗く陰気なこと、気分が沈んでいることを確認した。"
+          }
+        ],
+        "originLanguage": "英語",
+        "etymons": [
+          "gloomy",
+          "gloom",
+          "-y"
+        ],
+        "historicalPath": [
+          "英語 gloom（暗がり、暗い気分）",
+          "gloom＋-y（〜の性質をもつ）",
+          "英語 gloomy（暗い、陰気な、憂鬱な）"
+        ],
+        "components": [
+          {
+            "form": "gloom",
+            "kind": "base",
+            "gloss": "暗がり・憂鬱"
+          },
+          {
+            "form": "-y",
+            "kind": "suffix",
+            "gloss": "性質"
+          }
+        ],
+        "rootCandidates": [
+          "gloom"
+        ],
+        "semanticBridge": "物理的な暗がりから、先が明るく見えない心の状態を表すようになった。",
+        "summary": "gloomyは出典がgloomからの派生と説明しており、gloom＋-yの表面形に対応するため、語源が未詳な基体であることを注記した上でA型にする。",
+        "confidence": "medium"
+      }
+    },
+    "tender": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 tendre、ラテン語 tener「柔らかい・若い」から → 柔らかい、優しい"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/tender",
+          "https://www.merriam-webster.com/dictionary/tender"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/tender",
+            "note": "形容詞 tenderを古フランス語 tendre、ラテン語 tener「柔らかい、若い」に遡らせ、語中のdは語源的でないと説明する。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/tender",
+            "note": "tenderの現代語義として、柔らかい、若い、優しい・思いやりのあることを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "tender",
+          "tendre",
+          "tener",
+          "*ten-"
+        ],
+        "historicalPath": [
+          "ラテン語 tener（柔らかい、若い）",
+          "古フランス語 tendre",
+          "英語 tender（柔らかい、若い）",
+          "身体的な柔らかさから人の優しさへ意味が広がった"
+        ],
+        "components": [
+          {
+            "form": "tender",
+            "kind": "base",
+            "gloss": "柔らかい・優しい"
+          }
+        ],
+        "rootCandidates": [
+          "tener",
+          "ten"
+        ],
+        "semanticBridge": "柔らかく傷つきやすい状態から、感情に敏感で優しい状態を表すようになった。",
+        "summary": "tenderはラテン語tenerを起源とする借用語で、既存のtend語根などに分解するのは誤りのためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "cosmopolitan": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ギリシャ語 kosmos（世界）＋polites（市民）の複合語。世界の市民 → 国際的な、世界主義の"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/cosmopolitan",
+          "https://www.merriam-webster.com/dictionary/cosmopolitan"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/cosmopolitan",
+            "note": "cosmopolitanをcosmopolite「世界の市民」をもとにした語とし、cosmosとpolitesのギリシャ語構成に結び付ける。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/cosmopolitan",
+            "note": "cosmopolitanの現代語義として、国や地域に限定されず国際的であることを確認した。"
+          }
+        ],
+        "originLanguage": "ギリシャ語・英語",
+        "etymons": [
+          "cosmopolitan",
+          "cosmopolite",
+          "kosmos",
+          "polites",
+          "polis"
+        ],
+        "historicalPath": [
+          "ギリシャ語 kosmos（世界、秩序）＋polites（市民）",
+          "ギリシャ語 kosmopolitēs（世界の市民）",
+          "英語 cosmopolite",
+          "英語 cosmopolitan（国際的な）"
+        ],
+        "components": [
+          {
+            "form": "cosmopolitan",
+            "kind": "base",
+            "gloss": "国際的な・世界主義の"
+          }
+        ],
+        "rootCandidates": [
+          "cosm",
+          "polit"
+        ],
+        "semanticBridge": "一つの都市や国に限らず世界全体を故郷とする市民という考えから、国際的な性質を表すようになった。",
+        "summary": "cosmopolitanはギリシャ語要素からなる複合表現であり、ユーザー指定に従い語根を個別表示せずB型にする。",
+        "confidence": "high"
+      }
+    },
+    "menacing": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "menac（脅す・危険を示す）＋-ing（〜している性質） → 脅すような、威嚇的な",
+        "gloss": "脅すような、威嚇的な",
+        "root": "menac",
+        "parts": [
+          {
+            "form": "menac",
+            "kind": "root",
+            "gloss": "脅す・危険を示す"
+          },
+          {
+            "form": "-ing",
+            "kind": "suffix",
+            "gloss": "〜している性質"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/menacing",
+          "https://www.merriam-webster.com/dictionary/menacing"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/menacing",
+            "note": "menacingはmenaceから作られた現在分詞形の形容詞で、menaceは古フランス語 menacier・俗ラテン語 *minaciareに由来する。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/menacing",
+            "note": "menacingの現代語義として、危険や脅威を示すことを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "menacing",
+          "menace",
+          "menacier",
+          "*minaciare",
+          "minacia",
+          "minari",
+          "-ing"
+        ],
+        "historicalPath": [
+          "ラテン語 minari / minacia（脅す、脅し）",
+          "俗ラテン語 *minaciare",
+          "古フランス語 menacier",
+          "英語 menace＋-ing → menacing（威嚇的な）"
+        ],
+        "components": [
+          {
+            "form": "menac",
+            "kind": "base",
+            "gloss": "脅す・危険を示す"
+          },
+          {
+            "form": "-ing",
+            "kind": "suffix",
+            "gloss": "〜している性質"
+          }
+        ],
+        "rootCandidates": [
+          "menac",
+          "min"
+        ],
+        "semanticBridge": "脅しや危険を示す動作から、危険を感じさせる性質を表す形容詞になった。",
+        "summary": "menacingはmenaceの現在分詞形で、語末のeが落ちた表面幹menac＋-ingに対応するためA型にする。",
+        "confidence": "medium"
+      }
+    },
+    "perch": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 perche、ラテン語 pertica「棒・測量棒」から。鳥が止まる棒 → 鳥が止まる、腰かける"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/perch",
+          "https://www.merriam-webster.com/dictionary/perch"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/perch",
+            "note": "perchを古フランス語 perche、ラテン語 pertica「棒、長い杖、測量棒」に遡らせ、鳥が止まる棒の意味を説明する。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/perch",
+            "note": "perchの現代語義として、鳥が止まること、止まり木、腰かける場所を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "perch",
+          "perche",
+          "pertica"
+        ],
+        "historicalPath": [
+          "ラテン語 pertica（棒、測量棒）",
+          "古フランス語 perche",
+          "英語 perch（止まり木）",
+          "棒に止まることから、鳥が止まる・人が腰かける意味へ"
+        ],
+        "components": [
+          {
+            "form": "perch",
+            "kind": "base",
+            "gloss": "止まり木・止まる"
+          }
+        ],
+        "rootCandidates": [
+          "pertic",
+          "perch"
+        ],
+        "semanticBridge": "鳥が止まる棒から、鳥が止まる動作、さらに人が高い場所に腰かける意味へ広がった。",
+        "summary": "perchはフランス語・ラテン語系の借用語で、英語の接辞による表面分解はないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "breeze": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "スペイン語 briza「冷たい北東風」から（別説に東フリジア語）。軽い風 → 軽やかに通り抜ける、楽々とこなす"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/breeze",
+          "https://www.merriam-webster.com/dictionary/breeze"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/breeze",
+            "note": "breezeをスペイン語 briza「冷たい北東風」に由来する可能性が高い語とし、東フリジア語 brisenを別説として挙げる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/breeze",
+            "note": "breezeの現代語義として、軽い風と、容易に進むことを確認した。"
+          }
+        ],
+        "originLanguage": "スペイン語・英語",
+        "etymons": [
+          "breeze",
+          "briza",
+          "brisen"
+        ],
+        "historicalPath": [
+          "スペイン語 briza（冷たい北東風）",
+          "英語 breeze（風）",
+          "軽い風のイメージから、楽々と進むことの比喩へ"
+        ],
+        "components": [
+          {
+            "form": "breeze",
+            "kind": "base",
+            "gloss": "そよ風・楽に進むこと"
+          }
+        ],
+        "rootCandidates": [
+          "briz",
+          "bris"
+        ],
+        "semanticBridge": "軽く吹き抜ける風から、抵抗なく楽々と進むことを表す口語的な意味になった。",
+        "summary": "breezeはスペイン語などから入った単純な借用語で、英語の接辞分解はできないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "gleam": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 glæm「輝く光」からのゲルマン語系単純語 → きらりと光る"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/gleam",
+          "https://www.merriam-webster.com/dictionary/gleam"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/gleam",
+            "note": "gleamを古英語 glæm、ゲルマン祖語 *glaimiz、印欧祖語 *ghel-「輝く」に遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/gleam",
+            "note": "gleamの現代語義として、弱くきらめく光と、きらりと光ることを確認した。"
+          }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": [
+          "gleam",
+          "glæm",
+          "*glaimiz",
+          "*ghel-"
+        ],
+        "historicalPath": [
+          "印欧祖語 *ghel-（輝く）",
+          "ゲルマン祖語 *glaimiz",
+          "古英語 glæm",
+          "英語 gleam（きらめき、きらりと光る）"
+        ],
+        "components": [
+          {
+            "form": "gleam",
+            "kind": "base",
+            "gloss": "きらめき・光る"
+          }
+        ],
+        "rootCandidates": [
+          "ghel",
+          "gleam"
+        ],
+        "semanticBridge": "輝く光そのものを表す語から、弱くきらりと光る動作や光の兆しを表すようになった。",
+        "summary": "gleamは古英語以来のゲルマン語系単純語で、英語の接辞による分解はないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "sizzle": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "中英語 sissen「シューという音を立てる」に関係する擬音語 → ジュージュー音を立てる"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/sizzle",
+          "https://www.merriam-webster.com/dictionary/sizzle"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/sizzle",
+            "note": "sizzleを中英語 sissen「シュー、ブンという音を立てる」に関係する反復形・擬音語の可能性があると説明する。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/sizzle",
+            "note": "sizzleの現代語義として、熱い油などがジュージュー音を立てることを確認した。"
+          }
+        ],
+        "originLanguage": "中英語・英語",
+        "etymons": [
+          "sizzle",
+          "sissen",
+          "hiss"
+        ],
+        "historicalPath": [
+          "中英語 sissen（シューという音を立てる）",
+          "音をまねた反復的な語形",
+          "英語 sizzle（ジュージュー音を立てる）"
+        ],
+        "components": [
+          {
+            "form": "sizzle",
+            "kind": "base",
+            "gloss": "ジュージュー音"
+          }
+        ],
+        "rootCandidates": [
+          "siss",
+          "sizz"
+        ],
+        "semanticBridge": "熱いものから出る音をまねた語が、加熱された油や食物が音を立てる動作を表すようになった。",
+        "summary": "sizzleは擬音語・反復形に由来し、英語の語根と接辞の派生として示せないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "cemetery": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ギリシャ語 koimeterion「眠る場所」からラテン語・フランス語を経た借用語。死者の眠る場所 → 墓地"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/cemetery",
+          "https://www.merriam-webster.com/dictionary/cemetery"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/cemetery",
+            "note": "cemeteryを古フランス語 cimetiere、ラテン語 coemeterium、ギリシャ語 koimeterion「眠る場所」に遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/cemetery",
+            "note": "cemeteryの現代語義として、死者を埋葬する場所を確認した。"
+          }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・フランス語・英語",
+        "etymons": [
+          "cemetery",
+          "cimetiere",
+          "coemeterium",
+          "koimeterion",
+          "koiman",
+          "keimai"
+        ],
+        "historicalPath": [
+          "ギリシャ語 koimeterion（眠る場所）",
+          "ラテン語 coemeterium / 中世ラテン語 cemeterium",
+          "古フランス語 cimetiere",
+          "英語 cemetery（墓地）"
+        ],
+        "components": [
+          {
+            "form": "cemetery",
+            "kind": "base",
+            "gloss": "墓地・埋葬場所"
+          }
+        ],
+        "rootCandidates": [
+          "coemeter",
+          "keim"
+        ],
+        "semanticBridge": "死を眠りにたとえた「眠る場所」という表現から、死者を埋葬する場所を表す語になった。",
+        "summary": "cemeteryはギリシャ語を起源とする多段階の借用語で、現代英語の接辞による分解はないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "equation": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "equat（等しくする）＋-ion（〜すること） → 等しくすること、方程式・等式",
+        "gloss": "方程式、等式",
+        "root": "equat",
+        "parts": [
+          {
+            "form": "equat",
+            "kind": "root",
+            "gloss": "等しくする"
+          },
+          {
+            "form": "-ion",
+            "kind": "suffix",
+            "gloss": "〜すること"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/equation",
+          "https://www.merriam-webster.com/dictionary/equation"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/equation",
+            "note": "equationをラテン語 aequatio・aequare（等しくする）に遡らせ、等しくする行為から数学の等式へ意味が発達したと説明する。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/equation",
+            "note": "equationの現代語義として、二つの量の等しさを表す数学的命題・式を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "equation",
+          "équation",
+          "aequatio",
+          "aequare",
+          "aequus",
+          "-ion"
+        ],
+        "historicalPath": [
+          "ラテン語 aequus（等しい）",
+          "ラテン語 aequare（等しくする）",
+          "ラテン語 aequatio / フランス語 équation",
+          "英語 equat＋-ion → equation（方程式、等式）"
+        ],
+        "components": [
+          {
+            "form": "equat",
+            "kind": "base",
+            "gloss": "等しくする"
+          },
+          {
+            "form": "-ion",
+            "kind": "suffix",
+            "gloss": "行為・結果"
+          }
+        ],
+        "rootCandidates": [
+          "equat",
+          "aequ"
+        ],
+        "semanticBridge": "二つのものを等しくする行為から、数学で二つの量が等しいことを示す式を表すようになった。",
+        "summary": "equationはaequareの派生語幹equat＋-ionという表面形に対応するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "possessive": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "possess（所有する）＋-ive（〜する性質の） → 所有に関する、所有欲の強い・独占欲の強い",
+        "gloss": "所有欲の強い、独占欲の強い",
+        "root": "possess",
+        "parts": [
+          {
+            "form": "possess",
+            "kind": "root",
+            "gloss": "所有する"
+          },
+          {
+            "form": "-ive",
+            "kind": "suffix",
+            "gloss": "〜する性質の"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/possessive",
+          "https://www.merriam-webster.com/dictionary/possessive"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/possessive",
+            "note": "possessiveをフランス語 possessif、ラテン語 possessivus、possess-（possidere「所有する」の過去分詞語幹）に遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/possessive",
+            "note": "possessiveの現代語義として、所有を示す文法用語と、所有欲・独占欲の強い性質を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "possessive",
+          "possessif",
+          "possessivus",
+          "possess-",
+          "possidere",
+          "-ive"
+        ],
+        "historicalPath": [
+          "ラテン語 possidere（所有する）",
+          "ラテン語 possessivus（所有に関する）",
+          "古フランス語 possessif",
+          "英語 possess＋-ive → possessive（所有に関する、独占欲の強い）"
+        ],
+        "components": [
+          {
+            "form": "possess",
+            "kind": "base",
+            "gloss": "所有する"
+          },
+          {
+            "form": "-ive",
+            "kind": "suffix",
+            "gloss": "〜する性質の"
+          }
+        ],
+        "rootCandidates": [
+          "possess",
+          "sed"
+        ],
+        "semanticBridge": "物を自分のものとして持つことから、所有を示す文法上の性質や、所有欲の強さを表すようになった。",
+        "summary": "possessiveはpossess-＋-iveに由来することが出典で確認でき、possess＋-iveの表面形に対応するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "horizontal": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "horizont（境界・水平線）＋-al（〜に関する） → 水平線に関する、水平の",
+        "gloss": "水平の",
+        "root": "horizont",
+        "parts": [
+          {
+            "form": "horizont",
+            "kind": "root",
+            "gloss": "境界・水平線"
+          },
+          {
+            "form": "-al",
+            "kind": "suffix",
+            "gloss": "〜に関する"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/horizontal",
+          "https://www.merriam-webster.com/dictionary/horizontal"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/horizontal",
+            "note": "horizontalをフランス語 horizontal、ラテン語 horizontem、ギリシャ語 horizon（境界）に遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/horizontal",
+            "note": "horizontalの現代語義として、地平線に平行であること、水平であることを確認した。"
+          }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・フランス語・英語",
+        "etymons": [
+          "horizontal",
+          "horizon",
+          "horizontem",
+          "horizon",
+          "horizein",
+          "-al"
+        ],
+        "historicalPath": [
+          "ギリシャ語 horizein（境界を定める）・horizon（境界線）",
+          "ラテン語 horizontem",
+          "フランス語 horizontal",
+          "英語 horizont＋-al → horizontal（水平の）"
+        ],
+        "components": [
+          {
+            "form": "horizont",
+            "kind": "base",
+            "gloss": "境界・水平線"
+          },
+          {
+            "form": "-al",
+            "kind": "suffix",
+            "gloss": "〜に関する"
+          }
+        ],
+        "rootCandidates": [
+          "horizont",
+          "hor"
+        ],
+        "semanticBridge": "視界を区切る水平線に関するものから、水平線と平行な方向や位置を表すようになった。",
+        "summary": "horizontalはhorizon系の語幹horizont＋-alという表面形に対応するため、接続語幹の形を明示してA型にする。",
+        "confidence": "medium"
+      }
+    },
+    "drastic": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "drast（行う・実行する）＋-ic（〜に関する） → 強く作用する、徹底的な・思い切った",
+        "gloss": "徹底的な、思い切った、過激な",
+        "root": "drast",
+        "parts": [
+          {
+            "form": "drast",
+            "kind": "root",
+            "gloss": "行う・実行する"
+          },
+          {
+            "form": "-ic",
+            "kind": "suffix",
+            "gloss": "〜に関する"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/drastic",
+          "https://www.merriam-webster.com/dictionary/drastic"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/drastic",
+            "note": "drasticをギリシャ語 drastikos（効果的な、活動的な）、drasteon・draō（行う、実行する）に遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/drastic",
+            "note": "drasticの現代語義として、極端で強力な、思い切った変化や措置を確認した。"
+          }
+        ],
+        "originLanguage": "ギリシャ語・英語",
+        "etymons": [
+          "drastic",
+          "drastikos",
+          "drasteon",
+          "draō",
+          "-ic"
+        ],
+        "historicalPath": [
+          "ギリシャ語 draō（行う、実行する）",
+          "ギリシャ語 drasteon（行うべきこと）",
+          "ギリシャ語 drastikos（強く作用する）",
+          "英語 drast＋-ic → drastic（徹底的な、過激な）"
+        ],
+        "components": [
+          {
+            "form": "drast",
+            "kind": "base",
+            "gloss": "行う・実行する"
+          },
+          {
+            "form": "-ic",
+            "kind": "suffix",
+            "gloss": "〜に関する"
+          }
+        ],
+        "rootCandidates": [
+          "drast",
+          "dra"
+        ],
+        "semanticBridge": "強く実行・作用するものという意味から、変化や措置が極端で強力であることを表すようになった。",
+        "summary": "drasticはギリシャ語drastikosに由来するdrast＋-icの表面形に対応するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "haul": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "中英語 halen「引っ張る」に由来する単純語。綴りの-au-は後世の変化 → 引っ張る、運ぶ"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/haul",
+          "https://www.merriam-webster.com/dictionary/haul"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/haul",
+            "note": "haulを中英語 halen「引っ張る、引く」に遡らせ、現在の-au-綴りは17世紀初めの変化と説明する。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/haul",
+            "note": "haulの現代語義として、力をかけて引くこと、重い物を運ぶことを確認した。"
+          }
+        ],
+        "originLanguage": "中英語・英語",
+        "etymons": [
+          "haul",
+          "halen",
+          "hale"
+        ],
+        "historicalPath": [
+          "中英語 halen（引っ張る、引く）",
+          "英語 hall / haulへの語形変化",
+          "17世紀ごろ-au-の綴りが定着",
+          "英語 haul（引っ張る、運ぶ）"
+        ],
+        "components": [
+          {
+            "form": "haul",
+            "kind": "base",
+            "gloss": "引っ張る・運ぶ"
+          }
+        ],
+        "rootCandidates": [
+          "hal",
+          "haul"
+        ],
+        "semanticBridge": "力をかけて引く動作から、物を引いて運ぶこと、運搬した量を表すようになった。",
+        "summary": "haulは中英語由来の単純語で、語中の-au-も接辞ではないためB型にする。",
+        "confidence": "high"
+      }
+    }
+  }
+}

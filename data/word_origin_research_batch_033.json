@@ -1,0 +1,965 @@
+{
+  "meta": {
+    "batchId": "batch-033",
+    "note": "未確認B型の次の25語。語源資料が表面形の派生を支える語はA型へ移し、複合語・単純借用語・語源が分岐する語はB型に残す。"
+  },
+  "dictionary": {
+    "roots": {
+      "prior": {
+        "gloss": "前の・先の",
+        "origin": "ラテン語 prior / pri",
+        "note": "時間や順序で前にあることから、重要度が先に置かれる優先へ。priority。"
+      },
+      "tend": {
+        "gloss": "伸ばす・向ける",
+        "origin": "ラテン語 tendere",
+        "note": "ある方向へ伸びたり向かったりするイメージ。tendency。"
+      },
+      "chemic": {
+        "gloss": "化学・錬金術の",
+        "origin": "中世ラテン語 alchimicus / 古フランス語 chimique",
+        "note": "alchemyに由来するchemicに-alが付き、化学に関する意味になる。chemical。"
+      },
+      "bare": {
+        "gloss": "むき出しの・わずかな",
+        "origin": "古英語 bær / ゲルマン語系 *bazaz",
+        "note": "覆いがない状態から、余分なものがほとんどない、かろうじての意味へ。barely。"
+      },
+      "secret": {
+        "gloss": "隠された・秘密の",
+        "origin": "ラテン語 secretus / secernere",
+        "note": "他から分けて隠された状態を表す基体。secretly。"
+      }
+    }
+  },
+  "entries": {
+    "balance": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 balance、ラテン語 bilanx（2つの皿をもつはかり）に由来し、均衡や口座の残りを表すようになった。 → 均衡、バランス；（口座の）残高"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/balance",
+          "https://www.merriam-webster.com/dictionary/balance"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/balance", "note": "balanceを古フランス語 balance・中世ラテン語 bilancia・ラテン語 bilanx（2つの皿をもつはかり）に遡らせ、bi-とlanxの可能性を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/balance", "note": "balanceの現代語義として、均衡、はかり、口座の残高や差額を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["balance", "balance", "bilancia", "bilanx", "bis", "lanx"],
+        "historicalPath": [
+          "ラテン語 bilanx（2つの皿をもつはかり）",
+          "中世ラテン語 bilancia",
+          "古フランス語 balance・中英語 balance",
+          "英語 balance（均衡、残高）"
+        ],
+        "components": [
+          { "form": "bi-", "kind": "prefix", "gloss": "二つ" },
+          { "form": "lanx", "kind": "base", "gloss": "皿、はかり" }
+        ],
+        "rootCandidates": ["dwo", "lanx"],
+        "semanticBridge": "二つの皿で重さを比べる道具から、両側がつり合う状態、会計上の差額や残高へ意味が広がった。",
+        "summary": "balanceはラテン語bilanxに由来するが、bi-やlanxが英語のbalanceに表面上残らず、安定したA型分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "bi-＋lanxの深い語源は記録するが、balanceを表面形だけで分解しない。",
+        "batch": "batch-033"
+      }
+    },
+    "priority": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "優先",
+        "root": "prior",
+        "parts": [
+          { "form": "prior", "kind": "root", "gloss": "前の・先の" },
+          { "form": "-ity", "kind": "suffix", "gloss": "〜であること" }
+        ],
+        "derivation": "prior（前の・先の）＋-ity（〜であること） → 先に置かれること、優先"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/priority",
+          "https://www.merriam-webster.com/dictionary/priority"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/priority", "note": "priorityを古フランス語 priorite・中世ラテン語 prioritas、ラテン語 prior（前の、先の）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/priority", "note": "priorityの現代語義として、時間・順序・重要度の点で先に扱うこと、優先事項を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["priority", "priorite", "prioritas", "prior", "pri", "-ity"],
+        "historicalPath": [
+          "ラテン語 pri / prior（前にある、先の）",
+          "中世ラテン語 prioritas（先にある状態）",
+          "古フランス語 priorite・中英語 prioritie",
+          "英語 prior＋-ity → priority（優先）"
+        ],
+        "components": [
+          { "form": "prior", "kind": "base", "gloss": "前の、先の" },
+          { "form": "-itas / -ity", "kind": "suffix", "gloss": "性質・状態" }
+        ],
+        "rootCandidates": ["prior", "per"],
+        "semanticBridge": "時間や順序で前にある性質から、重要度や緊急度の点で先に扱うことへ意味が広がった。",
+        "summary": "priorityはprior（前の・先の）＋-ityで、先に置かれること、優先という意味になる。",
+        "confidence": "high",
+        "notes": "既存の-ity接尾辞を再利用する。",
+        "batch": "batch-033"
+      }
+    },
+    "tendency": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "傾向",
+        "root": "tend",
+        "parts": [
+          { "form": "tend", "kind": "root", "gloss": "伸ばす・向ける" },
+          { "form": "-ency", "kind": "suffix", "gloss": "〜の状態" }
+        ],
+        "derivation": "tend（伸ばす・向ける）＋-ency（〜の状態） → ある方向へ向かう状態、傾向"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/tendency",
+          "https://www.merriam-webster.com/dictionary/tendency"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/tendency", "note": "tendencyを中世ラテン語 tendentia、ラテン語 tendere（伸ばす、向ける）に遡らせ、古フランス語 tendanceとの関係も示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/tendency", "note": "tendencyの現代語義として、特定の方向へ向かう傾向・行動上の性向を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["tendency", "tendentia", "tendere", "tend", "*ten-", "-ency"],
+        "historicalPath": [
+          "インド・ヨーロッパ祖語 *ten-（伸ばす）",
+          "ラテン語 tendere（伸ばす、目指す）",
+          "中世ラテン語 tendentia・古フランス語 tendance",
+          "英語 tend＋-ency → tendency（傾向）"
+        ],
+        "components": [
+          { "form": "tendere / tend", "kind": "base", "gloss": "伸ばす、向ける" },
+          { "form": "-entia / -ency", "kind": "suffix", "gloss": "状態" }
+        ],
+        "rootCandidates": ["tend", "ten"],
+        "semanticBridge": "ある方向へ伸びて向かう動作から、物事や人が特定の方向へ向かいやすい性質へ広がった。",
+        "summary": "tendencyはtend（伸ばす・向ける）＋-encyで、ある方向へ向かう状態、傾向という意味になる。",
+        "confidence": "high",
+        "notes": "-ency接尾辞とtend語根を新規登録する。",
+        "batch": "batch-033"
+      }
+    },
+    "shelter": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "語源は論争があり、古英語 scyldtruma（盾を組んだ隊列）からの変化説や、shield＋-ture説がある。 → 避難所、シェルター；保護"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/shelter",
+          "https://www.merriam-webster.com/dictionary/shelter"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/shelter", "note": "shelterを語源論争のある語とし、古英語 scyldtruma（盾の隊列）からの変化説とshield＋-ture説を紹介している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/shelter", "note": "shelterの現代語義として、天候や危険から守る場所・保護する行為を確認した。" }
+        ],
+        "originLanguage": "古英語の可能性・英語",
+        "etymons": ["shelter", "sheltroun", "sheldtrume", "scyldtruma", "shield", "-ture"],
+        "historicalPath": [
+          "古英語 scyldtruma（盾で守られた隊列）という説",
+          "中英語 sheltroun / sheltron",
+          "近代英語 shelter（保護する構造、保護された状態）",
+          "英語 shelter（避難所、保護）"
+        ],
+        "components": [
+          { "form": "scyld", "kind": "base", "gloss": "盾" },
+          { "form": "truma", "kind": "base", "gloss": "隊列、固いもの" }
+        ],
+        "rootCandidates": ["shield", "deru"],
+        "semanticBridge": "人を危険から守る盾の隊列という説から、危険や天候を避ける場所、さらに守る行為へ意味が広がった。",
+        "summary": "shelterは語源そのものが論争中で、複数の分解案も確定していないためB型に残す。",
+        "confidence": "low",
+        "notes": "shield＋-ture説は出典が紹介する仮説として記録するが、A型表示には採用しない。",
+        "batch": "batch-033"
+      }
+    },
+    "content": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "内容",
+        "root": "ten",
+        "parts": [
+          { "form": "con", "kind": "prefix", "gloss": "共に・中に" },
+          { "form": "ten", "kind": "root", "gloss": "保つ" }
+        ],
+        "derivation": "con-（共に・中に）＋ten（保つ） → 中に保たれたもの、中身・内容／欲望が今あるものに限られて満足して"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/content",
+          "https://www.merriam-webster.com/dictionary/content"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/content", "note": "contentをラテン語 contentus（含まれた、満足した）、continere（共に保つ、囲む）に遡らせ、com／con-＋tenereの構成を説明している。名詞の中身と形容詞の満足の意味の接続も示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/content", "note": "contentの現代語義として、含まれている中身・内容と、満足している状態の両方を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["content", "contentus", "continere", "con-", "tenere", "*ten-"],
+        "historicalPath": [
+          "ラテン語 con-（共に）＋tenere（保つ、持つ）",
+          "ラテン語 continere / contentus（中に保たれた、満足した）",
+          "古フランス語 content・英語 content",
+          "英語 content（中身、内容／満足して）"
+        ],
+        "components": [
+          { "form": "con-", "kind": "prefix", "gloss": "共に、中に" },
+          { "form": "tenere", "kind": "base", "gloss": "保つ、持つ" }
+        ],
+        "rootCandidates": ["ten"],
+        "semanticBridge": "中に保たれているものから中身・内容となり、持っているもので欲望が満たされている状態から満足してという意味にもなった。",
+        "summary": "contentはcon-（共に・中に）＋ten（保つ）に結び付く語で、中身・内容と満足しての意味になる。",
+        "confidence": "high",
+        "notes": "既存のcon接頭辞とten語根を再利用する。ラテン語の過去分詞語尾は表示から省く。",
+        "batch": "batch-033"
+      }
+    },
+    "foster": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 fostrian（食物を与え、養う）、ゲルマン祖語 *fostraに由来し、子どもや能力を育てる意味へ広がった。 → （能力・感情などを）育む、促進する／里子として育てる"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/foster",
+          "https://www.merriam-webster.com/dictionary/foster"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/foster", "note": "fosterを古英語 fostrian・fostor（食物、養育）、ゲルマン祖語 *fostra、PIE *pa-（食べさせる）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/foster", "note": "fosterの現代語義として、子どもを養育すること、能力・感情・活動を促進することを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["foster", "fostrian", "fostor", "*fostra", "*pa-"],
+        "historicalPath": [
+          "インド・ヨーロッパ祖語 *pa-（食べさせる、守る）",
+          "ゲルマン祖語 *fostra（養育、食物）",
+          "古英語 fostrian（養う、支える）",
+          "英語 foster（育てる、促進する）"
+        ],
+        "components": [
+          { "form": "fostor", "kind": "word", "gloss": "食物、養育" }
+        ],
+        "rootCandidates": ["pa"],
+        "semanticBridge": "食物を与えて養うことから、子どもを親代わりに育てること、さらに能力や感情を成長させることへ広がった。",
+        "summary": "fosterは古いゲルマン語系の単純語で、現代語の表面形に安定した接辞分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "foster＋語形変化や、語源上の*pa-を英語の表面語根としては表示しない。",
+        "batch": "batch-033"
+      }
+    },
+    "hate": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 hatian、ゲルマン祖語 *haton、インド・ヨーロッパ祖語 *kad-（悲しみ、憎しみ）に由来する。 → 憎む、ひどく嫌う"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/hate",
+          "https://www.merriam-webster.com/dictionary/hate"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/hate", "note": "hateを古英語 hatian・ゲルマン祖語 *haton、PIE *kad-（悲しみ、憎しみ）に遡らせている。名詞hateとの関係も説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/hate", "note": "hateの現代語義として、強い嫌悪や敵意を感じることを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["hate", "hatian", "*haton", "*kad-", "hete", "*hatis-"],
+        "historicalPath": [
+          "インド・ヨーロッパ祖語 *kad-（悲しみ、憎しみ）",
+          "ゲルマン祖語 *haton（憎む）・*hatis-（憎しみ）",
+          "古英語 hatian / hete",
+          "英語 hate（憎む、ひどく嫌う）"
+        ],
+        "components": [
+          { "form": "hatian", "kind": "word", "gloss": "憎む" }
+        ],
+        "rootCandidates": ["kad"],
+        "semanticBridge": "悲しみや敵意を表す古い語から、強い嫌悪や敵意を感じる現代の動詞・名詞へ続いている。",
+        "summary": "hateは古いゲルマン語系の単純語で、現代語の表面形に安定した接辞分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "hate＋語形変化のような分析は語源分解として表示しない。",
+        "batch": "batch-033"
+      }
+    },
+    "typical": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "典型的な",
+        "root": "typ",
+        "parts": [
+          { "form": "typ", "kind": "root", "gloss": "形・型" },
+          { "form": "-ical", "kind": "suffix", "gloss": "〜の性質の" }
+        ],
+        "derivation": "typ（形・型）＋-ical（〜の性質の） → 型に関する、典型的な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/typical",
+          "https://www.merriam-webster.com/dictionary/typical"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/typical", "note": "typicalを中世ラテン語 typicalis・ギリシャ語 typikos、typos（印象、型）に遡らせ、型を示す意味から典型的な意味への発展を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/typical", "note": "typicalの現代語義として、ある型・種類の特徴を示すこと、典型的であることを確認した。" }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・英語",
+        "etymons": ["typical", "typicalis", "typicus", "typikos", "typos", "-ical"],
+        "historicalPath": [
+          "ギリシャ語 typos（打った跡、型、代表例）",
+          "ギリシャ語 typikos（型に関する）",
+          "ラテン語 typicalis・中世ラテン語 typicalis",
+          "英語 typ＋-ical → typical（典型的な）"
+        ],
+        "components": [
+          { "form": "typos / typ", "kind": "base", "gloss": "型、印象" },
+          { "form": "-ikos / -ical", "kind": "suffix", "gloss": "〜に関する" }
+        ],
+        "rootCandidates": ["typ"],
+        "semanticBridge": "打った跡や代表となる型から、ある集団の特徴をよく示す典型的なという意味へ広がった。",
+        "summary": "typicalはtyp（形・型）＋-icalで、型に関する、典型的なという意味になる。",
+        "confidence": "high",
+        "notes": "既存のtyp語根と-ical接尾辞を再利用する。",
+        "batch": "batch-033"
+      }
+    },
+    "chemical": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "化学の",
+        "root": "chemic",
+        "parts": [
+          { "form": "chemic", "kind": "root", "gloss": "化学・錬金術の" },
+          { "form": "-al", "kind": "suffix", "gloss": "〜に関する" }
+        ],
+        "derivation": "chemic（化学・錬金術の）＋-al（〜に関する） → 化学に関する、化学の"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/chemical",
+          "https://www.merriam-webster.com/dictionary/chemical"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/chemical", "note": "chemicalをchemic（錬金術の）＋-alと説明し、chemicを中世ラテン語 alchimicus・alchemyに結び付けている。名詞chemicalは形容詞から派生したと説明される。" },
+          { "url": "https://www.merriam-webster.com/dictionary/chemical", "note": "chemicalの現代語義として、化学に関する形容詞と、化学的に作られた物質を表す名詞を確認した。" }
+        ],
+        "originLanguage": "アラビア語・ラテン語・フランス語・英語",
+        "etymons": ["chemical", "chemic", "alchimicus", "alchemy", "al-kimiya", "-al"],
+        "historicalPath": [
+          "アラビア語 al-kimiya（錬金術）・中世ラテン語 alchimicus",
+          "古フランス語 alchimie / chimie",
+          "英語 chemic（化学・錬金術の）",
+          "英語 chemic＋-al → chemical（化学の、化学物質）"
+        ],
+        "components": [
+          { "form": "chemic", "kind": "base", "gloss": "化学・錬金術の" },
+          { "form": "-al", "kind": "suffix", "gloss": "〜に関する" }
+        ],
+        "rootCandidates": ["chemic", "chem"],
+        "semanticBridge": "錬金術・化学に関わる性質を示す形容詞から、化学に関するもの、さらに化学反応で作られた物質を表す名詞へ広がった。",
+        "summary": "chemicalはchemic（化学・錬金術の）＋-alで、化学に関する、化学のという意味になる。",
+        "confidence": "high",
+        "notes": "chemic＋-alという出典に直接現れる表面形を表示する。alchemy内のal-はchemicalの表示分解に含めない。",
+        "batch": "batch-033"
+      }
+    },
+    "false": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 fals／faus、ラテン語 falsus（欺く、誤った）に由来する。 → 誤った、偽の"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/false",
+          "https://www.merriam-webster.com/dictionary/false"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/false", "note": "falseを古フランス語 fals・ラテン語 falsus、fallere（欺く、失望させる）に遡らせ、fallereの語源は不確かと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/false", "note": "falseの現代語義として、事実に反すること、真実でないこと、誤ったことを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["false", "fals", "faus", "falsus", "fallere"],
+        "historicalPath": [
+          "ラテン語 fallere（欺く、失望させる）・falsus（欺かれた、偽の）",
+          "古フランス語 fals / faus",
+          "古英語・中英語 false",
+          "英語 false（誤った、偽の）"
+        ],
+        "components": [
+          { "form": "falsus", "kind": "word", "gloss": "欺かれた、偽の" }
+        ],
+        "rootCandidates": ["fall"],
+        "semanticBridge": "欺くことや誤りを表す語から、事実・真実に反するもの、偽りのものを表す形容詞へ定着した。",
+        "summary": "falseはラテン語・フランス語を経た単純な借用語で、現代語の表面形に安定した接辞分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "falseをfal＋-seなどに分ける綴り合わせは採用しない。",
+        "batch": "batch-033"
+      }
+    },
+    "weep": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 wepan、ゲルマン祖語 *wopjan（叫ぶ、泣く）に由来し、涙を流して泣く意味に狭まった。 → （涙を流して）泣く、すすり泣く"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/weep",
+          "https://www.merriam-webster.com/dictionary/weep"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/weep", "note": "weepを中英語 wepen・古英語 wepan・ゲルマン祖語 *wopjan（叫ぶ、泣く）、PIE *wab-に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/weep", "note": "weepの現代語義として、悲しみなどで涙を流すことを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["weep", "wepen", "wepan", "*wopjan", "*wab-"],
+        "historicalPath": [
+          "インド・ヨーロッパ祖語 *wab-（叫ぶ、泣く）",
+          "ゲルマン祖語 *wopjan",
+          "古英語 wepan・中英語 wepen",
+          "英語 weep（泣く、涙を流す）"
+        ],
+        "components": [
+          { "form": "wepan", "kind": "word", "gloss": "泣く、叫ぶ" }
+        ],
+        "rootCandidates": ["wab"],
+        "semanticBridge": "声を上げて泣くことを表す語から、英語では次第に涙を流すことを中心とする意味へ狭まった。",
+        "summary": "weepは古いゲルマン語系の単純な動詞で、現代語の表面形に安定した接辞分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "weepの過去形・過去分詞の不規則変化は語源分解として表示しない。",
+        "batch": "batch-033"
+      }
+    },
+    "swell": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 swellan、ゲルマン祖語 *swellananに由来し、大きくなることや膨らむことを表した。 → 膨らむ、腫れる"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/swell",
+          "https://www.merriam-webster.com/dictionary/swell"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/swell", "note": "swellを中英語 swellen・古英語 swellan・ゲルマン祖語 *swellananに遡らせ、語源は不明で基層語の可能性があると説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/swell", "note": "swellの現代語義として、量や大きさが増すこと、腫れることを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["swell", "swellen", "swellan", "*swellanan", "*swallejanan"],
+        "historicalPath": [
+          "ゲルマン祖語 *swellanan（大きくなる）",
+          "古英語 swellan",
+          "中英語 swellen",
+          "英語 swell（膨らむ、腫れる）"
+        ],
+        "components": [
+          { "form": "swellan", "kind": "word", "gloss": "大きくなる" }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "物の体積が増えることから、身体が腫れること、波や感情が高まることへ意味が広がった。",
+        "summary": "swellは語源不明の可能性が残る古いゲルマン語系の単純語で、表面形を分解せずB型に残す。",
+        "confidence": "low",
+        "notes": "swellをsw＋ellなどに分ける綴り合わせは採用しない。",
+        "batch": "batch-033"
+      }
+    },
+    "tap": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "軽く打つ音や動作を表す英語の擬音的な語として発達し、蛇口や採取の意味にも広がった。 → （指などで）軽くたたく／（名）蛇口"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/tap",
+          "https://www.merriam-webster.com/dictionary/tap"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/tap", "note": "tapの軽く打つ動詞・打つ音・栓や蛇口の名詞用法を区別して説明し、音や動作からの形成を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/tap", "note": "tapの現代語義として、軽くたたくこと、液体を取り出すための蛇口・栓を確認した。" }
+        ],
+        "originLanguage": "英語・ゲルマン語系の可能性",
+        "etymons": ["tap", "tappe", "tæppa", "tap-tap"],
+        "historicalPath": [
+          "中英語 tap（軽く打つ、打撃音）",
+          "英語 tap（軽くたたく）",
+          "液体を取り出すために穴を開ける用法",
+          "英語 tap（たたく、蛇口）"
+        ],
+        "components": [
+          { "form": "tap", "kind": "word", "gloss": "軽く打つ音・動作" }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "軽く打つ音や動作から、容器を軽く打って穴を開け液体を取り出すこと、そこに取り付ける蛇口へ意味が広がった。",
+        "summary": "tapは音・動作に基づく単純語で、名詞と動詞の意味が広がっており、安定した語根・接辞分解を設定しないためB型に残す。",
+        "confidence": "medium",
+        "notes": "tapを語源上の接辞付き語として表示しない。",
+        "batch": "batch-033"
+      }
+    },
+    "occupy": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 ocuper／occuper、ラテン語 occupare（つかむ、占める）に由来するが、英語語末の形は説明が難しい。 → 占める、占領する；（人を）従事させる"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/occupy",
+          "https://www.merriam-webster.com/dictionary/occupy"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/occupy", "note": "occupyを古フランス語 ocuper・ラテン語 occupare、ob-＋capere（つかむ）に遡らせる一方、英語の語末音節は説明が難しいと記している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/occupy", "note": "occupyの現代語義として、場所・時間を占めること、国や人を占領・従事させることを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["occupy", "occupien", "occuper", "occupare", "ob-", "capere", "*kap-"],
+        "historicalPath": [
+          "ラテン語 ob-（上に、向かって）＋capere（つかむ）",
+          "ラテン語 occupare（つかむ、占める）",
+          "古フランス語 ocuper・中英語 occupien",
+          "英語 occupy（占める、占領する）"
+        ],
+        "components": [
+          { "form": "ob-", "kind": "prefix", "gloss": "向かって、上に" },
+          { "form": "capere", "kind": "base", "gloss": "つかむ" }
+        ],
+        "rootCandidates": ["ob", "cap"],
+        "semanticBridge": "場所や物をつかんで自分のものにすることから、空間・時間を占めること、国を占領することへ広がった。",
+        "summary": "occupyは語源上ob-＋capereに関係するが、英語occupyの語末形が説明しにくく、表面形に安全なA型分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "既存のoccup語根をoccupyに無理に接続せず、語末の-yも派生接尾辞として扱わない。",
+        "batch": "batch-033"
+      }
+    },
+    "polish": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 poliss-、ラテン語 polire（滑らかにする、飾る）に由来し、表面を磨くことから洗練する意味へ広がった。 → 磨く；（技などを）洗練する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/polish",
+          "https://www.merriam-webster.com/dictionary/polish"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/polish", "note": "polish（磨く）を古フランス語 poliss-・ラテン語 polire（滑らかにする、飾る）に遡らせ、表面から人格や技術の洗練への比喩を説明している。Polish（ポーランドの）という別語源も示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/polish", "note": "polishの現代語義として、表面を磨くこと、技術や文章を洗練すること、またPolishの別用法を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["polish", "polissen", "poliss-", "polir", "polire", "*pel-"],
+        "historicalPath": [
+          "ラテン語 polire（磨く、滑らかにする、飾る）",
+          "古フランス語 polir / poliss-",
+          "中英語 polishen",
+          "英語 polish（磨く、洗練する）"
+        ],
+        "components": [
+          { "form": "polire", "kind": "word", "gloss": "磨く、滑らかにする" }
+        ],
+        "rootCandidates": ["pel"],
+        "semanticBridge": "物の表面を滑らかにして飾ることから、文章・技術・態度から粗さを取り除き洗練することへ広がった。",
+        "summary": "polishはラテン語・フランス語由来の単純語で、さらにPolish（ポーランドの）という別語も重なるためB型に残す。",
+        "confidence": "high",
+        "notes": "polishをpol＋-ishなどに分けず、Polish（ポーランドの）の-Pol＋-ishとも混同しない。",
+        "batch": "batch-033"
+      }
+    },
+    "barely": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "かろうじて",
+        "root": "bare",
+        "parts": [
+          { "form": "bare", "kind": "root", "gloss": "むき出しの・わずかな" },
+          { "form": "-ly", "kind": "suffix", "gloss": "〜な様子で" }
+        ],
+        "derivation": "bare（むき出しの・わずかな）＋-ly（〜な様子で） → 余分なものがないぎりぎりの状態で、かろうじて"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/barely",
+          "https://www.merriam-webster.com/dictionary/barely"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/barely", "note": "barelyをbare＋-lyと説明し、古英語bær（裸の、覆いのない）から『ほんの少しだけ』の意味へ変化したと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/barely", "note": "barelyの現代語義として、ほんのわずかに、かろうじて、ほとんど〜ないという用法を確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["barely", "bærlice", "bare", "*bazaz", "-ly"],
+        "historicalPath": [
+          "ゲルマン語系 *bazaz（裸の、覆いのない）",
+          "古英語 bær（むき出しの）",
+          "古英語 bærlice・中英語 barely（明らかに、完全に）",
+          "英語 bare＋-ly → barely（かろうじて）"
+        ],
+        "components": [
+          { "form": "bare", "kind": "base", "gloss": "むき出しの、わずかな" },
+          { "form": "-ly", "kind": "suffix", "gloss": "副詞化" }
+        ],
+        "rootCandidates": ["bare"],
+        "semanticBridge": "覆いがなく完全に露出した状態から、余分なものがなく限界ぎりぎりの状態、かろうじてという意味へ変化した。",
+        "summary": "barelyはbare（むき出しの・わずかな）＋-lyで、かろうじて、やっとという意味になる。",
+        "confidence": "high",
+        "notes": "既存の-ly接尾辞を再利用し、bare語根を新規登録する。",
+        "batch": "batch-033"
+      }
+    },
+    "secretly": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "こっそりと",
+        "root": "secret",
+        "parts": [
+          { "form": "secret", "kind": "root", "gloss": "隠された・秘密の" },
+          { "form": "-ly", "kind": "suffix", "gloss": "〜な様子で" }
+        ],
+        "derivation": "secret（隠された・秘密の）＋-ly（〜な様子で） → 秘密の状態で、こっそりと"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/secretly",
+          "https://www.merriam-webster.com/dictionary/secretly"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/secretly", "note": "secretlyをsecret＋-lyと明示し、secretをフランス語 secret・ラテン語 secretum（隠されたもの）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/secretly", "note": "secretlyの現代語義として、他人に知られないように、秘密に、こっそりという用法を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["secretly", "secretli", "secret", "secretum", "secernere", "-ly"],
+        "historicalPath": [
+          "ラテン語 secernere（分けて隠す）・secretum（隠されたもの）",
+          "フランス語 secret・中英語 secret",
+          "英語 secret（秘密の、隠された）",
+          "英語 secret＋-ly → secretly（こっそりと）"
+        ],
+        "components": [
+          { "form": "secret", "kind": "base", "gloss": "秘密の、隠された" },
+          { "form": "-ly", "kind": "suffix", "gloss": "副詞化" }
+        ],
+        "rootCandidates": ["secret", "cern"],
+        "semanticBridge": "他から分けて隠された性質を表す形容詞から、その秘密の状態で行うことを表す副詞へなった。",
+        "summary": "secretlyはsecret（隠された・秘密の）＋-lyで、こっそりと、密かにという意味になる。",
+        "confidence": "high",
+        "notes": "既存の-ly接尾辞を再利用し、secretを表面上の語根として登録する。",
+        "batch": "batch-033"
+      }
+    },
+    "frown": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 frognier（顔をしかめる、鼻を鳴らす）に由来し、不快感を眉や表情で示す動作を表した。 → 顔をしかめる、眉をひそめる"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/frown",
+          "https://www.merriam-webster.com/dictionary/frown"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/frown", "note": "frownを古フランス語 frognier・froigneに結び付け、ガリア語の鼻を表す語からの可能性もあると説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/frown", "note": "frownの現代語義として、不快感や怒りを示すため眉を寄せることを確認した。" }
+        ],
+        "originLanguage": "ガリア語の可能性・フランス語・英語",
+        "etymons": ["frown", "frognier", "froigne", "*frogna"],
+        "historicalPath": [
+          "ガリア語 *frogna（鼻）という説",
+          "古フランス語 frognier（顔をしかめる、鼻を鳴らす）",
+          "中英語 frownen",
+          "英語 frown（眉をひそめる）"
+        ],
+        "components": [
+          { "form": "frognier", "kind": "word", "gloss": "顔をしかめる" }
+        ],
+        "rootCandidates": ["frog"],
+        "semanticBridge": "鼻を鳴らしたり顔をしかめたりする表情から、不快感・怒りを眉の動きで示すことへ意味が定着した。",
+        "summary": "frownはフランス語由来で語源にも複数の可能性があり、現代語の表面形を安定して分解できないためB型に残す。",
+        "confidence": "medium",
+        "notes": "frownをfro＋-wnなどに分ける綴り合わせは採用しない。",
+        "batch": "batch-033"
+      }
+    },
+    "slip": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "中低ドイツ語・ゲルマン語系の滑る動詞に由来し、足を滑らせることから、そっと動く・抜け出す意味へ広がった。 → 滑る；そっと動く・抜け出す"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/slip",
+          "https://www.merriam-webster.com/dictionary/slip"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/slip", "note": "slipを中低ドイツ語 slippen・ゲルマン祖語 *slipan、PIE *sleib-／*slei-（滑る）に遡らせ、複数の名詞用法も区別している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/slip", "note": "slipの現代語義として、足を滑らせること、物や人が滑るように移動すること、気づかれずに抜け出すことを確認した。" }
+        ],
+        "originLanguage": "ゲルマン語系・中低ドイツ語・英語",
+        "etymons": ["slip", "slippen", "*slipan", "*sleib-", "*slei-"],
+        "historicalPath": [
+          "インド・ヨーロッパ祖語 *slei-（滑る、ぬるぬるする）",
+          "ゲルマン祖語 *slipan",
+          "中低ドイツ語 slippen・中英語 slippen",
+          "英語 slip（滑る、そっと抜け出す）"
+        ],
+        "components": [
+          { "form": "slipan", "kind": "word", "gloss": "滑る" }
+        ],
+        "rootCandidates": ["slei", "sleib"],
+        "semanticBridge": "滑らかに動いて足場を失うことから、物を滑らせること、見つからないようにそっと移動・脱出することへ広がった。",
+        "summary": "slipは古いゲルマン語系の単純語で、名詞にも複数の語源・意味があるため、表面形を分解せずB型に残す。",
+        "confidence": "medium",
+        "notes": "slip＋接辞のような現代語の綴り分解は採用しない。",
+        "batch": "batch-033"
+      }
+    },
+    "guess": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "中英語 gessen、北欧語・低地ドイツ語系の語に由来し、get（得る）から正解を当てる意味へ変化した可能性がある。 → 推測する、言い当てる"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/guess",
+          "https://www.merriam-webster.com/dictionary/guess"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/guess", "note": "guessを中英語 gessen、スカンジナビア語・中低ドイツ語系の語に結び付け、ゲルマン祖語 *getan（得る）からの意味変化と綴りのgu-を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/guess", "note": "guessの現代語義として、十分な証拠がないまま答えを推測すること、正解を言い当てることを確認した。" }
+        ],
+        "originLanguage": "ゲルマン語系・北欧語／低地ドイツ語・英語",
+        "etymons": ["guess", "gessen", "geta", "*getan", "*ghend-"],
+        "historicalPath": [
+          "インド・ヨーロッパ祖語 *ghend-（つかむ）という関係が想定される",
+          "ゲルマン祖語 *getan（得る、つかむ）",
+          "中英語 gessen（推測する）",
+          "英語 guess（推測する、言い当てる）"
+        ],
+        "components": [
+          { "form": "gessen", "kind": "word", "gloss": "推測する" }
+        ],
+        "rootCandidates": ["get", "ghend"],
+        "semanticBridge": "何かをつかみ取ることから、答えをつかみ取ろうと見積もること、さらに正しい答えを言い当てることへ意味が発達した。",
+        "summary": "guessは語源経路に推定が含まれるゲルマン語系の単純語で、現代語の表面形を安定して分解できないためB型に残す。",
+        "confidence": "medium",
+        "notes": "綴りのgu-を接頭辞として扱わず、getとの関係も表示用分解にはしない。",
+        "batch": "batch-033"
+      }
+    },
+    "crawl": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "中英語 craulen、古ノルド語 krafla（爪で引っかく、這う）に由来し、地面に近くゆっくり進む動作を表した。 → はう、ゆっくり進む"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/crawl",
+          "https://www.merriam-webster.com/dictionary/crawl"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/crawl", "note": "crawlを中英語 craulen、古ノルド語 krafla（這う、爪で引っかく）に結び付け、ゆっくり進む動作から人混みなどの比喩へ広がったと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/crawl", "note": "crawlの現代語義として、手足や体を地面に近づけて進むこと、非常にゆっくり進むことを確認した。" }
+        ],
+        "originLanguage": "古ノルド語・中英語・英語",
+        "etymons": ["crawl", "craulen", "krafla", "krabbla"],
+        "historicalPath": [
+          "古ノルド語 krafla / krabbla（這う、爪で引っかく）",
+          "中英語 craulen",
+          "英語 crawl（地面を這う）",
+          "英語 crawl（ゆっくり進む、列が進む）"
+        ],
+        "components": [
+          { "form": "krafla", "kind": "word", "gloss": "這う、引っかく" }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "地面に近い姿勢で進む動作から、非常にゆっくり進むこと、情報や文字が画面などに少しずつ現れることへ広がった。",
+        "summary": "crawlは古ノルド語由来の単純語で、現代語の表面形に安定した語根・接辞分解を設定しないためB型に残す。",
+        "confidence": "medium",
+        "notes": "crawlをcr＋-awlなどに分ける綴り合わせは採用しない。",
+        "batch": "batch-033"
+      }
+    },
+    "music": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 musique、ラテン語 musica、ギリシャ語 mousikē（ムーサたちの技芸）に由来する。 → 音楽"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/music",
+          "https://www.merriam-webster.com/dictionary/music"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/music", "note": "musicを古フランス語 musique・ラテン語 musica・ギリシャ語 mousikē（ムーサたちの技芸）、Mousaに遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/music", "note": "musicの現代語義として、声や楽器による組織化された音、音楽作品を確認した。" }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・フランス語・英語",
+        "etymons": ["music", "musike", "musica", "mousike", "Mousa", "*men-"],
+        "historicalPath": [
+          "ギリシャ語 Mousa（ムーサ、芸術の女神）・mousikē（ムーサたちの技芸）",
+          "ラテン語 musica",
+          "古フランス語 musique・中英語 musike",
+          "英語 music（音楽）"
+        ],
+        "components": [
+          { "form": "mousikē", "kind": "word", "gloss": "ムーサたちの技芸" }
+        ],
+        "rootCandidates": ["mus", "men"],
+        "semanticBridge": "ムーサたちが司る芸術一般を表す語から、特に音や旋律を組み合わせる芸術を表す語へ意味が絞られた。",
+        "summary": "musicはギリシャ語・ラテン語を経た単純な借用語で、現代語の表面形に安全な語根・接辞分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "Mousaとの関係は記録するが、mus＋-icの表面分解は採用しない。",
+        "batch": "batch-033"
+      }
+    },
+    "paint": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 peintier、ラテン語 pingere（描く、色を付ける）に由来し、切り込みの印から装飾・着色の意味へ広がった。 → 絵の具、塗料"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/paint",
+          "https://www.merriam-webster.com/dictionary/paint"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/paint", "note": "paintを古フランス語 peintier・peindre、ラテン語 pingere（描く、着色する）、PIE *peig-（切る、印を付ける）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/paint", "note": "paintの現代語義として、表面に色を塗ること、絵を描くこと、塗料を確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・英語",
+        "etymons": ["paint", "peinten", "peintier", "peindre", "pingere", "*peig-"],
+        "historicalPath": [
+          "インド・ヨーロッパ祖語 *peig-（切る、印を付ける）",
+          "ラテン語 pingere（描く、色を付ける）",
+          "古フランス語 peindre / peintier",
+          "英語 paint（描く、着色する、塗料）"
+        ],
+        "components": [
+          { "form": "pingere", "kind": "word", "gloss": "描く、着色する" }
+        ],
+        "rootCandidates": ["peig", "ping"],
+        "semanticBridge": "切り込みで印を付けることから装飾すること、さらに色を塗って描くこととそのための物質へ意味が広がった。",
+        "summary": "paintはラテン語・フランス語を経た単純な借用語で、現代語の表面形に安定した語根・接辞分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "paintをpa＋-intなどに分けず、pingereとの語源関係だけを記録する。",
+        "batch": "batch-033"
+      }
+    },
+    "newspaper": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "new（新しいもの）＋paper（紙）からなる英語の複合語で、定期的に発行されるニュースの紙面を表す。 → 新聞"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/newspaper",
+          "https://www.merriam-webster.com/dictionary/newspaper"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/newspaper", "note": "newspaperをnewes paperとして記録し、news＋paperからなる語と説明している。newsとpaperそれぞれの歴史も示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/newspaper", "note": "newspaperの現代語義として、ニュースや記事を掲載し定期的に発行される紙面・出版物を確認した。" }
+        ],
+        "originLanguage": "古英語・ラテン語・フランス語・英語",
+        "etymons": ["newspaper", "newes", "news", "new", "paper", "papyrus"],
+        "historicalPath": [
+          "英語 news（新しい出来事、知らせ）",
+          "英語 paper（紙、文書）",
+          "17世紀の英語 newes paper",
+          "英語 newspaper（新聞）"
+        ],
+        "components": [
+          { "form": "news", "kind": "word", "gloss": "新しい知らせ" },
+          { "form": "paper", "kind": "word", "gloss": "紙、文書" }
+        ],
+        "rootCandidates": ["new", "papyr"],
+        "semanticBridge": "新しい知らせを載せた紙という具体的な複合から、定期刊行されるニュース媒体全体を表す語へ定着した。",
+        "summary": "newspaperはnew/news＋paperの複合表現であり、複合語は熟語側に合わせてA型の語根・接辞表示をせずB型に残す。",
+        "confidence": "high",
+        "notes": "ユーザー指定に従い、複合表現はB型として扱う。",
+        "batch": "batch-033"
+      }
+    },
+    "lunch": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "luncheonを短くした語として発達し、昼の食事を表すようになった。 → 昼食"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/lunch",
+          "https://www.merriam-webster.com/dictionary/lunch"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/lunch", "note": "lunchをluncheonの短縮形と説明し、luncheonが昼の軽食・食事を表す語として発達した経路を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/lunch", "note": "lunchの現代語義として、昼間に食べる食事と、その食事を取る動作を確認した。" }
+        ],
+        "originLanguage": "英語・中英語",
+        "etymons": ["lunch", "luncheon", "nonechen", "noon", "shench"],
+        "historicalPath": [
+          "中英語 nonechen / nuncheon（正午の軽食）",
+          "英語 luncheon（昼食）",
+          "英語 luncheonの短縮形 lunch",
+          "英語 lunch（昼食）"
+        ],
+        "components": [
+          { "form": "luncheon", "kind": "word", "gloss": "昼の食事" }
+        ],
+        "rootCandidates": ["noon"],
+        "semanticBridge": "正午ごろの軽食を表す長い語の短縮形から、昼に取る食事一般を表す日常語へ定着した。",
+        "summary": "lunchはluncheonの短縮形で、独立した語根・接辞による派生語ではないためB型に残す。",
+        "confidence": "high",
+        "notes": "短縮による成立を語源的な接辞分解として表示しない。",
+        "batch": "batch-033"
+      }
+    }
+  }
+}

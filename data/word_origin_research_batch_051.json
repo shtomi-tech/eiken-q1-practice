@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "batchId": "batch-051",
+    "note": "最後の未確認語。出典が支える表面形の派生をA型として反映する。"
+  },
+  "dictionary": {
+    "roots": {},
+    "affixes": {}
+  },
+  "entries": {
+    "impart": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "im（中へ・分けて）＋part（分ける・部分） → 分け与える、知識や性質を伝える",
+        "gloss": "伝える、分け与える",
+        "root": "part",
+        "parts": [
+          {
+            "form": "im",
+            "kind": "prefix",
+            "gloss": "中へ・分けて"
+          },
+          {
+            "form": "part",
+            "kind": "root",
+            "gloss": "分ける・部分"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/impart",
+          "https://www.merriam-webster.com/dictionary/impart"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/impart",
+            "note": "impartを古フランス語 empartir、後期ラテン語 impartire、in-（中へ）＋partire（分ける、分配する）に遡らせる。物を分け与える意味から知識や性質を伝える意味が発達した。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/impart",
+            "note": "impartの現代語義として、与える・分け与えること、知識を伝えることを確認した。語源はin-＋partireと確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "impart",
+          "impartire",
+          "impertire",
+          "in-",
+          "partire",
+          "pars",
+          "part"
+        ],
+        "historicalPath": [
+          "ラテン語 in-（中へ）＋partire（分ける、分配する）",
+          "後期ラテン語 impartire（分け与える、共有する）",
+          "古フランス語 empartir / 中英語 impart（分け与える）",
+          "物から知識・情報・性質を伝える意味へ"
+        ],
+        "components": [
+          {
+            "form": "im",
+            "kind": "prefix",
+            "gloss": "中へ・分けて"
+          },
+          {
+            "form": "part",
+            "kind": "base",
+            "gloss": "分ける・部分"
+          }
+        ],
+        "rootCandidates": [
+          "part",
+          "per"
+        ],
+        "semanticBridge": "一つのものを他者と分けることから、知識・情報・性質を相手に分け与え、伝える意味になった。",
+        "summary": "impartはin-がpの前でim-となったim＋partの表面形に対応し、分け与える意味から伝える意味まで出典が支えるためA型にする。",
+        "confidence": "high"
+      }
+    }
+  }
+}

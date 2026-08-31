@@ -1,0 +1,1040 @@
+{
+  "meta": {
+    "batchId": "batch-030",
+    "note": "未確認B型の次の25語。複合語や単純借用語はB型に残し、出典が表面形の分解を支える語をA型へ移す。"
+  },
+  "dictionary": {
+    "roots": {
+      "dent": {
+        "gloss": "歯・切れ込み",
+        "origin": "ラテン語 dens / dentis",
+        "note": "歯の形に切り込むイメージから、字下げやへこみへ。indent(ed)。"
+      },
+      "agit": {
+        "gloss": "動かす・揺さぶる",
+        "origin": "ラテン語 agitare / agere",
+        "note": "前後に動かすことから、心や社会を揺さぶる状態へ。agitation。"
+      },
+      "ascens": {
+        "gloss": "登る・上へ進む",
+        "origin": "ラテン語 ascendere / ascensio",
+        "note": "上へ登る動作を表す表面幹。ascensionの上昇・即位につながる。"
+      },
+      "pand": {
+        "gloss": "広げる・伸ばす",
+        "origin": "ラテン語 pandere",
+        "note": "折りたたまれたものを外へ広げるイメージ。expand。"
+      },
+      "qual": {
+        "gloss": "どのような・性質",
+        "origin": "ラテン語 qualis",
+        "note": "性質を与え、資格づける意味へ。qualify。"
+      },
+      "occup": {
+        "gloss": "占める・つかむ",
+        "origin": "ラテン語 occupare / capere",
+        "note": "場所や時間をつかんで占めるイメージ。occupation。"
+      },
+      "verb": {
+        "gloss": "言葉・話す",
+        "origin": "ラテン語 verbum",
+        "note": "前へ出された言葉から、ことわざへ。proverb。"
+      },
+      "flat": {
+        "gloss": "平らな・広げる",
+        "origin": "古ノルド語 flatr",
+        "note": "平らな状態から、平らにする動詞へ。flatten。"
+      },
+      "mise": {
+        "gloss": "送る・言い送る",
+        "origin": "ラテン語 mittere / promissum",
+        "note": "promiseに現れる表面幹。前もって言い送るイメージ。"
+      },
+      "rest": {
+        "gloss": "立ち止まる・残る",
+        "origin": "ラテン語 restare / stare",
+        "note": "arrestに現れる表面幹。英語rest（休む）との同一視はしない。"
+      },
+      "appear": {
+        "gloss": "現れる・見える",
+        "origin": "ラテン語 apparere / 古フランス語 aparoir",
+        "note": "見える状態になること。disappearではこの基体が否定される。"
+      }
+    },
+    "affixes": {
+      "ar": {
+        "gloss": "〜へ・〜に向けて",
+        "kind": "prefix",
+        "note": "arrestではラテン語 ad- が語中で同化した表面形。"
+      }
+    }
+  },
+  "entries": {
+    "sedentary": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "座りがちな、座業中心の",
+        "root": "sed",
+        "parts": [
+          { "form": "sed", "kind": "root", "gloss": "座る・落ち着く" },
+          { "form": "-ent", "kind": "suffix", "gloss": "〜する性質の" },
+          { "form": "-ary", "kind": "suffix", "gloss": "〜に関する" }
+        ],
+        "derivation": "sed（座る）＋-ent（〜する性質の）＋-ary（〜に関する） → 座ることに関する、座りがちな、座業中心の"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/sedentary",
+          "https://www.merriam-webster.com/dictionary/sedentary"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/sedentary", "note": "sedentaryをフランス語 sédentaire・ラテン語 sedentariusに遡らせ、sedere（座る）を語源としている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/sedentary", "note": "sedentaryの現代語義として、長時間座っている・座業中心のことを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["sedentary", "sedentarius", "sedere", "-ent", "-ary"],
+        "historicalPath": [
+          "ラテン語 sedere（座る）",
+          "ラテン語 sedentarius（座っている、座業の）",
+          "フランス語 sédentaire",
+          "英語 sedentary（座りがちな、座業中心の）"
+        ],
+        "components": [
+          { "form": "sedere", "kind": "base", "gloss": "座る" },
+          { "form": "-entarius", "kind": "suffix", "gloss": "〜に関する性質" }
+        ],
+        "rootCandidates": ["sed"],
+        "semanticBridge": "座って一か所にとどまる性質から、長時間座って働く、運動をあまりしない意味へ広がった。",
+        "summary": "sedentaryはsed（座る）＋-ent＋-aryで、座りがちな・座業中心のという意味になる。",
+        "confidence": "high",
+        "notes": "既存のsed語根と-ent/-ary接尾辞を再利用する。"
+      }
+    },
+    "scolded": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "scoldの過去形。scoldは古ノルド語 skald（詩人）との関係が示され、嘲笑や悪口の感覚から叱責の意味へ変化した。 → 叱った"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/scold",
+          "https://www.merriam-webster.com/dictionary/scold"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/scold", "note": "scoldを古ノルド語 skald（詩人）に関連づけ、嘲笑や悪口を言う人から叱る動詞へ展開したと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/scold", "note": "scoldの現代語義として、過ちを厳しく注意する・叱ることを確認した。" }
+        ],
+        "originLanguage": "古ノルド語・中英語・英語",
+        "etymons": ["scolded", "scold", "skald"],
+        "historicalPath": [
+          "古ノルド語 skald（詩人）",
+          "中英語 scold（悪口を言う人、口やかましい人）",
+          "英語 scold（叱る）",
+          "英語 scolded（叱った）"
+        ],
+        "components": [
+          { "form": "scold", "kind": "word", "gloss": "叱る" },
+          { "form": "-ed", "kind": "inflection", "gloss": "過去形" }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "詩人が言葉で嘲笑したという連想から、相手を言葉で厳しく責める叱責の意味へ発達した。",
+        "summary": "scoldedはscoldの過去形で、語源上の深い分解が不確実なためB型に残す。",
+        "confidence": "low",
+        "notes": "scold＋-edを語源的な語根・接辞分解としては採用しない。"
+      }
+    },
+    "glossed": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "glossの過去形。glossは注釈や説明を加える意味から、表面を滑らかに見せる・問題を軽く扱う意味へ広がった。 → 表面を取り繕った、軽く扱った"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/gloss",
+          "https://www.merriam-webster.com/dictionary/gloss"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/gloss", "note": "glossをギリシャ語 glōssa（舌、言葉）からラテン語 glossa・古フランス語 gloserへ遡らせ、注釈と表面を滑らかにする二つの用法を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/gloss", "note": "glossの現代語義として、表面を磨くこと、問題を取り繕う・軽く扱うことを確認した。" }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・フランス語・英語",
+        "etymons": ["glossed", "gloss", "glossa", "glōssa"],
+        "historicalPath": [
+          "ギリシャ語 glōssa（舌、言葉、説明が必要な語）",
+          "後期ラテン語 glossa（注釈）",
+          "古フランス語 gloser・英語 gloss（注釈をつける、表面を飾る）",
+          "英語 glossed（取り繕った、軽く扱った）"
+        ],
+        "components": [
+          { "form": "gloss", "kind": "word", "gloss": "注釈・表面の光沢" },
+          { "form": "-ed", "kind": "inflection", "gloss": "過去形" }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "説明を加えて意味を覆うことから、見栄えを整えて問題の本質を隠す、軽く扱う意味へ広がった。",
+        "summary": "glossedは語源と意味の変化は確認できるが、二つのglossの影響が交差し表面分解が安定しないためB型に残す。",
+        "confidence": "medium",
+        "notes": "gloss＋-edを語源的な語根・接辞分解としては採用しない。"
+      }
+    },
+    "indented": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "字下げした、へこませた",
+        "root": "dent",
+        "parts": [
+          { "form": "in", "kind": "prefix", "gloss": "中へ・内側に" },
+          { "form": "dent", "kind": "root", "gloss": "歯・切れ込み" }
+        ],
+        "derivation": "in-（中へ・内側に）＋dent（歯・切れ込み） → 内側へ歯形に切り込み、字下げした、へこませた"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/indent",
+          "https://www.merriam-webster.com/dictionary/indent"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/indent", "note": "indentを古フランス語 endenter・中世ラテン語 indentareに遡らせ、in-（中へ）＋ラテン語 dens（歯）と説明している。印刷の字下げ義も確認できる。" },
+          { "url": "https://www.merriam-webster.com/dictionary/indent", "note": "indentの現代語義として、文字を行の内側へ移すこと、へこみを作ることを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・中英語・英語",
+        "etymons": ["indented", "indent", "indentare", "in-", "dens", "dentis"],
+        "historicalPath": [
+          "ラテン語 in-（中へ）＋dens, dentis（歯）",
+          "中世ラテン語 indentare（歯をつける）",
+          "古フランス語 endenter・英語 indent（切れ込ませる、字下げする）",
+          "英語 indented（字下げした、へこませた）"
+        ],
+        "components": [
+          { "form": "in-", "kind": "prefix", "gloss": "中へ" },
+          { "form": "dens / dentis", "kind": "base", "gloss": "歯" }
+        ],
+        "rootCandidates": ["dent"],
+        "semanticBridge": "歯のような切れ込みを内側へ作ることから、文字を内側へ下げる字下げや、表面をへこませる意味になった。",
+        "summary": "indentedはin-＋dent（歯・切れ込み）で、字下げした・へこませたという意味になる。",
+        "confidence": "high",
+        "notes": "dent語根と既存のin接頭辞を再利用し、過去分詞の-edは語形変化として省く。"
+      }
+    },
+    "frisked": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "friskの過去形。friskは古フランス語 frisque（活発な）を経てゲルマン語系の語に由来し、活発に動く意味から身体検査の意味へ広がった。 → 身体検査した"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/frisk",
+          "https://www.merriam-webster.com/dictionary/frisk"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/frisk", "note": "friskを古フランス語 frisque（活発な、陽気な）とゲルマン語系の freshに関連づけ、後に身体を手で調べる意味が生じたと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/frisk", "note": "friskの現代語義として、人の衣服や身体を手早く調べることを確認した。" }
+        ],
+        "originLanguage": "ゲルマン語系・古フランス語・英語",
+        "etymons": ["frisked", "frisk", "frisque", "fresh"],
+        "historicalPath": [
+          "ゲルマン語系の *frisk-（新鮮な、活発な）",
+          "古フランス語 frisque（活発な、陽気な）",
+          "英語 frisk（飛び跳ねる、身体検査する）",
+          "英語 frisked（身体検査した）"
+        ],
+        "components": [
+          { "form": "frisk", "kind": "word", "gloss": "活発に動く・身体検査する" },
+          { "form": "-ed", "kind": "inflection", "gloss": "過去形" }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "活発に動き回ることを表す語から、手早く身体を調べる動作を表す語義へ広がった。",
+        "summary": "friskedは語義の変化は確認できるが、現代語の表面分解が安定しないためB型に残す。",
+        "confidence": "medium",
+        "notes": "frisk＋-edを語源的な語根・接辞分解としては採用しない。"
+      }
+    },
+    "agitation": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "動揺、興奮",
+        "root": "agit",
+        "parts": [
+          { "form": "agit", "kind": "root", "gloss": "動かす・揺さぶる" },
+          { "form": "-ation", "kind": "suffix", "gloss": "〜すること・状態" }
+        ],
+        "derivation": "agit（動かす・揺さぶる）＋-ation（〜すること・状態） → 心や社会を揺さぶること、動揺、興奮"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/agitation",
+          "https://www.merriam-webster.com/dictionary/agitation"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/agitation", "note": "agitationをフランス語 agitation・ラテン語 agitationemに遡らせ、agitare（前後に動かす）・agere（動かす）から成ると説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/agitation", "note": "agitationの現代語義として、心の動揺・興奮や、社会的な扇動を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["agitation", "agitatio", "agitare", "agere", "-ation"],
+        "historicalPath": [
+          "ラテン語 agere（動かす、前へ駆る）",
+          "ラテン語 agitare（前後に動かす、揺さぶる）",
+          "ラテン語 agitatio・フランス語 agitation",
+          "英語 agitation（動揺、興奮）"
+        ],
+        "components": [
+          { "form": "agitare", "kind": "base", "gloss": "前後に動かす" },
+          { "form": "-ation", "kind": "suffix", "gloss": "行為・状態" }
+        ],
+        "rootCandidates": ["agit"],
+        "semanticBridge": "物を前後に動かすことから、心を揺さぶる動揺や、社会を動かそうとする扇動の意味へ広がった。",
+        "summary": "agitationはagit（動かす・揺さぶる）＋-ationで、動揺・興奮という意味になる。",
+        "confidence": "high",
+        "notes": "agit語根と既存の-ation接尾辞を使う。"
+      }
+    },
+    "indifference": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "無関心",
+        "root": "fer",
+        "parts": [
+          { "form": "in", "kind": "prefix", "gloss": "〜でない" },
+          { "form": "dif", "kind": "prefix", "gloss": "離れて・別々に" },
+          { "form": "fer", "kind": "root", "gloss": "運ぶ・分ける" },
+          { "form": "-ence", "kind": "suffix", "gloss": "〜の状態" }
+        ],
+        "derivation": "in-（〜でない）＋dif-（離れて・別々に）＋fer（運ぶ・分ける）＋-ence（〜の状態） → 違いを設けない状態、無関心"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/indifference",
+          "https://www.merriam-webster.com/dictionary/indifference"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/indifference", "note": "indifferenceをラテン語 indifferentia（違いがないこと）に遡らせ、in-＋differre（分ける、異なる）の構成を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/indifference", "note": "indifferenceの現代語義として、関心や好悪を示さない無関心を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["indifference", "indifferentia", "indifferens", "in-", "differre", "ferre", "-ence"],
+        "historicalPath": [
+          "ラテン語 in-（〜でない）＋differre（分ける、異なる）",
+          "ラテン語 indifferentia（違いがないこと、中立）",
+          "フランス語 indifférence・英語 indifference",
+          "英語 indifference（無関心）"
+        ],
+        "components": [
+          { "form": "in-", "kind": "prefix", "gloss": "否定" },
+          { "form": "dis- / dif-", "kind": "prefix", "gloss": "離れて" },
+          { "form": "ferre", "kind": "base", "gloss": "運ぶ・分ける" },
+          { "form": "-ence", "kind": "suffix", "gloss": "状態" }
+        ],
+        "rootCandidates": ["fer"],
+        "semanticBridge": "物事を別々に分けて扱うことを否定し、どちらにも差をつけない状態から、関心を向けない無関心の意味になった。",
+        "summary": "indifferenceはin-＋dif-＋fer（分ける）＋-enceで、無関心という意味になる。",
+        "confidence": "high",
+        "notes": "既存のfer語根、in/dif接頭辞、-ence接尾辞を再利用する。"
+      }
+    },
+    "ascension": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "上昇、即位",
+        "root": "ascens",
+        "parts": [
+          { "form": "ascens", "kind": "root", "gloss": "登る・上へ進む" },
+          { "form": "-ion", "kind": "suffix", "gloss": "〜すること" }
+        ],
+        "derivation": "ascens（登る・上へ進む）＋-ion（〜すること） → 上へ登ること、上昇、即位"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/ascension",
+          "https://www.merriam-webster.com/dictionary/ascension"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/ascension", "note": "ascensionをラテン語 ascensionem・ascendere（登る、上へ行く）に遡らせ、上昇やキリストの昇天の意味を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/ascension", "note": "ascensionの現代語義として、上へ昇ることと、王位などへの即位を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["ascension", "ascensio", "ascendere", "scandere", "-ion"],
+        "historicalPath": [
+          "ラテン語 ad-（〜へ）＋scandere（登る）",
+          "ラテン語 ascendere・ascensio（上へ登ること）",
+          "フランス語 ascension・英語 ascension",
+          "英語 ascension（上昇、即位）"
+        ],
+        "components": [
+          { "form": "ascens-", "kind": "base", "gloss": "上へ登る" },
+          { "form": "-ion", "kind": "suffix", "gloss": "行為" }
+        ],
+        "rootCandidates": ["ascens"],
+        "semanticBridge": "上へ登る動作から、物理的な上昇、宗教上の昇天、さらに地位が上がる即位の意味へ広がった。",
+        "summary": "ascensionはascens（上へ登る）＋-ionで、上昇・即位という意味になる。",
+        "confidence": "high",
+        "notes": "ascensionに実際に現れるascens表面幹を新しい語根キーとして登録し、既存scend語根との衝突を避ける。"
+      }
+    },
+    "rapture": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "有頂天、恍惚",
+        "root": "rapt",
+        "parts": [
+          { "form": "rapt", "kind": "root", "gloss": "運び去る・心を奪う" },
+          { "form": "-ure", "kind": "suffix", "gloss": "〜すること・もの" }
+        ],
+        "derivation": "rapt（運び去る・心を奪う）＋-ure（〜すること・もの） → 心を奪われて運び去られたような状態、有頂天、恍惚"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/rapture",
+          "https://www.merriam-webster.com/dictionary/rapture"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/rapture", "note": "raptureをrapt＋-ure、またはフランス語 rapture・中世ラテン語 rapturaに遡らせ、運び去ることから精神的恍惚へつながると説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/rapture", "note": "raptureの現代語義として、強い喜び・恍惚状態を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["rapture", "raptura", "raptus", "rapere", "-ure"],
+        "historicalPath": [
+          "ラテン語 rapere（つかむ、運び去る）",
+          "ラテン語 raptus / 中世ラテン語 raptura（運び去ること）",
+          "フランス語 rapture・英語 rapture",
+          "英語 rapture（心を奪われた恍惚）"
+        ],
+        "components": [
+          { "form": "raptus", "kind": "base", "gloss": "運び去られた" },
+          { "form": "-ure", "kind": "suffix", "gloss": "状態・行為" }
+        ],
+        "rootCandidates": ["rapt"],
+        "semanticBridge": "感情に心を運び去られたような状態から、強い喜びや宗教的な恍惚を表す意味になった。",
+        "summary": "raptureはrapt（心を運び去る）＋-ureで、有頂天・恍惚という意味になる。",
+        "confidence": "high",
+        "notes": "既存のrapt語根と-ure接尾辞を再利用する。"
+      }
+    },
+    "overlap": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "over（上に）＋lap（重ねる、覆う）から成る英語の複合語で、片方がもう片方の上に重なることを表す。 → 重なる、重複する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/overlap",
+          "https://www.merriam-webster.com/dictionary/overlap"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/overlap", "note": "overlapをover-（上に）＋lap（重ねる、包む）として説明し、片方が他方の上へ部分的に広がる意味を確認できる。" },
+          { "url": "https://www.merriam-webster.com/dictionary/overlap", "note": "overlapの現代語義として、範囲や部分が重なる・重複することを確認した。" }
+        ],
+        "originLanguage": "古英語・中英語・英語",
+        "etymons": ["overlap", "over-", "lap"],
+        "historicalPath": [
+          "古英語 ofer（上に、越えて）",
+          "中英語 lap（包む、重ねる）",
+          "英語 over＋lap（上に重なる）",
+          "英語 overlap（重なる、重複する）"
+        ],
+        "components": [
+          { "form": "over", "kind": "word", "gloss": "上に" },
+          { "form": "lap", "kind": "word", "gloss": "重ねる・覆う" }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "二つの独立した語を組み合わせ、片方がもう片方の上に部分的に覆いかぶさる状態を表すようになった。",
+        "summary": "overlapはover＋lapの複合語で、単一語根のA型ではなく複合表現としてB型に残す。",
+        "confidence": "high",
+        "notes": "複合表現は熟語と同じ扱いにし、over＋lapをA型の単一語根分解にはしない。"
+      }
+    },
+    "govern": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ギリシャ語 kybernan（船を操縦する）からラテン語 gubernare、フランス語 governerを経て、船を導くことから統治する意味になった。 → 統治する、支配する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/govern",
+          "https://www.merriam-webster.com/dictionary/govern"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/govern", "note": "governを古フランス語 governer・ラテン語 gubernareに遡らせ、元来はギリシャ語 kybernan（船を操縦する）から来た「導く」比喩だと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/govern", "note": "governの現代語義として、権力をもって統治・管理・支配することを確認した。" }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・フランス語・英語",
+        "etymons": ["govern", "governer", "gubernare", "kybernan"],
+        "historicalPath": [
+          "ギリシャ語 kybernan（船を操縦する、導く）",
+          "ラテン語 gubernare（導く、統治する）",
+          "古フランス語 governer・英語 govern",
+          "英語 govern（統治する、支配する）"
+        ],
+        "components": [
+          { "form": "govern", "kind": "word", "gloss": "導く・統治する" }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "船を安全な方向へ操縦することから、集団や国家を方向づけて統治する意味へ比喩的に広がった。",
+        "summary": "governは借用経路と比喩的な意味変化は明確だが、現代語の表面形に安全な語根分解を設定しにくいためB型に残す。",
+        "confidence": "high",
+        "notes": "gubern-を英語governの表面語根としては採用しない。"
+      }
+    },
+    "forgive": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 for-giefan（完全に与える、負債や罪を手放す）から成るゲルマン語の複合語で、罰する権利を手放す意味へ発達した。 → 許す"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/forgive",
+          "https://www.merriam-webster.com/dictionary/forgive"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/forgive", "note": "forgiveを古英語 forgiefan（与える、負債を免除する）に遡らせ、for-（完全に）＋giefan（与える）の複合として説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/forgive", "note": "forgiveの現代語義として、過ちに対する恨みや罰を手放して許すことを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・中英語・英語",
+        "etymons": ["forgive", "forgiefan", "for-", "giefan", "*ghabh-"],
+        "historicalPath": [
+          "古英語 for-（完全に、すっかり）＋giefan（与える）",
+          "古英語 forgiefan（負債を免除する、許す）",
+          "中英語 foryeven・英語 forgive",
+          "英語 forgive（許す）"
+        ],
+        "components": [
+          { "form": "for", "kind": "word", "gloss": "完全に・すっかり" },
+          { "form": "give", "kind": "word", "gloss": "与える" }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "負債や罰を完全に手放して相手へ与え直すことから、過ちを責めずに許す意味になった。",
+        "summary": "forgiveはfor＋giveに相当する古英語の複合語で、複合表現としてB型に残す。",
+        "confidence": "high",
+        "notes": "複合表現は熟語と同じ扱いにし、for＋giveをA型の単一語根分解にはしない。"
+      }
+    },
+    "arrest": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "逮捕する",
+        "root": "rest",
+        "parts": [
+          { "form": "ar", "kind": "prefix", "gloss": "〜へ・〜に向けて" },
+          { "form": "rest", "kind": "root", "gloss": "立ち止まる・残る" }
+        ],
+        "derivation": "ar-（ad-の同化形：〜へ）＋rest（立ち止まる・残る） → 相手を立ち止まらせ、逮捕する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/arrest",
+          "https://www.merriam-webster.com/dictionary/arrest"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/arrest", "note": "arrestを古フランス語 arester・俗ラテン語 arrestareに遡らせ、ad-＋restare（止まる、後ろに残る）＋stare（立つ）の構成を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/arrest", "note": "arrestの現代語義として、法的に人を拘束・逮捕することと、注意を引き止めることを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["arrest", "arrestare", "ad-", "restare", "stare"],
+        "historicalPath": [
+          "ラテン語 ad-（〜へ）＋re-（後ろへ）＋stare（立つ）",
+          "俗ラテン語 arrestare（止める、拘束する）",
+          "古フランス語 arester・英語 arrest（止める、逮捕する）",
+          "英語 arrest（逮捕する）"
+        ],
+        "components": [
+          { "form": "ad-", "kind": "prefix", "gloss": "〜へ" },
+          { "form": "re-", "kind": "prefix", "gloss": "後ろへ・とどまって" },
+          { "form": "stare", "kind": "base", "gloss": "立つ" }
+        ],
+        "rootCandidates": ["rest"],
+        "semanticBridge": "相手をその場に立ち止まらせることから、法的に身柄を拘束して逮捕する意味へ発達した。",
+        "summary": "arrestはar-（ad-の同化形）＋rest（立ち止まる）で、逮捕するという意味になる。",
+        "confidence": "medium",
+        "notes": "restはarrestに実際に現れる表面幹として登録し、ar-が英語の生産的接頭辞だとは扱わない。"
+      }
+    },
+    "expand": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "拡大する",
+        "root": "pand",
+        "parts": [
+          { "form": "ex", "kind": "prefix", "gloss": "外へ" },
+          { "form": "pand", "kind": "root", "gloss": "広げる・伸ばす" }
+        ],
+        "derivation": "ex-（外へ）＋pand（広げる・伸ばす） → 外へ広げ、拡大する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/expand",
+          "https://www.merriam-webster.com/dictionary/expand"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/expand", "note": "expandを古フランス語 espaundre・ラテン語 expandereに遡らせ、ex-（外へ）＋pandere（広げる）と説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/expand", "note": "expandの現代語義として、大きくする・広げる・範囲を増すことを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["expand", "expandere", "ex-", "pandere", "*pete-"],
+        "historicalPath": [
+          "ラテン語 ex-（外へ）＋pandere（広げる）",
+          "ラテン語 expandere（外へ広げる）",
+          "古フランス語 espaundre・英語 expand",
+          "英語 expand（拡大する、広がる）"
+        ],
+        "components": [
+          { "form": "ex-", "kind": "prefix", "gloss": "外へ" },
+          { "form": "pandere", "kind": "base", "gloss": "広げる" }
+        ],
+        "rootCandidates": ["pand"],
+        "semanticBridge": "内側に折りたたまれたものを外へ広げることから、大きさや範囲を増す意味になった。",
+        "summary": "expandはex-＋pand（広げる）で、拡大する・広がるという意味になる。",
+        "confidence": "high",
+        "notes": "pand語根と既存のex接頭辞を使う。"
+      }
+    },
+    "rob": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 rober（奪う、略奪する）を経てゲルマン語系の語に由来し、力ずくで奪う意味を表す。 → 奪う、強奪する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/rob",
+          "https://www.merriam-webster.com/dictionary/rob"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/rob", "note": "robを古フランス語 rober、ウェストゲルマン語 *rauba（戦利品）・*raubon（奪う）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/rob", "note": "robの現代語義として、違法に奪う・強盗することを確認した。" }
+        ],
+        "originLanguage": "ゲルマン語系・古フランス語・中英語・英語",
+        "etymons": ["rob", "robben", "rober", "*rauba", "*raubon"],
+        "historicalPath": [
+          "ゲルマン語系 *rauba（戦利品）・*raubon（奪う）",
+          "古フランス語 rober（奪う、略奪する）",
+          "中英語 robben・英語 rob",
+          "英語 rob（奪う、強奪する）"
+        ],
+        "components": [
+          { "form": "rob", "kind": "word", "gloss": "奪う・略奪する" }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "戦利品を力ずくで奪う行為から、人の所有物を違法に奪う意味へ定着した。",
+        "summary": "robは借用経路は確認できるが、英語表面に安全な接辞分解を設定できないためB型に残す。",
+        "confidence": "medium",
+        "notes": "rob＋接辞の表面分解は採用しない。"
+      }
+    },
+    "qualify": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "資格を得る",
+        "root": "qual",
+        "parts": [
+          { "form": "qual", "kind": "root", "gloss": "どのような・性質" },
+          { "form": "-ify", "kind": "suffix", "gloss": "〜にする" }
+        ],
+        "derivation": "qual（どのような・性質）＋-ify（〜にする） → 性質を与えて資格づける、資格を得る、予選を通過する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/qualify",
+          "https://www.merriam-webster.com/dictionary/qualify"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/qualify", "note": "qualifyをフランス語 qualifier・中世ラテン語 qualificareに遡らせ、ラテン語 qualis（どのような）＋facere（作る）と説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/qualify", "note": "qualifyの現代語義として、必要な条件を満たして資格を得る・予選を通過することを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["qualify", "qualificare", "qualis", "facere", "-ify"],
+        "historicalPath": [
+          "ラテン語 qualis（どのような、どんな性質の）＋facere（作る）",
+          "中世ラテン語 qualificare（性質を与える、資格づける）",
+          "フランス語 qualifier・英語 qualify",
+          "英語 qualify（資格を得る、予選を通過する）"
+        ],
+        "components": [
+          { "form": "qualis", "kind": "base", "gloss": "どのような" },
+          { "form": "-ify", "kind": "suffix", "gloss": "〜にする" }
+        ],
+        "rootCandidates": ["qual"],
+        "semanticBridge": "人や物に一定の性質を与えて資格づけることから、必要な条件を満たして資格を得る意味へ発達した。",
+        "summary": "qualifyはqual（性質）＋-ify（〜にする）で、資格を得る・予選を通過するという意味になる。",
+        "confidence": "high",
+        "notes": "qual語根と既存の-ify接尾辞を使い、facereは-ifyの由来として記録する。"
+      }
+    },
+    "weigh": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 wegan（運ぶ、重さを量る）に由来し、動かす・持ち上げる意味から重さを測る意味へ発達した。 → 重さを量る；重要である"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/weigh",
+          "https://www.merriam-webster.com/dictionary/weigh"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/weigh", "note": "weighを古英語 wegan・ゲルマン祖語 *wegan・PIE *wegh-（動く、運ぶ）に遡らせ、動かす→持ち上げる→重さを測るという変化を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/weigh", "note": "weighの現代語義として、重さを測ることと、重要性を評価することを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ゲルマン語系・古英語・英語",
+        "etymons": ["weigh", "wegan", "*wegan", "*wegh-"],
+        "historicalPath": [
+          "PIE *wegh-（行く、動く、運ぶ）",
+          "ゲルマン祖語 *wegan・古英語 wegan（運ぶ、重さを量る）",
+          "中英語 weien・英語 weigh",
+          "英語 weigh（重さを量る、重要である）"
+        ],
+        "components": [
+          { "form": "weigh", "kind": "word", "gloss": "重さを量る・評価する" }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "物を動かして持ち上げる経験から、その重さを測ること、さらに価値や重要性を評価する比喩へ広がった。",
+        "summary": "weighは語源上の意味変化は確認できるが、現代英語の表面に安全な分解を設定しにくいためB型に残す。",
+        "confidence": "high",
+        "notes": "weighを単独の語根として表示するA型にはしない。"
+      }
+    },
+    "disappear": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "消える、姿を消す",
+        "root": "appear",
+        "parts": [
+          { "form": "dis", "kind": "prefix", "gloss": "反対に・〜でなく" },
+          { "form": "appear", "kind": "root", "gloss": "現れる・見える" }
+        ],
+        "derivation": "dis-（反対に・〜でなく）＋appear（現れる・見える） → 現れなくなり、消える、姿を消す"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/disappear",
+          "https://www.merriam-webster.com/dictionary/disappear"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/disappear", "note": "disappearをdis-（反対に、〜でなく）＋appearとして説明し、appearを古フランス語 aparoir・ラテン語 apparereに遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/disappear", "note": "disappearの現代語義として、見えなくなる・存在しなくなることを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・中英語・英語",
+        "etymons": ["disappear", "dis-", "appear", "apparere", "aparoir"],
+        "historicalPath": [
+          "ラテン語 apparere（現れる、見える）",
+          "古フランス語 aparoir・英語 appear",
+          "英語 dis-（反対に、〜でなく）＋appear",
+          "英語 disappear（消える、姿を消す）"
+        ],
+        "components": [
+          { "form": "dis-", "kind": "prefix", "gloss": "反対に・離れて" },
+          { "form": "appear", "kind": "base", "gloss": "現れる" }
+        ],
+        "rootCandidates": ["appear"],
+        "semanticBridge": "見える状態になるappearを否定し、見えなくなる・存在が消える状態を表すようになった。",
+        "summary": "disappearはdis-＋appear（現れる）で、消える・姿を消すという意味になる。",
+        "confidence": "high",
+        "notes": "appearを表面上の基体として登録し、parereのさらに深い分解は表示しない。"
+      }
+    },
+    "device": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 devis（計画、工夫）から、分けて配置・計画する意味を経て、特定の目的に作られた装置や機器を表すようになった。 → 装置、機器"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/device",
+          "https://www.merriam-webster.com/dictionary/device"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/device", "note": "deviceを古フランス語 devis（分割、計画）・deviser、俗ラテン語 divisare・ラテン語 dividereに遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/device", "note": "deviceの現代語義として、特定の目的に作られた機械・装置・機器を確認した。" }
+        ],
+        "originLanguage": "ラテン語・古フランス語・中英語・英語",
+        "etymons": ["device", "devis", "deviser", "divisare", "dividere"],
+        "historicalPath": [
+          "ラテン語 dividere（分ける）",
+          "俗ラテン語 divisare・古フランス語 deviser（分けて配置する、計画する）",
+          "古フランス語 devis（計画、工夫）",
+          "英語 device（装置、機器）"
+        ],
+        "components": [
+          { "form": "device", "kind": "word", "gloss": "工夫・装置" }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "目的に応じて要素を分けて組み立てた計画や工夫から、目的に合わせて作られた道具・装置の意味へ発達した。",
+        "summary": "deviceは語源経路は明確だが、devis・dividereから英語deviceへの表面変化が大きく、安定したA型分解ができないためB型に残す。",
+        "confidence": "high",
+        "notes": "de＋viceなどの表面分解は採用しない。"
+      }
+    },
+    "occupation": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "職業",
+        "root": "occup",
+        "parts": [
+          { "form": "occup", "kind": "root", "gloss": "占める・つかむ" },
+          { "form": "-ation", "kind": "suffix", "gloss": "〜すること" }
+        ],
+        "derivation": "occup（占める・つかむ）＋-ation（〜すること） → 場所や時間を占めること、占有・占領、そこから従事する仕事・職業"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/occupation",
+          "https://www.merriam-webster.com/dictionary/occupation"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/occupation", "note": "occupationを古フランス語 occupacion・ラテン語 occupationemに遡らせ、occupare（占める、占有する）から職業・占領の意味が生じたと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/occupation", "note": "occupationの現代語義として、仕事・職業、場所を占有すること、軍事的占領を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["occupation", "occupatio", "occupare", "ob-", "capere", "-ation"],
+        "historicalPath": [
+          "ラテン語 ob-（上に、向かって）＋capere（つかむ）",
+          "ラテン語 occupare（占める、占有する）",
+          "ラテン語 occupatio・古フランス語 occupacion",
+          "英語 occupation（職業、占有、占領）"
+        ],
+        "components": [
+          { "form": "occupare", "kind": "base", "gloss": "占める・占有する" },
+          { "form": "-ation", "kind": "suffix", "gloss": "行為・状態" }
+        ],
+        "rootCandidates": ["occup"],
+        "semanticBridge": "場所や時間をつかんで占めることから、そこに従事して時間を占める仕事、さらに軍隊が土地を占める占領の意味へ広がった。",
+        "summary": "occupationはoccup（占める・つかむ）＋-ationで、職業・占有・占領という意味になる。",
+        "confidence": "high",
+        "notes": "occupareの英語表面幹occupと既存の-ation接尾辞を使う。"
+      }
+    },
+    "proverb": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "ことわざ",
+        "root": "verb",
+        "parts": [
+          { "form": "pro", "kind": "prefix", "gloss": "前へ" },
+          { "form": "verb", "kind": "root", "gloss": "言葉・話す" }
+        ],
+        "derivation": "pro-（前へ）＋verb（言葉） → 前へ出された言葉、ことわざ"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/proverb",
+          "https://www.merriam-webster.com/dictionary/proverb"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/proverb", "note": "proverbを古フランス語 proverbe・ラテン語 proverbiumに遡らせ、pro（前へ）＋verbum（言葉）を文字通り「前へ置かれた言葉」と説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/proverb", "note": "proverbの現代語義として、経験に基づく一般的な真理を短く表すことわざを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["proverb", "proverbium", "pro-", "verbum", "verb"],
+        "historicalPath": [
+          "ラテン語 pro（前へ）＋verbum（言葉）",
+          "ラテン語 proverbium（前へ出された言葉、格言）",
+          "古フランス語 proverbe・英語 proverb",
+          "英語 proverb（ことわざ）"
+        ],
+        "components": [
+          { "form": "pro-", "kind": "prefix", "gloss": "前へ" },
+          { "form": "verbum", "kind": "base", "gloss": "言葉" }
+        ],
+        "rootCandidates": ["verb"],
+        "semanticBridge": "人々の前に出された短い言葉が、経験から得た教訓を伝える定型的な言い回し、ことわざになった。",
+        "summary": "proverbはpro-＋verb（言葉）で、ことわざという意味になる。",
+        "confidence": "high",
+        "notes": "verb語根と既存のpro接頭辞を使う。"
+      }
+    },
+    "flatten": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "平らにする",
+        "root": "flat",
+        "parts": [
+          { "form": "flat", "kind": "root", "gloss": "平らな・広げる" },
+          { "form": "-en", "kind": "suffix", "gloss": "〜にする" }
+        ],
+        "derivation": "flat（平らな）＋-en（〜にする） → 平らにする"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/flatten",
+          "https://www.merriam-webster.com/dictionary/flatten"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/flatten", "note": "flattenをflat＋-enとして説明し、flatを古ノルド語 flatr・PIE *plat-（広げる）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/flatten", "note": "flattenの現代語義として、平らにする・高さや厚みをなくすことを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ゲルマン語系・古ノルド語・英語",
+        "etymons": ["flatten", "flat", "flatr", "*plat-", "-en"],
+        "historicalPath": [
+          "PIE *plat-（広げる）",
+          "古ノルド語 flatr（平らな）",
+          "英語 flat（平らな）",
+          "英語 flat＋-en → flatten（平らにする）"
+        ],
+        "components": [
+          { "form": "flat", "kind": "base", "gloss": "平らな" },
+          { "form": "-en", "kind": "suffix", "gloss": "〜にする" }
+        ],
+        "rootCandidates": ["flat"],
+        "semanticBridge": "平らな状態を表す形容詞から、その状態に変える動詞が作られ、平らにする意味になった。",
+        "summary": "flattenはflat（平らな）＋-en（〜にする）で、平らにするという意味になる。",
+        "confidence": "high",
+        "notes": "flat語根と既存の-en接尾辞を使う。"
+      }
+    },
+    "grip": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 grippan（つかむ）に由来し、しっかりつかむ動作から、注意や感情をとらえる比喩へ広がった。 → しっかりつかむ；（注意・興味などを）とらえる"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/grip",
+          "https://www.merriam-webster.com/dictionary/grip"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/grip", "note": "gripを古英語 grippan・西ゲルマン語 *greipananに遡らせ、gripeやドイツ語 greifenなどと関連づけている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/grip", "note": "gripの現代語義として、しっかりつかむことと、注意・感情を強くとらえることを確認した。" }
+        ],
+        "originLanguage": "ゲルマン語系・古英語・英語",
+        "etymons": ["grip", "grippan", "*greipanan", "gripe"],
+        "historicalPath": [
+          "西ゲルマン語 *greipanan（つかむ）",
+          "古英語 grippan（つかむ、捕らえる）",
+          "中英語 grip・英語 grip",
+          "英語 grip（しっかりつかむ、心をとらえる）"
+        ],
+        "components": [
+          { "form": "grip", "kind": "word", "gloss": "つかむ・捕らえる" }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "手でしっかり捕らえる動作から、注意や感情を強くとらえて離さない比喩的な意味へ広がった。",
+        "summary": "gripはゲルマン語系の単純語で、深い語源と表面分解が安定しないためB型に残す。",
+        "confidence": "medium",
+        "notes": "grip＋接辞の表面分解は採用しない。"
+      }
+    },
+    "promise": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "約束する",
+        "root": "mise",
+        "parts": [
+          { "form": "pro", "kind": "prefix", "gloss": "前へ・先に" },
+          { "form": "mise", "kind": "root", "gloss": "送る・言い送る" }
+        ],
+        "derivation": "pro-（前へ・先に）＋mise（送る・言い送る） → 前もって言い送る、約束する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/promise",
+          "https://www.merriam-webster.com/dictionary/promise"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/promise", "note": "promiseを古フランス語 promesse・ラテン語 promissum、promittereに遡らせ、pro（前へ）＋mittere（送る）と説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/promise", "note": "promiseの現代語義として、将来行うことを前もって保証・約束することを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・中英語・英語",
+        "etymons": ["promise", "promesse", "promissum", "promittere", "pro-", "mittere"],
+        "historicalPath": [
+          "ラテン語 pro（前へ）＋mittere（送る、放つ）",
+          "ラテン語 promittere（前もって言い送る、保証する）",
+          "ラテン語 promissum・古フランス語 promesse",
+          "英語 promise（約束する）"
+        ],
+        "components": [
+          { "form": "pro-", "kind": "prefix", "gloss": "前へ・先に" },
+          { "form": "mittere", "kind": "base", "gloss": "送る・言い送る" }
+        ],
+        "rootCandidates": ["mise"],
+        "semanticBridge": "将来の行為を前もって相手へ言い送ることから、実行を保証する約束の意味になった。",
+        "summary": "promiseはpro-＋mise（mittereに由来する表面幹）で、約束するという意味になる。",
+        "confidence": "high",
+        "notes": "promiseに実際に現れるmise表面幹を登録し、既存mit語根の概念と重ねず綴りを優先した。"
+      }
+    },
+    "massive": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "巨大な",
+        "root": "mass",
+        "parts": [
+          { "form": "mass", "kind": "root", "gloss": "かたまり・積み上げる" },
+          { "form": "-ive", "kind": "suffix", "gloss": "〜の性質をもつ" }
+        ],
+        "derivation": "mass（かたまり）＋-ive（〜の性質をもつ） → 大きなかたまりのような、巨大な、大規模な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/massive",
+          "https://www.merriam-webster.com/dictionary/massive"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/massive", "note": "massiveを古フランス語 massif・masse（塊）に遡らせ、massから大きく固いものを表す形容詞になったと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/massive", "note": "massiveの現代語義として、非常に大きい・大規模な・重量感のあることを確認した。" }
+        ],
+        "originLanguage": "ラテン語・ギリシャ語・フランス語・英語",
+        "etymons": ["massive", "massif", "masse", "massa", "maza", "-ive"],
+        "historicalPath": [
+          "ギリシャ語 maza（こねた塊）",
+          "ラテン語 massa・古フランス語 masse（塊、山）",
+          "古フランス語 massif（大きく固い）",
+          "英語 massive（巨大な、大規模な）"
+        ],
+        "components": [
+          { "form": "mass", "kind": "base", "gloss": "塊・大きな量" },
+          { "form": "-ive", "kind": "suffix", "gloss": "性質をもつ" }
+        ],
+        "rootCandidates": ["mass"],
+        "semanticBridge": "一つにまとまった塊から、物体の大きさ・重量、さらに無形の事柄の規模が大きい意味へ広がった。",
+        "summary": "massiveはmass（塊）＋-iveで、巨大な・大規模なという意味になる。",
+        "confidence": "high",
+        "notes": "既存のmass語根と-ive接尾辞を再利用する。"
+      }
+    }
+  }
+}

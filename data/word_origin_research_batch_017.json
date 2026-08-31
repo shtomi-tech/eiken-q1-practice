@@ -1,0 +1,1670 @@
+{
+  "meta": {
+    "batchId": "batch-017",
+    "note": "未確認B型の次の25語。語源経路と英語表面の語根・接辞が対応する語はA型へ、複合語・同形異語・語源の不確かな語はB型に残す。"
+  },
+  "dictionary": {
+    "roots": {
+      "embezzle": {
+        "gloss": "横領する・盗む",
+        "origin": "アングロ・フレンチ enbesiler / 古フランス語 besillier",
+        "note": "人の財産を密かに持ち去るイメージ。embezzlement。"
+      },
+      "rapt": {
+        "gloss": "運び去る・心を奪う",
+        "origin": "ラテン語 rapere / raptus",
+        "note": "突然奪い去ることから、心を奪われ夢中になる意味へ。enrapture。"
+      },
+      "tail": {
+        "gloss": "切る・形を定める",
+        "origin": "古フランス語 taillier / 後期ラテン語 taliare",
+        "note": "entailのtailは動物の尾ではなく、財産の継承を切り分けて制限する語源。"
+      },
+      "treat": {
+        "gloss": "扱う・交渉する・懇願する",
+        "origin": "ラテン語 tractare / 古フランス語 traiter",
+        "note": "扱う・交渉することから、相手に強く求める意味へ。entreat・entreaty。"
+      },
+      "tol": {
+        "gloss": "持ち上げる・運ぶ",
+        "origin": "ラテン語 tollere / PIE *tele-",
+        "note": "持ち上げて高くするイメージ。extol。ラテン語tollereに対応する表面形tol。",
+        "variants": [
+          "toll"
+        ]
+      },
+      "fortuit": {
+        "gloss": "偶然・思いがけないこと",
+        "origin": "ラテン語 fortuitus / fors",
+        "note": "運や偶然に起きること。fortuitous。"
+      },
+      "futil": {
+        "gloss": "漏れる・空しい",
+        "origin": "ラテン語 futilis / fundere",
+        "note": "漏れて空になるイメージから、役に立たない・むなしい意味へ。futility。"
+      },
+      "germin": {
+        "gloss": "芽を出す",
+        "origin": "ラテン語 germinare / germen",
+        "note": "芽や新しい成長の始まり。germination。"
+      },
+      "griev": {
+        "gloss": "重く苦しませる",
+        "origin": "ラテン語 gravare / 古フランス語 grever",
+        "note": "人を苦しませ、重荷を負わせるイメージ。grievance。"
+      },
+      "heed": {
+        "gloss": "注意・気に留める",
+        "origin": "古英語 hēdan / reccan",
+        "note": "注意を向けること。heedless。"
+      },
+      "plor": {
+        "gloss": "泣く・叫ぶ",
+        "origin": "ラテン語 plorare",
+        "note": "泣き叫びながら強く願うイメージ。plorareの深い語源は不明。",
+        "variants": [
+          "plore"
+        ]
+      }
+    },
+    "affixes": {
+      "-itude": {
+        "gloss": "性質・状態",
+        "kind": "suffix",
+        "note": "語幹から性質や状態を表す名詞を作る形。fortitude。"
+      },
+      "-less": {
+        "gloss": "〜のない",
+        "kind": "suffix",
+        "note": "古英語 -leas に由来し、『〜を欠く』性質を表す。heedless。"
+      }
+    }
+  },
+  "entries": {
+    "embezzlement": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "横領",
+        "root": "embezzle",
+        "parts": [
+          {
+            "form": "embezzle",
+            "kind": "root",
+            "gloss": "横領する・盗む"
+          },
+          {
+            "form": "-ment",
+            "kind": "suffix",
+            "gloss": "〜すること・もの"
+          }
+        ],
+        "derivation": "embezzle（横領する）＋-ment（〜すること・もの） → 横領する行為、横領"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/embezzlement",
+          "https://www.merriam-webster.com/dictionary/embezzlement"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/embezzlement",
+            "note": "embezzlementをembezzle＋-mentからなる名詞とし、embezzleをアングロ・フレンチ enbesiler、古フランス語 em-/besillier（盗む、消えさせる）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/embezzlement",
+            "note": "embezzlementの現代語義として、預けられた財産を不正に自分のものにする行為を確認した。"
+          }
+        ],
+        "originLanguage": "アングロ・フレンチ・古フランス語・英語",
+        "etymons": [
+          "embezzlement",
+          "embezzle",
+          "enbesiler",
+          "em-",
+          "besillier",
+          "-ment"
+        ],
+        "historicalPath": [
+          "古フランス語 em-/アングロ・フレンチ enbesiler（盗む、消えさせる）",
+          "英語 embezzle（横領する）",
+          "英語 embezzlement（横領する行為）"
+        ],
+        "components": [
+          {
+            "form": "embezzle",
+            "kind": "base",
+            "gloss": "横領する"
+          },
+          {
+            "form": "-ment",
+            "kind": "suffix",
+            "gloss": "行為・結果"
+          }
+        ],
+        "rootCandidates": [
+          "embezzle"
+        ],
+        "semanticBridge": "人の財産を密かに持ち去る動作が、預けられた財産を不正に自分のものにする犯罪行為を表す名詞になった。",
+        "summary": "embezzlementはembezzle（横領する）＋-mentで、横領する行為を表す。",
+        "confidence": "high",
+        "notes": "embezzleのさらに深い語源には不確かな点があるが、英語のembezzle＋-mentという派生関係は明確であるためA型にする。"
+      }
+    },
+    "enigma": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ギリシャ語 ainigma（謎めいた発言、なぞなぞ）からラテン語 aenigmaを経て英語へ。深い語源には不確かな点がある → 謎"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/enigma",
+          "https://www.merriam-webster.com/dictionary/enigma"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/enigma",
+            "note": "enigmaをラテン語 aenigma、ギリシャ語 ainigma（暗い言葉、なぞなぞ）、ainissesthai（謎めいて話す）に遡らせ、ainosの深い語源は不明としている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/enigma",
+            "note": "enigmaの現代語義として、理解・説明が難しいもの、謎めいた人や発言を確認し、ギリシャ語の『謎を語る』という由来を確認した。"
+          }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・英語",
+        "etymons": [
+          "enigma",
+          "aenigma",
+          "ainigma",
+          "ainissesthai",
+          "ainos"
+        ],
+        "historicalPath": [
+          "ギリシャ語 ainigma（謎めいた発言、なぞなぞ）",
+          "ラテン語 aenigma（なぞなぞ）",
+          "英語 enigma（理解しがたい謎）"
+        ],
+        "components": [
+          {
+            "form": "ainigma",
+            "kind": "base",
+            "gloss": "謎めいた発言"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "隠れた意味を含む謎めいた発言が、後に人や事柄を含む、理解しにくいもの全般を表すようになった。",
+        "summary": "enigmaはギリシャ語の謎めいた発言を表す語から、理解しにくい謎を表す語になった。",
+        "confidence": "medium",
+        "notes": "ギリシャ語の構成要素は確認できるが、英語表面をen-＋igmaと分解できないためB型に残す。"
+      }
+    },
+    "enrapture": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "夢中になった",
+        "root": "rapt",
+        "parts": [
+          {
+            "form": "en",
+            "kind": "prefix",
+            "gloss": "中へ・強く"
+          },
+          {
+            "form": "rapt",
+            "kind": "root",
+            "gloss": "運び去る・心を奪う"
+          },
+          {
+            "form": "-ure",
+            "kind": "suffix",
+            "gloss": "状態・結果"
+          }
+        ],
+        "derivation": "en-（中へ・強く）＋rapt（心を奪う）＋-ure（状態・結果） → 心を奪われた状態にし、夢中になった"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/enrapture",
+          "https://www.merriam-webster.com/dictionary/enrapture"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/enrapture",
+            "note": "enraptureをen-（中へ・強く）＋raptureとして説明し、raptureをラテン語 raptus（奪い去ること）・rapere（奪う）に結び付けている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/enrapture",
+            "note": "enraptureの現代語義として、人を強い喜びで満たし、夢中にさせることを確認した。"
+          }
+        ],
+        "originLanguage": "英語の派生語（フランス語・ラテン語由来の要素）",
+        "etymons": [
+          "enrapture",
+          "en-",
+          "rapture",
+          "rapt",
+          "raptus",
+          "rapere",
+          "-ure"
+        ],
+        "historicalPath": [
+          "ラテン語 rapere・raptus（奪い去る）",
+          "英語 rapture（心を奪う状態、恍惚）",
+          "英語 enrapture（強い喜びで心を奪う）",
+          "英語 enraptured（夢中になった）"
+        ],
+        "components": [
+          {
+            "form": "en-",
+            "kind": "prefix",
+            "gloss": "中へ・強く"
+          },
+          {
+            "form": "rapt",
+            "kind": "base",
+            "gloss": "奪い去る・心を奪う"
+          },
+          {
+            "form": "-ure",
+            "kind": "suffix",
+            "gloss": "状態・結果"
+          }
+        ],
+        "rootCandidates": [
+          "rapt"
+        ],
+        "semanticBridge": "物理的に奪い去ることが、心を強く奪って恍惚とさせる意味へ広がり、夢中にさせる動詞になった。",
+        "summary": "enraptureはen-（強く）＋rapt（心を奪う）＋-ureの連鎖で、夢中にさせることを表す。",
+        "confidence": "high",
+        "notes": "出典上はen-＋raptureで、rapture自体がrapt＋-ureに由来する。表示ではこの入れ子を平らにしてA型風に示す。"
+      }
+    },
+    "entail": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "必要とした",
+        "root": "tail",
+        "parts": [
+          {
+            "form": "en",
+            "kind": "prefix",
+            "gloss": "〜にする"
+          },
+          {
+            "form": "tail",
+            "kind": "root",
+            "gloss": "切る・形を定める"
+          }
+        ],
+        "derivation": "en-（〜にする）＋tail（切って定める） → 切り離せない結果として伴い、必要とした"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/entail",
+          "https://www.merriam-webster.com/dictionary/entail"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/entail",
+            "note": "entailをen-（〜にする）＋taile（相続上の法的制限）とし、taileを古フランス語 taillier（割り当てる、形に切る）・後期ラテン語 taliare（分ける）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/entail",
+            "note": "entailの現代語義として、何かを必然的な部分・結果として伴うこと、また相続を制限する法律用語を確認した。"
+          }
+        ],
+        "originLanguage": "アングロ・フレンチ・古フランス語・ラテン語・英語",
+        "etymons": [
+          "entail",
+          "en-",
+          "taile",
+          "taillier",
+          "taliare",
+          "tail"
+        ],
+        "historicalPath": [
+          "後期ラテン語 taliare（切る、分ける）",
+          "古フランス語 taillier・taile（切って定める、相続上の制限）",
+          "アングロ・フレンチ en＋taile（財産を継承制限に組み込む）",
+          "英語 entail（切り離せない結果として伴う）"
+        ],
+        "components": [
+          {
+            "form": "en-",
+            "kind": "prefix",
+            "gloss": "〜にする"
+          },
+          {
+            "form": "taile",
+            "kind": "base",
+            "gloss": "切って定める"
+          }
+        ],
+        "rootCandidates": [
+          "tail"
+        ],
+        "semanticBridge": "相続財産を切り分けて特定の継承者に結び付けることから、ある事柄に切り離せない結果や負担が伴う意味へ広がった。",
+        "summary": "entailはen-（〜にする）＋tail（切って定める）から、必然的に伴う・必要とする意味になった。",
+        "confidence": "high",
+        "notes": "entailのtailは動物のtail（尾）ではなく、taillier（切る）に由来する語幹を英語表面へ対応させたもの。"
+      }
+    },
+    "entreaty": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "懇願",
+        "root": "treat",
+        "parts": [
+          {
+            "form": "en",
+            "kind": "prefix",
+            "gloss": "〜に・〜にする"
+          },
+          {
+            "form": "treat",
+            "kind": "root",
+            "gloss": "扱う・交渉する"
+          },
+          {
+            "form": "-y",
+            "kind": "suffix",
+            "gloss": "名詞化"
+          }
+        ],
+        "derivation": "en-（〜に・〜にする）＋treat（扱う・交渉する）＋-y（名詞化） → 相手に強く願い求める行為、懇願"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/entreaty",
+          "https://www.merriam-webster.com/dictionary/entreaty"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/entreaty",
+            "note": "entreatyをentreat＋-yからなる名詞とし、entreatをアングロ・フレンチ entretier、古フランス語 entraiter（扱う、交渉する）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/entreaty",
+            "note": "entreatyの現代語義として、entreatする行為、懇願・嘆願を確認した。"
+          }
+        ],
+        "originLanguage": "アングロ・フレンチ・古フランス語・ラテン語・英語",
+        "etymons": [
+          "entreaty",
+          "entreat",
+          "entretier",
+          "entraiter",
+          "en-",
+          "traiter",
+          "tractare",
+          "-y"
+        ],
+        "historicalPath": [
+          "ラテン語 tractare（扱う、取り扱う）",
+          "古フランス語 traiter・entraiter（扱う、交渉する）",
+          "英語 entreat（懇願する）",
+          "英語 entreaty（懇願する行為）"
+        ],
+        "components": [
+          {
+            "form": "en-",
+            "kind": "prefix",
+            "gloss": "〜に・〜にする"
+          },
+          {
+            "form": "traiter",
+            "kind": "base",
+            "gloss": "扱う・交渉する"
+          },
+          {
+            "form": "-y",
+            "kind": "suffix",
+            "gloss": "名詞化"
+          }
+        ],
+        "rootCandidates": [
+          "treat"
+        ],
+        "semanticBridge": "相手を扱い交渉することから、相手に言葉を尽くして強く求めること、さらにその懇願という行為を表す意味へ発達した。",
+        "summary": "entreatyはen-＋treat（扱う・交渉する）＋-yで、懇願する行為を表す。",
+        "confidence": "high",
+        "notes": "出典がentreaty＝entreat＋-yを明示し、entreatの表面もen＋treatに対応するためA型にする。"
+      }
+    },
+    "extol": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "大いに褒めた",
+        "root": "tol",
+        "parts": [
+          {
+            "form": "ex",
+            "kind": "prefix",
+            "gloss": "上へ・高く"
+          },
+          {
+            "form": "tol",
+            "kind": "root",
+            "gloss": "持ち上げる・運ぶ"
+          }
+        ],
+        "derivation": "ex-（上へ・高く）＋tol（持ち上げる） → 高く持ち上げるように、大いに褒めた"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/extol",
+          "https://www.merriam-webster.com/dictionary/extol"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/extol",
+            "note": "extolをラテン語 extollere（高く置く、持ち上げる）に遡らせ、ex（上へ）＋tollere（持ち上げる）と説明している。比喩的な『高く褒める』は後から生じた。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/extol",
+            "note": "extolの現代語義として、非常に高く評価し、大いに褒めることを確認した。語源はex-＋tollere（持ち上げる）とされる。"
+          }
+        ],
+        "originLanguage": "ラテン語・英語",
+        "etymons": [
+          "extol",
+          "extollere",
+          "ex",
+          "tollere",
+          "*tele-"
+        ],
+        "historicalPath": [
+          "PIE *tele-（運ぶ、支える）",
+          "ラテン語 tollere（持ち上げる）",
+          "ラテン語 extollere（高く持ち上げる、称賛する）",
+          "英語 extol（大いに褒める）"
+        ],
+        "components": [
+          {
+            "form": "ex",
+            "kind": "prefix",
+            "gloss": "上へ"
+          },
+          {
+            "form": "tollere",
+            "kind": "base",
+            "gloss": "持ち上げる"
+          }
+        ],
+        "rootCandidates": [
+          "tol"
+        ],
+        "semanticBridge": "物を高く持ち上げることが、評価を高い位置に置く比喩となり、相手を大いに褒める意味になった。",
+        "summary": "extolはex-（上へ）＋tol（持ち上げる）から、高く評価して大いに褒める意味になった。",
+        "confidence": "high",
+        "notes": "ラテン語tollereに対応する表面形tolを語根として登録し、extolのextolledは語形変化として扱う。"
+      }
+    },
+    "fastidious": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 fastidiosus（軽蔑的な、気難しい）から、fastidium（嫌悪・過度の気難しさ）を経て英語へ。fastus（高慢）＋taedium（嫌悪）という説はあるが不確か → 細かいことにうるさい、念入りな"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/fastidious",
+          "https://www.merriam-webster.com/dictionary/fastidious"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/fastidious",
+            "note": "fastidiousをラテン語 fastidiosus、fastidium（嫌悪、過度の細かさ）に遡らせ、fastus＋taediumという複合説には不確かさがあると説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/fastidious",
+            "note": "fastidiousの現代語義として、極端に細かく几帳面な、気難しく好みがうるさい、清潔さに過度にこだわることを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・英語",
+        "etymons": [
+          "fastidious",
+          "fastidiosus",
+          "fastidium",
+          "fastus",
+          "taedium"
+        ],
+        "historicalPath": [
+          "ラテン語 fastus（高慢）＋taedium（嫌悪）という説",
+          "ラテン語 fastidium（嫌悪、気難しさ）",
+          "ラテン語 fastidiosus（軽蔑的な、気難しい）",
+          "英語 fastidious（細かいことにうるさい、念入りな）"
+        ],
+        "components": [
+          {
+            "form": "fastidiosus",
+            "kind": "base",
+            "gloss": "気難しい"
+          },
+          {
+            "form": "fastidium",
+            "kind": "base",
+            "gloss": "嫌悪・気難しさ"
+          }
+        ],
+        "rootCandidates": [
+          "fastid"
+        ],
+        "semanticBridge": "嫌悪や気難しさを示す性質が、細部や清潔さに過度にこだわり、簡単には満足しない性質を表すようになった。",
+        "summary": "fastidiousはラテン語の嫌悪・気難しさを表す語から、細かいことにうるさく念入りな性質を表す語になった。",
+        "confidence": "medium",
+        "notes": "fastus＋taediumという内部構成には不確かさがあり、英語表面に対応する安定した接辞分解を設定しないためB型に残す。"
+      }
+    },
+    "ferment": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 fermentum（発酵を起こすもの、パン種）から。fervere（沸騰する）と関係づけられる → 発酵させた"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/ferment",
+          "https://www.merriam-webster.com/dictionary/ferment"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/ferment",
+            "note": "fermentを古フランス語 fermenter、ラテン語 fermentare・fermentum（パン種、発酵した飲み物）に遡らせ、fervere（沸騰する）との関係を説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/ferment",
+            "note": "fermentの現代語義として、発酵させること・発酵状態、また比喩的な動揺や騒乱を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "ferment",
+          "fermentare",
+          "fermentum",
+          "fervere",
+          "*bhreu-"
+        ],
+        "historicalPath": [
+          "PIE *bhreu-（沸騰する、泡立つ）",
+          "ラテン語 fermentum（パン種、発酵を起こすもの）",
+          "古フランス語 fermenter",
+          "英語 ferment（発酵させる、発酵）"
+        ],
+        "components": [
+          {
+            "form": "fermentum",
+            "kind": "base",
+            "gloss": "発酵を起こすもの"
+          },
+          {
+            "form": "fervere",
+            "kind": "base",
+            "gloss": "沸騰する"
+          }
+        ],
+        "rootCandidates": [
+          "ferment"
+        ],
+        "semanticBridge": "沸騰するように液体が変化することから、酵母などによる発酵、さらに感情や社会の激しい動揺を表す意味へ広がった。",
+        "summary": "fermentは発酵を起こすものを表すラテン語から、発酵させることと比喩的な動揺を表す語になった。",
+        "confidence": "high",
+        "notes": "fermentの語源は確認できるが、fer-＋-mentという英語表面の分解ではないためB型に残す。"
+      }
+    },
+    "flout": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "語源不詳。中英語 flowten（笛を吹く）や中期オランダ語 fluyten（笛を吹く、嘲る）との関連説がある → 公然と無視した、軽視した"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/flout",
+          "https://www.merriam-webster.com/dictionary/flout"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/flout",
+            "note": "floutを『軽蔑して扱う、嘲る』という16世紀の語とし、起源は不確かで、中英語 flowten（笛を吹く）との関係を可能性として挙げている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/flout",
+            "note": "floutの現代語義として、規則・権威などを公然と無視・軽視することを確認した。"
+          }
+        ],
+        "originLanguage": "中英語・中期オランダ語の可能性・英語",
+        "etymons": [
+          "flout",
+          "flowten",
+          "fluyten"
+        ],
+        "historicalPath": [
+          "中英語 flowten（笛を吹く）との関連説",
+          "中期オランダ語 fluyten（笛を吹く、嘲る）との関連説",
+          "英語 flout（公然と軽視する）"
+        ],
+        "components": [
+          {
+            "form": "flout",
+            "kind": "base",
+            "gloss": "軽視する"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "嘲笑や軽蔑を示す行為から、規則や権威を公然と無視する行為を表すようになった可能性がある。",
+        "summary": "floutは起源に不確かな点があり、規則などを公然と軽視する意味をもつ単純語として扱う。",
+        "confidence": "low",
+        "notes": "flauntとの混同や語源説の不確かさがあるため、表面の接辞・語根を確定せずB型に残す。"
+      }
+    },
+    "fortitude": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "不屈の精神",
+        "root": "fort",
+        "parts": [
+          {
+            "form": "fort",
+            "kind": "root",
+            "gloss": "強い"
+          },
+          {
+            "form": "-itude",
+            "kind": "suffix",
+            "gloss": "性質・状態"
+          }
+        ],
+        "derivation": "fort（強い）＋-itude（性質・状態） → 強さ、困難に耐える不屈の精神"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/fortitude",
+          "https://www.merriam-webster.com/dictionary/fortitude"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/fortitude",
+            "note": "fortitudeをラテン語 fortitudo（強さ、堅固さ、勇気）、fortis（強い、勇敢な）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/fortitude",
+            "note": "fortitudeの現代語義として、危険・苦痛・逆境に勇気をもって耐える精神の強さを確認し、fortis（強い）由来であることを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・中英語・英語",
+        "etymons": [
+          "fortitude",
+          "fortitudo",
+          "fortis",
+          "-itude"
+        ],
+        "historicalPath": [
+          "ラテン語 fortis（強い、勇敢な）",
+          "ラテン語 fortitudo（強さ、堅固さ、勇気）",
+          "中英語 fortitude",
+          "英語 fortitude（困難に耐える精神の強さ）"
+        ],
+        "components": [
+          {
+            "form": "fortis",
+            "kind": "base",
+            "gloss": "強い"
+          },
+          {
+            "form": "-tudo",
+            "kind": "suffix",
+            "gloss": "性質・状態"
+          }
+        ],
+        "rootCandidates": [
+          "fort"
+        ],
+        "semanticBridge": "強い性質が、身体的な強さから危険や苦痛に耐える心の強さ、すなわち不屈の精神へと特化した。",
+        "summary": "fortitudeはfort（強い）に対応する語幹と性質を表す要素から、困難に耐える不屈の精神を表す。",
+        "confidence": "high",
+        "notes": "歴史的にはラテン語fortitudoの借用であり、表示上はfortisの語幹fortと、表面の-itudeに対応する名詞化要素へ正規化している。"
+      }
+    },
+    "fortuitous": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "偶然の",
+        "root": "fortuit",
+        "parts": [
+          {
+            "form": "fortuit",
+            "kind": "root",
+            "gloss": "偶然・思いがけないこと"
+          },
+          {
+            "form": "-ous",
+            "kind": "suffix",
+            "gloss": "〜の性質をもつ"
+          }
+        ],
+        "derivation": "fortuit（偶然）＋-ous（〜の性質をもつ） → 偶然の、思いがけない"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/fortuitous",
+          "https://www.merriam-webster.com/dictionary/fortuitous"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/fortuitous",
+            "note": "fortuitousをラテン語 fortuitus（偶然に起きる、意図されない）に遡らせ、forte（偶然に）・fors（運、偶然）と関係づけている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/fortuitous",
+            "note": "fortuitousの現代語義として、偶然に起きる、幸運な偶然によって生じることを確認した。語源はラテン語fortuitus・forsに結び付けられている。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "fortuitous",
+          "fortuit",
+          "fortuitus",
+          "forte",
+          "fors",
+          "-ous"
+        ],
+        "historicalPath": [
+          "ラテン語 fors（運、偶然）",
+          "ラテン語 forte・fortuitus（偶然に、偶然の）",
+          "フランス語 fortuit",
+          "英語 fortuitous（偶然の、思いがけない）"
+        ],
+        "components": [
+          {
+            "form": "fortuitus",
+            "kind": "base",
+            "gloss": "偶然の"
+          },
+          {
+            "form": "-ous",
+            "kind": "suffix",
+            "gloss": "〜の性質をもつ"
+          }
+        ],
+        "rootCandidates": [
+          "fortuit"
+        ],
+        "semanticBridge": "運や偶然に起きることを表す形容詞が、計画されていない出来事、文脈によっては幸運な出来事を表すようになった。",
+        "summary": "fortuitousはfortuit（偶然）＋-ousとして表示し、偶然の・思いがけないという意味を示す。",
+        "confidence": "medium",
+        "notes": "語源上はラテン語fortuitusの直接借用で、英語で新たにfortuit＋-ousを作ったとは限らない。表示は既存A型と同じ語幹・接尾辞対応へ正規化している。"
+      }
+    },
+    "futility": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "無益、むなしさ",
+        "root": "futil",
+        "parts": [
+          {
+            "form": "futil",
+            "kind": "root",
+            "gloss": "漏れる・空しい"
+          },
+          {
+            "form": "-ity",
+            "kind": "suffix",
+            "gloss": "〜であること"
+          }
+        ],
+        "derivation": "futil（漏れて空しい、役に立たない）＋-ity（〜であること） → 無益でむなしい性質、無益、むなしさ"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/futility",
+          "https://www.merriam-webster.com/dictionary/futility"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/futility",
+            "note": "futilityをフランス語 futilitéまたはラテン語 futilitasに遡らせ、futilis（空しい、価値がない）と、さらにfundere（注ぐ）・PIE *gheu-（注ぐ）に結び付けている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/futility",
+            "note": "futilityの現代語義として、futileである状態、無益さ、役に立たない行為を確認した。語源はfutilis＋-ityとされる。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "futility",
+          "futilitas",
+          "futilis",
+          "fundere",
+          "*gheu-",
+          "-ity"
+        ],
+        "historicalPath": [
+          "PIE *gheu-（注ぐ）",
+          "ラテン語 fundere（注ぐ、溶かす）",
+          "ラテン語 futilis（漏れやすい、役に立たない）",
+          "ラテン語 futilitas・フランス語 futilité",
+          "英語 futility（無益さ）"
+        ],
+        "components": [
+          {
+            "form": "futilis",
+            "kind": "base",
+            "gloss": "漏れやすい・役に立たない"
+          },
+          {
+            "form": "-ity",
+            "kind": "suffix",
+            "gloss": "性質・状態"
+          }
+        ],
+        "rootCandidates": [
+          "futil"
+        ],
+        "semanticBridge": "容器から中身が漏れて空になるイメージが、目的を達成できず役に立たないこと、さらにその無益な状態を表す意味へ発達した。",
+        "summary": "futilityはfutil（空しく、役に立たない）＋-ityで、無益さ・むなしさを表す。",
+        "confidence": "high",
+        "notes": "futilis・futilitasと英語の-ityによる名詞化が確認でき、表面形にも対応するためA型にする。"
+      }
+    },
+    "germination": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "発芽",
+        "root": "germin",
+        "parts": [
+          {
+            "form": "germin",
+            "kind": "root",
+            "gloss": "芽を出す"
+          },
+          {
+            "form": "-ation",
+            "kind": "suffix",
+            "gloss": "〜すること"
+          }
+        ],
+        "derivation": "germin（芽を出す）＋-ation（〜すること） → 芽を出すこと、発芽"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/germination",
+          "https://www.merriam-webster.com/dictionary/germination"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/germination",
+            "note": "germinationをラテン語 germinatio（芽を出すこと）に遡らせ、germinare（芽を出す）・germen（芽、若枝）と関係づけている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/germination",
+            "note": "germinationの現代語義として、種子や胞子が発芽・成長を始めることを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "germination",
+          "germinatio",
+          "germinare",
+          "germen",
+          "-ation"
+        ],
+        "historicalPath": [
+          "ラテン語 germen（芽、若枝）",
+          "ラテン語 germinare（芽を出す）",
+          "ラテン語 germinatio（芽を出すこと）",
+          "英語 germination（発芽）"
+        ],
+        "components": [
+          {
+            "form": "germinare",
+            "kind": "base",
+            "gloss": "芽を出す"
+          },
+          {
+            "form": "-ation",
+            "kind": "suffix",
+            "gloss": "行為・結果"
+          }
+        ],
+        "rootCandidates": [
+          "germin"
+        ],
+        "semanticBridge": "芽や若枝が出ることから、種子や胞子が成長を始める生物学上の発芽を表す名詞になった。",
+        "summary": "germinationはgermin（芽を出す）＋-ationで、発芽することを表す。",
+        "confidence": "high",
+        "notes": "ラテン語germinatioの行為名詞形成と英語表面の-ationが対応するためA型にする。"
+      }
+    },
+    "gist": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "アングロ・フレンチの法律表現 cest action gist（この訴訟は成り立つ）から。古フランス語 gist（横たわる、存する）、ラテン語 iacet（横たわる）に由来 → 要点、大意"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/gist",
+          "https://www.merriam-webster.com/dictionary/gist"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/gist",
+            "note": "gistを法律用語のcest action gist（この訴訟は成り立つ）から説明し、古フランス語 gist・ラテン語 iacet（横たわる）に遡らせている。『本質』の意味は後の拡張である。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/gist",
+            "note": "gistの現代語義として、文章や議論の中心的な意味・要点を確認した。"
+          }
+        ],
+        "originLanguage": "アングロ・フレンチ・古フランス語・ラテン語・英語",
+        "etymons": [
+          "gist",
+          "cest action gist",
+          "gésir",
+          "iacet",
+          "iacēre"
+        ],
+        "historicalPath": [
+          "ラテン語 iacēre・iacet（横たわる、存する）",
+          "古フランス語 gist（存する）",
+          "アングロ・フレンチ cest action gist（この訴訟の要点はここにある）",
+          "英語 gist（要点、本質）"
+        ],
+        "components": [
+          {
+            "form": "gist",
+            "kind": "base",
+            "gloss": "存する、横たわる"
+          }
+        ],
+        "rootCandidates": [
+          "gist"
+        ],
+        "semanticBridge": "訴訟の本質がどこに存するかを示す法律表現から、文章・議論の中心に存する意味、すなわち要点へ発達した。",
+        "summary": "gistは法律表現の『ここに存する』から、文章や議論の要点・大意を表す語になった。",
+        "confidence": "high",
+        "notes": "語源は明確だが、英語表面を複数の接辞・語根へ分解できないためB型に残す。"
+      }
+    },
+    "glaze": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "中英語 glasen（ガラスをはめる、輝かせる）の異形から。glas（ガラス）に由来し、glazierの影響で綴りが変化した → 釉薬、光沢"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/glaze",
+          "https://www.merriam-webster.com/dictionary/glaze"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/glaze",
+            "note": "glazeを中英語 glasenの異形とし、glas（ガラス）から、ガラスのように輝かせる意味、陶器を光沢ある物質で覆う意味へ広がったと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/glaze",
+            "note": "glazeの現代語義として、陶器などの表面を光沢ある被膜で覆うこと、その被膜や光沢を確認した。"
+          }
+        ],
+        "originLanguage": "古英語・中英語・英語",
+        "etymons": [
+          "glaze",
+          "glasen",
+          "glas",
+          "glass",
+          "glazier",
+          "*ghel-"
+        ],
+        "historicalPath": [
+          "PIE *ghel-（輝く）",
+          "古英語 glæs（ガラス）",
+          "中英語 glasen（ガラスをはめる、輝かせる）",
+          "英語 glaze（釉薬をかける、光沢、釉薬）"
+        ],
+        "components": [
+          {
+            "form": "glasen",
+            "kind": "base",
+            "gloss": "ガラスをはめる、輝かせる"
+          }
+        ],
+        "rootCandidates": [
+          "glas"
+        ],
+        "semanticBridge": "ガラスのように輝かせる動作から、陶器などを光沢ある被膜で覆うこと、その被膜や光沢を表す名詞へ発達した。",
+        "summary": "glazeはガラスをはめたり輝かせたりする中英語から、釉薬をかけることや光沢を表す語になった。",
+        "confidence": "high",
+        "notes": "glas・glassとの関係は確認できるが、glazeを表面上の接辞＋語根へ安定して分解しないためB型に残す。"
+      }
+    },
+    "grievance": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "不満、苦情",
+        "root": "griev",
+        "parts": [
+          {
+            "form": "griev",
+            "kind": "root",
+            "gloss": "重く苦しませる"
+          },
+          {
+            "form": "-ance",
+            "kind": "suffix",
+            "gloss": "〜すること・状態"
+          }
+        ],
+        "derivation": "griev（重く苦しませる）＋-ance（〜すること・状態） → 苦しみや不当な扱いを受けた状態、不満、苦情"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/grievance",
+          "https://www.merriam-webster.com/dictionary/grievance"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/grievance",
+            "note": "grievanceを古フランス語 grevance（害、苦痛、不幸）から、grever（害する、重荷を負わせる）に遡らせ、ラテン語 gravare・gravis（重い）と関係づけている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/grievance",
+            "note": "grievanceの現代語義として、不当な扱い・不満の正式な申し立て、苦情を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "grievance",
+          "grevance",
+          "grever",
+          "gravare",
+          "gravis",
+          "-ance"
+        ],
+        "historicalPath": [
+          "PIE *gwere-（重い）",
+          "ラテン語 gravare（重くする、苦しませる）",
+          "古フランス語 grever・grevance（害する、苦痛、不当な扱い）",
+          "英語 grievance（不満、苦情）"
+        ],
+        "components": [
+          {
+            "form": "grever",
+            "kind": "base",
+            "gloss": "害する、重荷を負わせる"
+          },
+          {
+            "form": "-ance",
+            "kind": "suffix",
+            "gloss": "状態"
+          }
+        ],
+        "rootCandidates": [
+          "griev"
+        ],
+        "semanticBridge": "人に重荷や苦痛を与えることから、害や不当な扱いを受けた状態、そこから生じる不満や正式な苦情へ発達した。",
+        "summary": "grievanceはgriev（苦しませる）＋-anceで、不満や苦情を表す。",
+        "confidence": "high",
+        "notes": "古フランス語grever・grievanceと英語表面のgriev＋-anceが対応するためA型にする。"
+      }
+    },
+    "haphazard": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "hap（運、偶然）＋hazard（危険、さいころの賭け）からなる複合語 → 無計画な、でたらめな"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/haphazard",
+          "https://www.merriam-webster.com/dictionary/haphazard"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/haphazard",
+            "note": "haphazardをhap（運、偶然）＋hazard（危険、偶然の賭け）からなる複合語と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/haphazard",
+            "note": "haphazardの現代語義として、計画・秩序・方向性がなく偶然に任せた状態を確認した。"
+          }
+        ],
+        "originLanguage": "古ノルド語・古フランス語・英語",
+        "etymons": [
+          "haphazard",
+          "hap",
+          "happ",
+          "hazard",
+          "hasard"
+        ],
+        "historicalPath": [
+          "古ノルド語 happ（運、幸運）→ 英語 hap（偶然）",
+          "古フランス語 hasard（さいころの賭け、危険）→ 英語 hazard",
+          "英語 hap＋hazard（偶然と危険）",
+          "英語 haphazard（無計画な、でたらめな）"
+        ],
+        "components": [
+          {
+            "form": "hap",
+            "kind": "base",
+            "gloss": "運、偶然"
+          },
+          {
+            "form": "hazard",
+            "kind": "base",
+            "gloss": "危険、賭け"
+          }
+        ],
+        "rootCandidates": [
+          "hap",
+          "hazard"
+        ],
+        "semanticBridge": "偶然や賭けに任せるイメージから、計画も秩序もなく偶然に進む状態を表す形容詞になった。",
+        "summary": "haphazardはhapとhazardを組み合わせた複合語で、無計画ででたらめな状態を表す。",
+        "confidence": "high",
+        "notes": "ユーザー指定に従い、複合表現はA型の接辞分解にせずB型・熟語側の表示にそろえる。"
+      }
+    },
+    "heedless": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "不注意な",
+        "root": "heed",
+        "parts": [
+          {
+            "form": "heed",
+            "kind": "root",
+            "gloss": "注意・気に留める"
+          },
+          {
+            "form": "-less",
+            "kind": "suffix",
+            "gloss": "〜のない"
+          }
+        ],
+        "derivation": "heed（注意）＋-less（〜のない） → 注意を払わない、不注意な、気に留めない"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/heedless",
+          "https://www.merriam-webster.com/dictionary/heedless"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/heedless",
+            "note": "heedlessをheed（注意）＋-less（欠いている）からなる語とし、-lessを古英語 -leas（〜のない）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/heedless",
+            "note": "heedlessの現代語義として、注意を払わない、気に留めない、配慮を欠くことを確認した。"
+          }
+        ],
+        "originLanguage": "古英語・中英語・英語",
+        "etymons": [
+          "heedless",
+          "heed",
+          "hēdan",
+          "reccan",
+          "-less",
+          "-leas",
+          "*leu-"
+        ],
+        "historicalPath": [
+          "古英語 hēdan・reccan（注意する、気にかける）",
+          "英語 heed（注意、気に留める）",
+          "古英語 -leas（〜のない）",
+          "英語 heedless（注意のない、不注意な）"
+        ],
+        "components": [
+          {
+            "form": "heed",
+            "kind": "base",
+            "gloss": "注意"
+          },
+          {
+            "form": "-less",
+            "kind": "suffix",
+            "gloss": "〜のない"
+          }
+        ],
+        "rootCandidates": [
+          "heed"
+        ],
+        "semanticBridge": "注意を払うことを欠いている状態から、配慮がなく不注意である性質を表す形容詞になった。",
+        "summary": "heedlessはheed（注意）＋-less（〜のない）で、不注意な・気に留めないという意味を表す。",
+        "confidence": "high",
+        "notes": "heed＋-lessの構成が出典に明示され、英語表面にも対応するためA型にする。"
+      }
+    },
+    "hindsight": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "hind（後ろの）＋sight（見ること、視力）からなる複合語。foresightとの対比で広がった → 後知恵"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/hindsight",
+          "https://www.merriam-webster.com/dictionary/hindsight"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/hindsight",
+            "note": "hindsightをhind（後ろの）＋sight（視力、見ること）からなる語とし、後の意味は出来事の後から振り返ることとして1862年に確認されると説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/hindsight",
+            "note": "hindsightの現代語義として、出来事が起きた後なら分かること、後から見れば明らかな判断を確認した。"
+          }
+        ],
+        "originLanguage": "古英語・中英語・英語",
+        "etymons": [
+          "hindsight",
+          "hind",
+          "behindan",
+          "sight",
+          "gesiht",
+          "foresight"
+        ],
+        "historicalPath": [
+          "古英語 hindan・behindan（後ろに、後ろから）",
+          "古英語 gesiht（見えるもの、視力）",
+          "英語 hind＋sight（後ろを見ること）",
+          "英語 hindsight（出来事の後からの理解、後知恵）"
+        ],
+        "components": [
+          {
+            "form": "hind",
+            "kind": "base",
+            "gloss": "後ろの"
+          },
+          {
+            "form": "sight",
+            "kind": "base",
+            "gloss": "見ること"
+          }
+        ],
+        "rootCandidates": [
+          "hind",
+          "sight"
+        ],
+        "semanticBridge": "後ろを見るという文字通りの構成が、出来事の後から事情や正しい判断が見えるという比喩的な意味になった。",
+        "summary": "hindsightはhind＋sightの複合語で、出来事の後から得られる理解、後知恵を表す。",
+        "confidence": "high",
+        "notes": "複合語のため、ユーザー指定に従いB型・熟語側の表示にそろえる。"
+      }
+    },
+    "implore": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "懇願した",
+        "root": "plor",
+        "parts": [
+          {
+            "form": "im",
+            "kind": "prefix",
+            "gloss": "〜に向かって"
+          },
+          {
+            "form": "plore",
+            "kind": "root",
+            "gloss": "泣く・叫ぶ"
+          }
+        ],
+        "derivation": "im-（〜に向かって）＋plore（泣き叫ぶ） → 泣きながら強く願い、懇願した"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/implore",
+          "https://www.merriam-webster.com/dictionary/implore"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/implore",
+            "note": "imploreをフランス語およびラテン語 implorare（助けを呼ぶ、熱心に懇願する）に遡らせ、in-（〜に向かって）＋plorare（泣く、叫ぶ）と説明している。plorareの起源は不明である。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/implore",
+            "note": "imploreの現代語義として、熱心に頼む・懇願することを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "implore",
+          "implorare",
+          "in-",
+          "plorare",
+          "*en"
+        ],
+        "historicalPath": [
+          "PIE *en（中へ、〜に向かって）",
+          "ラテン語 plorare（泣く、叫ぶ）",
+          "ラテン語 implorare（泣きながら呼びかける、懇願する）",
+          "フランス語 implorer",
+          "英語 implore（懇願する）"
+        ],
+        "components": [
+          {
+            "form": "in-",
+            "kind": "prefix",
+            "gloss": "〜に向かって"
+          },
+          {
+            "form": "plorare",
+            "kind": "base",
+            "gloss": "泣く、叫ぶ"
+          }
+        ],
+        "rootCandidates": [
+          "plor"
+        ],
+        "semanticBridge": "泣き叫びながら相手に呼びかける動作から、助けや許しを熱心に求める、懇願する意味になった。",
+        "summary": "imploreはim-（〜に向かって）＋plore（泣き叫ぶ）から、強く懇願する意味になった。",
+        "confidence": "high",
+        "notes": "ラテン語in-の表面同化形im-と、plorareに対応するploreを表示する。plorareの深い語源は不明だが、構成自体は明確である。"
+      }
+    },
+    "impromptu": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 in promptu（準備ができた状態で、すぐ使える状態で）からフランス語を経て英語へ → 即興の、準備なしの"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/impromptu",
+          "https://www.merriam-webster.com/dictionary/impromptu"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/impromptu",
+            "note": "impromptuをフランス語 impromptu、ラテン語 in promptu（準備ができた状態で）に遡らせ、in-＋promptus（準備された、前に出された）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/impromptu",
+            "note": "impromptuの現代語義として、準備や計画なしにその場で行われること、即興のことを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "impromptu",
+          "in promptu",
+          "in-",
+          "promptus",
+          "promere",
+          "pro",
+          "emere"
+        ],
+        "historicalPath": [
+          "ラテン語 pro（前へ）＋emere（取り出す、得る）",
+          "ラテン語 promptus（準備された、前に出された）",
+          "ラテン語 in promptu（すぐ使える状態で）",
+          "フランス語 impromptu",
+          "英語 impromptu（即興の、準備なしの）"
+        ],
+        "components": [
+          {
+            "form": "in promptu",
+            "kind": "base",
+            "gloss": "準備ができた状態で"
+          }
+        ],
+        "rootCandidates": [
+          "prompt"
+        ],
+        "semanticBridge": "すぐ使えるよう前に出された状態から、あらかじめ準備せず、その場で前に出して行う即興へ意味が反転・拡張した。",
+        "summary": "impromptuはラテン語の句 in promptuに由来し、準備なしにその場で行う即興を表す。",
+        "confidence": "high",
+        "notes": "語源は句・複合的なラテン語表現であり、英語のim-＋promptuという接辞分解にはしない。"
+      }
+    },
+    "inane": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 inanis（空の、価値のない）からフランス語または直接借用。語源は不確か → ばかげた、無意味な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/inane",
+          "https://www.merriam-webster.com/dictionary/inane"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/inane",
+            "note": "inaneをラテン語 inanis（空の、空虚な、価値のない）からの借用またはinanityからの逆形成とし、inanisの起源は不確かとしている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/inane",
+            "note": "inaneの現代語義として、意味や重要性がなく、ばかげた・無意味なことを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "inane",
+          "inanis",
+          "inanity"
+        ],
+        "historicalPath": [
+          "ラテン語 inanis（空の、空虚な、価値のない）",
+          "フランス語 inanitéまたはラテン語からの英語借用",
+          "英語 inane（空虚な、ばかげた、無意味な）"
+        ],
+        "components": [
+          {
+            "form": "inanis",
+            "kind": "base",
+            "gloss": "空の、空虚な"
+          }
+        ],
+        "rootCandidates": [
+          "inan"
+        ],
+        "semanticBridge": "空っぽで価値がないという物理的・抽象的な意味から、内容や意味がなく、ばかげているという評価へ発達した。",
+        "summary": "inaneはラテン語の空虚さを表す語に由来し、ばかげた・無意味なという意味になった。",
+        "confidence": "medium",
+        "notes": "in-（否定）＋aneという英語の表面分解は成立せず、inanisの深い語源も不確かなためB型に残す。"
+      }
+    },
+    "jeopardy": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 jeu parti（勝負の行方が分かれた、五分の勝負）から。jeu（ゲーム）＋parti（分けられた）を背景に → 危険"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/jeopardy",
+          "https://www.merriam-webster.com/dictionary/jeopardy"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/jeopardy",
+            "note": "jeopardyを古フランス語 jeu parti（分かれた勝負、勝敗が不確かなゲーム）に遡らせ、jeu（ゲーム）＋parti（分けられた）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/jeopardy",
+            "note": "jeopardyの現代語義として、損失・危害・失敗にさらされた危険な状態を確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語・アングロ・フレンチ・ラテン語・英語",
+        "etymons": [
+          "jeopardy",
+          "jupartie",
+          "jeu parti",
+          "jeu",
+          "parti",
+          "partire",
+          "pars"
+        ],
+        "historicalPath": [
+          "ラテン語 pars（部分）・partiri（分ける）",
+          "古フランス語 jeu（ゲーム）＋parti（分けられた）",
+          "アングロ・フレンチ jeu parti（勝負が五分で不確かな状態）",
+          "英語 jeopardy（危険、不確かな状態）"
+        ],
+        "components": [
+          {
+            "form": "jeu parti",
+            "kind": "base",
+            "gloss": "分かれた勝負"
+          }
+        ],
+        "rootCandidates": [
+          "part"
+        ],
+        "semanticBridge": "勝敗が分かれ、どちらに転ぶか分からないゲームの状態から、損失や危害にさらされた危険な状態へ発達した。",
+        "summary": "jeopardyは『勝敗が分かれたゲーム』を表す古フランス語句から、危険という意味になった。",
+        "confidence": "high",
+        "notes": "古フランス語の複合表現が英語で一語化したものなので、ユーザー指定に従いB型・熟語側の表示にする。"
+      }
+    },
+    "lackluster": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "lack（欠けている、不足）＋luster（輝き、光沢）からなる複合語 → ぱっとしない、精彩を欠く"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/lackluster",
+          "https://www.merriam-webster.com/dictionary/lackluster"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/lackluster",
+            "note": "lacklusterをlack（不足）＋luster（輝き）からなる複合語とし、もともとは目などが明るさを欠くことを表したと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/lackluster",
+            "note": "lacklusterの現代語義として、活気・輝き・興味・卓越性を欠く、ぱっとしないことを確認した。"
+          }
+        ],
+        "originLanguage": "古オランダ語の可能性・古フランス語・英語",
+        "etymons": [
+          "lackluster",
+          "lack",
+          "luster",
+          "lustrare",
+          "*leuk-"
+        ],
+        "historicalPath": [
+          "中期オランダ語 laken（不足する）との関係が考えられる英語 lack",
+          "ラテン語 lustrare（光を広げる、明るくする）→英語 luster",
+          "英語 lack＋luster（輝きを欠く）",
+          "英語 lackluster（精彩を欠く）"
+        ],
+        "components": [
+          {
+            "form": "lack",
+            "kind": "base",
+            "gloss": "不足"
+          },
+          {
+            "form": "luster",
+            "kind": "base",
+            "gloss": "輝き"
+          }
+        ],
+        "rootCandidates": [
+          "lack",
+          "lustr"
+        ],
+        "semanticBridge": "輝きが不足しているという視覚的な意味から、活気・興味・卓越性などがなく、ぱっとしない状態を表す比喩へ広がった。",
+        "summary": "lacklusterはlack＋lusterの複合語で、輝きや活気を欠く、ぱっとしない状態を表す。",
+        "confidence": "high",
+        "notes": "透明な複合語だが、ユーザー指定に従いA型の単語内接辞表示ではなくB型・熟語側にそろえる。"
+      }
+    },
+    "lament": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 lamenter、ラテン語 lamentari（嘆く、泣き悲しむ）から。lamentum（嘆きの声）と関係する → 嘆く、悲しむ"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/lament",
+          "https://www.merriam-webster.com/dictionary/lament"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/lament",
+            "note": "lamentを古フランス語 lamenterおよびラテン語 lamentari（嘆く、うめく、泣く）に遡らせ、lamentum（嘆き、泣き声）と関係づけている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/lament",
+            "note": "lamentの現代語義として、悲しみや後悔を声や言葉で表すこと、深く嘆くことを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "lament",
+          "lamenter",
+          "lamentari",
+          "lamentum",
+          "*la-"
+        ],
+        "historicalPath": [
+          "PIE *la-（叫ぶ、泣く）と再構成される語族",
+          "ラテン語 lamentum（嘆き、泣き声）",
+          "ラテン語 lamentari（嘆く、泣き悲しむ）",
+          "古フランス語 lamenter",
+          "英語 lament（嘆く、悲しむ）"
+        ],
+        "components": [
+          {
+            "form": "lamentari",
+            "kind": "base",
+            "gloss": "嘆く、泣き悲しむ"
+          }
+        ],
+        "rootCandidates": [
+          "lament"
+        ],
+        "semanticBridge": "嘆きの声や泣き悲しむ行為を表す語が、悲しみや後悔を言葉・声で表す動詞へ定着した。",
+        "summary": "lamentは嘆きの声を表すラテン語から、嘆く・悲しむという動詞になった。",
+        "confidence": "high",
+        "notes": "語源は明確だが、lamentを安定した英語の接辞＋語根へ分解できないためB型に残す。"
+      }
+    }
+  }
+}

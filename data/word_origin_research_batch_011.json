@@ -1,0 +1,1303 @@
+{
+  "meta": {
+    "batchId": "batch-011",
+    "note": "未確認B型の先頭25語。英語表面に出典が支える語根・接辞の対応を置ける語はA型へ、単一基体・複合表現・分詞語尾・語形変化が大きい語はB型に残す。"
+  },
+  "dictionary": {
+    "roots": {
+      "ascet": {
+        "gloss": "鍛錬・禁欲",
+        "origin": "ギリシャ語 askētēs / askein",
+        "note": "訓練や鍛錬によって自分を律するイメージ。ascetic・ascetically。"
+      },
+      "astute": {
+        "gloss": "抜け目のない",
+        "origin": "ラテン語 astutus / astus",
+        "note": "巧妙で鋭く、自分の利益を見抜くイメージ。astutely。さらに深い語源には不確かさがある。"
+      },
+      "vol": {
+        "gloss": "望む・意志",
+        "origin": "ラテン語 velle / volens",
+        "note": "よく望み、善意を向けるイメージ。benevolent。"
+      },
+      "queath": {
+        "gloss": "言う・遺贈する",
+        "origin": "古英語 cweðan / bequeath",
+        "note": "言葉にして宣言し、遺言によって財産を残すイメージ。bequeath。"
+      },
+      "blasphem": {
+        "gloss": "悪く語る・冒涜する",
+        "origin": "ギリシャ語 blasphēmein / blasphēmia",
+        "note": "神聖なものについて悪く語るイメージ。blasphemy。"
+      },
+      "blunt": {
+        "gloss": "鈍い・率直な",
+        "origin": "中英語 blunt / blont",
+        "note": "鋭さがなく鈍い状態から、遠回しにせず率直な話し方へ意味が広がる。bluntly。"
+      },
+      "cogit": {
+        "gloss": "考える・思案する",
+        "origin": "ラテン語 cogitare",
+        "note": "心の中で何度も動かし、真剣に考えるイメージ。cogitate。"
+      },
+      "sort": {
+        "gloss": "分け前・運命",
+        "origin": "ラテン語 sors / sortis",
+        "note": "同じ分け前や運命を共有するイメージ。consort。"
+      },
+      "coron": {
+        "gloss": "冠・花輪",
+        "origin": "ラテン語 corona / coronare",
+        "note": "冠を授け、王として認めるイメージ。coronation。"
+      },
+      "rod": {
+        "gloss": "かじる・削る",
+        "origin": "ラテン語 rodere",
+        "note": "少しずつかじり取って表面を削るイメージ。corrode・rodent。"
+      },
+      "culmin": {
+        "gloss": "頂点・最高潮",
+        "origin": "ラテン語 culmen / culminare",
+        "note": "山や天体が最も高い点に達するイメージ。culmination。"
+      },
+      "bar": {
+        "gloss": "棒・障壁",
+        "origin": "古フランス語 barre",
+        "note": "棒や障壁で通行をふさぐイメージ。debar。"
+      },
+      "ploy": {
+        "gloss": "折る・広げる",
+        "origin": "古フランス語 desploiier / ラテン語 plicare",
+        "note": "折りたたんだものをほどいて広げるイメージ。deploy。英語表面のployを表示用の変化形として採用する。"
+      },
+      "vor": {
+        "gloss": "飲み込む",
+        "origin": "ラテン語 vorare",
+        "note": "食物を飲み込み、すっかり消費するイメージ。devour。英語表面ではvourとなる。",
+        "variants": ["vour"]
+      }
+    },
+    "affixes": {
+      "bene": {
+        "gloss": "よく・善く",
+        "kind": "prefix",
+        "note": "ラテン語beneに由来する善意・良さを表す要素。benevolent。"
+      }
+    }
+  },
+  "entries": {
+    "ascetic": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "禁欲的な",
+        "root": "ascet",
+        "parts": [
+          { "form": "ascet", "kind": "root", "gloss": "鍛錬・禁欲" },
+          { "form": "-ic", "kind": "suffix", "gloss": "〜に関する" }
+        ],
+        "derivation": "ascet（鍛錬・禁欲）＋-ic（〜に関する） → 自分を厳しく鍛錬する、禁欲的な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/ascetic",
+          "https://www.merriam-webster.com/dictionary/ascetic"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/ascetic",
+            "note": "asceticをギリシャ語 askētikos（厳しく自己を律する）からラテン語化された形とし、askētēs（修行者、訓練する人）、askein（訓練する）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/ascetic",
+            "note": "asceticの宗教的修行として厳しい自己抑制を行う、または禁欲的なという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ギリシャ語（ラテン語化）",
+        "etymons": ["ascetic", "asketikos", "askētēs", "askein", "-ic"],
+        "historicalPath": [
+          "ギリシャ語 askein（鍛錬する、訓練する）",
+          "ギリシャ語 askētēs（修行者、訓練する人）",
+          "ギリシャ語 askētikos（厳しく自己を律する）",
+          "英語 ascetic（禁欲的な）"
+        ],
+        "components": [
+          { "form": "askētēs", "kind": "base", "gloss": "修行者・訓練する人", "display": false },
+          { "form": "-ikos", "kind": "suffix", "gloss": "〜に関する", "display": false }
+        ],
+        "rootCandidates": ["ascet"],
+        "semanticBridge": "競技や修行のために自分を鍛える人の性質から、欲望を厳しく抑える禁欲的な性質を表すようになった。",
+        "summary": "asceticは、ascet（鍛錬・禁欲）＋-icから、禁欲的なを表す。",
+        "confidence": "high",
+        "notes": "ギリシャ語askētēsの英語側の語幹ascetと形容詞化-icを対応させる。"
+      }
+    },
+    "ascetically": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "禁欲的に",
+        "root": "ascet",
+        "parts": [
+          { "form": "ascet", "kind": "root", "gloss": "鍛錬・禁欲" },
+          { "form": "-ic", "kind": "suffix", "gloss": "〜に関する" },
+          { "form": "-al", "kind": "suffix", "gloss": "〜に関する" },
+          { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で" }
+        ],
+        "derivation": "ascet（鍛錬・禁欲）＋-ic＋-al（〜に関する）＋-ly（〜な状態で） → 禁欲的に"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/ascetically",
+          "https://www.merriam-webster.com/dictionary/ascetically"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/ascetically",
+            "note": "asceticallyはasceticalに副詞語尾を加えた形で、ascetic・asceticalはギリシャ語askētikos（厳しく自己を律する）に遡る。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/ascetically",
+            "note": "asceticallyの禁欲的な仕方で、厳しい自己抑制をもってという副詞の用法を確認した。"
+          }
+        ],
+        "originLanguage": "ギリシャ語（英語の多重派生）",
+        "etymons": ["ascetically", "ascetical", "ascetic", "askētikos", "-ic", "-al", "-ly"],
+        "historicalPath": [
+          "ギリシャ語 askētikos（鍛錬に関する）",
+          "英語 ascetic（禁欲的な）",
+          "英語 ascetical（禁欲に関する）",
+          "英語 ascetically（禁欲的に）"
+        ],
+        "components": [
+          { "form": "ascetic", "kind": "base", "gloss": "禁欲的な", "display": false },
+          { "form": "-al", "kind": "suffix", "gloss": "〜に関する", "display": false },
+          { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で", "display": false }
+        ],
+        "rootCandidates": ["ascet"],
+        "semanticBridge": "禁欲的な性質を表す形容詞に副詞化が重なり、禁欲的な仕方・態度で行うことを表すようになった。",
+        "summary": "asceticallyは、ascet（鍛錬・禁欲）＋-ic＋-al＋-lyから、禁欲的にを表す。",
+        "confidence": "high",
+        "notes": "ascetic→ascetical→asceticallyの英語派生を、表面の三つの接辞へ対応させる。"
+      }
+    },
+    "astutely": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "鋭く",
+        "root": "astute",
+        "parts": [
+          { "form": "astute", "kind": "root", "gloss": "抜け目のない" },
+          { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で" }
+        ],
+        "derivation": "astute（抜け目のない）＋-ly（〜な状態で） → 鋭く、抜け目なく"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/astutely",
+          "https://www.merriam-webster.com/dictionary/astutely"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/astutely",
+            "note": "astutelyはastuteに副詞語尾-lyが付いた形で、astuteをラテン語astutus（巧妙な、抜け目のない）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/astutely",
+            "note": "astutelyの鋭い判断力や抜け目のなさをもってという副詞の用法を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（英語の副詞派生）",
+        "etymons": ["astutely", "astute", "astutus", "astus", "-ly"],
+        "historicalPath": [
+          "ラテン語 astus（巧妙さ）",
+          "ラテン語 astutus（巧妙な、鋭い）",
+          "英語 astute（抜け目のない）",
+          "英語 astutely（鋭く、抜け目なく）"
+        ],
+        "components": [
+          { "form": "astute", "kind": "base", "gloss": "抜け目のない", "display": false },
+          { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で", "display": false }
+        ],
+        "rootCandidates": ["astute"],
+        "semanticBridge": "巧妙で鋭い判断をする性質を、副詞として行為の仕方へ移し、鋭く抜け目なく行うことを表す。",
+        "summary": "astutelyは、astute（抜け目のない）＋-lyから、鋭く・抜け目なくを表す。",
+        "confidence": "high",
+        "notes": "astutusのさらに深い語源は不確かだが、英語astute＋-lyの派生は明確である。"
+      }
+    },
+    "attrition": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "消耗",
+        "root": "trit",
+        "parts": [
+          { "form": "a", "kind": "prefix", "gloss": "〜へ・離れて" },
+          { "form": "trit", "kind": "root", "gloss": "すりつぶす" },
+          { "form": "-ion", "kind": "suffix", "gloss": "〜すること・状態" }
+        ],
+        "derivation": "a(d)-（〜へ・徹底的に）＋trit（こすって削る）＋-ion（行為・状態） → すり減ること、消耗"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/attrition",
+          "https://www.merriam-webster.com/dictionary/attrition"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/attrition",
+            "note": "attritionをラテン語attritio（こすり合わせること）に遡らせ、atterere（すり減らす）をad-（〜へ）＋terere（こする）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/attrition",
+            "note": "attritionの摩擦によるすり減り、継続的な作用による人員・力の消耗や漸減という語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": ["attrition", "attritio", "atterere", "ad-", "terere", "-ion"],
+        "historicalPath": [
+          "ラテン語 terere（こする、すり減らす）",
+          "ラテン語 atterere（こすって削る）",
+          "ラテン語 attritio（すり減ること）",
+          "英語 attrition（消耗、漸減）"
+        ],
+        "components": [
+          { "form": "ad-", "kind": "prefix", "gloss": "〜へ・徹底的に", "display": false },
+          { "form": "terere", "kind": "base", "gloss": "こする", "display": false },
+          { "form": "-ion", "kind": "suffix", "gloss": "行為・状態", "display": false }
+        ],
+        "rootCandidates": ["trit"],
+        "semanticBridge": "物をこすって少しずつ削ることが、物質・人員・戦力などが継続的に減る消耗や漸減を表すようになった。",
+        "summary": "attritionは、a(d)-（〜へ）＋trit（こすって削る）＋-ionから、消耗・漸減を表す。",
+        "confidence": "high",
+        "notes": "ad-がtの前でat-となる同化を表面のaとして正規化し、既存語根tritを使う。"
+      }
+    },
+    "benevolent": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "慈悲深い",
+        "root": "vol",
+        "parts": [
+          { "form": "bene", "kind": "prefix", "gloss": "よく・善く" },
+          { "form": "vol", "kind": "root", "gloss": "望む・意志" },
+          { "form": "-ent", "kind": "suffix", "gloss": "〜する性質の" }
+        ],
+        "derivation": "bene-（よく・善く）＋vol（望む）＋-ent（〜する性質の） → 人のためを望む、慈悲深い"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/benevolent",
+          "https://www.merriam-webster.com/dictionary/benevolent"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/benevolent",
+            "note": "benevolentを古フランス語benivolentとラテン語benevolentemに遡らせ、bene（よく）＋volentem（望む、velleの現在分詞）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/benevolent",
+            "note": "benevolentの善意を持つ、親切で慈悲深いという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（フランス語経由）",
+        "etymons": ["benevolent", "bene", "volentem", "velle", "-ent"],
+        "historicalPath": [
+          "ラテン語 bene（よく、善く）",
+          "ラテン語 velle（望む）",
+          "ラテン語 benevolens（善意を望む）",
+          "英語 benevolent（慈悲深い、善意の）"
+        ],
+        "components": [
+          { "form": "bene", "kind": "prefix", "gloss": "よく・善く", "display": false },
+          { "form": "volens", "kind": "base", "gloss": "望む", "display": false },
+          { "form": "-ent", "kind": "suffix", "gloss": "〜する性質の", "display": false }
+        ],
+        "rootCandidates": ["vol"],
+        "semanticBridge": "よいことを望む性質から、他人の利益を願い、親切で慈悲深い性質を表すようになった。",
+        "summary": "benevolentは、bene-（よく）＋vol（望む）＋-entから、慈悲深い・善意のを表す。",
+        "confidence": "high",
+        "notes": "beneを接頭辞、velleの語幹volを語根、-entを形容詞要素として表示する。"
+      }
+    },
+    "bequeath": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "遺贈した",
+        "root": "queath",
+        "parts": [
+          { "form": "be", "kind": "prefix", "gloss": "〜に・周囲に" },
+          { "form": "queath", "kind": "root", "gloss": "言う・遺贈する" }
+        ],
+        "derivation": "be-（〜に・周囲に）＋queath（言う・遺贈する） → 遺言で財産を残し、遺贈した"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/bequeath",
+          "https://www.merriam-webster.com/dictionary/bequeath"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/bequeath",
+            "note": "bequeathを古英語becweðan（言う、話す、遺言で残す）に遡らせ、be-＋cweðan（言う）と説明している。cweðanのさらに深いPIE語源には説の対立がある。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/bequeath",
+            "note": "bequeathの遺言によって財産を残す、遺贈するという語義を確認した。"
+          }
+        ],
+        "originLanguage": "古英語（ゲルマン系）",
+        "etymons": ["bequeath", "becweðan", "be-", "cweðan", "*kwithan"],
+        "historicalPath": [
+          "古英語 cweðan（言う、話す）",
+          "古英語 be-＋cweðan（言い渡す、遺言で残す）",
+          "中英語 bequeath",
+          "英語 bequeath（遺贈する）"
+        ],
+        "components": [
+          { "form": "be-", "kind": "prefix", "gloss": "〜に・周囲に", "display": false },
+          { "form": "cweðan", "kind": "base", "gloss": "言う", "display": false }
+        ],
+        "rootCandidates": ["queath"],
+        "semanticBridge": "言葉にして宣言する動作が、遺言で財産の行き先を言い渡し、死後に残す意味へ特化した。",
+        "summary": "bequeathは、be-（〜に）＋queath（言う・遺贈する）から、遺贈したを表す。",
+        "confidence": "high",
+        "notes": "bequeathedという表面形は過去形語尾を含むため、原形bequeathのbe＋queathだけを表示する。"
+      }
+    },
+    "blasphemy": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "冒涜",
+        "root": "blasphem",
+        "parts": [
+          { "form": "blasphem", "kind": "root", "gloss": "悪く語る・冒涜する" },
+          { "form": "-y", "kind": "suffix", "gloss": "〜の性質・状態" }
+        ],
+        "derivation": "blasphem（神聖なものを悪く語る）＋-y（性質・状態） → 神聖なものを冒涜すること、冒涜"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/blasphemy",
+          "https://www.merriam-webster.com/dictionary/blasphemy"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/blasphemy",
+            "note": "blasphemyを古フランス語blasfemie、後期ラテン語blasphemia、ギリシャ語blasphēmia（悪く語ること）に遡らせ、blasphēmein（悪く語る）と説明している。第一要素の深い語源には不確かさがある。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/blasphemy",
+            "note": "blasphemyの神や神聖なものについて不敬・冒涜的に語ることという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ギリシャ語（ラテン語・フランス語経由）",
+        "etymons": ["blasphemy", "blasfemie", "blasphemia", "blasphēmia", "blasphēmein", "-y"],
+        "historicalPath": [
+          "ギリシャ語 blasphēmein（悪く語る、誹謗する）",
+          "ギリシャ語 blasphēmia（不敬な発言）",
+          "後期ラテン語 blasphemia、古フランス語 blasfemie",
+          "英語 blasphemy（冒涜）"
+        ],
+        "components": [
+          { "form": "blasphēmia", "kind": "base", "gloss": "不敬な発言", "display": false },
+          { "form": "-ia", "kind": "suffix", "gloss": "状態・行為", "display": false }
+        ],
+        "rootCandidates": ["blasphem"],
+        "semanticBridge": "神聖なものについて悪く語る発言や行為が、神や宗教に対する冒涜そのものを表す名詞になった。",
+        "summary": "blasphemyは、blasphem（悪く語る・冒涜する）＋-yから、冒涜を表す。",
+        "confidence": "medium",
+        "notes": "ギリシャ語の第一要素の語源には不確かさがあるため、複合内部をさらに分解せずblasphem全体を語根として扱う。"
+      }
+    },
+    "bluntly": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "率直に",
+        "root": "blunt",
+        "parts": [
+          { "form": "blunt", "kind": "root", "gloss": "鈍い・率直な" },
+          { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で" }
+        ],
+        "derivation": "blunt（鈍い・率直な）＋-ly（〜な状態で） → 遠回しにせず、率直に、ぶっきらぼうに"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/bluntly",
+          "https://www.merriam-webster.com/dictionary/bluntly"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/bluntly",
+            "note": "bluntlyをblunt＋-lyと説明し、bluntを中英語blunt/blont（鈍い、愚かな）に遡らせている。blunt自体のさらに深い語源には諸説がある。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/bluntly",
+            "note": "bluntlyの率直に、単刀直入に、またはぶっきらぼうにという副詞の用法を確認した。"
+          }
+        ],
+        "originLanguage": "中英語（語源不確実）",
+        "etymons": ["bluntly", "blunt", "blont", "-ly"],
+        "historicalPath": [
+          "中英語 blunt / blont（鈍い）",
+          "英語 blunt（鈍い、率直な）",
+          "英語 blunt＋-ly",
+          "英語 bluntly（率直に、ぶっきらぼうに）"
+        ],
+        "components": [
+          { "form": "blunt", "kind": "base", "gloss": "鈍い・率直な", "display": false },
+          { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で", "display": false }
+        ],
+        "rootCandidates": ["blunt"],
+        "semanticBridge": "鋭さのない状態から、言葉を飾らず直接的に伝える態度を表す形容詞となり、その副詞になった。",
+        "summary": "bluntlyは、blunt（鈍い・率直な）＋-lyから、率直に・ぶっきらぼうにを表す。",
+        "confidence": "high",
+        "notes": "bluntの深い語源は未確定だが、英語bluntからbluntlyへの派生は出典が明示している。"
+      }
+    },
+    "boon": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "chain": [
+          { "term": "bōn", "gloss": "願い・祈り" },
+          { "term": "boon", "gloss": "願い求めたもの" },
+          { "gloss": "恩恵、ありがたいもの" }
+        ],
+        "derivation": "願い求めたものや好意から、受けた利益・恩恵を指すようになって → 恩恵、ありがたいもの",
+        "source": "https://www.etymonline.com/word/boon",
+        "sources": [
+          "https://www.etymonline.com/word/boon",
+          "https://www.merriam-webster.com/dictionary/boon"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/boon",
+          "https://www.merriam-webster.com/dictionary/boon"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/boon",
+            "note": "boonは古ノルド語bon（願い、祈り）から来て、願い求めた好意・ものから利益や恩恵へ意味が移ったと説明されている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/boon",
+            "note": "boonの利益、恩恵、ありがたいものという名詞の語義を確認した。"
+          }
+        ],
+        "originLanguage": "古ノルド語（ゲルマン系）",
+        "etymons": ["boon", "bon", "*boniz", "ben"],
+        "historicalPath": [
+          "古ノルド語 bōn（願い、祈り）",
+          "中英語 bone（願い、請願）",
+          "願い求めた好意・もの",
+          "英語 boon（恩恵、利益）"
+        ],
+        "components": [
+          { "form": "boon", "kind": "base", "gloss": "願い・恩恵", "display": false }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "願いとして求めた好意が、実際に与えられた好ましいものや利益を指す意味へ変化した。",
+        "summary": "boonは、願い・請願を表す古ノルド語から、恩恵・ありがたいものを表す。",
+        "confidence": "high",
+        "notes": "単一基体の意味変化であり、英語表面に語根と接辞の安全な分解を置かないためB型にする。"
+      }
+    },
+    "canvass": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "chain": [
+          { "term": "canvas", "gloss": "帆布" },
+          { "term": "canvass", "gloss": "詳しく調べる、票を求める" },
+          { "gloss": "戸別訪問による勧誘、調査" }
+        ],
+        "derivation": "帆布の上で物をふるい、詳しく調べたことから、戸別に意見や票を調べるようになって → 戸別訪問による勧誘、調査",
+        "source": "https://www.etymonline.com/word/canvass",
+        "sources": [
+          "https://www.etymonline.com/word/canvass",
+          "https://www.merriam-webster.com/dictionary/canvass"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/canvass",
+          "https://www.merriam-webster.com/dictionary/canvass"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/canvass",
+            "note": "canvassはcanvasの別綴りから、帆布の上でふるいにかける、詳しく調べるという比喩を経て、票や支持を求める意味になった。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/canvass",
+            "note": "canvassの投票や意見を戸別に尋ねる、詳しく調査するという語義を確認した。"
+          }
+        ],
+        "originLanguage": "英語（フランス語・ラテン語系のcanvasから）",
+        "etymons": ["canvass", "canvas", "canabasser", "canevaz", "cannabis"],
+        "historicalPath": [
+          "ラテン語 cannabis（麻）から生じた帆布の語",
+          "英語 canvas（帆布）",
+          "英語 canvass（帆布上でふるう、詳しく調べる）",
+          "英語 canvass（戸別に勧誘・調査する）"
+        ],
+        "components": [
+          { "form": "canvas", "kind": "base", "gloss": "帆布", "display": false },
+          { "form": "canvass", "kind": "base", "gloss": "詳しく調べる", "display": false }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "帆布を使って中身をふるい分ける動作が、候補者の支持や人々の意見を一軒ずつ調べる活動へ比喩的に広がった。",
+        "summary": "canvassは、帆布をふるいに使う意味から、戸別訪問による勧誘・調査を表す。",
+        "confidence": "high",
+        "notes": "canvassingはcanvassの分詞形であり、canvasとの綴り・意味の分岐もあるためB型にする。"
+      }
+    },
+    "cogitate": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "熟考する",
+        "root": "cogit",
+        "parts": [
+          { "form": "cogit", "kind": "root", "gloss": "考える・思案する" },
+          { "form": "-ate", "kind": "suffix", "gloss": "〜する（動詞化）" }
+        ],
+        "derivation": "cogit（心の中で動かし、考える）＋-ate（動詞化） → 真剣に考え、熟考する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/cogitate",
+          "https://www.merriam-webster.com/dictionary/cogitate"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/cogitate",
+            "note": "cogitateをラテン語cogitatus、動詞cogitare（真剣に考える）に遡らせ、cogitatioはcom-＋agitare（心の中で動かす）に関係すると説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/cogitate",
+            "note": "cogitateの真剣に考える、熟考するという動詞の語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": ["cogitate", "cogitatus", "cogitare", "cogitatio", "agitare", "-ate"],
+        "historicalPath": [
+          "ラテン語 agere（動かす）",
+          "ラテン語 cogitare（心の中で動かす、考える）",
+          "ラテン語 cogitatus",
+          "英語 cogitate（熟考する）"
+        ],
+        "components": [
+          { "form": "cogitare", "kind": "base", "gloss": "考える", "display": false },
+          { "form": "-ate", "kind": "suffix", "gloss": "動詞化", "display": false }
+        ],
+        "rootCandidates": ["cogit"],
+        "semanticBridge": "物を絶えず動かす意味が心の中で考えを動かす比喩となり、真剣に思案する意味へ発達した。",
+        "summary": "cogitateは、cogit（考える・思案する）＋-ateから、熟考するを表す。",
+        "confidence": "high",
+        "notes": "ラテン語cogitareの語幹cogitと英語側の動詞化-ateを対応させる。"
+      }
+    },
+    "consort": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "交際する",
+        "root": "sort",
+        "parts": [
+          { "form": "con", "kind": "prefix", "gloss": "ともに" },
+          { "form": "sort", "kind": "root", "gloss": "分け前・運命" }
+        ],
+        "derivation": "con-（ともに）＋sort（分け前・運命） → 同じ運命を分かち、交際する、付き合う"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/consort",
+          "https://www.merriam-webster.com/dictionary/consort"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/consort",
+            "note": "consortを古フランス語consort、ラテン語consors/consortem（仲間、同じ運命の者）に遡らせ、com-（ともに）＋sors（分け前、運命）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/consort",
+            "note": "consortの人と親しく付き合う、交際する、または配偶者・仲間という語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（フランス語経由）",
+        "etymons": ["consort", "consors", "consortem", "com-", "sors", "sortis"],
+        "historicalPath": [
+          "ラテン語 sors / sortis（分け前、運命）",
+          "ラテン語 consors（同じ分け前・運命を持つ仲間）",
+          "古フランス語 consort（仲間、配偶者）",
+          "英語 consort（交際する、付き合う）"
+        ],
+        "components": [
+          { "form": "com-", "kind": "prefix", "gloss": "ともに", "display": false },
+          { "form": "sors", "kind": "base", "gloss": "分け前・運命", "display": false }
+        ],
+        "rootCandidates": ["sort"],
+        "semanticBridge": "同じ分け前や運命を共有する仲間という名詞から、親しく一緒にいる・交際するという動詞の意味が生じた。",
+        "summary": "consortは、con-（ともに）＋sort（分け前・運命）から、交際する・付き合うを表す。",
+        "confidence": "high",
+        "notes": "ラテン語sorsがフランス語・英語でsort系に現れる表面形を語根sortとして登録する。"
+      }
+    },
+    "coronation": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "戴冠式",
+        "root": "coron",
+        "parts": [
+          { "form": "coron", "kind": "root", "gloss": "冠・花輪" },
+          { "form": "-ation", "kind": "suffix", "gloss": "〜すること" }
+        ],
+        "derivation": "coron（冠・花輪）＋-ation（行為・結果） → 王に冠を授ける儀式、戴冠式"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/coronation",
+          "https://www.merriam-webster.com/dictionary/coronation"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/coronation",
+            "note": "coronationを後期ラテン語coronationem（戴冠）に遡らせ、ラテン語coronare（冠を授ける）とcorona（冠、花輪）から成る行為名詞と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/coronation",
+            "note": "coronationの君主に王冠を授ける儀式、戴冠式という語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（フランス語経由）",
+        "etymons": ["coronation", "coronationem", "coronatio", "coronare", "corona", "-ation"],
+        "historicalPath": [
+          "ラテン語 corona（冠、花輪）",
+          "ラテン語 coronare（冠を授ける）",
+          "後期ラテン語 coronatio（戴冠すること）",
+          "英語 coronation（戴冠式）"
+        ],
+        "components": [
+          { "form": "coronare", "kind": "base", "gloss": "冠を授ける", "display": false },
+          { "form": "-atio", "kind": "suffix", "gloss": "行為・結果", "display": false }
+        ],
+        "rootCandidates": ["coron"],
+        "semanticBridge": "冠や花輪を授ける動作が、君主として公に認める戴冠の儀式を表す名詞になった。",
+        "summary": "coronationは、coron（冠・花輪）＋-ationから、戴冠式を表す。",
+        "confidence": "high",
+        "notes": "corona・coronareの語幹coronと名詞化要素-ationを英語表面へ対応させる。"
+      }
+    },
+    "corrode": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "腐食した",
+        "root": "rod",
+        "parts": [
+          { "form": "co", "kind": "prefix", "gloss": "ともに・完全に" },
+          { "form": "rod", "kind": "root", "gloss": "かじる・削る" }
+        ],
+        "derivation": "co(m)-（完全に）＋rod（かじる） → 少しずつかじり取り、腐食した、蝕んだ"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/corrode",
+          "https://www.merriam-webster.com/dictionary/corrode"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/corrode",
+            "note": "corrodeを古フランス語corroderとラテン語corrodere（細かくかじる、すり減らす）に遡らせ、同化したcom-＋rodere（かじる）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/corrode",
+            "note": "corrodeの化学作用などで徐々に壊す・腐食させる、比喩的に力を削ぐという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（フランス語経由）",
+        "etymons": ["corrode", "corrodere", "com-", "rodere", "-ode"],
+        "historicalPath": [
+          "ラテン語 rodere（かじる、削る）",
+          "ラテン語 corrodere（完全にかじり取る）",
+          "古フランス語 corroder",
+          "英語 corrode（腐食する）"
+        ],
+        "components": [
+          { "form": "com-", "kind": "prefix", "gloss": "完全に", "display": false },
+          { "form": "rodere", "kind": "base", "gloss": "かじる・削る", "display": false }
+        ],
+        "rootCandidates": ["rod"],
+        "semanticBridge": "歯で少しずつかじり取る動作が、金属などの表面を化学的に徐々に削る腐食の意味へ広がった。",
+        "summary": "corrodeは、co(m)-（完全に）＋rod（かじる）から、腐食した・蝕んだを表す。",
+        "confidence": "high",
+        "notes": "com-がrの前でcor-となる同化を表面のcoとして正規化し、rodereの語幹rodを登録する。"
+      }
+    },
+    "cradle": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "chain": [
+          { "term": "cradle", "gloss": "ゆりかご" },
+          { "gloss": "抱える、そっと支える" }
+        ],
+        "derivation": "ゆりかごのように支えて揺らすことから → 抱える、そっと支える",
+        "source": "https://www.etymonline.com/word/cradle",
+        "sources": [
+          "https://www.etymonline.com/word/cradle",
+          "https://www.merriam-webster.com/dictionary/cradle"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/cradle",
+          "https://www.merriam-webster.com/dictionary/cradle"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/cradle",
+            "note": "cradleは古英語cradol（小さなベッド、ゆりかご）から来た語で、揺らす・支える家具から動詞の意味へ広がった経路を確認した。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/cradle",
+            "note": "cradleのゆりかご、幼少期の環境、腕などで抱えて支えるという名詞・動詞の語義を確認した。"
+          }
+        ],
+        "originLanguage": "古英語・ゲルマン系",
+        "etymons": ["cradle", "cradol", "cradolbearn"],
+        "historicalPath": [
+          "古英語 cradol（ゆりかご）",
+          "中英語 cradel",
+          "英語 cradle（ゆりかご）",
+          "英語 cradle（抱える、支える）"
+        ],
+        "components": [
+          { "form": "cradle", "kind": "base", "gloss": "ゆりかご・支えるもの", "display": false }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "乳児を安全に支えるゆりかごから、腕や手で人・物をそっと支える動詞の意味が生じた。",
+        "summary": "cradleは、ゆりかごを表す古英語の単一基体から、抱える・そっと支えるを表す。",
+        "confidence": "medium",
+        "notes": "古い基体の語源と意味拡張は確認できるが、英語表面の接辞分解は置かないためB型にする。"
+      }
+    },
+    "culmination": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "最高潮",
+        "root": "culmin",
+        "parts": [
+          { "form": "culmin", "kind": "root", "gloss": "頂点・最高潮" },
+          { "form": "-ation", "kind": "suffix", "gloss": "〜すること" }
+        ],
+        "derivation": "culmin（頂点）＋-ation（行為・結果） → 最も高い点に達した状態、最高潮、集大成"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/culmination",
+          "https://www.merriam-webster.com/dictionary/culmination"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/culmination",
+            "note": "culminationをフランス語culmination、ラテン語culminatio（頂点に達すること）に遡らせ、culminare（頂点に達する）とculmen（頂点、屋根）から成ると説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/culmination",
+            "note": "culminationの発展や出来事が最高点に達すること、最高潮・集大成という語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（フランス語経由）",
+        "etymons": ["culmination", "culminatio", "culminare", "culmen", "-ation"],
+        "historicalPath": [
+          "ラテン語 culmen（頂点、屋根）",
+          "ラテン語 culminare（頂点に達する、冠をつける）",
+          "ラテン語 culminatio（頂点に達すること）",
+          "英語 culmination（最高潮、集大成）"
+        ],
+        "components": [
+          { "form": "culminare", "kind": "base", "gloss": "頂点に達する", "display": false },
+          { "form": "-atio", "kind": "suffix", "gloss": "行為・結果", "display": false }
+        ],
+        "rootCandidates": ["culmin"],
+        "semanticBridge": "天体や山が最も高い位置に達することが、計画・努力・出来事が最高点に達した状態を表す比喩になった。",
+        "summary": "culminationは、culmin（頂点）＋-ationから、最高潮・集大成を表す。",
+        "confidence": "high",
+        "notes": "culmen・culminareの語幹culminと名詞化要素-ationを英語表面へ対応させる。"
+      }
+    },
+    "dainty": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "chain": [
+          { "term": "dignitas", "gloss": "価値・美しさ" },
+          { "term": "deinte", "gloss": "優れたもの、 delicacy" },
+          { "gloss": "繊細な、可憐な" }
+        ],
+        "derivation": "価値があり、上品で選び抜かれたものから → 繊細な、可憐な",
+        "source": "https://www.etymonline.com/word/dainty",
+        "sources": [
+          "https://www.etymonline.com/word/dainty",
+          "https://www.merriam-webster.com/dictionary/dainty"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/dainty",
+          "https://www.merriam-webster.com/dictionary/dainty"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/dainty",
+            "note": "daintyを中英語deinte、アングロフランス語deinteに遡らせ、ラテン語dignitatem（価値、品位、美しさ）・dignus（ふさわしい）と関係づけている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/dainty",
+            "note": "daintyの小さく繊細で美しい、上品で可憐な、または食べ物が精選されたという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（フランス語経由）",
+        "etymons": ["dainty", "deinte", "deintie", "dignitas", "dignus", "*dek-"],
+        "historicalPath": [
+          "ラテン語 dignus（ふさわしい、価値のある）",
+          "ラテン語 dignitas（価値、品位、美しさ）",
+          "古フランス語 deintie / 中英語 deinte",
+          "英語 dainty（繊細な、可憐な）"
+        ],
+        "components": [
+          { "form": "dignitas", "kind": "base", "gloss": "価値・品位", "display": false }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "価値があり選び抜かれたものという評価が、上品で繊細な外見や味わいを表す形容詞へ変化した。",
+        "summary": "daintyは、価値・品位を表すラテン語から、繊細な・可憐なを表す。",
+        "confidence": "high",
+        "notes": "フランス語・中英語を経た語形変化が大きく、表面の語根と接辞を安全に対応させないためB型にする。"
+      }
+    },
+    "deadlock": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "chain": [
+          { "term": "dead", "gloss": "動かない、絶対の" },
+          { "term": "lock", "gloss": "閉じ込める、固定する" },
+          { "gloss": "行き詰まり、膠着状態" }
+        ],
+        "derivation": "完全に動かず固定された状態から → 行き詰まり、膠着状態",
+        "source": "https://www.etymonline.com/word/deadlock",
+        "sources": [
+          "https://www.etymonline.com/word/deadlock",
+          "https://www.merriam-webster.com/dictionary/deadlock"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/deadlock",
+          "https://www.merriam-webster.com/dictionary/deadlock"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/deadlock",
+            "note": "deadlockはdeadの強意用法とlock（固定・閉鎖）からなる英語の複合語で、1779年に完全な停止の意味で現れた。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/deadlock",
+            "note": "deadlockの進展や合意が完全に止まった状態、膠着状態という語義を確認した。"
+          }
+        ],
+        "originLanguage": "英語",
+        "etymons": ["deadlock", "dead", "lock"],
+        "historicalPath": [
+          "古英語 dead（死んだ、動かない）",
+          "古英語 loc（閉じるもの、固定具）",
+          "英語 dead＋lock",
+          "英語 deadlock（完全な停止、膠着）"
+        ],
+        "components": [
+          { "form": "dead", "kind": "base", "gloss": "動かない・絶対の", "display": false },
+          { "form": "lock", "kind": "base", "gloss": "固定する", "display": false }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "鍵が掛かって動かない状態の比喩から、議論・交渉・進行が完全に止まる状態を表すようになった。",
+        "summary": "deadlockは、deadとlockの複合表現から、行き詰まり・膠着状態を表す。",
+        "confidence": "high",
+        "notes": "複合表現は指定どおり熟語に近いB型として表示する。"
+      }
+    },
+    "debar": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "締め出した",
+        "root": "bar",
+        "parts": [
+          { "form": "de", "kind": "prefix", "gloss": "離れて・除いて" },
+          { "form": "bar", "kind": "root", "gloss": "棒・障壁" }
+        ],
+        "derivation": "de-（離れて・除いて）＋bar（障壁） → 障壁で締め出し、締め出した、資格を奪った"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/debar",
+          "https://www.merriam-webster.com/dictionary/debar"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/debar",
+            "note": "debarをフランス語débarrer、古フランス語desbarer（閂を外す）に遡らせ、des-（反対に）＋barrer/barre（棒・障壁）と説明している。フランス語で意味が反転した。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/debar",
+            "note": "debarの場所や権利から締め出す、参加・資格を妨げるという語義を確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語（英語経由）",
+        "etymons": ["debar", "débarrer", "desbarer", "des-", "barrer", "barre"],
+        "historicalPath": [
+          "古フランス語 barre（棒、障壁）",
+          "古フランス語 desbarer（閂を外す）",
+          "フランス語 débarrerから英語 debar",
+          "英語 debar（締め出す、資格を奪う）"
+        ],
+        "components": [
+          { "form": "des-", "kind": "prefix", "gloss": "離れて・反対に", "display": false },
+          { "form": "barre", "kind": "base", "gloss": "棒・障壁", "display": false }
+        ],
+        "rootCandidates": ["bar"],
+        "semanticBridge": "障壁や閂を外す語が、英語では逆に障壁を置いて人を締め出し、資格や参加を奪う意味になった。",
+        "summary": "debarは、de-（除いて）＋bar（障壁）から、締め出した・資格を奪ったを表す。",
+        "confidence": "medium",
+        "notes": "古フランス語のdes-と英語de-の対応、フランス語内での意味反転を注記したうえでA型表示にする。"
+      }
+    },
+    "decant": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "chain": [
+          { "term": "decanthare", "gloss": "容器の縁から注ぐ" },
+          { "term": "décanter", "gloss": "液体を静かに分けて注ぐ" },
+          { "gloss": "液体を別容器へ移す" }
+        ],
+        "derivation": "容器の縁から澄んだ液体を静かに注ぎ分けることから → 液体を別容器へ移す",
+        "source": "https://www.etymonline.com/word/decant",
+        "sources": [
+          "https://www.etymonline.com/word/decant",
+          "https://www.merriam-webster.com/dictionary/decant"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/decant",
+          "https://www.merriam-webster.com/dictionary/decant"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/decant",
+            "note": "decantをフランス語décanter、おそらく中世ラテン語decanthare（容器の縁から注ぐ）に遡らせ、de-とcanthus（壺の縁）に関係づけている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/decant",
+            "note": "decantの液体を容器の底の沈殿物から分け、別の容器へ静かに注ぐという語義を確認した。"
+          }
+        ],
+        "originLanguage": "中世ラテン語（フランス語経由）",
+        "etymons": ["decant", "décanter", "decanthare", "de-", "canthus"],
+        "historicalPath": [
+          "ラテン語 canthus（縁、容器の口）",
+          "中世ラテン語 decanthare（縁から注ぐ）",
+          "フランス語 décanter",
+          "英語 decant（液体を別容器へ移す）"
+        ],
+        "components": [
+          { "form": "de-", "kind": "prefix", "gloss": "離れて・外へ", "display": false },
+          { "form": "canthus", "kind": "base", "gloss": "容器の縁", "display": false }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "容器の縁から澄んだ液体だけを注ぎ、沈殿物を分ける作業が、液体を別容器へ移す動詞になった。",
+        "summary": "decantは、容器の縁から注ぎ分ける中世ラテン語から、液体を別容器へ移すを表す。",
+        "confidence": "medium",
+        "notes": "英語の既存語根cant（歌う）と、語源上のcanthus（縁）が衝突するため、誤った語根を流用せずB型にする。"
+      }
+    },
+    "delve": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "chain": [
+          { "term": "delfan", "gloss": "掘る" },
+          { "term": "delve", "gloss": "深く掘る" },
+          { "gloss": "掘り下げて調べる" }
+        ],
+        "derivation": "深く掘る動作から、事柄を深く調べる比喩へ → 掘り下げて調べる",
+        "source": "https://www.etymonline.com/word/delve",
+        "sources": [
+          "https://www.etymonline.com/word/delve",
+          "https://www.merriam-webster.com/dictionary/delve"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/delve",
+          "https://www.merriam-webster.com/dictionary/delve"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/delve",
+            "note": "delveを古英語delfan（掘る）に遡らせ、土を掘る意味から、調査・研究で深く探る比喩的な意味が生じた経路を確認した。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/delve",
+            "note": "delveの地面を掘る、または問題・情報を深く調べるという語義を確認した。"
+          }
+        ],
+        "originLanguage": "古英語（ゲルマン系）",
+        "etymons": ["delve", "delfan", "dylfan", "dalf"],
+        "historicalPath": [
+          "古英語 delfan（掘る）",
+          "中英語 delven / delve",
+          "英語 delve（掘る）",
+          "英語 delve（掘り下げて調べる）"
+        ],
+        "components": [
+          { "form": "delve", "kind": "base", "gloss": "掘る・深く探る", "display": false }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "地中へ深く掘り進む動作が、情報や問題の内部へ深く入り込んで調べる意味へ比喩的に広がった。",
+        "summary": "delveは、掘るを表す古英語の単一基体から、掘り下げて調べるを表す。",
+        "confidence": "high",
+        "notes": "語源と意味拡張は明確だが、英語表面に語根＋接辞の安全な分解を置かないためB型にする。"
+      }
+    },
+    "deploy": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "配置した",
+        "root": "ploy",
+        "parts": [
+          { "form": "de", "kind": "prefix", "gloss": "離れて・広げて" },
+          { "form": "ploy", "kind": "root", "gloss": "折る・広げる" }
+        ],
+        "derivation": "de-（離して）＋ploy（折る・広げる） → 折りをほどいて配置した、展開した"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/deploy",
+          "https://www.merriam-webster.com/dictionary/deploy"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/deploy",
+            "note": "deployをフランス語déployer、古フランス語desploiier（ほどく、広げる）、ラテン語displicare（折りをほどく）に遡らせ、dis-＋plicareと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/deploy",
+            "note": "deployの軍隊や資源を配置・展開する、利用可能な場所へ動かすという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（フランス語経由）",
+        "etymons": ["deploy", "déployer", "desploiier", "displicare", "dis-", "plicare"],
+        "historicalPath": [
+          "ラテン語 plicare（折る）",
+          "ラテン語 displicare（折りをほどく、広げる）",
+          "古フランス語 desploiier / フランス語 déployer",
+          "英語 deploy（配置する、展開する）"
+        ],
+        "components": [
+          { "form": "dis-", "kind": "prefix", "gloss": "離れて・反対に", "display": false },
+          { "form": "plicare", "kind": "base", "gloss": "折る", "display": false }
+        ],
+        "rootCandidates": ["ploy"],
+        "semanticBridge": "折りたたまれた隊列や物をほどいて広げる動作が、軍隊・資源を適切な場所へ配置し展開する意味になった。",
+        "summary": "deployは、de-（離して）＋ploy（折る・広げる）から、配置した・展開したを表す。",
+        "confidence": "medium",
+        "notes": "ラテン語plicareがフランス語ploy系を経て現れる表面形ployを、既存語根plicとは別の表示用語根として登録する。"
+      }
+    },
+    "devour": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "むさぼり食うこと",
+        "root": "vor",
+        "parts": [
+          { "form": "de", "kind": "prefix", "gloss": "完全に・下へ" },
+          { "form": "vour", "kind": "root", "gloss": "飲み込む" }
+        ],
+        "derivation": "de-（完全に・下へ）＋vour（飲み込む） → すっかり飲み込み、むさぼり食うこと"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/devour",
+          "https://www.merriam-webster.com/dictionary/devour"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/devour",
+            "note": "devourを古フランス語devorer、ラテン語devorare（飲み込む、貪欲に受け入れる）に遡らせ、de-（下へ、完全に）＋vorare（飲み込む）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/devour",
+            "note": "devourのむさぼり食う、貪欲に消費する、文章などを熱心に読みふけるという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（フランス語経由）",
+        "etymons": ["devour", "devorer", "devorare", "de-", "vorare", "*gwora-"],
+        "historicalPath": [
+          "ラテン語 vorare（飲み込む）",
+          "ラテン語 devorare（完全に飲み込む）",
+          "古フランス語 devorer",
+          "英語 devour（むさぼり食う）"
+        ],
+        "components": [
+          { "form": "de-", "kind": "prefix", "gloss": "完全に・下へ", "display": false },
+          { "form": "vorare", "kind": "base", "gloss": "飲み込む", "display": false }
+        ],
+        "rootCandidates": ["vor"],
+        "semanticBridge": "食物を完全に飲み込む動作が、食事だけでなく資源・時間・本などを貪欲に消費する意味へ広がった。",
+        "summary": "devourは、de-（完全に）＋vor（飲み込む）から、むさぼり食うことを表す。",
+        "confidence": "high",
+        "notes": "ラテン語vorareの語根vorが英語表面でvourとなるため、語根vorに変化形vourを登録する。"
+      }
+    },
+    "devout": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "chain": [
+          { "term": "devotus", "gloss": "誓いによって献げられた" },
+          { "term": "devout", "gloss": "神に献身する" },
+          { "gloss": "敬虔な" }
+        ],
+        "derivation": "誓いによって身を献げることから、宗教的な献身を表すようになって → 敬虔な",
+        "source": "https://www.etymonline.com/word/devout",
+        "sources": [
+          "https://www.etymonline.com/word/devout",
+          "https://www.merriam-webster.com/dictionary/devout"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/devout",
+          "https://www.merriam-webster.com/dictionary/devout"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/devout",
+            "note": "devoutを古フランス語devotとラテン語devotus（誓いによって献げられた）に遡らせ、devovere（誓いによって献身する）をde-＋vovere（誓う）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/devout",
+            "note": "devoutの神への深い宗教的献身を示す、敬虔なという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（フランス語経由）",
+        "etymons": ["devout", "devot", "devotus", "devovere", "de-", "vovere"],
+        "historicalPath": [
+          "ラテン語 vovere（誓う）",
+          "ラテン語 devovere（誓いによって献げる）",
+          "ラテン語 devotus（献身した）",
+          "古フランス語 devotから英語 devout（敬虔な）"
+        ],
+        "components": [
+          { "form": "de-", "kind": "prefix", "gloss": "離れて・完全に", "display": false },
+          { "form": "vovere", "kind": "base", "gloss": "誓う", "display": false }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "誓いによって自分を神や宗教へ献げた状態が、深い信仰心をもつ敬虔さを表す形容詞になった。",
+        "summary": "devoutは、誓いによって献身するラテン語から、敬虔なを表す。",
+        "confidence": "high",
+        "notes": "既存語根votとの意味関係はあるが、devoutの表面形voutと安全に対応する接辞構造を新たに置かずB型にする。"
+      }
+    },
+    "disdain": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "chain": [
+          { "term": "desdeignier", "gloss": "価値がないとみなす" },
+          { "term": "disdain", "gloss": "軽蔑する" },
+          { "gloss": "軽蔑する" }
+        ],
+        "derivation": "価値がないとみなして退けることから → 軽蔑する",
+        "source": "https://www.etymonline.com/word/disdain",
+        "sources": [
+          "https://www.etymonline.com/word/disdain",
+          "https://www.merriam-webster.com/dictionary/disdain"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/disdain",
+          "https://www.merriam-webster.com/dictionary/disdain"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/disdain",
+            "note": "disdainを古フランス語desdeignier（軽蔑する、価値がないとみなす）に遡らせ、des-（反対に）＋deignier（価値があると扱う）と説明している。deignierはラテン語dignari/dignusに関係する。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/disdain",
+            "note": "disdainの価値がないものとして見下す、軽蔑するという動詞・名詞の語義を確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語（ラテン語系）",
+        "etymons": ["disdain", "desdeignier", "des-", "deignier", "dignari", "dignus"],
+        "historicalPath": [
+          "ラテン語 dignus（価値のある、ふさわしい）",
+          "古フランス語 deignier（価値があると扱う）",
+          "古フランス語 desdeignier（価値がないとみなす）",
+          "英語 disdain（軽蔑する）"
+        ],
+        "components": [
+          { "form": "des-", "kind": "prefix", "gloss": "反対に・離れて", "display": false },
+          { "form": "deignier", "kind": "base", "gloss": "価値があると扱う", "display": false }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "価値があると認める動作を反転させ、相手や物を価値のないものとして見下し退ける意味になった。",
+        "summary": "disdainは、価値がないとみなす古フランス語から、軽蔑するを表す。",
+        "confidence": "high",
+        "notes": "古フランス語の接頭辞・語根が英語disdainの綴りに直接対応しないためB型にする。"
+      }
+    }
+  }
+}

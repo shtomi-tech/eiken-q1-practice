@@ -1,0 +1,1527 @@
+{
+  "meta": {
+    "batchId": "batch-015",
+    "note": "未確認B型の次の25語。語源経路と英語表面の語根・接辞が対応する語はA型へ、複合語・同形異語・語源の不確かな語はB型に残す。"
+  },
+  "dictionary": {
+    "roots": {
+      "sumpt": {
+        "gloss": "取る・費やす",
+        "origin": "ラテン語 sumere / sumptus",
+        "note": "物を取り、費用を使うことから、費用のかかった豪華さへ。sumptuous。"
+      },
+      "trem": {
+        "gloss": "震える",
+        "origin": "ラテン語 tremere",
+        "note": "震えや身震いのイメージ。tremor。"
+      },
+      "abash": {
+        "gloss": "恥じさせる・動揺させる",
+        "origin": "古フランス語 esbaer / abaissier",
+        "note": "強い感情で平静を失わせ、恥じ入らせるイメージ。unabashedly。"
+      },
+      "wield": {
+        "gloss": "力を振るう・扱う",
+        "origin": "古英語 wieldan / wealdan",
+        "note": "力を支配して道具などを扱うイメージ。unwieldy。"
+      },
+      "vicin": {
+        "gloss": "近い・近隣の",
+        "origin": "ラテン語 vicinus / vicus",
+        "note": "近隣の集落にいるイメージ。vicinity。"
+      },
+      "vigil": {
+        "gloss": "見張る・目覚めている",
+        "origin": "ラテン語 vigil / vigilare",
+        "note": "眠らず見張るイメージ。vigilant。"
+      },
+      "climate": {
+        "gloss": "気候・地域",
+        "origin": "フランス語 climat / ギリシャ語 klima",
+        "note": "一定の地域・気候に慣らすイメージ。acclimate。"
+      },
+      "alacr": {
+        "gloss": "快活な・敏捷な",
+        "origin": "ラテン語 alacer / alacritas",
+        "note": "生き生きと素早いイメージ。alacrity。語源のさらに深い関係には不確かさがある。"
+      }
+    },
+    "affixes": {}
+  },
+  "entries": {
+    "streak": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 strica（線、筆の stroke）に由来する語と、速く走るstreekの変化形が関係する → 疾走すること、素早く走ること"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/streak",
+          "https://www.merriam-webster.com/dictionary/streak"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/streak",
+            "note": "streakには線や色の筋を表す名詞系列と、速く走る動詞系列があり、後者はstreek（速く進む）の綴り替えと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/streak",
+            "note": "streakの現代語義として、非常に速く走ること、連続する期間・勝ち続けなど複数の用法を確認した。"
+          }
+        ],
+        "originLanguage": "古英語・中英語",
+        "etymons": [
+          "streak",
+          "strica",
+          "strican",
+          "streek"
+        ],
+        "historicalPath": [
+          "古英語 strica（線、筆のstroke）",
+          "中英語 strik・streak（線、筋）",
+          "中英語 streek（速く進む）",
+          "英語 streak（疾走する、連続する）"
+        ],
+        "components": [
+          {
+            "form": "strica",
+            "kind": "base",
+            "gloss": "線・動きの跡"
+          }
+        ],
+        "rootCandidates": [
+          "strik"
+        ],
+        "semanticBridge": "線や稲妻のように素早く進むイメージから、全速力で走ること、さらに運や出来事が連続する期間へ用法が広がった。",
+        "summary": "streakは線を表す語と速く走る語が関係し、疾走・筋・連続など複数の用法をもつ。",
+        "confidence": "medium",
+        "notes": "二つの語義系列と綴りの変化が重なるため、表面のA型分解は行わない。"
+      }
+    },
+    "succumb": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "屈した",
+        "root": "cumb",
+        "parts": [
+          {
+            "form": "suc",
+            "kind": "prefix",
+            "gloss": "下に・下から"
+          },
+          {
+            "form": "cumb",
+            "kind": "root",
+            "gloss": "横になる・伏す"
+          }
+        ],
+        "derivation": "suc-（sub-『下に』の同化形）＋cumb（横になる・伏す） → 下に横たわって力に屈し、屈した、負けた"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/succumb",
+          "https://www.merriam-webster.com/dictionary/succumb"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/succumb",
+            "note": "succumbを古フランス語 succomber、ラテン語 succumbere（降伏する、屈する、下に沈む）に遡らせ、sub（下に）＋-cumbere（横になる）と説明している。sub-はcの前でsuc-に同化する。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/succumb",
+            "note": "succumbの現代語義として、圧力・病気・強い力に屈することを確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語・ラテン語",
+        "etymons": [
+          "succumb",
+          "succomber",
+          "succumbere",
+          "sub",
+          "cubare",
+          "-cumbere"
+        ],
+        "historicalPath": [
+          "ラテン語 cubare（横になる）",
+          "ラテン語 succumbere（下に横たわる、降伏する）",
+          "古フランス語 succomber",
+          "英語 succumb（屈する、負ける）"
+        ],
+        "components": [
+          {
+            "form": "sub",
+            "kind": "prefix",
+            "gloss": "下に"
+          },
+          {
+            "form": "cubare",
+            "kind": "base",
+            "gloss": "横になる"
+          }
+        ],
+        "rootCandidates": [
+          "cumb"
+        ],
+        "semanticBridge": "下に横たわるという身体的なイメージが、抵抗できず相手や病気などの力に屈する意味へつながった。",
+        "summary": "succumbはsuc-（sub-『下に』の同化形）＋cumb（横になる）で、力に屈することを表す。",
+        "confidence": "high",
+        "notes": "surfaceFormsのsuccumbedにある-edは過去形であり、語源接辞として扱わない。"
+      }
+    },
+    "sumptuous": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "豪華な",
+        "root": "sumpt",
+        "parts": [
+          {
+            "form": "sumpt",
+            "kind": "root",
+            "gloss": "取る・費やす"
+          },
+          {
+            "form": "-ous",
+            "kind": "suffix",
+            "gloss": "〜に満ちた"
+          }
+        ],
+        "derivation": "sumpt（取り、費やす）＋-ous（〜に満ちた） → 費用がかかった、豪華な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/sumptuous",
+          "https://www.merriam-webster.com/dictionary/sumptuous"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/sumptuous",
+            "note": "sumptuousを古フランス語 sumptueux、ラテン語 sumptuosus（費用のかかった、ぜいたくな）に遡らせ、sumptus（取ったもの、費用）・sumere（取る、費やす）と関係付けている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/sumptuous",
+            "note": "sumptuousの現代語義として、非常に豪華で費用がかかり、ぜいたくなことを確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語・ラテン語",
+        "etymons": [
+          "sumptuous",
+          "sumptueux",
+          "sumptuosus",
+          "sumptus",
+          "sumere",
+          "-ous"
+        ],
+        "historicalPath": [
+          "ラテン語 sumere（取る、買う、費やす）",
+          "ラテン語 sumptus（費用、支出）",
+          "ラテン語 sumptuosus（費用のかかった、ぜいたくな）",
+          "古フランス語 sumptueux",
+          "英語 sumptuous（豪華な）"
+        ],
+        "components": [
+          {
+            "form": "sumptus",
+            "kind": "base",
+            "gloss": "費用・支出"
+          }
+        ],
+        "rootCandidates": [
+          "sumpt"
+        ],
+        "semanticBridge": "物を取り、費用を使うことから、特に多額の費用がかかっていて豪華であることを表すようになった。",
+        "summary": "sumptuousはsumpt（費用・支出）＋-ousで、費用がかかった豪華さを表す。",
+        "confidence": "high",
+        "notes": "sumptuosusの語幹sumptと-ousが英語表面に対応するためA型にする。"
+      }
+    },
+    "surmise": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 surmis（告発）・surmettre（上に置く、告発する）に由来し、法的な主張から根拠の薄い推測へ意味が広がった → 推測すること"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/surmise",
+          "https://www.merriam-webster.com/dictionary/surmise"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/surmise",
+            "note": "surmiseを古フランス語 surmis（告発）、surmettre（告発する）に遡らせ、sur-（上に）＋mettre（置く）と説明している。後に根拠の薄い推測の意味が生じた。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/surmise",
+            "note": "surmiseの現代語義として、十分な証拠なしに何かだと推測することを確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語・ラテン語",
+        "etymons": [
+          "surmise",
+          "surmis",
+          "surmettre",
+          "sur",
+          "mettre",
+          "mittere"
+        ],
+        "historicalPath": [
+          "ラテン語 mittere（送る、置く）",
+          "古フランス語 surmettre（上に置く、告発する）",
+          "古フランス語 surmis（告発、主張）",
+          "英語 surmise（推測、推測する）"
+        ],
+        "components": [
+          {
+            "form": "sur",
+            "kind": "prefix",
+            "gloss": "上に・超えて"
+          },
+          {
+            "form": "mettre",
+            "kind": "base",
+            "gloss": "置く"
+          }
+        ],
+        "rootCandidates": [
+          "mis"
+        ],
+        "semanticBridge": "法廷で相手に対して主張を置く・告発する意味から、確実な証拠がないまま考えを置く、つまり推測する意味へ移った。",
+        "summary": "surmiseは告発・主張を表す古フランス語から、根拠の薄い推測を表すようになった。",
+        "confidence": "high",
+        "notes": "sur-＋miseと英語の表面を単純に対応させるより、古フランス語の過去分詞形と意味変化をB型で示す。"
+      }
+    },
+    "swill": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 swilian・swillan（液体を洗い流す、うがいする）に由来し、液体を勢いよく飲む意味へ → がぶ飲みする"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/swill",
+          "https://www.merriam-webster.com/dictionary/swill"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/swill",
+            "note": "swillを中英語 swillen、古英語 swilian・swillan（洗い流す、液体を渦立たせる、うがいする）に遡らせ、16世紀から貪欲に飲む意味が現れたと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/swill",
+            "note": "swillの現代語義として、液体を大量に勢いよく飲むこと、また豚の飼料や粗末な酒を確認した。"
+          }
+        ],
+        "originLanguage": "古英語・ゲルマン祖語",
+        "etymons": [
+          "swill",
+          "swillen",
+          "swilian",
+          "swillan"
+        ],
+        "historicalPath": [
+          "古英語 swilian・swillan（洗い流す、液体を動かす）",
+          "中英語 swillen",
+          "英語 swill（がぶ飲みする）",
+          "英語 swill（粗末な液体の飼料・酒）"
+        ],
+        "components": [
+          {
+            "form": "swilian",
+            "kind": "base",
+            "gloss": "洗い流す・液体を動かす"
+          }
+        ],
+        "rootCandidates": [
+          "swil"
+        ],
+        "semanticBridge": "液体を容器の中で動かしたり口をすすいだりする動作から、液体を乱暴に大量に飲む意味へ広がった。",
+        "summary": "swillは古英語の液体を動かす語から、がぶ飲みや粗末な液体を表すようになった。",
+        "confidence": "high",
+        "notes": "swillは単一のゲルマン系基体で、語根・接辞のA型対応を作らない。"
+      }
+    },
+    "tacit": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 tacite、ラテン語 tacitus（沈黙した）に由来し、言葉に出さず暗に示す意味へ → 暗黙の"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/tacit",
+          "https://www.merriam-webster.com/dictionary/tacit"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/tacit",
+            "note": "tacitをフランス語 tacite、ラテン語 tacitus（沈黙のうちに過ぎた、無言の）に遡らせ、tacere（沈黙する）からの過去分詞と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/tacit",
+            "note": "tacitの現代語義として、言葉に出されていないが理解・推測されることを確認した。"
+          }
+        ],
+        "originLanguage": "フランス語・ラテン語",
+        "etymons": [
+          "tacit",
+          "tacite",
+          "tacitus",
+          "tacere"
+        ],
+        "historicalPath": [
+          "ラテン語 tacere（沈黙する）",
+          "ラテン語 tacitus（無言の、沈黙の）",
+          "フランス語 tacite",
+          "英語 tacit（暗黙の、言葉に出さない）"
+        ],
+        "components": [
+          {
+            "form": "tacitus",
+            "kind": "base",
+            "gloss": "無言の・沈黙の"
+          }
+        ],
+        "rootCandidates": [
+          "tac"
+        ],
+        "semanticBridge": "沈黙して言葉にしない状態から、明言されていないが前提として示される意味へ広がった。",
+        "summary": "tacitは沈黙を表すラテン語から、言葉に出さない暗黙の意味になった。",
+        "confidence": "high",
+        "notes": "tac-と語尾を英語の生産的な接辞として扱わず、B型にする。"
+      }
+    },
+    "terse": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 ters、ラテン語 tersus（拭かれた、きれいな）に由来し、洗練された簡潔さからそっけない表現へ → 簡潔な、そっけない"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/terse",
+          "https://www.merriam-webster.com/dictionary/terse"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/terse",
+            "note": "terseをフランス語 ters、ラテン語 tersus（拭かれた、きれいな）に遡らせ、磨かれたように整った意味から簡潔な意味へ発達したと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/terse",
+            "note": "terseの現代語義として、言葉が簡潔で要点を突くこと、時にそっけないことを確認した。"
+          }
+        ],
+        "originLanguage": "フランス語・ラテン語",
+        "etymons": [
+          "terse",
+          "ters",
+          "tersus",
+          "tergere"
+        ],
+        "historicalPath": [
+          "ラテン語 tergere（こする、拭く）",
+          "ラテン語 tersus（拭かれた、整った）",
+          "フランス語 ters（きれいな、整った）",
+          "英語 terse（簡潔な、そっけない）"
+        ],
+        "components": [
+          {
+            "form": "tersus",
+            "kind": "base",
+            "gloss": "拭かれた・整った"
+          }
+        ],
+        "rootCandidates": [
+          "ters"
+        ],
+        "semanticBridge": "表面を拭いて整えることから、言葉の余分な部分を削った簡潔さへ、さらに冷たくそっけない調子へ意味が移った。",
+        "summary": "terseは『拭いて整った』ラテン語から、簡潔でそっけない表現を表すようになった。",
+        "confidence": "high",
+        "notes": "単一の借用形で、terg-からterseまでの語形変化を英語のA型分解にしない。"
+      }
+    },
+    "topple": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "top（頂部、上に置く）から、反復・小さな動作を表す古い語尾を伴ってできた語 → 倒した、倒れた"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/topple",
+          "https://www.merriam-webster.com/dictionary/topple"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/topple",
+            "note": "toppleをtop（傾ける、頂部）＋古い反復・縮小的な接尾辞-leから説明し、倒れる・頭から転ぶ意味を確認している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/topple",
+            "note": "toppleの現代語義として、バランスを失って倒れること、何かを倒すことを確認した。"
+          }
+        ],
+        "originLanguage": "英語・古英語系",
+        "etymons": [
+          "topple",
+          "top",
+          "-le"
+        ],
+        "historicalPath": [
+          "英語 top（頂部、上に置く、傾ける）",
+          "英語 topple（転がり倒れる）",
+          "英語 topple（倒す、倒れる）"
+        ],
+        "components": [
+          {
+            "form": "top",
+            "kind": "base",
+            "gloss": "頂部・上に置く"
+          }
+        ],
+        "rootCandidates": [
+          "top"
+        ],
+        "semanticBridge": "頂部を傾ける動作から、物が頭から転がり倒れること、さらに政権などを倒すことへ用法が広がった。",
+        "summary": "toppleはtopから古い反復的な語尾を伴ってできた動詞で、倒す・倒れるを表す。",
+        "confidence": "high",
+        "notes": "-leは今回の表示用接辞辞書にない古い語形成要素で、現代的なA型接辞として登録しない。"
+      }
+    },
+    "transient": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 transiens（通り過ぎる）に由来し、長くとどまらず通過するものを表すようになった → 一時的な、つかの間の"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/transient",
+          "https://www.merriam-webster.com/dictionary/transient"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/transient",
+            "note": "transientをラテン語 transientem・transiens（通り過ぎる）に遡らせ、trans（越えて）＋ire（行く）からなるtransireの現在分詞と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/transient",
+            "note": "transientの現代語義として、短時間しか続かないこと、場所に長く滞在しない人・ものを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": [
+          "transient",
+          "transiens",
+          "transire",
+          "trans",
+          "ire"
+        ],
+        "historicalPath": [
+          "ラテン語 trans（越えて）＋ire（行く）",
+          "ラテン語 transire（通り過ぎる）",
+          "ラテン語 transiens（通り過ぎる）",
+          "英語 transient（一時的な、つかの間の）"
+        ],
+        "components": [
+          {
+            "form": "transire",
+            "kind": "base",
+            "gloss": "通り過ぎる"
+          }
+        ],
+        "rootCandidates": [
+          "trans"
+        ],
+        "semanticBridge": "場所や時間を通り過ぎて長くとどまらない動作から、短期間しか続かない性質へ意味が移った。",
+        "summary": "transientはtransire（通り過ぎる）の分詞形から、一時的な・つかの間の意味になった。",
+        "confidence": "high",
+        "notes": "trans＋-ientとして英語表面に接辞を割り当てると語形史を単純化しすぎるためB型にする。"
+      }
+    },
+    "tremor": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "震え",
+        "root": "trem",
+        "parts": [
+          {
+            "form": "trem",
+            "kind": "root",
+            "gloss": "震える"
+          },
+          {
+            "form": "-or",
+            "kind": "suffix",
+            "gloss": "〜すること・もの"
+          }
+        ],
+        "derivation": "trem（震える）＋-or（〜すること・もの） → 震えること、震え、発作"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/tremor",
+          "https://www.merriam-webster.com/dictionary/tremor"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/tremor",
+            "note": "tremorを古フランス語 tremor、ラテン語 tremor（震え、恐怖）に遡らせ、tremere（震える）と関係付けている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/tremor",
+            "note": "tremorの現代語義として、身体の不随意な震え、地面などの揺れを確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語・ラテン語",
+        "etymons": [
+          "tremor",
+          "tremorem",
+          "tremere",
+          "-or"
+        ],
+        "historicalPath": [
+          "ラテン語 tremere（震える、身震いする）",
+          "ラテン語 tremor（震え、恐怖）",
+          "古フランス語 tremor",
+          "英語 tremor（震え、揺れ）"
+        ],
+        "components": [
+          {
+            "form": "tremere",
+            "kind": "base",
+            "gloss": "震える"
+          }
+        ],
+        "rootCandidates": [
+          "trem"
+        ],
+        "semanticBridge": "恐怖や寒さで震える動作から、身体の震え、地面や物体の揺れを表す名詞へなった。",
+        "summary": "tremorはtrem（震える）＋-orで、震えや揺れを表す。",
+        "confidence": "high",
+        "notes": "ラテン語tremorの語幹tremと名詞化要素-orを英語表面に対応させる。"
+      }
+    },
+    "turbulent": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 turbulentus（騒がしい、混乱した）に由来し、渦立つ水から社会や感情の激しい混乱へ意味が広がった → 激動の、荒れた"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/turbulent",
+          "https://www.merriam-webster.com/dictionary/turbulent"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/turbulent",
+            "note": "turbulentをラテン語 turbulentus（騒がしい、混乱した）に遡らせ、turba（騒ぎ、群衆）やturbare（かき乱す）と関係付けている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/turbulent",
+            "note": "turbulentの現代語義として、激しく乱れた空気・水、混乱や争いに満ちた状態を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": [
+          "turbulent",
+          "turbulentus",
+          "turba",
+          "turbare"
+        ],
+        "historicalPath": [
+          "ラテン語 turba（騒ぎ、群衆）",
+          "ラテン語 turbare（かき乱す）",
+          "ラテン語 turbulentus（騒がしい、混乱した）",
+          "英語 turbulent（激動の、荒れた）"
+        ],
+        "components": [
+          {
+            "form": "turbulentus",
+            "kind": "base",
+            "gloss": "騒がしい・混乱した"
+          }
+        ],
+        "rootCandidates": [
+          "turb"
+        ],
+        "semanticBridge": "群衆の騒ぎや物がかき乱される状態から、空気・水の乱流、さらに社会や感情の激動へ意味が広がった。",
+        "summary": "turbulentは騒ぎ・混乱を表すラテン語から、荒れた・激動の状態を表すようになった。",
+        "confidence": "high",
+        "notes": "turb＋-ulentを英語の確立した接辞として示す根拠は弱いためB型に置く。"
+      }
+    },
+    "unabashedly": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "臆面もなく",
+        "root": "abash",
+        "parts": [
+          {
+            "form": "un",
+            "kind": "prefix",
+            "gloss": "〜でない"
+          },
+          {
+            "form": "abash",
+            "kind": "root",
+            "gloss": "恥じさせる・動揺させる"
+          },
+          {
+            "form": "-ly",
+            "kind": "suffix",
+            "gloss": "〜な状態で"
+          }
+        ],
+        "derivation": "un-（〜でない）＋abash（恥じさせる・動揺させる）＋-ly（〜な状態で） → 恥じる様子なく、臆面もなく、恥じずに"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/unabashed",
+          "https://www.merriam-webster.com/dictionary/unabashedly"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/unabashed",
+            "note": "unabashedをun-（否定）＋abash（恥じさせる、動揺させる）として説明し、abashを古フランス語 esbaer（平静を失う、驚く）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/unabashedly",
+            "note": "unabashedlyの現代語義として、恥ずかしさやためらいを見せず、臆面なく行う様子を確認した。"
+          }
+        ],
+        "originLanguage": "英語・古フランス語",
+        "etymons": [
+          "unabashedly",
+          "unabashed",
+          "un",
+          "abash",
+          "esbaer",
+          "-ly"
+        ],
+        "historicalPath": [
+          "古フランス語 esbaer（平静を失わせる、驚かせる）",
+          "英語 abash（恥じさせる、動揺させる）",
+          "英語 unabashed（恥じていない、臆面のない）",
+          "英語 unabashedly（臆面もなく）"
+        ],
+        "components": [
+          {
+            "form": "un-",
+            "kind": "prefix",
+            "gloss": "〜でない"
+          },
+          {
+            "form": "abash",
+            "kind": "base",
+            "gloss": "恥じさせる"
+          }
+        ],
+        "rootCandidates": [
+          "abash"
+        ],
+        "semanticBridge": "恥じさせて平静を失わせるabashを否定し、恥じたり動揺したりしない態度を表す語になった。",
+        "summary": "unabashedlyはun-＋abash＋-lyで、恥じる様子なく、臆面もなく行うことを表す。",
+        "confidence": "high",
+        "notes": "unabashedの形容詞形成に含まれる過去分詞語尾-edは表示上省略し、-lyを副詞接辞として置く。"
+      }
+    },
+    "unwieldy": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "扱いにくい",
+        "root": "wield",
+        "parts": [
+          {
+            "form": "un",
+            "kind": "prefix",
+            "gloss": "〜でない"
+          },
+          {
+            "form": "wield",
+            "kind": "root",
+            "gloss": "力を振るう・扱う"
+          },
+          {
+            "form": "-y",
+            "kind": "suffix",
+            "gloss": "〜の性質をもつ"
+          }
+        ],
+        "derivation": "un-（〜でない）＋wield（力を振るう、扱う）＋-y（〜の性質をもつ） → うまく扱えない性質で、大きくて扱いにくい"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/unwieldy",
+          "https://www.merriam-webster.com/dictionary/unwieldy"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/unwieldy",
+            "note": "unwieldyをun-（ない）＋古いwieldyから説明し、wieldyを古英語 wielde（活動的な、力のある）・wield（力をもつ、扱う）に関係付けている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/unwieldy",
+            "note": "unwieldyの現代語義として、大きさや形のために扱いにくく、動かしにくいことを確認した。"
+          }
+        ],
+        "originLanguage": "英語・古英語",
+        "etymons": [
+          "unwieldy",
+          "un",
+          "wieldy",
+          "wield",
+          "weldan",
+          "-y"
+        ],
+        "historicalPath": [
+          "古英語 wieldan・wealdan（支配する、力をもつ）",
+          "英語 wield（力を振るう、道具を扱う）",
+          "英語 unwieldy（力や扱いやすさを欠く）",
+          "英語 unwieldy（大きくて扱いにくい）"
+        ],
+        "components": [
+          {
+            "form": "un-",
+            "kind": "prefix",
+            "gloss": "〜でない"
+          },
+          {
+            "form": "wield",
+            "kind": "base",
+            "gloss": "力を振るう・扱う"
+          }
+        ],
+        "rootCandidates": [
+          "wield"
+        ],
+        "semanticBridge": "力をもって物を扱える状態を否定し、力不足で扱えないことから、大きさや形のために扱いにくい意味へ移った。",
+        "summary": "unwieldyはun-＋wield＋-yで、うまく扱えない、大きくて不便な性質を表す。",
+        "confidence": "high",
+        "notes": "wieldyの語尾-yとun-が英語表面に対応し、語源と現代の語形成が一致するためA型にする。"
+      }
+    },
+    "vicinity": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "近辺",
+        "root": "vicin",
+        "parts": [
+          {
+            "form": "vicin",
+            "kind": "root",
+            "gloss": "近い・近隣の"
+          },
+          {
+            "form": "-ity",
+            "kind": "suffix",
+            "gloss": "〜であること"
+          }
+        ],
+        "derivation": "vicin（近い・近隣の）＋-ity（〜であること） → 近い状態、近辺"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/vicinity",
+          "https://www.merriam-webster.com/dictionary/vicinity"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/vicinity",
+            "note": "vicinityをフランス語 vicinité、ラテン語 vicinitas（近隣、近さ）に遡らせ、vicinus（近隣の）・vicus（村、家々の集まり）と関係付けている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/vicinity",
+            "note": "vicinityの現代語義として、場所・時間・関係が近いこと、近辺を確認した。"
+          }
+        ],
+        "originLanguage": "フランス語・ラテン語",
+        "etymons": [
+          "vicinity",
+          "vicinité",
+          "vicinitas",
+          "vicinus",
+          "vicus",
+          "-ity"
+        ],
+        "historicalPath": [
+          "ラテン語 vicus（村、家々の集まり）",
+          "ラテン語 vicinus（近隣の、近い）",
+          "ラテン語 vicinitas（近さ、近隣）",
+          "フランス語 vicinité",
+          "英語 vicinity（近辺、近さ）"
+        ],
+        "components": [
+          {
+            "form": "vicinus",
+            "kind": "base",
+            "gloss": "近隣の・近い"
+          }
+        ],
+        "rootCandidates": [
+          "vicin"
+        ],
+        "semanticBridge": "近隣の人・集落を表す語から、場所や時間が近い状態、さらにその周辺の地域を表す抽象名詞へ発達した。",
+        "summary": "vicinityはvicin（近い・近隣の）＋-ityで、近い状態や近辺を表す。",
+        "confidence": "high",
+        "notes": "vicinusとvicinitasの関係、英語の-ityによる名詞化が確認できるためA型にする。"
+      }
+    },
+    "vie": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 vie（競争、争い）・古フランス語 envïer（争う）に由来し、競争して勝とうとする動作を表す → 競い合う"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/vie",
+          "https://www.merriam-webster.com/dictionary/vie"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/vie",
+            "note": "vieを古フランス語 envïer（競う、争う）から説明し、さらにラテン語 invitare（招く、挑む）との関係を示している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/vie",
+            "note": "vieの現代語義として、優位や勝利を得るために競争することを確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語・ラテン語",
+        "etymons": [
+          "vie",
+          "envïer",
+          "invitare"
+        ],
+        "historicalPath": [
+          "ラテン語 invitare（招く、挑む）",
+          "古フランス語 envïer（競う、争う）",
+          "フランス語 vie（競争）",
+          "英語 vie（競い合う）"
+        ],
+        "components": [
+          {
+            "form": "envïer",
+            "kind": "base",
+            "gloss": "競う・争う"
+          }
+        ],
+        "rootCandidates": [
+          "vi"
+        ],
+        "semanticBridge": "相手に挑み競争する動作を表すフランス語が、英語で勝利や優位を目指して競い合う動詞になった。",
+        "summary": "vieは古フランス語の競争・争いの語に由来する単一基体である。",
+        "confidence": "medium",
+        "notes": "短い綴りで、envïerからvieへの語形変化も大きいため、語根・接辞のA型表示はしない。"
+      }
+    },
+    "vigil": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 vigile、ラテン語 vigilia（見張り、徹夜の祈り）に由来し、宗教行事前の夜通しの見守りを表す → 夜通しの見守り、徹夜の祈り"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/vigil",
+          "https://www.merriam-webster.com/dictionary/vigil"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/vigil",
+            "note": "vigilを古フランス語 vigile・ラテン語 vigilia（見張り、見守り）から説明し、宗教祭日の前夜の祈りや、死者を見守る通夜の意味を確認している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/vigil",
+            "note": "vigilの現代語義として、夜通しの見守り、祈りや弔いのために夜を過ごすことを確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語・ラテン語",
+        "etymons": [
+          "vigil",
+          "vigile",
+          "vigilia",
+          "vigil"
+        ],
+        "historicalPath": [
+          "ラテン語 vigil（目覚めている、見張る）",
+          "ラテン語 vigilia（見張り、徹夜）",
+          "古フランス語 vigile",
+          "英語 vigil（夜通しの見守り、徹夜の祈り）"
+        ],
+        "components": [
+          {
+            "form": "vigilia",
+            "kind": "base",
+            "gloss": "見張り・徹夜"
+          }
+        ],
+        "rootCandidates": [
+          "vigil"
+        ],
+        "semanticBridge": "眠らず見張る行為から、宗教的な祭日前夜の祈り、死者を見守る通夜などの特定の夜間行事へ意味が定着した。",
+        "summary": "vigilは眠らず見張ることを表すラテン語から、夜通しの見守りや祈りを表す名詞になった。",
+        "confidence": "high",
+        "notes": "vigilantとの語族関係はあるが、vigil自体は単一基体としてB型にする。"
+      }
+    },
+    "vigilant": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "警戒を怠らない",
+        "root": "vigil",
+        "parts": [
+          {
+            "form": "vigil",
+            "kind": "root",
+            "gloss": "見張る・目覚めている"
+          },
+          {
+            "form": "-ant",
+            "kind": "suffix",
+            "gloss": "〜する性質の"
+          }
+        ],
+        "derivation": "vigil（見張る・目覚めている）＋-ant（〜する性質の） → 見張り続ける、警戒を怠らない"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/vigilant",
+          "https://www.merriam-webster.com/dictionary/vigilant"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/vigilant",
+            "note": "vigilantを古フランス語 vigilant、ラテン語 vigilantem（警戒している）に遡らせ、vigilare（見張る、眠らずにいる）からの現在分詞と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/vigilant",
+            "note": "vigilantの現代語義として、安全に注意を払い、警戒を怠らないことを確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語・ラテン語",
+        "etymons": [
+          "vigilant",
+          "vigilantem",
+          "vigilare",
+          "vigil",
+          "-ant"
+        ],
+        "historicalPath": [
+          "ラテン語 vigil（目覚めている、警戒する）",
+          "ラテン語 vigilare（見張る、眠らずにいる）",
+          "ラテン語 vigilans・vigilantem（警戒している）",
+          "古フランス語 vigilant",
+          "英語 vigilant（警戒を怠らない）"
+        ],
+        "components": [
+          {
+            "form": "vigilare",
+            "kind": "base",
+            "gloss": "見張る・眠らずにいる"
+          }
+        ],
+        "rootCandidates": [
+          "vigil"
+        ],
+        "semanticBridge": "眠らず見張るvigilから、そのように常に注意を払う性質を表す形容詞になった。",
+        "summary": "vigilantはvigil（見張る・目覚めている）＋-antで、警戒を怠らない性質を表す。",
+        "confidence": "high",
+        "notes": "ラテン語の現在分詞と英語表面の-antが対応するためA型にする。"
+      }
+    },
+    "vogue": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 vogue（流行、成功）に由来し、もとは船をこぐ・揺れる動きを表した語から人気の流行へ意味が広がった → 流行"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/vogue",
+          "https://www.merriam-webster.com/dictionary/vogue"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/vogue",
+            "note": "vogueをフランス語 vogue、古フランス語 voguer（こぐ、揺れる、出帆する）に遡らせ、船が波に運ばれるイメージから流行・人気へつながった可能性を説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/vogue",
+            "note": "vogueの現代語義として、一定時期に広く受け入れられている流行・人気の型を確認した。"
+          }
+        ],
+        "originLanguage": "フランス語・古フランス語",
+        "etymons": [
+          "vogue",
+          "voguer",
+          "voga"
+        ],
+        "historicalPath": [
+          "古フランス語 voguer（こぐ、揺れる）",
+          "フランス語 vogue（こぐこと、成功、流行）",
+          "英語 vogue（流行、人気）"
+        ],
+        "components": [
+          {
+            "form": "voguer",
+            "kind": "base",
+            "gloss": "こぐ・揺れる"
+          }
+        ],
+        "rootCandidates": [
+          "vog"
+        ],
+        "semanticBridge": "波に乗って進む動きから、時代の波に乗って人気を得るもの、つまり流行を表すようになった。",
+        "summary": "vogueは船をこぐ・揺れるフランス語から、人気の流行を表す語になった。",
+        "confidence": "medium",
+        "notes": "単一借用語で、深い語源にもゲルマン系の説があるためB型にする。"
+      }
+    },
+    "walkout": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "walk（歩く、立ち去る）＋out（外へ）からなる英語の複合表現で、会議などから集団で出て抗議することへ → ストライキ、集団退場"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/walk-out",
+          "https://www.merriam-webster.com/dictionary/walkout"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/walk-out",
+            "note": "walk-outをwalk＋outの動詞句から生じた語とし、19世紀の立ち去る用法から、1888年に労働者のストライキ、1927年に抗議退場の意味が現れたと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/walkout",
+            "note": "walkoutの現代語義として、労働者のストライキ、抗議のための集団退場を確認した。"
+          }
+        ],
+        "originLanguage": "英語",
+        "etymons": [
+          "walkout",
+          "walk",
+          "out"
+        ],
+        "historicalPath": [
+          "英語 walk out（歩いて外へ出る、立ち去る）",
+          "英語 walkout（抗議のための退場）",
+          "英語 walkout（ストライキ、集団退場）"
+        ],
+        "components": [
+          {
+            "form": "walk",
+            "kind": "base",
+            "gloss": "歩く・立ち去る"
+          },
+          {
+            "form": "out",
+            "kind": "base",
+            "gloss": "外へ"
+          }
+        ],
+        "rootCandidates": [
+          "walk",
+          "out"
+        ],
+        "semanticBridge": "その場から歩いて出る行為が、意見への抗議として集団で退場すること、さらに労働者のストライキを指すようになった。",
+        "summary": "walkoutはwalk outに由来する英語の複合表現で、抗議の集団退場やストライキを表す。",
+        "confidence": "high",
+        "notes": "複合表現はユーザー指定どおり熟語寄りのB型表示にする。"
+      }
+    },
+    "whet": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 hwettan（こすることで鋭くする）に由来し、刃を研ぐ意味から食欲や関心を刺激する比喩へ → 研ぐ、刺激する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/whet",
+          "https://www.merriam-webster.com/dictionary/whet"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/whet",
+            "note": "whetを中英語 whetten、古英語 hwettan、ゲルマン祖語 *hwatjanに遡らせ、刃を研ぐことから、刺激・鼓舞する比喩へ説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/whet",
+            "note": "whetの現代語義として、刃を研ぐこと、食欲や興味を刺激することを確認した。"
+          }
+        ],
+        "originLanguage": "古英語・ゲルマン祖語",
+        "etymons": [
+          "whet",
+          "whetten",
+          "hwettan",
+          "hwatjan"
+        ],
+        "historicalPath": [
+          "古英語 hwettan（鋭くする、刺激する）",
+          "中英語 whetten",
+          "英語 whet（研ぐ）",
+          "英語 whet（食欲・関心を刺激する）"
+        ],
+        "components": [
+          {
+            "form": "hwettan",
+            "kind": "base",
+            "gloss": "鋭くする・刺激する"
+          }
+        ],
+        "rootCandidates": [
+          "whet"
+        ],
+        "semanticBridge": "刃を鋭くする動作から、感覚や欲求を鋭く目覚めさせる、つまり食欲・関心を刺激する意味へ広がった。",
+        "summary": "whetは刃を研ぐ古英語から、食欲や興味を刺激する意味へ広がった一語である。",
+        "confidence": "high",
+        "notes": "表面に明確な英語接辞がないためB型にする。"
+      }
+    },
+    "whine": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 hwinan（低く鼻にかかった音を出す）に由来し、人の泣き言にも用いられるようになった → 泣き言を言った、鼻にかかった声で鳴いた"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/whine",
+          "https://www.merriam-webster.com/dictionary/whine"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/whine",
+            "note": "whineを古英語 hwinan（低い音を出す、鼻にかかった声で鳴く）に遡らせ、動物や人の不快な泣き声から泣き言の意味へ広がったと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/whine",
+            "note": "whineの現代語義として、鼻にかかった不満げな声を出すこと、泣き言を言うことを確認した。"
+          }
+        ],
+        "originLanguage": "古英語・ゲルマン系",
+        "etymons": [
+          "whine",
+          "hwinan",
+          "hwinsian"
+        ],
+        "historicalPath": [
+          "古英語 hwinan（鼻にかかった声で鳴く）",
+          "古英語 hwinsian（泣き言を言う）",
+          "中英語 whinen",
+          "英語 whine（泣き言を言う、鼻声で鳴く）"
+        ],
+        "components": [
+          {
+            "form": "hwinan",
+            "kind": "base",
+            "gloss": "鼻声で鳴く"
+          }
+        ],
+        "rootCandidates": [
+          "whin"
+        ],
+        "semanticBridge": "動物や人が鼻にかかった不快な声を出すことから、弱々しく不満を述べる、泣き言を言う意味へ広がった。",
+        "summary": "whineは鼻声で鳴く古英語から、泣き言を言う意味へ発達した。",
+        "confidence": "high",
+        "notes": "surfaceFormsのwhinedにある-edは過去形として扱い、語源分解には含めない。"
+      }
+    },
+    "writhe": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 wriðan（ねじる、曲げる、縛る）に由来し、苦痛や感情で体をねじる動作へ → 身もだえする"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/writhe",
+          "https://www.merriam-webster.com/dictionary/writhe"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/writhe",
+            "note": "writheを中英語 writhen、古英語 wriðan（ねじる、曲げる、もとは縛る）に遡らせ、身体を苦痛や感情でねじる意味が13世紀頃に現れたと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/writhe",
+            "note": "writheの現代語義として、苦痛や不快感のために体をねじり、身もだえすることを確認した。"
+          }
+        ],
+        "originLanguage": "古英語・ゲルマン祖語",
+        "etymons": [
+          "writhe",
+          "writhen",
+          "wriðan",
+          "writhanan"
+        ],
+        "historicalPath": [
+          "古英語 wriðan（ねじる、曲げる、縛る）",
+          "中英語 writhen（ねじる）",
+          "英語 writhe（ねじる、身もだえする）"
+        ],
+        "components": [
+          {
+            "form": "wriðan",
+            "kind": "base",
+            "gloss": "ねじる・曲げる"
+          }
+        ],
+        "rootCandidates": [
+          "writh"
+        ],
+        "semanticBridge": "物をねじったり縛ったりする動作から、苦痛・恐怖・感情によって身体をねじる動作へ意味が特化した。",
+        "summary": "writheはねじる・曲げる古英語から、苦痛で身もだえする意味になった。",
+        "confidence": "high",
+        "notes": "単一のゲルマン系動詞で、表面にA型接辞は置かない。"
+      }
+    },
+    "acclaim": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "称賛",
+        "root": "claim",
+        "parts": [
+          {
+            "form": "ac",
+            "kind": "prefix",
+            "gloss": "〜へ・近くへ"
+          },
+          {
+            "form": "claim",
+            "kind": "root",
+            "gloss": "叫ぶ・主張する"
+          }
+        ],
+        "derivation": "ac-（ad-『〜へ』の同化形）＋claim（叫ぶ・主張する） → 声を上げて称賛し、称賛、賞賛"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/acclaim",
+          "https://www.merriam-webster.com/dictionary/acclaim"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/acclaim",
+            "note": "acclaimをラテン語 acclamare（声を上げて呼ぶ、叫んで迎える）に遡らせ、ad-（〜へ）＋clamare（叫ぶ）と説明している。英語ではclaimの綴りに合わせられ、拍手・称賛の意味が生じた。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/acclaim",
+            "note": "acclaimの現代語義として、熱烈に称賛することと、その称賛・賞賛を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "acclaim",
+          "acclamare",
+          "ad",
+          "clamare",
+          "claim"
+        ],
+        "historicalPath": [
+          "ラテン語 ad（〜へ）＋clamare（叫ぶ）",
+          "ラテン語 acclamare（声を上げて呼ぶ、称賛する）",
+          "古フランス語 acclamer",
+          "英語 acclaim（称賛する、称賛）"
+        ],
+        "components": [
+          {
+            "form": "ad",
+            "kind": "prefix",
+            "gloss": "〜へ"
+          },
+          {
+            "form": "clamare",
+            "kind": "base",
+            "gloss": "叫ぶ"
+          }
+        ],
+        "rootCandidates": [
+          "claim"
+        ],
+        "semanticBridge": "相手に向かって声を上げる動作から、声援や拍手で高く評価すること、その評価を表す名詞へ発達した。",
+        "summary": "acclaimはac-（ad-『〜へ』の同化形）＋claim（叫ぶ・主張する）から、称賛を表す。",
+        "confidence": "high",
+        "notes": "ラテン語clamareに対応する英語側のclaimと、ac-の同化形が表面に現れるためA型にする。"
+      }
+    },
+    "acclimate": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "慣れた",
+        "root": "climate",
+        "parts": [
+          {
+            "form": "ac",
+            "kind": "prefix",
+            "gloss": "〜へ・近くへ"
+          },
+          {
+            "form": "climate",
+            "kind": "root",
+            "gloss": "気候・地域"
+          }
+        ],
+        "derivation": "ac-（à『〜へ』に対応する形）＋climate（気候・地域） → 新しい気候に合わせ、慣れた、順応した"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/acclimate",
+          "https://www.merriam-webster.com/dictionary/acclimate"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/acclimate",
+            "note": "acclimateをフランス語 acclimaterからの英語形成とし、à（〜へ）＋climat（気候）に分けて、別の気候に慣らす・慣れる意味を説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/acclimate",
+            "note": "acclimateの現代語義として、新しい気候・環境に慣れ、適応することを確認した。"
+          }
+        ],
+        "originLanguage": "フランス語・ラテン語・ギリシャ語",
+        "etymons": [
+          "acclimate",
+          "acclimater",
+          "à",
+          "climat",
+          "climate",
+          "klima"
+        ],
+        "historicalPath": [
+          "ギリシャ語 klima（傾き、地域）",
+          "ラテン語 clima（地表の地域）",
+          "フランス語 climat（気候）",
+          "フランス語 acclimater（気候に慣らす）",
+          "英語 acclimate（慣れる、順応する）"
+        ],
+        "components": [
+          {
+            "form": "à",
+            "kind": "prefix",
+            "gloss": "〜へ"
+          },
+          {
+            "form": "climat",
+            "kind": "base",
+            "gloss": "気候"
+          }
+        ],
+        "rootCandidates": [
+          "climate"
+        ],
+        "semanticBridge": "特定の地域・気候へ移ることから、その気候や環境に身体・生活を合わせて慣れる意味になった。",
+        "summary": "acclimateはac-（〜へ）＋climate（気候）で、新しい環境に慣れることを表す。",
+        "confidence": "high",
+        "notes": "フランス語acclimaterの構成が出典に明示され、英語表面のac＋climateにも対応するためA型にする。"
+      }
+    },
+    "alacrity": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "快活さ",
+        "root": "alacr",
+        "parts": [
+          {
+            "form": "alacr",
+            "kind": "root",
+            "gloss": "快活な・敏捷な"
+          },
+          {
+            "form": "-ity",
+            "kind": "suffix",
+            "gloss": "〜であること"
+          }
+        ],
+        "derivation": "alacr（快活な・敏捷な）＋-ity（〜であること） → 快活で敏捷な性質、快活さ、敏捷さ"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/alacrity",
+          "https://www.merriam-webster.com/dictionary/alacrity"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/alacrity",
+            "note": "alacrityをラテン語 alacritas（快活さ、熱意）から、alacer（快活な、敏捷な）に遡らせている。alacerのさらに深い語源には不確かな点がある。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/alacrity",
+            "note": "alacrityの現代語義として、素早く快活に応じる性質、熱心さ・敏捷さを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語",
+        "etymons": [
+          "alacrity",
+          "alacritas",
+          "alacer",
+          "alacris",
+          "-ity"
+        ],
+        "historicalPath": [
+          "ラテン語 alacer・alacris（快活な、敏捷な）",
+          "ラテン語 alacritas（快活さ、熱意）",
+          "古フランス語 alegre・英語 aleger（快活な）との語族関係",
+          "英語 alacrity（快活さ、敏捷さ）"
+        ],
+        "components": [
+          {
+            "form": "alacer",
+            "kind": "base",
+            "gloss": "快活な・敏捷な"
+          }
+        ],
+        "rootCandidates": [
+          "alacr"
+        ],
+        "semanticBridge": "快活で素早い性質を表す形容詞から、快活さ・熱心さ・すばやく応じる性質を表す抽象名詞になった。",
+        "summary": "alacrityはalacr（快活な・敏捷な）＋-ityで、快活さや敏捷さを表す。",
+        "confidence": "medium",
+        "notes": "alacerの深い語源は不確かだが、alacritasとalacerの語族関係、および-ityの名詞化は確認できるためA型にする。"
+      }
+    }
+  }
+}

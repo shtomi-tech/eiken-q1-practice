@@ -1,0 +1,667 @@
+{
+  "meta": {
+    "batchId": "batch-045",
+    "note": "未確認B型の次の25語。出典と表面形が対応する8語をA型へ、短縮・逆成・単純語・借用語・複合表現はB型に残す。"
+  },
+  "dictionary": {
+    "roots": {
+      "cover": {
+        "gloss": "覆う・隠す",
+        "origin": "ラテン語 cooperire / 古フランス語 covrir",
+        "note": "覆いをかけて隠す動作。discoverではdis-によって覆いを取る意味になる。"
+      },
+      "clin": {
+        "gloss": "横たわる・傾く",
+        "origin": "ギリシャ語 klinein / klinē",
+        "note": "横たわる場所や傾きに関わる語根。clinicでは診療の場を表す語に現れる。"
+      },
+      "drive": {
+        "gloss": "動かす・駆り立てる",
+        "origin": "古英語 drifan / ゲルマン祖語 *dreibanan",
+        "note": "人や物を動かし、前へ進ませる動作。driverは運転する人。"
+      },
+      "dam": {
+        "gloss": "損害・害",
+        "origin": "古フランス語 dam / ラテン語 damnum",
+        "note": "失われたものや害を表す語幹。damageではdamとして現れる。"
+      },
+      "ptom": {
+        "gloss": "落ちる・起こる",
+        "origin": "ギリシャ語 piptein / ptōma",
+        "note": "落ちる・起こることを表す語幹。symptomではsyn-の後のptomとして現れる。"
+      }
+    },
+    "affixes": {
+      "-ine": {
+        "gloss": "〜に関する・物質を表す",
+        "kind": "suffix",
+        "note": "ラテン語系の名詞・形容詞に現れる表面形。medicineでは医療に関わる語を作る。"
+      }
+    }
+  },
+  "entries": {
+    "gentle": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "高い身分・立派な家柄を表す語から、礼儀正しく穏やかな性質を表す語へ意味が広がった → 穏やかな、優しい"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/gentle", "https://www.merriam-webster.com/dictionary/gentle"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/gentle", "note": "gentleを古フランス語 gentil、ラテン語 gentilis・gensに遡らせ、上流の家柄から礼儀や穏やかさへ意味が変化した経路を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/gentle", "note": "gentleの現代語義として、厳しくなく穏やかで優しいことを確認した。" }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": ["gentle", "gentil", "gentilis", "gens"],
+        "historicalPath": ["ラテン語 gens / gentilis（家族、同族の）", "古フランス語 gentil（高貴な、立派な）", "中英語 gentle（礼儀正しい、優しい）", "英語 gentle（穏やかな、優しい）"],
+        "components": [{ "form": "gentle", "kind": "base", "gloss": "穏やかな・立派な" }],
+        "rootCandidates": ["gent", "gene"],
+        "semanticBridge": "高貴で礼儀正しい人の性質から、態度や扱いが穏やかで優しい性質を表すようになった。",
+        "summary": "gentleはgent＋-leの英語派生ではなく、古フランス語・ラテン語からの借用と意味変化が中心なのでB型にする。",
+        "confidence": "high"
+      }
+    },
+    "bright": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 bryht・beorhtから続く、光を放つ・反射する性質を表すゲルマン系の単純語 → 明るい、輝く"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/bright", "https://www.merriam-webster.com/dictionary/bright"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/bright", "note": "brightを古英語 bryht・beorht、ゲルマン祖語 *berhtaz、輝きを表す印欧祖語語根に遡らせる。" },
+          { "url": "https://www.merriam-webster.com/dictionary/bright", "note": "brightの現代語義として、光を放つ・反射すること、輝いていることを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン祖語・英語",
+        "etymons": ["bright", "bryht", "beorht", "*berhtaz", "*bhereg-"],
+        "historicalPath": ["印欧祖語 *bhereg-（輝く）", "ゲルマン祖語 *berhtaz", "古英語 beorht / bryht", "英語 bright（明るい、輝く）"],
+        "components": [{ "form": "bright", "kind": "base", "gloss": "輝く・明るい" }],
+        "rootCandidates": ["berht", "bhereg"],
+        "semanticBridge": "光を放つ性質から、色や知性が鮮明であることへ意味が広がった。",
+        "summary": "brightはゲルマン系の単純語で、英語の接辞付き派生として扱わないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "discover": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "dis（離れて・覆いを取って）＋cover（覆う・隠す） → 覆いを取って見つける、発見する",
+        "gloss": "発見する",
+        "root": "cover",
+        "parts": [
+          { "form": "dis", "kind": "prefix", "gloss": "離れて・否定" },
+          { "form": "cover", "kind": "root", "gloss": "覆う・隠す" }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/discover", "https://www.merriam-webster.com/dictionary/discover"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/discover", "note": "discoverを古フランス語 descovrir、ラテン語 discooperire、dis-＋cooperire（覆う）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/discover", "note": "discoverの現代語義として、以前は知られていなかったものを初めて知る・見つけることを確認した。" }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": ["discover", "descovrir", "discooperire", "dis-", "cooperire", "cover"],
+        "historicalPath": ["ラテン語 dis-（反対に、離れて）＋cooperire（覆う）", "古フランス語 descovrir（覆いを取る、明らかにする）", "中英語 discoveren", "英語 discover（発見する）"],
+        "components": [{ "form": "dis", "kind": "prefix", "gloss": "覆いを取って" }, { "form": "cover", "kind": "base", "gloss": "覆う" }],
+        "rootCandidates": ["cover", "cooper"],
+        "semanticBridge": "覆って隠されたものから覆いを取り去る動作を経て、知られていなかったものを見つける意味になった。",
+        "summary": "discoverはdis-＋coverの関係が出典で確認でき、既存のdis接頭辞と新規cover語根で表面形にも対応するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "invite": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 invitare／フランス語 inviterに関係する語。人に来るよう求めること → 招待する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/invite", "https://www.merriam-webster.com/dictionary/invite"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/invite", "note": "inviteをinvitationからの逆成、またはフランス語 inviter・ラテン語 invitareから来た語と説明し、語源の不確実性も示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/invite", "note": "inviteの現代語義として、来るように求めること、招待することを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["invite", "invitation", "inviter", "invitare"],
+        "historicalPath": ["ラテン語 invitare（招く、もてなす）", "フランス語 inviter", "英語 invitation", "invitationからの逆成または借用として invite（招待する）"],
+        "components": [{ "form": "invite", "kind": "base", "gloss": "招く・招待する" }],
+        "rootCandidates": ["vit", "weie"],
+        "semanticBridge": "人を来させ、もてなす行為から、会合などへ来るよう求める意味になった。",
+        "summary": "inviteはinvitationからの逆成の可能性があり、語中のin＋vitを確定した英語の構成として表示できないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "cross": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "十字形・交差を表す古ノルド語や古フランス語と関係する単純語。一本の道を横切る動作へ意味が広がった → 横切る、渡る"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/cross", "https://www.merriam-webster.com/dictionary/cross"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/cross", "note": "crossの十字・交差に関わる古ノルド語、古英語・古フランス語の語史と、動詞の横切る意味を確認した。" },
+          { "url": "https://www.merriam-webster.com/dictionary/cross", "note": "crossの現代語義として、反対側へ横切ること、交差することを確認した。" }
+        ],
+        "originLanguage": "古ノルド語・古英語・古フランス語・英語",
+        "etymons": ["cross", "cros", "crux", "croiz"],
+        "historicalPath": ["ラテン語 crux（十字架）", "古ノルド語 kross", "古英語 cros / 古フランス語 crois", "英語 cross（十字、横切る）"],
+        "components": [{ "form": "cross", "kind": "base", "gloss": "十字・交差" }],
+        "rootCandidates": ["cruc", "cross"],
+        "semanticBridge": "十字に交わる形から、線や道を横切る動作を表すようになった。",
+        "summary": "crossは複数言語を経た単純語で、英語の接辞による分解はないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "follow": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "後ろから追うことを表す古英語 folgianから続く単純語。人や道の後について行く → ついて行く、従う"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/follow", "https://www.merriam-webster.com/dictionary/follow"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/follow", "note": "followを古英語 folgian（後について行く）、ゲルマン系の語に遡らせる。" },
+          { "url": "https://www.merriam-webster.com/dictionary/follow", "note": "followの現代語義として、後から進むこと、指示や方針に従うことを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン系・英語",
+        "etymons": ["follow", "folgian", "*fulgōjan"],
+        "historicalPath": ["ゲルマン系 *fulgōjan（後について行く）", "古英語 folgian", "中英語 folwen / folgen", "英語 follow（ついて行く、従う）"],
+        "components": [{ "form": "follow", "kind": "base", "gloss": "後について行く" }],
+        "rootCandidates": ["folg", "full"],
+        "semanticBridge": "後ろからついて行く動作から、指示・規則・方針に従う意味へ広がった。",
+        "summary": "followはゲルマン系の単純語で、表面形を英語の接辞列に分けないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "improve": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "利益になるようにするという古フランス語・アングロフランス語の表現から、よりよい状態にする意味へ発達した → 改善する、向上させる"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/improve", "https://www.merriam-webster.com/dictionary/improve"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/improve", "note": "improveをアングロフランス語 emprouwer、古フランス語 en-＋prou（利益）に遡らせ、綴りがproveの影響で変形したと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/improve", "note": "improveの現代語義として、質・状態をよりよくすることを確認した。" }
+        ],
+        "originLanguage": "古フランス語・アングロフランス語・英語",
+        "etymons": ["improve", "emprouwer", "en-", "prou", "profit"],
+        "historicalPath": ["古フランス語 en-（〜にする）＋prou（利益）", "アングロフランス語 emprouwer（利益にする）", "英語 improve", "状態や質をよりよくする意味へ発達"],
+        "components": [{ "form": "improve", "kind": "base", "gloss": "よりよくする" }],
+        "rootCandidates": ["prou", "prob"],
+        "semanticBridge": "利益になるようにすることから、質や状態をよりよいものへ変える意味になった。",
+        "summary": "improveは語源上のprouが現代のproveと同じではなく、綴りもproveの影響で変形したため、im＋proveとしてA型にしない。",
+        "confidence": "high"
+      }
+    },
+    "solve": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 solvere「ほどく、解放する」から、問題の難しさをほどいて答えを出す意味へ広がった → 解決する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/solve", "https://www.merriam-webster.com/dictionary/solve"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/solve", "note": "solveをラテン語 solvere（ほどく、解放する、支払う）に遡らせる。" },
+          { "url": "https://www.merriam-webster.com/dictionary/solve", "note": "solveの現代語義として、問題や謎の答えを見つけることを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["solve", "solvere", "solutus"],
+        "historicalPath": ["ラテン語 solvere（ほどく、解放する）", "ラテン語 solvereからの学術的借用", "英語 solve", "問題をほどいて答えを出す意味"],
+        "components": [{ "form": "solve", "kind": "base", "gloss": "ほどく・解決する" }],
+        "rootCandidates": ["solv", "se"],
+        "semanticBridge": "結び目や拘束をほどくことから、問題や疑問を解いて解決する意味になった。",
+        "summary": "solveはラテン語からの単純な学術借用で、語末eを英語接辞として扱わないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "join": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "結合することを表す古フランス語 joindre・ラテン語 iungereから続く語。別々のものを一つにする → 参加する、加わる"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/join", "https://www.merriam-webster.com/dictionary/join"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/join", "note": "joinを古フランス語 joindre、ラテン語 iungere（結び付ける）に遡らせる。" },
+          { "url": "https://www.merriam-webster.com/dictionary/join", "note": "joinの現代語義として、他の人や集団に加わること、結合することを確認した。" }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": ["join", "joindre", "iungere", "iugum"],
+        "historicalPath": ["ラテン語 iungere（結び付ける、つなぐ）", "古フランス語 joindre", "中英語 joinen", "英語 join（加わる、結合する）"],
+        "components": [{ "form": "join", "kind": "base", "gloss": "結び付ける・加わる" }],
+        "rootCandidates": ["iug", "join"],
+        "semanticBridge": "物を結び付けることから、人が集団や活動に加わる意味へ広がった。",
+        "summary": "joinはラテン語・フランス語からの単純な借用で、英語の接辞付きA型として切らないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "arrange": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "a（〜へ・〜に）＋rang（整える・並べる） → 一列に置いて整える、並べる・手配する",
+        "gloss": "整える",
+        "root": "rang",
+        "parts": [
+          { "form": "a", "kind": "prefix", "gloss": "〜へ・離れて" },
+          { "form": "rang", "kind": "root", "gloss": "整える・並べる" }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/arrange", "https://www.merriam-webster.com/dictionary/arrange"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/arrange", "note": "arrangeを古フランス語 arengier／rengier、a-とrang（列・位置）に関係する語として説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/arrange", "note": "arrangeの現代語義として、順序や位置を整えること、手配することを確認した。" }
+        ],
+        "originLanguage": "古フランス語・英語",
+        "etymons": ["arrange", "arengier", "rengier", "a-", "rang"],
+        "historicalPath": ["古フランス語 rang（列、位置）", "古フランス語 a-＋rengier（列に置く）", "中英語 arrange", "英語 arrange（整える、手配する）"],
+        "components": [{ "form": "a", "kind": "prefix", "gloss": "〜へ" }, { "form": "rang", "kind": "base", "gloss": "列・整える" }],
+        "rootCandidates": ["rang", "rank"],
+        "semanticBridge": "物を列や適切な位置に置くことから、物事を整えたり予定を手配したりする意味になった。",
+        "summary": "arrangeは古フランス語のa-＋rangierに対応し、既存のa接頭辞とrang語根が表面形に含まれるためA型にする。",
+        "confidence": "medium"
+      }
+    },
+    "board": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "木の板を表す古英語 bordから続く単純語。板や、板に似た台・掲示面を表す → 掲示板、板"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/board", "https://www.merriam-webster.com/dictionary/board"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/board", "note": "boardを古英語 bord、ゲルマン系の板・縁を表す語に遡らせ、食卓や船内などの意味発達を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/board", "note": "boardの現代語義として、板、掲示面、委員会などの意味を確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン系・英語",
+        "etymons": ["board", "bord", "*burdam"],
+        "historicalPath": ["ゲルマン系 *burdam（板）", "古英語 bord", "中英語 bord / board", "英語 board（板、掲示板）"],
+        "components": [{ "form": "board", "kind": "base", "gloss": "板・台" }],
+        "rootCandidates": ["bord", "board"],
+        "semanticBridge": "木の板から、板状の面、掲示板、さらに板を囲む組織などへ意味が広がった。",
+        "summary": "boardはゲルマン系の単純語で、英語の接辞による分解はないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "project": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "pro（前へ）＋ject（投げる） → 前へ投げ出した計画、計画・プロジェクト",
+        "gloss": "計画",
+        "root": "ject",
+        "parts": [
+          { "form": "pro", "kind": "prefix", "gloss": "前へ" },
+          { "form": "ject", "kind": "root", "gloss": "投げる" }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/project", "https://www.merriam-webster.com/dictionary/project"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/project", "note": "projectをラテン語 proicere（前へ投げる）、pro-＋iacereに遡らせ、心の中で前へ投げ出すことから計画の意味になったと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/project", "note": "projectの現代語義として、計画・企画、および前へ投げ出す動作を確認した。" }
+        ],
+        "originLanguage": "ラテン語・中世ラテン語・英語",
+        "etymons": ["project", "proiectum", "proicere", "pro-", "iacere", "-ject"],
+        "historicalPath": ["ラテン語 pro-（前へ）＋iacere（投げる）", "ラテン語 proicere / proiectum（前へ投げ出したもの）", "中世ラテン語 projectum", "英語 project（計画、プロジェクト）"],
+        "components": [{ "form": "pro", "kind": "prefix", "gloss": "前へ" }, { "form": "ject", "kind": "base", "gloss": "投げる" }],
+        "rootCandidates": ["ject", "ye"],
+        "semanticBridge": "前へ投げ出すイメージから、心の中で先に描いて前へ進める計画を表すようになった。",
+        "summary": "projectはpro-＋iacereの構成が出典で確認でき、既存のpro接頭辞とject語根を使えるためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "supply": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 supplere「満たす」から、必要なものを満たして与える意味へ発達した → 供給、備品"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/supply", "https://www.merriam-webster.com/dictionary/supply"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/supply", "note": "supplyを古フランス語 soupplier、ラテン語 supplere、sub-＋plere（満たす）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/supply", "note": "supplyの現代語義として、必要なものを提供すること、供給品を確認した。" }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": ["supply", "supplien", "soupplier", "supplere", "sub-", "plere"],
+        "historicalPath": ["ラテン語 sub-（下から）＋plere（満たす）", "ラテン語 supplere（満たす、完全にする）", "古フランス語 soupplier", "英語 supply（供給する、供給品）"],
+        "components": [{ "form": "supply", "kind": "base", "gloss": "満たして与える" }],
+        "rootCandidates": ["sub", "ple", "plere"],
+        "semanticBridge": "不足を満たして完全にすることから、必要なものを与える・供給する意味になった。",
+        "summary": "supplyはsub-＋plereに由来するが、英語の表面形ではsup／plyへの同化・綴り変化を伴い、既存部品がそのまま含まれないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "clinic": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "clin（横たわる・傾く）＋-ic（〜に関する） → 病床に関わる場所、診療所・クリニック",
+        "gloss": "診療所",
+        "root": "clin",
+        "parts": [
+          { "form": "clin", "kind": "root", "gloss": "横たわる・傾く" },
+          { "form": "-ic", "kind": "suffix", "gloss": "〜に関する・〜の性質の" }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/clinic", "https://www.merriam-webster.com/dictionary/clinic"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/clinic", "note": "clinicをフランス語 clinique、ラテン語 clinicus、ギリシャ語 klinike・klinē（寝床）に遡らせる。" },
+          { "url": "https://www.merriam-webster.com/dictionary/clinic", "note": "clinicの現代語義として、患者を診察・治療する施設や診療所を確認した。" }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・フランス語・英語",
+        "etymons": ["clinic", "clinique", "clinicus", "klinike", "klinē", "-ic"],
+        "historicalPath": ["ギリシャ語 klinē（寝床）・klinein（横たわる、傾く）", "ギリシャ語 klinike（病床に関する医療）", "ラテン語 clinicus / フランス語 clinique", "英語 clinic（診療所）"],
+        "components": [{ "form": "clin", "kind": "base", "gloss": "横たわる・病床" }, { "form": "-ic", "kind": "suffix", "gloss": "〜に関する" }],
+        "rootCandidates": ["clin", "kline"],
+        "semanticBridge": "病床や横たわる患者に関わる医療から、患者を診察・治療する施設を表すようになった。",
+        "summary": "clinicはギリシャ語klinēに由来するclin語幹と-icの表面形が対応するため、確信度を中としたA型にする。",
+        "confidence": "medium"
+      }
+    },
+    "medicine": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "medic（医療・治す）＋-ine（〜に関する・物質） → 治療に用いるもの、薬・医学",
+        "gloss": "薬",
+        "root": "medic",
+        "parts": [
+          { "form": "medic", "kind": "root", "gloss": "医療・治す" },
+          { "form": "-ine", "kind": "suffix", "gloss": "〜に関する・物質を表す" }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/medicine", "https://www.merriam-webster.com/dictionary/medicine"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/medicine", "note": "medicineを古フランス語 medecine、ラテン語 medicina・medicus（医師）に遡らせ、治療薬と治療・医学の意味を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/medicine", "note": "medicineの現代語義として、病気の治療に用いる薬、治療法、医学を確認した。" }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": ["medicine", "medecine", "medicina", "medicus", "mederi", "-ine"],
+        "historicalPath": ["ラテン語 medicus（医師、医療の）／mederi（治す）", "ラテン語 medicina（治療、薬）", "古フランス語 medecine", "英語 medicine（薬、医学）"],
+        "components": [{ "form": "medic", "kind": "base", "gloss": "医療・治す" }, { "form": "-ine", "kind": "suffix", "gloss": "医療に関するもの" }],
+        "rootCandidates": ["medic", "med"],
+        "semanticBridge": "病気を治す医療から、治療に用いる薬、さらに治療の学問である医学を表すようになった。",
+        "summary": "medicineはmedicina・medicusに由来し、表面上のmedic＋-ineへ対応づけられるためA型にする。語尾の歴史的機能を含むため確信度は中とする。",
+        "confidence": "medium"
+      }
+    },
+    "symptom": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "sym（ともに）＋ptom（落ちる・起こる） → ともに起こる徴候、症状",
+        "gloss": "症状",
+        "root": "ptom",
+        "parts": [
+          { "form": "sym", "kind": "prefix", "gloss": "ともに" },
+          { "form": "ptom", "kind": "root", "gloss": "落ちる・起こる" }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/symptom", "https://www.merriam-webster.com/dictionary/symptom"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/symptom", "note": "symptomをギリシャ語 symptoma（起こったこと）・symphiptein、syn-＋piptein（落ちる）に遡らせ、p音前のsym-の表面形を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/symptom", "note": "symptomの現代語義として、病気の存在を示す徴候・症状を確認した。" }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・フランス語・英語",
+        "etymons": ["symptom", "symptoma", "sympiptein", "syn-", "piptein", "ptōma"],
+        "historicalPath": ["ギリシャ語 syn-（ともに）＋piptein（落ちる）", "ギリシャ語 symptoma（ともに起こること、出来事）", "中世ラテン語 sinthoma / フランス語 symptome", "英語 symptom（症状、徴候）"],
+        "components": [{ "form": "sym", "kind": "prefix", "gloss": "ともに" }, { "form": "ptom", "kind": "base", "gloss": "起こる・落ちる" }],
+        "rootCandidates": ["ptom", "pet"],
+        "semanticBridge": "ともに起こる出来事という意味から、病気とともに現れてその存在を示す徴候、症状になった。",
+        "summary": "symptomはsyn-のp音前の表面形sym-と、pipteinに由来するptom語幹が語内に対応するためA型にする。",
+        "confidence": "medium"
+      }
+    },
+    "exam": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "examinationを短くした学生語。知識を試すための検査・試験 → 試験、検査"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/exam", "https://www.merriam-webster.com/dictionary/exam"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/exam", "note": "examを1848年ごろのcollege student slangとして、examinationを短縮した形と明記している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/exam", "note": "examの現代語義として、知識や能力を調べる試験・検査を確認した。" }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": ["exam", "examination", "examinare", "examen"],
+        "historicalPath": ["ラテン語 examinare（重さを量る、吟味する）", "古フランス語 examinacion", "英語 examination（試験、検査）", "英語 exam（短縮形）"],
+        "components": [{ "form": "exam", "kind": "base", "gloss": "試験・検査" }],
+        "rootCandidates": ["amin", "examen"],
+        "semanticBridge": "重さを量って吟味することから、知識や能力を試して判断する試験・検査になった。",
+        "summary": "examはexaminationの短縮形であり、ex＋amの英語派生として表示できないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "captain": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "頭・指導者を表すラテン語 capitaneusから、軍や船の指揮官を表す語になった → 船長、キャプテン"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/captain", "https://www.merriam-webster.com/dictionary/captain"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/captain", "note": "captainを古フランス語 capitaine、後期ラテン語 capitaneus、caput（頭）に関係する指導者の語として確認した。" },
+          { "url": "https://www.merriam-webster.com/dictionary/captain", "note": "captainの現代語義として、船や軍隊などを指揮する人を確認した。" }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": ["captain", "capitaine", "capitaneus", "caput"],
+        "historicalPath": ["ラテン語 caput（頭）から capitaneus（頭の、指導者）", "古フランス語 capitaine", "中英語 capitain", "英語 captain（指揮官、船長）"],
+        "components": [{ "form": "captain", "kind": "base", "gloss": "指揮官・船長" }],
+        "rootCandidates": ["capit", "caput"],
+        "semanticBridge": "集団の頭という比喩から、軍隊や船などを率いる指揮官を表すようになった。",
+        "summary": "captainはcaputに由来する借用語だが、既存のcap（取る）と同一視できず、英語の接尾辞も確定できないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "driver": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "drive（動かす・駆り立てる）＋-er（〜する人） → 乗り物を動かす人、運転手",
+        "gloss": "運転手",
+        "root": "drive",
+        "parts": [
+          { "form": "drive", "kind": "root", "gloss": "動かす・駆り立てる" },
+          { "form": "-er", "kind": "suffix", "gloss": "〜する人" }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/driver", "https://www.merriam-webster.com/dictionary/driver"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/driver", "note": "driverをdriveから作られた動作主名詞と明記し、家畜を追う人から車を運転する人への意味発達を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/driver", "note": "driverの現代語義として、車両を運転する人を確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン祖語・英語",
+        "etymons": ["driver", "drive", "drifan", "*dreibanan", "-er"],
+        "historicalPath": ["古英語 drifan（動かす、追う）", "英語 drive（動かす、運転する）", "drive＋-er（動作をする人）", "英語 driver（運転手）"],
+        "components": [{ "form": "drive", "kind": "base", "gloss": "動かす・運転する" }, { "form": "-er", "kind": "suffix", "gloss": "動作主" }],
+        "rootCandidates": ["drive", "driv"],
+        "semanticBridge": "人や物を動かす行為から、乗り物を動かす人、運転手を表す動作主名詞になった。",
+        "summary": "driverは出典にdrive由来の動作主名詞と明記され、drive＋-erが表面形にも一致するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "ticket": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "小さな札・メモを表すフランス語系の語から、入場や乗車の権利を示す券へ意味が広がった → 切符、チケット"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/ticket", "https://www.merriam-webster.com/dictionary/ticket"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/ticket", "note": "ticketを古フランス語 estiquet／語源不確実な小札・メモを表す語に関係づけ、券や札の意味発達を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/ticket", "note": "ticketの現代語義として、入場・乗車などの権利を示す券を確認した。" }
+        ],
+        "originLanguage": "古フランス語・英語・語源一部不確定",
+        "etymons": ["ticket", "etiquet", "estiquet"],
+        "historicalPath": ["古フランス語 estiquet / étiquette（札、メモ）", "英語 ticket（小札、短い文書）", "入場・乗車の権利を示す券", "英語 ticket（切符）"],
+        "components": [{ "form": "ticket", "kind": "base", "gloss": "札・券" }],
+        "rootCandidates": ["etiquet", "tick"],
+        "semanticBridge": "小さな札や書付から、特定の権利や入場を証明する券を表すようになった。",
+        "summary": "ticketはフランス語系の単純な借用語で、語源も一部不確実なためB型にする。",
+        "confidence": "medium"
+      }
+    },
+    "platform": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 plateforme「平たい形」からなる複合表現。高く平らな台や駅の乗降場所 → プラットホーム、台"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/platform", "https://www.merriam-webster.com/dictionary/platform"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/platform", "note": "platformをフランス語 plateforme、Old French plat（平ら）＋forme（形）に由来する複合表現として確認した。" },
+          { "url": "https://www.merriam-webster.com/dictionary/platform", "note": "platformの現代語義として、平らな高い台、特に駅の乗降場を確認した。" }
+        ],
+        "originLanguage": "古フランス語・フランス語・英語",
+        "etymons": ["platform", "plateforme", "plat", "forme"],
+        "historicalPath": ["古フランス語 plat（平らな）＋forme（形）", "フランス語 plateforme（平たい形、台）", "英語 platform（台、演説台）", "駅の乗降場・プラットホーム"],
+        "components": [{ "form": "plat", "kind": "compound", "gloss": "平らな" }, { "form": "form", "kind": "compound", "gloss": "形" }],
+        "rootCandidates": ["plat", "form"],
+        "semanticBridge": "平たい形という複合的なイメージから、人や物を載せる高い台、駅の乗降場になった。",
+        "summary": "platformはplat＋formの複合表現であり、ユーザー指定に従って語根部品を表示しないB型にする。",
+        "confidence": "high"
+      }
+    },
+    "damage": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "dam（損害・害）＋-age（〜の量・状態） → 害を受けた状態、損害・被害",
+        "gloss": "損害",
+        "root": "dam",
+        "parts": [
+          { "form": "dam", "kind": "root", "gloss": "損害・害" },
+          { "form": "-age", "kind": "suffix", "gloss": "〜の量・状態" }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/damage", "https://www.merriam-webster.com/dictionary/damage"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/damage", "note": "damageを古フランス語 damage／domage、dam（損害）、ラテン語 damnum（損失・害）に遡らせる。" },
+          { "url": "https://www.merriam-webster.com/dictionary/damage", "note": "damageの現代語義として、傷害や損失による害・損害を確認した。" }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": ["damage", "domage", "dam", "damnum", "-age"],
+        "historicalPath": ["ラテン語 damnum（損失、害）", "古フランス語 dam／damage（損害）", "中英語 damage", "英語 damage（損害、被害）"],
+        "components": [{ "form": "dam", "kind": "base", "gloss": "害・損害" }, { "form": "-age", "kind": "suffix", "gloss": "量・状態" }],
+        "rootCandidates": ["dam", "damn"],
+        "semanticBridge": "損失や害そのものから、傷害や事故によって生じた損害・被害を表す名詞になった。",
+        "summary": "damageは古フランス語のdam＋-ageに対応し、dam語幹と既存の-age接尾辞が表面形に含まれるため、確信度を中としたA型にする。",
+        "confidence": "medium"
+      }
+    },
+    "flood": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "流れあふれる水を表す古英語 flōdから続く単純語。水があふれて広がること → 洪水"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/flood", "https://www.merriam-webster.com/dictionary/flood"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/flood", "note": "floodを古英語 flōd、ゲルマン祖語 *floduz、流れることを表す語根に遡らせる。" },
+          { "url": "https://www.merriam-webster.com/dictionary/flood", "note": "floodの現代語義として、通常は乾いた土地を覆う大量の水を確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン祖語・英語",
+        "etymons": ["flood", "flōd", "*floduz", "*pleu"],
+        "historicalPath": ["ゲルマン祖語 *floduz（流れ、洪水）", "古英語 flōd", "中英語 flod", "英語 flood（洪水、あふれること）"],
+        "components": [{ "form": "flood", "kind": "base", "gloss": "流れ・あふれ" }],
+        "rootCandidates": ["flod", "pleu"],
+        "semanticBridge": "流れる水から、川などの水があふれて土地を覆う洪水の意味になった。",
+        "summary": "floodはゲルマン系の単純語で、英語の接辞による分解はないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "garden": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "囲われた土地を表す古フランス語・ゲルマン系の語から、植物を育てる区画へ意味が広がった → 庭、公園"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/garden", "https://www.merriam-webster.com/dictionary/garden"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/garden", "note": "gardenを古フランス語 gardin、ゲルマン系の囲い・垣根を表す語に関係づけ、囲われた栽培地の意味を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/garden", "note": "gardenの現代語義として、植物を育てる土地、庭園を確認した。" }
+        ],
+        "originLanguage": "ゲルマン系・古フランス語・英語",
+        "etymons": ["garden", "gardin", "gardo", "*gardaz"],
+        "historicalPath": ["ゲルマン系 *gardaz（囲い、庭）", "古フランス語 gardin", "中英語 gardin", "英語 garden（庭、公園）"],
+        "components": [{ "form": "garden", "kind": "base", "gloss": "囲われた土地・庭" }],
+        "rootCandidates": ["gard", "ghorto"],
+        "semanticBridge": "囲われた土地から、植物を育てるために整えた庭や庭園を表すようになった。",
+        "summary": "gardenはゲルマン系・フランス語系の単純語で、英語の接辞付きA型として分解しないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "weather": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "空気や風の状態を表す古英語 wederから続く語。一定の時期の大気の状態 → 天気、気象"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/weather", "https://www.merriam-webster.com/dictionary/weather"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/weather", "note": "weatherを古英語 weder、ゲルマン系の風・大気を表す語に遡らせ、天候の意味発達を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/weather", "note": "weatherの現代語義として、特定時刻・場所の大気の状態を確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン系・英語",
+        "etymons": ["weather", "weder", "*wedram", "*we-dhro-"],
+        "historicalPath": ["ゲルマン系 *wedram（風、大気）", "古英語 weder", "中英語 weder / weder", "英語 weather（天気、気象）"],
+        "components": [{ "form": "weather", "kind": "base", "gloss": "風・大気" }],
+        "rootCandidates": ["wed", "weder"],
+        "semanticBridge": "風や大気の状態から、ある時点・場所における天候全体を表すようになった。",
+        "summary": "weatherはゲルマン系の単純語で、英語の接辞による分解はないためB型にする。",
+        "confidence": "high"
+      }
+    }
+  }
+}

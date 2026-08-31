@@ -1,0 +1,1922 @@
+{
+  "meta": {
+    "batchId": "batch-008",
+    "note": "未確認B型の先頭25語。接頭辞・語根・接尾辞が出典と英語表面の双方で対応する語だけA型へ昇格し、語源不明・複雑な借用・単一基体はB型に残す。"
+  },
+  "dictionary": {
+    "roots": {
+      "esthet": {
+        "gloss": "感じる・知覚する",
+        "origin": "ギリシャ語 aisthesis / aisthanesthai",
+        "note": "感覚や知覚を働かせるイメージ。anesthetic。"
+      },
+      "ordin": {
+        "gloss": "順序・整える",
+        "origin": "ラテン語 ordo / ordinare",
+        "note": "ものを整然と並べ、秩序を定めるイメージ。ordinance。"
+      },
+      "coc": {
+        "gloss": "煮る・熟す",
+        "origin": "ラテン語 coquere / praecox",
+        "note": "熱を加えて熟させるイメージ。precocious。"
+      },
+      "scrupul": {
+        "gloss": "小石・心の引っかかり",
+        "origin": "ラテン語 scrupulus / scrupus",
+        "note": "靴の中の小石のような不安や良心の痛みのイメージ。scrupulous。"
+      },
+      "cant": {
+        "gloss": "歌う",
+        "origin": "ラテン語 cantare / PIE *kan-",
+        "note": "声に出して歌い、呪文を唱えるイメージ。enchant。chantは英語側の対応形。",
+        "variants": [
+          "chant"
+        ]
+      },
+      "clud": {
+        "gloss": "閉じる",
+        "origin": "ラテン語 claudere",
+        "note": "入口を閉じ、外から入れないようにするイメージ。preclusion。clusは語形変化。",
+        "variants": [
+          "clus"
+        ]
+      },
+      "hort": {
+        "gloss": "励ます・促す",
+        "origin": "ラテン語 hortari / PIE *gher-",
+        "note": "相手を励まして行動を促すイメージ。exhort。"
+      },
+      "typ": {
+        "gloss": "形・型",
+        "origin": "ギリシャ語 typos / typtein",
+        "note": "打った跡や形から、代表的な型を表すイメージ。typify。"
+      },
+      "omin": {
+        "gloss": "前兆",
+        "origin": "ラテン語 omen / ominari",
+        "note": "未来を示す前兆を見て、悪い兆しとして嫌うイメージ。abominable。"
+      },
+      "brief": {
+        "gloss": "短い・要点",
+        "origin": "古フランス語 brief / ラテン語 brevis",
+        "note": "短い要約や要点を伝えるイメージ。debrief。"
+      }
+    },
+    "affixes": {
+      "om": {
+        "gloss": "強く・向かって",
+        "kind": "prefix",
+        "note": "ラテン語ob-がmの前で同化した形。omit。"
+      },
+      "ab": {
+        "gloss": "離れて",
+        "kind": "prefix",
+        "note": "分離や遠ざかることを表す接頭辞。abominable。"
+      }
+    }
+  },
+  "entries": {
+    "canter": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "Canterbury",
+            "gloss": "巡礼地"
+          },
+          {
+            "term": "Canterbury pace",
+            "gloss": "巡礼者の楽な歩調"
+          },
+          {
+            "gloss": "馬が軽速歩した"
+          }
+        ],
+        "derivation": "カンタベリーへ向かう巡礼者の馬の楽な歩調から → 馬が軽速歩した",
+        "source": "https://www.etymonline.com/word/canter",
+        "sources": [
+          "https://www.etymonline.com/word/canter",
+          "https://www.merriam-webster.com/dictionary/canter"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/canter",
+          "https://www.merriam-webster.com/dictionary/canter"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/canter",
+            "note": "canterをCanterbury pace（カンタベリーへ向かう巡礼者の楽な速度）の短縮と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/canter",
+            "note": "canterの馬が駆け足で進む、駆け足・軽速歩という語義と、Canterburyに由来するという語源欄を確認した。"
+          }
+        ],
+        "originLanguage": "英語（固有名・複合表現由来）",
+        "etymons": [
+          "canter",
+          "Canterbury",
+          "Canterbury pace"
+        ],
+        "historicalPath": [
+          "Canterbury（カンタベリー）へ向かう巡礼",
+          "Canterbury pace（巡礼者の楽な馬の歩調）",
+          "英語 canter（軽速歩する）"
+        ],
+        "components": [
+          {
+            "form": "Canterbury",
+            "kind": "base",
+            "gloss": "カンタベリー",
+            "display": false
+          },
+          {
+            "form": "pace",
+            "kind": "base",
+            "gloss": "歩調",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "巡礼者がカンタベリーへ向かうときの楽な馬の歩調を指す表現が、現在の馬術用語になった。",
+        "summary": "canteredは、カンタベリー巡礼の楽な馬の歩調を表す表現から、馬が軽速歩したを表す。",
+        "confidence": "high",
+        "notes": "固有名を含む複合的な由来のため、一般的な語根・接辞分解は行わない。"
+      }
+    },
+    "trickle": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "trickle",
+            "gloss": "少量ずつ流れる"
+          },
+          {
+            "term": "trickle",
+            "gloss": "滴となって流れる"
+          },
+          {
+            "gloss": "少しずつ流れた"
+          }
+        ],
+        "derivation": "液体が小さく途切れた流れとなって落ちることから → 少しずつ流れた",
+        "source": "https://www.etymonline.com/word/trickle",
+        "sources": [
+          "https://www.etymonline.com/word/trickle",
+          "https://www.merriam-webster.com/dictionary/trickle"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/trickle",
+          "https://www.merriam-webster.com/dictionary/trickle"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/trickle",
+            "note": "trickleを14世紀末のtriklenとし、stricklenの短縮形やtrikenとの関係を候補に挙げるが、起源は不確かとしている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/trickle",
+            "note": "trickleの少量ずつ流れる、滴となって落ちる、少しずつ供給されるという語義を確認した。"
+          }
+        ],
+        "originLanguage": "英語（起源不確か）",
+        "etymons": [
+          "trickle",
+          "triklen",
+          "stricklen",
+          "triken"
+        ],
+        "historicalPath": [
+          "中英語 triklen（小さな流れとなる）",
+          "stricklen / trikenとの関係が提案される",
+          "英語 trickle（少しずつ流れる）"
+        ],
+        "components": [
+          {
+            "form": "trickle",
+            "kind": "base",
+            "gloss": "少しずつ流れる",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "液体が一度に流れず、小さく途切れた流れとなって落ちる様子を表す動詞になった。",
+        "summary": "trickledは、起源に諸説あるtrickleから、少しずつ流れたという意味になった。",
+        "confidence": "low",
+        "notes": "語源が確定していないため、trickを含むような綴りだけの分解は行わない。"
+      }
+    },
+    "anesthetic": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "麻酔薬",
+        "root": "esthet",
+        "parts": [
+          {
+            "form": "an",
+            "kind": "prefix",
+            "gloss": "〜でない"
+          },
+          {
+            "form": "esthet",
+            "kind": "root",
+            "gloss": "感じる・知覚する"
+          },
+          {
+            "form": "-ic",
+            "kind": "suffix",
+            "gloss": "〜に関する"
+          }
+        ],
+        "derivation": "an-（〜でない）＋esthet（感じる）＋-ic（〜に関する） → 感覚をなくすもの、麻酔薬"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/anesthetic",
+          "https://www.merriam-webster.com/dictionary/anesthetic"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/anesthetic",
+            "note": "anestheticを-anestheticの形で、-icとギリシャ語anaisthētos（感覚のない）を起点に説明し、anesthesiaをan-（〜なし）＋aisthēsis（感覚）に分けている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/anesthetic",
+            "note": "anestheticの一時的に感覚を失わせるもの、麻酔薬という形容詞・名詞の語義を確認した。"
+          }
+        ],
+        "originLanguage": "ギリシャ語（ラテン語化を経由）",
+        "etymons": [
+          "anesthetic",
+          "an-",
+          "anaisthētos",
+          "anesthesia",
+          "aisthēsis",
+          "-ic",
+          "*au-"
+        ],
+        "historicalPath": [
+          "PIE *au-（知覚する）",
+          "ギリシャ語 aisthēsis（感覚、知覚）",
+          "ギリシャ語 anaisthētos（感覚のない）",
+          "英語 anesthetic（感覚をなくすもの、麻酔薬）"
+        ],
+        "components": [
+          {
+            "form": "an-",
+            "kind": "prefix",
+            "gloss": "〜でない",
+            "display": false
+          },
+          {
+            "form": "aisthēsis",
+            "kind": "base",
+            "gloss": "感覚・知覚",
+            "display": false
+          },
+          {
+            "form": "-ic",
+            "kind": "suffix",
+            "gloss": "〜に関する",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "esthet"
+        ],
+        "semanticBridge": "感覚や知覚がないことを表すギリシャ語の構造から、感覚を一時的に失わせる薬や処置を表すようになった。",
+        "summary": "anestheticは、an-（〜でない）＋esthet（感じる）＋-icから、麻酔薬・麻酔のを表す。",
+        "confidence": "high",
+        "notes": "ギリシャ語aisthēsisの英語側の表示形esthetをrootに採用し、an-と-icは既存の接辞辞書へ対応させる。"
+      }
+    },
+    "ordinance": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "条例",
+        "root": "ordin",
+        "parts": [
+          {
+            "form": "ordin",
+            "kind": "root",
+            "gloss": "順序・整える"
+          },
+          {
+            "form": "-ance",
+            "kind": "suffix",
+            "gloss": "〜すること・状態"
+          }
+        ],
+        "derivation": "ordin（整った順序）＋-ance（状態・行為） → 公的に定められた規則、条例"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/ordinance",
+          "https://www.merriam-webster.com/dictionary/ordinance"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/ordinance",
+            "note": "ordinanceを古フランス語ordenanceまたは中世ラテン語ordinantia、ラテン語ordinare（整える）、ordo（列、順序）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/ordinance",
+            "note": "ordinanceの公的な命令、法律、条例、規則という語義を確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語・ラテン語",
+        "etymons": [
+          "ordinance",
+          "ordenance",
+          "ordinantia",
+          "ordinare",
+          "ordo"
+        ],
+        "historicalPath": [
+          "ラテン語 ordo（列、順序、配置）",
+          "ラテン語 ordinare（順序づける、整える）",
+          "中世ラテン語 ordinantia / 古フランス語 ordenance",
+          "英語 ordinance（公的な命令、条例）"
+        ],
+        "components": [
+          {
+            "form": "ordinare",
+            "kind": "base",
+            "gloss": "整える・定める",
+            "display": false
+          },
+          {
+            "form": "-ance",
+            "kind": "suffix",
+            "gloss": "状態・行為",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "ordin"
+        ],
+        "semanticBridge": "ものを整然と並べることが、社会の行動や制度を公的に整える規則・条例の意味へ広がった。",
+        "summary": "ordinanceは、順序を整えるラテン語から、公的に定められた条例や法令を表す。",
+        "confidence": "high",
+        "notes": "ordin＋-anceはordinare・ordinantiaの語幹と名詞化を英語表示へ正規化したもの。"
+      }
+    },
+    "precocious": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "早熟な",
+        "root": "coc",
+        "parts": [
+          {
+            "form": "pre",
+            "kind": "prefix",
+            "gloss": "前に・早く"
+          },
+          {
+            "form": "coc",
+            "kind": "root",
+            "gloss": "煮る・熟す"
+          },
+          {
+            "form": "-ous",
+            "kind": "suffix",
+            "gloss": "〜の性質の"
+          }
+        ],
+        "derivation": "pre-（前に・早く）＋coc（煮る・熟す）＋-ous（〜の性質の） → 通常より早く熟した、早熟な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/precocious",
+          "https://www.merriam-webster.com/dictionary/precocious"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/precocious",
+            "note": "precociousをラテン語praecox（早く熟す）＋-ousに遡らせ、prae（前に）＋coquere（煮る、熟す）、PIE *pekw-（煮る、熟す）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/precocious",
+            "note": "precociousの通常より早く発達・成熟した、特に子どもが年齢以上に知的なという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": [
+          "precocious",
+          "praecox",
+          "prae",
+          "coquere",
+          "*pekw-",
+          "-ous"
+        ],
+        "historicalPath": [
+          "PIE *pekw-（煮る、熟す）",
+          "ラテン語 coquere（煮る、熟させる）",
+          "ラテン語 praecox（早く熟した）",
+          "英語 precocious（早熟な）"
+        ],
+        "components": [
+          {
+            "form": "prae",
+            "kind": "prefix",
+            "gloss": "前に・早く",
+            "display": false
+          },
+          {
+            "form": "coquere",
+            "kind": "base",
+            "gloss": "煮る・熟す",
+            "display": false
+          },
+          {
+            "form": "-ous",
+            "kind": "suffix",
+            "gloss": "〜の性質の",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "coc"
+        ],
+        "semanticBridge": "食べ物が早く煮えて熟すイメージから、植物や人が通常の時期より早く成熟する意味になった。",
+        "summary": "precociousは、pre-（前に・早く）とcoquere（煮る・熟す）を起点に、早熟なを表す。",
+        "confidence": "medium",
+        "notes": "coquereの英語側の表示形cocをrootとし、precociousの綴りに合わせてpre・coc・-ousへ正規化する。"
+      }
+    },
+    "capricious": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "capriccio",
+            "gloss": "気まぐれ"
+          },
+          {
+            "term": "capricieux",
+            "gloss": "気まぐれな"
+          },
+          {
+            "gloss": "気まぐれな"
+          }
+        ],
+        "derivation": "突然変わる気分や気まぐれを表すイタリア語・フランス語から → 気まぐれな",
+        "source": "https://www.etymonline.com/word/capricious",
+        "sources": [
+          "https://www.etymonline.com/word/capricious",
+          "https://www.merriam-webster.com/dictionary/capricious"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/capricious",
+          "https://www.merriam-webster.com/dictionary/capricious"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/capricious",
+            "note": "capriciousをフランス語capricieux、イタリア語capriccioso、capriccio（気まぐれ）に遡らせている。capriccioのさらに深い語源は不確かで、山羊や頭・巻き毛などの説は確定していない。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/capricious",
+            "note": "capriciousの気分や行動が突然変わりやすい、予測しにくいという語義を確認した。"
+          }
+        ],
+        "originLanguage": "フランス語（イタリア語経由）",
+        "etymons": [
+          "capricious",
+          "capricieux",
+          "capriccioso",
+          "capriccio"
+        ],
+        "historicalPath": [
+          "イタリア語 capriccio（気まぐれ、身震い）",
+          "イタリア語 capriccioso（気まぐれな）",
+          "フランス語 capricieux",
+          "英語 capricious（気まぐれな）"
+        ],
+        "components": [
+          {
+            "form": "capriccio",
+            "kind": "base",
+            "gloss": "気まぐれ",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "突然変わる心の動きや身震いを表す語が、予測しにくく気まぐれな性質を表す形容詞になった。",
+        "summary": "capriciousは、イタリア語capriccioを起点に、気まぐれで予測しにくいを表す。",
+        "confidence": "medium",
+        "notes": "caproやcapo＋riccioという語源説は確定していないため、英語のrootへ分解しない。"
+      }
+    },
+    "scrupulous": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "良心的な",
+        "root": "scrupul",
+        "parts": [
+          {
+            "form": "scrupul",
+            "kind": "root",
+            "gloss": "小石・心の引っかかり"
+          },
+          {
+            "form": "-ous",
+            "kind": "suffix",
+            "gloss": "〜の性質の"
+          }
+        ],
+        "derivation": "scrupul（小石のような心の引っかかり）＋-ous（〜の性質の） → 良心の細部まで気を配る、良心的な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/scrupulous",
+          "https://www.merriam-webster.com/dictionary/scrupulous"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/scrupulous",
+            "note": "scrupulousをラテン語scrupulosus（注意深い、正確な）、scrupulus（小さな鋭い石、良心の不安）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/scrupulous",
+            "note": "scrupulousの道徳的に厳密で良心的な、細部まで入念な、正確なという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（古フランス語経由）",
+        "etymons": [
+          "scrupulous",
+          "scrupulosus",
+          "scrupulus",
+          "scrupus",
+          "-ous"
+        ],
+        "historicalPath": [
+          "ラテン語 scrupus（鋭い小石）",
+          "ラテン語 scrupulus（小石、心の不安）",
+          "ラテン語 scrupulosus（細心の、正確な）",
+          "古フランス語 scrupulos",
+          "英語 scrupulous（良心的な、入念な）"
+        ],
+        "components": [
+          {
+            "form": "scrupulus",
+            "kind": "base",
+            "gloss": "小石・心の不安",
+            "display": false
+          },
+          {
+            "form": "-ous",
+            "kind": "suffix",
+            "gloss": "〜の性質の",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "scrupul"
+        ],
+        "semanticBridge": "靴の中の小石のように心へ刺さる不安が、細部や良心を気にして厳密に行動する性質の比喩になった。",
+        "summary": "scrupulousは、心を刺す小石を表すラテン語から、良心的で入念なを表す。",
+        "confidence": "high",
+        "notes": "scrupulusの語幹scrupulと形容詞接尾辞-ousを英語表面へ対応させる。scrupus自体のさらに深い語源は確定しない。"
+      }
+    },
+    "nurture": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "nutrire",
+            "gloss": "養う・乳を与える"
+          },
+          {
+            "term": "norture",
+            "gloss": "養育・教育"
+          },
+          {
+            "gloss": "育てる、養う"
+          }
+        ],
+        "derivation": "食物を与え、子どもを養い育てることから → 育てる、養う",
+        "source": "https://www.etymonline.com/word/nurture",
+        "sources": [
+          "https://www.etymonline.com/word/nurture",
+          "https://www.merriam-webster.com/dictionary/nurture"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/nurture",
+          "https://www.merriam-webster.com/dictionary/nurture"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/nurture",
+            "note": "nurtureを古フランス語norture・nourreture、後期ラテン語nutritia、ラテン語nutrire（養う、乳を与える）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/nurture",
+            "note": "nurtureの食物を与えて育てる、教育や環境によって発達させるという動詞・名詞の語義を確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語（ラテン語経由）",
+        "etymons": [
+          "nurture",
+          "norture",
+          "nourreture",
+          "nutritia",
+          "nutrire"
+        ],
+        "historicalPath": [
+          "ラテン語 nutrire（養う、乳を与える）",
+          "後期ラテン語 nutritia（養育）",
+          "古フランス語 norture（養育、教育）",
+          "英語 nurture（育てる、養う）"
+        ],
+        "components": [
+          {
+            "form": "nutrire",
+            "kind": "base",
+            "gloss": "養う",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "食物を与えて成長させる具体的な養育が、教育や環境によって能力・性質を育てる意味へ広がった。",
+        "summary": "nurtureは、養うことを表すラテン語から、育てる・養うを表す。",
+        "confidence": "high",
+        "notes": "古フランス語を経た語形変化が大きく、現代英語のnutr-へ単純に分解しない。"
+      }
+    },
+    "shun": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "scunian",
+            "gloss": "逃げる・避ける"
+          },
+          {
+            "term": "shun",
+            "gloss": "近づかない"
+          },
+          {
+            "gloss": "避ける、遠ざける"
+          }
+        ],
+        "derivation": "危険から逃げて近づかないことから → 避ける、遠ざける",
+        "source": "https://www.etymonline.com/word/shun",
+        "sources": [
+          "https://www.etymonline.com/word/shun",
+          "https://www.merriam-webster.com/dictionary/shun"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/shun",
+          "https://www.merriam-webster.com/dictionary/shun"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/shun",
+            "note": "shunを中英語shunnen、古英語scunian（逃げる、避ける、嫌う）に遡らせるが、他のゲルマン語に確実な同族語はなく起源は不確かとしている。PIE *skeu-（覆う、隠す）説も可能性に留まる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/shun",
+            "note": "shunの意図的に避ける、関わりを持たない、遠ざけるという語義を確認した。"
+          }
+        ],
+        "originLanguage": "古英語（起源不確か）",
+        "etymons": [
+          "shun",
+          "shunnen",
+          "scunian",
+          "*skeu-"
+        ],
+        "historicalPath": [
+          "古英語 scunian（逃げる、避ける）",
+          "中英語 shunnen",
+          "英語 shun（避ける、遠ざける）"
+        ],
+        "components": [
+          {
+            "form": "shun",
+            "kind": "base",
+            "gloss": "避ける",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "危険や嫌悪の対象から身を隠して離れる動作が、人や行為を意図的に避ける意味になった。",
+        "summary": "shunは、逃げて避ける古英語から、関わりを持たず遠ざけるを表す。",
+        "confidence": "medium",
+        "notes": "PIE語根への接続は推測であり、英語の単一基体としてB型にする。"
+      }
+    },
+    "enchant": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "魅了する",
+        "root": "cant",
+        "parts": [
+          {
+            "form": "en",
+            "kind": "prefix",
+            "gloss": "中へ・強く"
+          },
+          {
+            "form": "chant",
+            "kind": "root",
+            "gloss": "歌う"
+          }
+        ],
+        "derivation": "en-（中へ・強く）＋chant（歌う） → 呪文を唱えて魅了する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/enchant",
+          "https://www.merriam-webster.com/dictionary/enchant"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/enchant",
+            "note": "enchantを古フランス語enchanter、ラテン語incantare（呪文をかける）に遡らせ、in-（中へ・上に）＋cantare（歌う）、PIE *kan-（歌う）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/enchant",
+            "note": "enchantの魔法をかける、強く喜ばせる、魅了するという語義を確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語（ラテン語経由）",
+        "etymons": [
+          "enchant",
+          "enchanter",
+          "incantare",
+          "in-",
+          "cantare",
+          "*kan-"
+        ],
+        "historicalPath": [
+          "PIE *kan-（歌う）",
+          "ラテン語 cantare（歌う）",
+          "ラテン語 incantare（呪文を唱える）",
+          "古フランス語 enchanter",
+          "英語 enchant（魅了する）"
+        ],
+        "components": [
+          {
+            "form": "in-",
+            "kind": "prefix",
+            "gloss": "中へ・上に",
+            "display": false
+          },
+          {
+            "form": "cantare",
+            "kind": "base",
+            "gloss": "歌う・唱える",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "cant"
+        ],
+        "semanticBridge": "歌うこと、とくに呪文を歌い唱えることが、相手へ魔法の影響を与え、心を強く引きつける意味になった。",
+        "summary": "enchantは、歌うことを表すcantに接頭辞が加わり、呪文を唱えて魅了するを表す。",
+        "confidence": "high",
+        "notes": "ラテン語cantareに対応する英語側のchantをroot cantのvariantとして登録し、en-＋chantで表示する。"
+      }
+    },
+    "preclusion": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "排除",
+        "root": "clud",
+        "parts": [
+          {
+            "form": "pre",
+            "kind": "prefix",
+            "gloss": "前もって"
+          },
+          {
+            "form": "clus",
+            "kind": "root",
+            "gloss": "閉じる"
+          },
+          {
+            "form": "-ion",
+            "kind": "suffix",
+            "gloss": "〜すること・状態"
+          }
+        ],
+        "derivation": "pre-（前もって）＋clus（閉じる）＋-ion（状態） → 先に閉ざして、排除・妨げること"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/preclusion",
+          "https://www.merriam-webster.com/dictionary/preclusion"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/preclusion",
+            "note": "preclusionをラテン語praeclusio（閉鎖、遮断）、praecludere（閉じる、妨げる）に遡らせ、prae（前に）＋claudere（閉じる）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/preclusion",
+            "note": "preclusionの何かを妨げること、排除すること、起こらないようにすることという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": [
+          "preclusion",
+          "praeclusio",
+          "praecludere",
+          "prae",
+          "claudere",
+          "clus"
+        ],
+        "historicalPath": [
+          "ラテン語 claudere（閉じる）",
+          "ラテン語 praecludere（先に閉じる、妨げる）",
+          "ラテン語 praeclusio（遮断、排除）",
+          "英語 preclusion（排除、妨げ）"
+        ],
+        "components": [
+          {
+            "form": "prae-",
+            "kind": "prefix",
+            "gloss": "前に・先に",
+            "display": false
+          },
+          {
+            "form": "claudere",
+            "kind": "base",
+            "gloss": "閉じる",
+            "display": false
+          },
+          {
+            "form": "-ion",
+            "kind": "suffix",
+            "gloss": "行為・状態",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "clud"
+        ],
+        "semanticBridge": "先に入口を閉じて入れなくすることが、機会や可能性をあらかじめ排除・妨害する意味になった。",
+        "summary": "preclusionは、pre-（先に）＋clud（閉じる）＋-ionから、排除や妨げを表す。",
+        "confidence": "high",
+        "notes": "claudereの語形変化で現れるclusをroot cludのvariantとして登録し、pre＋clus＋-ionで表示する。"
+      }
+    },
+    "affability": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "affari",
+            "gloss": "話しかける"
+          },
+          {
+            "term": "affable",
+            "gloss": "話しかけやすい"
+          },
+          {
+            "gloss": "愛想のよさ、親しみやすさ"
+          }
+        ],
+        "derivation": "人に話しかけやすく親しみやすい性質から → 愛想のよさ、親しみやすさ",
+        "source": "https://www.etymonline.com/word/affability",
+        "sources": [
+          "https://www.etymonline.com/word/affability",
+          "https://www.merriam-webster.com/dictionary/affability"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/affability",
+          "https://www.merriam-webster.com/dictionary/affability"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/affability",
+            "note": "affabilityを古フランス語affabilité、affableからの性質名詞と説明し、affableをラテン語affabilis（話しかけやすい）、affari（話しかける）、ad＋fari（話す）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/affability",
+            "note": "affabilityの親しみやすく会話を楽しむ性質、愛想のよさという語義を確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語（ラテン語経由）",
+        "etymons": [
+          "affability",
+          "affable",
+          "affabilis",
+          "affari",
+          "ad",
+          "fari",
+          "*bha-"
+        ],
+        "historicalPath": [
+          "PIE *bha-（話す、告げる）",
+          "ラテン語 affari（話しかける）",
+          "ラテン語 affabilis（話しかけやすい）",
+          "古フランス語 affable / affabilité",
+          "英語 affability（愛想のよさ）"
+        ],
+        "components": [
+          {
+            "form": "affable",
+            "kind": "base",
+            "gloss": "話しかけやすい",
+            "display": false
+          },
+          {
+            "form": "-ity",
+            "kind": "suffix",
+            "gloss": "性質・状態",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "話しかけやすい人の性質が、他人と親しく会話できる愛想のよさや親しみやすさを表す名詞になった。",
+        "summary": "affabilityは、話しかけやすいことを表すラテン語から、愛想のよさ・親しみやすさを表す。",
+        "confidence": "high",
+        "notes": "affableからの名詞化だが、affari・fariの語形が英語表面へ直接対応しにくいためB型を維持する。"
+      }
+    },
+    "dart": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "dart",
+            "gloss": "投げ槍・矢"
+          },
+          {
+            "term": "dart",
+            "gloss": "突然突進する"
+          },
+          {
+            "gloss": "素早く走る、突進する"
+          }
+        ],
+        "derivation": "投げられた矢のように急に前へ進むことから → 素早く走る、突進する",
+        "source": "https://www.etymonline.com/word/dart",
+        "sources": [
+          "https://www.etymonline.com/word/dart",
+          "https://www.merriam-webster.com/dictionary/dart"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/dart",
+          "https://www.merriam-webster.com/dictionary/dart"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/dart",
+            "note": "dartを古フランス語dart（投げ槍、矢）、ゲルマン系*darothuzに遡らせ、武器のdartから急に突進する動詞が生じたと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/dart",
+            "note": "dartの投げ矢、急に突進する、素早く動くという名詞・動詞の語義を確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語（ゲルマン系）",
+        "etymons": [
+          "dart",
+          "darten",
+          "*darothuz",
+          "daroð"
+        ],
+        "historicalPath": [
+          "ゲルマン系 *darothuz（投げ槍）",
+          "古フランス語 dart（投げ槍、矢）",
+          "中英語 dart（矢、突く）",
+          "英語 dart（素早く突進する）"
+        ],
+        "components": [
+          {
+            "form": "dart",
+            "kind": "base",
+            "gloss": "投げ矢・突進する",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "空中を鋭く飛ぶ投げ矢の動きが、人や動物が急に前へ走り出す動作の比喩になった。",
+        "summary": "dartingは、投げ矢を表す語から、矢のように素早く走る・突進するを表す。",
+        "confidence": "high",
+        "notes": "単一の借用基体で、現在の英語表面に接辞分解を表示しない。"
+      }
+    },
+    "wedge": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "wecg",
+            "gloss": "くさび"
+          },
+          {
+            "term": "wedge",
+            "gloss": "狭い隙間へ押し込む"
+          },
+          {
+            "gloss": "差し込む、押し込む"
+          }
+        ],
+        "derivation": "二つのものを押し分けるくさびの形や働きから → 差し込む、押し込む",
+        "source": "https://www.etymonline.com/word/wedge",
+        "sources": [
+          "https://www.etymonline.com/word/wedge",
+          "https://www.merriam-webster.com/dictionary/wedge"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/wedge",
+          "https://www.merriam-webster.com/dictionary/wedge"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/wedge",
+            "note": "wedgeを中英語wegge、古英語wecg、ゲルマン系*wagjazに遡らせるが、語源は不確かとしている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/wedge",
+            "note": "wedgeのくさび、狭い空間へ押し込む、くさびで分けるという名詞・動詞の語義を確認した。"
+          }
+        ],
+        "originLanguage": "古英語（ゲルマン系、語源不確か）",
+        "etymons": [
+          "wedge",
+          "wegge",
+          "wecg",
+          "*wagjaz",
+          "vomer"
+        ],
+        "historicalPath": [
+          "ゲルマン系 *wagjaz（くさび）",
+          "古英語 wecg（くさび）",
+          "中英語 wegge",
+          "英語 wedge（くさび、押し込む）"
+        ],
+        "components": [
+          {
+            "form": "wedge",
+            "kind": "base",
+            "gloss": "くさび・押し分けるもの",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "先の尖った道具で二つの面を押し分ける働きが、ものを隙間へ差し込んで固定・分離する動作を表すようになった。",
+        "summary": "wedgingは、くさびを表すゲルマン系の語から、差し込む・押し込むを表す。",
+        "confidence": "medium",
+        "notes": "語源が不確かで、ラテン語vomerとの関係も推測に留まるためB型を維持する。"
+      }
+    },
+    "exhort": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "強く促す",
+        "root": "hort",
+        "parts": [
+          {
+            "form": "ex",
+            "kind": "prefix",
+            "gloss": "強く・外へ"
+          },
+          {
+            "form": "hort",
+            "kind": "root",
+            "gloss": "励ます・促す"
+          }
+        ],
+        "derivation": "ex-（強く）＋hort（励ます・促す） → 強く促す、激励する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/exhort",
+          "https://www.merriam-webster.com/dictionary/exhort"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/exhort",
+            "note": "exhortを古フランス語exhorer、ラテン語exhortari（強く促す、励ます）に遡らせ、ex（ここでは強意）＋hortari（励ます）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/exhort",
+            "note": "exhortの強く勧める、熱心に促す、激励するという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（古フランス語経由）",
+        "etymons": [
+          "exhort",
+          "exhortari",
+          "ex-",
+          "hortari",
+          "*gher-"
+        ],
+        "historicalPath": [
+          "PIE *gher-（好む、望む）",
+          "ラテン語 hortari（励ます、促す）",
+          "ラテン語 exhortari（強く促す）",
+          "古フランス語 exhorer",
+          "英語 exhort（強く促す）"
+        ],
+        "components": [
+          {
+            "form": "ex-",
+            "kind": "prefix",
+            "gloss": "強く・外へ",
+            "display": false
+          },
+          {
+            "form": "hortari",
+            "kind": "base",
+            "gloss": "励ます・促す",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "hort"
+        ],
+        "semanticBridge": "相手を励まして動かす行為を、より強く・熱心に行うことから、強く促す・激励する意味になった。",
+        "summary": "exhortは、ex-（強意）＋hort（励ます・促す）から、強く促す・激励するを表す。",
+        "confidence": "high",
+        "notes": "exはここでは「外へ」よりも強意の用法で、hortariの英語側表示hortを新しいrootとして登録する。"
+      }
+    },
+    "typify": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "典型的に示す",
+        "root": "typ",
+        "parts": [
+          {
+            "form": "typ",
+            "kind": "root",
+            "gloss": "形・型"
+          },
+          {
+            "form": "-ify",
+            "kind": "suffix",
+            "gloss": "〜にする"
+          }
+        ],
+        "derivation": "typ（型・代表例）＋-ify（〜にする） → 典型として示す、典型的に示す"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/typify",
+          "https://www.merriam-webster.com/dictionary/typify"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/typify",
+            "note": "typifyを後期ラテン語typus（型、像）＋-fyに遡らせ、typusをギリシャ語typos（打った跡、型、印）、typtein（打つ）に関連づけている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/typify",
+            "note": "typifyの典型・代表例として示す、ある種類の特徴を具体的に表すという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ギリシャ語（ラテン語経由）",
+        "etymons": [
+          "typify",
+          "type",
+          "typus",
+          "typos",
+          "typtein",
+          "-fy"
+        ],
+        "historicalPath": [
+          "ギリシャ語 typtein（打つ）",
+          "ギリシャ語 typos（打痕、型、印）",
+          "ラテン語 typus（型、代表例）",
+          "英語 type＋-ify",
+          "英語 typify（典型的に示す）"
+        ],
+        "components": [
+          {
+            "form": "typus",
+            "kind": "base",
+            "gloss": "型・代表例",
+            "display": false
+          },
+          {
+            "form": "-fy",
+            "kind": "suffix",
+            "gloss": "〜にする",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "typ"
+        ],
+        "semanticBridge": "打った跡や形を表す語から、ある集団の特徴を代表する型を示す意味が生じ、そこから典型的に示す動詞になった。",
+        "summary": "typifyは、型・代表例を表すtypに-ifyが付き、典型的に示すを表す。",
+        "confidence": "high",
+        "notes": "資料の- fyを英語表面typifyに合わせて-ifyとして表示する。"
+      }
+    },
+    "omit": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "省く",
+        "root": "mit",
+        "parts": [
+          {
+            "form": "om",
+            "kind": "prefix",
+            "gloss": "強く・向かって"
+          },
+          {
+            "form": "mit",
+            "kind": "root",
+            "gloss": "手放す・送る"
+          }
+        ],
+        "derivation": "om-（強く・向かって）＋mit（手放す・送る） → 脇へ手放して、取り上げない・省く"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/omit",
+          "https://www.merriam-webster.com/dictionary/omit"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/omit",
+            "note": "omitをラテン語omittere（手放す、落とす、脇へ置く）、同化したob-＋mittere（手放す、送る）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/omit",
+            "note": "omitの何かを除外する、記載・発言しない、忘れて省くという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": [
+          "omit",
+          "omittere",
+          "ob-",
+          "mittere",
+          "*m(e)ith-"
+        ],
+        "historicalPath": [
+          "PIE *m(e)ith-（交換する、取り除く）",
+          "ラテン語 mittere（手放す、送る）",
+          "ラテン語 obmittere / omittere（脇へ手放す、落とす）",
+          "英語 omit（省く、記載しない）"
+        ],
+        "components": [
+          {
+            "form": "ob-",
+            "kind": "prefix",
+            "gloss": "向かって・強く",
+            "display": false
+          },
+          {
+            "form": "mittere",
+            "kind": "base",
+            "gloss": "手放す・送る",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "mit"
+        ],
+        "semanticBridge": "ものを手放して脇へ置く動作が、文章や行為から対象を取り除いて省く意味になった。",
+        "summary": "omitは、同化したob-（om-）＋mit（手放す・送る）から、省く・記載しないを表す。",
+        "confidence": "high",
+        "notes": "ob-がmの前でom-になった形を英語表示のomとして登録し、既存のmit rootへ対応させる。"
+      }
+    },
+    "clemency": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "慈悲",
+        "root": "clem",
+        "parts": [
+          {
+            "form": "clem",
+            "kind": "root",
+            "gloss": "穏やか"
+          },
+          {
+            "form": "-ency",
+            "kind": "suffix",
+            "gloss": "性質・状態"
+          }
+        ],
+        "derivation": "clem（穏やか）＋-ency（性質・状態） → 権力をもつ者が示す穏やかな処置、慈悲"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/clemency",
+          "https://www.merriam-webster.com/dictionary/clemency"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/clemency",
+            "note": "clemencyをラテン語clementia（穏やかさ、優しさ）、clemens（穏やかな）に遡らせ、clinare（傾く）・PIE *klei-説は異論付きで示している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/clemency",
+            "note": "clemencyの犯罪者などに対する慈悲、刑罰を軽くする寛大な処置という語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": [
+          "clemency",
+          "clementia",
+          "clemens",
+          "-ency",
+          "*klei-"
+        ],
+        "historicalPath": [
+          "ラテン語 clemens（穏やかな、柔和な）",
+          "ラテン語 clementia（穏やかさ、寛大さ）",
+          "古フランス語 clemence",
+          "英語 clemency（慈悲、寛大な処置）"
+        ],
+        "components": [
+          {
+            "form": "clemens",
+            "kind": "base",
+            "gloss": "穏やかな",
+            "display": false
+          },
+          {
+            "form": "-ia",
+            "kind": "suffix",
+            "gloss": "性質・状態",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "clem"
+        ],
+        "semanticBridge": "穏やかで厳しくない性質が、罰を軽くしたり許したりする権力者の慈悲・寛大さを表すようになった。",
+        "summary": "clemencyは、穏やかさを表すclemに名詞化要素が加わり、慈悲や寛大な処置を表す。",
+        "confidence": "high",
+        "notes": "既存のclem rootへ接続し、ラテン語-iaを英語表面の-encyとして表示する。"
+      }
+    },
+    "demise": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "desmettre",
+            "gloss": "手放す・退ける"
+          },
+          {
+            "term": "demise",
+            "gloss": "財産を移すこと"
+          },
+          {
+            "gloss": "死、終焉"
+          }
+        ],
+        "derivation": "財産や権力を次の者へ移すことから、その機会となる死・終焉へ → 死、終焉",
+        "source": "https://www.etymonline.com/word/demise",
+        "sources": [
+          "https://www.etymonline.com/word/demise",
+          "https://www.merriam-webster.com/dictionary/demise"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/demise",
+          "https://www.merriam-webster.com/dictionary/demise"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/demise",
+            "note": "demiseをアングロ・フランス語経由の古フランス語demis、desmettre（手放す、退ける）、ラテン語mittere（手放す、送る）に遡らせている。財産の移転から死の意味が生じた。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/demise",
+            "note": "demiseの死、終焉、財産や権利の移転という語義を確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語（ラテン語経由）",
+        "etymons": [
+          "demise",
+          "demis",
+          "desmettre",
+          "des-",
+          "mettre",
+          "mittere"
+        ],
+        "historicalPath": [
+          "ラテン語 mittere（手放す、送る）",
+          "古フランス語 desmettre（手放す、退ける）",
+          "アングロ・フランス語 demise（財産を移すこと）",
+          "英語 demise（死、終焉）"
+        ],
+        "components": [
+          {
+            "form": "desmettre",
+            "kind": "base",
+            "gloss": "手放す・退ける",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "土地や権力を次の者へ手放す法的な移転が、その移転を引き起こす重要人物の死、さらに一般的な死や終焉へ転じた。",
+        "summary": "demiseは、財産を手放し移すことを表す古フランス語から、死・終焉を表す。",
+        "confidence": "high",
+        "notes": "mittere系の語源は明らかだが、フランス語の語形変化と意味転換が大きいためA型へ単純分解しない。"
+      }
+    },
+    "melancholy": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "melas",
+            "gloss": "黒い"
+          },
+          {
+            "term": "kholē",
+            "gloss": "胆汁"
+          },
+          {
+            "gloss": "憂鬱、物悲しさ"
+          }
+        ],
+        "derivation": "古代医学で黒い胆汁が気分を沈ませると考えられたことから → 憂鬱、物悲しさ",
+        "source": "https://www.etymonline.com/word/melancholy",
+        "sources": [
+          "https://www.etymonline.com/word/melancholy",
+          "https://www.merriam-webster.com/dictionary/melancholy"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/melancholy",
+          "https://www.merriam-webster.com/dictionary/melancholy"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/melancholy",
+            "note": "melancholyを古フランス語melancolie、後期ラテン語melancholia、ギリシャ語melankholia（黒い胆汁）に遡らせ、melas（黒い）＋kholē（胆汁）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/melancholy",
+            "note": "melancholyの憂鬱な気分、物悲しさ、沈んだ状態という名詞・形容詞の語義を確認した。"
+          }
+        ],
+        "originLanguage": "ギリシャ語（ラテン語・古フランス語経由）",
+        "etymons": [
+          "melancholy",
+          "melancolie",
+          "melancholia",
+          "melankholia",
+          "melas",
+          "kholē"
+        ],
+        "historicalPath": [
+          "ギリシャ語 melas（黒い）＋kholē（胆汁）",
+          "ギリシャ語 melankholia（黒い胆汁、悲しみ）",
+          "後期ラテン語 melancholia",
+          "古フランス語 melancolie",
+          "英語 melancholy（憂鬱、物悲しさ）"
+        ],
+        "components": [
+          {
+            "form": "melas",
+            "kind": "base",
+            "gloss": "黒い",
+            "display": false
+          },
+          {
+            "form": "kholē",
+            "kind": "base",
+            "gloss": "胆汁",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "黒い胆汁が体内に過剰になると心が沈むという古代医学の説明が、長く続く憂鬱な気分の語として残った。",
+        "summary": "melancholyは、黒い胆汁を表すギリシャ語の複合語から、憂鬱や物悲しさを表す。",
+        "confidence": "high",
+        "notes": "ギリシャ語の複合語で、複合表現は熟語表示の扱いに合わせ、英語の単一root分解は行わない。"
+      }
+    },
+    "wrench": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "wrencan",
+            "gloss": "ねじる"
+          },
+          {
+            "term": "wrench",
+            "gloss": "強くねじる・引く"
+          },
+          {
+            "gloss": "激しい苦痛；ねじる道具"
+          }
+        ],
+        "derivation": "ものをねじり、力を加えて引く動作から、身体や心の痛み・工具の意味へ → 激しい苦痛；ねじる道具",
+        "source": "https://www.etymonline.com/word/wrench",
+        "sources": [
+          "https://www.etymonline.com/word/wrench",
+          "https://www.merriam-webster.com/dictionary/wrench"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/wrench",
+          "https://www.merriam-webster.com/dictionary/wrench"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/wrench",
+            "note": "wrenchを中英語wrenchen、古英語wrencan（ねじる）、ゲルマン系*wrankjanに遡らせ、PIE *wreng-（曲げる、ねじる）を示している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/wrench",
+            "note": "wrenchの強くねじる、引き離す、激しい苦痛、ねじるための工具という語義を確認した。"
+          }
+        ],
+        "originLanguage": "古英語（ゲルマン系）",
+        "etymons": [
+          "wrench",
+          "wrenchen",
+          "wrencan",
+          "*wrankjan",
+          "*wreng-"
+        ],
+        "historicalPath": [
+          "PIE *wreng-（曲げる、ねじる）",
+          "ゲルマン系 *wrankjan",
+          "古英語 wrencan（ねじる）",
+          "中英語 wrenchen",
+          "英語 wrench（ねじる、工具）"
+        ],
+        "components": [
+          {
+            "form": "wrench",
+            "kind": "base",
+            "gloss": "ねじる・引く",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "力を加えてねじる動作が、ねじりによる身体的な痛みや、物を回す工具の名称へ広がった。",
+        "summary": "wrenchは、ねじることを表す古英語・ゲルマン系の単一基体から、激しい苦痛や工具を表す。",
+        "confidence": "high",
+        "notes": "PIE *wreng-は語源経路の背景として記録するが、英語の表示単位としては分解しない。"
+      }
+    },
+    "filter": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "filtrum",
+            "gloss": "液体をこす布"
+          },
+          {
+            "term": "filter",
+            "gloss": "不純物をこすもの"
+          },
+          {
+            "gloss": "ろ過した、選別した"
+          }
+        ],
+        "derivation": "布を通して液体から不純物を取り除くことから、情報などを選別する意味へ → ろ過した、選別した",
+        "source": "https://www.etymonline.com/word/filter",
+        "sources": [
+          "https://www.etymonline.com/word/filter",
+          "https://www.merriam-webster.com/dictionary/filter"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/filter",
+          "https://www.merriam-webster.com/dictionary/filter"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/filter",
+            "note": "filterを古フランス語feutre（フェルト）、中世ラテン語filtrum（液体をこすフェルト）、西ゲルマン系*filtizに遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/filter",
+            "note": "filterの液体や気体から不純物を取り除く、情報を選別する、ろ過器という語義を確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語・中世ラテン語（ゲルマン系）",
+        "etymons": [
+          "filter",
+          "filtrum",
+          "feutre",
+          "*filtiz",
+          "*pel-"
+        ],
+        "historicalPath": [
+          "ゲルマン系 *filtiz（圧縮されたフェルト）",
+          "中世ラテン語 filtrum（液体をこすフェルト）",
+          "古フランス語 feutre / filtre",
+          "英語 filter（ろ過する、選別する）"
+        ],
+        "components": [
+          {
+            "form": "filtrum",
+            "kind": "base",
+            "gloss": "こすフェルト",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "フェルトを通して液体から不純物を分ける道具が、液体・気体・情報から不要なものを選び分ける機能の比喩になった。",
+        "summary": "filteredは、液体をこすフェルトを表す語から、ろ過した・選別したを表す。",
+        "confidence": "high",
+        "notes": "借用語のfiltrumと英語filterの綴り対応はあるが、英語の接頭辞・接尾辞によるA型分解はしない。"
+      }
+    },
+    "alleged": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "allege",
+            "gloss": "正式に主張する"
+          },
+          {
+            "term": "alleged",
+            "gloss": "証明されていないと主張された"
+          },
+          {
+            "gloss": "申し立てられた、疑惑の"
+          }
+        ],
+        "derivation": "法廷などで正式に主張されたが、まだ証明されていない状態から → 申し立てられた、疑惑の",
+        "source": "https://www.etymonline.com/word/alleged",
+        "sources": [
+          "https://www.etymonline.com/word/alleged",
+          "https://www.merriam-webster.com/dictionary/alleged"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/alleged",
+          "https://www.merriam-webster.com/dictionary/alleged"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/alleged",
+            "note": "allegedをallegeの過去分詞形容詞とし、allegeはフランス語の異なる動詞の形と意味が混ざり、ラテン語allegare/adlegare（証拠として提示する）にも関係すると説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/alleged",
+            "note": "allegedの証明されていないが主張された、申し立てられたという語義を確認した。"
+          }
+        ],
+        "originLanguage": "英語（アングロ・フランス語・ラテン語の混成経路）",
+        "etymons": [
+          "alleged",
+          "allege",
+          "aleger",
+          "eslegier",
+          "allegare",
+          "adlegare",
+          "legare"
+        ],
+        "historicalPath": [
+          "ラテン語 legare（委ねる、送る）",
+          "ラテン語 allegare / adlegare（提示する、証拠として挙げる）",
+          "古フランス語・アングロ・フランス語のallege系",
+          "英語 alleged（申し立てられた、未証明の）"
+        ],
+        "components": [
+          {
+            "form": "allege",
+            "kind": "base",
+            "gloss": "主張する・申し立てる",
+            "display": false
+          },
+          {
+            "form": "-ed",
+            "kind": "inflection",
+            "gloss": "過去分詞",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "法廷などで証拠として提示・主張されたことが、真実だと証明されたとは限らないという現在の用法になった。",
+        "summary": "allegedは、正式に主張するallegeの過去分詞から、申し立てられた・疑惑のを表す。",
+        "confidence": "medium",
+        "notes": "allegeの語源に複数のフランス語・ラテン語経路が混ざるため、過去分詞語尾を除くA型分解はしない。"
+      }
+    },
+    "debrief": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "任務後に事情聴取した",
+        "root": "brief",
+        "parts": [
+          {
+            "form": "de",
+            "kind": "prefix",
+            "gloss": "任務を終えて・離れて"
+          },
+          {
+            "form": "brief",
+            "kind": "root",
+            "gloss": "要点を伝える"
+          }
+        ],
+        "derivation": "de-（任務を終えて）＋brief（要点を伝える） → 任務後に事情を聞く、任務後に事情聴取した"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/debrief",
+          "https://www.merriam-webster.com/dictionary/debrief"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/debrief",
+            "note": "debriefを1945年のde-＋briefの形成と説明し、briefは指示や情報を与える動詞から来たとしている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/debrief",
+            "note": "debriefの任務終了後に報告を聞く、事情聴取するという語義を確認した。"
+          }
+        ],
+        "originLanguage": "英語（フランス語・ラテン語系基体からの派生）",
+        "etymons": [
+          "debrief",
+          "de-",
+          "brief",
+          "briefing",
+          "brevis"
+        ],
+        "historicalPath": [
+          "ラテン語 brevis（短い）",
+          "古フランス語 brief（短い文書、要点）",
+          "英語 brief（要点を伝える、説明する）",
+          "英語 de-＋brief（任務後に報告を聞く）",
+          "英語 debrief（事情聴取する）"
+        ],
+        "components": [
+          {
+            "form": "de-",
+            "kind": "prefix",
+            "gloss": "離れて・逆に",
+            "display": false
+          },
+          {
+            "form": "brief",
+            "kind": "base",
+            "gloss": "要点を伝える",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "brief"
+        ],
+        "semanticBridge": "要点を伝えるbriefに、任務を終えた後に行うことを表すde-が付き、任務後の報告聴取を表すようになった。",
+        "summary": "debriefは、de-（任務後に）＋brief（要点を伝える）から、任務後に事情聴取するを表す。",
+        "confidence": "high",
+        "notes": "1945年に明示された英語側のde-＋briefの形成であり、briefを新しいrootとして登録する。"
+      }
+    },
+    "abominable": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "非常にひどい",
+        "root": "omin",
+        "parts": [
+          {
+            "form": "ab",
+            "kind": "prefix",
+            "gloss": "離れて"
+          },
+          {
+            "form": "omin",
+            "kind": "root",
+            "gloss": "前兆"
+          },
+          {
+            "form": "-able",
+            "kind": "suffix",
+            "gloss": "〜に値する・〜できる"
+          }
+        ],
+        "derivation": "ab-（離れて）＋omin（前兆）＋-able（〜に値する） → 悪い前兆として忌み嫌うほど、非常にひどい"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/abominable",
+          "https://www.merriam-webster.com/dictionary/abominable"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/abominable",
+            "note": "abominableを古フランス語abominable、後期ラテン語abominabilis、ラテン語abominari（悪い前兆として嫌う）に遡らせ、ab（離れて）＋omin-（omen、前兆）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/abominable",
+            "note": "abominableの非常に悪い、忌まわしい、強い嫌悪を起こさせるという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（古フランス語経由）",
+        "etymons": [
+          "abominable",
+          "abominabilis",
+          "abominari",
+          "ab-",
+          "omin-",
+          "omen",
+          "-able"
+        ],
+        "historicalPath": [
+          "ラテン語 omen（前兆）",
+          "ラテン語 abominari（悪い前兆として嫌う）",
+          "後期ラテン語 abominabilis（嫌悪に値する）",
+          "古フランス語 abominable",
+          "英語 abominable（非常にひどい、忌まわしい）"
+        ],
+        "components": [
+          {
+            "form": "ab-",
+            "kind": "prefix",
+            "gloss": "離れて",
+            "display": false
+          },
+          {
+            "form": "omin-",
+            "kind": "base",
+            "gloss": "前兆",
+            "display": false
+          },
+          {
+            "form": "-able",
+            "kind": "suffix",
+            "gloss": "〜に値する・〜できる",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "omin"
+        ],
+        "semanticBridge": "悪い前兆を遠ざけ、忌み嫌う行為が、見るだけで嫌悪を起こさせるほどひどいものを表す形容詞になった。",
+        "summary": "abominableは、ab-（離れて）＋omin（前兆）＋-ableから、非常にひどい・忌まわしいを表す。",
+        "confidence": "high",
+        "notes": "omin-はラテン語omenの語幹で、英語abominableの綴りに対応するominとしてroot登録する。"
+      }
+    }
+  }
+}

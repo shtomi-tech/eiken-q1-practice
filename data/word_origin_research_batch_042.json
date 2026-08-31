@@ -1,0 +1,803 @@
+{
+  "meta": {
+    "batchId": "batch-042",
+    "note": "未確認B型の次の25語。語源の経路と表面形の語幹・接辞対応を個別に確認し、直接説明できる8語をA型へ、単純借用語・複合語・語源不確定語はB型に残す。"
+  },
+  "dictionary": {
+    "roots": {
+      "gar": {
+        "gloss": "保護する・置く",
+        "origin": "古フランス語 garer / garir、ゲルマン語系 *war-",
+        "note": "車や船を保護して置くイメージ。garageでは表面形garとして現れる。"
+      },
+      "pair": {
+        "gloss": "準備する・整える",
+        "origin": "ラテン語 parare",
+        "note": "repairではラテン語parareに対応する表面形pairとして表示する。英語pair（二つ組）とは別の語源。"
+      },
+      "entr": {
+        "gloss": "入る",
+        "origin": "古フランス語 entrer、ラテン語 intrare",
+        "note": "中へ入る動作。entranceでは表面形entrとして現れる。"
+      },
+      "count": {
+        "gloss": "数える・計算する",
+        "origin": "ラテン語 computare / 古フランス語 compter",
+        "note": "数え上げて計算するイメージ。discountではdis-と結び付く。"
+      },
+      "fold": {
+        "gloss": "折る・曲げる",
+        "origin": "古英語 faldan / ゲルマン語系 *falthan",
+        "note": "物を折り重ねる動作。folderは「折るもの・折る人」から書類入れへ発達した。"
+      },
+      "appoint": {
+        "gloss": "定める・整える",
+        "origin": "古フランス語 apointer / à point",
+        "note": "事柄を一点に定めて整えるイメージ。appointmentの予定・約束につながる。"
+      },
+      "mess": {
+        "gloss": "送る・伝える",
+        "origin": "ラテン語 missus / mittere、古フランス語 message",
+        "note": "messageでは古フランス語の表面語幹messとして表示する。英語mess（混乱）とは別の語源。"
+      }
+    }
+  },
+  "entries": {
+    "garage": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "車庫",
+        "root": "gar",
+        "parts": [
+          { "form": "gar", "kind": "root", "gloss": "保護する・置く" },
+          { "form": "-age", "kind": "suffix", "gloss": "〜すること・場所" }
+        ],
+        "derivation": "garer（保護して置く）＋-age（行為・場所） → 車を置いて保護する場所、車庫"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/garage",
+          "https://www.merriam-webster.com/dictionary/garage"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/garage", "note": "garageをフランス語garage（車両を保護して置く場所）、garer（保護する・船を泊める）、古フランス語garirへ遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/garage", "note": "garageをフランス語からの借用語とし、garerに接尾辞- ageが付いた形として説明している。" }
+        ],
+        "originLanguage": "フランス語・古フランス語・ゲルマン語系・英語",
+        "etymons": ["garage", "garer", "garir", "*waron", "*war-", "*wer-", "-age"],
+        "historicalPath": ["ゲルマン語系 *war-（守る、保護する）", "古フランス語 garir（保護する、救う）", "フランス語 garer（保護して置く、船を泊める）", "フランス語 garage → 英語 garage（車庫）"],
+        "components": [
+          { "form": "garer", "kind": "base", "gloss": "保護して置く" },
+          { "form": "-age", "kind": "suffix", "gloss": "行為・場所" }
+        ],
+        "rootCandidates": ["gar", "war"],
+        "semanticBridge": "物や船を保護して置く場所から、特に自動車を保管・修理する場所へ意味が限定された。",
+        "summary": "garageはgarer＋-ageという語源と表面形の対応を説明できるためA型に設定する。",
+        "confidence": "high"
+      }
+    },
+    "greet": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 gretan（近づく、接触する、歓迎する）に由来。人に声をかけて迎えることから → 挨拶する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/greet",
+          "https://www.merriam-webster.com/dictionary/greet"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/greet", "note": "greetを古英語 gretan（接触する、近づく、攻撃する、挨拶する）と西ゲルマン語系に遡らせ、語源には不確実性があると説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/greet", "note": "greetの現代語義として挨拶・歓迎を確認し、古英語gretanを語源としている。" }
+        ],
+        "originLanguage": "古英語・西ゲルマン語系・英語・語源一部不確定",
+        "etymons": ["greet", "gretan", "*grotjan", "*grætanan", "*gher-"],
+        "historicalPath": ["古英語 gretan（近づく、接触する）", "人に声をかけて迎える意味へ発達", "英語 greet（挨拶する、歓迎する）"],
+        "components": [
+          { "form": "gretan", "kind": "word", "gloss": "近づく、挨拶する" }
+        ],
+        "rootCandidates": ["gret", "gher"],
+        "semanticBridge": "相手に近づき接触する広い意味から、声をかけて歓迎・挨拶する意味が中心になった。",
+        "summary": "greetは古英語系の単純語で語源に不確実性もあるため、安定した語根・接辞表示を置かずB型に残す。",
+        "confidence": "medium"
+      }
+    },
+    "repair": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "修理する",
+        "root": "pair",
+        "parts": [
+          { "form": "re", "kind": "prefix", "gloss": "再び・元へ" },
+          { "form": "pair", "kind": "root", "gloss": "準備する・整える" }
+        ],
+        "derivation": "再び整えて元のよい状態に戻す → 修理する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/repair",
+          "https://www.merriam-webster.com/dictionary/repair"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/repair", "note": "修理する意味のrepairを古フランス語 reparer、ラテン語 reparare（元に戻す）に遡らせ、re-（再び）＋parare（準備する、整える）と説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/repair", "note": "repairの現代語義として壊れた状態を直し、よい状態へ戻すことを確認した。" }
+        ],
+        "originLanguage": "ラテン語・古フランス語・中英語・英語",
+        "etymons": ["repair", "reparer", "reparare", "re-", "parare", "*pere-"],
+        "historicalPath": ["ラテン語 re-（再び）＋parare（準備する、整える）", "ラテン語 reparare（元の状態へ戻す）", "古フランス語 reparer", "中英語 reparen → 英語 repair（修理する）"],
+        "components": [
+          { "form": "re-", "kind": "prefix", "gloss": "再び、元へ" },
+          { "form": "parare", "kind": "base", "gloss": "準備する、整える" }
+        ],
+        "rootCandidates": ["par", "pere"],
+        "semanticBridge": "物をもう一度整えて元の状態へ戻すことから、壊れた物を直す意味になった。",
+        "summary": "repairはre-＋parareが直接確認できる。表示上は既存のpar（等しい）との衝突を避け、parareに対応する表面形pairを語根としてA型にする。",
+        "confidence": "medium"
+      }
+    },
+    "touch": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 tochier（触る、打つ、叩く）、俗ラテン語 *toccareに由来。打つ動作が軽い接触の意味へ移って → 触る"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/touch",
+          "https://www.merriam-webster.com/dictionary/touch"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/touch", "note": "touchを中英語 touchen、古フランス語 tochier、俗ラテン語 *toccare（鐘などを打つ）に遡らせ、模倣語の可能性を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/touch", "note": "touchの現代語義として身体的接触、影響、扱うことなどを確認した。" }
+        ],
+        "originLanguage": "俗ラテン語・古フランス語・中英語・英語・語源一部不確定",
+        "etymons": ["touch", "touchen", "tochier", "*toccare"],
+        "historicalPath": ["俗ラテン語 *toccare（打つ、叩く）", "古フランス語 tochier（打つ、触る）", "中英語 touchen", "英語 touch（触る、接触する）"],
+        "components": [
+          { "form": "tochier / *toccare", "kind": "word", "gloss": "打つ、触る" }
+        ],
+        "rootCandidates": ["toc", "tocc"],
+        "semanticBridge": "鐘などを打つ動作から、より軽い物理的接触、さらに感情や関係に影響を与える意味へ広がった。",
+        "summary": "touchはフランス語・俗ラテン語を経た単純語で、現代英語の表面形に安定した語根・接辞分解を置かずB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "measure": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 mesurer、後期ラテン語 mensurare、ラテン語 mensura（測定）に由来。基準と比べて量を確かめることから → 測る"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/measure",
+          "https://www.merriam-webster.com/dictionary/measure"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/measure", "note": "measureを古フランス語 mesurer、後期ラテン語 mensurare、ラテン語 mensura・metiri、PIE *me-（測る）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/measure", "note": "measureの現代語義として、基準と比較して大きさ・量を確かめることを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・中英語・英語",
+        "etymons": ["measure", "mesurer", "mensurare", "mensura", "metiri", "*me-"],
+        "historicalPath": ["PIE *me-（測る）", "ラテン語 metiri / mensura", "後期ラテン語 mensurare", "古フランス語 mesurer → 英語 measure（測る）"],
+        "components": [
+          { "form": "mensurare / mesurer", "kind": "word", "gloss": "測る、量る" }
+        ],
+        "rootCandidates": ["me", "mens"],
+        "semanticBridge": "基準と比べて量を確かめる行為から、測定値・基準・節度・対策などの名詞的な意味にも広がった。",
+        "summary": "measureはラテン語系の単純借用語で、現代英語のmeasureを学習用の語根・接辞へ無理に切り分けずB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "whisper": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 hwisprian（とても小さな声で話す、つぶやく）に由来。音をまねた語と考えられ → ささやく"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/whisper",
+          "https://www.merriam-webster.com/dictionary/whisper"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/whisper", "note": "whisperを古英語 hwisprian、西ゲルマン語系 *hwis-、PIE *kwei-（シューという音、口笛）に遡らせ、模倣的な語源としている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/whisper", "note": "whisperの現代語義として、声をほとんど出さずに話すことやその声を確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・インド・ヨーロッパ祖語・英語",
+        "etymons": ["whisper", "hwisprian", "*hwis-", "*kwei-"],
+        "historicalPath": ["PIE *kwei-（シューという音、口笛）", "ゲルマン語系 *hwis-", "古英語 hwisprian", "英語 whisper（ささやく）"],
+        "components": [
+          { "form": "hwisprian", "kind": "word", "gloss": "小声で話す" }
+        ],
+        "rootCandidates": ["hwis", "kwei"],
+        "semanticBridge": "息の音や小さな音をまねた語から、声を抑えて話す行為とその声を表す語へ定着した。",
+        "summary": "whisperは音をまねた可能性のある古英語系の単純語で、現代形を安定した接辞構造に分解しないためB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "cancel": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 canceler、ラテン語 cancellare（格子状にする、取り消す）に由来。文書を格子線で消したことから → 中止する、取り消す"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/cancel",
+          "https://www.merriam-webster.com/dictionary/cancel"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/cancel", "note": "cancelを古フランス語 canceler、ラテン語 cancellare（格子にする、取り消す）、cancelli（格子）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/cancel", "note": "cancelの現代語義として、予定や契約を取り消すこと、無効にすることを確認した。" }
+        ],
+        "originLanguage": "ラテン語・古フランス語・中英語・英語",
+        "etymons": ["cancel", "canceler", "cancellare", "cancelli", "cancellus", "cancer"],
+        "historicalPath": ["ラテン語 cancelli（格子、格子状の仕切り）", "ラテン語 cancellare（格子線を引いて消す）", "古フランス語 canceler", "英語 cancel（中止する、取り消す）"],
+        "components": [
+          { "form": "cancellare", "kind": "word", "gloss": "格子状にする、取り消す" }
+        ],
+        "rootCandidates": ["cancell", "cancer"],
+        "semanticBridge": "文書を線で消して無効にする具体的な行為から、予定・契約・注文などを取り消す一般的な意味へ広がった。",
+        "summary": "cancelはラテン語の単純語幹に由来する借用語で、現代英語に生産的な語根・接辞分解を置かずB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "schedule": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 cedule、後期ラテン語 schedula（紙片、メモ）、ギリシャ語 skhidē（裂片）に由来。紙に書いた一覧から → 予定、日程"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/schedule",
+          "https://www.merriam-webster.com/dictionary/schedule"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/schedule", "note": "scheduleを中英語 sedule・cedule、古フランス語 cedule、後期ラテン語 schedula（紙片）、ギリシャ語 skhidē（裂片）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/schedule", "note": "scheduleの現代語義として予定表・時刻表・計画を確認し、英米で発音が異なる経緯も確認した。" }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・フランス語・中英語・英語",
+        "etymons": ["schedule", "sedule", "cedule", "schedula", "scheda", "skhidē", "skhizein"],
+        "historicalPath": ["ギリシャ語 skhidē（裂片）", "後期ラテン語 schedula（紙片、メモ）", "古フランス語 cedule", "英語 schedule（一覧、予定表、日程）"],
+        "components": [
+          { "form": "schedula / cedule", "kind": "word", "gloss": "紙片、一覧" }
+        ],
+        "rootCandidates": ["sched", "skhid"],
+        "semanticBridge": "紙片に書いた一覧や付記から、事項を時系列に並べた予定表・日程を表す語へ発達した。",
+        "summary": "scheduleは多言語を経た単純借用語で、綴りのscheduleを安全な現代英語の語根・接辞へ分解せずB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "budget": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 bougette（小さな袋）、ラテン語 bulga（革袋）に由来。財務計画を入れた大臣の財布から → 予算"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/budget",
+          "https://www.merriam-webster.com/dictionary/budget"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/budget", "note": "budgetを古フランス語 bougette（小さな袋）、bouge（革袋）、ラテン語 bulga（革袋）、ガリア語系に遡らせている。財務上の意味は財布に入れた財政計画から発達した。" },
+          { "url": "https://www.merriam-webster.com/dictionary/budget", "note": "budgetの現代語義として収入・支出の見積もりや予算を確認し、Middle French bougette・Latin bulgaの経路を確認した。" }
+        ],
+        "originLanguage": "ガリア語系・ラテン語・フランス語・中英語・英語",
+        "etymons": ["budget", "bougette", "bouge", "bulga", "*bhelgh-", "*bhel-"],
+        "historicalPath": ["PIE *bhel-（膨らむ）", "ラテン語 bulga（革袋）", "古フランス語 bougette（小袋）", "英語 budget（財布、財政計画、予算）"],
+        "components": [
+          { "form": "bougette / bulga", "kind": "word", "gloss": "革袋、小袋" }
+        ],
+        "rootCandidates": ["bulg", "bhelg"],
+        "semanticBridge": "財物を入れる小袋から、財務担当者が財布に入れて持ち歩く支出・収入計画を経て、現代の予算になった。",
+        "summary": "budgetは袋を表すフランス語・ラテン語系の単純借用語で、budgetを英語の語根・接辞へ無理に分解せずB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "entrance": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "入口",
+        "root": "entr",
+        "parts": [
+          { "form": "entr", "kind": "root", "gloss": "入る" },
+          { "form": "-ance", "kind": "suffix", "gloss": "〜すること・状態" }
+        ],
+        "derivation": "中へ入ること → 入口・入場"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/entrance",
+          "https://www.merriam-webster.com/dictionary/entrance"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/entrance", "note": "名詞entranceをフランス語 entrance、entrer（入る）に由来するものとして説明し、入口・扉の意味が後に発達したと示している。動詞entrance（うっとりさせる）は別語源である。" },
+          { "url": "https://www.merriam-webster.com/dictionary/entrance", "note": "entranceの名詞として、入る行為・場所・権利、入口や入場の意味を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・中英語・英語",
+        "etymons": ["entrance", "entrer", "intrare", "intra", "-ance", "*en"],
+        "historicalPath": ["ラテン語 intrare（中へ入る）", "古フランス語 entrer", "フランス語 entrance（入る行為）", "英語 entrance（入場、入口）"],
+        "components": [
+          { "form": "entrer / entr", "kind": "base", "gloss": "入る" },
+          { "form": "-ance", "kind": "suffix", "gloss": "行為・状態" }
+        ],
+        "rootCandidates": ["entr", "intr"],
+        "semanticBridge": "中へ入る行為から、そこへ入るための場所・入口、さらに入場する権利や入場そのものへ意味が広がった。",
+        "summary": "名詞entranceはentrer由来で、entr＋-anceという学習上の表面形対応を示せるためA型にする。動詞entrance（恍惚にする）とは分けて扱う。",
+        "confidence": "medium"
+      }
+    },
+    "shelf": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "中低ドイツ語 schelf、または古英語 scylfeに関係するとされる。割れた木片を水平に置いたものから → 棚"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/shelf",
+          "https://www.merriam-webster.com/dictionary/shelf"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/shelf", "note": "shelfを中低ドイツ語 schelf、または古英語 scylfeに関係する可能性がある語とし、ゲルマン祖語 *skelf-（割る）・PIE *skel-との関係を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/shelf", "note": "shelfの現代語義として物を載せる水平な板・棚や大陸棚を確認した。" }
+        ],
+        "originLanguage": "古英語・中低ドイツ語・ゲルマン語系・英語・語源一部不確定",
+        "etymons": ["shelf", "schelf", "scylfe", "*skelf-", "*skel-"],
+        "historicalPath": ["ゲルマン語系 *skelf-（割る）", "中低ドイツ語 schelf または古英語 scylfe", "中英語 shelf", "英語 shelf（棚、棚状の場所）"],
+        "components": [
+          { "form": "schelf / scylfe", "kind": "word", "gloss": "棚、割れた木片" }
+        ],
+        "rootCandidates": ["skelf", "skel"],
+        "semanticBridge": "木片や岩の張り出しのような水平面から、物を置く棚、さらに海底の棚状地形へ意味が広がった。",
+        "summary": "shelfは由来に複数説があり、古いゲルマン語系の単純語で表面形を確実な接辞構造に分解できないためB型に残す。",
+        "confidence": "medium"
+      }
+    },
+    "customer": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "アングロフランス語 custumer、古フランス語 coustumier、ラテン語 consuetudo（習慣、慣行）に関係する。税関係者から常連の買い手へ → 客、顧客"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/customer",
+          "https://www.merriam-webster.com/dictionary/customer"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/customer", "note": "customerを中英語 custumer、アングロフランス語 custumer、古フランス語 coustumier、ラテン語 custumarius（税・関税に関する者）に遡らせ、customとの関係を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/customer", "note": "customerの現代語義として商品やサービスを購入・利用する人、取引相手を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・中英語・英語",
+        "etymons": ["customer", "custumer", "coustumier", "custumarius", "consuetudo", "custom"],
+        "historicalPath": ["ラテン語 consuetudo（習慣、慣行）", "中世ラテン語 custumarius（関税に関する者）", "古フランス語 coustumier / アングロフランス語 custumer", "英語 customer（買い手、客）"],
+        "components": [
+          { "form": "coustumier / custumer", "kind": "word", "gloss": "慣行・関税に関する者" }
+        ],
+        "rootCandidates": ["custom", "coustum"],
+        "semanticBridge": "関税や慣行に関係する人から、特定の店を習慣的に利用する買い手、さらに一般の取引相手へ意味が広がった。",
+        "summary": "customerはcustomと関係するが、フランス語・ラテン語の職業語を経た歴史があり、英語custom＋-erと単純に同一視しないためB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "cashier": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 caissier（会計係）、caisse（金箱）に由来し、中低ドイツ語 kassierの影響も考えられる。 → レジ係"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/cashier",
+          "https://www.merriam-webster.com/dictionary/cashier"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/cashier", "note": "cashier（会計係）をフランス語 caissier、caisse（金箱）に遡らせ、英語への直接経路には中低ドイツ語 kassierの可能性もあると説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/cashier", "note": "cashierの現代語義として、店や組織で金銭の受け取り・精算を担当する人を確認した。" }
+        ],
+        "originLanguage": "ラテン語・イタリア語・フランス語・オランダ語系・英語",
+        "etymons": ["cashier", "caissier", "caisse", "cash", "capsa", "kassier"],
+        "historicalPath": ["ラテン語 capsa（箱）", "イタリア語 cassa / フランス語 caisse（現金箱）", "フランス語 caissier（会計係）", "英語 cashier（レジ係、会計係）"],
+        "components": [
+          { "form": "caissier / caisse", "kind": "word", "gloss": "会計係、金箱" }
+        ],
+        "rootCandidates": ["cais", "cash", "caps"],
+        "semanticBridge": "金銭を入れる箱から、その箱を管理する会計係、さらに店頭で精算するレジ係へ意味が具体化した。",
+        "summary": "cashierはフランス語・オランダ語系の職業語で、英語cash＋-erまたはcash＋-ierと単純化するのは語源を正確に表さないためB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "basket": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "アングロフランス語 bascatに由来し、ラテン語 bascauda（容器）・ケルト語との関係が提案されるが不確実。 → かご"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/basket",
+          "https://www.merriam-webster.com/dictionary/basket"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/basket", "note": "basketを13世紀のアングロフランス語 bascatに遡らせるが、語源は不明瞭で、ラテン語 bascauda・ケルト語説にも慎重な説明を付けている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/basket", "note": "basketの現代語義として編んだ容器、バスケットボールのゴールや得点を確認し、アングロフランス語・ラテン語・ケルト語の経路を示している。" }
+        ],
+        "originLanguage": "ラテン語・ケルト語説・フランス語・中英語・英語・語源不確定",
+        "etymons": ["basket", "bascat", "baschoue", "bascauda", "fascis"],
+        "historicalPath": ["アングロフランス語 bascat（かご）", "ラテン語 bascaudaとの関係が提案されるが不確実", "中英語 basket", "英語 basket（かご、ゴール、得点）"],
+        "components": [
+          { "form": "bascat / bascauda", "kind": "word", "gloss": "かご、容器" }
+        ],
+        "rootCandidates": ["basc", "fasc"],
+        "semanticBridge": "編んだ容器から、形や用途が似たバスケットボールのゴール・得点などの用法へ広がった。",
+        "summary": "basketは借用経路と語源説が不確実で、bas＋-ketのような分解を出典が支えないためB型に残す。",
+        "confidence": "medium"
+      }
+    },
+    "discount": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "割引",
+        "root": "count",
+        "parts": [
+          { "form": "dis", "kind": "prefix", "gloss": "離れて・差し引いて" },
+          { "form": "count", "kind": "root", "gloss": "数える・計算する" }
+        ],
+        "derivation": "数え上げた額から離して差し引く → 割引"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/discount",
+          "https://www.merriam-webster.com/dictionary/discount"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/discount", "note": "discountをフランス語 descompte、ラテン語 discomputareに遡らせ、dis-（離れて、差し引いて）＋computare（数える）と説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/discount", "note": "discountの現代語義として価格や債務から差し引くこと、割引価格を確認し、ラテン語 dis-＋computareの経路を示している。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["discount", "descompte", "desconter", "discomputare", "dis-", "computare", "count"],
+        "historicalPath": ["ラテン語 dis-（離れて、差し引いて）＋computare（数え上げる）", "ラテン語 discomputare（差し引いて計算する）", "古フランス語 desconter / フランス語 décompte", "英語 discount（差し引き、割引）"],
+        "components": [
+          { "form": "dis-", "kind": "prefix", "gloss": "離れて、差し引いて" },
+          { "form": "computare / count", "kind": "base", "gloss": "数える、計算する" }
+        ],
+        "rootCandidates": ["count", "put"],
+        "semanticBridge": "合計を計算した額から一部を離して差し引くことから、価格や債務の減額、さらに重要性を割り引いて考える意味へ広がった。",
+        "summary": "discountはdis-＋computare（count）という構成が出典で明確なためA型に設定する。",
+        "confidence": "high"
+      }
+    },
+    "compass": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "コンパス",
+        "root": "pass",
+        "parts": [
+          { "form": "com", "kind": "prefix", "gloss": "ともに" },
+          { "form": "pass", "kind": "root", "gloss": "歩む・進む" }
+        ],
+        "derivation": "ともに歩測して円を描く道具 → コンパス、羅針盤"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/compass",
+          "https://www.merriam-webster.com/dictionary/compass"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/compass", "note": "compassを古フランス語 compas・compasser、俗ラテン語 *compassare（歩測する）、ラテン語 com（ともに）＋passus（一歩）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/compass", "note": "compassの現代語義として円を描く器具、方位を示す羅針盤、範囲を確認し、ラテン語 com＋passusの経路を確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・中英語・英語",
+        "etymons": ["compass", "compas", "compasser", "*compassare", "com", "passus", "*pete-"],
+        "historicalPath": ["ラテン語 com（ともに）＋passus（一歩）", "俗ラテン語 *compassare（歩測する、周囲を回る）", "古フランス語 compas", "英語 compass（円を描く器具、羅針盤、範囲）"],
+        "components": [
+          { "form": "com-", "kind": "prefix", "gloss": "ともに" },
+          { "form": "passus / pass", "kind": "base", "gloss": "一歩、歩む" }
+        ],
+        "rootCandidates": ["pass", "pete"],
+        "semanticBridge": "歩数で円周や範囲を測ることから円を描く器具となり、形が似た航海用の方位器具にも名前が移った。",
+        "summary": "compassはcom-＋passusという構成が出典で直接説明でき、既存のpass語根とも整合するためA型に設定する。",
+        "confidence": "high"
+      }
+    },
+    "cabin": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 cabane、古オック語 cabana、後期ラテン語 capanna（小屋）に由来するが、さらに古い起源は不確か。 → 小屋、客室"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/cabin",
+          "https://www.merriam-webster.com/dictionary/cabin"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/cabin", "note": "cabinを古フランス語 cabane、古オック語 cabana、後期ラテン語 capanna（小屋）に遡らせるが、さらに古い語源は不確かとしている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/cabin", "note": "cabinの現代語義として小さな簡素な住居、船・飛行機などの客室を確認し、中フランス語 cabaneと不確かな先行形を示している。" }
+        ],
+        "originLanguage": "後期ラテン語・古オック語・フランス語・中英語・英語・語源不確定",
+        "etymons": ["cabin", "caban", "cabane", "cabana", "capanna"],
+        "historicalPath": ["不確かな先行形 *capanna（小屋）", "後期ラテン語 capanna", "古オック語 cabana / 古フランス語 cabane", "中英語 caban → 英語 cabin（小屋、客室）"],
+        "components": [
+          { "form": "cabane / capanna", "kind": "word", "gloss": "小屋、簡素な住居" }
+        ],
+        "rootCandidates": ["caban", "capann"],
+        "semanticBridge": "簡素な小屋から、船・列車・飛行機などの区切られた居室、さらに客室全般へ意味が広がった。",
+        "summary": "cabinはロマンス諸語を経た単純借用語で、先行形自体も不確かなため、現代形を語根・接辞に分解せずB型に残す。",
+        "confidence": "medium"
+      }
+    },
+    "map": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 mappe、古フランス語 mapemonde、中世ラテン語 mappa mundi（世界の布・地図）を短縮した語。 → 地図"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/map",
+          "https://www.merriam-webster.com/dictionary/map"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/map", "note": "mapを中英語 mapemounde（世界地図）、フランス語 mappe、古フランス語 mapemonde、中世ラテン語 mappa mundiに遡らせ、mappa（布）から地図の意味が発達したと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/map", "note": "mapの現代語義として地表や地域を平面上に表した図、計画・図式化する動詞を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・中英語・英語",
+        "etymons": ["map", "mappe", "mapemounde", "mappa mundi", "mappa", "mundus"],
+        "historicalPath": ["ラテン語 mappa（布）＋mundi（世界の）", "中世ラテン語 mappa mundi（世界地図）", "古フランス語 mapemonde / フランス語 mappe", "英語 map（地図）"],
+        "components": [
+          { "form": "mappa mundi", "kind": "phrase", "gloss": "世界の布、世界地図" }
+        ],
+        "rootCandidates": ["mapp", "mund"],
+        "semanticBridge": "地図を布に描いたことから、世界地図を表す語となり、さらに比喩的に物事の詳細な図解や計画も表すようになった。",
+        "summary": "mapはmappa mundiを短縮した単純借用語で、mapを英語の語根・接辞に分解しないためB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "parade": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 parade、イタリア語 parate、スペイン語 paradaを経て、ラテン語 parare（整える、準備する）に由来。整列・見せることから → パレード、行列"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/parade",
+          "https://www.merriam-webster.com/dictionary/parade"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/parade", "note": "paradeをフランス語・イタリア語・スペイン語の形から、俗ラテン語 *parata、ラテン語 parare（整える、準備する、飾る）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/parade", "note": "paradeの現代語義として祝祭などの行列、軍隊の整列、誇示を確認し、フランス語paradeとparer＋-adeの経路を示している。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・ロマンス諸語・フランス語・英語",
+        "etymons": ["parade", "parate", "parada", "*parata", "parare", "*pere-"],
+        "historicalPath": ["PIE *pere-（生み出す、用意する）", "ラテン語 parare（整える、準備する、飾る）", "ロマンス諸語 parade / parate / parada", "英語 parade（軍隊の整列、行列、誇示）"],
+        "components": [
+          { "form": "parare / parade", "kind": "word", "gloss": "整える、見せる" }
+        ],
+        "rootCandidates": ["par", "pere"],
+        "semanticBridge": "人や物を整えて見せることから、軍隊の整列、さらに祝祭などで人々が進む公開の行列へ意味が発達した。",
+        "summary": "paradeは複数のロマンス諸語を経た借用語で、par＋-adeとすると既存のpar（等しい）と衝突するため、学習用のA型分解を置かずB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "costume": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 costume、イタリア語 costume、ラテン語 consuetudo（習慣、慣行）に由来。時代・地域に固有の服装から → 衣装、仮装"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/costume",
+          "https://www.merriam-webster.com/dictionary/costume"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/costume", "note": "costumeをフランス語 costume、イタリア語 costume、ラテン語 consuetudo（習慣、慣行）に遡らせ、customと同源だが別経路で英語へ入った語と説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/costume", "note": "costumeの現代語義として時代・地域などに特徴的な服装、特定の人物や場面に見せるための衣装を確認した。" }
+        ],
+        "originLanguage": "ラテン語・イタリア語・フランス語・英語",
+        "etymons": ["costume", "costume", "consuetudo", "consuetus", "custom"],
+        "historicalPath": ["ラテン語 consuetudo（習慣、慣行）", "イタリア語 costume（習慣、服装）", "フランス語 costume", "英語 costume（時代衣装、衣装、仮装）"],
+        "components": [
+          { "form": "costume / consuetudo", "kind": "word", "gloss": "習慣、服装" }
+        ],
+        "rootCandidates": ["consuet", "costum"],
+        "semanticBridge": "ある時代・地域に習慣的な服装を指したことから、舞台や仮装で身に付ける衣装全般へ意味が広がった。",
+        "summary": "costumeはcustomと同源だが別経路の単純借用語で、cost＋-umeなどの表面分解を出典が支えないためB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "festival": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 festival、 中世ラテン語 festivalis、ラテン語 festum・festus（祝祭、喜ばしい）に由来。 → 祭り、行事"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/festival",
+          "https://www.merriam-webster.com/dictionary/festival"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/festival", "note": "festivalをfestival dayの短縮形、古フランス語 festival、中世ラテン語 festivalis、ラテン語 festum・festusに遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/festival", "note": "festivalの現代語義として祝祭日、特定の目的で行われる催しや行事を確認した。" }
+        ],
+        "originLanguage": "ラテン語・中世ラテン語・古フランス語・英語",
+        "etymons": ["festival", "festivalis", "festum", "festus", "festival day"],
+        "historicalPath": ["ラテン語 festum / festus（祝祭、喜ばしい）", "中世ラテン語 festivalis", "古フランス語 festival", "英語 festival（祭り、行事）"],
+        "components": [
+          { "form": "festivalis / festum", "kind": "word", "gloss": "祝祭、祝祭の" }
+        ],
+        "rootCandidates": ["fest", "festival"],
+        "semanticBridge": "宗教的・季節的な祝祭日から、音楽・映画・地域文化など特定の目的で開かれる行事全般へ意味が広がった。",
+        "summary": "festivalはfestival dayの短縮とラテン語系の形を経た単純語で、fest＋-ivalという英語接辞分解を置かずB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "fireworks": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "fire（火）＋work（作り出すもの）からなる複合語。火薬で光や音の spectacleを作るものから → 花火"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/fireworks",
+          "https://www.merriam-webster.com/dictionary/fireworks"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/fireworks", "note": "fireworksはfire＋work(s)の複合表現で、16世紀には軍事用の爆発物を指し、勝利や平和を祝う光景へ用法が広がった。" },
+          { "url": "https://www.merriam-webster.com/dictionary/fireworks", "note": "fireworkを燃焼する火薬で光や音の鮮やかな表示を作る装置とし、複数形fireworksが花火の表示全体を表すことを確認した。" }
+        ],
+        "originLanguage": "古英語・中英語・英語",
+        "etymons": ["fireworks", "firework", "fire", "work"],
+        "historicalPath": ["英語 fire（火）＋work（働き、作り出すもの）", "16世紀ごろ軍事用爆発物を表すfirework", "祝祭の光景を表す複数形fireworks", "英語 fireworks（花火）"],
+        "components": [
+          { "form": "fire + work", "kind": "compound", "gloss": "火で作り出すもの" }
+        ],
+        "rootCandidates": ["fire", "work"],
+        "semanticBridge": "火薬を使う装置から、祝祭で打ち上げる光と音の表示、さらに感情の激しい衝突や華やかな表現の比喩へ広がった。",
+        "summary": "fireworksはfire＋work(s)の複合語であり、複合表現をB型にそろえる方針に従ってB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "folder": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "フォルダー",
+        "root": "fold",
+        "parts": [
+          { "form": "fold", "kind": "root", "gloss": "折る・曲げる" },
+          { "form": "-er", "kind": "suffix", "gloss": "〜するもの・人" }
+        ],
+        "derivation": "fold（折る）＋-er（〜するもの） → 折るもの、折りたたんだ書類入れ・フォルダー"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/folder",
+          "https://www.merriam-webster.com/dictionary/folder"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/folder", "note": "folderを1550年代の「折る人・もの」、後の「折りたたんだ書類入れ」とし、foldから作られた動作主名詞と説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/folder", "note": "folderの現代語義として折るもの、折りたたんだ印刷物、書類を入れるカバー、コンピューターのフォルダーを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・中英語・英語",
+        "etymons": ["folder", "fold", "folden", "faldan", "*falthan", "*pel-", "-er"],
+        "historicalPath": ["PIE *pel-（折る）", "古英語 faldan / fealdan（折る、包む）", "中英語 folden", "英語 fold＋-er → folder（折るもの、書類入れ）"],
+        "components": [
+          { "form": "fold", "kind": "base", "gloss": "折る、曲げる" },
+          { "form": "-er", "kind": "suffix", "gloss": "動作主・道具" }
+        ],
+        "rootCandidates": ["fold", "fald"],
+        "semanticBridge": "折り曲げる動作をする人・ものから、折りたたんだ書類カバー、さらにファイルをまとめるコンピューター上の入れ物へ意味が広がった。",
+        "summary": "folderはfoldからの動作主名詞であることが出典に明記され、fold＋-erと表示できるためA型に設定する。",
+        "confidence": "high"
+      }
+    },
+    "appointment": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "約束",
+        "root": "appoint",
+        "parts": [
+          { "form": "appoint", "kind": "root", "gloss": "定める・整える" },
+          { "form": "-ment", "kind": "suffix", "gloss": "〜すること・もの" }
+        ],
+        "derivation": "時間や事柄を定めて整えること → 約束、予約"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/appointment",
+          "https://www.merriam-webster.com/dictionary/appointment"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/appointment", "note": "appointmentを古フランス語 apointement、apointer（整える、定める、配置する）に遡らせ、会う日時を定める合意の意味を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/appointment", "note": "appointmentの現代語義として会うための取り決め、予約、任命された地位を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・中英語・英語",
+        "etymons": ["appointment", "appointement", "apointer", "à point", "point", "punctum", "*peuk-", "-ment"],
+        "historicalPath": ["ラテン語 punctum（突いてできた点）", "古フランス語 à point / apointer（適切な点に定める、整える）", "古フランス語 apointement", "英語 appoint＋-ment → appointment（約束、予約、任命）"],
+        "components": [
+          { "form": "appoint", "kind": "base", "gloss": "定める、整える" },
+          { "form": "-ment", "kind": "suffix", "gloss": "行為・結果" }
+        ],
+        "rootCandidates": ["appoint", "point", "peuk"],
+        "semanticBridge": "事柄を適切な点に定めることから、会う日時を決めた約束・予約、さらに任命や役職の指定へ意味が広がった。",
+        "summary": "appointmentはappoint＋-mentと語源・表面形が対応し、現代の約束・予約の意味にも直結するためA型に設定する。",
+        "confidence": "high"
+      }
+    },
+    "message": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "伝言",
+        "root": "mess",
+        "parts": [
+          { "form": "mess", "kind": "root", "gloss": "送る・伝える" },
+          { "form": "-age", "kind": "suffix", "gloss": "行為・結果" }
+        ],
+        "derivation": "送られた知らせ → 伝言、メッセージ"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/message",
+          "https://www.merriam-webster.com/dictionary/message"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/message", "note": "messageを古フランス語 message、 中世ラテン語 missaticum、ラテン語 missus（送ること）・mittere（送る）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/message", "note": "messageの現代語義として、文章・音声・信号で伝える知らせ、伝言、使者の用件を確認した。" }
+        ],
+        "originLanguage": "ラテン語・中世ラテン語・古フランス語・中英語・英語",
+        "etymons": ["message", "missaticum", "missus", "mittere", "mission", "-age"],
+        "historicalPath": ["ラテン語 mittere（放つ、送る）", "ラテン語 missus（送られたもの、派遣）", "中世ラテン語 missaticum", "古フランス語 message", "英語 message（伝言、メッセージ）"],
+        "components": [
+          { "form": "missus / mess", "kind": "base", "gloss": "送る、派遣する" },
+          { "form": "-age", "kind": "suffix", "gloss": "行為・結果" }
+        ],
+        "rootCandidates": ["mess", "miss", "mit"],
+        "semanticBridge": "人や機関から送られた用件から、文章・音声・信号で伝える知らせ、さらに伝えられた主張や意味へ広がった。",
+        "summary": "messageはmissus・mittereからの派生語で、古フランス語messageの表面形mess＋-ageとしてA型風に表示する。ただしmessは英語mess（混乱）とは別語源のため中確度とする。",
+        "confidence": "medium"
+      }
+    }
+  }
+}

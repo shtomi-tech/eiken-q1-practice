@@ -1,0 +1,1566 @@
+{
+  "meta": {
+    "batchId": "batch-050",
+    "note": "未確認B型の次の25語。出典が支える表面形の派生だけをA型にし、借用語・単純語・不規則な語形はB型に残す。"
+  },
+  "dictionary": {
+    "roots": {
+      "bounc": {
+        "gloss": "跳ねる・強く打つ",
+        "origin": "英語 bounce / オランダ語 bonzen（諸説）",
+        "note": "跳ねる・強く打つ動作。bouncerでは語末eを落としたbouncとして現れる。"
+      },
+      "fabric": {
+        "gloss": "作る・形作る",
+        "origin": "ラテン語 fabrica / fabricare",
+        "note": "作業場で物を形作ること。fabricateの基体。"
+      },
+      "cavit": {
+        "gloss": "空洞・空っぽ",
+        "origin": "ラテン語 cavus / cavitas",
+        "note": "内部が空になった状態。cavityではcavitとして現れる。"
+      },
+      "cit": {
+        "gloss": "呼ぶ・促す",
+        "origin": "ラテン語 citare / ciēre",
+        "note": "人を呼び出し、動かすこと。citationではcitとして現れる。"
+      },
+      "turbul": {
+        "gloss": "かき乱す・動揺させる",
+        "origin": "ラテン語 turba / turbulentus",
+        "note": "群衆や騒ぎのように状態をかき乱すこと。turbulenceではturbulとして現れる。"
+      },
+      "vit": {
+        "gloss": "生命・生きる",
+        "origin": "ラテン語 vita / vivere",
+        "note": "生きていることや生命に関わる語幹。vitalではvitとして現れる。"
+      },
+      "brevi": {
+        "gloss": "短い",
+        "origin": "ラテン語 brevis",
+        "note": "長さや分量が短いこと。abbreviateではbreviとして現れる。"
+      },
+      "test": {
+        "gloss": "証言する・証人",
+        "origin": "ラテン語 testis / testari",
+        "note": "証人として事実を確認すること。attestではtestとして現れる。"
+      },
+      "magn": {
+        "gloss": "大きい・偉大な",
+        "origin": "ラテン語 magnus",
+        "note": "大きさや偉大さ。magnifyではmagnとして現れる。"
+      }
+    },
+    "affixes": {}
+  },
+  "entries": {
+    "envy": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 envie、ラテン語 invidia（ねたみ）から。悪意をもって見ること → うらやむ、ねたむ"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/envy",
+          "https://www.merriam-webster.com/dictionary/envy"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/envy",
+            "note": "envyを古フランス語 envie、ラテン語 invidia・invidere（悪意をもって見る、ねたむ）、in-＋videre（見る）に遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/envy",
+            "note": "envyの現代語義として、他人の利益や所有をうらやみ同じものを望む感情・動作を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "envy",
+          "envie",
+          "invidia",
+          "invidere",
+          "in-",
+          "videre"
+        ],
+        "historicalPath": [
+          "ラテン語 in-（〜に向かって）＋videre（見る）",
+          "ラテン語 invidere（悪意をもって見る、ねたむ）",
+          "古フランス語 envie",
+          "英語 envy（うらやむ、ねたむ）"
+        ],
+        "components": [
+          {
+            "form": "envy",
+            "kind": "base",
+            "gloss": "うらやむ・ねたむ"
+          }
+        ],
+        "rootCandidates": [
+          "vid",
+          "invid"
+        ],
+        "semanticBridge": "他人を悪意をもって見ることから、その人の持つものをうらやみ欲しがる意味になった。",
+        "summary": "envyはラテン語・フランス語を経た借用語で、現代英語のen＋vyという表面分解は語源を正確に表さないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "censor": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "cens（評価・判断する）＋-or（〜する人・もの） → 判断する役人、検閲する",
+        "gloss": "検閲する",
+        "root": "cens",
+        "parts": [
+          {
+            "form": "cens",
+            "kind": "root",
+            "gloss": "評価・判断する"
+          },
+          {
+            "form": "-or",
+            "kind": "suffix",
+            "gloss": "〜する人・もの"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/censor",
+          "https://www.merriam-webster.com/dictionary/censor"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/censor",
+            "note": "censorをフランス語・ラテン語 censor、censere（評価する、判断する）に遡らせ、cēnsorは行為者接尾辞を伴う語と説明する。英語の動詞は名詞から派生した。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/censor",
+            "note": "censorの現代語義として、出版物などを調べ、不適切な内容を削除・抑制することを確認した。また名詞censorの語源をcensēre＋-torと確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "censor",
+          "censere",
+          "cēnsor",
+          "census",
+          "-tor",
+          "-or"
+        ],
+        "historicalPath": [
+          "ラテン語 censēre（評価する、判断する）",
+          "ラテン語 cēnsor（評価・監督する役人）",
+          "フランス語 censor / 英語 censor（検閲官）",
+          "名詞から英語の動詞 censor（検閲する）が派生"
+        ],
+        "components": [
+          {
+            "form": "cens",
+            "kind": "base",
+            "gloss": "評価・判断する"
+          },
+          {
+            "form": "-or",
+            "kind": "suffix",
+            "gloss": "行為者"
+          }
+        ],
+        "rootCandidates": [
+          "cens",
+          "kens"
+        ],
+        "semanticBridge": "公的に価値や行為を判断する役人から、出版物や発言を調べて削除する検閲の動作へ発達した。",
+        "summary": "censorはcensereに由来するcens＋-orの名詞形があり、その名詞から動詞も派生したため、表面形を保つA型として表示する。",
+        "confidence": "high"
+      }
+    },
+    "bouncer": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "bounc（跳ねる・強く打つ）＋-er（〜する人） → 跳ねさせる人、追い出す用心棒",
+        "gloss": "(クラブなどの)用心棒",
+        "root": "bounc",
+        "parts": [
+          {
+            "form": "bounc",
+            "kind": "root",
+            "gloss": "跳ねる・強く打つ"
+          },
+          {
+            "form": "-er",
+            "kind": "suffix",
+            "gloss": "〜する人"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/bouncer",
+          "https://www.merriam-webster.com/dictionary/bouncer"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/bouncer",
+            "note": "bouncerをbounceからの行為者名詞とし、bounceは「強く打つ」意味から始まり、クラブなどで秩序を守る人の意味へ発達したと説明する。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/bouncer",
+            "note": "bouncerの現代語義として、無秩序な客を制止・退去させる人を確認した。"
+          }
+        ],
+        "originLanguage": "中英語・オランダ語系・英語",
+        "etymons": [
+          "bouncer",
+          "bounce",
+          "bounsen",
+          "bonzen",
+          "bunsen",
+          "-er"
+        ],
+        "historicalPath": [
+          "bounce（強く打つ、跳ねる）",
+          "bounce＋-er（跳ねる・追い出す人）",
+          "英語 bouncer（さまざまな「跳ねる人」）",
+          "19世紀に酒場などの用心棒の意味が発達"
+        ],
+        "components": [
+          {
+            "form": "bounc",
+            "kind": "base",
+            "gloss": "跳ねる・強く打つ"
+          },
+          {
+            "form": "-er",
+            "kind": "suffix",
+            "gloss": "行為者"
+          }
+        ],
+        "rootCandidates": [
+          "bounc",
+          "bonz"
+        ],
+        "semanticBridge": "強く打つ・跳ね返す動作から、乱暴な客を外へ跳ね返すように追い出す用心棒の意味になった。",
+        "summary": "bouncerはbounce＋-erの行為者名詞で、語末のeを落とした表面幹bounc＋-erに対応するためA型にする。",
+        "confidence": "medium"
+      }
+    },
+    "trigger": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "オランダ語 trekker（引くもの）から。引き金を引いて機構を作動させる → 引き起こす"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/trigger",
+          "https://www.merriam-webster.com/dictionary/trigger"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/trigger",
+            "note": "triggerをオランダ語 trekker（引き金）、trekken（引く）に遡らせ、後に銃の引き金から「引き起こす」の動詞義が発達したと説明する。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/trigger",
+            "note": "triggerの現代語義として、出来事を引き起こすことと、銃などの引き金を確認した。"
+          }
+        ],
+        "originLanguage": "オランダ語・英語",
+        "etymons": [
+          "trigger",
+          "tricker",
+          "trekker",
+          "trekken"
+        ],
+        "historicalPath": [
+          "オランダ語 trekken（引く）",
+          "オランダ語 trekker（引く装置、引き金）",
+          "英語 trigger（銃の引き金）",
+          "引き金が機構を作動させることから、出来事を引き起こす動詞へ"
+        ],
+        "components": [
+          {
+            "form": "trigger",
+            "kind": "base",
+            "gloss": "引き金・引き起こすもの"
+          }
+        ],
+        "rootCandidates": [
+          "trek",
+          "trig"
+        ],
+        "semanticBridge": "引くと機械を作動させる装置から、出来事や反応を引き起こすもの・動作を表すようになった。",
+        "summary": "triggerはオランダ語由来の借用語で、英語のtri＋gerなどの接辞分解はできないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "fabricate": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "fabric（作る・形作る）＋-ate（〜にする） → 形作る、作り上げる、でっち上げる",
+      "gloss": "捏造する",
+        "root": "fabric",
+        "parts": [
+          {
+            "form": "fabric",
+            "kind": "root",
+            "gloss": "作る・形作る"
+          },
+          {
+            "form": "-ate",
+            "kind": "suffix",
+            "gloss": "〜にする"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/fabricate",
+          "https://www.merriam-webster.com/dictionary/fabricate"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/fabricate",
+            "note": "fabricateをラテン語 fabricatus、fabricare（作る、構築する）、fabrica（作業場）に遡らせ、もともとの「作る」から後に「うそを作る」意味が生じたと説明する。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/fabricate",
+            "note": "fabricateの現代語義として、材料から作ることと、話・証拠などをでっち上げることを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "fabricate",
+          "fabricatus",
+          "fabricare",
+          "fabrica",
+          "faber",
+          "-ate"
+        ],
+        "historicalPath": [
+          "ラテン語 faber（職人）・fabrica（作業場）",
+          "ラテン語 fabricare（作る、形作る）",
+          "ラテン語 fabricatus / 英語 fabricate",
+          "作り上げる意味から、虚偽を作る・捏造する意味へ"
+        ],
+        "components": [
+          {
+            "form": "fabric",
+            "kind": "base",
+            "gloss": "作る・形作る"
+          },
+          {
+            "form": "-ate",
+            "kind": "suffix",
+            "gloss": "動詞化"
+          }
+        ],
+        "rootCandidates": [
+          "fabric",
+          "fabr"
+        ],
+        "semanticBridge": "物を形作ることから、事実でない話や証拠を意図的に作り上げる意味へ広がった。",
+        "summary": "fabricateはfabricare系のfabric＋-ateという表面形に対応し、作る意味から捏造する意味への発達も出典で確認できるためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "cavity": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "cavit（空洞・空っぽ）＋-y（状態） → 空洞になった場所、空洞・虫歯",
+        "gloss": "空洞、虫歯",
+        "root": "cavit",
+        "parts": [
+          {
+            "form": "cavit",
+            "kind": "root",
+            "gloss": "空洞・空っぽ"
+          },
+          {
+            "form": "-y",
+            "kind": "suffix",
+            "gloss": "状態"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/cavity",
+          "https://www.merriam-webster.com/dictionary/cavity"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/cavity",
+            "note": "cavityをフランス語 cavité、後期ラテン語 cavitas、ラテン語 cavus（空洞の）に遡らせ、空洞・空所の意味を説明する。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/cavity",
+            "note": "cavityの現代語義として、身体内の空洞と、歯の虫歯を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "cavity",
+          "cavité",
+          "cavitas",
+          "cavus",
+          "*keue-",
+          "-y"
+        ],
+        "historicalPath": [
+          "ラテン語 cavus（空洞の）",
+          "ラテン語 cavitas（空洞であること）",
+          "フランス語 cavité",
+          "英語 cavit＋-y → cavity（空洞、虫歯）"
+        ],
+        "components": [
+          {
+            "form": "cavit",
+            "kind": "base",
+            "gloss": "空洞・空っぽ"
+          },
+          {
+            "form": "-y",
+            "kind": "suffix",
+            "gloss": "状態・もの"
+          }
+        ],
+        "rootCandidates": [
+          "cavit",
+          "cav"
+        ],
+        "semanticBridge": "空洞である性質から、身体や歯にできた空間・穴を表す名詞になった。",
+        "summary": "cavityはcavitas系のcavit＋-yという表面形に対応し、空洞・虫歯の意味につながるためA型にする。",
+        "confidence": "medium"
+      }
+    },
+    "citation": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "cit（呼ぶ・促す）＋-ation（〜すること） → 呼び出すこと、引用・召喚状・表彰",
+        "gloss": "引用、召喚状、表彰",
+        "root": "cit",
+        "parts": [
+          {
+            "form": "cit",
+            "kind": "root",
+            "gloss": "呼ぶ・促す"
+          },
+          {
+            "form": "-ation",
+            "kind": "suffix",
+            "gloss": "〜すること"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/citation",
+          "https://www.merriam-webster.com/dictionary/citation"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/citation",
+            "note": "citationを古フランス語 citationまたはラテン語 citationem、citare（呼び出す、促す）に遡らせ、召喚状から引用・表彰の意味が発達したと説明する。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/citation",
+            "note": "citationの現代語義として、文章の引用、法的な召喚状、功績を示す表彰を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "citation",
+          "citationem",
+          "citatio",
+          "citare",
+          "ciēre",
+          "-ation"
+        ],
+        "historicalPath": [
+          "ラテン語 ciēre / citare（呼ぶ、促す）",
+          "ラテン語 citatio（呼び出すこと、命令）",
+          "古フランス語 citation / 英語 citation（召喚状）",
+          "引用や公式の言及、表彰の意味へ広がった"
+        ],
+        "components": [
+          {
+            "form": "cit",
+            "kind": "base",
+            "gloss": "呼ぶ・促す"
+          },
+          {
+            "form": "-ation",
+            "kind": "suffix",
+            "gloss": "行為・結果"
+          }
+        ],
+        "rootCandidates": [
+          "cit",
+          "kei"
+        ],
+        "semanticBridge": "人を呼び出す公式の命令から、文章を呼び出して示す引用、さらに功績を公式に取り上げる表彰へ広がった。",
+        "summary": "citationはcitareの派生語幹cit＋-ationの表面形に対応するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "turbulence": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "turbul（かき乱す・動揺させる）＋-ence（〜の状態） → かき乱された状態、乱気流・動揺・混乱",
+        "gloss": "乱気流、動揺、混乱",
+        "root": "turbul",
+        "parts": [
+          {
+            "form": "turbul",
+            "kind": "root",
+            "gloss": "かき乱す・動揺させる"
+          },
+          {
+            "form": "-ence",
+            "kind": "suffix",
+            "gloss": "〜の状態"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/turbulence",
+          "https://www.merriam-webster.com/dictionary/turbulence"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/turbulence",
+            "note": "turbulenceを後期ラテン語 turbulentia、ラテン語 turbulentus（騒然とした、嵐のような）に遡らせ、気象の乱気流の意味へ発達したと説明する。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/turbulence",
+            "note": "turbulenceの現代語義として、空気や水の不規則な動き、混乱・動揺を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "turbulence",
+          "turbulentia",
+          "turbulentus",
+          "turba",
+          "-ence"
+        ],
+        "historicalPath": [
+          "ラテン語 turba（騒ぎ、群衆）",
+          "ラテン語 turbulentus（騒然とした、かき乱された）",
+          "後期ラテン語 turbulentia / 英語 turbulence",
+          "騒ぎや動揺から、空気の乱れである乱気流へ"
+        ],
+        "components": [
+          {
+            "form": "turbul",
+            "kind": "base",
+            "gloss": "かき乱す・動揺させる"
+          },
+          {
+            "form": "-ence",
+            "kind": "suffix",
+            "gloss": "状態"
+          }
+        ],
+        "rootCandidates": [
+          "turbul",
+          "turb"
+        ],
+        "semanticBridge": "群衆や騒ぎで乱れた状態から、感情や社会の動揺、さらに空気の不規則な流れを表すようになった。",
+        "summary": "turbulenceはturbulentus系のturbul＋-enceという表面形に対応するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "barren": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 baraigne（不毛な、子を生まない）から。生産できない状態 → 不毛の、実を結ばない"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/barren",
+          "https://www.merriam-webster.com/dictionary/barren"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/barren",
+            "note": "barrenを古フランス語 baraigne・baraing（不毛な、子を生まない）に遡らせ、さらに古い語源は不明瞭であると説明する。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/barren",
+            "note": "barrenの現代語義として、植物を生じない土地、実を結ばない状態を確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語・英語",
+        "etymons": [
+          "barren",
+          "baraigne",
+          "baraing",
+          "brahain"
+        ],
+        "historicalPath": [
+          "古フランス語 baraigne / baraing（不毛な、子を生まない）",
+          "英語 barren（生産できない）",
+          "女性・動物から土地や計画などへ意味が広がった"
+        ],
+        "components": [
+          {
+            "form": "barren",
+            "kind": "base",
+            "gloss": "不毛の・実を結ばない"
+          }
+        ],
+        "rootCandidates": [
+          "bar",
+          "barr"
+        ],
+        "semanticBridge": "生物が子を生めない状態から、植物や成果を生じない土地・計画を表すようになった。",
+        "summary": "barrenは語源不明瞭な古フランス語由来の単純な借用語で、英語のbar＋-renという分解を示せないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "slack": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 slæc、ゲルマン祖語 *slakas「緩い、活力のない」から → たるんだ、緩い、不振の"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/slack",
+          "https://www.merriam-webster.com/dictionary/slack"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/slack",
+            "note": "slackを古英語 slæc、ゲルマン祖語 *slakas、印欧祖語 *sleg-「緩い、弱々しい」に遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/slack",
+            "note": "slackの現代語義として、張りがない、活気がない、商売などが不振であることを確認した。"
+          }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": [
+          "slack",
+          "slæc",
+          "*slakas",
+          "*sleg-"
+        ],
+        "historicalPath": [
+          "印欧祖語 *sleg-（緩い、弱々しい）",
+          "ゲルマン祖語 *slakas",
+          "古英語 slæc",
+          "英語 slack（たるんだ、緩い、不振の）"
+        ],
+        "components": [
+          {
+            "form": "slack",
+            "kind": "base",
+            "gloss": "たるんだ・緩い"
+          }
+        ],
+        "rootCandidates": [
+          "sleg",
+          "slak"
+        ],
+        "semanticBridge": "張りや活力がない状態から、物理的なたるみ、行動の遅さ、商売の不振へ意味が広がった。",
+        "summary": "slackはゲルマン語系の単純語で、英語の接辞による分解はないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "sparse": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 sparsus（まき散らされた）から。広く散らばった状態 → まばらな、希薄な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/sparse",
+          "https://www.merriam-webster.com/dictionary/sparse"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/sparse",
+            "note": "sparseをラテン語 sparsus、spargere（まき散らす、広げる）に遡らせ、印欧祖語の「まく・広げる」語根にも関係づける。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/sparse",
+            "note": "sparseの現代語義として、間隔をあけて少数しか存在しない、まばらであることを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・英語",
+        "etymons": [
+          "sparse",
+          "sparsus",
+          "spargere",
+          "*sperg-",
+          "*sper-"
+        ],
+        "historicalPath": [
+          "ラテン語 spargere（まき散らす、広げる）",
+          "ラテン語 sparsus（散らばった）",
+          "英語 sparse（まばらな）"
+        ],
+        "components": [
+          {
+            "form": "sparse",
+            "kind": "base",
+            "gloss": "まばらな・散らばった"
+          }
+        ],
+        "rootCandidates": [
+          "spers",
+          "sperg"
+        ],
+        "semanticBridge": "物を広くまき散らした状態から、要素同士の間隔が広く数が少ない状態を表すようになった。",
+        "summary": "sparseはラテン語の過去分詞由来の借用形で、現代英語の語根＋接辞としての表面分解が明確でないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "vast": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 vaste、ラテン語 vastus「広大な、空の」から → 広大な、莫大な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/vast",
+          "https://www.merriam-webster.com/dictionary/vast"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/vast",
+            "note": "vastをフランス語 vaste、ラテン語 vastus（広大な、巨大な、荒れ果てた）に遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/vast",
+            "note": "vastの現代語義として、面積・数量・程度が非常に大きいことを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "vast",
+          "vaste",
+          "vastus",
+          "waste"
+        ],
+        "historicalPath": [
+          "ラテン語 vastus（広大な、荒れ果てた）",
+          "フランス語 vaste",
+          "英語 vast（広大な）",
+          "空間の大きさから数量・程度の大きさへ"
+        ],
+        "components": [
+          {
+            "form": "vast",
+            "kind": "base",
+            "gloss": "広大な・莫大な"
+          }
+        ],
+        "rootCandidates": [
+          "vast",
+          "was"
+        ],
+        "semanticBridge": "広大で人のいない空間のイメージから、面積だけでなく数量や程度が非常に大きいことを表すようになった。",
+        "summary": "vastはラテン語・フランス語系の単純な借用語で、英語の接辞による分解はないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "vital": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "vit（生命・生きる）＋-al（〜に関する） → 生命に関する、生命に不可欠な、極めて重要な",
+        "gloss": "極めて重要な、生命の",
+        "root": "vit",
+        "parts": [
+          {
+            "form": "vit",
+            "kind": "root",
+            "gloss": "生命・生きる"
+          },
+          {
+            "form": "-al",
+            "kind": "suffix",
+            "gloss": "〜に関する"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/vital",
+          "https://www.merriam-webster.com/dictionary/vital"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/vital",
+            "note": "vitalを古フランス語 vital、ラテン語 vitalis（生命に関する）、vita（生命）、vivere（生きる）に遡らせ、生命に不可欠なことから重要の意味が生じたと説明する。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/vital",
+            "note": "vitalの現代語義として、生命に関することと、不可欠で極めて重要であることを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "vital",
+          "vitalis",
+          "vita",
+          "vivere",
+          "*gwei-",
+          "-al"
+        ],
+        "historicalPath": [
+          "ラテン語 vivere（生きる）・vita（生命）",
+          "ラテン語 vitalis（生命に関する）",
+          "古フランス語 vital",
+          "英語 vit＋-al → vital（生命の、極めて重要な）"
+        ],
+        "components": [
+          {
+            "form": "vit",
+            "kind": "base",
+            "gloss": "生命・生きる"
+          },
+          {
+            "form": "-al",
+            "kind": "suffix",
+            "gloss": "性質・関係"
+          }
+        ],
+        "rootCandidates": [
+          "vit",
+          "viv"
+        ],
+        "semanticBridge": "生命に関わり、生命を保つのに不可欠なものという意味から、一般に極めて重要なことを表すようになった。",
+        "summary": "vitalはvitalis系のvit＋-alという表面形に対応するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "triumph": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 triumphe、ラテン語 triumphusから。戦勝を祝う行進 → 勝利、大成功"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/triumph",
+          "https://www.merriam-webster.com/dictionary/triumph"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/triumph",
+            "note": "triumphを古フランス語 triumphe、ラテン語 triumphus、さらにエトルリア語を経たギリシャ語 thriambosの借用と説明する。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/triumph",
+            "note": "triumphの現代語義として、勝利・成功と、その喜びや祝賀を確認した。"
+          }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・古フランス語・英語",
+        "etymons": [
+          "triumph",
+          "triumphe",
+          "triumphus",
+          "triumpus",
+          "thriambos"
+        ],
+        "historicalPath": [
+          "ギリシャ語 thriambos（ディオニュソスの讃歌）",
+          "エトルリア語を経たラテン語 triumphus",
+          "古フランス語 triumphe",
+          "英語 triumph（戦勝、勝利、大成功）"
+        ],
+        "components": [
+          {
+            "form": "triumph",
+            "kind": "base",
+            "gloss": "勝利・成功"
+          }
+        ],
+        "rootCandidates": [
+          "triumph",
+          "triump"
+        ],
+        "semanticBridge": "勝利した将軍を祝う行進から、戦争に限らない大きな成功や勝利を表すようになった。",
+        "summary": "triumphは複数言語を経た借用語で、英語の接辞による表面分解はないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "flourish": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 florir、ラテン語 florere（花開く）から。花が咲くように栄える → 繁栄する、生い茂る"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/flourish",
+          "https://www.merriam-webster.com/dictionary/flourish"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/flourish",
+            "note": "flourishを古フランス語 floriss-・florir、ラテン語 florere（花開く、栄える）、flos（花）に遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/flourish",
+            "note": "flourishの現代語義として、勢いよく成長・繁栄すること、植物が生い茂ることを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "flourish",
+          "florishen",
+          "florir",
+          "florere",
+          "flos",
+          "*bhel-"
+        ],
+        "historicalPath": [
+          "ラテン語 flos（花）・florere（花開く）",
+          "古フランス語 florir / floriss-",
+          "英語 flourish（花開く、栄える）",
+          "植物から事業・人の成功へ比喩的に広がった"
+        ],
+        "components": [
+          {
+            "form": "flourish",
+            "kind": "base",
+            "gloss": "花開く・栄える"
+          }
+        ],
+        "rootCandidates": [
+          "flor",
+          "bhel"
+        ],
+        "semanticBridge": "花が咲き勢いよく育つことから、事業や人が成功し栄える意味へ広がった。",
+        "summary": "flourishはflor-系の借用語で綴りも変化しており、現代英語のflour＋-ishという分解を示せないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "pledge": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 plege、フランク語系の「保証する」語から。保証や担保 → 誓う、約束する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/pledge",
+          "https://www.merriam-webster.com/dictionary/pledge"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/pledge",
+            "note": "pledgeを古フランス語 plege、アングロラテン語 plegium、フランク語系 *plegan「保証する」に遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/pledge",
+            "note": "pledgeの現代語義として、約束・誓約、担保、またはそれを約束することを確認した。"
+          }
+        ],
+        "originLanguage": "フランク語系・古フランス語・英語",
+        "etymons": [
+          "pledge",
+          "plegge",
+          "plege",
+          "plegium",
+          "*plegan",
+          "*dlegh-"
+        ],
+        "historicalPath": [
+          "西ゲルマン語系 *pleg-（責任を負う、保証する）",
+          "古フランス語 plege（人質、保証、担保）",
+          "英語 pledge（担保、誓約）",
+          "名詞から誓う・約束する動詞へ"
+        ],
+        "components": [
+          {
+            "form": "pledge",
+            "kind": "base",
+            "gloss": "保証・誓約"
+          }
+        ],
+        "rootCandidates": [
+          "pleg",
+          "dlegh"
+        ],
+        "semanticBridge": "責任を引き受け保証するものから、将来の行為を保証する誓約・約束の意味になった。",
+        "summary": "pledgeはフランス語・ゲルマン語系の単純な借用語で、英語の接辞による分解はないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "scatter": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "中英語 scateren、古ノルド語の影響を受けた語から。ばらばらに追い散らす → まき散らす、散らばる"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/scatter",
+          "https://www.merriam-webster.com/dictionary/scatter"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/scatter",
+            "note": "scatterを中英語 scaterenに遡らせ、shatterとの関係や古ノルド語の影響が考えられるが、確定的な接辞分解は示していない。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/scatter",
+            "note": "scatterの現代語義として、物を広くばらまくこと、人や物が各方向へ散ることを確認した。"
+          }
+        ],
+        "originLanguage": "中英語・古ノルド語系・英語",
+        "etymons": [
+          "scatter",
+          "scateren",
+          "shatter",
+          "schateren"
+        ],
+        "historicalPath": [
+          "中英語 scateren（無駄に使う、追い散らす）",
+          "古ノルド語の影響を受けた語形",
+          "英語 scatter（まき散らす、散らばる）"
+        ],
+        "components": [
+          {
+            "form": "scatter",
+            "kind": "base",
+            "gloss": "まき散らす・散らばる"
+          }
+        ],
+        "rootCandidates": [
+          "scat",
+          "shat"
+        ],
+        "semanticBridge": "人や物をばらばらに追い散らすことから、物を広く投げ散らし、また自ら各方向へ散る意味になった。",
+        "summary": "scatterは中英語・北欧語の影響を受けた単純語で、英語の接辞による分解はないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "droop": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古ノルド語 drupa（落ちる、垂れる）から。頭や物が下がる → うなだれる、しおれる"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/droop",
+          "https://www.merriam-webster.com/dictionary/droop"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/droop",
+            "note": "droopを古ノルド語 drupa（落ちる、沈む、頭を垂れる）に遡らせ、古英語 dropianとも関係づける。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/droop",
+            "note": "droopの現代語義として、頭や身体を下げること、植物がしおれることを確認した。"
+          }
+        ],
+        "originLanguage": "古ノルド語・古英語・英語",
+        "etymons": [
+          "droop",
+          "droupen",
+          "drupa",
+          "dropian",
+          "drop"
+        ],
+        "historicalPath": [
+          "古ノルド語 drupa（落ちる、沈む、垂れる）",
+          "中英語 droupen",
+          "英語 droop（垂れる、うなだれる、しおれる）"
+        ],
+        "components": [
+          {
+            "form": "droop",
+            "kind": "base",
+            "gloss": "垂れる・しおれる"
+          }
+        ],
+        "rootCandidates": [
+          "drup",
+          "drop"
+        ],
+        "semanticBridge": "物や頭が下へ垂れることから、悲しみでうなだれることや植物がしおれることを表すようになった。",
+        "summary": "droopは北欧語系の単純語で、英語の接辞による分解はないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "glacier": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 glacier、ラテン語 glacies（氷）から。動く氷の塊 → 氷河"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/glacier",
+          "https://www.merriam-webster.com/dictionary/glacier"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/glacier",
+            "note": "glacierをフランス語 glacier、サヴォワ方言 glaciére、古フランス語 glace、ラテン語 glacies（氷）に遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/glacier",
+            "note": "glacierの現代語義として、ゆっくり移動する大きな氷の塊を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・フランス語・英語",
+        "etymons": [
+          "glacier",
+          "glacier",
+          "glacière",
+          "glace",
+          "glacies",
+          "*gel-"
+        ],
+        "historicalPath": [
+          "ラテン語 glacies（氷）",
+          "古フランス語 glace（氷）",
+          "フランス語 glacier（氷河）",
+          "英語 glacier（氷河）"
+        ],
+        "components": [
+          {
+            "form": "glacier",
+            "kind": "base",
+            "gloss": "氷・氷河"
+          }
+        ],
+        "rootCandidates": [
+          "glac",
+          "gel"
+        ],
+        "semanticBridge": "氷を表す語から、山地などをゆっくり移動する大規模な氷の塊を表すようになった。",
+        "summary": "glacierはフランス語由来の借用語で、語末の-erを英語の行為者接尾辞として扱えないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "blockade": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "block（ふさぐ）をもとにした語。通路や場所を閉ざすこと → 封鎖"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/blockade",
+          "https://www.merriam-webster.com/dictionary/blockade"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/blockade",
+            "note": "blockadeをblock＋-adeと説明する一方、-adeはフランス語の語尾をまねた見せかけの語尾であると指摘している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/blockade",
+            "note": "blockadeの現代語義として、軍事力などで出入りを妨げる封鎖を確認した。"
+          }
+        ],
+        "originLanguage": "英語・フランス語・オランダ語系",
+        "etymons": [
+          "blockade",
+          "block",
+          "-ade",
+          "blocus",
+          "bloquer",
+          "blokhuus"
+        ],
+        "historicalPath": [
+          "block（ふさぐ、障害物）",
+          "英語 blockade（封鎖）",
+          "フランス語 blocusなどの影響を受けた語尾",
+          "軍事的に出入りを閉ざす意味へ"
+        ],
+        "components": [
+          {
+            "form": "blockade",
+            "kind": "base",
+            "gloss": "ふさぐこと・封鎖"
+          }
+        ],
+        "rootCandidates": [
+          "block",
+          "blok"
+        ],
+        "semanticBridge": "通路を障害物でふさぐことから、敵の出入りを軍事的に妨げる封鎖を表すようになった。",
+        "summary": "blockadeはblockをもとにするものの、出典が語尾-adeを偽のフランス語風語尾と説明しており、正確なA型分解にならないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "abbreviate": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "ab（〜へ・強意）＋brevi（短い）＋-ate（〜にする） → 短い状態にする、短縮する・略す",
+        "gloss": "短縮する、略す",
+        "root": "brevi",
+        "parts": [
+          {
+            "form": "ab",
+            "kind": "prefix",
+            "gloss": "〜へ・強意"
+          },
+          {
+            "form": "brevi",
+            "kind": "root",
+            "gloss": "短い"
+          },
+          {
+            "form": "-ate",
+            "kind": "suffix",
+            "gloss": "〜にする"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/abbreviate",
+          "https://www.merriam-webster.com/dictionary/abbreviate"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/abbreviate",
+            "note": "abbreviateをラテン語 abbreviatus、abbreviare（短くする）、ad-＋brevis（短い）に遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/abbreviate",
+            "note": "abbreviateの現代語義として、特に語や文章を短くすることを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "abbreviate",
+          "abbreviatus",
+          "abbreviare",
+          "ad-",
+          "breviare",
+          "brevis",
+          "-ate"
+        ],
+        "historicalPath": [
+          "ラテン語 ad-（〜へ・強意）＋brevis（短い）",
+          "ラテン語 abbreviare（短くする）",
+          "フランス語 abrevier / 英語 abbreviate",
+          "語や文章を短縮する意味へ"
+        ],
+        "components": [
+          {
+            "form": "ab",
+            "kind": "prefix",
+            "gloss": "〜へ・強意"
+          },
+          {
+            "form": "brevi",
+            "kind": "base",
+            "gloss": "短い"
+          },
+          {
+            "form": "-ate",
+            "kind": "suffix",
+            "gloss": "動詞化"
+          }
+        ],
+        "rootCandidates": [
+          "brevi",
+          "mregh"
+        ],
+        "semanticBridge": "短い状態にすることから、文章や単語の長さを縮めて略す意味になった。",
+        "summary": "abbreviateはad-がbの前でab-となったbrevi＋-ateの表面形に対応するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "attest": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "at（〜へ・向けて）＋test（証言する・証人） → 証人として確認する、証明する・証言する",
+        "gloss": "証明する、証言する",
+        "root": "test",
+        "parts": [
+          {
+            "form": "at",
+            "kind": "prefix",
+            "gloss": "〜へ・向けて"
+          },
+          {
+            "form": "test",
+            "kind": "root",
+            "gloss": "証言する・証人"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/attest",
+          "https://www.merriam-webster.com/dictionary/attest"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/attest",
+            "note": "attestをフランス語 attester、ラテン語 attestari（証明する）、ad-＋testari（証言する）、testis（証人）に遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/attest",
+            "note": "attestの現代語義として、証拠を示して事実を証明すること、証人として証言することを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "attest",
+          "attester",
+          "attestari",
+          "ad-",
+          "testari",
+          "testis"
+        ],
+        "historicalPath": [
+          "ラテン語 ad-（〜に向けて）＋testari（証言する）",
+          "ラテン語 attestari（証明する、証言する）",
+          "フランス語 attester",
+          "英語 at＋test → attest（証明する、証言する）"
+        ],
+        "components": [
+          {
+            "form": "at",
+            "kind": "prefix",
+            "gloss": "〜へ・向けて"
+          },
+          {
+            "form": "test",
+            "kind": "base",
+            "gloss": "証言する・証人"
+          }
+        ],
+        "rootCandidates": [
+          "test",
+          "steth"
+        ],
+        "semanticBridge": "証人として事実を確認して示すことから、証拠によって真実性を証明する意味になった。",
+        "summary": "attestはad-＋testariに由来し、同化した表面形at＋testに対応するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "carve": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 ceorfan（切る、彫る）から。切り込みを入れる動作 → 彫る、切り分ける"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/carve",
+          "https://www.merriam-webster.com/dictionary/carve"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/carve",
+            "note": "carveを中英語 kerven、古英語 ceorfan（切る、切り倒す）、西ゲルマン語系 *kerbanan、印欧祖語 *gerbh-「ひっかく」に遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/carve",
+            "note": "carveの現代語義として、木や石を彫ること、肉などを切り分けることを確認した。"
+          }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・中英語・英語",
+        "etymons": [
+          "carve",
+          "kerven",
+          "ceorfan",
+          "*kerbanan",
+          "*gerbh-"
+        ],
+        "historicalPath": [
+          "印欧祖語 *gerbh-（ひっかく）",
+          "西ゲルマン語系 *kerbanan",
+          "古英語 ceorfan / 中英語 kerven",
+          "英語 carve（彫る、切り分ける）"
+        ],
+        "components": [
+          {
+            "form": "carve",
+            "kind": "base",
+            "gloss": "切る・彫る"
+          }
+        ],
+        "rootCandidates": [
+          "kerb",
+          "gerbh"
+        ],
+        "semanticBridge": "表面に切り込みを入れる動作から、木や石を彫り、食物を切り分ける意味へ広がった。",
+        "summary": "carveは古英語・ゲルマン語系の単純語で、現代英語の接辞による分解はないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "yield": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 gieldan（支払う、返す）から。相手に渡す・譲る → 産出する、譲る、屈する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/yield",
+          "https://www.merriam-webster.com/dictionary/yield"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/yield",
+            "note": "yieldを中英語 yelden、古英語 gieldan（支払う、返す、仕える）、ゲルマン祖語 *geldanに遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/yield",
+            "note": "yieldの現代語義として、作物などを産出すること、道や権利を譲ること、抵抗をやめ屈することを確認した。"
+          }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・中英語・英語",
+        "etymons": [
+          "yield",
+          "yelden",
+          "gieldan",
+          "geldan",
+          "*geldan",
+          "*gheldh-"
+        ],
+        "historicalPath": [
+          "ゲルマン祖語 *geldan（支払う、返す）",
+          "古英語 gieldan（支払う、返す、仕える）",
+          "中英語 yelden",
+          "英語 yield（譲る、産出する、屈する）"
+        ],
+        "components": [
+          {
+            "form": "yield",
+            "kind": "base",
+            "gloss": "与える・譲る・産出する"
+          }
+        ],
+        "rootCandidates": [
+          "geld",
+          "gheldh"
+        ],
+        "semanticBridge": "価値を返し相手に渡すことから、土地が収穫を返す産出、道を譲ること、抵抗をやめて屈することへ意味が広がった。",
+        "summary": "yieldはゲルマン語系の単純語で、綴りと発音も歴史的に大きく変化しており、英語の接辞分解はないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "magnify": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "magn（大きい・偉大な）＋-ify（〜にする） → 大きくする、拡大する",
+        "gloss": "拡大する",
+        "root": "magn",
+        "parts": [
+          {
+            "form": "magn",
+            "kind": "root",
+            "gloss": "大きい・偉大な"
+          },
+          {
+            "form": "-ify",
+            "kind": "suffix",
+            "gloss": "〜にする"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/magnify",
+          "https://www.merriam-webster.com/dictionary/magnify"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/magnify",
+            "note": "magnifyを古フランス語 magnefiier、ラテン語 magnificare、magnus（大きい）＋facere（作る、する）に遡らせ、後に光学的に大きく見せる意味が生じたと説明する。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/magnify",
+            "note": "magnifyの現代語義として、実際の大きさや見かけの大きさを増すこと、重要性を大きく扱うことを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "magnify",
+          "magnefiier",
+          "magnificare",
+          "magnificus",
+          "magnus",
+          "facere",
+          "-ify"
+        ],
+        "historicalPath": [
+          "ラテン語 magnus（大きい）＋facere（作る、する）",
+          "ラテン語 magnificare（大きく扱う、称賛する）",
+          "古フランス語 magnefiier",
+          "英語 magn＋-ify → magnify（大きくする、拡大する）"
+        ],
+        "components": [
+          {
+            "form": "magn",
+            "kind": "base",
+            "gloss": "大きい・偉大な"
+          },
+          {
+            "form": "-ify",
+            "kind": "suffix",
+            "gloss": "〜にする"
+          }
+        ],
+        "rootCandidates": [
+          "magn",
+          "meg"
+        ],
+        "semanticBridge": "大きく扱うことから、対象を実際以上に大きく見せる、または重要性を大きくする意味へ発達した。",
+        "summary": "magnifyはmagnus＋facereに由来するmagn＋-ifyの表面形に対応するためA型にする。",
+        "confidence": "high"
+      }
+    }
+  }
+}

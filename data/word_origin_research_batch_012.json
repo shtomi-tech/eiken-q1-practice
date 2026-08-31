@@ -1,0 +1,1285 @@
+{
+  "meta": {
+    "batchId": "batch-012",
+    "note": "未確認B型の先頭25語。英語表面に出典が支える語根・接辞の対応を置ける語はA型へ、単一基体・複合表現・分詞語尾・語形変化が大きい語はB型に残す。"
+  },
+  "dictionary": {
+    "roots": {
+      "lodge": {
+        "gloss": "宿・泊まる",
+        "origin": "古フランス語 loge / logier",
+        "note": "宿や休む場所に入り、そこから追い出すイメージ。dislodge。"
+      },
+      "sect": {
+        "gloss": "切る・分ける",
+        "origin": "ラテン語 secare / sectus",
+        "note": "切り分けて別々の部分にするイメージ。dissect・section。"
+      },
+      "dorm": {
+        "gloss": "眠る",
+        "origin": "ラテン語 dormire",
+        "note": "眠って動かない、活動を止めているイメージ。dormant・dormitory。"
+      },
+      "amor": {
+        "gloss": "愛",
+        "origin": "ラテン語 amor / amare",
+        "note": "愛によって心をつかまれ、夢中になるイメージ。enamored。"
+      },
+      "flagr": {
+        "gloss": "燃える・目立つ",
+        "origin": "ラテン語 flagrare",
+        "note": "燃え上がるほど明白で、目立つイメージ。flagrantly。"
+      },
+      "flip": {
+        "gloss": "軽く動く・軽口",
+        "origin": "英語 flip（語源は擬音的）",
+        "note": "軽く弾く動きや軽口から、軽薄でぞんざいな態度を表す。flippant。",
+        "variants": ["flipp"]
+      },
+      "idl": {
+        "gloss": "何もしない",
+        "origin": "古英語 īdel / idle",
+        "note": "空で何もせず、活動していないイメージ。idly。"
+      },
+      "hale": {
+        "gloss": "息をする",
+        "origin": "ラテン語 halare",
+        "note": "息や空気を取り込むイメージ。inhale。"
+      },
+      "leni": {
+        "gloss": "柔らかくする",
+        "origin": "ラテン語 lenire / lenis",
+        "note": "硬さや厳しさを和らげるイメージ。lenient。"
+      },
+      "magnanim": {
+        "gloss": "大きな心・寛大な",
+        "origin": "ラテン語 magnanimus",
+        "note": "magnus（大きい）とanimus（心・魂）が結び付いた語幹。magnanimous。"
+      },
+      "modul": {
+        "gloss": "尺度・調整する",
+        "origin": "ラテン語 modulus / modulari",
+        "note": "基準となる尺度に合わせて調整するイメージ。modulate。"
+      },
+      "passiv": {
+        "gloss": "苦しむ・受ける",
+        "origin": "ラテン語 pati / passivus",
+        "note": "作用を自分から行わず、影響を受けるイメージ。impassive。既存のpass（通る）とは別の語源として扱う。"
+      }
+    }
+  },
+  "entries": {
+    "dislodge": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "取り除く",
+        "root": "lodge",
+        "parts": [
+          { "form": "dis", "kind": "prefix", "gloss": "離れて・反対に" },
+          { "form": "lodge", "kind": "root", "gloss": "宿・泊まる" }
+        ],
+        "derivation": "dis-（離れて・反対に）＋lodge（宿・泊まる） → 宿や定位置から離して、取り除く、追い出す"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/dislodge",
+          "https://www.merriam-webster.com/dictionary/dislodge"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/dislodge",
+            "note": "dislodgeを古フランス語deslogier（宿所を離れる、追い出す）に遡らせ、des-（反対に）＋logier（宿る、宿を与える）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/dislodge",
+            "note": "dislodgeの場所や位置から取り除く、定着したものを追い出すという語義を確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語",
+        "etymons": ["dislodge", "deslogier", "des-", "logier", "loge"],
+        "historicalPath": [
+          "古フランス語 loge（小屋、宿）",
+          "古フランス語 logier（宿る、宿を与える）",
+          "古フランス語 deslogier（宿所から追い出す）",
+          "英語 dislodge（取り除く、追い出す）"
+        ],
+        "components": [
+          { "form": "des-", "kind": "prefix", "gloss": "離れて・反対に", "display": false },
+          { "form": "logier", "kind": "base", "gloss": "宿る", "display": false }
+        ],
+        "rootCandidates": ["lodge"],
+        "semanticBridge": "宿や休息場所から離れさせる動作が、定位置にある人・物・考えを取り除き、追い出す意味へ広がった。",
+        "summary": "dislodgeは、dis-（離れて）＋lodge（宿る）から、取り除く・追い出すを表す。",
+        "confidence": "high",
+        "notes": "古フランス語logierの英語側の対応形lodgeと、des-に対応するdis-を表面へ合わせる。"
+      }
+    },
+    "dissect": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "解剖する",
+        "root": "sect",
+        "parts": [
+          { "form": "dis", "kind": "prefix", "gloss": "離れて・分けて" },
+          { "form": "sect", "kind": "root", "gloss": "切る・分ける" }
+        ],
+        "derivation": "dis-（離れて・分けて）＋sect（切る） → 部分ごとに切り分け、解剖する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/dissect",
+          "https://www.merriam-webster.com/dictionary/dissect"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/dissect",
+            "note": "dissectをラテン語dissectus、dissecare（切り分ける）に遡らせ、dis-（離れて）＋secare（切る）と説明している。dissectionからの逆形成の可能性も記録されている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/dissect",
+            "note": "dissectの動物や植物を部分ごとに切り分けて調べる、または問題を細かく分析するという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": ["dissect", "dissectus", "dissecare", "dis-", "secare", "-sect"],
+        "historicalPath": [
+          "ラテン語 secare（切る）",
+          "ラテン語 dissecare（切り分ける）",
+          "ラテン語 dissectus（切り分けられた）",
+          "英語 dissect（解剖する、分析する）"
+        ],
+        "components": [
+          { "form": "dis-", "kind": "prefix", "gloss": "離れて・分けて", "display": false },
+          { "form": "secare", "kind": "base", "gloss": "切る", "display": false }
+        ],
+        "rootCandidates": ["sect"],
+        "semanticBridge": "物を切り分けて各部分を調べる動作が、身体の解剖だけでなく、複雑な問題を細部まで分析する意味へ広がった。",
+        "summary": "dissectは、dis-（分けて）＋sect（切る）から、解剖するを表す。",
+        "confidence": "high",
+        "notes": "secareの過去分詞語幹sectとdis-を、英語表面のdis＋sectへ対応させる。"
+      }
+    },
+    "dormant": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "休眠中の",
+        "root": "dorm",
+        "parts": [
+          { "form": "dorm", "kind": "root", "gloss": "眠る" },
+          { "form": "-ant", "kind": "suffix", "gloss": "〜しているもの" }
+        ],
+        "derivation": "dorm（眠る）＋-ant（〜しているもの） → 眠って活動していない、休眠中の"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/dormant",
+          "https://www.merriam-webster.com/dictionary/dormant"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/dormant",
+            "note": "dormantを古フランス語dormant、動詞dormir（眠る）の現在分詞、ラテン語dormireに遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/dormant",
+            "note": "dormantの休眠中の、活動していない、火山などが一時的に活動していないという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（フランス語経由）",
+        "etymons": ["dormant", "dormir", "dormire", "*drem-", "-ant"],
+        "historicalPath": [
+          "ラテン語 dormire（眠る）",
+          "古フランス語 dormir / dormant（眠っている）",
+          "英語 dormant（眠って活動していない）"
+        ],
+        "components": [
+          { "form": "dormire", "kind": "base", "gloss": "眠る", "display": false },
+          { "form": "-ant", "kind": "suffix", "gloss": "〜しているもの", "display": false }
+        ],
+        "rootCandidates": ["dorm"],
+        "semanticBridge": "眠っている状態から、火山・能力・制度などが存在はするが一時的に活動していない状態を表すようになった。",
+        "summary": "dormantは、dorm（眠る）＋-antから、休眠中の・活動していないを表す。",
+        "confidence": "high",
+        "notes": "ラテン語dormireの語幹dormと現在分詞要素- antを英語表面へ対応させる。"
+      }
+    },
+    "echelon": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "chain": [
+          { "term": "échelon", "gloss": "はしごの横木、段" },
+          { "term": "echelon", "gloss": "段階、階層" },
+          { "gloss": "階層、段階" }
+        ],
+        "derivation": "はしごの一段から、組織や配置の一段階・階層を指すようになって → 階層、段階",
+        "source": "https://www.etymonline.com/word/echelon",
+        "sources": [
+          "https://www.etymonline.com/word/echelon",
+          "https://www.merriam-webster.com/dictionary/echelon"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/echelon",
+          "https://www.merriam-webster.com/dictionary/echelon"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/echelon",
+            "note": "echelonをフランス語échelon（段、階層）、古フランス語eschelon、さらに梯子を表すscala系の語に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/echelon",
+            "note": "echelonの階段状の軍隊配置、組織や社会の階層・段階という語義を確認した。"
+          }
+        ],
+        "originLanguage": "フランス語（ラテン語系）",
+        "etymons": ["echelon", "échelon", "eschelon", "eschiele", "scala"],
+        "historicalPath": [
+          "ラテン語 scala（梯子、階段）",
+          "古フランス語 eschelon（梯子の段）",
+          "フランス語 échelon（段、階層）",
+          "英語 echelon（階層、段階）"
+        ],
+        "components": [
+          { "form": "échelon", "kind": "base", "gloss": "段・階層", "display": false }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "梯子の横木や階段の一段という具体物から、軍隊の段階的配置、組織上の地位や区分へ意味が広がった。",
+        "summary": "echelonは、梯子の段を表すフランス語から、階層・段階を表す。",
+        "confidence": "high",
+        "notes": "フランス語からの単一借用語で、英語表面の安全な語根分解を置かないためB型にする。"
+      }
+    },
+    "enamored": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "夢中になった",
+        "root": "amor",
+        "parts": [
+          { "form": "en", "kind": "prefix", "gloss": "中へ" },
+          { "form": "amor", "kind": "root", "gloss": "愛" }
+        ],
+        "derivation": "en-（中へ）＋amor（愛） → 愛に心を奪われ、夢中になった、気に入った"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/enamored",
+          "https://www.merriam-webster.com/dictionary/enamored"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/enamored",
+            "note": "enamoredをenamorの過去分詞形とし、enamorを古フランス語enamorer、en-（中へ）＋amor（愛）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/enamored",
+            "note": "enamoredの強く愛情を抱く、夢中になった、魅了されたという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（古フランス語経由）",
+        "etymons": ["enamored", "enamor", "enamorer", "en-", "amor", "amare"],
+        "historicalPath": [
+          "ラテン語 amare（愛する）",
+          "ラテン語 amor（愛）",
+          "古フランス語 enamorer（愛で満たす、魅了する）",
+          "英語 enamor / enamored（夢中にさせる、夢中になった）"
+        ],
+        "components": [
+          { "form": "en-", "kind": "prefix", "gloss": "中へ", "display": false },
+          { "form": "amor", "kind": "base", "gloss": "愛", "display": false }
+        ],
+        "rootCandidates": ["amor"],
+        "semanticBridge": "愛の中へ入れられたように心を奪われるイメージから、強く気に入り夢中になった状態を表すようになった。",
+        "summary": "enamoredは、en-（中へ）＋amor（愛）から、夢中になった・気に入ったを表す。",
+        "confidence": "high",
+        "notes": "enamoredは英語で主に過去分詞として使われるが、表示は原形enamorのen＋amorに合わせる。"
+      }
+    },
+    "envoy": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "chain": [
+          { "term": "envoyé", "gloss": "送られた人" },
+          { "term": "envoy", "gloss": "使者" },
+          { "gloss": "使節" }
+        ],
+        "derivation": "任務のために送られた人から、外交上の代表者を指すようになって → 使節",
+        "source": "https://www.etymonline.com/word/envoy",
+        "sources": [
+          "https://www.etymonline.com/word/envoy",
+          "https://www.merriam-webster.com/dictionary/envoy"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/envoy",
+          "https://www.merriam-webster.com/dictionary/envoy"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/envoy",
+            "note": "envoyをフランス語envoyé（送られた人、使者）、envoyer（送る）に遡らせ、俗ラテン語inviare（道へ送り出す）とラテン語in＋via（道）に関係づけている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/envoy",
+            "note": "envoyの政府や君主から派遣された使節、外交上の代表者という語義を確認した。"
+          }
+        ],
+        "originLanguage": "フランス語（ラテン語経由）",
+        "etymons": ["envoy", "envoyé", "envoyer", "*inviare", "in", "via"],
+        "historicalPath": [
+          "ラテン語 via（道）",
+          "俗ラテン語 inviare（道へ送り出す）",
+          "フランス語 envoyer / envoyé（送る、送られた人）",
+          "英語 envoy（使節）"
+        ],
+        "components": [
+          { "form": "envoyé", "kind": "base", "gloss": "送られた人", "display": false }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "任務のために送り出された人という意味が、国家や君主を代表して派遣される外交使節へ特化した。",
+        "summary": "envoyは、送られた人を表すフランス語から、使節を表す。",
+        "confidence": "high",
+        "notes": "フランス語の過去分詞がそのまま名詞化した借用語で、英語表面の語根＋接辞分解を置かないためB型にする。"
+      }
+    },
+    "fare": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "chain": [
+          { "term": "faran", "gloss": "旅をする、進む" },
+          { "term": "fare", "gloss": "進み方、状態" },
+          { "gloss": "うまくいった、進んだ" }
+        ],
+        "derivation": "旅をする・道を進む動作から、物事がどのように進むかを表すようになって → うまくいった、進んだ",
+        "source": "https://www.etymonline.com/word/fare",
+        "sources": [
+          "https://www.etymonline.com/word/fare",
+          "https://www.merriam-webster.com/dictionary/fare"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/fare",
+          "https://www.merriam-webster.com/dictionary/fare"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/fare",
+            "note": "fareを古英語faran（旅をする、進む）とゲルマン祖語*farananに遡らせ、旅・道の意味から状態や進行の意味が生じた経路を確認した。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/fare",
+            "note": "fareの人や物事が進む・うまくいく、また運賃や食事を表す複数の語義を確認した。"
+          }
+        ],
+        "originLanguage": "古英語（ゲルマン系）",
+        "etymons": ["fare", "fared", "faran", "*faranan", "*per-"],
+        "historicalPath": [
+          "PIE *per-（進む、通り抜ける）",
+          "ゲルマン祖語 *faranan（行く）",
+          "古英語 faran / fær（旅、進行）",
+          "英語 fare（進む、うまくいく）"
+        ],
+        "components": [
+          { "form": "fare", "kind": "base", "gloss": "進む・旅をする", "display": false }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "道を進む旅の動作から、仕事・計画・人の状態がどのように進んでいるかを表す動詞になった。",
+        "summary": "fareは、旅をして進む古英語の単一基体から、うまくいった・進んだを表す。",
+        "confidence": "high",
+        "notes": "語源と意味拡張は明確だが、現代英語の表面に語根＋接辞の安全な分解を置かないためB型にする。"
+      }
+    },
+    "flagrantly": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "露骨に",
+        "root": "flagr",
+        "parts": [
+          { "form": "flagr", "kind": "root", "gloss": "燃える・目立つ" },
+          { "form": "-ant", "kind": "suffix", "gloss": "〜する性質の" },
+          { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で" }
+        ],
+        "derivation": "flagr（燃える・目立つ）＋-ant（〜する性質の）＋-ly（〜な状態で） → 露骨に、甚だしく"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/flagrantly",
+          "https://www.merriam-webster.com/dictionary/flagrantly"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/flagrantly",
+            "note": "flagrantlyをflagrant＋-lyから成る副詞とし、flagrantをラテン語flagrans（燃えている）・flagrare（燃える）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/flagrantly",
+            "note": "flagrantlyの明らかに悪い、露骨に、甚だしくという副詞の用法を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（英語の副詞派生）",
+        "etymons": ["flagrantly", "flagrant", "flagrans", "flagrare", "-ant", "-ly"],
+        "historicalPath": [
+          "ラテン語 flagrare（燃える）",
+          "ラテン語 flagrans（燃えている、明白な）",
+          "英語 flagrant（露骨な、甚だしい）",
+          "英語 flagrantly（露骨に、甚だしく）"
+        ],
+        "components": [
+          { "form": "flagrare", "kind": "base", "gloss": "燃える", "display": false },
+          { "form": "-ant", "kind": "suffix", "gloss": "〜する性質の", "display": false },
+          { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で", "display": false }
+        ],
+        "rootCandidates": ["flagr"],
+        "semanticBridge": "燃え上がって遠くからでも目立つ状態が、悪事や違反が隠しようなく明白であることを表すようになった。",
+        "summary": "flagrantlyは、flagr（燃える・目立つ）＋-ant＋-lyから、露骨に・甚だしくを表す。",
+        "confidence": "high",
+        "notes": "flagrareの語幹flagr、現在分詞要素-ant、副詞化-lyを英語表面へ対応させる。"
+      }
+    },
+    "flap": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "chain": [
+          { "term": "flappe", "gloss": "打つ音、平手打ち" },
+          { "term": "flap", "gloss": "翼をばたつかせる" },
+          { "gloss": "ばたついた" }
+        ],
+        "derivation": "翼や薄いものが音を立てて動くことから → ばたついた",
+        "source": "https://www.etymonline.com/word/flap",
+        "sources": [
+          "https://www.etymonline.com/word/flap",
+          "https://www.merriam-webster.com/dictionary/flap"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/flap",
+          "https://www.merriam-webster.com/dictionary/flap"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/flap",
+            "note": "flapは中英語flappe（打つ音、平手打ち）から来て、鳥の翼のような動きや音を表す語へ広がった。語源はおそらく擬音的である。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/flap",
+            "note": "flapの翼や薄いものを上下に動かす、打つ、ばたつくという語義を確認した。"
+          }
+        ],
+        "originLanguage": "中英語（擬音的）",
+        "etymons": ["flap", "flappe", "flapped"],
+        "historicalPath": [
+          "中英語 flappe（打つ音、平手打ち）",
+          "擬音的な動詞 flap（打つ、ばたつく）",
+          "英語 flapped（ばたついた）"
+        ],
+        "components": [
+          { "form": "flap", "kind": "base", "gloss": "打つ・ばたつく", "display": false }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "何かを打つ音や翼が動く音をまねた基体から、翼や布などが上下にばたつく動作を表すようになった。",
+        "summary": "flapは、打つ音を表す中英語の擬音的な基体から、ばたついたを表す。",
+        "confidence": "medium",
+        "notes": "擬音起源で語根と接辞を安全に分けられないためB型にする。"
+      }
+    },
+    "flippant": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "軽薄な",
+        "root": "flip",
+        "parts": [
+          { "form": "flipp", "kind": "root", "gloss": "軽く動く・軽口" },
+          { "form": "-ant", "kind": "suffix", "gloss": "〜する性質の" }
+        ],
+        "derivation": "flipp（軽く動く・軽口）＋-ant（〜する性質の） → 口が軽く、軽薄な、ぞんざいな"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/flippant",
+          "https://www.merriam-webster.com/dictionary/flippant"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/flippant",
+            "note": "flippantをflipの拡張形とし、語尾は他の- ant形容詞をまねたもの、または中英語の現在分詞語尾の残りかもしれないと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/flippant",
+            "note": "flippantの軽口をたたく、真面目さを欠いた、軽薄でぞんざいなという語義を確認した。"
+          }
+        ],
+        "originLanguage": "英語（擬音的なflipから）",
+        "etymons": ["flippant", "flip", "fillip", "-ant"],
+        "historicalPath": [
+          "英語 flip（弾く、軽く動かす）",
+          "英語 flip（軽口をたたく）",
+          "英語 flippant（口が軽い、軽薄な）"
+        ],
+        "components": [
+          { "form": "flip", "kind": "base", "gloss": "軽く動く・軽口", "display": false },
+          { "form": "-ant", "kind": "suffix", "gloss": "〜する性質の", "display": false }
+        ],
+        "rootCandidates": ["flip"],
+        "semanticBridge": "軽く弾く動きや軽口をたたく態度から、重要な事柄を軽く扱い、ぞんざいに話す性質を表すようになった。",
+        "summary": "flippantは、flipp（軽く動く・軽口）＋-antから、軽薄な・ぞんざいなを表す。",
+        "confidence": "medium",
+        "notes": "flippantではflipのpが重なる表面形flippを語根flipの変化形として登録する。"
+      }
+    },
+    "frantic": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "chain": [
+          { "term": "phrenitis", "gloss": "脳の炎症、狂気" },
+          { "term": "frentik / frantic", "gloss": "狂った、取り乱した" },
+          { "gloss": "取り乱した、必死の" }
+        ],
+        "derivation": "狂気や激しい興奮に襲われた状態から → 取り乱した、必死の",
+        "source": "https://www.etymonline.com/word/frantic",
+        "sources": [
+          "https://www.etymonline.com/word/frantic",
+          "https://www.merriam-webster.com/dictionary/frantic"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/frantic",
+          "https://www.merriam-webster.com/dictionary/frantic"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/frantic",
+            "note": "franticを中英語frentikの変形とし、freneticを介してラテン語phreneticus、ギリシャ語phrenitis（狂気、脳の炎症）に関係づけている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/frantic",
+            "note": "franticの極度に動揺した、取り乱した、必死に急いだという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ギリシャ語（ラテン語・フランス語経由）",
+        "etymons": ["frantic", "frentik", "frenetic", "phreneticus", "phrenitis", "phrēn"],
+        "historicalPath": [
+          "ギリシャ語 phrēn（心、精神、横隔膜）",
+          "ギリシャ語 phrenitis（精神の病、狂気）",
+          "ラテン語 phreneticus・古フランス語 frenetike",
+          "中英語 frentikから英語 frantic（取り乱した）"
+        ],
+        "components": [
+          { "form": "phrenitis", "kind": "base", "gloss": "狂気・精神の病", "display": false }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "精神の病や狂気を指す語が、激しい興奮や切迫感で取り乱し、必死に動く状態を表す形容詞へ広がった。",
+        "summary": "franticは、狂気を表すギリシャ語系の語形から、取り乱した・必死のを表す。",
+        "confidence": "high",
+        "notes": "franticは中英語での変形とphren-系の語形変化が大きく、英語表面に語根と接辞を置かないためB型にする。"
+      }
+    },
+    "fringe": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "chain": [
+          { "term": "fimbria", "gloss": "繊維、房飾り" },
+          { "term": "frenge", "gloss": "房飾り、縁" },
+          { "gloss": "周辺、縁" }
+        ],
+        "derivation": "布の房飾りや端から、中心から離れた周辺を指すようになって → 周辺、縁",
+        "source": "https://www.etymonline.com/word/fringe",
+        "sources": [
+          "https://www.etymonline.com/word/fringe",
+          "https://www.merriam-webster.com/dictionary/fringe"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/fringe",
+          "https://www.merriam-webster.com/dictionary/fringe"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/fringe",
+            "note": "fringeを古フランス語frenge、俗ラテン語*frimbia、後期ラテン語fimbria（繊維、房飾り）に遡らせ、fimbriaの深い語源は不確かとしている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/fringe",
+            "note": "fringeの布の端飾り、物の外縁・周辺、主流から外れた集団という語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（フランス語経由）",
+        "etymons": ["fringe", "frenge", "*frimbia", "fimbria"],
+        "historicalPath": [
+          "ラテン語 fimbria（繊維、房飾り）",
+          "俗ラテン語 *frimbia",
+          "古フランス語 frenge",
+          "英語 fringe（房飾り、周辺、縁）"
+        ],
+        "components": [
+          { "form": "fimbria", "kind": "base", "gloss": "繊維・房飾り", "display": false }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "布の端に垂れる房飾りから、物や集団の中心から離れた外縁・周辺を表す比喩へ広がった。",
+        "summary": "fringeは、房飾りを表すラテン語系の単一基体から、周辺・縁を表す。",
+        "confidence": "high",
+        "notes": "借用の途中で音位転換と綴り変化があり、英語表面の安全な分解を置かないためB型にする。"
+      }
+    },
+    "headway": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "chain": [
+          { "term": "head", "gloss": "前方、先頭" },
+          { "term": "way", "gloss": "進む道" },
+          { "gloss": "進展、前進" }
+        ],
+        "derivation": "前方へ進む道を得ることから、物事が進むことを指すようになって → 進展、前進",
+        "source": "https://www.etymonline.com/word/headway",
+        "sources": [
+          "https://www.etymonline.com/word/headway",
+          "https://www.merriam-webster.com/dictionary/headway"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/headway",
+          "https://www.merriam-webster.com/dictionary/headway"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/headway",
+            "note": "headwayはhead（前方）とway（道）からなる航海由来の英語複合表現で、船が前進する距離・進展の意味へ発達した。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/headway",
+            "note": "headwayの前進、進展、特に困難の中で得られた進歩という語義を確認した。"
+          }
+        ],
+        "originLanguage": "英語",
+        "etymons": ["headway", "head", "way"],
+        "historicalPath": [
+          "古英語 heafod（頭、前方）",
+          "古英語 weg（道）",
+          "航海用法 headway（船の前進）",
+          "英語 headway（進展、前進）"
+        ],
+        "components": [
+          { "form": "head", "kind": "base", "gloss": "前方・先頭", "display": false },
+          { "form": "way", "kind": "base", "gloss": "道・進路", "display": false }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "船が前方へ進むために得た速度や距離が、計画・交渉・研究などの進展を表す比喩になった。",
+        "summary": "headwayは、headとwayの複合表現から、進展・前進を表す。",
+        "confidence": "high",
+        "notes": "複合表現は指定どおり熟語に近いB型として表示する。"
+      }
+    },
+    "hone": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "chain": [
+          { "term": "hone", "gloss": "砥石" },
+          { "term": "hone", "gloss": "刃を砥石で磨く" },
+          { "gloss": "磨く、鍛える" }
+        ],
+        "derivation": "砥石で刃を滑らかに整えることから、技能や計画を磨く比喩へ → 磨く、鍛える",
+        "source": "https://www.etymonline.com/word/hone",
+        "sources": [
+          "https://www.etymonline.com/word/hone",
+          "https://www.merriam-webster.com/dictionary/hone"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/hone",
+          "https://www.merriam-webster.com/dictionary/hone"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/hone",
+            "note": "honeは刃を磨く砥石を表す名詞から動詞になり、物理的に刃を磨く意味から能力・技能を向上させる比喩へ広がった経路を確認した。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/hone",
+            "note": "honeの砥石、刃を磨く、技能や計画を磨き上げるという名詞・動詞の語義を確認した。"
+          }
+        ],
+        "originLanguage": "英語（ゲルマン系の基体）",
+        "etymons": ["hone", "honing", "han"],
+        "historicalPath": [
+          "古英語・中英語系の hone（砥石）",
+          "英語 hone（刃を磨く）",
+          "英語 hone（技能・計画を磨く）"
+        ],
+        "components": [
+          { "form": "hone", "kind": "base", "gloss": "砥石・磨く", "display": false }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "刃物を砥石で少しずつ整える動作が、技能・知識・計画を練習によって向上させる意味へ比喩的に広がった。",
+        "summary": "honeは、砥石や刃を磨く単一基体から、磨く・鍛えるを表す。",
+        "confidence": "medium",
+        "notes": "語源と意味拡張は確認できるが、表面に語根＋接辞の安全な分解を置かないためB型にする。"
+      }
+    },
+    "idly": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "何もせず",
+        "root": "idl",
+        "parts": [
+          { "form": "idl", "kind": "root", "gloss": "何もしない" },
+          { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で" }
+        ],
+        "derivation": "idl（何もしない）＋-ly（〜な状態で） → 何もせず、ぼんやりと"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/idly",
+          "https://www.merriam-webster.com/dictionary/idly"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/idly",
+            "note": "idlyをidle＋-lyから成る副詞とし、idleを古英語īdel（空の、役に立たない、怠惰な）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/idly",
+            "note": "idlyの何もせず、怠惰に、ぼんやりとという副詞の用法を確認した。"
+          }
+        ],
+        "originLanguage": "古英語（ゲルマン系）",
+        "etymons": ["idly", "idle", "īdel", "-ly"],
+        "historicalPath": [
+          "古英語 īdel（空の、何もしない）",
+          "英語 idle（怠惰な、活動していない）",
+          "英語 idle＋-ly（怠惰に、ぼんやりと）",
+          "英語 idly（何もせず）"
+        ],
+        "components": [
+          { "form": "idle", "kind": "base", "gloss": "怠惰な・何もしない", "display": false },
+          { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で", "display": false }
+        ],
+        "rootCandidates": ["idl"],
+        "semanticBridge": "空で役に立たない状態から、活動せず時間を過ごす態度を表す形容詞・副詞になった。",
+        "summary": "idlyは、idl（何もしない）＋-lyから、何もせず・ぼんやりとを表す。",
+        "confidence": "high",
+        "notes": "idleの語末eが副詞形で落ちるため、語根辞書には表面形idlを登録する。"
+      }
+    },
+    "impassive": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "無表情な",
+        "root": "passiv",
+        "parts": [
+          { "form": "im", "kind": "prefix", "gloss": "〜でない" },
+          { "form": "passiv", "kind": "root", "gloss": "苦しむ・受ける" }
+        ],
+        "derivation": "im-（〜でない）＋passiv（影響を受ける） → 感情や苦痛を表に出さず、無表情な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/impassive",
+          "https://www.merriam-webster.com/dictionary/impassive"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/impassive",
+            "note": "impassiveをフランス語impassif、ラテン語impassivus（苦痛を受けない）に遡らせ、in-（〜でない）＋passivus（苦しむ、受ける）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/impassive",
+            "note": "impassiveの感情や反応をほとんど示さない、無表情な、動じないという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（フランス語経由）",
+        "etymons": ["impassive", "impassif", "impassivus", "in-", "passivus", "pati"],
+        "historicalPath": [
+          "ラテン語 pati（苦しむ、経験する）",
+          "ラテン語 passivus（影響を受ける、受動的な）",
+          "ラテン語 impassivus（苦痛を受けない）",
+          "英語 impassive（感情を示さない）"
+        ],
+        "components": [
+          { "form": "in-", "kind": "prefix", "gloss": "〜でない", "display": false },
+          { "form": "passivus", "kind": "base", "gloss": "影響を受ける", "display": false }
+        ],
+        "rootCandidates": ["passiv"],
+        "semanticBridge": "苦痛や外部からの作用を受ける性質を否定し、感情や反応を表面に出さず動じない性質を表すようになった。",
+        "summary": "impassiveは、im-（〜でない）＋passiv（影響を受ける）から、無表情な・感情を示さないを表す。",
+        "confidence": "high",
+        "notes": "既存のpass（通る）とは異なり、pati由来のpassivを別語根として登録して語源の衝突を避ける。"
+      }
+    },
+    "impel": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "駆り立てる",
+        "root": "puls",
+        "parts": [
+          { "form": "im", "kind": "prefix", "gloss": "中へ・向かって" },
+          { "form": "pel", "kind": "root", "gloss": "押す・駆り立てる" }
+        ],
+        "derivation": "im-（中へ・向かって）＋pel（押す） → 前へ押し出し、駆り立てる"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/impel",
+          "https://www.merriam-webster.com/dictionary/impel"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/impel",
+            "note": "impelをラテン語impellere（押す、前へ駆り立てる）に遡らせ、同化したin-（中へ、向かって）＋pellere（押す）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/impel",
+            "note": "impelの人や物を強く動かす、行動を駆り立てるという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": ["impel", "impellere", "in-", "pellere", "*pel-"],
+        "historicalPath": [
+          "PIE *pel-（押す、打つ）",
+          "ラテン語 pellere（押す、追い立てる）",
+          "ラテン語 impellere（中へ押す、駆り立てる）",
+          "英語 impel（駆り立てる）"
+        ],
+        "components": [
+          { "form": "in-", "kind": "prefix", "gloss": "中へ・向かって", "display": false },
+          { "form": "pellere", "kind": "base", "gloss": "押す・駆り立てる", "display": false }
+        ],
+        "rootCandidates": ["puls"],
+        "semanticBridge": "力を加えて前へ押す動作が、人を行動へ向かわせる心理的な圧力や動機を表す意味へ広がった。",
+        "summary": "impelは、im-（向かって）＋pel（押す）から、駆り立てるを表す。",
+        "confidence": "high",
+        "notes": "in-がpの前でim-となる同化を表面のimとして表示する。"
+      }
+    },
+    "implement": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "実行する",
+        "root": "ple",
+        "parts": [
+          { "form": "im", "kind": "prefix", "gloss": "中へ・完全に" },
+          { "form": "ple", "kind": "root", "gloss": "満たす" },
+          { "form": "-ment", "kind": "suffix", "gloss": "〜すること・もの" }
+        ],
+        "derivation": "im-（完全に）＋ple（満たす）＋-ment（行為・もの） → 必要なものを満たして、実行する、実施する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/implement",
+          "https://www.merriam-webster.com/dictionary/implement"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/implement",
+            "note": "implementを後期ラテン語implementum（満たすこと、必要を満たすもの）に遡らせ、implere（満たす）をin-＋plere（満たす）と説明している。道具の意味と実行する動詞の意味も確認できる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/implement",
+            "note": "implementの道具・器具、計画や決定を実行する・実施するという名詞・動詞の語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": ["implement", "implementum", "implere", "in-", "plere", "-ment"],
+        "historicalPath": [
+          "ラテン語 plere（満たす）",
+          "ラテン語 implere（完全に満たす、実現する）",
+          "後期ラテン語 implementum（必要を満たすもの）",
+          "英語 implement（道具、実行する）"
+        ],
+        "components": [
+          { "form": "in-", "kind": "prefix", "gloss": "中へ・完全に", "display": false },
+          { "form": "plere", "kind": "base", "gloss": "満たす", "display": false },
+          { "form": "-mentum", "kind": "suffix", "gloss": "行為・もの", "display": false }
+        ],
+        "rootCandidates": ["ple"],
+        "semanticBridge": "必要を満たすものという名詞から、計画や決定を現実の行動として満たし、実行する意味が生じた。",
+        "summary": "implementは、im-（完全に）＋ple（満たす）＋-mentから、実行する・実施するを表す。",
+        "confidence": "high",
+        "notes": "implementの名詞・動詞の両用法を保持し、既存語根pleとim・-mentを対応させる。"
+      }
+    },
+    "inhale": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "吸い込む",
+        "root": "hale",
+        "parts": [
+          { "form": "in", "kind": "prefix", "gloss": "中へ" },
+          { "form": "hale", "kind": "root", "gloss": "息をする" }
+        ],
+        "derivation": "in-（中へ）＋hale（息をする） → 空気を体の中へ吸い込む"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/inhale",
+          "https://www.merriam-webster.com/dictionary/inhale"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/inhale",
+            "note": "inhaleはinhalationからの逆形成、またはフランス語inhalerから来た語で、inhalationはラテン語inhalare（息を吹きかける）・in-＋halare（呼吸する）に遡る。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/inhale",
+            "note": "inhaleの空気や煙などを肺へ吸い込む、比喩的に急いで食べるという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（フランス語・英語の逆形成）",
+        "etymons": ["inhale", "inhalation", "inhalare", "in-", "halare"],
+        "historicalPath": [
+          "ラテン語 halare（呼吸する）",
+          "ラテン語 inhalare（中へ息を吹きかける）",
+          "英語 inhalation（吸入）からの逆形成",
+          "英語 inhale（吸い込む）"
+        ],
+        "components": [
+          { "form": "in-", "kind": "prefix", "gloss": "中へ", "display": false },
+          { "form": "halare", "kind": "base", "gloss": "呼吸する", "display": false }
+        ],
+        "rootCandidates": ["hale"],
+        "semanticBridge": "息を体内へ取り込む動作を表すラテン語系の表現が、空気・煙などを吸い込む現代英語の動詞になった。",
+        "summary": "inhaleは、in-（中へ）＋hale（息をする）から、吸い込むを表す。",
+        "confidence": "high",
+        "notes": "英語inhaleは逆形成だが、inhalareのin-＋halareと表面in＋haleの対応が明確なためA型にする。"
+      }
+    },
+    "layover": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "chain": [
+          { "term": "lay over", "gloss": "途中で横たわる、滞在する" },
+          { "term": "layover", "gloss": "途中の滞在" },
+          { "gloss": "乗り継ぎ待ち" }
+        ],
+        "derivation": "移動の途中で横たわり、いったん滞在することから → 乗り継ぎ待ち",
+        "source": "https://www.etymonline.com/word/layover",
+        "sources": [
+          "https://www.etymonline.com/word/layover",
+          "https://www.merriam-webster.com/dictionary/layover"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/layover",
+          "https://www.merriam-webster.com/dictionary/layover"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/layover",
+            "note": "layoverはlay over（途中で横たわる、滞在する）から生じた英語の複合表現で、旅行途中の停止・滞在を表す。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/layover",
+            "note": "layoverの旅行中に乗り継ぎなどのため一時停止する時間・場所という語義を確認した。"
+          }
+        ],
+        "originLanguage": "英語",
+        "etymons": ["layover", "lay", "over"],
+        "historicalPath": [
+          "古英語 lecgan（横たえる、置く）",
+          "英語 lay over（途中で休む、滞在する）",
+          "英語 layover（途中の滞在）",
+          "英語 layover（乗り継ぎ待ち）"
+        ],
+        "components": [
+          { "form": "lay", "kind": "base", "gloss": "横たえる・置く", "display": false },
+          { "form": "over", "kind": "base", "gloss": "越えて・途中で", "display": false }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "移動をいったん止めて途中で休む句が、航空機や列車の乗り継ぎのための一時滞在を表す名詞になった。",
+        "summary": "layoverは、lay overの複合表現から、乗り継ぎ待ちを表す。",
+        "confidence": "high",
+        "notes": "句動詞由来の複合表現は指定どおり熟語に近いB型として表示する。"
+      }
+    },
+    "lenient": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "寛大な",
+        "root": "leni",
+        "parts": [
+          { "form": "leni", "kind": "root", "gloss": "柔らかくする" },
+          { "form": "-ent", "kind": "suffix", "gloss": "〜する性質の" }
+        ],
+        "derivation": "leni（柔らかくする）＋-ent（〜する性質の） → 厳しさを和らげ、寛大な、厳しくない"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/lenient",
+          "https://www.merriam-webster.com/dictionary/lenient"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/lenient",
+            "note": "lenientをフランス語lenient、ラテン語lenientem（和らげるもの）に遡らせ、lenire（柔らかくする、落ち着かせる）・lenis（穏やかな）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/lenient",
+            "note": "lenientの罰や扱いが厳しくなく、慈悲深く寛大なという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（フランス語経由）",
+        "etymons": ["lenient", "lenientem", "lenire", "lenis", "-ent"],
+        "historicalPath": [
+          "ラテン語 lenis（穏やかな、柔らかい）",
+          "ラテン語 lenire（和らげる、落ち着かせる）",
+          "ラテン語 leniens（和らげるもの）",
+          "英語 lenient（寛大な、厳しくない）"
+        ],
+        "components": [
+          { "form": "lenire", "kind": "base", "gloss": "和らげる", "display": false },
+          { "form": "-ent", "kind": "suffix", "gloss": "〜する性質の", "display": false }
+        ],
+        "rootCandidates": ["leni"],
+        "semanticBridge": "硬さや痛みを和らげる性質が、規則・罰・判断の厳しさを抑え、寛大であることを表すようになった。",
+        "summary": "lenientは、leni（柔らかくする）＋-entから、寛大な・厳しくないを表す。",
+        "confidence": "high",
+        "notes": "lenireの語幹leniと現在分詞系の形容詞要素-entを英語表面へ対応させる。"
+      }
+    },
+    "litany": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "chain": [
+          { "term": "litaneia", "gloss": "祈り、嘆願" },
+          { "term": "litany", "gloss": "連祷" },
+          { "gloss": "長い列挙、連祷" }
+        ],
+        "derivation": "祈りの中で嘆願を繰り返し列挙することから、一般の長い列挙へ → 長い列挙、連祷",
+        "source": "https://www.etymonline.com/word/litany",
+        "sources": [
+          "https://www.etymonline.com/word/litany",
+          "https://www.merriam-webster.com/dictionary/litany"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/litany",
+          "https://www.merriam-webster.com/dictionary/litany"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/litany",
+            "note": "litanyを古フランス語letanie、ラテン語litania、ギリシャ語litaneia（祈り、嘆願）に遡らせ、lite（祈り、嘆願）は語源不明としている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/litany",
+            "note": "litanyの教会の連祷、または退屈なほど長く繰り返される列挙という語義を確認した。"
+          }
+        ],
+        "originLanguage": "ギリシャ語（ラテン語・フランス語経由）",
+        "etymons": ["litany", "letanie", "litania", "litaneia", "lite"],
+        "historicalPath": [
+          "ギリシャ語 lite（祈り、嘆願）",
+          "ギリシャ語 litaneia（祈り、嘆願）",
+          "ラテン語 litania・古フランス語 letanie",
+          "英語 litany（連祷、長い列挙）"
+        ],
+        "components": [
+          { "form": "litaneia", "kind": "base", "gloss": "祈り・嘆願", "display": false }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "礼拝で嘆願を繰り返し列挙する形式から、同じ内容を退屈なほど長く並べる一般的な比喩へ広がった。",
+        "summary": "litanyは、祈り・嘆願を表すギリシャ語から、長い列挙・連祷を表す。",
+        "confidence": "high",
+        "notes": "基体liteの語源が不明で語形変化も大きいため、英語表面の語根＋接辞分解を置かないB型にする。"
+      }
+    },
+    "magnanimous": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "寛大な",
+        "root": "magnanim",
+        "parts": [
+          { "form": "magnanim", "kind": "root", "gloss": "大きな心・寛大な" },
+          { "form": "-ous", "kind": "suffix", "gloss": "〜に満ちた" }
+        ],
+        "derivation": "magn（大きい・偉大な）＋anim（心・魂）＋-ous（〜に満ちた） → 心が大きく、寛大な、度量の大きい"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/magnanimous",
+          "https://www.merriam-webster.com/dictionary/magnanimous"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/magnanimous",
+            "note": "magnanimousをラテン語magnanimus（大きな魂をもつ、高潔な）に遡らせ、magnus（大きい）＋animus（心、魂）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/magnanimous",
+            "note": "magnanimousの寛大で高潔な、つまらない恨みにとらわれないという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": ["magnanimous", "magnanimus", "magnus", "animus", "-ous"],
+        "historicalPath": [
+          "ラテン語 magnus（大きい、偉大な）",
+          "ラテン語 animus（心、魂、精神）",
+          "ラテン語 magnanimus（大きな魂をもつ）",
+          "英語 magnanimous（寛大な、度量の大きい）"
+        ],
+        "components": [
+          { "form": "magnus", "kind": "base", "gloss": "大きい・偉大な", "display": false },
+          { "form": "animus", "kind": "base", "gloss": "心・魂", "display": false },
+          { "form": "-ous", "kind": "suffix", "gloss": "〜に満ちた", "display": false }
+        ],
+        "rootCandidates": ["magnanim"],
+        "semanticBridge": "身体的な大きさではなく心や魂が大きいという比喩から、他人の過ちを許し小さな恨みにこだわらない寛大さを表すようになった。",
+        "summary": "magnanimousは、magnanim（大きな心・寛大な）＋-ousから、寛大なを表す。",
+        "confidence": "high",
+        "notes": "表示スキーマのroot欄が単一語根を取るため、magnus＋animusの複合基体をmagnanimとしてまとめ、-ousを付けて表示する。"
+      }
+    },
+    "maneuver": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "chain": [
+          { "term": "manu operari", "gloss": "手で働く" },
+          { "term": "manœuvre", "gloss": "手仕事、巧みな操作" },
+          { "gloss": "巧みな操作、策略" }
+        ],
+        "derivation": "手を使って巧みに操作する仕事から、軍事・人の動きを操ることへ → 巧みな操作、策略",
+        "source": "https://www.etymonline.com/word/maneuver",
+        "sources": [
+          "https://www.etymonline.com/word/maneuver",
+          "https://www.merriam-webster.com/dictionary/maneuver"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/maneuver",
+          "https://www.merriam-webster.com/dictionary/maneuver"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/maneuver",
+            "note": "maneuverをフランス語manœuvre、古フランス語manovre、さらに中世ラテン語manuopera（手で働くこと）に遡らせ、manus（手）＋operari（働く）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/maneuver",
+            "note": "maneuverの計画された軍事行動、巧みな動き・操作、策略という名詞・動詞の語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（フランス語経由）",
+        "etymons": ["maneuver", "manœuvre", "manovre", "manuopera", "manus", "operari"],
+        "historicalPath": [
+          "ラテン語 manus（手）",
+          "ラテン語 operari（働く、操作する）",
+          "中世ラテン語 manuopera（手仕事）",
+          "フランス語 manœuvreから英語 maneuver（巧みな操作、策略）"
+        ],
+        "components": [
+          { "form": "manus", "kind": "base", "gloss": "手", "display": false },
+          { "form": "operari", "kind": "base", "gloss": "働く・操作する", "display": false }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "手を使う巧みな作業から、軍隊・車両・人の動きを計画的に操ること、さらに策略へ意味が広がった。",
+        "summary": "maneuverは、手で働くことを表すラテン語系の複合借用語から、巧みな操作・策略を表す。",
+        "confidence": "high",
+        "notes": "ラテン語由来の複合借用語で、英語表面の語根＋接辞分解を置かないためB型にする。"
+      }
+    },
+    "modulate": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "調整した",
+        "root": "modul",
+        "parts": [
+          { "form": "modul", "kind": "root", "gloss": "尺度・調整する" },
+          { "form": "-ate", "kind": "suffix", "gloss": "〜にする（動詞化）" }
+        ],
+        "derivation": "modul（尺度・調整する）＋-ate（動詞化） → 基準に合わせて調整した、変調した"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/modulate",
+          "https://www.merriam-webster.com/dictionary/modulate"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/modulate",
+            "note": "modulateをラテン語modulatus、modulari（尺度を定める、調整する）、modulus（小さな尺度、基準）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/modulate",
+            "note": "modulateの音・声・信号の強さや性質を調整する、適度に変化させるという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": ["modulate", "modulatus", "modulari", "modulus", "modus", "-ate"],
+        "historicalPath": [
+          "ラテン語 modus（尺度、方法）",
+          "ラテン語 modulus（小さな尺度、基準）",
+          "ラテン語 modulari（尺度に合わせる、調整する）",
+          "英語 modulate（調整する、変調する）"
+        ],
+        "components": [
+          { "form": "modulari", "kind": "base", "gloss": "尺度に合わせる", "display": false },
+          { "form": "-ate", "kind": "suffix", "gloss": "動詞化", "display": false }
+        ],
+        "rootCandidates": ["modul"],
+        "semanticBridge": "一定の尺度や基準に合わせる動作が、音・声・電波などの強さや性質を調整し変化させる意味へ広がった。",
+        "summary": "modulateは、modul（尺度・調整する）＋-ateから、調整した・変調したを表す。",
+        "confidence": "high",
+        "notes": "modulus・modulariの語幹modulと動詞化-ateを英語表面へ対応させる。"
+      }
+    }
+  }
+}

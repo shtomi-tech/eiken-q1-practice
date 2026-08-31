@@ -1,0 +1,1669 @@
+{
+  "meta": {
+    "batchId": "batch-026",
+    "note": "未確認B型の次の25語。出典が英語表面の語根・接辞対応を支える語はA型へ、借用語・不確実語・表面分解が不安定な語はB型に残す。"
+  },
+  "dictionary": {
+    "roots": {
+      "ign": {
+        "gloss": "生まれ・性質",
+        "origin": "ラテン語 -gnus / gignere",
+        "note": "生まれつきの性質を表す要素。malignant。"
+      },
+      "neuro": {
+        "gloss": "神経",
+        "origin": "ギリシャ語 neuron / neuro-",
+        "note": "神経や神経系に関するイメージ。neurotic。"
+      },
+      "murk": {
+        "gloss": "暗がり・濁った暗さ",
+        "origin": "古ノルド語 myrkr / 中英語 murk",
+        "note": "光がなく、暗く見えにくい状態。murky。"
+      },
+      "ostraciz": {
+        "gloss": "陶片で追放する",
+        "origin": "ギリシャ語 ostrakizein / ostrakon",
+        "note": "陶片への投票で人を追放するイメージ。ostracizing。"
+      },
+      "bridl": {
+        "gloss": "手綱・抑える",
+        "origin": "古英語 bridel / bridlian",
+        "note": "手綱で馬を制御し、行動を抑えるイメージ。bridling。"
+      },
+      "pulveriz": {
+        "gloss": "粉にする",
+        "origin": "後期ラテン語 pulverizare / pulvis",
+        "note": "粉やほこりにまで細かくするイメージ。pulverizing。"
+      },
+      "reft": {
+        "gloss": "奪う・取り去る",
+        "origin": "古英語 reafian / bereft",
+        "note": "reaveの過去分詞に現れる表面形。奪われた状態へつながる。bereft。"
+      },
+      "plod": {
+        "gloss": "打つ・内側へ押す",
+        "origin": "ラテン語 plodere / implodere",
+        "note": "内側へ打ち込んでつぶすイメージ。implode。"
+      },
+      "crep": {
+        "gloss": "音を立てる・食い違う",
+        "origin": "ラテン語 crepare / discrepere",
+        "note": "音や性質が一致せず、違いが生じるイメージ。discrepancies。"
+      }
+    },
+    "affixes": {
+      "-otic": {
+        "gloss": "〜に関する・〜の状態",
+        "kind": "suffix",
+        "note": "ギリシャ語系の語幹から、状態や関係を表す形容詞を作る。neurotic。"
+      },
+      "-atory": {
+        "gloss": "〜に関する・〜する性質の",
+        "kind": "suffix",
+        "note": "ラテン語系の動詞から、関係や性質を表す形容詞を作る。derogatory・laudatory。"
+      }
+    }
+  },
+  "entries": {
+    "malignant": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "悪性の、有害な",
+        "root": "ign",
+        "parts": [
+          {
+            "form": "mal",
+            "kind": "prefix",
+            "gloss": "悪く・悪い"
+          },
+          {
+            "form": "ign",
+            "kind": "root",
+            "gloss": "生まれ・性質"
+          },
+          {
+            "form": "-ant",
+            "kind": "suffix",
+            "gloss": "〜の性質の"
+          }
+        ],
+        "derivation": "mal-（悪く・悪い）＋ign（生まれ・性質）＋-ant（〜の性質の） → 悪性の、有害な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/malignant",
+          "https://www.merriam-webster.com/dictionary/malignant"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/malignant",
+            "note": "malignantを後期ラテン語 malignantem・malignare、ラテン語 malignus（悪意のある）に遡らせ、male（悪く）＋-gnus（生まれた、gignere由来）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/malignant",
+            "note": "malignantの現代語義として、病気などが悪性で有害なこと、人に苦痛を与える性質を確認し、ラテン語 malignans 系を語源としている。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "malignant",
+          "malignantem",
+          "malignare",
+          "malignus",
+          "male",
+          "-gnus",
+          "gignere"
+        ],
+        "historicalPath": [
+          "ラテン語 male（悪く）＋-gnus（生まれた、性質）",
+          "ラテン語 malignus・malignare（悪意のある、害を加える）",
+          "後期ラテン語 malignantem・フランス語 malignant",
+          "英語 malignant（悪性の、有害な）"
+        ],
+        "components": [
+          {
+            "form": "male",
+            "kind": "prefix",
+            "gloss": "悪く"
+          },
+          {
+            "form": "-gnus",
+            "kind": "base",
+            "gloss": "生まれ・性質"
+          },
+          {
+            "form": "-ant",
+            "kind": "suffix",
+            "gloss": "性質を表す"
+          }
+        ],
+        "rootCandidates": [
+          "ign"
+        ],
+        "semanticBridge": "悪い性質をもって生まれたという構成から、病気や作用が悪性で有害なことを表すようになった。",
+        "summary": "malignantはmal-＋ign（生まれ・性質）＋-antで、悪性の・有害なという意味になる。",
+        "confidence": "high",
+        "notes": "-gnusの綴りが英語表面でignとして現れるため、malignantの実在部分に合わせてignを表示する。"
+      }
+    },
+    "neurotic": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "神経症的な、神経質な",
+        "root": "neuro",
+        "parts": [
+          {
+            "form": "neuro",
+            "kind": "root",
+            "gloss": "神経"
+          },
+          {
+            "form": "-otic",
+            "kind": "suffix",
+            "gloss": "〜に関する・〜の状態"
+          }
+        ],
+        "derivation": "neuro（神経）＋-otic（〜に関する・〜の状態） → 神経症的な、神経質な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/neurotic",
+          "https://www.merriam-webster.com/dictionary/neurotic"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/neurotic",
+            "note": "neuroticをギリシャ語 neuron（神経）＋-oticに遡らせ、神経を刺激するものから神経症に関する意味へ発達したと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/neurotic",
+            "note": "neuroticの現代語義として、神経症に関することや神経質な性質を確認した。"
+          }
+        ],
+        "originLanguage": "ギリシャ語・近代ラテン語・英語",
+        "etymons": [
+          "neurotic",
+          "neuron",
+          "neuro-",
+          "-otic"
+        ],
+        "historicalPath": [
+          "ギリシャ語 neuron（神経、腱）",
+          "neuro-（神経に関する）＋-otic（状態・関係）",
+          "英語 neurotic（神経症的な、神経質な）"
+        ],
+        "components": [
+          {
+            "form": "neuron",
+            "kind": "base",
+            "gloss": "神経"
+          },
+          {
+            "form": "-otic",
+            "kind": "suffix",
+            "gloss": "状態・関係"
+          }
+        ],
+        "rootCandidates": [
+          "neuro"
+        ],
+        "semanticBridge": "神経に関係することから、神経系の状態、特に神経症や神経質な性質を表すようになった。",
+        "summary": "neuroticはneuro（神経）＋-oticで、神経症的な・神経質なという意味になる。",
+        "confidence": "high",
+        "notes": "ギリシャ語neuronに対応する表面形neuroと、-otic接尾辞を表示する。"
+      }
+    },
+    "fallible": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "誤りやすい",
+        "root": "fall",
+        "parts": [
+          {
+            "form": "fall",
+            "kind": "root",
+            "gloss": "だます・誤る"
+          },
+          {
+            "form": "-ible",
+            "kind": "suffix",
+            "gloss": "〜できる"
+          }
+        ],
+        "derivation": "fall（だます・誤る）＋-ible（〜できる） → 誤りやすい"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/fallible",
+          "https://www.merriam-webster.com/dictionary/fallible"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/fallible",
+            "note": "fallibleを中世ラテン語 fallibilis（誤りやすい、だまされうる）に遡らせ、ラテン語 fallere（だます）から説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/fallible",
+            "note": "fallibleの現代語義として、誤りを犯しやすいことを確認し、ラテン語 fallere 系を語源としている。"
+          }
+        ],
+        "originLanguage": "ラテン語・中世ラテン語・英語",
+        "etymons": [
+          "fallible",
+          "fallibilis",
+          "fallere",
+          "-ible"
+        ],
+        "historicalPath": [
+          "ラテン語 fallere（だます、誤らせる）",
+          "中世ラテン語 fallibilis（だまされうる、誤りやすい）",
+          "英語 fallible（誤りやすい）"
+        ],
+        "components": [
+          {
+            "form": "fallere",
+            "kind": "base",
+            "gloss": "だます・誤らせる"
+          },
+          {
+            "form": "-ible",
+            "kind": "suffix",
+            "gloss": "〜できる"
+          }
+        ],
+        "rootCandidates": [
+          "fall"
+        ],
+        "semanticBridge": "人をだましたり誤らせたりできることから、判断や行動が誤りを含みうるという意味になった。",
+        "summary": "fallibleはfall（誤らせる）＋-ibleで、誤りやすいという意味になる。",
+        "confidence": "high",
+        "notes": "既存のfall語根と-ible接尾辞を再利用する。"
+      }
+    },
+    "tepid": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 tepidus（なまぬるい）から、温度の低さを表し、熱意のない意味にも広がった。 → なまぬるい、熱意のない"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/tepid",
+          "https://www.merriam-webster.com/dictionary/tepid"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/tepid",
+            "note": "tepidをラテン語 tepidus（なまぬるい）、tepere（適度に温かい）に遡らせ、後に感情への比喩的用法が生じたと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/tepid",
+            "note": "tepidの現代語義として、温度がなまぬるいことと、熱意が弱いことを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・中英語・英語",
+        "etymons": [
+          "tepid",
+          "tepide",
+          "tepidus",
+          "tepere"
+        ],
+        "historicalPath": [
+          "ラテン語 tepere（適度に温かい）",
+          "ラテン語 tepidus（なまぬるい）",
+          "中英語 tepide・英語 tepid（なまぬるい、熱意のない）"
+        ],
+        "components": [
+          {
+            "form": "tepid",
+            "kind": "word",
+            "gloss": "なまぬるい"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "水や空気の温度が十分に高くないことから、感情や反応の熱意が弱いことも表すようになった。",
+        "summary": "tepidは語源は明確だが、現代英語の綴りを安定した語根・接辞に分けにくいためB型に残す。",
+        "confidence": "high",
+        "notes": "tepereとtepidusの関係を英語のtep＋接辞とは表示しない。"
+      }
+    },
+    "murky": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "濁った、薄暗い",
+        "root": "murk",
+        "parts": [
+          {
+            "form": "murk",
+            "kind": "root",
+            "gloss": "暗がり・濁った暗さ"
+          },
+          {
+            "form": "-y",
+            "kind": "suffix",
+            "gloss": "〜の性質をもつ"
+          }
+        ],
+        "derivation": "murk（暗がり・濁った暗さ）＋-y（〜の性質をもつ） → 濁った、薄暗い"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/murky",
+          "https://www.merriam-webster.com/dictionary/murky"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/murky",
+            "note": "murkyをmurk＋-yとして説明し、murkを古ノルド語 myrkr（暗闇）・古英語 mirceに遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/murky",
+            "note": "murkyの現代語義として、暗くて見えにくいこと、液体が濁っていること、事情が不明瞭なことを確認した。"
+          }
+        ],
+        "originLanguage": "古ノルド語・中英語・英語",
+        "etymons": [
+          "murky",
+          "murk",
+          "myrkr",
+          "-y"
+        ],
+        "historicalPath": [
+          "古ノルド語 myrkr（暗闇）",
+          "中英語 murk（暗がり、暗い）",
+          "英語 murk＋-y（暗い性質をもつ）",
+          "英語 murky（濁った、薄暗い）"
+        ],
+        "components": [
+          {
+            "form": "murk",
+            "kind": "base",
+            "gloss": "暗がり"
+          },
+          {
+            "form": "-y",
+            "kind": "suffix",
+            "gloss": "性質をもつ"
+          }
+        ],
+        "rootCandidates": [
+          "murk"
+        ],
+        "semanticBridge": "暗がりを表すmurkから、暗くて見えにくい、または液体や事情が濁っている性質を表す形容詞になった。",
+        "summary": "murkyはmurk（暗がり）＋-yで、濁った・薄暗いという意味になる。",
+        "confidence": "high",
+        "notes": "既存の-y接尾辞を再利用する。"
+      }
+    },
+    "coarse": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "中英語 cors（普通の、粗い）に由来し、布地の粗さから下品さ・粗野さへ意味が広がった。 → 粗い、下品な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/coarse",
+          "https://www.merriam-webster.com/dictionary/coarse"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/coarse",
+            "note": "coarseを中英語 cors（普通の）に遡らせ、courseとの関係やフランス語 grosの影響の可能性を含めて語源には複数の説明があると示している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/coarse",
+            "note": "coarseの現代語義として、粒や繊維が粗いこと、言動が下品・粗野なことを確認した。"
+          }
+        ],
+        "originLanguage": "中英語・古フランス語系・英語",
+        "etymons": [
+          "coarse",
+          "cors",
+          "cours",
+          "course"
+        ],
+        "historicalPath": [
+          "中英語 cors（普通の、粗い布に関する）",
+          "布地の細かさが足りない意味へ",
+          "英語 coarse（粗い、下品な）"
+        ],
+        "components": [
+          {
+            "form": "coarse",
+            "kind": "word",
+            "gloss": "粗い・下品な"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "布地や粒の物理的な粗さから、言葉や態度が洗練されておらず下品である意味へ広がった。",
+        "summary": "coarseは語源に複数の説明があり、現代英語の綴りを安定した語根・接辞に分けにくいためB型に残す。",
+        "confidence": "medium",
+        "notes": "courseやcorsとの関係を、coar＋-seの表面分解として表示しない。"
+      }
+    },
+    "ostracizing": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "仲間外れにしている",
+        "root": "ostraciz",
+        "parts": [
+          {
+            "form": "ostraciz",
+            "kind": "root",
+            "gloss": "陶片で追放する"
+          },
+          {
+            "form": "-ing",
+            "kind": "suffix",
+            "gloss": "〜している性質"
+          }
+        ],
+        "derivation": "ostraciz（陶片で追放する）＋-ing（〜している性質） → 仲間外れにしている"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/ostracize",
+          "https://www.merriam-webster.com/dictionary/ostracizing"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/ostracize",
+            "note": "ostracizeをギリシャ語 ostrakizein（陶片への投票で追放する）に遡らせ、ostrakon（陶片、瓦片）との関係を説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/ostracizing",
+            "note": "ostracizingの現代語義として、社会や集団から仲間外れにしていることを確認した。"
+          }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・英語",
+        "etymons": [
+          "ostracizing",
+          "ostracize",
+          "ostrakizein",
+          "ostrakon",
+          "-ing"
+        ],
+        "historicalPath": [
+          "ギリシャ語 ostrakon（陶片、瓦片）",
+          "ギリシャ語 ostrakizein（陶片投票で追放する）",
+          "英語 ostracize（社会から追放する）",
+          "英語 ostracizing（仲間外れにしている）"
+        ],
+        "components": [
+          {
+            "form": "ostrakon",
+            "kind": "base",
+            "gloss": "陶片・瓦片"
+          },
+          {
+            "form": "-ing",
+            "kind": "suffix",
+            "gloss": "進行・性質"
+          }
+        ],
+        "rootCandidates": [
+          "ostraciz"
+        ],
+        "semanticBridge": "陶片に名前を書いて投票し追放した制度から、社会や集団から仲間外れにする意味になった。",
+        "summary": "ostracizingはostraciz（陶片で追放する）＋-ingで、仲間外れにしているという意味になる。",
+        "confidence": "high",
+        "notes": "語尾のeが-ingの前で落ちるため、ostracizeではなく実在する表面形ostracizを語根として表示する。"
+      }
+    },
+    "bridling": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "腹を立てて抑える、手綱を取る",
+        "root": "bridl",
+        "parts": [
+          {
+            "form": "bridl",
+            "kind": "root",
+            "gloss": "手綱・抑える"
+          },
+          {
+            "form": "-ing",
+            "kind": "suffix",
+            "gloss": "〜している性質"
+          }
+        ],
+        "derivation": "bridl（手綱・抑える）＋-ing（〜している性質） → 腹を立てて抑える、手綱を取る"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/bridle",
+          "https://www.merriam-webster.com/dictionary/bridling"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/bridle",
+            "note": "bridleを古英語 bridel（馬具、抑制）・bridlian（手綱を付ける）に遡らせ、馬を制御する意味から比喩的な抑制へ発達したと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/bridling",
+            "note": "bridlingの現代語義として、手綱を取ること、また怒りや反発を抑えることを確認した。"
+          }
+        ],
+        "originLanguage": "古英語・中英語・英語",
+        "etymons": [
+          "bridling",
+          "bridle",
+          "bridel",
+          "bridlian",
+          "-ing"
+        ],
+        "historicalPath": [
+          "古英語 bridel（馬の手綱、抑制）",
+          "古英語 bridlian（手綱を付ける、制御する）",
+          "英語 bridle（抑える、手綱を取る）",
+          "英語 bridling（抑えている、手綱を取っている）"
+        ],
+        "components": [
+          {
+            "form": "bridel",
+            "kind": "base",
+            "gloss": "手綱"
+          },
+          {
+            "form": "-ing",
+            "kind": "suffix",
+            "gloss": "進行・性質"
+          }
+        ],
+        "rootCandidates": [
+          "bridl"
+        ],
+        "semanticBridge": "馬を手綱で制御することから、行動や怒りを抑えること、怒りを表して頭を上げることへ意味が広がった。",
+        "summary": "bridlingはbridl（手綱・抑える）＋-ingで、手綱を取る・抑えているという意味になる。",
+        "confidence": "high",
+        "notes": "語尾のeが-ingの前で落ちるため、実在する表面形bridlを語根として表示する。"
+      }
+    },
+    "lauding": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "賞賛している",
+        "root": "laud",
+        "parts": [
+          {
+            "form": "laud",
+            "kind": "root",
+            "gloss": "ほめる"
+          },
+          {
+            "form": "-ing",
+            "kind": "suffix",
+            "gloss": "〜している性質"
+          }
+        ],
+        "derivation": "laud（ほめる）＋-ing（〜している性質） → 賞賛している"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/laud",
+          "https://www.merriam-webster.com/dictionary/lauding"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/laud",
+            "note": "laudを古フランス語 lauder、ラテン語 laudare（高くほめる）・laus（賞賛）に遡らせ、laudingを関連形として示している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/lauding",
+            "note": "laudingの現代語義として、誰かや何かを賞賛していることを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "lauding",
+          "laud",
+          "lauder",
+          "laudare",
+          "laus",
+          "-ing"
+        ],
+        "historicalPath": [
+          "ラテン語 laus / laudare（賞賛、ほめる）",
+          "古フランス語 lauder（高くほめる）",
+          "英語 laud（賞賛する）",
+          "英語 lauding（賞賛している）"
+        ],
+        "components": [
+          {
+            "form": "laudare",
+            "kind": "base",
+            "gloss": "高くほめる"
+          },
+          {
+            "form": "-ing",
+            "kind": "suffix",
+            "gloss": "進行・性質"
+          }
+        ],
+        "rootCandidates": [
+          "laud"
+        ],
+        "semanticBridge": "価値や名声を高く評価することから、現在進行中の賞賛行為を表す形になった。",
+        "summary": "laudingはlaud（ほめる）＋-ingで、賞賛しているという意味になる。",
+        "confidence": "high",
+        "notes": "既存のlaud語根と-ing接尾辞を再利用する。"
+      }
+    },
+    "pulverizing": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "粉砕している",
+        "root": "pulveriz",
+        "parts": [
+          {
+            "form": "pulveriz",
+            "kind": "root",
+            "gloss": "粉にする"
+          },
+          {
+            "form": "-ing",
+            "kind": "suffix",
+            "gloss": "〜している性質"
+          }
+        ],
+        "derivation": "pulveriz（粉にする）＋-ing（〜している性質） → 粉砕している"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/pulverize",
+          "https://www.merriam-webster.com/dictionary/pulverizing"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/pulverize",
+            "note": "pulverizeを後期ラテン語 pulverizare（粉やほこりにする）、ラテン語 pulvis（ほこり、粉）に遡らせ、pulverizingを関連形としている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/pulverizing",
+            "note": "pulverizingの現代語義として、物を粉砕していることを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・中世ラテン語・英語",
+        "etymons": [
+          "pulverizing",
+          "pulverize",
+          "pulverizare",
+          "pulvis",
+          "-ing"
+        ],
+        "historicalPath": [
+          "ラテン語 pulvis（ほこり、粉）",
+          "後期ラテン語 pulverizare（粉にする）",
+          "英語 pulverize（粉砕する）",
+          "英語 pulverizing（粉砕している）"
+        ],
+        "components": [
+          {
+            "form": "pulverizare",
+            "kind": "base",
+            "gloss": "粉にする"
+          },
+          {
+            "form": "-ing",
+            "kind": "suffix",
+            "gloss": "進行・性質"
+          }
+        ],
+        "rootCandidates": [
+          "pulveriz"
+        ],
+        "semanticBridge": "ほこりや粉にまで細かくすることから、物を完全に粉砕する意味になった。",
+        "summary": "pulverizingはpulveriz（粉にする）＋-ingで、粉砕しているという意味になる。",
+        "confidence": "high",
+        "notes": "語尾のeが-ingの前で落ちるため、pulverizeではなく実在する表面形pulverizを語根として表示する。"
+      }
+    },
+    "reverie": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 reverie / rêverie（夢想、狂気じみた行動）から、ぼんやりした空想を表す。 → 夢想、空想"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/reverie",
+          "https://www.merriam-webster.com/dictionary/reverie"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/reverie",
+            "note": "reverieを古フランス語 reverie / resverie（歓楽、狂気、夢想）から、resver（夢を見る、さまよう）に遡らせ、深い語源は不確実と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/reverie",
+            "note": "reverieの現代語義として、楽しい空想やぼんやりした夢想を確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語・フランス語・英語",
+        "etymons": [
+          "reverie",
+          "rêverie",
+          "reverie",
+          "resver"
+        ],
+        "historicalPath": [
+          "古フランス語 reverie / resverie（狂気、夢想）",
+          "フランス語 rêverie（夢想、空想）",
+          "英語 reverie（夢想、空想）"
+        ],
+        "components": [
+          {
+            "form": "reverie",
+            "kind": "word",
+            "gloss": "夢想・空想"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "現実から離れたような狂気じみた行動や夢を見る状態から、楽しい空想・夢想の意味へ変化した。",
+        "summary": "reverieは由来と意味の変化は確認できるが、現代英語の綴りを安定した語根・接辞に分けにくいためB型に残す。",
+        "confidence": "medium",
+        "notes": "rever＋-ieのような表面分解は採用しない。"
+      }
+    },
+    "gamut": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "中世ラテン語 gamma ut（音階の最低音）に由来し、音域全体から一般的な範囲の意味へ広がった。 → 範囲、全領域"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/gamut",
+          "https://www.merriam-webster.com/dictionary/gamut"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/gamut",
+            "note": "gamutを中世ラテン語 gamma utに遡らせ、gamma（ギリシャ文字）とut（音階の音節）から音楽の最低音を表したと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/gamut",
+            "note": "gamutの現代語義として、音域・音階全体から転じた範囲や全領域を確認した。"
+          }
+        ],
+        "originLanguage": "ギリシャ語・中世ラテン語・英語",
+        "etymons": [
+          "gamut",
+          "gamma",
+          "ut"
+        ],
+        "historicalPath": [
+          "ギリシャ文字 gammaと音節utによる中世の音楽記法",
+          "中世ラテン語 gamma ut（音階の最低音）",
+          "英語 gamut（音域全体、転じて範囲・全領域）"
+        ],
+        "components": [
+          {
+            "form": "gamma ut",
+            "kind": "word",
+            "gloss": "音階の最低音"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "音階全体を表す語から、物事について考えられる範囲全体・全領域を表す意味になった。",
+        "summary": "gamutは音楽記法に由来する借用語で、現在の英語表面を一つの語根と接辞に分けにくいためB型に残す。",
+        "confidence": "high",
+        "notes": "gammaやutを英語表面の語根・接辞として割り当てない。"
+      }
+    },
+    "tirade": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 tirade（長い発言、言葉の連射）から、激しい長広舌や非難を表す。 → 長広舌、激しい非難"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/tirade",
+          "https://www.merriam-webster.com/dictionary/tirade"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/tirade",
+            "note": "tiradeをフランス語 tirade（連射、引くこと、長い発言）・tirer（引く、長く引き出す）に関係づけるが、ロマンス語群の深い由来は不確実と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/tirade",
+            "note": "tiradeの現代語義として、長く激しい非難の発言や文章を確認した。"
+          }
+        ],
+        "originLanguage": "フランス語・イタリア語系・英語",
+        "etymons": [
+          "tirade",
+          "tirata",
+          "tirer",
+          "tirare"
+        ],
+        "historicalPath": [
+          "フランス語 tirer（引く、長く引き出す）",
+          "フランス語 tirade（言葉の連射、長い発言）",
+          "英語 tirade（長広舌、激しい非難）"
+        ],
+        "components": [
+          {
+            "form": "tirade",
+            "kind": "word",
+            "gloss": "長い発言・非難"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "言葉を一気に引き出すような長い発言から、特に激しい非難の長広舌を表す意味になった。",
+        "summary": "tiradeは借用の経路は確認できるが、語源の不確実性と表面分解の不安定さからB型に残す。",
+        "confidence": "medium",
+        "notes": "tir＋-adeの表面分解は採用しない。"
+      }
+    },
+    "derogatory": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "軽蔑的な",
+        "root": "rog",
+        "parts": [
+          {
+            "form": "de",
+            "kind": "prefix",
+            "gloss": "下へ・離れて"
+          },
+          {
+            "form": "rog",
+            "kind": "root",
+            "gloss": "尋ねる・求める"
+          },
+          {
+            "form": "-atory",
+            "kind": "suffix",
+            "gloss": "〜に関する・〜する性質の"
+          }
+        ],
+        "derivation": "de-（下へ・離れて）＋rog（尋ねる・求める）＋-atory（〜に関する性質） → 軽蔑的な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/derogatory",
+          "https://www.merriam-webster.com/dictionary/derogatory"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/derogatory",
+            "note": "derogatoryを後期ラテン語 derogatorius、ラテン語 derogare（取り去る、価値を減じる）に遡らせ、de（離れて）＋rogare（尋ねる、提案する）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/derogatory",
+            "note": "derogatoryの現代語義として、価値や評判を傷つける軽蔑的な性質を確認し、ラテン語 derogare 系を語源としている。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "derogatory",
+          "derogatorius",
+          "derogare",
+          "de",
+          "rogare"
+        ],
+        "historicalPath": [
+          "ラテン語 de（離れて、下へ）＋rogare（尋ねる、提案する）",
+          "ラテン語 derogare（部分的に取り去る、価値を減じる）",
+          "後期ラテン語 derogatorius・フランス語 derogatoire",
+          "英語 derogatory（軽蔑的な）"
+        ],
+        "components": [
+          {
+            "form": "de-",
+            "kind": "prefix",
+            "gloss": "下へ・離れて"
+          },
+          {
+            "form": "rogare",
+            "kind": "base",
+            "gloss": "尋ねる・求める"
+          },
+          {
+            "form": "-atory",
+            "kind": "suffix",
+            "gloss": "関係・性質"
+          }
+        ],
+        "rootCandidates": [
+          "rog"
+        ],
+        "semanticBridge": "何かを取り去って価値や権利を減じることから、相手を低く評価する軽蔑的な性質を表すようになった。",
+        "summary": "derogatoryはde-＋rog（求める）＋-atoryで、価値を下げるような軽蔑的なという意味になる。",
+        "confidence": "high",
+        "notes": "既存のrog語根とde接頭辞を再利用する。"
+      }
+    },
+    "bereft": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "奪われた、欠いている",
+        "root": "reft",
+        "parts": [
+          {
+            "form": "be",
+            "kind": "prefix",
+            "gloss": "対象に向けて"
+          },
+          {
+            "form": "reft",
+            "kind": "root",
+            "gloss": "奪う・取り去る"
+          }
+        ],
+        "derivation": "be-（対象に向けて）＋reft（奪う・取り去る） → 奪われた、欠いている"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/bereft",
+          "https://www.merriam-webster.com/dictionary/bereft"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/bereft",
+            "note": "bereftをbereaveの過去分詞形に遡らせ、bereaveは古英語 bereafian（奪う）＝be-＋reafian（略奪する）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/bereft",
+            "note": "bereftの現代語義として、何かを奪われた状態、何かを欠いている状態を確認した。"
+          }
+        ],
+        "originLanguage": "古英語・中英語・英語",
+        "etymons": [
+          "bereft",
+          "bereave",
+          "bereafian",
+          "be-",
+          "reafian",
+          "reft"
+        ],
+        "historicalPath": [
+          "古英語 be-（対象に向けて）＋reafian（奪う、略奪する）",
+          "古英語 berēafian・中英語 bireven（奪う）",
+          "英語 bereave（奪う）とその過去分詞 bereft",
+          "英語 bereft（奪われた、欠いている）"
+        ],
+        "components": [
+          {
+            "form": "be-",
+            "kind": "prefix",
+            "gloss": "対象に向けて"
+          },
+          {
+            "form": "reafian",
+            "kind": "base",
+            "gloss": "奪う・略奪する"
+          }
+        ],
+        "rootCandidates": [
+          "reft"
+        ],
+        "semanticBridge": "人や物から何かを奪うことから、愛する人や希望などを失って欠いている状態を表すようになった。",
+        "summary": "bereftはbe-＋reft（奪う・取り去る）で、奪われた・欠いているという意味になる。",
+        "confidence": "medium",
+        "notes": "reaveの不規則な過去分詞表面形reftを語根として表示し、過去分詞の変化自体は別の接辞にしない。"
+      }
+    },
+    "tactful": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "機転の利く、如才ない",
+        "root": "tang",
+        "parts": [
+          {
+            "form": "tact",
+            "kind": "root",
+            "gloss": "触れる・扱う"
+          },
+          {
+            "form": "-ful",
+            "kind": "suffix",
+            "gloss": "〜に満ちた"
+          }
+        ],
+        "derivation": "tact（触れる・扱う）＋-ful（〜に満ちた） → 機転の利く、如才ない"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/tactful",
+          "https://www.merriam-webster.com/dictionary/tactful"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/tactful",
+            "note": "tactfulをtact＋-fulとして説明し、tactをラテン語 tactus（触れること、扱い）・tangere（触れる）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/tactful",
+            "note": "tactfulの現代語義として、何を言う・するのが適切かを判断できる機転の利いた性質を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "tactful",
+          "tact",
+          "tactus",
+          "tangere",
+          "-ful"
+        ],
+        "historicalPath": [
+          "ラテン語 tangere（触れる、扱う）",
+          "ラテン語 tactus（触れること、扱い）",
+          "英語 tact（機転、扱いの感覚）",
+          "英語 tact＋-ful（機転の利く）"
+        ],
+        "components": [
+          {
+            "form": "tactus",
+            "kind": "base",
+            "gloss": "触れること・扱い"
+          },
+          {
+            "form": "-ful",
+            "kind": "suffix",
+            "gloss": "〜に満ちた"
+          }
+        ],
+        "rootCandidates": [
+          "tang"
+        ],
+        "semanticBridge": "物を扱う感覚から、状況や人の気持ちをうまく扱う判断力、つまり機転へ意味が広がった。",
+        "summary": "tactfulはtact（扱う感覚）＋-fulで、機転の利く・如才ないという意味になる。",
+        "confidence": "high",
+        "notes": "既存のtang語根に登録された表面形tactと-ful接尾辞を再利用する。"
+      }
+    },
+    "laudatory": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "賞賛する、賞賛の",
+        "root": "laud",
+        "parts": [
+          {
+            "form": "laud",
+            "kind": "root",
+            "gloss": "ほめる"
+          },
+          {
+            "form": "-atory",
+            "kind": "suffix",
+            "gloss": "〜に関する・〜する性質の"
+          }
+        ],
+        "derivation": "laud（ほめる）＋-atory（〜に関する・〜する性質の） → 賞賛する、賞賛の"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/laudatory",
+          "https://www.merriam-webster.com/dictionary/laudatory"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/laudatory",
+            "note": "laudatoryをフランス語 laudatoire、後期ラテン語 laudatorius（賞賛に属する）に遡らせ、ラテン語 laudare（ほめる）との関係を示している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/laudatory",
+            "note": "laudatoryの現代語義として、賞賛を表すことや賞賛に関することを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "laudatory",
+          "laudatorius",
+          "laudare",
+          "laus",
+          "-atory"
+        ],
+        "historicalPath": [
+          "ラテン語 laus（賞賛）・laudare（ほめる）",
+          "後期ラテン語 laudatorius（賞賛に属する）",
+          "フランス語 laudatoire・英語 laudatory（賞賛の）"
+        ],
+        "components": [
+          {
+            "form": "laudare",
+            "kind": "base",
+            "gloss": "ほめる"
+          },
+          {
+            "form": "-atory",
+            "kind": "suffix",
+            "gloss": "関係・性質"
+          }
+        ],
+        "rootCandidates": [
+          "laud"
+        ],
+        "semanticBridge": "高く評価してほめる行為から、賞賛を表す性質や内容を表す形容詞になった。",
+        "summary": "laudatoryはlaud（ほめる）＋-atoryで、賞賛する・賞賛のという意味になる。",
+        "confidence": "high",
+        "notes": "既存のlaud語根を再利用する。"
+      }
+    },
+    "swagger": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "swag（揺れる、重く歩く）から生じた反復的な表現とされ、いばって歩く・威張る意味になった。 → いばって歩く、威張る"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/swagger",
+          "https://www.merriam-webster.com/dictionary/swagger"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/swagger",
+            "note": "swaggerをswag（揺れる、重く不安定に動く）の反復形とする説を示し、swagは北欧語系の語に関係する可能性があると説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/swagger",
+            "note": "swaggerの現代語義として、いばって歩くことや、威張った態度を取ることを確認した。"
+          }
+        ],
+        "originLanguage": "英語・北欧語系（可能性）",
+        "etymons": [
+          "swagger",
+          "swag",
+          "sveggja"
+        ],
+        "historicalPath": [
+          "北欧語系 sveggja（揺らす、揺れる）との関係が指摘される",
+          "英語 swag（重く揺れながら動く）",
+          "英語 swagger（いばって歩く、威張る）"
+        ],
+        "components": [
+          {
+            "form": "swagger",
+            "kind": "word",
+            "gloss": "いばって歩く・威張る"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "体を大きく揺らして歩く様子から、見せつけるようにいばって歩く・威張る意味になった。",
+        "summary": "swaggerは由来の候補はあるが、反復形の成り立ちと深い語源が確定的でなく、B型に残す。",
+        "confidence": "low",
+        "notes": "swag＋-erの通常の接辞分解とはみなさない。"
+      }
+    },
+    "reconvene": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "再招集する、再開する",
+        "root": "ven",
+        "parts": [
+          {
+            "form": "re",
+            "kind": "prefix",
+            "gloss": "再び"
+          },
+          {
+            "form": "con",
+            "kind": "prefix",
+            "gloss": "ともに"
+          },
+          {
+            "form": "ven",
+            "kind": "root",
+            "gloss": "来る"
+          }
+        ],
+        "derivation": "re-（再び）＋con-（ともに）＋ven（来る） → ともに再び集まり、再招集する、再開する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/reconvene",
+          "https://www.merriam-webster.com/dictionary/reconvene"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/reconvene",
+            "note": "reconveneをre-＋convene、さらに中世ラテン語 reconvenireに遡らせ、再び集まる意味と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/reconvene",
+            "note": "reconveneの現代語義として、会議などを再招集する・再開することを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "reconvene",
+          "re-",
+          "convene",
+          "convenire",
+          "con-",
+          "venire"
+        ],
+        "historicalPath": [
+          "ラテン語 con-（ともに）＋venire（来る）",
+          "ラテン語 convenire（ともに来る、集まる）",
+          "re-（再び）＋convene（集める、集まる）",
+          "英語 reconvene（再招集する、再開する）"
+        ],
+        "components": [
+          {
+            "form": "re-",
+            "kind": "prefix",
+            "gloss": "再び"
+          },
+          {
+            "form": "con-",
+            "kind": "prefix",
+            "gloss": "ともに"
+          },
+          {
+            "form": "venire",
+            "kind": "base",
+            "gloss": "来る"
+          }
+        ],
+        "rootCandidates": [
+          "ven"
+        ],
+        "semanticBridge": "人々がともに来て集まることをもう一度行うことから、会議などを再招集する・再開する意味になった。",
+        "summary": "reconveneはre-＋con-＋ven（来る）で、ともに再び集まり再招集するという意味になる。",
+        "confidence": "high",
+        "notes": "既存のre・con接頭辞とven語根を再利用する。"
+      }
+    },
+    "implode": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "内破する、突然崩壊する",
+        "root": "plod",
+        "parts": [
+          {
+            "form": "im",
+            "kind": "prefix",
+            "gloss": "内へ"
+          },
+          {
+            "form": "plod",
+            "kind": "root",
+            "gloss": "打つ・内側へ押す"
+          }
+        ],
+        "derivation": "im-（内へ）＋plod（打つ・内側へ押す） → 内側へ押しつぶされ、内破する、突然崩壊する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/implode",
+          "https://www.merriam-webster.com/dictionary/implode"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/implode",
+            "note": "implodeをラテン語 implodere、in-（内へ）＋plodere（たたく、打つ）に遡らせ、explodeとの対になる形成と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/implode",
+            "note": "implodeの現代語義として、外側へ爆発するのではなく内側へ崩壊すること、組織などが突然崩れることを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・英語",
+        "etymons": [
+          "implode",
+          "implodere",
+          "in-",
+          "plodere"
+        ],
+        "historicalPath": [
+          "ラテン語 in-（内へ）＋plodere（たたく、打つ）",
+          "ラテン語 implodere（内側へ打ち込む）",
+          "英語 implode（内破する、突然崩壊する）"
+        ],
+        "components": [
+          {
+            "form": "in-",
+            "kind": "prefix",
+            "gloss": "内へ"
+          },
+          {
+            "form": "plodere",
+            "kind": "base",
+            "gloss": "たたく・打つ"
+          }
+        ],
+        "rootCandidates": [
+          "plod"
+        ],
+        "semanticBridge": "外へ広がるのではなく内側へ打ち込まれてつぶれることから、物体や組織が内破・崩壊する意味になった。",
+        "summary": "implodeはim-＋plod（内側へ打つ）で、内破する・突然崩壊するという意味になる。",
+        "confidence": "medium",
+        "notes": "in-の表面同化形imを表示し、plodereの英語表面形plodを語根とする。"
+      }
+    },
+    "seep": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "中英語 sipe の変形で、古英語 sipian（染み出る）やゲルマン語系の語と関係する。 → 染み出る、徐々に広まる"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/seep",
+          "https://www.merriam-webster.com/dictionary/seep"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/seep",
+            "note": "seepを中英語 sipeの変形とし、古英語 sipian（染み出る）、ゲルマン語系 sip-、さらに『流れ出る』意味の印欧祖語根との関係を説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/seep",
+            "note": "seepの現代語義として、液体がゆっくり染み出ることと、影響などが徐々に広まることを確認した。"
+          }
+        ],
+        "originLanguage": "古英語・中英語・ゲルマン語系・英語",
+        "etymons": [
+          "seep",
+          "sipe",
+          "sipian",
+          "sip-",
+          "*seib-"
+        ],
+        "historicalPath": [
+          "古英語 sipian（滴る、染み出る）",
+          "中英語 sipe（染み出る）",
+          "英語 seep（ゆっくり染み出る、徐々に広まる）"
+        ],
+        "components": [
+          {
+            "form": "seep",
+            "kind": "word",
+            "gloss": "染み出る"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "液体が少しずつ外へ出ることから、情報や影響が徐々に広まる意味へも広がった。",
+        "summary": "seepは語源の候補は確認できるが、現代英語の綴りを語根・接辞の複数部分に安定して分けにくいためB型に残す。",
+        "confidence": "medium",
+        "notes": "語源上のsip-を英語表面のsee＋pとは分解しない。"
+      }
+    },
+    "barrages": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "砲撃、集中質問",
+        "root": "bar",
+        "parts": [
+          {
+            "form": "bar",
+            "kind": "root",
+            "gloss": "棒・障壁"
+          },
+          {
+            "form": "-age",
+            "kind": "suffix",
+            "gloss": "〜の量・状態"
+          }
+        ],
+        "derivation": "bar（棒・障壁）＋-age（〜の量・状態） → 障壁のように一斉に浴びせる砲撃、集中質問"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/barrage",
+          "https://www.merriam-webster.com/dictionary/barrage"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/barrage",
+            "note": "barrageをフランス語 barrer（止める）、barre（棒、障壁）に遡らせ、第一次世界大戦期のtir de barrage（障壁射撃）から砲撃の意味が生じたと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/barrage",
+            "note": "barrageの現代語義として、砲弾・質問などを一斉に浴びせることを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語系・古フランス語・フランス語・英語",
+        "etymons": [
+          "barrages",
+          "barrage",
+          "barrer",
+          "barre",
+          "bar",
+          "-age"
+        ],
+        "historicalPath": [
+          "古フランス語 barre（棒、障壁）",
+          "フランス語 barrer（止める）から barrage（障壁を作ること）",
+          "フランス語 tir de barrage（障壁射撃）",
+          "英語 barrage（砲撃、集中質問）"
+        ],
+        "components": [
+          {
+            "form": "barre",
+            "kind": "base",
+            "gloss": "棒・障壁"
+          },
+          {
+            "form": "-age",
+            "kind": "suffix",
+            "gloss": "行為・状態"
+          }
+        ],
+        "rootCandidates": [
+          "bar"
+        ],
+        "semanticBridge": "通行を遮る障壁から、対象を遮るように砲弾や質問を一斉に浴びせる意味になった。",
+        "summary": "barragesはbar（障壁）＋-ageで、砲撃や質問を一斉に浴びせることを表す。",
+        "confidence": "high",
+        "notes": "既存のbar語根と-age接尾辞を再利用し、複数形のsは表示上省く。"
+      }
+    },
+    "blemishes": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 blemir / blesmir（青白くする、汚す、傷つける）に由来し、欠点やしみを表す。 → しみ、欠点"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/blemish",
+          "https://www.merriam-webster.com/dictionary/blemish"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/blemish",
+            "note": "blemishを古フランス語 blemiss- / blemir（青白くする、汚す、傷つける）に遡らせ、ゲルマン語系・印欧祖語根との関係には不確実性があると説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/blemish",
+            "note": "blemishの現代語義として、外見や完全さを損なうしみ・傷・欠点を確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語・フランク語系（可能性）・英語",
+        "etymons": [
+          "blemishes",
+          "blemish",
+          "blemir",
+          "blesmir",
+          "*blas"
+        ],
+        "historicalPath": [
+          "古フランス語 blemir / blesmir（青白くする、汚す、傷つける）",
+          "英語 blemish（損なう、しみ・欠点）",
+          "英語 blemishes（しみ、欠点）"
+        ],
+        "components": [
+          {
+            "form": "blemish",
+            "kind": "word",
+            "gloss": "しみ・欠点"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "色や外見を損なうことから、物の完全さ・評判・美しさを損なうしみや欠点を表すようになった。",
+        "summary": "blemishesは由来は確認できるが、現代英語の表面に安定した語根・接辞の組み合わせを作りにくいためB型に残す。",
+        "confidence": "medium",
+        "notes": "blem＋-ishの表面分解は語源が支える形として採用しない。"
+      }
+    },
+    "allegiances": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "アングロフランス語 legaunce / 古フランス語 legeance（君主への忠誠）に由来し、綴りの混同を経て現在の形になった。 → 忠誠、所属"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/allegiance",
+          "https://www.merriam-webster.com/dictionary/allegiance"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/allegiance",
+            "note": "allegianceを英語で形成されたalligeaunce、アングロフランス語 legaunce、古フランス語 legeance（主君への忠誠）に遡らせ、別語との綴りの混同を説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/allegiance",
+            "note": "allegianceの現代語義として、政府・君主・組織などへの忠誠や義務的な結びつきを確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語・アングロフランス語・英語",
+        "etymons": [
+          "allegiances",
+          "allegiance",
+          "alligeaunce",
+          "legaunce",
+          "legeance",
+          "liege"
+        ],
+        "historicalPath": [
+          "古フランス語 liege（主君に属する）・legeance（忠誠）",
+          "アングロフランス語 legaunce",
+          "中英語 alligeaunce（綴りの混同を含む）",
+          "英語 allegiance（忠誠、所属）"
+        ],
+        "components": [
+          {
+            "form": "allegiance",
+            "kind": "word",
+            "gloss": "忠誠・所属"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "主君に属する者の義務的な結びつきから、政府・組織などへの忠誠や所属を表すようになった。",
+        "summary": "allegiancesはフランス語系の借用と綴りの混同を経た語で、英語表面を安定した語根・接辞に分けにくいためB型に残す。",
+        "confidence": "high",
+        "notes": "alleg＋-ianceやleg＋-ianceの表面分解は採用しない。"
+      }
+    },
+    "discrepancies": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "相違、不一致",
+        "root": "crep",
+        "parts": [
+          {
+            "form": "dis",
+            "kind": "prefix",
+            "gloss": "離れて・別々に"
+          },
+          {
+            "form": "crep",
+            "kind": "root",
+            "gloss": "音を立てる・食い違う"
+          }
+        ],
+        "derivation": "dis-（離れて・別々に）＋crep（音を立てる・食い違う） → 音や性質が食い違うことから、相違、不一致"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/discrepancy",
+          "https://www.merriam-webster.com/dictionary/discrepancy"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/discrepancy",
+            "note": "discrepancyをラテン語 discrepantia・discrepare（異なる音を出す、食い違う）に遡らせ、dis-（離れて）＋crepare（音を立てる）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/discrepancy",
+            "note": "discrepancyの現代語義として、二つ以上のものの相違・不一致を確認し、ラテン語 discrepantia 系を語源としている。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "discrepancies",
+          "discrepancy",
+          "discrepantia",
+          "discrepare",
+          "dis-",
+          "crepare"
+        ],
+        "historicalPath": [
+          "ラテン語 dis-（離れて）＋crepare（音を立てる、鳴る）",
+          "ラテン語 discrepans・discrepantia（音や性質が食い違うこと）",
+          "フランス語 discrepancy・英語 discrepancy（相違、不一致）",
+          "英語 discrepancies（相違、不一致）"
+        ],
+        "components": [
+          {
+            "form": "dis-",
+            "kind": "prefix",
+            "gloss": "離れて・別々に"
+          },
+          {
+            "form": "crepare",
+            "kind": "base",
+            "gloss": "音を立てる・鳴る"
+          }
+        ],
+        "rootCandidates": [
+          "crep"
+        ],
+        "semanticBridge": "二つの音が別々に鳴ることから、事実・数値・性質などが一致せず相違する意味になった。",
+        "summary": "discrepanciesはdis-＋crep（音を立てる・食い違う）で、相違や不一致を表す。",
+        "confidence": "high",
+        "notes": "名詞語尾と複数形の-iesは表示上省き、実在するdis＋crepを中心に表示する。"
+      }
+    }
+  }
+}

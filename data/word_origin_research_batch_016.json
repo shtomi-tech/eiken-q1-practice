@@ -1,0 +1,1620 @@
+{
+  "meta": {
+    "batchId": "batch-016",
+    "note": "未確認B型の次の25語。語源経路と英語表面の語根・接辞が対応する語はA型へ、複合語・同形異語・語源の不確かな語はB型に残す。"
+  },
+  "dictionary": {
+    "roots": {
+      "pac": {
+        "gloss": "平和・結びつける",
+        "origin": "ラテン語 pax / pacare",
+        "note": "平和な状態へ導き、争いを静めるイメージ。appease。表面形peasを異形として扱う。",
+        "variants": [
+          "peas"
+        ]
+      },
+      "assassin": {
+        "gloss": "暗殺者",
+        "origin": "アラビア語 ḥashshāshīn / 中世ラテン語 assassin",
+        "note": "秘密裏に人を殺す者から、暗殺することへ。assassination。"
+      },
+      "little": {
+        "gloss": "小さい・少なくする",
+        "origin": "古英語 lytl / lytlian",
+        "note": "小さくするイメージ。belittle。"
+      },
+      "moan": {
+        "gloss": "嘆く・うめく",
+        "origin": "古英語 mānan / mænan",
+        "note": "悲しみを声に出すイメージ。bemoan。"
+      },
+      "brusque": {
+        "gloss": "粗い・ぶっきらぼうな",
+        "origin": "フランス語 brusque / イタリア語 brusco",
+        "note": "荒く急な態度から、そっけなくぶっきらぼうな性質へ。brusquely。"
+      },
+      "caust": {
+        "gloss": "焼く・焦がす",
+        "origin": "ギリシャ語 kaiein / kaustikos",
+        "note": "焼くように痛烈な、辛辣なイメージ。caustic。"
+      },
+      "cens": {
+        "gloss": "評価・判断する",
+        "origin": "ラテン語 censere / census",
+        "note": "価値を判断することから、非難・譴責へ。censure。"
+      },
+      "lat": {
+        "gloss": "運ぶ・持たれる",
+        "origin": "ラテン語 ferre / latus",
+        "note": "物をいっしょに運び、持ち寄るイメージ。collate。"
+      },
+      "coct": {
+        "gloss": "煮る・調理する",
+        "origin": "ラテン語 coquere / coctus",
+        "note": "材料を混ぜて煮ることから、話や物をでっち上げるイメージへ。concoct。"
+      },
+      "cred": {
+        "gloss": "信じる",
+        "origin": "ラテン語 credere",
+        "note": "信じることから、信用・信憑性へ。credence。"
+      },
+      "dei": {
+        "gloss": "神",
+        "origin": "ラテン語 deus / deificare",
+        "note": "神にするイメージ。deify。"
+      },
+      "dubi": {
+        "gloss": "疑う",
+        "origin": "ラテン語 dubius / dubitare",
+        "note": "二つの可能性の間で疑うイメージ。dubious。"
+      },
+      "centr": {
+        "gloss": "中心",
+        "origin": "ギリシャ語 kentron",
+        "note": "中心から外れた位置・性質のイメージ。eccentric。"
+      }
+    },
+    "affixes": {
+      "ec": {
+        "gloss": "外へ",
+        "kind": "prefix",
+        "note": "ギリシャ語 ek-の同化形。cの前でecになる。eccentric。"
+      }
+    }
+  },
+  "entries": {
+    "appease": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "なだめた",
+        "root": "pac",
+        "parts": [
+          {
+            "form": "a",
+            "kind": "prefix",
+            "gloss": "〜へ・近くへ"
+          },
+          {
+            "form": "peas",
+            "kind": "root",
+            "gloss": "平和・結びつける"
+          }
+        ],
+        "derivation": "a-（〜へ）＋peas（pac-『平和』の表面形） → 平和な状態へ導き、なだめた、満足させた"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/appease",
+          "https://www.merriam-webster.com/dictionary/appease"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/appease",
+            "note": "appeaseをアングロ・フレンチ apeser、古フランス語 apaisier（平和にする、なだめる）に遡らせ、a（〜へ）＋pais、さらにラテン語 pacem・pax（平和）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/appease",
+            "note": "appeaseの現代語義として、怒りや不満を静めること、要求を満たして満足させることを確認した。"
+          }
+        ],
+        "originLanguage": "アングロ・フレンチ・古フランス語・ラテン語",
+        "etymons": [
+          "appease",
+          "apeser",
+          "apaisier",
+          "a",
+          "pais",
+          "pax",
+          "pacem"
+        ],
+        "historicalPath": [
+          "ラテン語 pax・pacem（平和）",
+          "古フランス語 pais（平和）",
+          "古フランス語 a paisier（平和な状態へ導く）",
+          "英語 appease（なだめる、満足させる）"
+        ],
+        "components": [
+          {
+            "form": "a",
+            "kind": "prefix",
+            "gloss": "〜へ"
+          },
+          {
+            "form": "pais",
+            "kind": "base",
+            "gloss": "平和"
+          }
+        ],
+        "rootCandidates": [
+          "pac"
+        ],
+        "semanticBridge": "平和な状態へ導くことから、怒っている相手をなだめ、要求を満たして満足させる意味へ広がった。",
+        "summary": "appeaseはa-（〜へ）＋pac-（平和、表面形peas）で、なだめて満足させることを表す。",
+        "confidence": "high",
+        "notes": "古フランス語paisが英語表面ではpeasとなるため、pacの異形peasを語根辞書に登録する。"
+      }
+    },
+    "appraise": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 aprisier、後期ラテン語 appretiare（価値をつける）に由来するが、英語の綴りはpraiseの影響を受けた → 評価された、査定された"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/appraise",
+          "https://www.merriam-webster.com/dictionary/appraise"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/appraise",
+            "note": "appraiseを古フランス語 aprisier、後期ラテン語 appretiare（価値をつける）に遡らせ、ad（〜へ）＋pretium（価格）と説明している。英語の綴りはpraiseの影響で変化した。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/appraise",
+            "note": "appraiseの現代語義として、価値・品質・重要性を評価または査定することを確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語・後期ラテン語・英語",
+        "etymons": [
+          "appraise",
+          "apreisen",
+          "aprisier",
+          "appretiare",
+          "ad",
+          "pretium",
+          "praise"
+        ],
+        "historicalPath": [
+          "ラテン語 pretium（価格、価値）",
+          "後期ラテン語 appretiare（価値をつける）",
+          "古フランス語 aprisier",
+          "英語 appraise（価値を評価する）",
+          "英語の綴りがpraiseの影響を受ける"
+        ],
+        "components": [
+          {
+            "form": "aprisier",
+            "kind": "base",
+            "gloss": "価値をつける"
+          }
+        ],
+        "rootCandidates": [
+          "preti"
+        ],
+        "semanticBridge": "価格をつけることから、物の価値・品質・重要性を判断することへ意味が広がった。",
+        "summary": "appraiseは価格・価値をつける古フランス語に由来し、評価・査定する意味になった。",
+        "confidence": "high",
+        "notes": "praiseに似た綴りは後からの影響であり、a＋praiseとしてA型に分解しない。surfaceFormsのappraisedの-edも語形変化として扱う。"
+      }
+    },
+    "assassination": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "暗殺",
+        "root": "assassin",
+        "parts": [
+          {
+            "form": "assassin",
+            "kind": "root",
+            "gloss": "暗殺者"
+          },
+          {
+            "form": "-ation",
+            "kind": "suffix",
+            "gloss": "〜すること"
+          }
+        ],
+        "derivation": "assassin（暗殺者）＋-ation（〜すること） → 暗殺者が行うこと、暗殺；人格攻撃、中傷"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/assassination",
+          "https://www.merriam-webster.com/dictionary/assassination"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/assassination",
+            "note": "assassinationをassassinateの行為名詞とし、assassinateを中世ラテン語 assassinare・assassinに結び付けている。暗殺者を表す語から行為名詞ができた。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/assassination",
+            "note": "assassinationの現代語義として、計画的な暗殺と、評判・人格への攻撃を確認した。"
+          }
+        ],
+        "originLanguage": "アラビア語・中世ラテン語・英語",
+        "etymons": [
+          "assassination",
+          "assassinate",
+          "assassinare",
+          "assassin",
+          "ḥashshāshīn",
+          "-ation"
+        ],
+        "historicalPath": [
+          "アラビア語 ḥashshāshīn（暗殺者集団）",
+          "中世ラテン語 assassin・assassinare",
+          "英語 assassin（暗殺者）",
+          "英語 assassination（暗殺、人格攻撃）"
+        ],
+        "components": [
+          {
+            "form": "assassin",
+            "kind": "base",
+            "gloss": "暗殺者"
+          }
+        ],
+        "rootCandidates": [
+          "assassin"
+        ],
+        "semanticBridge": "暗殺者を表す名詞から、その人物が行う暗殺という行為、さらに評判を破壊する比喩的な攻撃へ意味が広がった。",
+        "summary": "assassinationはassassin（暗殺者）＋-ationで、暗殺することや人格攻撃を表す。",
+        "confidence": "high",
+        "notes": "assassinateからの行為名詞形成と表面の-ationが対応するためA型にする。"
+      }
+    },
+    "belittle": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "軽視する",
+        "root": "little",
+        "parts": [
+          {
+            "form": "be",
+            "kind": "prefix",
+            "gloss": "対象に向けて・〜にする"
+          },
+          {
+            "form": "little",
+            "kind": "root",
+            "gloss": "小さい・少なくする"
+          }
+        ],
+        "derivation": "be-（対象に〜する）＋little（小さい） → 小さく扱い、軽視する、けなす"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/belittle",
+          "https://www.merriam-webster.com/dictionary/belittle"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/belittle",
+            "note": "belittleをbe-＋littleからできた語と明記し、1781年に『小さくする』、1797年頃から価値がないとけなす意味が生じたと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/belittle",
+            "note": "belittleの現代語義として、重要性や価値を低く扱うこと、けなすことを確認した。"
+          }
+        ],
+        "originLanguage": "英語・古英語",
+        "etymons": [
+          "belittle",
+          "be-",
+          "little",
+          "lytlian"
+        ],
+        "historicalPath": [
+          "古英語 lytl・lytlian（小さい、少なくする）",
+          "英語 little（小さい）",
+          "英語 be-little（小さく扱う）",
+          "英語 belittle（軽視する、けなす）"
+        ],
+        "components": [
+          {
+            "form": "be-",
+            "kind": "prefix",
+            "gloss": "対象に向けて・〜にする"
+          },
+          {
+            "form": "little",
+            "kind": "base",
+            "gloss": "小さい"
+          }
+        ],
+        "rootCandidates": [
+          "little"
+        ],
+        "semanticBridge": "対象を小さくするという構成から、相手の価値・重要性を低く見積もり、けなす意味へ発達した。",
+        "summary": "belittleはbe-＋littleで、小さく扱う、つまり軽視してけなすことを表す。",
+        "confidence": "high",
+        "notes": "英語でのbe-＋little形成が出典に明記されているためA型にする。"
+      }
+    },
+    "bemoan": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "嘆く",
+        "root": "moan",
+        "parts": [
+          {
+            "form": "be",
+            "kind": "prefix",
+            "gloss": "対象に向けて・〜にする"
+          },
+          {
+            "form": "moan",
+            "kind": "root",
+            "gloss": "嘆く・うめく"
+          }
+        ],
+        "derivation": "be-（対象について、十分に）＋moan（嘆く・うめく） → 悲しみを表して嘆く、こぼす"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/bemoan",
+          "https://www.merriam-webster.com/dictionary/bemoan"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/bemoan",
+            "note": "bemoanを古英語 bemænan・中英語 bimonen、be-＋moanとして説明し、悲しみを表す・嘆く意味を確認している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/bemoan",
+            "note": "bemoanの現代語義として、悲しみや不満を嘆くこと、失ったものを悼むことを確認した。"
+          }
+        ],
+        "originLanguage": "古英語・中英語",
+        "etymons": [
+          "bemoan",
+          "bemænan",
+          "be-",
+          "moan",
+          "mānan"
+        ],
+        "historicalPath": [
+          "古英語 mānan・mænan（嘆く、悼む）",
+          "英語 moan（うめく、嘆く）",
+          "古英語 bemænan（悲しみを表す）",
+          "英語 bemoan（嘆く、こぼす）"
+        ],
+        "components": [
+          {
+            "form": "be-",
+            "kind": "prefix",
+            "gloss": "対象について・十分に"
+          },
+          {
+            "form": "moan",
+            "kind": "base",
+            "gloss": "嘆く・うめく"
+          }
+        ],
+        "rootCandidates": [
+          "moan"
+        ],
+        "semanticBridge": "嘆き声を出すmoanにbe-が加わり、失ったものや不満について悲しみを表明する動作になった。",
+        "summary": "bemoanはbe-＋moanで、悲しみや不満を嘆く・こぼすことを表す。",
+        "confidence": "high",
+        "notes": "古英語から続くbe-＋moanの構成が明確なのでA型にする。"
+      }
+    },
+    "bolster": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 bolster（詰め物をした長い枕）に由来し、枕で支えることから支援・強化の比喩へ → 強化する、支える"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/bolster",
+          "https://www.merriam-webster.com/dictionary/bolster"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/bolster",
+            "note": "bolsterを古英語 bolster、ゲルマン祖語 *bolkhstraz（膨らんだ枕）に遡らせ、枕で支える具体義から、弱いものを支える比喩義へ広がったと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/bolster",
+            "note": "bolsterの現代語義として、支えを加えて強化すること、主張や自信を支えることを確認した。"
+          }
+        ],
+        "originLanguage": "古英語・ゲルマン祖語",
+        "etymons": [
+          "bolster",
+          "bolkhstraz",
+          "bhelgh"
+        ],
+        "historicalPath": [
+          "古英語 bolster（詰め物をした枕）",
+          "英語 bolster（支え、枕）",
+          "英語 bolster（枕で支える）",
+          "英語 bolster（強化する、支える）"
+        ],
+        "components": [
+          {
+            "form": "bolster",
+            "kind": "base",
+            "gloss": "枕・支え"
+          }
+        ],
+        "rootCandidates": [
+          "bolst"
+        ],
+        "semanticBridge": "物理的な枕や支えで持ち上げることから、組織・主張・自信などを支え強化する意味へ広がった。",
+        "summary": "bolsterは枕・支えを表す古英語から、強化する・支えるという動詞になった。",
+        "confidence": "high",
+        "notes": "単一のゲルマン系基体で、bolst＋接辞のA型分解は行わない。"
+      }
+    },
+    "bravado": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 bravade、イタリア語 bravata（自慢、虚勢）に由来し、bravo（勇敢な）から強がりの意味へ → 虚勢、強がり"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/bravado",
+          "https://www.merriam-webster.com/dictionary/bravado"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/bravado",
+            "note": "bravadoをフランス語 bravade、イタリア語 bravata（自慢、強がり）、bravare（自慢する）に遡らせ、bravoの語源と、英語形がスペイン語の-adoの影響を受けたことを説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/bravado",
+            "note": "bravadoの現代語義として、実際以上の勇気や自信を見せる虚勢・強がりを確認した。"
+          }
+        ],
+        "originLanguage": "フランス語・イタリア語・英語",
+        "etymons": [
+          "bravado",
+          "bravade",
+          "bravata",
+          "bravare",
+          "bravo",
+          "-ado"
+        ],
+        "historicalPath": [
+          "イタリア語 bravo（勇敢な、荒々しい）",
+          "イタリア語 bravare・bravata（自慢する、強がり）",
+          "フランス語 bravade",
+          "英語 bravado（虚勢、強がり）"
+        ],
+        "components": [
+          {
+            "form": "bravata",
+            "kind": "base",
+            "gloss": "自慢・強がり"
+          }
+        ],
+        "rootCandidates": [
+          "brav"
+        ],
+        "semanticBridge": "勇敢さを誇示することから、実力や勇気を実際以上に見せる虚勢・強がりの意味へ特化した。",
+        "summary": "bravadoはbravoに関係するイタリア語・フランス語から、虚勢や強がりを表すようになった。",
+        "confidence": "high",
+        "notes": "英語の-adoが語源的な接尾辞として確定するわけではなく、形の影響も含むためB型にする。"
+      }
+    },
+    "brusquely": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "ぶっきらぼうに",
+        "root": "brusque",
+        "parts": [
+          {
+            "form": "brusque",
+            "kind": "root",
+            "gloss": "粗い・ぶっきらぼうな"
+          },
+          {
+            "form": "-ly",
+            "kind": "suffix",
+            "gloss": "〜な状態で"
+          }
+        ],
+        "derivation": "brusque（粗い、ぶっきらぼうな）＋-ly（〜な状態で） → ぶっきらぼうな状態で、ぶっきらぼうに、ぞんざいに"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/brusque",
+          "https://www.merriam-webster.com/dictionary/brusquely"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/brusque",
+            "note": "brusqueをフランス語 brusque、イタリア語 brusco（粗い、急な）に遡らせ、荒く急な態度を表す形容詞として説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/brusquely",
+            "note": "brusquelyの現代語義として、短く粗い態度で、ぶっきらぼうに話す様子を確認した。"
+          }
+        ],
+        "originLanguage": "フランス語・イタリア語・英語",
+        "etymons": [
+          "brusquely",
+          "brusque",
+          "brusco",
+          "-ly"
+        ],
+        "historicalPath": [
+          "イタリア語 brusco（粗い、急な）",
+          "フランス語 brusque",
+          "英語 brusque（ぶっきらぼうな）",
+          "英語 brusquely（ぶっきらぼうに）"
+        ],
+        "components": [
+          {
+            "form": "brusque",
+            "kind": "base",
+            "gloss": "粗い・急な"
+          }
+        ],
+        "rootCandidates": [
+          "brusque"
+        ],
+        "semanticBridge": "粗く急な態度を表す形容詞に、英語の副詞語尾が付き、そのような態度で行う様子を表すようになった。",
+        "summary": "brusquelyはbrusque＋-lyで、ぶっきらぼうに・ぞんざいにという様子を表す。",
+        "confidence": "high",
+        "notes": "brusque＋-lyという英語で透明な副詞形成なのでA型にする。"
+      }
+    },
+    "buttress": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 boteres・buter（押し当てる、支える）に由来し、建物の控え壁から比喩的な支援へ → 支持、強化"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/buttress",
+          "https://www.merriam-webster.com/dictionary/buttress"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/buttress",
+            "note": "buttressを古フランス語 boteres（建物を支えるもの）、buter（押し当てる）に関係付け、建築上の支えから主張などを支える動詞へ発達したと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/buttress",
+            "note": "buttressの現代語義として、建物を補強する控え壁、または計画・議論を支えることを確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語・英語",
+        "etymons": [
+          "buttress",
+          "boteres",
+          "buter"
+        ],
+        "historicalPath": [
+          "古フランス語 buter（押し当てる、突く）",
+          "古フランス語 boteres（控え壁、支え）",
+          "英語 buttress（建築上の支え）",
+          "英語 buttress（支える、強化する）"
+        ],
+        "components": [
+          {
+            "form": "boteres",
+            "kind": "base",
+            "gloss": "建物の支え"
+          }
+        ],
+        "rootCandidates": [
+          "but"
+        ],
+        "semanticBridge": "建物の壁を押し支える構造物から、議論・計画・権力などを支え強化する比喩へ広がった。",
+        "summary": "buttressは建物を支える控え壁の語から、支持・強化を表す名詞と動詞になった。",
+        "confidence": "medium",
+        "notes": "古フランス語の語形からbut＋接尾辞を英語表面のA型として断定しない。"
+      }
+    },
+    "cajole": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 cajoler（甘言で説得する）に由来し、鳥のさえずりや鳥かごへ誘う語が混ざった可能性がある → 甘言で説得する、なだめすかす"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/cajole",
+          "https://www.merriam-webster.com/dictionary/cajole"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/cajole",
+            "note": "cajoleをフランス語 cajoler（おだててだます、口車に乗せる）に遡らせ、cageoler（カケスのようにしゃべる）とgaioler（鳥かごに入れる）の混成説を示している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/cajole",
+            "note": "cajoleの現代語義として、甘い言葉やおだてで人に何かをさせることを確認した。"
+          }
+        ],
+        "originLanguage": "フランス語",
+        "etymons": [
+          "cajole",
+          "cajoler",
+          "cageoler",
+          "gaioler"
+        ],
+        "historicalPath": [
+          "フランス語 cajoler（おだてる、甘言で説得する）",
+          "おしゃべりを表す cageoler と、鳥かごに入れる gaioler の混成説",
+          "英語 cajole（甘言で説得する）"
+        ],
+        "components": [
+          {
+            "form": "cajoler",
+            "kind": "base",
+            "gloss": "おだてて説得する"
+          }
+        ],
+        "rootCandidates": [
+          "cajol"
+        ],
+        "semanticBridge": "甘い声で相手を誘う・おだてるイメージから、相手をうまく丸め込んで何かをさせる意味へ発達した。",
+        "summary": "cajoleはフランス語の甘言で説得する語に由来し、語源の混成説もあるためB型にする。",
+        "confidence": "high",
+        "notes": "語源が一つの確定した語根へ分けられないためA型化しない。"
+      }
+    },
+    "caustic": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "辛辣な",
+        "root": "caust",
+        "parts": [
+          {
+            "form": "caust",
+            "kind": "root",
+            "gloss": "焼く・焦がす"
+          },
+          {
+            "form": "-ic",
+            "kind": "suffix",
+            "gloss": "〜に関する・〜の性質の"
+          }
+        ],
+        "derivation": "caust（焼く・焦がす）＋-ic（〜の性質の） → 焼くように痛烈な、辛辣な、痛烈な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/caustic",
+          "https://www.merriam-webster.com/dictionary/caustic"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/caustic",
+            "note": "causticをギリシャ語 kaustikos（焼く性質の）に遡らせ、kaiein（焼く）と関係付けている。化学的に焼く性質から、言葉が人を傷つける辛辣さへ意味が広がった。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/caustic",
+            "note": "causticの現代語義として、化学的に腐食性があること、言葉や批判が辛辣で痛烈なことを確認した。"
+          }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・英語",
+        "etymons": [
+          "caustic",
+          "kaustikos",
+          "kaiein",
+          "-ic"
+        ],
+        "historicalPath": [
+          "ギリシャ語 kaiein（焼く）",
+          "ギリシャ語 kaustikos（焼く性質の）",
+          "ラテン語 causticus",
+          "英語 caustic（腐食性の、辛辣な）"
+        ],
+        "components": [
+          {
+            "form": "kaustikos",
+            "kind": "base",
+            "gloss": "焼く性質の"
+          }
+        ],
+        "rootCandidates": [
+          "caust"
+        ],
+        "semanticBridge": "物を焼き焦がす化学的な性質から、皮肉や批判が心を焼くように鋭く痛烈なことへ比喩的に広がった。",
+        "summary": "causticはcaust（焼く・焦がす）＋-icで、腐食性の、または辛辣な性質を表す。",
+        "confidence": "high",
+        "notes": "ギリシャ語kaustikosと表面のcaustic、-icが対応するためA型にする。"
+      }
+    },
+    "censure": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "非難",
+        "root": "cens",
+        "parts": [
+          {
+            "form": "cens",
+            "kind": "root",
+            "gloss": "評価・判断する"
+          },
+          {
+            "form": "-ure",
+            "kind": "suffix",
+            "gloss": "〜すること・もの"
+          }
+        ],
+        "derivation": "cens（評価・判断する）＋-ure（〜すること・もの） → 判断して欠点を指摘すること、非難、譴責"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/censure",
+          "https://www.merriam-webster.com/dictionary/censure"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/censure",
+            "note": "censureをラテン語 censura（判断、意見、検閲官の職務）に遡らせ、censere（評価する、査定する）からできた語と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/censure",
+            "note": "censureの現代語義として、公式に強く非難すること、その非難・譴責を確認した。"
+          }
+        ],
+        "originLanguage": "フランス語・ラテン語",
+        "etymons": [
+          "censure",
+          "censura",
+          "censere",
+          "census",
+          "-ure"
+        ],
+        "historicalPath": [
+          "ラテン語 censere（評価する、判断する）",
+          "ラテン語 census・censura（評価、判断、検閲）",
+          "古フランス語 censure",
+          "英語 censure（非難する、非難）"
+        ],
+        "components": [
+          {
+            "form": "censere",
+            "kind": "base",
+            "gloss": "評価する・判断する"
+          }
+        ],
+        "rootCandidates": [
+          "cens"
+        ],
+        "semanticBridge": "価値や行為を判断することから、欠点を見つけて公式に非難することへ意味が特化した。",
+        "summary": "censureはcens（評価・判断する）＋-ureで、公式な非難・譴責を表す。",
+        "confidence": "high",
+        "notes": "censuraからの名詞形成と、英語表面のcens＋-ureが対応するためA型にする。"
+      }
+    },
+    "clatter": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "中英語 clateren（音を立てる）に由来する擬音的な語で、硬い物がぶつかる音を表す → ガチャガチャという音"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/clatter",
+          "https://www.merriam-webster.com/dictionary/clatter"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/clatter",
+            "note": "clatterを中英語 clateren、古英語 clatrung（騒音）に関係する擬音的な語として説明し、硬い物がぶつかる音を確認している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/clatter",
+            "note": "clatterの現代語義として、硬い物が連続してぶつかるガチャガチャという音と、その音を立てる動作を確認した。"
+          }
+        ],
+        "originLanguage": "中英語・古英語系",
+        "etymons": [
+          "clatter",
+          "clateren",
+          "clatrung"
+        ],
+        "historicalPath": [
+          "古英語 clatrung（騒音）",
+          "中英語 clateren（音を立てる）",
+          "英語 clatter（ガチャガチャ音を立てる、ガチャガチャという音）"
+        ],
+        "components": [
+          {
+            "form": "clateren",
+            "kind": "base",
+            "gloss": "音を立てる"
+          }
+        ],
+        "rootCandidates": [
+          "clat"
+        ],
+        "semanticBridge": "硬い物が連続してぶつかる音をまねた語から、その音と音を立てる動作の両方を表すようになった。",
+        "summary": "clatterは擬音的な中英語から、ガチャガチャという音・動作を表す語になった。",
+        "confidence": "high",
+        "notes": "擬音的な一語で、clat＋接辞のA型分解は行わない。"
+      }
+    },
+    "collate": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "照合する",
+        "root": "lat",
+        "parts": [
+          {
+            "form": "col",
+            "kind": "prefix",
+            "gloss": "ともに"
+          },
+          {
+            "form": "lat",
+            "kind": "root",
+            "gloss": "運ぶ・持たれる"
+          }
+        ],
+        "derivation": "col-（com-『ともに』の同化形）＋lat（運ぶ・持たれる） → いっしょに持ち寄って照合する、比較する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/collate",
+          "https://www.merriam-webster.com/dictionary/collate"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/collate",
+            "note": "collateをラテン語 collatus（conferre『ともに運ぶ』の不規則な過去分詞）に遡らせ、com-（ともに）＋latus（運ばれた）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/collate",
+            "note": "collateの現代語義として、複数の文書や情報を持ち寄って比較・照合することを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "collate",
+          "collatus",
+          "conferre",
+          "com",
+          "latus",
+          "ferre"
+        ],
+        "historicalPath": [
+          "ラテン語 ferre（運ぶ）",
+          "ラテン語 latus（運ばれた）",
+          "ラテン語 conferre（ともに運ぶ、持ち寄る）",
+          "ラテン語 collatus",
+          "英語 collate（照合する、比較する）"
+        ],
+        "components": [
+          {
+            "form": "com",
+            "kind": "prefix",
+            "gloss": "ともに"
+          },
+          {
+            "form": "latus",
+            "kind": "base",
+            "gloss": "運ばれた"
+          }
+        ],
+        "rootCandidates": [
+          "lat"
+        ],
+        "semanticBridge": "資料をいっしょに運び持ち寄ることから、文書や情報を並べて一致を確認し、照合・比較する意味になった。",
+        "summary": "collateはcol-（ともに）＋lat（運ぶ・持たれる）で、持ち寄って照合することを表す。",
+        "confidence": "high",
+        "notes": "latusの不規則な語形を英語表面のlatとして扱い、col-の同化形を既存辞書から再利用する。"
+      }
+    },
+    "concoct": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "でっち上げた",
+        "root": "coct",
+        "parts": [
+          {
+            "form": "con",
+            "kind": "prefix",
+            "gloss": "ともに・完全に"
+          },
+          {
+            "form": "coct",
+            "kind": "root",
+            "gloss": "煮る・調理する"
+          }
+        ],
+        "derivation": "con-（ともに・完全に）＋coct（煮る・調理する） → 材料を混ぜて調理し、比喩的にでっち上げた、調合した"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/concoct",
+          "https://www.merriam-webster.com/dictionary/concoct"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/concoct",
+            "note": "concoctをラテン語 concoquere（いっしょに煮る、消化する）・coctus（煮られた）に遡らせ、con-（ともに）＋coquere（煮る）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/concoct",
+            "note": "concoctの現代語義として、材料を混ぜて作ること、話や計画を巧みにでっち上げることを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・英語",
+        "etymons": [
+          "concoct",
+          "concoquere",
+          "coctus",
+          "con",
+          "coquere"
+        ],
+        "historicalPath": [
+          "ラテン語 coquere（煮る、調理する）",
+          "ラテン語 concoquere（いっしょに煮る）",
+          "ラテン語 coctus（煮られた）",
+          "英語 concoct（調合する、でっち上げる）"
+        ],
+        "components": [
+          {
+            "form": "con",
+            "kind": "prefix",
+            "gloss": "ともに"
+          },
+          {
+            "form": "coquere",
+            "kind": "base",
+            "gloss": "煮る・調理する"
+          }
+        ],
+        "rootCandidates": [
+          "coct"
+        ],
+        "semanticBridge": "複数の材料をいっしょに煮る動作から、情報・話・計画を混ぜ合わせて作る、つまりでっち上げる意味へ比喩的に広がった。",
+        "summary": "concoctはcon-＋coct（煮る・調理する）で、調合する・でっち上げることを表す。",
+        "confidence": "high",
+        "notes": "ラテン語concoquere・coctusの構成が表面のcon＋coctに対応するためA型にする。surfaceFormsのconcoctedの-edは語形変化として扱う。"
+      }
+    },
+    "contort": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "ねじ曲げた",
+        "root": "tort",
+        "parts": [
+          {
+            "form": "con",
+            "kind": "prefix",
+            "gloss": "ともに・完全に"
+          },
+          {
+            "form": "tort",
+            "kind": "root",
+            "gloss": "ねじる"
+          }
+        ],
+        "derivation": "con-（完全に）＋tort（ねじる） → すっかりねじり、ねじ曲げた、ゆがめた"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/contort",
+          "https://www.merriam-webster.com/dictionary/contort"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/contort",
+            "note": "contortをラテン語 contortus（ねじれた）、contorquere（ねじる）に遡らせ、com-/con-（完全に、ともに）＋torquere（ねじる）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/contort",
+            "note": "contortの現代語義として、形や顔を不自然にねじ曲げること、意味を歪曲することを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・英語",
+        "etymons": [
+          "contort",
+          "contortus",
+          "contorquere",
+          "con",
+          "torquere"
+        ],
+        "historicalPath": [
+          "ラテン語 torquere（ねじる）",
+          "ラテン語 contorquere（完全にねじる）",
+          "ラテン語 contortus（ねじれた）",
+          "英語 contort（ねじ曲げる、ゆがめる）"
+        ],
+        "components": [
+          {
+            "form": "con",
+            "kind": "prefix",
+            "gloss": "完全に"
+          },
+          {
+            "form": "torquere",
+            "kind": "base",
+            "gloss": "ねじる"
+          }
+        ],
+        "rootCandidates": [
+          "tort"
+        ],
+        "semanticBridge": "ねじる動作を完全に行うことから、身体・表情をゆがめること、さらに意味や事実を歪曲することへ広がった。",
+        "summary": "contortはcon-（完全に）＋tort（ねじる）で、ねじ曲げる・ゆがめることを表す。",
+        "confidence": "high",
+        "notes": "既存のtort語根とcon-接頭辞を再利用し、surfaceFormsのcontortedの-edは語形変化として扱う。"
+      }
+    },
+    "coup": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 coup（打撃、ひと打ち）に由来し、政変の一撃や思いがけない成功を表すようになった → クーデター；大成功"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/coup",
+          "https://www.merriam-webster.com/dictionary/coup"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/coup",
+            "note": "coupをフランス語 coup（打撃、ひと打ち）、古フランス語 copに遡らせ、政治的なcoup d'étatから政権転覆、さらに思いがけない成功の意味へ広がったと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/coup",
+            "note": "coupの現代語義として、非合法な政権奪取・クーデターと、非常に成功した行為・大成功を確認した。"
+          }
+        ],
+        "originLanguage": "フランス語・古フランス語",
+        "etymons": [
+          "coup",
+          "cop",
+          "coup d'état"
+        ],
+        "historicalPath": [
+          "古フランス語 cop（打撃、ひと打ち）",
+          "フランス語 coup（打撃、ひと打ち）",
+          "フランス語 coup d'état（国家への一撃、政変）",
+          "英語 coup（クーデター、大成功）"
+        ],
+        "components": [
+          {
+            "form": "coup",
+            "kind": "base",
+            "gloss": "打撃・ひと打ち"
+          }
+        ],
+        "rootCandidates": [
+          "coup"
+        ],
+        "semanticBridge": "ひと打ち・一撃という意味から、国家に加える政変の一撃、さらに計画を鮮やかに成功させる一手へ比喩的に広がった。",
+        "summary": "coupはフランス語の『一撃』から、クーデターと大成功の両方を表すようになった。",
+        "confidence": "high",
+        "notes": "単一のフランス語基体で、coup d'étatは複合表現として語源経路に残す。"
+      }
+    },
+    "credence": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "信用",
+        "root": "cred",
+        "parts": [
+          {
+            "form": "cred",
+            "kind": "root",
+            "gloss": "信じる"
+          },
+          {
+            "form": "-ence",
+            "kind": "suffix",
+            "gloss": "〜の状態"
+          }
+        ],
+        "derivation": "cred（信じる）＋-ence（〜の状態） → 信じられる状態、信用、信憑性"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/credence",
+          "https://www.merriam-webster.com/dictionary/credence"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/credence",
+            "note": "credenceを古フランス語 credence、ラテン語 credentia（信頼、信念）に遡らせ、credere（信じる）と関係付けている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/credence",
+            "note": "credenceの現代語義として、何かを信じ受け入れること、信用・信憑性を確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語・ラテン語",
+        "etymons": [
+          "credence",
+          "credentia",
+          "credere",
+          "credens",
+          "-ence"
+        ],
+        "historicalPath": [
+          "ラテン語 credere（信じる）",
+          "ラテン語 credens・credentia（信じること、信頼）",
+          "古フランス語 credence",
+          "英語 credence（信用、信憑性）"
+        ],
+        "components": [
+          {
+            "form": "credere",
+            "kind": "base",
+            "gloss": "信じる"
+          }
+        ],
+        "rootCandidates": [
+          "cred"
+        ],
+        "semanticBridge": "人や情報を信じる動作から、信じるに値する状態、つまり信用や信憑性を表す抽象名詞になった。",
+        "summary": "credenceはcred（信じる）＋-enceで、信用・信憑性を表す。",
+        "confidence": "high",
+        "notes": "ラテン語credereとcredentia、英語の-enceが対応するためA型にする。"
+      }
+    },
+    "dearth": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 deore（貴重な、高価な）に由来する抽象名詞で、飢饉では食料が高価になることから不足の意味へ → 不足、欠乏"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/dearth",
+          "https://www.merriam-webster.com/dictionary/dearth"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/dearth",
+            "note": "dearthを古英語 deore（貴重な、高価な）＋古い抽象名詞語尾-thから説明し、食料不足で価格が上がることから欠乏の意味になったと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/dearth",
+            "note": "dearthの現代語義として、必要なものの不足・欠乏、特に量が極端に少ないことを確認した。"
+          }
+        ],
+        "originLanguage": "古英語・ゲルマン祖語",
+        "etymons": [
+          "dearth",
+          "derthe",
+          "deore",
+          "-th"
+        ],
+        "historicalPath": [
+          "古英語 deore（貴重な、高価な）",
+          "古英語系 dearth（高価さ、欠乏）",
+          "中英語 derthe（食料不足）",
+          "英語 dearth（不足、欠乏）"
+        ],
+        "components": [
+          {
+            "form": "deore",
+            "kind": "base",
+            "gloss": "貴重な・高価な"
+          }
+        ],
+        "rootCandidates": [
+          "dear"
+        ],
+        "semanticBridge": "希少で高価な状態から、特に不足のために高価になる状態を指し、一般の欠乏を表すようになった。",
+        "summary": "dearthは『高価な』古英語から、希少さ・不足を表す名詞になった。",
+        "confidence": "high",
+        "notes": "古い-thを現代の表示用接辞辞書へ追加せず、dear＋-thのA型表示は避ける。"
+      }
+    },
+    "deify": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "神格化した",
+        "root": "dei",
+        "parts": [
+          {
+            "form": "dei",
+            "kind": "root",
+            "gloss": "神"
+          },
+          {
+            "form": "-ify",
+            "kind": "suffix",
+            "gloss": "〜にする"
+          }
+        ],
+        "derivation": "dei（神）＋-ify（〜にする） → 神にし、神格化した"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/deify",
+          "https://www.merriam-webster.com/dictionary/deify"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/deify",
+            "note": "deifyをフランス語 déifier、ラテン語 deificare（神にする）に遡らせ、deus（神）＋facere（する、作る）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/deify",
+            "note": "deifyの現代語義として、人や物を神として扱うこと、過度に崇拝することを確認した。"
+          }
+        ],
+        "originLanguage": "フランス語・ラテン語・英語",
+        "etymons": [
+          "deify",
+          "déifier",
+          "deificare",
+          "deus",
+          "facere",
+          "-ify"
+        ],
+        "historicalPath": [
+          "ラテン語 deus（神）",
+          "ラテン語 deificare（神にする）",
+          "フランス語 déifier",
+          "英語 deify（神格化する）"
+        ],
+        "components": [
+          {
+            "form": "deus",
+            "kind": "base",
+            "gloss": "神"
+          },
+          {
+            "form": "facere",
+            "kind": "base",
+            "gloss": "する・作る"
+          }
+        ],
+        "rootCandidates": [
+          "dei"
+        ],
+        "semanticBridge": "神を表すdeusから、神にするという動詞が生じ、人物や物を神のように扱う意味へ広がった。",
+        "summary": "deifyはdei（神）＋-ify（〜にする）で、神格化することを表す。",
+        "confidence": "high",
+        "notes": "deusの英語表面形deiと-ifyが対応する。surfaceFormsのdeifiedにある-edは語形変化として扱う。"
+      }
+    },
+    "ditch": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 dic（溝、堀）に由来し、溝を掘ることから物や人を見捨てる俗用へ → 溝、どぶ；捨てる"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/ditch",
+          "https://www.merriam-webster.com/dictionary/ditch"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/ditch",
+            "note": "ditchを古英語 dic（溝、堀）・dikeの変種に遡らせ、溝を掘る動作から、19世紀末に捨てる・見捨てる俗用が生じたと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/ditch",
+            "note": "ditchの現代語義として、地面の溝・排水溝と、誰か・何かを捨てる動詞を確認した。"
+          }
+        ],
+        "originLanguage": "古英語・ゲルマン祖語",
+        "etymons": [
+          "ditch",
+          "diche",
+          "dic",
+          "dike"
+        ],
+        "historicalPath": [
+          "古英語 dic（溝、堀）",
+          "中英語 diche（溝、防御壁）",
+          "英語 ditch（溝、排水溝）",
+          "英語 ditch（溝へ投げる、捨てる）"
+        ],
+        "components": [
+          {
+            "form": "dic",
+            "kind": "base",
+            "gloss": "溝・堀"
+          }
+        ],
+        "rootCandidates": [
+          "ditch"
+        ],
+        "semanticBridge": "物を捨てる場所としての溝から、溝へ投げ入れるように人や計画を見捨てる俗用が生じた。",
+        "summary": "ditchは古英語の溝の語から、溝と、捨てる・見捨てる動詞の両方を表す。",
+        "confidence": "high",
+        "notes": "名詞と動詞の意味が分岐する単一基体で、英語表面のA型接辞はない。"
+      }
+    },
+    "dogma": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 dogma、ギリシャ語 dogma（意見、決定された教え）に由来し、宗教や思想で権威ある教義を表すようになった → 独断的な教義、定説"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/dogma",
+          "https://www.merriam-webster.com/dictionary/dogma"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/dogma",
+            "note": "dogmaをラテン語 dogma、ギリシャ語 dogma（意見、教義、決定）に遡らせ、dokein（思う、判断する）と関係付けている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/dogma",
+            "note": "dogmaの現代語義として、議論なしに真理として受け入れられる原則・教義を確認した。"
+          }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語",
+        "etymons": [
+          "dogma",
+          "dogmatos",
+          "dokein"
+        ],
+        "historicalPath": [
+          "ギリシャ語 dokein（思う、判断する）",
+          "ギリシャ語 dogma（意見、決定、教義）",
+          "ラテン語 dogma",
+          "英語 dogma（独断的な教義、定説）"
+        ],
+        "components": [
+          {
+            "form": "dogma",
+            "kind": "base",
+            "gloss": "意見・教義"
+          }
+        ],
+        "rootCandidates": [
+          "dogm"
+        ],
+        "semanticBridge": "判断された意見や決定を表す語から、宗教・思想の中で権威をもって受け入れられる教義、時に独断的な定説へ意味が特化した。",
+        "summary": "dogmaは判断・意見を表すギリシャ語から、独断的な教義や定説を表すようになった。",
+        "confidence": "high",
+        "notes": "単一のギリシャ語借用語で、dogm＋接辞のA型分解は行わない。"
+      }
+    },
+    "dubious": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "疑わしい",
+        "root": "dubi",
+        "parts": [
+          {
+            "form": "dubi",
+            "kind": "root",
+            "gloss": "疑う"
+          },
+          {
+            "form": "-ous",
+            "kind": "suffix",
+            "gloss": "〜に満ちた"
+          }
+        ],
+        "derivation": "dubi（疑う）＋-ous（〜に満ちた） → 疑いに満ちた、疑わしい"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/dubious",
+          "https://www.merriam-webster.com/dictionary/dubious"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/dubious",
+            "note": "dubiousを古フランス語 dubieus、ラテン語 dubiosus（疑わしい）に遡らせ、dubius（疑わしい）・dubitare（ためらう、疑う）と関係付けている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/dubious",
+            "note": "dubiousの現代語義として、真実・正当性・信頼性が疑わしいこと、ためらいがちなことを確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語・ラテン語",
+        "etymons": [
+          "dubious",
+          "dubieus",
+          "dubiosus",
+          "dubius",
+          "dubitare",
+          "-ous"
+        ],
+        "historicalPath": [
+          "ラテン語 dubitare（疑う、ためらう）",
+          "ラテン語 dubius（疑わしい、二つの間にある）",
+          "ラテン語 dubiosus（疑いに満ちた）",
+          "古フランス語 dubieus",
+          "英語 dubious（疑わしい）"
+        ],
+        "components": [
+          {
+            "form": "dubius",
+            "kind": "base",
+            "gloss": "疑わしい"
+          }
+        ],
+        "rootCandidates": [
+          "dubi"
+        ],
+        "semanticBridge": "二つの可能性の間でためらう状態から、真実・正当性・信頼性に疑いがある性質へ広がった。",
+        "summary": "dubiousはdubi（疑う）＋-ousで、疑いに満ちた、疑わしいことを表す。",
+        "confidence": "high",
+        "notes": "dubiusの語幹dubiと-ousが英語表面に対応するためA型にする。"
+      }
+    },
+    "dupe": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 dupe（だまされた人）に由来し、語源はフクロウを指す表現だった可能性がある → だまされた"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/dupe",
+          "https://www.merriam-webster.com/dictionary/dupe"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/dupe",
+            "note": "dupeをフランス語 dupe、盗賊仲間の語d​​uppeに遡らせ、de huppe（ヤツガシラのような鳥）から来た可能性を示している。だまされやすい鳥の比喩である。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/dupe",
+            "note": "dupeの現代語義として、だまされて人の言いなりになる人、またはだますことを確認した。"
+          }
+        ],
+        "originLanguage": "フランス語・盗賊仲間の語",
+        "etymons": [
+          "dupe",
+          "duppe",
+          "huppe"
+        ],
+        "historicalPath": [
+          "フランス語 huppe（ヤツガシラ）",
+          "盗賊仲間の語 duppe（だまされやすい人）",
+          "フランス語 dupe",
+          "英語 dupe（だます、だまされた人）"
+        ],
+        "components": [
+          {
+            "form": "dupe",
+            "kind": "base",
+            "gloss": "だまされた人"
+          }
+        ],
+        "rootCandidates": [
+          "dup"
+        ],
+        "semanticBridge": "だまされやすいとされた鳥や人を指す語から、他人の策略に引っかかった人、さらにその人をだます動詞へ発達した。",
+        "summary": "dupeはフランス語の『だまされた人』に由来し、語源説にも揺れがあるためB型にする。",
+        "confidence": "medium",
+        "notes": "sourceの表記揺れを含む語源説で、英語表面の語根・接辞分解は行わない。surfaceFormsのdupedの-edは語形変化として扱う。"
+      }
+    },
+    "eccentric": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "風変わりな",
+        "root": "centr",
+        "parts": [
+          {
+            "form": "ec",
+            "kind": "prefix",
+            "gloss": "外へ"
+          },
+          {
+            "form": "centr",
+            "kind": "root",
+            "gloss": "中心"
+          },
+          {
+            "form": "-ic",
+            "kind": "suffix",
+            "gloss": "〜に関する・〜の性質の"
+          }
+        ],
+        "derivation": "ec-（外へ）＋centr（中心）＋-ic（〜の性質の） → 中心から外れた、風変わりな"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/eccentric",
+          "https://www.merriam-webster.com/dictionary/eccentric"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/eccentric",
+            "note": "eccentricを中世ラテン語 eccentricus、ギリシャ語 ekkentros（中心の外にある）に遡らせ、ek（外へ）＋kentron（中心）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/eccentric",
+            "note": "eccentricの現代語義として、一般的な行動や考え方から外れて風変わりなこと、また中心から外れた軌道を確認した。"
+          }
+        ],
+        "originLanguage": "ギリシャ語・中世ラテン語・フランス語",
+        "etymons": [
+          "eccentric",
+          "ekkentros",
+          "ek",
+          "kentron",
+          "-ic"
+        ],
+        "historicalPath": [
+          "ギリシャ語 ek（外へ）＋kentron（中心）",
+          "ギリシャ語 ekkentros（中心の外にある）",
+          "中世ラテン語 eccentricus",
+          "英語 eccentric（中心から外れた、風変わりな）"
+        ],
+        "components": [
+          {
+            "form": "ek",
+            "kind": "prefix",
+            "gloss": "外へ"
+          },
+          {
+            "form": "kentron",
+            "kind": "base",
+            "gloss": "中心"
+          }
+        ],
+        "rootCandidates": [
+          "centr"
+        ],
+        "semanticBridge": "幾何学的に中心から外れていることから、行動・考え方が一般から外れて風変わりであることへ比喩的に広がった。",
+        "summary": "eccentricはec-（外へ）＋centr（中心）＋-icで、中心から外れた、風変わりな性質を表す。",
+        "confidence": "high",
+        "notes": "ギリシャ語ekの同化形ecを新しい接頭辞として登録し、中心を表すcentrと-icを組み合わせる。"
+      }
+    }
+  }
+}

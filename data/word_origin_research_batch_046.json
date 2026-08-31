@@ -1,0 +1,584 @@
+{
+  "meta": {
+    "batchId": "batch-046",
+    "note": "未確認B型の次の25語。出典が示す派生関係と表面形が対応する15語をA型へ、単純語・短縮形・借用語・語形変化が英語の部品として安全に切れない10語はB型に残す。"
+  },
+  "dictionary": {
+    "roots": {
+      "fact": {
+        "gloss": "する・作る",
+        "origin": "ラテン語 facere / factus",
+        "note": "行為や制作を表す語根。factoryでは物を作る場所へつながる。"
+      },
+      "equip": {
+        "gloss": "備える・装備する",
+        "origin": "古フランス語 esquiper / フランス語 équiper",
+        "note": "目的のために必要なものを備える動作。equipmentの基体。"
+      },
+      "work": {
+        "gloss": "働く・作業する",
+        "origin": "古英語 wyrcan / ゲルマン祖語 *wurkjanan",
+        "note": "努力して作業する動作。workerは働く人。"
+      },
+      "regul": {
+        "gloss": "規則・定規",
+        "origin": "ラテン語 regula",
+        "note": "基準となる線や規則。regularでは規則に沿った状態を表す。"
+      },
+      "success": {
+        "gloss": "うまく進む・成功",
+        "origin": "ラテン語 succedere / successus",
+        "note": "後に続いてうまく進むこと。successfulの基体。"
+      },
+      "health": {
+        "gloss": "全体・健康",
+        "origin": "古英語 hælþ / ゲルマン祖語 *hailitho",
+        "note": "欠けるところなく健全な状態。healthyの基体。"
+      },
+      "tempor": {
+        "gloss": "時間・季節",
+        "origin": "ラテン語 tempus / temporis",
+        "note": "時間の長さや季節。temporaryでは限られた時間を表す。"
+      },
+      "valu": {
+        "gloss": "価値をつける・価値",
+        "origin": "古フランス語 valuer / ラテン語 valere",
+        "note": "価値や有用性を表す語幹。valuableではvaluとして現れる。"
+      },
+      "nounce": {
+        "gloss": "知らせる・報告する",
+        "origin": "ラテン語 nuntiare / nuntius",
+        "note": "知らせを伝える動作。announceでは語頭の同化後のnounceとして現れる。"
+      },
+      "get": {
+        "gloss": "つかむ・得る",
+        "origin": "古ノルド語 geta / ゲルマン祖語 *getan",
+        "note": "つかみ取ること。forgetではfor-によって「つかみ損なう」意味へつながる。"
+      },
+      "stock": {
+        "gloss": "木の幹・かたまり",
+        "origin": "古英語 stocc / ゲルマン祖語 *stauk-",
+        "note": "木の幹や太いかたまり。stockyでは太くずんぐりした形へつながる。"
+      },
+      "cheer": {
+        "gloss": "表情・元気",
+        "origin": "古フランス語 chiere / 後期ラテン語 cara",
+        "note": "顔の表情から心の元気・陽気さへ意味が広がった。cheeryの基体。"
+      }
+    },
+    "affixes": {
+      "-ory": {
+        "gloss": "〜に関する場所・性質",
+        "kind": "suffix",
+        "note": "行為や機能に関わる形容詞・名詞を作る接尾辞。factoryでは作る場所を表す。"
+      },
+      "for": {
+        "gloss": "離れて・誤って",
+        "kind": "prefix",
+        "note": "古英語のfor-。getと結び付き、つかみ損なう・心から失う意味を作る。"
+      }
+    }
+  },
+  "entries": {
+    "machine": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "装置・道具を表すギリシャ語・ラテン語から続く借用語。動く部分で力を働かせる装置 → 機械" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/machine", "https://www.merriam-webster.com/dictionary/machine"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/machine", "note": "machineをフランス語 machine、ラテン語 machina、ギリシャ語 mēkhanēに遡らせ、装置・道具の意味を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/machine", "note": "machineの現代語義として、機械的な力を働かせる可動部品を備えた装置を確認した。" }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・フランス語・英語",
+        "etymons": ["machine", "machina", "mēkhanē", "makhana"],
+        "historicalPath": ["ギリシャ語 mēkhanē（道具、装置、工夫）", "ラテン語 machina", "フランス語 machine", "英語 machine（機械）"],
+        "components": [{ "form": "machine", "kind": "base", "gloss": "装置・機械" }],
+        "rootCandidates": ["machin", "magh"],
+        "semanticBridge": "工夫して目的を実現する装置から、動力を利用して働く機械を表すようになった。",
+        "summary": "machineはギリシャ語・ラテン語からの借用語で、語源上のmakhanaを現代英語の部品として安全に切れないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "factory": {
+      "classification": "A",
+      "display": { "type": "A", "derivation": "fact（する・作る）＋-ory（〜に関する場所） → 物を作る場所、工場", "gloss": "工場", "root": "fact", "parts": [{ "form": "fact", "kind": "root", "gloss": "する・作る" }, { "form": "-ory", "kind": "suffix", "gloss": "〜に関する場所・性質" }] },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/factory", "https://www.merriam-webster.com/dictionary/factory"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/factory", "note": "factoryをフランス語 factorie、後期ラテン語 factorium、ラテン語 factor（作る者）・facereに遡らせている。製造する建物の意味も確認できる。" },
+          { "url": "https://www.merriam-webster.com/dictionary/factory", "note": "factoryの現代語義として、商品を製造する建物・施設を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["factory", "factorie", "factorium", "factor", "facere", "-ory"],
+        "historicalPath": ["ラテン語 facere（する、作る）", "ラテン語 factor（作る者）／factorium（作業所）", "フランス語 factorie", "英語 fact＋-ory → factory（工場）"],
+        "components": [{ "form": "fact", "kind": "base", "gloss": "作る" }, { "form": "-ory", "kind": "suffix", "gloss": "場所・性質" }],
+        "rootCandidates": ["fact", "fac", "dhe"],
+        "semanticBridge": "作る行為から、作る者の仕事場、さらに商品を製造する工場を表すようになった。",
+        "summary": "factoryはfactorium・facereに由来し、fact語幹と-ory接尾辞が表面形に対応するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "equipment": {
+      "classification": "A",
+      "display": { "type": "A", "derivation": "equip（備える・装備する）＋-ment（〜すること・もの） → 備え付けたもの、設備・用具", "gloss": "設備", "root": "equip", "parts": [{ "form": "equip", "kind": "root", "gloss": "備える・装備する" }, { "form": "-ment", "kind": "suffix", "gloss": "〜すること・もの" }] },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/equipment", "https://www.merriam-webster.com/dictionary/equipment"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/equipment", "note": "equipmentをequip＋-ment、またはフランス語 équipementから成る語と明記している。equipは船などを装備する意味から来る。" },
+          { "url": "https://www.merriam-webster.com/dictionary/equipment", "note": "equipmentの現代語義として、目的のために必要な道具・備品・設備を確認した。" }
+        ],
+        "originLanguage": "古ノルド語・古フランス語・フランス語・英語",
+        "etymons": ["equipment", "equip", "équiper", "esquiper", "-ment"],
+        "historicalPath": ["古ノルド語 skipa（整える、船を装備する）", "古フランス語 esquiper", "フランス語 équiper", "equip＋-ment → equipment（設備、用具）"],
+        "components": [{ "form": "equip", "kind": "base", "gloss": "備える" }, { "form": "-ment", "kind": "suffix", "gloss": "結果・もの" }],
+        "rootCandidates": ["equip", "skip"],
+        "semanticBridge": "目的のために装備する動作から、装備された道具・備品・設備全体を表す名詞になった。",
+        "summary": "equipmentは出典にequip＋-mentの関係が明記され、表面形も一致するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "worker": {
+      "classification": "A",
+      "display": { "type": "A", "derivation": "work（働く・作業する）＋-er（〜する人） → 働く人、作業員", "gloss": "作業員", "root": "work", "parts": [{ "form": "work", "kind": "root", "gloss": "働く・作業する" }, { "form": "-er", "kind": "suffix", "gloss": "〜する人" }] },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/worker", "https://www.merriam-webster.com/dictionary/worker"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/worker", "note": "workerをworkから作られた動作主名詞と明記し、労働者・作業者の意味を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/worker", "note": "workerの現代語義として、仕事をする人、特に賃金を得て働く人を確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン祖語・英語",
+        "etymons": ["worker", "work", "wyrcan", "*wurkjanan", "-er"],
+        "historicalPath": ["ゲルマン祖語 *wurkjanan（働く、作る）", "古英語 wyrcan", "英語 work", "work＋-er → worker（作業員）"],
+        "components": [{ "form": "work", "kind": "base", "gloss": "働く" }, { "form": "-er", "kind": "suffix", "gloss": "動作主" }],
+        "rootCandidates": ["work", "werg"],
+        "semanticBridge": "働く・作業する行為から、その行為をする人、作業員を表す名詞になった。",
+        "summary": "workerはwork＋-erの動作主名詞であることが出典に示され、表面形にも一致するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "careless": {
+      "classification": "A",
+      "display": { "type": "A", "derivation": "care（心配・注意）＋-less（〜のない） → 注意のない、不注意な", "gloss": "不注意な", "root": "care", "parts": [{ "form": "care", "kind": "root", "gloss": "心配・注意" }, { "form": "-less", "kind": "suffix", "gloss": "〜のない" }] },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/careless", "https://www.merriam-webster.com/dictionary/careless"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/careless", "note": "carelessを古英語 caru＋-lessと明記し、careを欠くことから不注意の意味になった経路を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/careless", "note": "carelessの現代語義として、注意や配慮を欠くことを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン系・英語",
+        "etymons": ["careless", "care", "caru", "cearu", "-less"],
+        "historicalPath": ["古英語 caru / cearu（心配、注意）", "英語 care（注意、配慮）", "care＋-less（注意がない）", "英語 careless（不注意な）"],
+        "components": [{ "form": "care", "kind": "base", "gloss": "注意・配慮" }, { "form": "-less", "kind": "suffix", "gloss": "〜のない" }],
+        "rootCandidates": ["care", "kar"],
+        "semanticBridge": "心配や注意を欠く状態から、注意を払わず不注意な性質を表すようになった。",
+        "summary": "carelessはcare＋-lessの構成が出典に明記され、既存のcare語根と-less接尾辞を再利用できるためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "quiet": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "休んでいる・静かな状態を表すラテン語 quietusから続く借用語。音や活動が少ない状態 → 静かな" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/quiet", "https://www.merriam-webster.com/dictionary/quiet"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/quiet", "note": "quietを古フランス語 quiet、ラテン語 quietus（休んだ、静かな）に遡らせる。" },
+          { "url": "https://www.merriam-webster.com/dictionary/quiet", "note": "quietの現代語義として、音・動き・活動がほとんどないことを確認した。" }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": ["quiet", "quietus", "quiescere"],
+        "historicalPath": ["ラテン語 quiescere（休む）／quietus（休んだ、静かな）", "古フランス語 quiet", "中英語 quiete", "英語 quiet（静かな）"],
+        "components": [{ "form": "quiet", "kind": "base", "gloss": "休んだ・静かな" }],
+        "rootCandidates": ["quie", "quiet"],
+        "semanticBridge": "休んで動きがない状態から、音や活動が少なく静かな状態を表すようになった。",
+        "summary": "quietはラテン語系の借用語で、語末を英語の接辞として分けないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "regular": {
+      "classification": "A",
+      "display": { "type": "A", "derivation": "regul（規則・定規）＋-ar（〜に関する） → 規則に沿った、規則的な", "gloss": "規則的な", "root": "regul", "parts": [{ "form": "regul", "kind": "root", "gloss": "規則・定規" }, { "form": "-ar", "kind": "suffix", "gloss": "〜に関する" }] },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/regulate", "https://www.merriam-webster.com/dictionary/regular"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/regulate", "note": "regularの基体に当たるラテン語 regula（定規、規則）・regularis（規則に関する）の語源を確認した。" },
+          { "url": "https://www.merriam-webster.com/dictionary/regular", "note": "regularの現代語義として、一定の規則・パターンに従うこと、通常のことを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["regular", "regularis", "regula", "-ar"],
+        "historicalPath": ["ラテン語 regula（定規、規則）", "ラテン語 regularis（規則に関する）", "フランス語 reguler / 英語 regular", "regul＋-ar → regular（規則的な）"],
+        "components": [{ "form": "regul", "kind": "base", "gloss": "規則・定規" }, { "form": "-ar", "kind": "suffix", "gloss": "〜に関する" }],
+        "rootCandidates": ["regul", "reg"],
+        "semanticBridge": "基準となる定規や規則から、規則に沿って一定のパターンを保つ性質を表すようになった。",
+        "summary": "regularはregula・regularisに由来し、regul語幹と既存の-ar接尾辞が表面形に対応するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "successful": {
+      "classification": "A",
+      "display": { "type": "A", "derivation": "success（うまく進む・成功）＋-ful（〜に満ちた） → 成功に満ちた、成功した", "gloss": "成功した", "root": "success", "parts": [{ "form": "success", "kind": "root", "gloss": "うまく進む・成功" }, { "form": "-ful", "kind": "suffix", "gloss": "〜に満ちた" }] },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/successful", "https://www.merriam-webster.com/dictionary/successful"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/successful", "note": "successfulをsuccess＋-fulと明記し、意図したことを成し遂げる人や行為を表すと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/successful", "note": "successfulの現代語義として、望んだ結果を達成したことを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["successful", "success", "successus", "succedere", "-ful"],
+        "historicalPath": ["ラテン語 succedere（後に続く、うまく進む）", "ラテン語 successus（進展、よい結果）", "英語 success", "success＋-ful → successful（成功した）"],
+        "components": [{ "form": "success", "kind": "base", "gloss": "成功" }, { "form": "-ful", "kind": "suffix", "gloss": "〜に満ちた" }],
+        "rootCandidates": ["success", "ced"],
+        "semanticBridge": "うまく進むこと・よい結果から、成功が実現している状態を表す形容詞になった。",
+        "summary": "successfulは出典にsuccess＋-fulの構成が明記され、表面形にも一致するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "fresh": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "新しい・生き生きした状態を表すゲルマン系の単純語。古くなく、作りたての状態 → 新鮮な" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/fresh", "https://www.merriam-webster.com/dictionary/fresh"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/fresh", "note": "freshを古英語 fersc、ゲルマン系の新しい・塩気のない語に遡らせ、食物や水の意味の発達を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/fresh", "note": "freshの現代語義として、新しく作られた・傷んでいない・新鮮なことを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン系・英語",
+        "etymons": ["fresh", "fersc", "*friskaz"],
+        "historicalPath": ["ゲルマン系 *friskaz（新しい、生き生きした）", "古英語 fersc", "中英語 fresh", "英語 fresh（新鮮な）"],
+        "components": [{ "form": "fresh", "kind": "base", "gloss": "新しい・新鮮な" }],
+        "rootCandidates": ["frisk", "pres"],
+        "semanticBridge": "新しく生き生きした状態から、作りたてで傷んでいない食物や空気を表す意味になった。",
+        "summary": "freshはゲルマン系の単純語で、英語の接辞による分解はないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "frozen": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "freezeの過去分詞形・形容詞。液体などが固まった状態 → 凍った、冷凍の" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/frozen", "https://www.merriam-webster.com/dictionary/frozen"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/frozen", "note": "frozenをfreezeの過去分詞形として扱い、freezeの古英語・ゲルマン系の語史を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/frozen", "note": "frozenの現代語義として、凍った状態、冷凍保存された状態を確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン祖語・英語",
+        "etymons": ["frozen", "freeze", "frēosan", "*freusan"],
+        "historicalPath": ["ゲルマン祖語 *freusan（凍る）", "古英語 frēosan", "英語 freeze", "freezeの過去分詞 frozen（凍った）"],
+        "components": [{ "form": "freeze", "kind": "base", "gloss": "凍る" }, { "form": "-en", "kind": "inflection", "gloss": "過去分詞" }],
+        "rootCandidates": ["freus", "freeze"],
+        "semanticBridge": "凍る動作から、その結果として固まった・冷凍された状態を表す形になった。",
+        "summary": "frozenはfreezeの不規則な過去分詞形であり、活用語尾を語源接辞として扱わずB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "healthy": {
+      "classification": "A",
+      "display": { "type": "A", "derivation": "health（全体・健康）＋-y（〜の性質をもつ） → 健康の性質をもつ、健康な", "gloss": "健康な", "root": "health", "parts": [{ "form": "health", "kind": "root", "gloss": "全体・健康" }, { "form": "-y", "kind": "suffix", "gloss": "〜の性質をもつ" }] },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/healthy", "https://www.merriam-webster.com/dictionary/healthy"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/healthy", "note": "healthyをhealth＋-yと明記し、健全な状態・健康を促す性質を表すと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/healthy", "note": "healthyの現代語義として、健康状態がよいこと、健康を促すことを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン祖語・英語",
+        "etymons": ["healthy", "health", "hælþ", "*hailitho", "-y"],
+        "historicalPath": ["ゲルマン祖語 *hailitho（全体、健全）", "古英語 hælþ", "英語 health", "health＋-y → healthy（健康な）"],
+        "components": [{ "form": "health", "kind": "base", "gloss": "健康" }, { "form": "-y", "kind": "suffix", "gloss": "性質をもつ" }],
+        "rootCandidates": ["health", "hail"],
+        "semanticBridge": "欠けるところなく健全な状態から、身体の状態がよい・健康を促す性質を表すようになった。",
+        "summary": "healthyは出典にhealth＋-yの構成が明記され、表面形にも一致するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "simple": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "一重・一枚を表すラテン語 simplexから続く借用語。複雑な部分をもたないこと → 簡単な、単純な" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/simple", "https://www.merriam-webster.com/dictionary/simple"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/simple", "note": "simpleをラテン語 simplex（単一の、一重の）に遡らせ、複雑でない意味の発達を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/simple", "note": "simpleの現代語義として、構成や形が複雑でないことを確認した。" }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": ["simple", "simplex", "simplus", "semel"],
+        "historicalPath": ["ラテン語 simplex（単一の、一重の）", "古フランス語 simple", "中英語 simple", "英語 simple（簡単な、単純な）"],
+        "components": [{ "form": "simple", "kind": "base", "gloss": "一重の・単純な" }],
+        "rootCandidates": ["sim", "plex"],
+        "semanticBridge": "一重で単一のものから、構成や説明に複雑な部分がない状態を表すようになった。",
+        "summary": "simpleはラテン語simplexからの借用語で、表面のsim＋-pleを英語の安全な派生として扱わないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "temporary": {
+      "classification": "A",
+      "display": { "type": "A", "derivation": "tempor（時間・季節）＋-ary（〜に関する） → 時間に限られた、一時的な", "gloss": "一時的な", "root": "tempor", "parts": [{ "form": "tempor", "kind": "root", "gloss": "時間・季節" }, { "form": "-ary", "kind": "suffix", "gloss": "〜に関する" }] },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/temporary", "https://www.merriam-webster.com/dictionary/temporary"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/temporary", "note": "temporaryをラテン語 temporarius、tempus・temporis（時間、季節）に遡らせ、短い期間だけ続く意味を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/temporary", "note": "temporaryの現代語義として、限られた期間だけ続き永続しないことを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["temporary", "temporarius", "tempus", "temporis", "-ary"],
+        "historicalPath": ["ラテン語 tempus / temporis（時間、季節）", "ラテン語 temporarius（時間に関する、短期間の）", "フランス語 temporaire", "tempor＋-ary → temporary（一時的な）"],
+        "components": [{ "form": "tempor", "kind": "base", "gloss": "時間" }, { "form": "-ary", "kind": "suffix", "gloss": "〜に関する" }],
+        "rootCandidates": ["tempor", "ten"],
+        "semanticBridge": "時間・季節に関するものから、限られた期間だけ続く一時的な状態を表すようになった。",
+        "summary": "temporaryはtemporariusに由来し、tempor語幹と-ary接尾辞が表面形に対応するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "valuable": {
+      "classification": "A",
+      "display": { "type": "A", "derivation": "valu（価値をつける・価値）＋-able（〜できる・〜に値する） → 大きな価値がある、価値のある", "gloss": "価値のある", "root": "valu", "parts": [{ "form": "valu", "kind": "root", "gloss": "価値をつける・価値" }, { "form": "-able", "kind": "suffix", "gloss": "〜できる・〜に値する" }] },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/valuable", "https://www.merriam-webster.com/dictionary/valuable"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/valuable", "note": "valuableをvalue＋-ableと明記し、価値や価格が大きいこと、役立つことを示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/valuable", "note": "valuableの現代語義として、金銭的・実用的な価値が大きいことを確認した。" }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": ["valuable", "value", "valuer", "valere", "-able"],
+        "historicalPath": ["ラテン語 valere（強い、価値がある）", "古フランス語 valuer", "英語 value", "value＋-able → valuable（価値のある）"],
+        "components": [{ "form": "valu", "kind": "base", "gloss": "価値" }, { "form": "-able", "kind": "suffix", "gloss": "〜に値する" }],
+        "rootCandidates": ["valu", "val"],
+        "semanticBridge": "価値を見積もることから、価値が大きく評価に値する性質を表す形容詞になった。",
+        "summary": "valuableはvalue＋-ableの派生だが、語尾eが落ちるため表示用の語根は表面形valuとし、A型にする。",
+        "confidence": "high"
+      }
+    },
+    "central": {
+      "classification": "A",
+      "display": { "type": "A", "derivation": "centr（中心）＋-al（〜に関する） → 中心に関する、中央の", "gloss": "中心の", "root": "centr", "parts": [{ "form": "centr", "kind": "root", "gloss": "中心" }, { "form": "-al", "kind": "suffix", "gloss": "〜に関する" }] },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/central", "https://www.merriam-webster.com/dictionary/central"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/central", "note": "centralをフランス語 central、ラテン語 centralis、centrum（中心）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/central", "note": "centralの現代語義として、中心に位置すること、中心から他が生じることを確認した。" }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・フランス語・英語",
+        "etymons": ["central", "centralis", "centrum", "kentron", "-al"],
+        "historicalPath": ["ギリシャ語 kentron（中心点、尖った点）", "ラテン語 centrum / centralis", "フランス語 central", "centr＋-al → central（中心の）"],
+        "components": [{ "form": "centr", "kind": "base", "gloss": "中心" }, { "form": "-al", "kind": "suffix", "gloss": "〜に関する" }],
+        "rootCandidates": ["centr", "kent"],
+        "semanticBridge": "円の中心点から、中心に位置することや中心から周囲へ広がる関係を表すようになった。",
+        "summary": "centralはcentrum・centralisに由来し、既存のcentr語根と-al接尾辞を再利用できるためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "public": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "人々・共同体を表すラテン語 publicusから続く借用語。個人のものではなく人々に開かれた状態 → 公共の、公の" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/public", "https://www.merriam-webster.com/dictionary/public"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/public", "note": "publicをフランス語 public、ラテン語 publicus・populus（人々）に遡らせる。" },
+          { "url": "https://www.merriam-webster.com/dictionary/public", "note": "publicの現代語義として、一般の人々に関係すること、私的でなく開かれていることを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["public", "publicus", "populus"],
+        "historicalPath": ["ラテン語 populus（人々）", "ラテン語 publicus（人々に属する）", "フランス語 public", "英語 public（公共の、公の）"],
+        "components": [{ "form": "public", "kind": "base", "gloss": "人々に属する・公の" }],
+        "rootCandidates": ["publ", "popul"],
+        "semanticBridge": "人々に属するものから、個人のものではなく一般に開かれた公共の状態を表すようになった。",
+        "summary": "publicはラテン語由来の借用語で、表面のpub＋-licを確実な英語派生として扱わないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "avoid": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "空にする・取り除くことを表す古フランス語 esvuiderから、危険などを避ける意味へ発達した → 避ける" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/avoid", "https://www.merriam-webster.com/dictionary/avoid"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/avoid", "note": "avoidを古フランス語 esvuidier／voider（空にする）に遡らせ、避ける意味へ発達した経路を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/avoid", "note": "avoidの現代語義として、近づかないこと、起こらないようにすることを確認した。" }
+        ],
+        "originLanguage": "古フランス語・ラテン語系・英語",
+        "etymons": ["avoid", "esvuidier", "voider", "vuide"],
+        "historicalPath": ["古フランス語 vuide / voider（空にする）", "古フランス語 esvuidier（空にする、取り除く）", "中英語 avoiden", "英語 avoid（避ける）"],
+        "components": [{ "form": "avoid", "kind": "base", "gloss": "避ける・空にする" }],
+        "rootCandidates": ["void", "vuid"],
+        "semanticBridge": "場所を空にして取り除くことから、危険や望ましくない事態を近づけない意味になった。",
+        "summary": "avoidは古フランス語esvuiderに由来し、英語のa＋voidという表面分解は語史を正確に表さないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "depend": {
+      "classification": "A",
+      "display": { "type": "A", "derivation": "de（下へ・離れて）＋pend（吊るす・量る） → 上から吊り下げられる、頼る・次第である", "gloss": "頼る", "root": "pend", "parts": [{ "form": "de", "kind": "prefix", "gloss": "下へ・離れて・完全に" }, { "form": "pend", "kind": "root", "gloss": "量る・吊るす" }] },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/depend", "https://www.merriam-webster.com/dictionary/depend"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/depend", "note": "dependを古フランス語 dependre、ラテン語 dependere、de-＋pendere（吊るす・量る）に遡らせる。吊り下がる状態から依存の意味になった。" },
+          { "url": "https://www.merriam-webster.com/dictionary/depend", "note": "dependの現代語義として、他のものに頼ること、条件によって決まることを確認した。" }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": ["depend", "dependere", "de-", "pendere", "-pend"],
+        "historicalPath": ["ラテン語 de-（下へ、離れて）＋pendere（吊るす、量る）", "ラテン語 dependere（吊り下がる、依存する）", "古フランス語 dependre", "英語 de＋pend → depend（頼る、次第である）"],
+        "components": [{ "form": "de", "kind": "prefix", "gloss": "下へ・離れて" }, { "form": "pend", "kind": "base", "gloss": "吊るす・量る" }],
+        "rootCandidates": ["pend", "spen"],
+        "semanticBridge": "何かに吊り下がって支えられる状態から、他のものに頼る・条件によって決まる意味になった。",
+        "summary": "dependはde-＋pendereの構成が出典で確認でき、既存のde接頭辞とpend語根が表面形に対応するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "announce": {
+      "classification": "A",
+      "display": { "type": "A", "derivation": "an（〜へ・上に）＋nounce（知らせる・報告する） → 人々へ知らせる、発表する", "gloss": "発表する", "root": "nounce", "parts": [{ "form": "an", "kind": "prefix", "gloss": "〜へ・上に" }, { "form": "nounce", "kind": "root", "gloss": "知らせる・報告する" }] },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/announce", "https://www.merriam-webster.com/dictionary/announce"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/announce", "note": "announceを古フランス語 anoncier、ラテン語 annuntiare・ad＋nuntiare（知らせを届ける）に遡らせる。" },
+          { "url": "https://www.merriam-webster.com/dictionary/announce", "note": "announceの現代語義として、正式に知らせる・発表することを確認した。" }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": ["announce", "anoncier", "annuntiare", "ad-", "nuntiare", "nuntius"],
+        "historicalPath": ["ラテン語 ad-（〜へ）＋nuntiare（知らせる）", "古フランス語 anoncier", "中英語 announce", "英語 an＋nounce → announce（発表する）"],
+        "components": [{ "form": "an", "kind": "prefix", "gloss": "〜へ" }, { "form": "nounce", "kind": "base", "gloss": "知らせる" }],
+        "rootCandidates": ["nounce", "neu"],
+        "semanticBridge": "知らせを人々へ届ける動作から、公式に知らせる・発表する意味になった。",
+        "summary": "announceはad-＋nuntiareに由来し、語中の同化後のan＋nounceが表面形に対応するためA型にする。",
+        "confidence": "medium"
+      }
+    },
+    "lend": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "一時的に貸し与えることを表す古英語 lænanから続く単純語。物を相手に使わせる → 貸す" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/lend", "https://www.merriam-webster.com/dictionary/lend"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/lend", "note": "lendを古英語 lænan、ゲルマン系の貸し与える語に遡らせる。" },
+          { "url": "https://www.merriam-webster.com/dictionary/lend", "note": "lendの現代語義として、返却を条件に物や金を一時的に使わせることを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン系・英語",
+        "etymons": ["lend", "lænan", "loan"],
+        "historicalPath": ["ゲルマン系の貸し与える語", "古英語 lænan", "中英語 lenen", "英語 lend（貸す）"],
+        "components": [{ "form": "lend", "kind": "base", "gloss": "貸し与える" }],
+        "rootCandidates": ["loan", "len"],
+        "semanticBridge": "相手に一時的に使わせる行為から、返却を前提に物や金を貸す意味になった。",
+        "summary": "lendはゲルマン系の単純語で、英語の接辞による分解はないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "save": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "安全にする・救うことを表す古フランス語 sauverから続く語。危険や損失から守る → 蓄える、節約する、救う" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/save", "https://www.merriam-webster.com/dictionary/save"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/save", "note": "saveを古フランス語 sauver、ラテン語 salvare・salvus（安全な）に遡らせ、救う・守る意味を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/save", "note": "saveの現代語義として、危険から救うこと、将来のために取っておくことを確認した。" }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": ["save", "sauver", "salvare", "salvus"],
+        "historicalPath": ["ラテン語 salvus（安全な、無傷の）", "ラテン語 salvare（安全にする、救う）", "古フランス語 sauver", "英語 save（救う、取っておく）"],
+        "components": [{ "form": "save", "kind": "base", "gloss": "安全にする・取っておく" }],
+        "rootCandidates": ["salv", "safe"],
+        "semanticBridge": "危険から安全にすることから、損失を防いで蓄える・節約する意味へ広がった。",
+        "summary": "saveはラテン語salvus系の借用語で、表面のsavを英語の語根として確定できないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "choose": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "選び取ることを表す古英語 cēosanから続く単純語。複数の中から一つを選ぶ → 選ぶ" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/choose", "https://www.merriam-webster.com/dictionary/choose"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/choose", "note": "chooseを古英語 cēosan、ゲルマン祖語 *keusanに遡らせ、choose・choiceの関係を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/choose", "note": "chooseの現代語義として、複数の可能性から一つを選択することを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン祖語・英語",
+        "etymons": ["choose", "cēosan", "*keusan", "choice"],
+        "historicalPath": ["ゲルマン祖語 *keusan（選ぶ、試す）", "古英語 cēosan", "中英語 chosen", "英語 choose（選ぶ）"],
+        "components": [{ "form": "choose", "kind": "base", "gloss": "選び取る" }],
+        "rootCandidates": ["keus", "choose"],
+        "semanticBridge": "複数のものを見分けて選び取る動作から、選択する意味になった。",
+        "summary": "chooseはゲルマン系の単純語で、語形変化を伴うため英語の接辞付きA型にはしない。",
+        "confidence": "high"
+      }
+    },
+    "forget": {
+      "classification": "A",
+      "display": { "type": "A", "derivation": "for（離れて・誤って）＋get（つかむ・得る） → 心からつかみ損なう、忘れる", "gloss": "忘れる", "root": "get", "parts": [{ "form": "for", "kind": "prefix", "gloss": "離れて・誤って" }, { "form": "get", "kind": "root", "gloss": "つかむ・得る" }] },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/forget", "https://www.merriam-webster.com/dictionary/forget"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/forget", "note": "forgetを古英語 for-gietan、for-（離れて・誤って）＋gietan（つかむ）に遡らせ、「つかみ損なう」ことから忘れる意味になったと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/forget", "note": "forgetの現代語義として、記憶から失うこと、思い出せないことを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン系・英語",
+        "etymons": ["forget", "for-gietan", "for-", "gietan", "getan"],
+        "historicalPath": ["古英語 for-（離れて、誤って）＋gietan（つかむ）", "古英語 forgietan（心から失う）", "中英語 foryeten", "英語 for＋get → forget（忘れる）"],
+        "components": [{ "form": "for", "kind": "prefix", "gloss": "離れて・誤って" }, { "form": "get", "kind": "base", "gloss": "つかむ・得る" }],
+        "rootCandidates": ["get", "ghend"],
+        "semanticBridge": "記憶にしっかりつかんでおけないことから、心から失って忘れる意味になった。",
+        "summary": "forgetは古英語for-＋gietanの構成が出典で明記され、表面形for＋getにも対応するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "stocky": {
+      "classification": "A",
+      "display": { "type": "A", "derivation": "stock（木の幹・かたまり）＋-y（〜の性質をもつ） → 木の幹のように太い、がっしりした", "gloss": "がっしりした", "root": "stock", "parts": [{ "form": "stock", "kind": "root", "gloss": "木の幹・かたまり" }, { "form": "-y", "kind": "suffix", "gloss": "〜の性質をもつ" }] },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/stocky", "https://www.merriam-webster.com/dictionary/stocky"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/stocky", "note": "stockyをstock＋-yに関係づけ、木でできたもの、植物や人の太くがっしりした形の意味を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/stocky", "note": "stockyの現代語義として、背が低めで体つきが太く頑丈なことを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン祖語・英語",
+        "etymons": ["stocky", "stock", "stocc", "*stauk-", "-y"],
+        "historicalPath": ["ゲルマン祖語 *stauk-（木の幹、かたまり）", "古英語 stocc", "英語 stock（幹、太い部分）", "stock＋-y → stocky（がっしりした）"],
+        "components": [{ "form": "stock", "kind": "base", "gloss": "木の幹・かたまり" }, { "form": "-y", "kind": "suffix", "gloss": "性質をもつ" }],
+        "rootCandidates": ["stock", "sta"],
+        "semanticBridge": "木の幹や太いかたまりのような形から、体つきが太く頑丈な性質を表すようになった。",
+        "summary": "stockyはstock＋-yの関係が出典で確認でき、表面形にも一致するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "cheery": {
+      "classification": "A",
+      "display": { "type": "A", "derivation": "cheer（表情・元気）＋-y（〜の性質をもつ） → 元気のよい性質をもつ、陽気な", "gloss": "陽気な", "root": "cheer", "parts": [{ "form": "cheer", "kind": "root", "gloss": "表情・元気" }, { "form": "-y", "kind": "suffix", "gloss": "〜の性質をもつ" }] },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/cheery", "https://www.merriam-webster.com/dictionary/cheery"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/cheery", "note": "cheeryをcheer＋-yと明記し、元気のよい・陽気な状態を表すと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/cheery", "note": "cheeryの現代語義として、明るく元気な気分や様子を確認した。" }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": ["cheery", "cheer", "chiere", "cara", "-y"],
+        "historicalPath": ["後期ラテン語 cara（顔）", "古フランス語 chiere（顔、表情）", "英語 cheer（表情、元気）", "cheer＋-y → cheery（陽気な）"],
+        "components": [{ "form": "cheer", "kind": "base", "gloss": "表情・元気" }, { "form": "-y", "kind": "suffix", "gloss": "性質をもつ" }],
+        "rootCandidates": ["cheer", "cara"],
+        "semanticBridge": "顔に表れる表情から心の元気・喜びへ、さらにその性質をもつ陽気な状態へ意味が広がった。",
+        "summary": "cheeryは出典にcheer＋-yの構成が明記され、表面形にも一致するためA型にする。",
+        "confidence": "high"
+      }
+    }
+  }
+}

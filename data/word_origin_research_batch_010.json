@@ -1,0 +1,1294 @@
+{
+  "meta": {
+    "batchId": "batch-010",
+    "note": "未確認B型の先頭25語。出典が支える接頭辞・語根・接尾辞の対応はA型へ、複合表現・単一基体・語形対応が不安定な語はB型に残す。"
+  },
+  "dictionary": {
+    "roots": {
+      "fumig": {
+        "gloss": "煙・煙で処理する",
+        "origin": "ラテン語 fumus / fumigare",
+        "note": "煙を使って処理するイメージ。fumigate・fumigation。英語fumigateはfumigationからの逆形成という経路も記録する。"
+      },
+      "sud": {
+        "gloss": "汗・にじみ出る",
+        "origin": "ラテン語 sudare / sudor",
+        "note": "汗や液体が外へにじみ出るイメージ。exudeではsの脱落した表面形udを使う。",
+        "variants": ["ud"]
+      },
+      "imper": {
+        "gloss": "命令・支配",
+        "origin": "ラテン語 imperium / imperare",
+        "note": "命令して支配する権力のイメージ。imperious。"
+      },
+      "surmount": {
+        "gloss": "乗り越える",
+        "origin": "古フランス語 surmonter",
+        "note": "障害や山の上へ出て乗り越えるイメージ。insurmountable。"
+      },
+      "sen": {
+        "gloss": "老い",
+        "origin": "ラテン語 senex / senilis",
+        "note": "年を重ねた状態や老年に関する性質のイメージ。senile。"
+      },
+      "don": {
+        "gloss": "与える・贈り物",
+        "origin": "ラテン語 donare / donum",
+        "note": "贈り物を与え、相手の罪を免じるイメージ。condone・donate。"
+      },
+      "mort": {
+        "gloss": "死",
+        "origin": "ラテン語 mors / mortis",
+        "note": "死や死に至る状態のイメージ。mortify・mortal。"
+      },
+      "err": {
+        "gloss": "さまよう・外れる",
+        "origin": "ラテン語 errare",
+        "note": "道から外れてさまようイメージ。aberration・errant。"
+      },
+      "ort": {
+        "gloss": "生まれる・立ち上がる",
+        "origin": "ラテン語 oriri / ortus",
+        "note": "生まれたり、立ち上がったりするイメージ。abortではabortusの語幹ortを表面表示に採用する。"
+      },
+      "quies": {
+        "gloss": "静けさ・休息",
+        "origin": "ラテン語 quies / quiescere",
+        "note": "静かに休み、抵抗せず従うイメージ。acquiesce・quiescent。"
+      },
+      "adul": {
+        "gloss": "へつらう",
+        "origin": "ラテン語 adulari / adulatio",
+        "note": "相手にお世辞を言い、過度に持ち上げるイメージ。adulation。"
+      },
+      "gnost": {
+        "gloss": "知る",
+        "origin": "ギリシャ語 gnōstos / gignōskein",
+        "note": "知識や認識に関するイメージ。agnostic・gnostic。"
+      },
+      "allege": {
+        "gloss": "申し立てる",
+        "origin": "ラテン語 allegare",
+        "note": "根拠として言い立て、申し立てるイメージ。allegedly・allege。"
+      },
+      "appar": {
+        "gloss": "現れる",
+        "origin": "ラテン語 apparere",
+        "note": "目の前に現れ、見えるようになるイメージ。apparition・appear。"
+      }
+    }
+  },
+  "entries": {
+    "fumigate": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "燻蒸消毒する",
+        "root": "fumig",
+        "parts": [
+          { "form": "fumig", "kind": "root", "gloss": "煙・煙で処理する" },
+          { "form": "-ate", "kind": "suffix", "gloss": "〜にする（動詞化）" }
+        ],
+        "derivation": "fumig（煙・煙で処理する）＋-ate（動詞化） → 煙で処理して、燻蒸消毒する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/fumigate",
+          "https://www.merriam-webster.com/dictionary/fumigate"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/fumigate",
+            "note": "fumigateはfumigationからの逆形成とされ、ラテン語fumigare（煙で処理する）をfumus（煙）とagere（動かす、行う）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/fumigate",
+            "note": "fumigateの煙やガスで害虫・病原体などを処理するという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": ["fumigate", "fumigation", "fumigare", "fumus", "agere", "-ate"],
+        "historicalPath": [
+          "ラテン語 fumus（煙）",
+          "ラテン語 fumigare（煙で処理する）",
+          "英語 fumigation（燻蒸）からの逆形成",
+          "英語 fumigate（燻蒸消毒する）"
+        ],
+        "components": [
+          { "form": "fumigare", "kind": "base", "gloss": "煙で処理する", "display": false },
+          { "form": "-ate", "kind": "suffix", "gloss": "動詞化", "display": false }
+        ],
+        "rootCandidates": ["fumig"],
+        "semanticBridge": "煙を送り込んで害虫や病原体を追い払う処理から、煙やガスで燻蒸消毒する動詞になった。",
+        "summary": "fumigateは、fumig（煙で処理する）＋-ateから、煙で燻蒸消毒することを表す。",
+        "confidence": "medium",
+        "notes": "英語ではfumigationからの逆形成だが、ラテン語fumigareと表面のfumig＋-ateを対応させてA型表示にする。"
+      }
+    },
+    "exude": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "にじみ出る",
+        "root": "sud",
+        "parts": [
+          { "form": "ex", "kind": "prefix", "gloss": "外へ" },
+          { "form": "ud", "kind": "root", "gloss": "汗・にじみ出る" }
+        ],
+        "derivation": "ex-（外へ）＋ud（sudareの表面形・汗を出す） → 内側から外へ、にじみ出る"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/exude",
+          "https://www.merriam-webster.com/dictionary/exude"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/exude",
+            "note": "exudeをラテン語exudare（汗を出す）に遡らせ、ex-（外へ）＋sudare（汗をかく、汗を出す）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/exude",
+            "note": "exudeの液体や気体をゆっくり外へ出す、性質や雰囲気を発散するという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": ["exude", "exudare", "ex-", "sudare", "sudor"],
+        "historicalPath": [
+          "ラテン語 sudare（汗を出す）",
+          "ラテン語 exudare（外へ汗を出す）",
+          "英語 exude（にじみ出る、発散する）"
+        ],
+        "components": [
+          { "form": "ex-", "kind": "prefix", "gloss": "外へ", "display": false },
+          { "form": "sudare", "kind": "base", "gloss": "汗を出す", "display": false }
+        ],
+        "rootCandidates": ["sud"],
+        "semanticBridge": "汗が体の内側から外へ出る動作が、液体・気体・性質や雰囲気がゆっくり外へ現れる意味へ広がった。",
+        "summary": "exudeは、ex-（外へ）＋sudare（汗を出す）から、にじみ出る・発散するを表す。",
+        "confidence": "high",
+        "notes": "exudareではsが同化して表面のudとなるため、語根辞書sudに変化形udを登録する。"
+      }
+    },
+    "waive": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "chain": [
+          { "term": "waive", "gloss": "権利を手放す" },
+          { "gloss": "放棄する、免除する" }
+        ],
+        "derivation": "権利や要求を手放して放棄・免除することから → 放棄する、免除する",
+        "source": "https://www.etymonline.com/word/waive",
+        "sources": [
+          "https://www.etymonline.com/word/waive",
+          "https://www.merriam-webster.com/dictionary/waive"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/waive",
+          "https://www.merriam-webster.com/dictionary/waive"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/waive",
+            "note": "waiveは古フランス語・アングロフランス語系の語から来たとされ、北欧系の語との関係を含めて語源の細部に不確かさがある。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/waive",
+            "note": "waiveの権利や要求を自発的に放棄する、規則の適用を免除するという語義を確認した。"
+          }
+        ],
+        "originLanguage": "英語（フランス語・北欧語系の影響）",
+        "etymons": ["waive", "waiver", "weyven"],
+        "historicalPath": [
+          "中世フランス語・アングロフランス語系の語形",
+          "中英語 waive / weyven",
+          "英語 waive（放棄する、免除する）"
+        ],
+        "components": [
+          { "form": "waive", "kind": "base", "gloss": "手放す", "display": false }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "権利や主張を手元から手放す動作が、法的な権利を放棄することや規則の適用を免除することを表すようになった。",
+        "summary": "waiveは、権利などを手放す意味から、放棄する・免除するを表す。",
+        "confidence": "medium",
+        "notes": "語源の借用経路と語形の対応が単純な英語接辞分解にならないためB型にする。"
+      }
+    },
+    "imperious": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "横柄な",
+        "root": "imper",
+        "parts": [
+          { "form": "imper", "kind": "root", "gloss": "命令・支配" },
+          { "form": "-ous", "kind": "suffix", "gloss": "〜に満ちた" }
+        ],
+        "derivation": "imper（命令・支配）＋-ous（〜に満ちた） → 命令する権力を振りかざす、横柄な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/imperious",
+          "https://www.merriam-webster.com/dictionary/imperious"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/imperious",
+            "note": "imperiousをラテン語imperiosus（命令する、支配的な）に遡らせ、imperium（命令、支配権）と関係づけている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/imperious",
+            "note": "imperiousの他人に命令する、尊大で横柄な、緊急で抗しがたいという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（フランス語経由）",
+        "etymons": ["imperious", "imperiosus", "imperium", "imperare", "-ous"],
+        "historicalPath": [
+          "ラテン語 imperare（命令する）",
+          "ラテン語 imperium（命令、支配権）",
+          "ラテン語 imperiosus（支配的な）",
+          "英語 imperious（横柄な、尊大な）"
+        ],
+        "components": [
+          { "form": "imperium", "kind": "base", "gloss": "命令・支配権", "display": false },
+          { "form": "-osus", "kind": "suffix", "gloss": "〜に満ちた", "display": false }
+        ],
+        "rootCandidates": ["imper"],
+        "semanticBridge": "命令や支配権を持つ性質が、相手を見下して命令する尊大さを表すようになった。",
+        "summary": "imperiousは、imper（命令・支配）＋-ousから、横柄で尊大なを表す。",
+        "confidence": "medium",
+        "notes": "ラテン語imperiosusの連結母音を省略し、英語表面のimper＋-ousへ正規化して表示する。"
+      }
+    },
+    "insurmountable": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "克服できない",
+        "root": "surmount",
+        "parts": [
+          { "form": "in", "kind": "prefix", "gloss": "〜でない" },
+          { "form": "surmount", "kind": "root", "gloss": "乗り越える" },
+          { "form": "-able", "kind": "suffix", "gloss": "〜できる" }
+        ],
+        "derivation": "in-（〜でない）＋surmount（乗り越える）＋-able（〜できる） → 乗り越えることができない"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/insurmountable",
+          "https://www.merriam-webster.com/dictionary/insurmountable"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/insurmountable",
+            "note": "insurmountableをin-（否定）＋surmountableと説明し、surmountableをsurmount＋-ableに分けている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/insurmountable",
+            "note": "insurmountableの克服できない、乗り越えられないという語義を確認した。"
+          }
+        ],
+        "originLanguage": "英語（フランス語系基体からの派生）",
+        "etymons": ["insurmountable", "in-", "surmountable", "surmount", "-able"],
+        "historicalPath": [
+          "古フランス語 surmonter（上へ乗り越える）",
+          "英語 surmount（克服する）",
+          "英語 surmountable（乗り越えられる）",
+          "英語 insurmountable（乗り越えられない）"
+        ],
+        "components": [
+          { "form": "in-", "kind": "prefix", "gloss": "〜でない", "display": false },
+          { "form": "surmount", "kind": "base", "gloss": "乗り越える", "display": false },
+          { "form": "-able", "kind": "suffix", "gloss": "〜できる", "display": false }
+        ],
+        "rootCandidates": ["surmount"],
+        "semanticBridge": "山や障害を上から越えるsurmountに可能を表す- ableと否定のin-が加わり、克服できない状態を表す。",
+        "summary": "insurmountableは、in-（〜でない）＋surmount（乗り越える）＋-ableから、克服できないを表す。",
+        "confidence": "high",
+        "notes": "出典がin-＋surmountable、さらにsurmount＋-ableを示すため、三要素を英語表面へ対応させる。"
+      }
+    },
+    "roundabout": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "chain": [
+          { "term": "round", "gloss": "回る・円形の" },
+          { "term": "about", "gloss": "周囲を" },
+          { "gloss": "遠回りの、間接的な" }
+        ],
+        "derivation": "まっすぐ進まず周囲を回ることから → 遠回りの、間接的な",
+        "source": "https://www.etymonline.com/word/roundabout",
+        "sources": [
+          "https://www.etymonline.com/word/roundabout",
+          "https://www.merriam-webster.com/dictionary/roundabout"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/roundabout",
+          "https://www.merriam-webster.com/dictionary/roundabout"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/roundabout",
+            "note": "roundaboutはroundとaboutから成る英語の複合表現として、遠回りの道や間接的な方法を表す経路を確認した。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/roundabout",
+            "note": "roundaboutの円形の、遠回りの、直接的でないという形容詞・名詞の語義を確認した。"
+          }
+        ],
+        "originLanguage": "英語",
+        "etymons": ["roundabout", "round", "about"],
+        "historicalPath": [
+          "英語 round（回る、円形の）",
+          "英語 about（周囲を）",
+          "英語 roundabout（周囲を回る、遠回りの）"
+        ],
+        "components": [
+          { "form": "round", "kind": "base", "gloss": "回る・円形の", "display": false },
+          { "form": "about", "kind": "base", "gloss": "周囲を", "display": false }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "円を描くように周囲を回る動きが、目的地へ直接向かわない遠回りや間接的な表現を表すようになった。",
+        "summary": "roundaboutは、roundとaboutが結び付いた複合表現から、遠回りの・間接的なを表す。",
+        "confidence": "high",
+        "notes": "英語の複合表現は、指定どおり熟語に近いB型として表示する。"
+      }
+    },
+    "senile": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "老衰した",
+        "root": "sen",
+        "parts": [
+          { "form": "sen", "kind": "root", "gloss": "老い" },
+          { "form": "-ile", "kind": "suffix", "gloss": "〜の性質の" }
+        ],
+        "derivation": "sen（老い）＋-ile（〜の性質の） → 老年に関係する、老衰した"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/senile",
+          "https://www.merriam-webster.com/dictionary/senile"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/senile",
+            "note": "senileをフランス語senile、ラテン語senilis（老年の）に遡らせ、senex（老人）とPIE *sen-（古い）に関係づけている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/senile",
+            "note": "senileの老年に関する、特に老衰によって精神・身体機能が衰えたという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（フランス語経由）",
+        "etymons": ["senile", "senilis", "senex", "*sen-", "-ile"],
+        "historicalPath": [
+          "PIE *sen-（古い）",
+          "ラテン語 senex（老人）",
+          "ラテン語 senilis（老年の）",
+          "英語 senile（老衰した、老年性の）"
+        ],
+        "components": [
+          { "form": "senex", "kind": "base", "gloss": "老人・老い", "display": false },
+          { "form": "-ilis", "kind": "suffix", "gloss": "〜の性質の", "display": false }
+        ],
+        "rootCandidates": ["sen"],
+        "semanticBridge": "老年に関する性質を表す形容詞が、特に老年による身体・精神機能の衰えを表すようになった。",
+        "summary": "senileは、sen（老い）＋-ileから、老衰した・老年性のを表す。",
+        "confidence": "high",
+        "notes": "ラテン語senex・senilisの語幹senと英語表面の-ileを対応させる。"
+      }
+    },
+    "condone": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "大目に見る",
+        "root": "don",
+        "parts": [
+          { "form": "con", "kind": "prefix", "gloss": "ともに・完全に" },
+          { "form": "don", "kind": "root", "gloss": "与える・贈り物" }
+        ],
+        "derivation": "con-（完全に）＋don（与える・免じる） → 罰を与えずに許し、大目に見る"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/condone",
+          "https://www.merriam-webster.com/dictionary/condone"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/condone",
+            "note": "condoneをラテン語condonare（許す、贈り物として与える）に遡らせ、con-（完全に、ともに）＋donare（与える）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/condone",
+            "note": "condoneの好ましくない行為を許す、暗黙に認めるという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": ["condone", "condonare", "con-", "donare", "donum"],
+        "historicalPath": [
+          "ラテン語 donum（贈り物）",
+          "ラテン語 donare（与える）",
+          "ラテン語 condonare（罰を免じる、許す）",
+          "英語 condone（大目に見る、容認する）"
+        ],
+        "components": [
+          { "form": "con-", "kind": "prefix", "gloss": "完全に", "display": false },
+          { "form": "donare", "kind": "base", "gloss": "与える・許す", "display": false }
+        ],
+        "rootCandidates": ["don"],
+        "semanticBridge": "罰や負担を相手に与えず、許しという贈り物を与えるイメージから、悪い行為を大目に見る意味になった。",
+        "summary": "condoneは、con-（完全に）＋don（与える・免じる）から、大目に見るを表す。",
+        "confidence": "high",
+        "notes": "condonareのdonareを語根donとして、英語表面のcon＋donへ対応させる。"
+      }
+    },
+    "mortify": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "屈辱を与える",
+        "root": "mort",
+        "parts": [
+          { "form": "mort", "kind": "root", "gloss": "死" },
+          { "form": "-ify", "kind": "suffix", "gloss": "〜にする" }
+        ],
+        "derivation": "mort（死）＋-ify（〜にする） → 精神的に死ぬほど苦しめ、屈辱を与える"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/mortify",
+          "https://www.merriam-webster.com/dictionary/mortify"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/mortify",
+            "note": "mortifyをラテン語mortificare（死なせる、苦しめる）に遡らせ、mort（死）＋facere（作る、行う）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/mortify",
+            "note": "mortifyの恥をかかせる、屈辱を与える、悔しがらせるという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（フランス語経由）",
+        "etymons": ["mortify", "mortificare", "mort", "mors", "facere", "-ify"],
+        "historicalPath": [
+          "ラテン語 mors / mortis（死）",
+          "ラテン語 mortificare（死なせる、苦しめる）",
+          "古フランス語 mortifier",
+          "英語 mortify（屈辱を与える、苦しめる）"
+        ],
+        "components": [
+          { "form": "mort", "kind": "base", "gloss": "死", "display": false },
+          { "form": "-ficare", "kind": "suffix", "gloss": "〜にする", "display": false }
+        ],
+        "rootCandidates": ["mort"],
+        "semanticBridge": "死ぬほど苦しめるという比喩が、恥や屈辱によって精神的に苦しめる意味へ発達した。",
+        "summary": "mortifyは、mort（死）＋-ify（〜にする）から、屈辱を与える・悔しがらせるを表す。",
+        "confidence": "high",
+        "notes": "ラテン語mortificareのmortと、英語で対応する動詞化要素-ifyを表示する。"
+      }
+    },
+    "embroil": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "chain": [
+          { "term": "embrouillier", "gloss": "混乱させる" },
+          { "term": "embroil", "gloss": "争いに巻き込む" },
+          { "gloss": "巻き込む" }
+        ],
+        "derivation": "混乱や争いの中へ人を引き入れることから → 巻き込む",
+        "source": "https://www.etymonline.com/word/embroil",
+        "sources": [
+          "https://www.etymonline.com/word/embroil",
+          "https://www.merriam-webster.com/dictionary/embroil"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/embroil",
+          "https://www.merriam-webster.com/dictionary/embroil"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/embroil",
+            "note": "embroilを古フランス語embrouillier（混乱させる）に遡らせ、en-が同化した形とbrouiller（混ぜる、混乱させる）の関係を説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/embroil",
+            "note": "embroilの争いや困難な状況に巻き込む、そこへ関与させるという語義を確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語（英語経由）",
+        "etymons": ["embroil", "embrouillier", "en-", "brouiller"],
+        "historicalPath": [
+          "古フランス語 brouiller（混乱させる、混ぜる）",
+          "古フランス語 embrouillier（混乱の中へ引き入れる）",
+          "英語 embroil（争いに巻き込む）"
+        ],
+        "components": [
+          { "form": "en-", "kind": "prefix", "gloss": "中へ", "display": false },
+          { "form": "brouiller", "kind": "base", "gloss": "混乱させる", "display": false }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "物を混ぜて乱す意味から、人を争いや困難な状況の中へ引き入れる意味へ比喩的に広がった。",
+        "summary": "embroilは、混乱の中へ引き入れる古フランス語から、巻き込むを表す。",
+        "confidence": "high",
+        "notes": "en-/brouillerの借用・同化と英語の綴り変化があり、英語表面の安定した接辞分解としてはB型にする。"
+      }
+    },
+    "aberration": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "異常",
+        "root": "err",
+        "parts": [
+          { "form": "ab", "kind": "prefix", "gloss": "離れて" },
+          { "form": "err", "kind": "root", "gloss": "さまよう・外れる" },
+          { "form": "-ation", "kind": "suffix", "gloss": "〜すること" }
+        ],
+        "derivation": "ab-（離れて）＋err（さまよう）＋-ation（行為・結果） → 道筋から外れた異常、逸脱"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/aberration",
+          "https://www.merriam-webster.com/dictionary/aberration"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/aberration",
+            "note": "aberrationをラテン語aberratio、動詞aberrare（道から外れる）に遡らせ、ab-（離れて）＋errare（さまよう）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/aberration",
+            "note": "aberrationの通常からの逸脱、異常な状態・行動という語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": ["aberration", "aberratio", "aberrare", "ab-", "errare", "-ation"],
+        "historicalPath": [
+          "ラテン語 errare（さまよう、誤る）",
+          "ラテン語 aberrare（道から外れる）",
+          "ラテン語 aberratio（外れること）",
+          "英語 aberration（異常、逸脱）"
+        ],
+        "components": [
+          { "form": "ab-", "kind": "prefix", "gloss": "離れて", "display": false },
+          { "form": "errare", "kind": "base", "gloss": "さまよう", "display": false },
+          { "form": "-atio", "kind": "suffix", "gloss": "行為・結果", "display": false }
+        ],
+        "rootCandidates": ["err"],
+        "semanticBridge": "道筋から外れてさまようことが、標準や通常の状態から外れた異常・逸脱を表すようになった。",
+        "summary": "aberrationは、ab-（離れて）＋err（さまよう）＋-ationから、異常・逸脱を表す。",
+        "confidence": "high",
+        "notes": "aberrareのerrareを語根errとして、ab＋err＋-ationの英語表面へ対応させる。"
+      }
+    },
+    "abomination": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "忌まわしいもの",
+        "root": "omin",
+        "parts": [
+          { "form": "ab", "kind": "prefix", "gloss": "離れて" },
+          { "form": "omin", "kind": "root", "gloss": "前兆" },
+          { "form": "-ation", "kind": "suffix", "gloss": "〜すること" }
+        ],
+        "derivation": "ab-（離れて）＋omin（前兆）＋-ation（行為・結果） → 悪い前兆として避ける忌まわしいもの"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/abomination",
+          "https://www.merriam-webster.com/dictionary/abomination"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/abomination",
+            "note": "abominationをラテン語abominatio、動詞abominari（忌み嫌う）に遡らせ、ab-（離れて）とomen（前兆）に関係づけている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/abomination",
+            "note": "abominationの強い嫌悪や憎悪の対象、忌まわしい行為・ものという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": ["abomination", "abominatio", "abominari", "ab-", "omen", "-ation"],
+        "historicalPath": [
+          "ラテン語 omen（前兆）",
+          "ラテン語 abominari（悪い前兆として避ける）",
+          "ラテン語 abominatio（忌み嫌うこと）",
+          "英語 abomination（忌まわしいもの）"
+        ],
+        "components": [
+          { "form": "ab-", "kind": "prefix", "gloss": "離れて", "display": false },
+          { "form": "omen", "kind": "base", "gloss": "前兆", "display": false },
+          { "form": "-atio", "kind": "suffix", "gloss": "行為・結果", "display": false }
+        ],
+        "rootCandidates": ["omin"],
+        "semanticBridge": "悪い前兆から遠ざかり避ける対象というイメージが、強い嫌悪の対象や忌まわしいものを表すようになった。",
+        "summary": "abominationは、ab-（離れて）＋omin（前兆）＋-ationから、忌まわしいものを表す。",
+        "confidence": "high",
+        "notes": "omenの語幹がabominariでominとなるため、既存語根ominと英語表面を対応させる。"
+      }
+    },
+    "abort": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "中止する",
+        "root": "ort",
+        "parts": [
+          { "form": "ab", "kind": "prefix", "gloss": "離れて" },
+          { "form": "ort", "kind": "root", "gloss": "生まれる・立ち上がる" }
+        ],
+        "derivation": "ab-（正常な経路から離れて）＋ort（生まれる・立ち上がる） → 予定された進行から外れ、中止する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/abort",
+          "https://www.merriam-webster.com/dictionary/abort"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/abort",
+            "note": "abortをラテン語abortus、動詞aboriri（流産する、失敗する、消える）に遡らせ、ab-（ここでは正常でない方向）＋oriri（現れる、生まれる、立ち上がる）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/abort",
+            "note": "abortの計画や活動を中止する、予定された結果に至らせないという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": ["abort", "abortus", "aboriri", "ab-", "oriri", "ortus"],
+        "historicalPath": [
+          "ラテン語 oriri（現れる、生まれる、立ち上がる）",
+          "ラテン語 aboriri（正常な出生から外れる、失敗する）",
+          "ラテン語 abortus（失敗・流産）",
+          "英語 abort（中止する）"
+        ],
+        "components": [
+          { "form": "ab-", "kind": "prefix", "gloss": "離れて・正常でなく", "display": false },
+          { "form": "ortus", "kind": "base", "gloss": "生まれた・立ち上がった", "display": false }
+        ],
+        "rootCandidates": ["ort"],
+        "semanticBridge": "生まれる・立ち上がるはずの経路から外れて失敗することが、計画や活動を途中で中止する意味へ広がった。",
+        "summary": "abortは、ab-（正常な経路から離れて）＋ort（生まれる・立ち上がる）から、中止するを表す。",
+        "confidence": "medium",
+        "notes": "深い語源にはoririとPIE語根の複数説があるが、abortusの語幹ortとab-の対応は明示できる。"
+      }
+    },
+    "acquiesce": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "黙って従う",
+        "root": "quies",
+        "parts": [
+          { "form": "ac", "kind": "prefix", "gloss": "〜へ・近くへ" },
+          { "form": "quies", "kind": "root", "gloss": "静けさ・休息" }
+        ],
+        "derivation": "ac-（〜へ）＋quies（静けさ・休息） → 抵抗せず静かに受け入れ、黙って従う"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/acquiesce",
+          "https://www.merriam-webster.com/dictionary/acquiesce"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/acquiesce",
+            "note": "acquiesceをフランス語acquiescer、ラテン語adquiescere（静かに休む、黙って従う）に遡らせ、ad-（〜へ）＋quiescere（休む）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/acquiesce",
+            "note": "acquiesceの反対せず受け入れる、黙って同意するという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（フランス語経由）",
+        "etymons": ["acquiesce", "acquiescer", "adquiescere", "ad-", "quiescere", "quies"],
+        "historicalPath": [
+          "ラテン語 quies（休息、静けさ）",
+          "ラテン語 adquiescere（静かに休む、従う）",
+          "フランス語 acquiescer",
+          "英語 acquiesce（黙って従う、同意する）"
+        ],
+        "components": [
+          { "form": "ad-", "kind": "prefix", "gloss": "〜へ", "display": false },
+          { "form": "quiescere", "kind": "base", "gloss": "休む・静かにする", "display": false }
+        ],
+        "rootCandidates": ["quies"],
+        "semanticBridge": "争わず静かな休息へ入るイメージが、反対せずに提案や決定を受け入れ、黙って従う意味になった。",
+        "summary": "acquiesceは、ac-（〜へ）＋quies（静けさ・休息）から、黙って従う・同意するを表す。",
+        "confidence": "high",
+        "notes": "ad-がcの前でac-となる同化形を、表面のacとして表示する。"
+      }
+    },
+    "adulation": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "過度な称賛",
+        "root": "adul",
+        "parts": [
+          { "form": "adul", "kind": "root", "gloss": "へつらう" },
+          { "form": "-ation", "kind": "suffix", "gloss": "〜すること" }
+        ],
+        "derivation": "adul（へつらう）＋-ation（行為・結果） → 相手にへつらい、過度に称賛すること"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/adulation",
+          "https://www.merriam-webster.com/dictionary/adulation"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/adulation",
+            "note": "adulationをラテン語adulatio（へつらい）に遡らせ、動詞adulari（お世辞を言う、へつらう）と関係づけている。ad-＋尾を振るという伝統的説明には不確かさがある。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/adulation",
+            "note": "adulationの過度でへつらうような称賛、強い賞賛という語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": ["adulation", "adulatio", "adulari", "-ation"],
+        "historicalPath": [
+          "ラテン語 adulari（へつらう、お世辞を言う）",
+          "ラテン語 adulatio（へつらい）",
+          "英語 adulation（過度な称賛）"
+        ],
+        "components": [
+          { "form": "adulari", "kind": "base", "gloss": "へつらう", "display": false },
+          { "form": "-atio", "kind": "suffix", "gloss": "行為・結果", "display": false }
+        ],
+        "rootCandidates": ["adul"],
+        "semanticBridge": "相手の機嫌を取るためのお世辞やへつらいが、度を越した賞賛や追従を表す名詞になった。",
+        "summary": "adulationは、adul（へつらう）＋-ationから、過度な称賛を表す。",
+        "confidence": "medium",
+        "notes": "深い語源の分解には不確かさがあるが、adulari・adulatioの語幹adulと名詞化語尾の表面対応を採用する。"
+      }
+    },
+    "agnostic": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "不可知論の",
+        "root": "gnost",
+        "parts": [
+          { "form": "a", "kind": "prefix", "gloss": "〜でない" },
+          { "form": "gnost", "kind": "root", "gloss": "知る" },
+          { "form": "-ic", "kind": "suffix", "gloss": "〜に関する" }
+        ],
+        "derivation": "a-（〜でない）＋gnost（知る）＋-ic（〜に関する） → 知ることができないとする、不可知論の"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/agnostic",
+          "https://www.merriam-webster.com/dictionary/agnostic"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/agnostic",
+            "note": "agnosticはHuxleyが1870年に作った語で、ギリシャ語agnōstos（知られていない）に由来し、a-（〜でない）＋gnōstos（知られた）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/agnostic",
+            "note": "agnosticの神や究極の実在を知ることはできないとする立場・人、または知識に関して不可知論的なという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ギリシャ語（近代の造語）",
+        "etymons": ["agnostic", "agnōstos", "a-", "gnōstos", "gignōskein", "-ic"],
+        "historicalPath": [
+          "ギリシャ語 gignōskein（知る）",
+          "ギリシャ語 gnōstos（知られた、知ることのできる）",
+          "ギリシャ語 agnōstos（知られていない）",
+          "近代英語 agnostic（不可知論の）"
+        ],
+        "components": [
+          { "form": "a-", "kind": "prefix", "gloss": "〜でない", "display": false },
+          { "form": "gnōstos", "kind": "base", "gloss": "知られた", "display": false },
+          { "form": "-ic", "kind": "suffix", "gloss": "〜に関する", "display": false }
+        ],
+        "rootCandidates": ["gnost"],
+        "semanticBridge": "知識を表す語を否定し、人間には究極の実在を知ることができないという立場を表す語になった。",
+        "summary": "agnosticは、a-（〜でない）＋gnost（知る）＋-icから、不可知論のを表す。",
+        "confidence": "high",
+        "notes": "ギリシャ語gnōstosの語幹gnostと否定接頭辞a-、形容詞化-icを英語表面へ対応させる。"
+      }
+    },
+    "ailing": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "chain": [
+          { "term": "ail", "gloss": "苦しむ、病む" },
+          { "term": "ailing", "gloss": "病気で弱っている" },
+          { "gloss": "病気の、不調な" }
+        ],
+        "derivation": "病気や不調で苦しんでいる状態から → 病気の、不調な",
+        "source": "https://www.etymonline.com/word/ailing",
+        "sources": [
+          "https://www.etymonline.com/word/ailing",
+          "https://www.merriam-webster.com/dictionary/ailing"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/ailing",
+          "https://www.merriam-webster.com/dictionary/ailing"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/ailing",
+            "note": "ailingを動詞ailの現在分詞形からできた形容詞とし、ailを古英語eglan（苦しめる）、ゲルマン系語、PIE *agh-（恐れる、苦しむ）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/ailing",
+            "note": "ailingの病気である、健康状態が悪い、機能が不調なという語義を確認した。"
+          }
+        ],
+        "originLanguage": "英語（古英語・ゲルマン系）",
+        "etymons": ["ailing", "ail", "eglan", "*azljaz", "*agh-"],
+        "historicalPath": [
+          "PIE *agh-（苦しむ、恐れる）",
+          "古英語 eglan（苦しめる）",
+          "英語 ail（病む、苦しむ）",
+          "英語 ailing（病気の、不調な）"
+        ],
+        "components": [
+          { "form": "ail", "kind": "base", "gloss": "病む・苦しむ", "display": false },
+          { "form": "-ing", "kind": "suffix", "gloss": "進行・状態", "display": false }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "病気や苦痛を経験しているailの現在分詞が、病気で弱っている状態を表す形容詞として使われるようになった。",
+        "summary": "ailingは、ail（病む・苦しむ）の現在分詞から、病気の・不調なを表す。",
+        "confidence": "high",
+        "notes": "語源は明確だが、中心となる-ingは語源接辞ではなく英語の分詞語尾のため、A型の語根辞書表示からは外してB型にする。"
+      }
+    },
+    "allegedly": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "申し立てによれば",
+        "root": "allege",
+        "parts": [
+          { "form": "allege", "kind": "root", "gloss": "申し立てる" },
+          { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で" }
+        ],
+        "derivation": "allege（申し立てる）＋-ly（〜な状態で） → 申し立てられたところでは、申し立てによれば"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/allegedly",
+          "https://www.merriam-webster.com/dictionary/allegedly"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/allegedly",
+            "note": "allegedlyをalleged＋-lyから成る副詞とし、alleged/allegeをラテン語allegare（申し立てる）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/allegedly",
+            "note": "allegedlyの申し立てによれば、真偽を確定せずに伝えるという副詞の用法を確認した。"
+          }
+        ],
+        "originLanguage": "英語（ラテン語系基体からの派生）",
+        "etymons": ["allegedly", "alleged", "allege", "allegare", "-ly"],
+        "historicalPath": [
+          "ラテン語 allegare（申し立てる、証拠として挙げる）",
+          "古フランス語 aleguer",
+          "英語 allege（申し立てる）",
+          "英語 alleged＋-ly（申し立てによれば）"
+        ],
+        "components": [
+          { "form": "allege", "kind": "base", "gloss": "申し立てる", "display": false },
+          { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で", "display": false }
+        ],
+        "rootCandidates": ["allege"],
+        "semanticBridge": "申し立てられた内容を事実と断定せず、その申し立ての範囲に限定して述べる副詞になった。",
+        "summary": "allegedlyは、allege（申し立てる）＋-lyから、申し立てによればを表す。",
+        "confidence": "high",
+        "notes": "実際の直前段階はalleged＋-lyだが、過去分詞の-edを独立語根とせず、allegeと副詞化-lyを表示する。"
+      }
+    },
+    "allegory": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "chain": [
+          { "term": "allēgoria", "gloss": "別のことを語ること" },
+          { "term": "allegory", "gloss": "寓意をもつ物語" },
+          { "gloss": "寓話、寓意的な物語" }
+        ],
+        "derivation": "別の意味を語る物語から → 寓話、寓意的な物語",
+        "source": "https://www.etymonline.com/word/allegory",
+        "sources": [
+          "https://www.etymonline.com/word/allegory",
+          "https://www.merriam-webster.com/dictionary/allegory"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/allegory",
+          "https://www.merriam-webster.com/dictionary/allegory"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/allegory",
+            "note": "allegoryをギリシャ語allēgoria（別のことを語ること）に遡らせ、allos（別の）＋agoreuein（公の場で話す）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/allegory",
+            "note": "allegoryの人物・出来事を通じて別の意味や教訓を表す物語、寓意という語義を確認した。"
+          }
+        ],
+        "originLanguage": "ギリシャ語（ラテン語・フランス語経由）",
+        "etymons": ["allegory", "allēgoria", "allos", "agoreuein", "agora"],
+        "historicalPath": [
+          "ギリシャ語 allos（別の）",
+          "ギリシャ語 agoreuein（公の場で話す）",
+          "ギリシャ語 allēgoria（別のことを語ること）",
+          "英語 allegory（寓話、寓意）"
+        ],
+        "components": [
+          { "form": "allos", "kind": "base", "gloss": "別の", "display": false },
+          { "form": "agoreuein", "kind": "base", "gloss": "公に話す", "display": false }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "表面上の物語とは別の意味を、人物や出来事に託して語る形式を表す名詞になった。",
+        "summary": "allegoryは、別のことを語るギリシャ語の複合語から、寓話・寓意的な物語を表す。",
+        "confidence": "high",
+        "notes": "ギリシャ語の複合語であり、英語の語根＋接辞として安定した表示にしないためB型にする。"
+      }
+    },
+    "annex": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "chain": [
+          { "term": "annectere", "gloss": "結び付ける" },
+          { "term": "annex", "gloss": "付属させる、併合する" },
+          { "gloss": "併合する、付属させる" }
+        ],
+        "derivation": "別のものへ結び付けて付属させることから → 併合する、付属させる",
+        "source": "https://www.etymonline.com/word/annex",
+        "sources": [
+          "https://www.etymonline.com/word/annex",
+          "https://www.merriam-webster.com/dictionary/annex"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/annex",
+          "https://www.merriam-webster.com/dictionary/annex"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/annex",
+            "note": "annexをフランス語annexer、ラテン語annectere（結び付ける）に遡らせ、ad-（〜へ）＋nectere（結ぶ）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/annex",
+            "note": "annexの領土や建物を併合する、付属物として加えるという動詞・名詞の語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（フランス語経由）",
+        "etymons": ["annex", "annexer", "annectere", "ad-", "nectere"],
+        "historicalPath": [
+          "ラテン語 nectere（結ぶ）",
+          "ラテン語 annectere（結び付ける）",
+          "フランス語 annexer",
+          "英語 annex（併合する、付属させる）"
+        ],
+        "components": [
+          { "form": "ad-", "kind": "prefix", "gloss": "〜へ", "display": false },
+          { "form": "nectere", "kind": "base", "gloss": "結ぶ", "display": false }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "別のものへ結び付ける動作が、領土を本体へ併合することや、建物・文書を付属させることへ広がった。",
+        "summary": "annexは、結び付けるラテン語から、併合する・付属させるを表す。",
+        "confidence": "high",
+        "notes": "ad-の同化とnectereの語形変化が英語annexに直接残らないため、B型にする。"
+      }
+    },
+    "apex": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "chain": [
+          { "term": "apex", "gloss": "頂点、先端" },
+          { "gloss": "頂点" }
+        ],
+        "derivation": "先端や頂点を表すラテン語の基体から → 頂点",
+        "source": "https://www.etymonline.com/word/apex",
+        "sources": [
+          "https://www.etymonline.com/word/apex",
+          "https://www.merriam-webster.com/dictionary/apex"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/apex",
+          "https://www.merriam-webster.com/dictionary/apex"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/apex",
+            "note": "apexをラテン語apex（頂点、先端）に遡らせ、固定する・結び付ける意味の語との関係を示すが、深い語源には不確かさがある。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/apex",
+            "note": "apexの山や物の最も高い点、発展や成功の頂点という語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": ["apex", "apexus", "apere"],
+        "historicalPath": [
+          "ラテン語 apex（頂点、先端）",
+          "ラテン語 apexの英語借用",
+          "英語 apex（頂点、絶頂）"
+        ],
+        "components": [
+          { "form": "apex", "kind": "base", "gloss": "頂点・先端", "display": false }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "物の最も高い先端から、発展・成功・権力などの最高潮を表す比喩的な意味へ広がった。",
+        "summary": "apexは、頂点・先端を表すラテン語の単一基体から、頂点を表す。",
+        "confidence": "medium",
+        "notes": "単一基体で、さらに深い語源の対応も確定しないためB型にする。"
+      }
+    },
+    "apparition": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "幽霊",
+        "root": "appar",
+        "parts": [
+          { "form": "appar", "kind": "root", "gloss": "現れる" },
+          { "form": "-ition", "kind": "suffix", "gloss": "〜すること・状態" }
+        ],
+        "derivation": "appar（現れる）＋-ition（〜すること・状態） → 突然現れたもの、幽霊"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/apparition",
+          "https://www.merriam-webster.com/dictionary/apparition"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/apparition",
+            "note": "apparitionを後期ラテン語apparitionem（現れること）に遡らせ、動詞apparere（現れる）と関係づけている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/apparition",
+            "note": "apparitionの幽霊や超自然的な姿、突然現れたものという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（フランス語経由）",
+        "etymons": ["apparition", "apparitionem", "apparere", "ad-", "parere", "-ition"],
+        "historicalPath": [
+          "ラテン語 parere（現れる、見える）",
+          "ラテン語 apparere（現れる）",
+          "後期ラテン語 apparitionem（現れること）",
+          "英語 apparition（幽霊、突然現れたもの）"
+        ],
+        "components": [
+          { "form": "apparere", "kind": "base", "gloss": "現れる", "display": false },
+          { "form": "-ition", "kind": "suffix", "gloss": "行為・状態", "display": false }
+        ],
+        "rootCandidates": ["appar"],
+        "semanticBridge": "現れることを表す名詞が、特に突然目の前に現れる超自然的な姿や幽霊を表すようになった。",
+        "summary": "apparitionは、appar（現れる）＋-itionから、幽霊・突然現れたものを表す。",
+        "confidence": "medium",
+        "notes": "apparereの語幹apparと名詞化要素-itionを、英語の綴りに対応する形で表示する。"
+      }
+    },
+    "arcane": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "chain": [
+          { "term": "arcanus", "gloss": "隠された、秘密の" },
+          { "term": "arcane", "gloss": "一般に知られていない" },
+          { "gloss": "難解な、一般には知られていない" }
+        ],
+        "derivation": "隠された秘密に関することから → 難解な、一般には知られていない",
+        "source": "https://www.etymonline.com/word/arcane",
+        "sources": [
+          "https://www.etymonline.com/word/arcane",
+          "https://www.merriam-webster.com/dictionary/arcane"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/arcane",
+          "https://www.merriam-webster.com/dictionary/arcane"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/arcane",
+            "note": "arcaneをラテン語arcanus（秘密の、隠された）に遡らせ、arca（箱、保管庫）やarcere（閉じ込める）と関係づけている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/arcane",
+            "note": "arcaneの少数の人だけに知られ、一般には理解されにくいという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": ["arcane", "arcanus", "arca", "arcere"],
+        "historicalPath": [
+          "ラテン語 arca（箱、保管庫）",
+          "ラテン語 arcere（閉じ込める）",
+          "ラテン語 arcanus（隠された、秘密の）",
+          "英語 arcane（難解な、一般に知られていない）"
+        ],
+        "components": [
+          { "form": "arcanus", "kind": "base", "gloss": "隠された・秘密の", "display": false }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "箱や保管庫の中に閉じ込められた秘密というイメージから、一般に知られず理解しにくいことを表す形容詞になった。",
+        "summary": "arcaneは、隠された秘密を表すラテン語の単一基体から、難解な・一般に知られていないを表す。",
+        "confidence": "high",
+        "notes": "arcanusの語源経路は明確だが、英語表面に安定した接辞分解を置かないためB型にする。"
+      }
+    },
+    "archipelago": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "chain": [
+          { "term": "arkhi-", "gloss": "主な、首位の" },
+          { "term": "pelagos", "gloss": "海" },
+          { "gloss": "群島" }
+        ],
+        "derivation": "主な海を表した複合語から、島々の集まりを指すようになって → 群島",
+        "source": "https://www.etymonline.com/word/archipelago",
+        "sources": [
+          "https://www.etymonline.com/word/archipelago",
+          "https://www.merriam-webster.com/dictionary/archipelago"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/archipelago",
+          "https://www.merriam-webster.com/dictionary/archipelago"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/archipelago",
+            "note": "archipelagoをイタリア語arcipelago、ギリシャ語arkhipelagos（主な海）に遡らせ、arkhi-（主な）＋pelagos（海）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/archipelago",
+            "note": "archipelagoの海域にまとまって存在する島々の集まりという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ギリシャ語（イタリア語経由）",
+        "etymons": ["archipelago", "arcipelago", "arkhipelagos", "arkhi-", "pelagos"],
+        "historicalPath": [
+          "ギリシャ語 arkhi-（主な、首位の）",
+          "ギリシャ語 pelagos（海）",
+          "ギリシャ語 arkhipelagos（主な海）",
+          "イタリア語 arcipelagoを経て英語 archipelago（群島）"
+        ],
+        "components": [
+          { "form": "arkhi-", "kind": "base", "gloss": "主な・首位の", "display": false },
+          { "form": "pelagos", "kind": "base", "gloss": "海", "display": false }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "もともとエーゲ海などの主要な海を指した語が、海上にまとまる島々全体を指す名詞へ変化した。",
+        "summary": "archipelagoは、主な海を表すギリシャ語の複合語から、群島を表す。",
+        "confidence": "high",
+        "notes": "ギリシャ語・イタリア語を経た複合借用語であり、指定どおり熟語に近いB型にする。"
+      }
+    },
+    "arid": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "chain": [
+          { "term": "aridus", "gloss": "乾いた" },
+          { "term": "arid", "gloss": "水分のない" },
+          { "gloss": "乾燥した" }
+        ],
+        "derivation": "水分がなく乾いた状態から → 乾燥した",
+        "source": "https://www.etymonline.com/word/arid",
+        "sources": [
+          "https://www.etymonline.com/word/arid",
+          "https://www.merriam-webster.com/dictionary/arid"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/arid",
+          "https://www.merriam-webster.com/dictionary/arid"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/arid",
+            "note": "aridをフランス語aride、ラテン語aridus（乾いた）に遡らせ、arere（乾く）およびPIE *as-（燃える、輝く）と関係づけている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/arid",
+            "note": "aridの雨が少なく乾燥した、興味や想像力に乏しいという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（フランス語経由）",
+        "etymons": ["arid", "aride", "aridus", "arere", "*as-"],
+        "historicalPath": [
+          "PIE *as-（燃える、輝く）",
+          "ラテン語 arere（乾く）",
+          "ラテン語 aridus（乾いた）",
+          "英語 arid（乾燥した）"
+        ],
+        "components": [
+          { "form": "aridus", "kind": "base", "gloss": "乾いた", "display": false }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "水分が失われて乾いた状態から、土地・気候が乾燥していること、さらに内容が乏しいことを表すようになった。",
+        "summary": "aridは、乾いた状態を表すラテン語の単一基体から、乾燥したを表す。",
+        "confidence": "high",
+        "notes": "語源は明確だが、英語表面に採用できる安定した語根＋接辞の組合せがないためB型にする。"
+      }
+    }
+  }
+}

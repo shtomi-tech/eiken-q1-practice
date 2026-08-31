@@ -1,0 +1,1721 @@
+{
+  "meta": {
+    "batchId": "batch-022",
+    "note": "未確認B型の次の25語。個別出典が英語表面の語根・接辞対応を支える語はA型へ、借用語・固有名由来・語形変化だけの語・表面分解が不安定な語はB型に残す。"
+  },
+  "dictionary": {
+    "roots": {
+      "exor": {
+        "gloss": "説得する・動かす",
+        "origin": "ラテン語 exorare / exorabilis",
+        "note": "願って相手を動かすイメージ。inexorably。"
+      },
+      "jubil": {
+        "gloss": "歓喜の叫びをあげる",
+        "origin": "ラテン語 iubilare",
+        "note": "喜びを声に出して叫ぶイメージ。jubilant。"
+      },
+      "fusc": {
+        "gloss": "暗くする・曖昧にする",
+        "origin": "ラテン語 fuscus / fuscare",
+        "note": "暗くして見えにくくするイメージ。obfuscating。"
+      },
+      "mod": {
+        "gloss": "尺度・方法・流行",
+        "origin": "ラテン語 modus",
+        "note": "適切な尺度や方法から、流行の型へ。outmoded。"
+      },
+      "pontific": {
+        "gloss": "教皇・司祭らしく振る舞う",
+        "origin": "ラテン語 pontifex / pontificare",
+        "note": "教皇のように権威をもって話すイメージ。pontificating。"
+      },
+      "butt": {
+        "gloss": "打つ・押し返す",
+        "origin": "古フランス語 boter / ゲルマン語系 buttan",
+        "note": "突いて押し返すイメージ。rebuttals。"
+      },
+      "loc": {
+        "gloss": "場所・置く",
+        "origin": "ラテン語 locus / locare",
+        "note": "ものをある場所へ置くイメージ。relocated。"
+      },
+      "minisc": {
+        "gloss": "心に思い出す",
+        "origin": "ラテン語 minisci / mens",
+        "note": "心の中で再び思い起こすイメージ。reminiscent。"
+      },
+      "nunci": {
+        "gloss": "知らせる・告げる",
+        "origin": "ラテン語 nuntiare / nuntius",
+        "note": "知らせを運び、宣言するイメージ。renunciation。"
+      },
+      "prud": {
+        "gloss": "慎み深い・潔癖な",
+        "origin": "フランス語 prude / 古フランス語 preux",
+        "note": "慎み深さを過度に示すイメージ。prudish。"
+      }
+    },
+    "affixes": {
+      "-ably": {
+        "gloss": "〜できる様子で",
+        "kind": "suffix",
+        "note": "-ableと-lyが連続した副詞の表面形。inexorably。"
+      },
+      "out": {
+        "gloss": "外れて・時代を越えて",
+        "kind": "prefix",
+        "note": "英語out-。基準や流行の外に出ることを表す。outmoded。"
+      }
+    }
+  },
+  "entries": {
+    "inexorably": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "容赦なく",
+        "root": "exor",
+        "parts": [
+          {
+            "form": "in",
+            "kind": "prefix",
+            "gloss": "〜でない"
+          },
+          {
+            "form": "exor",
+            "kind": "root",
+            "gloss": "説得する・動かす"
+          },
+          {
+            "form": "-ably",
+            "kind": "suffix",
+            "gloss": "〜できる様子で"
+          }
+        ],
+        "derivation": "in-（〜でない）＋exor（説得して動かす）＋-ably（〜できる様子で） → 説得で動かせない、容赦なく"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/inexorable",
+          "https://www.merriam-webster.com/dictionary/inexorable"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/inexorable",
+            "note": "inexorableをフランス語・ラテン語 inexorabilis（懇願で動かせない）に遡らせ、in-（否定）＋exorabilis、さらにexorare（説得する）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/inexorable",
+            "note": "inexorableの現代語義として、説得・停止ができない容赦のない状態を確認し、ラテン語inexorabilisとin-＋exorabilisの構成を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "inexorably",
+          "inexorable",
+          "inexorabilis",
+          "in-",
+          "exorabilis",
+          "exorare",
+          "ex-",
+          "orare",
+          "-able",
+          "-ly"
+        ],
+        "historicalPath": [
+          "ラテン語 ex-（外へ）＋orare（願う、説得する）",
+          "ラテン語 exorare・exorabilis（説得する、説得可能な）",
+          "ラテン語 inexorabilis・フランス語 inexorable",
+          "英語 inexorable・inexorably（容赦のない様子で）"
+        ],
+        "components": [
+          {
+            "form": "in-",
+            "kind": "prefix",
+            "gloss": "否定"
+          },
+          {
+            "form": "exorare",
+            "kind": "base",
+            "gloss": "説得する・懇願する"
+          },
+          {
+            "form": "-ably",
+            "kind": "suffix",
+            "gloss": "可能な様子で"
+          }
+        ],
+        "rootCandidates": [
+          "exor"
+        ],
+        "semanticBridge": "懇願によって相手を動かせる性質を否定することから、どれほど頼んでも変えられない、容赦のない状態を表すようになった。",
+        "summary": "inexorablyはin-＋exor（説得して動かす）＋-ablyで、説得で動かせない様子、容赦なくを表す。",
+        "confidence": "high",
+        "notes": "inexorableの語幹をexorへ正規化し、inexorablyの表面形ではeを落とした-ablyを表示する。"
+      }
+    },
+    "infer": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "推論する",
+        "root": "fer",
+        "parts": [
+          {
+            "form": "in",
+            "kind": "prefix",
+            "gloss": "中へ"
+          },
+          {
+            "form": "fer",
+            "kind": "root",
+            "gloss": "運ぶ"
+          }
+        ],
+        "derivation": "in-（中へ）＋fer（運ぶ） → 考えの中へ運び入れる、推論する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/infer",
+          "https://www.merriam-webster.com/dictionary/infer"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/infer",
+            "note": "inferをラテン語 inferre（中へ運ぶ、推論する）に遡らせ、in-（中へ）＋ferre（運ぶ）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/infer",
+            "note": "inferの現代語義として、事実や前提から結論を導く・推測することを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・中フランス語・英語",
+        "etymons": [
+          "infer",
+          "inferre",
+          "in-",
+          "ferre",
+          "*bher-"
+        ],
+        "historicalPath": [
+          "ラテン語 in-（中へ）＋ferre（運ぶ）",
+          "ラテン語 inferre（中へ運ぶ、推論する）",
+          "中フランス語 inferer・英語 infer",
+          "英語 infer（推論する、推測する）"
+        ],
+        "components": [
+          {
+            "form": "in-",
+            "kind": "prefix",
+            "gloss": "中へ"
+          },
+          {
+            "form": "ferre",
+            "kind": "base",
+            "gloss": "運ぶ"
+          }
+        ],
+        "rootCandidates": [
+          "fer"
+        ],
+        "semanticBridge": "事実から得られる結論を考えの中へ運び入れることから、証拠に基づいて推論・推測する意味になった。",
+        "summary": "inferはin-＋fer（運ぶ）で、情報を考えの中へ運び入れて推論することを表す。",
+        "confidence": "high",
+        "notes": "既存のfer語根を再利用し、単独の動詞として接尾辞は表示しない。"
+      }
+    },
+    "insubordinate": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "反抗的な",
+        "root": "ordin",
+        "parts": [
+          {
+            "form": "in",
+            "kind": "prefix",
+            "gloss": "〜でない"
+          },
+          {
+            "form": "sub",
+            "kind": "prefix",
+            "gloss": "下に"
+          },
+          {
+            "form": "ordin",
+            "kind": "root",
+            "gloss": "順序・整える"
+          },
+          {
+            "form": "-ate",
+            "kind": "suffix",
+            "gloss": "〜にする・〜の状態にする"
+          }
+        ],
+        "derivation": "in-（〜でない）＋sub-（下に）＋ordin（秩序）＋-ate（〜の状態にする） → 下位の秩序に従わない、反抗的な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/insubordinate",
+          "https://www.merriam-webster.com/dictionary/insubordinate"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/insubordinate",
+            "note": "insubordinateをin-（否定）＋subordinateと説明し、subordinateをラテン語 subordinare（下位の秩序に置く）、sub＋ordinareへ遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/insubordinate",
+            "note": "insubordinateの現代語義として、権威に従わず反抗的であることを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "insubordinate",
+          "in-",
+          "subordinate",
+          "subordinare",
+          "sub-",
+          "ordinare",
+          "ordo",
+          "-ate"
+        ],
+        "historicalPath": [
+          "ラテン語 sub-（下に）＋ordinare（順序づける）",
+          "ラテン語 subordinare・フランス語 subordonné",
+          "英語 subordinate（下位の、従属させる）",
+          "英語 in-＋subordinate → insubordinate（反抗的な）"
+        ],
+        "components": [
+          {
+            "form": "in-",
+            "kind": "prefix",
+            "gloss": "否定"
+          },
+          {
+            "form": "sub-",
+            "kind": "prefix",
+            "gloss": "下に"
+          },
+          {
+            "form": "ordinare",
+            "kind": "base",
+            "gloss": "秩序づける"
+          },
+          {
+            "form": "-ate",
+            "kind": "suffix",
+            "gloss": "状態・動作"
+          }
+        ],
+        "rootCandidates": [
+          "ordin"
+        ],
+        "semanticBridge": "下位の秩序に置かれて従う性質を否定することから、権威や命令に従わない反抗的な性質を表すようになった。",
+        "summary": "insubordinateはin-＋sub-＋ordin（秩序）＋-ateで、秩序に従わない反抗的な性質を表す。",
+        "confidence": "high",
+        "notes": "既存のordin語根を再利用し、英語表面のinsubordinateへ4要素を対応させる。"
+      }
+    },
+    "interjected": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "口を挟んだ",
+        "root": "ject",
+        "parts": [
+          {
+            "form": "inter",
+            "kind": "prefix",
+            "gloss": "間に"
+          },
+          {
+            "form": "ject",
+            "kind": "root",
+            "gloss": "投げる"
+          }
+        ],
+        "derivation": "inter-（間に）＋ject（投げる） → 会話の間に言葉を投げ入れた、口を挟んだ"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/interject",
+          "https://www.merriam-webster.com/dictionary/interjected"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/interject",
+            "note": "interjectをラテン語 interiectus・intericere（間に投げる、置く）に遡らせ、inter（間に）＋iacere（投げる）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/interjected",
+            "note": "interjectedの現代語義として、会話や議論の途中に発言を差し挟んだことを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "interjected",
+          "interject",
+          "interiectus",
+          "intericere",
+          "inter",
+          "iacere",
+          "-ed"
+        ],
+        "historicalPath": [
+          "ラテン語 inter（間に）＋iacere（投げる）",
+          "ラテン語 intericere・interiectus（間に投げる、置く）",
+          "古フランス語 interjecter・英語 interject",
+          "英語 interjected（口を挟んだ）"
+        ],
+        "components": [
+          {
+            "form": "inter-",
+            "kind": "prefix",
+            "gloss": "間に"
+          },
+          {
+            "form": "iacere",
+            "kind": "base",
+            "gloss": "投げる"
+          }
+        ],
+        "rootCandidates": [
+          "ject"
+        ],
+        "semanticBridge": "物と物の間へ投げ入れる動作から、会話の途中へ発言を投げ入れて口を挟む意味になった。",
+        "summary": "interjectedはinter-＋ject（投げる）で、会話の間へ言葉を投げ入れて口を挟んだことを表す。",
+        "confidence": "high",
+        "notes": "既存のject語根を再利用し、過去形の-edは語形変化として表示から省く。"
+      }
+    },
+    "jangles": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 jangler（おしゃべりする、騒がしく言い争う）などに由来し、ゲルマン語・擬音との関係には不確実さがある。三人称単数の-sは語形変化 → 耳障りに鳴る"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/jangle",
+          "https://www.merriam-webster.com/dictionary/jangles"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/jangle",
+            "note": "jangleを中英語jangeln、古フランス語janglerに遡らせ、フランク語・他のゲルマン語源または擬音の可能性を示している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/jangles",
+            "note": "janglesの現代語義として、不調和で耳障りな音を立てることや人をいら立たせることを確認した。"
+          }
+        ],
+        "originLanguage": "中英語・古フランス語・英語（語源に不確実さ）",
+        "etymons": [
+          "jangles",
+          "jangle",
+          "jangeln",
+          "jangler"
+        ],
+        "historicalPath": [
+          "古フランス語 jangler（騒がしく話す、言い争う）",
+          "中英語 jangeln・英語 jangle",
+          "英語 jangles（耳障りに鳴る、いら立たせる）"
+        ],
+        "components": [
+          {
+            "form": "jangle",
+            "kind": "base",
+            "gloss": "騒がしく鳴る・言い争う"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "騒がしい会話や言い争いを表す語から、不調和で耳障りな音を立てる意味へ広がった。",
+        "summary": "janglesは起源に不確実さが残るjangleの三人称単数形で、耳障りに鳴ることを表す。",
+        "confidence": "low",
+        "notes": "借用経路と擬音説が併存し、英語表面の安定した語根分解を確定できないためB型に残す。"
+      }
+    },
+    "jubilant": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "歓喜に満ちた",
+        "root": "jubil",
+        "parts": [
+          {
+            "form": "jubil",
+            "kind": "root",
+            "gloss": "歓喜の叫びをあげる"
+          },
+          {
+            "form": "-ant",
+            "kind": "suffix",
+            "gloss": "〜しているもの・性質"
+          }
+        ],
+        "derivation": "jubil（歓喜の叫びをあげる）＋-ant（〜している性質） → 喜びに満ちて叫ぶような、歓喜に満ちた"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/jubilant",
+          "https://www.merriam-webster.com/dictionary/jubilant"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/jubilant",
+            "note": "jubilantをラテン語 iubilantem・iubilare（歓喜の叫びをあげる）に遡らせ、喜びの叫びを表す語と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/jubilant",
+            "note": "jubilantの現代語義として、勝利や成功などによる大きな喜びに満ちていることを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・英語",
+        "etymons": [
+          "jubilant",
+          "iubilantem",
+          "iubilare",
+          "iubilum",
+          "-ant"
+        ],
+        "historicalPath": [
+          "ラテン語 iubilum（歓喜の叫び）",
+          "ラテン語 iubilare（喜びを叫ぶ）・iubilans（歓喜している）",
+          "英語 jubilant（歓喜に満ちた）"
+        ],
+        "components": [
+          {
+            "form": "iubilare",
+            "kind": "base",
+            "gloss": "歓喜の叫びをあげる"
+          },
+          {
+            "form": "-ant",
+            "kind": "suffix",
+            "gloss": "動作中の性質"
+          }
+        ],
+        "rootCandidates": [
+          "jubil"
+        ],
+        "semanticBridge": "喜びを声に出して叫ぶ動作から、勝利や成功を大声で喜ぶほど歓喜に満ちた性質を表すようになった。",
+        "summary": "jubilantはjubil（歓喜の叫び）＋-antで、歓喜に満ちたという意味になる。",
+        "confidence": "high",
+        "notes": "ラテン語のiを英語表面のjへ合わせ、jubil＋-antとして表示する。"
+      }
+    },
+    "kindled": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "中英語 cundel などから、古ノルド語 kynda（火をつける）に関係するとされるが起源は不確か。過去形の-edは語形変化 → 火をつけた、感情を呼び起こした"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/kindle",
+          "https://www.merriam-webster.com/dictionary/kindled"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/kindle",
+            "note": "kindleを中英語 cundel、古ノルド語 kyndaなどに関係づけるが、より深い起源は不確かで、ラテン語candelaとは結び付けないと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/kindled",
+            "note": "kindledの現代語義として、火をつけたことや感情・関心を呼び起こしたことを確認した。"
+          }
+        ],
+        "originLanguage": "中英語・古ノルド語・英語（起源不確か）",
+        "etymons": [
+          "kindled",
+          "kindle",
+          "cundel",
+          "kynda"
+        ],
+        "historicalPath": [
+          "古ノルド語 kynda（火をつける）という関連説",
+          "中英語 cundel・英語 kindle",
+          "英語 kindled（火をつけた、呼び起こした）"
+        ],
+        "components": [
+          {
+            "form": "kindle",
+            "kind": "base",
+            "gloss": "火をつける・燃え立たせる"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "火を燃え立たせる動作から、感情・関心・希望などを内面で燃え立たせる比喩的な意味へ広がった。",
+        "summary": "kindledは起源に不確実さが残るkindleの過去形で、火や感情を呼び起こしたことを表す。",
+        "confidence": "low",
+        "notes": "kind＋-leなどの英語表面分解は語源を十分に説明しないためB型に残す。"
+      }
+    },
+    "latent": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 latentem・latere（隠れている）からフランス語・英語へ。英語の表面に安定した派生接辞を置かない → 潜在的な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/latent",
+          "https://www.merriam-webster.com/dictionary/latent"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/latent",
+            "note": "latentをラテン語 latentem・latere（隠れている、潜む）に遡らせ、後に休眠中・未発達の意味になったと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/latent",
+            "note": "latentの現代語義として、現時点では現れていないが存在・発達する可能性があることを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "latent",
+          "latentem",
+          "latere",
+          "*lādh-"
+        ],
+        "historicalPath": [
+          "ラテン語 latere（隠れる、潜む）",
+          "ラテン語 latens・latentem（隠れている）",
+          "フランス語 latent・英語 latent（潜在的な）"
+        ],
+        "components": [
+          {
+            "form": "latentem",
+            "kind": "base",
+            "gloss": "隠れているもの"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "隠れて見えない状態から、まだ表面化していないが存在・発達する可能性のある状態を表すようになった。",
+        "summary": "latentはラテン語latere（隠れる）を起点とする借用語で、潜在的なという意味を表す。",
+        "confidence": "high",
+        "notes": "語源は明確だが、既存のlat語根は別系統のlatus（運ぶ）であり、表面のlat＋-entという表示は採用しない。"
+      }
+    },
+    "mediocre": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 médiocre、ラテン語 mediocris（中ほどの高さ、平凡な）から英語へ。ラテン語内部のmedius＋ocrisは英語の生産的分解ではない → 平凡な、二流の"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/mediocrity",
+          "https://www.merriam-webster.com/dictionary/mediocre"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/mediocrity",
+            "note": "mediocrityの語源欄から、mediocreをラテン語 mediocris（中ほどの高さ、普通の）に遡らせ、文字通りには山の途中の高さを表すと確認した。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/mediocre",
+            "note": "mediocreの現代語義として、品質・能力が平均的で特に優れても劣ってもいないことを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "mediocre",
+          "médiocre",
+          "mediocris",
+          "medius",
+          "ocris"
+        ],
+        "historicalPath": [
+          "ラテン語 medius（中間の）＋ocris（山の峰）",
+          "ラテン語 mediocris（中ほどの高さ、平凡な）",
+          "フランス語 médiocre・英語 mediocre（平凡な）"
+        ],
+        "components": [
+          {
+            "form": "mediocris",
+            "kind": "base",
+            "gloss": "中ほどの・平凡な"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "山の中ほどの高さを表す語から、能力や品質が中ほどで特に優れていないことを表すようになった。",
+        "summary": "mediocreはラテン語mediocrisを経た借用語で、平凡な・二流のという意味になる。",
+        "confidence": "high",
+        "notes": "medius＋ocrisの歴史的構成は記録するが、英語表面のmedi＋ocreを生産的なA型分解にはしない。"
+      }
+    },
+    "mutiny": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 mutiner（反乱する）、さらに中世ラテン語・ラテン語 movere（動かす）に関係する語から英語へ。語尾の-yを含む歴史的形成は英語表面の安定分解とみなさない → 反乱"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/mutiny",
+          "https://www.merriam-webster.com/dictionary/mutiny"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/mutiny",
+            "note": "mutinyをobsolete mutine（反乱する）＋名詞接尾辞-y、フランス語 mutiner・meute、ラテン語 movere（動かす）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/mutiny",
+            "note": "mutinyの現代語義として、兵士・船員など部下が正当な権威に反抗する反乱を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "mutiny",
+          "mutine",
+          "mutiner",
+          "meute",
+          "*movita",
+          "movere",
+          "-y"
+        ],
+        "historicalPath": [
+          "ラテン語 movere（動かす）・*movita（反乱の動き）",
+          "フランス語 meute・mutiner（反乱、反乱する）",
+          "英語 mutine・mutiny（反乱、反乱を起こす）"
+        ],
+        "components": [
+          {
+            "form": "mutiny",
+            "kind": "base",
+            "gloss": "反乱・反乱を起こすこと"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "軍隊や船内で人が一斉に動いて権威へ抵抗することから、組織内の反乱を表すようになった。",
+        "summary": "mutinyはフランス語・ラテン語系の語を経た借用語で、反乱を表す。",
+        "confidence": "high",
+        "notes": "歴史的な-move系の連想は残すが、英語のmut＋-inyという表面分解は採用しないためB型にする。"
+      }
+    },
+    "nemesis": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ギリシャ神話の女神 Nemesis、ギリシャ語 nemesis（正当な分配・報復）からラテン語を経て英語へ。固有名・借用語で英語表面の分解はしない → 宿敵、かなわない相手"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/nemesis",
+          "https://www.merriam-webster.com/dictionary/nemesis"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/nemesis",
+            "note": "nemesisをギリシャ語 Nemesis（正当な分配、報復の女神）に遡らせ、nemein（分配する）に関係づけている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/nemesis",
+            "note": "nemesisの現代語義として、決定的な敗北をもたらす宿敵やかなわない相手を確認した。"
+          }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・英語",
+        "etymons": [
+          "nemesis",
+          "Nemesis",
+          "nemein"
+        ],
+        "historicalPath": [
+          "ギリシャ語 nemein（分配する、正当に割り当てる）",
+          "ギリシャ語 Nemesis（報復の女神、正当な分配）",
+          "ラテン語 nemesis・英語 nemesis（宿敵、報復）"
+        ],
+        "components": [
+          {
+            "form": "Nemesis",
+            "kind": "base",
+            "gloss": "報復の女神・宿敵"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "正当な分配や報復を司る女神の名から、相手に決定的な敗北や報いをもたらす存在を表すようになった。",
+        "summary": "nemesisはギリシャ神話の女神名を起点とする借用語で、宿敵・かなわない相手を表す。",
+        "confidence": "high",
+        "notes": "nemeinとの語源関係は研究欄に残すが、Nemesisを英語表面の語根へ分解しないためB型にする。"
+      }
+    },
+    "obfuscating": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "わかりにくくしている",
+        "root": "fusc",
+        "parts": [
+          {
+            "form": "ob",
+            "kind": "prefix",
+            "gloss": "前に・覆って"
+          },
+          {
+            "form": "fusc",
+            "kind": "root",
+            "gloss": "暗くする・曖昧にする"
+          },
+          {
+            "form": "-ing",
+            "kind": "suffix",
+            "gloss": "〜している性質"
+          }
+        ],
+        "derivation": "ob-（覆って）＋fusc（暗くする）＋-ing（〜している性質） → 暗くして見えにくくしている、わかりにくくしている"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/obfuscate",
+          "https://www.merriam-webster.com/dictionary/obfuscating"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/obfuscate",
+            "note": "obfuscateをラテン語 obfuscatus・obfuscare（暗くする）に遡らせ、ob（前に、覆って）＋fuscare、fuscus（暗い）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/obfuscating",
+            "note": "obfuscatingの現代語義として、意味や意図を不明瞭・わかりにくくしていることを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・英語",
+        "etymons": [
+          "obfuscating",
+          "obfuscate",
+          "obfuscatus",
+          "obfuscare",
+          "ob",
+          "fuscus",
+          "-ing"
+        ],
+        "historicalPath": [
+          "ラテン語 ob（前に、覆って）＋fuscus（暗い）",
+          "ラテン語 obfuscare・obfuscatus（暗くする、曖昧にする）",
+          "英語 obfuscate（わかりにくくする）",
+          "英語 obfuscating（わかりにくくしている）"
+        ],
+        "components": [
+          {
+            "form": "ob-",
+            "kind": "prefix",
+            "gloss": "覆って"
+          },
+          {
+            "form": "fuscare",
+            "kind": "base",
+            "gloss": "暗くする"
+          },
+          {
+            "form": "-ing",
+            "kind": "suffix",
+            "gloss": "動作中の性質"
+          }
+        ],
+        "rootCandidates": [
+          "fusc"
+        ],
+        "semanticBridge": "光を遮って暗くすることから、意味や意図を覆い隠して理解しにくくする比喩的な意味になった。",
+        "summary": "obfuscatingはob-＋fusc（暗くする）＋-ingで、わかりにくくしているという意味になる。",
+        "confidence": "high",
+        "notes": "obfuscateの語幹と現在分詞の-ingを表示し、語形変化による-ateの脱落は研究欄へ残す。"
+      }
+    },
+    "outmoded": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "時代遅れの",
+        "root": "mod",
+        "parts": [
+          {
+            "form": "out",
+            "kind": "prefix",
+            "gloss": "外れて・時代を越えて"
+          },
+          {
+            "form": "mod",
+            "kind": "root",
+            "gloss": "尺度・方法・流行"
+          }
+        ],
+        "derivation": "out-（流行の外れて）＋mod（流行・型） → 流行の外れた、時代遅れの"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/outmoded",
+          "https://www.merriam-webster.com/dictionary/outmoded"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/outmoded",
+            "note": "outmodedをout-＋modeからの形成とし、フランス語 démoderをモデルにした可能性を示している。modeはラテン語 modus（尺度、方法、流行）に遡る。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/outmoded",
+            "note": "outmodedの現代語義として、もはや流行していない・時代遅れであることを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "outmoded",
+          "out-",
+          "mode",
+          "modus"
+        ],
+        "historicalPath": [
+          "ラテン語 modus（尺度、方法、型、流行）",
+          "古フランス語 mode・英語 mode（型、流行）",
+          "英語 out-＋mode → outmoded（流行の外れた）"
+        ],
+        "components": [
+          {
+            "form": "out-",
+            "kind": "prefix",
+            "gloss": "外れて"
+          },
+          {
+            "form": "mode",
+            "kind": "base",
+            "gloss": "流行・型"
+          }
+        ],
+        "rootCandidates": [
+          "mod"
+        ],
+        "semanticBridge": "流行や型の外側に出てしまったことから、現在の流行に合わず時代遅れであることを表すようになった。",
+        "summary": "outmodedはout-＋mod（流行・型）で、流行の外れた時代遅れの状態を表す。",
+        "confidence": "high",
+        "notes": "modeの表面語幹modを表示し、過去分詞の-edは語形変化として省く。"
+      }
+    },
+    "panders": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "中英語 Pandare、イタリア語 Pandaro、ギリシャ神話の人物 Pandaros に由来する固有名から一般名詞・動詞へ。三人称単数の-sは語形変化 → 迎合する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/pander",
+          "https://www.merriam-webster.com/dictionary/panders"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/pander",
+            "note": "panderをChaucerが用いた中英語 Pandare、Boccaccioのイタリア語 Pandaro、ギリシャ神話のPandarosという人物名に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/panders",
+            "note": "pandersの現代語義として、他人の欲望や弱点に迎合して利益を得ようとすることを確認した。"
+          }
+        ],
+        "originLanguage": "ギリシャ語・イタリア語・中英語・英語",
+        "etymons": [
+          "panders",
+          "pander",
+          "Pandare",
+          "Pandaro",
+          "Pandaros"
+        ],
+        "historicalPath": [
+          "ギリシャ神話 Pandaros（人物名）",
+          "イタリア語 Pandaro・中英語 Pandare",
+          "英語 pander（他人の欲望に取り入る）",
+          "英語 panders（迎合する）"
+        ],
+        "components": [
+          {
+            "form": "pander",
+            "kind": "base",
+            "gloss": "迎合する人・迎合する"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "物語の中で恋愛の仲介をした人物名が、他人の欲望に取り入る仲介者を指す一般名詞・動詞へ変化した。",
+        "summary": "pandersはギリシャ神話の人物名を起点とする借用語panderの三人称単数形で、迎合することを表す。",
+        "confidence": "high",
+        "notes": "固有名由来で、pan＋derなどの英語表面分解には根拠がないためB型に残す。"
+      }
+    },
+    "paragon": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 parangon、イタリア語 paragone（試金石、比較）を経て、ギリシャ語 parakonan（研ぐ）に遡る。英語のpara＋gonとしては分解しない → 模範、典型"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/paragon",
+          "https://www.merriam-webster.com/dictionary/paragon"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/paragon",
+            "note": "paragonをフランス語 parangon、イタリア語 paragone（試金石、比較）、ギリシャ語 parakonan（研ぐ）に遡らせ、para＋akonē（砥石）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/paragon",
+            "note": "paragonの現代語義として、特別な卓越性・完全さの模範や、そのような人を確認した。"
+          }
+        ],
+        "originLanguage": "ギリシャ語・イタリア語・フランス語・英語",
+        "etymons": [
+          "paragon",
+          "parangon",
+          "paragone",
+          "parakonan",
+          "para-",
+          "akonē"
+        ],
+        "historicalPath": [
+          "ギリシャ語 para-（そばに）＋akonē（砥石）",
+          "ギリシャ語 parakonan（研ぐ、鋭くする）",
+          "イタリア語 paragone・フランス語 parangon（試金石、模範）",
+          "英語 paragon（模範、典型）"
+        ],
+        "components": [
+          {
+            "form": "paragone",
+            "kind": "base",
+            "gloss": "試金石・比較の基準"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "金の純度を試す砥石から、他のものの価値を測る比較基準、さらに卓越した模範を表すようになった。",
+        "summary": "paragonは試金石を意味するギリシャ語・イタリア語・フランス語を経た借用語で、模範を表す。",
+        "confidence": "high",
+        "notes": "歴史的にはpara＋akonēだが、英語表面のparagonへ直接対応する生産的な語根分解ではないためB型にする。"
+      }
+    },
+    "peevish": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "中英語 pevische などから英語へ。基体 peeve の起源と形成にも不確実さがあり、語尾の-ishだけで安定した語源分解とはしない → いら立った、気難しい"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/peevish",
+          "https://www.merriam-webster.com/dictionary/peevish"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/peevish",
+            "note": "peevishを中英語 pevische などに遡らせ、基体peeveとの関係や語源に不確実さがあることを示している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/peevish",
+            "note": "peevishの現代語義として、いら立ちや不機嫌さを示し、気難しいことを確認した。"
+          }
+        ],
+        "originLanguage": "中英語・英語（語源不確か）",
+        "etymons": [
+          "peevish",
+          "pevische",
+          "peeve",
+          "-ish"
+        ],
+        "historicalPath": [
+          "中英語 pevische（気難しい、不機嫌な）",
+          "英語 peevish（いら立った、気難しい）",
+          "peeveとの関係は後からの再分析の可能性"
+        ],
+        "components": [
+          {
+            "form": "peevish",
+            "kind": "base",
+            "gloss": "気難しい・不機嫌な"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "不機嫌で扱いにくい性質を表す中英語の語から、いら立って気難しい状態を表す形容詞になった。",
+        "summary": "peevishは起源とpeeveとの関係に不確実さが残る語で、いら立った・気難しいという意味を表す。",
+        "confidence": "low",
+        "notes": "表面上のpeev＋-ishは考えられるが、基体と語源経路が確定しないためB型に残す。"
+      }
+    },
+    "pillaged": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 pilage・pillier（略奪する）、おそらく俗ラテン語 *piliare を経て英語へ。過去形の-edは語形変化で、pill＋-ageとしては表示しない → 略奪した"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/pillage",
+          "https://www.merriam-webster.com/dictionary/pillaged"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/pillage",
+            "note": "pillageを古フランス語 pilage・pillier、可能性として俗ラテン語 *piliare・ラテン語 pilare（毛をむしる、皮をはぐ）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/pillaged",
+            "note": "pillagedの現代語義として、戦争などで財産を略奪したことを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "pillaged",
+          "pillage",
+          "pilage",
+          "pillier",
+          "*piliare",
+          "pilare",
+          "pilus"
+        ],
+        "historicalPath": [
+          "ラテン語 pilus（毛）・pilare（毛をむしる、皮をはぐ）という比喩",
+          "古フランス語 pilier・pilage（略奪する、略奪）",
+          "英語 pillage（略奪する）",
+          "英語 pillaged（略奪した）"
+        ],
+        "components": [
+          {
+            "form": "pillage",
+            "kind": "base",
+            "gloss": "略奪する・略奪"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "毛や皮をむしり取る比喩から、所有物を完全に奪い取る略奪の意味へ広がった。",
+        "summary": "pillagedはフランス語系のpillageの過去形で、略奪したことを表す。",
+        "confidence": "medium",
+        "notes": "pillageの語源は確認できるが、英語表面のpill＋-ageが生産的な分解とは限らないためB型に残す。"
+      }
+    },
+    "pontificating": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "偉そうに意見を述べている",
+        "root": "pontific",
+        "parts": [
+          {
+            "form": "pontific",
+            "kind": "root",
+            "gloss": "教皇・司祭らしく振る舞う"
+          },
+          {
+            "form": "-ing",
+            "kind": "suffix",
+            "gloss": "〜している性質"
+          }
+        ],
+        "derivation": "pontific（教皇のように振る舞う）＋-ing（〜している性質） → 権威的に、偉そうに意見を述べている"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/pontificate",
+          "https://www.merriam-webster.com/dictionary/pontificating"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/pontificate",
+            "note": "pontificateを中世ラテン語 pontificatus・pontificare（教皇として振る舞う）、ラテン語 pontifexに遡らせ、後に尊大・独断的に話す意味になったと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/pontificating",
+            "note": "pontificatingの現代語義として、偉そうに権威的・独断的な意見を述べていることを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・中世ラテン語・英語",
+        "etymons": [
+          "pontificating",
+          "pontificate",
+          "pontificare",
+          "pontificatus",
+          "pontifex",
+          "-ing"
+        ],
+        "historicalPath": [
+          "ラテン語 pontifex（教皇、司祭）",
+          "中世ラテン語 pontificare・pontificatus（教皇として振る舞うこと）",
+          "英語 pontificate（教皇らしく振る舞う、尊大に話す）",
+          "英語 pontificating（偉そうに意見を述べている）"
+        ],
+        "components": [
+          {
+            "form": "pontificare",
+            "kind": "base",
+            "gloss": "教皇として振る舞う"
+          },
+          {
+            "form": "-ing",
+            "kind": "suffix",
+            "gloss": "動作中の性質"
+          }
+        ],
+        "rootCandidates": [
+          "pontific"
+        ],
+        "semanticBridge": "教皇や高位聖職者のように権威を示す振る舞いから、相手を見下すように独断的な意見を述べる意味へ広がった。",
+        "summary": "pontificatingはpontific（教皇らしく振る舞う）＋-ingで、偉そうに意見を述べている状態を表す。",
+        "confidence": "high",
+        "notes": "pontificateの語幹pontificと現在分詞の-ingを表示し、語形変化による-ateの脱落を吸収する。"
+      }
+    },
+    "protégé": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 protégé（保護された人）、protéger（保護する）の過去分詞、ラテン語 protegere（覆って守る）から英語へ。フランス語借用のため英語表面は分解しない → 保護を受ける人、弟子"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/protege",
+          "https://www.merriam-webster.com/dictionary/protégé"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/protege",
+            "note": "protegeをフランス語 protégé（保護された人）、protéger、ラテン語 protegere（覆って守る）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/protégé",
+            "note": "protégéの現代語義として、後援者・指導者の保護や支援を受ける人を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "protégé",
+          "protéger",
+          "protegere",
+          "pro",
+          "tegere"
+        ],
+        "historicalPath": [
+          "ラテン語 pro（前に）＋tegere（覆う）",
+          "ラテン語 protegere（前から覆って守る）",
+          "フランス語 protéger・protégé",
+          "英語 protégé（保護を受ける人、弟子）"
+        ],
+        "components": [
+          {
+            "form": "protégé",
+            "kind": "base",
+            "gloss": "保護された人・弟子"
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "前から覆って守る動作の過去分詞が、保護・後援を受ける人を指す名詞として使われるようになった。",
+        "summary": "protégéはフランス語の過去分詞を借用した語で、保護を受ける人や弟子を表す。",
+        "confidence": "high",
+        "notes": "pro＋tegereの歴史的構成は確認できるが、英語表面のprotégéへ安定したA型分解を適用しない。"
+      }
+    },
+    "prudish": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "堅苦しく潔癖な",
+        "root": "prud",
+        "parts": [
+          {
+            "form": "prud",
+            "kind": "root",
+            "gloss": "慎み深い・潔癖な"
+          },
+          {
+            "form": "-ish",
+            "kind": "suffix",
+            "gloss": "〜のような"
+          }
+        ],
+        "derivation": "prud（慎み深い・潔癖な）＋-ish（〜のような） → prudeのように、堅苦しく潔癖な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/prudish",
+          "https://www.merriam-webster.com/dictionary/prudish"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/prudish",
+            "note": "prudishをprude＋-ishと説明し、prudeはフランス語 prude（過度に慎み深い女性）に由来し、さらに古フランス語系の語との関係には諸説がある。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/prudish",
+            "note": "prudishの現代語義として、性的・道徳的な事柄に対して過度に潔癖で堅苦しいことを確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語・フランス語・英語",
+        "etymons": [
+          "prudish",
+          "prude",
+          "prude",
+          "preux",
+          "-ish"
+        ],
+        "historicalPath": [
+          "古フランス語 preux・prude（よい、徳のある、慎み深い）という語群",
+          "フランス語 prude（過度に慎み深い人）",
+          "英語 prude＋-ish → prudish（堅苦しく潔癖な）"
+        ],
+        "components": [
+          {
+            "form": "prude",
+            "kind": "base",
+            "gloss": "潔癖な人"
+          },
+          {
+            "form": "-ish",
+            "kind": "suffix",
+            "gloss": "〜のような"
+          }
+        ],
+        "rootCandidates": [
+          "prud"
+        ],
+        "semanticBridge": "慎み深い人を表すprudeから、その人のように過度に堅苦しく潔癖な性質を表す形容詞になった。",
+        "summary": "prudishはprud（慎み深い・潔癖な）＋-ishで、堅苦しく潔癖なという意味になる。",
+        "confidence": "medium",
+        "notes": "prudeの語源には諸説があるが、prudishの英語形成prude＋-ishは出典で確認できるためA型へ追加する。語末eは表面形で省略。"
+      }
+    },
+    "rebuttals": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "反論",
+        "root": "butt",
+        "parts": [
+          {
+            "form": "re",
+            "kind": "prefix",
+            "gloss": "後ろへ・反対に"
+          },
+          {
+            "form": "butt",
+            "kind": "root",
+            "gloss": "打つ・押し返す"
+          },
+          {
+            "form": "-al",
+            "kind": "suffix",
+            "gloss": "〜に関する・行為"
+          }
+        ],
+        "derivation": "re-（反対に）＋butt（打ち返す）＋-al（行為） → 打ち返す行為、反論"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/rebuttal",
+          "https://www.merriam-webster.com/dictionary/rebuttals"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/rebuttal",
+            "note": "rebuttalをrebut＋-alと説明し、rebutを古フランス語 reboter・rebuter（押し返す）、re-＋ゲルマン語系boter（打つ）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/rebuttals",
+            "note": "rebuttalsの現代語義として、主張や証拠に対する反論・反証を確認した。"
+          }
+        ],
+        "originLanguage": "ゲルマン語・古フランス語・英語",
+        "etymons": [
+          "rebuttals",
+          "rebuttal",
+          "rebut",
+          "reboter",
+          "re-",
+          "boter",
+          "buttan",
+          "-al"
+        ],
+        "historicalPath": [
+          "ゲルマン語系 buttan（打つ）",
+          "古フランス語 re-（後ろへ）＋boter（打つ）",
+          "英語 rebut（押し返す、反論する）・rebuttal（反論）",
+          "英語 rebuttals（反論、複数）"
+        ],
+        "components": [
+          {
+            "form": "re-",
+            "kind": "prefix",
+            "gloss": "反対に・後ろへ"
+          },
+          {
+            "form": "boter",
+            "kind": "base",
+            "gloss": "打つ・押す"
+          },
+          {
+            "form": "-al",
+            "kind": "suffix",
+            "gloss": "行為・関係"
+          }
+        ],
+        "rootCandidates": [
+          "butt"
+        ],
+        "semanticBridge": "相手の攻撃を打ち返す動作から、議論で相手の主張を証拠や論拠によって打ち返す反論を表すようになった。",
+        "summary": "rebuttalsはre-＋butt（打ち返す）＋-alで、反論を表す。",
+        "confidence": "high",
+        "notes": "複数形の-sは省き、rebuttalの表面をre＋butt＋-alへ対応させる。"
+      }
+    },
+    "reclusive": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "隠遁した",
+        "root": "clud",
+        "parts": [
+          {
+            "form": "re",
+            "kind": "prefix",
+            "gloss": "後ろへ・閉じて"
+          },
+          {
+            "form": "clus",
+            "kind": "root",
+            "gloss": "閉じる"
+          },
+          {
+            "form": "-ive",
+            "kind": "suffix",
+            "gloss": "〜する性質の"
+          }
+        ],
+        "derivation": "re-（閉じて）＋clus（閉じる）＋-ive（〜する性質の） → 社会から閉じて隠遁した"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/reclusive",
+          "https://www.merriam-webster.com/dictionary/reclusive"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/reclusive",
+            "note": "reclusiveをrecluse＋-iveと説明し、recluseをラテン語 recludere（閉じる、締め出す）、re-＋claudereに遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/reclusive",
+            "note": "reclusiveの現代語義として、社会から離れて一人で暮らす傾向があることを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "reclusive",
+          "recluse",
+          "reclusus",
+          "recludere",
+          "re-",
+          "claudere",
+          "-ive"
+        ],
+        "historicalPath": [
+          "ラテン語 re-（後ろへ、閉じて）＋claudere（閉じる）",
+          "ラテン語 recludere・reclusus（閉じる、閉じ込められた）",
+          "古フランス語 reclus・英語 recluse",
+          "英語 reclusive（隠遁した）"
+        ],
+        "components": [
+          {
+            "form": "re-",
+            "kind": "prefix",
+            "gloss": "閉じて"
+          },
+          {
+            "form": "reclusus",
+            "kind": "base",
+            "gloss": "閉じ込められた"
+          },
+          {
+            "form": "-ive",
+            "kind": "suffix",
+            "gloss": "性質を表す"
+          }
+        ],
+        "rootCandidates": [
+          "clud"
+        ],
+        "semanticBridge": "外界を閉め出して閉じこもることから、社会との接触を避けて一人で暮らす性質を表すようになった。",
+        "summary": "reclusiveはre-＋clus（閉じる）＋-iveで、隠遁した・世間から離れたという意味になる。",
+        "confidence": "high",
+        "notes": "既存のclud語根の異形clusを再利用し、recluse＋-iveの英語形成を表示する。"
+      }
+    },
+    "relocated": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "移転させた",
+        "root": "loc",
+        "parts": [
+          {
+            "form": "re",
+            "kind": "prefix",
+            "gloss": "再び・別の場所へ"
+          },
+          {
+            "form": "loc",
+            "kind": "root",
+            "gloss": "場所・置く"
+          },
+          {
+            "form": "-ate",
+            "kind": "suffix",
+            "gloss": "〜にする・動詞化"
+          }
+        ],
+        "derivation": "re-（再び・別の場所へ）＋loc（場所・置く）＋-ate（〜にする） → 別の場所へ置いた、移転させた"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/relocate",
+          "https://www.merriam-webster.com/dictionary/relocated"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/relocate",
+            "note": "relocateをre-＋locateと説明し、locateをラテン語 locatus・locare（置く、場所を定める）、locus（場所）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/relocated",
+            "note": "relocatedの現代語義として、人や物を別の場所へ移した・移ったことを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・英語",
+        "etymons": [
+          "relocated",
+          "relocate",
+          "re-",
+          "locate",
+          "locatus",
+          "locare",
+          "locus",
+          "-ate"
+        ],
+        "historicalPath": [
+          "ラテン語 locus（場所）・locare（置く）",
+          "ラテン語 locatus・英語 locate（場所を定める）",
+          "英語 re-＋locate → relocate（別の場所へ移す）",
+          "英語 relocated（移転させた、移転した）"
+        ],
+        "components": [
+          {
+            "form": "re-",
+            "kind": "prefix",
+            "gloss": "再び・別の場所へ"
+          },
+          {
+            "form": "locare",
+            "kind": "base",
+            "gloss": "置く・場所を定める"
+          },
+          {
+            "form": "-ate",
+            "kind": "suffix",
+            "gloss": "動詞化"
+          }
+        ],
+        "rootCandidates": [
+          "loc"
+        ],
+        "semanticBridge": "ものをある場所へ置く動作に「再び・別の場所へ」を加え、別の場所へ置き直す・移転する意味になった。",
+        "summary": "relocatedはre-＋loc（場所・置く）＋-ateで、移転させた・移転したという意味になる。",
+        "confidence": "high",
+        "notes": "locateの語幹locと-ateを表示し、過去形の-edは語形変化として省く。"
+      }
+    },
+    "reminiscent": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "〜を思い起こさせる",
+        "root": "minisc",
+        "parts": [
+          {
+            "form": "re",
+            "kind": "prefix",
+            "gloss": "再び"
+          },
+          {
+            "form": "minisc",
+            "kind": "root",
+            "gloss": "心に思い出す"
+          },
+          {
+            "form": "-ent",
+            "kind": "suffix",
+            "gloss": "〜する性質の"
+          }
+        ],
+        "derivation": "re-（再び）＋minisc（心に思い出す）＋-ent（〜する性質の） → 再び思い出させる性質の、〜を思い起こさせる"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/reminiscent",
+          "https://www.merriam-webster.com/dictionary/reminiscent"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/reminiscent",
+            "note": "reminiscentをラテン語 reminiscentem・reminisci（思い出す、心に呼び戻す）に遡らせ、re-（再び）＋minisci（思い出す）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/reminiscent",
+            "note": "reminiscentの現代語義として、誰か・何かを思い起こさせることを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・英語",
+        "etymons": [
+          "reminiscent",
+          "reminiscens",
+          "reminisci",
+          "re-",
+          "minisci",
+          "mens",
+          "*men-",
+          "-ent"
+        ],
+        "historicalPath": [
+          "ラテン語 re-（再び）＋minisci（思い出す）",
+          "ラテン語 reminisci・reminiscens（思い出す、思い出させる）",
+          "英語 reminiscent（回想に関する、〜を思い起こさせる）"
+        ],
+        "components": [
+          {
+            "form": "re-",
+            "kind": "prefix",
+            "gloss": "再び"
+          },
+          {
+            "form": "reminisci",
+            "kind": "base",
+            "gloss": "思い出す"
+          },
+          {
+            "form": "-ent",
+            "kind": "suffix",
+            "gloss": "性質を表す"
+          }
+        ],
+        "rootCandidates": [
+          "minisc"
+        ],
+        "semanticBridge": "心の中で再び思い出すことから、あるものが別の人・出来事・雰囲気を思い起こさせる性質を表すようになった。",
+        "summary": "reminiscentはre-＋minisc（思い出す）＋-entで、〜を思い起こさせるという意味になる。",
+        "confidence": "high",
+        "notes": "reminisciの語幹を英語表面のminiscへ正規化し、-entを性質の接尾辞として表示する。"
+      }
+    },
+    "renunciation": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "放棄",
+        "root": "nunci",
+        "parts": [
+          {
+            "form": "re",
+            "kind": "prefix",
+            "gloss": "反対に・離れて"
+          },
+          {
+            "form": "nunci",
+            "kind": "root",
+            "gloss": "知らせる・告げる"
+          },
+          {
+            "form": "-ation",
+            "kind": "suffix",
+            "gloss": "行為・結果"
+          }
+        ],
+        "derivation": "re-（反対に・離れて）＋nunci（知らせる）＋-ation（行為・結果） → 公式に放棄を告げる行為、放棄"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/renounce",
+          "https://www.merriam-webster.com/dictionary/renunciation"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/renounce",
+            "note": "renunciationをrenounceの関連語として示し、renounceをラテン語 renuntiare（知らせを戻す、宣言する、放棄する）、re-＋nuntiareに遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/renunciation",
+            "note": "renunciationの現代語義として、放棄・断念する行為、特に禁欲的な自己否定を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・中英語・英語",
+        "etymons": [
+          "renunciation",
+          "renuntiatio",
+          "renuntiare",
+          "re-",
+          "nuntiare",
+          "nuntius",
+          "-ation"
+        ],
+        "historicalPath": [
+          "ラテン語 re-（反対に、離れて）＋nuntiare（知らせる、宣言する）",
+          "ラテン語 renuntiare・renuntiatio（放棄を宣言する、放棄の行為）",
+          "古フランス語・中英語 renunciacion",
+          "英語 renunciation（放棄、断念）"
+        ],
+        "components": [
+          {
+            "form": "re-",
+            "kind": "prefix",
+            "gloss": "反対に・離れて"
+          },
+          {
+            "form": "nuntiare",
+            "kind": "base",
+            "gloss": "知らせる・宣言する"
+          },
+          {
+            "form": "-ation",
+            "kind": "suffix",
+            "gloss": "行為・結果"
+          }
+        ],
+        "rootCandidates": [
+          "nunci"
+        ],
+        "semanticBridge": "自分の立場や権利を放棄すると公に告げる行為から、放棄・断念そのものを表す名詞になった。",
+        "summary": "renunciationはre-＋nunci（告げる）＋-ationで、放棄を告げる行為、放棄を表す。",
+        "confidence": "high",
+        "notes": "nuntiare系の英語表面nunciへ正規化し、-ationを行為名詞の接尾辞として表示する。"
+      }
+    }
+  }
+}

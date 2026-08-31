@@ -1,0 +1,1811 @@
+{
+  "meta": {
+    "batchId": "batch-048",
+    "note": "未確認B型の次の25語。出典と表面形が対応する20語をA型へ、単純語・語形変更・借用語はB型に残す。"
+  },
+  "dictionary": {
+    "roots": {
+      "quaint": {
+        "gloss": "知る・なじみのある",
+        "origin": "ラテン語 cognoscere / 古フランス語 coint",
+        "note": "知識を得て知り合いになる意味に関わる語幹。acquaintではquaintとして現れる。"
+      },
+      "steril": {
+        "gloss": "不毛な・生殖しない",
+        "origin": "ラテン語 sterilis",
+        "note": "生産や生殖がない状態。sterilizeの基体。"
+      },
+      "natur": {
+        "gloss": "生まれ・自然",
+        "origin": "ラテン語 natura / nasci",
+        "note": "生まれたもの・自然。supernaturalでは自然を表す。"
+      },
+      "coward": {
+        "gloss": "勇気のない人",
+        "origin": "古フランス語 couard / coart",
+        "note": "危険に尾を巻く臆病者。cowardlyの基体。"
+      },
+      "spac": {
+        "gloss": "空間・広がり",
+        "origin": "ラテン語 spatium",
+        "note": "空間や余裕。spaciousではspacとして現れる。"
+      },
+      "roll": {
+        "gloss": "巻物・名簿",
+        "origin": "古フランス語 rolle / ラテン語 rotulus",
+        "note": "記録を書いた巻物や名簿。enrollでは名簿へ記す意味になる。"
+      },
+      "bel": {
+        "gloss": "戦う",
+        "origin": "ラテン語 bellare / bellum",
+        "note": "反対して戦うこと。rebelではbelとして現れる。"
+      },
+      "radi": {
+        "gloss": "光線・車輪の spoke",
+        "origin": "ラテン語 radius",
+        "note": "中心から伸びる光線や車輪の spoke。radiateの基体。"
+      },
+      "forge": {
+        "gloss": "形作る・偽造する",
+        "origin": "古フランス語 forge / ラテン語 fabrica",
+        "note": "作業場で形作ることから、偽造することへつながる。"
+      },
+      "candid": {
+        "gloss": "白い・率直な",
+        "origin": "ラテン語 candidus / candere",
+        "note": "白く輝くことから、隠し立てのない率直さ、候補者へつながる。"
+      },
+      "nutrit": {
+        "gloss": "養う・育てる",
+        "origin": "ラテン語 nutrire / nutrix",
+        "note": "養い育てること。nutritiousではnutritとして現れる。"
+      },
+      "tom": {
+        "gloss": "切る",
+        "origin": "ギリシャ語 temnein / tomē",
+        "note": "切り開いて調べる動作。anatomyではtomとして現れる。"
+      },
+      "tentat": {
+        "gloss": "試す・触れて確かめる",
+        "origin": "ラテン語 tentare / tentatus",
+        "note": "試しに触れて確かめる動作。tentativeではtentatとして現れる。"
+      },
+      "warrant": {
+        "gloss": "守る・保証する",
+        "origin": "ゲルマン祖語 *war- / 古フランス語 warant",
+        "note": "守り保証する約束。warrantyの基体。"
+      }
+    },
+    "affixes": {
+      "-ery": {
+        "gloss": "行為・結果",
+        "kind": "suffix",
+        "note": "行為・結果や、その行為に関わるものを表す接尾辞。forgery。"
+      },
+      "-acy": {
+        "gloss": "〜の状態",
+        "kind": "suffix",
+        "note": "抽象的な状態を表す接尾辞。candidacy。"
+      },
+      "ana": {
+        "gloss": "上へ・通して",
+        "kind": "prefix",
+        "note": "ギリシャ語ana-に由来し、上へ・通しての意味を表す。anatomy。"
+      }
+    }
+  },
+  "entries": {
+    "acquaint": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "ac（〜へ）＋quaint（知る・なじみのある） → 知識を与えて知らせる、慣れさせる",
+        "gloss": "知らせる",
+        "root": "quaint",
+        "parts": [
+          {
+            "form": "ac",
+            "kind": "prefix",
+            "gloss": "〜へ・近くへ"
+          },
+          {
+            "form": "quaint",
+            "kind": "root",
+            "gloss": "知る・なじみのある"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/acquaint",
+          "https://www.merriam-webster.com/dictionary/acquaint"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/acquaint",
+            "note": "acquaintを古フランス語 acointer、俗ラテン語 *accognitare、ラテン語 ad-＋cognoscere（知る）に遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/acquaint",
+            "note": "acquaintの現代語義として、情報を知らせること、経験などに慣れさせることを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "acquaint",
+          "acointer",
+          "*accognitare",
+          "accognitus",
+          "ad-",
+          "cognoscere"
+        ],
+        "historicalPath": [
+          "ラテン語 ad-（〜へ）＋cognoscere（知る）",
+          "俗ラテン語 *accognitare（知らせる）",
+          "古フランス語 acointer（知らせる、知り合いにする）",
+          "英語 ac＋quaint → acquaint（知らせる、慣れさせる）"
+        ],
+        "components": [
+          {
+            "form": "ac",
+            "kind": "prefix",
+            "gloss": "〜へ"
+          },
+          {
+            "form": "quaint",
+            "kind": "base",
+            "gloss": "知る・なじみのある"
+          }
+        ],
+        "rootCandidates": [
+          "quaint",
+          "cogn",
+          "gno"
+        ],
+        "semanticBridge": "知識を相手へ届けて知り合いにすることから、情報を知らせ、経験に慣れさせる意味になった。",
+        "summary": "acquaintはad-＋cognoscereに由来し、古フランス語のacointerを経た表面形ac＋quaintに対応づけられるため、確信度を中としたA型にする。",
+        "confidence": "medium"
+      }
+    },
+    "escort": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "護衛・付き添いを表すフランス語・イタリア語系の語。安全のために人や集団に付き添う → 護衛する、付き添う"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/escort",
+          "https://www.merriam-webster.com/dictionary/escort"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/escort",
+            "note": "escortをフランス語 escorte、イタリア語 scorta、俗ラテン語 *excorrigereに遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/escort",
+            "note": "escortの現代語義として、旅などで人に付き添い守ることを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・イタリア語・フランス語・英語",
+        "etymons": [
+          "escort",
+          "escorte",
+          "scorta",
+          "scorgere",
+          "*excorrigere",
+          "ex-",
+          "corrigere"
+        ],
+        "historicalPath": [
+          "ラテン語 ex-（外へ）＋corrigere（正しく導く）",
+          "俗ラテン語 *excorrigere",
+          "イタリア語 scorta（案内、護衛）",
+          "フランス語 escorte / 英語 escort（護衛、付き添い）"
+        ],
+        "components": [
+          {
+            "form": "escort",
+            "kind": "base",
+            "gloss": "護衛・付き添い"
+          }
+        ],
+        "rootCandidates": [
+          "corr",
+          "scort"
+        ],
+        "semanticBridge": "案内して守ることから、旅や社交の場で人に付き添い保護する意味になった。",
+        "summary": "escortはイタリア語・フランス語を経た借用語で、現代英語のex＋cortとして安全に分解できないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "batch": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "焼いたものの一まとまりを表す語から、同時に作られた物のまとまりへ意味が広がった → 一まとめ、一団、ひと窯分"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/batch",
+          "https://www.merriam-webster.com/dictionary/batch"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/batch",
+            "note": "batchを古英語に関係する*bæcce（焼いたもの）とbacan（焼く）に結び付け、一回に作られた量の意味を確認した。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/batch",
+            "note": "batchの現代語義として、一度に作られた物の一まとまりや一団を確認した。"
+          }
+        ],
+        "originLanguage": "古英語・ゲルマン系・英語",
+        "etymons": [
+          "batch",
+          "*bæcce",
+          "bake",
+          "bacan"
+        ],
+        "historicalPath": [
+          "古英語 bacan（焼く）に関係する語",
+          "焼いた一まとまりのもの",
+          "英語 batch（同時に作られた一団）",
+          "一回の作業で生じた量・一まとめ"
+        ],
+        "components": [
+          {
+            "form": "batch",
+            "kind": "base",
+            "gloss": "一まとまり"
+          }
+        ],
+        "rootCandidates": [
+          "bak",
+          "batch"
+        ],
+        "semanticBridge": "一度に焼いたもののまとまりから、一回の作業で作られた物や人の一団を表すようになった。",
+        "summary": "batchは古英語・ゲルマン系の単純語で、英語の接辞による分解はないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "evade": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "e（外へ）＋vad（行く） → 外へ逃れて免れる、回避した",
+        "gloss": "免れた",
+        "root": "vad",
+        "parts": [
+          {
+            "form": "e",
+            "kind": "prefix",
+            "gloss": "外へ"
+          },
+          {
+            "form": "vad",
+            "kind": "root",
+            "gloss": "行く"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/evade",
+          "https://www.merriam-webster.com/dictionary/evade"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/evade",
+            "note": "evadeをフランス語 evader、ラテン語 evadere、ex-＋vadere（行く）に遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/evade",
+            "note": "evadeの現代語義として、危険や困難を逃れる・回避することを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "evade",
+          "evader",
+          "evadere",
+          "ex-",
+          "vadere"
+        ],
+        "historicalPath": [
+          "ラテン語 ex-（外へ）＋vadere（行く）",
+          "ラテン語 evadere（逃げ出す、免れる）",
+          "フランス語 evader",
+          "英語 e＋vad → evade（免れる、回避する）"
+        ],
+        "components": [
+          {
+            "form": "e",
+            "kind": "prefix",
+            "gloss": "外へ"
+          },
+          {
+            "form": "vad",
+            "kind": "base",
+            "gloss": "行く"
+          }
+        ],
+        "rootCandidates": [
+          "vad",
+          "wadh"
+        ],
+        "semanticBridge": "危険や拘束の外へ行くことから、困難や責任を逃れて回避する意味になった。",
+        "summary": "evadeはex-の表面形eと既存のvad語根が出典・表面形に対応するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "sterilize": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "steril（不毛な・生殖しない）＋-ize（〜にする） → 生きたものをなくす状態にする、殺菌する",
+        "gloss": "殺菌した",
+        "root": "steril",
+        "parts": [
+          {
+            "form": "steril",
+            "kind": "root",
+            "gloss": "不毛な・生殖しない"
+          },
+          {
+            "form": "-ize",
+            "kind": "suffix",
+            "gloss": "〜にする"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/sterilize",
+          "https://www.merriam-webster.com/dictionary/sterilize"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/sterilize",
+            "note": "sterilizeをフランス語 stériliser、またはsterile＋-izeから来た語と確認した。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/sterilize",
+            "note": "sterilizeの現代語義として、微生物を除いて無菌にすることを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "sterilize",
+          "steriliser",
+          "sterile",
+          "sterilis",
+          "-ize"
+        ],
+        "historicalPath": [
+          "ラテン語 sterilis（不毛な、生産しない）",
+          "フランス語 stérile / stériliser",
+          "英語 sterile",
+          "sterile＋-ize → sterilize（殺菌する）"
+        ],
+        "components": [
+          {
+            "form": "steril",
+            "kind": "base",
+            "gloss": "不毛な・生殖しない"
+          },
+          {
+            "form": "-ize",
+            "kind": "suffix",
+            "gloss": "〜にする"
+          }
+        ],
+        "rootCandidates": [
+          "steril",
+          "ster"
+        ],
+        "semanticBridge": "生殖や生産がない状態から、微生物などを生きられない状態にする意味へ広がった。",
+        "summary": "sterilizeはsterile＋-izeの関係が出典に示され、表面形steril＋-izeに対応するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "wreck": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "船や物を壊すことを表すゲルマン系の語。難破や破壊の結果 → 難破させた、破壊した"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/wreck",
+          "https://www.merriam-webster.com/dictionary/wreck"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/wreck",
+            "note": "wreckを古ノルド語wrekなどのゲルマン系の難破・残骸を表す語に遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/wreck",
+            "note": "wreckの現代語義として、船を難破させること、物をひどく壊すことを確認した。"
+          }
+        ],
+        "originLanguage": "古ノルド語・ゲルマン系・英語",
+        "etymons": [
+          "wreck",
+          "wrek",
+          "vrak",
+          "*wreg-"
+        ],
+        "historicalPath": [
+          "ゲルマン系 *wreg-（追い出す、損なう）に関係する語",
+          "古ノルド語 wrek（難破、残骸）",
+          "中英語 wrek / wreck",
+          "英語 wreck（難破させる、破壊する）"
+        ],
+        "components": [
+          {
+            "form": "wreck",
+            "kind": "base",
+            "gloss": "難破・破壊"
+          }
+        ],
+        "rootCandidates": [
+          "wreg",
+          "wreck"
+        ],
+        "semanticBridge": "海岸に追いやられた難破船や残骸から、物を激しく壊す意味になった。",
+        "summary": "wreckはゲルマン系の単純語で、英語の接辞による分解はないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "commute": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "com（ともに・完全に）＋mut（変える） → 交換・変更する、刑を軽くする／通勤する",
+        "gloss": "通勤した",
+        "root": "mut",
+        "parts": [
+          {
+            "form": "com",
+            "kind": "prefix",
+            "gloss": "ともに・完全に"
+          },
+          {
+            "form": "mut",
+            "kind": "root",
+            "gloss": "変える"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/commute",
+          "https://www.merriam-webster.com/dictionary/commute"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/commute",
+            "note": "commuteをラテン語 commutare、com-＋mutare（変える）に遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/commute",
+            "note": "commuteの現代語義として、通勤することと刑を軽くすることの両方を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・英語",
+        "etymons": [
+          "commute",
+          "commutare",
+          "com-",
+          "mutare",
+          "mei"
+        ],
+        "historicalPath": [
+          "ラテン語 com-（ともに、完全に）＋mutare（変える）",
+          "ラテン語 commutare（何度も変える、交換する）",
+          "英語 commute（交換する、刑を軽くする）",
+          "住居と職場を交換するように往復する通勤の意味"
+        ],
+        "components": [
+          {
+            "form": "com",
+            "kind": "prefix",
+            "gloss": "ともに・完全に"
+          },
+          {
+            "form": "mut",
+            "kind": "base",
+            "gloss": "変える"
+          }
+        ],
+        "rootCandidates": [
+          "mut",
+          "mei"
+        ],
+        "semanticBridge": "物を交換・変更することから刑を別の軽いものへ変える意味、さらに住居と職場を往復する通勤の意味になった。",
+        "summary": "commuteはcom-＋mutareの構成が出典で確認でき、既存のcom接頭辞とmut語根が表面形に対応するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "supernatural": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "super（上に・超えて）＋natur（生まれ・自然）＋-al（〜に関する） → 自然を超えた、超自然的な",
+        "gloss": "超自然的な",
+        "root": "natur",
+        "parts": [
+          {
+            "form": "super",
+            "kind": "prefix",
+            "gloss": "上に・超えて"
+          },
+          {
+            "form": "natur",
+            "kind": "root",
+            "gloss": "生まれ・自然"
+          },
+          {
+            "form": "-al",
+            "kind": "suffix",
+            "gloss": "〜に関する"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/supernatural",
+          "https://www.merriam-webster.com/dictionary/supernatural"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/supernatural",
+            "note": "supernaturalを中世ラテン語supernaturalis、ラテン語super（上に）＋natura（自然）に遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/supernatural",
+            "note": "supernaturalの現代語義として、自然界の通常の法則を超えることを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・中世ラテン語・英語",
+        "etymons": [
+          "supernatural",
+          "supernaturalis",
+          "super",
+          "natura",
+          "-al"
+        ],
+        "historicalPath": [
+          "ラテン語 super（上に、超えて）＋natura（自然）",
+          "中世ラテン語 supernaturalis（自然を超えた）",
+          "英語 supernatural",
+          "super＋natur＋-al → supernatural（超自然的な）"
+        ],
+        "components": [
+          {
+            "form": "super",
+            "kind": "prefix",
+            "gloss": "超えて"
+          },
+          {
+            "form": "natur",
+            "kind": "base",
+            "gloss": "自然"
+          },
+          {
+            "form": "-al",
+            "kind": "suffix",
+            "gloss": "〜に関する"
+          }
+        ],
+        "rootCandidates": [
+          "natur",
+          "nas"
+        ],
+        "semanticBridge": "自然の上・外にあるものという意味から、自然法則を超えた超自然的なものを表すようになった。",
+        "summary": "supernaturalはラテン語super＋natura＋-alに対応し、表面形にも一致するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "cowardly": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "coward（勇気のない人）＋-ly（〜な状態で） → 臆病な様子で、臆病に",
+        "gloss": "臆病な",
+        "root": "coward",
+        "parts": [
+          {
+            "form": "coward",
+            "kind": "root",
+            "gloss": "勇気のない人"
+          },
+          {
+            "form": "-ly",
+            "kind": "suffix",
+            "gloss": "〜な状態で"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/cowardly",
+          "https://www.merriam-webster.com/dictionary/cowardly"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/cowardly",
+            "note": "cowardlyをcoward＋-lyと明記し、cowardを古フランス語couard・coart、尾を表すラテン語caudaに関係づける。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/cowardly",
+            "note": "cowardlyの現代語義として、勇気がなく危険に立ち向かわない様子を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "cowardly",
+          "coward",
+          "couard",
+          "coart",
+          "coda",
+          "cauda",
+          "-ard",
+          "-ly"
+        ],
+        "historicalPath": [
+          "ラテン語 cauda（尾）に関係する古フランス語 coart（尾を巻く者）",
+          "古フランス語 couard / 英語 coward（臆病者）",
+          "coward＋-ly",
+          "英語 cowardly（臆病な、臆病に）"
+        ],
+        "components": [
+          {
+            "form": "coward",
+            "kind": "base",
+            "gloss": "勇気のない人"
+          },
+          {
+            "form": "-ly",
+            "kind": "suffix",
+            "gloss": "〜な状態で"
+          }
+        ],
+        "rootCandidates": [
+          "coward",
+          "caud"
+        ],
+        "semanticBridge": "危険に際して尾を巻く人という比喩から、そのような臆病さを示す性質・様子を表すようになった。",
+        "summary": "cowardlyは出典にcoward＋-lyと明記され、表面形にも対応するためA型にする。coward内部の語史は別段階の借用を含む。",
+        "confidence": "high"
+      }
+    },
+    "spacious": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "spac（空間・広がり）＋-ious（〜の性質の） → 空間に余裕がある、広々とした",
+        "gloss": "広々とした",
+        "root": "spac",
+        "parts": [
+          {
+            "form": "spac",
+            "kind": "root",
+            "gloss": "空間・広がり"
+          },
+          {
+            "form": "-ious",
+            "kind": "suffix",
+            "gloss": "〜の性質の"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/spacious",
+          "https://www.merriam-webster.com/dictionary/spacious"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/spacious",
+            "note": "spaciousを古フランス語spacios、ラテン語spatiosus・spatium（空間）に遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/spacious",
+            "note": "spaciousの現代語義として、空間が広く余裕のあることを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "spacious",
+          "spacios",
+          "spatiosus",
+          "spatium",
+          "-ious"
+        ],
+        "historicalPath": [
+          "ラテン語 spatium（空間、広がり）",
+          "ラテン語 spatiosus（広い、余裕のある）",
+          "古フランス語 spacios",
+          "英語 spac＋-ious → spacious（広々とした）"
+        ],
+        "components": [
+          {
+            "form": "spac",
+            "kind": "base",
+            "gloss": "空間・広がり"
+          },
+          {
+            "form": "-ious",
+            "kind": "suffix",
+            "gloss": "性質"
+          }
+        ],
+        "rootCandidates": [
+          "spac",
+          "spat"
+        ],
+        "semanticBridge": "空間や広がりから、場所に十分な余裕がある性質を表すようになった。",
+        "summary": "spaciousはspatium・spatiosusに由来し、spaceのeがiに変わった表面語幹spacと-iousに対応させるため、確信度を中としたA型にする。",
+        "confidence": "medium"
+      }
+    },
+    "enroll": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "en（中へ・完全に）＋roll（巻物・名簿） → 名簿の中に記す、登録する",
+        "gloss": "登録する",
+        "root": "roll",
+        "parts": [
+          {
+            "form": "en",
+            "kind": "prefix",
+            "gloss": "中へ・完全に"
+          },
+          {
+            "form": "roll",
+            "kind": "root",
+            "gloss": "巻物・名簿"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/enroll",
+          "https://www.merriam-webster.com/dictionary/enroll"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/enroll",
+            "note": "enrollを古フランス語enroller、en-（中へ）＋rolle（記録の巻物）に遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/enroll",
+            "note": "enrollの現代語義として、名簿に登録すること、学校へ入学することを確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語・フランス語・英語",
+        "etymons": [
+          "enroll",
+          "enroller",
+          "en-",
+          "rolle",
+          "roll"
+        ],
+        "historicalPath": [
+          "古フランス語 rolle（記録を書いた巻物）",
+          "フランス語 enroller（名簿に書き入れる）",
+          "en-（中へ）＋roll（巻物）",
+          "英語 enroll（登録する、入学させる）"
+        ],
+        "components": [
+          {
+            "form": "en",
+            "kind": "prefix",
+            "gloss": "中へ"
+          },
+          {
+            "form": "roll",
+            "kind": "base",
+            "gloss": "巻物・名簿"
+          }
+        ],
+        "rootCandidates": [
+          "roll",
+          "rot"
+        ],
+        "semanticBridge": "記録を書いた巻物の中へ名前を書き入れることから、名簿や学校へ登録する意味になった。",
+        "summary": "enrollはフランス語enrollerのen-＋rolleに対応し、en接頭辞とroll語根が表面形に一致するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "rebel": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "re（反対に）＋bel（戦う） → 反対して戦う、反抗する・反乱を起こす",
+        "gloss": "反抗する",
+        "root": "bel",
+        "parts": [
+          {
+            "form": "re",
+            "kind": "prefix",
+            "gloss": "再び・反対に"
+          },
+          {
+            "form": "bel",
+            "kind": "root",
+            "gloss": "戦う"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/rebel",
+          "https://www.merriam-webster.com/dictionary/rebel"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/rebel",
+            "note": "rebelを古フランス語rebelle、ラテン語rebellare、re-＋bellare（戦う）に遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/rebel",
+            "note": "rebelの現代語義として、政府や権威に反抗することを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "rebel",
+          "rebelle",
+          "rebellis",
+          "rebellare",
+          "re-",
+          "bellare",
+          "bellum"
+        ],
+        "historicalPath": [
+          "ラテン語 re-（反対に）＋bellare（戦う）",
+          "ラテン語 rebellare / rebellis（反乱する、反抗的な）",
+          "古フランス語 rebelle",
+          "英語 re＋bel → rebel（反抗する、反乱を起こす）"
+        ],
+        "components": [
+          {
+            "form": "re",
+            "kind": "prefix",
+            "gloss": "反対に"
+          },
+          {
+            "form": "bel",
+            "kind": "base",
+            "gloss": "戦う"
+          }
+        ],
+        "rootCandidates": [
+          "bel",
+          "bell"
+        ],
+        "semanticBridge": "支配者に対して再び戦うことから、政府や権威に反抗・反乱する意味になった。",
+        "summary": "rebelはラテン語re-＋bellareの構成が出典で確認でき、re接頭辞とbel表面語根が対応するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "radiate": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "radi（光線・車輪の spoke）＋-ate（〜にする） → 光線のように広がる、放射する・輝く",
+        "gloss": "放射する",
+        "root": "radi",
+        "parts": [
+          {
+            "form": "radi",
+            "kind": "root",
+            "gloss": "光線・車輪の spoke"
+          },
+          {
+            "form": "-ate",
+            "kind": "suffix",
+            "gloss": "〜にする（動詞化）"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/radiate",
+          "https://www.merriam-webster.com/dictionary/radiate"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/radiate",
+            "note": "radiateをラテン語radiatus・radiare（光線を出す、輝く）、radius（光線）に遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/radiate",
+            "note": "radiateの現代語義として、光・熱などを中心から放射することを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・英語",
+        "etymons": [
+          "radiate",
+          "radiatus",
+          "radiare",
+          "radius",
+          "-ate"
+        ],
+        "historicalPath": [
+          "ラテン語 radius（光線、車輪の spoke）",
+          "ラテン語 radiare（光線を出す、輝く）",
+          "ラテン語 radiatus",
+          "英語 radi＋-ate → radiate（放射する、輝く）"
+        ],
+        "components": [
+          {
+            "form": "radi",
+            "kind": "base",
+            "gloss": "光線・車輪の spoke"
+          },
+          {
+            "form": "-ate",
+            "kind": "suffix",
+            "gloss": "〜にする"
+          }
+        ],
+        "rootCandidates": [
+          "radi",
+          "rad"
+        ],
+        "semanticBridge": "車輪の spokeや光線が中心から伸びる形から、光や熱があらゆる方向へ広がる意味になった。",
+        "summary": "radiateはradius・radiareに由来するradi＋-ateの表面形に対応するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "solidify": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "solid（固い・一体の）＋-ify（〜にする） → 固い状態にする、固まる・強固にする",
+        "gloss": "固まる",
+        "root": "solid",
+        "parts": [
+          {
+            "form": "solid",
+            "kind": "root",
+            "gloss": "固い・一体の"
+          },
+          {
+            "form": "-ify",
+            "kind": "suffix",
+            "gloss": "〜にする（facere＝作る から）"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/solidify",
+          "https://www.merriam-webster.com/dictionary/solidify"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/solidify",
+            "note": "solidifyをフランス語solidifier、古フランス語solide、ラテン語solidusに遡らせ、-ifyとの関係を確認した。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/solidify",
+            "note": "solidifyの現代語義として、固体化すること、強固にすることを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・フランス語・英語",
+        "etymons": [
+          "solidify",
+          "solidifier",
+          "solide",
+          "solidus",
+          "-ify"
+        ],
+        "historicalPath": [
+          "ラテン語 solidus（固い、全体の）",
+          "古フランス語 solide",
+          "フランス語 solidifier",
+          "solid＋-ify → solidify（固める、固まる）"
+        ],
+        "components": [
+          {
+            "form": "solid",
+            "kind": "base",
+            "gloss": "固い・一体の"
+          },
+          {
+            "form": "-ify",
+            "kind": "suffix",
+            "gloss": "〜にする"
+          }
+        ],
+        "rootCandidates": [
+          "solid",
+          "sol"
+        ],
+        "semanticBridge": "空洞のない固い状態から、液体や組織を固い・強固な状態へ変える意味になった。",
+        "summary": "solidifyはsolid＋-ifyの関係が出典で確認でき、既存のsolid語根と-ify接尾辞を再利用できるためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "haunt": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "住みつく・繰り返し訪れることを表す古フランス語系の語。幽霊や記憶が場所・人に現れ続ける → （幽霊が）出る、つきまとう"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/haunt",
+          "https://www.merriam-webster.com/dictionary/haunt"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/haunt",
+            "note": "hauntを古フランス語hanter、古ノルマン語hantに関係づけ、頻繁に訪れる意味からの発達を確認した。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/haunt",
+            "note": "hauntの現代語義として、幽霊が場所に出ること、記憶などが人につきまとうことを確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語・古ノルマン語・英語",
+        "etymons": [
+          "haunt",
+          "haunten",
+          "hanter",
+          "hant"
+        ],
+        "historicalPath": [
+          "古フランス語 hanter（頻繁に訪れる、住みつく）",
+          "古ノルマン語 hant",
+          "中英語 haunten",
+          "英語 haunt（幽霊が出る、つきまとう）"
+        ],
+        "components": [
+          {
+            "form": "haunt",
+            "kind": "base",
+            "gloss": "繰り返し現れる場所"
+          }
+        ],
+        "rootCandidates": [
+          "hant",
+          "haunt"
+        ],
+        "semanticBridge": "繰り返し訪れる場所から、幽霊や記憶が同じ場所・人に現れ続ける意味へ広がった。",
+        "summary": "hauntは古フランス語系の単純な借用語で、英語の接辞による分解はないためB型にする。",
+        "confidence": "high"
+      }
+    },
+    "obstruct": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "ob（〜に対して・前に）＋struct（組み立てる・建てる） → 前に積み上げて道をふさぐ、妨げる",
+        "gloss": "妨げる",
+        "root": "struct",
+        "parts": [
+          {
+            "form": "ob",
+            "kind": "prefix",
+            "gloss": "〜に対して・上に"
+          },
+          {
+            "form": "struct",
+            "kind": "root",
+            "gloss": "組み立てる・建てる"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/obstruct",
+          "https://www.merriam-webster.com/dictionary/obstruct"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/obstruct",
+            "note": "obstructをobstructionからの逆成、またはラテン語obstructus・obstruere、ob-＋struereに遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/obstruct",
+            "note": "obstructの現代語義として、道や進行をふさぐ・妨げることを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "obstruct",
+          "obstruction",
+          "obstructus",
+          "obstruere",
+          "ob-",
+          "struere"
+        ],
+        "historicalPath": [
+          "ラテン語 ob-（前に、道に対して）＋struere（積み上げる、建てる）",
+          "ラテン語 obstruere / obstructus（ふさぐ、妨げられた）",
+          "英語 obstructionからの逆成またはラテン語からの借用",
+          "英語 ob＋struct → obstruct（妨げる）"
+        ],
+        "components": [
+          {
+            "form": "ob",
+            "kind": "prefix",
+            "gloss": "前に・対して"
+          },
+          {
+            "form": "struct",
+            "kind": "base",
+            "gloss": "積み上げる・建てる"
+          }
+        ],
+        "rootCandidates": [
+          "struct",
+          "streu"
+        ],
+        "semanticBridge": "前に積み上げて通路をふさぐことから、進行や行為を妨げる意味になった。",
+        "summary": "obstructはob-＋struereに対応し、既存ob接頭辞とstruct語根が表面形に一致するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "forgery": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "forge（形作る・偽造する）＋-ery（行為・結果） → 偽って作ったもの、偽造",
+        "gloss": "偽造",
+        "root": "forge",
+        "parts": [
+          {
+            "form": "forge",
+            "kind": "root",
+            "gloss": "形作る・偽造する"
+          },
+          {
+            "form": "-ery",
+            "kind": "suffix",
+            "gloss": "行為・結果"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/forgery",
+          "https://www.merriam-webster.com/dictionary/forgery"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/forgery",
+            "note": "forgeryをforge＋-eryと明記し、forgeを古フランス語forge・ラテン語fabricaに遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/forgery",
+            "note": "forgeryの現代語義として、文書や物を偽造する行為・偽造品を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "forgery",
+          "forge",
+          "-ery",
+          "fabrica",
+          "faber"
+        ],
+        "historicalPath": [
+          "ラテン語 fabrica（作業場、制作）",
+          "古フランス語 forge（鍛冶場、作ること）",
+          "英語 forge（作る、偽造する）",
+          "forge＋-ery → forgery（偽造、偽造品）"
+        ],
+        "components": [
+          {
+            "form": "forge",
+            "kind": "base",
+            "gloss": "作る・偽造する"
+          },
+          {
+            "form": "-ery",
+            "kind": "suffix",
+            "gloss": "行為・結果"
+          }
+        ],
+        "rootCandidates": [
+          "forge",
+          "fabr"
+        ],
+        "semanticBridge": "鍛冶場で物を作ることから、物を作る行為、特に本物らしく偽って作ることになった。",
+        "summary": "forgeryは出典にforge＋-eryと明記され、表面形にも対応するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "candidacy": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "candid（白い・率直な）＋-acy（〜の状態） → 候補者である状態、立候補",
+        "gloss": "立候補",
+        "root": "candid",
+        "parts": [
+          {
+            "form": "candid",
+            "kind": "root",
+            "gloss": "白い・率直な"
+          },
+          {
+            "form": "-acy",
+            "kind": "suffix",
+            "gloss": "〜の状態"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/candidacy",
+          "https://www.merriam-webster.com/dictionary/candidacy"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/candidacy",
+            "note": "candidacyをcandidate＋抽象名詞接尾辞-acyに関係づけ、candidateをラテン語candidatus・candidus・candereに遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/candidacy",
+            "note": "candidacyの現代語義として、候補者である状態、立候補を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "candidacy",
+          "candidate",
+          "candidatus",
+          "candidus",
+          "candere",
+          "-acy"
+        ],
+        "historicalPath": [
+          "ラテン語 candere（輝く、白く光る）",
+          "ラテン語 candidatus（白い服を着た公職志望者）",
+          "英語 candidate（候補者）",
+          "candid＋-acy → candidacy（候補者である状態、立候補）"
+        ],
+        "components": [
+          {
+            "form": "candid",
+            "kind": "base",
+            "gloss": "白い・率直な"
+          },
+          {
+            "form": "-acy",
+            "kind": "suffix",
+            "gloss": "〜の状態"
+          }
+        ],
+        "rootCandidates": [
+          "candid",
+          "cand"
+        ],
+        "semanticBridge": "公職志望者が白い服を着たことから候補者となり、候補者として立つ状態を表す名詞になった。",
+        "summary": "candidacyはcandidate・candidに-acyを付けた抽象名詞として出典に示され、candid＋-acyが表面形にも対応するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "leniency": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "leni（柔らかくする）＋-ency（〜の状態） → 厳しさを和らげた状態、寛大さ・寛容",
+        "gloss": "寛大さ",
+        "root": "leni",
+        "parts": [
+          {
+            "form": "leni",
+            "kind": "root",
+            "gloss": "柔らかくする"
+          },
+          {
+            "form": "-ency",
+            "kind": "suffix",
+            "gloss": "〜の状態"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/leniency",
+          "https://www.merriam-webster.com/dictionary/leniency"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/leniency",
+            "note": "leniencyをlenient＋抽象名詞接尾辞-cyとし、lenientをラテン語lenire・lenisに遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/leniency",
+            "note": "leniencyの現代語義として、処罰や扱いの寛大さ・寛容さを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": [
+          "leniency",
+          "lenient",
+          "lenire",
+          "lenis",
+          "-cy",
+          "-ency"
+        ],
+        "historicalPath": [
+          "ラテン語 lenis（穏やかな、柔らかい）",
+          "ラテン語 lenire（和らげる）",
+          "フランス語 lenient / 英語 lenient",
+          "lenient＋-cy → leniency（寛大さ）"
+        ],
+        "components": [
+          {
+            "form": "leni",
+            "kind": "base",
+            "gloss": "和らげる"
+          },
+          {
+            "form": "-ency",
+            "kind": "suffix",
+            "gloss": "〜の状態"
+          }
+        ],
+        "rootCandidates": [
+          "leni",
+          "lē"
+        ],
+        "semanticBridge": "硬さや厳しさを和らげることから、処罰や扱いが厳しくない寛大な状態を表すようになった。",
+        "summary": "leniencyはlenient＋-cyに由来し、表面形leni＋-encyが既存部品に対応するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "nutritious": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "nutrit（養う・育てる）＋-ious（〜の性質の） → 栄養を与える性質の、栄養のある",
+        "gloss": "栄養のある",
+        "root": "nutrit",
+        "parts": [
+          {
+            "form": "nutrit",
+            "kind": "root",
+            "gloss": "養う・育てる"
+          },
+          {
+            "form": "-ious",
+            "kind": "suffix",
+            "gloss": "〜の性質の"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/nutritious",
+          "https://www.merriam-webster.com/dictionary/nutritious"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/nutritious",
+            "note": "nutritiousをラテン語nutricius（養うもの）、nutrix、nutrire（養う・授乳する）に遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/nutritious",
+            "note": "nutritiousの現代語義として、栄養を含み健康を支えることを確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・英語",
+        "etymons": [
+          "nutritious",
+          "nutricius",
+          "nutrix",
+          "nutrire",
+          "-ious"
+        ],
+        "historicalPath": [
+          "ラテン語 nutrire（養う、授乳する）",
+          "ラテン語 nutrix / nutricius（養うもの、栄養の）",
+          "英語 nutrit＋-ious",
+          "英語 nutritious（栄養のある）"
+        ],
+        "components": [
+          {
+            "form": "nutrit",
+            "kind": "base",
+            "gloss": "養う・育てる"
+          },
+          {
+            "form": "-ious",
+            "kind": "suffix",
+            "gloss": "性質"
+          }
+        ],
+        "rootCandidates": [
+          "nutrit",
+          "sna"
+        ],
+        "semanticBridge": "子どもを養い育てることから、食物が身体に栄養を与える性質を表すようになった。",
+        "summary": "nutritiousはnutrire・nutriciusに由来するnutrit＋-iousの表面形に対応するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "righteous": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "rightwiseから語尾が変化した形。正しい・公正な行為や人を表す → 正義感の強い、公正な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/righteous",
+          "https://www.merriam-webster.com/dictionary/righteous"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/righteous",
+            "note": "righteousを古いrightwiseの語尾変化と説明し、right＋wisからの形であることを確認した。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/righteous",
+            "note": "righteousの現代語義として、道徳的に正しく公正であることを確認した。"
+          }
+        ],
+        "originLanguage": "古英語・英語",
+        "etymons": [
+          "righteous",
+          "rightwise",
+          "riht",
+          "wis",
+          "courteous"
+        ],
+        "historicalPath": [
+          "古英語 riht（正しい）＋wis（方法、性質）",
+          "古英語 rightwise（正義にかなった）",
+          "16世紀ごろ語尾が変化して righteousになる",
+          "英語 righteous（公正な、正義感の強い）"
+        ],
+        "components": [
+          {
+            "form": "rightwise",
+            "kind": "compound",
+            "gloss": "正しい方法・性質"
+          }
+        ],
+        "rootCandidates": [
+          "right",
+          "wis"
+        ],
+        "semanticBridge": "正しい方法・性質をもつことから、道徳的に正しく公正な人や行為を表すようになった。",
+        "summary": "righteousはrightwiseの語尾が変化した形で、right＋-eousという直接の英語派生ではないため、複合表現に準じてB型にする。",
+        "confidence": "high"
+      }
+    },
+    "tentative": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "tentat（試す・触れて確かめる）＋-ive（〜する性質の） → 試しに基づく、仮の・暫定的な",
+        "gloss": "仮の",
+        "root": "tentat",
+        "parts": [
+          {
+            "form": "tentat",
+            "kind": "root",
+            "gloss": "試す・触れて確かめる"
+          },
+          {
+            "form": "-ive",
+            "kind": "suffix",
+            "gloss": "〜する性質の"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/tentative",
+          "https://www.merriam-webster.com/dictionary/tentative"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/tentative",
+            "note": "tentativeを中世ラテン語tentativus、ラテン語tentatus・tentare（試す）に遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/tentative",
+            "note": "tentativeの現代語義として、試験的で最終決定前の仮の状態を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・中世ラテン語・英語",
+        "etymons": [
+          "tentative",
+          "tentativus",
+          "tentatus",
+          "tentare",
+          "-ive"
+        ],
+        "historicalPath": [
+          "ラテン語 tentare（触る、試す、試みる）",
+          "ラテン語 tentatus（試した）",
+          "中世ラテン語 tentativus（試験的な）",
+          "tentat＋-ive → tentative（仮の、暫定的な）"
+        ],
+        "components": [
+          {
+            "form": "tentat",
+            "kind": "base",
+            "gloss": "試す"
+          },
+          {
+            "form": "-ive",
+            "kind": "suffix",
+            "gloss": "〜する性質の"
+          }
+        ],
+        "rootCandidates": [
+          "tentat",
+          "tempt",
+          "temp"
+        ],
+        "semanticBridge": "試して確かめる段階のものから、最終決定前の仮の・暫定的な状態を表すようになった。",
+        "summary": "tentativeはtentare・tentativusに由来するtentat＋-iveの表面形に対応するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "anatomy": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "ana（上へ・通して）＋tom（切る）＋-y（状態・学問） → 切り開いて調べること、解剖学",
+        "gloss": "解剖学",
+        "root": "tom",
+        "parts": [
+          {
+            "form": "ana",
+            "kind": "prefix",
+            "gloss": "上へ・通して"
+          },
+          {
+            "form": "tom",
+            "kind": "root",
+            "gloss": "切る"
+          },
+          {
+            "form": "-y",
+            "kind": "suffix",
+            "gloss": "状態・学問"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/anatomy",
+          "https://www.merriam-webster.com/dictionary/anatomy"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/anatomy",
+            "note": "anatomyをギリシャ語anatomē「切り開くこと」、ana（上へ）＋temnein（切る）に遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/anatomy",
+            "note": "anatomyの現代語義として、身体の構造を研究する学問と構造そのものを確認した。"
+          }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・フランス語・英語",
+        "etymons": [
+          "anatomy",
+          "anatomia",
+          "anatomē",
+          "ana",
+          "temnein",
+          "-y"
+        ],
+        "historicalPath": [
+          "ギリシャ語 ana（上へ、通して）＋temnein（切る）",
+          "ギリシャ語 anatomē（切り開くこと、解剖）",
+          "後期ラテン語 anatomia / 古フランス語 anatomie",
+          "ana＋tom＋-y → anatomy（解剖学、構造）"
+        ],
+        "components": [
+          {
+            "form": "ana",
+            "kind": "prefix",
+            "gloss": "上へ・通して"
+          },
+          {
+            "form": "tom",
+            "kind": "base",
+            "gloss": "切る"
+          },
+          {
+            "form": "-y",
+            "kind": "suffix",
+            "gloss": "学問・状態"
+          }
+        ],
+        "rootCandidates": [
+          "tom",
+          "tem"
+        ],
+        "semanticBridge": "身体を切り開いて内部を調べる行為から、身体の構造を研究する学問・構造そのものを表すようになった。",
+        "summary": "anatomyはギリシャ語ana＋temneinの構成が出典で確認でき、表面形ana・tom・-yに対応するためA型にする。",
+        "confidence": "high"
+      }
+    },
+    "warranty": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "warrant（守る・保証する）＋-y（状態・もの） → 守ることを約束したもの、保証（書）",
+        "gloss": "保証",
+        "root": "warrant",
+        "parts": [
+          {
+            "form": "warrant",
+            "kind": "root",
+            "gloss": "守る・保証する"
+          },
+          {
+            "form": "-y",
+            "kind": "suffix",
+            "gloss": "〜の性質をもつ"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/warranty",
+          "https://www.merriam-webster.com/dictionary/warranty"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/warranty",
+            "note": "warrantyをアングロフランス語warantie、古フランス語garantie、warrantに関係づける。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/warranty",
+            "note": "warrantyの現代語義として、品質や履行を保証する約束・保証書を確認した。"
+          }
+        ],
+        "originLanguage": "ゲルマン祖語・古フランス語・英語",
+        "etymons": [
+          "warranty",
+          "warantie",
+          "warant",
+          "garantie",
+          "*war-",
+          "-y"
+        ],
+        "historicalPath": [
+          "ゲルマン祖語 *war-（警告する、守る）",
+          "古フランス語 garant / garantie",
+          "アングロフランス語 warantie（保護、保証）",
+          "warrant＋-y → warranty（保証）"
+        ],
+        "components": [
+          {
+            "form": "warrant",
+            "kind": "base",
+            "gloss": "守る・保証する"
+          },
+          {
+            "form": "-y",
+            "kind": "suffix",
+            "gloss": "状態・もの"
+          }
+        ],
+        "rootCandidates": [
+          "warrant",
+          "war"
+        ],
+        "semanticBridge": "守り保証する約束から、商品や契約が一定の品質・履行を保証する書面や制度になった。",
+        "summary": "warrantyはwarrantに関係する古フランス語warantieから来ており、warrant＋-yの表面形に対応させるため、確信度を中としたA型にする。",
+        "confidence": "medium"
+      }
+    },
+    "fracture": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "derivation": "fract（折る・壊す）＋-ure（〜すること・もの） → 折れた状態、骨折・亀裂",
+        "gloss": "骨折",
+        "root": "fract",
+        "parts": [
+          {
+            "form": "fract",
+            "kind": "root",
+            "gloss": "折る・壊す"
+          },
+          {
+            "form": "-ure",
+            "kind": "suffix",
+            "gloss": "〜すること・もの"
+          }
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/fracture",
+          "https://www.merriam-webster.com/dictionary/fracture"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/fracture",
+            "note": "fractureを古フランス語fracture、ラテン語fractura・fractus・frangere（折る）に遡らせる。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/fracture",
+            "note": "fractureの現代語義として、骨折や物体の亀裂を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": [
+          "fracture",
+          "fractura",
+          "fractus",
+          "frangere",
+          "-ure"
+        ],
+        "historicalPath": [
+          "ラテン語 frangere（折る、壊す）",
+          "ラテン語 fractus / fractura（折れ、破れ）",
+          "古フランス語 fracture",
+          "fract＋-ure → fracture（骨折、亀裂）"
+        ],
+        "components": [
+          {
+            "form": "fract",
+            "kind": "base",
+            "gloss": "折る・壊す"
+          },
+          {
+            "form": "-ure",
+            "kind": "suffix",
+            "gloss": "結果・状態"
+          }
+        ],
+        "rootCandidates": [
+          "fract",
+          "bhreg"
+        ],
+        "semanticBridge": "折る・壊す動作から、その結果として骨や物体に生じた折れ・亀裂を表す名詞になった。",
+        "summary": "fractureはfrangere・fracturaに由来するfract＋-ureの表面形に対応するためA型にする。",
+        "confidence": "high"
+      }
+    }
+  }
+}

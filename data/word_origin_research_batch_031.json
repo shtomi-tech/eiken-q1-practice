@@ -1,0 +1,1030 @@
+{
+  "meta": {
+    "batchId": "batch-031",
+    "note": "未確認B型の次の25語。派生語として安全に表面分解できる語をA型へ移し、複合語・単純借用語・語源が不確かな語はB型に残す。"
+  },
+  "dictionary": {
+    "roots": {
+    "cent": {
+        "gloss": "新しい・新鮮な",
+        "origin": "ラテン語 recens / PIE *ken-",
+        "note": "recentに現れる表面幹。通貨のcent（百）とは別で、新鮮・新しい意味。"
+      },
+      "necess": {
+        "gloss": "避けられない・必要な",
+        "origin": "ラテン語 necesse / necessarius",
+        "note": "退く余地がない状態から、必要な・必然的な意味へ。necessarily。"
+      },
+      "surpris": {
+        "gloss": "不意に捕える・驚かせる",
+        "origin": "古フランス語 surprise / surprendre",
+        "note": "不意に捕えることから、驚かせる・意外なことへ。surprisingly。"
+      },
+      "faith": {
+        "gloss": "信頼・忠実さ",
+        "origin": "ラテン語 fides / fidere",
+        "note": "信頼や誠実さを満たす性質から、忠実にという副詞へ。faithfully。"
+      },
+      "pollut": {
+        "gloss": "汚す・汚染する",
+        "origin": "ラテン語 polluere / pollutio",
+        "note": "汚すことから、環境などを汚染することへ。pollution。"
+      },
+      "mix": {
+        "gloss": "混ぜる",
+        "origin": "ラテン語 mixtus / PIE *meik-",
+        "note": "異なるものを一つに混ぜるイメージ。mixture。"
+      },
+      "ill": {
+        "gloss": "悪い・病気の",
+        "origin": "古ノルド語 illr",
+        "note": "悪い状態から、健康でない状態へ。illness。"
+      },
+      "judg": {
+        "gloss": "判断する・裁く",
+        "origin": "ラテン語 iudicare / 古フランス語 juger",
+        "note": "法や事実について判断することから、判断・判決へ。judgment。"
+      },
+      "elast": {
+        "gloss": "伸びる・戻る",
+        "origin": "ギリシャ語 elastos / elaunein",
+        "note": "引き伸ばしたものが戻る性質。elastic。"
+      },
+      "up": {
+        "gloss": "上・上へ",
+        "origin": "古英語 up",
+        "note": "上の位置を表す語から、より上のupperへ。"
+      },
+      "ist": {
+        "gloss": "立つ・現れる",
+        "origin": "ラテン語 sistere / existere",
+        "note": "前へ立ち現れる表面幹。exist。"
+      },
+      "sid": {
+        "gloss": "座る・前に座る",
+        "origin": "ラテン語 sedere / praesidere",
+        "note": "前に座って人を導くことから、presidentの地位へ。"
+      }
+    },
+    "affixes": {
+      "-arily": {
+        "gloss": "〜な方法で",
+        "kind": "suffix",
+        "note": "-aryで終わる形容詞を副詞化する表面形。necessarily。"
+      }
+    }
+  },
+  "entries": {
+    "recent": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "最近の",
+        "root": "cent",
+        "parts": [
+          { "form": "re", "kind": "prefix", "gloss": "再び・新たに" },
+          { "form": "cent", "kind": "root", "gloss": "新しい・新鮮な" }
+        ],
+        "derivation": "re-（再び・新たに）＋cent（新しい・新鮮な） → 新しく生じた、最近の"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/recent",
+          "https://www.merriam-webster.com/dictionary/recent"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/recent", "note": "recentをラテン語 recentem・recensに遡らせ、re-とPIE *ken-（新しい、若い）の関係を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/recent", "note": "recentの現代語義として、現在の少し前に起きた・新しいことを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・英語",
+        "etymons": ["recent", "recens", "recentem", "re-", "*ken-"],
+        "historicalPath": [
+          "PIE *ken-（新しい、若い）",
+          "ラテン語 recens / recentem（新しい、新しく作られた）",
+          "フランス語 récent・英語 recent",
+          "英語 recent（最近の）"
+        ],
+        "components": [
+          { "form": "re-", "kind": "prefix", "gloss": "新たに" },
+          { "form": "recens", "kind": "base", "gloss": "新しい" }
+        ],
+        "rootCandidates": ["cent"],
+        "semanticBridge": "新しく作られたものを表す語から、時間的に現在に近い、最近起きた意味へ広がった。",
+        "summary": "recentはre-＋cent（新しい・新鮮な）で、最近のという意味になる。",
+        "confidence": "medium",
+        "notes": "centはrecentに現れる表面幹として登録し、cent（百）とは区別する。"
+      }
+    },
+    "necessarily": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "必然的に",
+        "root": "necess",
+        "parts": [
+          { "form": "necess", "kind": "root", "gloss": "避けられない・必要な" },
+          { "form": "-arily", "kind": "suffix", "gloss": "〜な方法で" }
+        ],
+        "derivation": "necess（避けられない・必要な）＋-arily（〜な方法で） → 避けられないように、必然的に"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/necessarily",
+          "https://www.merriam-webster.com/dictionary/necessarily"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/necessarily", "note": "necessarilyをnecessary＋-lyと説明し、necessaryをラテン語 necessarius・necesse、ne-＋cedere（退く）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/necessarily", "note": "necessarilyの現代語義として、避けられず必然的に、否定文では必ずしもという用法を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・中英語・英語",
+        "etymons": ["necessarily", "necessary", "necessarius", "necesse", "cedere", "-ary", "-ly"],
+        "historicalPath": [
+          "ラテン語 ne-（〜でない）＋cedere（退く、譲る）",
+          "ラテン語 necesse / necessarius（避けられない、必要な）",
+          "フランス語 necessaire・英語 necessary",
+          "英語 necessary＋-ly → necessarily（必然的に）"
+        ],
+        "components": [
+          { "form": "necesse", "kind": "base", "gloss": "避けられない" },
+          { "form": "-ary", "kind": "suffix", "gloss": "性質に関する" },
+          { "form": "-ly", "kind": "suffix", "gloss": "副詞化" }
+        ],
+        "rootCandidates": ["necess"],
+        "semanticBridge": "そこから退いて逃れる余地がない状態から、必ずそうなる、必然的にという意味になった。",
+        "summary": "necessarilyはnecess（避けられない）＋-arilyで、必然的にという意味になる。",
+        "confidence": "high",
+        "notes": "necessarilyの実際の表面形に合わせ、necess＋-arilyとして表示する。深い語源ではne-＋cedereの関係を記録する。"
+      }
+    },
+    "surprisingly": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "驚いたことに、意外にも",
+        "root": "surpris",
+        "parts": [
+          { "form": "surpris", "kind": "root", "gloss": "不意に捕える・驚かせる" },
+          { "form": "-ing", "kind": "suffix", "gloss": "〜する性質の" },
+          { "form": "-ly", "kind": "suffix", "gloss": "〜な様子で" }
+        ],
+        "derivation": "surpris（不意に捕える・驚かせる）＋-ing（〜する性質の）＋-ly（〜な様子で） → 驚くような様子で、驚いたことに、意外にも"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/surprise",
+          "https://www.merriam-webster.com/dictionary/surprising"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/surprise", "note": "surpriseを古フランス語 surprise・surprendre（不意に捕える）に遡らせ、sur-＋prendre（つかむ）と説明している。surprisingも同系の派生語として示される。" },
+          { "url": "https://www.merriam-webster.com/dictionary/surprising", "note": "surprisingの現代語義として、予想外で驚きを引き起こすことを確認した。" }
+        ],
+        "originLanguage": "ラテン語・古フランス語・英語",
+        "etymons": ["surprisingly", "surprising", "surprise", "surprendre", "prendre", "-ing", "-ly"],
+        "historicalPath": [
+          "ラテン語 prehendere（つかむ）",
+          "古フランス語 surprendre（上から不意に捕える）",
+          "古フランス語 surprise・英語 surprise",
+          "英語 surprising＋-ly → surprisingly（驚いたことに）"
+        ],
+        "components": [
+          { "form": "surprise", "kind": "base", "gloss": "不意の驚き" },
+          { "form": "-ing", "kind": "suffix", "gloss": "性質" },
+          { "form": "-ly", "kind": "suffix", "gloss": "副詞化" }
+        ],
+        "rootCandidates": ["surpris"],
+        "semanticBridge": "不意に相手を捕えることから、予想外の出来事で驚かせること、さらにその様子を表す副詞へ発達した。",
+        "summary": "surprisinglyはsurpris（不意に捕える）＋-ing＋-lyで、驚いたことにという意味になる。",
+        "confidence": "high",
+        "notes": "surprisはsurpriseに実際に現れる表面幹として登録し、sur-とpriseの深い分解は表示しない。"
+      }
+    },
+    "faithfully": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "忠実に",
+        "root": "faith",
+        "parts": [
+          { "form": "faith", "kind": "root", "gloss": "信頼・忠実さ" },
+          { "form": "-ful", "kind": "suffix", "gloss": "〜に満ちた" },
+          { "form": "-ly", "kind": "suffix", "gloss": "〜な様子で" }
+        ],
+        "derivation": "faith（信頼・忠実さ）＋-ful（〜に満ちた）＋-ly（〜な様子で） → 信頼や忠実さに満ちた様子で、忠実に"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/faithful",
+          "https://www.merriam-webster.com/dictionary/faithful"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/faithful", "note": "faithfulをfaith＋-fulとして説明し、faithを古フランス語 feid・ラテン語 fides（信頼）に遡らせている。faithfullyもその派生語として示される。" },
+          { "url": "https://www.merriam-webster.com/dictionary/faithful", "note": "faithfulの現代語義として、忠実な・信頼できる・事実に正確なことを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・中英語・英語",
+        "etymons": ["faithfully", "faithful", "faith", "fides", "fidere", "-ful", "-ly"],
+        "historicalPath": [
+          "ラテン語 fides / fidere（信頼、信じる）",
+          "古フランス語 feid・英語 faith（信頼、忠実さ）",
+          "英語 faith＋-ful（忠実な、信頼できる）",
+          "英語 faithful＋-ly → faithfully（忠実に）"
+        ],
+        "components": [
+          { "form": "faith", "kind": "base", "gloss": "信頼・忠実さ" },
+          { "form": "-ful", "kind": "suffix", "gloss": "満ちた" },
+          { "form": "-ly", "kind": "suffix", "gloss": "副詞化" }
+        ],
+        "rootCandidates": ["faith"],
+        "semanticBridge": "信頼や忠実さを備えた性質から、約束や事実に沿って忠実に行う様子を表す副詞になった。",
+        "summary": "faithfullyはfaith（信頼・忠実さ）＋-ful＋-lyで、忠実にという意味になる。",
+        "confidence": "high",
+        "notes": "faith語根と既存の-ful/-ly接尾辞を使う。"
+      }
+    },
+    "surgery": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ギリシャ語 kheirourgia（手で行う仕事）からラテン語 chirurgia、フランス語 surgerieを経て、手を使う外科治療を表すようになった。 → 外科手術"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/surgery",
+          "https://www.merriam-webster.com/dictionary/surgery"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/surgery", "note": "surgeryを古フランス語 surgerie・後期ラテン語 chirurgia・ギリシャ語 kheirourgiaに遡らせ、kheir（手）＋ergon（仕事）と説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/surgery", "note": "surgeryの現代語義として、病気やけがを治すための外科手術を確認した。" }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・フランス語・英語",
+        "etymons": ["surgery", "surgerie", "chirurgia", "kheirourgia", "kheir", "ergon"],
+        "historicalPath": [
+          "ギリシャ語 kheir（手）＋ergon（仕事）",
+          "ギリシャ語 kheirourgia（手で行う仕事）",
+          "後期ラテン語 chirurgia・古フランス語 surgerie",
+          "英語 surgery（外科手術）"
+        ],
+        "components": [
+          { "form": "kheir", "kind": "base", "gloss": "手" },
+          { "form": "ergon", "kind": "base", "gloss": "仕事" }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "手を使って行う仕事という文字どおりの意味から、手で切開などを行う外科治療の意味へ専門化した。",
+        "summary": "surgeryは二つのギリシャ語要素から成る専門語で、複合表現としてB型に残す。",
+        "confidence": "high",
+        "notes": "kheir＋ergonの二語根を単一語根のA型へ押し込まない。"
+      }
+    },
+    "pollution": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "汚染、公害",
+        "root": "pollut",
+        "parts": [
+          { "form": "pollut", "kind": "root", "gloss": "汚す・汚染する" },
+          { "form": "-ion", "kind": "suffix", "gloss": "〜すること・状態" }
+        ],
+        "derivation": "pollut（汚す・汚染する）＋-ion（〜すること・状態） → 汚すこと、汚染、公害"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/pollution",
+          "https://www.merriam-webster.com/dictionary/pollution"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/pollution", "note": "pollutionを後期ラテン語 pollutionem・polluere（汚す、汚染する）に遡らせ、環境汚染の意味が19世紀以降に広がったと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/pollution", "note": "pollutionの現代語義として、環境や物を汚染すること、公害を確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・英語",
+        "etymons": ["pollution", "pollutio", "polluere", "pollutus", "-ion"],
+        "historicalPath": [
+          "ラテン語 polluere（汚す、汚染する）",
+          "ラテン語 pollutio（汚すこと、汚れ）",
+          "中英語 pollucioun・英語 pollution",
+          "英語 pollution（汚染、公害）"
+        ],
+        "components": [
+          { "form": "polluere", "kind": "base", "gloss": "汚す" },
+          { "form": "-ion", "kind": "suffix", "gloss": "行為・状態" }
+        ],
+        "rootCandidates": ["pollut"],
+        "semanticBridge": "物を汚して儀礼的に不浄にすることから、空気・水・環境を汚す現代的な汚染の意味へ広がった。",
+        "summary": "pollutionはpollut（汚す・汚染する）＋-ionで、汚染・公害という意味になる。",
+        "confidence": "high",
+        "notes": "pollut語根と既存の-ion接尾辞を使う。"
+      }
+    },
+    "resort": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 resort / resortir（再び出る、頼る）から、助けを求めて向かう場所・手段、さらに行楽地の意味へ広がった。 → 行楽地、リゾート；（最後の）手段"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/resort",
+          "https://www.merriam-webster.com/dictionary/resort"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/resort", "note": "resortを古フランス語 resort・resortir（再び出る）に遡らせ、re-＋sortir（出る）の関係と、助けを求める意味から行楽地へ広がった経路を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/resort", "note": "resortの現代語義として、助けを求めて頼ること、最後の手段、行楽地を確認した。" }
+        ],
+        "originLanguage": "ラテン語・古フランス語・中英語・英語",
+        "etymons": ["resort", "resortir", "re-", "sortir", "sortie"],
+        "historicalPath": [
+          "ラテン語 surgere（立ち上がる）からフランス語 sortir（出る）へ",
+          "古フランス語 resortir（再び出る、頼る）",
+          "古フランス語 resort（助け、手段、場所）",
+          "英語 resort（行楽地、手段、頼る）"
+        ],
+        "components": [
+          { "form": "re-", "kind": "prefix", "gloss": "再び" },
+          { "form": "sortir", "kind": "base", "gloss": "出る" }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "困ったときに助けを求めて向かう手段や場所から、人が楽しみのために向かう行楽地の意味へ広がった。",
+        "summary": "resortは語源経路は確認できるが、sortとの表面類似を語根表示に使うと別語源と混同するためB型に残す。",
+        "confidence": "high",
+        "notes": "既存sort語根（分け前・運命）をresortへ流用しない。"
+      }
+    },
+    "mixture": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "混合物、混ぜ合わせたもの",
+        "root": "mix",
+        "parts": [
+          { "form": "mix", "kind": "root", "gloss": "混ぜる" },
+          { "form": "-ture", "kind": "suffix", "gloss": "〜すること・もの" }
+        ],
+        "derivation": "mix（混ぜる）＋-ture（〜すること・もの） → 混ぜることからできたもの、混合物、混ぜ合わせたもの"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/mixture",
+          "https://www.merriam-webster.com/dictionary/mixture"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/mixture", "note": "mixtureを古フランス語 misture・ラテン語 mixtura、mixtus（混ぜられた）に遡らせ、英語mixから直接作った語ではないと注意している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/mixture", "note": "mixtureの現代語義として、二つ以上のものを混ぜた結果の混合物を確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・英語",
+        "etymons": ["mixture", "misture", "mixtura", "mixtus", "*meik-", "-ture"],
+        "historicalPath": [
+          "PIE *meik-（混ぜる）",
+          "ラテン語 mixtus / mixtura（混ぜられたもの、混合）",
+          "古フランス語 misture・英語 mixture",
+          "英語 mixture（混合物、混ぜ合わせたもの）"
+        ],
+        "components": [
+          { "form": "mixtus", "kind": "base", "gloss": "混ぜられた" },
+          { "form": "-ture", "kind": "suffix", "gloss": "結果・もの" }
+        ],
+        "rootCandidates": ["mix"],
+        "semanticBridge": "異なるものを一つに混ぜる行為から、その結果できた混合物を表す名詞になった。",
+        "summary": "mixtureはmix（混ぜる）＋-tureで、混合物・混ぜ合わせたものという意味になる。",
+        "confidence": "high",
+        "notes": "mix語根と既存の-ture接尾辞を使う。"
+      }
+    },
+    "laughter": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 hleahtor（笑い、歓喜）から、笑う動作や喜び・あざけりの表現を表すようになった。 → 笑い、笑い声"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/laughter",
+          "https://www.merriam-webster.com/dictionary/laughter"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/laughter", "note": "laughterを古英語 hleahtor・ゲルマン祖語 *hlahtrazに遡らせ、laughと関連づけている。綴りのlaugh＋-terという単純な語源分解ではない。" },
+          { "url": "https://www.merriam-webster.com/dictionary/laughter", "note": "laughterの現代語義として、笑う行為や笑い声を確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ゲルマン語系・古英語・英語",
+        "etymons": ["laughter", "hleahtor", "*hlahtraz", "laugh"],
+        "historicalPath": [
+          "PIE *kleg-（笑い声をまねた語根）",
+          "ゲルマン祖語 *hlahtraz・古英語 hleahtor（笑い、歓喜）",
+          "中英語 laughter・英語 laughter",
+          "英語 laughter（笑い、笑い声）"
+        ],
+        "components": [
+          { "form": "hleahtor", "kind": "base", "gloss": "笑い・歓喜" }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "笑い声を表す古い語から、楽しさや喜び、時にはあざけりを表す笑いの行為・音へ定着した。",
+        "summary": "laughterは古英語由来の名詞で、laugh＋-terという表面分解を語源表示には採用しないためB型に残す。",
+        "confidence": "high",
+        "notes": "laugh＋-terの見かけの分解は避ける。"
+      }
+    },
+    "climate": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ギリシャ語 klima（傾き、地表の地域）からラテン語 clima、フランス語 climatを経て、地域の気候や社会の風潮を表すようになった。 → 気候；（社会などの）風潮"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/climate",
+          "https://www.merriam-webster.com/dictionary/climate"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/climate", "note": "climateを古フランス語 climat・ラテン語 clima・ギリシャ語 klima（傾き）に遡らせ、地球表面の傾き・地域から気候へ意味が移ったと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/climate", "note": "climateの現代語義として、地域の気象状態と、社会や組織の雰囲気・風潮を確認した。" }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・フランス語・英語",
+        "etymons": ["climate", "climat", "clima", "klima", "*klei-"],
+        "historicalPath": [
+          "PIE *klei-（傾く、寄りかかる）",
+          "ギリシャ語 klima（傾き、地域）",
+          "ラテン語 clima・フランス語 climat",
+          "英語 climate（気候、風潮）"
+        ],
+        "components": [
+          { "form": "klima", "kind": "base", "gloss": "傾き・地域" }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "地表の傾きによって分けた地域から、その地域に特徴的な天候、さらに社会的な雰囲気の意味へ広がった。",
+        "summary": "climateは単純な借用語で、clim＋-ateという英語表面の分解は採用しないためB型に残す。",
+        "confidence": "high",
+        "notes": "既存climate語根はacclimateの基体として使われており、単独climateをA型へはしない。"
+      }
+    },
+    "illness": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "病気",
+        "root": "ill",
+        "parts": [
+          { "form": "ill", "kind": "root", "gloss": "悪い・病気の" },
+          { "form": "-ness", "kind": "suffix", "gloss": "〜である状態" }
+        ],
+        "derivation": "ill（悪い・病気の）＋-ness（〜である状態） → 病気である状態、病気"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/illness",
+          "https://www.merriam-webster.com/dictionary/illness"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/illness", "note": "illnessをill＋-nessとして説明し、illを古ノルド語 illr（悪い）に遡らせ、悪い状態から病気へ意味が移ったと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/illness", "note": "illnessの現代語義として、病気・健康でない状態を確認した。" }
+        ],
+        "originLanguage": "古ノルド語・中英語・英語",
+        "etymons": ["illness", "ill", "illr", "-ness"],
+        "historicalPath": [
+          "古ノルド語 illr（悪い、困難な）",
+          "中英語 ill（悪い、害のある、病気の）",
+          "英語 ill＋-ness（病気である状態）",
+          "英語 illness（病気）"
+        ],
+        "components": [
+          { "form": "ill", "kind": "base", "gloss": "悪い・病気の" },
+          { "form": "-ness", "kind": "suffix", "gloss": "状態" }
+        ],
+        "rootCandidates": ["ill"],
+        "semanticBridge": "悪い状態を表す形容詞から、その状態にあることを表す名詞が作られ、病気の意味へ定着した。",
+        "summary": "illnessはill（悪い・病気の）＋-nessで、病気という意味になる。",
+        "confidence": "high",
+        "notes": "ill語根と既存の-ness接尾辞を使う。"
+      }
+    },
+    "judgment": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "判断（力）、判決",
+        "root": "judg",
+        "parts": [
+          { "form": "judg", "kind": "root", "gloss": "判断する・裁く" },
+          { "form": "-ment", "kind": "suffix", "gloss": "〜すること・結果" }
+        ],
+        "derivation": "judg（判断する・裁く）＋-ment（〜すること・結果） → 判断することや裁判の結果、判断、判決"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/judgment",
+          "https://www.merriam-webster.com/dictionary/judgment"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/judgment", "note": "judgmentを古フランス語 jugement・jugier、ラテン語 iudicareに遡らせ、判断する行為や法廷の判決の意味を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/judgment", "note": "judgmentの現代語義として、判断力・意見・裁判所の判決を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・中英語・英語",
+        "etymons": ["judgment", "jugement", "jugier", "iudicare", "iudex", "-ment"],
+        "historicalPath": [
+          "ラテン語 ius（法）＋dicere（言う）から iudicare（裁く）",
+          "古フランス語 jugier・jugement（判断すること、判決）",
+          "中英語 jugement・英語 judgment",
+          "英語 judgment（判断、判決）"
+        ],
+        "components": [
+          { "form": "judge", "kind": "base", "gloss": "判断する・裁く" },
+          { "form": "-ment", "kind": "suffix", "gloss": "行為・結果" }
+        ],
+        "rootCandidates": ["judg"],
+        "semanticBridge": "法や事実について判断する行為から、その判断力、意見、さらに裁判所が下す判決の意味へ広がった。",
+        "summary": "judgmentはjudg（判断する・裁く）＋-mentで、判断・判決という意味になる。",
+        "confidence": "high",
+        "notes": "judg語根と既存の-ment接尾辞を使う。"
+      }
+    },
+    "tragedy": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ギリシャ語 tragōidia（直訳では「山羊の歌」）からラテン語・フランス語を経て、悲しい結末の劇、さらに悲劇的な出来事を表すようになった。 → 悲劇"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/tragedy",
+          "https://www.merriam-webster.com/dictionary/tragedy"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/tragedy", "note": "tragedyを古フランス語 tragedie・ラテン語 tragedia・ギリシャ語 tragōidiaに遡らせ、tragos（山羊）＋ōidē（歌）の複合と説明している。語源説には異論もある。" },
+          { "url": "https://www.merriam-webster.com/dictionary/tragedy", "note": "tragedyの現代語義として、悲しい結末の劇と、悲惨な出来事を確認した。" }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・フランス語・英語",
+        "etymons": ["tragedy", "tragedie", "tragedia", "tragōidia", "tragos", "ōidē"],
+        "historicalPath": [
+          "ギリシャ語 tragos（山羊）＋ōidē（歌）",
+          "ギリシャ語 tragōidia（悲劇）",
+          "ラテン語 tragedia・古フランス語 tragedie",
+          "英語 tragedy（悲劇、悲惨な出来事）"
+        ],
+        "components": [
+          { "form": "tragos", "kind": "base", "gloss": "山羊" },
+          { "form": "ōidē", "kind": "base", "gloss": "歌" }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "古代劇に関する「山羊の歌」という語から、深刻な不幸や悲しい結末をもつ劇・出来事の意味へ定着した。",
+        "summary": "tragedyは二つのギリシャ語要素から成る複合語で、諸説もあるためB型に残す。",
+        "confidence": "medium",
+        "notes": "tragos＋ōidēの二語根を単一語根のA型へはしない。"
+      }
+    },
+    "mystery": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ギリシャ語 mystērion（秘密の儀式、秘密の教え）からラテン語・フランス語を経て、意味や原因が隠れた謎を表すようになった。 → 神秘、謎"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/mystery",
+          "https://www.merriam-webster.com/dictionary/mystery"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/mystery", "note": "mysteryを古フランス語 mistere・ラテン語 mysterium・ギリシャ語 mystērionに遡らせ、myein（閉じる、口を閉じる）との関係を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/mystery", "note": "mysteryの現代語義として、理解や説明が難しい秘密・謎を確認した。" }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・フランス語・英語",
+        "etymons": ["mystery", "mistere", "mysterium", "mystērion", "mystēs", "myein"],
+        "historicalPath": [
+          "ギリシャ語 myein（閉じる、口を閉じる）",
+          "ギリシャ語 mystērion（秘密の儀式、秘密の教え）",
+          "ラテン語 mysterium・古フランス語 mistere",
+          "英語 mystery（神秘、謎）"
+        ],
+        "components": [
+          { "form": "mystērion", "kind": "base", "gloss": "秘密の儀式・教え" }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "口を閉じて明かさない秘密の儀式から、意味や原因が隠れていて解き明かしにくい謎の意味へ広がった。",
+        "summary": "mysteryは古典語からの借用語で、myster＋-yという表面分解を採用しないためB型に残す。",
+        "confidence": "high",
+        "notes": "mysteryをmyster＋-yの英語派生語として表示しない。"
+      }
+    },
+    "philosophy": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ギリシャ語 philosophia（知恵を愛すること）からラテン語・フランス語を経て、知識や真理を体系的に探究する学問、人生観を表すようになった。 → 哲学；人生観"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/philosophy",
+          "https://www.merriam-webster.com/dictionary/philosophy"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/philosophy", "note": "philosophyを古フランス語 filosofie・ラテン語 philosophia・ギリシャ語 philosophiaに遡らせ、philo-（愛する）＋sophia（知恵）と説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/philosophy", "note": "philosophyの現代語義として、知識や真理の根本を探究する学問と、個人の人生観を確認した。" }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・フランス語・英語",
+        "etymons": ["philosophy", "philosophia", "philo-", "sophia", "sophis"],
+        "historicalPath": [
+          "ギリシャ語 philo-（愛する、好む）＋sophia（知恵）",
+          "ギリシャ語 philosophia（知恵の探究、哲学）",
+          "ラテン語 philosophia・古フランス語 filosofie",
+          "英語 philosophy（哲学、人生観）"
+        ],
+        "components": [
+          { "form": "philo-", "kind": "base", "gloss": "愛する" },
+          { "form": "sophia", "kind": "base", "gloss": "知恵" }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "知恵を愛し求めることから、世界や知識の根本を体系的に探究する学問、さらに生き方の考え方へ広がった。",
+        "summary": "philosophyはphilo-＋sophiaの複合語で、二語根を単一語根のA型へはしないためB型に残す。",
+        "confidence": "high",
+        "notes": "複合表現は熟語と同じ扱いにし、philo-＋sophiaをA型の単一語根分解にはしない。"
+      }
+    },
+    "major": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 maior（より大きい、より重要な）からフランス語を経て、数量・地位・重要性がより大きいことを表すようになった。 → 主要な、大きな"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/major",
+          "https://www.merriam-webster.com/dictionary/major"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/major", "note": "majorをラテン語 maior（magnusの比較級）に遡らせ、より大きい・重要な意味の発達を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/major", "note": "majorの現代語義として、規模・重要性・地位が大きいことを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・英語",
+        "etymons": ["major", "maior", "magnus", "*meg-"],
+        "historicalPath": [
+          "PIE *meg-（大きい）",
+          "ラテン語 magnus（大きい）→ maior（より大きい）",
+          "フランス語 major・英語 major",
+          "英語 major（主要な、大きな）"
+        ],
+        "components": [
+          { "form": "maior", "kind": "base", "gloss": "より大きい" }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "大きさの比較級から、数量・範囲・重要性・地位が他より大きいことを表す語義へ広がった。",
+        "summary": "majorはラテン語比較級の単純借用語で、maj＋-orという表面分解は採用しないためB型に残す。",
+        "confidence": "high",
+        "notes": "majorを英語の語根と接辞に分けない。"
+      }
+    },
+    "upper": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "上の、上部の",
+        "root": "up",
+        "parts": [
+          { "form": "up", "kind": "root", "gloss": "上・上へ" },
+          { "form": "-er", "kind": "suffix", "gloss": "より〜な" }
+        ],
+        "derivation": "up（上・上へ）＋-er（より〜な） → より上にある、上の、上部の"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/upper",
+          "https://www.merriam-webster.com/dictionary/upper"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/upper", "note": "upperをupの比較級として説明し、上の位置・上部という意味の発達を確認できる。" },
+          { "url": "https://www.merriam-webster.com/dictionary/upper", "note": "upperの現代語義として、より高い位置にある・上部のことを確認した。" }
+        ],
+        "originLanguage": "古英語・中英語・英語",
+        "etymons": ["upper", "up", "-er"],
+        "historicalPath": [
+          "古英語 up（上へ、上に）",
+          "中英語 uppe・upper（より高い）",
+          "英語 upper（上の、上部の）"
+        ],
+        "components": [
+          { "form": "up", "kind": "base", "gloss": "上" },
+          { "form": "-er", "kind": "suffix", "gloss": "比較級" }
+        ],
+        "rootCandidates": ["up"],
+        "semanticBridge": "上を表すupの比較級として、基準より高い位置や物の上部を表すようになった。",
+        "summary": "upperはup（上）＋-er（比較級）で、上の・上部のという意味になる。",
+        "confidence": "high",
+        "notes": "up語根と既存の-er接尾辞を使う。"
+      }
+    },
+    "elastic": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "弾力のある、伸縮する",
+        "root": "elast",
+        "parts": [
+          { "form": "elast", "kind": "root", "gloss": "伸びる・戻る" },
+          { "form": "-ic", "kind": "suffix", "gloss": "〜の性質の" }
+        ],
+        "derivation": "elast（伸びる・戻る）＋-ic（〜の性質の） → 伸びて元に戻る性質の、弾力のある、伸縮する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/elastic",
+          "https://www.merriam-webster.com/dictionary/elastic"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/elastic", "note": "elasticを近代ラテン語 elasticus・ギリシャ語 elastos（伸ばされた、柔軟な）に遡らせ、elaunein（打ち出す）との関係を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/elastic", "note": "elasticの現代語義として、力を除くと元の形に戻る弾力性や伸縮性を確認した。" }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・フランス語・英語",
+        "etymons": ["elastic", "elasticus", "elastos", "elaunein", "-ic"],
+        "historicalPath": [
+          "ギリシャ語 elaunein（打つ、伸ばし出す）",
+          "ギリシャ語 elastos（伸ばされた、柔軟な）",
+          "近代ラテン語 elasticus・フランス語 élastique",
+          "英語 elastic（弾力のある、伸縮する）"
+        ],
+        "components": [
+          { "form": "elastos", "kind": "base", "gloss": "伸びる・柔軟な" },
+          { "form": "-ic", "kind": "suffix", "gloss": "性質" }
+        ],
+        "rootCandidates": ["elast"],
+        "semanticBridge": "物を打ち出して伸ばすことから、伸ばされたものが元へ戻る性質、弾力性の意味へ発達した。",
+        "summary": "elasticはelast（伸びる・戻る）＋-icで、弾力のある・伸縮するという意味になる。",
+        "confidence": "medium",
+        "notes": "elast語根と既存の-ic接尾辞を使う。深い語源のelauneinには不確実性がある。"
+      }
+    },
+    "troop": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 troupe、古フランス語 trope / trupe（人々の集まり）から、兵士の集団、さらに人や動物の一団を表すようになった。 → 部隊、一団"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/troop",
+          "https://www.merriam-webster.com/dictionary/troop"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/troop", "note": "troopをフランス語 troupe・古フランス語 trope / trupeに遡らせるが、さらに深い起源は不確かで、フランク語やラテン語説が並んでいる。" },
+          { "url": "https://www.merriam-webster.com/dictionary/troop", "note": "troopの現代語義として、兵士の部隊や人・動物の一団を確認した。" }
+        ],
+        "originLanguage": "ゲルマン語系・ラテン語・フランス語・英語",
+        "etymons": ["troop", "troupe", "trope", "trupe", "troppus"],
+        "historicalPath": [
+          "フランク語 *throp（集まり、村）またはラテン語 troppus（群れ）の可能性",
+          "古フランス語 trope / trupe（人の集まり）",
+          "フランス語 troupe・英語 troop",
+          "英語 troop（部隊、一団）"
+        ],
+        "components": [
+          { "form": "troop", "kind": "word", "gloss": "部隊・一団" }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "人々の集まりを表す語から、軍人の集団、さらに同じ種類の人や動物の一団へ意味が広がった。",
+        "summary": "troopは借用元と深い語源に複数説がある単純語で、B型に残す。",
+        "confidence": "low",
+        "notes": "troop＋接辞の表面分解は採用しない。"
+      }
+    },
+    "cliff": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 clif（崖、急な斜面）から、中英語を経て、切り立った岩壁や断崖を表すようになった。 → 崖、断崖"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/cliff",
+          "https://www.merriam-webster.com/dictionary/cliff"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/cliff", "note": "cliffを古英語 clif（崖、斜面）に遡らせ、ゲルマン語系の同族語と関連づけている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/cliff", "note": "cliffの現代語義として、ほぼ垂直に切り立った岩壁や断崖を確認した。" }
+        ],
+        "originLanguage": "ゲルマン語系・古英語・中英語・英語",
+        "etymons": ["cliff", "clif"],
+        "historicalPath": [
+          "ゲルマン語系の崖・斜面を表す語",
+          "古英語 clif（崖、斜面）",
+          "中英語 cliff・英語 cliff",
+          "英語 cliff（崖、断崖）"
+        ],
+        "components": [
+          { "form": "cliff", "kind": "word", "gloss": "崖・断崖" }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "急な斜面や崖を表す古いゲルマン語系の単純語が、切り立った岩壁を指す現代語へ定着した。",
+        "summary": "cliffは古英語由来の単純語で、現代英語の表面分解がないためB型に残す。",
+        "confidence": "high",
+        "notes": "cliff＋接辞の表面分解は採用しない。"
+      }
+    },
+    "duty": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 deu（負うべき、当然の）から俗ラテン語・英語へ入り、負うべき務めや義務、さらに税・関税を表すようになった。 → 義務、職務"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/duty",
+          "https://www.merriam-webster.com/dictionary/duty"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/duty", "note": "dutyをアングロフランス語 duete・古フランス語 deu、ラテン語 debitus / debere（負う）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/duty", "note": "dutyの現代語義として、道徳的・法的に果たすべき義務や職務を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・中英語・英語",
+        "etymons": ["duty", "duete", "deu", "debitus", "debere"],
+        "historicalPath": [
+          "ラテン語 debere（負う、義務がある）",
+          "俗ラテン語 *debutus・古フランス語 deu（負うべき）",
+          "アングロフランス語 duete・中英語 duty",
+          "英語 duty（義務、職務）"
+        ],
+        "components": [
+          { "form": "debere", "kind": "base", "gloss": "負う・義務がある" }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "誰かに負っているもの、果たすべき務めという考えから、道徳・法律上の義務や職務の意味へ定着した。",
+        "summary": "dutyはフランス語を経た単純借用語で、du＋-tyという表面分解は採用しないためB型に残す。",
+        "confidence": "high",
+        "notes": "dutyを英語の語根と接辞に分けない。"
+      }
+    },
+    "exist": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "存在する",
+        "root": "ist",
+        "parts": [
+          { "form": "ex", "kind": "prefix", "gloss": "外へ・前へ" },
+          { "form": "ist", "kind": "root", "gloss": "立つ・現れる" }
+        ],
+        "derivation": "ex-（外へ・前へ）＋ist（立つ・現れる） → 前へ立ち現れ、存在する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/exist",
+          "https://www.merriam-webster.com/dictionary/exist"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/exist", "note": "existをフランス語 exister・ラテン語 existere / exsistere（外へ立つ、現れる、存在する）に遡らせ、ex-＋sistereと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/exist", "note": "existの現代語義として、現実に存在する・ある状態で実在することを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["exist", "existere", "exsistere", "ex-", "sistere", "*sta-"],
+        "historicalPath": [
+          "PIE *sta-（立つ）",
+          "ラテン語 ex-（外へ）＋sistere（立たせる）",
+          "ラテン語 existere・フランス語 exister",
+          "英語 exist（存在する）"
+        ],
+        "components": [
+          { "form": "ex-", "kind": "prefix", "gloss": "外へ・前へ" },
+          { "form": "exsistere", "kind": "base", "gloss": "立ち現れる" }
+        ],
+        "rootCandidates": ["ist"],
+        "semanticBridge": "外へ立ち現れることから、現実の中に姿を示して存在する意味へ定着した。",
+        "summary": "existはex-＋ist（立つ・現れる）で、存在するという意味になる。",
+        "confidence": "high",
+        "notes": "istはexistに現れる表面幹として登録し、既存sist語根との綴り衝突を避ける。"
+      }
+    },
+    "react": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "反応する",
+        "root": "act",
+        "parts": [
+          { "form": "re", "kind": "prefix", "gloss": "後ろへ・応じて" },
+          { "form": "act", "kind": "root", "gloss": "行う・動かす" }
+        ],
+        "derivation": "re-（後ろへ・応じて）＋act（行う・動かす） → 働きかけに応じて逆向きに働き、反応する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/react",
+          "https://www.merriam-webster.com/dictionary/react"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/react", "note": "reactをre-（後ろへ）＋actとして説明し、actをラテン語 actus / agere（動かす、行う）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/react", "note": "reactの現代語義として、刺激や出来事に応じて行動・変化することを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["react", "re-", "act", "actus", "agere"],
+        "historicalPath": [
+          "ラテン語 agere（動かす、行う）",
+          "ラテン語 actus・英語 act（行う、働く）",
+          "英語 re-（後ろへ、応じて）＋act",
+          "英語 react（反応する）"
+        ],
+        "components": [
+          { "form": "re-", "kind": "prefix", "gloss": "応じて・後ろへ" },
+          { "form": "act", "kind": "base", "gloss": "行う・働く" }
+        ],
+        "rootCandidates": ["act"],
+        "semanticBridge": "ある働きかけに対して別の働きが返ることから、刺激・出来事・意見などに応じて反応する意味になった。",
+        "summary": "reactはre-＋act（行う・働く）で、反応するという意味になる。",
+        "confidence": "high",
+        "notes": "既存のre接頭辞とact語根を再利用する。"
+      }
+    },
+    "seize": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 saisir（所有する、力ずくで取る）から、ラテン語 sacireを経て、法的な占有や手でつかむ意味を表すようになった。 → つかむ、奪い取る"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/seize",
+          "https://www.merriam-webster.com/dictionary/seize"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/seize", "note": "seizeを古フランス語 saisir・後期ラテン語 sacireに遡らせるが、ゲルマン語系の正確な起源には複数説があると説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/seize", "note": "seizeの現代語義として、手や歯でつかむこと、力ずくで奪い取ることを確認した。" }
+        ],
+        "originLanguage": "ゲルマン語系（可能性）・ラテン語・フランス語・英語",
+        "etymons": ["seize", "seisen", "saisir", "sacire"],
+        "historicalPath": [
+          "後期ラテン語 sacire（所有させる、起源不確実）",
+          "古フランス語 saisir（所有する、力ずくで取る）",
+          "中英語 seisen・英語 seize",
+          "英語 seize（つかむ、奪い取る）"
+        ],
+        "components": [
+          { "form": "seize", "kind": "word", "gloss": "つかむ・所有する" }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "法的に所有物を取り上げることから、手や歯でつかむこと、さらに機会や恐怖が人をとらえる比喩へ広がった。",
+        "summary": "seizeは借用経路は確認できるが、深い起源に諸説があり表面分解もできないためB型に残す。",
+        "confidence": "low",
+        "notes": "se＋izeなどの表面分解は採用しない。"
+      }
+    },
+    "president": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "大統領、社長、会長",
+        "root": "sid",
+        "parts": [
+          { "form": "pre", "kind": "prefix", "gloss": "前に・先に" },
+          { "form": "sid", "kind": "root", "gloss": "座る・前に座る" },
+          { "form": "-ent", "kind": "suffix", "gloss": "〜する人・もの" }
+        ],
+        "derivation": "pre-（前に・先に）＋sid（座る・前に座る）＋-ent（〜する人・もの） → 前に座って会を導く人、大統領、社長、会長"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/president",
+          "https://www.merriam-webster.com/dictionary/president"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/president", "note": "presidentを古フランス語 president・ラテン語 praesidens / praesidereに遡らせ、prae（前に）＋sedere（座る）から会を率いる人になったと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/president", "note": "presidentの現代語義として、共和国の大統領や組織・会社の長を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・中英語・英語",
+        "etymons": ["president", "praesidens", "praesidere", "prae-", "sedere", "-ent"],
+        "historicalPath": [
+          "ラテン語 prae-（前に）＋sedere（座る）",
+          "ラテン語 praesidere（前に座って監督する）",
+          "ラテン語 praesidens・古フランス語 president",
+          "英語 president（会を導く長、大統領）"
+        ],
+        "components": [
+          { "form": "prae-", "kind": "prefix", "gloss": "前に" },
+          { "form": "sedere", "kind": "base", "gloss": "座る" },
+          { "form": "-ent", "kind": "suffix", "gloss": "行為者" }
+        ],
+        "rootCandidates": ["sid"],
+        "semanticBridge": "人々の前に座って会を監督することから、組織や国家を代表して導く長の意味へ発達した。",
+        "summary": "presidentはpre-＋sid（前に座る）＋-entで、大統領・社長・会長という意味になる。",
+        "confidence": "high",
+        "notes": "sidはpresidentに実際に現れる表面幹として登録し、既存sed語根との綴り衝突を避ける。"
+      }
+    }
+  }
+}

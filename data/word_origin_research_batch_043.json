@@ -1,0 +1,864 @@
+{
+  "meta": {
+    "batchId": "batch-043",
+    "note": "未確認B型の次の25語。派生関係と表面形が出典で確認できる13語をA型へ、単純語・複合語・活用形・語形上の不確実性がある語はB型に残す。"
+  },
+  "dictionary": {
+    "roots": {
+      "visit": {
+        "gloss": "訪れる・見に行く",
+        "origin": "ラテン語 visitare / 古フランス語 visiter",
+        "note": "人や場所を訪ねて見る動作。visitorは訪れる人。"
+      },
+      "priv": {
+        "gloss": "分ける・個人のものにする",
+        "origin": "ラテン語 privare / privus",
+        "note": "公のものから分けられた個人の領域というイメージ。private。"
+      },
+      "pati": {
+        "gloss": "耐える・苦しむ",
+        "origin": "ラテン語 pati",
+        "note": "苦痛や困難に耐える動作。patientは耐えられる性質を表す。"
+      },
+      "curi": {
+        "gloss": "注意深く尋ねる・知りたがる",
+        "origin": "ラテン語 curiosus / cura",
+        "note": "注意を向けて知ろうとする性質。curiousでは表面形curiとして現れる。"
+      },
+      "use": {
+        "gloss": "使う・役立てる",
+        "origin": "ラテン語 usus / uti、古フランス語 us",
+        "note": "何かを目的のために使うこと。usefulは使う価値があることを表す。"
+      },
+      "avail": {
+        "gloss": "役立つ・有効である",
+        "origin": "古フランス語 aveilir / ラテン語 valere",
+        "note": "価値や効力があって役立つこと。availableは利用できる状態を表す。"
+      },
+      "us": {
+        "gloss": "使用・習慣",
+        "origin": "ラテン語 usus / uti",
+        "note": "使うことや繰り返された習慣。usualでは表面形usとして現れる。"
+      },
+      "place": {
+        "gloss": "置く・場所を定める",
+        "origin": "古フランス語 placer / ラテン語 platea",
+        "note": "特定の場所に置き、位置を定めること。replaceは元の位置へ置くこと。"
+      },
+      "commend": {
+        "gloss": "託す・ほめる",
+        "origin": "ラテン語 commendare",
+        "note": "相手に託し、価値あるものとして示すこと。recommendは強く勧めること。"
+      },
+      "tect": {
+        "gloss": "覆う・隠す",
+        "origin": "ラテン語 tegere",
+        "note": "前に覆いを置いて守るイメージ。protectではtectとして現れる。"
+      },
+      "turn": {
+        "gloss": "回す・向きを変える",
+        "origin": "古フランス語 torner / ラテン語 tornare",
+        "note": "向きを変えて戻す動作。returnは元へ向きを戻すこと。"
+      },
+      "pare": {
+        "gloss": "整える・準備する",
+        "origin": "古フランス語 parer / ラテン語 parare",
+        "note": "前もって整え、使える状態にすること。prepareではpareとして現れる。"
+      }
+    }
+  },
+  "entries": {
+    "visitor": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "訪問者",
+        "root": "visit",
+        "parts": [
+          { "form": "visit", "kind": "root", "gloss": "訪れる・見に行く" },
+          { "form": "-or", "kind": "suffix", "gloss": "〜する人・もの" }
+        ],
+        "derivation": "visit（訪れる）＋-or（〜する人） → 訪れる人、訪問者"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/visitor",
+          "https://www.merriam-webster.com/dictionary/visitor"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/visitor", "note": "visitorをvisitから作られた動作主名詞とし、古フランス語 visiteor・アングロフランス語 visitourの経路を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/visitor", "note": "visitorの現代語義として訪問・見学する人、特に公式に訪問・検査する人を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・中英語・英語",
+        "etymons": ["visitor", "visitour", "visiteor", "visit", "visiter", "visitare", "-or"],
+        "historicalPath": ["ラテン語 visitare（訪ねて見る）", "古フランス語 visiter", "古フランス語 visiteor / 中英語 visitour", "英語 visit＋-or → visitor（訪問者）"],
+        "components": [
+          { "form": "visit", "kind": "base", "gloss": "訪れる" },
+          { "form": "-or", "kind": "suffix", "gloss": "動作主" }
+        ],
+        "rootCandidates": ["visit", "vis"],
+        "semanticBridge": "見に行く・訪ねる行為から、その行為をする人、特に客や見学者を表す名詞になった。",
+        "summary": "visitorはvisitからの動作主名詞であることが出典に明記され、visit＋-orと表示できるためA型に設定する。",
+        "confidence": "high"
+      }
+    },
+    "narrow": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 nearu、中英語 narwe、西ゲルマン語系 *narwazに由来するが、さらに古い起源は不明。 → 狭い"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/narrow",
+          "https://www.merriam-webster.com/dictionary/narrow"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/narrow", "note": "narrowを古英語 nearu、中英語 narwe、西ゲルマン語系 *narwazに遡らせるが、起源は不明としている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/narrow", "note": "narrowの現代語義として幅が広くないこと、限定されたこと、狭める動詞を確認した。" }
+        ],
+        "originLanguage": "古英語・西ゲルマン語系・中英語・英語・語源不明",
+        "etymons": ["narrow", "narwe", "nearu", "*narwaz"],
+        "historicalPath": ["西ゲルマン語系 *narwaz（狭さ）", "古英語 nearu", "中英語 narwe", "英語 narrow（狭い、狭める）"],
+        "components": [
+          { "form": "nearu / narwe", "kind": "word", "gloss": "狭い、限定された" }
+        ],
+        "rootCandidates": ["narw", "near"],
+        "semanticBridge": "物理的な幅の狭さから、範囲・見解・時間などが限定されていることへ意味が広がった。",
+        "summary": "narrowは古いゲルマン語系の単純語で、起源自体も不明なため、現代形を安定した語根・接辞に分解せずB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "private": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "私的な",
+        "root": "priv",
+        "parts": [
+          { "form": "priv", "kind": "root", "gloss": "分ける・個人のものにする" },
+          { "form": "-ate", "kind": "suffix", "gloss": "〜にする・〜の性質の" }
+        ],
+        "derivation": "公のものから分けられた（priv）＋-ate（〜の性質の） → 私的な、個人用の"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/private",
+          "https://www.merriam-webster.com/dictionary/private"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/private", "note": "privateをラテン語 privatus（公から分けられた、個人の）に遡らせ、privare（奪う、分ける）・privus（自分自身の）との関係を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/private", "note": "privateの現代語義として、特定の人や集団に限られたもの、公的でないもの、個人に関するものを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・中英語・英語",
+        "etymons": ["private", "privatus", "privare", "privus", "*prai-", "-ate"],
+        "historicalPath": ["PIE *prai-（前に、分けて）", "ラテン語 privus（自分自身の）→ privare（分ける、奪う）", "ラテン語 privatus", "古フランス語・中英語 privat → 英語 private（私的な）"],
+        "components": [
+          { "form": "privare / priv", "kind": "base", "gloss": "分ける、個人のものにする" },
+          { "form": "-ate", "kind": "suffix", "gloss": "性質を表す" }
+        ],
+        "rootCandidates": ["priv", "prai"],
+        "semanticBridge": "公的な領域から分けられたものという意味から、個人用・非公開・私的なものを表す意味へ定着した。",
+        "summary": "privateはprivatus・privareに基づく語幹と表面形の対応を示せるため、priv＋-ateのA型に設定する。",
+        "confidence": "high"
+      }
+    },
+    "crowded": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "crowd（群衆、群がる）に過去分詞語尾が付いた形。人や物が押し合うように集まった状態から → 混雑した"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/crowd",
+          "https://www.merriam-webster.com/dictionary/crowd"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/crowd", "note": "crowdを中英語 crouden（押し進む、群がる）に関係する語とし、語源には不確実性があると説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/crowd", "note": "crowdの現代語義として群衆、押し寄せること、場所を人や物で満たすことを確認した。" }
+        ],
+        "originLanguage": "中英語・英語・語源一部不確定",
+        "etymons": ["crowded", "crowd", "crouden"],
+        "historicalPath": ["中英語 crouden（押し進む、群がる）", "英語 crowd（群衆、群がる）", "crowdの過去分詞 crowded", "英語 crowded（混雑した）"],
+        "components": [
+          { "form": "crowd", "kind": "base", "gloss": "群がる、群衆" },
+          { "form": "-ed", "kind": "inflection", "gloss": "過去分詞・状態" }
+        ],
+        "rootCandidates": ["crowd", "cru"],
+        "semanticBridge": "人が群がる動作から、人や物が空間を満たして余地が少ない状態を表す形へなった。",
+        "summary": "crowdedはcrowdの活用・形容詞化された形であり、今回のA型語根再構成では活用語尾を語源接辞として扱わずB型に残す。",
+        "confidence": "medium"
+      }
+    },
+    "honest": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 oneste、ラテン語 honestus（名誉ある、尊敬される）に由来。名誉ある性質から → 正直な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/honest",
+          "https://www.merriam-webster.com/dictionary/honest"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/honest", "note": "honestを古フランス語 oneste・honeste、ラテン語 honestus、honos（名誉）に遡らせ、正直・公正の意味が後に中心化したと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/honest", "note": "honestの現代語義として、欺きがなく公正で真実を語ること、道徳的に正しいことを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・中英語・英語",
+        "etymons": ["honest", "oneste", "honeste", "honestus", "honos", "-tus"],
+        "historicalPath": ["ラテン語 honos（名誉、尊敬）", "ラテン語 honestus（名誉ある、尊敬される）", "古フランス語 oneste", "英語 honest（名誉ある、正直な）"],
+        "components": [
+          { "form": "honestus / honos", "kind": "word", "gloss": "名誉ある、尊敬" }
+        ],
+        "rootCandidates": ["hon", "honor"],
+        "semanticBridge": "名誉や尊敬に値する性質から、外見・礼儀・道徳を経て、欺きのない正直さを表す意味へ移った。",
+        "summary": "honestはhonosに由来するラテン語系の単純語で、hon＋-estなどの英語表面分解を出典が支えないためB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "polite": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 politus（磨かれた、洗練された）、polire（磨く）に由来。態度が磨かれていることから → 礼儀正しい"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/polite",
+          "https://www.merriam-webster.com/dictionary/polite"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/polite", "note": "politeをラテン語 politus（洗練された、文字通り磨かれた）、polire（磨く、滑らかにする）に遡らせ、礼儀正しさの意味が後に発達したと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/polite", "note": "politeの現代語義として、他人への配慮を示し、礼儀正しく振る舞うことを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["polite", "politus", "polire", "polish"],
+        "historicalPath": ["ラテン語 polire（磨く、滑らかにする）", "ラテン語 politus（磨かれた、洗練された）", "フランス語・英語 polite（洗練された、礼儀正しい）"],
+        "components": [
+          { "form": "politus / polire", "kind": "word", "gloss": "磨かれた、洗練された" }
+        ],
+        "rootCandidates": ["polit", "pol"],
+        "semanticBridge": "物の表面を磨く具体的な意味から、教養や話し方・態度が洗練されているという比喩へ広がった。",
+        "summary": "politeはpolitusからの単純な借用・派生語で、polit＋-eという語末文字を英語接辞として扱わずB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "patient": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "忍耐強い",
+        "root": "pati",
+        "parts": [
+          { "form": "pati", "kind": "root", "gloss": "耐える・苦しむ" },
+          { "form": "-ent", "kind": "suffix", "gloss": "〜する性質のもの" }
+        ],
+        "derivation": "pati（耐える）＋-ent（〜する性質の） → 耐えることができる、忍耐強い"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/patient",
+          "https://www.merriam-webster.com/dictionary/patient"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/patient", "note": "patientを古フランス語 pacient、ラテン語 patientem・pati（耐える、苦しむ）に遡らせ、苦痛や挑発に耐える性質へ意味が発達したと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/patient", "note": "patientの現代語義として、苦痛や試練を落ち着いて耐えること、急がず辛抱強いことを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・中英語・英語",
+        "etymons": ["patient", "pacient", "patientem", "pati", "-ent"],
+        "historicalPath": ["ラテン語 pati（耐える、経験する）", "ラテン語 patiens / patientem（耐えている、苦しんでいる）", "古フランス語 pacient", "英語 pati＋-ent → patient（忍耐強い）"],
+        "components": [
+          { "form": "pati", "kind": "base", "gloss": "耐える、苦しむ" },
+          { "form": "-ent", "kind": "suffix", "gloss": "その性質を持つ" }
+        ],
+        "rootCandidates": ["pati", "pat"],
+        "semanticBridge": "苦痛や試練に耐える動作から、怒らず待ち続けられる人の性質へ意味が一般化した。",
+        "summary": "patientはラテン語patiの現在分詞形に基づき、pati＋-entと表面形が対応するためA型に設定する。",
+        "confidence": "high"
+      }
+    },
+    "curious": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "好奇心の強い",
+        "root": "curi",
+        "parts": [
+          { "form": "curi", "kind": "root", "gloss": "注意深く尋ねる・知りたがる" },
+          { "form": "-ous", "kind": "suffix", "gloss": "〜に満ちた" }
+        ],
+        "derivation": "curi（注意を向けて知ろうとする）＋-ous（〜に満ちた） → 好奇心の強い"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/curious",
+          "https://www.merriam-webster.com/dictionary/curious"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/curious", "note": "curiousを古フランス語 curios、ラテン語 curiosus（注意深い、知りたがる）、cura（注意、世話）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/curious", "note": "curiousの現代語義として、知りたいという強い関心、珍しく興味を引く性質を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・中英語・英語",
+        "etymons": ["curious", "curios", "curiosus", "cura", "-ous"],
+        "historicalPath": ["ラテン語 cura（注意、世話）", "ラテン語 curiosus（注意深い、探究する）", "古フランス語 curios", "英語 curi＋-ous → curious（好奇心の強い）"],
+        "components": [
+          { "form": "curiosus / curi", "kind": "base", "gloss": "注意深く知りたがる" },
+          { "form": "-ous", "kind": "suffix", "gloss": "性質に満ちた" }
+        ],
+        "rootCandidates": ["curi", "cur", "cura"],
+        "semanticBridge": "注意を払うことから、知識を求めて質問する性質、さらに珍しく興味を引く性質へ意味が広がった。",
+        "summary": "curiousはcuriosus・curaと表面形curiの対応を示せ、curi＋-ousと表示できるためA型に設定する。",
+        "confidence": "medium"
+      }
+    },
+    "similar": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 similaire、中世ラテン語 similis（似た、同種の）に由来。共通点を持つことから → 似た、類似した"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/similar",
+          "https://www.merriam-webster.com/dictionary/similar"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/similar", "note": "similarをフランス語 similaire、中世ラテン語の拡張形、ラテン語 similis（似た、同種の）、PIE *sem-（一つ、ともに）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/similar", "note": "similarの現代語義として、性質や外見などに共通点があることを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・英語",
+        "etymons": ["similar", "similaire", "similis", "semol", "*sem-"],
+        "historicalPath": ["PIE *sem-（一つ、ともに）", "ラテン語 similis（似た、同種の）", "中世ラテン語・フランス語 similaire", "英語 similar（類似した）"],
+        "components": [
+          { "form": "similis / similaire", "kind": "word", "gloss": "似た、同種の" }
+        ],
+        "rootCandidates": ["simil", "sem"],
+        "semanticBridge": "同じもの・共通するものという観念から、性質や外見に共通点を持つことを表す形容詞へ発達した。",
+        "summary": "similarはラテン語similisを経た単純な借用語で、sim＋-ilarのような英語表面分解を置かずB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "useful": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "役に立つ",
+        "root": "use",
+        "parts": [
+          { "form": "use", "kind": "root", "gloss": "使う・役立てる" },
+          { "form": "-ful", "kind": "suffix", "gloss": "〜に満ちた" }
+        ],
+        "derivation": "use（使う、役立てる）＋-ful（〜に満ちた） → 使う価値があり、役に立つ"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/useful",
+          "https://www.merriam-webster.com/dictionary/useful"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/useful", "note": "usefulをuse＋-fulと明示し、useを古フランス語 us・ラテン語 usus（使用、習慣、役立てること）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/useful", "note": "usefulの現代語義として、目的のために使用できること、価値や生産性があることを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・古英語・中英語・英語",
+        "etymons": ["useful", "use", "usus", "uti", "-ful"],
+        "historicalPath": ["ラテン語 uti（使う、役立てる）→ usus（使用、利益）", "古フランス語 us / 中英語 use", "英語 use＋-ful → useful（役に立つ）"],
+        "components": [
+          { "form": "use", "kind": "base", "gloss": "使う、役立てる" },
+          { "form": "-ful", "kind": "suffix", "gloss": "〜に満ちた" }
+        ],
+        "rootCandidates": ["use", "ut"],
+        "semanticBridge": "使うこと・用途から、目的にかなって価値があること、役に立つことを表す形容詞になった。",
+        "summary": "usefulはuse＋-fulと出典が直接明示するためA型に設定する。",
+        "confidence": "high"
+      }
+    },
+    "available": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "利用できる",
+        "root": "avail",
+        "parts": [
+          { "form": "avail", "kind": "root", "gloss": "役立つ・有効である" },
+          { "form": "-able", "kind": "suffix", "gloss": "〜できる・〜に値する" }
+        ],
+        "derivation": "avail（役立つ、有効である）＋-able（〜できる） → 利用できる、使える"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/available",
+          "https://www.merriam-webster.com/dictionary/available"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/available", "note": "availableをavail＋-ableと明示し、利用できる意味が19世紀に発達したと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/available", "note": "availableの現代語義として、すぐ使える、入手・利用できる、特定の時点で時間が空いていることを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・中英語・英語",
+        "etymons": ["available", "avail", "aveilir", "valere", "-able"],
+        "historicalPath": ["ラテン語 valere（価値がある、強い）", "古フランス語 aveilir（役立つ、有効である）", "英語 avail", "英語 avail＋-able → available（利用できる）"],
+        "components": [
+          { "form": "avail", "kind": "base", "gloss": "役立つ、有効である" },
+          { "form": "-able", "kind": "suffix", "gloss": "〜できる" }
+        ],
+        "rootCandidates": ["avail", "val"],
+        "semanticBridge": "価値や効力があることから、すぐ使える・入手できる・時間が空いているという利用可能性へ意味が広がった。",
+        "summary": "availableはavail＋-ableと出典が直接支えるためA型に設定する。",
+        "confidence": "high"
+      }
+    },
+    "usual": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "いつもの",
+        "root": "us",
+        "parts": [
+          { "form": "us", "kind": "root", "gloss": "使用・習慣" },
+          { "form": "-ual", "kind": "suffix", "gloss": "〜に関する" }
+        ],
+        "derivation": "us（使用・習慣）＋-ual（〜に関する） → 習慣に関する、いつもの"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/usual",
+          "https://www.merriam-webster.com/dictionary/usual"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/usual", "note": "usualを古フランス語 usuel、後期ラテン語 usualis、ラテン語 usus（習慣、使用）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/usual", "note": "usualの現代語義として、習慣・慣行に合うこと、普通に使われること、いつものことを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・中英語・英語",
+        "etymons": ["usual", "usuel", "usualis", "usus", "uti", "-ual"],
+        "historicalPath": ["ラテン語 uti（使う）→ usus（使用、習慣）", "後期ラテン語 usualis（普通の）", "古フランス語 usuel", "英語 us＋-ual → usual（いつもの、通常の）"],
+        "components": [
+          { "form": "usus / us", "kind": "base", "gloss": "使用、習慣" },
+          { "form": "-ual", "kind": "suffix", "gloss": "〜に関する" }
+        ],
+        "rootCandidates": ["us", "ut"],
+        "semanticBridge": "繰り返し使うこと・習慣から、普通に行われること、予想されるいつもの状態へ意味が発達した。",
+        "summary": "usualはusus・usualisに基づき、表面形us＋-ualとしてA型風に表示する。語源語幹を短く表示するため中確度とする。",
+        "confidence": "medium"
+      }
+    },
+    "replace": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "取り替える",
+        "root": "place",
+        "parts": [
+          { "form": "re", "kind": "prefix", "gloss": "再び・元へ" },
+          { "form": "place", "kind": "root", "gloss": "置く・場所を定める" }
+        ],
+        "derivation": "re（元へ、再び）＋place（置く） → 元の位置に置き直す、取り替える"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/replace",
+          "https://www.merriam-webster.com/dictionary/replace"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/replace", "note": "replaceをre-（後ろへ、再び）＋placeと明示し、元の場所へ戻す意味から、他のものの場所を占める意味へ発達したと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/replace", "note": "replaceの現代語義として、元の場所へ戻すこと、別のものに置き換えることを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・中英語・英語",
+        "etymons": ["replace", "re-", "place", "placer", "platea"],
+        "historicalPath": ["ラテン語 platea（広場、場所）", "古フランス語 placer（置く、位置を定める）", "英語 re-＋place（元へ置く）", "英語 replace（取り替える、交換する）"],
+        "components": [
+          { "form": "re-", "kind": "prefix", "gloss": "元へ、再び" },
+          { "form": "place", "kind": "base", "gloss": "置く、場所を定める" }
+        ],
+        "rootCandidates": ["place", "plat"],
+        "semanticBridge": "物を元の場所へ置き直すことから、元のものの場所を別のものが占める、取り替える意味へ広がった。",
+        "summary": "replaceはre-＋placeと出典が明示するためA型に設定する。",
+        "confidence": "high"
+      }
+    },
+    "reserve": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "予約する",
+        "root": "serv",
+        "parts": [
+          { "form": "re", "kind": "prefix", "gloss": "後ろへ・取っておいて" },
+          { "form": "serv", "kind": "root", "gloss": "保つ・守る" }
+        ],
+        "derivation": "re（後のために）＋serv（保つ） → 後のために取っておく、予約する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/reserve",
+          "https://www.merriam-webster.com/dictionary/reserve"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/reserve", "note": "reserveを古フランス語 reserver、ラテン語 reservare（取っておく、保持する）、re-＋servare（保つ、守る）に遡らせている。予約の意味は後に発達した。" },
+          { "url": "https://www.merriam-webster.com/dictionary/reserve", "note": "reserveの現代語義として、将来のために取っておくこと、席や部屋などを予約することを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・中英語・英語",
+        "etymons": ["reserve", "reserver", "reservare", "re-", "servare", "*ser-"],
+        "historicalPath": ["PIE *ser-（守る、保つ）", "ラテン語 re-＋servare（後のために保つ）", "古フランス語 reserver", "英語 reserve（取っておく、予約する）"],
+        "components": [
+          { "form": "re-", "kind": "prefix", "gloss": "後のために" },
+          { "form": "servare / serv", "kind": "base", "gloss": "保つ、守る" }
+        ],
+        "rootCandidates": ["serv", "ser"],
+        "semanticBridge": "物を後のために保持することから、在庫・資源を残すこと、席や部屋を先に確保することへ意味が広がった。",
+        "summary": "reserveはre-＋servareと出典が明確で、既存のserv語根とも一致するためA型に設定する。",
+        "confidence": "high"
+      }
+    },
+    "deliver": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 delivrer、後期ラテン語 deliberare（解放する）に由来。解放して手渡す意味から → 配達する、届ける"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/deliver",
+          "https://www.merriam-webster.com/dictionary/deliver"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/deliver", "note": "deliverを古フランス語 delivrer、後期ラテン語 deliberare、de-（離して）＋liberare（自由にする）に遡らせ、手渡す意味が後に発達したと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/deliver", "note": "deliverの現代語義として、物を相手に届けること、手渡すこと、約束や演説を実行することを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・中英語・英語",
+        "etymons": ["deliver", "delivrer", "deliberare", "de-", "liberare", "liber"],
+        "historicalPath": ["ラテン語 de-（離して）＋liberare（自由にする）", "後期ラテン語 deliberare", "古フランス語 delivrer（解放する、手渡す）", "英語 deliver（届ける、引き渡す）"],
+        "components": [
+          { "form": "deliberare / delivrer", "kind": "word", "gloss": "解放する、手渡す" }
+        ],
+        "rootCandidates": ["liber", "liv"],
+        "semanticBridge": "拘束から解放することから、物や人を相手の手元へ引き渡すこと、さらに言葉・約束を実行することへ意味が広がった。",
+        "summary": "deliverはde-＋liberareに由来するが、現代形のliverを語根として表示すると誤解を招くためB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "recommend": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "推薦する",
+        "root": "commend",
+        "parts": [
+          { "form": "re", "kind": "prefix", "gloss": "強く・改めて" },
+          { "form": "commend", "kind": "root", "gloss": "託す・ほめる" }
+        ],
+        "derivation": "re（強く）＋commend（価値あるものとして示す） → 強く勧める、推薦する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/recommend",
+          "https://www.merriam-webster.com/dictionary/recommend"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/recommend", "note": "recommendを中世ラテン語 recommendare、re-（強調または再び）＋commendare（託す、ほめる）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/recommend", "note": "recommendの現代語義として、よいものとして人に勧めること、適切な行動を助言することを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・中英語・英語",
+        "etymons": ["recommend", "recomendare", "commendare", "re-", "com-", "mandare"],
+        "historicalPath": ["ラテン語 commendare（世話に託す、ほめる）", "ラテン語 re-＋commendare（強く託す、価値あるものとして示す）", "中世ラテン語 recommendare", "英語 recommend（推薦する、勧める）"],
+        "components": [
+          { "form": "re-", "kind": "prefix", "gloss": "強く、改めて" },
+          { "form": "commend", "kind": "base", "gloss": "託す、ほめる" }
+        ],
+        "rootCandidates": ["commend", "mand"],
+        "semanticBridge": "相手の世話に託す・価値あるものとして示す行為から、よい選択肢として人や行動を勧める意味へ発達した。",
+        "summary": "recommendはre-＋commendareと出典が直接支えるため、表面基体commendを用いたA型に設定する。",
+        "confidence": "high"
+      }
+    },
+    "notice": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 notece、ラテン語 notitia（知られていること、知識）、notus（知られた）に由来。知識や知らせから → 気づく"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/notice",
+          "https://www.merriam-webster.com/dictionary/notice"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/notice", "note": "noticeを古フランス語 notece、ラテン語 notitia（知られていること、知識）、noscere（知る）とPIE *gno-（知る）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/notice", "note": "noticeの現代語義として、知らせ・注意・公告、また何かに気づく動詞を確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・中英語・英語",
+        "etymons": ["notice", "notece", "notitia", "notus", "noscere", "*gno-"],
+        "historicalPath": ["PIE *gno-（知る）", "ラテン語 noscere（知る）→ notus（知られた）→ notitia（知識）", "古フランス語 notece", "英語 notice（知らせ、注意、気づく）"],
+        "components": [
+          { "form": "notitia / notece", "kind": "word", "gloss": "知識、知らせ" }
+        ],
+        "rootCandidates": ["not", "gnos"],
+        "semanticBridge": "知識や知らせを表す名詞から、注意を向けること、さらに対象を認識して気づく動詞へ意味が広がった。",
+        "summary": "noticeはnotitiaを経た単純借用語で、not＋-iceのような表面分解を出典が支えないためB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "protect": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "守る",
+        "root": "tect",
+        "parts": [
+          { "form": "pro", "kind": "prefix", "gloss": "前に・前もって" },
+          { "form": "tect", "kind": "root", "gloss": "覆う・隠す" }
+        ],
+        "derivation": "pro（前に）＋tect（覆う） → 前に覆いを置いて守る"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/protect",
+          "https://www.merriam-webster.com/dictionary/protect"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/protect", "note": "protectをラテン語 protectus・protegere（保護する、前に覆う）、pro（前に）＋tegere（覆う）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/protect", "note": "protectの現代語義として、危険・損害・攻撃などから覆って守ることを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・英語",
+        "etymons": ["protect", "protectus", "protegere", "pro", "tegere", "*(s)teg-"],
+        "historicalPath": ["PIE *(s)teg-（覆う）", "ラテン語 pro（前に）＋tegere（覆う）", "ラテン語 protegere / protectus", "古フランス語 protecter → 英語 protect（守る）"],
+        "components": [
+          { "form": "pro-", "kind": "prefix", "gloss": "前に" },
+          { "form": "tegere / tect", "kind": "base", "gloss": "覆う、隠す" }
+        ],
+        "rootCandidates": ["tect", "teg", "steg"],
+        "semanticBridge": "危険の前に覆いを置く具体的な行為から、人・権利・環境などを害から守る一般的な意味へ広がった。",
+        "summary": "protectはpro＋tegereと出典が明確で、表面形tectとしてA型に設定する。",
+        "confidence": "high"
+      }
+    },
+    "return": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "返す",
+        "root": "turn",
+        "parts": [
+          { "form": "re", "kind": "prefix", "gloss": "元へ・再び" },
+          { "form": "turn", "kind": "root", "gloss": "回す・向きを変える" }
+        ],
+        "derivation": "re（元へ）＋turn（向きを変える） → 元の場所や状態へ戻す、返す"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/return",
+          "https://www.merriam-webster.com/dictionary/return"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/return", "note": "returnを古フランス語 retorner、re-（後ろへ）＋torner（回す、向きを変える）、ラテン語 tornareに遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/return", "note": "returnの現代語義として、元の場所・状態へ戻ること、物を返すことを確認した。" }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・フランス語・中英語・英語",
+        "etymons": ["return", "retorner", "re-", "torner", "tornare", "tornus", "*tere-"],
+        "historicalPath": ["PIE *tere-（こする、回す）", "ラテン語 tornare（ろくろで回す）", "古フランス語 torner", "古フランス語 re-＋torner → 英語 return（戻る、返す）"],
+        "components": [
+          { "form": "re-", "kind": "prefix", "gloss": "元へ、再び" },
+          { "form": "torner / turn", "kind": "base", "gloss": "回す、向きを変える" }
+        ],
+        "rootCandidates": ["turn", "torn", "ter"],
+        "semanticBridge": "向きを元へ回すことから、人・物・金銭・報告などを元の場所や相手へ戻す意味へ広がった。",
+        "summary": "returnはre-＋torner/turnと出典が明確で、re＋turnとしてA型に設定する。",
+        "confidence": "high"
+      }
+    },
+    "prepare": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "準備する",
+        "root": "pare",
+        "parts": [
+          { "form": "pre", "kind": "prefix", "gloss": "前もって" },
+          { "form": "pare", "kind": "root", "gloss": "整える・準備する" }
+        ],
+        "derivation": "pre（前もって）＋pare（整える） → 前もって整え、準備する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/prepare",
+          "https://www.merriam-webster.com/dictionary/prepare"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/prepare", "note": "prepareをラテン語 praeparare（前もって整える）、prae（前に）＋parare（準備する）に遡らせ、古フランス語 preparerにも関係すると説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/prepare", "note": "prepareの現代語義として、特定の目的に向けて順序や用意を整えることを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・中英語・英語",
+        "etymons": ["prepare", "praeparare", "prae", "parare", "parer", "*pere-"],
+        "historicalPath": ["PIE *pere-（生み出す、用意する）", "ラテン語 prae（前もって）＋parare（整える）", "ラテン語 praeparare / 古フランス語 preparer", "英語 prepare（準備する）"],
+        "components": [
+          { "form": "prae- / pre-", "kind": "prefix", "gloss": "前もって" },
+          { "form": "parare / pare", "kind": "base", "gloss": "整える、準備する" }
+        ],
+        "rootCandidates": ["pare", "par", "pere"],
+        "semanticBridge": "必要なものを前もって整えることから、食事・心構え・資料などを目的に合わせて用意する意味へ広がった。",
+        "summary": "prepareはpre-＋parareと出典が直接支えるため、既存のpar（等しい）と衝突しない表面形pareを語根としてA型に設定する。",
+        "confidence": "medium"
+      }
+    },
+    "museum": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 museum、ギリシャ語 Mouseion（ムーサの神殿・学芸の場）に由来。学芸を研究する場所から → 博物館"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/museum",
+          "https://www.merriam-webster.com/dictionary/museum"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/museum", "note": "museumをラテン語 museum、ギリシャ語 Mouseion（ムーサたちの場所、学芸の場）に遡らせ、収蔵・研究施設の意味へ発達したと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/museum", "note": "museumの現代語義として、芸術・科学・歴史上の資料を収集・保存・展示する施設を確認した。" }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・フランス語・英語",
+        "etymons": ["museum", "museum", "Mouseion", "Mousa"],
+        "historicalPath": ["ギリシャ語 Mouseion（ムーサの神殿、学芸の場）", "ラテン語 museum", "フランス語 musée", "英語 museum（博物館、美術館）"],
+        "components": [
+          { "form": "Mouseion / museum", "kind": "word", "gloss": "学芸の場" }
+        ],
+        "rootCandidates": ["muse", "mousei"],
+        "semanticBridge": "学芸を学ぶ場所から、知識や文化資料を収集・保存し、一般に展示する施設へ意味が具体化した。",
+        "summary": "museumは固有名詞的なギリシャ語をラテン語・フランス語経由で借用した単純語で、muse＋-umなどの分解を置かずB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "harbor": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 here-beorg（軍隊の宿営・避難所）、ゲルマン語系の複合語に由来。船を守る場所へ意味が特化して → 港"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/harbor",
+          "https://www.merriam-webster.com/dictionary/harbor"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/harbor", "note": "harborを古英語 here-beorg、中英語 herberwe、ゲルマン祖語の「軍隊＋保護・避難所」に当たる複合語へ遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/harbor", "note": "harborの現代語義として、船が停泊し嵐から守られる水域、また考えなどを心に抱く動詞を確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・中英語・英語",
+        "etymons": ["harbor", "here-beorg", "herberwe", "*harja-bergaz", "*bhergh-"],
+        "historicalPath": ["ゲルマン語系 *harja-bergaz（軍隊の宿営、避難所）", "古英語 here-beorgian（宿営する、保護する）", "中英語 herberwe", "英語 harbor（港、保護する）"],
+        "components": [
+          { "form": "here + beorg", "kind": "compound", "gloss": "軍隊の宿営、避難所" }
+        ],
+        "rootCandidates": ["berg", "bhergh"],
+        "semanticBridge": "人や軍隊の宿営・避難所から、船を嵐から守る海岸の場所、さらに秘密や考えを心に抱く動詞へ意味が広がった。",
+        "summary": "harborは古英語・ゲルマン語系の複合語であり、複合表現をB型にそろえる方針に従ってB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "lighthouse": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "light（光）＋house（建物）からなる複合語。船に光を示す建物から → 灯台"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/lighthouse",
+          "https://www.merriam-webster.com/dictionary/lighthouse"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/lighthouse", "note": "lighthouseをlight（光）＋house（家、建物）の複合語と明示し、船員に岩礁などを知らせる塔と説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/lighthouse", "note": "lighthouseの現代語義として、航行を助けるために強い光を出す塔や建物を確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ゲルマン語系・古英語・英語",
+        "etymons": ["lighthouse", "light", "house", "*leuk-", "*husan"],
+        "historicalPath": ["古英語・ゲルマン語系 light（光）＋house（家）", "17世紀の英語 lighthouse", "英語 lighthouse（灯台）"],
+        "components": [
+          { "form": "light + house", "kind": "compound", "gloss": "光を示す建物" }
+        ],
+        "rootCandidates": ["leuk", "hus"],
+        "semanticBridge": "光を出す建物という文字通りの構成から、船の航行を安全に導く海岸の塔を表す語になった。",
+        "summary": "lighthouseはlight＋houseの複合語であり、複合表現をB型にそろえる方針に従ってB型に残す。",
+        "confidence": "high"
+      }
+    },
+    "shore": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 scora、西ゲルマン語系の形、または中低ドイツ語・中オランダ語の同系語に由来するとされる。 → 岸、海岸"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/shore",
+          "https://www.merriam-webster.com/dictionary/shore"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/shore", "note": "shoreを古英語 scora・sceor-、中低ドイツ語 schor、中オランダ語 scorreに関係づけ、PIE *sker-（切る）説には不確実性があると説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/shore", "note": "shoreの現代語義として、水域に接する陸地・海岸、また支柱として支える動詞を確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・中英語・英語・語源一部不確定",
+        "etymons": ["shore", "scora", "sceor-", "schor", "scorre", "*skur-o-", "*sker-"],
+        "historicalPath": ["ゲルマン語系 *skur-o-（切る）とする説", "古英語 scora または中低ドイツ語 schor / 中オランダ語 scorre", "中英語 shore", "英語 shore（岸、海岸）"],
+        "components": [
+          { "form": "scora / schor / scorre", "kind": "word", "gloss": "岸、切り分けられた土地" }
+        ],
+        "rootCandidates": ["skor", "sker"],
+        "semanticBridge": "陸と水の境界にある土地という意味から、海岸地域全体、さらに建物などを支える支柱の動詞へ別の語義が発達した。",
+        "summary": "shoreは由来に複数説があり、古いゲルマン語系の単純語でもあるため、確実な英語接辞分解を置かずB型に残す。",
+        "confidence": "medium"
+      }
+    },
+    "volunteer": {
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "フランス語 volontaire、ラテン語 voluntarius（自発的な）、voluntas（意志）に由来。自分から申し出る人から → ボランティア、志願者"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/volunteer",
+          "https://www.merriam-webster.com/dictionary/volunteer"
+        ],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/volunteer", "note": "volunteerをフランス語 voluntaire、ラテン語 voluntarius（自発的な）に遡らせ、軍務に自分から就く人から一般の志願者へ意味が広がったと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/volunteer", "note": "volunteerの現代語義として、報酬を求めず自分からサービスを申し出る人、また自発的に申し出る動詞を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・中英語・英語",
+        "etymons": ["volunteer", "voluntaire", "voluntarius", "voluntas", "velle"],
+        "historicalPath": ["ラテン語 velle（望む）→ voluntas（意志）", "ラテン語 voluntarius（自発的な）", "フランス語 volontaire", "英語 volunteer（志願者、ボランティア）"],
+        "components": [
+          { "form": "voluntarius / volontaire", "kind": "word", "gloss": "自発的な、志願者" }
+        ],
+        "rootCandidates": ["volunt", "vol"],
+        "semanticBridge": "自分の意志で軍務に志願する人から、軍務に限らず無償で自発的に奉仕する人へ意味が一般化した。",
+        "summary": "volunteerはラテン語・フランス語からの借用語で、volunt＋-eerの英語分解をそのまま語源としないためB型に残す。",
+        "confidence": "high"
+      }
+    }
+  }
+}

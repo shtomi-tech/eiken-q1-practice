@@ -1,0 +1,630 @@
+{
+  "meta": {
+    "batchId": "batch-040",
+    "note": "未確認B型の次の25語。表面形に安定した語根・接辞の対応がある語はA型へ、単純借用語・複合語・語形上の不確実性がある語はB型に残す。"
+  },
+  "dictionary": {
+    "roots": {
+      "rare": {
+        "gloss": "まれな・薄い",
+        "origin": "ラテン語 rarus / 古フランス語 rer",
+        "note": "密度が低く、数が少ないイメージ。rarely。"
+      },
+      "separate": {
+        "gloss": "分ける・離す",
+        "origin": "ラテン語 separare / 古フランス語 severer",
+        "note": "互いに離して別々にするイメージ。separately。"
+      },
+      "wood": {
+        "gloss": "木・木材",
+        "origin": "古英語 wudu / ゲルマン語系 *widu-",
+        "note": "木や木材を表す基体。wooden。"
+      },
+      "bor": {
+        "gloss": "穴をあける・退屈にする",
+        "origin": "古英語 borian / bore",
+        "note": "boringではboreの語末eが落ちた表面形。穴をあける意味から退屈にさせる意味も生じた。"
+      },
+      "tempt": {
+        "gloss": "試す・試みる",
+        "origin": "ラテン語 temptare / tentare",
+        "note": "試してみる、働きかけるイメージ。attempt。"
+      },
+      "gage": {
+        "gloss": "質・担保",
+        "origin": "古フランス語 gage / ゲルマン語系 *wadiare",
+        "note": "約束の担保を置くイメージ。engage。"
+      }
+    }
+  },
+  "entries": {
+    "rarely": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "めったに〜ない",
+        "root": "rare",
+        "parts": [
+          { "form": "rare", "kind": "root", "gloss": "まれな・薄い" },
+          { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で" }
+        ],
+        "derivation": "rare（まれな・薄い）＋-ly（〜な状態で） → まれな頻度で、めったに〜ない"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/rarely", "https://www.merriam-webster.com/dictionary/rarely"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/rarely", "note": "rarelyをrare＋-lyと明示し、rareを古フランス語 rer / rere、ラテン語 rarus（薄い、まばらな）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/rarely", "note": "rarelyの現代語義として、ほとんどない頻度で、まれに、めったに〜ないことを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・中英語・英語",
+        "etymons": ["rarely", "rare", "rer", "rere", "rarus", "-ly"],
+        "historicalPath": ["ラテン語 rarus（薄い、まばらな）", "古フランス語 rer / rere", "英語 rare", "英語 rare＋-ly → rarely（めったに〜ない）"],
+        "components": [{ "form": "rare", "kind": "base", "gloss": "まれな、まばらな" }, { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で" }],
+        "rootCandidates": ["rare", "rar"],
+        "semanticBridge": "物がまばらで数が少ないことから、出来事が起こる頻度が低いことを表す副詞へ意味が広がった。",
+        "summary": "rarelyはrare＋-lyとして出典が直接支えるA型を設定できる。",
+        "confidence": "high",
+        "notes": "rare語根と既存の-ly接尾辞を登録する。"
+      }
+    },
+    "separately": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "別々に",
+        "root": "separate",
+        "parts": [
+          { "form": "separate", "kind": "root", "gloss": "分ける・離す" },
+          { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で" }
+        ],
+        "derivation": "separate（分ける・離す）＋-ly（〜な状態で） → 分けられた状態で、別々に"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/separate", "https://www.merriam-webster.com/dictionary/separately"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/separate", "note": "separateをラテン語 separare（引き離す）、se-（離れて）＋parare（準備する）に遡らせ、separatelyを関連形として示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/separately", "note": "separatelyの現代語義として、他と分けて、個別に、別々に行うことを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・英語",
+        "etymons": ["separately", "separate", "separare", "se-", "parare", "-ly"],
+        "historicalPath": ["ラテン語 se-（離れて）＋parare（準備する）", "ラテン語 separare（引き離す）", "古フランス語 severer / 英語 separate", "英語 separate＋-ly → separately（別々に）"],
+        "components": [{ "form": "separate", "kind": "base", "gloss": "分ける、離す" }, { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で" }],
+        "rootCandidates": ["separ", "par", "pere"],
+        "semanticBridge": "互いに引き離すことから、他と区別された状態、そのような状態で個別に行うことへ意味が広がった。",
+        "summary": "separatelyはseparate＋-lyとして表面形に沿ったA型を設定できる。",
+        "confidence": "high",
+        "notes": "separate語根と既存の-ly接尾辞を登録する。"
+      }
+    },
+    "danger": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "アングロフランス語 daunger、古フランス語 dangier（権力、害する力）に由来する。支配される状態から危険の意味になった。 → 危険、危険性" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/danger", "https://www.merriam-webster.com/dictionary/danger"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/danger", "note": "dangerをアングロフランス語 daunger、古フランス語 dangier、俗ラテン語 *dominarium、ラテン語 dominus（主人）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/danger", "note": "dangerの現代語義として、傷害・損失・破壊にさらされる危険や危険な状況を確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・英語",
+        "etymons": ["danger", "daunger", "dangier", "*dominarium", "dominus", "domus", "*dem-"],
+        "historicalPath": ["PIE *dem-（家）", "ラテン語 domus / dominus（家、主人）", "俗ラテン語 *dominarium", "古フランス語 dangier → 英語 danger（危険）"],
+        "components": [{ "form": "dangier / dominarium", "kind": "word", "gloss": "権力、害する力" }],
+        "rootCandidates": ["dem", "domin"],
+        "semanticBridge": "主人の支配下に置かれることから、害を及ぼす力や支配、さらに傷害・損失にさらされる危険へ意味が変化した。",
+        "summary": "dangerは音形変化を経たフランス語系の単純語で、深いdomin語根を表面形に分解しないためB型に残す。",
+        "confidence": "high",
+        "notes": "dang＋-erなどの綴り合わせは採用しない。"
+      }
+    },
+    "palace": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古フランス語 palais、ラテン語 palatium（パラティーノの丘、宮殿）に由来する。 → 宮殿" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/palace", "https://www.merriam-webster.com/dictionary/palace"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/palace", "note": "palaceを古フランス語 palais、ラテン語 palatium（パラティーノの丘、宮殿）に遡らせ、アウグストゥスの邸宅から一般名詞化した経路を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/palace", "note": "palaceの現代語義として、君主などの公的住居、壮大で立派な建物を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["palace", "palais", "palatium", "Mons Palatinus", "palus"],
+        "historicalPath": ["ローマのMons Palatinus（パラティーノの丘）", "ラテン語 palatium（丘の宮殿）", "古フランス語 palais", "英語 palace（宮殿）"],
+        "components": [{ "form": "palatium / palais", "kind": "word", "gloss": "宮殿、宮廷" }],
+        "rootCandidates": ["palat", "pal"],
+        "semanticBridge": "特定の丘にあった皇帝の邸宅から、王侯の公的住居一般、さらに豪華で壮大な建物へ意味が一般化した。",
+        "summary": "palaceは地名を起点とするラテン語・フランス語系の単純語で、palatiumを英語表面形へ分解しないためB型に残す。",
+        "confidence": "high",
+        "notes": "pal＋-aceなどの綴り合わせは採用しない。"
+      }
+    },
+    "market": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古フランス語 marché、ラテン語 mercatus（売買、市場）に由来する。 → 市場、マーケット" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/market", "https://www.merriam-webster.com/dictionary/market"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/market", "note": "marketを古ノルマンフランス語 market、ラテン語 mercatus（売買、市場）、mercari（売買する）、merx（商品）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/market", "note": "marketの現代語義として、商品を売買する場所、需要と供給による取引の仕組み、売買することを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語・語源一部不確定",
+        "etymons": ["market", "market", "marché", "mercatus", "mercari", "merx", "*merk-"],
+        "historicalPath": ["ラテン語 merx（商品）・mercari（売買する）", "ラテン語 mercatus（売買、市場）", "古フランス語 marché", "英語 market（市場、売買する）"],
+        "components": [{ "form": "mercatus / marché", "kind": "word", "gloss": "売買、市場" }],
+        "rootCandidates": ["merk", "merc"],
+        "semanticBridge": "商品を売買する集まりから、定期的な市場、売買が行われる場所、需要と供給が働く経済領域へ意味が広がった。",
+        "summary": "marketはラテン語・フランス語を経た単純な借用語で、merc語根を現代英語のmarketに分解しないためB型に残す。",
+        "confidence": "high",
+        "notes": "mar＋-ketなどの綴り合わせは採用しない。"
+      }
+    },
+    "gallery": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古フランス語 galerie、 中世ラテン語 galeria に由来する。回廊から美術品を展示する場所の意味へ広がった。 → 美術館、展示室" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/gallery", "https://www.merriam-webster.com/dictionary/gallery"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/gallery", "note": "galleryを古フランス語 galerie、中世ラテン語 galeriaに遡らせ、回廊・通路から美術品を置く建物、劇場の上階席へ意味が広がったと説明している。語源は不確定である。" },
+          { "url": "https://www.merriam-webster.com/dictionary/gallery", "note": "galleryの現代語義として、美術品の展示室・美術館、建物内の長い通路、劇場の上階席を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語・語源不確定",
+        "etymons": ["gallery", "galerie", "galeria", "galilea"],
+        "historicalPath": ["中世ラテン語 galeria（回廊）", "古フランス語 galerie", "中英語 gallery（屋根付き通路）", "英語 gallery（展示室、美術館、上階席）"],
+        "components": [{ "form": "galeria / galerie", "kind": "word", "gloss": "回廊、長い通路" }],
+        "rootCandidates": ["galer", "galil"],
+        "semanticBridge": "壁沿いの屋根付き通路から、作品を並べる長い空間、展示施設、劇場の上階の客席へ意味が広がった。",
+        "summary": "galleryは語源が不確定なラテン語・フランス語系の単純語で、galeriaを表面形に分解しないためB型に残す。",
+        "confidence": "high",
+        "notes": "gall＋-eryなどの綴り合わせは採用しない。"
+      }
+    },
+    "wooden": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "木製の",
+        "root": "wood",
+        "parts": [
+          { "form": "wood", "kind": "root", "gloss": "木・木材" },
+          { "form": "-en", "kind": "suffix", "gloss": "〜製の" }
+        ],
+        "derivation": "wood（木・木材）＋-en（〜製の） → 木でできた、木製の"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/wooden", "https://www.merriam-webster.com/dictionary/wooden"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/wooden", "note": "woodenをwood＋-enと明示し、-enを名詞に付いて「〜製の、〜の性質の」形容詞を作る接尾辞として説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/wooden", "note": "woodenの現代語義として、木でできたこと、比喩的に硬くぎこちないことを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・古英語・ゲルマン語系・英語",
+        "etymons": ["wooden", "wood", "wudu", "*widu-", "*widhu-", "-en"],
+        "historicalPath": ["PIE *widhu-（木、樹木）", "ゲルマン語系 *widu-", "古英語 wudu・英語 wood", "英語 wood＋-en → wooden（木製の）"],
+        "components": [{ "form": "wood", "kind": "base", "gloss": "木、木材" }, { "form": "-en", "kind": "suffix", "gloss": "〜製の" }],
+        "rootCandidates": ["widhu", "widu"],
+        "semanticBridge": "樹木や木材を表す名詞から、その材料でできていること、さらに硬く柔軟性に欠ける様子を表す形容詞へ作られた。",
+        "summary": "woodenはwood＋-enとして出典が直接支えるA型を設定できる。",
+        "confidence": "high",
+        "notes": "既存の-en接尾辞を材料形容詞の意味で再利用し、wood語根を登録する。"
+      }
+    },
+    "boring": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "退屈な",
+        "root": "bor",
+        "parts": [
+          { "form": "bor", "kind": "root", "gloss": "穴をあける・退屈にする" },
+          { "form": "-ing", "kind": "suffix", "gloss": "〜させる性質" }
+        ],
+        "derivation": "bor（穴をあける・退屈にする）＋-ing（〜させる性質） → 人を退屈にさせる、退屈な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/boring", "https://www.merriam-webster.com/dictionary/boring"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/boring", "note": "boringをboreの現在分詞形とし、穴をあけるboreと、退屈にさせるboreの両方から形容詞用法が生じたと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/boring", "note": "boringの現代語義として、興味を失わせる、退屈であること、および穴をあける意味に関係する用法を確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・中英語・英語",
+        "etymons": ["boring", "bore", "borian", "bor", "*bhorh-", "-ing"],
+        "historicalPath": ["PIE *bhorh-（穴）", "古英語 borian（穴をあける）", "英語 bore（穴をあける、退屈にさせる）", "英語 bor＋-ing → boring（退屈な）"],
+        "components": [{ "form": "bore / bor", "kind": "base", "gloss": "穴をあける、退屈にさせる" }, { "form": "-ing", "kind": "suffix", "gloss": "〜させる性質" }],
+        "rootCandidates": ["bor", "bhorh"],
+        "semanticBridge": "穴をあけ続けるように人を疲れさせる比喩から、興味や注意を削って退屈にさせる性質を表す形容詞へ広がった。",
+        "summary": "boringはboreの語末eが落ちた表面形bor＋-ingとしてA型を設定できる。",
+        "confidence": "high",
+        "notes": "語源研究ではboreを保ちつつ、表示要件に合わせてborの表面variantを語根キーにする。"
+      }
+    },
+    "cute": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "acute（鋭い、賢い）の短縮形として生じ、後に「かわいい」の意味になった。 → かわいい" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/cute", "https://www.merriam-webster.com/dictionary/cute"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/cute", "note": "cuteを1731年頃のacuteの短縮形（賢い、鋭い）とし、19世紀にかわいいの意味が生じたと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/cute", "note": "cuteの現代語義として、魅力的でかわいいこと、気の利いた・抜け目のないことを確認した。" }
+        ],
+        "originLanguage": "ラテン語・英語",
+        "etymons": ["cute", "acute", "acutus", "acuere", "*ak-"],
+        "historicalPath": ["PIE *ak-（鋭い、尖る）", "ラテン語 acuere / acutus（鋭くする、鋭い）", "英語 acute", "英語 acuteの短縮形 cute → かわいい"],
+        "components": [{ "form": "acute", "kind": "word", "gloss": "鋭い、賢い" }],
+        "rootCandidates": ["ak", "acu"],
+        "semanticBridge": "鋭く賢いことを表すacuteの短縮形から、気が利いて魅力的という評価を経て、見た目や性質がかわいい意味へ広がった。",
+        "summary": "cuteはacuteの短縮形で、語根・接辞による派生語ではないためB型に残す。",
+        "confidence": "high",
+        "notes": "cut＋-eやcu＋-teなどの綴り合わせは採用しない。"
+      }
+    },
+    "award": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "アングロフランス語 awarder、古フランス語 eswarder（注意深く判断する）に由来する。 → 賞、賞品" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/award", "https://www.merriam-webster.com/dictionary/award"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/award", "note": "awardをアングロフランス語 awarder、古北フランス語 eswarder / esgarder（判断する）に遡らせ、es-（外へ）＋warder（見守る）との関係を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/award", "note": "awardの現代語義として、功績に対して賞を与えること、与えられた賞や賞品を確認した。" }
+        ],
+        "originLanguage": "フランス語・ゲルマン語系・中英語・英語",
+        "etymons": ["award", "awarden", "awarder", "eswarder", "esgarder", "warder", "*wer-"],
+        "historicalPath": ["PIE *wer-（注意して見る）", "ゲルマン語系 ward（守る、見張る）", "古フランス語 eswarder（見て判断する）", "アングロフランス語 awarder → 英語 award（判断、賞を与える）"],
+        "components": [{ "form": "eswarder / awarder", "kind": "word", "gloss": "注意して判断する" }],
+        "rootCandidates": ["wer", "ward"],
+        "semanticBridge": "注意深く見て判断することから、判断を公式に決定すること、さらに功績への公式な賞や賞品へ意味が移った。",
+        "summary": "awardはフランス語由来の語形と綴りの変化が重なり、a＋wardという英語表面分解を確定できないためB型に残す。",
+        "confidence": "high",
+        "notes": "awardのaを既存のa接頭辞、wardを語根として表示しない。"
+      }
+    },
+    "aisle": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古フランス語 ele（翼、側面）、ラテン語 ala（翼）に由来し、後にisleやalleyとの混同を受けた。 → 通路" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/aisle", "https://www.merriam-webster.com/dictionary/aisle"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/aisle", "note": "aisleを古フランス語 ele、ラテン語 ala（翼、側面）に遡らせ、教会の側廊から座席列の間の通路へ意味が広がったと説明している。綴りのsは非語源的である。" },
+          { "url": "https://www.merriam-webster.com/dictionary/aisle", "note": "aisleの現代語義として、教会・劇場・列車・店舗などの座席や棚の間の通路を確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・英語",
+        "etymons": ["aisle", "ele", "aile", "ala", "axilla", "*aks-", "isle", "alley"],
+        "historicalPath": ["PIE *aks-（軸）", "ラテン語 ala（翼、側面）", "古フランス語 ele", "中英語 ile / aisle（教会側廊）", "英語 aisle（列の間の通路）"],
+        "components": [{ "form": "ele / ala", "kind": "word", "gloss": "翼、側面" }],
+        "rootCandidates": ["aks", "al"],
+        "semanticBridge": "教会の側面に沿う翼状の空間から、座席や棚の列に挟まれた通路へ意味が一般化した。",
+        "summary": "aisleはフランス語・ラテン語由来で、isleやalleyとの綴り混同もある単純語のためB型に残す。",
+        "confidence": "high",
+        "notes": "ai＋-sleなどの綴り合わせは採用しない。"
+      }
+    },
+    "attempt": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "試み",
+        "root": "tempt",
+        "parts": [
+          { "form": "at", "kind": "prefix", "gloss": "〜へ" },
+          { "form": "tempt", "kind": "root", "gloss": "試す・試みる" }
+        ],
+        "derivation": "at-（〜へ）＋tempt（試す・試みる） → 目標へ試みを向ける、試み"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/attempt", "https://www.merriam-webster.com/dictionary/attempt"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/attempt", "note": "attemptを古フランス語 atempter、ラテン語 attemptare（試す）に遡らせ、同化したad（〜へ）＋temptare（試す）の構成を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/attempt", "note": "attemptの現代語義として、難しいことを成し遂げようと試みること、試みそのものを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["attempt", "atempter", "attemptare", "ad", "temptare", "tentare", "-at"],
+        "historicalPath": ["ラテン語 ad（〜へ）＋temptare（試す）", "ラテン語 attemptare", "古フランス語 atempter", "英語 at＋tempt → attempt（試みる、試み）"],
+        "components": [{ "form": "at- / ad-", "kind": "prefix", "gloss": "〜へ" }, { "form": "tempt", "kind": "base", "gloss": "試す、試みる" }],
+        "rootCandidates": ["tempt", "tang"],
+        "semanticBridge": "目標へ働きかけて試すことから、難しいことを成し遂げようとする行為、その試み自体へ意味が定着した。",
+        "summary": "attemptはat-（ad-の同化形）＋temptとして表面形に沿ったA型を設定できる。",
+        "confidence": "high",
+        "notes": "既存のat接頭辞を再利用し、tempt語根を登録する。"
+      }
+    },
+    "policy": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古フランス語 policie、ギリシャ語 politeia（国家、行政、市民権）に由来する。 → 方針、政策" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/policy", "https://www.merriam-webster.com/dictionary/policy"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/policy", "note": "policyを古フランス語 policie、後期ラテン語 politia、ギリシャ語 politeia / politēs / polisに遡らせ、政府運営から行動方針へ意味が広がった経路を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/policy", "note": "policyの現代語義として、政府や組織が採用する方針・政策、行動上の原則、保険契約を確認した。" }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・フランス語・英語",
+        "etymons": ["policy", "policie", "politia", "politeia", "politēs", "polis"],
+        "historicalPath": ["ギリシャ語 polis（都市、国家）・politeia（国家運営）", "後期ラテン語 politia", "古フランス語 policie", "英語 policy（政治運営、方針、保険証券）"],
+        "components": [{ "form": "politeia / policie", "kind": "word", "gloss": "国家運営、行政" }],
+        "rootCandidates": ["pol", "tpolh"],
+        "semanticBridge": "国家や市民の運営を表す語から、政府・組織が採る行動方針、さらに保険契約書へ意味が分化した。",
+        "summary": "policyはギリシャ語・ラテン語・フランス語を経た単純語で、polisを表面形のpol＋-icyに分解しないためB型に残す。",
+        "confidence": "high",
+        "notes": "pol＋-icyなどの綴り合わせは採用しない。"
+      }
+    },
+    "blanket": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古フランス語 blanchet（白い毛織物）、blanc（白い）に由来する。 → 毛布" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/blanket", "https://www.merriam-webster.com/dictionary/blanket"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/blanket", "note": "blanketを古フランス語 blanchet（軽い毛織物）に遡らせ、blanc（白い）の指小形として毛布を表すようになったと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/blanket", "note": "blanketの現代語義として、体を覆う寝具、全面的に適用されるもの、覆うことを確認した。" }
+        ],
+        "originLanguage": "ゲルマン語系・フランス語・英語",
+        "etymons": ["blanket", "blanchet", "blanc", "*blank", "*blangkaz", "*bhel-"],
+        "historicalPath": ["ゲルマン語系 *blangkaz（白く輝く）", "古フランス語 blanc（白い）→ blanchet（白い毛織物）", "中英語 blanket", "英語 blanket（毛布、覆うもの）"],
+        "components": [{ "form": "blanchet", "kind": "word", "gloss": "白い毛織物" }],
+        "rootCandidates": ["blank", "bhel"],
+        "semanticBridge": "白い毛織物から、体を覆って暖める毛布、さらに物事を一括して覆う・適用する意味へ広がった。",
+        "summary": "blanketはフランス語の指小形を借用した単純語で、blank＋-etという英語表面分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "blanketの-etを英語の接尾辞として扱わない。"
+      }
+    },
+    "insect": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "昆虫",
+        "root": "sect",
+        "parts": [
+          { "form": "in", "kind": "prefix", "gloss": "中へ" },
+          { "form": "sect", "kind": "root", "gloss": "切る・分ける" }
+        ],
+        "derivation": "in-（中へ）＋sect（切る・分ける） → 体が切れ目で分かれたもの、昆虫"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/insect", "https://www.merriam-webster.com/dictionary/insect"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/insect", "note": "insectをラテン語 insectum（切れ目のあるもの）、in-（中へ）＋secare（切る）の過去分詞に遡らせ、ギリシャ語entomonの翻訳語であると説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/insect", "note": "insectの現代語義として、体が節に分かれた節足動物の一群を確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・英語",
+        "etymons": ["insect", "insectum", "in-", "secare", "sectus", "*en", "*sek-"],
+        "historicalPath": ["PIE *en（中へ）＋*sek-（切る）", "ラテン語 in-＋secare → insectum（切れ目のあるもの）", "英語 insect（体節のある動物）"],
+        "components": [{ "form": "in-", "kind": "prefix", "gloss": "中へ" }, { "form": "sect", "kind": "base", "gloss": "切る、分ける" }],
+        "rootCandidates": ["sect", "sek"],
+        "semanticBridge": "切れ目を入れて分けられたような体をもつ動物という命名から、節のある小型の動物群を表す分類名になった。",
+        "summary": "insectはin-＋sectとしてラテン語の構成と英語表面形が対応するA型を設定できる。",
+        "confidence": "high",
+        "notes": "既存のin接頭辞とsect語根を再利用する。"
+      }
+    },
+    "battery": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "フランス語 batterie、古フランス語 baterie、batre（打つ）に由来する。砲兵隊から電池の意味へ広がった。 → 電池、バッテリー" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/battery", "https://www.merriam-webster.com/dictionary/battery"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/battery", "note": "batteryをフランス語 batterie、古フランス語 baterie（打撃、攻撃）、batre（打つ）、ラテン語 battuereに遡らせ、砲兵隊から電気セルへ意味が移った経路を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/battery", "note": "batteryの現代語義として、電気を蓄える装置、砲兵隊、連続した打撃、野球の投手と捕手を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["battery", "batterie", "baterie", "batre", "battue", "battuere"],
+        "historicalPath": ["ラテン語 battuere（打つ）", "古フランス語 baterie（打撃、攻撃）", "フランス語 batterie（砲兵隊）", "英語 battery（砲兵隊、電池、ひとまとまり）"],
+        "components": [{ "form": "batterie", "kind": "word", "gloss": "打撃、砲兵隊" }],
+        "rootCandidates": ["batt", "bau"],
+        "semanticBridge": "連続した打撃から砲撃のひとまとまり、さらに電気の放電を行う複数セルの装置、野球の投手・捕手の組へ意味が広がった。",
+        "summary": "batteryはフランス語の名詞を借用した単純語で、batt＋-eryという英語表面分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "batteryの語末-eryを英語の接尾辞として扱わない。"
+      }
+    },
+    "website": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "web（網、ウェブ）＋site（場所）からなる英語の複合語。 → ウェブサイト" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/website", "https://www.merriam-webster.com/dictionary/website"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/website", "note": "websiteをweb＋siteからなる語とし、1994年からの用例を示している。siteはラテン語 situs、webはインターネットのWorld Wide Webに由来する。" },
+          { "url": "https://www.merriam-webster.com/dictionary/website", "note": "websiteの現代語義として、インターネット上の一連のページと関連資源の集合を確認した。" }
+        ],
+        "originLanguage": "ラテン語・古英語・英語",
+        "etymons": ["website", "web", "site", "situs", "sinere", "World Wide Web"],
+        "historicalPath": ["古英語 web（織物、網）", "ラテン語 situs（場所）→英語 site", "20世紀末のweb＋site", "英語 website（ウェブサイト）"],
+        "components": [{ "form": "web", "kind": "word", "gloss": "網、ウェブ" }, { "form": "site", "kind": "word", "gloss": "場所" }],
+        "rootCandidates": ["web", "tkei", "si"],
+        "semanticBridge": "網状の仕組みを表すwebと、場所を表すsiteが結びつき、インターネット上の情報の場所を表す複合語になった。",
+        "summary": "websiteはweb＋siteの複合語であり、複合表現を熟語側に合わせる方針のためB型に残す。",
+        "confidence": "high",
+        "notes": "複合要素をA型の語根・接辞チップとして表示しない。"
+      }
+    },
+    "frame": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 framian（役に立つ、前進させる）に由来し、準備・構造・枠の意味へ発達した。 → 枠、額縁、骨組み" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/frame", "https://www.merriam-webster.com/dictionary/frame"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/frame", "note": "frameを古英語 framian（役に立つ、助ける）、fram（前へ）に遡らせ、中英語で木材を建築用に準備する意味、構造や枠の意味へ発達したと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/frame", "note": "frameの現代語義として、構造を支える枠、絵の額縁、映画の一画面、構成することを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・古英語・ゲルマン語系・英語",
+        "etymons": ["frame", "framian", "fram", "fremman", "*per-"],
+        "historicalPath": ["PIE *per-（前へ）", "ゲルマン語系 fram（前へ、役立つ）", "古英語 framian（役立つ、前進させる）", "英語 frame（構造、枠、構成する）"],
+        "components": [{ "form": "framian / frame", "kind": "word", "gloss": "役立つ、準備する" }],
+        "rootCandidates": ["per", "fram"],
+        "semanticBridge": "前へ進め役立てることから、建築用木材を準備すること、構造を組むこと、物を囲む枠や作品の構成へ意味が広がった。",
+        "summary": "frameは古英語・ゲルマン語系の単純語で、深いper語根を表面形に分解しないためB型に残す。",
+        "confidence": "high",
+        "notes": "fra＋-meなどの綴り合わせは採用しない。"
+      }
+    },
+    "paste": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古フランス語 paste、後期ラテン語 pasta（生地、ペースト）に由来する。 → 貼る、貼り付ける" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/paste", "https://www.merriam-webster.com/dictionary/paste"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/paste", "note": "pasteを古フランス語 paste、後期ラテン語 pasta（生地、ペースト）、ギリシャ語 pastaに遡らせ、食物の生地から接着剤や貼り付ける動作へ発達したと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/paste", "note": "pasteの現代語義として、接着用の柔らかい混合物、貼り付けること、コンピューターで内容を挿入することを確認した。" }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・フランス語・英語",
+        "etymons": ["paste", "pasta", "pastos", "passein", "*kwet-"],
+        "historicalPath": ["PIE *kwet-（振る）", "ギリシャ語 pasta / ラテン語 pasta（生地）", "古フランス語 paste", "英語 paste（生地、接着剤、貼り付ける）"],
+        "components": [{ "form": "pasta / paste", "kind": "word", "gloss": "生地、柔らかい混合物" }],
+        "rootCandidates": ["kwet", "past"],
+        "semanticBridge": "パンや菓子の生地から、物を接着する柔らかな混合物、その混合物で貼る動作、データを挿入する操作へ意味が広がった。",
+        "summary": "pasteはギリシャ語・ラテン語・フランス語を経た単純語で、past＋-eなどの表面分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "pasteの語末-eを接辞として扱わない。"
+      }
+    },
+    "blame": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古フランス語 blasmer、後期ラテン語 blasphemare（冒涜する、悪く語る）に由来する。 → 責める、〜のせいにする" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/blame", "https://www.merriam-webster.com/dictionary/blame"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/blame", "note": "blameを古フランス語 blasmer、俗ラテン語 *blastemare、後期ラテン語 blasphemare（冒涜する、悪く語る）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/blame", "note": "blameの現代語義として、過失や責任を負わせること、非難、責任を確認した。" }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・フランス語・英語",
+        "etymons": ["blame", "blasmer", "*blastemare", "blasphemare", "blaspheme", "*bha-", "*mel-"],
+        "historicalPath": ["ギリシャ語 blasphemein（悪く語る）", "後期ラテン語 blasphemare", "古フランス語 blasmer", "中英語 blame（非難する、責任を負わせる）"],
+        "components": [{ "form": "blasmer / blasphemare", "kind": "word", "gloss": "非難する、悪く語る" }],
+        "rootCandidates": ["bha", "mel"],
+        "semanticBridge": "神聖なものを悪く語ることから一般の人や行為を非難することへ、さらに望ましくない結果の責任を負わせる意味へ広がった。",
+        "summary": "blameはフランス語を経た音形変化の大きい単純語で、blasphemの語根を表面形に分解しないためB型に残す。",
+        "confidence": "high",
+        "notes": "blam＋-eなどの綴り合わせは採用しない。"
+      }
+    },
+    "trust": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古ノルド語 traust、ゲルマン祖語 *treuwaz（信頼できる）に由来し、PIE *deru-（固い）と関係する。 → 信頼する" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/trust", "https://www.merriam-webster.com/dictionary/trust"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/trust", "note": "trustを古ノルド語 traust、ゲルマン祖語 *traustam / *treuwaz、古英語 treowian・treowe、PIE *deru-（固い、堅固な）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/trust", "note": "trustの現代語義として、人や物の誠実さ・能力を信頼すること、委ねること、信託を確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・古英語・古ノルド語・ゲルマン語系・英語",
+        "etymons": ["trust", "traust", "*traustam", "*treuwaz", "treowian", "treowe", "*deru-"],
+        "historicalPath": ["PIE *deru-（固い、堅固な）", "ゲルマン祖語 *treuwaz（誠実な、信頼できる）", "古ノルド語 traust・古英語 treowian", "英語 trust（信頼、信頼する）"],
+        "components": [{ "form": "traust / treowian", "kind": "word", "gloss": "信頼、頼る" }],
+        "rootCandidates": ["deru", "treuw", "traust"],
+        "semanticBridge": "固く確かなものというイメージから、人や原則が信頼できること、財産や判断を安心して委ねることへ意味が広がった。",
+        "summary": "trustは古ノルド語・ゲルマン語系の単純語で、深いderu語根が表面形に残らないためB型に残す。",
+        "confidence": "high",
+        "notes": "tru＋-stなどの綴り合わせは採用しない。"
+      }
+    },
+    "scratch": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "中英語 scracchen（引っかく）に由来し、scrattenとcrachenの融合と考えられるが、起源は不確実である。 → ひっかく、傷をつける" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/scratch", "https://www.merriam-webster.com/dictionary/scratch"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/scratch", "note": "scratchを中英語 scracchenに遡らせ、scrattenとcrachenの融合と考えられるが、両方とも起源不明であると説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/scratch", "note": "scratchの現代語義として、表面を引っかいて傷や線をつけること、引っかき傷、計画を取り消すことを確認した。" }
+        ],
+        "originLanguage": "中英語・英語・語源不確定",
+        "etymons": ["scratch", "scracchen", "scratten", "crachen", "scr-"],
+        "historicalPath": ["中英語 scratten / crachen（引っかく）", "中英語 scracchen", "英語 scratch（引っかく、傷）", "競技の線・取り消しなどの比喩用法"],
+        "components": [{ "form": "scracchen", "kind": "word", "gloss": "引っかく、傷をつける" }],
+        "rootCandidates": ["scr", "crak"],
+        "semanticBridge": "粗い物で表面を引っかく動作から、傷や線、出発点、計画の取り消し、わずかな進展を表す比喩へ用法が広がった。",
+        "summary": "scratchは起源不確定の融合語と考えられる単純語で、表面形に安定した語根・接辞分解を置かないためB型に残す。",
+        "confidence": "high",
+        "notes": "scr＋-atchなどの綴り合わせは採用しない。"
+      }
+    },
+    "engage": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "従事する",
+        "root": "gage",
+        "parts": [
+          { "form": "en", "kind": "prefix", "gloss": "中に・〜にする" },
+          { "form": "gage", "kind": "root", "gloss": "質・担保" }
+        ],
+        "derivation": "en-（中に・〜にする）＋gage（質・担保） → 約束で人を縛る、従事させる"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/engage", "https://www.merriam-webster.com/dictionary/engage"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/engage", "note": "engageを古フランス語 engagier、句 en gage（質・担保の中に）に遡らせ、en（中に）＋gage（担保、約束）から拘束・従事の意味が発達したと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/engage", "note": "engageの現代語義として、活動に従事する、注意を引きつける、雇う、約束する、戦闘に入ることを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ゲルマン語系・フランス語・英語",
+        "etymons": ["engage", "engagier", "en", "gage", "*wadiare", "*wadh-"],
+        "historicalPath": ["PIE *wadh-（誓約する）", "ゲルマン語系 *wadiare → 古フランス語 gage（担保）", "古フランス語 en gage / engagier", "英語 en＋gage → engage（従事する、関わる）"],
+        "components": [{ "form": "en-", "kind": "prefix", "gloss": "中に、〜にする" }, { "form": "gage", "kind": "base", "gloss": "質、担保" }],
+        "rootCandidates": ["gage", "wadh"],
+        "semanticBridge": "担保を置いて約束に縛られることから、人を仕事や活動に従事させること、注意を引きつけること、婚約・交戦へ意味が広がった。",
+        "summary": "engageはen＋gageというフランス語の句・構成に沿ったA型を設定できる。",
+        "confidence": "high",
+        "notes": "既存のen接頭辞を再利用し、gage語根を登録する。"
+      }
+    },
+    "claim": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古フランス語 clamer、ラテン語 clamare（叫ぶ、宣言する）に由来する。 → 主張する、要求する" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/claim", "https://www.merriam-webster.com/dictionary/claim"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/claim", "note": "claimを古フランス語 clamer、ラテン語 clamare（叫ぶ、宣言する）、PIE *kele-（叫ぶ）に遡らせ、権利を求める意味から主張へ発達したと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/claim", "note": "claimの現代語義として、権利として要求すること、真実だと主張すること、要求されたものを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・英語",
+        "etymons": ["claim", "claime", "clamer", "clamare", "*kele-"],
+        "historicalPath": ["PIE *kele-（叫ぶ）", "ラテン語 clamare（叫ぶ、宣言する）", "古フランス語 clamer", "英語 claim（権利を要求する、主張する）"],
+        "components": [{ "form": "clamer / clamare", "kind": "word", "gloss": "叫ぶ、宣言する" }],
+        "rootCandidates": ["kele", "clam"],
+        "semanticBridge": "声を上げて宣言することから、権利を公に要求すること、さらに意見や事実を真実だと主張することへ意味が広がった。",
+        "summary": "claimはフランス語・ラテン語を経た単純語で、clamareの語根が現代英語のclaimに安定して残らないためB型に残す。",
+        "confidence": "high",
+        "notes": "cla＋-imなどの綴り合わせは採用しない。"
+      }
+    },
+    "score": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古ノルド語 skor（切れ目、刻み、20）に由来し、刻みで数えることから得点の意味へ広がった。 → 得点する、点を取る" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/score", "https://www.merriam-webster.com/dictionary/score"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/score", "note": "scoreを古英語 scoru、古ノルド語 skor（刻み、切れ目、20）、ゲルマン祖語 *skur-、PIE *sker-（切る）に遡らせ、刻みで数えたことから記録・得点へ意味が発達したと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/score", "note": "scoreの現代語義として、試合の得点、記録、得点すること、音楽の総譜を確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・古英語・古ノルド語・ゲルマン語系・英語",
+        "etymons": ["score", "scoru", "skor", "*skur-", "*sker-"],
+        "historicalPath": ["PIE *sker-（切る）", "ゲルマン語系 *skur-・古ノルド語 skor（刻み、20）", "古英語 scoru（20）", "英語 score（記録、得点する）"],
+        "components": [{ "form": "skor / scoru", "kind": "word", "gloss": "刻み、20、記録" }],
+        "rootCandidates": ["sker", "skur"],
+        "semanticBridge": "数を記録するため木に刻みをつけることから、記録・勘定、試合の得点、さらに楽譜や成功して得るものへ意味が広がった。",
+        "summary": "scoreは古ノルド語・ゲルマン語系の単純語で、深いsker語根を現代英語のscoreに分解しないためB型に残す。",
+        "confidence": "high",
+        "notes": "scor＋-eなどの綴り合わせは採用しない。"
+      }
+    }
+  }
+}

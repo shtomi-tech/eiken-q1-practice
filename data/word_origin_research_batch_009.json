@@ -1,0 +1,1936 @@
+{
+  "meta": {
+    "batchId": "batch-009",
+    "note": "未確認B型の先頭25語。明示的な接頭辞・語根・接尾辞の対応がある語はA型へ、単一基体・不確かな語源・複雑な借用はB型に残す。"
+  },
+  "dictionary": {
+    "roots": {
+      "pertin": {
+        "gloss": "関係する",
+        "origin": "ラテン語 pertinere",
+        "note": "主題に関係し、適切な範囲に属するイメージ。impertinent・pertinent。"
+      },
+      "leth": {
+        "gloss": "死",
+        "origin": "ラテン語 lethum / letum",
+        "note": "死や致命性を表す語幹。語源上の最終起源には不確かな点がある。lethal。"
+      },
+      "torr": {
+        "gloss": "乾かす・焦がす",
+        "origin": "ラテン語 torrere",
+        "note": "熱で乾かし、焼けるほど熱くするイメージ。torrid。"
+      },
+      "resolut": {
+        "gloss": "解く・決める",
+        "origin": "ラテン語 resolvere / resolutus",
+        "note": "結び目をほどき、問題を分解して決定するイメージ。irresolute。"
+      },
+      "rudiment": {
+        "gloss": "基礎・初歩",
+        "origin": "ラテン語 rudimentum / rudis",
+        "note": "まだ十分に発達していない初期段階や基本原理のイメージ。rudimentary。"
+      },
+      "stipul": {
+        "gloss": "約束・契約",
+        "origin": "ラテン語 stipulari / stipulatio",
+        "note": "条件を取り決め、約束するイメージ。stipulation。語源の細部には不確かさがある。"
+      },
+      "not": {
+        "gloss": "印をつける",
+        "origin": "ラテン語 notare / nota",
+        "note": "印や記号を付けて、注意すべきことを記録するイメージ。annotation。"
+      },
+      "hast": {
+        "gloss": "急ぐ",
+        "origin": "古フランス語 haste / haster",
+        "note": "急いで進め、急がせるイメージ。hasten。"
+      },
+      "capital": {
+        "gloss": "主要な・資本",
+        "origin": "ラテン語 capitalis / caput",
+        "note": "頭・頂点にあるものから、主要なものや資本を表すイメージ。capitalize。"
+      },
+      "fluct": {
+        "gloss": "波打つ・変動する",
+        "origin": "ラテン語 fluctus / fluctuare",
+        "note": "波のように上下し、一定しないイメージ。fluctuate。"
+      },
+      "penit": {
+        "gloss": "後悔する",
+        "origin": "ラテン語 paenitere / paenitens",
+        "note": "行いを悔い、改めようとするイメージ。penitent。"
+      },
+      "studi": {
+        "gloss": "熱意・学ぶ",
+        "origin": "ラテン語 studium / studere",
+        "note": "熱心に取り組み、学習へ力を注ぐイメージ。studious。"
+      },
+      "cerebr": {
+        "gloss": "脳",
+        "origin": "ラテン語 cerebrum",
+        "note": "脳や知性に関わるイメージ。cerebral。"
+      },
+      "spill": {
+        "gloss": "こぼす・流す",
+        "origin": "古英語 spillan / ゲルマン系 *spilthjan",
+        "note": "中身を外へ流し、こぼすイメージ。spillage。"
+      },
+      "audac": {
+        "gloss": "大胆な",
+        "origin": "ラテン語 audax / audere",
+        "note": "恐れず試みる、大胆に行動するイメージ。audacity。"
+      },
+      "hash": {
+        "gloss": "細かく刻む",
+        "origin": "フランス語 hacher",
+        "note": "材料を細かく刻んで作り直すイメージ。rehash。"
+      },
+      "trunc": {
+        "gloss": "切り取る",
+        "origin": "ラテン語 truncus / truncare",
+        "note": "幹や先端を切り取り、短くするイメージ。truncate。"
+      }
+    },
+    "affixes": {
+      "ir": {
+        "gloss": "〜でない",
+        "kind": "prefix",
+        "note": "in-がrの前で同化した否定接頭辞。irresolute・irrepressible。"
+      },
+      "-ary": {
+        "gloss": "〜に関する",
+        "kind": "suffix",
+        "note": "基体に関係する形容詞を作る接尾辞。rudimentary。"
+      }
+    }
+  },
+  "entries": {
+    "impertinent": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "生意気な",
+        "root": "pertin",
+        "parts": [
+          {
+            "form": "im",
+            "kind": "prefix",
+            "gloss": "〜でない"
+          },
+          {
+            "form": "pertin",
+            "kind": "root",
+            "gloss": "関係する"
+          },
+          {
+            "form": "-ent",
+            "kind": "suffix",
+            "gloss": "〜する性質の"
+          }
+        ],
+        "derivation": "im-（〜でない）＋pertin（関係する）＋-ent（〜する性質の） → 話題に関係なく、出しゃばって生意気な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/impertinent",
+          "https://www.merriam-webster.com/dictionary/impertinent"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/impertinent",
+            "note": "impertinentを古フランス語または後期ラテン語impertinens（属さない）に遡らせ、同化したin-（〜でない）＋pertinens（関係する）と説明している。無関係という意味から、生意気で無礼な意味が発達した。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/impertinent",
+            "note": "impertinentの生意気な、無礼な、適切な範囲を越えた、関係のないという語義と、in-＋pertinēreの語源欄を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（古フランス語経由）",
+        "etymons": [
+          "impertinent",
+          "impertinens",
+          "in-",
+          "pertinens",
+          "pertinere"
+        ],
+        "historicalPath": [
+          "ラテン語 pertinere（関係する、属する）",
+          "ラテン語 impertinens（関係しない）",
+          "古フランス語 impertinent",
+          "英語 impertinent（無関係な、出しゃばった）"
+        ],
+        "components": [
+          {
+            "form": "in-",
+            "kind": "prefix",
+            "gloss": "〜でない",
+            "display": false
+          },
+          {
+            "form": "pertinere",
+            "kind": "base",
+            "gloss": "関係する・属する",
+            "display": false
+          },
+          {
+            "form": "-ent",
+            "kind": "suffix",
+            "gloss": "〜する性質の",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "pertin"
+        ],
+        "semanticBridge": "話題に関係し属するpertinensを否定し、場にそぐわず出しゃばることから、無礼で生意気な性質を表すようになった。",
+        "summary": "impertinentは、im-（〜でない）＋pertin（関係する）から、無関係な、さらに生意気なを表す。",
+        "confidence": "high",
+        "notes": "pertinensの語幹pertinと、英語表面のim・-entを対応させる。"
+      }
+    },
+    "lethal": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "致命的な",
+        "root": "leth",
+        "parts": [
+          {
+            "form": "leth",
+            "kind": "root",
+            "gloss": "死"
+          },
+          {
+            "form": "-al",
+            "kind": "suffix",
+            "gloss": "〜に関する"
+          }
+        ],
+        "derivation": "leth（死）＋-al（〜に関する） → 死に関わる、致命的な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/lethal",
+          "https://www.merriam-webster.com/dictionary/lethal"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/lethal",
+            "note": "lethalを後期ラテン語lethalis、ラテン語letalis（致命的な）、lethum/letum（死）に遡らせている。letumの深い語源には不確かさがあり、死を「手放すこと」とする説もある。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/lethal",
+            "note": "lethalの死を引き起こす、致命的な、死に至るという語義を確認した。"
+          }
+        ],
+        "originLanguage": "後期ラテン語",
+        "etymons": [
+          "lethal",
+          "lethalis",
+          "letalis",
+          "lethum",
+          "letum",
+          "-al"
+        ],
+        "historicalPath": [
+          "ラテン語 letum / lethum（死）",
+          "ラテン語 letalis（死に関わる、致命的な）",
+          "後期ラテン語 lethalis",
+          "英語 lethal（致命的な）"
+        ],
+        "components": [
+          {
+            "form": "lethum",
+            "kind": "base",
+            "gloss": "死",
+            "display": false
+          },
+          {
+            "form": "-alis",
+            "kind": "suffix",
+            "gloss": "〜に関する",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "leth"
+        ],
+        "semanticBridge": "死を表す基体に関する形容詞が、死をもたらす性質、つまり致命的な性質を表すようになった。",
+        "summary": "lethalは、死を表すlethに- alが付いて、致命的なを表す。",
+        "confidence": "medium",
+        "notes": "lethumのさらに深い語源は不確かだが、lethalis・-alの英語表面への対応は明示できる。"
+      }
+    },
+    "sleek": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "slike",
+            "gloss": "なめらかな"
+          },
+          {
+            "term": "sleek",
+            "gloss": "表面がつややかで滑らかな"
+          },
+          {
+            "gloss": "なめらかで洗練された"
+          }
+        ],
+        "derivation": "表面が滑らかでつややかな状態から、人やデザインの洗練された印象へ → なめらかで洗練された",
+        "source": "https://www.etymonline.com/word/sleek",
+        "sources": [
+          "https://www.etymonline.com/word/sleek",
+          "https://www.merriam-webster.com/dictionary/sleek"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/sleek",
+          "https://www.merriam-webster.com/dictionary/sleek"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/sleek",
+            "note": "sleekを16世紀のslike（なめらかな）の変種とし、slickとの関係を説明している。動詞sleekもslickの変種である。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/sleek",
+            "note": "sleekの表面が滑らかで光沢のある、外見や服装が洗練されたという語義を確認した。"
+          }
+        ],
+        "originLanguage": "英語（中英語の変種）",
+        "etymons": [
+          "sleek",
+          "slike",
+          "slick",
+          "sleken"
+        ],
+        "historicalPath": [
+          "中英語 slike（なめらかな）",
+          "英語 slickとの語形関係",
+          "英語 sleek（滑らかでつややかな）",
+          "英語 sleek（洗練された）"
+        ],
+        "components": [
+          {
+            "form": "sleek",
+            "kind": "base",
+            "gloss": "滑らかでつややかな",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "動物の毛や表面が滑らかで健康的に見えることから、人やデザインの無駄がなく洗練された印象へ意味が広がった。",
+        "summary": "sleekは、なめらかさを表す中英語の変種から、洗練されたを表す。",
+        "confidence": "medium",
+        "notes": "単一基体で、slike・slickとの関係を英語の接辞分解として表示しない。"
+      }
+    },
+    "torrid": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "猛暑の",
+        "root": "torr",
+        "parts": [
+          {
+            "form": "torr",
+            "kind": "root",
+            "gloss": "乾かす・焦がす"
+          },
+          {
+            "form": "-id",
+            "kind": "suffix",
+            "gloss": "〜の性質の"
+          }
+        ],
+        "derivation": "torr（熱で乾かす・焦がす）＋-id（〜の性質の） → 焼けるように熱い、猛暑の"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/torrid",
+          "https://www.merriam-webster.com/dictionary/torrid"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/torrid",
+            "note": "torridを中世ラテン語torrida zona、ラテン語torridus（熱で乾いた、焼けるような）、torrere（乾かす、焦がす）に遡らせ、PIE *ters-（乾かす）を示している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/torrid",
+            "note": "torridの非常に暑く乾燥した、灼熱の、感情が熱烈なという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": [
+          "torrid",
+          "torridus",
+          "torrere",
+          "*ters-",
+          "-id"
+        ],
+        "historicalPath": [
+          "PIE *ters-（乾かす）",
+          "ラテン語 torrere（乾かす、焦がす）",
+          "ラテン語 torridus（焼けるように熱い）",
+          "英語 torrid（猛暑の、灼熱の）"
+        ],
+        "components": [
+          {
+            "form": "torrere",
+            "kind": "base",
+            "gloss": "乾かす・焦がす",
+            "display": false
+          },
+          {
+            "form": "-idus",
+            "kind": "suffix",
+            "gloss": "〜の性質の",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "torr"
+        ],
+        "semanticBridge": "熱で水分を奪い乾かす動作が、焼けるように熱く乾いた状態や、熱烈な感情を表す形容詞になった。",
+        "summary": "torridは、torr（乾かす・焦がす）＋-idから、猛暑の・灼熱のを表す。",
+        "confidence": "high",
+        "notes": "ラテン語torridusの語幹torrと形容詞語尾を、英語表面のtorr＋-idへ正規化する。"
+      }
+    },
+    "irresolute": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "優柔不断な",
+        "root": "resolut",
+        "parts": [
+          {
+            "form": "ir",
+            "kind": "prefix",
+            "gloss": "〜でない"
+          },
+          {
+            "form": "resolut",
+            "kind": "root",
+            "gloss": "解く・決める"
+          }
+        ],
+        "derivation": "ir-（〜でない）＋resolut（解いて決める） → 決断を固められない、優柔不断な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/irresolute",
+          "https://www.merriam-webster.com/dictionary/irresolute"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/irresolute",
+            "note": "irresoluteをラテン語irresolutus（ほどかれていない、固まっていない）、同化したin-（〜でない）＋resolutusに遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/irresolute",
+            "note": "irresoluteの目的が固まらない、疑いやためらいを抱く、優柔不断なという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": [
+          "irresolute",
+          "irresolutus",
+          "in-",
+          "resolutus",
+          "resolvere"
+        ],
+        "historicalPath": [
+          "ラテン語 solvere（ほどく、解く）",
+          "ラテン語 resolvere（ほどいて決める、解決する）",
+          "ラテン語 resolutus（決断した、ほどかれた）",
+          "ラテン語 irresolutus（決断できない）",
+          "英語 irresolute（優柔不断な）"
+        ],
+        "components": [
+          {
+            "form": "in-",
+            "kind": "prefix",
+            "gloss": "〜でない",
+            "display": false
+          },
+          {
+            "form": "resolutus",
+            "kind": "base",
+            "gloss": "決めた・ほどいた",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "resolut"
+        ],
+        "semanticBridge": "問題をほどいて決定するresoluteな状態を否定し、目的や判断を固められない性質を表すようになった。",
+        "summary": "irresoluteは、ir-（〜でない）＋resolut（解いて決める）から、優柔不断なを表す。",
+        "confidence": "high",
+        "notes": "in-のr前での同化形irと、resolutusの英語表示resolutを対応させる。"
+      }
+    },
+    "rudimentary": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "初歩的な",
+        "root": "rudiment",
+        "parts": [
+          {
+            "form": "rudiment",
+            "kind": "root",
+            "gloss": "基礎・初歩"
+          },
+          {
+            "form": "-ary",
+            "kind": "suffix",
+            "gloss": "〜に関する"
+          }
+        ],
+        "derivation": "rudiment（基礎・初歩）＋-ary（〜に関する） → 基本段階に関する、初歩的な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/rudimentary",
+          "https://www.merriam-webster.com/dictionary/rudimentary"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/rudimentary",
+            "note": "rudimentaryをrudiment＋-aryと説明し、rudimentをフランス語またはラテン語rudimentum（初歩、第一原理）、rudis（未熟な、訓練されていない）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/rudimentary",
+            "note": "rudimentaryの基本原理に関する、初歩的な、未発達のという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（フランス語経由）",
+        "etymons": [
+          "rudimentary",
+          "rudiment",
+          "rudimentum",
+          "rudis",
+          "-ary"
+        ],
+        "historicalPath": [
+          "ラテン語 rudis（未熟な、訓練されていない）",
+          "ラテン語 rudimentum（初歩、第一原理）",
+          "フランス語 rudiment",
+          "英語 rudiment＋-ary",
+          "英語 rudimentary（初歩的な、未発達の）"
+        ],
+        "components": [
+          {
+            "form": "rudiment",
+            "kind": "base",
+            "gloss": "基礎・初歩",
+            "display": false
+          },
+          {
+            "form": "-ary",
+            "kind": "suffix",
+            "gloss": "〜に関する",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "rudiment"
+        ],
+        "semanticBridge": "学問や技術の最初の原理を指すrudimentから、まだ基礎段階にある、発達していない状態を表す形容詞になった。",
+        "summary": "rudimentaryは、rudiment（基礎・初歩）＋-aryから、初歩的な・未発達なを表す。",
+        "confidence": "high",
+        "notes": "出典がrudiment＋-aryを明示するため、英語表面の綴りにそのまま対応させる。"
+      }
+    },
+    "amenable": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "amener",
+            "gloss": "連れて行く・導く"
+          },
+          {
+            "term": "amenable",
+            "gloss": "答えたり従ったりできる"
+          },
+          {
+            "gloss": "受け入れやすい、従順な"
+          }
+        ],
+        "derivation": "法廷などへ連れて行かれ、答えや影響を受け入れる状態から → 受け入れやすい、従順な",
+        "source": "https://www.etymonline.com/word/amenable",
+        "sources": [
+          "https://www.etymonline.com/word/amenable",
+          "https://www.merriam-webster.com/dictionary/amenable"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/amenable",
+          "https://www.merriam-webster.com/dictionary/amenable"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/amenable",
+            "note": "amenableをアングロ・フランス語amenable、古フランス語amener（連れて行く、導く）、ラテン語minare（叫び声で家畜を追う）に遡らせている。答弁や服従の対象となる意味から従順な意味が生じた。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/amenable",
+            "note": "amenableの影響・説得・提案を受け入れやすい、従順な、責任を問えるという語義を確認した。"
+          }
+        ],
+        "originLanguage": "アングロ・フランス語（ラテン語経由）",
+        "etymons": [
+          "amenable",
+          "amener",
+          "mener",
+          "minare",
+          "minari",
+          "*men-"
+        ],
+        "historicalPath": [
+          "PIE *men-（突き出す、投影する）",
+          "ラテン語 minare（追い立てる、脅す）",
+          "古フランス語 amener（連れて行く、導く）",
+          "アングロ・フランス語 amenable（答弁すべき）",
+          "英語 amenable（受け入れやすい、従順な）"
+        ],
+        "components": [
+          {
+            "form": "amener",
+            "kind": "base",
+            "gloss": "連れて行く・導く",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "法廷へ連れて行かれて答えを求められる状態が、一般に影響や提案を受け入れ、従う性質へ広がった。",
+        "summary": "amenableは、連れて行き答えさせるというフランス語系の語から、受け入れやすく従順なを表す。",
+        "confidence": "high",
+        "notes": "amenableの表面をa＋men＋-ableと見なすと語源経路を誤るため、A型分解はしない。"
+      }
+    },
+    "stipulation": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "条件",
+        "root": "stipul",
+        "parts": [
+          {
+            "form": "stipul",
+            "kind": "root",
+            "gloss": "約束・契約"
+          },
+          {
+            "form": "-ation",
+            "kind": "suffix",
+            "gloss": "行為・内容"
+          }
+        ],
+        "derivation": "stipul（約束・契約）＋-ation（行為・内容） → 契約で取り決めた条件、規定"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/stipulation",
+          "https://www.merriam-webster.com/dictionary/stipulation"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/stipulation",
+            "note": "stipulationをラテン語stipulatio（約束、契約）、stipulari（約束を取り付ける、契約する）に遡らせている。stipula（わら）由来説は伝統的だが、多くの権威が退けており語源の細部は不確かである。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/stipulation",
+            "note": "stipulationの契約や合意で定めた条件、条件を規定する行為という語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（語源の細部は不確か）",
+        "etymons": [
+          "stipulation",
+          "stipulatio",
+          "stipulari",
+          "stipula",
+          "stip-"
+        ],
+        "historicalPath": [
+          "ラテン語 stipulari（約束を取り付ける、契約する）",
+          "ラテン語 stipulatio（約束、契約）",
+          "古フランス語・英語 stipulation",
+          "英語 stipulation（条件、規定）"
+        ],
+        "components": [
+          {
+            "form": "stipulari",
+            "kind": "base",
+            "gloss": "契約する",
+            "display": false
+          },
+          {
+            "form": "-ation",
+            "kind": "suffix",
+            "gloss": "行為・内容",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "stipul"
+        ],
+        "semanticBridge": "約束や契約を取り付ける行為が、契約の中で合意された個々の条件や規定を表す名詞になった。",
+        "summary": "stipulationは、stipul（約束・契約）＋-ationから、条件や規定を表す。",
+        "confidence": "medium",
+        "notes": "stipulatioの語幹と-ationは明瞭だが、stipul-のさらに深い由来は不確かである。"
+      }
+    },
+    "annotation": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "注釈",
+        "root": "not",
+        "parts": [
+          {
+            "form": "an",
+            "kind": "prefix",
+            "gloss": "〜に向けて"
+          },
+          {
+            "form": "not",
+            "kind": "root",
+            "gloss": "印をつける"
+          },
+          {
+            "form": "-ation",
+            "kind": "suffix",
+            "gloss": "行為・結果"
+          }
+        ],
+        "derivation": "an-（〜に向けて）＋not（印をつける）＋-ation（行為・結果） → 本文に印を付けて補足する注釈"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/annotation",
+          "https://www.merriam-webster.com/dictionary/annotation"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/annotation",
+            "note": "annotationをラテン語annotatio、annotare（観察する、注記する）、ad（〜へ）＋notare（印をつける）に遡らせ、nota（印、記号）を基体として示している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/annotation",
+            "note": "annotationの本文に付ける説明・注釈・注記という語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": [
+          "annotation",
+          "annotatio",
+          "annotare",
+          "ad",
+          "notare",
+          "nota"
+        ],
+        "historicalPath": [
+          "ラテン語 nota（印、記号）",
+          "ラテン語 notare（印をつける、注記する）",
+          "ラテン語 annotare（対象に印をつける）",
+          "ラテン語 annotatio",
+          "英語 annotation（注釈）"
+        ],
+        "components": [
+          {
+            "form": "ad-",
+            "kind": "prefix",
+            "gloss": "〜へ・〜に向けて",
+            "display": false
+          },
+          {
+            "form": "notare",
+            "kind": "base",
+            "gloss": "印をつける・注記する",
+            "display": false
+          },
+          {
+            "form": "-ation",
+            "kind": "suffix",
+            "gloss": "行為・結果",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "not"
+        ],
+        "semanticBridge": "本文へ印をつけて注意を向ける行為が、本文を補足・説明する書き込みや注釈を表すようになった。",
+        "summary": "annotationは、an-（〜へ）＋not（印をつける）＋-ationから、注釈を表す。",
+        "confidence": "high",
+        "notes": "ad-がnの前でan-となった英語表面をan＋not＋-ationとして表示する。"
+      }
+    },
+    "splash": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "plash",
+            "gloss": "水をはね散らす"
+          },
+          {
+            "term": "splash",
+            "gloss": "液体を飛び散らせる"
+          },
+          {
+            "gloss": "はねかけた"
+          }
+        ],
+        "derivation": "水や液体をはね散らす動きから → はねかけた",
+        "source": "https://www.etymonline.com/word/splash",
+        "sources": [
+          "https://www.etymonline.com/word/splash",
+          "https://www.merriam-webster.com/dictionary/splash"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/splash",
+          "https://www.merriam-webster.com/dictionary/splash"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/splash",
+            "note": "splashを18世紀のplashの変形とし、強意のs-が加わった可能性を説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/splash",
+            "note": "splashの液体を飛び散らせる、はねかける、液体がはねるという語義を確認した。"
+          }
+        ],
+        "originLanguage": "英語（plashの変形）",
+        "etymons": [
+          "splash",
+          "plash"
+        ],
+        "historicalPath": [
+          "英語 plash（液体をはね散らす）",
+          "強意のs-が加わった splash",
+          "英語 splash（はねかける、飛び散る）"
+        ],
+        "components": [
+          {
+            "form": "plash",
+            "kind": "base",
+            "gloss": "液体をはね散らす",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "液体がはね散る動きや音を表す語の変形が、液体を飛び散らせる動作とその結果を表すようになった。",
+        "summary": "splashedは、plashの強意的な変形とされるsplashから、はねかけたを表す。",
+        "confidence": "medium",
+        "notes": "s-の位置づけが語源的な接頭辞として確定していないためA型分解はしない。"
+      }
+    },
+    "hasten": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "急いだ",
+        "root": "hast",
+        "parts": [
+          {
+            "form": "hast",
+            "kind": "root",
+            "gloss": "急ぐ"
+          },
+          {
+            "form": "-en",
+            "kind": "suffix",
+            "gloss": "〜にする（動詞化）"
+          }
+        ],
+        "derivation": "hast（急ぐ）＋-en（〜にする） → 急がせる、急いだ"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/hasten",
+          "https://www.merriam-webster.com/dictionary/hasten"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/hasten",
+            "note": "hastenをhasteから派生し、動詞形成要素- enが付いた形と明示している。hasteは古フランス語haster（急ぐ、急がせる）に遡る。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/hasten",
+            "note": "hastenの急がせる、急いで行う、促進するという語義を確認した。"
+          }
+        ],
+        "originLanguage": "古フランス語（英語の- en派生）",
+        "etymons": [
+          "hasten",
+          "haste",
+          "haster",
+          "-en"
+        ],
+        "historicalPath": [
+          "古フランス語 haster（急ぐ、急がせる）",
+          "英語 haste（急ぐこと、急がせる）",
+          "英語 haste＋-en",
+          "英語 hasten（急ぐ、促進する）"
+        ],
+        "components": [
+          {
+            "form": "haste",
+            "kind": "base",
+            "gloss": "急ぐ・急ぎ",
+            "display": false
+          },
+          {
+            "form": "-en",
+            "kind": "suffix",
+            "gloss": "〜にする",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "hast"
+        ],
+        "semanticBridge": "急ぎを表すhasteに動詞化の- enが付き、何かを速める・急いで行う動作を表すようになった。",
+        "summary": "hastenは、hast（急ぐ）＋-en（動詞化）から、急ぐ・促進するを表す。",
+        "confidence": "high",
+        "notes": "出典がhaste＋-enを明示するため、英語表面のhast＋-enとして表示する。"
+      }
+    },
+    "capitalize": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "活用した",
+        "root": "capital",
+        "parts": [
+          {
+            "form": "capital",
+            "kind": "root",
+            "gloss": "主要な・資本"
+          },
+          {
+            "form": "-ize",
+            "kind": "suffix",
+            "gloss": "〜にする"
+          }
+        ],
+        "derivation": "capital（主要なもの・資本）＋-ize（〜にする） → 資本として扱う、機会を活用した"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/capitalize",
+          "https://www.merriam-webster.com/dictionary/capitalize"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/capitalize",
+            "note": "capitalizeをcapital＋-izeから作られた1764年の動詞と説明し、資本へ変える意味は19世紀後半に生じたとしている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/capitalize",
+            "note": "capitalizeの大文字で書く、資本化する、機会を利用する・活用するという語義を確認した。"
+          }
+        ],
+        "originLanguage": "英語（ラテン語系基体からの派生）",
+        "etymons": [
+          "capitalize",
+          "capital",
+          "capitalis",
+          "caput",
+          "-ize"
+        ],
+        "historicalPath": [
+          "ラテン語 caput（頭、頂点）",
+          "ラテン語 capitalis（頭に関する、主要な）",
+          "英語 capital（主要なもの、資本）",
+          "英語 capital＋-ize",
+          "英語 capitalize（資本化する、活用する）"
+        ],
+        "components": [
+          {
+            "form": "capital",
+            "kind": "base",
+            "gloss": "主要なもの・資本",
+            "display": false
+          },
+          {
+            "form": "-ize",
+            "kind": "suffix",
+            "gloss": "〜にする",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "capital"
+        ],
+        "semanticBridge": "頭や頂点にある主要なものを表すcapitalに-izeが付き、資本として扱うことから、機会や状況を有効に活用する意味へ広がった。",
+        "summary": "capitalizeは、capital（主要なもの・資本）＋-izeから、資本化する・活用するを表す。",
+        "confidence": "high",
+        "notes": "capitalは既存のcap（取る）とは別に、caput由来の基体として独立登録する。"
+      }
+    },
+    "relent": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "relenter",
+            "gloss": "溶ける・和らぐ"
+          },
+          {
+            "term": "relent",
+            "gloss": "厳しさを弱める"
+          },
+          {
+            "gloss": "折れた、態度を和らげた"
+          }
+        ],
+        "derivation": "硬いものが溶けるイメージから、態度や厳しさを弱める意味へ → 折れた、態度を和らげた",
+        "source": "https://www.etymonline.com/word/relent",
+        "sources": [
+          "https://www.etymonline.com/word/relent",
+          "https://www.merriam-webster.com/dictionary/relent"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/relent",
+          "https://www.merriam-webster.com/dictionary/relent"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/relent",
+            "note": "relentをアングロ・フランス語relenter（物質が溶ける、柔らかくなる）、ラテン語lentus（ゆっくりした、粘りのある）に関係づけているが、直接の経路は明確でないとしている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/relent",
+            "note": "relentの厳しさや反対を弱める、態度を和らげる、折れるという語義を確認した。"
+          }
+        ],
+        "originLanguage": "アングロ・フランス語（ラテン語系、直接経路は不確か）",
+        "etymons": [
+          "relent",
+          "relenter",
+          "re-",
+          "lentus",
+          "lithe"
+        ],
+        "historicalPath": [
+          "ラテン語 lentus（柔らかな、ゆっくりした）",
+          "アングロ・フランス語 relenter（溶ける、和らぐ）",
+          "英語 relent（厳しさを弱める）"
+        ],
+        "components": [
+          {
+            "form": "relent",
+            "kind": "base",
+            "gloss": "和らぐ・折れる",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "relent"
+        ],
+        "semanticBridge": "硬い物質が溶けて柔らかくなるイメージが、厳しい態度や抵抗を弱めて折れる意味へ比喩化した。",
+        "summary": "relentは、溶けて柔らかくなるイメージから、態度を和らげる・折れるを表す。",
+        "confidence": "medium",
+        "notes": "unrelentingの基体としての候補は記録するが、relent単独は語源経路が不確かでA型分解しない。"
+      }
+    },
+    "fluctuate": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "変動した",
+        "root": "fluct",
+        "parts": [
+          {
+            "form": "fluct",
+            "kind": "root",
+            "gloss": "波打つ・変動する"
+          },
+          {
+            "form": "-ate",
+            "kind": "suffix",
+            "gloss": "〜する（動詞化）"
+          }
+        ],
+        "derivation": "fluct（波打つ・変動する）＋-ate（動詞化） → 波のように上下し、変動した"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/fluctuate",
+          "https://www.merriam-webster.com/dictionary/fluctuate"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/fluctuate",
+            "note": "fluctuateをラテン語fluctuatus、fluctuare（波打つ、波のように動く）、fluctus（波、流れ）、fluere（流れる）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/fluctuate",
+            "note": "fluctuateの不規則に上下する、変動する、一定しないという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": [
+          "fluctuate",
+          "fluctuatus",
+          "fluctuare",
+          "fluctus",
+          "fluere",
+          "-ate"
+        ],
+        "historicalPath": [
+          "ラテン語 fluere（流れる）",
+          "ラテン語 fluctus（波、うねり）",
+          "ラテン語 fluctuare（波打つ、変動する）",
+          "英語 fluctuate（変動する）"
+        ],
+        "components": [
+          {
+            "form": "fluctus",
+            "kind": "base",
+            "gloss": "波・うねり",
+            "display": false
+          },
+          {
+            "form": "-ate",
+            "kind": "suffix",
+            "gloss": "〜する",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "fluct"
+        ],
+        "semanticBridge": "波やうねりのような上下運動が、価格・量・感情などが一定せず変動する意味になった。",
+        "summary": "fluctuateは、波を表すfluctに-ateが加わり、変動するを表す。",
+        "confidence": "high",
+        "notes": "flu（流れる）と関係するが、英語表面のfluctusに対応するfluctを独立rootとして登録する。"
+      }
+    },
+    "bolt": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "bolt",
+            "gloss": "重い矢"
+          },
+          {
+            "term": "bolt",
+            "gloss": "矢のように急に飛び出す"
+          },
+          {
+            "gloss": "急に走り去った"
+          }
+        ],
+        "derivation": "重い矢が素早く飛ぶ動きから、動物や人が急に逃げ出す意味へ → 急に走り去った",
+        "source": "https://www.etymonline.com/word/bolt",
+        "sources": [
+          "https://www.etymonline.com/word/bolt",
+          "https://www.merriam-webster.com/dictionary/bolt"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/bolt",
+          "https://www.merriam-webster.com/dictionary/bolt"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/bolt",
+            "note": "boltを古英語bolt（重い頭の短い矢）、ゲルマン系*bultasに遡らせ、矢の素早い飛行から突然走り去る動詞の意味が生じたと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/bolt",
+            "note": "boltの矢、固定用の金具、突然走り去る、急に飛び出すという複数の語義を確認した。"
+          }
+        ],
+        "originLanguage": "古英語（ゲルマン系）",
+        "etymons": [
+          "bolt",
+          "*bultas",
+          "bolti",
+          "*bheld-"
+        ],
+        "historicalPath": [
+          "ゲルマン系 *bultas（重い矢）",
+          "古英語 bolt（矢、石弓）",
+          "英語 bolt（矢のように飛び出す）",
+          "英語 bolt（急に走り去る）"
+        ],
+        "components": [
+          {
+            "form": "bolt",
+            "kind": "base",
+            "gloss": "矢・急に飛び出す",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "矢が空中を一気に飛ぶ動きが、動物や人が危険などから突然走り去る動作の比喩になった。",
+        "summary": "boltedは、重い矢を表す古英語から、急に走り去ったを表す。",
+        "confidence": "high",
+        "notes": "同じ語形に金具・固定の意味もあるため、単一の英語rootへ分解しない。"
+      }
+    },
+    "chuckle": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "chukken",
+            "gloss": "コッコッと音を立てる"
+          },
+          {
+            "term": "chuckle",
+            "gloss": "抑えた声で笑う"
+          },
+          {
+            "gloss": "くすくす笑った"
+          }
+        ],
+        "derivation": "鳥の鳴き声のような音から、声を抑えて内心楽しそうに笑う意味へ → くすくす笑った",
+        "source": "https://www.etymonline.com/word/chuckle",
+        "sources": [
+          "https://www.etymonline.com/word/chuckle",
+          "https://www.merriam-webster.com/dictionary/chuckle"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/chuckle",
+          "https://www.merriam-webster.com/dictionary/chuckle"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/chuckle",
+            "note": "chuckleを16世紀の中英語chukken（コッコッと音を立てる）の反復形とし、擬音的な起源から、1803年までに抑えた笑いへ意味が移ったと説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/chuckle",
+            "note": "chuckleの控えめな笑い、くすくす笑う、満足を声を抑えて表すという語義を確認した。"
+          }
+        ],
+        "originLanguage": "英語（擬音的）",
+        "etymons": [
+          "chuckle",
+          "chukken"
+        ],
+        "historicalPath": [
+          "中英語 chukken（コッコッと音を立てる）",
+          "反復形 chuckle（大声で笑う）",
+          "英語 chuckle（声を抑えて笑う）"
+        ],
+        "components": [
+          {
+            "form": "chuckle",
+            "kind": "base",
+            "gloss": "笑い声を立てる",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "鳥の鳴き声に似た音を表す擬音語が、人の内心の満足や面白さを抑えた笑いで表す動作になった。",
+        "summary": "chuckledは、擬音的なchuckleから、くすくす笑ったを表す。",
+        "confidence": "high",
+        "notes": "反復的な語形だが、英語の確定した接辞分解ではないためB型を維持する。"
+      }
+    },
+    "penitent": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "悔い改めた",
+        "root": "penit",
+        "parts": [
+          {
+            "form": "penit",
+            "kind": "root",
+            "gloss": "後悔する"
+          },
+          {
+            "form": "-ent",
+            "kind": "suffix",
+            "gloss": "〜している人・状態"
+          }
+        ],
+        "derivation": "penit（後悔する）＋-ent（〜している状態） → 自分の過ちを悔い改めた"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/penitent",
+          "https://www.merriam-webster.com/dictionary/penitent"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/penitent",
+            "note": "penitentを古フランス語pénitent、ラテン語paenitens（悔い改めた）に遡らせ、paenitere（後悔させる、後悔する）との関係を示している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/penitent",
+            "note": "penitentの犯した罪や過ちを悔い、改めようとしているという形容詞・名詞の語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（古フランス語経由）",
+        "etymons": [
+          "penitent",
+          "pénitent",
+          "paenitens",
+          "paenitere",
+          "paene",
+          "-ent"
+        ],
+        "historicalPath": [
+          "ラテン語 paenitere（後悔する）",
+          "ラテン語 paenitens（後悔している）",
+          "古フランス語 pénitent",
+          "英語 penitent（悔い改めた、後悔している）"
+        ],
+        "components": [
+          {
+            "form": "paenitere",
+            "kind": "base",
+            "gloss": "後悔する",
+            "display": false
+          },
+          {
+            "form": "-ent",
+            "kind": "suffix",
+            "gloss": "〜している",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "penit"
+        ],
+        "semanticBridge": "過ちが十分でない・満たされないと感じて後悔することが、罪を認めて改めようとする人や状態を表すようになった。",
+        "summary": "penitentは、penit（後悔する）＋-entから、悔い改めた・後悔しているを表す。",
+        "confidence": "medium",
+        "notes": "paenitereの起源には不確かさがあるが、paenitensと- entの対応を英語表示へ正規化する。"
+      }
+    },
+    "studious": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "勉強熱心な",
+        "root": "studi",
+        "parts": [
+          {
+            "form": "studi",
+            "kind": "root",
+            "gloss": "熱意・学ぶ"
+          },
+          {
+            "form": "-ous",
+            "kind": "suffix",
+            "gloss": "〜の性質の"
+          }
+        ],
+        "derivation": "studi（熱意・学ぶ）＋-ous（〜の性質の） → 学習に熱心な、勉強熱心な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/studious",
+          "https://www.merriam-webster.com/dictionary/studious"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/studious",
+            "note": "studiousをラテン語studiosus（学習に熱心な、勤勉な）、studium（熱意、熱心な努力）、studere（熱心に取り組む）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/studious",
+            "note": "studiousの勉強熱心な、学習に熱心な、注意深く取り組むという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（古フランス語経由）",
+        "etymons": [
+          "studious",
+          "studiosus",
+          "studium",
+          "studere",
+          "-ous"
+        ],
+        "historicalPath": [
+          "PIE *(s)teu-（押す、突き出す）",
+          "ラテン語 studere（熱心に取り組む）",
+          "ラテン語 studium（熱意、学習）",
+          "ラテン語 studiosus（学習に熱心な）",
+          "英語 studious（勉強熱心な）"
+        ],
+        "components": [
+          {
+            "form": "studium",
+            "kind": "base",
+            "gloss": "熱意・学習",
+            "display": false
+          },
+          {
+            "form": "-ous",
+            "kind": "suffix",
+            "gloss": "〜の性質の",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "studi"
+        ],
+        "semanticBridge": "何かへ力を押し向ける熱意が、とくに学習へ熱心に取り組む性質を表す形容詞になった。",
+        "summary": "studiousは、studi（熱意・学ぶ）＋-ousから、勉強熱心なを表す。",
+        "confidence": "high",
+        "notes": "ラテン語studiumの語幹を英語表面のstudiとして表示する。"
+      }
+    },
+    "irrepressible": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "抑えきれない",
+        "root": "prim",
+        "parts": [
+          {
+            "form": "ir",
+            "kind": "prefix",
+            "gloss": "〜でない"
+          },
+          {
+            "form": "press",
+            "kind": "root",
+            "gloss": "押さえる"
+          },
+          {
+            "form": "-ible",
+            "kind": "suffix",
+            "gloss": "〜できる"
+          }
+        ],
+        "derivation": "ir-（〜でない）＋press（押さえる）＋-ible（〜できる） → 抑えることができない、抑えきれない"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/irrepressible",
+          "https://www.merriam-webster.com/dictionary/irrepressible"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/irrepressible",
+            "note": "irrepressibleを同化したin-（〜でない）＋repress（抑える）＋-ible（〜できる）と明示している。repressはラテン語reprimere（押し返す、抑える）に遡る。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/irrepressible",
+            "note": "irrepressibleの制御・抑制できない、抑えきれない、非常に前向きで活気のあるという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語系",
+        "etymons": [
+          "irrepressible",
+          "in-",
+          "repress",
+          "reprimere",
+          "re-",
+          "premere",
+          "-ible"
+        ],
+        "historicalPath": [
+          "ラテン語 premere（押す、押さえる）",
+          "ラテン語 reprimere（押し返す、抑える）",
+          "英語 repress（抑える）",
+          "英語 ir-＋repress＋-ible",
+          "英語 irrepressible（抑えきれない）"
+        ],
+        "components": [
+          {
+            "form": "in-",
+            "kind": "prefix",
+            "gloss": "〜でない",
+            "display": false
+          },
+          {
+            "form": "repress",
+            "kind": "base",
+            "gloss": "抑える",
+            "display": false
+          },
+          {
+            "form": "-ible",
+            "kind": "suffix",
+            "gloss": "〜できる",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "prim"
+        ],
+        "semanticBridge": "押さえつけるrepressを否定し、感情・行動・活力などを外へ抑え込めない性質を表すようになった。",
+        "summary": "irrepressibleは、ir-（〜でない）＋press（押さえる）＋-ibleから、抑えきれないを表す。",
+        "confidence": "high",
+        "notes": "既存のprim rootのvariant pressを使い、irはin-のr前同化形として新規登録する。"
+      }
+    },
+    "cerebral": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "知的な",
+        "root": "cerebr",
+        "parts": [
+          {
+            "form": "cerebr",
+            "kind": "root",
+            "gloss": "脳"
+          },
+          {
+            "form": "-al",
+            "kind": "suffix",
+            "gloss": "〜に関する"
+          }
+        ],
+        "derivation": "cerebr（脳）＋-al（〜に関する） → 脳に関する、そこから知的な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/cerebral",
+          "https://www.merriam-webster.com/dictionary/cerebral"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/cerebral",
+            "note": "cerebralをフランス語cérébral、ラテン語cerebrum（脳、理解力）、PIE *keres-、*ker-（角、頭）に遡らせている。知的な意味は20世紀に生じた。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/cerebral",
+            "note": "cerebralの脳に関する、知的な、理性や知性に関するという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（フランス語経由）",
+        "etymons": [
+          "cerebral",
+          "cerebrum",
+          "*keres-",
+          "*ker-",
+          "-al"
+        ],
+        "historicalPath": [
+          "PIE *ker-（頭、角）",
+          "ラテン語 cerebrum（脳、理解力）",
+          "フランス語 cérébral",
+          "英語 cerebral（脳の、知的な）"
+        ],
+        "components": [
+          {
+            "form": "cerebrum",
+            "kind": "base",
+            "gloss": "脳・理解力",
+            "display": false
+          },
+          {
+            "form": "-al",
+            "kind": "suffix",
+            "gloss": "〜に関する",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "cerebr"
+        ],
+        "semanticBridge": "脳に関わる形容詞が、身体の脳だけでなく、感情よりも知性・理性を重視する性質も表すようになった。",
+        "summary": "cerebralは、cerebr（脳）＋-alから、脳の・知的なを表す。",
+        "confidence": "high",
+        "notes": "cerebrumの英語側の語幹cerebrと- alを対応させる。"
+      }
+    },
+    "fraudulent": {
+      "display": {
+        "type": "B",
+        "chain": [
+          {
+            "term": "fraus",
+            "gloss": "欺き・詐欺"
+          },
+          {
+            "term": "fraudulentus",
+            "gloss": "欺く性質の"
+          },
+          {
+            "gloss": "不正な、詐欺的な"
+          }
+        ],
+        "derivation": "人を欺く行為や性質から → 不正な、詐欺的な",
+        "source": "https://www.etymonline.com/word/fraudulent",
+        "sources": [
+          "https://www.etymonline.com/word/fraudulent",
+          "https://www.merriam-webster.com/dictionary/fraudulent"
+        ]
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/fraudulent",
+          "https://www.merriam-webster.com/dictionary/fraudulent"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/fraudulent",
+            "note": "fraudulentを古フランス語fraudulent、ラテン語fraudulentus（欺く、正直でない）、fraus（欺き、詐欺）に遡らせている。frausのさらに深い語源は不確かである。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/fraudulent",
+            "note": "fraudulentの詐欺を含む、不正な、他人を欺く目的のという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語（古フランス語経由）",
+        "etymons": [
+          "fraudulent",
+          "fraudulentus",
+          "fraus",
+          "fraudios"
+        ],
+        "historicalPath": [
+          "ラテン語 fraus（欺き、詐欺）",
+          "ラテン語 fraudulentus（欺く性質の）",
+          "古フランス語 fraudulent / fraudios",
+          "英語 fraudulent（不正な、詐欺的な）"
+        ],
+        "components": [
+          {
+            "form": "fraudulentus",
+            "kind": "base",
+            "gloss": "欺く性質の",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "semanticBridge": "欺きや詐欺そのものを表す名詞から、行為・文書・人物が人を欺く性質をもつことを表す形容詞になった。",
+        "summary": "fraudulentは、欺きや詐欺を表すラテン語から、不正な・詐欺的なを表す。",
+        "confidence": "high",
+        "notes": "fraud＋-ulentという英語表面の分解に見えるが、英語で安定した-ulent接辞として扱わずB型にする。"
+      }
+    },
+    "spillage": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "流出",
+        "root": "spill",
+        "parts": [
+          {
+            "form": "spill",
+            "kind": "root",
+            "gloss": "こぼす・流す"
+          },
+          {
+            "form": "-age",
+            "kind": "suffix",
+            "gloss": "行為・結果"
+          }
+        ],
+        "derivation": "spill（こぼす・流す）＋-age（行為・結果） → こぼす行為や、こぼれて流出したもの"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/spillage",
+          "https://www.merriam-webster.com/dictionary/spillage"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/spillage",
+            "note": "spillageをspill＋-ageから成る1827年の語と説明し、spillを古英語spillan（破壊する、こぼす）、ゲルマン系*spilthjanに遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/spillage",
+            "note": "spillageのこぼす行為、こぼれた物や液体、流出という語義を確認した。"
+          }
+        ],
+        "originLanguage": "英語（古英語・ゲルマン系）",
+        "etymons": [
+          "spillage",
+          "spill",
+          "spillen",
+          "spillan",
+          "*spilthjan",
+          "-age"
+        ],
+        "historicalPath": [
+          "ゲルマン系 *spilthjan（破壊する、こぼす）",
+          "古英語 spillan（破壊する、こぼす）",
+          "英語 spill（こぼす、流す）",
+          "英語 spill＋-age",
+          "英語 spillage（流出、こぼれ）"
+        ],
+        "components": [
+          {
+            "form": "spill",
+            "kind": "base",
+            "gloss": "こぼす・流す",
+            "display": false
+          },
+          {
+            "form": "-age",
+            "kind": "suffix",
+            "gloss": "行為・結果",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "spill"
+        ],
+        "semanticBridge": "中身を外へ流すspillの行為や結果を表す名詞として、こぼれた液体や物の流出を表すようになった。",
+        "summary": "spillageは、spill（こぼす・流す）＋-ageから、流出やこぼれを表す。",
+        "confidence": "high",
+        "notes": "出典がspill＋-ageを明示するため、英語表面にそのまま対応させる。"
+      }
+    },
+    "audacity": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "厚かましい大胆さ",
+        "root": "audac",
+        "parts": [
+          {
+            "form": "audac",
+            "kind": "root",
+            "gloss": "大胆な"
+          },
+          {
+            "form": "-ity",
+            "kind": "suffix",
+            "gloss": "性質・状態"
+          }
+        ],
+        "derivation": "audac（大胆な）＋-ity（性質・状態） → 大胆さ、度を越した厚かましさ"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/audacity",
+          "https://www.merriam-webster.com/dictionary/audacity"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/audacity",
+            "note": "audacityを中世ラテン語audacitas、ラテン語audax（大胆な、向こう見ずな）、audere（あえてする、勇敢である）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/audacity",
+            "note": "audacityの大胆さ、勇気、特に無礼で厚かましい大胆さという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": [
+          "audacity",
+          "audacitas",
+          "audax",
+          "audere",
+          "-ity"
+        ],
+        "historicalPath": [
+          "ラテン語 audere（敢えてする、大胆である）",
+          "ラテン語 audax（大胆な、向こう見ずな）",
+          "中世ラテン語 audacitas（大胆さ）",
+          "英語 audacity（厚かましい大胆さ）"
+        ],
+        "components": [
+          {
+            "form": "audax",
+            "kind": "base",
+            "gloss": "大胆な・向こう見ずな",
+            "display": false
+          },
+          {
+            "form": "-ity",
+            "kind": "suffix",
+            "gloss": "性質・状態",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "audac"
+        ],
+        "semanticBridge": "恐れず行動する大胆さが、社会的な礼儀や道徳の限度を越えた厚かましさという否定的な意味へ強まった。",
+        "summary": "audacityは、audac（大胆な）＋-ityから、大胆さ・厚かましい大胆さを表す。",
+        "confidence": "high",
+        "notes": "audaxの語幹audacと名詞化-ityを英語表面へ対応させる。"
+      }
+    },
+    "rehash": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "焼き直し",
+        "root": "hash",
+        "parts": [
+          {
+            "form": "re",
+            "kind": "prefix",
+            "gloss": "再び"
+          },
+          {
+            "form": "hash",
+            "kind": "root",
+            "gloss": "細かく刻む"
+          }
+        ],
+        "derivation": "re-（再び）＋hash（細かく刻む・料理する） → 古い材料をもう一度加工した焼き直し"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/rehash",
+          "https://www.merriam-webster.com/dictionary/rehash"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/rehash",
+            "note": "rehashをre-（再び）＋hash（古い材料を新しい形に作り直す）と明示している。hashはフランス語hacher（細かく刻む）に遡る。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/rehash",
+            "note": "rehashの古い材料を新しい形で作り直す、内容を焼き直すという動詞・名詞の語義を確認した。"
+          }
+        ],
+        "originLanguage": "英語（フランス語系基体からの派生）",
+        "etymons": [
+          "rehash",
+          "re-",
+          "hash",
+          "hacher"
+        ],
+        "historicalPath": [
+          "フランス語 hacher（細かく刻む）",
+          "英語 hash（刻んだ料理、加工する）",
+          "英語 re-＋hash（再び加工する）",
+          "英語 rehash（焼き直す、焼き直し）"
+        ],
+        "components": [
+          {
+            "form": "re-",
+            "kind": "prefix",
+            "gloss": "再び",
+            "display": false
+          },
+          {
+            "form": "hash",
+            "kind": "base",
+            "gloss": "細かく刻む・加工する",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "hash"
+        ],
+        "semanticBridge": "材料を細かく刻んで別の料理にするhashに、再びを表すre-が付き、古い内容を少し形を変えて再利用する意味になった。",
+        "summary": "rehashは、re-（再び）＋hash（細かく加工する）から、焼き直しを表す。",
+        "confidence": "high",
+        "notes": "単なる複合表現ではなく、出典がre-＋hashを明示する英語派生としてA型にする。"
+      }
+    },
+    "truncate": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "切り詰める",
+        "root": "trunc",
+        "parts": [
+          {
+            "form": "trunc",
+            "kind": "root",
+            "gloss": "切り取る"
+          },
+          {
+            "form": "-ate",
+            "kind": "suffix",
+            "gloss": "〜する（動詞化）"
+          }
+        ],
+        "derivation": "trunc（切り取る）＋-ate（動詞化） → 先端や一部を切り取って、切り詰める"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/truncate",
+          "https://www.merriam-webster.com/dictionary/truncate"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/truncate",
+            "note": "truncateをラテン語truncatus（切り取られた）、truncare（傷つける、切り取る）、truncus（切断された幹・胴体）に遡らせている。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/truncate",
+            "note": "truncateの切って短くする、一部を省略する、切り詰めるという語義を確認した。"
+          }
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": [
+          "truncate",
+          "truncatus",
+          "truncare",
+          "truncus",
+          "-ate"
+        ],
+        "historicalPath": [
+          "ラテン語 truncus（切断された幹、胴体）",
+          "ラテン語 truncare（切り取る、短くする）",
+          "ラテン語 truncatus（切り取られた）",
+          "英語 truncate（切り詰める、省略する）"
+        ],
+        "components": [
+          {
+            "form": "truncus",
+            "kind": "base",
+            "gloss": "切断された幹・胴体",
+            "display": false
+          },
+          {
+            "form": "-ate",
+            "kind": "suffix",
+            "gloss": "〜する",
+            "display": false
+          }
+        ],
+        "rootCandidates": [
+          "trunc"
+        ],
+        "semanticBridge": "幹や身体の一部を切り取る動作が、文章・数値・期間などを短く省略する意味へ広がった。",
+        "summary": "truncateは、trunc（切り取る）＋-ateから、切り詰める・省略するを表す。",
+        "confidence": "high",
+        "notes": "truncusの語幹truncと動詞化-ateを英語表面へ対応させる。"
+      }
+    }
+  }
+}

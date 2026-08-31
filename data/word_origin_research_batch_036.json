@@ -1,0 +1,679 @@
+{
+  "meta": {
+    "batchId": "batch-036",
+    "note": "未確認B型の次の25語。表面形に安定した語根・接辞の対応がある語はA型へ、複合語・単純借用語・語形変化はB型に残す。"
+  },
+  "dictionary": {
+    "roots": {
+      "vari": {
+        "gloss": "変化・多様",
+        "origin": "ラテン語 varius / variare",
+        "note": "異なる状態や変化を表すイメージ。various。"
+      },
+      "medic": {
+        "gloss": "医療・治す",
+        "origin": "ラテン語 medicus / mederi",
+        "note": "病気を治療する人や行為のイメージ。medical。"
+      },
+      "stud": {
+        "gloss": "学ぶ・熱心に取り組む",
+        "origin": "ラテン語 studere / studium",
+        "note": "何かに熱心に取り組み、学ぶイメージ。student。"
+      },
+      "profess": {
+        "gloss": "公言する・宣言する",
+        "origin": "ラテン語 profiteri / professus",
+        "note": "公に言い表すことから、職業や専門性を表すイメージ。professional。"
+      },
+      "doc": {
+        "gloss": "教える・示す",
+        "origin": "ラテン語 docere",
+        "note": "知識を教え、分からせるイメージ。doctor。"
+      },
+      "mov": {
+        "gloss": "動かす",
+        "origin": "ラテン語 movere",
+        "note": "前へ動かし、進めるイメージ。promoteではmotの形で現れる。",
+        "variants": ["mot"]
+      },
+      "tot": {
+        "gloss": "全部・全体",
+        "origin": "ラテン語 totus",
+        "note": "一つ残らず全体を表すイメージ。total。"
+      }
+    },
+    "affixes": {
+      "-ual": {
+        "gloss": "〜に関する",
+        "kind": "suffix"
+      }
+    }
+  },
+  "entries": {
+    "mutual": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "相互の",
+        "root": "mut",
+        "parts": [
+          { "form": "mut", "kind": "root", "gloss": "変える・交換する" },
+          { "form": "-ual", "kind": "suffix", "gloss": "〜に関する" }
+        ],
+        "derivation": "mut（変える・交換する）＋-ual（〜に関する） → 互いに交換される、相互の"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/mutual", "https://www.merriam-webster.com/dictionary/mutual"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/mutual", "note": "mutualを古フランス語 mutuel、ラテン語 mutuus（相互の、交換された）、PIE *mei-（変える、交換する）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/mutual", "note": "mutualの現代語義として、二者以上が同じ関係を互いに共有することを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・英語",
+        "etymons": ["mutual", "mutuel", "mutuus", "*mei-", "-ual"],
+        "historicalPath": ["PIE *mei-（変える、交換する）", "ラテン語 mutuus（交換された、相互の）", "古フランス語 mutuel", "英語 mut＋-ual → mutual（相互の）"],
+        "components": [{ "form": "mutuus / mut", "kind": "base", "gloss": "交換された、相互の" }, { "form": "-ual", "kind": "suffix", "gloss": "〜に関する" }],
+        "rootCandidates": ["mut", "mei"],
+        "semanticBridge": "物や感情を互いに交換する関係から、二者以上が同じ関係を共有する相互の意味へ広がった。",
+        "summary": "mutualはmut（変える・交換する）＋-ualとして表面形に沿ったA型を設定できる。",
+        "confidence": "high",
+        "notes": "既存のmut語根を再利用し、-ual接尾辞を新規登録する。"
+      }
+    },
+    "apparent": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "明らかな",
+        "root": "appar",
+        "parts": [
+          { "form": "appar", "kind": "root", "gloss": "現れる" },
+          { "form": "-ent", "kind": "suffix", "gloss": "〜するもの・性質" }
+        ],
+        "derivation": "appar（現れる）＋-ent（〜するもの・性質） → 目に現れている、明らかな"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/apparent", "https://www.merriam-webster.com/dictionary/apparent"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/apparent", "note": "apparentを古フランス語 aparant、ラテン語 apparentem / apparens、apparere（現れる、目に入る）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/apparent", "note": "apparentの現代語義として、容易に見えること、明白なこと、見かけ上そうであることを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["apparent", "aparant", "apparentem", "apparens", "apparere", "-ent"],
+        "historicalPath": ["ラテン語 apparere（現れる）", "ラテン語 apparentem（現れている）", "古フランス語 aparant", "英語 appar＋-ent → apparent（明らかな）"],
+        "components": [{ "form": "apparere / appar", "kind": "base", "gloss": "現れる、目に入る" }, { "form": "-ent", "kind": "suffix", "gloss": "〜している性質" }],
+        "rootCandidates": ["par", "appar"],
+        "semanticBridge": "目の前に現れることから、見てすぐ分かること、さらに実際の真偽とは別に見かけ上明らかなことへ広がった。",
+        "summary": "apparentは既存のappar語根＋-entとして表面形に沿ったA型を設定できる。",
+        "confidence": "high",
+        "notes": "既存のappar語根と-ent接尾辞を再利用する。"
+      }
+    },
+    "uniform": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "ラテン語 uniformis（ひとつの形の）から、フランス語を経て英語になった。uni（ひとつ）＋form（形）という複合的な構成をもつ。 → 統一された、一様な" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/uniform", "https://www.merriam-webster.com/dictionary/uniform"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/uniform", "note": "uniformをフランス語 uniforme、ラテン語 uniformis（同じ形の）、uni-＋formaに遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/uniform", "note": "uniformの現代語義として、形・性質が一様であること、また同じ型の服を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["uniform", "uniforme", "uniformis", "uni-", "forma"],
+        "historicalPath": ["ラテン語 unus（ひとつ）＋ forma（形）", "ラテン語 uniformis", "フランス語 uniforme", "英語 uniform（一様な、制服）"],
+        "components": [{ "form": "uni-", "kind": "base", "gloss": "ひとつ" }, { "form": "forma", "kind": "base", "gloss": "形" }],
+        "rootCandidates": ["uni", "form"],
+        "semanticBridge": "同じ形を持つことから、性質が一様であること、さらに同じ型の衣服へ意味が広がった。",
+        "summary": "uniformはuni＋formに相当する複合的な語であり、複合表現を熟語側に合わせる方針のためB型に残す。",
+        "confidence": "high",
+        "notes": "複合要素をA型の語根・接辞チップとして表示しない。"
+      }
+    },
+    "various": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "さまざまな",
+        "root": "vari",
+        "parts": [
+          { "form": "vari", "kind": "root", "gloss": "変化・多様" },
+          { "form": "-ous", "kind": "suffix", "gloss": "〜に満ちた" }
+        ],
+        "derivation": "vari（変化・多様）＋-ous（〜に満ちた） → 多様なものに満ちた、さまざまな"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/various", "https://www.merriam-webster.com/dictionary/various"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/various", "note": "variousをラテン語 varius（変化した、異なる、多様な）に遡らせ、varyとの関係を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/various", "note": "variousの現代語義として、異なる種類が複数あること、多様であることを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["various", "varius", "variare", "vary", "-ous"],
+        "historicalPath": ["ラテン語 varius（異なる、変化した）", "古フランス語 varié / 英語 varyとの関係", "英語 vari＋-ous", "英語 various（さまざまな）"],
+        "components": [{ "form": "varius / vari", "kind": "base", "gloss": "異なる、変化した" }, { "form": "-ous", "kind": "suffix", "gloss": "〜に満ちた" }],
+        "rootCandidates": ["vari"],
+        "semanticBridge": "変化して異なる状態から、複数の異なる種類が存在することへ意味が広がった。",
+        "summary": "variousはvari（変化・多様）＋-ousとして表面形に沿ったA型を設定できる。",
+        "confidence": "high",
+        "notes": "既存のvaric語根とは分け、varius由来のvari語根を登録する。"
+      }
+    },
+    "ratio": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "ラテン語 ratio（計算、割合、理性）に由来し、計算や関係の意味から比率を表すようになった。 → 比率" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/ratio", "https://www.merriam-webster.com/dictionary/ratio"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/ratio", "note": "ratioをラテン語 ratio（計算、方法、理由、割合）、reri（数える、考える）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/ratio", "note": "ratioの現代語義として、二つの量の大きさを比較する関係を確認した。" }
+        ],
+        "originLanguage": "ラテン語・英語",
+        "etymons": ["ratio", "reri", "ratus", "reason"],
+        "historicalPath": ["ラテン語 reri（数える、考える）", "ラテン語 ratio（計算、割合、理由）", "英語 ratio（割合、比率）"],
+        "components": [{ "form": "ratio", "kind": "word", "gloss": "計算、割合" }],
+        "rootCandidates": ["rat"],
+        "semanticBridge": "数えて計算することから、二つの量の関係を表す割合・比率へ意味が絞られた。",
+        "summary": "ratioはラテン語の単純な借用語で、ratioをrat＋-ioと分ける安定した英語表面分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "語末の-ioを英語の表示用接尾辞として扱わない。"
+      }
+    },
+    "passage": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "一節",
+        "root": "pass",
+        "parts": [
+          { "form": "pass", "kind": "root", "gloss": "通る・歩む" },
+          { "form": "-age", "kind": "suffix", "gloss": "〜の量・状態" }
+        ],
+        "derivation": "pass（通る・歩む）＋-age（〜の量・状態） → 通り過ぎること・通路、文章の一節"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/passage", "https://www.merriam-webster.com/dictionary/passage"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/passage", "note": "passageを古フランス語 passage、passer、俗ラテン語 *passare、ラテン語 passus（歩み、一歩）に遡らせている。文章の一節の意味は後に発達した。" },
+          { "url": "https://www.merriam-webster.com/dictionary/passage", "note": "passageの現代語義として、通過、通路、移動、文章や音楽の一節を確認した。" }
+        ],
+        "originLanguage": "ラテン語・俗ラテン語・フランス語・英語",
+        "etymons": ["passage", "passer", "*passare", "passus", "-age"],
+        "historicalPath": ["ラテン語 passus（歩み、歩幅）", "俗ラテン語 *passare（歩く、通る）", "古フランス語 passage", "英語 pass＋-age → passage（通路、一節）"],
+        "components": [{ "form": "passus / pass", "kind": "base", "gloss": "歩み、通る" }, { "form": "-age", "kind": "suffix", "gloss": "行為・状態" }],
+        "rootCandidates": ["pass", "pete"],
+        "semanticBridge": "一歩進んで通り過ぎる行為から、通路、さらに文章や音楽の中を通過するまとまりである一節へ意味が広がった。",
+        "summary": "passageはpass（通る・歩む）＋-ageとして表面形に沿ったA型を設定できる。",
+        "confidence": "high",
+        "notes": "既存のpass語根と-age接尾辞を再利用する。"
+      }
+    },
+    "local": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "地元の",
+        "root": "loc",
+        "parts": [
+          { "form": "loc", "kind": "root", "gloss": "場所・置く" },
+          { "form": "-al", "kind": "suffix", "gloss": "〜に関する" }
+        ],
+        "derivation": "loc（場所・置く）＋-al（〜に関する） → ある場所に関する、地元の"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/local", "https://www.merriam-webster.com/dictionary/local"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/local", "note": "localを古フランス語 local、後期ラテン語 localis、ラテン語 locus（場所）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/local", "note": "localの現代語義として、特定の場所や地域に限られること、地元の人やものを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["local", "localis", "locus", "-al"],
+        "historicalPath": ["ラテン語 locus（場所）", "後期ラテン語 localis（場所に関する）", "古フランス語 local", "英語 loc＋-al → local（地元の）"],
+        "components": [{ "form": "locus / loc", "kind": "base", "gloss": "場所" }, { "form": "-al", "kind": "suffix", "gloss": "〜に関する" }],
+        "rootCandidates": ["loc"],
+        "semanticBridge": "特定の場所を表す語から、その場所に属すること、地元に関することへ意味が広がった。",
+        "summary": "localは既存のloc語根＋-alとして表面形に沿ったA型を設定できる。",
+        "confidence": "high",
+        "notes": "既存のloc語根と-al接尾辞を再利用する。"
+      }
+    },
+    "male": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古フランス語 masle / male、ラテン語 masculus（男性の）に由来する。 → 男性の" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/male", "https://www.merriam-webster.com/dictionary/male"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/male", "note": "maleを古フランス語 masle / male、ラテン語 masculusに遡らせ、mas（男性）に関係する語としている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/male", "note": "maleの現代語義として、男性の性別、人や動物の雄を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["male", "masle", "male", "masculus", "mas"],
+        "historicalPath": ["ラテン語 mas（男性）・masculus（男性の）", "古フランス語 masle / male", "中英語 male", "英語 male（男性の、雄の）"],
+        "components": [{ "form": "masculus", "kind": "word", "gloss": "男性の、雄の" }],
+        "rootCandidates": ["mas"],
+        "semanticBridge": "男性や雄を表すラテン語系の語が、性別を示す英語の形容詞・名詞になった。",
+        "summary": "maleはフランス語を経た単純な借用語で、masculusを現代英語の表面形に安全に分解できないためB型に残す。",
+        "confidence": "high",
+        "notes": "mal＋-eなどの綴り合わせは採用しない。"
+      }
+    },
+    "medical": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "医療の",
+        "root": "medic",
+        "parts": [
+          { "form": "medic", "kind": "root", "gloss": "医療・治す" },
+          { "form": "-al", "kind": "suffix", "gloss": "〜に関する" }
+        ],
+        "derivation": "medic（医療・治す）＋-al（〜に関する） → 医師・治療に関する、医療の"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/medical", "https://www.merriam-webster.com/dictionary/medical"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/medical", "note": "medicalをフランス語 médical、後期ラテン語 medicalis、ラテン語 medicus（医師）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/medical", "note": "medicalの現代語義として、病気の診断・治療・予防や医師に関することを確認した。" }
+        ],
+        "originLanguage": "ラテン語・後期ラテン語・フランス語・英語",
+        "etymons": ["medical", "médical", "medicalis", "medicus", "mederi", "-al"],
+        "historicalPath": ["ラテン語 medicus（医師）・mederi（治す）", "後期ラテン語 medicalis", "フランス語 médical", "英語 medic＋-al → medical（医療の）"],
+        "components": [{ "form": "medicus / medic", "kind": "base", "gloss": "医師、治療" }, { "form": "-al", "kind": "suffix", "gloss": "〜に関する" }],
+        "rootCandidates": ["med", "medic"],
+        "semanticBridge": "病気に適切な処置をする医師・治療から、診断や治療など医療全体に関する意味へ広がった。",
+        "summary": "medicalはmedic（医療・治す）＋-alとして表面形に沿ったA型を設定できる。",
+        "confidence": "high",
+        "notes": "medic語根と既存の-al接尾辞を新規に組み合わせる。"
+      }
+    },
+    "reveal": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古フランス語 reveler、ラテン語 revelare（覆いを取り去る、明らかにする）に由来する。 → 明らかにする、示す" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/reveal", "https://www.merriam-webster.com/dictionary/reveal"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/reveal", "note": "revealを古フランス語 reveler、ラテン語 revelare（覆いを取り去る）に遡らせ、re-とvelum（覆い）との関係を示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/reveal", "note": "revealの現代語義として、以前隠されていたものを明らかにすること、情報を示すことを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["reveal", "reveler", "revelare", "re-", "velum"],
+        "historicalPath": ["ラテン語 velum（覆い）・revelare（覆いを取る）", "古フランス語 reveler", "中英語 revelen", "英語 reveal（明らかにする）"],
+        "components": [{ "form": "revelare", "kind": "word", "gloss": "覆いを取る、明らかにする" }],
+        "rootCandidates": ["vel"],
+        "semanticBridge": "覆いを取って見えるようにすることから、隠されていた事実や情報を明らかにすることへ意味が広がった。",
+        "summary": "revealにはre-とvelumの深い語源があるが、英語の表面形はre＋vealと一致せず、安定したA型分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "vealを語根とする綴り合わせは採用しない。"
+      }
+    },
+    "students": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "学生",
+        "root": "stud",
+        "parts": [
+          { "form": "stud", "kind": "root", "gloss": "学ぶ・熱心に取り組む" },
+          { "form": "-ent", "kind": "suffix", "gloss": "〜するもの・人" }
+        ],
+        "derivation": "stud（学ぶ・熱心に取り組む）＋-ent（〜するもの・人） → 学ぶ人、学生（複数）"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/student", "https://www.merriam-webster.com/dictionary/student"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/student", "note": "studentを古フランス語 estudiant、ラテン語 studiare / studium / studereに遡らせ、学ぶ人を表す現在分詞由来の名詞と説明している。studentsはその複数形である。" },
+          { "url": "https://www.merriam-webster.com/dictionary/student", "note": "studentの現代語義として、学校などで学ぶ人、特定の分野を研究する人を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・中英語・英語",
+        "etymons": ["student", "studient", "estudiant", "studiare", "studium", "studere", "-ent"],
+        "historicalPath": ["ラテン語 studere（熱心に取り組む）・studium（学習、熱意）", "古フランス語 estudiant", "中英語 studient", "英語 stud＋-ent → student → students"],
+        "components": [{ "form": "studere / stud", "kind": "base", "gloss": "熱心に取り組む、学ぶ" }, { "form": "-ent", "kind": "suffix", "gloss": "〜する人" }, { "form": "-s", "kind": "inflection", "gloss": "複数" }],
+        "rootCandidates": ["stud", "teu"],
+        "semanticBridge": "熱心に取り組むことから、知識を求めて学ぶ人、学校などに在籍する学生へ意味が具体化した。",
+        "summary": "studentsはstud（学ぶ）＋-entでstudentを作り、末尾の-sは複数語尾として省くA型を設定できる。",
+        "confidence": "high",
+        "notes": "既存のstudi語根とは区別し、student表面形に合うstud語根を登録する。"
+      }
+    },
+    "professionals": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "専門職の人",
+        "root": "profess",
+        "parts": [
+          { "form": "profess", "kind": "root", "gloss": "公言する・宣言する" },
+          { "form": "-ion", "kind": "suffix", "gloss": "〜すること" },
+          { "form": "-al", "kind": "suffix", "gloss": "〜に関する" }
+        ],
+        "derivation": "profess（公言する・宣言する）＋-ion（〜すること）＋-al（〜に関する） → 職業・専門性に関する人（複数）"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/professional", "https://www.merriam-webster.com/dictionary/professional"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/professional", "note": "professionalをprofessionに結び付け、professionをラテン語 professionem、profiteri（公に宣言する）に遡らせている。professionalsは複数形である。" },
+          { "url": "https://www.merriam-webster.com/dictionary/professional", "note": "professionalの現代語義として、職業として専門的な活動をする人、専門職に関することを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["professional", "profession", "profiteri", "professus", "pro-", "fateri", "-ion", "-al"],
+        "historicalPath": ["ラテン語 profiteri（公言する）", "ラテン語 professio（公言、職業）", "古フランス語 profession", "英語 profess＋-ion＋-al → professional → professionals"],
+        "components": [{ "form": "profiteri / profess", "kind": "base", "gloss": "公に宣言する" }, { "form": "-ion", "kind": "suffix", "gloss": "行為・結果" }, { "form": "-al", "kind": "suffix", "gloss": "〜に関する" }, { "form": "-s", "kind": "inflection", "gloss": "複数" }],
+        "rootCandidates": ["profess", "bha"],
+        "semanticBridge": "公に誓い・専門性を表明することから、専門的な職業やその職業に従事する人を表す語へ広がった。",
+        "summary": "professionalsはprofess（公言する）＋-ion＋-alでprofessionalを作り、末尾の-sを複数語尾として省くA型を設定できる。",
+        "confidence": "high",
+        "notes": "既存の-ion・-al接尾辞を再利用し、profess語根を新規登録する。"
+      }
+    },
+    "doctors": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "医師",
+        "root": "doc",
+        "parts": [
+          { "form": "doc", "kind": "root", "gloss": "教える・示す" },
+          { "form": "-or", "kind": "suffix", "gloss": "〜する人・もの" }
+        ],
+        "derivation": "doc（教える・示す）＋-or（〜する人・もの） → 教える人、学識を持つ人、医師（複数）"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/doctor", "https://www.merriam-webster.com/dictionary/doctor"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/doctor", "note": "doctorを古フランス語 doctour・中世ラテン語 doctor、ラテン語 docere（教える、分からせる）の行為者名詞に遡らせている。doctorsは複数形である。" },
+          { "url": "https://www.merriam-webster.com/dictionary/doctor", "note": "doctorの現代語義として、医学を実践する医師、また学位取得者や専門家を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["doctor", "doctour", "doctor", "docere", "-or", "doc-"],
+        "historicalPath": ["ラテン語 docere（教える、示す）", "ラテン語 doctor（教師、学者）", "古フランス語 doctour", "英語 doc＋-or → doctor → doctors"],
+        "components": [{ "form": "docere / doc", "kind": "base", "gloss": "教える、示す" }, { "form": "-or", "kind": "suffix", "gloss": "行為者" }, { "form": "-s", "kind": "inflection", "gloss": "複数" }],
+        "rootCandidates": ["doc", "dek"],
+        "semanticBridge": "教える人・学識ある人を表す語から、高度な学位を持つ人、さらに医学を行う医師へ意味が具体化した。",
+        "summary": "doctorsはdoc（教える）＋-orでdoctorを作り、末尾の-sを複数語尾として省くA型を設定できる。",
+        "confidence": "high",
+        "notes": "doc語根と既存の-or接尾辞を再利用する。"
+      }
+    },
+    "issue": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古フランス語 issue、ラテン語 exitus（外へ出ること、結果）に由来し、出てきたもの・問題・発行物などの意味へ広がった。 → 発行する" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/issue", "https://www.merriam-webster.com/dictionary/issue"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/issue", "note": "issueを古フランス語 issue、ラテン語 exitus（出ること、結果）、exire（外へ出る）に遡らせ、動詞の発行する意味への発展を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/issue", "note": "issueの現代語義として、出版物を発行すること、問題・論点、流出・結果などを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["issue", "issue", "exitus", "exire", "ex-", "ire"],
+        "historicalPath": ["ラテン語 exire（外へ出る）・exitus（出ること、結果）", "古フランス語 issue", "中英語 issue", "英語 issue（出す、発行する、問題）"],
+        "components": [{ "form": "exitus", "kind": "word", "gloss": "出ること、結果" }],
+        "rootCandidates": ["it", "ei"],
+        "semanticBridge": "外へ出ることから、出てきた結果や流出物、議論に出された問題、出版物を出すことへ意味が広がった。",
+        "summary": "issueにはex＋ireの深い語源があるが、英語のissueにその要素が表面形として残らず、安定したA型分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "iss＋-ueやi＋-ssueなどの綴り合わせは採用しない。"
+      }
+    },
+    "promote": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "促進",
+        "root": "mov",
+        "parts": [
+          { "form": "pro", "kind": "prefix", "gloss": "前へ" },
+          { "form": "mot", "kind": "root", "gloss": "動かす" }
+        ],
+        "derivation": "pro-（前へ）＋mot（動かす） → 前へ動かす、昇進させる、促進する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/promote", "https://www.merriam-webster.com/dictionary/promote"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/promote", "note": "promoteを古フランス語 promoter、ラテン語 promotus / promovere（前へ動かす）に遡らせ、pro-＋movereの構成を説明している。movereの語幹がmotの形で現れる。" },
+          { "url": "https://www.merriam-webster.com/dictionary/promote", "note": "promoteの現代語義として、昇進させること、成長や進展を促すこと、商品を宣伝することを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["promote", "promoter", "promotus", "promovere", "pro-", "movere", "mot"],
+        "historicalPath": ["ラテン語 pro-（前へ）＋movere（動かす）", "ラテン語 promovere / promotus", "古フランス語 promoter", "英語 pro＋mot → promote（前へ進める、促進する）"],
+        "components": [{ "form": "pro- / pro", "kind": "prefix", "gloss": "前へ" }, { "form": "movere / mot", "kind": "base", "gloss": "動かす" }],
+        "rootCandidates": ["mov", "meue"],
+        "semanticBridge": "物を前へ動かすことから、人を上位へ進めること、物事の成長を促すこと、商品を広めることへ意味が広がった。",
+        "summary": "promoteはpro-（前へ）＋mot（動かす）として表面形に沿ったA型を設定できる。",
+        "confidence": "high",
+        "notes": "mov語根の表面variant motを使用し、既存のpro接頭辞を再利用する。"
+      }
+    },
+    "advanced": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "advanceの過去分詞・形容詞形。古フランス語 avancer、俗ラテン語 *abantiare（前へ進める）に由来する。 → 高度な" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/advance", "https://www.merriam-webster.com/dictionary/advance"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/advance", "note": "advanceを古フランス語 avancer、俗ラテン語 *abantiare、ラテン語 ab ante（前から）に遡らせ、前進・進歩の意味を説明している。advancedはその形容詞・分詞形である。" },
+          { "url": "https://www.merriam-webster.com/dictionary/advance", "note": "advanceの現代語義として、前進、進歩、昇進、先進的な状態を確認した。" }
+        ],
+        "originLanguage": "ラテン語・俗ラテン語・フランス語・英語",
+        "etymons": ["advanced", "advance", "avancer", "*abantiare", "ab ante"],
+        "historicalPath": ["ラテン語 ab ante（前から、前方へ）", "俗ラテン語 *abantiare", "古フランス語 avancer", "英語 advance → advanced"],
+        "components": [{ "form": "advance", "kind": "word", "gloss": "前進、進歩" }, { "form": "-ed", "kind": "inflection", "gloss": "過去分詞・形容詞" }],
+        "rootCandidates": ["ante", "ab"],
+        "semanticBridge": "前へ進むことから、発達段階が進んでいること、知識や技術が高度であることへ意味が広がった。",
+        "summary": "advancedはadvanceの語形変化で、深い語源のab anteも英語表面形に安定して残らないためB型に残す。",
+        "confidence": "high",
+        "notes": "ad＋vanceやadvancedの-edを語源的なA型分解として表示しない。"
+      }
+    },
+    "skilled": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "skillに過去分詞・形容詞語尾が付いた形。skillは古ノルド語 skil（区別、理解）に由来する。 → 技能を持つ" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/skill", "https://www.merriam-webster.com/dictionary/skill"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/skill", "note": "skillを古ノルド語 skil（区別、理解、能力）に遡らせ、知識や技術の意味へ発達したと説明している。skilledはskillの分詞・形容詞形である。" },
+          { "url": "https://www.merriam-webster.com/dictionary/skill", "note": "skillの現代語義として、訓練によって得た能力や、何かを上手に行う力を確認した。" }
+        ],
+        "originLanguage": "古ノルド語・ゲルマン語系・英語",
+        "etymons": ["skilled", "skill", "skil", "skilja", "-ed"],
+        "historicalPath": ["古ノルド語 skil（区別、理解、能力）", "中英語 skill（知識、能力）", "英語 skill", "英語 skill＋-ed → skilled"],
+        "components": [{ "form": "skill", "kind": "word", "gloss": "能力、技術" }, { "form": "-ed", "kind": "inflection", "gloss": "形容詞・分詞" }],
+        "rootCandidates": ["skil"],
+        "semanticBridge": "物事を区別して理解する力から、訓練で得た特定の能力、さらにその能力を持つ状態へ意味が広がった。",
+        "summary": "skilledはskillに語形要素が付いた形で、skill自体も単純借用語のためA型の語根・接辞表示を設定しない。",
+        "confidence": "high",
+        "notes": "skil＋-ledのような綴り合わせは採用しない。"
+      }
+    },
+    "course": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古フランス語 cours、ラテン語 cursus（走ること、進行、道筋）に由来する。 → 課程" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/course", "https://www.merriam-webster.com/dictionary/course"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/course", "note": "courseを古フランス語 cours、ラテン語 cursus、currere（走る）に遡らせ、道筋・進行・授業課程の意味を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/course", "note": "courseの現代語義として、進行経路、授業の課程、食事の一品などを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["course", "cours", "cursus", "currere", "*kers-"],
+        "historicalPath": ["ラテン語 currere（走る）・cursus（進行、道筋）", "古フランス語 cours", "中英語 cours / course", "英語 course（進路、課程）"],
+        "components": [{ "form": "cursus", "kind": "word", "gloss": "走ること、進行" }],
+        "rootCandidates": ["cur", "kers"],
+        "semanticBridge": "走って進む道筋から、物事の進行、学習の道筋である課程、食事の順序へ意味が広がった。",
+        "summary": "courseはフランス語を経た単純な借用語で、currereの語根が現代英語の表面形に残らないためB型に残す。",
+        "confidence": "high",
+        "notes": "cour＋-seなどの綴り合わせは採用しない。"
+      }
+    },
+    "total": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "合計の",
+        "root": "tot",
+        "parts": [
+          { "form": "tot", "kind": "root", "gloss": "全部・全体" },
+          { "form": "-al", "kind": "suffix", "gloss": "〜に関する" }
+        ],
+        "derivation": "tot（全部・全体）＋-al（〜に関する） → 全体に関する、合計の"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/total", "https://www.merriam-webster.com/dictionary/total"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/total", "note": "totalを古フランス語 total、中世ラテン語 totalis、ラテン語 totus（全部、全体）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/total", "note": "totalの現代語義として、全体の、全額、合計することを確認した。" }
+        ],
+        "originLanguage": "ラテン語・中世ラテン語・フランス語・英語",
+        "etymons": ["total", "totalis", "totus", "-al"],
+        "historicalPath": ["ラテン語 totus（全部、全体）", "中世ラテン語 totalis（全体の）", "古フランス語 total", "英語 tot＋-al → total（全体の、合計）"],
+        "components": [{ "form": "totus / tot", "kind": "base", "gloss": "全部、全体" }, { "form": "-al", "kind": "suffix", "gloss": "〜に関する" }],
+        "rootCandidates": ["tot"],
+        "semanticBridge": "一つ残らず全体であることから、全体の量、合計、すべてを破壊するほどの意味へ広がった。",
+        "summary": "totalはtot（全部・全体）＋-alとして表面形に沿ったA型を設定できる。",
+        "confidence": "high",
+        "notes": "tot語根と既存の-al接尾辞を新規に組み合わせる。"
+      }
+    },
+    "average": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古フランス語 averaie、アラビア語 ʿawārīyah（損傷品の売買）に由来し、商取引の意味から平均へ発達した。 → 平均" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/average", "https://www.merriam-webster.com/dictionary/average"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/average", "note": "averageを古フランス語 averaie、アラビア語 ʿawārīyahに遡らせ、船荷の損害を共同で負担する商取引の語から平均の意味が発達した経路を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/average", "note": "averageの現代語義として、数値の平均、標準的な程度、平均を計算することを確認した。" }
+        ],
+        "originLanguage": "アラビア語・フランス語・英語",
+        "etymons": ["average", "averaige", "avera", "awariya", "avaria"],
+        "historicalPath": ["アラビア語 ʿawārīyah（損傷品）", "古イタリア語 avaria / 古フランス語 averaie", "中英語 average（共同負担）", "英語 average（平均）"],
+        "components": [{ "form": "ʿawārīyah", "kind": "word", "gloss": "損傷品、損害" }],
+        "rootCandidates": ["awar"],
+        "semanticBridge": "船荷の損害を共同で負担する計算から、数値を均等に分けた平均、標準的な程度へ意味が広がった。",
+        "summary": "averageはアラビア語・フランス語を経た借用語で、aver＋-ageの英語表面分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "語末の-ageを英語の接尾辞とみなす綴り合わせは採用しない。"
+      }
+    },
+    "percentage": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "percent（100あたり）に -age が付いた語で、per（〜につき）＋cent（100）を含む複合的な構成をもつ。 → 百分率、〜％" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/percentage", "https://www.merriam-webster.com/dictionary/percentage"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/percentage", "note": "percentageをpercent＋-ageとして説明し、percentはイタリア語 per cento（100につき）から来ると確認した。" },
+          { "url": "https://www.merriam-webster.com/dictionary/percentage", "note": "percentageの現代語義として、100を基準にした割合、得られる分け前や確率を確認した。" }
+        ],
+        "originLanguage": "ラテン語・イタリア語・フランス語・英語",
+        "etymons": ["percentage", "percent", "per cento", "per", "centum", "-age"],
+        "historicalPath": ["ラテン語 per（〜につき）＋centum（百）", "イタリア語 per cento", "英語 percent", "英語 percentage（百分率）"],
+        "components": [{ "form": "per cento", "kind": "phrase", "gloss": "100につき" }, { "form": "-age", "kind": "suffix", "gloss": "量・状態" }],
+        "rootCandidates": ["per", "cent"],
+        "semanticBridge": "100を基準にした割合を表す表現から、割合そのものや分け前・確率を表す名詞へ発達した。",
+        "summary": "percentageはper centoを含む複合的な語にpercent＋-ageが重なった形であり、複合表現をB型にそろえる方針のためB型に残す。",
+        "confidence": "high",
+        "notes": "per＋cent＋-ageをA型の語根・接辞表示としては採用しない。"
+      }
+    },
+    "income": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "in（中へ、内に）＋come（来る）からなる英語の複合語で、入って来る金銭や収入を表す。 → 所得" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/income", "https://www.merriam-webster.com/dictionary/income"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/income", "note": "incomeを中英語 income、in＋comeからなる語とし、入って来るものから金銭の収入へ意味が具体化したと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/income", "note": "incomeの現代語義として、一定期間に得る金銭や経済的利益を確認した。" }
+        ],
+        "originLanguage": "古英語・中英語・英語",
+        "etymons": ["income", "in", "come", "incum", "incoming"],
+        "historicalPath": ["英語 in（中へ）＋come（来る）", "中英語 income（入って来るもの）", "英語 income（収入、所得）"],
+        "components": [{ "form": "in", "kind": "word", "gloss": "中へ、内に" }, { "form": "come", "kind": "word", "gloss": "来る" }],
+        "rootCandidates": ["in", "gwa"],
+        "semanticBridge": "中へ来るものという空間的な複合から、入って来る金銭や一定期間の所得を表す語へ定着した。",
+        "summary": "incomeはin＋comeの複合語であり、複合表現は熟語側に合わせる方針のためB型に残す。",
+        "confidence": "high",
+        "notes": "複合要素をA型の語根・接辞チップとして表示しない。"
+      }
+    },
+    "per": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "ラテン語 per（通って、〜を通じて、〜につき）に由来する。 → 〜あたり" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/per", "https://www.merriam-webster.com/dictionary/per"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/per", "note": "perをラテン語 per（通って、通じて、〜につき）に遡らせ、英語の割合・単位あたりの用法を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/per", "note": "perの現代語義として、各々につき、割合や速度を表す用法を確認した。" }
+        ],
+        "originLanguage": "ラテン語・英語",
+        "etymons": ["per", "per-", "peri", "perficere"],
+        "historicalPath": ["ラテン語 per（通って、〜を通じて）", "英語のラテン語系前置詞・接頭辞", "英語 per（〜につき、〜あたり）"],
+        "components": [{ "form": "per", "kind": "word", "gloss": "通って、〜につき" }],
+        "rootCandidates": ["per"],
+        "semanticBridge": "何かを通って行く関係から、単位ごと・割合ごとの関係を示す機能語へ用法が広がった。",
+        "summary": "perは短い前置詞・略語的な機能語で、接頭辞用法も一語の語源表示として分解しないためB型に残す。",
+        "confidence": "high",
+        "notes": "perを単独のA型語根として表示せず、percentageの複合要素とも分けて扱う。"
+      }
+    },
+    "system": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古フランス語 sisteme、ラテン語 systema、ギリシャ語 systēma（組み立てられた全体）に由来する。 → 制度" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/system", "https://www.merriam-webster.com/dictionary/system"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/system", "note": "systemを古フランス語 sisteme、ラテン語 systema、ギリシャ語 systēma（組み立て、全体）に遡らせ、syn-＋histanai（立てる）との関係を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/system", "note": "systemの現代語義として、相互に関係する要素の組織化された全体、制度・体系を確認した。" }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・フランス語・英語",
+        "etymons": ["system", "sisteme", "systema", "systēma", "syn-", "histanai"],
+        "historicalPath": ["ギリシャ語 syn-（共に）＋histanai（立てる）", "ギリシャ語 systēma（組み立てられた全体）", "ラテン語 systema・古フランス語 sisteme", "英語 system（体系、制度）"],
+        "components": [{ "form": "systēma", "kind": "word", "gloss": "組み立てられた全体" }],
+        "rootCandidates": ["sta", "sem"],
+        "semanticBridge": "複数の要素を一緒に立てて組み上げた全体から、相互関係をもつ仕組み・制度・体系へ意味が広がった。",
+        "summary": "systemはギリシャ語・ラテン語を経た借用語で、深い構成要素が英語の表面形に安定して残らないためB型に残す。",
+        "confidence": "high",
+        "notes": "sys＋-temなどの綴り合わせは採用しない。"
+      }
+    },
+    "risks": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "riskの複数形。古フランス語 risque、イタリア語 risico、アラビア語 rizq などを経た借用語で、起源には諸説がある。 → リスク、危険（複数）" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/risk", "https://www.merriam-webster.com/dictionary/risk"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/risk", "note": "riskを古フランス語 risque、イタリア語 risco / risicoに遡らせ、アラビア語 rizqなど複数の起源説を紹介している。risksは複数形である。" },
+          { "url": "https://www.merriam-webster.com/dictionary/risk", "note": "riskの現代語義として、損失や危険にさらされる可能性、危険を冒すことを確認した。" }
+        ],
+        "originLanguage": "アラビア語・イタリア語・フランス語・英語",
+        "etymons": ["risk", "risque", "risco", "risico", "rizq", "-s"],
+        "historicalPath": ["アラビア語 rizqなどの起源説", "イタリア語 risco / risico", "古フランス語 risque", "英語 risk → risks（複数形）"],
+        "components": [{ "form": "risk", "kind": "word", "gloss": "危険、可能性" }, { "form": "-s", "kind": "inflection", "gloss": "複数" }],
+        "rootCandidates": ["rizq"],
+        "semanticBridge": "危険な航海や商取引で損失を受ける可能性を表す語から、一般的な危険や不確実な結果を表す語へ広がった。",
+        "summary": "risksはriskの複数形で、借用経路にも諸説があり、現代語の表面形を分解しないためB型に残す。",
+        "confidence": "medium",
+        "notes": "複数語尾 -s は語源分解として表示しない。"
+      }
+    }
+  }
+}

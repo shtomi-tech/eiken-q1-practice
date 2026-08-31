@@ -1,0 +1,636 @@
+{
+  "meta": {
+    "batchId": "batch-039",
+    "note": "未確認B型の次の25語。表面形に安定した語根・接辞の対応がある語はA型へ、単純借用語・語形変化・複合語・同綴異語はB型に残す。"
+  },
+  "dictionary": {
+    "roots": {
+      "vey": {
+        "gloss": "見る・調べる",
+        "origin": "古フランス語 veoir / ラテン語 videre",
+        "note": "surveyではフランス語経由のveyの形で現れる。"
+      },
+      "fail": {
+        "gloss": "欠ける・失敗する",
+        "origin": "古フランス語 falir / ラテン語 fallere",
+        "note": "目的を達成できず欠けるイメージ。failure。"
+      },
+      "loud": {
+        "gloss": "音が大きい",
+        "origin": "古英語 hlud / ゲルマン語系 *hludaz",
+        "note": "聞こえるほど音が大きいイメージ。loudly。"
+      },
+      "guilt": {
+        "gloss": "罪・有罪",
+        "origin": "古英語 gylt",
+        "note": "犯罪や道徳的な落ち度。guiltyでは現代綴りのguiltの形で現れる。"
+      },
+      "absolute": {
+        "gloss": "制限のない・完全な",
+        "origin": "ラテン語 absolutus / absolvere",
+        "note": "束縛から解かれ、条件に制限されないイメージ。absolutely。"
+      }
+    }
+  },
+  "entries": {
+    "impression": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "印象",
+        "root": "prim",
+        "parts": [
+          { "form": "im", "kind": "prefix", "gloss": "中へ" },
+          { "form": "press", "kind": "root", "gloss": "押す" },
+          { "form": "-ion", "kind": "suffix", "gloss": "〜すること" }
+        ],
+        "derivation": "im-（中へ）＋press（押す）＋-ion（〜すること） → 心に押し込まれたもの、印象"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/impression", "https://www.merriam-webster.com/dictionary/impression"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/impression", "note": "impressionを古フランス語 impression、ラテン語 impressionem / impressio、imprimere（押し込む、押印する）に遡らせ、心への比喩的な印の意味を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/impression", "note": "impressionの現代語義として、押してできた跡、心に生じた感じ・印象、印刷物を確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・英語",
+        "etymons": ["impression", "impressio", "imprimere", "im-", "premere", "press", "-ion"],
+        "historicalPath": ["PIE *per-（打つ）・ラテン語 premere（押す）", "ラテン語 im-＋premere → imprimere（押し込む）", "古フランス語 impression", "英語 im＋press＋-ion → impression（印象）"],
+        "components": [{ "form": "im-", "kind": "prefix", "gloss": "中へ" }, { "form": "press", "kind": "base", "gloss": "押す" }, { "form": "-ion", "kind": "suffix", "gloss": "行為・結果" }],
+        "rootCandidates": ["prim", "per"],
+        "semanticBridge": "物に押し込んで跡をつけることから、外から心に強く刻まれた感じや考え、さらに印刷物へ意味が広がった。",
+        "summary": "impressionはim-＋press（prim語根の表面variant）＋-ionとして表面形に沿ったA型を設定できる。",
+        "confidence": "high",
+        "notes": "既存のim接頭辞・prim語根のpress variant・-ion接尾辞を再利用する。"
+      }
+    },
+    "survey": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "調査",
+        "root": "vey",
+        "parts": [
+          { "form": "sur", "kind": "prefix", "gloss": "上から" },
+          { "form": "vey", "kind": "root", "gloss": "見る・調べる" }
+        ],
+        "derivation": "sur-（上から）＋vey（見る・調べる） → 全体を見渡して調べる、調査"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/survey", "https://www.merriam-webster.com/dictionary/survey"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/survey", "note": "surveyを古フランス語 surveier / sorveoir、ラテン語 supervidere（上から見る）に遡らせ、super＋videreの構成と調査・測量の意味を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/survey", "note": "surveyの現代語義として、全体を調べること、土地を測量すること、意見を集めるアンケートを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・英語",
+        "etymons": ["survey", "surveier", "sorveoir", "supervidere", "super", "videre", "vey"],
+        "historicalPath": ["PIE *weid-（見る）", "ラテン語 super（上から）＋videre（見る）", "古フランス語 surveier / sorveoir", "英語 sur＋vey → survey（調査、測量）"],
+        "components": [{ "form": "sur-", "kind": "prefix", "gloss": "上から" }, { "form": "vey / videre", "kind": "base", "gloss": "見る、調べる" }],
+        "rootCandidates": ["vey", "vid", "weid"],
+        "semanticBridge": "上から全体を見渡すことから、対象の状態を詳しく調べること、土地を測量すること、意見を集めることへ意味が広がった。",
+        "summary": "surveyはsur-＋veyとしてフランス語経由の表面形に沿ったA型を設定できる。",
+        "confidence": "high",
+        "notes": "既存のsur接頭辞とは別に、surveyの表面形veyを語根辞書へ登録する。"
+      }
+    },
+    "purse": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 pursa、ラテン語 bursa、ギリシャ語 byrsa（革、皮）に由来する。 → 財布、女性用ハンドバッグ" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/purse", "https://www.merriam-webster.com/dictionary/purse"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/purse", "note": "purseを古英語 pursa、中世ラテン語 bursa、ギリシャ語 byrsa（皮、革）に遡らせ、bからpへの変化の可能性も説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/purse", "note": "purseの現代語義として、金銭を入れる小袋、女性用ハンドバッグ、資金、口をすぼめることを確認した。" }
+        ],
+        "originLanguage": "ギリシャ語・ラテン語・古英語・中英語・英語",
+        "etymons": ["purse", "pursa", "bursa", "byrsa", "bourse"],
+        "historicalPath": ["ギリシャ語 byrsa（皮、革）", "ラテン語 bursa（革袋）", "古英語 pursa", "中英語 purs / purse → 英語 purse（財布、ハンドバッグ）"],
+        "components": [{ "form": "byrsa / bursa", "kind": "word", "gloss": "皮、革袋" }],
+        "rootCandidates": ["burs", "byrs"],
+        "semanticBridge": "革で作った小袋から、金銭を入れる財布、資金そのもの、女性用ハンドバッグ、口をすぼめる動作へ意味が広がった。",
+        "summary": "purseはギリシャ語・ラテン語を経た単純語で、byrsaの語根が表面形に残らないためB型に残す。",
+        "confidence": "high",
+        "notes": "pur＋-seなどの綴り合わせは採用しない。"
+      }
+    },
+    "failure": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "失敗",
+        "root": "fail",
+        "parts": [
+          { "form": "fail", "kind": "root", "gloss": "欠ける・失敗する" },
+          { "form": "-ure", "kind": "suffix", "gloss": "〜すること・もの" }
+        ],
+        "derivation": "fail（欠ける・失敗する）＋-ure（〜すること・もの） → 失敗すること、失敗"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/failure", "https://www.merriam-webster.com/dictionary/failure"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/failure", "note": "failureを英語 failer / failに結び付け、古フランス語 falir（欠ける、成功しない）に由来し、語末が-ureに整えられたと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/failure", "note": "failureの現代語義として、目的を達成できないこと、失敗した人や物、機能停止を確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・中英語・英語",
+        "etymons": ["failure", "failer", "fail", "falir", "*fallire", "fallere", "-ure"],
+        "historicalPath": ["ラテン語 fallere（つまずかせる、欺く）", "俗ラテン語 *fallire", "古フランス語 falir・英語 fail", "英語 fail＋-ure → failure（失敗）"],
+        "components": [{ "form": "fail", "kind": "base", "gloss": "欠ける、失敗する" }, { "form": "-ure", "kind": "suffix", "gloss": "行為・結果" }],
+        "rootCandidates": ["fall", "fail"],
+        "semanticBridge": "目的から外れたり欠けたりすることから、仕事や機械がうまくいかないこと、その結果としての失敗・故障へ意味が広がった。",
+        "summary": "failureはfail＋-ureとして出典が語末の整形を含めて支えるA型を設定できる。",
+        "confidence": "high",
+        "notes": "fail語根と既存の-ure接尾辞を登録する。"
+      }
+    },
+    "journey": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古フランス語 journée（1日の長さ、1日の旅）、俗ラテン語 *diurnum（昼、日）に由来する。 → 旅、旅行、行程" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/journey", "https://www.merriam-webster.com/dictionary/journey"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/journey", "note": "journeyを古フランス語 journée（1日の長さ、1日の仕事・旅）、俗ラテン語 *diurnum、ラテン語 dies（日）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/journey", "note": "journeyの現代語義として、ある場所から別の場所への移動、旅程、人生の道のりを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・英語",
+        "etymons": ["journey", "journée", "*diurnum", "diurnus", "dies", "*dyeu-"],
+        "historicalPath": ["PIE *dyeu-（輝く、昼）", "ラテン語 dies / diurnus（昼、1日の）", "俗ラテン語 *diurnum", "古フランス語 journée → 英語 journey（1日の旅、旅行）"],
+        "components": [{ "form": "journée / diurnum", "kind": "word", "gloss": "1日、1日の旅" }],
+        "rootCandidates": ["dyeu", "diurn"],
+        "semanticBridge": "もともとの「1日の仕事・旅」から、1日に進む距離、一般的な陸海の旅行、比喩的な人生の道のりへ意味が広がった。",
+        "summary": "journeyはフランス語を経た単純な借用語で、jourや-dayの英語表面分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "jour＋-neyなどの綴り合わせは採用しない。"
+      }
+    },
+    "wonder": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 wundor、ゲルマン祖語 *wundran に由来するが、さらに古い起源は不明である。 → だろうかと思った、不思議に思った" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/wonder", "https://www.merriam-webster.com/dictionary/wonder"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/wonder", "note": "wonderを古英語 wundor、ゲルマン祖語 *wundranに遡らせ、語源はunknownとしつつ、驚異・困惑・疑問を表す名詞と動詞の発達を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/wonder", "note": "wonderの現代語義として、驚異、驚きの感情、不思議に思うこと、疑問に思うことを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・中英語・英語・語源不確定",
+        "etymons": ["wonder", "wundor", "wundrian", "*wundran"],
+        "historicalPath": ["ゲルマン祖語 *wundran（驚異、奇異なもの）", "古英語 wundor / wundrian", "中英語 wonder / wondren", "英語 wonder（驚異、不思議に思う）"],
+        "components": [{ "form": "wundor / wonder", "kind": "word", "gloss": "驚異、奇異なもの" }],
+        "rootCandidates": ["wund"],
+        "semanticBridge": "奇妙で驚くべき出来事から、驚きの感情、理解できずに疑問を抱くこと、推測を表す動詞へ意味が広がった。",
+        "summary": "wonderは古いゲルマン語系の単純語で、さらに古い起源も不明なためB型に残す。",
+        "confidence": "high",
+        "notes": "wond＋-erなどの綴り合わせは採用しない。"
+      }
+    },
+    "enter": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古フランス語 entrer、ラテン語 intrare（中へ入る）に由来する。 → 入った、参加した／入る、入力する、参加する" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/enter", "https://www.merriam-webster.com/dictionary/enter"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/enter", "note": "enterを古フランス語 entrer、ラテン語 intrare（中へ行く、入る）、intra（内側）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/enter", "note": "enterの現代語義として、場所や状況に入る、団体に加わる、情報を入力することを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・英語",
+        "etymons": ["enter", "entrer", "intrare", "intra", "inter", "*enter", "*en"],
+        "historicalPath": ["PIE *en（中へ）・*enter（間に）", "ラテン語 intra / intrare（内へ入る）", "古フランス語 entrer", "中英語 entren → 英語 enter（入る、参加する、入力する）"],
+        "components": [{ "form": "intrare / entrer", "kind": "word", "gloss": "中へ入る" }],
+        "rootCandidates": ["en", "enter", "intra"],
+        "semanticBridge": "物理的に中へ入ることから、状況や団体に加わること、記録やコンピューターへ情報を入れることへ意味が広がった。",
+        "summary": "enterはラテン語・フランス語を経た単純な借用語で、en＋terなどの英語表面分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "ent＋-erなどの綴り合わせは採用しない。"
+      }
+    },
+    "forward": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 forewearde、fore（前に）＋-ward（〜の方向へ）からなる複合的な語。 → 前へ、前方に" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/forward", "https://www.merriam-webster.com/dictionary/forward"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/forward", "note": "forwardを古英語 foreweardeに遡らせ、fore（前に）と-ward（方向）の組み合わせ、前進・未来・厚かましさなどの意味を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/forward", "note": "forwardの現代語義として、前方へ、進行中の、手紙などを転送することを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["forward", "forewearde", "fore", "-ward", "*fura", "*per-"],
+        "historicalPath": ["PIE *per-（前へ）", "ゲルマン語系 *fura・古英語 fore（前に）", "古英語 -weard（方向へ）", "古英語 forewearde → 英語 forward（前へ）"],
+        "components": [{ "form": "fore", "kind": "word", "gloss": "前に" }, { "form": "-ward", "kind": "word-forming element", "gloss": "〜の方向へ" }],
+        "rootCandidates": ["per", "fura", "ward"],
+        "semanticBridge": "前方を向いている状態から、前へ進むこと、時間的に先へ進むこと、さらに手紙などを先へ送ることへ用法が広がった。",
+        "summary": "forwardはfore＋-wardの複合的な語であり、複合表現を熟語側に合わせる方針のためB型に残す。",
+        "confidence": "high",
+        "notes": "複合要素をA型の語根・接辞チップとして表示しない。"
+      }
+    },
+    "loudly": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "大声で",
+        "root": "loud",
+        "parts": [
+          { "form": "loud", "kind": "root", "gloss": "音が大きい" },
+          { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で" }
+        ],
+        "derivation": "loud（音が大きい）＋-ly（〜な状態で） → 音が大きい状態で、大声で"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/loudly", "https://www.merriam-webster.com/dictionary/loudly"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/loudly", "note": "loudlyをloud＋-lyと明示し、loudを古英語 hlud、ゲルマン語系 *hludaz、PIE *kleu-（聞く）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/loudly", "note": "loudlyの現代語義として、大きな音で、騒々しく、声を張って行うことを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・古英語・ゲルマン語系・中英語・英語",
+        "etymons": ["loudly", "loud", "hlud", "*hludaz", "*kleu-", "-ly"],
+        "historicalPath": ["PIE *kleu-（聞く）", "ゲルマン語系 *hludaz", "古英語 hlud・中英語 loud", "英語 loud＋-ly → loudly（大声で）"],
+        "components": [{ "form": "loud", "kind": "base", "gloss": "音が大きい" }, { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で" }],
+        "rootCandidates": ["kleu", "hlud"],
+        "semanticBridge": "聞こえるほど音が大きい性質から、そのような音量や態度で行うことを表す副詞へ作られた。",
+        "summary": "loudlyはloud＋-lyとして出典が直接支えるA型を設定できる。",
+        "confidence": "high",
+        "notes": "loud語根と既存の-ly接尾辞を登録する。"
+      }
+    },
+    "worldwide": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "world（世界）＋wide（広い）からなる英語の複合語。 → 世界中で、世界規模の" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/worldwide", "https://www.merriam-webster.com/dictionary/worldwide"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/worldwide", "note": "worldwideをworld＋wideからなる語とし、世界全体に広がる意味を説明している。worldとwideそれぞれの古英語・ゲルマン語系の経路も示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/worldwide", "note": "worldwideの現代語義として、世界中に広がること、全世界に関係することを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["worldwide", "world", "wide", "woruld", "*wer", "*ald", "*widaz"],
+        "historicalPath": ["古英語 world（人の時代、世界）＋wide（広い）", "英語 world-wide（世界と同じ広さの）", "英語 worldwide（世界中で、世界規模の）"],
+        "components": [{ "form": "world", "kind": "word", "gloss": "世界" }, { "form": "wide", "kind": "word", "gloss": "広い" }],
+        "rootCandidates": ["wer", "ald", "wi"],
+        "semanticBridge": "世界全体と同じ広さであることから、地理的に全世界に及ぶこと、規模が全世界的であることへ意味が定着した。",
+        "summary": "worldwideはworld＋wideの複合語であり、複合表現を熟語側に合わせる方針のためB型に残す。",
+        "confidence": "high",
+        "notes": "複合要素をA型の語根・接辞チップとして表示しない。"
+      }
+    },
+    "shy": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "後期古英語 sceoh、ゲルマン祖語 *skeukh(w)az（恐れた）に由来する。 → 恥ずかしがりの、内気な" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/shy", "https://www.merriam-webster.com/dictionary/shy"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/shy", "note": "shyを中英語 shei、後期古英語 sceoh、ゲルマン祖語 *skeukh(w)az（恐れた、驚きやすい）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/shy", "note": "shyの現代語義として、他人との接触を避ける内気さ、恐れやすさ、不足していることを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・中英語・英語",
+        "etymons": ["shy", "shei", "sceoh", "*skeukh(w)az", "schuw"],
+        "historicalPath": ["ゲルマン語系 *skeukh(w)az（恐れた、驚きやすい）", "後期古英語 sceoh", "中英語 shei", "英語 shy（内気な、恐れやすい）"],
+        "components": [{ "form": "sceoh / shy", "kind": "word", "gloss": "恐れやすい、内気な" }],
+        "rootCandidates": ["skeukh"],
+        "semanticBridge": "驚いて身を引く性質から、人との接触を避ける内気さ、さらに不足している状態や複合語での嫌悪・抵抗へ意味が広がった。",
+        "summary": "shyはゲルマン語系の単純語で、語源上の語根が表面形に安定して残らないためB型に残す。",
+        "confidence": "high",
+        "notes": "sh＋-yなどの綴り合わせは採用しない。"
+      }
+    },
+    "cheap": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 ceap（取引、購入）、ゲルマン語系 *kaup- に由来し、ラテン語 caupo（小商人）からの借用と考えられる。 → 安い、安価な" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/cheap", "https://www.merriam-webster.com/dictionary/cheap"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/cheap", "note": "cheapを古英語 ceap（取引、購入）、ceapian（売買する）、ゲルマン語系 *kaup-に遡らせ、ラテン語 caupoからの借用説と安価の意味への変化を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/cheap", "note": "cheapの現代語義として、価格が低い、安っぽい、価値が低いことを確認した。" }
+        ],
+        "originLanguage": "ラテン語・古英語・ゲルマン語系・英語",
+        "etymons": ["cheap", "ceap", "ceapian", "*kaup-", "caupo"],
+        "historicalPath": ["ラテン語 caupo（小商人）からゲルマン語系 *kaup-へ借用", "古英語 ceap（取引、購入）", "中英語 chep / cheap", "英語 cheap（安い）"],
+        "components": [{ "form": "ceap / cheap", "kind": "word", "gloss": "取引、購入" }],
+        "rootCandidates": ["kaup", "caup"],
+        "semanticBridge": "取引や購入の価格を表す語から、買い手にとって有利な安い価格、さらに安っぽい・価値が低いという評価へ意味が広がった。",
+        "summary": "cheapは古英語の単純語で、深いkaup語根を現代英語のcheapに分解しないためB型に残す。",
+        "confidence": "high",
+        "notes": "chea＋-pなどの綴り合わせは採用しない。"
+      }
+    },
+    "guilty": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "有罪の",
+        "root": "guilt",
+        "parts": [
+          { "form": "guilt", "kind": "root", "gloss": "罪・有罪" },
+          { "form": "-y", "kind": "suffix", "gloss": "〜の性質をもつ" }
+        ],
+        "derivation": "guilt（罪・有罪）＋-y（〜の性質をもつ） → 罪のある、有罪の"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/guilty", "https://www.merriam-webster.com/dictionary/guilty"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/guilty", "note": "guiltyを古英語 gyltig（罪を犯した、犯罪者）に遡らせ、gylt（罪、道徳的欠陥）からの形成と説明している。現代語のuは語源的でない挿入である。" },
+          { "url": "https://www.merriam-webster.com/dictionary/guilty", "note": "guiltyの現代語義として、犯罪を犯した、有罪の、罪悪感を覚えることを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・英語",
+        "etymons": ["guilty", "gyltig", "gylt", "guilt", "-ig", "-y"],
+        "historicalPath": ["古英語 gylt（罪、落ち度）", "古英語 gyltig（罪のある）", "中英語 gilty / guilty", "現代英語 guilt＋-y → guilty（有罪の、罪悪感のある）"],
+        "components": [{ "form": "guilt / gylt", "kind": "base", "gloss": "罪、落ち度" }, { "form": "-y / -ig", "kind": "suffix", "gloss": "〜の性質をもつ" }],
+        "rootCandidates": ["gylt"],
+        "semanticBridge": "犯罪や道徳的な落ち度から、その罪を負っている状態、法律上有罪である状態、さらに罪悪感の感情へ意味が広がった。",
+        "summary": "guiltyは歴史的にはgylt＋-igだが、現代語形に合わせたguilt＋-yの表面表示を採用する。uが後代の挿入であることは研究欄に残す。",
+        "confidence": "high",
+        "notes": "現代の学習表示を優先したA型。古英語の接尾辞-igとの違いを隠さない。"
+      }
+    },
+    "rest": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "休むのrestは古英語 ræstan、残りのrestは古フランス語 resteに由来し、同綴に複数の語源経路がある。 → 休む、休憩／残り" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/rest", "https://www.merriam-webster.com/dictionary/rest"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/rest", "note": "休息のrestを古英語 ræstan / restan、ゲルマン祖語 *rastejananに、残りのrestを古フランス語 reste、rester、ラテン語 restareに遡らせ、別系統を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/rest", "note": "restの現代語義として、活動を止めて休むこと、休憩、残りの部分、支えに置くことを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・古英語・ゲルマン語系・英語",
+        "etymons": ["rest", "ræstan", "*rastejanan", "reste", "rester", "restare", "stare"],
+        "historicalPath": ["ゲルマン語系 *rastejanan → 古英語 ræstan（休む）", "古フランス語 reste / rester（残り、残る）", "英語 rest（休む、残り）", "二つの語源経路が同綴で重なった"],
+        "components": [{ "form": "ræstan", "kind": "word", "gloss": "休む" }, { "form": "reste", "kind": "word", "gloss": "残り" }],
+        "rootCandidates": ["rast", "sta"],
+        "semanticBridge": "活動を止めて休むことと、分離後に残る部分という異なる意味が同じ綴りに集まり、休息・支え・残余を表す語になった。",
+        "summary": "restはゲルマン語系とフランス語・ラテン語系の同綴語が重なっており、単一の表面分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "re＋-stなどの綴り合わせは採用しない。"
+      }
+    },
+    "attend": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "出席する",
+        "root": "tend",
+        "parts": [
+          { "form": "at", "kind": "prefix", "gloss": "〜へ" },
+          { "form": "tend", "kind": "root", "gloss": "伸ばす・向ける" }
+        ],
+        "derivation": "at-（〜へ）＋tend（伸ばす・向ける） → 注意や心を対象へ向ける、出席する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/attend", "https://www.merriam-webster.com/dictionary/attend"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/attend", "note": "attendを古フランス語 atendre、ラテン語 attendere（注意を向ける、文字通り伸ばす）、ad＋tendere、PIE *ten-に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/attend", "note": "attendの現代語義として、注意を向ける、世話をする、会合や学校に出席することを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・英語",
+        "etymons": ["attend", "atendre", "attendere", "ad", "tendere", "*ten-"],
+        "historicalPath": ["PIE *ten-（伸ばす）", "ラテン語 ad（〜へ）＋tendere（伸ばす）", "古フランス語 atendre", "英語 at＋tend → attend（注意を向ける、出席する）"],
+        "components": [{ "form": "at- / ad-", "kind": "prefix", "gloss": "〜へ" }, { "form": "tend", "kind": "base", "gloss": "伸ばす、向ける" }],
+        "rootCandidates": ["tend", "ten"],
+        "semanticBridge": "心や力を対象へ伸ばすことから、注意を向けること、誰かの世話をすること、さらにその場へ出席することへ意味が広がった。",
+        "summary": "attendはat-（ad-の同化形）＋tendとして表面形に沿ったA型を設定できる。",
+        "confidence": "high",
+        "notes": "既存のat接頭辞とtend語根を再利用する。"
+      }
+    },
+    "erase": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "ラテン語 erasus、eradere（こすり取る）に由来し、ex（外へ）＋radere（こする）の経路をもつ。 → 消す、削除する" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/erase", "https://www.merriam-webster.com/dictionary/erase"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/erase", "note": "eraseをラテン語 erasus、eradere（こすり取る、削り落とす）、同化したex＋radereに遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/erase", "note": "eraseの現代語義として、書いたものをこすって消す、記録や記憶を取り除くことを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["erase", "erasus", "eradere", "ex", "radere", "*red-"],
+        "historicalPath": ["ラテン語 ex（外へ）＋radere（こする）", "ラテン語 eradere / erasus（こすり取った）", "16世紀の英語 erase", "英語 erase（消す、削除する）"],
+        "components": [{ "form": "eradere / erasus", "kind": "word", "gloss": "こすり取る、削る" }],
+        "rootCandidates": ["red", "rad"],
+        "semanticBridge": "表面をこすり取ることから、文字や記録を消すこと、磁気テープや記憶から情報を取り除くことへ意味が広がった。",
+        "summary": "eraseはラテン語の過去分詞形を借用した単純語で、er＋raseなどの英語表面分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "同化したex-とradereを現代英語のer＋raseとして表示しない。"
+      }
+    },
+    "order": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古フランス語 ordre、ラテン語 ordo（列、順位、配列）に由来する。 → 注文する、命じる／順序" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/order", "https://www.merriam-webster.com/dictionary/order"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/order", "note": "orderを古フランス語 ordre、ラテン語 ordo / ordinem（列、順位、配列）に遡らせ、織機の糸列から秩序・命令へ意味が広がった経路を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/order", "note": "orderの現代語義として、順序、整然とした状態、命令、商品を注文することを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語・語源一部不確定",
+        "etymons": ["order", "ordre", "ordo", "ordinem", "ordiri", "*ar-"],
+        "historicalPath": ["ラテン語 ordo（糸の列、順位、配列）", "古フランス語 ordre", "中英語 ordre / order", "英語 order（順序、命令、注文する）"],
+        "components": [{ "form": "ordo / ordre", "kind": "word", "gloss": "列、順位、配列" }],
+        "rootCandidates": ["ord", "ar"],
+        "semanticBridge": "列や配列から、物事の整った順序、社会的な階級、秩序を保つ命令、店への注文へ意味が広がった。",
+        "summary": "orderはフランス語・ラテン語を経た単純語で、語源にも不確実な部分があるため、ord＋-erなどに分解せずB型に残す。",
+        "confidence": "high",
+        "notes": "ord＋-erなどの綴り合わせは採用しない。"
+      }
+    },
+    "catch": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "アングロフランス語 cachier、古フランス語 chacier、俗ラテン語 *captiare（つかもうとする）に由来する。 → 捕まえる、間に合う" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/catch", "https://www.merriam-webster.com/dictionary/catch"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/catch", "note": "catchをアングロフランス語・古フランス語 cachier / chacier、俗ラテン語 *captiare、ラテン語 captare / capereに遡らせている。chaseとは二重語である。" },
+          { "url": "https://www.merriam-webster.com/dictionary/catch", "note": "catchの現代語義として、つかまえる、間に合う、理解する、感染する、受け止めることを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・英語",
+        "etymons": ["catch", "cachier", "chacier", "*captiare", "captare", "capere", "*kap-"],
+        "historicalPath": ["PIE *kap-（つかむ）", "ラテン語 capere / captare", "俗ラテン語 *captiare", "古フランス語 chacier・英語 catch（捕まえる、間に合う）"],
+        "components": [{ "form": "captiare / cachier", "kind": "word", "gloss": "つかもうとする、捕らえる" }],
+        "rootCandidates": ["kap", "capt"],
+        "semanticBridge": "動物を追ってつかまえることから、物を受け止めること、時間に間に合うこと、病気をうつされること、意味を理解することへ用法が広がった。",
+        "summary": "catchはフランス語を経た単純な借用語で、深いkap語根を表面形に分解しないためB型に残す。",
+        "confidence": "high",
+        "notes": "cat＋-chなどの綴り合わせは採用しない。"
+      }
+    },
+    "hide": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "隠すのhideは古英語 hydan、皮のhideは古英語 hydに由来し、共通して「覆う」イメージをもつ。 → 隠す、隠れる" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/hide", "https://www.merriam-webster.com/dictionary/hide"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/hide", "note": "動詞hideを古英語 hydan、ゲルマン語系 *hudjan、PIE *keudh- / *(s)keu-（覆う、隠す）に、名詞hideを古英語 hyd（皮）に遡らせている。土地のhideにはさらに別系統がある。" },
+          { "url": "https://www.merriam-webster.com/dictionary/hide", "note": "hideの現代語義として、見えないようにする・隠れること、大型動物の皮、土地の単位を確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・古英語・ゲルマン語系・英語",
+        "etymons": ["hide", "hydan", "hyd", "*hudjan", "*keudh-", "*(s)keu-"],
+        "historicalPath": ["PIE *(s)keu-（覆う、隠す）", "ゲルマン語系 *hudjan / *hudiz", "古英語 hydan（隠す）・hyd（皮）", "英語 hide（隠す、皮）"],
+        "components": [{ "form": "hydan", "kind": "word", "gloss": "隠す" }, { "form": "hyd", "kind": "word", "gloss": "皮" }],
+        "rootCandidates": ["keu", "hud"],
+        "semanticBridge": "覆って見えなくすることと、身体を覆う皮という近いイメージが同じ綴りに集まり、隠す・皮・土地の単位という複数の意味になった。",
+        "summary": "hideは同綴に動詞・皮・土地の複数経路があり、単一の表面分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "hi＋-deなどの綴り合わせは採用しない。"
+      }
+    },
+    "rate": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "割合・評価のrateは古フランス語 rate、ラテン語 rata（定められた割合）に由来する。叱るrateには別のreputare系統がある。 → 評価する、格付けする／割合" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/rate", "https://www.merriam-webster.com/dictionary/rate"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/rate", "note": "割合・評価のrateを古フランス語 rate、ラテン語 rata（定められた金額、割合）、reri（数える、考える）に遡らせ、rateの叱責用法には別のreputare系統があると示している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/rate", "note": "rateの現代語義として、割合、速度、料金、評価・格付けすることを確認した。" }
+        ],
+        "originLanguage": "ラテン語・フランス語・英語",
+        "etymons": ["rate", "rata", "reri", "reputare", "*re-", "*pau-"],
+        "historicalPath": ["ラテン語 reri（数える、考える）・rata（定められた割合）", "古フランス語 rate", "英語 rate（割合、料金、評価）", "別経路のrate（叱る）"],
+        "components": [{ "form": "rata / rate", "kind": "word", "gloss": "定められた割合、評価" }],
+        "rootCandidates": ["rat", "put", "pau"],
+        "semanticBridge": "定められた割合や価値から、速度・料金・税率などの基準、さらに基準に照らして評価する動作へ意味が広がった。",
+        "summary": "rateは同綴に複数の意味・語源経路があり、rat＋-eなどの表面分解を設定しないためB型に残す。",
+        "confidence": "high",
+        "notes": "rateの語末-eを接辞として扱わない。"
+      }
+    },
+    "heal": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 hælan、ゲルマン祖語 *hailjan（全体にする）に由来し、PIE *kailo-（完全な）と関係する。 → 傷などが治る、癒やす" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/heal", "https://www.merriam-webster.com/dictionary/heal"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/heal", "note": "healを古英語 hælan、ゲルマン祖語 *hailjan（治す、完全にする）、PIE *kailo-（完全な）に遡らせている。" },
+          { "url": "https://www.merriam-webster.com/dictionary/heal", "note": "healの現代語義として、傷や病気を治す、健康を回復する、心の傷を癒やすことを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・古英語・ゲルマン語系・英語",
+        "etymons": ["heal", "hælan", "*hailjan", "*kailo-"],
+        "historicalPath": ["PIE *kailo-（完全な、無傷の）", "ゲルマン祖語 *hailjan（完全にする）", "古英語 hælan", "英語 heal（治す、癒やす）"],
+        "components": [{ "form": "hælan / heal", "kind": "word", "gloss": "完全にする、治す" }],
+        "rootCandidates": ["kail", "hail"],
+        "semanticBridge": "欠けのない完全な状態に戻すことから、身体の傷病を治すこと、心や関係を回復させることへ意味が広がった。",
+        "summary": "healは古英語・ゲルマン語系の単純語で、深いkail語根を現代英語のhealに分解しないためB型に残す。",
+        "confidence": "high",
+        "notes": "hea＋-lなどの綴り合わせは採用しない。"
+      }
+    },
+    "chase": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古フランス語 chacier、俗ラテン語 *captiare、ラテン語 capere（つかむ）に由来する。catchとは同語源の二重語である。 → 追いかける、追い求める" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/chase", "https://www.merriam-webster.com/dictionary/chase"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/chase", "note": "chaseを古フランス語 chacier、俗ラテン語 *captiare、ラテン語 captare / capere、PIE *kap-に遡らせ、catchとは二重語であると説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/chase", "note": "chaseの現代語義として、追跡する、追い払う、目標を追い求めることを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・英語",
+        "etymons": ["chase", "chacen", "chacier", "*captiare", "captare", "capere", "*kap-"],
+        "historicalPath": ["PIE *kap-（つかむ）", "ラテン語 capere / captare", "俗ラテン語 *captiare", "古フランス語 chacier → 英語 chase（追う、追跡する）"],
+        "components": [{ "form": "chacier / captiare", "kind": "word", "gloss": "狩る、つかもうとする" }],
+        "rootCandidates": ["kap", "capt"],
+        "semanticBridge": "獲物を捕らえるために狩ることから、敵や目標を追跡すること、比喩的に目標を追い求めることへ意味が広がった。",
+        "summary": "chaseはフランス語を経た単純な借用語で、深いkap語根を現代英語のchaseに分解しないためB型に残す。",
+        "confidence": "high",
+        "notes": "cha＋-seなどの綴り合わせは採用しない。"
+      }
+    },
+    "dry": {
+      "classification": "B",
+      "display": { "type": "B", "derivation": "古英語 dryge / drygan、ゲルマン語系 *draugiz / *dreug-（乾いた）に由来する。 → 乾かす、乾く／乾いた" },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/dry", "https://www.merriam-webster.com/dictionary/dry"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/dry", "note": "dryを中英語 drie、古英語 dryge / drygan、ゲルマン語系 *draugiz / *dreug-に遡らせ、乾燥・感情のない態度・辛口などの意味を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/dry", "note": "dryの現代語義として、水分がない、乾かす、感情を表さない、甘くないことを確認した。" }
+        ],
+        "originLanguage": "古英語・ゲルマン語系・中英語・英語",
+        "etymons": ["dry", "drie", "dryge", "drygan", "*draugiz", "*dreug-"],
+        "historicalPath": ["ゲルマン語系 *dreug-（乾かす）", "古英語 dryge（乾いた）・drygan（乾かす）", "中英語 drie / drien", "英語 dry（乾いた、乾かす）"],
+        "components": [{ "form": "dryge / drygan", "kind": "word", "gloss": "乾いた、乾かす" }],
+        "rootCandidates": ["dreug", "draug"],
+        "semanticBridge": "水分を取り除くことから、乾いた状態、感情の乏しい態度、甘くない飲み物や辛口の冗談へ意味が広がった。",
+        "summary": "dryは古英語・ゲルマン語系の単純語で、語根の音形が現代英語のdryにそのまま分解できないためB型に残す。",
+        "confidence": "high",
+        "notes": "dr＋-yなどの綴り合わせは採用しない。"
+      }
+    },
+    "nervously": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "緊張して",
+        "root": "nerv",
+        "parts": [
+          { "form": "nerv", "kind": "root", "gloss": "筋・神経" },
+          { "form": "-ous", "kind": "suffix", "gloss": "〜の性質の" },
+          { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で" }
+        ],
+        "derivation": "nerv（筋・神経）＋-ous（〜の性質の）＋-ly（〜な状態で） → 神経が高ぶった状態で、緊張して"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/nervous", "https://www.merriam-webster.com/dictionary/nervously"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/nervous", "note": "nervousをラテン語 nervosus（筋の多い、活力のある）、nervus（筋、神経）に遡らせ、現代の不安・緊張の意味とnervouslyの関連形を説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/nervously", "note": "nervouslyの現代語義として、緊張して、不安そうに、神経質な様子で行うことを確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・フランス語・英語",
+        "etymons": ["nervously", "nervous", "nervosus", "nervus", "*sneu-", "-ous", "-ly"],
+        "historicalPath": ["PIE *(s)neu-（腱、筋）", "ラテン語 nervus / nervosus（筋、神経の）", "英語 nervous", "英語 nervous＋-ly → nervously（緊張して）"],
+        "components": [{ "form": "nervus / nerv", "kind": "base", "gloss": "筋、神経" }, { "form": "-ous", "kind": "suffix", "gloss": "〜の性質の" }, { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で" }],
+        "rootCandidates": ["nerv", "sneu"],
+        "semanticBridge": "筋や神経に関する性質から活力・神経の状態を表し、そこから不安や緊張を示す形容詞、さらにその状態で行う副詞へ作られた。",
+        "summary": "nervouslyはnerv＋-ous＋-lyとして表面形に沿ったA型を設定できる。",
+        "confidence": "high",
+        "notes": "既存のnerv語根と-ous・-ly接尾辞を再利用する。"
+      }
+    },
+    "absolutely": {
+      "classification": "A",
+      "display": {
+        "type": "A",
+        "gloss": "完全に",
+        "root": "absolute",
+        "parts": [
+          { "form": "absolute", "kind": "root", "gloss": "制限のない・完全な" },
+          { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で" }
+        ],
+        "derivation": "absolute（制限のない・完全な）＋-ly（〜な状態で） → 完全な状態で、完全に・まったく"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": ["https://www.etymonline.com/word/absolutely", "https://www.merriam-webster.com/dictionary/absolutely"],
+        "sourceNotes": [
+          { "url": "https://www.etymonline.com/word/absolutely", "note": "absolutelyをabsolute＋-lyと明示し、無条件・完全の意味から最大限の強調へ発達したと説明している。" },
+          { "url": "https://www.merriam-webster.com/dictionary/absolutely", "note": "absolutelyの現代語義として、完全に、無条件に、断固として、本当にという副詞用法を確認した。" }
+        ],
+        "originLanguage": "インド・ヨーロッパ祖語・ラテン語・英語",
+        "etymons": ["absolutely", "absolute", "absolutus", "absolvere", "ab", "solvere", "-ly"],
+        "historicalPath": ["PIE *leu-（ゆるめる、分ける）", "ラテン語 ab（離れて）＋solvere（ほどく）", "ラテン語 absolutus → 英語 absolute", "英語 absolute＋-ly → absolutely（完全に）"],
+        "components": [{ "form": "absolute", "kind": "base", "gloss": "制限のない、完全な" }, { "form": "-ly", "kind": "suffix", "gloss": "〜な状態で" }],
+        "rootCandidates": ["absolut", "solut", "leu"],
+        "semanticBridge": "束縛からほどかれて何にも制限されない状態から、完全で例外のない状態、さらに強い断定・強調を表す副詞へ意味が広がった。",
+        "summary": "absolutelyはabsolute＋-lyとして出典が直接支えるA型を設定できる。",
+        "confidence": "high",
+        "notes": "absoluteを表示上の基体とし、深いab＋solvere分解は研究欄に残す。"
+      }
+    }
+  }
+}
