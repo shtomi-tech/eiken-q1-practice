@@ -18,10 +18,15 @@ async function boot() {
         && typeof lemmaData.flashcardLemmas === "object" && !Array.isArray(lemmaData.flashcardLemmas)
         ? lemmaData.flashcardLemmas
         : {};
+      flashcardDisplayLemmaMap = lemmaData && lemmaData.flashcardDisplayLemmas
+        && typeof lemmaData.flashcardDisplayLemmas === "object" && !Array.isArray(lemmaData.flashcardDisplayLemmas)
+        ? lemmaData.flashcardDisplayLemmas
+        : {};
     } catch (e) {
       lemmaMap = {};
       lemmaEntries = {};
       flashcardLemmaMap = {};
+      flashcardDisplayLemmaMap = {};
     }
     await loadWordOriginData();
 

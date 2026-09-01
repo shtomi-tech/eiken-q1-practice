@@ -56,6 +56,7 @@ const VOCAB_GOALS = {
   let lemmaMap = {};
   let lemmaEntries = {};
   let flashcardLemmaMap = {};
+  let flashcardDisplayLemmaMap = {};
 let wordOriginMap = {};
 
 function isValidIsoDate(value) {

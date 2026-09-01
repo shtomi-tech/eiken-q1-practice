@@ -44,9 +44,8 @@ function learningEntryOf(item) {
 function learningMeaningOf(item) { return learningEntryOf(item).meaning || item?.meaning || ""; }
 function learningPosOf(item) { return learningEntryOf(item).pos || item?.pos || ""; }
 function lemmaAudioPathOf(item, useFlashcardLemma = false) {
-  if (useFlashcardLemma && item?.type === "word") {
-    const surface = String(surfaceOf(item) || "").toLowerCase();
-    const flashcardLemma = String(flashcardLemmaMap[surface] || "").trim().toLowerCase();
+  if (useFlashcardLemma) {
+    const flashcardLemma = flashcardLemmaOf(item);
     if (flashcardLemma) {
       const entry = lemmaEntries[flashcardLemma];
       return entry?.audio || `assets/audio/lemma/${audioSlug(flashcardLemma)}.mp3`;
@@ -64,6 +63,15 @@ function normalizedSurface(value) {
 }
 function audioSlug(value) {
   return normalizedSurface(value).replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+}
+function flashcardLemmaOf(item) {
+  if (!item) return "";
+  const surface = String(surfaceOf(item) || "").toLowerCase();
+  return String(
+    flashcardDisplayLemmaMap[surface]
+      || (item.type === "word" ? flashcardLemmaMap[surface] : "")
+      || "",
+  ).trim().toLowerCase();
 }
 function vocabularyAudioDataset(item) {
   if (!item || (item.type !== "word" && item.type !== "idiom")) return null;
@@ -174,9 +182,7 @@ function playVocabAudio(path, button, text) {
   audio.play().catch(finish);
 }
 function buildVocabAudioButton(item, className = "flashListenButton", useFlashcardLemma = false) {
-  const surface = useFlashcardLemma && item?.type === "word"
-    ? flashcardLemmaMap[String(surfaceOf(item) || "").toLowerCase()] || canonicalHeadwordOf(item)
-    : canonicalHeadwordOf(item);
+  const surface = useFlashcardLemma ? flashcardLemmaOf(item) || canonicalHeadwordOf(item) : canonicalHeadwordOf(item);
   const audioButton = el("button", {
     class: className,
     type: "button",
@@ -264,4 +270,3 @@ function armChoiceGuard() { session._choicesReadyAt = performance.now() + CHOICE
 function choicesLocked() { return performance.now() < (session._choicesReadyAt || 0); }
 function armFlashNavGuard() { session._flashNavReadyAt = performance.now() + FLASH_NAV_GUARD_MS; }
 function flashNavLocked() { return performance.now() < (session._flashNavReadyAt || 0); }
-

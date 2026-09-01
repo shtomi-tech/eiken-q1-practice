@@ -359,9 +359,9 @@ function buildFlashCard(item) {
   const card = el("div", { class: "flash" });
   const head = el("div", { class: "flashHead" });
   const surface = surfaceOf(item);
-  const displayLemma = item.type === "word"
-    ? flashcardLemmaMap[String(surface || "").toLowerCase()]
-    : "";
+  const surfaceKey = String(surface || "").toLowerCase();
+  const displayLemma = flashcardDisplayLemmaMap[surfaceKey]
+    || (item.type === "word" ? flashcardLemmaMap[surfaceKey] : "");
   const headword = displayLemma || canonicalHeadwordOf(item);
   const learning = learningEntryOf(item);
   const wordLine = el("div", { class: "flashWordLine" },

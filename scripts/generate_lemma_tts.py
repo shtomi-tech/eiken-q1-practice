@@ -1,4 +1,4 @@
-"""Generate one Azure Speech MP3 for each learning lemma entry."""
+"""Generate Azure Speech MP3s for flashcard lemma entries."""
 
 from __future__ import annotations
 
@@ -38,21 +38,22 @@ def main() -> int:
     parser.add_argument(
         "--flashcard-only",
         action="store_true",
-        help="lemmas.jsonのflashcardLemmasにある表示用原形だけを処理する",
+        help="lemmas.jsonのflashcardLemmasとflashcardDisplayLemmasにある表示用原形だけを処理する",
     )
     args = parser.parse_args()
 
     data = json.loads(LEMMA_PATH.read_text(encoding="utf-8"))
     if args.flashcard_only:
-        mapping = data.get("flashcardLemmas")
-        if not isinstance(mapping, dict) or not mapping:
-            raise SystemExit("data/lemmas.json に flashcardLemmas がありません")
         lemmas = set()
-        for surface, value in mapping.items():
-            lemma = str(value or "").strip().lower()
-            if not lemma:
-                raise SystemExit(f"flashcardLemmasの原形が空です: {surface}")
-            lemmas.add(lemma)
+        for mapping_name in ("flashcardLemmas", "flashcardDisplayLemmas"):
+            mapping = data.get(mapping_name)
+            if not isinstance(mapping, dict) or not mapping:
+                raise SystemExit(f"data/lemmas.json に {mapping_name} がありません")
+            for surface, value in mapping.items():
+                lemma = str(value or "").strip().lower()
+                if not lemma:
+                    raise SystemExit(f"{mapping_name}の原形が空です: {surface}")
+                lemmas.add(lemma)
         entries = {
             lemma: {"audio": f"assets/audio/lemma/{audio_slug(lemma)}.mp3"}
             for lemma in sorted(lemmas)

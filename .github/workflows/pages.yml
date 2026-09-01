@@ -58,7 +58,7 @@ jobs:
           cp data/questions_iuhw_*.json data/vocab_iuhw_*.json _site/data/
           cp -R assets/audio/vocab/* _site/assets/audio/vocab/
           cp -R assets/audio/lemma/* _site/assets/audio/lemma/
-          expected_lemma_audio_count=$(node -e 'const fs=require("fs"); const data=JSON.parse(fs.readFileSync("data/lemmas.json", "utf8")); const entries=Object.keys(data.entries || {}); const display=Object.values(data.flashcardLemmas || {}); console.log(new Set([...entries, ...display]).size)')
+          expected_lemma_audio_count=$(node -e 'const fs=require("fs"); const data=JSON.parse(fs.readFileSync("data/lemmas.json", "utf8")); const entries=Object.keys(data.entries || {}); const display=Object.values(data.flashcardLemmas || {}); const displayOnly=Object.values(data.flashcardDisplayLemmas || {}); console.log(new Set([...entries, ...display, ...displayOnly]).size)')
           lemma_audio_count=$(find assets/audio/lemma -type f -name '*.mp3' | wc -l)
           site_lemma_audio_count=$(find _site/assets/audio/lemma -type f -name '*.mp3' | wc -l)
           test "$lemma_audio_count" -eq "$expected_lemma_audio_count"

@@ -9,10 +9,17 @@ const css = appCss();
 const data = readJson("data/lemmas.json");
 const pages = readText(".github/workflows/pages.yml");
 const buildScript = readText("scripts/build_lemma_entries.py");
+const lemmaTts = readText("scripts/generate_lemma_tts.py");
 const allowMissingAudio = process.argv.includes("--allow-missing-audio");
 const flashcardLemmas = data.flashcardLemmas && typeof data.flashcardLemmas === "object" && !Array.isArray(data.flashcardLemmas)
   ? data.flashcardLemmas
   : {};
+const flashcardDisplayLemmas = data.flashcardDisplayLemmas && typeof data.flashcardDisplayLemmas === "object" && !Array.isArray(data.flashcardDisplayLemmas)
+  ? data.flashcardDisplayLemmas
+  : {};
+const displayAudioTargets = new Set(Object.values(flashcardDisplayLemmas)
+  .map((lemma) => String(lemma || "").trim().toLowerCase())
+  .filter(Boolean));
 
 function audioSlug(value) {
   return String(value || "")
@@ -48,9 +55,15 @@ for (const [key, value] of Object.entries(data.lemmas)) {
 }
 
 const vocabWords = new Set();
+const vocabSurfaces = new Set();
 for (const name of fs.readdirSync("data").filter((value) => /^vocab_.*\.json$/.test(value))) {
   const vocab = JSON.parse(fs.readFileSync(path.join("data", name), "utf8"));
-  for (const item of vocab.words || []) vocabWords.add(String(item.word || "").toLowerCase());
+  for (const item of vocab.words || []) {
+    const surface = String(item.word || "").toLowerCase();
+    vocabWords.add(surface);
+    vocabSurfaces.add(surface);
+  }
+  for (const item of vocab.idioms || []) vocabSurfaces.add(String(item.phrase || "").toLowerCase());
 }
 for (const [surface, lemma] of Object.entries(flashcardLemmas)) {
   assert.equal(surface, surface.trim().toLowerCase(), `暗記カード原形キーが正規化されていない: ${surface}`);
@@ -58,6 +71,13 @@ for (const [surface, lemma] of Object.entries(flashcardLemmas)) {
   assert.equal(lemma, lemma.trim().toLowerCase(), `暗記カード原形値が正規化されていない: ${surface}`);
   assert.notEqual(surface, lemma, `暗記カード原形マップに同じ語を入れない: ${surface}`);
   assert.ok(vocabWords.has(surface), `暗記カード原形マップの出題形が語彙データにありません: ${surface}`);
+}
+for (const [surface, lemma] of Object.entries(flashcardDisplayLemmas)) {
+  assert.equal(surface, surface.trim().toLowerCase(), `暗記カード表示原形キーが正規化されていない: ${surface}`);
+  assert.ok(typeof lemma === "string" && lemma.trim(), `暗記カード表示原形値が空: ${surface}`);
+  assert.equal(lemma, lemma.trim().toLowerCase(), `暗記カード表示原形値が正規化されていない: ${surface}`);
+  assert.notEqual(surface, lemma, `暗記カード表示原形マップに同じ語を入れない: ${surface}`);
+  assert.ok(vocabSurfaces.has(surface), `暗記カード表示原形マップの出題形が語彙データにありません: ${surface}`);
 }
 for (const key of Object.keys(data.lemmas)) {
   assert.ok(vocabWords.has(key), `語彙データにない原形キー: ${key}`);
@@ -127,6 +147,11 @@ for (const lemma of targetLemmas) {
   const audioPath = path.resolve(entry.audio);
   if (!fs.existsSync(audioPath) || fs.statSync(audioPath).size === 0) missingAudio += 1;
 }
+let missingDisplayAudio = 0;
+for (const lemma of displayAudioTargets) {
+  const audioPath = path.resolve(`assets/audio/lemma/${audioSlug(lemma)}.mp3`);
+  if (!fs.existsSync(audioPath) || fs.statSync(audioPath).size === 0) missingDisplayAudio += 1;
+}
 
 assert.equal(data.entries.liaison.meaning, "連絡、連携、協力関係；密通",
   "liaison の収録済み語義が統合されていません");
@@ -143,10 +168,13 @@ assert.match(pages, /cp -R assets\/audio\/lemma\/\* _site\/assets\/audio\/lemma\
   "Pagesで原形音声をコピーしていません");
 assert.match(pages, /lemma_audio_count|lemma_count|audio\/lemma/,
   "Pages成果物の原形音声件数チェックがありません");
+assert.match(pages, /flashcardDisplayLemmas/,
+  "Pagesの原形音声件数チェックが表示原形マップを含んでいません");
 
 const buildFlashCard = extractFunctionBody(js, "buildFlashCard");
 assert.match(buildFlashCard, /canonicalHeadwordOf/);
 assert.match(buildFlashCard, /flashcardLemmaMap/);
+assert.match(buildFlashCard, /flashcardDisplayLemmaMap/);
 assert.match(buildFlashCard, /buildVocabAudioButton\(item, "flashListenButton", true\)/);
 assert.match(buildFlashCard, /learningEntryOf/);
 assert.match(buildFlashCard, /learningPosOf/);
@@ -158,25 +186,31 @@ assert.match(extractFunctionBody(js, "meaningPoolForItems"), /learningMeaningOf/
 const lemmaAudioPath = extractFunctionBody(js, "lemmaAudioPathOf");
 assert.match(lemmaAudioPath, /vocabularyAudioPath/);
 assert.match(lemmaAudioPath, /useFlashcardLemma/);
+assert.match(lemmaAudioPath, /flashcardLemmaOf/);
+const flashcardLemma = extractFunctionBody(js, "flashcardLemmaOf");
+assert.match(flashcardLemma, /flashcardDisplayLemmaMap/);
+assert.match(flashcardLemma, /flashcardLemmaMap/);
 const vocabAudioButton = extractFunctionBody(js, "buildVocabAudioButton");
-assert.match(vocabAudioButton, /flashcardLemmaMap/);
+assert.match(vocabAudioButton, /flashcardLemmaOf/);
 assert.match(vocabAudioButton, /useFlashcardLemma/);
 const boot = extractFunctionBody(js, "boot");
 assert.match(boot, /data\/lemmas\.json/);
 assert.match(boot, /lemmaEntries/);
 assert.match(boot, /flashcardLemmaMap/);
+assert.match(boot, /flashcardDisplayLemmaMap/);
+assert.match(lemmaTts, /flashcardDisplayLemmas/);
 
 for (const name of ["surfaceOf", "itemKeyOf", "vocabularyAudioPath"]) {
-  assert.doesNotMatch(extractFunctionBody(js, name), /lemmaMap|lemmaEntries|flashcardLemmaMap|lemmas|canonicalHeadwordOf|learningEntryOf/,
+  assert.doesNotMatch(extractFunctionBody(js, name), /lemmaMap|lemmaEntries|flashcardLemmaMap|flashcardDisplayLemmaMap|lemmas|canonicalHeadwordOf|learningEntryOf/,
     `${name} は原形マップを参照してはいけません`);
 }
 
 assert.match(css, /\.flashLemmaNote\s*\{/);
 
-if (missingAudio && !allowMissingAudio) {
-  assert.fail(`原形MP3が${missingAudio}/${targetLemmas.size}件不足しています。音声生成後に再実行してください。`);
+if ((missingAudio || missingDisplayAudio) && !allowMissingAudio) {
+  assert.fail(`原形MP3が不足しています（辞書${missingAudio}/${targetLemmas.size}件、表示原形${missingDisplayAudio}/${displayAudioTargets.size}件）。音声生成後に再実行してください。`);
 }
-if (missingAudio) {
-  console.log(`lemma audio files: allowed missing (${missingAudio}/${targetLemmas.size}; --allow-missing-audio)`);
+if (missingAudio || missingDisplayAudio) {
+  console.log(`lemma audio files: allowed missing (辞書${missingAudio}/${targetLemmas.size}件、表示原形${missingDisplayAudio}/${displayAudioTargets.size}件; --allow-missing-audio)`);
 }
-console.log(`lemma headword contract: OK (${Object.keys(data.lemmas).length} map entries / ${targetLemmas.size} dictionary entries)`);
+console.log(`lemma headword contract: OK (${Object.keys(data.lemmas).length} map entries / ${targetLemmas.size} dictionary entries / ${displayAudioTargets.size} display audio targets)`);
