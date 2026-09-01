@@ -403,6 +403,185 @@ function scrollFlashCardIntoView() {
   window.scrollTo({ top: Math.max(0, target), left: 0, behavior: "auto" });
 }
 
+// 暗記カードのスワイプは、既存の前へ／次へボタンを補助する操作。
+// 現在の表示位置と指の速度から始めることで、途中でつかみ直しても動きが飛ばないようにする。
+function flashTranslateX(card) {
+  const transform = getComputedStyle(card).transform;
+  if (!transform || transform === "none") return 0;
+  const matrix3d = transform.match(/^matrix3d\(([^)]+)\)$/);
+  if (matrix3d) return Number(matrix3d[1].split(",")[12]) || 0;
+  const matrix = transform.match(/^matrix\(([^)]+)\)$/);
+  return matrix ? Number(matrix[1].split(",")[4]) || 0 : 0;
+}
+
+function setFlashGestureTransform(card, x) {
+  const rotation = Math.max(-4, Math.min(4, x * 0.025));
+  const opacity = Math.max(0.86, 1 - Math.abs(x) / 1400);
+  card.style.transform = `translate3d(${x.toFixed(2)}px, 0, 0) rotate(${rotation.toFixed(2)}deg)`;
+  card.style.opacity = opacity.toFixed(3);
+}
+
+function clearFlashGesture(card) {
+  card.classList.remove("gestureActive");
+  card.style.transform = "";
+  card.style.opacity = "";
+  card.style.willChange = "";
+}
+
+function stopFlashSpring(card) {
+  if (!card._flashGestureRaf) return;
+  cancelAnimationFrame(card._flashGestureRaf);
+  card._flashGestureRaf = 0;
+}
+
+function animateFlashGesture(card, target, initialVelocity = 0, onComplete = null) {
+  stopFlashSpring(card);
+  if (prefersReducedMotion()) {
+    clearFlashGesture(card);
+    if (onComplete) onComplete();
+    return;
+  }
+
+  card.classList.add("gestureActive");
+  let position = flashTranslateX(card);
+  let velocity = Math.max(-3200, Math.min(3200, Number(initialVelocity) || 0));
+  let previousTime = performance.now();
+  const stiffness = 360;
+  const damping = 2 * Math.sqrt(stiffness); // 臨界減衰: 反発は指が勢いを持ったときだけ残す
+  const step = (now) => {
+    if (!card.isConnected) return;
+    const delta = Math.min(0.032, Math.max(0.001, (now - previousTime) / 1000));
+    previousTime = now;
+    velocity += ((target - position) * stiffness - velocity * damping) * delta;
+    position += velocity * delta;
+    setFlashGestureTransform(card, position);
+    if (Math.abs(target - position) < 0.5 && Math.abs(velocity) < 8) {
+      setFlashGestureTransform(card, target);
+      card._flashGestureRaf = 0;
+      clearFlashGesture(card);
+      if (onComplete) onComplete();
+      return;
+    }
+    card._flashGestureRaf = requestAnimationFrame(step);
+  };
+  card._flashGestureRaf = requestAnimationFrame(step);
+}
+
+function flashRubberband(overshoot, dimension, constant = 0.55) {
+  return (overshoot * dimension * constant) / (dimension + constant * Math.abs(overshoot));
+}
+
+function setupFlashGesture(card, canGoBack, canGoForward) {
+  let pointerId = null;
+  let startX = 0;
+  let startY = 0;
+  let startOffset = 0;
+  let horizontal = false;
+  let samples = [];
+
+  const releasePointer = () => {
+    if (pointerId == null) return;
+    if (card.hasPointerCapture(pointerId)) card.releasePointerCapture(pointerId);
+    pointerId = null;
+  };
+
+  const remember = (x, time) => {
+    samples.push({ x, time });
+    if (samples.length > 5) samples.shift();
+  };
+
+  const releaseVelocity = () => {
+    if (samples.length < 2) return 0;
+    const first = samples[Math.max(0, samples.length - 3)];
+    const last = samples[samples.length - 1];
+    const elapsed = Math.max(1, last.time - first.time);
+    return ((last.x - first.x) / elapsed) * 1000;
+  };
+
+  const cancelTracking = () => {
+    horizontal = false;
+    samples = [];
+    releasePointer();
+  };
+
+  const finish = (event, cancelled = false) => {
+    if (pointerId !== event.pointerId) return;
+    const position = flashTranslateX(card);
+    remember(position, performance.now());
+    const velocity = releaseVelocity();
+    const canCommit = !cancelled && horizontal
+      && (Math.abs(position) >= 56 || Math.abs(velocity) >= 480)
+      && ((position < 0 && canGoForward) || (position > 0 && canGoBack));
+    const direction = position < 0 ? 1 : -1;
+    horizontal = false;
+    releasePointer();
+    card.classList.remove("gestureActive");
+
+    if (!canCommit) {
+      animateFlashGesture(card, 0, velocity);
+      return;
+    }
+
+    armFlashNavGuard();
+    const exitTarget = direction > 0
+      ? -Math.max(window.innerWidth * 0.88, 280)
+      : Math.max(window.innerWidth * 0.88, 280);
+    animateFlashGesture(card, exitTarget, velocity, () => {
+      if (!card.isConnected) return;
+      if (direction > 0) {
+        if (session.flashIdx === session.items.length - 1) session.stage = "check";
+        else session.flashIdx++;
+      } else {
+        session.flashIdx = Math.max(0, session.flashIdx - 1);
+      }
+      renderSession();
+      scrollFlashCardIntoView();
+    });
+  };
+
+  card.addEventListener("pointerdown", (event) => {
+    if (pointerId != null || (event.pointerType === "mouse" && event.button !== 0) || flashNavLocked()) return;
+    const target = event.target instanceof Element ? event.target : null;
+    if (target?.closest("button, a, input, select, textarea")) return;
+    stopFlashSpring(card);
+    pointerId = event.pointerId;
+    startX = event.clientX;
+    startY = event.clientY;
+    startOffset = flashTranslateX(card);
+    horizontal = false;
+    samples = [];
+    remember(startOffset, performance.now());
+    card.setPointerCapture(pointerId);
+  });
+
+  card.addEventListener("pointermove", (event) => {
+    if (pointerId !== event.pointerId) return;
+    const rawX = startOffset + event.clientX - startX;
+    const rawY = event.clientY - startY;
+    if (!horizontal) {
+      if (Math.abs(rawX) < 10 && Math.abs(rawY) < 10) return;
+      if (Math.abs(rawY) > Math.abs(rawX)) {
+        cancelTracking();
+        return;
+      }
+      horizontal = true;
+      card.classList.add("gestureActive");
+    }
+    event.preventDefault();
+    const limit = Math.max(72, card.getBoundingClientRect().width * 0.28);
+    let position = rawX;
+    if ((rawX < 0 && !canGoForward) || (rawX > 0 && !canGoBack)) {
+      const edge = rawX < 0 ? -limit : limit;
+      position = edge + flashRubberband(rawX - edge, limit);
+    }
+    setFlashGestureTransform(card, position);
+    remember(position, performance.now());
+  });
+
+  card.addEventListener("pointerup", (event) => finish(event));
+  card.addEventListener("pointercancel", (event) => finish(event, true));
+}
+
 function originKindLabel(kind) {
   return { prefix: "接頭辞", root: "語根", suffix: "接尾辞" }[kind] || "構成要素";
 }
@@ -473,7 +652,10 @@ function renderFlash(body) {
   const items = session.items;
   const item = items[session.flashIdx];
 
-  body.appendChild(buildFlashCard(item));
+  const flash = buildFlashCard(item);
+  // 最後のカードから左へ送る操作は「意味チェックへ進む」に対応する。
+  setupFlashGesture(flash, session.flashIdx > 0, true);
+  body.appendChild(flash);
 
   const nav = el("div", { class: "actions flashNav" });
   const guardActive = flashNavLocked();

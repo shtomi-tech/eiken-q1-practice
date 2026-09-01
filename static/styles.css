@@ -30,6 +30,8 @@
   --motion-async: 220ms;
   --motion-completion: 420ms;
   --ease-spring-soft: cubic-bezier(.34, 1.56, .64, 1);
+  --chrome-bg: rgba(250, 249, 245, .84);
+  --chrome-line: rgba(230, 223, 216, .84);
 }
 
 * { box-sizing: border-box; }
@@ -91,8 +93,8 @@ a:focus-visible,
 select:focus-visible,
 input:focus-visible,
 summary:focus-visible {
-  outline: 2px solid var(--ink);
-  outline-offset: 2px;
+  outline: 2px solid var(--clay);
+  outline-offset: 3px;
 }
 
 button, select, input, textarea { font: inherit; }
@@ -106,7 +108,12 @@ button {
   padding: 9px 16px;
   cursor: pointer;
   transform: scale(1);
-  transition: transform var(--motion-release) var(--ease-spring-soft);
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform var(--motion-release) var(--ease-spring-soft),
+              background-color var(--motion-release) ease-out,
+              border-color var(--motion-release) ease-out,
+              color var(--motion-release) ease-out;
 }
 
 button:hover { background: #000; }
@@ -130,14 +137,28 @@ select, input {
 .wrap { max-width: 960px; margin: 0 auto; padding: 24px 16px 64px; }
 
 .top {
+  position: relative;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   gap: 16px;
   flex-wrap: wrap;
-  border-bottom: 2px solid var(--ink);
+  background: var(--chrome-bg);
+  -webkit-backdrop-filter: blur(18px) saturate(120%);
+  backdrop-filter: blur(18px) saturate(120%);
+  border-bottom: 1px solid var(--chrome-line);
   padding-bottom: 12px;
   margin-bottom: 16px;
+}
+.top::after {
+  position: absolute;
+  right: 0;
+  bottom: -8px;
+  left: 0;
+  height: 8px;
+  background: linear-gradient(to bottom, rgba(250, 249, 245, .46), transparent);
+  content: "";
+  pointer-events: none;
 }
 
 .brand { display: flex; flex-direction: column; gap: 4px; align-items: flex-start; }
@@ -326,6 +347,12 @@ h2 {
   text-align: left;
 }
 .datasetUnitCard:hover { background: var(--surface-soft); }
+@media (hover: hover) {
+  .datasetUnitCard:hover,
+  .qCard:hover {
+    transform: translateY(-2px);
+  }
+}
 .datasetUnitCard.current {
   background: var(--surface-strong);
   border-left: 4px solid var(--ink);
@@ -391,6 +418,9 @@ h2 {
   width: min(928px, calc(100% - 32px));
   transform: translateX(-50%);
   background: var(--parchment);
+  background: var(--chrome-bg);
+  -webkit-backdrop-filter: blur(18px) saturate(120%);
+  backdrop-filter: blur(18px) saturate(120%);
   border-top: 1px solid var(--line);
   padding: 12px 0 max(12px, env(safe-area-inset-bottom));
 }
@@ -444,10 +474,33 @@ h2 {
     position: sticky;
     bottom: 0;
     background: var(--parchment);
+    background: var(--chrome-bg);
+    -webkit-backdrop-filter: blur(16px) saturate(120%);
+    backdrop-filter: blur(16px) saturate(120%);
     border-top: 1px solid var(--ink);
     margin: 14px -16px -16px;
     padding: 12px 16px;
     z-index: 5;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .top,
+  .sessionStickyNav,
+  .sessionActionBar,
+  .answerActions {
+    background: var(--parchment);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+
+@media (prefers-contrast: more) {
+  .top,
+  .sessionStickyNav,
+  .sessionActionBar,
+  .answerActions {
+    border-color: var(--ink);
   }
 }
 .startCta {
@@ -712,6 +765,9 @@ h2 {
   gap: 10px;
   flex-wrap: wrap;
   background: var(--parchment);
+  background: var(--chrome-bg);
+  -webkit-backdrop-filter: blur(16px) saturate(120%);
+  backdrop-filter: blur(16px) saturate(120%);
   border-bottom: 1px solid var(--line);
   margin: -4px -4px 14px;
   padding: 8px 4px;
@@ -724,22 +780,23 @@ h2 {
   letter-spacing: .04em;
   color: var(--muted);
 }
+.sessionStickyPos {
+  color: var(--ink);
+  font-weight: 600;
+}
 @media (max-width: 720px) {
   .sessionStickyStage { display: none; }
 }
 
 .stageBar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0;
-  background: var(--paper);
-  border-radius: var(--r-md);
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  background: transparent;
   margin-bottom: 16px;
 }
 .stagePill {
-  flex: 1 1 0;
-  min-width: 120px;
+  min-width: 0;
   min-height: 44px;
   padding: 8px 10px;
   display: flex;
@@ -751,12 +808,13 @@ h2 {
   letter-spacing: .06em;
   text-transform: uppercase;
   color: var(--muted);
-  border-right: 1px solid var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--paper);
 }
-.stagePill:last-child { border-right: 0; }
-.stagePill.active { background: var(--ink); color: var(--parchment); }
-.stagePill.cleared { color: var(--ok-text); }
-.meaningBar .stagePill { flex-basis: 50%; }
+.stagePill.active { border-color: var(--ink); background: var(--ink); color: var(--parchment); }
+.stagePill.cleared { border-color: var(--line); background: var(--surface-soft); color: var(--ok-text); }
+.meaningBar { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
 .q1Progress {
   background: var(--paper);
@@ -1036,6 +1094,13 @@ details.vocabForecast:not([open]) > :not(summary) { display: none; }
   background: var(--parchment);
   border-radius: var(--r-lg);
   overflow: hidden;
+  touch-action: pan-y;
+  transform: translate3d(0, 0, 0);
+}
+.flash.gestureActive {
+  cursor: grabbing;
+  user-select: none;
+  will-change: transform, opacity;
 }
 .flashHead {
   background: var(--ink);
@@ -1472,7 +1537,7 @@ details.vocabForecast:not([open]) > :not(summary) { display: none; }
   .studyPlanMetrics { grid-template-columns: 1fr; }
   .vocabForecastGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .itemHead, .sectionHead { align-items: stretch; }
-  .stagePill { min-width: 90px; font-size: 10px; }
+  .stagePill { min-width: 0; font-size: 10px; }
 }
 
 @media (max-width: 560px) {
