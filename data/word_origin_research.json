@@ -6823,35 +6823,60 @@
       "meanings": [
         "延期する"
       ],
-      "classification": "A",
+      "classification": "B",
       "display": {
-        "type": "A",
-        "gloss": "延期する",
-        "root": "fer",
-        "parts": [
+        "type": "B",
+        "derivation": "ラテン語 differre（離して運ぶ、先延ばしにする）を経て → 延期する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/defer",
+          "https://www.merriam-webster.com/dictionary/defer"
+        ],
+        "originLanguage": "ラテン語・古フランス語・中英語",
+        "etymons": [
+          "defer",
+          "differre",
+          "dis-",
+          "ferre",
+          "differ"
+        ],
+        "historicalPath": [
+          "ラテン語 differre（離して運ぶ、延期する）",
+          "古フランス語 diferer / 中英語 differren・deferren",
+          "英語 defer（延期する）",
+          "英語の別語義 defer（人の判断に委ねる）はラテン語 deferre 系で、延期の語義とは区別される"
+        ],
+        "components": [
           {
-            "form": "de",
+            "form": "dis- / dif-",
             "kind": "prefix",
-            "gloss": "下へ・離れて"
+            "gloss": "離れて・別方向へ"
           },
           {
-            "form": "fer",
+            "form": "ferre",
             "kind": "root",
             "gloss": "運ぶ"
           }
         ],
-        "derivation": "先へ回して運ぶ → 延期する"
-      },
-      "research": {
-        "status": "legacy",
-        "sources": [],
-        "originLanguage": "",
-        "etymons": [],
-        "historicalPath": [],
-        "semanticBridge": "",
-        "summary": "",
-        "confidence": "",
-        "notes": "既存A型を移行。再構築する語根辞書との整合監査対象。"
+        "rootCandidates": [
+          "fer"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/defer",
+            "note": "延期するdeferをラテン語 differre（離して運ぶ、延期する）に遡らせ、dis-の同化形＋ferreと説明している。一方、委ねる意味のdeferはdeferre系として区別している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/defer",
+            "note": "deferに延期する語義と委ねる語義という別の語があることを確認し、延期の語義をLatin differre、委ねる語義をLatin deferreに遡らせている。"
+          }
+        ],
+        "semanticBridge": "離して先へ延ばす意味から、予定や行為を後の時点へ送る延期の意味へつながる。",
+        "summary": "延期するdeferはラテン語 differre（dis-＋ferre）系であり、de-＋ferreのdeferre系とは別である。英語表面のde＋ferをA型として表示せず、B型で経路を示す。",
+        "confidence": "high",
+        "notes": "2026-09-02再監査で延期義のdifferre系と委譲義のdeferre系を分離し、B型へ移行。"
       }
     },
     "deferentially": {
@@ -7425,40 +7450,60 @@
       "meanings": [
         "割合"
       ],
-      "classification": "A",
+      "classification": "B",
       "display": {
-        "type": "A",
-        "gloss": "割合",
-        "root": "port",
-        "parts": [
-          {
-            "form": "pro",
-            "kind": "prefix",
-            "gloss": "前へ"
-          },
-          {
-            "form": "port",
-            "kind": "root",
-            "gloss": "運ぶ"
-          },
-          {
-            "form": "-ion",
-            "kind": "suffix",
-            "gloss": "〜すること"
-          }
-        ],
-        "derivation": "前へ運んで関係づける → 割合"
+        "type": "B",
+        "derivation": "ラテン語 pro portione（部分どうしの関係に応じて）から → 割合、比率"
       },
       "research": {
-        "status": "legacy",
-        "sources": [],
-        "originLanguage": "",
-        "etymons": [],
-        "historicalPath": [],
-        "semanticBridge": "",
-        "summary": "",
-        "confidence": "",
-        "notes": "既存A型を移行。再構築する語根辞書との整合監査対象。"
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/proportion",
+          "https://www.merriam-webster.com/dictionary/proportion"
+        ],
+        "originLanguage": "ラテン語・古フランス語・中英語",
+        "etymons": [
+          "proportion",
+          "proportio",
+          "pro portione",
+          "*partio",
+          "pars",
+          "portion"
+        ],
+        "historicalPath": [
+          "ラテン語 prō portiōne（部分どうしの関係に応じて）",
+          "古フランス語 proporcion / アングロフレンチ proporcion を経て英語 proportion",
+          "部分どうしの適切な関係から、割合・比率へ"
+        ],
+        "components": [
+          {
+            "form": "pro portione",
+            "kind": "phrase",
+            "gloss": "関係に応じて"
+          },
+          {
+            "form": "pars / *partio",
+            "kind": "root",
+            "gloss": "部分・分割"
+          }
+        ],
+        "rootCandidates": [
+          "part"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/proportion",
+            "note": "proportionを古フランス語 proporcionおよびラテン語 proportionem / proportioに遡らせ、pro portione（部分どうしの関係に従って）、pro＋*partio（分割・部分、parsに関連）と説明している。portare（運ぶ）を語源としていない。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/proportion",
+            "note": "proportionの現代義として部分どうしの調和・関係、割合・比率を確認し、語源をMiddle English proporcioun、Anglo-French / Latin prōportiō、prō portiōneに遡らせている。"
+          }
+        ],
+        "semanticBridge": "部分どうしの関係や釣り合いを表す語から、全体に対する部分の割合や比率を表す現在義へつながる。",
+        "summary": "proportionはpro＋portare（運ぶ）の派生ではなく、ラテン語 pro portione（部分どうしの関係に応じて）を経た語である。現代英語のportを語根とするA型表示は避け、B型にする。",
+        "confidence": "high",
+        "notes": "2026-09-02再監査でportare（運ぶ）との混同を修正し、B型へ移行。"
       }
     },
     "rapport": {
@@ -10183,40 +10228,60 @@
       "meanings": [
         "表面的な"
       ],
-      "classification": "A",
+      "classification": "B",
       "display": {
-        "type": "A",
-        "gloss": "表面的な",
-        "root": "fac",
-        "parts": [
+        "type": "B",
+        "derivation": "ラテン語 superficies（表面・上側）に由来し、表面に関することから → 表面的な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/superficial",
+          "https://www.merriam-webster.com/dictionary/superficial"
+        ],
+        "originLanguage": "ラテン語・古フランス語・中英語",
+        "etymons": [
+          "superficial",
+          "superficialis",
+          "superficies",
+          "super",
+          "facies"
+        ],
+        "historicalPath": [
+          "ラテン語 superficies（表面・上側）＝super（上）＋facies（形・顔）",
+          "後期ラテン語 superficialis（表面に関する）",
+          "古フランス語 superficial / 中英語 superficial",
+          "表面にとどまり深くない、という比喩義へ"
+        ],
+        "components": [
           {
             "form": "super",
             "kind": "prefix",
-            "gloss": "上に"
+            "gloss": "上・上側"
           },
           {
-            "form": "fic",
-            "kind": "root",
-            "gloss": "作る・なす"
-          },
-          {
-            "form": "-al",
-            "kind": "suffix",
-            "gloss": "〜に関する"
+            "form": "facies",
+            "kind": "base",
+            "gloss": "形・顔"
           }
         ],
-        "derivation": "上に作られた面の性質 → 表面的な"
-      },
-      "research": {
-        "status": "legacy",
-        "sources": [],
-        "originLanguage": "",
-        "etymons": [],
-        "historicalPath": [],
-        "semanticBridge": "",
-        "summary": "",
-        "confidence": "",
-        "notes": "既存A型を移行。再構築する語根辞書との整合監査対象。"
+        "rootCandidates": [
+          "facies"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/superficial",
+            "note": "superficialを古フランス語および後期ラテン語 superficialisに遡らせ、その元の superficiesをsuper（上）＋facies（形・顔）と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/superficial",
+            "note": "superficialの現代義として表面に関する、表面だけにとどまる、浅いという意味を確認し、語源をMiddle English、Late Latin superficialis、Latin superficiesに遡らせている。"
+          }
+        ],
+        "semanticBridge": "表面に関する形容詞から、表面だけにとどまり深くないという現在の比喩義へつながる。",
+        "summary": "superficialはsuperficies（表面・上側）を経た語で、facere（作る）を現代英語の語根として分解する根拠は弱い。A型を避け、B型で表面から浅さへの意味変化を示す。",
+        "confidence": "high",
+        "notes": "2026-09-02再監査でfacere（作る）との直接対応を外し、B型へ移行。"
       }
     },
     "surface": {
@@ -10226,35 +10291,59 @@
       "meanings": [
         "表面"
       ],
-      "classification": "A",
+      "classification": "B",
       "display": {
-        "type": "A",
-        "gloss": "表面",
-        "root": "fac",
-        "parts": [
-          {
-            "form": "sur",
-            "kind": "prefix",
-            "gloss": "上に"
-          },
-          {
-            "form": "fac",
-            "kind": "root",
-            "gloss": "作る・なす"
-          }
-        ],
-        "derivation": "上に作られた面 → 表面"
+        "type": "B",
+        "derivation": "フランス語 surface（上にある外側の面）を経て → 表面"
       },
       "research": {
-        "status": "legacy",
-        "sources": [],
-        "originLanguage": "",
-        "etymons": [],
-        "historicalPath": [],
-        "semanticBridge": "",
-        "summary": "",
-        "confidence": "",
-        "notes": "既存A型を移行。再構築する語根辞書との整合監査対象。"
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/surface",
+          "https://www.merriam-webster.com/dictionary/surface"
+        ],
+        "originLanguage": "ラテン語・フランス語・中英語・英語",
+        "etymons": [
+          "surface",
+          "sur-",
+          "face",
+          "superficies",
+          "facies"
+        ],
+        "historicalPath": [
+          "ラテン語 superficies（表面・上側）を背景に、古フランス語 sur-＋face",
+          "フランス語 surface（外側・最外部）",
+          "外側・上側を表す語から、物体の表面へ"
+        ],
+        "components": [
+          {
+            "form": "sur-",
+            "kind": "prefix",
+            "gloss": "上に・上側に"
+          },
+          {
+            "form": "face",
+            "kind": "base",
+            "gloss": "顔・外観"
+          }
+        ],
+        "rootCandidates": [
+          "facies"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/surface",
+            "note": "surfaceをフランス語 surface、古フランス語 sur-＋faceに遡らせ、ラテン語 superficies（表面・上側）をモデルにした形と説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/surface",
+            "note": "surfaceの現代義として物体の外側・上側の境界を確認し、語源をFrench surface、Middle French sur-＋faceに遡らせている。"
+          }
+        ],
+        "semanticBridge": "上側・外側を表す語から、物体の外側の面を表す現在義へつながる。",
+        "summary": "surfaceはフランス語 surface の外側・上側という構成を経た語で、facere（作る）を直接の英語語根として表示するのは適切でない。B型で由来を示す。",
+        "confidence": "high",
+        "notes": "2026-09-02再監査でfacere（作る）との直接対応を外し、B型へ移行。"
       }
     },
     "facade": {
@@ -16560,35 +16649,62 @@
       "meanings": [
         "苦悩、困窮"
       ],
-      "classification": "A",
+      "classification": "B",
       "display": {
-        "type": "A",
-        "gloss": "苦悩",
-        "root": "string",
-        "parts": [
+        "type": "B",
+        "derivation": "ラテン語 distringere（引き離す、きつく締める）を経て → 苦悩、困窮"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/distress",
+          "https://www.merriam-webster.com/dictionary/distress"
+        ],
+        "originLanguage": "ラテン語・古フランス語・中英語",
+        "etymons": [
+          "distress",
+          "destresse",
+          "districtus",
+          "distringere",
+          "dis-",
+          "stringere",
+          "stress"
+        ],
+        "historicalPath": [
+          "ラテン語 distringere（引き離す、きつく締める）",
+          "過去分詞 districtus / 後期ラテン語 districtia",
+          "古フランス語 destresse / 中英語 destresse",
+          "拘束・困窮から、身体や心の苦悩へ"
+        ],
+        "components": [
           {
-            "form": "dis",
+            "form": "dis-",
             "kind": "prefix",
             "gloss": "離れて"
           },
           {
-            "form": "stress",
+            "form": "stringere",
             "kind": "root",
-            "gloss": "締める"
+            "gloss": "きつく締める"
           }
         ],
-        "derivation": "離れて引き締められた状態 → 苦悩、困窮"
-      },
-      "research": {
-        "status": "legacy",
-        "sources": [],
-        "originLanguage": "",
-        "etymons": [],
-        "historicalPath": [],
-        "semanticBridge": "",
-        "summary": "",
-        "confidence": "",
-        "notes": "既存A型を移行。再構築する語根辞書との整合監査対象。"
+        "rootCandidates": [
+          "stringere"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/distress",
+            "note": "distressを古フランス語 destresse、ラテン語 districtus、dis-＋stringere（きつく締める）に遡らせている。またstressはdistressの短縮を一部含むため、stressを基礎語根とはしない。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/distress",
+            "note": "distressの現代義として身体や心の苦悩・困窮を確認し、語源をMiddle English destresse、Anglo-French、Late Latin districtus、distringereに遡らせている。"
+          }
+        ],
+        "semanticBridge": "引き離す・きつく締めるという拘束のイメージから、身体や心の苦悩・困窮を表す意味へつながる。",
+        "summary": "distressは英語stressをdis-で組み合わせた語ではなく、ラテン語 distringere 系を経た語である。stress自体もdistressからの短縮を一部含むため、A型のdis＋stress表示を避けてB型にする。",
+        "confidence": "high",
+        "notes": "2026-09-02再監査でstressを基礎語根とする循環的な分解を修正し、B型へ移行。"
       }
     },
     "diagram": {
@@ -16679,40 +16795,62 @@
       "meanings": [
         "小さい、小柄な"
       ],
-      "classification": "A",
+      "classification": "B",
       "display": {
-        "type": "A",
-        "gloss": "小さい",
-        "root": "min",
-        "parts": [
-          {
-            "form": "di",
-            "kind": "prefix",
-            "gloss": "離れて"
-          },
-          {
-            "form": "min",
-            "kind": "root",
-            "gloss": "小さくする"
-          },
-          {
-            "form": "-ive",
-            "kind": "suffix",
-            "gloss": "〜する性質の"
-          }
-        ],
-        "derivation": "小さくした性質の → 小さい、小柄な"
+        "type": "B",
+        "derivation": "ラテン語 deminuere（小さくする、減らす）を経た語から → 小さい、小柄な"
       },
       "research": {
-        "status": "legacy",
-        "sources": [],
-        "originLanguage": "",
-        "etymons": [],
-        "historicalPath": [],
-        "semanticBridge": "",
-        "summary": "",
-        "confidence": "",
-        "notes": "既存A型を移行。再構築する語根辞書との整合監査対象。"
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/diminutive",
+          "https://www.merriam-webster.com/dictionary/diminutive"
+        ],
+        "originLanguage": "ラテン語・古フランス語・中英語",
+        "etymons": [
+          "diminutive",
+          "diminutivus",
+          "deminutivus",
+          "deminuere",
+          "de-",
+          "minuere"
+        ],
+        "historicalPath": [
+          "ラテン語 deminuere（小さくする、減らす）＝de-＋minuere",
+          "ラテン語 deminutivus / diminutivus（小さくする性質の）",
+          "古フランス語 diminutif / 中英語 diminutif",
+          "小さくする意味から、小さい・小柄な意味へ"
+        ],
+        "components": [
+          {
+            "form": "de-",
+            "kind": "prefix",
+            "gloss": "減少・完全に"
+          },
+          {
+            "form": "minuere",
+            "kind": "root",
+            "gloss": "小さくする"
+          }
+        ],
+        "rootCandidates": [
+          "minuere",
+          "*mei-"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/diminutive",
+            "note": "diminutiveをラテン語 diminutivus、より古い deminutivus、deminuere（小さくする）に遡らせ、de-＋minuereの経路を説明している。"
+          },
+          {
+            "url": "https://www.merriam-webster.com/dictionary/diminutive",
+            "note": "diminutiveの現代義として小さいこと・小さい語形を確認し、語源をMiddle English diminutif、Medieval Latin diminutivum、Late Latin deminutivum、deminuereに遡らせている。"
+          }
+        ],
+        "semanticBridge": "小さくする動作を表す語から、小さい・小柄な性質やそのような語形を表す意味へつながる。",
+        "summary": "diminutiveは英語表面のdi＋min＋-iveとして説明するより、ラテン語 deminuere / deminutivus 系を由来として示す方が安全である。diを独立した接頭辞とするA型表示を避け、B型にする。",
+        "confidence": "high",
+        "notes": "2026-09-02再監査でdi（離れて）という根拠の弱い分解を外し、B型へ移行。"
       }
     },
     "divulgence": {
