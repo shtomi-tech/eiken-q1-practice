@@ -153,7 +153,7 @@ function renderSession() {
      el("div", {},
        el("p", { class: "label" }, sessionLabel(q, isIdiom, isMeaning, isFinal)),
        el("h2", {}, stageTitle(session.stage)),
-       el("p", { class: "sessionState" }, "現在地はこの端末に保存済み"),
+       el("p", { class: "sessionState" }, "中断してもこの位置から再開できます"),
      ),
   ));
 
@@ -161,7 +161,9 @@ function renderSession() {
   if (isFinal) panel.appendChild(finalBar());
   else if (isMeaning) panel.appendChild(meaningBar());
   else panel.appendChild(stageBar(session.stage));
-  panel.appendChild(questionProgressBar());
+  // 意味だけ復習セッション中はプール解放率のバーを出さない。解放状況はホームの間隔復習カードが持ち、
+  // セッション中の位置・正誤数は meaningBar に集約する（設問へ早く到達させるため画面上部を短くする）。
+  if (!isMeaning) panel.appendChild(questionProgressBar());
 
   const body = el("div", {});
   panel.appendChild(body);
@@ -198,8 +200,8 @@ function sessionStickyNav(q, isMeaning, isFinal) {
 function sessionLabel(q, isIdiom, isMeaning, isFinal) {
   if (isFinal) return `最終チェック ${session.checkIdx + 1} / ${session.checkOrder.length}`;
   if (isMeaning) {
-    const label = session.stage === "meaningReview" ? "意味だけ復習・見直し" : "意味だけ復習";
-    return `${label} ${session.checkIdx + 1} / ${session.checkOrder.length}`;
+    // 位置「n / m」は現在地バーと meaningBar が持つ。ここでは種別名だけを出して重複を避ける。
+    return session.stage === "meaningReview" ? "意味だけ復習・見直し" : "意味だけ復習";
   }
   return `第${q}問 ・ ${isIdiom ? "熟語" : "単語"}`;
 }
@@ -226,10 +228,10 @@ function meaningBar() {
     );
   }
   const answered = session.checkIdx + (session.checkAnswered ? 1 : 0);
-  const remaining = Math.max(0, session.checkOrder.length - answered);
+  // 位置は「n / m語句」で示す（現在地バーと同じ数え方）。「残り」の逆算はさせない。
   return el("div", { class: "stageBar meaningBar" },
     el("div", { class: "stagePill active" },
-      answered ? `残り ${remaining}語句` : `今回 ${session.checkOrder.length}語句`),
+      `${session.checkIdx + 1} / ${session.checkOrder.length}語句`),
     el("div", { class: "stagePill" },
       `回答済 ${answered} / 正解 ${session.meaningCorrect}`),
   );
@@ -240,9 +242,8 @@ function refreshMeaningBar() {
   const bar = document.querySelector("#sessionPanel .meaningBar");
   if (!bar) return;
   const answered = session.checkIdx + (session.checkAnswered ? 1 : 0);
-  const remaining = Math.max(0, session.checkOrder.length - answered);
   const pills = bar.querySelectorAll(".stagePill");
-  if (pills[0]) pills[0].textContent = answered ? `残り ${remaining}語句` : `今回 ${session.checkOrder.length}語句`;
+  if (pills[0]) pills[0].textContent = `${session.checkIdx + 1} / ${session.checkOrder.length}語句`;
   if (pills[1]) pills[1].textContent = `回答済 ${answered} / 正解 ${session.meaningCorrect}`;
 }
 
@@ -296,8 +297,6 @@ function questionProgressBar() {
   const total = state.qList.length;
   if (!total) return el("div", { class: "q1Progress hide" });
 
-  if (session.mode === "meaning" && currentGrade()) return meaningProgressBar();
-
   const isQuestionSession = session.q != null;
   const current = isQuestionSession
     ? Math.max(1, state.qList.indexOf(session.q) + 1)
@@ -324,33 +323,6 @@ function questionProgressBar() {
   progress.setAttribute("aria-valuetext", `${label}、残り${remaining}問`);
   wrap.appendChild(progress);
   appendProgressFill(wrap, value, total, t.from);
-  return wrap;
-}
-
-function meaningProgressBar() {
-  const summary = meaningPracticeSummary();
-  const total = summary.total;
-  if (!total) return el("div", { class: "q1Progress hide" });
-  const remaining = Math.max(0, total - summary.learned);
-  const label = `対象 ${summary.learned} / ${total}語句`;
-  const t = progressTransition(`m:${state.datasetId}`, summary.learned, total);
-  const settleCls = t.settle ? " progressSettle" : "";
-  const wrap = el("div", { class: "q1Progress meaningProgress" },
-    el("div", { class: "q1ProgressHead" },
-      el("span", { class: "label" }, "意味練習の解放状況"),
-      el("strong", { class: "q1ProgressValue" + settleCls }, label),
-      el("span", { class: "q1ProgressRemaining" + settleCls }, `未解放${remaining}語句`),
-    ),
-  );
-  const progress = el("progress", {
-    class: "q1ProgressBar",
-    max: total,
-    value: summary.learned,
-    "aria-label": `${dataset().shortLabel}の意味練習対象語句の解放状況`,
-  });
-  progress.setAttribute("aria-valuetext", `${label}、未解放${remaining}語句`);
-  wrap.appendChild(progress);
-  appendProgressFill(wrap, summary.learned, total, t.from);
   return wrap;
 }
 
@@ -783,7 +755,11 @@ function renderCheck(body) {
   const correct = learningMeaningOf(item);
   const example = session.mode === "meaning" ? exampleMatch(item) : null;
 
-  body.appendChild(el("div", { class: "roundInfo" }, `4語句の意味確認 ${session.checkIdx + 1} / ${session.checkOrder.length}`));
+  // 「4語句」はユニット学習（1ユニット＝4語句）だけの数。意味だけ復習(最大30)・最終チェック(全語句)では
+  // 現在地バーと meaningBar/finalBar が位置を持つため roundInfo は出さない（"4語句…12/30" の矛盾表示を避ける）。
+  if (session.mode === "learn") {
+    body.appendChild(el("div", { class: "roundInfo" }, `4語句の意味確認 ${session.checkIdx + 1} / ${session.checkOrder.length}`));
+  }
 
   // 出題表示の時刻。音声を押さなかった設問もここを起点に解答時間を測る
   if (!session.checkShownAt) session.checkShownAt = Date.now();

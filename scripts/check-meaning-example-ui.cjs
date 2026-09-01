@@ -76,6 +76,15 @@ assert.match(css, /--rule-underline:\s*1\.5px solid var\(--ink\)/);
 assert.match(css, /\.exUnderline\s*\{[\s\S]*border-bottom:\s*var\(--rule-underline\)/);
 assert.ok(!css.includes(".flashEx em"), "旧flashEx emの下線指定を残してはいけません");
 assert.match(css, /\.askExampleLine\s*\{/);
-assert.match(css, /\.askExample\s*\{[\s\S]*font-size:\s*20px[\s\S]*line-height:\s*1\.8/);
+// 設問として読ませる英文は本文の Inter（見出し用セリフは使わない）。DESIGN.md タイポグラフィ節。
+assert.match(
+  css,
+  /\.askExample\s*\{[^}]*font-family:\s*var\(--sans\)[^}]*font-size:\s*20px[^}]*line-height:\s*1\.8[^}]*max-inline-size:\s*58ch/,
+  "設問英文(.askExample)は本文Inter・20px・行間1.8・行幅58chである必要があります",
+);
+assert.ok(
+  !/\.askExample\s*\{[^}]*var\(--serif\)/.test(css),
+  "設問英文(.askExample)に見出し用セリフ体を使ってはいけません",
+);
 
 console.log(`meaning example UI contract: OK (${itemCount} vocabulary items)`);

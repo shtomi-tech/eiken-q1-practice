@@ -1351,7 +1351,7 @@ details.vocabForecast:not([open]) > :not(summary) { display: none; }
 }
 .askExampleHead .label { margin: 0; }
 .askExampleLine { margin-bottom: 16px; }
-.askExample { font-family: var(--serif); font-size: 20px; line-height: 1.8; max-inline-size: 62ch; margin: 0; }
+.askExample { font-family: var(--sans); font-size: 20px; line-height: 1.8; max-inline-size: 58ch; margin: 0; }
 .quizListenButton {
   display: inline-flex;
   align-items: center;
