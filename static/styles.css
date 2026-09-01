@@ -1151,13 +1151,6 @@ details.vocabForecast:not([open]) > :not(summary) { display: none; }
 .originChip-prefix { background: var(--surface-soft); }
 .originChip-root { background: var(--surface-strong); }
 .originChip-suffix { background: var(--surface-soft); }
-.originChip-summary {
-  flex: 1 1 100%;
-  min-width: 0;
-  background: var(--surface-soft);
-}
-.originChip-summary .originChipForm { font-size: 16px; }
-.originChip-summary .originChipGloss { font-size: 13px; }
 .originChipKind {
   width: 100%;
   color: var(--muted);

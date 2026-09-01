@@ -427,17 +427,8 @@ function flashWordOrigin(item) {
   }
 
   if (origin.type === "B") {
-    const summary = el("div", { class: "originChips", "aria-label": "語源の概要" });
-    summary.appendChild(el("span", {
-      class: "originChip originChip-summary",
-      "aria-label": "由来：B型。構成要素に分解せず一行で確認",
-    },
-    el("span", { class: "originChipKind" }, "由来"),
-    el("span", { class: "originChipForm" }, "B型"),
-    el("span", { class: "originChipGloss" }, "構成要素に分解せず一行で確認")));
-    row.appendChild(summary);
     if (origin.derivation) row.appendChild(el("p", { class: "originDerivation" }, origin.derivation));
-    return row;
+    return origin.derivation ? row : null;
   }
   if (origin.type !== "A") return row;
 
