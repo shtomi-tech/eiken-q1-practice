@@ -8,7 +8,7 @@
       "reviewed": "一語ごとに2つ以上の独立ホストの出典URLを確認し、語源の経路と意味のつながりを要約する。",
       "decomposition": "綴りの類似だけで語根や接辞を割り当てず、出典が支える場合だけA型にする。"
     },
-    "lastAppliedBatch": "batch-051",
+    "lastAppliedBatch": "batch-052",
     "appliedBatches": [
       {
         "batchId": "batch-001"
@@ -312,6 +312,13 @@
         "entries": 1,
         "roots": 0,
         "affixes": 0
+      },
+      {
+        "batchId": "batch-052",
+        "entries": 42,
+        "roots": 0,
+        "affixes": 0,
+        "note": "語根グループの誤判定で除外されていた語をB型として収録し、exclusionsから移した。"
       }
     ]
   },
@@ -5423,24 +5430,8 @@
     "cord": {
       "accordingto": "語源表示対象外の句で、単語の語根カードには載せない"
     },
-    "dic": {
-      "editor": "dare（与える）由来の ex＋dare で、dicere（言う）の語根ではない"
-    },
-    "cur": {
-      "curfew": "couvre-feu（火を覆う）由来で、currereの語根ではない",
-      "curly": "curl系のゲルマン語で、currereの語根ではない",
-      "obscurity": "obscurus（暗い）由来で、currereの語根ではない",
-      "procure": "procurare（pro＋curare＝世話する）由来で、currereの語根ではない"
-    },
     "fac": {
-      "desertification": "-ficationの接尾辞だけが一致し、前半を安全に分解できない",
-      "ratification": "-ficationの接尾辞だけが一致し、前半を安全に分解できない"
-    },
-    "gen": {
-      "convergence": "vergere（向かう）由来で、genusの語根ではない",
-      "gently": "gentilis由来だが、今回のgen語根として安全に分解できない",
-      "insurgent": "surgere（立ち上がる）由来で、genusの語根ではない",
-      "pungent": "pungere（刺す）由来で、genusの語根ではない"
+      "desertification": "-ficationの接尾辞だけが一致し、前半を安全に分解できない"
     },
     "general": {
       "thwart": "ゲルマン系の不透明語で、接辞＋語根の分解が学習上の助けにならない",
@@ -5508,58 +5499,8 @@
       "coax": "生成元の語源説明でも不確かと明記されており、安全な語源分解を作らない",
       "boisterous": "生成元の語源説明でも不確かと明記されており、安全な語源分解を作らない"
     },
-    "lect": {
-      "relegation": "legare（送る）由来で、legere（集める・読む）の語根ではない",
-      "delectable": "delectare（楽しませる）由来で、legere（集める・読む）の語根ではない"
-    },
     "her": {
-      "altogether": "all+togetherのゲルマン系語で、haerereの語根ではない",
-      "gather": "ゲルマン系の語で、haerereの語根ではない",
-      "heresy": "ギリシャ語 hairesis（選択）由来で、haerereの語根ではない",
-      "inheritance": "heres（相続人）由来で、haerere（くっつく）の語根ではない",
-      "philosopher": "ギリシャ語 philos+sophia由来で、haerereの語根ではない",
-      "synthesis": "ギリシャ語 syn+tithenai由来で、haerereの語根ではない",
-      "synthesize": "ギリシャ語 syn+tithenai由来で、haerereの語根ではない",
-      "tether": "ゲルマン系の語で、haerereの語根ではない",
-      "treacherous": "treachery系の語で、haerereの語根ではない"
-    },
-    "log": {
-      "backlog": "back+logの英語の組み合わせで、logos/loquiの語根ではない",
-      "log": "木材を表すゲルマン系の語で、logos/loquiの語根ではない"
-    },
-    "nom": {
-      "autonomy": "nomos（法）由来で、nomen/onyma（名前）の語根ではない"
-    },
-    "reg": {
-      "impregnable": "prehendere（つかむ）由来で、regereの語根ではない",
-      "insurrection": "surgere（立ち上がる）由来で、regereの語根ではない",
-      "regurgitate": "gurges（渦・のど）由来で、regereの語根ではない"
-    },
-    "sist": {
-      "installer": "stallum（席）由来で、stare/sistereの語根ではない",
-      "nostalgia": "ギリシャ語 nostos+algos由来で、stareの語根ではない",
-      "painstaking": "pain+stakeの英語の組み合わせで、stareの語根ではない",
-      "stake": "ゲルマン系の語で、stareの語根ではない",
-      "stammer": "ゲルマン系の語で、stareの語根ではない",
-      "stampede": "スペイン語系の語で、stareの語根ではない",
-      "stand": "古英語由来で、stare/sistereの語根ではない",
-      "staunch": "ゲルマン・フランス語系の語で、stareの語根ではない"
-    },
-    "sip": {
-      "dissipate": "supare（投げ散らす）由来で、sapere（味わう）の語根ではない"
-    },
-    "val": {
-      "cavalier": "caballus（馬）由来で、valereの語根ではない",
-      "rivalry": "rivus（小川）由来で、valereの語根ではない",
-      "upheaval": "heave（持ち上げる）由来で、valereの語根ではない",
-      "valley": "vallis（谷）由来で、valereの語根ではない"
-    },
-    "vid": {
-      "livid": "lividus（青黒い）由来で、videreの語根ではない",
-      "divide": "dividere（di-＋*videre＝分ける）由来で、videre（見る）の語根ではない"
-    },
-    "ven": {
-      "intravenous": "vena（静脈）由来で、venire（来る）の語根ではない"
+      "inheritance": "heres（相続人）由来で、haerere（くっつく）の語根ではない"
     }
   },
   "entries": {
@@ -106910,6 +106851,2617 @@
           "nom"
         ],
         "batch": "batch-001"
+      }
+    },
+    "altogether": {
+      "surfaceForms": [
+        "altogether"
+      ],
+      "meanings": [
+        "合計で、まったく、全部で"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 all（すべて）＋togædere（一緒に）による英語の複合語 → 合計で、まったく"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/altogether",
+          "https://www.dictionary.com/browse/altogether"
+        ],
+        "originLanguage": "古英語（ゲルマン系）",
+        "etymons": [
+          "altogedere",
+          "all",
+          "togædere"
+        ],
+        "historicalPath": [
+          "古英語 all（すべて）＋togædere（一緒に）",
+          "中英語 altogedere",
+          "英語 altogether（13世紀初「すっかり、完全に」）"
+        ],
+        "semanticBridge": "「すべて一緒に」という強めの言い方が、完全さや総計を表す副詞になった。",
+        "summary": "altogetherはallとtogetherを重ねたゲルマン系の複合語で、完全さを表す。",
+        "confidence": "high",
+        "notes": "haerere（くっつく）の語根ではない。語根カード her には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/altogether",
+            "note": "altogetherをall＋togetherの強調形とし、中英語 altogedere、古英語 togædere に遡らせている。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/altogether",
+            "note": "中英語 altogeder の異形で、all と together から成ること、1125–75年の初出を確認した。"
+          }
+        ],
+        "components": [
+          {
+            "form": "all",
+            "kind": "base",
+            "gloss": "すべて",
+            "display": false
+          },
+          {
+            "form": "together",
+            "kind": "base",
+            "gloss": "一緒に",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "autonomy": {
+      "surfaceForms": [
+        "autonomy"
+      ],
+      "meanings": [
+        "自治、自主性"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ギリシャ語 autonomia＝autos（自己）＋nomos（法）に由来 → 自治、自主性"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/autonomy",
+          "https://www.dictionary.com/browse/autonomy"
+        ],
+        "originLanguage": "ギリシャ語",
+        "etymons": [
+          "autonomia",
+          "autonomos",
+          "autos",
+          "nomos"
+        ],
+        "historicalPath": [
+          "ギリシャ語 nomos（法、慣習）",
+          "ギリシャ語 autonomos（自らの法で生きる）",
+          "ギリシャ語 autonomia（独立）",
+          "英語 autonomy（1620年代、国家の自治）",
+          "1803年 個人へ拡張"
+        ],
+        "semanticBridge": "自分たちの法で治めるという国家の性質が、個人が自ら律することへ広がった。",
+        "summary": "autonomyはautos（自己）＋nomos（法）に由来し、自治から個人の自律へ意味が広がった。",
+        "confidence": "high",
+        "notes": "nomen/onyma（名前）ではなく nomos（法）由来。語根カード nom には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/autonomy",
+            "note": "autonomiaを autos（self）＋nomos（law）とし、1620年代の国家の自治から1803年の個人への拡張を示している。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/autonomy",
+            "note": "ギリシャ語 autonomía＝auto（自己）＋nomos（法、慣習）＋-ia の構成を確認した。"
+          }
+        ],
+        "components": [
+          {
+            "form": "auto",
+            "kind": "prefix",
+            "gloss": "自己",
+            "display": false
+          },
+          {
+            "form": "nomos",
+            "kind": "root",
+            "gloss": "法",
+            "display": false
+          },
+          {
+            "form": "-y",
+            "kind": "suffix",
+            "gloss": "名詞化",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "backlog": {
+      "surfaceForms": [
+        "backlog"
+      ],
+      "meanings": [
+        "未処理の仕事の山、滞留"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "back（後ろ）＋log（丸太）の英語の複合語。暖炉の奥に据える大きな薪 → ため込んだもの → 未処理の仕事の山"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/backlog",
+          "https://www.dictionary.com/browse/backlog"
+        ],
+        "originLanguage": "英語（複合語）",
+        "etymons": [
+          "back",
+          "log"
+        ],
+        "historicalPath": [
+          "英語 backlog（1680年代「暖炉の奥に置く大きな薪」）",
+          "1883年「後々のために蓄えたもの」",
+          "1932年「未処理の注文」"
+        ],
+        "semanticBridge": "火を長持ちさせるために奥へ据えた薪が、後回しにして積み上がったものの比喩になった。",
+        "summary": "backlogは暖炉の奥の薪を指す複合語で、蓄え、さらに未処理の仕事へ意味が移った。",
+        "confidence": "high",
+        "notes": "logos/loqui（言葉）の語根ではない。語根カード log には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/backlog",
+            "note": "back＋logの複合語とし、1680年代の薪→1883年の蓄え→1932年の未処理注文という経路を示している。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/backlog",
+            "note": "back＋logの構成と1675–85年の初出、意味変化の年代を確認した。"
+          }
+        ],
+        "components": [
+          {
+            "form": "back",
+            "kind": "base",
+            "gloss": "後ろ",
+            "display": false
+          },
+          {
+            "form": "log",
+            "kind": "base",
+            "gloss": "丸太",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "cavalier": {
+      "surfaceForms": [
+        "cavalier"
+      ],
+      "meanings": [
+        "軽率な、無頓着な"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "俗ラテン語 caballus（馬）＞後期ラテン語 caballarius（騎手）＞イタリア語 cavaliere に由来。「騎士らしい」→「無造作な」 → 軽率な、無頓着な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/cavalier",
+          "https://www.dictionary.com/browse/cavalier"
+        ],
+        "originLanguage": "イタリア語（後期ラテン語 caballarius）",
+        "etymons": [
+          "cavaliere",
+          "caballarius",
+          "caballus"
+        ],
+        "historicalPath": [
+          "俗ラテン語 caballus（馬）",
+          "後期ラテン語 caballarius（騎手）",
+          "イタリア語 cavaliere（騎士）",
+          "英語 cavalier（1580年代「騎兵、騎士」）",
+          "1650年代「無造作な」",
+          "1817年「見下すような」"
+        ],
+        "semanticBridge": "馬上の騎士に結び付いた気位が、物事を軽く扱う態度を指す語へ転じた。",
+        "summary": "cavalierはcaballus（馬）に遡り、騎士の意味から高慢・無頓着な態度を表すようになった。",
+        "confidence": "high",
+        "notes": "valere（強い、価値がある）ではなく caballus（馬）由来。語根カード val には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/cavalier",
+            "note": "イタリア語 cavalliere＜後期ラテン語 caballarius＜caballus とし、1580年代から1817年までの語義変化を示している。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/cavalier",
+            "note": "フランス語経由で古イタリア語 cavaliere、後期ラテン語 caballārius（馬に乗る人）、caballus（馬）を確認した。"
+          }
+        ],
+        "components": [
+          {
+            "form": "caballus",
+            "kind": "root",
+            "gloss": "馬",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "convergence": {
+      "surfaceForms": [
+        "convergence"
+      ],
+      "meanings": [
+        "収束、融合",
+        "収束、合流"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 convergere＝com（ともに）＋vergere（傾く、向かう）に由来する converge＋-ence → 収束、合流"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/convergence",
+          "https://www.dictionary.com/browse/convergence"
+        ],
+        "originLanguage": "後期ラテン語",
+        "etymons": [
+          "convergere",
+          "com",
+          "vergere"
+        ],
+        "historicalPath": [
+          "後期ラテン語 convergere（ともに傾く）",
+          "英語 converge（1690年代）",
+          "converge＋-ence → convergence（1713年）"
+        ],
+        "semanticBridge": "複数のものが同じ方向へ傾いて一点に向かうことから、収束・合流の意味になった。",
+        "summary": "convergenceはcom＋vergere（ともに傾く）に由来し、一点へ向かうことを表す。",
+        "confidence": "high",
+        "notes": "genus（生まれ、種族）の語根ではない。語根カード gen には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/convergence",
+            "note": "convergeを後期ラテン語 convergere（com＋vergere「傾く」）とし、convergenceは converge＋-ence（1713年）としている。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/convergence",
+            "note": "converg(ent)＋-ence の構成と、con-（ともに）＋verge（向かう）の由来を確認した。"
+          }
+        ],
+        "components": [
+          {
+            "form": "com",
+            "kind": "prefix",
+            "gloss": "ともに",
+            "display": false
+          },
+          {
+            "form": "vergere",
+            "kind": "root",
+            "gloss": "傾く、向かう",
+            "display": false
+          },
+          {
+            "form": "-ence",
+            "kind": "suffix",
+            "gloss": "名詞化",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "curfew": {
+      "surfaceForms": [
+        "curfews"
+      ],
+      "meanings": [
+        "門限、外出禁止令"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 cuevrefeu（火を覆え）＝covrir（覆う）＋feu（火）に由来 → 門限、外出禁止令"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/curfew",
+          "https://www.dictionary.com/browse/curfew"
+        ],
+        "originLanguage": "古フランス語（アングロフランス語経由）",
+        "etymons": [
+          "coeverfu",
+          "cuevrefeu",
+          "covrir",
+          "feu"
+        ],
+        "historicalPath": [
+          "古フランス語 cuevrefeu（火を覆う）",
+          "アングロフランス語 coeverfu",
+          "英語 curfew（14世紀初「消火を告げる夕方の鐘」）",
+          "1800年代「夜間の外出制限」"
+        ],
+        "semanticBridge": "就寝前に火を落とせと告げる夕鐘が、時刻で行動を縛る制度そのものを指すようになった。",
+        "summary": "curfewは「火を覆え」と告げる中世の夕鐘に由来し、時間による外出制限の意味へ移った。",
+        "confidence": "high",
+        "notes": "currere（走る）の語根ではない。語根カード cur には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/curfew",
+            "note": "curfewを古フランス語 cuevrefeu（cover fire）とし、消火の鐘から外出制限へ至る経路を示している。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/curfew",
+            "note": "covrefeu（火を覆う）由来と、1250–1300年の中英語初出を確認した。"
+          }
+        ],
+        "components": [
+          {
+            "form": "covrir",
+            "kind": "root",
+            "gloss": "覆う",
+            "display": false
+          },
+          {
+            "form": "feu",
+            "kind": "root",
+            "gloss": "火",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "curly": {
+      "surfaceForms": [
+        "curly"
+      ],
+      "meanings": [
+        "巻き毛の"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "中期オランダ語 krul（巻き毛の）に遡る curl＋-y → 巻き毛の"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/curly",
+          "https://www.dictionary.com/browse/curly"
+        ],
+        "originLanguage": "ゲルマン系（中期オランダ語）",
+        "etymons": [
+          "curl",
+          "crulle",
+          "krul",
+          "-y"
+        ],
+        "historicalPath": [
+          "中期オランダ語 krul（巻き毛の）",
+          "中英語 crulle",
+          "英語 curl（1600年ごろ「巻き毛」）",
+          "curl＋-y → curly（18世紀）"
+        ],
+        "semanticBridge": "巻いた形状を表す名詞に形容詞語尾 -y が付き、髪の形状を表す語になった。",
+        "summary": "curlyはゲルマン系のcurl（巻く）に-yが付いた語で、ラテン語系の語根とは無関係である。",
+        "confidence": "medium",
+        "notes": "currere（走る）の語根ではない。curl自体の究極の語源は出典間で確度に差がある（etymonlineは明示せず、dictionary.comは中期オランダ語 krul とする）。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/curly",
+            "note": "curlyを1770年代の curl＋-y とし、curlは1600年ごろ「巻き毛」と説明している。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/curly",
+            "note": "curlは元は crulle で、中期オランダ語 krul（巻き毛の）由来と説明している。"
+          }
+        ],
+        "components": [
+          {
+            "form": "curl",
+            "kind": "base",
+            "gloss": "巻く、巻き毛",
+            "display": false
+          },
+          {
+            "form": "-y",
+            "kind": "suffix",
+            "gloss": "〜の性質をもつ",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "delectable": {
+      "surfaceForms": [
+        "delectable"
+      ],
+      "meanings": [
+        "とてもおいしい"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 delectare（楽しませる）＋-abilis に由来。delicere（誘い出す）＝de（離れて）＋lacere（誘う） → とてもおいしい"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/delectable",
+          "https://www.dictionary.com/browse/delectable"
+        ],
+        "originLanguage": "ラテン語（古フランス語経由）",
+        "etymons": [
+          "delectabilis",
+          "delectare",
+          "delicere",
+          "de",
+          "lacere"
+        ],
+        "historicalPath": [
+          "ラテン語 lacere（誘う）",
+          "ラテン語 delicere（誘い出す）",
+          "ラテン語 delectare（楽しませる）",
+          "ラテン語 delectabilis",
+          "英語 delectable（1400年ごろ）"
+        ],
+        "semanticBridge": "感覚を誘い喜ばせるという意味が、味覚の快さへ絞られた。",
+        "summary": "delectableはdelectare（楽しませる）＋-abilisに由来し、delicious・delightと同系である。",
+        "confidence": "high",
+        "notes": "legere（集める・読む）ではなく delectare 由来。語根カード lect には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/delectable",
+            "note": "delectableをラテン語 delectabilis、delectare、さらに delicere（de＋lacere「誘う」）に遡らせている。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/delectable",
+            "note": "ラテン語 dēlectābilis＝dēlectāre（dēlicere の反復形）＋-bilis の構成を確認した。"
+          }
+        ],
+        "components": [
+          {
+            "form": "de",
+            "kind": "prefix",
+            "gloss": "離れて",
+            "display": false
+          },
+          {
+            "form": "lacere",
+            "kind": "root",
+            "gloss": "誘う",
+            "display": false
+          },
+          {
+            "form": "-able",
+            "kind": "suffix",
+            "gloss": "〜できる、〜の性質の",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "dissipate": {
+      "surfaceForms": [
+        "dissipate"
+      ],
+      "meanings": [
+        "消散させる、浪費する"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 dissipare＝dis（バラバラに）＋supare（投げ散らす）に由来 → 消散させる、浪費する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/dissipate",
+          "https://www.dictionary.com/browse/dissipate"
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": [
+          "dissipatus",
+          "dissipare",
+          "dis",
+          "supare"
+        ],
+        "historicalPath": [
+          "ラテン語 supare（投げ散らす）",
+          "ラテン語 dissipare（散らす）",
+          "英語 dissipate（15世紀初「四方に追い散らす」）",
+          "1680年代「浪費する」"
+        ],
+        "semanticBridge": "四方へ散らすという物理的な動作が、財産や力を無駄に使い果たすことへ広がった。",
+        "summary": "dissipateはdis＋supare（投げ散らす）に由来し、散らすことから浪費の意味が生じた。",
+        "confidence": "high",
+        "notes": "sapere（味わう）ではなく supare（投げ散らす）由来。語根カード sip には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/dissipate",
+            "note": "ラテン語 dissipare＝dis-（apart）＋supare（to throw, scatter）とし、1680年代の浪費の語義を示している。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/dissipate",
+            "note": "ラテン語 dissipātus（dissipāre／dissupāre「散らす」の過去分詞）由来を確認した。"
+          }
+        ],
+        "components": [
+          {
+            "form": "dis",
+            "kind": "prefix",
+            "gloss": "バラバラに",
+            "display": false
+          },
+          {
+            "form": "supare",
+            "kind": "root",
+            "gloss": "投げ散らす",
+            "display": false
+          },
+          {
+            "form": "-ate",
+            "kind": "suffix",
+            "gloss": "動詞化",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "divide": {
+      "surfaceForms": [
+        "divide"
+      ],
+      "meanings": [
+        "分ける、分割する；割り算する"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 dividere＝dis（バラバラに）＋-videre（分ける）に由来 → 分ける、分割する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/divide",
+          "https://www.dictionary.com/browse/divide"
+        ],
+        "originLanguage": "ラテン語（アングロフランス語経由）",
+        "etymons": [
+          "dividere",
+          "dis",
+          "videre"
+        ],
+        "historicalPath": [
+          "ラテン語 dividere（dis＋-videre＝引き離す）",
+          "アングロフランス語 divider",
+          "中英語 divide（1325–75年）"
+        ],
+        "semanticBridge": "力を加えて引き離すという原義が、分割や割り算の意味として保たれている。",
+        "summary": "divideはdis＋-videre（分ける）に由来し、視覚のvidere（見る）とは別系統である。",
+        "confidence": "high",
+        "notes": "videre（見る）ではなく、印欧祖語 *(d)uid-（分ける、区別する）系の -videre 由来。語根カード vid には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/divide",
+            "note": "ラテン語 dividere を dis-（apart）＋-videre（印欧祖語 *(d)uid-「分ける、区別する」）と分析している。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/divide",
+            "note": "中英語（アングロフランス語 divider 経由）、ラテン語 dīvidere（分ける）と1325–75年の初出を確認した。"
+          }
+        ],
+        "components": [
+          {
+            "form": "dis",
+            "kind": "prefix",
+            "gloss": "バラバラに",
+            "display": false
+          },
+          {
+            "form": "videre",
+            "kind": "root",
+            "gloss": "分ける",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "editor": {
+      "surfaceForms": [
+        "editor"
+      ],
+      "meanings": [
+        "編集者"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 edere（世に出す）＝ex（外へ）＋dare（与える）に由来する edit＋-or → 編集者"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/editor",
+          "https://www.dictionary.com/browse/editor"
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": [
+          "editor",
+          "editus",
+          "edere",
+          "ex",
+          "dare"
+        ],
+        "historicalPath": [
+          "ラテン語 edere（ex＋dare＝外へ与える、世に出す）",
+          "ラテン語 editor（世に出す人）",
+          "英語 editor（1640年代「出版者」）",
+          "1712年「出版用に原稿を整える人」"
+        ],
+        "semanticBridge": "「世に出す人」から、原稿を整えて世に出す役割へ意味が絞られた。",
+        "summary": "editorはex＋dare（外へ与える）に遡り、出版者から編集者へ意味が限定された語である。",
+        "confidence": "high",
+        "notes": "dicere（言う）ではなく dare（与える）由来。語根カード dic には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/editor",
+            "note": "editorをラテン語 editor（世に出す人）とし、edere が ex＋dare であることを示している。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/editor",
+            "note": "中世・後期ラテン語 editor（出版者）と -tor（動作主）による構成、1640–50年の初出を確認した。"
+          }
+        ],
+        "components": [
+          {
+            "form": "ex",
+            "kind": "prefix",
+            "gloss": "外へ",
+            "display": false
+          },
+          {
+            "form": "dare",
+            "kind": "root",
+            "gloss": "与える",
+            "display": false
+          },
+          {
+            "form": "-or",
+            "kind": "suffix",
+            "gloss": "〜する人",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "gather": {
+      "surfaceForms": [
+        "gather"
+      ],
+      "meanings": [
+        "集める、集まる"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 gadrian（geador「一緒に」の派生）に由来するゲルマン系の語 → 集める、集まる"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/gather",
+          "https://www.dictionary.com/browse/gather"
+        ],
+        "originLanguage": "古英語（ゲルマン系）",
+        "etymons": [
+          "gadrian",
+          "geador",
+          "gaduron",
+          "gæd"
+        ],
+        "historicalPath": [
+          "ゲルマン祖語 gaduron（一つにする）",
+          "古英語 gadrian / geador（一緒に）",
+          "中英語 gaderen",
+          "英語 gather（16世紀に-d-→-th-）"
+        ],
+        "semanticBridge": "一つに合わせるという基本義が、物や人を集める意味として一貫して残った。",
+        "summary": "gatherは古英語 gadrian に由来するゲルマン系の語で、一つに合わせることを表す。",
+        "confidence": "high",
+        "notes": "haerere（くっつく）の語根ではない。語根カード her には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/gather",
+            "note": "gatherを古英語 gadrian、ゲルマン祖語 gaduron（come or bring together）に遡らせている。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/gather",
+            "note": "古英語 gaderian（geador「一緒に」の派生）と900年以前の初出を確認した。"
+          }
+        ],
+        "components": [],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "gently": {
+      "surfaceForms": [
+        "gently"
+      ],
+      "meanings": [
+        "やさしく、穏やかに"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 gentilis（同じ氏族の、家柄のよい）に遡る gentle＋-ly。「高貴な」→「上品な」→「穏やかな」 → やさしく、穏やかに"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/gentle",
+          "https://www.dictionary.com/browse/gently"
+        ],
+        "originLanguage": "ラテン語（古フランス語経由）",
+        "etymons": [
+          "gentilis",
+          "gens",
+          "gentle",
+          "-ly"
+        ],
+        "historicalPath": [
+          "ラテン語 gens（氏族）",
+          "ラテン語 gentilis（同じ氏族の、家柄のよい）",
+          "古フランス語 gentil",
+          "英語 gentle（13世紀初「生まれのよい」→1550年代「穏やかな」）",
+          "gentle＋-ly → gently"
+        ],
+        "semanticBridge": "高貴な生まれに求められた振る舞いが、身分と切り離されて気質のやわらかさを指すようになった。",
+        "summary": "gentlyは「家柄のよい」を意味するgentilisに遡り、身分から気質へ意味が移ったgentleの副詞形である。",
+        "confidence": "high",
+        "notes": "gens/gentilis 系だが、今回の語根カード gen には安全に分解できないため載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/gentle",
+            "note": "gentleを古フランス語 gentil、ラテン語 gentilis（of the same family or clan）とし、「生まれのよい」から「穏やかな」への変化を示している。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/gently",
+            "note": "gentl(e)＋-ly の構成を確認した。"
+          }
+        ],
+        "components": [
+          {
+            "form": "gentle",
+            "kind": "base",
+            "gloss": "穏やかな",
+            "display": false
+          },
+          {
+            "form": "-ly",
+            "kind": "suffix",
+            "gloss": "副詞化",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "heresy": {
+      "surfaceForms": [
+        "heresy"
+      ],
+      "meanings": [
+        "異端、異端説"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ギリシャ語 hairesis（選び取ること、学派）＝hairein（選ぶ）に由来 → 異端、異端説"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/heresy",
+          "https://www.dictionary.com/browse/heresy"
+        ],
+        "originLanguage": "ギリシャ語（ラテン語・古フランス語経由）",
+        "etymons": [
+          "hairesis",
+          "hairein",
+          "haeresis"
+        ],
+        "historicalPath": [
+          "ギリシャ語 hairein（選ぶ）",
+          "ギリシャ語 hairesis（選び取ること、学派）",
+          "ラテン語 haeresis",
+          "古フランス語 heresie",
+          "英語 heresy（1200年ごろ）"
+        ],
+        "semanticBridge": "自分で選び取った学説という中立的な語が、正統から外れた選択を指す語へ転じた。",
+        "summary": "heresyは「選ぶ」に遡り、学派を指す語が正統に反する説の意味へ変わった。",
+        "confidence": "high",
+        "notes": "haerere（くっつく）ではなくギリシャ語 hairein（選ぶ）由来。語根カード her には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/heresy",
+            "note": "hairesis（a taking or choosing for oneself、学派）と hairein（選ぶ）に遡らせ、教会用語化の経路を示している。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/heresy",
+            "note": "ギリシャ語 haíresis（選ぶこと）＜haireîn（選ぶ）と、1175–1225年の初出を確認した。"
+          }
+        ],
+        "components": [
+          {
+            "form": "hairein",
+            "kind": "root",
+            "gloss": "選ぶ",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "impregnable": {
+      "surfaceForms": [
+        "impregnable"
+      ],
+      "meanings": [
+        "攻略不能な、難攻不落の"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 imprenable＝in（否定）＋prenable（奪える）に由来。prendre（取る）＜ラテン語 prehendere（つかむ）。16世紀に-g-が挿入された → 難攻不落の"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/impregnable",
+          "https://www.dictionary.com/browse/impregnable"
+        ],
+        "originLanguage": "古フランス語（ラテン語 prehendere 系）",
+        "etymons": [
+          "imprenable",
+          "in",
+          "prenable",
+          "prendre",
+          "prehendere"
+        ],
+        "historicalPath": [
+          "ラテン語 prehendere（つかむ、奪う）",
+          "古フランス語 prendre（取る）",
+          "古フランス語 imprenable（奪えない）",
+          "英語 imprenable（15世紀初）",
+          "16世紀に -g- が復元されて impregnable"
+        ],
+        "semanticBridge": "「奪うことができない」という否定が、攻め落とせない堅固さを表す語になった。",
+        "summary": "impregnableはin＋prenable（奪える）に由来し、攻略できない状態を表す。綴りの-g-は16世紀の挿入である。",
+        "confidence": "high",
+        "notes": "regere（治める）ではなく prehendere（つかむ）由来。語根カード reg には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/impregnable",
+            "note": "古フランス語 imprenable（in-＋prenable）とし、prendre＜ラテン語 prehendere、16世紀の-g-復元を示している。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/impregnable",
+            "note": "中期フランス語 im-＋prenable（prendre「取る」の派生）と1400–50年の初出を確認した。"
+          }
+        ],
+        "components": [
+          {
+            "form": "im",
+            "kind": "prefix",
+            "gloss": "否定",
+            "display": false
+          },
+          {
+            "form": "prehendere",
+            "kind": "root",
+            "gloss": "つかむ",
+            "display": false
+          },
+          {
+            "form": "-able",
+            "kind": "suffix",
+            "gloss": "〜できる",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "installer": {
+      "surfaceForms": [
+        "installers"
+      ],
+      "meanings": [
+        "設置業者"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "中世ラテン語 installare＝in（中へ）＋stallum（席）に由来する install＋-er。「席に据える」→「設置する」 → 設置業者"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/install",
+          "https://www.dictionary.com/browse/install"
+        ],
+        "originLanguage": "中世ラテン語（ゲルマン系 stallum を含む）",
+        "etymons": [
+          "installare",
+          "in",
+          "stallum",
+          "-er"
+        ],
+        "historicalPath": [
+          "古高ドイツ語 stal（立つ場所）",
+          "中世ラテン語 stallum（席）",
+          "中世ラテン語 installare（席に据える）",
+          "英語 install（15世紀初「聖職者を席に着かせる」）",
+          "1880年代「機械を据え付ける」",
+          "install＋-er → installer"
+        ],
+        "semanticBridge": "聖職者を所定の席に着かせる儀式が、物を所定の位置に据え付ける行為へ広がった。",
+        "summary": "installerはin＋stallum（席）に由来するinstallの動作主形で、据え付ける人を表す。",
+        "confidence": "high",
+        "notes": "stare/sistere（立つ）ではなくゲルマン系の stallum（席）由来。語根カード sist には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/install",
+            "note": "installを中世ラテン語 installare（in-＋stallum「席」）とし、聖職叙任から1880年代の機械据付への拡張を示している。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/install",
+            "note": "中世ラテン語 installāre＝in-（中へ）＋stallum（席、場所）と1375–1425年の初出を確認した。"
+          }
+        ],
+        "components": [
+          {
+            "form": "in",
+            "kind": "prefix",
+            "gloss": "中へ",
+            "display": false
+          },
+          {
+            "form": "stallum",
+            "kind": "root",
+            "gloss": "席、立つ場所",
+            "display": false
+          },
+          {
+            "form": "-er",
+            "kind": "suffix",
+            "gloss": "〜する人",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "insurgent": {
+      "surfaceForms": [
+        "insurgent"
+      ],
+      "meanings": [
+        "反乱者、反政府の"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 insurgere＝in（上へ）＋surgere（立ち上がる）の現在分詞に由来 → 反乱者、反政府の"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/insurgent",
+          "https://www.dictionary.com/browse/insurgent"
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": [
+          "insurgentem",
+          "insurgere",
+          "in",
+          "surgere"
+        ],
+        "historicalPath": [
+          "ラテン語 surgere（立ち上がる）",
+          "ラテン語 insurgere（立ち上がる、反抗する）",
+          "ラテン語 insurgentem（現在分詞）",
+          "英語 insurgent（1745年ごろ）"
+        ],
+        "semanticBridge": "権力に対して身を起こす動作が、反乱する人そのものを指す語になった。",
+        "summary": "insurgentはin＋surgere（立ち上がる）の現在分詞に由来し、反乱者を表す。",
+        "confidence": "high",
+        "notes": "genus（生まれ）ではなく surgere（立つ）由来。語根カード gen には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/insurgent",
+            "note": "insurgentをラテン語 insurgentem（insurgere＝in＋surgere「立ち上がる」の現在分詞）としている。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/insurgent",
+            "note": "ラテン語 insurgēns（insurgere「立ち上がる、反乱する」の現在分詞）由来を確認した。"
+          }
+        ],
+        "components": [
+          {
+            "form": "in",
+            "kind": "prefix",
+            "gloss": "上へ、〜に対して",
+            "display": false
+          },
+          {
+            "form": "surgere",
+            "kind": "root",
+            "gloss": "立ち上がる",
+            "display": false
+          },
+          {
+            "form": "-ent",
+            "kind": "suffix",
+            "gloss": "〜する人・もの",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "insurrection": {
+      "surfaceForms": [
+        "insurrection"
+      ],
+      "meanings": [
+        "反乱、暴動"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 insurgere＝in（上へ）＋surgere（立ち上がる）の名詞形 insurrectionem に由来 → 反乱、暴動"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/insurrection",
+          "https://www.dictionary.com/browse/insurrection"
+        ],
+        "originLanguage": "後期ラテン語（古フランス語経由）",
+        "etymons": [
+          "insurrectionem",
+          "insurrectus",
+          "insurgere",
+          "in",
+          "surgere"
+        ],
+        "historicalPath": [
+          "ラテン語 surgere（立ち上がる）",
+          "ラテン語 insurgere（立ち上がる、反抗する）",
+          "後期ラテン語 insurrectionem（蜂起）",
+          "英語 insurrection（15世紀初）"
+        ],
+        "semanticBridge": "身を起こすという動作が、権力に対して集団で立ち上がる行為を指す語になった。",
+        "summary": "insurrectionはin＋surgere（立ち上がる）の名詞形で、権力への蜂起を表す。",
+        "confidence": "high",
+        "notes": "regere（治める）ではなく surgere（立ち上がる）由来。語根カード reg には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/insurrection",
+            "note": "後期ラテン語 insurrectionem（a rising up）と insurgere＝in-＋surgere を示している。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/insurrection",
+            "note": "後期ラテン語 insurrēctiō＝insurrēctus（insurgere の過去分詞）＋-iō の構成を確認した。"
+          }
+        ],
+        "components": [
+          {
+            "form": "in",
+            "kind": "prefix",
+            "gloss": "上へ",
+            "display": false
+          },
+          {
+            "form": "surgere",
+            "kind": "root",
+            "gloss": "立ち上がる",
+            "display": false
+          },
+          {
+            "form": "-ion",
+            "kind": "suffix",
+            "gloss": "名詞化",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "intravenous": {
+      "surfaceForms": [
+        "intravenous"
+      ],
+      "meanings": [
+        "静脈内の"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 intra（内側に）＋vena（静脈）に由来 → 静脈内の"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/intravenous",
+          "https://www.dictionary.com/browse/intravenous"
+        ],
+        "originLanguage": "ラテン語（近代の学術造語）",
+        "etymons": [
+          "intra",
+          "vena",
+          "venous"
+        ],
+        "historicalPath": [
+          "ラテン語 vena（静脈）",
+          "ラテン語 intra（内側に）",
+          "英語 intravenous（1840年代の医学用語）"
+        ],
+        "semanticBridge": "静脈の内側という位置関係を表す造語が、そのまま投与経路を指す医学用語になった。",
+        "summary": "intravenousはintra（内側に）＋vena（静脈）による医学の造語である。",
+        "confidence": "high",
+        "notes": "venire（来る）ではなく vena（静脈）由来。語根カード ven には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/intravenous",
+            "note": "1845年の語で intra-（within）＋venous（ラテン語 vena「静脈」）としている。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/intravenous",
+            "note": "intra-（内に）＋venous（静脈の）の構成と1840–50年の初出を確認した。"
+          }
+        ],
+        "components": [
+          {
+            "form": "intra",
+            "kind": "prefix",
+            "gloss": "内側に",
+            "display": false
+          },
+          {
+            "form": "vena",
+            "kind": "root",
+            "gloss": "静脈",
+            "display": false
+          },
+          {
+            "form": "-ous",
+            "kind": "suffix",
+            "gloss": "形容詞化",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "livid": {
+      "surfaceForms": [
+        "livid"
+      ],
+      "meanings": [
+        "激怒した、青ざめた"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 lividus（青黒い）に由来。怒りで青ざめる様子から → 激怒した、青ざめた"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/livid",
+          "https://www.dictionary.com/browse/livid"
+        ],
+        "originLanguage": "ラテン語（古フランス語経由）",
+        "etymons": [
+          "lividus",
+          "livere"
+        ],
+        "historicalPath": [
+          "ラテン語 livere（青黒い色である）",
+          "ラテン語 lividus（青黒い、あざの色の）",
+          "古フランス語 livide",
+          "英語 livid（1615–25年「青黒い」）",
+          "1912年ごろ「激怒した」"
+        ],
+        "semanticBridge": "怒りで血の気が引き青ざめた顔色が、そのまま激しい怒りそのものを指すようになった。",
+        "summary": "lividはlividus（青黒い）に由来し、怒りによる顔色から「激怒した」の意味が生じた。",
+        "confidence": "high",
+        "notes": "videre（見る）ではなく livere（青黒い）由来。語根カード vid には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/livid",
+            "note": "古フランス語 livide、ラテン語 lividus（bluish, black-and-blue）とし、1912年ごろの「激怒」への転義を示している。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/livid",
+            "note": "ラテン語 līvidus（黒ずんだ）＜līvēre と、1615–25年の初出を確認した。"
+          }
+        ],
+        "components": [
+          {
+            "form": "lividus",
+            "kind": "root",
+            "gloss": "青黒い",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "log": {
+      "surfaceForms": [
+        "logs"
+      ],
+      "meanings": [
+        "丸太"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "中英語 logge（丸太、棒）に由来するゲルマン系の語。航海日誌 log-book の log も速度測定に使った丸太から → 丸太"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/log",
+          "https://www.dictionary.com/browse/log"
+        ],
+        "originLanguage": "ゲルマン系（中英語 logge）",
+        "etymons": [
+          "logge",
+          "lugge"
+        ],
+        "historicalPath": [
+          "中英語 logge（切り出した木材の塊）",
+          "英語 log（14世紀初）",
+          "log-book（1670年代、丸太で船速を測った記録）",
+          "log（記録、1842年）"
+        ],
+        "semanticBridge": "水に浮かべて船速を測る丸太が、その測定を書き留める記録そのものを指すようになった。",
+        "summary": "logは丸太を指すゲルマン系の語で、船速測定具から「記録」の意味も生じた。",
+        "confidence": "medium",
+        "notes": "logos/loqui（言葉）の語根ではない。究極の語源は不明とする出典もある（etymonlineは origin unknown、dictionary.comは中英語 lugge の異形とする）。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/log",
+            "note": "log(n.1)を由来不詳の中英語語とし、log-book（1670年代）から記録の意味が生じた経路を示している。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/log",
+            "note": "中英語 logge（lugge「棒、木の枝」の異形）と1350–1400年の初出を確認した。"
+          }
+        ],
+        "components": [],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "nostalgia": {
+      "surfaceForms": [
+        "nostalgia"
+      ],
+      "meanings": [
+        "郷愁、懐かしさ"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ギリシャ語 nostos（帰郷）＋algos（苦痛）による近代ラテン語の造語（1688年） → 郷愁、懐かしさ"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/nostalgia",
+          "https://www.dictionary.com/browse/nostalgia"
+        ],
+        "originLanguage": "近代ラテン語（ギリシャ語要素）",
+        "etymons": [
+          "nostalgia",
+          "nostos",
+          "algos"
+        ],
+        "historicalPath": [
+          "ギリシャ語 nostos（帰郷）＋algos（苦痛）",
+          "1688年 Johannes Hofer が近代ラテン語で造語（独語 Heimweh の訳）",
+          "18世紀「重い郷愁という病」",
+          "1920年ごろ「過去への憧れ」"
+        ],
+        "semanticBridge": "故郷を離れた苦痛という医学用語が、遠い場所から遠い時代への憧れへ移った。",
+        "summary": "nostalgiaは「帰郷の苦痛」を意味する造語で、病名から過去への郷愁へ意味が移った。",
+        "confidence": "high",
+        "notes": "stare（立つ）の語根ではない。語根カード sist には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/nostalgia",
+            "note": "1688年 Hofer による造語とし、ギリシャ語 nostos＋algos、および1920年ごろの現代語義への移行を示している。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/nostalgia",
+            "note": "新ラテン語で nóstos（帰郷）＋-algia（痛み）を組み合わせた語であることを確認した。"
+          }
+        ],
+        "components": [
+          {
+            "form": "nostos",
+            "kind": "root",
+            "gloss": "帰郷",
+            "display": false
+          },
+          {
+            "form": "-algia",
+            "kind": "suffix",
+            "gloss": "痛み",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "obscurity": {
+      "surfaceForms": [
+        "obscurity"
+      ],
+      "meanings": [
+        "無名、曖昧さ"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 obscurus（暗い、隠れた）＋-itas に由来 → 無名、曖昧さ"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.dictionary.com/browse/obscurity",
+          "https://en.wiktionary.org/wiki/obscurity"
+        ],
+        "originLanguage": "ラテン語（中期フランス語経由）",
+        "etymons": [
+          "obscuritas",
+          "obscurus",
+          "-itas"
+        ],
+        "historicalPath": [
+          "ラテン語 obscurus（暗い）",
+          "ラテン語 obscuritas",
+          "中期フランス語 obscurité",
+          "中英語 obscurite（1470年代）"
+        ],
+        "semanticBridge": "光が届かず見えない状態が、世に知られないことや意味の不明瞭さへ広がった。",
+        "summary": "obscurityは「暗い」を表すobscurusの名詞形で、無名・曖昧さの意味を持つ。",
+        "confidence": "high",
+        "notes": "currere（走る）の語根ではない。語根カード cur には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.dictionary.com/browse/obscurity",
+            "note": "ラテン語 obscuritas / obscurus（暗い、不明瞭な）＋-itas と、中期フランス語経由の経路を確認した。"
+          },
+          {
+            "url": "https://en.wiktionary.org/wiki/obscurity",
+            "note": "中英語 obscurite、中期フランス語 obscurité、ラテン語 obscuritas の系統を確認した。"
+          }
+        ],
+        "components": [
+          {
+            "form": "obscurus",
+            "kind": "root",
+            "gloss": "暗い",
+            "display": false
+          },
+          {
+            "form": "-ity",
+            "kind": "suffix",
+            "gloss": "状態を表す名詞化",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "painstaking": {
+      "surfaceForms": [
+        "painstaking"
+      ],
+      "meanings": [
+        "綿密な、骨の折れる"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "pain（骨折り、労苦）＋take（引き受ける）の英語の複合語。「労を取る」 → 綿密な、骨の折れる"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/painstaking",
+          "https://www.dictionary.com/browse/painstaking"
+        ],
+        "originLanguage": "英語（複合語。pain はラテン語 poena 系）",
+        "etymons": [
+          "pain",
+          "taking",
+          "peine",
+          "poena"
+        ],
+        "historicalPath": [
+          "ラテン語 poena（罰）＞古フランス語 peine＞英語 pain（労苦）",
+          "中英語 take the peyn of laboure（骨を折る）",
+          "英語 painstaking（1550年代 名詞）",
+          "1690年代 形容詞「入念な」"
+        ],
+        "semanticBridge": "苦労を引き受けるという言い回しが、手間を惜しまない仕事ぶりを表す形容詞になった。",
+        "summary": "painstakingはpain（労苦）＋take（引き受ける）の複合語で、労を惜しまない様子を表す。",
+        "confidence": "high",
+        "notes": "stare（立つ）の語根ではない。語根カード sist には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/painstaking",
+            "note": "pain（exertion, effort）＋taking の複合とし、1550年代の名詞・1690年代の形容詞用法を示している。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/painstaking",
+            "note": "pain＋-s＋taking の構成と1550–60年の初出を確認した。"
+          }
+        ],
+        "components": [
+          {
+            "form": "pain",
+            "kind": "base",
+            "gloss": "労苦",
+            "display": false
+          },
+          {
+            "form": "taking",
+            "kind": "base",
+            "gloss": "引き受けること",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "philosopher": {
+      "surfaceForms": [
+        "philosopher"
+      ],
+      "meanings": [
+        "哲学者、思想家"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ギリシャ語 philosophos＝philos（愛する）＋sophos（賢い）に由来 → 哲学者"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/philosopher",
+          "https://www.dictionary.com/browse/philosopher"
+        ],
+        "originLanguage": "ギリシャ語（ラテン語・古フランス語経由）",
+        "etymons": [
+          "philosophos",
+          "philos",
+          "sophos",
+          "philosophus"
+        ],
+        "historicalPath": [
+          "ギリシャ語 philosophos（知を愛する者）",
+          "ラテン語 philosophus",
+          "アングロフランス語 philosophe",
+          "英語 philosopher（14世紀初）"
+        ],
+        "semanticBridge": "「知恵を愛する人」という自称が、学問としての哲学を修める人を指す語になった。",
+        "summary": "philosopherはphilos（愛する）＋sophos（賢い）に由来し、「知を愛する人」を表す。",
+        "confidence": "high",
+        "notes": "haerere（くっつく）の語根ではない。語根カード her には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/philosopher",
+            "note": "ギリシャ語 philosophos（lover of wisdom）＝philos＋sophos とし、ピタゴラスの自称の逸話を伝えている。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/philosopher",
+            "note": "ギリシャ語 philósophos＝philo-（愛する）＋sophía（知恵）と、ラテン語 philosophus 経由の系統を確認した。"
+          }
+        ],
+        "components": [
+          {
+            "form": "philo",
+            "kind": "prefix",
+            "gloss": "愛する",
+            "display": false
+          },
+          {
+            "form": "soph",
+            "kind": "root",
+            "gloss": "知恵",
+            "display": false
+          },
+          {
+            "form": "-er",
+            "kind": "suffix",
+            "gloss": "〜する人",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "procure": {
+      "surfaceForms": [
+        "procure"
+      ],
+      "meanings": [
+        "調達する"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 procurare＝pro（〜のために）＋curare（世話をする）に由来 → 調達する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/procure",
+          "https://www.dictionary.com/browse/procure"
+        ],
+        "originLanguage": "ラテン語（古フランス語経由）",
+        "etymons": [
+          "procurare",
+          "pro",
+          "curare",
+          "cura"
+        ],
+        "historicalPath": [
+          "ラテン語 procurare（pro＋curare＝〜のために世話をする）",
+          "古フランス語 procurer",
+          "英語 procure（1300年ごろ「引き起こす」）",
+          "14世紀後半「入手する」"
+        ],
+        "semanticBridge": "人のために手を尽くして世話をすることが、必要な物を手に入れる行為へ移った。",
+        "summary": "procureはpro＋curare（世話をする）に由来し、取り計らうことから調達する意味になった。",
+        "confidence": "high",
+        "notes": "currere（走る）ではなく curare（世話をする）由来。語根カード cur には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/procure",
+            "note": "procureを後期ラテン語 procurare（pro「〜に代わって」＋curare「世話する」）に遡らせている。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/procure",
+            "note": "ラテン語 prōcūrāre＝prō-＋cūrāre（世話をする）と、1250–1300年の初出を確認した。"
+          }
+        ],
+        "components": [
+          {
+            "form": "pro",
+            "kind": "prefix",
+            "gloss": "〜のために",
+            "display": false
+          },
+          {
+            "form": "curare",
+            "kind": "root",
+            "gloss": "世話をする",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "pungent": {
+      "surfaceForms": [
+        "pungent"
+      ],
+      "meanings": [
+        "強烈な（味・臭い）；辛辣な"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 pungere（刺す）の現在分詞 pungentem に由来 → 強烈な（味・臭い）、辛辣な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/pungent",
+          "https://www.dictionary.com/browse/pungent"
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": [
+          "pungentem",
+          "pungere"
+        ],
+        "historicalPath": [
+          "ラテン語 pungere（刺す、突く）",
+          "ラテン語 pungentem（現在分詞）",
+          "英語 pungent（1590年代「鋭く痛む」）",
+          "1660年代「強烈なにおい・味の」"
+        ],
+        "semanticBridge": "刺すような痛みが、鼻や舌を刺す刺激、さらに言葉の鋭さへ広がった。",
+        "summary": "pungentはpungere（刺す）の現在分詞に由来し、感覚と言葉の鋭さを表す。",
+        "confidence": "high",
+        "notes": "genus（生まれ）ではなく pungere（刺す）由来。語根カード gen には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/pungent",
+            "note": "pungentをラテン語 pungentem（pungere「刺す」の現在分詞）とし、痛み→におい→言葉の経路を示している。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/pungent",
+            "note": "ラテン語 pungēns（pungere「刺す」の現在分詞）由来と、poignantとの同源を確認した。"
+          }
+        ],
+        "components": [
+          {
+            "form": "pungere",
+            "kind": "root",
+            "gloss": "刺す",
+            "display": false
+          },
+          {
+            "form": "-ent",
+            "kind": "suffix",
+            "gloss": "形容詞化",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "ratification": {
+      "surfaceForms": [
+        "ratification"
+      ],
+      "meanings": [
+        "批准、承認"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 ratificare（有効と確認する）＝ratus（確定した）＋facere（作る）に由来 → 批准、承認"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/ratification",
+          "https://www.dictionary.com/browse/ratification"
+        ],
+        "originLanguage": "中世ラテン語（古フランス語経由）",
+        "etymons": [
+          "ratificationem",
+          "ratificare",
+          "ratus",
+          "reri",
+          "facere"
+        ],
+        "historicalPath": [
+          "ラテン語 reri（数える、判断する）",
+          "ラテン語 ratus（計算で確定した、承認された）",
+          "中世ラテン語 ratificare（確認する）",
+          "英語 ratification（15世紀半ば）"
+        ],
+        "semanticBridge": "計算して確定させることが、正式な手続きで有効と認める行為へ移った。",
+        "summary": "ratificationはratus（確定した）＋facere（作る）に遡り、正式承認を表す語である。",
+        "confidence": "high",
+        "notes": "後半の -fication は facere だが、前半 rat- は reri 系で、語根カード fac には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/ratification",
+            "note": "ratificareを ratus（fixed by reckoning）＋facere とし、reri に遡ることを示している。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/ratification",
+            "note": "中世ラテン語 ratificātiōn-（ratificāre＋-iōn-）と1400–50年の初出を確認した。"
+          }
+        ],
+        "components": [
+          {
+            "form": "ratus",
+            "kind": "root",
+            "gloss": "確定した",
+            "display": false
+          },
+          {
+            "form": "facere",
+            "kind": "root",
+            "gloss": "作る、する",
+            "display": false
+          },
+          {
+            "form": "-ion",
+            "kind": "suffix",
+            "gloss": "名詞化",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "regurgitate": {
+      "surfaceForms": [
+        "regurgitates"
+      ],
+      "meanings": [
+        "吐き戻す、逆流させる"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 regurgitare＝re（戻って）＋gurges（渦、のど）に由来 → 吐き戻す、逆流させる"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/regurgitate",
+          "https://www.dictionary.com/browse/regurgitate"
+        ],
+        "originLanguage": "中世ラテン語",
+        "etymons": [
+          "regurgitatus",
+          "regurgitare",
+          "re",
+          "gurgitare",
+          "gurges"
+        ],
+        "historicalPath": [
+          "ラテン語 gurges（渦、のど、深み）",
+          "後期ラテン語 gurgitare（あふれさせる）",
+          "中世ラテン語 regurgitare（逆流させる）",
+          "英語 regurgitate（1640年代）",
+          "1753年 嘔吐の意味"
+        ],
+        "semanticBridge": "渦を巻いて逆に押し戻す水の動きが、胃の内容物を吐き戻すことへ移った。",
+        "summary": "regurgitateはre＋gurges（渦・のど）に由来し、逆流から吐き戻しの意味になった。",
+        "confidence": "high",
+        "notes": "regere（治める）ではなく gurges（渦）由来。語根カード reg には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/regurgitate",
+            "note": "re-＋後期ラテン語 gurgitare（gurges「渦、のど」由来）とし、1640年代と1753年の語義を示している。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/regurgitate",
+            "note": "中世ラテン語 regurgitātus＝re-＋gurgit-（gurges の語幹）＋-ātus の構成を確認した。"
+          }
+        ],
+        "components": [
+          {
+            "form": "re",
+            "kind": "prefix",
+            "gloss": "戻って",
+            "display": false
+          },
+          {
+            "form": "gurges",
+            "kind": "root",
+            "gloss": "渦、のど",
+            "display": false
+          },
+          {
+            "form": "-ate",
+            "kind": "suffix",
+            "gloss": "動詞化",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "relegation": {
+      "surfaceForms": [
+        "relegation"
+      ],
+      "meanings": [
+        "降格"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 relegare（追いやる）＝re（後ろへ）＋legare（使いとして送る）に由来 → 降格"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/relegate",
+          "https://www.dictionary.com/browse/relegation"
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": [
+          "relegatio",
+          "relegare",
+          "re",
+          "legare",
+          "lex"
+        ],
+        "historicalPath": [
+          "ラテン語 legare（使いとして送る、委任する）",
+          "ラテン語 relegare（遠ざける、追放する）",
+          "ラテン語 relegatio（追放）",
+          "英語 relegation（15世紀前半）"
+        ],
+        "semanticBridge": "ローマの法用語である市民の追放が、下位へ落とすことや降格へ広がった。",
+        "summary": "relegationはre＋legare（送り返す）に由来し、追放から降格の意味になった。",
+        "confidence": "high",
+        "notes": "legere（集める・読む）ではなく legare（送る）由来。語根カード lect には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/relegate",
+            "note": "relegareを re-＋legare（send as a deputy）とし、relegatio（追放）がローマ法の用語であることを示している。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/relegation",
+            "note": "ラテン語 relēgātiō（送り出すこと、追放）＋-ion と1400–50年の初出を確認した。"
+          }
+        ],
+        "components": [
+          {
+            "form": "re",
+            "kind": "prefix",
+            "gloss": "後ろへ",
+            "display": false
+          },
+          {
+            "form": "legare",
+            "kind": "root",
+            "gloss": "使いとして送る",
+            "display": false
+          },
+          {
+            "form": "-ion",
+            "kind": "suffix",
+            "gloss": "名詞化",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "rivalry": {
+      "surfaceForms": [
+        "rivalry"
+      ],
+      "meanings": [
+        "競争、対抗意識"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 rivalis（同じ小川 rivus を使う者）に由来する rival＋-ry → 競争、対抗意識"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/rivalry",
+          "https://www.dictionary.com/browse/rivalry"
+        ],
+        "originLanguage": "ラテン語",
+        "etymons": [
+          "rivalis",
+          "rivus",
+          "-ry"
+        ],
+        "historicalPath": [
+          "ラテン語 rivus（小川）",
+          "ラテン語 rivalis（同じ流れを使う者、競争相手）",
+          "英語 rival",
+          "rival＋-ry → rivalry（1590年代）"
+        ],
+        "semanticBridge": "同じ川の水を使う隣人同士の争いが、競争という関係そのものを指す語になった。",
+        "summary": "rivalryはrivus（小川）に遡るrivalの派生語で、同じ資源を争う関係から競争を表す。",
+        "confidence": "high",
+        "notes": "valere（強い）ではなく rivus（小川）由来。語根カード val には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/rivalry",
+            "note": "ラテン語 rivalis（one who uses the same stream）と rivus（brook）に遡らせ、rivalry は1590年代の rival＋-ry としている。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/rivalry",
+            "note": "rival＋-ry の構成と1590–1600年の初出を確認した。"
+          }
+        ],
+        "components": [
+          {
+            "form": "rivus",
+            "kind": "root",
+            "gloss": "小川",
+            "display": false
+          },
+          {
+            "form": "-ry",
+            "kind": "suffix",
+            "gloss": "状態・行為の名詞化",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "stake": {
+      "surfaceForms": [
+        "stakes"
+      ],
+      "meanings": [
+        "賭け金、利害"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 staca（杭）に由来するゲルマン系の語。賭け金の語義は16世紀に生じた → 賭け金、利害"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/stake",
+          "https://www.dictionary.com/browse/stake"
+        ],
+        "originLanguage": "古英語（ゲルマン系）",
+        "etymons": [
+          "staca",
+          "stakon"
+        ],
+        "historicalPath": [
+          "ゲルマン祖語 stakon（杭、棒）",
+          "古英語 staca（杭）",
+          "英語 stake（杭）",
+          "1530年代「賭け金」（由来は不確か）",
+          "1784年 have a stake in（利害を持つ）"
+        ],
+        "semanticBridge": "杭に賭け金を置いたとされる慣行から、賭けたもの、さらに失うと困る利害を指すようになった。",
+        "summary": "stakeは古英語 staca（杭）に由来し、賭け金・利害の語義は16世紀に生じた。",
+        "confidence": "medium",
+        "notes": "stare（立つ）の語根ではない。賭け金の語義の由来は出典も uncertain とする。語根カード sist には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/stake",
+            "note": "stake(n.1)を古英語 staca、ゲルマン祖語 stakon とし、stake(n.2)（賭け金、1530年代）は由来不詳としている。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/stake",
+            "note": "古英語 staca（pin, stake）と900年以前の初出、賭け金の語義が1530–40年に生じたことを確認した。"
+          }
+        ],
+        "components": [],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "stammer": {
+      "surfaceForms": [
+        "stammered"
+      ],
+      "meanings": [
+        "どもった"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 stamerian（つかえて話す）に由来するゲルマン系の語 → どもった、言葉がつかえた"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/stammer",
+          "https://www.dictionary.com/browse/stammer"
+        ],
+        "originLanguage": "古英語（ゲルマン系）",
+        "etymons": [
+          "stamerian",
+          "stameren",
+          "stamro-"
+        ],
+        "historicalPath": [
+          "ゲルマン祖語 stamro-",
+          "古英語 stamerian（つかえて話す）",
+          "中英語 stameren",
+          "英語 stammer"
+        ],
+        "semanticBridge": "話がつかえるという古英語の動詞が、そのまま現代の語義として続いている。",
+        "summary": "stammerは古英語 stamerian に由来するゲルマン系の語で、言葉がつかえることを表す。",
+        "confidence": "high",
+        "notes": "stare（立つ）の語根ではない。語根カード sist には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/stammer",
+            "note": "古英語 stamerian、ゲルマン祖語 stamro- に遡らせ、独語 stammeln などの同族語を挙げている。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/stammer",
+            "note": "古英語 stamerian＝stam（つかえた）＋-erian と、1000年以前の初出を確認した。"
+          }
+        ],
+        "components": [],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "stampede": {
+      "surfaceForms": [
+        "stampede"
+      ],
+      "meanings": [
+        "群衆の殺到、暴走"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "メキシコ・スペイン語 estampida（estampar「踏みつける」の名詞形）に由来 → 群衆の殺到、暴走"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/stampede",
+          "https://www.dictionary.com/browse/stampede"
+        ],
+        "originLanguage": "スペイン語（ゲルマン系 stamp を含む）",
+        "etymons": [
+          "estampida",
+          "estampar"
+        ],
+        "historicalPath": [
+          "ゲルマン系 stamp（踏みつける）",
+          "スペイン語 estampar（押す、踏む）",
+          "スペイン語 estampida（轟音、驚いて逃げること）",
+          "英語 stampede（1820–30年代、家畜の暴走）",
+          "同年代に人の殺到にも比喩的に適用"
+        ],
+        "semanticBridge": "驚いた家畜が地を踏み鳴らして逃げる様子が、人の群れの殺到にも使われるようになった。",
+        "summary": "stampedeはスペイン語 estampida（踏みつけ、轟音）に由来し、家畜の暴走から人の殺到へ広がった。",
+        "confidence": "high",
+        "notes": "stare（立つ）の語根ではない。語根カード sist には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/stampede",
+            "note": "メキシコ・スペイン語 estampida、estamper（to stamp）とし、1836年の英語用例と比喩的用法を示している。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/stampede",
+            "note": "スペイン語 estampida＝estamp(ar)（踏む）＋-ida と、1815–25年のアメリカ英語初出を確認した。"
+          }
+        ],
+        "components": [],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "stand": {
+      "surfaceForms": [
+        "stand"
+      ],
+      "meanings": [
+        "立つ",
+        "立つ、我慢する"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 standan（まっすぐ立つ）に由来するゲルマン系の語。1600年ごろ「持ちこたえる」→「我慢する」 → 立つ、我慢する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/stand",
+          "https://www.dictionary.com/browse/stand"
+        ],
+        "originLanguage": "古英語（ゲルマン系）",
+        "etymons": [
+          "standan",
+          "standanan"
+        ],
+        "historicalPath": [
+          "ゲルマン祖語 standanan",
+          "古英語 standan（場所を占める、しっかり立つ）",
+          "英語 stand",
+          "1600年ごろ「持ちこたえる」",
+          "1620年代「我慢する」"
+        ],
+        "semanticBridge": "しっかり立っていることが、圧力に耐えること、さらに嫌なことを我慢することへ広がった。",
+        "summary": "standは古英語 standan に由来するゲルマン系の語で、立つことから耐える意味が生じた。",
+        "confidence": "high",
+        "notes": "ラテン語 stare とは同じ印欧祖語 *sta- に遡るが、借用ではなく古英語からの継承語。語根カード sist には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/stand",
+            "note": "古英語 standan、ゲルマン祖語 standanan、印欧祖語 *sta- に遡らせ、1600年ごろの「耐える」への変化を示している。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/stand",
+            "note": "古英語 standan と900年以前の初出、ラテン語 stāre・ギリシャ語 histánai との同族関係を確認した。"
+          }
+        ],
+        "components": [],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "staunch": {
+      "surfaceForms": [
+        "staunch"
+      ],
+      "meanings": [
+        "忠実な、断固とした"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 estanche（水を通さない）＜俗ラテン語 stanticare に由来。「漏れない」→「揺るがない」 → 忠実な、断固とした"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/staunch",
+          "https://www.dictionary.com/browse/staunch"
+        ],
+        "originLanguage": "古フランス語（俗ラテン語 stanticare）",
+        "etymons": [
+          "estanche",
+          "stanticare",
+          "stans",
+          "stare"
+        ],
+        "historicalPath": [
+          "ラテン語 stare（立つ）＞stans",
+          "俗ラテン語 stanticare",
+          "古フランス語 estanche（水を通さない）",
+          "英語 staunch（15世紀初「水を通さない」）",
+          "1620年代 人について「信念に忠実な」"
+        ],
+        "semanticBridge": "水も漏らさない堅固さが、人の変わらない忠実さを表す語へ移った。",
+        "summary": "staunchは「水を通さない」に由来し、堅固さから人の忠実さを表すようになった。",
+        "confidence": "high",
+        "notes": "stare 系ではあるが古フランス語 estanche 経由の語で、今回の語根カード sist には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/staunch",
+            "note": "古フランス語 estanche、俗ラテン語 stanticare（stans＜stare）とし、1620年代の人への適用を示している。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/staunch",
+            "note": "中期フランス語 estanche（水を通さない）、estancher、ラテン語 stanticare の系統と1375–1425年の初出を確認した。"
+          }
+        ],
+        "components": [],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "synthesis": {
+      "surfaceForms": [
+        "synthesis"
+      ],
+      "meanings": [
+        "統合、総合"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ギリシャ語 synthesis＝syn（ともに）＋tithenai（置く）に由来 → 統合、総合"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/synthesis",
+          "https://www.dictionary.com/browse/synthesis"
+        ],
+        "originLanguage": "ギリシャ語（ラテン語経由）",
+        "etymons": [
+          "synthesis",
+          "syn",
+          "tithenai"
+        ],
+        "historicalPath": [
+          "ギリシャ語 tithenai（置く）",
+          "ギリシャ語 synthesis（ともに置くこと、組み立て）",
+          "ラテン語 synthesis（集成）",
+          "英語 synthesis（1610年代）"
+        ],
+        "semanticBridge": "別々のものを一つの場に置き合わせることが、要素を統合する行為を指すようになった。",
+        "summary": "synthesisはsyn＋tithenai（ともに置く）に由来し、要素を組み合わせて一つにすることを表す。",
+        "confidence": "high",
+        "notes": "haerere（くっつく）ではなくギリシャ語 tithenai（置く）由来。語根カード her には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/synthesis",
+            "note": "ギリシャ語 synthesis（a putting together）＝syn-＋tithenai とし、1610年代の英語初出を示している。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/synthesis",
+            "note": "ギリシャ語 sýnthesis＝syn-＋the-（tithénai の語幹）＋-sis の構成を確認した。"
+          }
+        ],
+        "components": [
+          {
+            "form": "syn",
+            "kind": "prefix",
+            "gloss": "ともに",
+            "display": false
+          },
+          {
+            "form": "the",
+            "kind": "root",
+            "gloss": "置く",
+            "display": false
+          },
+          {
+            "form": "-sis",
+            "kind": "suffix",
+            "gloss": "名詞化",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "synthesize": {
+      "surfaceForms": [
+        "synthesized"
+      ],
+      "meanings": [
+        "合成した、統合した"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ギリシャ語 syn（ともに）＋tithenai（置く）に遡る synthesis＋-ize → 合成する、統合する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/synthesize",
+          "https://www.dictionary.com/browse/synthesize"
+        ],
+        "originLanguage": "ギリシャ語（英語で -ize 派生）",
+        "etymons": [
+          "synthesis",
+          "syntithenai",
+          "syn",
+          "tithenai",
+          "-ize"
+        ],
+        "historicalPath": [
+          "ギリシャ語 syntithenai（ともに置く、組み合わせる）",
+          "英語 synthesis",
+          "synthesis＋-ize → synthesize（1820–30年代）"
+        ],
+        "semanticBridge": "「ともに置く」ことを表す名詞に動詞語尾が付き、要素を組み合わせて作る行為を指すようになった。",
+        "summary": "synthesizeはsynthesisに-izeが付いた語で、syn＋tithenai（ともに置く）に遡る。",
+        "confidence": "high",
+        "notes": "haerere（くっつく）ではなくギリシャ語 tithenai（置く）由来。語根カード her には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/synthesize",
+            "note": "synthesizeを synthesis＋-ize（1825年）とし、ギリシャ語 syntithenai（syn-＋tithenai）に遡らせている。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/synthesize",
+            "note": "synthes(is)＋-ize の構成と1820–30年の初出を確認した。"
+          }
+        ],
+        "components": [
+          {
+            "form": "syn",
+            "kind": "prefix",
+            "gloss": "ともに",
+            "display": false
+          },
+          {
+            "form": "the",
+            "kind": "root",
+            "gloss": "置く",
+            "display": false
+          },
+          {
+            "form": "-ize",
+            "kind": "suffix",
+            "gloss": "動詞化",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "tether": {
+      "surfaceForms": [
+        "tethered"
+      ],
+      "meanings": [
+        "つなぎ留めた"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古ノルド語 tjoðr（つなぎ綱）に由来するゲルマン系の語 → つなぎ留める、つなぎ綱"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/tether",
+          "https://www.dictionary.com/browse/tether"
+        ],
+        "originLanguage": "古ノルド語（ゲルマン系）",
+        "etymons": [
+          "tjoðr",
+          "teudran"
+        ],
+        "historicalPath": [
+          "ゲルマン祖語 teudran",
+          "古ノルド語 tjoðr（つなぎ綱）",
+          "英語 tether（14世紀「家畜をつなぐ綱」）",
+          "1570年代「行動の限界」の比喩"
+        ],
+        "semanticBridge": "家畜を一点につなぐ綱が、行動を縛る条件や限界の比喩へ広がった。",
+        "summary": "tetherは古ノルド語 tjoðr に由来し、つなぎ留めることと行動の制限を表す。",
+        "confidence": "high",
+        "notes": "haerere（くっつく）の語根ではない。語根カード her には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/tether",
+            "note": "tetherを古ノルド語 tjoðr、ゲルマン祖語 teudran に遡らせ、比喩的用法の年代を示している。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/tether",
+            "note": "古ノルド語 tjōthr とオランダ語 tuier に由来し、1350–1400年に中英語で初出することを確認した。"
+          }
+        ],
+        "components": [],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "treacherous": {
+      "surfaceForms": [
+        "treacherous"
+      ],
+      "meanings": [
+        "危険な、裏切りやすい"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古フランス語 trichier（だます）に由来する trecheor（欺く者）＋-ous → 裏切りやすい、危険な"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/treacherous",
+          "https://www.dictionary.com/browse/treacherous"
+        ],
+        "originLanguage": "古フランス語",
+        "etymons": [
+          "trecheros",
+          "trecheor",
+          "trechier"
+        ],
+        "historicalPath": [
+          "古フランス語 trechier / trichier（だます）",
+          "古フランス語 trecheor（欺く者）",
+          "古フランス語 trecheros（不実な）",
+          "英語 treacherous（14世紀半ば）",
+          "1600年ごろ 物事にも適用"
+        ],
+        "semanticBridge": "人の不実さを指す語が、見た目はよいが当てにならない物事の危うさへ広がった。",
+        "summary": "treacherousは「だます」に遡り、裏切りやすい人から油断ならない物事へ広がった。",
+        "confidence": "high",
+        "notes": "haerere（くっつく）の語根ではない。語根カード her には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/treacherous",
+            "note": "古フランス語 trecheros/trecheor、trechier（to cheat）に遡らせ、1600年ごろの物への転用を示している。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/treacherous",
+            "note": "アングロフランス語 trecher（欺く者）＋-ous と、1300–50年の初出を確認した。"
+          }
+        ],
+        "components": [
+          {
+            "form": "trech",
+            "kind": "root",
+            "gloss": "だます",
+            "display": false
+          },
+          {
+            "form": "-ous",
+            "kind": "suffix",
+            "gloss": "〜の性質をもつ",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "upheaval": {
+      "surfaceForms": [
+        "upheaval"
+      ],
+      "meanings": [
+        "大変動、混乱"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 up（上へ）＋hebban（持ち上げる）に遡る upheave＋-al → 大変動、混乱"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/upheaval",
+          "https://www.dictionary.com/browse/upheaval"
+        ],
+        "originLanguage": "古英語（ゲルマン系）",
+        "etymons": [
+          "upheave",
+          "uphebban",
+          "up",
+          "hebban"
+        ],
+        "historicalPath": [
+          "古英語 hebban（持ち上げる）",
+          "古英語 uphebban（持ち上げる）",
+          "英語 upheave",
+          "upheave＋-al → upheaval（1834年「社会の激動」、1836年 地質学）"
+        ],
+        "semanticBridge": "地面が下から押し上げられる現象が、社会が根底から揺らぐ状態の比喩になった。",
+        "summary": "upheavalはup＋heave（持ち上げる）に遡り、隆起から社会的な激動を表すようになった。",
+        "confidence": "high",
+        "notes": "valere（強い）ではなく heave（持ち上げる）由来。語根カード val には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/upheaval",
+            "note": "upheave＋-al（1834年）とし、古英語 uphebban＝up＋hebban（to lift, raise）に遡らせている。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/upheaval",
+            "note": "upheave＋-al の構成と1830–40年の初出を確認した。"
+          }
+        ],
+        "components": [
+          {
+            "form": "up",
+            "kind": "prefix",
+            "gloss": "上へ",
+            "display": false
+          },
+          {
+            "form": "heave",
+            "kind": "base",
+            "gloss": "持ち上げる",
+            "display": false
+          },
+          {
+            "form": "-al",
+            "kind": "suffix",
+            "gloss": "名詞化",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "batch": "batch-052"
+      }
+    },
+    "valley": {
+      "surfaceForms": [
+        "valley"
+      ],
+      "meanings": [
+        "谷"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "ラテン語 vallis（谷）＞古フランス語 valee に由来 → 谷"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/valley",
+          "https://www.dictionary.com/browse/valley"
+        ],
+        "originLanguage": "ラテン語（古フランス語経由）",
+        "etymons": [
+          "vallis",
+          "valee",
+          "valey"
+        ],
+        "historicalPath": [
+          "ラテン語 vallis（谷）",
+          "古フランス語 valee",
+          "アングロフランス語 valey",
+          "英語 valley（1300年ごろ）"
+        ],
+        "semanticBridge": "高地に挟まれた低地というラテン語の語義が、そのまま現代英語に引き継がれている。",
+        "summary": "valleyはラテン語 vallis（谷）に由来し、古フランス語を経て英語に入った。",
+        "confidence": "high",
+        "notes": "valere（強い、価値がある）ではなく vallis（谷）由来。語根カード val には載せない判定を保持する。",
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/valley",
+            "note": "アングロフランス語 valey、古フランス語 valee、ラテン語 vallis に遡らせている（vallis自体の由来は不明）。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/valley",
+            "note": "中英語 valeie＜古フランス語 valee（val＋-ee＜ラテン語 -āta）と1250–1300年の初出を確認した。"
+          }
+        ],
+        "components": [
+          {
+            "form": "vallis",
+            "kind": "root",
+            "gloss": "谷",
+            "display": false
+          }
+        ],
+        "rootCandidates": [],
+        "batch": "batch-052"
       }
     }
   }

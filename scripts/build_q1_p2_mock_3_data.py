@@ -169,70 +169,6 @@ DETAILS = {
 }
 
 
-ETYMOLOGY = {
-    "museum": "ギリシャ語 Mouseion「ムーサの神殿」。芸術や資料を集めて展示する場所。",
-    "harbor": "古英語 herebeorg「軍の避難所」。船が安全に休める場所。",
-    "lighthouse": "light（光）+ house（建物）。船へ光を送る建物。",
-    "shore": "古英語 scor「海岸、岸」。水と陸の境目。",
-    "volunteer": "ラテン語 voluntarius「自発的な」。自分から申し出る人。",
-    "donation": "donate（与える）+ -ion。与えられた金品や行為。",
-    "charity": "ラテン語 caritas「愛、親切」。人を助ける慈善活動。",
-    "fundraiser": "fund（資金）+ raise（集める人・催し）。資金を集める活動。",
-    "recipe": "ラテン語 recipe「受け取れ、取りなさい」。調理の指示書の冒頭語。",
-    "flavor": "ラテン語 flare「香りを放つ」。食べ物の味や風味。",
-    "plate": "フランス語 plate「平らな」。平たい食器。",
-    "oven": "ラテン語 ofen「かまど、オーブン」。熱で食物を焼く設備。",
-    "landlord": "land（土地）+ lord（主人）。土地や建物を貸す所有者。",
-    "tourist": "tour（旅行、巡回）+ -ist。観光や旅行をする人。",
-    "apartment": "ラテン語 partire「分ける」から。分けられた一つの住居。",
-    "elevator": "elevate（持ち上げる）+ -or。人や物を上下させる装置。",
-    "park": "ラテン語 parricus「囲われた場所」。人が休んだり遊んだりする場所。",
-    "bridge": "古英語 brycg。川や道の上に渡した構造物。",
-    "intersection": "inter-（間で）+ sect（切る）。道が切り合う場所。",
-    "sidewalk": "side（側）+ walk（歩く場所）。道路の側の歩行用部分。",
-    "ancient": "ラテン語 ante「前に」+ -cient。遠い過去のもの。",
-    "modern": "ラテン語 modo「今、たった今」。現在の時代に属する。",
-    "peaceful": "peace（平和）+ -ful（満ちた）。争いがなく穏やかな状態。",
-    "dangerous": "danger（危険）+ -ous。危険を含む状態。",
-    "comfortable": "comfort（安楽）+ -able。心地よく過ごせる。",
-    "convenient": "ラテン語 convenire「一緒に来る、都合が合う」。使いやすく都合がよい。",
-    "surprising": "surprise（驚かせる）+ -ing。予想を越えて驚かせる性質。",
-    "necessary": "ラテン語 necessarius「避けられない」。なくてはならない。",
-    "proud": "古フランス語 prud「価値のある、誇り高い」。誇りを感じる。",
-    "empty": "古フランス語 emptier「空にする」。中身がない状態。",
-    "gentle": "ラテン語 gentilis「同じ一族の」。身分のよさから穏やかで優しい意味へ。",
-    "bright": "古英語 beorht「輝く、明るい」。光を放つ状態。",
-    "discover": "dis-（覆いを取って）+ cover（覆う）。隠れていたものを見つける。",
-    "invite": "ラテン語 invitare「招く」。人に来るよう声をかける。",
-    "follow": "古英語 folgian「後について行く」。後から同じ道を進む。",
-    "cross": "古英語 cros「十字架」。線を横切る動きから「渡る」。",
-    "improve": "古フランス語 en + pro「よりよく」。状態をよりよくする。",
-    "solve": "ラテン語 solvere「ほどく、解く」。問題の結び目をほどく。",
-    "arrange": "フランス語 arranger「整える」。物を適切な順序や場所に置く。",
-    "join": "古フランス語 joindre、ラテン語 jungere「つなぐ」。人や物を一つにつなぐ。",
-    "come up with": "come（来る）+ up（上へ）+ with（伴って）。考えを持ち上げて「考え出す」。",
-    "bring up": "bring（持ってくる）+ up（上へ）。話題を表へ持ち上げて「話題に出す」。",
-    "catch up with": "catch（つかまえる）+ up（追いついて）+ with（対象に）。同じ位置まで追いつく。",
-    "put up with": "put（置く）+ up（内側へ保って）+ with（伴って）。不快なことを抱えて「我慢する」。",
-    "hand out": "hand（手渡す）+ out（外へ）。手元から外へ渡して「配る」。",
-    "clean up": "clean（きれいにする）+ up（整えて）。散らかった状態を片づける。",
-    "check out": "check（確認する）+ out（外へ取り出して）。対象を取り出して「調べる」。",
-    "turn out": "turn（向きを変える）+ out（外へ）。作り出して外へ出し、「生産する」。",
-    "in the absence of": "absence（不在、欠如）の中に in。何かがない状態で。",
-    "on the point of": "point（点、時点）の上に on。まさにその時点にある。",
-    "in view of": "view（見えること、考慮）に in。見えている事情を考慮して。",
-    "toward the edge of": "toward（〜の方向へ）+ edge（端）。端へ向かう位置や動き。",
-    "as a result of": "result（結果）を理由として示す表現。結果として起きたこと。",
-    "in relation to": "relation（関係）の中で in。別の対象との関係を示す。",
-    "in contrast to": "contrast（対照）の中で in。別のものとの違いを示す。",
-    "at the request of": "request（要請）をきっかけにする at。要請を受けて。",
-    "with the permission of": "permission（許可）を伴って with。許可を得た状態。",
-    "under the influence of": "influence（影響）の下に under。影響を受けている状態。",
-    "in exchange for": "exchange（交換）の中で in。別の物と交換する条件。",
-    "at the invitation of": "invitation（招待）をきっかけにする at。招待を受けて。",
-}
-
-
 CORE_IMAGES = {
     "come up with": {"particle": "up", "particleSense": "fabricate", "chain": [{"term": "come", "gloss": "来る"}, {"term": "up", "gloss": "上へ作り上げて"}, {"gloss": "案を考え出して形にする"}]},
     "bring up": {"particle": "up", "particleSense": "raise", "chain": [{"term": "bring", "gloss": "持ってくる"}, {"term": "up", "gloss": "上へ持ち上げて"}, {"gloss": "話題を表に出す"}]},
@@ -270,9 +206,6 @@ def build() -> tuple[dict, dict]:
     missing = sorted(set(choices) - set(DETAILS))
     if missing:
         raise ValueError(f"語句情報がありません: {missing}")
-    missing_etymology = sorted(set(choices) - set(ETYMOLOGY))
-    if missing_etymology:
-        raise ValueError(f"語源情報がありません: {missing_etymology}")
     idioms = {choice for choice in choices if " " in choice}
     if idioms != set(CORE_IMAGES):
         raise ValueError(f"核心イメージの定義が一致しません: {sorted(idioms ^ set(CORE_IMAGES))}")
@@ -302,7 +235,6 @@ def build() -> tuple[dict, dict]:
                 "example": example,
                 "exampleTranslation": example_translation,
                 "pos": pos,
-                "etymology": ETYMOLOGY[choice],
             }
             if " " in choice:
                 item["type"] = "idiom"

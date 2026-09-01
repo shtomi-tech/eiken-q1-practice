@@ -173,7 +173,7 @@ def main() -> None:
         for item in items:
             surface = item_surface(item)
             label = f"Q{q}/{surface}"
-            if not all(str(item.get(field, "")).strip() for field in ("meaning", "pos", "example", "exampleTranslation", "etymology")):
+            if not all(str(item.get(field, "")).strip() for field in ("meaning", "pos", "example", "exampleTranslation")):
                 fail(f"{label}の必須フィールドが不足しています")
             if "word" in item and not IPA_RE.fullmatch(str(item.get("ipa", ""))):
                 fail(f"{label}のIPAがありません")
@@ -240,7 +240,7 @@ def main() -> None:
     missing_audio = check_audio(vocab, lemmas, args.allow_missing_audio)
     print(f"{DATASET_ID}: 25 questions / 100 items OK")
     print(f"answer positions: {dict(sorted(answer_positions.items()))}")
-    print("etymology: 100 / 100; IPA: 84 / 84; core images: 16 / 16")
+    print("IPA: 84 / 84; core images: 16 / 16")
     if missing_audio:
         print(f"audio: missing {len(missing_audio)} file(s)")
     else:

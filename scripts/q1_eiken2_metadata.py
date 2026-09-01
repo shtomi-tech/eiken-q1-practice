@@ -112,8 +112,8 @@ EXAMPLE_OVERRIDES = {
             "授業が始まる前の金曜朝までに宿題を提出してください。",
         ),
         "feed on": (
-            "Giant pandas feed mainly on bamboo in their natural mountain habitat.",
-            "ジャイアントパンダは自然の山岳環境で主に竹を食べます。",
+            "Giant pandas feed on bamboo in their natural mountain habitat.",
+            "ジャイアントパンダは自然の山岳環境で竹を食べます。",
         ),
     },
     "2025-3": {

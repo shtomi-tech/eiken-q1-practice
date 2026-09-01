@@ -139,7 +139,7 @@ description: eiken-q1-practice に大問1の問題セット（自作模試・過
 出力する語彙項目の形:
 
 ```
-q, is_answer, word|phrase, pos, meaning, example, exampleTranslation, etymology
+q, is_answer, word|phrase, pos, meaning, example, exampleTranslation
 熟語は type:"idiom", coreImage を追加。ipa は 7 の enrich で後付け。
 ```
 
@@ -152,7 +152,7 @@ q, is_answer, word|phrase, pos, meaning, example, exampleTranslation, etymology
 `.gitignore` 対象の `data/eiken_1/<round>/{problem,answer}.pdf` を入力にする。
 どちらかが無い場合は、問題内容を推測して補わず、再生成未確認として止める。入力が揃ったら、
 `build_q1_1_data.py` → 各公式JSONへの `enrich_flashcard_fields.py --file` →
-`curate_1_examples.py` → `curate_1_etymology.py` の順で再生成し、再生成前後の設問・選択肢・
+`curate_1_examples.py` の順で再生成し、再生成前後の設問・選択肢・
 正答位置が一致することを確認する。PDFはコミット・公開しない。
 
 ## 4.5 暗記カードの原形・音声整合

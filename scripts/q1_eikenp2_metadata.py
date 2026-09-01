@@ -741,7 +741,7 @@ def apply_round(round_id: str) -> None:
         example = str(item.get("example", ""))
         if not all(
             str(item.get(field, "")).strip()
-            for field in ("meaning", "pos", "exampleTranslation", "etymology")
+            for field in ("meaning", "pos", "exampleTranslation")
         ):
             raise ValueError(f"{round_id}: {surface}の学習項目が不足しています")
         if "word" in item and not re.fullmatch(r"/.+/", str(item.get("ipa", ""))):

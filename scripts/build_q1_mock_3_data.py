@@ -7,13 +7,11 @@ import re
 from pathlib import Path
 
 from q1_mock_core_images import CORE_IMAGES_BY_ROUND
-from q1_mock_etymology import ETYMOLOGY_BY_ROUND
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 ROUND_ID = "mock-3"
 CORE_IMAGES = CORE_IMAGES_BY_ROUND[ROUND_ID]
-ETYMOLOGY = ETYMOLOGY_BY_ROUND[ROUND_ID]
 
 
 QUESTIONS = [
@@ -256,7 +254,7 @@ DETAILS = {
     "dainty": ("繊細な、可憐な", "形容詞", "The child carefully held the dainty porcelain cup.", "その子は繊細な磁器のカップを注意深く持った。"),
     "introspective": ("内省的な", "形容詞", "Her introspective journal helped her understand her feelings.", "内省的な日記を書くことで、彼女は自分の気持ちを理解できた。"),
     "dabble in": ("〜にちょっと手を出す", "熟語", "She decided to dabble in photography during the summer.", "彼女は夏の間、写真撮影を少し始めることにした。"),
-    "let down": ("失望させる", "熟語", "I promised that I would not let my team down during the crisis.", "私は危機の間、チームを失望させないと約束した。"),
+    "let down": ("失望させる", "熟語", "I promised that I would never let down my team during the crisis.", "私は危機の間、チームを決して失望させないと約束した。"),
     "put across": ("うまく伝える、売り込む", "熟語", "The speaker put across his idea in simple language.", "話し手は自分の考えを簡単な言葉でうまく伝えた。"),
     "farm out": ("外注する", "熟語", "The company will farm out the design work to a small studio.", "その会社はデザイン作業を小さなスタジオに外注する。"),
     "stumbled upon": ("偶然見つける", "熟語", "While walking through the market, she stumbled upon an old map.", "市場を歩いていると、彼女は古い地図を偶然見つけた。"),
@@ -287,9 +285,6 @@ def build() -> tuple[dict, dict]:
     missing = sorted(set(choices) - set(DETAILS))
     if missing:
         raise ValueError(f"語句情報がありません: {missing}")
-    missing_etymology = sorted(set(choices) - set(ETYMOLOGY))
-    if missing_etymology:
-        raise ValueError(f"語源情報がありません: {missing_etymology}")
     missing_core_image = sorted({phrase for phrase in choices if " " in phrase} - set(CORE_IMAGES))
     if missing_core_image:
         raise ValueError(f"熟語の核心イメージがありません: {missing_core_image}")
@@ -333,7 +328,6 @@ def build() -> tuple[dict, dict]:
                 "meaning": meaning,
                 "example": example,
                 "exampleTranslation": example_translation,
-                "etymology": ETYMOLOGY[choice],
                 "pos": pos,
             }
             if " " in choice:

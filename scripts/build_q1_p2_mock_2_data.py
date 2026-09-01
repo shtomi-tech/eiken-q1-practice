@@ -169,70 +169,6 @@ DETAILS = {
 }
 
 
-ETYMOLOGY = {
-    "schedule": "ラテン語 schedula「小さな紙片」。紙に書いた予定表から「日程」。",
-    "budget": "古フランス語 bougette「小さな革袋」。財政の計画を入れる袋から「予算」。",
-    "entrance": "enter（入る）+ -ance。中へ入ることや、そのための場所。",
-    "shelf": "古英語 scylf「棚、岩棚」。物を載せる平らな場所。",
-    "customer": "custom（習慣、取引）+ -er。店をいつも利用する人が「顧客」。",
-    "cashier": "フランス語 caisse「金箱、レジ」。お金を扱う係へ。",
-    "basket": "中英語 basket。物を入れて運ぶ編んだ容器。",
-    "discount": "dis-（離して）+ count（数える）。価格から一部を差し引くこと。",
-    "trail": "古フランス語 trailler「引きずる」。引きずった跡から「小道、跡」。",
-    "compass": "ラテン語 compassare「一周する」。方向を測る道具が「羅針盤」。",
-    "cabin": "フランス語 cabane「小屋」。簡素な小さな部屋や小屋。",
-    "map": "ラテン語 mappa「布」。布に描いた地図から現在の「地図」。",
-    "parade": "フランス語 parade「見せること、行列」。人前で行進して見せる催し。",
-    "costume": "イタリア語 costume「習慣、服装」。その人や時代に特有の衣装。",
-    "festival": "ラテン語 festivus「祭りの、楽しい」。祝いや催しを表す語。",
-    "fireworks": "fire（火）+ works（仕掛け）。火を使う華やかな仕掛けが「花火」。",
-    "appointment": "appoint（指定する）+ -ment。時間や場所を指定した約束。",
-    "folder": "fold（折る）+ -er。書類を折らずにまとめて入れるもの。",
-    "message": "ラテン語 mittere「送る」。送られた知らせが「メッセージ」。",
-    "visitor": "visit（訪れる）+ -or。訪れる人が「来訪者」。",
-    "crowded": "crowd（群衆、混雑）+ -ed。人や物がいっぱいの状態。",
-    "narrow": "古英語 nearu「狭い」。幅が小さい状態。",
-    "local": "ラテン語 locus「場所」。特定の場所に属するので「地元の」。",
-    "private": "ラテン語 privatus「分けられた、個人の」。公のものから分かれた状態。",
-    "patient": "ラテン語 pati「耐える」。耐えて待てる人の性質から「忍耐強い」。",
-    "honest": "ラテン語 honestus「名誉ある、立派な」。正直で立派な態度。",
-    "polite": "フランス語 poli「磨かれた」。態度が磨かれて礼儀正しいこと。",
-    "curious": "ラテン語 curiosus「注意深い、知りたがる」。知識を求める性質。",
-    "useful": "use（使う）+ -ful（満ちた）。役立つものに満ちている。",
-    "similar": "ラテン語 similis「同じような」。共通点があって「似た」。",
-    "available": "avail（役に立つ、利用する）+ -able。利用できる状態。",
-    "usual": "ラテン語 usus「使用、習慣」。習慣的に行われるので「いつもの」。",
-    "reserve": "ラテン語 reservare「取っておく」。後のために残す、予約する。",
-    "deliver": "ラテン語 de-（完全に）+ liberare（自由にする）。相手の手元へ届ける。",
-    "replace": "re-（再び）+ place（置く）。元の場所に置き直す。",
-    "recommend": "ラテン語 re-（強く）+ commendare（託す、ほめる）。人に強く勧める。",
-    "notice": "ラテン語 notitia「知識、知らせ」。目に留めて知ること。",
-    "protect": "ラテン語 pro-（前に）+ tegere（覆う）。前に覆いを置いて守る。",
-    "prepare": "ラテン語 praeparare「前もって整える」。使えるように準備する。",
-    "return": "re-（再び）+ turn（向きを変える）。元の場所や状態へ戻る。",
-    "put off": "put（置く）+ off（離して）。予定を現在から離して置くことで「延期する」。",
-    "figure out": "figure（考える、計算する）+ out（外へ）。考えを外へほどいて「理解する」。",
-    "look up": "look（見る）+ up（上へ）。情報を目の前へ出して「調べる」。",
-    "make up": "make（作る）+ up（作り上げて）。材料のない話を作り上げて「でっち上げる」。",
-    "find out": "find（見つける）+ out（外へ）。隠れていた情報を外へ出して「突き止める」。",
-    "fill out": "fill（満たす）+ out（すみずみまで外へ）。用紙を埋めて「記入する」。",
-    "leave out": "leave（残す）+ out（外へ）。一部を外に残して「省く」。",
-    "call off": "call（呼ぶ）+ off（離して）。予定を取り消して遠ざけることで「中止する」。",
-    "in case of": "case（場合）を in で包み、ある事態が起きた場合を示す。",
-    "instead of": "instead（代わりに）+ of（〜について）。あるものを別のものに置き換える。",
-    "in the course of": "course（進行、過程）の中にあることから、進行中の期間を示す。",
-    "on the way to": "way（道）の上を進んで目的地へ向かう途中を表す。",
-    "at the beginning of": "beginning（始まり）を基準にする at の表現。開始時点を示す。",
-    "in the center of": "center（中心）の中にある位置を示す前置詞表現。",
-    "for the purpose of": "purpose（目的）に向かう for。目的を明示する表現。",
-    "in honor of": "honor（敬意、名誉）の中に in。誰かへの敬意や記念を表す。",
-    "in response to": "response（応答）に向けて in。何かへの対応を表す。",
-    "under the control of": "control（管理）の下に under。管理されている状態を示す。",
-    "at the risk of": "risk（危険）を基準にする at。危険を伴う行為を表す。",
-    "with the support of": "support（支援）を with（伴って）受ける構造。支援を受けて。",
-}
-
-
 CORE_IMAGES = {
     "put off": {"particle": "off", "particleSense": "pull-away", "chain": [{"term": "put", "gloss": "置く"}, {"term": "off", "gloss": "離して"}, {"gloss": "予定を先へ延ばす"}]},
     "figure out": {"particle": "out", "particleSense": "resolve", "siblings": [{"phrase": "sort out", "gloss": "整理して解決する"}, {"phrase": "iron out", "gloss": "問題を解消する"}, {"phrase": "straighten out", "gloss": "整理する"}], "chain": [{"term": "figure", "gloss": "考える"}, {"term": "out", "gloss": "外へほどいて"}, {"gloss": "理解して解決する"}]},
@@ -270,9 +206,6 @@ def build() -> tuple[dict, dict]:
     missing = sorted(set(choices) - set(DETAILS))
     if missing:
         raise ValueError(f"語句情報がありません: {missing}")
-    missing_etymology = sorted(set(choices) - set(ETYMOLOGY))
-    if missing_etymology:
-        raise ValueError(f"語源情報がありません: {missing_etymology}")
     idioms = {choice for choice in choices if " " in choice}
     if idioms != set(CORE_IMAGES):
         raise ValueError(f"核心イメージの定義が一致しません: {sorted(idioms ^ set(CORE_IMAGES))}")
@@ -302,7 +235,6 @@ def build() -> tuple[dict, dict]:
                 "example": example,
                 "exampleTranslation": example_translation,
                 "pos": pos,
-                "etymology": ETYMOLOGY[choice],
             }
             if " " in choice:
                 item["type"] = "idiom"

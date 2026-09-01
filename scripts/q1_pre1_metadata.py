@@ -241,6 +241,10 @@ EXAMPLE_OVERRIDES = {
             "She managed to bear up despite the pressure of the public investigation.",
             "彼女は公の調査によるプレッシャーにもかかわらず、何とか耐えた。",
         ),
+        "pull off": (
+            "It was a difficult project, but the team managed to pull off the launch.",
+            "難しいプロジェクトでしたが、チームはなんとか立ち上げをやり遂げました。",
+        ),
     },
     "2026-1": {
         "haul": (
@@ -322,6 +326,10 @@ EXAMPLE_OVERRIDES = {
         "drop out": (
             "Some students drop out when financial problems make university unaffordable.",
             "経済的な問題で大学に通えなくなると、中退する学生もいる。",
+        ),
+        "read into": (
+            "Don't read into his silence; he's probably just tired.",
+            "彼の沈黙を深読みしないでください。彼はおそらくただ疲れているだけだろう。",
         ),
     },
 }

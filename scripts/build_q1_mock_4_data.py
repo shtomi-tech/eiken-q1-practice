@@ -7,13 +7,11 @@ import re
 from pathlib import Path
 
 from q1_mock_core_images import CORE_IMAGES_BY_ROUND
-from q1_mock_etymology import ETYMOLOGY_BY_ROUND
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 ROUND_ID = "mock-4"
 CORE_IMAGES = CORE_IMAGES_BY_ROUND[ROUND_ID]
-ETYMOLOGY = ETYMOLOGY_BY_ROUND[ROUND_ID]
 
 
 QUESTIONS = [
@@ -162,9 +160,6 @@ def build() -> tuple[dict, dict]:
     missing = sorted(set(choices) - set(DETAILS))
     if missing:
         raise ValueError(f"語句情報がありません: {missing}")
-    missing_etymology = sorted(set(choices) - set(ETYMOLOGY))
-    if missing_etymology:
-        raise ValueError(f"語源情報がありません: {missing_etymology}")
     missing_core_image = sorted({phrase for phrase in choices if " " in phrase} - set(CORE_IMAGES))
     if missing_core_image:
         raise ValueError(f"熟語の核心イメージがありません: {missing_core_image}")
@@ -208,7 +203,6 @@ def build() -> tuple[dict, dict]:
                 "meaning": meaning,
                 "example": example,
                 "exampleTranslation": example_translation,
-                "etymology": ETYMOLOGY[choice],
                 "pos": pos,
             }
             if " " in choice:

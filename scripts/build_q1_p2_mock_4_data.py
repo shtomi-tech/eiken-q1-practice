@@ -169,70 +169,6 @@ DETAILS = {
 }
 
 
-ETYMOLOGY = {
-    "library": "ラテン語 liber「本」から。書物を集める場所。",
-    "board": "古英語 bord「板」。知らせや予定を貼る板。",
-    "project": "ラテン語 proicere「前へ投げる」。前へ進める計画。",
-    "supply": "ラテン語 supplere「満たす」。必要な物を満たして与えること。",
-    "clinic": "ギリシャ語 kline「ベッド」。病床のそばで行う診療所。",
-    "medicine": "ラテン語 mederi「治す」。病気を治す薬や学問。",
-    "symptom": "ギリシャ語 syn「共に」+ piptein「落ちる」。病気と共に現れる兆候。",
-    "exam": "ラテン語 examinare「調べる」。状態を詳しく調べる検査や試験。",
-    "captain": "ラテン語 caput「頭」。集団の頭に立つ人。",
-    "driver": "drive（運転する）+ -er。乗り物を運転する人。",
-    "ticket": "フランス語 etiquette「札、ラベル」。入場や乗車を示す札。",
-    "platform": "フランス語 plateforme「平らな場所」。列車が止まる台や舞台。",
-    "garden": "古フランス語 jardin「囲われた場所」。花や植物を育てる場所。",
-    "flood": "古英語 flod「流れ」。水があふれて広がること。",
-    "damage": "ラテン語 damnificare「損失を与える」。壊れた状態や損害。",
-    "weather": "古英語 weder「空気、天候」。空の状態。",
-    "equipment": "フランス語 équiper「装備する」。目的のために備えた道具。",
-    "machine": "ギリシャ語 mēkhanē「仕掛け、機械」。仕事をする仕組み。",
-    "factory": "ラテン語 facere「作る」。物を作る場所。",
-    "worker": "work（働く）+ -er。働く人。",
-    "successful": "success（成功）+ -ful。望んだ結果を得た状態。",
-    "careless": "care（注意、世話）+ -less（ない）。注意を欠く。",
-    "quiet": "ラテン語 quietus「休んだ、静かな」。音や動きが少ない。",
-    "regular": "ラテン語 regula「定規、規則」。規則に沿っている。",
-    "fresh": "古英語 fersc「新しい、塩気のない」。新しく清らかな。",
-    "frozen": "freeze（凍る）の過去分詞。古英語 freosan から。",
-    "healthy": "health（健康）+ -y。健康に関する、健康な。",
-    "simple": "ラテン語 simplex「一つに折れた」。複雑に分かれていない。",
-    "valuable": "value（価値）+ -able。価値を持つ。",
-    "central": "ラテン語 centrum「中心点」。中心にある。",
-    "public": "ラテン語 publicus「人々の」。個人ではなく皆のもの。",
-    "temporary": "ラテン語 tempus「時間」。限られた期間だけの。",
-    "announce": "ラテン語 ad-（〜へ）+ nuntiare（知らせる）。公に知らせる。",
-    "avoid": "ラテン語 ab-（離れて）+ via（道）。道を外れて避ける。",
-    "depend": "ラテン語 de-（下に）+ pendere（ぶら下がる）。何かにぶら下がって頼る。",
-    "increase": "ラテン語 in-（上へ）+ crescere（成長する）。量や程度が増える。",
-    "forget": "古英語 forgietan「失念する」。心から離れて覚えていない。",
-    "choose": "古英語 ceosan「選ぶ」。複数から一つを取る。",
-    "lend": "古英語 lænan「貸す」。一時的に使わせる。",
-    "save": "ラテン語 salvare「安全にする」。危険から守る、蓄える。",
-    "hold off": "hold（保つ）+ off（離して）。予定を手元から離して「延期する」。",
-    "cut down on": "cut（切る）+ down（下げて）+ on（対象に）。対象への量を下げて「減らす」。",
-    "sort out": "sort（分類する）+ out（外へ）。混乱から取り出して「整理・解決する」。",
-    "take on": "take（取る）+ on（対象に向けて）。役割を引き受けて身に付ける。",
-    "hang up": "hang（受話器を掛ける）+ up（終わりまで）。受話器を掛けて通話を終える。",
-    "turn on": "turn（向きを変える）+ on（対象へ作用させて）。機器へ作用させて「電源を入れる」。",
-    "break down": "break（壊す）+ down（下へ分けて）。機械を分けて「分解する」。",
-    "put down": "put（置く）+ down（下へ）。物を下へ置く。",
-    "in the meantime": "mean（中間）+ time（時間）。二つの時点の間に。",
-    "at the moment": "moment（瞬間、現在の時点）を基準にする at。",
-    "for now": "now（今）を期間の目安にする for。今のところ。",
-    "on purpose": "purpose（意図、目的）に沿って on。意図的に。",
-    "in no way": "way（方法、程度）のどの道にも in no。決して〜ない。",
-    "for this reason": "reason（理由）を原因として for。この理由で。",
-    "on the whole": "whole（全体）を見渡す on。全体として。",
-    "in the long run": "long（長い）+ run（進行）。長い時間の流れ全体で見れば。",
-    "in the form of": "form（形）の中に in。ある形や形式で現れることを示す。",
-    "in spite of": "spite（悪意、反対する気持ち）にもかかわらず、という逆接を表す。",
-    "due to": "due（当然支払われる、起因する）+ to（〜へ）。原因が〜に帰せられる。",
-    "at the time of": "time（時）を基準にする at。ある時点や機会に。",
-}
-
-
 CORE_IMAGES = {
     "hold off": {"particle": "off", "particleSense": "pull-away", "siblings": [{"phrase": "pay off", "gloss": "金を渡して黙らせる"}, {"phrase": "call off", "gloss": "中止させる"}, {"phrase": "warn off", "gloss": "警告して手を引かせる"}], "chain": [{"term": "hold", "gloss": "保つ"}, {"term": "off", "gloss": "離して"}, {"gloss": "予定を延期して遠ざける"}]},
     "cut down on": {"particle": "down", "particleSense": "reduce", "siblings": [{"phrase": "slow down", "gloss": "速度を落とす"}, {"phrase": "cool down", "gloss": "冷ます"}, {"phrase": "tone down", "gloss": "調子をやわらげる"}], "chain": [{"term": "cut", "gloss": "切る"}, {"term": "down", "gloss": "下げて"}, {"gloss": "対象への量を減らす"}]},
@@ -270,9 +206,6 @@ def build() -> tuple[dict, dict]:
     missing = sorted(set(choices) - set(DETAILS))
     if missing:
         raise ValueError(f"語句情報がありません: {missing}")
-    missing_etymology = sorted(set(choices) - set(ETYMOLOGY))
-    if missing_etymology:
-        raise ValueError(f"語源情報がありません: {missing_etymology}")
     idioms = {choice for choice in choices if " " in choice}
     if idioms != set(CORE_IMAGES):
         raise ValueError(f"核心イメージの定義が一致しません: {sorted(idioms ^ set(CORE_IMAGES))}")
@@ -302,7 +235,6 @@ def build() -> tuple[dict, dict]:
                 "example": example,
                 "exampleTranslation": example_translation,
                 "pos": pos,
-                "etymology": ETYMOLOGY[choice],
             }
             if " " in choice:
                 item["type"] = "idiom"

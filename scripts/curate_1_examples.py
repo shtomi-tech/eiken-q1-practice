@@ -88,7 +88,7 @@ EXAMPLES = {
         "pony up": ("Everyone had to pony up ten dollars for the shared meal.", "全員が食事代として10ドルずつ支払わなければならなかった。"),
         "buckle down": ("With the exam approaching, I decided to buckle down and study.", "試験が近づいたので、私は本腰を入れて勉強することにした。"),
         "foul up": ("A single typo can foul up the entire order.", "たった一つのタイプミスで注文全体がめちゃくちゃになることがある。"),
-        "cast down": ("The rejection cast her down, but she soon tried again.", "不合格の知らせで彼女は落胆したが、すぐにもう一度挑戦した。"),
+        "cast down": ("The rejection cast down her spirits, but she soon tried again.", "不合格の知らせは彼女の気持ちを落ち込ませたが、すぐにもう一度挑戦した。"),
         "breeze in": ("She tends to breeze in late and act as if nothing has happened.", "彼女は遅れてふらりと入ってきて、何事もなかったように振る舞いがちだ。"),
         "branch off": ("At the old bridge, the main trail begins to branch off toward the lake.", "古い橋のところで、本道が湖に向かって分岐し始める。"),
         "crack down": ("The city promised to crack down on illegal dumping.", "市は不法投棄を厳しく取り締まると約束した。"),

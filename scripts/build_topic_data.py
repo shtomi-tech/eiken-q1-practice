@@ -348,11 +348,6 @@ def normalize_entries(source: dict) -> list[dict]:
                 "ja": meaning,
                 "axis": AXIS_OVERRIDES.get(surface) or (raw.get("axis") if raw.get("axis") in AXES else infer_axis(surface, meaning)),
             }
-            etymology = [*en_etymology, *ja_etymology]
-            if raw.get("etymology"):
-                etymology.insert(0, str(raw["etymology"]))
-            if etymology:
-                entry["etymology"] = " / ".join(dict.fromkeys(etymology))
             entries.append(entry)
     if len(entries) != 325:
         raise ValueError(f"正規化後の語句数が325ではありません: {len(entries)}")
@@ -838,8 +833,6 @@ def vocab_item(entry: dict, q: int, is_answer: bool, examples: dict[str, dict[st
         "topic": entry["topic"],
         "pos": "熟語" if len(entry["en"].split()) >= 2 else infer_pos(entry["en"]),
     }
-    if entry.get("etymology"):
-        item["etymology"] = entry["etymology"]
     item["phrase" if len(entry["en"].split()) >= 2 else "word"] = entry["en"]
     return item
 

@@ -169,70 +169,6 @@ DETAILS = {
 }
 
 
-ETYMOLOGY = {
-    "assignment": "assign（割り当てる）+ -ment。割り当てられた仕事が「課題」。",
-    "deadline": "dead（死んだ）+ line（線）。もとは越えると撃たれる境界線で、そこから「越えられない期限」。",
-    "lecture": "ラテン語 lectura「読むこと」。声に出して読み聞かせる形式から「講義」。",
-    "attitude": "ラテン語 aptitudo「ふさわしさ」。体の構えから心の構え＝「態度」へ。",
-    "expensive": "expense（費用）+ -ive。費用がかかる状態が「高価な」。",
-    "affordable": "afford（余裕がある）+ -able。払う余裕があるので「手頃な」。",
-    "colorful": "color（色）+ -ful（満ちた）。色に満ちているで「色鮮やかな」。",
-    "formal": "form（形式）+ -al。決まった形式にのっとっているで「正式な」。",
-    "route": "ラテン語 rupta via「切り開かれた道」。切り開かれた通り道が「経路」。",
-    "border": "古フランス語 bordure「へり」。土地のへりが「国境」。",
-    "vehicle": "ラテン語 vehere「運ぶ」+ -icle。運ぶ道具で「乗り物」。",
-    "luggage": "lug（重い物を引きずる）+ -age。引きずって運ぶ物で「荷物」。",
-    "borrowed": "borrow（借りる）の過去形。古英語 borgian「担保を取る」から。",
-    "escaped": "escape の過去形。ex（外へ）+ cappa（マント）。マントを脱ぎ捨てて逃げるイメージ。",
-    "painted": "paint（塗る・描く）の過去形。ラテン語 pingere「描く」から。",
-    "completed": "complete（完成させる）の過去形。com（すっかり）+ plere（満たす）。",
-    "neighbor": "古英語 neah（近い）+ gebur（住む人）。近くに住む人で「近所の人」。",
-    "prize": "price（価格）と同語源で「価値あるもの」。競技で与えられる価値ある物が「賞」。",
-    "wallet": "中英語で「持ち歩く袋」。小さな袋が「財布」。",
-    "pillow": "ラテン語 pulvinus「クッション」。頭を載せるクッションで「枕」。",
-    "engine": "ラテン語 ingenium「才能・工夫」。工夫の産物としての機械が「エンジン」。",
-    "habit": "ラテン語 habitus「身につけたもの」。身についた行動が「習慣」。",
-    "event": "ラテン語 evenire「外に出てくる・起こる」。起こる出来事が「行事」。",
-    "temperature": "ラテン語 temperare「ほどよく混ぜる」。熱と冷の混ざり具合で「温度」。",
-    "nervous": "nerve（神経）+ -ous。神経が高ぶった状態で「緊張した」。",
-    "silent": "ラテン語 silere「黙る」。音を出さない状態で「静かな」。",
-    "famous": "fame（名声）+ -ous。名声に満ちているで「有名な」。",
-    "relieved": "relieve（軽くする）の過去分詞。re（再び）+ levare（持ち上げる）。重荷が下りて「安心した」。",
-    "label": "古フランス語 label「細い帯」。品物に付ける小さな紙片が「ラベル」。",
-    "surface": "sur（上の）+ face（面）。上の面で「表面」。",
-    "garage": "フランス語 garer「しまう・停める」+ -age。車をしまう場所。",
-    "valley": "ラテン語 vallis「谷」。山と山の間のくぼみ。",
-    "greet": "古英語 gretan「近づいて話しかける」。声をかけるで「挨拶する」。",
-    "repair": "re（再び）+ parare（整える）。もとの状態に整え直すで「修理する」。",
-    "touch": "古フランス語 tochier「触れる」。接触の動作そのもの。",
-    "measure": "ラテン語 mensura「測ること」。ものさしで量るで「測る」。",
-    "decorate": "ラテン語 decorare「美しくする」。見た目を整えるで「飾る」。",
-    "postpone": "post（後に）+ ponere（置く）。後ろに置き直すで「延期する」。",
-    "whisper": "古英語 hwisprian。息の音をまねた語で「ささやく」。",
-    "cancel": "ラテン語 cancellare「格子状に線を引いて消す」。書いたものを消すで「取り消す」。",
-    "look after": "look（目を向ける）+ after（後を追って）。後を追って見守るで「世話をする」。",
-    "run into": "run（走る）+ into（中へ）。走ってぶつかるイメージから「偶然出会う」。",
-    "turn down": "turn（回す）+ down（下へ）。つまみを下げる＝音量を下げる、親指を下に向ける＝「断る」。",
-    "go over": "go（行く）+ over（上を一通り）。上をひと通りなぞるで「見直す・復習する」。",
-    "take it back": "take back（持ち帰る）。店へ持ち帰るで「返品する」、言葉を引き戻すで「撤回する」。",
-    "fill it out": "fill（満たす）+ out（すみずみまで）。用紙のすみずみまで埋めるで「記入する」。",
-    "put it off": "put（置く）+ off（離して）。予定を先へ離して置くで「延期する」。",
-    "give it away": "give（与える）+ away（手放して）。手放して与えるで「ただであげる」。",
-    "look forward to": "look forward（前を見る）+ to（〜へ）。前方の予定を見るで「楽しみに待つ」。",
-    "get rid of": "rid（取り除かれた状態）にする。厄介なものを片づけるで「処分する」。",
-    "set off for": "set off（出発する）+ for（〜へ向けて）。動き出して目的地へ向かう。",
-    "run out of": "run out（尽きる）+ of（〜が）。走り続けて外に出てしまう＝在庫が尽きる。",
-    "break into": "break（壊す）+ into（中へ）。壊して中へ入るで「侵入する」。",
-    "carry out": "carry（運ぶ）+ out（最後まで外へ）。計画を最後まで運びきるで「実行する」。",
-    "pick up": "pick（つまむ）+ up（上へ）。つまんで持ち上げるで「拾う・受け取る」。",
-    "look for": "look（見る）+ for（求めて）。求めて目を向けるで「探す」。",
-    "take after": "take（受け取る）+ after（後に続いて）。親の特徴を受け継ぐで「似ている」。",
-    "come across": "come（来る）+ across（横切って）。歩いていて横切るように出くわす。",
-    "turn into": "turn（変わる）+ into（〜の中へ）。別の状態の中へ変わる。",
-    "set up": "set（据える）+ up（立てて）。立てて据えるで「設置する・始める」。",
-}
-
-
 def write_json(path: Path, value: dict) -> None:
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
@@ -246,9 +182,6 @@ def build() -> tuple[dict, dict]:
     missing = sorted(set(choices) - set(DETAILS))
     if missing:
         raise ValueError(f"語句情報がありません: {missing}")
-    missing_etymology = sorted(set(choices) - set(ETYMOLOGY))
-    if missing_etymology:
-        raise ValueError(f"語源情報がありません: {missing_etymology}")
 
     meta = {
         "grade": "英検準2級",
@@ -276,7 +209,6 @@ def build() -> tuple[dict, dict]:
                 "example": example,
                 "exampleTranslation": example_translation,
                 "pos": pos,
-                "etymology": ETYMOLOGY[choice],
             }
             if " " in choice:
                 item["type"] = "idiom"

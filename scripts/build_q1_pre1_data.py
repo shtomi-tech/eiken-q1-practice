@@ -14,7 +14,6 @@ ROUND_IDS = ("2026-1", "2025-3", "2025-2")
 VOCAB_FIELDS = (
     "word",
     "meaning",
-    "etymology",
     "example",
     "exampleTranslation",
     "pos",
@@ -22,7 +21,6 @@ VOCAB_FIELDS = (
     "ipa",
     "relatedWords",
     "selfExampleEnabled",
-    "etymologyUncertain",
 )
 
 

@@ -23,7 +23,6 @@ from build_pre1_data import (  # noqa: E402 - 既存PDF抽出ヘルパーを再�
     parse_numbered_blocks,
 )
 from q1_official_core_images import CORE_IMAGES_BY_ROUND  # noqa: E402
-from q1_official_etymology import ETYMOLOGY_BY_ROUND  # noqa: E402
 
 
 ROOT = SCRIPTS_DIR.parent
@@ -442,10 +441,6 @@ def build_round(round_id: str) -> tuple[dict, dict]:
     missing = sorted(surfaces - set(MEANINGS))
     if missing:
         raise ValueError(f"{round_id}: gloss未登録: {missing}")
-    etymology = ETYMOLOGY_BY_ROUND[round_id]
-    missing_etymology = sorted(surfaces - set(etymology))
-    if missing_etymology:
-        raise ValueError(f"{round_id}: 語源情報がありません: {missing_etymology}")
     core_images = CORE_IMAGES_BY_ROUND[round_id]
     missing_core_image = sorted({phrase for phrase in surfaces if " " in phrase} - set(core_images))
     if missing_core_image:
@@ -459,7 +454,6 @@ def build_round(round_id: str) -> tuple[dict, dict]:
                 "q": question["q"],
                 "is_answer": index == question["answerIndex"],
                 "meaning": MEANINGS[choice],
-                "etymology": etymology[choice],
             }
             if " " in choice:
                 item["phrase"] = choice

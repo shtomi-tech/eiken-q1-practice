@@ -63,6 +63,11 @@ py -3 scripts/sync_q1_mock_9_origins.py
 py -3 scripts/check_mock_9_data.py --allow-missing-audio
 ```
 
+> **追記（2026-09-01）**: 上のコマンド列は実行当時の記録である。`sync_q1_mock_9_origins.py` は
+> その後削除した。現在の語源辞書は `data/word_origin_research.json` を正本として
+> `node scripts/rebuild-word-origin-dictionaries.cjs --write` で生成するため、この手順は再実行できない。
+> `check_mock_9_data.py` の語源件数の確認も、語句データから `etymology` を削除した際に外した。
+
 データビルダー、発音補完、語源同期、専用検査、音声生成まで実行済み。専用検査は25問・100語句、語源100件、IPA84件、核心イメージ16件、表層音声100件を確認した。暗記カード用原形16件を含む音声ファイルは、0バイトや一時ファイルがないことも確認した。
 
 正答キーを渡さずに設問文と4択だけをローカルの `qwen3:8b` に渡して独立レビューした。25問すべてが `NONE` で、登録した正答位置と一致し、複数の選択肢が文脈上成立する設問はなかった。

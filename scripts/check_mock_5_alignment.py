@@ -167,8 +167,6 @@ def main() -> None:
             example = str(item.get("example", ""))
             if not item.get("meaning") or not item.get("pos") or not item.get("exampleTranslation"):
                 fail(f"Q{q}/{surface}の必須フィールドが不足しています")
-            if not item.get("etymology"):
-                fail(f"Q{q}/{surface}の語源説明がありません")
             if item.get("word") and not re.fullmatch(r"/.+/", str(item.get("ipa", ""))):
                 fail(f"Q{q}/{surface}のIPAがありません")
             if len(WORD_RE.findall(example)) < 8:
@@ -197,7 +195,7 @@ def main() -> None:
 
     missing_audio = check_audio(vocab, lemmas, args.allow_missing_audio)
     print("eiken1-mock-5: 25 questions / 100 items OK")
-    print(f"etymology: 100 / 100; IPA: 84 / 84; core images: 16 / 16")
+    print("IPA: 84 / 84; core images: 16 / 16")
     print(f"word origins: {84 - len([item for item in vocab.get('words', []) if lemma_map.get(item_surface(item).lower(), item_surface(item).lower()) in excluded])} / 84; C: {len([item for item in vocab.get('words', []) if lemma_map.get(item_surface(item).lower(), item_surface(item).lower()) in excluded])}")
     if missing_audio:
         print(f"audio: missing {len(missing_audio)} file(s) ({', '.join(missing_audio)})")

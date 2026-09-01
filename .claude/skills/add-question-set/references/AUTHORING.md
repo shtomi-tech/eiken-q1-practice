@@ -54,9 +54,9 @@
 | `pos` | 4択で揃える。熟語は `熟語` ではなく既存データにあるラベル（句動詞／前置詞句／慣用句 等）から選ぶ |
 | `example` | 見出し語句を**ちょうど1回**含む**8語以上**の短文。他の語句と骨格が重複しない |
 | `exampleTranslation` | `example` の和訳。骨格の重複を避ける |
-| `etymology` | 1行。フラッシュカードの「語源・なりたち」行はこれがあるときだけ出る |
 | `ipa` | 手で書かない。`enrich_flashcard_fields.py` が付ける。取得できないものは推測で埋めない。表示専用の原形対応を追加しても、語彙JSONの出題形IPAを原形へ書き換えない |
 | `collocation` | アプリが参照していないので付けない |
+| `etymology` | **付けない**。語源表示は `data/word_origins.json` だけを参照する。語源を足すときは `data/word_origin_research.json` に出典付きで登録し、`rebuild-word-origin-dictionaries.cjs --write` で反映する |
 
 - 語彙レベルは級相当に揃える（準2級なら CEFR A2〜B1 相当）。
 - 米語基調に揃える（`noticeboard` などの英用法は既存データと食い違う）。

@@ -17,7 +17,6 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from check_q1_data import surfaces_match  # noqa: E402  同じ活用照合を使い回す
-from q1_iuhw_etymology import ETYMOLOGY  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
@@ -342,8 +341,6 @@ def build() -> tuple[dict, dict]:
                     "example": example,
                     "exampleTranslation": example_translation,
                 }
-                if item in ETYMOLOGY:
-                    word_data["etymology"] = ETYMOLOGY[item]
                 words.append(word_data)
     print(f"品詞混在の設問: {mixed}/15")
     return {"meta": meta, "words": words, "idioms": idioms}, question_data

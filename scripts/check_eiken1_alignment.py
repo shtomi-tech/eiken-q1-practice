@@ -216,7 +216,7 @@ def collect_issues(dataset_id: str, require_audio: bool | None = None) -> list[s
                     issues.append(f"{label}: 同一セット内で語形が重複しています（{seen_surfaces[variant]}）")
                 seen_surfaces[variant] = surface
 
-            for field in ("meaning", "pos", "example", "exampleTranslation", "etymology"):
+            for field in ("meaning", "pos", "example", "exampleTranslation"):
                 if not str(item.get(field, "")).strip():
                     issues.append(f"{label}: {field} がありません")
             if "word" in item and not IPA_RE.fullmatch(str(item.get("ipa", ""))):
