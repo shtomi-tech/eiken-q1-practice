@@ -3047,10 +3047,14 @@ function renderCheck(body) {
   const box = el("div", { class: "quizBox" });
   const listenButton = buildVocabAudioButton(item, "quizListenButton");
   if (example) {
-    box.appendChild(el("p", { class: "label" }, "下線部の意味として最も適当なものを選べ"));
+    // 音声ボタンは設問文の行へ逃がす。例文と横に並べると英文の折り返しが早まる。
+    box.appendChild(el("div", { class: "askExampleHead" },
+      el("p", { class: "label" }, "下線部の意味として最も適当なものを選べ"),
+      listenButton,
+    ));
     const askExample = el("p", { class: "askExample" });
     askExample.appendChild(buildExampleText(item, example));
-    box.appendChild(el("div", { class: "askExampleLine" }, askExample, listenButton));
+    box.appendChild(el("div", { class: "askExampleLine" }, askExample));
   } else {
     box.appendChild(el("p", { class: "label" }, "次の語句の意味は？"));
     box.appendChild(el("div", { class: "askWordLine" },

@@ -1283,8 +1283,17 @@ details.vocabForecast:not([open]) > :not(summary) { display: none; }
 .blank { border-bottom: 2px solid var(--ink); padding: 0 22px; }
 .askWordLine { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
 .askWord { font-family: var(--serif); font-size: 26px; margin: 0; }
-.askExampleLine { display: flex; align-items: flex-start; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
-.askExample { font-family: var(--serif); font-size: 20px; line-height: 1.8; max-inline-size: 46ch; margin: 0; }
+.askExampleHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.askExampleHead .label { margin: 0; }
+.askExampleLine { margin-bottom: 16px; }
+.askExample { font-family: var(--serif); font-size: 20px; line-height: 1.8; max-inline-size: 62ch; margin: 0; }
 .quizListenButton {
   display: inline-flex;
   align-items: center;

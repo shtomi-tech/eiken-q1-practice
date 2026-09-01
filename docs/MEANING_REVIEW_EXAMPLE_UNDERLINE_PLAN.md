@@ -4,7 +4,9 @@
 例文の正本4スクリプト（`scripts/curate_1_examples.py`・`scripts/build_q1_mock_3_data.py`・`scripts/q1_eiken2_metadata.py`・`scripts/q1_pre1_metadata.py`）/
 新規 `scripts/check-meaning-example-ui.cjs`
 関連: [RESPONSE_TIME_SRS_PLAN.md](RESPONSE_TIME_SRS_PLAN.md)（応答時間とSRS）/ [CROSS_GRADE_DUE_PLAN.md](CROSS_GRADE_DUE_PLAN.md)（級横断プール）
-状態: 未着手。要件はヒアリング済み（本文§8に決定事項の全リスト）
+状態: 実装・公開済み（`a05520e`）。以下は追補
+- 実行時の一致判定は単語境界付きにした（境界なしだと "When" の中の "he" を下線にする）
+- 音声ボタンは例文の横ではなく設問文の行へ置き、例文の行長を46ch→62chに広げた
 スコープ: **意味だけ復習（`mode === "meaning"`）の出題形式のみ**。通常学習(learn)・最終チェック(final)の出題形式、4択の生成ロジック、SRSの判定は対象外
 
 ## 0. 目的
