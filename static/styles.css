@@ -8,6 +8,7 @@
   --surface-soft: #f5f0e8;
   --surface-strong: #e8e0d2;
   --line: #e6dfd8;
+  --rule-underline: 1.5px solid var(--ink);
   --muted: #615c54;
   --clay: #a9583e;
   --clay-hover: #8a4732;
@@ -1233,7 +1234,11 @@ details.vocabForecast:not([open]) > :not(summary) { display: none; }
   font-size: 13px;
 }
 .flashEx { max-inline-size: 58ch; font-size: 15px; }
-.flashEx em { font-style: normal; border-bottom: 2px solid var(--ink); padding: 0 2px; }
+.exUnderline {
+  border-bottom: var(--rule-underline);
+  padding: 0 2px 1px;
+  font-style: normal;
+}
 .flashExampleTranslation {
   margin: 6px 0 0;
   color: var(--muted);
@@ -1278,6 +1283,8 @@ details.vocabForecast:not([open]) > :not(summary) { display: none; }
 .blank { border-bottom: 2px solid var(--ink); padding: 0 22px; }
 .askWordLine { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
 .askWord { font-family: var(--serif); font-size: 26px; margin: 0; }
+.askExampleLine { display: flex; align-items: flex-start; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+.askExample { font-family: var(--serif); font-size: 20px; line-height: 1.8; max-inline-size: 46ch; margin: 0; }
 .quizListenButton {
   display: inline-flex;
   align-items: center;

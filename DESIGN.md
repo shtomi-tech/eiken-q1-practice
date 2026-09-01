@@ -33,6 +33,9 @@
 - **OK** `#16803a`（正解）／ **OK Text** `#126b30`（Card・Surface上の小さい状態文字）／ **NG** `#b42318`（不正解）／ **Warn** `#a16207`（部分一致）
 - Claude原典の `success #5db872`（対クリーム地コントラスト約2.3:1）・`warning #d4a017`（約2.3:1）・`error #c64545`（約4.6:1）はいずれもAA未達または現状値より弱いため採用せず、実測でAAを満たす値を維持する（AGENTS.md「理論とアクセシビリティが衝突する場合はアクセシビリティを優先」）
 
+### 下線（強調）
+- **対象語句の下線** `--rule-underline: 1.5px solid var(--ink)` — 例文中の対象語句を示す唯一の手段。適用箇所は `.askExample` と `.flashEx` の2つに限り、補助テキストは付けない
+
 ## タイポグラフィ
 
 - 見出し（display）: `"Cormorant Garamond", Georgia, "Hiragino Mincho ProN", "Yu Mincho", serif`。Claude原典のCopernicus（非公開ライセンス書体）代替としてGoogle Fontsから読み込む。ウェイト500〜600、字間は詰めない（日本語混植のため原典のnegative trackingは採用しない）

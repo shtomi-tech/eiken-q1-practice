@@ -2967,18 +2967,43 @@ function flashRow(labelText, text, cls) {
     el("div", { class: cls }, text),
   );
 }
+
+// 例文中の出題形の位置を返す。見つからなければ null。
+function exampleMatch(item) {
+  if (!item) return null;
+  const surface = String(surfaceOf(item) || "");
+  const example = String(item.example || "");
+  if (!surface || !example) return null;
+  const escaped = surface.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  // 単語境界で区切る。境界を見ないと "When" の中の "he"、"president" の中の "preside" を拾う。
+  const match = new RegExp(`(?<![A-Za-z])${escaped}(?![A-Za-z])`, "i").exec(example);
+  if (!match) return null;
+  return {
+    before: example.slice(0, match.index),
+    hit: match[0],
+    after: example.slice(match.index + match[0].length),
+  };
+}
+
+// 例文ノードを組み立て、対象語句だけを下線で示す。
+function buildExampleText(item, match) {
+  const fragment = document.createDocumentFragment();
+  if (!match) {
+    if (item?.example) fragment.appendChild(document.createTextNode(String(item.example)));
+    return fragment;
+  }
+  fragment.appendChild(document.createTextNode(match.before));
+  fragment.appendChild(el("span", { class: "exUnderline" }, match.hit));
+  fragment.appendChild(document.createTextNode(match.after));
+  return fragment;
+}
+
 function flashExampleRow(item) {
-  const surface = surfaceOf(item);
   const row = el("div", { class: "flashRow" });
   row.appendChild(el("strong", {}, "例文"));
-  // 見出し語をハイライト
-  const re = new RegExp("(" + surface.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + ")", "i");
-  const parts = item.example.split(re);
+  const match = exampleMatch(item);
   const p = el("div", { class: "flashEx" });
-  parts.forEach((part) => {
-    if (part.toLowerCase() === surface.toLowerCase()) p.appendChild(el("em", {}, part));
-    else p.appendChild(document.createTextNode(part));
-  });
+  p.appendChild(buildExampleText(item, match));
   row.appendChild(p);
   if (item.exampleTranslation) {
     row.appendChild(el("p", { class: "flashExampleTranslation" },
@@ -3012,6 +3037,7 @@ function renderCheck(body) {
   const item = session.checkOrder[session.checkIdx];
   const surface = canonicalHeadwordOf(item);
   const correct = learningMeaningOf(item);
+  const example = session.mode === "meaning" ? exampleMatch(item) : null;
 
   body.appendChild(el("div", { class: "roundInfo" }, `4語句の意味確認 ${session.checkIdx + 1} / ${session.checkOrder.length}`));
 
@@ -3019,12 +3045,19 @@ function renderCheck(body) {
   if (!session.checkShownAt) session.checkShownAt = Date.now();
 
   const box = el("div", { class: "quizBox" });
-  box.appendChild(el("p", { class: "label" }, "次の語句の意味は？"));
   const listenButton = buildVocabAudioButton(item, "quizListenButton");
-  box.appendChild(el("div", { class: "askWordLine" },
-    el("p", { class: "askWord" }, surface),
-    listenButton,
-  ));
+  if (example) {
+    box.appendChild(el("p", { class: "label" }, "下線部の意味として最も適当なものを選べ"));
+    const askExample = el("p", { class: "askExample" });
+    askExample.appendChild(buildExampleText(item, example));
+    box.appendChild(el("div", { class: "askExampleLine" }, askExample, listenButton));
+  } else {
+    box.appendChild(el("p", { class: "label" }, "次の語句の意味は？"));
+    box.appendChild(el("div", { class: "askWordLine" },
+      el("p", { class: "askWord" }, surface),
+      listenButton,
+    ));
+  }
 
   // choices: correct meaning + 3 distractors of same type
   if (!session._checkChoices) {
@@ -3094,6 +3127,9 @@ function appendCheckFeedback(box, item, surface, correct, isCorrect) {
     el("h3", {}, isCorrect ? "正解！" : "おしい！"),
     el("p", {}, `${surface}：${correct}`),
   );
+  if (session.mode === "meaning" && item.exampleTranslation) {
+    fb.appendChild(el("p", { class: "trans checkExampleTranslation" }, `例文訳：${item.exampleTranslation}`));
+  }
   if (typeof session.checkElapsed === "number") {
     const average = session.checkPrevAvgMs;
     const compare = Number.isFinite(average) ? `（前回までの平均 ${(average / 1000).toFixed(1)} 秒）` : "";
