@@ -48,6 +48,15 @@ assert.ok(body.includes("vocabularyForecast"), "1級の期間別語句予測を�
 assert.ok(body.includes("現在、このアプリの英検1級通常問題には"), "収録語句数の注記を表示する必要がある");
 assert.ok(body.includes("1週間後") && body.includes("1年後"), "5期間の語句予測を表示する必要がある");
 
+// 常時表示は見出し＋「n 語 / m語」のサマリー1行。バー・ハリネズミ・メッセージ・予測は展開時。
+assert.ok(body.includes('el("details", { class: "vocabGoalDetails" })'), "語彙目標カードは vocabGoalDetails で折りたたむ必要がある");
+{
+  const summaryIdx = body.indexOf('details.appendChild(el("summary"');
+  const barIdx = body.indexOf('class: "vgBar"');
+  assert.ok(summaryIdx !== -1 && barIdx !== -1 && summaryIdx < barIdx, "サマリー（見出し＋語数）はバーより前で、summary 内に置く必要がある");
+}
+assert.ok(css.includes(".vocabGoalDetails"), "CSSに .vocabGoalDetails の規則が必要");
+
 const renderHome = js.slice(js.indexOf("function renderHomeContent("));
 assert.match(renderHome, /home\.appendChild\(goalCard\)/, "語彙目標カードはホーム直下へ追加する必要がある");
 

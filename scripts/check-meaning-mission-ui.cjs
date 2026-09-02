@@ -131,14 +131,19 @@ assert.match(
   "対象0件・due 0件・読込中でCTAをdisabledにする分岐が必要",
 );
 
-// --- 新しい2指標・6セルグリッド用クラス ---
+// --- 指標は「今すぐ復習」1つ・6セルグリッド用クラス ---
 assert.ok(
   meaningMissionBody.includes("meaningMissionMetrics"),
-  "2指標グリッド用クラス meaningMissionMetrics がJSに必要",
+  "指標コンテナ meaningMissionMetrics がJSに必要",
 );
 assert.ok(
   !meaningMissionBody.includes("今回の1回分") && !meaningMissionBody.includes("未解放"),
   "旧4指標（今回の1回分・未解放）はカード上部の指標から除去する必要がある",
+);
+assert.ok(
+  meaningMissionBody.includes("今すぐ復習")
+    && !meaningMissionBody.includes('el("span", {}, "対象語句")'),
+  "カード上部の指標は「今すぐ復習」1つに絞り、プール全体の解放数指標（対象語句）は出さない",
 );
 assert.ok(
   !meaningMissionBody.includes("meaningMissionBadge") && !meaningMissionBody.includes("meaningMissionHead"),

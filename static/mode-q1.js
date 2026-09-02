@@ -1672,24 +1672,32 @@ function studyPlanPanel(entries = []) {
   panel.appendChild(el("div", { class: "studyPlanHead" },
     el("div", {},
       el("p", { class: "label" }, "学習目標"),
-      el("h3", { id: "studyPlanTitle" }, "今日と今週の新規問題"),
+      el("h3", { id: "studyPlanTitle" }, "新規問題の進捗"),
     ),
     settingsToggle,
   ));
+  // 日常の正本は「今日 n / m問」1つだけ常時表示。総目標・今週・再配分の目安は折りたたみへ。
   panel.appendChild(el("div", { class: "studyPlanMetrics" },
-    studyPlanProgress(
-      "総目標",
-      summary.answeredOverall,
-      plan.questionGoal,
-      `回答済み ${num(summary.answeredOverall)} / ${num(plan.questionGoal)}問`,
-      totalStatus,
-    ),
     studyPlanProgress(
       "今日",
       summary.answeredToday,
       plan.dailyQuestionGoal,
       `${num(summary.answeredToday)} / ${num(plan.dailyQuestionGoal)}問`,
       `${dailyStatus}・新規${num(summary.answeredToday * STUDY_PLAN_VOCABULARY_PER_QUESTION)}語句`,
+    ),
+  ));
+  const planMore = el("details", { class: "studyPlanMore" });
+  planMore.appendChild(el("summary", {},
+    el("span", { class: "studyPlanMoreTitle" }, "総目標・今週の進捗"),
+    el("span", { class: "studyPlanMoreLead" }, `総目標 ${totalStatus} ・ 今週 ${weeklyStatus}`),
+  ));
+  planMore.appendChild(el("div", { class: "studyPlanMetrics" },
+    studyPlanProgress(
+      "総目標",
+      summary.answeredOverall,
+      plan.questionGoal,
+      `回答済み ${num(summary.answeredOverall)} / ${num(plan.questionGoal)}問`,
+      totalStatus,
     ),
     studyPlanProgress(
       "今週",
@@ -1699,11 +1707,12 @@ function studyPlanPanel(entries = []) {
       `${weekRange}・${weeklyStatus}`,
     ),
   ));
-  panel.appendChild(el("p", { class: "studyPlanAdjustment" },
+  planMore.appendChild(el("p", { class: "studyPlanAdjustment" },
     summary.weeklyRemaining === 0
       ? "✓ 今週の目標達成"
       : `残り${num(summary.daysRemainingIncludingToday)}日なら、1日${num(summary.adjustedDailyTarget)}問`,
   ));
+  panel.appendChild(planMore);
   panel.appendChild(settings);
   return panel;
 }
@@ -2129,7 +2138,9 @@ function vocabGoalCard(learned, ready) {
     }
   }
 
-  return el("section", { class: "card vocabGoalCard", "aria-labelledby": "vocabGoalTitle" },
+  // 常時表示はサマリー（見出し＋「n 語 / m語」）1行。バー・ハリネズミ・メッセージ・注記・期間別予測は展開時。
+  const details = el("details", { class: "vocabGoalDetails" });
+  details.appendChild(el("summary", {},
     el("div", { class: "vgHead" },
       el("div", {},
         el("p", { class: "label" }, "語彙の目標"),
@@ -2139,19 +2150,21 @@ function vocabGoalCard(learned, ready) {
         el("strong", {}, num(value)),
         el("span", {}, ` 語 / ${num(goal.target)}語`)),
     ),
-    el("div", { class: "vgBar" }, track,
-      el("div", { class: "vgTicks" },
-        el("span", { class: "vgTick vgTickStart" }, el("strong", {}, "0")),
-        prevTick,
-        el("span", { class: "vgTick vgTickEnd" },
-          el("strong", {}, num(goal.target)), el("small", {}, dataset().shortLabel)),
-      ),
+  ));
+  details.appendChild(el("div", { class: "vgBar" }, track,
+    el("div", { class: "vgTicks" },
+      el("span", { class: "vgTick vgTickStart" }, el("strong", {}, "0")),
+      prevTick,
+      el("span", { class: "vgTick vgTickEnd" },
+        el("strong", {}, num(goal.target)), el("small", {}, dataset().shortLabel)),
     ),
-    el("p", { class: "vgMessage" }, message),
-    el("p", { class: "hint" },
-      `${goal.prevLabel}までの${num(goal.prev)}語は習得済みとして計算しています。このアプリで学習した語句は${ready ? num(own) : "—"}語句。語彙数は目安です。`),
-    forecast,
-  );
+  ));
+  details.appendChild(el("p", { class: "vgMessage" }, message));
+  details.appendChild(el("p", { class: "hint" },
+    `${goal.prevLabel}までの${num(goal.prev)}語は習得済みとして計算しています。このアプリで学習した語句は${ready ? num(own) : "—"}語句。語彙数は目安です。`));
+  if (forecast) details.appendChild(forecast);
+
+  return el("section", { class: "card vocabGoalCard", "aria-labelledby": "vocabGoalTitle" }, details);
 }
 
 function meaningMission(
@@ -2163,7 +2176,6 @@ function meaningMission(
   coreResume = false,
   hasPrimaryCta = false,
 ) {
-  const total = summary.total;
   const learned = summary.learned;
   const due = summary.due;
   const batch = nextQueue.length || Math.min(due, MEANING_SESSION_SIZE);
@@ -2176,8 +2188,8 @@ function meaningMission(
     el("h3", { id: "spacedReviewCardTitle" }, `意味だけ復習（${dataset().shortLabel}）`),
     el("p", { class: "meaningMissionLead" },
       `${datasetSectionName()}の収録セットをまとめ、通常学習で最後まで解いた設問の語句を1回最大${MEANING_SESSION_SIZE}語句で復習します。正解すると1・3・7・14日後へ進みます。`),
+    // 行動指標は「今すぐ復習」1つに絞る。プール全体の解放数（旧・左指標）は日常判断に使わないため出さない。
     el("div", { class: "meaningMissionMetrics" },
-      el("div", {}, el("strong", {}, ready ? `${learned} / ${total}` : "—"), el("span", {}, "対象語句")),
       el("div", { class: ready && due > 0 ? "meaningMissionMetricDue" : "" }, el("strong", {}, ready ? `${due}語句` : "—"), el("span", {}, "今すぐ復習")),
     ),
   );

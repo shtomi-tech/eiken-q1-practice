@@ -20,6 +20,18 @@ for (const text of ["学習目標", "回答済み", "今週", "新規", "総目�
   assert.ok(studyPanel.includes(text), `ホームに ${text} の表示契約が必要`);
 }
 
+// 常時表示は「今日」1つ。総目標・今週・再配分の目安は折りたたみ（studyPlanMore）へ。
+{
+  const moreIdx = studyPanel.indexOf('"studyPlanMore"');
+  const todayIdx = studyPanel.indexOf('"今日"');
+  const overallIdx = studyPanel.indexOf('"総目標"');
+  assert.ok(moreIdx !== -1, "総目標・今週は折りたたみ（studyPlanMore）に入れる必要がある");
+  assert.ok(todayIdx !== -1 && overallIdx !== -1, "今日/総目標の studyPlanProgress ラベルが特定できない");
+  assert.ok(todayIdx < moreIdx, "「今日」は折りたたみの外（常時表示）に置く必要がある");
+  assert.ok(overallIdx > moreIdx, "「総目標」は折りたたみ（studyPlanMore）の中に置く必要がある");
+}
+assert.ok(css.includes(".studyPlanMore"), "CSSに .studyPlanMore の規則が必要");
+
 for (const text of ["studyPlanSettings", "総問題目標", "1日の問題目標", "週の開始曜日", "保存", "キャンセル", "aria-expanded", "aria-controls"]) {
   assert.ok(studyPanel.includes(text), `設定UIに ${text} が必要`);
 }
