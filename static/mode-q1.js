@@ -2137,9 +2137,9 @@ function vocabGoalCard(learned, ready) {
     }
   }
 
-  // 常時表示はサマリー（見出し＋「n 語 / m語」）1行。バー・ハリネズミ・メッセージ・注記・期間別予測は展開時。
-  const details = el("details", { class: "vocabGoalDetails" });
-  details.appendChild(el("summary", {},
+  // 見出し・語数・バー・ハリネズミ・目盛り・励ましメッセージ・前級注記は常時表示（ハリネズミの現在地が主モチベーション）。
+  // 折りたたむのは1級の期間別予測（forecast＝.vocabForecast）だけ。
+  return el("section", { class: "card vocabGoalCard", "aria-labelledby": "vocabGoalTitle" },
     el("div", { class: "vgHead" },
       el("div", {},
         el("p", { class: "label" }, "語彙の目標"),
@@ -2149,21 +2149,19 @@ function vocabGoalCard(learned, ready) {
         el("strong", {}, num(value)),
         el("span", {}, ` 語 / ${num(goal.target)}語`)),
     ),
-  ));
-  details.appendChild(el("div", { class: "vgBar" }, track,
-    el("div", { class: "vgTicks" },
-      el("span", { class: "vgTick vgTickStart" }, el("strong", {}, "0")),
-      prevTick,
-      el("span", { class: "vgTick vgTickEnd" },
-        el("strong", {}, num(goal.target)), el("small", {}, dataset().shortLabel)),
+    el("div", { class: "vgBar" }, track,
+      el("div", { class: "vgTicks" },
+        el("span", { class: "vgTick vgTickStart" }, el("strong", {}, "0")),
+        prevTick,
+        el("span", { class: "vgTick vgTickEnd" },
+          el("strong", {}, num(goal.target)), el("small", {}, dataset().shortLabel)),
+      ),
     ),
-  ));
-  details.appendChild(el("p", { class: "vgMessage" }, message));
-  details.appendChild(el("p", { class: "hint" },
-    `${goal.prevLabel}までの${num(goal.prev)}語は習得済みとして計算しています。このアプリで学習した語句は${ready ? num(own) : "—"}語句。語彙数は目安です。`));
-  if (forecast) details.appendChild(forecast);
-
-  return el("section", { class: "card vocabGoalCard", "aria-labelledby": "vocabGoalTitle" }, details);
+    el("p", { class: "vgMessage" }, message),
+    el("p", { class: "hint" },
+      `${goal.prevLabel}までの${num(goal.prev)}語は習得済みとして計算しています。このアプリで学習した語句は${ready ? num(own) : "—"}語句。語彙数は目安です。`),
+    forecast,
+  );
 }
 
 function meaningMission(

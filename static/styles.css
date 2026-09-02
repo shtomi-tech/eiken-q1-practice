@@ -1028,8 +1028,7 @@ h2 {
   padding-top: 16px;
 }
 .vocabForecast > summary,
-.studyPlanMore > summary,
-.vocabGoalDetails > summary {
+.studyPlanMore > summary {
   cursor: pointer;
   list-style: none;
   min-height: 44px;
@@ -1037,14 +1036,11 @@ h2 {
   position: relative;
 }
 .vocabForecast > summary::-webkit-details-marker,
-.studyPlanMore > summary::-webkit-details-marker,
-.vocabGoalDetails > summary::-webkit-details-marker { display: none; }
+.studyPlanMore > summary::-webkit-details-marker { display: none; }
 details.vocabForecast:not([open]) > :not(summary),
-details.studyPlanMore:not([open]) > :not(summary),
-details.vocabGoalDetails:not([open]) > :not(summary) { display: none; }
+details.studyPlanMore:not([open]) > :not(summary) { display: none; }
 .vocabForecast > summary::before,
-.studyPlanMore > summary::before,
-.vocabGoalDetails > summary::before {
+.studyPlanMore > summary::before {
   color: var(--muted);
   content: "＋";
   font-family: var(--mono);
@@ -1055,16 +1051,13 @@ details.vocabGoalDetails:not([open]) > :not(summary) { display: none; }
   top: 2px;
 }
 .vocabForecast[open] > summary::before,
-.studyPlanMore[open] > summary::before,
-.vocabGoalDetails[open] > summary::before { content: "−"; }
+.studyPlanMore[open] > summary::before { content: "−"; }
 
 .studyPlanMore { margin-top: 12px; }
 .studyPlanMore > summary { display: flex; flex-direction: column; gap: 2px; }
 .studyPlanMoreTitle { font-family: var(--mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
 .studyPlanMoreLead { font-family: var(--mono); font-size: 12px; color: var(--ink); }
 .studyPlanMore > .studyPlanMetrics { margin-top: 12px; }
-.vocabGoalDetails > summary .vgHead { margin: 0; }
-.vocabGoalDetails > .vgBar { margin-top: 20px; }
 .vocabForecast h4,
 .vocabForecastSummaryTitle {
   display: block;

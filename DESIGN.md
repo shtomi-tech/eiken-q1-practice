@@ -187,7 +187,7 @@ MOTION_INTENSITY: 3（既定UIに一貫した押下感・状態変化を与え�
 | 層 | 常時表示（1つ） | 同カード内の折りたたみ |
 |---|---|---|
 | B 学習目標（`.studyPlanPanel`） | 「今日 n / m問」（`.studyPlanMetrics` に1指標） | `.studyPlanMore`：総目標・今週の2バー＋「残りn日なら1日k問」。summaryに「総目標 … ・ 今週 …」 |
-| C 語彙目標（`.vocabGoalCard`） | 見出し＋「n 語 / m語」（`.vgHead` を `summary` に） | `.vocabGoalDetails`：バー・目盛り・ハリネズミ・励ましメッセージ・前級注記・`.vocabForecast`（14,000語予想・期間別予測。二重の折りたたみ） |
+| C 語彙目標（`.vocabGoalCard`） | 見出し＋「n 語 / m語」＋バー・目盛り・ハリネズミ・励ましメッセージ・前級注記（すべて常時表示。ハリネズミの現在地が主モチベーションなので折りたたまない） | `.vocabForecast`：1級の14,000語到達予想・期間別予測だけを折りたたむ |
 | D 間隔復習（`.spacedReviewCard`） | 「今すぐ復習 n語句」（`.meaningMissionMetrics` に1指標） | 6セルの間隔内訳（`.meaningMissionInterval`）。プール全体の解放数（旧「対象語句 n / total」）は表示しない |
 
 - 学習計画・語彙予測の設定フォームや詳細は従来どおりカード内に温存する（折りたたみの中でよい）。数字を減らすだけで、情報自体は消さない。
