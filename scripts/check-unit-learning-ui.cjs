@@ -12,7 +12,6 @@ const datasetUnitCardsBody = extractFunctionBody(js, "datasetUnitCards");
 const datasetUnitCardBody = extractFunctionBody(js, "datasetUnitCard");
 const buildQuestionCardBody = extractFunctionBody(js, "buildQuestionCard");
 const questionFilterBarBody = extractFunctionBody(js, "questionFilterBar");
-const sessionStickyNavBody = extractFunctionBody(js, "sessionStickyNav");
 const renderSessionBody = extractFunctionBody(js, "renderSession");
 const renderDoneBody = extractFunctionBody(js, "renderDone");
 
@@ -66,13 +65,9 @@ assert.match(
   "間隔復習カードは引き続きホーム直下へ追加する必要がある（既存契約を維持）",
 );
 
-// --- sticky現在地ナビ（Task7） ---
-assert.ok(renderSessionBody.includes("sessionStickyNav("), "renderSession は sessionStickyNav() を描画する必要がある");
-assert.ok(
-  renderSessionBody.indexOf("sessionStickyNav(") < renderSessionBody.indexOf('class: "itemHead"'),
-  "sticky版は既存の itemHead より前（上）に描画する必要がある",
-);
-assert.ok(sessionStickyNavBody.includes("renderHome"), "sticky版にも一覧へ戻る操作が必要");
+// --- セッション見出し（Task7） ---
+assert.ok(!renderSessionBody.includes("sessionStickyNav("), "重複するsticky現在地バーを描画しない");
+assert.ok(renderSessionBody.includes("sessionHeadBack"), "タイトル行の右端に一覧へ戻る操作が必要");
 
 // --- 完了画面（Task8） ---
 assert.ok(
@@ -97,9 +92,10 @@ assert.ok(!renderDoneBody.includes("pendingReviews"), "完了画面に誤答復�
 assert.ok(!renderDoneBody.includes("間違えた"), "完了画面に誤答問題の復習文言を残してはいけません");
 
 // --- CSS ---
-for (const cls of [".datasetUnitCard", ".datasetUnitGrid", ".qCardNumber", ".qCardMain", ".qCardArrow", ".questionFilterBar", ".filterGroupLabel", ".sessionStickyNav"]) {
+for (const cls of [".datasetUnitCard", ".datasetUnitGrid", ".qCardNumber", ".qCardMain", ".qCardArrow", ".questionFilterBar", ".filterGroupLabel", ".sessionHeadBack"]) {
   assert.ok(css.includes(cls), `CSSに ${cls} の規則が必要`);
 }
+assert.ok(!css.includes(".sessionStickyNav"), "重複するsticky現在地バーのCSSを残さない");
 assert.match(css, /@media \(max-width: 720px\)/, "720px以下のレスポンシブ規則が必要");
 assert.match(css, /@media \(prefers-reduced-motion: reduce\)/, "prefers-reduced-motion の規則が必要（既存維持）");
 

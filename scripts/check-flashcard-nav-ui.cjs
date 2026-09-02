@@ -7,7 +7,6 @@ const design = readText("DESIGN.md");
 
 
 const renderSessionBody = extractFunctionBody(js, "renderSession");
-const stickyBody = extractFunctionBody(js, "sessionStickyNav");
 const renderFlashBody = extractFunctionBody(js, "renderFlash");
 const scrollBody = extractFunctionBody(js, "scrollFlashCardIntoView");
 const gestureBody = extractFunctionBody(js, "setupFlashGesture");
@@ -26,7 +25,7 @@ assert.equal(
 );
 assert.ok(scrollBody.includes("window.scrollTo"), "カード送り後はwindow.scrollToを使う必要がある");
 assert.ok(scrollBody.includes('behavior: "auto"'), "カード送り後のスクロールは即時である必要がある");
-assert.ok(scrollBody.includes("sessionStickyNav"), "stickyバーの高さをスクロール位置から引く必要がある");
+assert.ok(!scrollBody.includes("sessionStickyNav"), "削除したsticky現在地バーへの依存を残さない");
 
 // 450msガードは無効化せず、受付済みの見た目だけを付ける。disabledは使わない。
 assert.ok(renderFlashBody.includes("flashNavLocked()"), "flashNavLocked()を使う必要がある");
@@ -41,8 +40,9 @@ assert.ok(
 );
 assert.ok(renderFlashBody.includes("removeAttribute(\"aria-disabled\")"), "ガード終了時にaria-disabledを外す必要がある");
 
-// カウンタは固定バー中央へ一本化する。
-assert.ok(!stickyBody.includes("sessionStickyFlash"), "上部stickyバーに暗記カードカウンタを残さない");
+// カウンタは下部固定バー中央へ一本化する。
+assert.ok(!renderSessionBody.includes("sessionStickyNav("), "重複するsticky現在地バーを残さない");
+assert.ok(renderSessionBody.includes("sessionHeadBack"), "タイトル行に一覧へ戻る操作を置く必要がある");
 assert.ok(!renderFlashBody.includes("cardCounter"), "下部の旧カウンタを残さない");
 assert.ok(renderFlashBody.includes("flashNavCounter"), "固定バー中央のカウンタが必要");
 assert.ok(renderFlashBody.includes("sessionActionBar"), "固定バーのラッパーが必要");
@@ -83,7 +83,10 @@ assert.ok(
     && questionProgressBarBody.includes("appendProgressFill"),
   "questionProgressBar は flash ステージで appendProgressFill を呼ばない分岐が必要",
 );
+assert.ok(!css.includes(".sessionStickyNav"), "重複するsticky現在地バーのCSSを残さない");
 assert.ok(!css.includes(".sessionStickyFlash"), "未使用のsessionStickyFlash CSSを残さない");
+assert.ok(!css.includes(".sessionStickyBack"), "未使用のsessionStickyBack CSSを残さない");
+assert.match(css, /\.sessionHeadBack\s*\{[\s\S]*min-height:\s*44px/);
 assert.ok(!css.includes(".cardCounter"), "未使用のcardCounter CSSを残さない");
 
 // DESIGN.mdを実装と同じ正本へ更新する。

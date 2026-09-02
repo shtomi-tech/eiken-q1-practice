@@ -145,9 +145,6 @@ function renderSession() {
   const q = session.q;
   const isIdiom = !isMeaning && !isFinal && session.items[0].type === "idiom";
 
-  // 長いカードをスクロールしても現在地・戻る操作を見失わないための補助バー
-  panel.appendChild(sessionStickyNav(q, isMeaning, isFinal));
-
   // header
   panel.appendChild(el("div", { class: "itemHead" },
      el("div", {},
@@ -155,6 +152,7 @@ function renderSession() {
        el("h2", {}, stageTitle(session.stage)),
        el("p", { class: "sessionState" }, "中断してもこの位置から再開できます"),
      ),
+     el("button", { class: "sessionHeadBack ghost", type: "button", onclick: () => { saveResume(); renderHome(); } }, "一覧へ戻る"),
   ));
 
   // stage bar
@@ -175,32 +173,10 @@ function renderSession() {
   else if (session.stage === "done") renderDone(body);
 }
 
-// 元のitemHead/stageBar/q1Progressは残したまま、スクロール中も現在地が分かる補助バーを上に固定する。
-function sessionStickyNav(q, isMeaning, isFinal) {
-  const total = state.qList.length;
-  const reviewChecked = session.meaningWrongChecked?.length || 0;
-  const reviewTotal = session.meaningWrongItems?.length || 0;
-  const posLabel = isFinal
-    ? `${session.checkIdx + 1} / ${session.checkOrder.length}`
-    : isMeaning && session.stage === "meaningReview"
-      ? `見直し ${reviewChecked} / ${reviewTotal}`
-      : isMeaning
-        ? `${session.checkIdx + 1} / ${session.checkOrder.length}`
-        : (q != null && total ? `第${state.qList.indexOf(q) + 1} / ${total}問` : "");
-  const stageLabel = {
-    flash: "覚える", check: "確かめる", meaningReview: "見直し", practice: "解く", done: "完了",
-  }[session.stage] || "";
-  return el("div", { class: "sessionStickyNav" },
-    el("button", { class: "sessionStickyBack ghost", type: "button", onclick: () => { saveResume(); renderHome(); } }, "一覧へ戻る"),
-    el("span", { class: "sessionStickyPos" }, posLabel),
-    el("span", { class: "sessionStickyStage" }, stageLabel),
-  );
-}
-
 function sessionLabel(q, isIdiom, isMeaning, isFinal) {
   if (isFinal) return `最終チェック ${session.checkIdx + 1} / ${session.checkOrder.length}`;
   if (isMeaning) {
-    // 位置「n / m」は現在地バーと meaningBar が持つ。ここでは種別名だけを出して重複を避ける。
+    // 位置「n / m」は meaningBar が持つ。ここでは種別名だけを出して重複を避ける。
     return session.stage === "meaningReview" ? "意味だけ復習・見直し" : "意味だけ復習";
   }
   return `第${q}問 ・ ${isIdiom ? "熟語" : "単語"}`;
@@ -372,9 +348,7 @@ function buildFlashCard(item) {
 function scrollFlashCardIntoView() {
   const flash = $("#sessionPanel .flash");
   if (!flash) return;
-  const sticky = $("#sessionPanel .sessionStickyNav");
-  const stickyHeight = sticky ? sticky.getBoundingClientRect().height : 0;
-  const target = flash.getBoundingClientRect().top + window.scrollY - stickyHeight - 8;
+  const target = flash.getBoundingClientRect().top + window.scrollY - 8;
   window.scrollTo({ top: Math.max(0, target), left: 0, behavior: "auto" });
 }
 
@@ -941,8 +915,6 @@ function renderMeaningWrongReview(body) {
       : `見直し ${checked.size}/${items.length}語句を確認済み（残り${remaining}語句）`;
     nextBtn.disabled = !complete;
     nextBtn.textContent = complete ? nextLabel : lockedNextLabel;
-    const stickyPos = $("#sessionPanel .sessionStickyPos");
-    if (stickyPos) stickyPos.textContent = `見直し ${checked.size} / ${items.length}`;
   };
   updateReviewState();
 

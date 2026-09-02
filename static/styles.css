@@ -487,7 +487,6 @@ h2 {
 
 @media (prefers-reduced-transparency: reduce) {
   .top,
-  .sessionStickyNav,
   .sessionActionBar,
   .answerActions {
     background: var(--parchment);
@@ -498,7 +497,6 @@ h2 {
 
 @media (prefers-contrast: more) {
   .top,
-  .sessionStickyNav,
   .sessionActionBar,
   .answerActions {
     border-color: var(--ink);
@@ -758,37 +756,7 @@ h2 {
 .qCardArrow { flex: 0 0 auto; color: var(--muted); }
 
 /* ---- Session shell ---- */
-.sessionStickyNav {
-  position: sticky;
-  top: 0;
-  z-index: 6;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  background: var(--parchment);
-  background: var(--chrome-bg);
-  -webkit-backdrop-filter: blur(16px) saturate(120%);
-  backdrop-filter: blur(16px) saturate(120%);
-  border-bottom: 1px solid var(--line);
-  margin: -4px -4px 14px;
-  padding: 8px 4px;
-}
-.sessionStickyBack { min-height: 44px; padding: 6px 12px; font-size: 12px; }
-.sessionStickyPos,
-.sessionStickyStage {
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: .04em;
-  color: var(--muted);
-}
-.sessionStickyPos {
-  color: var(--ink);
-  font-weight: 600;
-}
-@media (max-width: 720px) {
-  .sessionStickyStage { display: none; }
-}
+.sessionHeadBack { align-self: flex-start; min-height: 44px; padding: 6px 12px; font-size: 12px; }
 
 .stageBar {
   display: grid;
