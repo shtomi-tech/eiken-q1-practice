@@ -37,9 +37,8 @@ assert.ok(start !== -1, "vocabGoalCard() が見つからない");
 const body = js.slice(start, js.indexOf("\nfunction ", start + 1));
 // 実績は差分区間を超えて描かない（バーが目標をはみ出さないため）
 assert.match(body, /Math\.min\(learned, gap\)/, "実績は差分(gap)でクランプする必要がある");
-// 目安であることと前級既習前提は必ず併記する（数値の性格を誤解させない）
-assert.ok(body.includes("習得済みとして計算"), "前級を既習前提としている旨の注記が必要");
-assert.ok(body.includes("目安です"), "語彙数が目安である旨の注記が必要");
+// カード本体の前級注記は撤去済み。目安である旨は forecast 折りたたみ内の「理論上の学習量です／収録語句数」で担保する。
+assert.ok(body.includes("理論上の学習量です"), "推定値であることの注記（forecast内）が必要");
 assert.ok(body.includes('role: "progressbar"'), "バーは progressbar として読み上げ可能にする必要がある");
 assert.ok(body.includes('"aria-valuetext"'), "aria-valuetext で内訳を読み上げる必要がある");
 assert.ok(body.includes('"aria-hidden": "true"'), "装飾のハリネズミは支援技術から隠す必要がある");

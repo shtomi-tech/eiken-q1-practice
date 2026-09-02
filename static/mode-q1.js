@@ -2137,7 +2137,7 @@ function vocabGoalCard(learned, ready) {
     }
   }
 
-  // 見出し・語数・バー・ハリネズミ・目盛り・励ましメッセージ・前級注記は常時表示（ハリネズミの現在地が主モチベーション）。
+  // 見出し・語数・バー・ハリネズミ・目盛り・励ましメッセージは常時表示（ハリネズミの現在地が主モチベーション）。
   // 折りたたむのは1級の期間別予測（forecast＝.vocabForecast）だけ。
   return el("section", { class: "card vocabGoalCard", "aria-labelledby": "vocabGoalTitle" },
     el("div", { class: "vgHead" },
@@ -2158,8 +2158,6 @@ function vocabGoalCard(learned, ready) {
       ),
     ),
     el("p", { class: "vgMessage" }, message),
-    el("p", { class: "hint" },
-      `${goal.prevLabel}までの${num(goal.prev)}語は習得済みとして計算しています。このアプリで学習した語句は${ready ? num(own) : "—"}語句。語彙数は目安です。`),
     forecast,
   );
 }
