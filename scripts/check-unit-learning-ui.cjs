@@ -47,6 +47,9 @@ assert.ok(questionFilterBarBody.includes('role: "group"'), "状態・種別フ�
 assert.ok(questionFilterBarBody.includes("filterGroupLabel"), "状態・種別フィルターには視覚ラベルが必要");
 assert.ok(js.includes("すべて表示"), "フィルター0件時の復帰操作「すべて表示」が必要");
 assert.ok(js.includes("questionFilters"), "表示専用の questionFilters state が必要");
+// 本番形式で誤答した設問だけを一覧で絞れる（誤答復習の代替導線）。
+assert.ok(questionFilterBarBody.includes('"incorrect"'), "状態フィルターに「不正解あり」(incorrect) を含める必要がある");
+assert.ok(js.includes('answerResult === "incorrect"'), "「不正解あり」の絞り込みは unit の answerResult で判定する必要がある");
 
 // --- ホーム三層構成（Task6） ---
 const datasetPickerCallIdx = renderHomeBody.indexOf("datasetPicker()");
@@ -78,6 +81,17 @@ assert.ok(
 );
 assert.ok(renderDoneBody.includes("この設問をもう一度学ぶ"), "誤答後は同じ設問へ戻る二次CTAが必要");
 assert.ok(renderDoneBody.includes("session.meaningCorrect < session.checkOrder.length"), "意味確認の誤答を再学習CTAの表示条件に含める必要がある");
+// 完了バナーの主役は4語の意味把握。本番形式1問の正誤は補助行へ。
+{
+  const anchor = renderDoneBody.indexOf("第${q}問の4語句を学習しました");
+  assert.ok(anchor !== -1, "完了バナーの学習ブランチが特定できない");
+  const learnBanner = renderDoneBody.slice(Math.max(0, anchor - 320), anchor + 420);
+  assert.ok(
+    learnBanner.includes('class: "big" }, `${session.meaningCorrect} / ${session.checkOrder.length}`'),
+    "完了バナーの big は意味把握数（meaningCorrect / checkOrder.length）にする必要がある",
+  );
+  assert.ok(learnBanner.includes("本番形式："), "本番形式1問の正誤は補助行（本番形式：…）で示す必要がある");
+}
 assert.ok(renderDoneBody.includes("startLearn(q)"), "同じ設問の再学習CTAは現在の設問を開始する必要がある");
 assert.ok(!renderDoneBody.includes("pendingReviews"), "完了画面に誤答復習待ちの状態を残してはいけません");
 assert.ok(!renderDoneBody.includes("間違えた"), "完了画面に誤答問題の復習文言を残してはいけません");

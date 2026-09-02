@@ -1868,19 +1868,27 @@ function renderHomeContent() {
 
   // 層3：詳細（問題一覧。状態・種別フィルター付き）
   const path = el("section", { class: "card" });
+  // 最終チェックの予告。全設問を終える前でも、このセットのゴール（全語句・80%でCLEAR）と残数を示す。
+  const finalNote = final.cleared
+    ? `✓ このセットはCLEAR済み（最終チェック ${final.bestScore} / ${finalTotal}語）`
+    : finalUnlocked()
+      ? `全${total}問を学習済み。最終チェック（全${finalTotal}語・${finalPassScore(finalTotal)}問正解でCLEAR）に挑戦できます`
+      : `全${total}問を学習すると最終チェック（全${finalTotal}語・正答率80%でCLEAR）。あと${total - learned}問`;
   path.appendChild(el("div", { class: "pathHead" },
     el("p", { class: "label" }, "問題一覧"),
     el("h2", {}, `${datasetHeadline()}（全${total}問）`),
     el("p", { class: "hint" }, "各設問に出る4つの語句を覚えてから、その設問を解きます。クリックで開始。"),
+    el("p", { class: "hint finalCheckNote" }, finalNote),
   ));
-  const statusCounts = { all: state.qList.length, notStarted: 0, inProgress: 0, done: 0 };
+  const statusCounts = { all: state.qList.length, notStarted: 0, inProgress: 0, done: 0, incorrect: 0 };
   const typeCounts = { all: state.qList.length, word: 0, idiom: 0 };
   state.qList.forEach((q) => {
     statusCounts[questionCardStatus(q)]++;
+    if (unit(q).answerResult === "incorrect") statusCounts.incorrect++;
     typeCounts[questionCardType(q)]++;
   });
   const filteredQList = state.qList.filter((q) =>
-    (questionFilters.status === "all" || questionCardStatus(q) === questionFilters.status)
+    questionMatchesStatusFilter(q, questionFilters.status)
     && (questionFilters.type === "all" || questionCardType(q) === questionFilters.type));
   path.appendChild(questionFilterBar({ status: statusCounts, type: typeCounts }));
   if (filteredQList.length) {
@@ -1960,8 +1968,15 @@ function renderGradeChoice() {
 
 /* ---- 問題一覧の状態・種別フィルター（表示専用。永続化・保存キーには影響しない） ---- */
 const questionFilters = { status: "all", type: "all" };
-const QUESTION_STATUS_LABELS = { all: "すべて", notStarted: "未学習", inProgress: "途中", done: "完了" };
+const QUESTION_STATUS_LABELS = { all: "すべて", notStarted: "未学習", inProgress: "途中", done: "完了", incorrect: "不正解あり" };
 const QUESTION_TYPE_LABELS = { all: "すべて", word: "単語", idiom: "熟語" };
+
+// 「不正解あり」は完了(done)のサブ状態。本番形式で誤答した設問だけに一致する。
+function questionMatchesStatusFilter(q, filter) {
+  if (filter === "all") return true;
+  if (filter === "incorrect") return unit(q).answerResult === "incorrect";
+  return questionCardStatus(q) === filter;
+}
 
 function resetQuestionFilters() {
   questionFilters.status = "all";
@@ -2015,7 +2030,7 @@ function questionFilterBar(counts) {
   const statusGroup = el("div", { class: "filterGroup", role: "group", "aria-label": "状態で絞り込む" },
     el("span", { class: "filterGroupLabel", "aria-hidden": "true" }, "状態"),
   );
-  for (const key of ["all", "notStarted", "inProgress", "done"]) {
+  for (const key of ["all", "notStarted", "inProgress", "done", "incorrect"]) {
     statusGroup.appendChild(el("button", {
       class: "filterChip",
       type: "button",
@@ -2757,7 +2772,10 @@ function questionProgressBar() {
   });
   progress.setAttribute("aria-valuetext", `${label}、残り${remaining}問`);
   wrap.appendChild(progress);
-  appendProgressFill(wrap, value, total, t.from);
+  // 覚える（暗記カード）ステージでは全幅の塗りバーを出さない。1問ずつ読み進める段階では
+  // 25問中どこかは操作の判断に使えず、Clay塗りのバーがカード見出しを画面下へ押し下げる。
+  // 数値行（第n問 / m問）とスクリーンリーダー用<progress>は残す。
+  if (!session || session.stage !== "flash") appendProgressFill(wrap, value, total, t.from);
   return wrap;
 }
 
@@ -3539,10 +3557,14 @@ function renderDone(body) {
       ));
     }
   } else {
-    banner.appendChild(el("div", { class: "big" }, session.practiceResult ? "✓ 正解！" : "! 不正解"));
+    // 締めの主役は「この設問の4語をどれだけ意味把握できたか」。本番形式1問の正誤は補助へ落とす。
+    const missed = session.checkOrder.length - session.meaningCorrect;
+    banner.appendChild(el("div", { class: "big" }, `${session.meaningCorrect} / ${session.checkOrder.length}`));
     banner.appendChild(el("h2", {}, `第${q}問の4語句を学習しました`));
     banner.appendChild(el("p", { class: "hint" },
-      `意味確認 ${session.meaningCorrect}/${session.checkOrder.length}・誤答 ${session.checkOrder.length - session.meaningCorrect}語`));
+      missed > 0 ? `意味を確認：${session.meaningCorrect}語つかめました（未定着 ${missed}語）` : `意味を確認：4語すべてつかめました`));
+    banner.appendChild(el("p", { class: "hint" },
+      `本番形式：${session.practiceResult ? "✓ 正解" : "! 不正解"}`));
   }
   const responseElapsedLog = session.responseElapsedLog || [];
   if (responseElapsedLog.length) {

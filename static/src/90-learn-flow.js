@@ -322,7 +322,10 @@ function questionProgressBar() {
   });
   progress.setAttribute("aria-valuetext", `${label}、残り${remaining}問`);
   wrap.appendChild(progress);
-  appendProgressFill(wrap, value, total, t.from);
+  // 覚える（暗記カード）ステージでは全幅の塗りバーを出さない。1問ずつ読み進める段階では
+  // 25問中どこかは操作の判断に使えず、Clay塗りのバーがカード見出しを画面下へ押し下げる。
+  // 数値行（第n問 / m問）とスクリーンリーダー用<progress>は残す。
+  if (!session || session.stage !== "flash") appendProgressFill(wrap, value, total, t.from);
   return wrap;
 }
 
@@ -1104,10 +1107,14 @@ function renderDone(body) {
       ));
     }
   } else {
-    banner.appendChild(el("div", { class: "big" }, session.practiceResult ? "✓ 正解！" : "! 不正解"));
+    // 締めの主役は「この設問の4語をどれだけ意味把握できたか」。本番形式1問の正誤は補助へ落とす。
+    const missed = session.checkOrder.length - session.meaningCorrect;
+    banner.appendChild(el("div", { class: "big" }, `${session.meaningCorrect} / ${session.checkOrder.length}`));
     banner.appendChild(el("h2", {}, `第${q}問の4語句を学習しました`));
     banner.appendChild(el("p", { class: "hint" },
-      `意味確認 ${session.meaningCorrect}/${session.checkOrder.length}・誤答 ${session.checkOrder.length - session.meaningCorrect}語`));
+      missed > 0 ? `意味を確認：${session.meaningCorrect}語つかめました（未定着 ${missed}語）` : `意味を確認：4語すべてつかめました`));
+    banner.appendChild(el("p", { class: "hint" },
+      `本番形式：${session.practiceResult ? "✓ 正解" : "! 不正解"}`));
   }
   const responseElapsedLog = session.responseElapsedLog || [];
   if (responseElapsedLog.length) {

@@ -664,6 +664,7 @@ h2 {
 
 /* ---- Question path ---- */
 .pathHead { border-top: 2px solid var(--ink); margin-top: 20px; padding-top: 18px; }
+.finalCheckNote { margin-top: 10px; padding-left: 10px; border-left: 3px solid var(--clay); color: var(--ink); }
 
 .questionFilterBar {
   display: flex;
@@ -1291,7 +1292,7 @@ details.vocabForecast:not([open]) > :not(summary) { display: none; }
   color: var(--muted);
   font-size: 13px;
 }
-.flashEx { max-inline-size: 58ch; font-size: 15px; }
+.flashEx { max-inline-size: 58ch; font-size: 18px; }
 .exUnderline {
   border-bottom: var(--rule-underline);
   padding: 0 2px 1px;

@@ -50,7 +50,11 @@ assert.ok(
 );
 assert.ok(
   !renderHomeBody.includes('class: "missionNote"'),
-  "最終チェック解放までの案内はホームに表示しない必要がある",
+  "旧・最終チェック解放の煽り表示（missionNote）は復活させない",
+);
+assert.ok(
+  renderHomeBody.includes("finalCheckNote"),
+  "問題一覧に最終チェックの予告（finalCheckNote：全n問→最終チェック・80%でCLEAR・残り数）を出す必要がある",
 );
 assert.ok(
   !renderHomeBody.includes("progressDetails"),

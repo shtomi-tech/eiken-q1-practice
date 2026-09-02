@@ -12,6 +12,7 @@ const renderFlashBody = extractFunctionBody(js, "renderFlash");
 const scrollBody = extractFunctionBody(js, "scrollFlashCardIntoView");
 const gestureBody = extractFunctionBody(js, "setupFlashGesture");
 const springBody = extractFunctionBody(js, "animateFlashGesture");
+const questionProgressBarBody = extractFunctionBody(js, "questionProgressBar");
 
 // 固定バーはflashステージだけ。renderSession全体へスクロール処理を混ぜない。
 assert.ok(renderSessionBody.includes('panel.classList.toggle("hasActionBar", session.stage === "flash")'));
@@ -73,6 +74,15 @@ assert.ok(meaningSize >= 22, "意味は22px以上である必要がある");
 assert.match(css, /\.flashMeaning,\s*\.flashExampleTranslation\s*\{[^}]*max-inline-size:\s*34em/);
 const exampleWidth = Number(css.match(/\.flashEx\s*\{[^}]*max-inline-size:\s*(\d+)ch/)[1]);
 assert.ok(exampleWidth <= 70, "例文の行幅は70ch以下である必要がある");
+const exampleSize = Number(css.match(/\.flashEx\s*\{[^}]*font-size:\s*(\d+)px/)[1]);
+assert.ok(exampleSize >= 17 && exampleSize <= 20, "例文サイズは17〜20px（意味22pxとSTEP2設問英文20pxの間）である必要がある");
+
+// 覚える（暗記カード）ステージでは設問進捗の塗りバーを出さない。数値行とSR用<progress>は残す。
+assert.ok(
+  /session\.stage\s*!==\s*"flash"/.test(questionProgressBarBody)
+    && questionProgressBarBody.includes("appendProgressFill"),
+  "questionProgressBar は flash ステージで appendProgressFill を呼ばない分岐が必要",
+);
 assert.ok(!css.includes(".sessionStickyFlash"), "未使用のsessionStickyFlash CSSを残さない");
 assert.ok(!css.includes(".cardCounter"), "未使用のcardCounter CSSを残さない");
 
