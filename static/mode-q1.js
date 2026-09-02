@@ -1751,6 +1751,8 @@ function renderHomeContent() {
   const isStudyPlanGrade = currentGrade() === "eiken1";
   const studyPlanEntries = isStudyPlanGrade ? gradeQuestionEntries("eiken1") : [];
   const isFirstVisit = learned === 0;
+  // 級の変更は URL で級を固定していないときだけ。下部の「その他」ではなく先頭カードの右上へ置く。
+  const canChangeGrade = !new URLSearchParams(window.location.search).has("g");
 
   // hero は初回訪問（まだ何も学習していない）時だけ表示し、今日の学習カードとの説明重複を避ける
   if (isFirstVisit) {
@@ -1764,13 +1766,26 @@ function renderHomeContent() {
   // 層1：今日の学習（現在セット名・主CTA・その理由）。問題セット選択は独立sectionへ分離。
   const summary = el("section", { class: "card" });
   const headerTitle = final.cleared ? `${datasetHeadline()} CLEAR` : `${datasetHeadline()}を「覚えて→確かめて→解く」`;
-  summary.appendChild(el("div", { class: "sectionHead" },
+  const sectionHead = el("div", { class: "sectionHead" },
     el("div", {},
       el("p", { class: "label" }, final.cleared ? "達成状況" : "今日の学習"),
       el("h2", {}, headerTitle),
       el("p", { class: "hint" }, currentDataset.label),
     ),
-  ));
+  );
+  if (canChangeGrade) {
+    sectionHead.appendChild(el("button", {
+      class: "ghost smallGhost gradeChangeButton",
+      type: "button",
+      onclick: () => {
+        if (!confirm("学習する級を変更します。現在の級以外の進捗も消えません。変更しますか？")) return;
+        removeStored(scopedStorageKey(GRADE_KEY));
+        needsGradeChoice = true;
+        renderHome();
+      },
+    }, "級を変更"));
+  }
+  summary.appendChild(sectionHead);
   // --- 次にやること（Hickの法則：迷わせないため主導線は常に1つに絞る） ---
   const resume = currentResume();
   const resumeIsDone = resume?.stage === "done";
@@ -1912,39 +1927,23 @@ function renderHomeContent() {
   }
   home.appendChild(path);
 
-  const canChangeGrade = !new URLSearchParams(window.location.search).has("g");
-  if (!sharedMode() || canChangeGrade) {
+  // 級の変更は先頭カードの右上へ移動済み。ここは「その他」（進捗リセット）だけを扱う。
+  if (!sharedMode()) {
     const utility = el("section", { class: "card" });
-    if (!sharedMode()) {
-      utility.appendChild(el("details", { class: "moreDetails" },
-        el("summary", { class: "label" }, "その他"),
-        el("div", { class: "actions" },
-          el("button", {
-            class: "ghost", type: "button", onclick: () => {
-              if (confirm("すべての進捗を消去します。よろしいですか？")) {
-                state.progress = { units: {} };
-                saveProgress();
-                renderHome();
-              }
-            },
-          }, "進捗リセット"),
-        ),
-      ));
-    }
-    if (canChangeGrade) {
-      utility.appendChild(el("div", { class: "gradeScopeChange" },
+    utility.appendChild(el("details", { class: "moreDetails" },
+      el("summary", { class: "label" }, "その他"),
+      el("div", { class: "actions" },
         el("button", {
-          class: "ghost smallGhost",
-          type: "button",
-          onclick: () => {
-            if (!confirm("学習する級を変更します。現在の級以外の進捗も消えません。変更しますか？")) return;
-            removeStored(scopedStorageKey(GRADE_KEY));
-            needsGradeChoice = true;
-            renderHome();
+          class: "ghost", type: "button", onclick: () => {
+            if (confirm("すべての進捗を消去します。よろしいですか？")) {
+              state.progress = { units: {} };
+              saveProgress();
+              renderHome();
+            }
           },
-        }, "級を変更"),
-      ));
-    }
+        }, "進捗リセット"),
+      ),
+    ));
     home.appendChild(utility);
   }
 }
