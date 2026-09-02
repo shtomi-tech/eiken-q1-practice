@@ -943,12 +943,12 @@ h2 {
 .vgTickEnd { align-items: flex-end; right: 0; }
 .vgMessage { font-family: var(--serif); font-size: 19px; margin: 4px 0 6px; }
 
-/* ---- 1級の学習計画（通常学習カード内。主CTAは増やさない） ---- */
+/* ---- 1級の学習計画（語彙目標カード内。主CTAは増やさない） ---- */
 .studyPlanPanel {
-  border-top: 1px solid var(--line);
-  margin-top: 20px;
-  padding-top: 16px;
+  margin: 0 0 20px;
+  padding: 0 0 20px;
 }
+.vocabGoalCard > .studyPlanPanel { border-bottom: 1px solid var(--line); }
 .studyPlanHead {
   align-items: start;
   display: flex;
@@ -961,7 +961,7 @@ h2 {
 .studyPlanMetrics {
   display: grid;
   gap: 12px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   margin-top: 16px;
 }
 .studyPlanMetric {
@@ -1014,7 +1014,7 @@ h2 {
 .studyPlanFields {
   display: grid;
   gap: 12px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-top: 14px;
 }
 .studyPlanField { display: grid; gap: 6px; min-width: 0; }
@@ -1027,20 +1027,16 @@ h2 {
   margin-top: 18px;
   padding-top: 16px;
 }
-.vocabForecast > summary,
-.studyPlanMore > summary {
+.vocabForecast > summary {
   cursor: pointer;
   list-style: none;
   min-height: 44px;
   padding: 0 28px 0 0;
   position: relative;
 }
-.vocabForecast > summary::-webkit-details-marker,
-.studyPlanMore > summary::-webkit-details-marker { display: none; }
-details.vocabForecast:not([open]) > :not(summary),
-details.studyPlanMore:not([open]) > :not(summary) { display: none; }
-.vocabForecast > summary::before,
-.studyPlanMore > summary::before {
+.vocabForecast > summary::-webkit-details-marker { display: none; }
+details.vocabForecast:not([open]) > :not(summary) { display: none; }
+.vocabForecast > summary::before {
   color: var(--muted);
   content: "＋";
   font-family: var(--mono);
@@ -1050,14 +1046,8 @@ details.studyPlanMore:not([open]) > :not(summary) { display: none; }
   right: 0;
   top: 2px;
 }
-.vocabForecast[open] > summary::before,
-.studyPlanMore[open] > summary::before { content: "−"; }
+.vocabForecast[open] > summary::before { content: "−"; }
 
-.studyPlanMore { margin-top: 12px; }
-.studyPlanMore > summary { display: flex; flex-direction: column; gap: 2px; }
-.studyPlanMoreTitle { font-family: var(--mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
-.studyPlanMoreLead { font-family: var(--mono); font-size: 12px; color: var(--ink); }
-.studyPlanMore > .studyPlanMetrics { margin-top: 12px; }
 .vocabForecast h4,
 .vocabForecastSummaryTitle {
   display: block;

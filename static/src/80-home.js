@@ -5,9 +5,6 @@ function renderHome() {
   // 同期処理のみ。await をまたぐとキャッシュが別パスへ漏れるので中で非同期処理を待たない。
   return withProgressReadCache(renderHomeContent);
 }
-function formatStudyPlanDate(date) {
-  return date.toLocaleDateString("ja-JP", { month: "numeric", day: "numeric" });
-}
 function studyPlanProgress(label, value, max, valueText, detail) {
   const safeMax = Math.max(1, Number(max) || 1);
   const safeValue = Math.max(0, Number(value) || 0);
@@ -38,12 +35,7 @@ function studyPlanPanel(entries = []) {
   const limit = studyPlanQuestionLimit();
   const summary = studyPlanSummary(new Date(), plan, entries);
   const num = (value) => Number(value).toLocaleString("ja-JP");
-  const weekEndDate = new Date(summary.weekEnd);
-  weekEndDate.setDate(weekEndDate.getDate() - 1);
-  const weekRange = `${formatStudyPlanDate(summary.weekStart)}〜${formatStudyPlanDate(weekEndDate)}`;
-  const totalStatus = summary.overallRemaining === 0 ? "✓ 総目標達成" : `あと${num(summary.overallRemaining)}問`;
   const dailyStatus = summary.dailyRemaining === 0 ? "✓ 今日の目標達成" : `あと${num(summary.dailyRemaining)}問`;
-  const weeklyStatus = summary.weeklyRemaining === 0 ? "✓ 今週の目標達成" : `残り${num(summary.weeklyRemaining)}問`;
   const panel = el("div", { class: "studyPlanPanel", "aria-labelledby": "studyPlanTitle" });
   const settingsId = "studyPlanSettings";
   const settingsToggle = el("button", {
@@ -56,13 +48,6 @@ function studyPlanPanel(entries = []) {
     class: "studyPlanSettings hide",
     id: settingsId,
     "aria-labelledby": "studyPlanSettingsTitle",
-  });
-  const goalInput = el("input", {
-    type: "number",
-    min: "1",
-    max: String(limit),
-    value: String(plan.questionGoal),
-    inputmode: "numeric",
   });
   const dailyInput = el("input", {
     type: "number",
@@ -78,7 +63,6 @@ function studyPlanPanel(entries = []) {
   weekSelect.value = String(plan.weekStartsOn);
   const error = el("p", { class: "studyPlanFormError", role: "alert", "aria-live": "polite" });
   function restoreSettingsForm() {
-    goalInput.value = String(plan.questionGoal);
     dailyInput.value = String(plan.dailyQuestionGoal);
     weekSelect.value = String(plan.weekStartsOn);
     error.textContent = "";
@@ -89,9 +73,8 @@ function studyPlanPanel(entries = []) {
     el("span", { class: "studyPlanFieldHint" }, hint),
   );
   settings.appendChild(el("h4", { id: "studyPlanSettingsTitle" }, "学習目標の設定"));
-  settings.appendChild(el("p", { class: "hint" }, `総問題目標と1日の問題目標は1〜${num(limit)}問で設定できます。`));
+  settings.appendChild(el("p", { class: "hint" }, `1日の問題目標は1〜${num(limit)}問で設定できます。`));
   settings.appendChild(el("div", { class: "studyPlanFields" },
-    field("総問題目標", goalInput, "このアプリで新規に解く総問題数"),
     field("1日の問題目標", dailyInput, "週間目標はこの7倍"),
     field("週の開始曜日", weekSelect, "日〜土から選択"),
   ));
@@ -107,18 +90,16 @@ function studyPlanPanel(entries = []) {
   ));
   settings.addEventListener("submit", (event) => {
     event.preventDefault();
-    const questionGoal = Number(goalInput.value);
     const dailyQuestionGoal = Number(dailyInput.value);
     const weekStartsOn = Number(weekSelect.value);
     const validInteger = (value, max) => Number.isInteger(value) && value >= 1 && value <= max;
-    if (!validInteger(questionGoal, limit) || !validInteger(dailyQuestionGoal, limit)
+    if (!validInteger(dailyQuestionGoal, limit)
       || !Number.isInteger(weekStartsOn) || weekStartsOn < 0 || weekStartsOn > 6) {
-      error.textContent = `総問題目標と1日の問題目標は1〜${num(limit)}問、週の開始曜日は日〜土から選んでください。`;
+      error.textContent = `1日の問題目標は1〜${num(limit)}問、週の開始曜日は日〜土から選んでください。`;
       return;
     }
     studyPlan = normalizeStudyPlan({
       ...plan,
-      questionGoal,
       dailyQuestionGoal,
       weekStartsOn,
     }, limit);
@@ -141,7 +122,7 @@ function studyPlanPanel(entries = []) {
     }
     settings.classList.toggle("hide", !open);
     settingsToggle.setAttribute("aria-expanded", String(open));
-    if (open) goalInput.focus();
+    if (open) dailyInput.focus();
   });
 
   panel.appendChild(el("div", { class: "studyPlanHead" },
@@ -151,43 +132,16 @@ function studyPlanPanel(entries = []) {
     ),
     settingsToggle,
   ));
-  // 日常の正本は「今日 n / m問」1つだけ常時表示。総目標・今週・再配分の目安は折りたたみへ。
+  // 日常の正本は「今日 n / m問」1つだけ常時表示する。
   panel.appendChild(el("div", { class: "studyPlanMetrics" },
     studyPlanProgress(
       "今日",
       summary.answeredToday,
       plan.dailyQuestionGoal,
       `${num(summary.answeredToday)} / ${num(plan.dailyQuestionGoal)}問`,
-      `${dailyStatus}・新規${num(summary.answeredToday * STUDY_PLAN_VOCABULARY_PER_QUESTION)}語句`,
+      dailyStatus,
     ),
   ));
-  const planMore = el("details", { class: "studyPlanMore" });
-  planMore.appendChild(el("summary", {},
-    el("span", { class: "studyPlanMoreTitle" }, "総目標・今週の進捗"),
-    el("span", { class: "studyPlanMoreLead" }, `総目標 ${totalStatus} ・ 今週 ${weeklyStatus}`),
-  ));
-  planMore.appendChild(el("div", { class: "studyPlanMetrics" },
-    studyPlanProgress(
-      "総目標",
-      summary.answeredOverall,
-      plan.questionGoal,
-      `回答済み ${num(summary.answeredOverall)} / ${num(plan.questionGoal)}問`,
-      totalStatus,
-    ),
-    studyPlanProgress(
-      "今週",
-      summary.answeredThisWeek,
-      summary.weeklyGoal,
-      `${num(summary.answeredThisWeek)} / ${num(summary.weeklyGoal)}問`,
-      `${weekRange}・${weeklyStatus}`,
-    ),
-  ));
-  planMore.appendChild(el("p", { class: "studyPlanAdjustment" },
-    summary.weeklyRemaining === 0
-      ? "✓ 今週の目標達成"
-      : `残り${num(summary.daysRemainingIncludingToday)}日なら、1日${num(summary.adjustedDailyTarget)}問`,
-  ));
-  panel.appendChild(planMore);
   panel.appendChild(settings);
   return panel;
 }
@@ -340,14 +294,14 @@ function renderHomeContent() {
       ),
     ));
   }
-  if (isStudyPlanGrade) summary.appendChild(studyPlanPanel(studyPlanEntries));
   home.appendChild(summary);
 
-  // 語彙目標カード（級単位。問題セットより上位の目標なので、セット一覧より前に置く）
+  // 語彙目標カード（級単位。1級は日次学習目標を上段に統合。問題セットより上位の目標なので、セット一覧より前に置く）
   const learnedVocabulary = isStudyPlanGrade
     ? learnedVocabularyCount("eiken1", studyPlanEntries)
     : (meaningSummary ? meaningSummary.learned : 0);
-  const goalCard = grade ? vocabGoalCard(learnedVocabulary, Boolean(pooled)) : null;
+  const studyPlanNode = isStudyPlanGrade ? studyPlanPanel(studyPlanEntries) : null;
+  const goalCard = grade ? vocabGoalCard(learnedVocabulary, Boolean(pooled), studyPlanNode) : null;
   if (goalCard) home.appendChild(goalCard);
 
   if (grade) {
@@ -537,7 +491,7 @@ function questionFilterBar(counts) {
 
 // 語彙目標カード。前の級までは習得済みという前提で、前級目標→当級目標の区間を進捗として見せる。
 // 分子の実績は「その級で通常学習まで終えた語句数」（meaningPracticeSummary().learned と同じ母集団）。
-function vocabGoalCard(learned, ready) {
+function vocabGoalCard(learned, ready, studyPlanNode = null) {
   const goal = VOCAB_GOALS[currentGrade()];
   if (!goal) return null;
   const gap = goal.target - goal.prev;
@@ -615,6 +569,7 @@ function vocabGoalCard(learned, ready) {
   // 見出し・語数・バー・ハリネズミ・目盛り・励ましメッセージは常時表示（ハリネズミの現在地が主モチベーション）。
   // 折りたたむのは1級の期間別予測（forecast＝.vocabForecast）だけ。
   return el("section", { class: "card vocabGoalCard", "aria-labelledby": "vocabGoalTitle" },
+    studyPlanNode,
     el("div", { class: "vgHead" },
       el("div", {},
         el("p", { class: "label" }, "語彙の目標"),

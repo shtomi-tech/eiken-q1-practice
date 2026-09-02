@@ -11,38 +11,40 @@ const vocabGoal = extractFunctionBody(js, "vocabGoalCard");
 const cloudMeta = extractFunctionBody(js, "cloudMeta");
 
 assert.match(home, /currentGrade\(\) === "eiken1"/);
-assert.ok(home.includes("studyPlanPanel"), "1級の今日の学習カードに学習目標パネルを置く");
+assert.ok(home.includes("const studyPlanNode = isStudyPlanGrade ? studyPlanPanel(studyPlanEntries) : null;"), "1級の統合目標カードへ学習目標パネルを渡す");
+assert.ok(!home.includes("summary.appendChild(studyPlanPanel"), "学習目標パネルを今日の学習カードへ重複配置しない");
 assert.ok(home.includes("home.appendChild(goalCard)"), "語彙目標カードはホーム直下に置く");
 assert.match(studyPanel, /studyPlanSummary\(/);
 assert.match(home, /vocabGoalCard\(/);
+assert.ok(vocabGoal.includes("studyPlanNode"), "統合目標カードへ学習目標パネルを含める");
 
-for (const text of ["学習目標", "回答済み", "今週", "新規", "総目標達成", "今日の目標達成", "今週の目標達成"]) {
+for (const text of ["学習目標", "今日", "今日の目標達成"]) {
   assert.ok(studyPanel.includes(text), `ホームに ${text} の表示契約が必要`);
 }
+assert.ok(!studyPanel.includes("総問題目標"), "総問題目標は設定UIから外す");
+assert.ok(!studyPanel.includes("総目標"), "総目標の表示を学習目標パネルから外す");
+assert.ok(!studyPanel.includes("goalInput"), "総問題目標の入力欄を学習目標パネルから外す");
+assert.ok(!studyPanel.includes("studyPlanMore"), "週次進捗の折りたたみ表示を学習目標パネルから外す");
+assert.ok(!studyPanel.includes("今週の進捗"), "週次進捗の表示を学習目標パネルから外す");
 
-// 常時表示は「今日」1つ。総目標・今週・再配分の目安は折りたたみ（studyPlanMore）へ。
+// 常時表示は「今日」1つ。週開始曜日は設定フォームに残すが、週次進捗は表示しない。
 {
-  const moreIdx = studyPanel.indexOf('"studyPlanMore"');
-  const todayIdx = studyPanel.indexOf('"今日"');
-  const overallIdx = studyPanel.indexOf('"総目標"');
-  assert.ok(moreIdx !== -1, "総目標・今週は折りたたみ（studyPlanMore）に入れる必要がある");
-  assert.ok(todayIdx !== -1 && overallIdx !== -1, "今日/総目標の studyPlanProgress ラベルが特定できない");
-  assert.ok(todayIdx < moreIdx, "「今日」は折りたたみの外（常時表示）に置く必要がある");
-  assert.ok(overallIdx > moreIdx, "「総目標」は折りたたみ（studyPlanMore）の中に置く必要がある");
+  const todayIdx = studyPanel.indexOf('studyPlanProgress(\n      "今日"');
+  assert.ok(todayIdx !== -1, "「今日」の studyPlanProgress ラベルが特定できない");
 }
-assert.ok(css.includes(".studyPlanMore"), "CSSに .studyPlanMore の規則が必要");
 
-for (const text of ["studyPlanSettings", "総問題目標", "1日の問題目標", "週の開始曜日", "保存", "キャンセル", "aria-expanded", "aria-controls"]) {
+for (const text of ["studyPlanSettings", "1日の問題目標", "週の開始曜日", "保存", "キャンセル", "aria-expanded", "aria-controls"]) {
   assert.ok(studyPanel.includes(text), `設定UIに ${text} が必要`);
 }
+assert.ok(!studyPanel.includes("総問題目標"), "設定UIに総問題目標を残さない");
 assert.match(studyPanel, /type: "number"/);
 assert.match(studyPanel, /type: "submit"/);
 assert.match(studyPanel, /weekStartsOn/);
 assert.match(studyPanel, /function restoreSettingsForm\(\)/, "キャンセル時に設定フォームを復元する");
-assert.match(studyPanel, /goalInput\.value = String\(plan\.questionGoal\)/, "総問題目標を保存済み値へ戻す");
 assert.match(studyPanel, /dailyInput\.value = String\(plan\.dailyQuestionGoal\)/, "日別目標を保存済み値へ戻す");
 assert.match(studyPanel, /weekSelect\.value = String\(plan\.weekStartsOn\)/, "週開始曜日を保存済み値へ戻す");
 assert.match(studyPanel, /settingsToggle\.focus\(\)/, "キャンセル後に設定トグルへフォーカスを戻す");
+assert.match(studyPanel, /dailyInput\.focus\(\)/, "設定を開いたときに日別目標へフォーカスを置く");
 
 for (const text of ["vocabularyForecast", "vocabularyGoalForecast", "理論上の学習量", "現在、このアプリの英検1級通常問題には", "14,000語まであと"]) {
   assert.ok(vocabGoal.includes(text) || js.includes(text), `語彙予測に ${text} が必要`);
@@ -61,11 +63,13 @@ for (const cls of [
   ".studyPlanMetric",
   ".studyPlanSettings",
   ".studyPlanFields",
+  ".vocabGoalCard > .studyPlanPanel",
   ".vocabForecast",
   ".vocabForecastGrid",
 ]) {
   assert.ok(css.includes(cls), `CSSに ${cls} の規則が必要`);
 }
+assert.ok(!css.includes(".studyPlanMore"), "CSSに削除済みの週次進捗ブロックを残さない");
 assert.match(css, /@media \(max-width: 320px\)/);
 assert.match(css, /prefers-reduced-motion: reduce/);
 
