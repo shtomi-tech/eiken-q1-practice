@@ -3,10 +3,10 @@
     "schemaVersion": 2,
     "note": "暗記カード・意味4択用の原形辞書。進捗キーと本番形式問題には使わない。",
     "scope": "words only (idioms は対象外)",
-    "meaningReviewedEntries": 258,
-    "meaningReviewedSourceMeanings": 280,
-    "meaningReviewDigest": "690379f22d412ce608b000d98cace36b7631ee6737c4233287ef8674bcdfd5ce",
-    "posReviewedEntries": 258,
+    "meaningReviewedEntries": 264,
+    "meaningReviewedSourceMeanings": 286,
+    "meaningReviewDigest": "cdbc7bb394e863f9016fb19cb80b82d5faa232df6cd5aa057322e17915aba334",
+    "posReviewedEntries": 264,
     "reviewCommand": "py -3 scripts/build_lemma_entries.py --audit"
   },
   "lemmas": {
@@ -130,6 +130,7 @@
     "grouches": "grouch",
     "haggling": "haggle",
     "hastened": "hasten",
+    "hibernating": "hibernate",
     "hitches": "hitch",
     "honing": "hone",
     "illuminates": "illuminate",
@@ -158,8 +159,10 @@
     "mulled": "mull",
     "nominations": "nomination",
     "nullified": "nullify",
+    "obfuscating": "obfuscate",
     "obliterated": "obliterate",
     "omits": "omit",
+    "ostracizing": "ostracize",
     "palaces": "palace",
     "pampered": "pamper",
     "participants": "participant",
@@ -179,6 +182,7 @@
     "poached": "poach",
     "policies": "policy",
     "pondering": "ponder",
+    "pontificating": "pontificate",
     "posed": "pose",
     "positions": "position",
     "pretexts": "pretext",
@@ -189,6 +193,7 @@
     "proscribes": "proscribe",
     "provisions": "provision",
     "provisos": "proviso",
+    "pulverizing": "pulverize",
     "purged": "purge",
     "puzzles": "puzzle",
     "quenched": "quench",
@@ -212,6 +217,7 @@
     "rescinded": "rescind",
     "resonated": "resonate",
     "reveled": "revel",
+    "reverberating": "reverberate",
     "reverted": "revert",
     "ropes": "rope",
     "sanctified": "sanctify",
@@ -1652,6 +1658,16 @@
       ],
       "reviewed": true
     },
+    "hibernate": {
+      "meaning": "冬眠する",
+      "ipa": "/hˈaɪbɚneɪt/",
+      "audio": "assets/audio/lemma/hibernate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "hibernating"
+      ],
+      "reviewed": true
+    },
     "hitch": {
       "meaning": "障害、支障",
       "ipa": "/hˈɪtʃ/",
@@ -1936,6 +1952,16 @@
       ],
       "reviewed": true
     },
+    "obfuscate": {
+      "meaning": "わかりにくくする、曖昧にする",
+      "ipa": "/ˈɑbfəskeɪt/",
+      "audio": "assets/audio/lemma/obfuscate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "obfuscating"
+      ],
+      "reviewed": true
+    },
     "obliterate": {
       "meaning": "完全に破壊する、消し去る",
       "ipa": "/əblˈɪtɚeɪt/",
@@ -1953,6 +1979,16 @@
       "pos": "動詞",
       "surfaces": [
         "omits"
+      ],
+      "reviewed": true
+    },
+    "ostracize": {
+      "meaning": "仲間外れにする、追放する",
+      "ipa": "/ˈɔstɹəsaɪz/",
+      "audio": "assets/audio/lemma/ostracize.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "ostracizing"
       ],
       "reviewed": true
     },
@@ -2148,6 +2184,16 @@
       ],
       "reviewed": true
     },
+    "pontificate": {
+      "meaning": "偉そうに意見を述べる",
+      "ipa": "/pɑntˈɪfəkeɪt/",
+      "audio": "assets/audio/lemma/pontificate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "pontificating"
+      ],
+      "reviewed": true
+    },
     "pose": {
       "meaning": "ポーズをとる；（問題を）引き起こす",
       "ipa": "/pˈoʊz/",
@@ -2246,6 +2292,16 @@
       "pos": "名詞",
       "surfaces": [
         "provisos"
+      ],
+      "reviewed": true
+    },
+    "pulverize": {
+      "meaning": "粉砕する、粉々にする",
+      "ipa": "/pˈəlvɚaɪz/",
+      "audio": "assets/audio/lemma/pulverize.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "pulverizing"
       ],
       "reviewed": true
     },
@@ -2478,6 +2534,16 @@
       "pos": "動詞",
       "surfaces": [
         "reveled"
+      ],
+      "reviewed": true
+    },
+    "reverberate": {
+      "meaning": "反響する、鳴り響く",
+      "ipa": "/ɹɪvˈɝbɚeɪt/",
+      "audio": "assets/audio/lemma/reverberate.mp3",
+      "pos": "動詞",
+      "surfaces": [
+        "reverberating"
       ],
       "reviewed": true
     },

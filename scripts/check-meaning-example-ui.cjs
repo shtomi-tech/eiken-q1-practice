@@ -79,8 +79,8 @@ assert.match(css, /\.askExampleLine\s*\{/);
 // 設問として読ませる英文は本文の Inter（見出し用セリフは使わない）。DESIGN.md タイポグラフィ節。
 assert.match(
   css,
-  /\.askExample\s*\{[^}]*font-family:\s*var\(--sans\)[^}]*font-size:\s*20px[^}]*line-height:\s*1\.8[^}]*max-inline-size:\s*58ch/,
-  "設問英文(.askExample)は本文Inter・20px・行間1.8・行幅58chである必要があります",
+  /\.askExample\s*\{[^}]*font-family:\s*var\(--sans\)[^}]*font-size:\s*20px[^}]*line-height:\s*1\.8[^}]*max-inline-size:\s*70ch/,
+  "設問英文(.askExample)は本文Inter・20px・行間1.8・行幅70chである必要があります",
 );
 assert.ok(
   !/\.askExample\s*\{[^}]*var\(--serif\)/.test(css),

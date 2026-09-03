@@ -146,6 +146,7 @@ MEANING_OVERRIDES = {
     "grouch": "不平を言う人、不満",
     "haggle": "値段を交渉する",
     "hasten": "急ぐ、促進する",
+    "hibernate": "冬眠する",
     "hitch": "障害、支障",
     "hone": "磨く、鍛える",
     "illuminate": "照らす、明らかにする",
@@ -174,8 +175,10 @@ MEANING_OVERRIDES = {
     "mull": "熟考する、思案する",
     "nomination": "ノミネート、指名",
     "nullify": "無効にする",
+    "obfuscate": "わかりにくくする、曖昧にする",
     "obliterate": "完全に破壊する、消し去る",
     "omit": "省く、記載しない",
+    "ostracize": "仲間外れにする、追放する",
     "palace": "宮殿",
     "pamper": "甘やかす",
     "participant": "参加者",
@@ -195,6 +198,7 @@ MEANING_OVERRIDES = {
     "poach": "密猟する、引き抜く",
     "policy": "方針、政策",
     "ponder": "熟考する",
+    "pontificate": "偉そうに意見を述べる",
     "pose": "ポーズをとる；（問題を）引き起こす",
     "position": "地位、役職",
     "pretext": "口実",
@@ -205,6 +209,7 @@ MEANING_OVERRIDES = {
     "proscribe": "禁止する",
     "provision": "条項、備え；食料、備蓄",
     "proviso": "条件、但し書き",
+    "pulverize": "粉砕する、粉々にする",
     "purge": "除去する、一掃する",
     "puzzle": "パズル、難問；困惑させる",
     "quench": "消す、癒やす",
@@ -228,6 +233,7 @@ MEANING_OVERRIDES = {
     "rescind": "取り消す",
     "resonate": "共鳴する、響く",
     "revel": "大いに楽しむ",
+    "reverberate": "反響する、鳴り響く",
     "revert": "元に戻る",
     "rope": "ロープ、綱",
     "sanctify": "神聖化する、清める",
@@ -301,7 +307,7 @@ POS_LABEL_ORDER = ("名詞", "動詞", "形容詞", "副詞", "前置詞", "代�
 # 語彙データまたは MEANING_OVERRIDES が変わると不一致になり、再確認なしでは
 # data/lemmas.json を再生成できない。値は audit_lemma_entries() の
 # meaningReviewDigest を確認した後にだけ更新する。
-REVIEWED_MEANING_DIGEST = "690379f22d412ce608b000d98cace36b7631ee6737c4233287ef8674bcdfd5ce"
+REVIEWED_MEANING_DIGEST = "cdbc7bb394e863f9016fb19cb80b82d5faa232df6cd5aa057322e17915aba334"
 
 
 def load_json(path: Path) -> dict[str, Any]:
