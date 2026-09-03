@@ -1,6 +1,6 @@
 # 英検 大問1 単語アプリ
 
-英検5級・1級・2級・準2級・準1級の大問1（語彙）を扱う静的Webアプリです。5級の2026年度第1回、1級・2級・準2級・準1級の各級過去問3回分に加え、1級の模試第1回〜第9回、準2級の自作模試第1回〜第4回、国際医療福祉大学の総合型選抜基礎試験セットを収録しています（合計27セット）。準2級の自作模試と国際医療福祉大学セットは英検過去問を引用していません。
+英検5級・1級・2級・準2級・準1級の大問1（語彙）を扱う静的Webアプリです。5級の2026年度第1回、1級・2級・準2級・準1級の各級過去問3回分に加え、1級の模試第1回〜第9回、準2級の自作模試第1回〜第4回、国際医療福祉大学の総合型選抜基礎試験セット2回分を収録しています（合計28セット）。準2級の自作模試と国際医療福祉大学セットは英検過去問を引用していません。
 
 ## 学習の流れ
 
@@ -28,7 +28,7 @@
 | 準2級 | 105 | 420 |
 | 準1級 | 54 | 216 |
 | 1級（模試第1回〜第9回を含む） | 291 | 1164 |
-| 医療福祉 基礎試験 | 15 | 60 |
+| 医療福祉 基礎試験（第1回・第2回） | 30 | 120 |
 
 語句ごとの復習間隔は、その語句が属する回の進捗（`eiken_q1_progress_<datasetId>` の `items`）に保存します。級をまたいで混ざることはありません。
 
@@ -63,7 +63,8 @@
 - 1級模試第7回: `data/questions_1_mock-7.json` / `data/vocab_1_mock-7.json`
 - 1級模試第8回: `data/questions_1_mock-8.json` / `data/vocab_1_mock-8.json`
 - 1級模試第9回: `data/questions_1_mock-9.json` / `data/vocab_1_mock-9.json`
-- 国際医療福祉大学 基礎試験: `data/questions_iuhw_set-1.json` / `data/vocab_iuhw_set-1.json`
+- 国際医療福祉大学 基礎試験 第1回: `data/questions_iuhw_set-1.json` / `data/vocab_iuhw_set-1.json`
+- 国際医療福祉大学 基礎試験 第2回: `data/questions_iuhw_set-2.json` / `data/vocab_iuhw_set-2.json`
 - 熟語の核心イメージ共有辞書（データ検査・作成補助用。UIには表示しない）: `data/particle_images.json`
 - 単語の語根・接辞辞書（表示専用）: `data/word_roots.json`
 - 単語の語源分解（表示専用・原形キー）: `data/word_origins.json`
@@ -230,13 +231,14 @@ py -3 scripts/add_example_translations.py
 - `scripts/build_q1_mock_9_data.py`: 1級模試第9回の問題・語彙データ生成
 - `scripts/build_q1_p2_mock_1_data.py`: 準2級自作模試第1回の問題・語彙データ生成
 - `scripts/build_q1_p2_mock_{2,3,4}_data.py`: 準2級自作模試第2回〜第4回の問題・語彙データ生成
-- `scripts/build_q1_iuhw_set_1_data.py`: 国際医療福祉大学セットの問題・語彙データ生成
+- `scripts/build_q1_iuhw_set_1_data.py`: 国際医療福祉大学セット第1回の問題・語彙データ生成
+- `scripts/build_q1_iuhw_set_2_data.py`: 国際医療福祉大学セット第2回の問題・語彙データ生成（完全自作・熟語12件）
 - `scripts/check_mock_6_data.py`: 1級模試第6回の内容・重複チェック
 - `scripts/check_mock_7_data.py`: 1級模試第7回の内容・重複・音声チェック
 - `scripts/check_mock_8_data.py`: 1級模試第8回の内容・重複・音声チェック
 - `scripts/check_mock_9_data.py`: 1級模試第9回の内容・重複・音声チェック
 - `scripts/check_5_data.py`: 5級2026年度第1回大問1の内容・公式解答チェック
-- `scripts/check_q1_data.py`: 27セットのデータ契約チェック
+- `scripts/check_q1_data.py`: 28セットのデータ契約チェック
 - `scripts/check_p2_mock_data.py`: 準2級自作模試（全回）の内容チェック
 
 このリポジトリは大問1専用です。大問2・3、リスニング、ライティング、言い換えのコード・教材・音声・生成スクリプトには依存しません。

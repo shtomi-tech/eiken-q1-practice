@@ -30,6 +30,7 @@ EXPECTED_IDS = {
     "eikenp2-mock-3",
     "eikenp2-mock-4",
     "iuhw-set-1",
+    "iuhw-set-2",
 }
 TRANSLATION_BLANK_RE = re.compile(r"(?:\(\s*\)|（\s*）)")
 
