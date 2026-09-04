@@ -32,18 +32,28 @@
 
 語句ごとの復習間隔は、その語句が属する回の進捗（`eiken_q1_progress_<datasetId>` の `items`）に保存します。級をまたいで混ざることはありません。
 
-## 1級の日次・週次学習目標
+## 日次・週次学習目標（英検5級〜1級）
 
-1級の通常問題（過去問3回分と模試第1回〜第9回）では、ホームの語彙目標カード上段に新規問題の学習計画を表示できます。常時表示は「今日 n / m問」です。新規問題は、本番形式4択へ初めて回答した `(datasetId, q)` の組です。正誤は問わず、同じ問題の解き直し・意味だけ復習は日次・週次・総問題数へ重複加算しません。
+英検5級・準2級・2級・準1級・1級の通常問題では、ホームの語彙目標カード上段に新規問題の学習計画を表示できます。常時表示は「今日 n / m問」です。新規問題は、本番形式4択へ初めて回答した `(datasetId, q)` の組です。正誤は問わず、同じ問題の解き直し・意味だけ復習は日次・週次・総問題数へ重複加算しません。医療福祉セットは英検の級ではないため対象外です。
 
-- 総問題目標の初期値は、manifest配下の現在の1級通常問題数です。現在は291問・1164語句です。既存データとの互換性のため保持しますが、ホームの設定・表示には出しません。
+- 総問題目標の初期値は、manifest配下のその級の通常問題数です（5級15問／準2級105問／2級51問／準1級54問／1級291問）。既存データとの互換性のため保持しますが、ホームの設定・表示には出しません。
 - 1日の問題目標の初期値は8問、週間目標はその7倍です。設定では1日の問題目標と週の開始曜日を変更できます。週次の集計・再配分ロジックは保持しますが、ホームには表示しません。
 - 日次・週次の実績は、設問の初回答時刻 `firstAnsweredAt` を利用者のローカル日付へ戻して集計します。既存履歴から補完できる場合は最古の設問回答時刻を使い、日時不明の旧回答は総数だけに含めます。
 - 週の残り日数へ再配分する値は、`ceil(週間残数 / 今週の残り日数)` です。未達分を翌週へ自動繰越はしません。
 
-同じカードには、1問4語句として、7・30・90・180・365日後の理論上の学習語句数と、準1級までの9,000語を起点に14,000語へ到達する予想日を表示します。いずれも学習ペースの目安であり、長期予測には現在の収録語句数を超える理論値が含まれます。
+同じカードには、1問4語句として、7・30・90・180・365日後の理論上の学習語句数と、その級の語彙目標へ到達する予想日を表示します。いずれも学習ペースの目安であり、長期予測には現在の収録語句数を超える理論値が含まれます。
 
-計画設定は匿名利用では `eiken_q1_study_plan_v1`、生徒別利用では同キーの生徒別localStorageへ保存します。クラウド進捗では既存の `_meta` とマージされる `studyPlanV1` として同期し、既存の進捗・アプリIDは変更しません。
+語彙目標は級ごとに次の値です。5級は前の級を持たないため0語を起点とし、準2級以降は「前級の目標＝当級の起点」という連鎖になっています。
+
+| 級 | 起点 | 目標 |
+| --- | ---: | ---: |
+| 5級 | 0 | 600 |
+| 準2級 | 1,500（3級相当） | 3,000 |
+| 2級 | 3,000 | 5,000 |
+| 準1級 | 5,000 | 9,000 |
+| 1級 | 9,000 | 14,000 |
+
+計画設定は級ごとに独立して保存します。1級は従来どおり `eiken_q1_study_plan_v1`、他の級は `eiken_q1_study_plan_v1_<級プレフィックス>`（例: `eiken_q1_study_plan_v1_eiken5`）です。生徒別利用では同じキーの生徒別localStorageへ保存します。クラウド進捗では、1級を既存の `studyPlanV1`、他の級を `studyPlanByGradeV1` として `_meta` へマージし、既存の進捗・アプリID・1級の目標レコードは変更しません。
 
 ## 対象データ
 
@@ -83,10 +93,11 @@ py -3 scripts/check_eiken1_alignment.py --dataset-id eiken1-2026-1
 py -3 scripts/check_eiken1_alignment.py --dataset-id eiken2-2026-1
 py -3 scripts/check_eiken1_alignment.py --dataset-id eikenp2-2026-1
 py -3 scripts/check_eiken1_alignment.py --dataset-id eikenp1-2026-1
+py -3 scripts/check_eiken1_alignment.py --dataset-id iuhw-set-2
 py -3 scripts/check_eiken1_alignment.py --all
 ```
 
-1級・2級・準2級・準1級の各セットは、公式形式の件数を保ったまま、問題文訳・語句メタデータ・例文・IPA・正答フラグの共通整合検査を実行できます。全1級セットの独立レビュー結果は `docs/EIKEN1_ALIGNMENT_REVIEW.md`、2級と準2級・準1級の整合記録は `docs/EIKEN2_ALIGNMENT.md`、`docs/EIKENP2_ALIGNMENT.md`、`docs/EIKENP1_ALIGNMENT.md` に記録しています。
+1級・2級・準2級・準1級・5級と国際医療福祉大学の各セットは、公式形式の件数を保ったまま、問題文訳・語句メタデータ・例文・IPA・正答フラグの共通整合検査を実行できます。`--all` はmanifest上の全28セットを対象にします。全1級セットの独立レビュー結果は `docs/EIKEN1_ALIGNMENT_REVIEW.md`、2級と準2級・準1級の整合記録は `docs/EIKEN2_ALIGNMENT.md`、`docs/EIKENP2_ALIGNMENT.md`、`docs/EIKENP1_ALIGNMENT.md`、医療福祉セットの整合記録は `docs/IUHW_ALIGNMENT.md` に記録しています。
 
 準1級のQ1データは、全体過去問データから次で抽出します。
 
@@ -129,7 +140,7 @@ py -3 scripts/generate_tts_1.py --grade 2 --round all
 py -3 scripts/generate_tts_1.py --grade 5 --round all
 py -3 scripts/generate_tts_1.py --grade pre1 --round all
 py -3 scripts/generate_tts_1.py --grade pre2 --round all
-py -3 scripts/generate_tts_1.py --grade iuhw --round set-1
+py -3 scripts/generate_tts_1.py --grade iuhw --round all
 ```
 
 生成先は単語が `assets/audio/vocab/<級>/<回>/`、熟語が `assets/audio/vocab/<級>/<回>/idiom/` です。生成済みの単語・熟語は暗記カードと意味チェックで「音声」ボタンから再生できます。
@@ -216,7 +227,7 @@ py -3 scripts/add_example_translations.py
 - `scripts/rebuild-word-origin-dictionaries.cjs`: 語源再調査台帳から表示用辞書を再生成
 - `scripts/apply-word-origin-research-batch.cjs`: 個別再調査バッチを台帳へ適用
 - `scripts/check-word-origin-research.cjs`: 1,255語の調査状況・出典・原形対応を検査
-- `scripts/check_eiken1_alignment.py`: 5級・準2級・2級・準1級・1級全セットの語句・例文・語源・音声の整合検査
+- `scripts/check_eiken1_alignment.py`: 5級・準2級・2級・準1級・1級と医療福祉の全28セットの語句・例文・語源・音声の整合検査
 - `scripts/review_official_questions.py`: 正答を伏せて2級・準2級・準1級公式問題をローカル別モデルでレビュー
 - `scripts/check-pre1-core-image-compat.cjs`: 準1級48句動詞の`word:`進捗互換と核心イメージを検査
 - `scripts/q1_eiken2_metadata.py`: 2級の例文補正・正答フラグ・出典メタデータの正本
