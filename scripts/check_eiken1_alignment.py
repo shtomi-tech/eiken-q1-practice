@@ -1,4 +1,4 @@
-"""英検5級・準2級・2級・準1級・1級セットを模試第6回の品質基準で検査する。
+"""英検5級・準2級・2級・準1級・1級と医療福祉セットを模試第6回の品質基準で検査する。
 
 問題の内容・ID・進捗キーを変更せず、既存セットの問題文訳・語句カードに
 必要なメタデータ、語源、核心イメージ、原形音声、表層音声が揃っているかを確認する。
@@ -26,6 +26,7 @@ VOCAB_AUDIO_GRADE = {
     "eikenp2": "pre2",
     "eikenp1": "pre1",
     "eiken5": "5",
+    "iuhw": "iuhw",
 }
 WORD_RE = re.compile(r"[A-Za-z]+(?:[-'][A-Za-z]+)*")
 BLANK_RE = re.compile(r"(?:\(\s*\)|（\s*）)")
@@ -292,12 +293,12 @@ def main() -> int:
     target = parser.add_mutually_exclusive_group(required=True)
     target.add_argument(
         "--dataset-id",
-        help="例: eiken1-mock-1 / eiken2-2026-1 / eikenp2-2026-1 / eikenp1-2026-1 / eiken5-2026-1",
+        help="例: eiken1-mock-1 / eiken2-2026-1 / eikenp2-2026-1 / eikenp1-2026-1 / eiken5-2026-1 / iuhw-set-1",
     )
     target.add_argument(
         "--all",
         action="store_true",
-        help="manifestに登録された英検セットをすべて検査する",
+        help="manifestに登録された英検・医療福祉セットをすべて検査する",
     )
     parser.add_argument(
         "--require-audio",
@@ -314,7 +315,7 @@ def main() -> int:
     if args.dataset_id and not any(
         args.dataset_id.startswith(f"{prefix}-") for prefix in VOCAB_AUDIO_GRADE
     ):
-        parser.error("eiken1-、eiken2-、eikenp2-、eikenp1-、またはeiken5-のdatasetIdを指定してください")
+        parser.error("eiken1-、eiken2-、eikenp2-、eikenp1-、eiken5-、またはiuhw-のdatasetIdを指定してください")
 
     has_issues = False
     for dataset_id in dataset_ids:
