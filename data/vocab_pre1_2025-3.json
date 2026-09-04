@@ -581,7 +581,18 @@
       "pos": "句動詞",
       "q": 15,
       "ipa": "/lˈaɪvˈɔf/",
-      "is_answer": false
+      "is_answer": false,
+      "coreImage": {
+        "chain": [
+          {
+            "term": "live off",
+            "gloss": "外部の支えを生活源にする"
+          },
+          {
+            "gloss": "人や収入源に頼って生活する"
+          }
+        ]
+      }
     },
     {
       "word": "make for",
@@ -591,7 +602,18 @@
       "pos": "句動詞",
       "q": 15,
       "ipa": "/mˈeɪkfˈɔɹ/",
-      "is_answer": true
+      "is_answer": true,
+      "coreImage": {
+        "chain": [
+          {
+            "term": "make for",
+            "gloss": "目標へ進む・結果を生む"
+          },
+          {
+            "gloss": "ある方向へ向かう、または結果に役立つ"
+          }
+        ]
+      }
     },
     {
       "word": "pass on",
@@ -601,7 +623,24 @@
       "pos": "句動詞",
       "q": 15,
       "ipa": "/pˈæsˈɑn/",
-      "is_answer": false
+      "is_answer": false,
+      "coreImage": {
+        "chain": [
+          {
+            "term": "pass",
+            "gloss": "次へ渡す"
+          },
+          {
+            "term": "on",
+            "gloss": "次の相手へ伝える"
+          },
+          {
+            "gloss": "情報や物を次へ伝える"
+          }
+        ],
+        "particle": "on",
+        "particleSense": "transmit"
+      }
     },
     {
       "word": "wipe out",
@@ -611,7 +650,24 @@
       "pos": "句動詞",
       "q": 15,
       "ipa": "/wˈaɪpˈaʊt/",
-      "is_answer": false
+      "is_answer": false,
+      "coreImage": {
+        "chain": [
+          {
+            "term": "wipe",
+            "gloss": "ぬぐい取る"
+          },
+          {
+            "term": "out",
+            "gloss": "外へ取り除く"
+          },
+          {
+            "gloss": "残らないほど一掃する"
+          }
+        ],
+        "particle": "out",
+        "particleSense": "remove"
+      }
     },
     {
       "word": "iron out",
@@ -621,7 +677,24 @@
       "pos": "句動詞",
       "q": 16,
       "ipa": "/ˈaɪɚnˈaʊt/",
-      "is_answer": false
+      "is_answer": false,
+      "coreImage": {
+        "chain": [
+          {
+            "term": "iron",
+            "gloss": "しわを伸ばす"
+          },
+          {
+            "term": "out",
+            "gloss": "もつれを外へほどく"
+          },
+          {
+            "gloss": "問題点を整理して解決する"
+          }
+        ],
+        "particle": "out",
+        "particleSense": "resolve"
+      }
     },
     {
       "word": "toss in",
@@ -631,7 +704,23 @@
       "pos": "句動詞",
       "q": 16,
       "ipa": "/tˈɔsɪn/",
-      "is_answer": false
+      "is_answer": false,
+      "coreImage": {
+        "chain": [
+          {
+            "term": "toss",
+            "gloss": "軽く放る"
+          },
+          {
+            "term": "in",
+            "gloss": "内側へ加える"
+          },
+          {
+            "gloss": "本体へ気軽に付け加える"
+          }
+        ],
+        "particle": "in"
+      }
     },
     {
       "word": "take on",
@@ -641,7 +730,24 @@
       "pos": "句動詞",
       "q": 16,
       "ipa": "/tˈeɪkˈɑn/",
-      "is_answer": true
+      "is_answer": true,
+      "coreImage": {
+        "chain": [
+          {
+            "term": "take",
+            "gloss": "自分の側へ引き受ける"
+          },
+          {
+            "term": "on",
+            "gloss": "対象へ接して担う"
+          },
+          {
+            "gloss": "仕事や責任を引き受ける"
+          }
+        ],
+        "particle": "on",
+        "particleSense": "contact"
+      }
     },
     {
       "word": "size up",
@@ -651,7 +757,24 @@
       "pos": "句動詞",
       "q": 16,
       "ipa": "/sˈaɪzˈəp/",
-      "is_answer": false
+      "is_answer": false,
+      "coreImage": {
+        "chain": [
+          {
+            "term": "size",
+            "gloss": "大きさや性質を測る"
+          },
+          {
+            "term": "up",
+            "gloss": "考えを組み上げて決める"
+          },
+          {
+            "gloss": "全体を見て評価する"
+          }
+        ],
+        "particle": "up",
+        "particleSense": "decide"
+      }
     },
     {
       "word": "sound off",
@@ -661,7 +784,24 @@
       "pos": "句動詞",
       "q": 17,
       "ipa": "/sˈaʊndˈɔf/",
-      "is_answer": false
+      "is_answer": false,
+      "coreImage": {
+        "chain": [
+          {
+            "term": "sound",
+            "gloss": "声を出す"
+          },
+          {
+            "term": "off",
+            "gloss": "外へ目立つように表す"
+          },
+          {
+            "gloss": "大声で意見や不満を述べる"
+          }
+        ],
+        "particle": "off",
+        "particleSense": "express"
+      }
     },
     {
       "word": "draw back",
@@ -671,7 +811,23 @@
       "pos": "句動詞",
       "q": 17,
       "ipa": "/dɹˈɔbˈæk/",
-      "is_answer": false
+      "is_answer": false,
+      "coreImage": {
+        "chain": [
+          {
+            "term": "draw",
+            "gloss": "引く"
+          },
+          {
+            "term": "back",
+            "gloss": "後ろ・元の位置へ戻す"
+          },
+          {
+            "gloss": "後ずさりして手を引く"
+          }
+        ],
+        "particle": "back"
+      }
     },
     {
       "word": "turn up",
@@ -681,7 +837,24 @@
       "pos": "句動詞",
       "q": 17,
       "ipa": "/tˈɝnˈəp/",
-      "is_answer": false
+      "is_answer": false,
+      "coreImage": {
+        "chain": [
+          {
+            "term": "turn",
+            "gloss": "向きを変える"
+          },
+          {
+            "term": "up",
+            "gloss": "表面へ現れる"
+          },
+          {
+            "gloss": "姿を現す、または見つかる"
+          }
+        ],
+        "particle": "up",
+        "particleSense": "appear"
+      }
     },
     {
       "word": "rule out",
@@ -691,7 +864,24 @@
       "pos": "句動詞",
       "q": 17,
       "ipa": "/ɹˈulˈaʊt/",
-      "is_answer": true
+      "is_answer": true,
+      "coreImage": {
+        "chain": [
+          {
+            "term": "rule",
+            "gloss": "判断の線を引く"
+          },
+          {
+            "term": "out",
+            "gloss": "範囲の外へ除く"
+          },
+          {
+            "gloss": "候補や可能性から除外する"
+          }
+        ],
+        "particle": "out",
+        "particleSense": "remove"
+      }
     },
     {
       "word": "chip in",
@@ -701,7 +891,23 @@
       "pos": "句動詞",
       "q": 18,
       "ipa": "/tʃˈɪpɪn/",
-      "is_answer": false
+      "is_answer": false,
+      "coreImage": {
+        "chain": [
+          {
+            "term": "chip",
+            "gloss": "小さな一片を出す"
+          },
+          {
+            "term": "in",
+            "gloss": "内側へ加える"
+          },
+          {
+            "gloss": "少額や一言を持ち寄る"
+          }
+        ],
+        "particle": "in"
+      }
     },
     {
       "word": "pull off",
@@ -711,7 +917,18 @@
       "pos": "句動詞",
       "q": 18,
       "ipa": "/pˈʊlˈɔf/",
-      "is_answer": false
+      "is_answer": false,
+      "coreImage": {
+        "chain": [
+          {
+            "term": "pull off",
+            "gloss": "困難なものを自分の側へ引き離す"
+          },
+          {
+            "gloss": "難しいことをうまくやり遂げる"
+          }
+        ]
+      }
     },
     {
       "word": "stick around",
@@ -721,7 +938,23 @@
       "pos": "句動詞",
       "q": 18,
       "ipa": "/stˈɪkɚˈaʊnd/",
-      "is_answer": true
+      "is_answer": true,
+      "coreImage": {
+        "chain": [
+          {
+            "term": "stick",
+            "gloss": "その場にくっつく"
+          },
+          {
+            "term": "around",
+            "gloss": "周囲にとどまる"
+          },
+          {
+            "gloss": "立ち去らず近くに居続ける"
+          }
+        ],
+        "particle": "around"
+      }
     },
     {
       "word": "bear up",
@@ -731,7 +964,18 @@
       "pos": "句動詞",
       "q": 18,
       "ipa": "/bˈɛɹˈəp/",
-      "is_answer": false
+      "is_answer": false,
+      "coreImage": {
+        "chain": [
+          {
+            "term": "bear up",
+            "gloss": "重さや圧力を支える"
+          },
+          {
+            "gloss": "苦しい状況でも持ちこたえる"
+          }
+        ]
+      }
     }
   ],
   "idioms": []

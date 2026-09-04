@@ -83,6 +83,7 @@ py -3 scripts/check_eiken1_alignment.py --dataset-id eiken1-2026-1
 py -3 scripts/check_eiken1_alignment.py --dataset-id eiken2-2026-1
 py -3 scripts/check_eiken1_alignment.py --dataset-id eikenp2-2026-1
 py -3 scripts/check_eiken1_alignment.py --dataset-id eikenp1-2026-1
+py -3 scripts/check_eiken1_alignment.py --all
 ```
 
 1級・2級・準2級・準1級の各セットは、公式形式の件数を保ったまま、問題文訳・語句メタデータ・例文・IPA・正答フラグの共通整合検査を実行できます。全1級セットの独立レビュー結果は `docs/EIKEN1_ALIGNMENT_REVIEW.md`、2級と準2級・準1級の整合記録は `docs/EIKEN2_ALIGNMENT.md`、`docs/EIKENP2_ALIGNMENT.md`、`docs/EIKENP1_ALIGNMENT.md` に記録しています。
@@ -101,6 +102,7 @@ py -3 scripts/build_q1_1_data.py
 py -3 scripts/enrich_flashcard_fields.py
 py -3 scripts/curate_1_examples.py
 py -3 scripts/check_q1_data.py
+py -3 scripts/build_q1_official_data.py
 ```
 
 1級公式過去問の入力PDFは `data/eiken_1/<round>/problem.pdf` と
@@ -206,6 +208,7 @@ py -3 scripts/add_example_translations.py
 - `static/vendor/harness/cloud.js`: 生徒別クラウド同期の生成物。直接編集しない
 - `scripts/build_q1_pre1_data.py`: 準1級Q1データの抽出
 - `scripts/build_q1_1_data.py`: 1級公式PDFから大問1を抽出
+- `scripts/build_q1_official_data.py`: 2級・準2級・準1級の非公開公式PDFと設問・4択・正答位置を照合・再適用
 - `scripts/build_pre1_data.py`: 1級公式PDFのページ・設問・解答キー抽出ヘルパー
 - `scripts/build_q1_5_2026-1_data.py`: 5級2026年度第1回の大問1データ生成
 - `scripts/enrich_flashcard_fields.py`: 対象データの発音・品詞の補完
@@ -213,7 +216,9 @@ py -3 scripts/add_example_translations.py
 - `scripts/rebuild-word-origin-dictionaries.cjs`: 語源再調査台帳から表示用辞書を再生成
 - `scripts/apply-word-origin-research-batch.cjs`: 個別再調査バッチを台帳へ適用
 - `scripts/check-word-origin-research.cjs`: 1,255語の調査状況・出典・原形対応を検査
-- `scripts/check_eiken1_alignment.py`: 1級・2級・準2級・準1級全セットの語句・例文・原形音声の整合検査
+- `scripts/check_eiken1_alignment.py`: 5級・準2級・2級・準1級・1級全セットの語句・例文・語源・音声の整合検査
+- `scripts/review_official_questions.py`: 正答を伏せて2級・準2級・準1級公式問題をローカル別モデルでレビュー
+- `scripts/check-pre1-core-image-compat.cjs`: 準1級48句動詞の`word:`進捗互換と核心イメージを検査
 - `scripts/q1_eiken2_metadata.py`: 2級の例文補正・正答フラグ・出典メタデータの正本
 - `scripts/curate_eiken2_data.py`: 2級の既存生成JSONへの整合情報の再適用
 - `scripts/q1_eikenp2_metadata.py`: 準2級公式過去問の例文補正・正答フラグ・出典メタデータの正本

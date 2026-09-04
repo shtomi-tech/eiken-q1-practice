@@ -581,7 +581,23 @@
       "pos": "句動詞",
       "q": 15,
       "ipa": "/tˈeɪkɪn/",
-      "is_answer": false
+      "is_answer": false,
+      "coreImage": {
+        "chain": [
+          {
+            "term": "take",
+            "gloss": "手元へ取る"
+          },
+          {
+            "term": "in",
+            "gloss": "内側へ取り込む"
+          },
+          {
+            "gloss": "情報を取り込んで理解する"
+          }
+        ],
+        "particle": "in"
+      }
     },
     {
       "word": "even out",
@@ -591,7 +607,24 @@
       "pos": "句動詞",
       "q": 15,
       "ipa": "/ˈivɪnˈaʊt/",
-      "is_answer": false
+      "is_answer": false,
+      "coreImage": {
+        "chain": [
+          {
+            "term": "even",
+            "gloss": "均等にする"
+          },
+          {
+            "term": "out",
+            "gloss": "むらを外へほどく"
+          },
+          {
+            "gloss": "偏りをなくして均等にする"
+          }
+        ],
+        "particle": "out",
+        "particleSense": "resolve"
+      }
     },
     {
       "word": "figure on",
@@ -601,7 +634,24 @@
       "pos": "句動詞",
       "q": 15,
       "ipa": "/fˈɪɡjɚɑn/",
-      "is_answer": true
+      "is_answer": true,
+      "coreImage": {
+        "chain": [
+          {
+            "term": "figure",
+            "gloss": "見積もる"
+          },
+          {
+            "term": "on",
+            "gloss": "前提として頼る"
+          },
+          {
+            "gloss": "起こるものとして見込む"
+          }
+        ],
+        "particle": "on",
+        "particleSense": "rely"
+      }
     },
     {
       "word": "make do",
@@ -611,7 +661,18 @@
       "pos": "句動詞",
       "q": 15,
       "ipa": "/mˈeɪkdˈu/",
-      "is_answer": false
+      "is_answer": false,
+      "coreImage": {
+        "chain": [
+          {
+            "term": "make do",
+            "gloss": "手元のもので間に合わせる"
+          },
+          {
+            "gloss": "不十分でも何とかやりくりする"
+          }
+        ]
+      }
     },
     {
       "word": "hold out",
@@ -621,7 +682,24 @@
       "pos": "句動詞",
       "q": 16,
       "ipa": "/hˈoʊldˈaʊt/",
-      "is_answer": false
+      "is_answer": false,
+      "coreImage": {
+        "chain": [
+          {
+            "term": "hold",
+            "gloss": "状態を保つ"
+          },
+          {
+            "term": "out",
+            "gloss": "譲らず外側に保つ"
+          },
+          {
+            "gloss": "圧力に屈せず持ちこたえる"
+          }
+        ],
+        "particle": "out",
+        "particleSense": "reserve"
+      }
     },
     {
       "word": "shoot down",
@@ -631,7 +709,24 @@
       "pos": "句動詞",
       "q": 16,
       "ipa": "/ʃˈutdˈaʊn/",
-      "is_answer": true
+      "is_answer": true,
+      "coreImage": {
+        "chain": [
+          {
+            "term": "shoot",
+            "gloss": "勢いよく打つ"
+          },
+          {
+            "term": "down",
+            "gloss": "下へ押さえ落とす"
+          },
+          {
+            "gloss": "提案を退けて却下する"
+          }
+        ],
+        "particle": "down",
+        "particleSense": "suppress"
+      }
     },
     {
       "word": "get over",
@@ -641,7 +736,23 @@
       "pos": "句動詞",
       "q": 16,
       "ipa": "/ɡˈɛtˈoʊvɚ/",
-      "is_answer": false
+      "is_answer": false,
+      "coreImage": {
+        "chain": [
+          {
+            "term": "get",
+            "gloss": "ある状態へ至る"
+          },
+          {
+            "term": "over",
+            "gloss": "障害を越える"
+          },
+          {
+            "gloss": "病気や衝撃を乗り越える"
+          }
+        ],
+        "particle": "over"
+      }
     },
     {
       "word": "snap up",
@@ -651,7 +762,24 @@
       "pos": "句動詞",
       "q": 16,
       "ipa": "/snˈæpˈəp/",
-      "is_answer": false
+      "is_answer": false,
+      "coreImage": {
+        "chain": [
+          {
+            "term": "snap",
+            "gloss": "素早くつかむ"
+          },
+          {
+            "term": "up",
+            "gloss": "残さず取り切る"
+          },
+          {
+            "gloss": "機会を逃さず手に入れる"
+          }
+        ],
+        "particle": "up",
+        "particleSense": "complete"
+      }
     },
     {
       "word": "tune up",
@@ -661,7 +789,24 @@
       "pos": "句動詞",
       "q": 17,
       "ipa": "/tˈunˈəp/",
-      "is_answer": false
+      "is_answer": false,
+      "coreImage": {
+        "chain": [
+          {
+            "term": "tune",
+            "gloss": "調子を合わせる"
+          },
+          {
+            "term": "up",
+            "gloss": "使える状態へ整える"
+          },
+          {
+            "gloss": "機械や楽器を調整する"
+          }
+        ],
+        "particle": "up",
+        "particleSense": "prepare"
+      }
     },
     {
       "word": "touch on",
@@ -671,7 +816,24 @@
       "pos": "句動詞",
       "q": 17,
       "ipa": "/tˈətʃˈɑn/",
-      "is_answer": false
+      "is_answer": false,
+      "coreImage": {
+        "chain": [
+          {
+            "term": "touch",
+            "gloss": "軽く触れる"
+          },
+          {
+            "term": "on",
+            "gloss": "話題へ接する"
+          },
+          {
+            "gloss": "詳述せず軽く言及する"
+          }
+        ],
+        "particle": "on",
+        "particleSense": "contact"
+      }
     },
     {
       "word": "tear down",
@@ -681,7 +843,24 @@
       "pos": "句動詞",
       "q": 17,
       "ipa": "/tˈɛɹdˈaʊn/",
-      "is_answer": true
+      "is_answer": true,
+      "coreImage": {
+        "chain": [
+          {
+            "term": "tear",
+            "gloss": "力を加えて壊す"
+          },
+          {
+            "term": "down",
+            "gloss": "下へ崩し落とす"
+          },
+          {
+            "gloss": "建物などを取り壊す"
+          }
+        ],
+        "particle": "down",
+        "particleSense": "suppress"
+      }
     },
     {
       "word": "free up",
@@ -691,7 +870,24 @@
       "pos": "句動詞",
       "q": 17,
       "ipa": "/fɹˈiəp/",
-      "is_answer": false
+      "is_answer": false,
+      "coreImage": {
+        "chain": [
+          {
+            "term": "free",
+            "gloss": "束縛から解く"
+          },
+          {
+            "term": "up",
+            "gloss": "手放して使えるようにする"
+          },
+          {
+            "gloss": "時間や資金を空ける"
+          }
+        ],
+        "particle": "up",
+        "particleSense": "release"
+      }
     },
     {
       "word": "get down",
@@ -701,7 +897,24 @@
       "pos": "句動詞",
       "q": 18,
       "ipa": "/ɡˈɛtdˈaʊn/",
-      "is_answer": true
+      "is_answer": true,
+      "coreImage": {
+        "chain": [
+          {
+            "term": "get",
+            "gloss": "ある状態へ移る"
+          },
+          {
+            "term": "down",
+            "gloss": "腰を据えて落ち着く"
+          },
+          {
+            "gloss": "本腰を入れて取りかかる"
+          }
+        ],
+        "particle": "down",
+        "particleSense": "settle"
+      }
     },
     {
       "word": "round out",
@@ -711,7 +924,18 @@
       "pos": "句動詞",
       "q": 18,
       "ipa": "/ɹˈaʊndˈaʊt/",
-      "is_answer": false
+      "is_answer": false,
+      "coreImage": {
+        "chain": [
+          {
+            "term": "round out",
+            "gloss": "欠けた部分を丸く整える"
+          },
+          {
+            "gloss": "必要な要素を補って完成させる"
+          }
+        ]
+      }
     },
     {
       "word": "die away",
@@ -721,7 +945,23 @@
       "pos": "句動詞",
       "q": 18,
       "ipa": "/dˈaɪəwˈeɪ/",
-      "is_answer": false
+      "is_answer": false,
+      "coreImage": {
+        "chain": [
+          {
+            "term": "die",
+            "gloss": "勢いを失う"
+          },
+          {
+            "term": "away",
+            "gloss": "遠ざかって消える"
+          },
+          {
+            "gloss": "音や光が次第に弱まる"
+          }
+        ],
+        "particle": "away"
+      }
     },
     {
       "word": "lay out",
@@ -731,7 +971,24 @@
       "pos": "句動詞",
       "q": 18,
       "ipa": "/lˈeɪˈaʊt/",
-      "is_answer": false
+      "is_answer": false,
+      "coreImage": {
+        "chain": [
+          {
+            "term": "lay",
+            "gloss": "並べて置く"
+          },
+          {
+            "term": "out",
+            "gloss": "外へ広げて見せる"
+          },
+          {
+            "gloss": "順序立てて配置・説明する"
+          }
+        ],
+        "particle": "out",
+        "particleSense": "spread"
+      }
     }
   ],
   "idioms": []

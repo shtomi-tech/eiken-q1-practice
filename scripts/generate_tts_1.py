@@ -35,7 +35,8 @@ OUTPUT_FORMAT = "audio-24khz-48kbitrate-mono-mp3"
 def audio_slug(surface: str) -> str:
     normalized = str(surface or "").lower()
     normalized = re.sub(r"[’']", "'", normalized)
-    normalized = re.sub(r"\b(one's|his|her|my|your|our|their|its)\b", "@poss", normalized)
+    if " " in normalized:
+        normalized = re.sub(r"\b(one's|his|her|my|your|our|their|its)\b", "@poss", normalized)
     normalized = re.sub(r"\s+", " ", normalized).strip()
     slug = re.sub(r"[^a-z0-9]+", "-", normalized).strip("-")
     if not slug:
@@ -113,6 +114,13 @@ def request_audio(key: str, region: str, word: str, voice: str) -> bytes:
 
 def generate(args: argparse.Namespace) -> int:
     jobs = load_jobs(args.grade, args.round_id)
+    if args.surfaces:
+        requested = {surface.casefold() for surface in args.surfaces}
+        jobs = [job for job in jobs if job[2].casefold() in requested]
+        found = {job[2].casefold() for job in jobs}
+        missing = sorted(requested - found)
+        if missing:
+            raise SystemExit(f"指定した語句が見つかりません: {', '.join(missing)}")
     if args.limit:
         jobs = jobs[: args.limit]
 
@@ -157,6 +165,7 @@ def main() -> int:
     parser.add_argument("--grade", choices=sorted(GRADE_CONFIG), default="1", help="1 / 2 / 5 / pre1 / pre2 / iuhw")
     parser.add_argument("--round", dest="round_id", default="all", help="既存の回 / set-1〜set-5 / all")
     parser.add_argument("--limit", type=int, help="先頭から指定件数だけ処理する")
+    parser.add_argument("--surface", dest="surfaces", action="append", help="指定した表層語句だけ生成する（複数指定可）")
     parser.add_argument("--voice", default=os.environ.get("AZURE_SPEECH_VOICE", DEFAULT_VOICE))
     parser.add_argument("--force", action="store_true", help="既存音声を上書きする")
     parser.add_argument("--dry-run", action="store_true", help="Azureへ送信せず対象だけ確認する")

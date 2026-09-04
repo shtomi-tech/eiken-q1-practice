@@ -25,7 +25,7 @@ const exampleIndex = buildFlashCardBody.indexOf("flashExampleRow");
 assert.ok(meaningIndex !== -1 && originIndex !== -1 && exampleIndex !== -1, "カードの意味・語源・例文の描画経路が必要です");
 assert.ok(meaningIndex < originIndex && originIndex < exampleIndex, "語源は意味の直下かつ例文の前に表示する必要があります");
 assert.ok(buildFlashCardBody.includes('item.type === "word"'), "語源表示は単語だけを対象にする必要があります");
-assert.ok(buildFlashCardBody.includes('item.type === "idiom"'), "熟語の核心イメージ分岐を維持する必要があります");
+assert.ok(buildFlashCardBody.includes("if (item.coreImage)"), "核心イメージ分岐を維持する必要があります");
 assert.equal(buildFlashCardBody.includes("item.etymology"), false, "単語カードは旧etymology分岐を使ってはいけません");
 assert.equal(js.includes("flashEtym"), false, "旧flashEtymクラスを残してはいけません");
 assert.equal(css.includes(".flashEtym"), false, "旧flashEtymルールを残してはいけません");

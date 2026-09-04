@@ -1252,12 +1252,14 @@ function lemmaAudioPathOf(item, useFlashcardLemma = false) {
   return learningEntryOf(item).audio || vocabularyAudioPath(item);
 }
 function normalizedSurface(value) {
-  return String(value || "")
+  const normalized = String(value || "")
     .toLowerCase()
     .replace(/[’']/g, "'")
-    .replace(/\b(one's|his|her|my|your|our|their|its)\b/g, "@poss")
     .replace(/\s+/g, " ")
     .trim();
+  return normalized.includes(" ")
+    ? normalized.replace(/\b(one's|his|her|my|your|our|their|its)\b/g, "@poss")
+    : normalized;
 }
 function audioSlug(value) {
   return normalizedSurface(value).replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
@@ -2746,11 +2748,11 @@ function buildFlashCard(item) {
 
   const inner = el("div", { class: "flashBody" });
   inner.appendChild(flashRow("意味", learning.meaning || item.meaning, "flashMeaning"));
-  if (item.type === "word") {
+  if (item.coreImage) {
+    inner.appendChild(flashCoreImage(item));
+  } else if (item.type === "word") {
     const wordOrigin = flashWordOrigin(item);
     if (wordOrigin) inner.appendChild(wordOrigin);
-  } else if (item.type === "idiom" && item.coreImage) {
-    inner.appendChild(flashCoreImage(item));
   }
   if (item.example) inner.appendChild(flashExampleRow(item));
   card.appendChild(inner);

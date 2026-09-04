@@ -120,13 +120,17 @@ def add_detail(
     pos: str,
     example: str,
     example_translation: str,
+    ipa: str = "",
 ) -> None:
-    DETAILS[(q, surface)] = {
+    detail = {
         "meaning": meaning,
         "pos": pos,
         "example": example,
         "exampleTranslation": example_translation,
     }
+    if ipa:
+        detail["ipa"] = ipa
+    DETAILS[(q, surface)] = detail
 
 
 # Q1
@@ -208,15 +212,15 @@ add_detail(13, "him", "彼を、彼に", "代名詞（所有格を含む）", "W
 add_detail(13, "us", "私たちを、私たちに", "代名詞（所有格を含む）", "Our teacher helps us with difficult homework after class.", "先生は授業の後、難しい宿題を私たちに手伝ってくれます。")
 
 # Q14
-add_detail(14, "I", "私は、私が", "代名詞（所有格を含む）", "Only I can answer this question about the missing eraser.", "なくなった消しゴムについて、この質問に答えられるのは私だけです。")
+add_detail(14, "I", "私は、私が", "代名詞（所有格を含む）", "Only I can answer this question about the missing eraser.", "なくなった消しゴムについて、この質問に答えられるのは私だけです。", "/aɪ/")
 add_detail(14, "my", "私の", "代名詞（所有格を含む）", "My sister keeps spare pencils in a small box.", "姉は予備の鉛筆を小さな箱に入れています。")
 add_detail(14, "me", "私を、私に", "代名詞（所有格を含む）", "Please call me when you find the blue eraser.", "青い消しゴムを見つけたら私に電話してください。")
 add_detail(14, "mine", "私のもの", "代名詞（所有格を含む）", "That red notebook is mine, so please leave it here.", "あの赤いノートは私のものなので、ここに置いておいてください。")
 
 # Q15
-add_detail(15, "is studying", "勉強している（主語が単数）", "動詞", "Kent is studying English in the library after school today.", "ケントは今日、放課後に図書館で英語を勉強しています。")
-add_detail(15, "are studying", "勉強している（主語が複数・you）", "動詞", "The two students are studying together for tomorrow's test.", "その2人の生徒は明日のテストに向けて一緒に勉強しています。")
-add_detail(15, "am studying", "勉強している（主語がI）", "動詞", "I am studying math now because the quiz starts soon.", "私は小テストがすぐ始まるので、今数学を勉強しています。")
+add_detail(15, "is studying", "勉強している（主語が単数）", "動詞", "Kent is studying English in the library after school today.", "ケントは今日、放課後に図書館で英語を勉強しています。", "/ɪz ˈstʌdiɪŋ/")
+add_detail(15, "are studying", "勉強している（主語が複数・you）", "動詞", "The two students are studying together for tomorrow's test.", "その2人の生徒は明日のテストに向けて一緒に勉強しています。", "/ɑr ˈstʌdiɪŋ/")
+add_detail(15, "am studying", "勉強している（主語がI）", "動詞", "I am studying math now because the quiz starts soon.", "私は小テストがすぐ始まるので、今数学を勉強しています。", "/æm ˈstʌdiɪŋ/")
 add_detail(15, "studying", "勉強している（現在分詞）", "動詞", "She is studying quietly while her brother watches television.", "彼女は弟がテレビを見ている間、静かに勉強しています。")
 
 

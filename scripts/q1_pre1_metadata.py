@@ -335,6 +335,96 @@ EXAMPLE_OVERRIDES = {
 }
 
 
+def _particle_core(
+    term: str,
+    term_gloss: str,
+    particle: str,
+    particle_gloss: str,
+    result: str,
+    particle_sense: str | None = None,
+) -> dict:
+    image = {
+        "chain": [
+            {"term": term, "gloss": term_gloss},
+            {"term": particle, "gloss": particle_gloss},
+            {"gloss": result},
+        ],
+        "particle": particle,
+    }
+    if particle_sense:
+        image["particleSense"] = particle_sense
+    return image
+
+
+def _derived_core(term: str, term_gloss: str, result: str) -> dict:
+    return {
+        "chain": [
+            {"term": term, "gloss": term_gloss},
+            {"gloss": result},
+        ]
+    }
+
+
+# 準1級の既存データでは句動詞も type="word" である。進捗キーを維持するため型は変えず、
+# 暗記カード表示用の coreImage だけを正本から付与する。
+CORE_IMAGES_BY_ROUND = {
+    "2025-2": {
+        "take in": _particle_core("take", "手元へ取る", "in", "内側へ取り込む", "情報を取り込んで理解する"),
+        "even out": _particle_core("even", "均等にする", "out", "むらを外へほどく", "偏りをなくして均等にする", "resolve"),
+        "figure on": _particle_core("figure", "見積もる", "on", "前提として頼る", "起こるものとして見込む", "rely"),
+        "make do": _derived_core("make do", "手元のもので間に合わせる", "不十分でも何とかやりくりする"),
+        "hold out": _particle_core("hold", "状態を保つ", "out", "譲らず外側に保つ", "圧力に屈せず持ちこたえる", "reserve"),
+        "shoot down": _particle_core("shoot", "勢いよく打つ", "down", "下へ押さえ落とす", "提案を退けて却下する", "suppress"),
+        "get over": _particle_core("get", "ある状態へ至る", "over", "障害を越える", "病気や衝撃を乗り越える"),
+        "snap up": _particle_core("snap", "素早くつかむ", "up", "残さず取り切る", "機会を逃さず手に入れる", "complete"),
+        "tune up": _particle_core("tune", "調子を合わせる", "up", "使える状態へ整える", "機械や楽器を調整する", "prepare"),
+        "touch on": _particle_core("touch", "軽く触れる", "on", "話題へ接する", "詳述せず軽く言及する", "contact"),
+        "tear down": _particle_core("tear", "力を加えて壊す", "down", "下へ崩し落とす", "建物などを取り壊す", "suppress"),
+        "free up": _particle_core("free", "束縛から解く", "up", "手放して使えるようにする", "時間や資金を空ける", "release"),
+        "get down": _particle_core("get", "ある状態へ移る", "down", "腰を据えて落ち着く", "本腰を入れて取りかかる", "settle"),
+        "round out": _derived_core("round out", "欠けた部分を丸く整える", "必要な要素を補って完成させる"),
+        "die away": _particle_core("die", "勢いを失う", "away", "遠ざかって消える", "音や光が次第に弱まる"),
+        "lay out": _particle_core("lay", "並べて置く", "out", "外へ広げて見せる", "順序立てて配置・説明する", "spread"),
+    },
+    "2025-3": {
+        "live off": _derived_core("live off", "外部の支えを生活源にする", "人や収入源に頼って生活する"),
+        "make for": _derived_core("make for", "目標へ進む・結果を生む", "ある方向へ向かう、または結果に役立つ"),
+        "pass on": _particle_core("pass", "次へ渡す", "on", "次の相手へ伝える", "情報や物を次へ伝える", "transmit"),
+        "wipe out": _particle_core("wipe", "ぬぐい取る", "out", "外へ取り除く", "残らないほど一掃する", "remove"),
+        "iron out": _particle_core("iron", "しわを伸ばす", "out", "もつれを外へほどく", "問題点を整理して解決する", "resolve"),
+        "toss in": _particle_core("toss", "軽く放る", "in", "内側へ加える", "本体へ気軽に付け加える"),
+        "take on": _particle_core("take", "自分の側へ引き受ける", "on", "対象へ接して担う", "仕事や責任を引き受ける", "contact"),
+        "size up": _particle_core("size", "大きさや性質を測る", "up", "考えを組み上げて決める", "全体を見て評価する", "decide"),
+        "sound off": _particle_core("sound", "声を出す", "off", "外へ目立つように表す", "大声で意見や不満を述べる", "express"),
+        "draw back": _particle_core("draw", "引く", "back", "後ろ・元の位置へ戻す", "後ずさりして手を引く"),
+        "turn up": _particle_core("turn", "向きを変える", "up", "表面へ現れる", "姿を現す、または見つかる", "appear"),
+        "rule out": _particle_core("rule", "判断の線を引く", "out", "範囲の外へ除く", "候補や可能性から除外する", "remove"),
+        "chip in": _particle_core("chip", "小さな一片を出す", "in", "内側へ加える", "少額や一言を持ち寄る"),
+        "pull off": _derived_core("pull off", "困難なものを自分の側へ引き離す", "難しいことをうまくやり遂げる"),
+        "stick around": _particle_core("stick", "その場にくっつく", "around", "周囲にとどまる", "立ち去らず近くに居続ける"),
+        "bear up": _derived_core("bear up", "重さや圧力を支える", "苦しい状況でも持ちこたえる"),
+    },
+    "2026-1": {
+        "sank in": _particle_core("sink", "沈んで深く入る", "in", "内側へ入り込む", "意味が徐々に心へしみ込む"),
+        "let out": _particle_core("let", "制限を解いて出す", "out", "内側から外へ表す", "声や秘密などを外へ出す", "express"),
+        "went under": _particle_core("go", "ある状態へ進む", "under", "力の下へ沈む", "支えきれず倒産・沈没する"),
+        "lived off": _derived_core("live off", "外部の支えを生活源にする", "人や収入源に頼って生活する"),
+        "add up": _particle_core("add", "一つずつ加える", "up", "最後までまとめ上げる", "合計する、または筋が通る", "complete"),
+        "read into": _particle_core("read", "意味を読み取る", "into", "表面から奥へ入り込む", "明示されていない意味まで読み込む"),
+        "take off": _particle_core("take", "手に取って動かす", "off", "接していた場所から離す", "身から外す、または地面を離れる", "separate"),
+        "fall out": _particle_core("fall", "まとまりから落ちる", "out", "集団の外へ離れる", "関係が崩れて仲たがいする", "social"),
+        "slip away": _particle_core("slip", "気づかれず滑る", "away", "元の場所から離れる", "こっそり立ち去る、または過ぎ去る"),
+        "tear up": _particle_core("tear", "引き裂く", "up", "まとまった状態を乱す", "紙や契約を破って無効にする", "disrupt"),
+        "drop out": _particle_core("drop", "位置から落ちる", "out", "集団の外へ離れる", "学校や競争から脱落する", "social"),
+        "follow up": _particle_core("follow", "後を追う", "up", "残りまで完了させる", "後から確認・追跡する", "complete"),
+        "fed off": _derived_core("feed off", "外部のものを糧として取り込む", "何かをエネルギー源にして強まる"),
+        "burnt out": _particle_core("burn", "燃えて力を使う", "out", "最後まで出し切る", "燃料や気力を使い果たす", "exhaust"),
+        "fell through": _derived_core("fall through", "支えを抜けて下へ落ちる", "計画が支えを失って実現しない"),
+        "ate up": _particle_core("eat", "食べて取り込む", "up", "残さず使い切る", "食料・時間・資金を大量に消費する", "complete"),
+    },
+}
+
+
 def load_json(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -376,13 +466,27 @@ def apply_round(round_id: str) -> None:
         raise ValueError(f"{round_id}: 準1級の語句構成が18問・72語から変わっています")
 
     overrides = EXAMPLE_OVERRIDES.get(round_id, {})
+    core_images = CORE_IMAGES_BY_ROUND[round_id]
     word_surfaces = {str(item.get("word", "")) for item in words}
     if set(overrides) - word_surfaces:
         raise ValueError(f"{round_id}: 例文補正の対象語が語彙データにありません")
+    if set(core_images) - word_surfaces:
+        raise ValueError(f"{round_id}: 核心イメージの対象語が語彙データにありません")
+    phrasal_surfaces = {surface for surface in word_surfaces if " " in surface}
+    if set(core_images) != phrasal_surfaces:
+        raise ValueError(
+            f"{round_id}: 句動詞と核心イメージの定義が一致しません: "
+            f"{sorted(set(core_images) ^ phrasal_surfaces)}"
+        )
     for item in words:
-        override = overrides.get(str(item.get("word", "")))
+        surface = str(item.get("word", ""))
+        override = overrides.get(surface)
         if override:
             item["example"], item["exampleTranslation"] = override
+        if surface in core_images:
+            item["coreImage"] = core_images[surface]
+        else:
+            item.pop("coreImage", None)
 
     items_by_q = {}
     for item in words:
@@ -409,4 +513,4 @@ def apply_round(round_id: str) -> None:
     write_json(vocab_path, vocab_data)
 
 
-__all__ = ["ROUND_IDS", "apply_round"]
+__all__ = ["CORE_IMAGES_BY_ROUND", "ROUND_IDS", "apply_round"]

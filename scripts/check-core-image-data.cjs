@@ -21,12 +21,17 @@ const irregularBase = {
   brought: "bring",
   caught: "catch",
   dealt: "deal",
+  ate: "eat",
+  burnt: "burn",
+  fed: "feed",
+  fell: "fall",
   held: "hold",
   laid: "lay",
   lost: "lose",
   made: "make",
   paid: "pay",
   sold: "sell",
+  sank: "sink",
   stood: "stand",
   took: "take",
   felt: "feel",
@@ -50,6 +55,10 @@ function assertNonEmptyString(value, label) {
 
 function normalizedPhrase(value) {
   return String(value || "").toLowerCase().replace(/\s+/g, " ").trim();
+}
+
+function coreSurface(item) {
+  return item.phrase || item.word || "";
 }
 
 function hasParticleTerm(chain, particle) {
@@ -157,7 +166,7 @@ function simulatedSiblingPool(item) {
 function simulatedVisibleSiblings(item) {
   const pool = simulatedSiblingPool(item);
   const ownPhrases = new Set([
-    normalizedPhrase(item.phrase),
+    normalizedPhrase(coreSurface(item)),
     normalizedPhrase((item.coreImage.chain || []).filter((step) => step.term).map((step) => step.term).join(" ")),
   ]);
   const filtered = pool.filter((sibling) => !ownPhrases.has(normalizedPhrase(sibling.phrase)));
@@ -167,7 +176,7 @@ function simulatedVisibleSiblings(item) {
 
 function simulatedFilteredSiblingCount(item) {
   const ownPhrases = new Set([
-    normalizedPhrase(item.phrase),
+    normalizedPhrase(coreSurface(item)),
     normalizedPhrase((item.coreImage.chain || []).filter((step) => step.term).map((step) => step.term).join(" ")),
   ]);
   return simulatedSiblingPool(item).filter((sibling) => !ownPhrases.has(normalizedPhrase(sibling.phrase))).length;
@@ -192,10 +201,10 @@ function assertNoSimulatedSlotCollisions(items, label) {
     assert.equal(
       previous,
       undefined,
-      `${label}/${item.phrase}: slot ${slot} が ${previous?.phrase || "別の熟語"} と同じ仲間例を選びました`,
+      `${label}/${coreSurface(item)}: slot ${slot} が ${previous?.phrase || "別の熟語"} と同じ仲間例を選びました`,
     );
     const group = selections.get(key) || new Map();
-    group.set(signature, { phrase: item.phrase, slot });
+    group.set(signature, { phrase: coreSurface(item), slot });
     selections.set(key, group);
   }
 }
@@ -242,8 +251,13 @@ for (const fileName of vocabFiles) {
   const senseUseCounts = new Map();
   const phraseCorePresence = new Map();
   let fileCoreImageCount = 0;
-  for (const item of vocab.idioms || []) {
-    const phraseKey = normalizedPhrase(item.phrase);
+  const coreItems = [
+    ...(vocab.words || []).filter((item) => Object.prototype.hasOwnProperty.call(item, "coreImage")),
+    ...(vocab.idioms || []),
+  ];
+  for (const item of coreItems) {
+    const surface = coreSurface(item);
+    const phraseKey = normalizedPhrase(surface);
     const hasCoreImage = Object.prototype.hasOwnProperty.call(item, "coreImage");
     if (deliveryVocabFiles.has(fileName)) {
       const existing = uniqueDeliveryEntries.get(phraseKey);
@@ -251,17 +265,17 @@ for (const fileName of vocabFiles) {
         assert.equal(
           existing.hasCoreImage,
           hasCoreImage,
-          `${fileName}/${item.phrase}: 配信セット間でcoreImageの有無が一致していません`,
+          `${fileName}/${surface}: 配信セット間でcoreImageの有無が一致していません`,
         );
       } else {
-        uniqueDeliveryEntries.set(phraseKey, { phrase: item.phrase, hasCoreImage, item });
+        uniqueDeliveryEntries.set(phraseKey, { phrase: surface, hasCoreImage, item });
       }
     }
     if (phraseCorePresence.has(phraseKey)) {
       assert.equal(
         phraseCorePresence.get(phraseKey),
         hasCoreImage,
-        `${fileName}/${item.phrase}: 同一セット内の重複phraseでcoreImageの有無が一致していません`,
+        `${fileName}/${surface}: 同一セット内の重複phraseでcoreImageの有無が一致していません`,
       );
     } else {
       phraseCorePresence.set(phraseKey, hasCoreImage);
@@ -269,13 +283,13 @@ for (const fileName of vocabFiles) {
     if (!hasCoreImage) continue;
     coreImageCount += 1;
     fileCoreImageCount += 1;
-    const label = `${fileName}/${item.phrase}`;
+    const label = `${fileName}/${surface}`;
     const image = item.coreImage;
     Object.keys(image).forEach((key) => {
       assert.ok(allowedCoreImageKeys.has(key), `${label}: coreImage.${key} は未使用フィールドです`);
     });
     if (fileName === "vocab_1_2025-2.json") {
-      const expectedTerminal = expected2025_2Terminals.get(normalizedPhrase(item.phrase));
+      const expectedTerminal = expected2025_2Terminals.get(normalizedPhrase(surface));
       if (expectedTerminal != null) {
         assert.equal(
           image.chain.at(-1).gloss,
@@ -298,7 +312,7 @@ for (const fileName of vocabFiles) {
         assertNonEmptyString(step.term, `${label}: chain[${index}].term`);
         assert.equal(step.term, step.term.toLowerCase(), `${label}: chain[${index}].term は小文字の原形で書きます`);
         assert.ok(
-          tokens(step.term).every((termToken) => tokens(item.phrase).some((phraseToken) => relatedTerm(termToken, phraseToken))),
+          tokens(step.term).every((termToken) => tokens(surface).some((phraseToken) => relatedTerm(termToken, phraseToken))),
           `${label}: chain[${index}].term が phrase と対応していません`,
         );
       }
@@ -315,7 +329,7 @@ for (const fileName of vocabFiles) {
     if (image.particle != null) {
       assertNonEmptyString(image.particle, `${label}: particle`);
       assert.ok(particleEntry, `${label}: particle辞書に ${image.particle} がありません`);
-      const phraseTokens = tokens(item.phrase);
+      const phraseTokens = tokens(surface);
       assert.ok(
         tokens(image.particle).every((particleToken) => phraseTokens.includes(particleToken)),
         `${label}: particle が phrase に含まれていません`,
@@ -330,7 +344,7 @@ for (const fileName of vocabFiles) {
         `${label}: particleSense ${image.particleSense} が辞書にありません`,
       );
       const senseKey = `${image.particle}\u0000${image.particleSense}`;
-      const phraseSenseKey = `${image.particle}\u0000${normalizedPhrase(item.phrase)}`;
+      const phraseSenseKey = `${image.particle}\u0000${normalizedPhrase(surface)}`;
       const phraseSenseRefs = senseRefsByPhrase.get(phraseSenseKey) || new Set();
       phraseSenseRefs.add(image.particleSense);
       senseRefsByPhrase.set(phraseSenseKey, phraseSenseRefs);
@@ -353,17 +367,8 @@ for (const fileName of vocabFiles) {
         assertNonEmptyString(sibling && sibling.gloss, `${label}: coreImage.siblings[${index}].gloss`);
       });
     }
-    const senseEntry = image.particleSense && particleEntry && Array.isArray(particleEntry.senses)
-      ? particleEntry.senses.find((sense) => sense.id === image.particleSense)
-      : null;
-    const resolvedSiblings = image.siblings || senseEntry?.siblings || particleEntry?.siblings || [];
-    const ownPhrases = new Set([
-      normalizedPhrase(item.phrase),
-      normalizedPhrase((image.chain || []).filter((step) => step.term).map((step) => step.term).join(" ")),
-    ]);
-    resolvedSiblings.forEach((sibling) => {
-      assert.ok(!ownPhrases.has(normalizedPhrase(sibling.phrase)), `${label}: 仲間例に自分自身を含めないでください`);
-    });
+    // 共有辞書の用例に対象語自身が含まれる場合は、表示候補の計算時に除外する。
+    // 個別データへ同じsiblingsを複製させないため、辞書側の自己例は許容する。
     if (image.note != null) assertNonEmptyString(image.note, `${label}: note`);
   }
   for (const { particle, senseId, count } of senseUseCounts.values()) {
@@ -374,8 +379,8 @@ for (const fileName of vocabFiles) {
       `${fileName}/${particle}/${senseId}: ${count}件参照されるため仲間例は${minimumPoolSize}件以上必要です`,
     );
   }
-  if (deliveryVocabFiles.has(fileName) && (vocab.idioms || []).length > 0) {
-    progressRows.push({ fileName, idioms: vocab.idioms.length, coreImage: fileCoreImageCount });
+  if (deliveryVocabFiles.has(fileName) && coreItems.length > 0) {
+    progressRows.push({ fileName, items: coreItems.length, coreImage: fileCoreImageCount });
   }
 }
 
@@ -402,10 +407,10 @@ assert.ok(coreImageCount > 0, "coreImage を持つ熟語が1件以上必要で�
 // 件数は固定しない。セットを追加しても落ちないよう、契約（1件ずつの構造）だけを検査して総数は記録に留める。
 assert.equal(particleChainLengths.get(2) || 0, 0, "particle付きcoreImageに2段chainを残さないでください");
 console.log(`particle chain coverage: ${particleChainCount} entries; lengths ${JSON.stringify(Object.fromEntries(particleChainLengths))}`);
-const deliveryIdiomTotal = progressRows.reduce((sum, row) => sum + row.idioms, 0);
-console.log(`core image delivery scope: ${progressRows.length} sets / ${deliveryIdiomTotal} idioms`);
+const deliveryCoreItemTotal = progressRows.reduce((sum, row) => sum + row.items, 0);
+console.log(`core image delivery scope: ${progressRows.length} sets / ${deliveryCoreItemTotal} items`);
 for (const row of progressRows) {
-  console.log(`core image progress: ${row.fileName}: ${row.idioms} idioms / ${row.coreImage} coreImage`);
+  console.log(`core image progress: ${row.fileName}: ${row.items} items / ${row.coreImage} coreImage`);
 }
 const uniqueCoreRows = [...uniqueDeliveryEntries.values()];
 const unannotatedRows = uniqueCoreRows.filter((row) => !row.hasCoreImage);

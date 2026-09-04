@@ -17,7 +17,8 @@ const wordOriginBranch = buildFlashCardBody.indexOf("flashWordOrigin");
 assert.ok(coreImageBranch !== -1, "buildFlashCard は coreImage を判定する必要があります");
 assert.equal(etymologyBranch, -1, "buildFlashCard は旧etymology表示を使ってはいけません");
 assert.ok(wordOriginBranch !== -1, "buildFlashCard は単語の語源表示を判定する必要があります");
-assert.ok(buildFlashCardBody.includes('item.type === "idiom"'), "coreImageは熟語カードでだけ表示する必要があります");
+assert.ok(buildFlashCardBody.includes("if (item.coreImage)"), "coreImageは項目型に関係なく表示する必要があります");
+assert.ok(coreImageBranch < wordOriginBranch, "coreImageは互換word項目の語源表示より優先する必要があります");
 
 for (const marker of ["coreChain", "coreChainStep", "coreChainTerm", "coreChainGloss"]) {
   assert.ok(flashCoreImageBody.includes(marker), `flashCoreImage に ${marker} が必要です`);

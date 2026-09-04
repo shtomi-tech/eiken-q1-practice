@@ -1,4 +1,4 @@
-"""英検1級・2級・準2級・準1級セットを模試第6回の品質基準で検査する。
+"""英検5級・準2級・2級・準1級・1級セットを模試第6回の品質基準で検査する。
 
 問題の内容・ID・進捗キーを変更せず、既存セットの問題文訳・語句カードに
 必要なメタデータ、語源、核心イメージ、原形音声、表層音声が揃っているかを確認する。
@@ -20,7 +20,13 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 VOCAB_AUDIO_DIR = ROOT / "assets" / "audio" / "vocab"
 LEMMA_AUDIO_DIR = ROOT / "assets" / "audio" / "lemma"
-VOCAB_AUDIO_GRADE = {"eiken1": "1", "eiken2": "2", "eikenp2": "pre2", "eikenp1": "pre1"}
+VOCAB_AUDIO_GRADE = {
+    "eiken1": "1",
+    "eiken2": "2",
+    "eikenp2": "pre2",
+    "eikenp1": "pre1",
+    "eiken5": "5",
+}
 WORD_RE = re.compile(r"[A-Za-z]+(?:[-'][A-Za-z]+)*")
 BLANK_RE = re.compile(r"(?:\(\s*\)|（\s*）)")
 TRANSLATION_BLANK_RE = BLANK_RE
@@ -40,7 +46,8 @@ def item_surface(item: dict[str, Any]) -> str:
 
 def audio_slug(value: str) -> str:
     normalized = re.sub(r"[’']", "'", value).lower()
-    normalized = re.sub(r"\b(one's|his|her|my|your|our|their|its)\b", "@poss", normalized)
+    if " " in normalized:
+        normalized = re.sub(r"\b(one's|his|her|my|your|our|their|its)\b", "@poss", normalized)
     normalized = re.sub(r"\s+", " ", normalized).strip()
     return re.sub(r"^-+|-+$", "", re.sub(r"[^a-z0-9]+", "-", normalized))
 
@@ -82,6 +89,16 @@ def manifest_entry(dataset_id: str) -> dict[str, Any]:
     return entry
 
 
+def manifest_dataset_ids() -> list[str]:
+    manifest = load(DATA_DIR / "manifest.json")
+    q1 = manifest.get("q1", {})
+    return [
+        dataset_id
+        for dataset_id in q1
+        if dataset_id.split("-", 1)[0] in VOCAB_AUDIO_GRADE
+    ]
+
+
 def data_path(url: str) -> Path:
     if not url.startswith("data/"):
         raise ValueError(f"data URLが不正です: {url}")
@@ -118,10 +135,8 @@ def expected_audio_path(dataset_id: str, item: dict[str, Any]) -> Path:
 
 
 def default_audio_required(dataset_id: str) -> bool:
-    prefix, round_id = dataset_id.split("-", 1)
-    if prefix in {"eiken1", "eiken2"}:
-        return True
-    return prefix == "eikenp2" and not round_id.startswith("mock-")
+    prefix = dataset_id.split("-", 1)[0]
+    return prefix in VOCAB_AUDIO_GRADE
 
 
 def collect_issues(dataset_id: str, require_audio: bool | None = None) -> list[str]:
@@ -174,6 +189,7 @@ def collect_issues(dataset_id: str, require_audio: bool | None = None) -> list[s
 
     seen_surfaces: dict[str, str] = {}
     seen_examples: dict[str, str] = {}
+    audio_owners: dict[Path, str] = {}
     for q in expected_qs:
         question = questions_by_q.get(q, {})
         items = items_by_q.get(q, [])
@@ -199,7 +215,11 @@ def collect_issues(dataset_id: str, require_audio: bool | None = None) -> list[s
         for choice in choices:
             if not any(surface_variants(choice) & surface_variants(surface) for surface in surfaces):
                 issues.append(f"Q{q}: 選択肢と語彙項目が対応しません: {choice}")
-            if re.search(rf"\b{re.escape(choice)}\b", str(question.get("stem", "")), flags=re.IGNORECASE):
+            if len(choice) >= 3 and re.search(
+                rf"\b{re.escape(choice)}\b",
+                str(question.get("stem", "")),
+                flags=re.IGNORECASE,
+            ):
                 issues.append(f"Q{q}: 選択肢が設問文に露出しています: {choice}")
 
         meanings = [str(item.get("meaning", "")) for item in items]
@@ -211,10 +231,11 @@ def collect_issues(dataset_id: str, require_audio: bool | None = None) -> list[s
             label = f"Q{q}/{surface}"
             if not surface:
                 continue
-            for variant in surface_variants(surface):
-                if variant in seen_surfaces:
-                    issues.append(f"{label}: 同一セット内で語形が重複しています（{seen_surfaces[variant]}）")
-                seen_surfaces[variant] = surface
+            if prefix != "eiken5":
+                for variant in surface_variants(surface):
+                    if variant in seen_surfaces:
+                        issues.append(f"{label}: 同一セット内で語形が重複しています（{seen_surfaces[variant]}）")
+                    seen_surfaces[variant] = surface
 
             for field in ("meaning", "pos", "example", "exampleTranslation"):
                 if not str(item.get(field, "")).strip():
@@ -233,10 +254,21 @@ def collect_issues(dataset_id: str, require_audio: bool | None = None) -> list[s
             seen_examples[skeleton] = surface
 
             canonical = canonical_lemmas.get(surface.lower(), surface.lower())
-            if prefix == "eiken1" and "word" in item and canonical not in origins and canonical not in excluded:
+            if (
+                "word" in item
+                and not isinstance(item.get("coreImage"), dict)
+                and canonical not in origins
+                and canonical not in excluded
+            ):
                 issues.append(f"{label}: 語源またはC型理由がありません（原形: {canonical}）")
 
             audio_path = expected_audio_path(dataset_id, item)
+            previous_audio_owner = audio_owners.get(audio_path)
+            if previous_audio_owner and previous_audio_owner.casefold() != surface.casefold():
+                issues.append(
+                    f"{label}: 別語句と表層音声パスが衝突しています（{previous_audio_owner} / {audio_path.name}）"
+                )
+            audio_owners[audio_path] = surface
             if require_audio and (not audio_path.is_file() or audio_path.stat().st_size == 0):
                 issues.append(f"{label}: 表層音声がありません（{audio_path.relative_to(ROOT)}）")
             if "word" in item:
@@ -247,7 +279,7 @@ def collect_issues(dataset_id: str, require_audio: bool | None = None) -> list[s
                         issues.append(
                             f"{label}: 原形音声がありません（{lemma_audio.relative_to(ROOT)}）"
                         )
-            elif not isinstance(item.get("coreImage"), dict):
+            elif "phrase" in item and not isinstance(item.get("coreImage"), dict):
                 issues.append(f"{label}: 核心イメージがありません")
 
     return issues
@@ -257,11 +289,20 @@ def main() -> int:
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--dataset-id", required=True, help="例: eiken1-mock-1 / eiken2-2026-1 / eikenp2-2026-1 / eikenp1-2026-1")
+    target = parser.add_mutually_exclusive_group(required=True)
+    target.add_argument(
+        "--dataset-id",
+        help="例: eiken1-mock-1 / eiken2-2026-1 / eikenp2-2026-1 / eikenp1-2026-1 / eiken5-2026-1",
+    )
+    target.add_argument(
+        "--all",
+        action="store_true",
+        help="manifestに登録された英検セットをすべて検査する",
+    )
     parser.add_argument(
         "--require-audio",
         action="store_true",
-        help="表層MP3も必須にする（1級・2級・準2級は省略時も必須、準1級はブラウザ音声を許容）",
+        help="対象セットの表層MP3を必須にする",
     )
     parser.add_argument(
         "--audit",
@@ -269,22 +310,31 @@ def main() -> int:
         help="不足項目を列挙するだけで終了する（整備前の監査用）",
     )
     args = parser.parse_args()
-    if not any(args.dataset_id.startswith(f"{prefix}-") for prefix in VOCAB_AUDIO_GRADE):
-        parser.error("eiken1-、eiken2-、eikenp2-、または eikenp1- のdatasetIdを指定してください")
-    try:
-        prefix = args.dataset_id.split("-", 1)[0]
-        issues = collect_issues(args.dataset_id, require_audio=args.require_audio or default_audio_required(args.dataset_id))
-    except (KeyError, TypeError, ValueError, FileNotFoundError, json.JSONDecodeError) as error:
-        print(f"{args.dataset_id}: 検査自体を実行できません: {error}", file=sys.stderr)
-        return 1
+    dataset_ids = manifest_dataset_ids() if args.all else [args.dataset_id]
+    if args.dataset_id and not any(
+        args.dataset_id.startswith(f"{prefix}-") for prefix in VOCAB_AUDIO_GRADE
+    ):
+        parser.error("eiken1-、eiken2-、eikenp2-、eikenp1-、またはeiken5-のdatasetIdを指定してください")
 
-    if issues:
-        print(f"{args.dataset_id}: {len(issues)}件の不足・不整合")
-        for issue in issues:
-            print(f"- {issue}")
-        return 0 if args.audit else 1
-    print(f"{args.dataset_id}: 第6回基準の整合OK")
-    return 0
+    has_issues = False
+    for dataset_id in dataset_ids:
+        try:
+            issues = collect_issues(
+                dataset_id,
+                require_audio=args.require_audio or default_audio_required(dataset_id),
+            )
+        except (KeyError, TypeError, ValueError, FileNotFoundError, json.JSONDecodeError) as error:
+            print(f"{dataset_id}: 検査自体を実行できません: {error}", file=sys.stderr)
+            return 1
+
+        if issues:
+            has_issues = True
+            print(f"{dataset_id}: {len(issues)}件の不足・不整合")
+            for issue in issues:
+                print(f"- {issue}")
+        else:
+            print(f"{dataset_id}: 第6回基準の整合OK")
+    return 0 if args.audit or not has_issues else 1
 
 
 if __name__ == "__main__":

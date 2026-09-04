@@ -54,12 +54,14 @@ function lemmaAudioPathOf(item, useFlashcardLemma = false) {
   return learningEntryOf(item).audio || vocabularyAudioPath(item);
 }
 function normalizedSurface(value) {
-  return String(value || "")
+  const normalized = String(value || "")
     .toLowerCase()
     .replace(/[’']/g, "'")
-    .replace(/\b(one's|his|her|my|your|our|their|its)\b/g, "@poss")
     .replace(/\s+/g, " ")
     .trim();
+  return normalized.includes(" ")
+    ? normalized.replace(/\b(one's|his|her|my|your|our|their|its)\b/g, "@poss")
+    : normalized;
 }
 function audioSlug(value) {
   return normalizedSurface(value).replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
