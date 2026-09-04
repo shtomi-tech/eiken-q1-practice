@@ -68,6 +68,10 @@ assert.match(
 // --- セッション見出し（Task7） ---
 assert.ok(!renderSessionBody.includes("sessionStickyNav("), "重複するsticky現在地バーを描画しない");
 assert.ok(renderSessionBody.includes("sessionHeadBack"), "タイトル行の右端に一覧へ戻る操作が必要");
+assert.ok(
+  /if \(!isMeaning && !isFinal\) panel\.appendChild\(questionProgressBar\(\)\);/.test(renderSessionBody),
+  "最終チェック画面では重複する設問進捗バーを表示しない必要がある",
+);
 
 // --- 完了画面（Task8） ---
 assert.ok(

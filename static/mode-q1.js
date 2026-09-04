@@ -2571,9 +2571,9 @@ function renderSession() {
   if (isFinal) panel.appendChild(finalBar());
   else if (isMeaning) panel.appendChild(meaningBar());
   else panel.appendChild(stageBar(session.stage));
-  // 意味だけ復習セッション中はプール解放率のバーを出さない。解放状況はホームの間隔復習カードが持ち、
-  // セッション中の位置・正誤数は meaningBar に集約する（設問へ早く到達させるため画面上部を短くする）。
-  if (!isMeaning) panel.appendChild(questionProgressBar());
+  // 意味だけ復習・最終チェックは、それぞれ meaningBar/finalBar に位置・正誤数を集約する。
+  // 重複する設問進捗カードは通常学習の3ステップだけに表示する。
+  if (!isMeaning && !isFinal) panel.appendChild(questionProgressBar());
 
   const body = el("div", {});
   panel.appendChild(body);
