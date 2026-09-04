@@ -10,8 +10,11 @@ const studyPanel = extractFunctionBody(js, "studyPlanPanel");
 const vocabGoal = extractFunctionBody(js, "vocabGoalCard");
 const cloudMeta = extractFunctionBody(js, "cloudMeta");
 
-assert.match(home, /currentGrade\(\) === "eiken1"/);
-assert.ok(home.includes("const studyPlanNode = isStudyPlanGrade ? studyPlanPanel(studyPlanEntries) : null;"), "1級の統合目標カードへ学習目標パネルを渡す");
+// 学習目標は英検5級〜1級の5区分で出す（医療福祉は英検の級ではないので対象外）。
+assert.match(js, /const STUDY_PLAN_GRADES = \["eiken5", "eikenp2", "eiken2", "eikenp1", "eiken1"\]/);
+assert.match(home, /const showStudyPlan = isStudyPlanGrade\(currentGrade\(\)\);/);
+assert.ok(!home.includes('currentGrade() === "eiken1"'), "ホームの級判定を1級固定にしない");
+assert.ok(home.includes("const studyPlanNode = showStudyPlan ? studyPlanPanel(studyPlanEntries) : null;"), "対象級の統合目標カードへ学習目標パネルを渡す");
 assert.ok(!home.includes("summary.appendChild(studyPlanPanel"), "学習目標パネルを今日の学習カードへ重複配置しない");
 assert.ok(home.includes("home.appendChild(goalCard)"), "語彙目標カードはホーム直下に置く");
 assert.match(studyPanel, /studyPlanSummary\(/);
@@ -46,15 +49,18 @@ assert.match(studyPanel, /weekSelect\.value = String\(plan\.weekStartsOn\)/, "�
 assert.match(studyPanel, /settingsToggle\.focus\(\)/, "キャンセル後に設定トグルへフォーカスを戻す");
 assert.match(studyPanel, /dailyInput\.focus\(\)/, "設定を開いたときに日別目標へフォーカスを置く");
 
-for (const text of ["vocabularyForecast", "vocabularyGoalForecast", "理論上の学習量", "現在、このアプリの英検1級通常問題には", "14,000語まであと"]) {
+for (const text of ["vocabularyForecast", "vocabularyGoalForecast", "理論上の学習量", "現在、このアプリの英検${dataset().shortLabel}通常問題には", "語まであと"]) {
   assert.ok(vocabGoal.includes(text) || js.includes(text), `語彙予測に ${text} が必要`);
 }
 assert.match(vocabGoal, /7日|1週間後/);
 assert.match(vocabGoal, /30日|1か月後/);
 assert.match(vocabGoal, /estimatedDate/);
 
-assert.ok(cloudMeta.includes("studyPlanV1"), "cloudMetaへ学習計画を含める");
-assert.match(js, /scopedStorageKey\(STUDY_PLAN_KEY\)/, "学習計画は生徒スコープ付きlocalStorageへ保存する");
+assert.ok(cloudMeta.includes("studyPlanV1"), "cloudMetaへ1級の学習計画を含める");
+assert.ok(cloudMeta.includes("studyPlanByGradeV1"), "cloudMetaへ他級の学習計画を含める");
+// 1級は従来キー、他級は接尾辞付きキー。既存の1級レコードを移行なしで読み書きし続ける。
+assert.match(js, /scopedStorageKey\(grade === STUDY_PLAN_LEGACY_GRADE \? STUDY_PLAN_KEY : `\$\{STUDY_PLAN_KEY\}_\$\{grade\}`\)/,
+  "学習計画は生徒スコープ付きの級別localStorageキーへ保存する");
 assert.match(js, /cloud\.queueSave\(\{[\s\S]*cloudMeta\(\)/, "設定変更時に現在セットとcloudMetaを同期する");
 
 for (const cls of [

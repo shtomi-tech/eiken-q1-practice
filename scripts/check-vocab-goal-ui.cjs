@@ -32,6 +32,13 @@ for (const grade of order) {
   assert.equal((goals[grade].target - goals[grade].prev) % 500, 0, `${grade} の差分は500の倍数にする`);
 }
 
+// 5級は前級を持たない起点なので上の連鎖には入れず、単独で妥当性を検査する。
+const grade5 = goals.eiken5;
+assert.ok(grade5, "VOCAB_GOALS に eiken5 が必要");
+assert.equal(grade5.prev, 0, "5級は前級を持たないので prev は0にする");
+assert.ok(grade5.target > grade5.prev, "5級の target は prev より大きい必要がある");
+assert.equal(goals.eikenp2.prev, 1500, "準2級の prev（3級相当）は5級の target と連鎖させない");
+
 const start = js.indexOf("function vocabGoalCard(");
 assert.ok(start !== -1, "vocabGoalCard() が見つからない");
 const body = js.slice(start, js.indexOf("\nfunction ", start + 1));
@@ -41,10 +48,11 @@ assert.match(body, /Math\.min\(learned, gap\)/, "実績は差分(gap)でクラ�
 assert.ok(body.includes("理論上の学習量です"), "推定値であることの注記（forecast内）が必要");
 assert.ok(body.includes('role: "progressbar"'), "バーは progressbar として読み上げ可能にする必要がある");
 assert.ok(body.includes('"aria-valuetext"'), "aria-valuetext で内訳を読み上げる必要がある");
+assert.match(body, /const prevTick = goal\.prev > 0/, "前級を持たない級（5級）では0の目盛りを出さない");
 assert.ok(body.includes('"aria-hidden": "true"'), "装飾のハリネズミは支援技術から隠す必要がある");
-assert.ok(body.includes("vocabularyGoalForecast"), "1級の14,000語到達予想を既存カードへ追加する必要がある");
-assert.ok(body.includes("vocabularyForecast"), "1級の期間別語句予測を既存カードへ追加する必要がある");
-assert.ok(body.includes("現在、このアプリの英検1級通常問題には"), "収録語句数の注記を表示する必要がある");
+assert.ok(body.includes("vocabularyGoalForecast"), "目標語数への到達予想を既存カードへ追加する必要がある");
+assert.ok(body.includes("vocabularyForecast"), "期間別語句予測を既存カードへ追加する必要がある");
+assert.ok(body.includes("現在、このアプリの英検${dataset().shortLabel}通常問題には"), "収録語句数の注記を表示する必要がある");
 assert.ok(body.includes("1週間後") && body.includes("1年後"), "5期間の語句予測を表示する必要がある");
 
 // バー・ハリネズミ・目盛り・メッセージ・前級注記は常時表示（折りたたまない）。折りたたむのは期間別予測（.vocabForecast）だけ。

@@ -177,15 +177,20 @@ function meaningIntervalBreakdown(items) {
 // クラウドから来た進捗（{datasetId: progress}）を localStorage へ反映
 function applyCloudProgress(map) {
   if (!map || typeof map !== "object") return;
-  pendingCloudStudyPlan = map._meta && map._meta.studyPlanV1
-    && typeof map._meta.studyPlanV1 === "object"
-    && !Array.isArray(map._meta.studyPlanV1)
-    ? map._meta.studyPlanV1
-    : null;
-  if (studyPlan && pendingCloudStudyPlan) {
-    studyPlan = normalizeStudyPlan(pendingCloudStudyPlan, studyPlanQuestionLimit());
-    saveStudyPlan();
-  }
+  const isPlainObject = (value) => value && typeof value === "object" && !Array.isArray(value);
+  const meta = isPlainObject(map._meta) ? map._meta : {};
+  const byGrade = isPlainObject(meta.studyPlanByGradeV1) ? meta.studyPlanByGradeV1 : {};
+  const incoming = {};
+  STUDY_PLAN_GRADES.forEach((grade) => {
+    const candidate = grade === STUDY_PLAN_LEGACY_GRADE ? meta.studyPlanV1 : byGrade[grade];
+    if (isPlainObject(candidate)) incoming[grade] = candidate;
+  });
+  pendingCloudStudyPlans = Object.keys(incoming).length ? incoming : null;
+  STUDY_PLAN_GRADES.forEach((grade) => {
+    if (!studyPlans[grade] || !incoming[grade]) return;
+    studyPlans[grade] = normalizeStudyPlan(incoming[grade], studyPlanQuestionLimit(grade));
+    saveStudyPlan(grade);
+  });
   const lastDatasetId = map._meta && typeof map._meta.lastDatasetId === "string"
     ? map._meta.lastDatasetId
     : "";

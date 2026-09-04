@@ -68,9 +68,9 @@ async function boot() {
     const migratedStudyPlanDatasetIds = migrateStudyPlanFirstAnswers();
 
     await loadData();
-    if (currentGrade() === "eiken1") {
-      try { await loadPooledItems("eiken1"); } catch (e) { /* 次のホーム描画で再試行する */ }
-      loadStudyPlan();
+    if (isStudyPlanGrade(currentGrade())) {
+      try { await loadPooledItems(currentGrade()); } catch (e) { /* 次のホーム描画で再試行する */ }
+      loadStudyPlan(currentGrade());
     }
     if (migratedLegacy) {
       migratedLegacyDatasetIds.forEach((datasetId) => {

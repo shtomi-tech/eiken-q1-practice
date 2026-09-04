@@ -32,11 +32,18 @@ function gradeOf(datasetId) {
 function currentGrade() {
   return gradeOf(state.datasetId);
 }
-function studyPlanDatasetIds(grade = "eiken1") {
+function isStudyPlanGrade(grade = currentGrade()) {
+  return STUDY_PLAN_GRADES.includes(grade);
+}
+// 1級は従来どおり eiken_q1_study_plan_v1 を使い、既存の目標レコードをそのまま読み書きする。
+function studyPlanStorageKey(grade = currentGrade()) {
+  return scopedStorageKey(grade === STUDY_PLAN_LEGACY_GRADE ? STUDY_PLAN_KEY : `${STUDY_PLAN_KEY}_${grade}`);
+}
+function studyPlanDatasetIds(grade = currentGrade()) {
   const source = Object.keys(ALL_DATASETS).length ? ALL_DATASETS : DATASETS;
   return Object.keys(source).filter((id) => gradeOf(id) === grade && !datasetIsTopic(id));
 }
-function gradeQuestionEntries(grade = "eiken1") {
+function gradeQuestionEntries(grade = currentGrade()) {
   const ids = new Set(studyPlanDatasetIds(grade));
   const entries = [];
   const seen = new Set();
@@ -63,7 +70,7 @@ function gradeQuestionEntries(grade = "eiken1") {
   }
   return entries.sort((a, b) => a.datasetId.localeCompare(b.datasetId) || a.q - b.q);
 }
-function gradeVocabularyItems(grade = "eiken1") {
+function gradeVocabularyItems(grade = currentGrade()) {
   const ids = new Set(studyPlanDatasetIds(grade));
   const pooled = pooledData(grade);
   if (pooled) return pooled.items.filter((item) => ids.has(item._datasetId));
@@ -81,11 +88,16 @@ function learnedVocabularyCount(grade, entries = gradeQuestionEntries(grade)) {
   });
   return seen.size;
 }
-function studyPlanQuestionLimit() {
-  return Math.max(1, gradeQuestionEntries("eiken1").length);
+function studyPlanQuestionLimit(grade = currentGrade()) {
+  return Math.max(1, gradeQuestionEntries(grade).length);
 }
-function defaultStudyPlan() {
-  return normalizeStudyPlan(null, studyPlanQuestionLimit());
+function defaultStudyPlan(grade = currentGrade()) {
+  return normalizeStudyPlan(null, studyPlanQuestionLimit(grade));
+}
+// 級ごとに独立した目標レコード。級を切り替えても互いの設定を上書きしない。
+function currentStudyPlan(grade = currentGrade()) {
+  if (!isStudyPlanGrade(grade)) return null;
+  return studyPlans[grade] || defaultStudyPlan(grade);
 }
 function datasetIsTopic(datasetId = state.datasetId) {
   return String(datasetId || "").startsWith("eikentopic-");
@@ -166,9 +178,9 @@ function loadProgress(datasetId = state.datasetId) {
   }
 }
 
-function readStudyPlanLocal() {
+function readStudyPlanLocal(grade = currentGrade()) {
   try {
-    const raw = localStorage.getItem(scopedStorageKey(STUDY_PLAN_KEY));
+    const raw = localStorage.getItem(studyPlanStorageKey(grade));
     if (!raw) return null;
     const value = JSON.parse(raw);
     return value && typeof value === "object" && !Array.isArray(value) ? value : null;
@@ -176,24 +188,35 @@ function readStudyPlanLocal() {
     return null;
   }
 }
-function saveStudyPlan() {
-  if (!studyPlan) return;
-  writeStoredJson(scopedStorageKey(STUDY_PLAN_KEY), studyPlan);
+function saveStudyPlan(grade = currentGrade()) {
+  if (!isStudyPlanGrade(grade) || !studyPlans[grade]) return;
+  writeStoredJson(studyPlanStorageKey(grade), studyPlans[grade]);
 }
-function loadStudyPlan() {
-  const limit = studyPlanQuestionLimit();
-  const local = readStudyPlanLocal();
+function pendingCloudStudyPlanFor(grade) {
+  const candidate = pendingCloudStudyPlans && pendingCloudStudyPlans[grade];
+  return candidate && typeof candidate === "object" && !Array.isArray(candidate) ? candidate : null;
+}
+function loadStudyPlan(grade = currentGrade()) {
+  if (!isStudyPlanGrade(grade)) return null;
+  const local = readStudyPlanLocal(grade);
+  // その級の語彙プールが未読込だと問題数が1件しか数えられない。保存済みの目標値を
+  // 下限に加えて、読み込み失敗時に利用者の設定を1問へ切り下げて上書きしないようにする。
+  const limit = Math.max(
+    studyPlanQuestionLimit(grade),
+    Number(local?.questionGoal) || 1,
+    Number(local?.dailyQuestionGoal) || 1,
+  );
   const localPlan = local ? normalizeStudyPlan(local, limit) : null;
-  const cloudPlan = pendingCloudStudyPlan && typeof pendingCloudStudyPlan === "object" && !Array.isArray(pendingCloudStudyPlan)
-    ? normalizeStudyPlan(pendingCloudStudyPlan, limit)
-    : null;
-  studyPlan = sharedMode() && cloudPlan ? cloudPlan : (localPlan || defaultStudyPlan());
-  if (sharedMode() && cloudPlan) saveStudyPlan();
-  return studyPlan;
+  const cloudSource = pendingCloudStudyPlanFor(grade);
+  const cloudPlan = cloudSource ? normalizeStudyPlan(cloudSource, limit) : null;
+  studyPlans[grade] = sharedMode() && cloudPlan ? cloudPlan : (localPlan || defaultStudyPlan(grade));
+  if (sharedMode() && cloudPlan) saveStudyPlan(grade);
+  return studyPlans[grade];
 }
 function migrateStudyPlanFirstAnswers() {
   const changedDatasetIds = [];
-  studyPlanDatasetIds("eiken1").forEach((datasetId) => {
+  const datasetIds = [...new Set(STUDY_PLAN_GRADES.flatMap((grade) => studyPlanDatasetIds(grade)))];
+  datasetIds.forEach((datasetId) => {
     let raw = null;
     try { raw = localStorage.getItem(progressKey(datasetId)); } catch (e) { /* ignore */ }
     if (!raw) return;

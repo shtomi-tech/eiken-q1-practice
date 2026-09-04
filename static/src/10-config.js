@@ -32,17 +32,24 @@ const GRADE_PREFIXES = {
 const GRADE_CHOICE_ORDER = ["5", "pre2", "2", "pre1", "1", "iuhw"];
 const GRADE_LABELS = { "5": "5級", pre2: "準2級", "2": "2級", pre1: "準1級", "1": "1級", iuhw: "医療福祉" };
 const STUDY_PLAN_KEY = "eiken_q1_study_plan_v1";
+// 日次・週次の学習目標を出す級。医療福祉は英検の級ではないため含めない。
+// 1級は既存キー、他級は `<STUDY_PLAN_KEY>_<grade>` へ保存する（studyPlanStorageKey）。
+const STUDY_PLAN_GRADES = ["eiken5", "eikenp2", "eiken2", "eikenp1", "eiken1"];
+const STUDY_PLAN_LEGACY_GRADE = "eiken1";
 const STUDY_PLAN_VERSION = 1;
 const STUDY_PLAN_TARGET_VOCABULARY = 14000;
 const STUDY_PLAN_BASE_VOCABULARY = 9000;
 const STUDY_PLAN_VOCABULARY_PER_QUESTION = 4;
 const STUDY_PLAN_FORECAST_DAYS = [7, 30, 90, 180, 365];
-let studyPlan = null;
-let pendingCloudStudyPlan = null;
+let studyPlans = {};
+let pendingCloudStudyPlans = null;
 // 級ごとの語彙目標。英検公式は必要語彙数を公表していないため、95%カバー率解析
 // （ei-raku.com の推定 1,650/3,000/5,100/8,900/14,400）を生徒が扱いやすい丸い数字にした目安。
 // prev は「前の級までは習得済み」という前提の起点で、累計と差分（+1,500/+2,000/+4,000/+5,000）が一致するよう丸めてある。
 const VOCAB_GOALS = {
+  // 5級は前級を持たない起点なので、上の累計の連鎖（前級target＝次級prev）には入れない。
+  // 600語は英検が5級の目安として示す語彙数。
+  eiken5: { prev: 0, target: 600, prevLabel: "" },
   eikenp2: { prev: 1500, target: 3000, prevLabel: "3級" },
   eiken2: { prev: 3000, target: 5000, prevLabel: "準2級" },
   eikenp1: { prev: 5000, target: 9000, prevLabel: "2級" },
@@ -184,13 +191,13 @@ function vocabularyForecast(plan = {}) {
   return STUDY_PLAN_FORECAST_DAYS.map((days) => ({ days, vocabulary: dailyVocabulary * days }));
 }
 
-function vocabularyGoalForecast(now = new Date(), plan = {}, learnedVocabulary = 0) {
+// goal を省略したときは1級の 9,000→14,000 を使う（既存の呼び出し・検査との互換のため）。
+function vocabularyGoalForecast(now = new Date(), plan = {}, learnedVocabulary = 0, goal = null) {
+  const target = Number.isFinite(Number(goal?.target)) ? Number(goal.target) : STUDY_PLAN_TARGET_VOCABULARY;
+  const base = Number.isFinite(Number(goal?.prev)) ? Number(goal.prev) : STUDY_PLAN_BASE_VOCABULARY;
   const dailyVocabulary = Math.max(1, Number(plan.dailyQuestionGoal) || 1) * STUDY_PLAN_VOCABULARY_PER_QUESTION;
-  const currentVocabulary = Math.min(
-    STUDY_PLAN_TARGET_VOCABULARY,
-    STUDY_PLAN_BASE_VOCABULARY + Math.max(0, Number(learnedVocabulary) || 0),
-  );
-  const remainingVocabulary = Math.max(0, STUDY_PLAN_TARGET_VOCABULARY - currentVocabulary);
+  const currentVocabulary = Math.min(target, base + Math.max(0, Number(learnedVocabulary) || 0));
+  const remainingVocabulary = Math.max(0, target - currentVocabulary);
   const daysToGoal = remainingVocabulary > 0 ? Math.ceil(remainingVocabulary / dailyVocabulary) : 0;
   const estimatedDate = startOfLocalDay(now);
   estimatedDate.setDate(estimatedDate.getDate() + daysToGoal);
@@ -200,6 +207,7 @@ function vocabularyGoalForecast(now = new Date(), plan = {}, learnedVocabulary =
     dailyVocabulary,
     daysToGoal,
     estimatedDate,
+    targetVocabulary: target,
   };
 }
 

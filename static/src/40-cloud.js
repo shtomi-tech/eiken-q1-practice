@@ -11,10 +11,17 @@ let legacyPre1Cloud = null;
 let legacyPre1CloudProgress = null;
 let pendingCloudProgress = null;
 
+// studyPlanV1 は1級の目標として既存の意味を保つ。他級は studyPlanByGradeV1 へ分けて送る。
 function cloudMeta() {
+  const byGrade = {};
+  STUDY_PLAN_GRADES.forEach((grade) => {
+    if (grade !== STUDY_PLAN_LEGACY_GRADE && studyPlans[grade]) byGrade[grade] = studyPlans[grade];
+  });
+  const legacyPlan = studyPlans[STUDY_PLAN_LEGACY_GRADE];
   return {
     lastDatasetId: state.datasetId,
-    ...(studyPlan ? { studyPlanV1: studyPlan } : {}),
+    ...(legacyPlan ? { studyPlanV1: legacyPlan } : {}),
+    ...(Object.keys(byGrade).length ? { studyPlanByGradeV1: byGrade } : {}),
   };
 }
 

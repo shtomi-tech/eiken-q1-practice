@@ -14,6 +14,8 @@ const exposed = [
   "vocabularyForecast",
   "vocabularyGoalForecast",
   "migrateFirstAnsweredAt",
+  "studyPlanStorageKey",
+  "isStudyPlanGrade",
 ];
 
 assert.match(js, /const STUDY_PLAN_KEY = "eiken_q1_study_plan_v1";/);
@@ -27,6 +29,20 @@ const source = js.replace(
 const sandbox = {};
 vm.runInNewContext(`${source}\nglobalThis.app = EikenQ1App;`, sandbox);
 const plan = sandbox.app.__test;
+
+// 級別の目標レコード。1級だけは既存キーのまま読み書きし、他級は接尾辞付きの別キーにする。
+assert.equal(plan.studyPlanStorageKey("eiken1"), "eiken_q1_study_plan_v1",
+  "1級の保存キーは従来のまま変えない（既存利用者の目標を維持する）");
+for (const grade of ["eiken5", "eikenp2", "eiken2", "eikenp1"]) {
+  assert.equal(plan.studyPlanStorageKey(grade), `eiken_q1_study_plan_v1_${grade}`,
+    `${grade} は1級と別のキーへ保存する`);
+}
+assert.equal(new Set(["eiken5", "eikenp2", "eiken2", "eikenp1", "eiken1"].map(plan.studyPlanStorageKey)).size, 5,
+  "級ごとの保存キーが衝突しない");
+for (const grade of ["eiken5", "eikenp2", "eiken2", "eikenp1", "eiken1"]) {
+  assert.equal(plan.isStudyPlanGrade(grade), true, `${grade} は学習目標の対象`);
+}
+assert.equal(plan.isStudyPlanGrade("iuhw"), false, "医療福祉は英検の級ではないので学習目標の対象外");
 
 const limit = 191;
 const validPlan = { version: 1, questionGoal: 191, dailyQuestionGoal: 8, weekStartsOn: 1 };

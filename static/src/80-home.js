@@ -31,8 +31,9 @@ function studyPlanProgress(label, value, max, valueText, detail) {
   );
 }
 function studyPlanPanel(entries = []) {
-  const plan = studyPlan || defaultStudyPlan();
-  const limit = studyPlanQuestionLimit();
+  const grade = currentGrade();
+  const plan = currentStudyPlan(grade) || defaultStudyPlan(grade);
+  const limit = studyPlanQuestionLimit(grade);
   const summary = studyPlanSummary(new Date(), plan, entries);
   const num = (value) => Number(value).toLocaleString("ja-JP");
   const dailyStatus = summary.dailyRemaining === 0 ? "✓ 今日の目標達成" : `あと${num(summary.dailyRemaining)}問`;
@@ -98,12 +99,12 @@ function studyPlanPanel(entries = []) {
       error.textContent = `1日の問題目標は1〜${num(limit)}問、週の開始曜日は日〜土から選んでください。`;
       return;
     }
-    studyPlan = normalizeStudyPlan({
+    studyPlans[grade] = normalizeStudyPlan({
       ...plan,
       dailyQuestionGoal,
       weekStartsOn,
     }, limit);
-    saveStudyPlan();
+    saveStudyPlan(grade);
     if (cloud) cloud.queueSave({
       datasetId: state.datasetId,
       progress: state.progress,
@@ -168,7 +169,7 @@ function renderHomeContent() {
   // （学習セッション中や級の切り替え後に、古い級の数字で画面が奪われないようにする）。
   if (grade && !pooledData(grade)) {
     loadPooledItems(grade).then(() => {
-      if (grade === "eiken1") loadStudyPlan();
+      if (isStudyPlanGrade(grade)) loadStudyPlan(grade);
       if (currentGrade() === grade && !$("#homePanel").classList.contains("hide")) renderHome();
     }).catch(() => { /* オフライン等。次の描画で再試行する。 */ });
   }
@@ -177,8 +178,8 @@ function renderHomeContent() {
   const meaningItems = pooled ? learnedPooledItems(pooled.items) : [];
   const meaningQueue = pooled ? meaningPracticeQueue(meaningItems, true) : [];
   const meaningDueCount = meaningSummary ? meaningSummary.due : 0;
-  const isStudyPlanGrade = currentGrade() === "eiken1";
-  const studyPlanEntries = isStudyPlanGrade ? gradeQuestionEntries("eiken1") : [];
+  const showStudyPlan = isStudyPlanGrade(currentGrade());
+  const studyPlanEntries = showStudyPlan ? gradeQuestionEntries(currentGrade()) : [];
   const isFirstVisit = learned === 0;
   // 級の変更は URL で級を固定していないときだけ。下部の「その他」ではなく先頭カードの右上へ置く。
   const canChangeGrade = !new URLSearchParams(window.location.search).has("g");
@@ -297,10 +298,10 @@ function renderHomeContent() {
   home.appendChild(summary);
 
   // 語彙目標カード（級単位。1級は日次学習目標を上段に統合。問題セットより上位の目標なので、セット一覧より前に置く）
-  const learnedVocabulary = isStudyPlanGrade
-    ? learnedVocabularyCount("eiken1", studyPlanEntries)
+  const learnedVocabulary = showStudyPlan
+    ? learnedVocabularyCount(grade, studyPlanEntries)
     : (meaningSummary ? meaningSummary.learned : 0);
-  const studyPlanNode = isStudyPlanGrade ? studyPlanPanel(studyPlanEntries) : null;
+  const studyPlanNode = showStudyPlan ? studyPlanPanel(studyPlanEntries) : null;
   const goalCard = grade ? vocabGoalCard(learnedVocabulary, Boolean(pooled), studyPlanNode) : null;
   if (goalCard) home.appendChild(goalCard);
 
@@ -388,9 +389,10 @@ function renderGradeChoice() {
       needsGradeChoice = false;
       state.datasetId = loadDatasetId();
       await loadData();
-      if (code === "1") {
-        try { await loadPooledItems("eiken1"); } catch (e) { /* ホーム描画後に再試行する */ }
-        loadStudyPlan();
+      const nextGrade = currentGrade();
+      if (isStudyPlanGrade(nextGrade)) {
+        try { await loadPooledItems(nextGrade); } catch (e) { /* ホーム描画後に再試行する */ }
+        loadStudyPlan(nextGrade);
       }
       renderHome();
     },
@@ -523,14 +525,19 @@ function vocabGoalCard(learned, ready, studyPlanNode = null) {
     "aria-valuemin": "0",
     "aria-valuemax": String(goal.target),
     "aria-valuenow": String(value),
-    "aria-valuetext": `${dataset().shortLabel}の目標${num(goal.target)}語のうち${num(value)}語。${goal.prevLabel}までの${num(goal.prev)}語に、このアプリで学習した${num(own)}語句を足した数です。`,
+    "aria-valuetext": goal.prev > 0
+      ? `${dataset().shortLabel}の目標${num(goal.target)}語のうち${num(value)}語。${goal.prevLabel}までの${num(goal.prev)}語に、このアプリで学習した${num(own)}語句を足した数です。`
+      : `${dataset().shortLabel}の目標${num(goal.target)}語のうち${num(value)}語。このアプリで学習した語句の数です。`,
   }, base, ownFill, walker);
 
-  const prevTick = el("span", { class: "vgTick vgTickMid" },
-    el("strong", {}, num(goal.prev)), el("small", {}, goal.prevLabel));
-  prevTick.style.left = pct(goal.prev);
+  // 5級は前級を持たない（prev=0）ため、意味のない「0」の目盛りを出さない。
+  const prevTick = goal.prev > 0
+    ? el("span", { class: "vgTick vgTickMid" },
+      el("strong", {}, num(goal.prev)), el("small", {}, goal.prevLabel))
+    : null;
+  if (prevTick) prevTick.style.left = pct(goal.prev);
 
-  const forecast = currentGrade() === "eiken1"
+  const forecast = isStudyPlanGrade(currentGrade())
     ? (ready
       // detailsにはroleが無くaria-labelledbyが効かないため、名前はsummary自身が持つ。
       ? el("details", { class: "vocabForecast" })
@@ -539,18 +546,19 @@ function vocabGoalCard(learned, ready, studyPlanNode = null) {
   if (forecast) {
     if (!ready) {
       forecast.appendChild(el("h4", { id: "vocabForecastTitle" }, "このペースで学べる語句"));
-      forecast.appendChild(el("p", { class: "hint" }, "英検1級通常問題の語句を読み込み中…"));
+      forecast.appendChild(el("p", { class: "hint" }, `英検${dataset().shortLabel}通常問題の語句を読み込み中…`));
     } else {
-      const goalForecast = vocabularyGoalForecast(new Date(), studyPlan || defaultStudyPlan(), learned);
-      const periods = vocabularyForecast(studyPlan || defaultStudyPlan());
+      const gradePlan = currentStudyPlan() || defaultStudyPlan();
+      const goalForecast = vocabularyGoalForecast(new Date(), gradePlan, learned, goal);
+      const periods = vocabularyForecast(gradePlan);
       const forecastSummary = el("summary", { id: "vocabForecastTitle" },
         el("span", { class: "vocabForecastSummaryTitle" }, "このペースで学べる語句"),
         el("span", { class: "vocabForecastLead" },
-          `このペースなら14,000語まであと${num(goalForecast.remainingVocabulary)}語`),
+          `このペースなら${num(goal.target)}語まであと${num(goalForecast.remainingVocabulary)}語`),
       );
       forecast.appendChild(forecastSummary);
       forecast.appendChild(el("p", { class: "hint vocabForecastDate" }, goalForecast.remainingVocabulary === 0
-        ? "14,000語の目安に到達しています。"
+        ? `${num(goal.target)}語の目安に到達しています。`
         : `1日${num(goalForecast.dailyVocabulary)}語句で、${goalForecast.estimatedDate.toLocaleDateString("ja-JP", { year: "numeric", month: "long", day: "numeric" })}ごろ（あと${num(goalForecast.daysToGoal)}日）`));
       forecast.appendChild(el("div", { class: "vocabForecastGrid", "aria-label": "期間別の理論上の語句予測" },
         ...periods.map(({ days, vocabulary }) => {
@@ -562,12 +570,12 @@ function vocabGoalCard(learned, ready, studyPlanNode = null) {
         })),
       );
       forecast.appendChild(el("p", { class: "hint" },
-        `理論上の学習量です。現在、このアプリの英検1級通常問題には${num(gradeVocabularyItems("eiken1").length)}語句を収録しています。このアプリだけの収録数を超える予測を含みます。`));
+        `理論上の学習量です。現在、このアプリの英検${dataset().shortLabel}通常問題には${num(gradeVocabularyItems().length)}語句を収録しています。このアプリだけの収録数を超える予測を含みます。`));
     }
   }
 
   // 見出し・語数・バー・ハリネズミ・目盛り・励ましメッセージは常時表示（ハリネズミの現在地が主モチベーション）。
-  // 折りたたむのは1級の期間別予測（forecast＝.vocabForecast）だけ。
+  // 折りたたむのは期間別予測（forecast＝.vocabForecast）だけ。
   return el("section", { class: "card vocabGoalCard", "aria-labelledby": "vocabGoalTitle" },
     studyPlanNode,
     el("div", { class: "vgHead" },
