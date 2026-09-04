@@ -1156,8 +1156,7 @@ details.vocabForecast:not([open]) > :not(summary) { display: none; }
   color: var(--muted);
   margin-bottom: 5px;
 }
-.flashMeaning,
-.flashExampleTranslation { max-inline-size: 34em; }
+.flashMeaning { max-inline-size: 34em; }
 .flashMeaning {
   font-size: 22px;
   font-family: var(--serif);
@@ -1269,6 +1268,7 @@ details.vocabForecast:not([open]) > :not(summary) { display: none; }
   font-style: normal;
 }
 .flashExampleTranslation {
+  max-inline-size: 70ch;
   margin: 6px 0 0;
   color: var(--muted);
   font-size: 13px;

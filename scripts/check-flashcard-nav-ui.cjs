@@ -71,9 +71,11 @@ assert.match(css, /@media \(prefers-contrast: more\)[\s\S]*border-color:\s*var\(
 assert.match(css, /\.flashMeaning\s*\{[^}]*font-size:\s*(\d+)px[^}]*font-weight:\s*600/);
 const meaningSize = Number(css.match(/\.flashMeaning\s*\{[^}]*font-size:\s*(\d+)px/)[1]);
 assert.ok(meaningSize >= 22, "意味は22px以上である必要がある");
-assert.match(css, /\.flashMeaning,\s*\.flashExampleTranslation\s*\{[^}]*max-inline-size:\s*34em/);
+assert.match(css, /\.flashMeaning\s*\{[^}]*max-inline-size:\s*34em/);
 const exampleWidth = Number(css.match(/\.flashEx\s*\{[^}]*max-inline-size:\s*(\d+)ch/)[1]);
 assert.ok(exampleWidth <= 70, "例文の行幅は70ch以下である必要がある");
+const translationWidth = Number(css.match(/\.flashExampleTranslation\s*\{[^}]*max-inline-size:\s*(\d+)ch/)[1]);
+assert.equal(translationWidth, exampleWidth, "日本語訳の行幅は例文と揃える必要がある");
 const exampleSize = Number(css.match(/\.flashEx\s*\{[^}]*font-size:\s*(\d+)px/)[1]);
 assert.ok(exampleSize >= 17 && exampleSize <= 20, "例文サイズは17〜20px（意味22pxとSTEP2設問英文20pxの間）である必要がある");
 
@@ -92,7 +94,7 @@ assert.ok(!css.includes(".cardCounter"), "未使用のcardCounter CSSを残さ�
 // DESIGN.mdを実装と同じ正本へ更新する。
 // 行幅はCSSの実装値をそのまま照合する。固定値を書くと、実装だけ変えたときに
 // DESIGN.mdとCSSが食い違ったまま通ってしまう（実際に70ch/58chで食い違った）。
-for (const token of [".sessionActionBar", ".flashMeaning", "34em", `${exampleWidth}ch`]) {
+for (const token of [".sessionActionBar", ".flashMeaning", ".flashExampleTranslation", "34em", `${exampleWidth}ch`]) {
   assert.ok(design.includes(token), `DESIGN.mdに${token}の規範が必要`);
 }
 

@@ -44,7 +44,7 @@
 - 本文: `"Inter", "Segoe UI", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif`。StyreneB代替。ラテン文字はInter、CJK文字は既存システムフォントに自動フォールバック
 - ラベル・カウンタ: `"JetBrains Mono", "SFMono-Regular", Consolas, monospace`。大文字化＋字間拡大（既存踏襲）
 - ホームカードの `h3` は表示見出しとしてセリフ22px・ウェイト600・行間1.35を共通値にする。カード固有の余白だけを各コンポーネントで上書きし、ブラウザ既定の見出し値に依存しない
-- 暗記カード本文の行幅上限: 日本語（`.flashMeaning` `.flashExampleTranslation`）は34em、ラテン文字の例文（`.flashEx`）は70ch。カードの情報量は変えず、長文だけを読み幅で制約する。PC表示を前提に、カード幅に対して折り返しが早すぎて右側に不自然な余白が出ないよう、可読性の上限（英字で約80字＝70ch）まで広げる。これ以上は本文の読み幅として広すぎるため `check-flashcard-nav-ui.cjs` で70ch以下を強制する
+- 暗記カード本文の行幅上限: 意味（`.flashMeaning`）は34em、日本語訳（`.flashExampleTranslation`）とラテン文字の例文（`.flashEx`）は同じ70ch。カードの情報量は変えず、長文だけを読み幅で制約する。PC表示を前提に、カード幅に対して折り返しが早すぎて右側に不自然な余白が出ないよう、例文と日本語訳は可読性の上限（英字で約80字＝70ch）まで広げる。これ以上は本文の読み幅として広すぎるため `check-flashcard-nav-ui.cjs` で70ch以下を強制する
 - 設問として読ませる英文（意味だけ復習の `.askExample`）は「読む本文」であり、見出し用のセリフ体ではなく本文の Inter を使う。x-heightが大きく画面上の実効サイズと下線部（`--rule-underline`）の視認性を確保できる。サイズ20px・行間1.8・行幅上限70ch（`.flashEx` と同じ読み幅）。セリフ体は見出し（`h2`）と単語1語を掲げる `.askWord` に限る
 - 暗記カードの例文（`.flashEx`）は覚える対象の用例なので18px。意味（`.flashMeaning` 22px）に次ぐ大きさとし、訳（`.flashExampleTranslation` 13px）や語源導出文（`.originDerivation` 14px）より小さくしない。同じ英文が STEP 2（`.askExample` 20px）で小さく感じられない範囲に保つ
 - フォント読み込みは `display=swap` 必須。取得中・失敗時も日本語システムフォントでレイアウトが崩れない
