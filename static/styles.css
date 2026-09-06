@@ -1492,6 +1492,7 @@ details.vocabForecast:not([open]) > :not(summary) { display: none; }
   text-align: center;
 }
 .doneBanner h2 { color: var(--parchment); }
+.studyPlanDoneStatus { color: var(--parchment); font-weight: 600; }
 .doneBanner .big { font-family: var(--serif); font-size: 40px; line-height: 1.1; }
 .doneBanner .big.celebrate { animation: kAnswerSuccess var(--motion-completion) var(--ease-spring-soft); }
 .doneBanner h2.firstClear::before {

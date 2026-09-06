@@ -3517,6 +3517,10 @@ function renderDone(body) {
   const q = session.q;
   const isMeaning = session.mode === "meaning";
   const isFinal = session.mode === "final";
+  const grade = currentGrade();
+  const doneStudyPlan = !isMeaning && !isFinal && isStudyPlanGrade(grade)
+    ? studyPlanSummary(new Date(), currentStudyPlan(grade), gradeQuestionEntries(grade))
+    : null;
   const meaningSummary = isMeaning && currentGrade() ? meaningPracticeSummary() : null;
   const banner = el("div", { class: "doneBanner" });
   banner.appendChild(el("p", { class: "label", style: "color:rgba(250,249,246,.72)" }, "Step Complete"));
@@ -3551,6 +3555,16 @@ function renderDone(body) {
       missed > 0 ? `意味を確認：${session.meaningCorrect}語つかめました（未定着 ${missed}語）` : `意味を確認：4語すべてつかめました`));
     banner.appendChild(el("p", { class: "hint" },
       `本番形式：${session.practiceResult ? "✓ 正解" : "! 不正解"}`));
+    if (doneStudyPlan) {
+      const dailyRemaining = doneStudyPlan.dailyRemaining;
+      banner.appendChild(el("p", {
+        class: "hint studyPlanDoneStatus",
+        role: "status",
+        "aria-live": "polite",
+      }, dailyRemaining === 0
+        ? "✓ 今日の学習目標を達成しました"
+        : `今日の学習目標まであと${Number(dailyRemaining).toLocaleString("ja-JP")}問`));
+    }
   }
   const responseElapsedLog = session.responseElapsedLog || [];
   if (responseElapsedLog.length) {

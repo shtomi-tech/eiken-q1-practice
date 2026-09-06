@@ -9,6 +9,7 @@ const home = extractFunctionBody(js, "renderHomeContent");
 const studyPanel = extractFunctionBody(js, "studyPlanPanel");
 const vocabGoal = extractFunctionBody(js, "vocabGoalCard");
 const cloudMeta = extractFunctionBody(js, "cloudMeta");
+const done = extractFunctionBody(js, "renderDone");
 
 // 学習目標は英検5級〜1級の5区分で出す（医療福祉は英検の級ではないので対象外）。
 assert.match(js, /const STUDY_PLAN_GRADES = \["eiken5", "eikenp2", "eiken2", "eikenp1", "eiken1"\]/);
@@ -29,6 +30,14 @@ assert.ok(!studyPanel.includes("総目標"), "総目標の表示を学習目標�
 assert.ok(!studyPanel.includes("goalInput"), "総問題目標の入力欄を学習目標パネルから外す");
 assert.ok(!studyPanel.includes("studyPlanMore"), "週次進捗の折りたたみ表示を学習目標パネルから外す");
 assert.ok(!studyPanel.includes("今週の進捗"), "週次進捗の表示を学習目標パネルから外す");
+
+// 通常問題の完了画面でも、その時点の日次目標の残りを示す。意味復習・最終チェックは対象外。
+assert.ok(done.includes("!isMeaning && !isFinal"), "完了画面の日次目標を通常問題に限定する");
+assert.ok(done.includes("studyPlanSummary(new Date(), currentStudyPlan(grade), gradeQuestionEntries(grade))"), "完了画面が既存の日次集計を再利用する");
+assert.ok(done.includes("studyPlanDoneStatus"), "完了画面に日次目標の状態表示を置く");
+for (const text of ["今日の学習目標まであと", "今日の学習目標を達成しました"]) {
+  assert.ok(done.includes(text), `完了画面に ${text} の表示契約が必要`);
+}
 
 // 常時表示は「今日」1つ。週開始曜日は設定フォームに残すが、週次進捗は表示しない。
 {
@@ -67,6 +76,7 @@ for (const cls of [
   ".studyPlanPanel",
   ".studyPlanMetrics",
   ".studyPlanMetric",
+  ".studyPlanDoneStatus",
   ".studyPlanSettings",
   ".studyPlanFields",
   ".vocabGoalCard > .studyPlanPanel",
