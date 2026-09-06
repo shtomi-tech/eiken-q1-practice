@@ -671,7 +671,7 @@ function meaningMission(
   } else if (ready && due === 0) {
     buttonLabel = "今すぐ復習する語句はありません";
   } else if (ready) {
-    buttonLabel = `今回の${batch}語句を復習する`;
+    buttonLabel = `今日の復習を始める（${batch}語句）`;
     delete buttonAttrs.disabled;
     buttonAttrs.onclick = () => startMeaningPractice(true, nextQueue);
     if (remaining > 0) note = `今すぐ復習する${due}語句のうち、今回は${batch}語句を出題します。残り${remaining}語句は次回に回ります。`;

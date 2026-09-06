@@ -2241,7 +2241,7 @@ function meaningMission(
   } else if (ready && due === 0) {
     buttonLabel = "今すぐ復習する語句はありません";
   } else if (ready) {
-    buttonLabel = `今回の${batch}語句を復習する`;
+    buttonLabel = `今日の復習を始める（${batch}語句）`;
     delete buttonAttrs.disabled;
     buttonAttrs.onclick = () => startMeaningPractice(true, nextQueue);
     if (remaining > 0) note = `今すぐ復習する${due}語句のうち、今回は${batch}語句を出題します。残り${remaining}語句は次回に回ります。`;
@@ -3209,10 +3209,7 @@ function renderCheck(body) {
   const listenButton = buildVocabAudioButton(item, "quizListenButton");
   if (example) {
     // 音声ボタンは設問文の行へ逃がす。例文と横に並べると英文の折り返しが早まる。
-    box.appendChild(el("div", { class: "askExampleHead" },
-      el("p", { class: "label" }, "下線部の意味として最も適当なものを選べ"),
-      listenButton,
-    ));
+    box.appendChild(el("div", { class: "askExampleHead" }, listenButton));
     const askExample = el("p", { class: "askExample" });
     askExample.appendChild(buildExampleText(item, example));
     box.appendChild(el("div", { class: "askExampleLine" }, askExample));
@@ -3545,6 +3542,13 @@ function renderDone(body) {
       banner.appendChild(el("p", { class: "hint" },
         `意味だけの復習対象は現在${meaningSummary.learned}/${meaningSummary.total}語句。未解放の語句は通常学習後に追加されます。`,
       ));
+      banner.appendChild(el("p", {
+        class: "hint meaningDueRemaining",
+        role: "status",
+        "aria-live": "polite",
+      }, meaningSummary.due > 0
+        ? `今すぐ復習する残り：${meaningSummary.due}語句`
+        : "今すぐ復習する語句はありません"));
     }
   } else {
     // 締めの主役は「この設問の4語をどれだけ意味把握できたか」。本番形式1問の正誤は補助へ落とす。

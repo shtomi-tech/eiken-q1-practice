@@ -9,6 +9,7 @@ const css = appCss();
 const meaningMissionBody = extractFunctionBody(js, "meaningMission");
 const intervalBreakdownBody = extractFunctionBody(js, "meaningIntervalBreakdown");
 const renderHomeBody = extractFunctionBody(js, "renderHomeContent");
+const renderDoneBody = extractFunctionBody(js, "renderDone");
 const meaningWrongReviewBody = extractFunctionBody(js, "renderMeaningWrongReview");
 
 // --- ホーム上のカード境界とCTA所属 ---
@@ -90,6 +91,13 @@ assert.ok(
 assert.ok(meaningMissionBody.includes("間隔復習"), "meaningMission() は「間隔復習」ラベルを描画する必要がある");
 assert.ok(meaningMissionBody.includes("意味だけ復習"), "meaningMission() は「意味だけ復習」見出しを描画する必要がある");
 assert.ok(!meaningMissionBody.includes("中心学習"), "旧ラベル「中心学習」は meaningMission() から除去済みである必要がある");
+assert.ok(
+  renderDoneBody.includes("meaningSummary.due")
+    && renderDoneBody.includes("meaningDueRemaining")
+    && renderDoneBody.includes("今すぐ復習する残り：${meaningSummary.due}語句")
+    && renderDoneBody.includes("今すぐ復習する語句はありません"),
+  "意味だけ復習の完了画面に、現在の復習待ち残数を表示する必要がある",
+);
 
 // --- 意味だけ復習の誤答見直し ---
 assert.ok(js.includes('meaning: ["check", "meaningReview", "done"]') && js.includes('return "meaningReview"'), "意味復習の誤答時に見直しstageへ遷移できる必要がある");
@@ -110,6 +118,10 @@ for (const label of ["未実施", "要再確認", "1日後", "3日後", "7日後
 assert.ok(
   meaningMissionBody.includes("startMeaningPractice(true, nextQueue)"),
   "復習開始は引き続き startMeaningPractice(true, nextQueue) を呼ぶ必要がある",
+);
+assert.ok(
+  meaningMissionBody.includes("今日の復習を始める（${batch}語句）"),
+  "復習CTAは今日の行動と出題数が分かる文言にする必要がある",
 );
 
 // --- CTAの状態分岐が残っている ---
@@ -192,6 +204,11 @@ assert.ok(
 for (const cls of [".spacedReviewCard", ".meaningMissionMetrics", ".meaningMissionCta", ".meaningMissionInterval", ".meaningMissionOtherGrade", ".meaningWrongReview", ".meaningReviewCheckBtn"]) {
   assert.ok(css.includes(cls), `CSSに ${cls} の規則が必要`);
 }
+assert.ok(
+  css.includes(".meaningMissionCta.secondaryCta:not(:disabled)")
+    && css.includes('content: "→"'),
+  "実行可能な二次CTAは視認できる枠と操作方向を持つ必要がある",
+);
 assert.ok(!css.includes(".meaningMission {"), "旧入れ子パネル用のmeaningMissionルート規則は削除する必要がある");
 assert.ok(
   !css.includes(".meaningMissionHead") && !css.includes(".meaningMissionBadge") && !css.includes(".meaningMissionProgress"),

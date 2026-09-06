@@ -57,8 +57,13 @@ assert.ok(
   "exampleMatch は単語境界付きで一致判定する必要があります",
 );
 
-assert.match(renderCheckBody, /下線部の意味として最も適当なものを選べ/);
+assert.doesNotMatch(
+  renderCheckBody,
+  /下線部の意味として最も適当なものを選べ/,
+  "意味だけ復習の設問には定型の問いかけを表示しない",
+);
 assert.match(renderCheckBody, /session\.mode === "meaning"/);
+assert.ok(renderCheckBody.includes('class: "askExampleHead"') && renderCheckBody.includes("listenButton"), "意味だけ復習の例文には音声ボタンを残す必要があります");
 assert.ok(renderCheckBody.includes("exampleMatch(item)"), "renderCheck は例文の一致判定を使う必要があります");
 assert.ok(renderCheckBody.includes("buildExampleText(item, example)"), "renderCheck は共通の例文ノードを使う必要があります");
 assert.ok(renderCheckBody.includes('class: "askExampleLine"'), "meaning の出題部に例文レイアウトが必要です");
