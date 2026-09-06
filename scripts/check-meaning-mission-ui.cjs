@@ -174,10 +174,15 @@ assert.ok(
   "間隔内訳は説明文付きの独立パネルではなく簡潔な連結グリッドにする必要がある",
 );
 
-// --- resume時にCTAを二次操作へ落とす ---
+// --- resume時（coreResume含む）にCTAを二次操作へ落とす（F-04） ---
+// 再開の主導線はホーム上部の .startCta 1つへ集約したため、間隔復習カード内の重複案内は出さない。
 assert.ok(
-  meaningMissionBody.includes("通常学習の続きがあるため、先に再開するのがおすすめです。"),
-  "resumeあり時の案内文が必要",
+  !meaningMissionBody.includes("先に再開するのがおすすめです"),
+  "上部CTAへ再開を集約したため、間隔復習カード内に再開の重複案内を残さない（F-04）",
+);
+assert.ok(
+  meaningMissionBody.includes('if (hasPrimaryCta) buttonAttrs.class = "secondaryCta meaningMissionCta"'),
+  "主CTA（coreResume時の上部再開CTAを含む）があるとき、間隔復習CTAは .secondaryCta.meaningMissionCta へ落とす必要がある（F-04）",
 );
 
 // --- 他の級の復習待ち ---

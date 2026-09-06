@@ -28,6 +28,38 @@ assert.ok(summaryBody.includes('status = "resumable"'), "学習済み0でも途�
 assert.ok(labelBody.includes('summary.status === "resumable"'), "datasetPrimaryLabel() はresumableを扱う必要がある");
 assert.ok(cardBody.includes("resumeDescription"), "UnitカードはresumeDescription()を再利用する必要がある");
 
+// F-04: 途中保存(coreResume)時、同じ再開先を開く主CTAはホーム上部の .startCta 1つだけ。
+// coreResume分岐の primary は「続きから再開する」+ restoreSession の1オブジェクトに限る。
+assert.match(
+  renderHomeBody,
+  /if \(coreResume\) \{\s*primary = \{\s*label: "続きから再開する",/,
+  "coreResume時の主CTAはホーム上部の『続きから再開する』1つへ集約する必要がある（F-04）",
+);
+assert.match(
+  renderHomeBody,
+  /primary = \{\s*label: "続きから再開する",\s*onclick: async \(\) => \{[^}]*restoreSession\(\)/,
+  "coreResume時の上部主CTAは restoreSession() を呼ぶ必要がある（F-04）",
+);
+assert.ok(
+  renderHomeBody.includes('rec.appendChild(el("button", { class: "cta startCta"'),
+  "上部の主CTAは .startCta として1つだけ描画する（既存維持・F-04）",
+);
+// 現在セットの途中保存Unitカードは操作要素ではなく状態表示コンテナ（div）にし、
+// restoreSession をもう一つのCTAとして持たない。別セットは switchDataset で切替できる。
+assert.ok(
+  cardBody.includes('summary.resume.mode !== "meaning"') && cardBody.includes("isResumeStatus"),
+  "現在セットの通常学習途中保存Unitは状態表示（isResumeStatus）へ切り替える判定が必要（F-04）",
+);
+assert.match(
+  cardBody,
+  /if \(isResumeStatus\) \{\s*return el\("div"/,
+  "isResumeStatus のUnitカードは button ではなく div を返す必要がある（F-04）",
+);
+assert.ok(
+  cardBody.includes('"aria-current": "true"') && cardBody.includes("datasetUnitCardProgress") && cardBody.includes("datasetUnitCardResume"),
+  "状態表示化しても aria-current・進捗・途中保存文言は保持する必要がある（F-04）",
+);
+
 for (const [datasetId, data] of Object.entries(manifest.q1)) {
   for (const key of ["totalQuestions", "totalVocabulary"]) {
     assert.ok(Number.isInteger(data[key]) && data[key] > 0, `${datasetId}.${key} は正の整数である必要がある`);

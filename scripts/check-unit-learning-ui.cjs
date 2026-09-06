@@ -103,4 +103,28 @@ assert.ok(!css.includes(".sessionStickyNav"), "重複するsticky現在地バー
 assert.match(css, /@media \(max-width: 720px\)/, "720px以下のレスポンシブ規則が必要");
 assert.match(css, /@media \(prefers-reduced-motion: reduce\)/, "prefers-reduced-motion の規則が必要（既存維持）");
 
+// F-01: 720px以下で「一覧へ戻る」(.sessionHeadBack) はタイトル行から折り返してもコンテンツ右端へ寄せる。
+assert.match(
+  css,
+  /@media \(max-width: 720px\)[\s\S]*?\.sessionHeadBack\s*\{[^}]*margin-left:\s*auto/,
+  "720px以下で .sessionHeadBack は margin-left: auto で右寄せする必要がある（F-01）",
+);
+assert.match(css, /\.sessionHeadBack\s*\{[\s\S]*?align-self:\s*flex-start/, "sessionHeadBack の align-self: flex-start を基底規則で維持する必要がある");
+
+// F-04: 現在セットで通常学習の途中保存があるUnitカードは button ではなく状態表示コンテナにする。
+// 再開の主導線はホーム上部の .startCta へ集約し、別セットは従来どおり switchDataset で切替できる。
+assert.ok(
+  datasetUnitCardBody.includes('summary.resume.mode !== "meaning"'),
+  "現在セットの途中保存Unitは通常学習resume（meaning以外）のときだけ状態表示へ切り替える必要がある（F-04）",
+);
+assert.match(
+  datasetUnitCardBody,
+  /isResumeStatus[\s\S]*?el\("div"/,
+  "途中保存の現在Unitカードは button ではなく div で描画する必要がある（F-04）",
+);
+assert.ok(
+  datasetUnitCardBody.includes("switchDataset("),
+  "別セットのUnitカードは switchDataset() で切り替えできる必要がある（既存維持）",
+);
+
 console.log("unit learning UI contract: OK");

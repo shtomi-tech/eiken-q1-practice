@@ -63,4 +63,20 @@ for (const cls of [
   assert.ok(css.includes(cls), `CSSに ${cls} の規則が必要`);
 }
 
+// --- F-02: 本番形式の回答後操作バーは専用クラスを持ち、720px以下では固定しない ---
+assert.ok(
+  onPracticeAnswerBody.includes('classList.add("practiceAnswerActions")'),
+  "onPracticeAnswer() は回答後の .answerActions に practiceAnswerActions を付与する必要がある（F-02）",
+);
+assert.match(
+  css,
+  /@media \(max-width: 720px\)[\s\S]*?\.answerActions\.practiceAnswerActions\s*\{[^}]*position:\s*static/,
+  "720px以下で .answerActions.practiceAnswerActions は position: static（固定解除）にする必要がある（F-02）",
+);
+assert.match(
+  css,
+  /@media \(max-width: 720px\)[\s\S]*?\.answerActions\s*\{[^}]*position:\s*sticky/,
+  "意味確認（STEP 2）の回答後操作バーは720px以下で従来どおり sticky を維持する必要がある",
+);
+
 console.log("practice feedback UI contract: OK");

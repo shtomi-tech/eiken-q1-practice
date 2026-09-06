@@ -2225,9 +2225,8 @@ function meaningMission(
       el("p", { class: "hint" }, "意味だけ復習の続きから再開できます。"),
     ));
   }
-  if (coreResume) {
-    mission.appendChild(el("p", { class: "hint" }, "通常学習の続きがあるため、先に再開するのがおすすめです。"));
-  }
+  // coreResume（通常学習の途中保存）時は、ホーム上部の .startCta と .resumeNotice が再開を案内する。
+  // ここで重ねて案内しない。CTA自体は下の hasPrimaryCta 分岐で二次操作（.secondaryCta.meaningMissionCta）へ落とす。
 
   const buttonAttrs = { class: "cta reviewCta meaningMissionCta", type: "button", disabled: "disabled" };
   let buttonLabel = "対象を確認中…";
@@ -2332,13 +2331,44 @@ function datasetUnitCard(id, data, index) {
   const totalV = summary.totalVocabulary != null ? summary.totalVocabulary : "—";
   const progressLine = `${summary.learnedQuestions} / ${totalQ}問`;
   const resumeText = summary.hasResume ? `途中保存：${resumeDescription(summary.resume)}` : "";
+  // 現在セットで通常学習（meaning以外）の途中保存があるとき、このカードは状態表示に徹する。
+  // 同じ保存位置を開く再開操作はホーム上部の .startCta 1つへ集約し、競合CTAを増やさない（F-04）。
+  // 別セットのカードは従来どおり切替操作を持つ。
+  const isResumeStatus = isCurrent && summary.hasResume
+    && summary.resume && summary.resume.mode !== "meaning";
+  const actionLabel = isResumeStatus ? "途中保存あり" : label;
   const cls = ["datasetUnitCard"];
   if (isCurrent) cls.push("current");
   if (summary.cleared) cls.push("cleared");
+  if (isResumeStatus) cls.push("isResumeStatus");
   const ariaParts = [datasetSetLabel(id, data), progressLine];
   if (summary.cleared) ariaParts.push("CLEAR");
   if (resumeText) ariaParts.push(resumeText);
-  ariaParts.push(label);
+  ariaParts.push(actionLabel);
+  const inner = [
+    el("span", { class: "datasetUnitCardNumber" }, String(index + 1).padStart(2, "0")),
+    el("div", { class: "datasetUnitCardMain" },
+      el("span", { class: "datasetUnitCardTitle" }, datasetSetLabel(id, data)),
+      el("span", { class: "datasetUnitCardMeta" }, `全${totalQ}問・${totalV}語`),
+      el("span", { class: "datasetUnitCardProgress" }, progressLine),
+      summary.cleared
+        ? el("span", { class: "datasetUnitCardClear" }, "✓ CLEAR")
+        : null,
+      summary.hasResume ? el("span", { class: "datasetUnitCardResume" }, resumeText) : null,
+      el("span", { class: "datasetUnitCardAction" }, actionLabel),
+    ),
+    isResumeStatus ? null : el("span", { class: "datasetUnitCardArrow", "aria-hidden": "true" }, "→"),
+  ];
+
+  // 途中保存の現在Unitは操作要素にしない（onclick・type=button・矢印を持たない）。
+  if (isResumeStatus) {
+    return el("div", {
+      class: cls.join(" "),
+      "aria-current": "true",
+      "aria-label": ariaParts.join("・"),
+    }, ...inner);
+  }
+
   const attrs = {
     class: cls.join(" "),
     type: "button",
@@ -2357,20 +2387,7 @@ function datasetUnitCard(id, data, index) {
     },
   };
   if (isCurrent) attrs["aria-current"] = "true";
-  return el("button", attrs,
-    el("span", { class: "datasetUnitCardNumber" }, String(index + 1).padStart(2, "0")),
-    el("div", { class: "datasetUnitCardMain" },
-      el("span", { class: "datasetUnitCardTitle" }, datasetSetLabel(id, data)),
-      el("span", { class: "datasetUnitCardMeta" }, `全${totalQ}問・${totalV}語`),
-      el("span", { class: "datasetUnitCardProgress" }, progressLine),
-      summary.cleared
-        ? el("span", { class: "datasetUnitCardClear" }, "✓ CLEAR")
-        : null,
-      summary.hasResume ? el("span", { class: "datasetUnitCardResume" }, resumeText) : null,
-      el("span", { class: "datasetUnitCardAction" }, label),
-    ),
-    el("span", { class: "datasetUnitCardArrow", "aria-hidden": "true" }, "→"),
-  );
+  return el("button", attrs, ...inner);
 }
 
 // 同じ級の問題セットを種別ごとの小見出しに分けてUnitカードで並べる。
@@ -2614,7 +2631,8 @@ function renderSession() {
   panel.appendChild(el("div", { class: "itemHead" },
      el("div", {},
        el("p", { class: "label" }, sessionLabel(q, isIdiom, isMeaning, isFinal)),
-       el("h2", {}, stageTitle(session.stage)),
+       // 固定ID + tabindex=-1: カード／ステージのDOM置換後、暗記カード以外はここへフォーカスを移す（F-03）。
+       el("h2", { id: "sessionStageTitle", tabindex: "-1" }, stageTitle(session.stage)),
      ),
      el("button", { class: "sessionHeadBack ghost", type: "button", onclick: () => { saveResume(); renderHome(); } }, "一覧へ戻る"),
   ));
@@ -2635,6 +2653,21 @@ function renderSession() {
   else if (session.stage === "meaningReview") renderMeaningWrongReview(body);
   else if (session.stage === "practice") renderPractice(body);
   else if (session.stage === "done") renderDone(body);
+
+  focusSessionContext();
+}
+
+// カード・ステージをDOM置換した後、フォーカスを現在の内容へ一元的に移す（F-03）。
+// 旧「次のカード」等の削除済み要素にフォーカスが残ると、次のTabが新画面の先頭から始まらない。
+// 暗記カードは現在語句（.flashWord）、他ステージはセッション見出し（#sessionStageTitle）。
+// スクロール位置は変えない（送り後の scrollFlashCardIntoView などと競合させない）。
+function focusSessionContext() {
+  const target = session && session.stage === "flash"
+    ? $("#sessionPanel .flash .flashWord")
+    : $("#sessionStageTitle");
+  if (target && typeof target.focus === "function") {
+    target.focus({ preventScroll: true });
+  }
 }
 
 function sessionLabel(q, isIdiom, isMeaning, isFinal) {
@@ -2780,7 +2813,8 @@ function buildFlashCard(item) {
   const headword = displayLemma || canonicalHeadwordOf(item);
   const learning = learningEntryOf(item);
   const wordLine = el("div", { class: "flashWordLine" },
-    el("div", { class: "flashWord" }, headword),
+    // tabindex=-1: カード置換後に focusSessionContext() がここへフォーカスを移す（F-03）。語句テキストは変更しない。
+    el("div", { class: "flashWord", tabindex: "-1" }, headword),
   );
   if (learning.ipa) wordLine.appendChild(el("div", { class: "flashIpa" }, learning.ipa));
   if (vocabularyAudioEnabled(item)) wordLine.appendChild(buildVocabAudioButton(item, "flashListenButton", true));
@@ -3504,6 +3538,8 @@ function onPracticeAnswer(idx, box, choiceWrap, q_, items) {
   const actions = answerActions(
     el("button", { class: "cta", onclick: () => { session.stage = "done"; renderSession(); } }, "結果を見る →"),
   );
+  // 本番形式の回答後だけを識別する修飾クラス。長い意味一覧の後ろで固定を解除するため（F-02）。
+  actions.classList.add("practiceAnswerActions");
   box.appendChild(actions);
   revealAnswerActions(actions);
 }

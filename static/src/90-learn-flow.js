@@ -149,7 +149,8 @@ function renderSession() {
   panel.appendChild(el("div", { class: "itemHead" },
      el("div", {},
        el("p", { class: "label" }, sessionLabel(q, isIdiom, isMeaning, isFinal)),
-       el("h2", {}, stageTitle(session.stage)),
+       // 固定ID + tabindex=-1: カード／ステージのDOM置換後、暗記カード以外はここへフォーカスを移す（F-03）。
+       el("h2", { id: "sessionStageTitle", tabindex: "-1" }, stageTitle(session.stage)),
      ),
      el("button", { class: "sessionHeadBack ghost", type: "button", onclick: () => { saveResume(); renderHome(); } }, "一覧へ戻る"),
   ));
@@ -170,6 +171,21 @@ function renderSession() {
   else if (session.stage === "meaningReview") renderMeaningWrongReview(body);
   else if (session.stage === "practice") renderPractice(body);
   else if (session.stage === "done") renderDone(body);
+
+  focusSessionContext();
+}
+
+// カード・ステージをDOM置換した後、フォーカスを現在の内容へ一元的に移す（F-03）。
+// 旧「次のカード」等の削除済み要素にフォーカスが残ると、次のTabが新画面の先頭から始まらない。
+// 暗記カードは現在語句（.flashWord）、他ステージはセッション見出し（#sessionStageTitle）。
+// スクロール位置は変えない（送り後の scrollFlashCardIntoView などと競合させない）。
+function focusSessionContext() {
+  const target = session && session.stage === "flash"
+    ? $("#sessionPanel .flash .flashWord")
+    : $("#sessionStageTitle");
+  if (target && typeof target.focus === "function") {
+    target.focus({ preventScroll: true });
+  }
 }
 
 function sessionLabel(q, isIdiom, isMeaning, isFinal) {
@@ -315,7 +331,8 @@ function buildFlashCard(item) {
   const headword = displayLemma || canonicalHeadwordOf(item);
   const learning = learningEntryOf(item);
   const wordLine = el("div", { class: "flashWordLine" },
-    el("div", { class: "flashWord" }, headword),
+    // tabindex=-1: カード置換後に focusSessionContext() がここへフォーカスを移す（F-03）。語句テキストは変更しない。
+    el("div", { class: "flashWord", tabindex: "-1" }, headword),
   );
   if (learning.ipa) wordLine.appendChild(el("div", { class: "flashIpa" }, learning.ipa));
   if (vocabularyAudioEnabled(item)) wordLine.appendChild(buildVocabAudioButton(item, "flashListenButton", true));
@@ -1039,6 +1056,8 @@ function onPracticeAnswer(idx, box, choiceWrap, q_, items) {
   const actions = answerActions(
     el("button", { class: "cta", onclick: () => { session.stage = "done"; renderSession(); } }, "結果を見る →"),
   );
+  // 本番形式の回答後だけを識別する修飾クラス。長い意味一覧の後ろで固定を解除するため（F-02）。
+  actions.classList.add("practiceAnswerActions");
   box.appendChild(actions);
   revealAnswerActions(actions);
 }

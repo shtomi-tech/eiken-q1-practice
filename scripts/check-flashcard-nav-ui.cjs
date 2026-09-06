@@ -8,6 +8,8 @@ const design = readText("DESIGN.md");
 
 const renderSessionBody = extractFunctionBody(js, "renderSession");
 const renderFlashBody = extractFunctionBody(js, "renderFlash");
+const buildFlashCardBody = extractFunctionBody(js, "buildFlashCard");
+const focusSessionContextBody = extractFunctionBody(js, "focusSessionContext");
 const scrollBody = extractFunctionBody(js, "scrollFlashCardIntoView");
 const gestureBody = extractFunctionBody(js, "setupFlashGesture");
 const springBody = extractFunctionBody(js, "animateFlashGesture");
@@ -46,6 +48,38 @@ assert.ok(renderSessionBody.includes("sessionHeadBack"), "タイトル行に一�
 assert.ok(!renderFlashBody.includes("cardCounter"), "下部の旧カウンタを残さない");
 assert.ok(renderFlashBody.includes("flashNavCounter"), "固定バー中央のカウンタが必要");
 assert.ok(renderFlashBody.includes("sessionActionBar"), "固定バーのラッパーが必要");
+
+// F-03: カード・ステージのDOM置換後、フォーカスを現在内容へ一元的に移す（旧「次のカード」等に残さない）。
+assert.ok(
+  renderSessionBody.includes("focusSessionContext()"),
+  "renderSession は各ステージ描画後に focusSessionContext() を1回呼ぶ必要がある（F-03）",
+);
+assert.ok(
+  renderSessionBody.includes('id: "sessionStageTitle"') && renderSessionBody.includes('tabindex: "-1"'),
+  "セッション見出しに固定ID sessionStageTitle と tabindex=-1 が必要（F-03）",
+);
+assert.ok(
+  buildFlashCardBody.includes('class: "flashWord", tabindex: "-1"'),
+  "暗記カードの現在語句 .flashWord は tabindex=-1 でプログラム的にフォーカス可能にする必要がある（F-03）",
+);
+assert.ok(
+  focusSessionContextBody.includes(".flashWord") && focusSessionContextBody.includes("sessionStageTitle"),
+  "focusSessionContext は flash なら現在語句、他ステージはセッション見出しを選ぶ必要がある（F-03）",
+);
+assert.ok(
+  focusSessionContextBody.includes("preventScroll: true"),
+  "フォーカス移動はスクロール位置を変えない（preventScroll: true）必要がある（F-03）",
+);
+assert.ok(
+  !focusSessionContextBody.includes("addEventListener") && !renderSessionBody.includes('addEventListener("keydown"'),
+  "F-03はグローバルkeydown処理を足さず、描画後フォーカスだけで閉じる",
+);
+// カード番号の live 通知（既存）は維持する。
+assert.match(
+  renderFlashBody,
+  /flashNavCounter", "aria-live": "polite"/,
+  "カード番号の aria-live=polite 通知を維持する必要がある（F-03）",
+);
 
 // スワイプはボタン操作を置き換えず、暗記カードの補助操作として直接操作できるようにする。
 assert.ok(renderFlashBody.includes("setupFlashGesture"), "暗記カードにスワイプ操作を接続する必要がある");
