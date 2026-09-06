@@ -2615,7 +2615,6 @@ function renderSession() {
      el("div", {},
        el("p", { class: "label" }, sessionLabel(q, isIdiom, isMeaning, isFinal)),
        el("h2", {}, stageTitle(session.stage)),
-       el("p", { class: "sessionState" }, "中断してもこの位置から再開できます"),
      ),
      el("button", { class: "sessionHeadBack ghost", type: "button", onclick: () => { saveResume(); renderHome(); } }, "一覧へ戻る"),
   ));
