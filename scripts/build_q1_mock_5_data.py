@@ -18,19 +18,19 @@ QUESTIONS = [
     {"stem": "Whenever Joe's wife made curry, the smell ( ) the entire house. So he knew that she was making curry the moment he opened the front door.", "choices": ["professed", "waylaid", "permeated", "detonated"], "answerIndex": 2, "translation": "ジョーの妻がカレーを作ると、いつもその匂いが家全体に行き渡った。そのため、玄関を開けた瞬間に彼女がカレーを作っていると分かった。"},
     {"stem": "In order for your computer to run at ( ) speed, it needs to be kept cool. When the temperature gets too high, performance will begin to drop.", "choices": ["incompetent", "imminent", "optimum", "stolid"], "answerIndex": 2, "translation": "コンピューターを最適な速度で動かすには、冷たく保つ必要がある。温度が高くなりすぎると、性能が低下し始める。"},
     {"stem": "A: This is really bad. The CEO is all over the news for being involved in that government scandal.\nB: I wonder if the board of directors is going to fire him. He's become a ( ) to the company.", "choices": ["maxim", "synthesis", "strife", "liability"], "answerIndex": 3, "translation": "A：これは本当にまずい。CEOが政府のスキャンダルに関わったことで、ニュースで大きく報じられている。\nB：取締役会は彼を解雇するのだろうか。彼は会社にとって負担になっている。"},
-    {"stem": "A: Is it safe to send private information using this software?\nB: Yes, it's totally safe. The software automatically ( ) the message to prevent outside sources from being able to read it.", "choices": ["encrypts", "affixes", "decrees", "proscribes"], "answerIndex": 0, "translation": "A：このソフトウェアを使って個人情報を送っても安全ですか？\nB：はい、完全に安全です。外部の人が読めないよう、ソフトウェアが自動的にメッセージを暗号化します。"},
+    {"stem": "A: Is it safe to send private information using this software?\nB: Yes, it's totally safe. The software automatically ( ) the message to prevent outside sources from being able to read it.", "choices": ["affixes", "encrypts", "decrees", "proscribes"], "answerIndex": 1, "translation": "A：このソフトウェアを使って個人情報を送っても安全ですか？\nB：はい、完全に安全です。外部の人が読めないよう、ソフトウェアが自動的にメッセージを暗号化します。"},
     {"stem": "By encouraging residents to get to know their neighbors and participate in local charity projects, the organization is hoping to create more ( ) communities.", "choices": ["cranky", "painstaking", "superfluous", "cohesive"], "answerIndex": 3, "translation": "住民に近所の人と知り合い、地域の慈善活動に参加するよう促すことで、その団体はより結束した地域社会を作ろうとしている。"},
     {"stem": "A: Do they pay you a good salary?\nB: Not really. The ( ) are fantastic, though. I get to use a company car, and they provide me with really great health insurance.", "choices": ["delusions", "gripes", "perks", "hitches"], "answerIndex": 2, "translation": "A：給料はよいの？\nB：それほどでもないよ。でも福利厚生はすばらしい。社用車を使えるし、とてもよい健康保険も付いている。"},
     {"stem": "With their win on Friday, the basketball team has ( ) their spot in the playoffs. Their first playoff game will be the second week of February.", "choices": ["diced", "fazed", "clinched", "condensed"], "answerIndex": 2, "translation": "金曜日の勝利により、そのバスケットボールチームはプレーオフ出場の座を確定させた。最初のプレーオフ試合は2月の第2週になる。"},
     {"stem": "A: Jane bought another purse?\nB: I'm not surprised. She is always so ( ) with her parents' money.", "choices": ["definitive", "cavalier", "fiendish", "retentive"], "answerIndex": 1, "translation": "A：ジェーンはまたバッグを買ったの？\nB：驚かないよ。彼女はいつも親のお金を軽率に扱っているから。"},
     {"stem": "Experts say that the rare bird is ( ) on the edge of extinction. They warn that if something isn't done soon, then the species could be gone from the earth in only a few years.", "choices": ["teetering", "twitching", "matriculating", "shearing"], "answerIndex": 0, "translation": "専門家によると、その珍しい鳥は絶滅の瀬戸際で危うい状態にある。すぐに対策を取らなければ、数年で地球上から姿を消す可能性があると警告している。"},
-    {"stem": "According to reports from board members, negotiations for the agreement have reached an ( ), and it now seems unlikely that the companies are going to merge, after all.", "choices": ["insignia", "indictment", "impasse", "auspice"], "answerIndex": 2, "translation": "取締役会のメンバーによると、その合意に向けた交渉は行き詰まりに達し、結局、両社が合併する可能性は低そうだ。"},
+    {"stem": "According to reports from board members, negotiations for the agreement have reached an ( ), and it now seems unlikely that the companies are going to merge, after all.", "choices": ["insignia", "impasse", "indictment", "auspice"], "answerIndex": 1, "translation": "取締役会のメンバーによると、その合意に向けた交渉は行き詰まりに達し、結局、両社が合併する可能性は低そうだ。"},
     {"stem": "The CEO tried to ( ) his employees with confidence during the company's difficult times. \"We will get through this,\" he assured them.", "choices": ["banish", "procure", "stump", "infuse"], "answerIndex": 3, "translation": "会社が困難な時期にある中、CEOは従業員に自信を吹き込もうとした。「私たちはこれを乗り越えられる」と彼らを安心させた。"},
     {"stem": "A: Wow, you look so tired.\nB: Yeah, I didn't sleep at all. My neighbors had a huge party last night, and the ( ) noise kept me up until four this morning.", "choices": ["prudent", "mutinous", "delectable", "unrelenting"], "answerIndex": 3, "translation": "A：わあ、とても疲れているように見えるね。\nB：ああ、まったく眠れなかった。昨夜、隣人が大きなパーティーを開いて、絶え間ない騒音で朝4時まで眠れなかったんだ。"},
     {"stem": "There is a long-standing ( ) between Colleen and her husband about how they should educate their children. She thinks they should go to private school, but he wants them to go to public school.", "choices": ["gait", "feud", "whim", "rig"], "answerIndex": 1, "translation": "コリーンと夫の間には、子どもたちをどう教育すべきかをめぐる長年の確執がある。彼女は私立学校に行かせるべきだと思っているが、夫は公立学校を望んでいる。"},
     {"stem": "Timothy is a somewhat ( ) student. It's clear that he is intelligent, but he often ignores homework assignments, and he doesn't seem to care about his grades at all.", "choices": ["wayward", "inconspicuous", "spellbound", "intrepid"], "answerIndex": 0, "translation": "ティモシーは少し気まぐれで手に負えない生徒だ。頭がよいのは明らかだが、宿題をよく無視し、成績をまったく気にしていないようだ。"},
     {"stem": "After the crisis, the government declared a ( ) on nuclear power. Nuclear plants across the country would be shut down until more reliable safeguards could be developed.", "choices": ["blister", "footage", "moratorium", "snare"], "answerIndex": 2, "translation": "危機の後、政府は原子力発電の一時停止を宣言した。より信頼できる安全対策が開発されるまで、全国の原子力発電所は停止されることになった。"},
-    {"stem": "Although he studied French every day, Freddy had no chances to use it in daily life. So, when a group of French tourists came into his shop, he ( ) in the opportunity to test his skills.", "choices": ["reveled", "bellowed", "cantered", "trickled"], "answerIndex": 0, "translation": "フレディは毎日フランス語を勉強していたが、日常生活で使う機会がなかった。だからフランス人観光客の一団が店に入ってきたとき、技能を試せる機会を大いに楽しんだ。"},
+    {"stem": "Although he studied French every day, Freddy had no chances to use it in daily life. So, when a group of French tourists came into his shop, he ( ) in the opportunity to test his skills.", "choices": ["bellowed", "reveled", "cantered", "trickled"], "answerIndex": 1, "translation": "フレディは毎日フランス語を勉強していたが、日常生活で使う機会がなかった。だからフランス人観光客の一団が店に入ってきたとき、技能を試せる機会を大いに楽しんだ。"},
     {"stem": "After having her wisdom teeth removed, the dentist warned Eliza that her mouth would probably begin hurting once the ( ) wore off.", "choices": ["anesthetic", "specter", "ordinance", "proponent"], "answerIndex": 0, "translation": "親知らずを抜いた後、歯科医はエリザに、麻酔薬が切れると口が痛み始めるだろうと警告した。"},
     {"stem": "A: Troy's son is such a ( ) child.\nB: I know, right? He can already build websites, and he's only nine years old!", "choices": ["precocious", "capricious", "scrupulous", "treacherous"], "answerIndex": 0, "translation": "A：トロイの息子は本当に早熟な子どもだね。\nB：そうだよね。まだ9歳なのに、もうウェブサイトを作れるんだよ。"},
     {"stem": "After it was revealed that Janet had been cheating on her husband, many of their mutual friends began to ( ) her. It was clear that they were on his side, not hers.", "choices": ["nurture", "exasperate", "shun", "enchant"], "answerIndex": 2, "translation": "ジャネットが夫を裏切っていたことが明らかになると、共通の友人の多くが彼女を避け始めた。彼らが彼女ではなく夫の味方なのは明らかだった。"},
@@ -310,6 +310,23 @@ def write_json(path: Path, value: dict) -> None:
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+def load_existing_ipa(name: str) -> dict[str, str]:
+    """既存 vocab の IPA を引き継ぐ。IPA は enrich_flashcard_fields.py が
+    ネット経由で付けるため、再生成でオフラインでも失わないようにする。"""
+    path = DATA_DIR / name
+    if not path.exists():
+        return {}
+    try:
+        prev = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    return {
+        w["word"]: w["ipa"]
+        for w in prev.get("words", [])
+        if w.get("word") and w.get("ipa")
+    }
+
+
 def build() -> tuple[dict, dict]:
     if len(QUESTIONS) != 25:
         raise ValueError("模試 第5回は25問である必要があります")
@@ -348,6 +365,7 @@ def build() -> tuple[dict, dict]:
             for index, question in enumerate(QUESTIONS, start=1)
         ],
     }
+    existing_ipa = load_existing_ipa("vocab_1_mock-5.json")
     words = []
     idioms = []
     for q, question in enumerate(QUESTIONS, start=1):
@@ -367,6 +385,8 @@ def build() -> tuple[dict, dict]:
                 idioms.append(item)
             else:
                 item["word"] = choice
+                if choice in existing_ipa:
+                    item["ipa"] = existing_ipa[choice]
                 words.append(item)
     if (len(words), len(idioms)) != (84, 16):
         raise ValueError(f"語句数が想定と違います: words={len(words)}, idioms={len(idioms)}")

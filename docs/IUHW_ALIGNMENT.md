@@ -92,3 +92,29 @@ py -3 scripts/review_official_questions.py --dataset-id iuhw-set-1
   origins 1,578件で成功。
 - `npm test`: 成功。
 - `assets/audio/vocab/iuhw/set-2/`: 単語48件・熟語12件、0バイトなし。
+
+## Q15 を熟語のみの4択へ変更（2026-09-08、監査 Q12 対応）
+
+`audit-question-set` の Q12（同一設問に単語と熟語が混在）指摘に対応し、`iuhw-set-1` Q15 を
+語彙2＋熟語2の混在から、熟語のみの4択へ作り替えた。設問数・`datasetId`・進捗キーは不変。
+
+- **Q15 新設問文**: 「A nationwide system for sending rural patients to city hospitals was
+  finally ( ) by 2020, after years of delay.」正答 `in place`（位置2、正答位置分散 [4,4,4,3] は不変）。
+- **語句構成**: 単語58＋熟語2 → 単語56＋熟語4。
+  - 削除: `benefits` `proportion`（Q15 でしか使っていなかった単語）、`according to`（前置詞句のため
+    述語補語の空所に他の熟語と同居できない）。
+  - 追加: `at risk` `on hold` `in demand`（`in place` と同じ述語補語クラスの熟語）。核心イメージは
+    term ステップ2件＋導出1件の3段チェーン（set-2 と同形式、particle 不使用）。
+- **語源台帳**: `data/word_origin_research.json` の `entries` から `benefits` `proportion` を削除、
+  `researchTarget.lemmas` から `benefits` を外し `count` 1255→1254。
+  `node scripts/rebuild-word-origin-dictionaries.cjs --write` で `word_origins.json`（1578→1576）を再生成。
+- **暗記カード表示原形**: `data/lemmas.json` の `flashcardDisplayLemmas` から `benefits: benefit` を削除
+  （出題形が語彙データから消えたため）。
+- **ビルド**: `scripts/build_q1_iuhw_set_1_data.py` に既存 IPA の引き継ぎを追加（IPA は
+  `enrich_flashcard_fields.py` がネット経由で付けるため、再生成でオフラインでも 56 語の IPA を保持）。
+- **未了**: `at risk` / `on hold` / `in demand` の表層MP3が未生成
+  （`assets/audio/vocab/iuhw/set-1/idiom/`）。`AZURE_SPEECH_KEY` を設定して
+  `py -3 scripts/generate_tts_1.py --grade iuhw --round set-1` を実行する。MP3 が無い間は
+  ブラウザ内蔵音声で再生される。`check_eiken1_alignment.py --all` はこの3件で終了コード1。
+- 検証: `check_q1_data.py` OK / `npm test` 成功 / `audit_question_set.py iuhw-set-1` は Q12 が消え、
+  残りは V10（句動詞0件・IUHW の設計）と Q04（級相応）のみ。

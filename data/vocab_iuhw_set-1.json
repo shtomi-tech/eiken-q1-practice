@@ -6,8 +6,8 @@
     "source": "出題英文から抜き出した60語句の学習用自作文（原文未収録）",
     "counts": {
       "questions": 15,
-      "words": 58,
-      "idioms": 2,
+      "words": 56,
+      "idioms": 4,
       "total": 60
     }
   },
@@ -571,26 +571,6 @@
       "example": "Costs for elderly care are rising more quickly than expected.",
       "exampleTranslation": "高齢者介護の費用は予想より早く増えている。",
       "ipa": "/kwˈɪkli/"
-    },
-    {
-      "q": 15,
-      "word": "benefits",
-      "is_answer": false,
-      "pos": "名詞",
-      "meaning": "給付、恩恵",
-      "example": "Pension benefits make up the largest part of the budget.",
-      "exampleTranslation": "年金給付は予算の最大の部分を占めている。",
-      "ipa": "/bˈɛnəfɪts/"
-    },
-    {
-      "q": 15,
-      "word": "proportion",
-      "is_answer": true,
-      "pos": "名詞",
-      "meaning": "割合",
-      "example": "A large proportion of the budget goes to pensions.",
-      "exampleTranslation": "予算の大きな割合が年金に充てられている。",
-      "ipa": "/pɹəpˈɔɹʃən/"
     }
   ],
   "idioms": [
@@ -598,30 +578,30 @@
       "q": 15,
       "is_answer": false,
       "type": "idiom",
-      "phrase": "according to",
+      "phrase": "on hold",
       "pos": "熟語",
       "coreImage": {
         "chain": [
           {
-            "term": "according",
-            "gloss": "一致して"
+            "term": "on",
+            "gloss": "接した状態が続いて"
           },
           {
-            "term": "to",
-            "gloss": "基準・情報に沿って"
+            "term": "hold",
+            "gloss": "動かさずにつかんで止める"
           },
           {
-            "gloss": "基準や情報に合わせて、〜によれば"
+            "gloss": "手を止めたまま先へ進めず、保留されている"
           }
         ]
       },
-      "meaning": "〜によれば",
-      "example": "According to the survey, half of the respondents work overtime.",
-      "exampleTranslation": "その調査によれば、回答者の半数は残業をしている。"
+      "meaning": "保留されて",
+      "example": "The plan to raise nurses' pay was put on hold during the budget review.",
+      "exampleTranslation": "看護師の給与を上げる計画は、予算審査の間、保留された。"
     },
     {
       "q": 15,
-      "is_answer": false,
+      "is_answer": true,
       "type": "idiom",
       "phrase": "in place",
       "pos": "熟語",
@@ -643,6 +623,56 @@
       "meaning": "整備されている",
       "example": "Support programs for foreign workers are already in place.",
       "exampleTranslation": "外国人労働者への支援制度はすでに整備されている。"
+    },
+    {
+      "q": 15,
+      "is_answer": false,
+      "type": "idiom",
+      "phrase": "at risk",
+      "pos": "熟語",
+      "coreImage": {
+        "chain": [
+          {
+            "term": "at",
+            "gloss": "ある地点・状況に接して"
+          },
+          {
+            "term": "risk",
+            "gloss": "損害が起こる可能性"
+          },
+          {
+            "gloss": "損害が起こりうる状況に置かれて、危険にさらされている"
+          }
+        ]
+      },
+      "meaning": "危険にさらされて",
+      "example": "Small maternity wards in remote towns are increasingly at risk of closing.",
+      "exampleTranslation": "へき地の町の小さな産科病棟は、閉鎖の危険にますますさらされている。"
+    },
+    {
+      "q": 15,
+      "is_answer": false,
+      "type": "idiom",
+      "phrase": "in demand",
+      "pos": "熟語",
+      "coreImage": {
+        "chain": [
+          {
+            "term": "in",
+            "gloss": "その状態の中に"
+          },
+          {
+            "term": "demand",
+            "gloss": "強い要求・需要"
+          },
+          {
+            "gloss": "多くの需要を向けられる状態にあって、引く手あまた"
+          }
+        ]
+      },
+      "meaning": "需要が高くて",
+      "example": "Nurses with intensive care experience are in demand across the whole region.",
+      "exampleTranslation": "集中治療の経験を持つ看護師は、地域全体で需要が高い。"
     }
   ]
 }

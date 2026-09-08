@@ -480,6 +480,9 @@ def apply_round(round_id: str) -> None:
         )
     for item in words:
         surface = str(item.get("word", ""))
+        # アプリが参照しないフィールドは基準セットに合わせて落とす（監査 V02）。
+        item.pop("collocation", None)
+        item.pop("etymology", None)
         override = overrides.get(surface)
         if override:
             item["example"], item["exampleTranslation"] = override

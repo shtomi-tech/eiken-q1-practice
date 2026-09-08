@@ -1,19 +1,17 @@
 {
   "meta": {
-    "exam": "英検2級 2025年度第3回 一次試験",
+    "grade": "英検2級",
+    "round": "2025-3",
     "section": "Reading 大問1（語句空所補充）",
-    "source_pdf": "2025-3-1ji-2kyu.pdf",
-    "note": "正解は公式解答（2025年度第3回）と照合済み。語源は定説に基づき、学習に効く範囲で簡潔化。",
+    "note": "正解は公式解答と照合済み。choices は本番の出題順。answerIndex は0始まり。",
+    "source": "英検公式の公開過去問PDFを、学習用JSONへ大問1だけ構造化",
+    "source_problem_url": "https://www.eiken.or.jp/eiken/exam/kakomon/2025-3-1ji-2kyu.pdf",
+    "source_answer_url": "https://www.eiken.or.jp/eiken/result/pdf/202503F2kyu.pdf",
     "counts": {
       "words": 40,
       "idioms": 28,
       "total": 68
-    },
-    "grade": "英検2級",
-    "round": "2025-3",
-    "source": "英検公式の公開過去問PDFを、学習用JSONへ大問1だけ構造化",
-    "source_problem_url": "https://www.eiken.or.jp/eiken/exam/kakomon/2025-3-1ji-2kyu.pdf",
-    "source_answer_url": "https://www.eiken.or.jp/eiken/result/pdf/202503F2kyu.pdf"
+    }
   },
   "words": [
     {
@@ -24,8 +22,7 @@
       "pos": "形容詞",
       "meaning": "主要な、大きな",
       "example": "The company made a major change to its plan.",
-      "exampleTranslation": "会社は計画を大幅に変更した。",
-      "collocation": "a major problem / a major city"
+      "exampleTranslation": "会社は計画を大幅に変更した。"
     },
     {
       "q": 1,
@@ -35,8 +32,7 @@
       "pos": "形容詞",
       "meaning": "上の、上部の",
       "example": "Hugh did exercises to increase the strength of his upper body.",
-      "exampleTranslation": "ヒューは上半身の筋力を高めるためにエクササイズをしました。",
-      "collocation": "upper body / upper floor / upper class"
+      "exampleTranslation": "ヒューは上半身の筋力を高めるためにエクササイズをしました。"
     },
     {
       "q": 1,
@@ -46,8 +42,7 @@
       "pos": "形容詞",
       "meaning": "直接の、まっすぐな",
       "example": "There is a direct train from the airport to the city.",
-      "exampleTranslation": "空港から市内まで直通の電車があります。",
-      "collocation": "direct contact / direct flight"
+      "exampleTranslation": "空港から市内まで直通の電車があります。"
     },
     {
       "q": 1,
@@ -57,8 +52,7 @@
       "pos": "形容詞",
       "meaning": "弾力のある、伸縮する",
       "example": "This elastic material stretches easily without losing its original shape.",
-      "exampleTranslation": "この伸縮性のある素材は、元の形を失わずに簡単に伸びます。",
-      "collocation": "elastic band / elastic material"
+      "exampleTranslation": "この伸縮性のある素材は、元の形を失わずに簡単に伸びます。"
     },
     {
       "q": 2,
@@ -68,8 +62,7 @@
       "pos": "名詞",
       "meaning": "部隊、一団",
       "example": "A troop of soldiers entered the town before sunrise to protect residents.",
-      "exampleTranslation": "兵士の一隊が住民を守るため、日の出前に町へ入りました。",
-      "collocation": "a troop of soldiers / troop movements"
+      "exampleTranslation": "兵士の一隊が住民を守るため、日の出前に町へ入りました。"
     },
     {
       "q": 2,
@@ -79,8 +72,7 @@
       "pos": "名詞",
       "meaning": "ことわざ",
       "example": "My grandmother often used an old proverb to teach patience and kindness.",
-      "exampleTranslation": "祖母は忍耐と親切を教えるため、古いことわざをよく使いました。",
-      "collocation": "an old proverb / as the proverb says"
+      "exampleTranslation": "祖母は忍耐と親切を教えるため、古いことわざをよく使いました。"
     },
     {
       "q": 2,
@@ -90,8 +82,7 @@
       "pos": "名詞",
       "meaning": "崖、断崖",
       "example": "She stood at the edge of a tall cliff.",
-      "exampleTranslation": "彼女は高い崖の端に立っていました。",
-      "collocation": "a steep cliff / the edge of a cliff"
+      "exampleTranslation": "彼女は高い崖の端に立っていました。"
     },
     {
       "q": 2,
@@ -101,8 +92,7 @@
       "pos": "名詞",
       "meaning": "義務、職務",
       "example": "It is my duty to help the guests.",
-      "exampleTranslation": "ゲストを助けるのが私の義務です。",
-      "collocation": "do one's duty / on duty"
+      "exampleTranslation": "ゲストを助けるのが私の義務です。"
     },
     {
       "q": 3,
@@ -112,8 +102,7 @@
       "pos": "動詞",
       "meaning": "存在する",
       "example": "Many different opinions exist in the class about the new rule.",
-      "exampleTranslation": "そのクラスには新しい規則についてさまざまな意見があります。",
-      "collocation": "still exist / exist in nature"
+      "exampleTranslation": "そのクラスには新しい規則についてさまざまな意見があります。"
     },
     {
       "q": 3,
@@ -123,8 +112,7 @@
       "pos": "動詞",
       "meaning": "反応する",
       "example": "How did your husband react when you told him about the baby?",
-      "exampleTranslation": "赤ちゃんのことを旦那さんに話したとき、旦那さんはどう反応しましたか？",
-      "collocation": "react to news / react quickly"
+      "exampleTranslation": "赤ちゃんのことを旦那さんに話したとき、旦那さんはどう反応しましたか？"
     },
     {
       "q": 3,
@@ -134,8 +122,7 @@
       "pos": "動詞",
       "meaning": "つかむ、奪い取る",
       "example": "The police will seize the stolen goods if the court approves the warrant.",
-      "exampleTranslation": "裁判所が令状を承認すれば、警察は盗品を押収します。",
-      "collocation": "seize a chance / seize control"
+      "exampleTranslation": "裁判所が令状を承認すれば、警察は盗品を押収します。"
     },
     {
       "q": 3,
@@ -145,8 +132,7 @@
       "pos": "動詞",
       "meaning": "消える、姿を消す",
       "example": "The bright stars disappear when morning sunlight reaches the quiet valley.",
-      "exampleTranslation": "朝の日差しが静かな谷に届くと、明るい星々は消えます。",
-      "collocation": "suddenly disappear / disappear from view"
+      "exampleTranslation": "朝の日差しが静かな谷に届くと、明るい星々は消えます。"
     },
     {
       "q": 4,
@@ -156,8 +142,7 @@
       "pos": "名詞",
       "meaning": "大統領、社長、会長",
       "example": "The president gave a speech to the nation.",
-      "exampleTranslation": "大統領は国民に向けて演説した。",
-      "collocation": "company president / student council president"
+      "exampleTranslation": "大統領は国民に向けて演説した。"
     },
     {
       "q": 4,
@@ -167,8 +152,7 @@
       "pos": "名詞",
       "meaning": "観客、見物人",
       "example": "Each spectator watched the final game from a crowded seat near the field.",
-      "exampleTranslation": "それぞれの観客は、競技場近くの混雑した席から決勝戦を見ました。",
-      "collocation": "a spectator sport / spectators in the stadium"
+      "exampleTranslation": "それぞれの観客は、競技場近くの混雑した席から決勝戦を見ました。"
     },
     {
       "q": 4,
@@ -178,8 +162,7 @@
       "pos": "名詞",
       "meaning": "哲学者、思想家",
       "example": "She wants to be a philosopher and learn about the meaning of life.",
-      "exampleTranslation": "彼女は哲学者になって人生の意味について学びたいと思っています。",
-      "collocation": "a Greek philosopher / moral philosopher"
+      "exampleTranslation": "彼女は哲学者になって人生の意味について学びたいと思っています。"
     },
     {
       "q": 4,
@@ -189,8 +172,7 @@
       "pos": "名詞",
       "meaning": "指揮者、車掌",
       "example": "The conductor raised his hand before the music began.",
-      "exampleTranslation": "音楽が始まる前に指揮者が手を挙げた。",
-      "collocation": "train conductor / orchestra conductor"
+      "exampleTranslation": "音楽が始まる前に指揮者が手を挙げた。"
     },
     {
       "q": 5,
@@ -200,8 +182,7 @@
       "pos": "動詞",
       "meaning": "交流する、相互に作用する",
       "example": "Students interact with each other during group work.",
-      "exampleTranslation": "グループワーク中に学生同士が交流します。",
-      "collocation": "interact with people / interact online"
+      "exampleTranslation": "グループワーク中に学生同士が交流します。"
     },
     {
       "q": 5,
@@ -211,8 +192,7 @@
       "pos": "動詞",
       "meaning": "うろたえる、パニックになる",
       "example": "I started to panic when I realized my passport was gone.",
-      "exampleTranslation": "パスポートがなくなったことに気づいてパニックになり始めました。",
-      "collocation": "don't panic / panic about a test"
+      "exampleTranslation": "パスポートがなくなったことに気づいてパニックになり始めました。"
     },
     {
       "q": 5,
@@ -222,8 +202,7 @@
       "pos": "動詞",
       "meaning": "飛ぶ、飛行機で行く",
       "example": "They will fly to Canada next week for a family holiday.",
-      "exampleTranslation": "彼らは来週、家族旅行のためカナダへ飛びます。",
-      "collocation": "fly to London / fly over the city"
+      "exampleTranslation": "彼らは来週、家族旅行のためカナダへ飛びます。"
     },
     {
       "q": 5,
@@ -233,8 +212,7 @@
       "pos": "動詞",
       "meaning": "泳ぐ",
       "example": "The children swim in the lake every summer during their school vacation.",
-      "exampleTranslation": "子どもたちは学校の休暇中、毎年夏に湖で泳ぎます。",
-      "collocation": "swim across a river / go swimming"
+      "exampleTranslation": "子どもたちは学校の休暇中、毎年夏に湖で泳ぎます。"
     },
     {
       "q": 6,
@@ -244,8 +222,7 @@
       "pos": "動詞",
       "meaning": "回復する、取り戻す",
       "example": "Most patients recover quickly from this illness with proper medical treatment.",
-      "exampleTranslation": "適切な治療を受ければ、ほとんどの患者はこの病気からすぐ回復します。",
-      "collocation": "recover from illness / recover lost files"
+      "exampleTranslation": "適切な治療を受ければ、ほとんどの患者はこの病気からすぐ回復します。"
     },
     {
       "q": 6,
@@ -255,8 +232,7 @@
       "pos": "動詞",
       "meaning": "見直す、確認する、復習する",
       "example": "My boss says we will review my progress next month.",
-      "exampleTranslation": "上司は来月私の進捗状況を確認すると言っています。",
-      "collocation": "review progress / review notes"
+      "exampleTranslation": "上司は来月私の進捗状況を確認すると言っています。"
     },
     {
       "q": 6,
@@ -266,8 +242,7 @@
       "pos": "動詞",
       "meaning": "拡大する、広げる",
       "example": "The company plans to expand its business overseas.",
-      "exampleTranslation": "同社は海外での事業拡大を計画している。",
-      "collocation": "expand a business / expand rapidly"
+      "exampleTranslation": "同社は海外での事業拡大を計画している。"
     },
     {
       "q": 6,
@@ -277,8 +252,7 @@
       "pos": "動詞",
       "meaning": "疑う、怪しいと思う",
       "example": "I suspect that the story is not true.",
-      "exampleTranslation": "この話は真実ではないのではないかと思います。",
-      "collocation": "suspect a problem / suspect someone of"
+      "exampleTranslation": "この話は真実ではないのではないかと思います。"
     },
     {
       "q": 7,
@@ -288,8 +262,7 @@
       "pos": "動詞",
       "meaning": "結ぶ、縛る",
       "example": "Neil stopped to tie his shoelaces before entering the crowded classroom.",
-      "exampleTranslation": "ニールは混雑した教室に入る前に、靴ひもを結ぶため立ち止まりました。",
-      "collocation": "tie one's shoes / tie a knot"
+      "exampleTranslation": "ニールは混雑した教室に入る前に、靴ひもを結ぶため立ち止まりました。"
     },
     {
       "q": 7,
@@ -299,8 +272,7 @@
       "pos": "動詞",
       "meaning": "稼ぐ、得る",
       "example": "She hopes to earn enough money by teaching piano to local children.",
-      "exampleTranslation": "彼女は地元の子どもたちにピアノを教えて、十分なお金を稼ぎたいと考えています。",
-      "collocation": "earn money / earn respect"
+      "exampleTranslation": "彼女は地元の子どもたちにピアノを教えて、十分なお金を稼ぎたいと考えています。"
     },
     {
       "q": 7,
@@ -310,8 +282,7 @@
       "pos": "動詞",
       "meaning": "雇う、借りる",
       "example": "The store will hire new workers this summer.",
-      "exampleTranslation": "その店はこの夏、新しい従業員を雇う予定だ。",
-      "collocation": "hire a worker / hire a car"
+      "exampleTranslation": "その店はこの夏、新しい従業員を雇う予定だ。"
     },
     {
       "q": 7,
@@ -321,8 +292,7 @@
       "pos": "動詞",
       "meaning": "注ぐ、激しく降る",
       "example": "Please pour some hot tea into this cup for our guest.",
-      "exampleTranslation": "このカップに熱いお茶を少し注いで、お客さまに出してください。",
-      "collocation": "pour water / pour rain"
+      "exampleTranslation": "このカップに熱いお茶を少し注いで、お客さまに出してください。"
     },
     {
       "q": 8,
@@ -332,8 +302,7 @@
       "pos": "名詞",
       "meaning": "幸運、財産",
       "example": "She made a small fortune by selling handmade furniture online.",
-      "exampleTranslation": "彼女は手作り家具をオンラインで販売して、小さな財産を築きました。",
-      "collocation": "good fortune / make a fortune"
+      "exampleTranslation": "彼女は手作り家具をオンラインで販売して、小さな財産を築きました。"
     },
     {
       "q": 8,
@@ -343,8 +312,7 @@
       "pos": "名詞",
       "meaning": "区別、卓越、名誉",
       "example": "There is an important distinction between the two ideas.",
-      "exampleTranslation": "2 つの考え方には重要な違いがあります。",
-      "collocation": "make a distinction / a clear distinction"
+      "exampleTranslation": "2 つの考え方には重要な違いがあります。"
     },
     {
       "q": 8,
@@ -354,8 +322,7 @@
       "pos": "名詞",
       "meaning": "忠誠、忠実さ",
       "example": "The fans have a lot of loyalty to the team.",
-      "exampleTranslation": "ファンはチームに対して深い忠誠心を持っています。",
-      "collocation": "loyalty to a team / customer loyalty"
+      "exampleTranslation": "ファンはチームに対して深い忠誠心を持っています。"
     },
     {
       "q": 8,
@@ -365,8 +332,7 @@
       "pos": "名詞",
       "meaning": "疑い、疑念",
       "example": "The strange noise filled her with suspicion about the empty house.",
-      "exampleTranslation": "その奇妙な物音は、空き家についての疑いを彼女に抱かせました。",
-      "collocation": "arouse suspicion / under suspicion"
+      "exampleTranslation": "その奇妙な物音は、空き家についての疑いを彼女に抱かせました。"
     },
     {
       "q": 9,
@@ -376,8 +342,7 @@
       "pos": "名詞",
       "meaning": "富、豊かさ",
       "example": "The country gained great wealth from trade over several centuries.",
-      "exampleTranslation": "その国は数世紀にわたる貿易で大きな富を得ました。",
-      "collocation": "great wealth / wealth of information"
+      "exampleTranslation": "その国は数世紀にわたる貿易で大きな富を得ました。"
     },
     {
       "q": 9,
@@ -387,8 +352,7 @@
       "pos": "名詞",
       "meaning": "激怒、怒り",
       "example": "He shouted in rage after hearing the news.",
-      "exampleTranslation": "彼はその知らせを聞いて激怒して叫びました。",
-      "collocation": "in a rage / road rage"
+      "exampleTranslation": "彼はその知らせを聞いて激怒して叫びました。"
     },
     {
       "q": 9,
@@ -398,8 +362,7 @@
       "pos": "名詞",
       "meaning": "無知、知らないこと",
       "example": "Arguments often result from people's ignorance of each other's ways.",
-      "exampleTranslation": "口論は、人々がお互いのやり方を知らないことから起こることがよくあります。",
-      "collocation": "ignorance of the law / complete ignorance"
+      "exampleTranslation": "口論は、人々がお互いのやり方を知らないことから起こることがよくあります。"
     },
     {
       "q": 9,
@@ -409,8 +372,7 @@
       "pos": "名詞",
       "meaning": "貧困、欠乏",
       "example": "The charity helps children living in poverty in several rural communities.",
-      "exampleTranslation": "その慈善団体は、いくつかの地方社会で貧困の中に暮らす子どもたちを支援します。",
-      "collocation": "live in poverty / reduce poverty"
+      "exampleTranslation": "その慈善団体は、いくつかの地方社会で貧困の中に暮らす子どもたちを支援します。"
     },
     {
       "q": 10,
@@ -420,8 +382,7 @@
       "pos": "副詞",
       "meaning": "無邪気に、悪気なく",
       "example": "The child innocently denied taking the cookie from the kitchen.",
-      "exampleTranslation": "その子は台所からクッキーを取ったことを無邪気に否定しました。",
-      "collocation": "ask innocently / smile innocently"
+      "exampleTranslation": "その子は台所からクッキーを取ったことを無邪気に否定しました。"
     },
     {
       "q": 10,
@@ -431,8 +392,7 @@
       "pos": "副詞",
       "meaning": "ありがたいことに、感謝して",
       "example": "Thankfully, I found a stream and followed it down to the road.",
-      "exampleTranslation": "ありがたいことに、私は小川を見つけて、それをたどって道路まで下りました。",
-      "collocation": "thankfully, ... / smile thankfully"
+      "exampleTranslation": "ありがたいことに、私は小川を見つけて、それをたどって道路まで下りました。"
     },
     {
       "q": 10,
@@ -442,8 +402,7 @@
       "pos": "副詞",
       "meaning": "伝統的に、昔から",
       "example": "This festival is traditionally held in spring by local families.",
-      "exampleTranslation": "この祭りは地元の家族によって、伝統的に春に開催されます。",
-      "collocation": "traditionally used / traditionally held"
+      "exampleTranslation": "この祭りは地元の家族によって、伝統的に春に開催されます。"
     },
     {
       "q": 10,
@@ -453,8 +412,7 @@
       "pos": "副詞",
       "meaning": "腹を立てて、恨めしそうに",
       "example": "He resentfully accepted the decision after hearing the manager's explanation.",
-      "exampleTranslation": "彼は支配人の説明を聞いた後、不満そうにその決定を受け入れました。",
-      "collocation": "speak resentfully / look resentfully"
+      "exampleTranslation": "彼は支配人の説明を聞いた後、不満そうにその決定を受け入れました。"
     }
   ],
   "idioms": [
@@ -481,8 +439,7 @@
         ]
       },
       "example": "The two leaders shake hands after signing the agreement in public.",
-      "exampleTranslation": "二人の指導者は、公の場で合意書に署名した後、握手をします。",
-      "collocation": "shake hands with someone"
+      "exampleTranslation": "二人の指導者は、公の場で合意書に署名した後、握手をします。"
     },
     {
       "q": 11,
@@ -510,8 +467,7 @@
         ]
       },
       "example": "Drivers must give way to pedestrians at the busy crossing.",
-      "exampleTranslation": "運転手はその混雑した横断歩道で歩行者に道を譲らなければなりません。",
-      "collocation": "give way to traffic / give way under pressure"
+      "exampleTranslation": "運転手はその混雑した横断歩道で歩行者に道を譲らなければなりません。"
     },
     {
       "q": 11,
@@ -539,8 +495,7 @@
         ]
       },
       "example": "I take pains to review all new vocabulary every night before bed.",
-      "exampleTranslation": "私は毎晩寝る前に、新しい語彙をすべて復習するよう心がけています。",
-      "collocation": "take pains to do"
+      "exampleTranslation": "私は毎晩寝る前に、新しい語彙をすべて復習するよう心がけています。"
     },
     {
       "q": 11,
@@ -568,8 +523,7 @@
         ]
       },
       "example": "Your explanation will make sense after we review the diagram together.",
-      "exampleTranslation": "一緒に図を見直せば、あなたの説明は理解できるようになります。",
-      "collocation": "make sense to someone / it makes sense"
+      "exampleTranslation": "一緒に図を見直せば、あなたの説明は理解できるようになります。"
     },
     {
       "q": 12,
@@ -598,8 +552,7 @@
         ]
       },
       "example": "The two brothers were more or less the same size.",
-      "exampleTranslation": "二人の兄弟はほぼ同じ身長でした。",
-      "collocation": "more or less the same / more or less finished"
+      "exampleTranslation": "二人の兄弟はほぼ同じ身長でした。"
     },
     {
       "q": 12,
@@ -628,8 +581,7 @@
         ]
       },
       "example": "Sooner or later, you will need to make a decision.",
-      "exampleTranslation": "遅かれ早かれ、決断を下さなければなりません。",
-      "collocation": "sooner or later, ..."
+      "exampleTranslation": "遅かれ早かれ、決断を下さなければなりません。"
     },
     {
       "q": 12,
@@ -658,8 +610,7 @@
         ]
       },
       "example": "The team worked day and night to finish the project.",
-      "exampleTranslation": "チームはプロジェクトを完成させるために昼夜を問わず働きました。",
-      "collocation": "work day and night"
+      "exampleTranslation": "チームはプロジェクトを完成させるために昼夜を問わず働きました。"
     },
     {
       "q": 12,
@@ -688,8 +639,7 @@
         ]
       },
       "example": "The photos show the room before and after the repair.",
-      "exampleTranslation": "写真は改修前と改修後のお部屋です。",
-      "collocation": "before and after photos"
+      "exampleTranslation": "写真は改修前と改修後のお部屋です。"
     },
     {
       "q": 13,
@@ -716,8 +666,7 @@
       },
       "meaning": "見せびらかす、誇示する",
       "example": "He likes to show off his new watch.",
-      "exampleTranslation": "彼は新しい時計を自慢するのが好きです。",
-      "collocation": "show off skills / show off money"
+      "exampleTranslation": "彼は新しい時計を自慢するのが好きです。"
     },
     {
       "q": 13,
@@ -743,8 +692,7 @@
       },
       "meaning": "片付ける、蓄える",
       "example": "Please put away your toys before the guests arrive this evening.",
-      "exampleTranslation": "今晩、来客が到着する前に、おもちゃを片付けてください。",
-      "collocation": "put away clothes / put away money"
+      "exampleTranslation": "今晩、来客が到着する前に、おもちゃを片付けてください。"
     },
     {
       "q": 13,
@@ -771,8 +719,7 @@
       },
       "meaning": "〜を食べて生きる、〜で暮らす",
       "example": "They could barely live on the money they had left.",
-      "exampleTranslation": "彼らは残ったお金でかろうじて生活することができました。",
-      "collocation": "live on a small income / live on rice"
+      "exampleTranslation": "彼らは残ったお金でかろうじて生活することができました。"
     },
     {
       "q": 13,
@@ -797,8 +744,7 @@
       },
       "meaning": "〜から成る、構成される",
       "example": "The committee will consist of ten members from different schools.",
-      "exampleTranslation": "その委員会は異なる学校から来た10人のメンバーで構成されます。",
-      "collocation": "consist of parts / consist of members"
+      "exampleTranslation": "その委員会は異なる学校から来た10人のメンバーで構成されます。"
     },
     {
       "q": 14,
@@ -827,8 +773,7 @@
         ]
       },
       "example": "Bit by bit, she learned to speak Japanese.",
-      "exampleTranslation": "少しずつ彼女は日本語を話せるようになりました。",
-      "collocation": "improve bit by bit"
+      "exampleTranslation": "少しずつ彼女は日本語を話せるようになりました。"
     },
     {
       "q": 14,
@@ -857,8 +802,7 @@
         ]
       },
       "example": "This is far and away the best restaurant in town.",
-      "exampleTranslation": "これは町ではるかに最高のレストランです。",
-      "collocation": "far and away the best"
+      "exampleTranslation": "これは町ではるかに最高のレストランです。"
     },
     {
       "q": 14,
@@ -887,8 +831,7 @@
         ]
       },
       "example": "The risky investment forced the committee to choose an all or nothing strategy.",
-      "exampleTranslation": "その危険な投資によって、委員会は全か無かの方針を選ばざるを得ませんでした。",
-      "collocation": "an all-or-nothing approach"
+      "exampleTranslation": "その危険な投資によって、委員会は全か無かの方針を選ばざるを得ませんでした。"
     },
     {
       "q": 14,
@@ -917,8 +860,7 @@
         ]
       },
       "example": "The cat came home safe and sound before the storm began.",
-      "exampleTranslation": "その猫は嵐が始まる前に、無事に帰宅しました。",
-      "collocation": "arrive safe and sound"
+      "exampleTranslation": "その猫は嵐が始まる前に、無事に帰宅しました。"
     },
     {
       "q": 15,
@@ -943,8 +885,7 @@
       },
       "meaning": "〜を探して、〜を求めて",
       "example": "Clara went to the bookstore in search of a novel.",
-      "exampleTranslation": "クララは小説を探しに本屋に行きました。",
-      "collocation": "go in search of / in search of work"
+      "exampleTranslation": "クララは小説を探しに本屋に行きました。"
     },
     {
       "q": 15,
@@ -969,8 +910,7 @@
       },
       "meaning": "〜を恐れて、〜しないように",
       "example": "She spoke quietly for fear of waking the baby.",
-      "exampleTranslation": "彼女は赤ん坊を起こすのを恐れて静かに話した。",
-      "collocation": "for fear of failure / for fear of doing"
+      "exampleTranslation": "彼女は赤ん坊を起こすのを恐れて静かに話した。"
     },
     {
       "q": 15,
@@ -995,8 +935,7 @@
       },
       "meaning": "〜を代表して、〜のために",
       "example": "I accepted the award on behalf of the team.",
-      "exampleTranslation": "チームを代表して賞を受け取りました。",
-      "collocation": "speak on behalf of / on behalf of everyone"
+      "exampleTranslation": "チームを代表して賞を受け取りました。"
     },
     {
       "q": 15,
@@ -1021,8 +960,7 @@
       },
       "meaning": "〜に関して",
       "example": "We have no comments with regard to the plan.",
-      "exampleTranslation": "この計画に関してはコメントはありません。",
-      "collocation": "with regard to this issue"
+      "exampleTranslation": "この計画に関してはコメントはありません。"
     },
     {
       "q": 16,
@@ -1050,8 +988,7 @@
         ]
       },
       "example": "We should make a move before it gets dark.",
-      "exampleTranslation": "暗くなる前に行動を起こさなければなりません。",
-      "collocation": "make a move toward / make the first move"
+      "exampleTranslation": "暗くなる前に行動を起こさなければなりません。"
     },
     {
       "q": 16,
@@ -1076,8 +1013,7 @@
         ]
       },
       "example": "I think I'll take a nap this afternoon.",
-      "exampleTranslation": "今日の午後は昼寝しようと思います。",
-      "collocation": "take a short nap / take a quick nap"
+      "exampleTranslation": "今日の午後は昼寝しようと思います。"
     },
     {
       "q": 16,
@@ -1105,8 +1041,7 @@
         ]
       },
       "example": "Make a wish before you blow out the candles.",
-      "exampleTranslation": "ろうそくの火を吹き消す前に願い事をしましょう。",
-      "collocation": "make a wish on a star"
+      "exampleTranslation": "ろうそくの火を吹き消す前に願い事をしましょう。"
     },
     {
       "q": 16,
@@ -1134,8 +1069,7 @@
         ]
       },
       "example": "He decided to take a chance and start a new business.",
-      "exampleTranslation": "彼はチャンスを掴んで新しいビジネスを始めようと決心した。",
-      "collocation": "take a chance on / take a chance with"
+      "exampleTranslation": "彼はチャンスを掴んで新しいビジネスを始めようと決心した。"
     },
     {
       "q": 17,
@@ -1160,8 +1094,7 @@
       },
       "meaning": "〜と同じくらい速く",
       "example": "The athlete ran as fast as she could during the final race.",
-      "exampleTranslation": "その選手は決勝レースで、できる限り速く走りました。",
-      "collocation": "as fast as possible / as fast as one can"
+      "exampleTranslation": "その選手は決勝レースで、できる限り速く走りました。"
     },
     {
       "q": 17,
@@ -1186,8 +1119,7 @@
       },
       "meaning": "〜する限りでは、〜まで",
       "example": "As far as I know, most people are planning to attend.",
-      "exampleTranslation": "私の知る限り、ほとんどの人が参加する予定です。",
-      "collocation": "as far as I know / as far as I'm concerned"
+      "exampleTranslation": "私の知る限り、ほとんどの人が参加する予定です。"
     },
     {
       "q": 17,
@@ -1212,8 +1144,7 @@
       },
       "meaning": "〜する限り、〜でありさえすれば",
       "example": "You can stay here as long as you are quiet.",
-      "exampleTranslation": "静かにしている限り、ここにいても大丈夫です。",
-      "collocation": "as long as possible / as long as you want"
+      "exampleTranslation": "静かにしている限り、ここにいても大丈夫です。"
     },
     {
       "q": 17,
@@ -1238,8 +1169,7 @@
       },
       "meaning": "〜だけでなく、〜と同じくらい上手に",
       "example": "She speaks Spanish as well as English at work and at home.",
-      "exampleTranslation": "彼女は職場でも家庭でも、英語だけでなくスペイン語も話します。",
-      "collocation": "A as well as B / as well as anyone"
+      "exampleTranslation": "彼女は職場でも家庭でも、英語だけでなくスペイン語も話します。"
     }
   ]
 }

@@ -429,15 +429,6 @@
         "https://www.merriam-webster.com/dictionary/portfolio"
       ]
     },
-    "proportion": {
-      "type": "B",
-      "derivation": "ラテン語 pro portione（部分どうしの関係に応じて）から → 割合、比率",
-      "source": "https://www.etymonline.com/word/proportion",
-      "sources": [
-        "https://www.etymonline.com/word/proportion",
-        "https://www.merriam-webster.com/dictionary/proportion"
-      ]
-    },
     "rapport": {
       "type": "B",
       "derivation": "フランス語 rapport（持ち帰って伝えるもの）に由来。ラテン語 portare（運ぶ）を背景に → 親密な関係、意思疎通",
@@ -11360,10 +11351,11 @@
     },
     "appendage": {
       "type": "A",
-      "derivation": "pend（吊るす・付ける）＋-age（〜の状態） → 何かに付いている付属物、付加物",
+      "derivation": "ap-（〜へ。ad-がpの前で同化した形）＋pend（吊るす・付ける）＋-age（〜の状態） → 何かに付いている付属物、付加物",
       "gloss": "付属物、付加物",
       "root": "pend",
       "parts": [
+        { "form": "ap", "kind": "prefix", "gloss": "〜へ（ad-の同化形）" },
         { "form": "pend", "kind": "root", "gloss": "量る・吊るす" },
         { "form": "-age", "kind": "suffix", "gloss": "〜の量・状態" }
       ],
@@ -14455,15 +14447,6 @@
       "sources": [
         "https://www.etymonline.com/word/quickly",
         "https://www.merriam-webster.com/dictionary/quickly"
-      ]
-    },
-    "benefits": {
-      "type": "B",
-      "derivation": "benefitの複数形。古フランス語 benfet、ラテン語 benefactum（よい行為）に由来し、恩恵・利益から給付の意味へ広がった。 → 給付、恩恵",
-      "source": "https://www.etymonline.com/word/benefit",
-      "sources": [
-        "https://www.etymonline.com/word/benefit",
-        "https://www.merriam-webster.com/dictionary/benefit"
       ]
     },
     "architect": {

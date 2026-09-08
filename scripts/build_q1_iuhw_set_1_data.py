@@ -1,8 +1,9 @@
 """国際医療福祉大学の基礎試験セットをQ1形式のJSONへ出力する。
 
 収録語彙は docs/IUHW_BASIC_EXAM_SET_PLAN.md で確定した60語句（WORD_LIST）に固定する。
-60語句は出題英文（正誤判定の選択肢文）から抜き出したもので、単語58語は名詞32・形容詞17・動詞7・その他2、
-熟語2件と品詞が偏っている。全問を「正答と同一品詞の4択」で組むことはできないため、
+60語句は出題英文（正誤判定の選択肢文）から抜き出したもので、単語56語は名詞30・形容詞17・動詞7・その他2、
+熟語4件（Q15 を熟語のみの4択にした。監査 Q12 対応）と品詞が偏っている。
+全問を「正答と同一品詞の4択」で組むことはできないため、
 - 空所に入れたときに文法的に成立する語形を choices に置き、
 - 学習見出し語（words[].word / idioms[].phrase）は WORD_LIST の原形のままにする
 という二層構造にしている（choices と見出し語の対応は check_q1_data.py と同じ活用照合で検証する）。
@@ -67,7 +68,7 @@ WORD_LIST = {
     "percentage": ("百分率、〜％", "名詞", "The percentage of women among new doctors has slowly risen.", "新人医師に占める女性の割合は、ゆっくりと上昇している。"),
     "income": ("所得", "名詞", "Households with a low income depend heavily on public support.", "所得の低い世帯は、公的支援に大きく依存している。"),
     "visas": ("ビザ、査証（複数）", "名詞", "The number of visas granted to engineers rose again last year.", "技術者に発給されたビザの数は、昨年再び増えた。"),
-    "benefits": ("給付、恩恵", "名詞", "Pension benefits make up the largest part of the budget.", "年金給付は予算の最大の部分を占めている。"),
+    "at risk": ("危険にさらされて", "熟語", "Small maternity wards in remote towns are increasingly at risk of closing.", "へき地の町の小さな産科病棟は、閉鎖の危険にますますさらされている。"),
 
     "positions": ("地位、役職（複数）", "名詞", "Few women reach senior positions in Japanese hospitals.", "日本の病院で上級の役職に就く女性は少ない。"),
     "system": ("制度", "名詞", "The social security system was built after the war.", "その社会保障制度は戦後に作られた。"),
@@ -94,26 +95,40 @@ WORD_LIST = {
     "important": ("重要な", "形容詞", "Language ability is an important condition for these applicants.", "語学力はこれらの申請者にとって重要な条件である。"),
     "quickly": ("早く、すばやく", "副詞", "Costs for elderly care are rising more quickly than expected.", "高齢者介護の費用は予想より早く増えている。"),
 
-    "proportion": ("割合", "名詞", "A large proportion of the budget goes to pensions.", "予算の大きな割合が年金に充てられている。"),
+    "on hold": ("保留されて", "熟語", "The plan to raise nurses' pay was put on hold during the budget review.", "看護師の給与を上げる計画は、予算審査の間、保留された。"),
     "per": ("〜あたり", "前置詞", "Japan has fewer doctors per person than most member countries.", "日本は大半の加盟国より、一人あたりの医師数が少ない。"),
-    "according to": ("〜によれば", "熟語", "According to the survey, half of the respondents work overtime.", "その調査によれば、回答者の半数は残業をしている。"),
+    "in demand": ("需要が高くて", "熟語", "Nurses with intensive care experience are in demand across the whole region.", "集中治療の経験を持つ看護師は、地域全体で需要が高い。"),
     "in place": ("整備されている", "熟語", "Support programs for foreign workers are already in place.", "外国人労働者への支援制度はすでに整備されている。"),
 }
 
 # 熟語カードに表示する核心イメージ。単語の語源辞書とは別の表示経路を使う。
 IDIOM_CORE_IMAGES = {
-    "according to": {
-        "chain": [
-            {"term": "according", "gloss": "一致して"},
-            {"term": "to", "gloss": "基準・情報に沿って"},
-            {"gloss": "基準や情報に合わせて、〜によれば"},
-        ]
-    },
     "in place": {
         "chain": [
             {"term": "in", "gloss": "中に"},
             {"term": "place", "gloss": "所定の場所・状態"},
             {"gloss": "必要な位置・状態に置かれて、整備されている"},
+        ]
+    },
+    "at risk": {
+        "chain": [
+            {"term": "at", "gloss": "ある地点・状況に接して"},
+            {"term": "risk", "gloss": "損害が起こる可能性"},
+            {"gloss": "損害が起こりうる状況に置かれて、危険にさらされている"},
+        ]
+    },
+    "on hold": {
+        "chain": [
+            {"term": "on", "gloss": "接した状態が続いて"},
+            {"term": "hold", "gloss": "動かさずにつかんで止める"},
+            {"gloss": "手を止めたまま先へ進めず、保留されている"},
+        ]
+    },
+    "in demand": {
+        "chain": [
+            {"term": "in", "gloss": "その状態の中に"},
+            {"term": "demand", "gloss": "強い要求・需要"},
+            {"gloss": "多くの需要を向けられる状態にあって、引く手あまた"},
         ]
     },
 }
@@ -219,11 +234,11 @@ QUESTIONS = [
         "translation": "医療費は日本の社会保障支出全体の約半分を占めている。",
     },
     {
-        "stem": "The ( ) of social security in general spending was higher in 2023 than in 2010.",
-        "choices": ["benefits", "proportion", "according to", "in place"],
-        "items": ["benefits", "proportion", "according to", "in place"],
+        "stem": "A nationwide system for sending rural patients to city hospitals was finally ( ) by 2020, after years of delay.",
+        "choices": ["on hold", "in place", "at risk", "in demand"],
+        "items": ["on hold", "in place", "at risk", "in demand"],
         "answerIndex": 1,
-        "translation": "一般歳出に占める社会保障の割合は、2010年より2023年のほうが高かった。",
+        "translation": "農村部の患者を都市の病院へ送る全国的な仕組みは、長年の遅れを経て、2020年までにようやく整備された。",
     },
 ]
 
@@ -244,11 +259,29 @@ def write_json(path: Path, value: dict) -> None:
     path.write_bytes(content.encode("utf-8"))
 
 
+def load_existing_ipa() -> dict[str, str]:
+    """既存 vocab の IPA を引き継ぐ。IPA は enrich_flashcard_fields.py が
+    ネット経由で付けるため、再生成でオフラインでも失わないようにする。"""
+    path = DATA_DIR / f"vocab_iuhw_{ROUND_ID}.json"
+    if not path.exists():
+        return {}
+    try:
+        prev = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    return {
+        entry["word"]: entry["ipa"]
+        for entry in prev.get("words", [])
+        if entry.get("word") and entry.get("ipa")
+    }
+
+
 def build() -> tuple[dict, dict]:
     if len(WORD_LIST) != 60:
         raise ValueError(f"見出し語句は60件である必要があります: {len(WORD_LIST)}")
     if len(QUESTIONS) != 15:
         raise ValueError("IUHWセットは15問である必要があります")
+    existing_ipa = load_existing_ipa()
     idiom_keys = {item for item in WORD_LIST if " " in item}
     if idiom_keys != set(IDIOM_CORE_IMAGES):
         raise ValueError(f"熟語の核心イメージ定義が一致しません: {sorted(idiom_keys ^ set(IDIOM_CORE_IMAGES))}")
@@ -278,7 +311,7 @@ def build() -> tuple[dict, dict]:
         details = [WORD_LIST[item] for item in items]
         if len({detail[0] for detail in details}) != 4:
             raise ValueError(f"同一設問内で意味が重複しています: {items}")
-        # 60語句は出題英文由来で品詞が偏っており（単語58語、熟語2件）、
+        # 60語句は出題英文由来で品詞が偏っており（単語56語、熟語4件）、
         # 全問を同一品詞では組めない。正答と同じ品詞が2件以上あるか、
         # 空所に入る語形が揃っている設問だけを許し、混在の件数を上限で押さえる。
         answer_pos = details[question["answerIndex"]][1]
@@ -341,6 +374,8 @@ def build() -> tuple[dict, dict]:
                     "example": example,
                     "exampleTranslation": example_translation,
                 }
+                if item in existing_ipa:
+                    word_data["ipa"] = existing_ipa[item]
                 words.append(word_data)
     print(f"品詞混在の設問: {mixed}/15")
     return {"meta": meta, "words": words, "idioms": idioms}, question_data

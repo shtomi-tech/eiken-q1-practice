@@ -1,19 +1,17 @@
 {
   "meta": {
-    "exam": "英検準2級 2026年度第1回 一次試験",
+    "grade": "英検準2級",
+    "round": "2026-1",
     "section": "Reading 大問1（語句空所補充）",
-    "source_pdf": "2026-1-1ji-p2kyu.pdf",
-    "note": "問題PDFと解答PDFをもとに、大問1の選択肢語句を学習用に整理。",
+    "note": "正解は公式解答と照合済み。choices は本番の出題順。answerIndex は0始まり。",
+    "source": "英検公式の公開過去問PDFを、学習用JSONへ大問1だけ構造化",
+    "source_problem_url": "https://www.eiken.or.jp/eiken/exam/kakomon/2026-1-1ji-p2kyu.pdf",
+    "source_answer_url": "https://www.eiken.or.jp/eiken/result/pdf/202601Fp2kyu.pdf",
     "counts": {
       "words": 40,
       "idioms": 20,
       "total": 60
-    },
-    "grade": "英検準2級",
-    "round": "2026-1",
-    "source": "英検公式の公開過去問PDFを、学習用JSONへ大問1だけ構造化",
-    "source_problem_url": "https://www.eiken.or.jp/eiken/exam/kakomon/2026-1-1ji-p2kyu.pdf",
-    "source_answer_url": "https://www.eiken.or.jp/eiken/result/pdf/202601Fp2kyu.pdf"
+    }
   },
   "words": [
     {
@@ -24,8 +22,7 @@
       "pos": "副詞",
       "meaning": "緊張して、不安そうに",
       "example": "The student waited nervously outside the principal's office before the interview.",
-      "exampleTranslation": "その生徒は面接の前、校長室の外で緊張しながら待ちました。",
-      "collocation": "wait nervously / smile nervously"
+      "exampleTranslation": "その生徒は面接の前、校長室の外で緊張しながら待ちました。"
     },
     {
       "q": 1,
@@ -35,8 +32,7 @@
       "pos": "副詞",
       "meaning": "完全に、本当に、まったく",
       "example": "The restaurant is absolutely packed with customers during the lunch hour.",
-      "exampleTranslation": "昼食時、そのレストランは客でいっぱいです。",
-      "collocation": "absolutely delicious / absolutely right"
+      "exampleTranslation": "昼食時、そのレストランは客でいっぱいです。"
     },
     {
       "q": 1,
@@ -46,8 +42,7 @@
       "pos": "副詞",
       "meaning": "めったに〜ない",
       "example": "We rarely eat at that restaurant because it is far from our home.",
-      "exampleTranslation": "私たちは家から遠いので、そのレストランではめったに食事をしません。",
-      "collocation": "rarely see / rarely happens"
+      "exampleTranslation": "私たちは家から遠いので、そのレストランではめったに食事をしません。"
     },
     {
       "q": 1,
@@ -57,8 +52,7 @@
       "pos": "副詞",
       "meaning": "別々に、個別に",
       "example": "Please pack the fragile glasses separately from the heavy kitchen dishes.",
-      "exampleTranslation": "割れやすいグラスは重い台所用品とは別に包んでください。",
-      "collocation": "work separately / pay separately"
+      "exampleTranslation": "割れやすいグラスは重い台所用品とは別に包んでください。"
     },
     {
       "q": 2,
@@ -68,8 +62,7 @@
       "pos": "動詞",
       "meaning": "異動させた、移した",
       "example": "Dennis was transferred to the New York office.",
-      "exampleTranslation": "デニスはニューヨーク事務所に転勤になりました。",
-      "collocation": "be transferred to / transfer money"
+      "exampleTranslation": "デニスはニューヨーク事務所に転勤になりました。"
     },
     {
       "q": 2,
@@ -79,8 +72,7 @@
       "pos": "動詞",
       "meaning": "減らした、縮小した",
       "example": "The store reduced the price of winter coats before the weekend sale.",
-      "exampleTranslation": "その店は週末のセールの前に、冬のコートの価格を下げました。",
-      "collocation": "reduce the price / reduce waste"
+      "exampleTranslation": "その店は週末のセールの前に、冬のコートの価格を下げました。"
     },
     {
       "q": 2,
@@ -90,8 +82,7 @@
       "pos": "動詞",
       "meaning": "提案した、申し込んだ",
       "example": "The scientist proposed a new explanation after studying the unusual results.",
-      "exampleTranslation": "その科学者は珍しい結果を調べた後、新しい説明を提案しました。",
-      "collocation": "propose a plan / propose an idea"
+      "exampleTranslation": "その科学者は珍しい結果を調べた後、新しい説明を提案しました。"
     },
     {
       "q": 2,
@@ -101,8 +92,7 @@
       "pos": "動詞",
       "meaning": "謝った",
       "example": "The driver apologized to the passengers after taking the wrong road.",
-      "exampleTranslation": "その運転手は道を間違えた後、乗客に謝りました。",
-      "collocation": "apologize for / apologize to someone"
+      "exampleTranslation": "その運転手は道を間違えた後、乗客に謝りました。"
     },
     {
       "q": 3,
@@ -112,8 +102,7 @@
       "pos": "名詞",
       "meaning": "危険、危険性",
       "example": "The guide explained the dangers of walking alone in the mountains.",
-      "exampleTranslation": "案内人は山を一人で歩く危険について説明しました。",
-      "collocation": "the dangers of / face danger"
+      "exampleTranslation": "案内人は山を一人で歩く危険について説明しました。"
     },
     {
       "q": 3,
@@ -123,8 +112,7 @@
       "pos": "名詞",
       "meaning": "宮殿",
       "example": "Tourists visited several beautiful palaces during their trip across Europe.",
-      "exampleTranslation": "観光客はヨーロッパを旅する間、いくつかの美しい宮殿を訪れました。",
-      "collocation": "royal palace / old palaces"
+      "exampleTranslation": "観光客はヨーロッパを旅する間、いくつかの美しい宮殿を訪れました。"
     },
     {
       "q": 3,
@@ -134,8 +122,7 @@
       "pos": "名詞",
       "meaning": "市場、マーケット",
       "example": "Local markets sell fresh vegetables and handmade goods every morning.",
-      "exampleTranslation": "地元の市場では毎朝、新鮮な野菜と手作り品を売っています。",
-      "collocation": "local market / global markets"
+      "exampleTranslation": "地元の市場では毎朝、新鮮な野菜と手作り品を売っています。"
     },
     {
       "q": 3,
@@ -145,8 +132,7 @@
       "pos": "名詞",
       "meaning": "美術館、展示室",
       "example": "The city has several art galleries that display paintings by young artists.",
-      "exampleTranslation": "その市には若い芸術家の絵を展示する画廊がいくつかあります。",
-      "collocation": "art gallery / photo gallery"
+      "exampleTranslation": "その市には若い芸術家の絵を展示する画廊がいくつかあります。"
     },
     {
       "q": 4,
@@ -156,8 +142,7 @@
       "pos": "形容詞",
       "meaning": "木製の",
       "example": "The carpenter built a wooden table that could seat eight people.",
-      "exampleTranslation": "その大工は8人が座れる木製のテーブルを作りました。",
-      "collocation": "wooden chair / wooden house"
+      "exampleTranslation": "その大工は8人が座れる木製のテーブルを作りました。"
     },
     {
       "q": 4,
@@ -167,8 +152,7 @@
       "pos": "形容詞",
       "meaning": "退屈な",
       "example": "The lecture seemed boring at first, but the final discussion was interesting.",
-      "exampleTranslation": "その講義は最初は退屈に思えましたが、最後の議論は興味深いものでした。",
-      "collocation": "boring movie / boring class"
+      "exampleTranslation": "その講義は最初は退屈に思えましたが、最後の議論は興味深いものでした。"
     },
     {
       "q": 4,
@@ -178,8 +162,7 @@
       "pos": "形容詞",
       "meaning": "かわいい",
       "example": "The children thought the small puppy was cute and very friendly.",
-      "exampleTranslation": "子どもたちはその小さな子犬を、かわいくてとても人なつこいと思いました。",
-      "collocation": "cute dog / cute idea"
+      "exampleTranslation": "子どもたちはその小さな子犬を、かわいくてとても人なつこいと思いました。"
     },
     {
       "q": 4,
@@ -189,8 +172,7 @@
       "pos": "形容詞",
       "meaning": "手ごろな、妥当な",
       "example": "The hotel offered a reasonable price for a clean room near the station.",
-      "exampleTranslation": "そのホテルは駅近くの清潔な部屋を手頃な価格で提供しました。",
-      "collocation": "reasonable price / reasonable choice"
+      "exampleTranslation": "そのホテルは駅近くの清潔な部屋を手頃な価格で提供しました。"
     },
     {
       "q": 5,
@@ -200,8 +182,7 @@
       "pos": "名詞",
       "meaning": "賞、賞品",
       "example": "The school gave her an award for helping younger students after class.",
-      "exampleTranslation": "学校は放課後に年下の生徒を助けたことで、彼女に賞を贈りました。",
-      "collocation": "win an award / receive an award"
+      "exampleTranslation": "学校は放課後に年下の生徒を助けたことで、彼女に賞を贈りました。"
     },
     {
       "q": 5,
@@ -211,8 +192,7 @@
       "pos": "名詞",
       "meaning": "通路",
       "example": "The narrow aisle became crowded when shoppers entered the store together.",
-      "exampleTranslation": "買い物客が一斉に店へ入ると、狭い通路は混雑しました。",
-      "collocation": "walk down the aisle / aisle seat"
+      "exampleTranslation": "買い物客が一斉に店へ入ると、狭い通路は混雑しました。"
     },
     {
       "q": 5,
@@ -222,8 +202,7 @@
       "pos": "名詞",
       "meaning": "試み、挑戦",
       "example": "Her first attempt to repair the bicycle failed, but she tried again.",
-      "exampleTranslation": "彼女の自転車修理の最初の試みは失敗しましたが、再び挑戦しました。",
-      "collocation": "make an attempt / first attempt"
+      "exampleTranslation": "彼女の自転車修理の最初の試みは失敗しましたが、再び挑戦しました。"
     },
     {
       "q": 5,
@@ -233,8 +212,7 @@
       "pos": "名詞",
       "meaning": "発表、お知らせ",
       "example": "The principal made an announcement about the school festival during lunch.",
-      "exampleTranslation": "校長は昼食中に、学校祭について発表しました。",
-      "collocation": "make an announcement / official announcement"
+      "exampleTranslation": "校長は昼食中に、学校祭について発表しました。"
     },
     {
       "q": 6,
@@ -244,8 +222,7 @@
       "pos": "名詞",
       "meaning": "方針、政策",
       "example": "The company changed its policies to give employees more flexible hours.",
-      "exampleTranslation": "その会社は従業員により柔軟な勤務時間を与えるため、方針を変更しました。",
-      "collocation": "school policies / company policies"
+      "exampleTranslation": "その会社は従業員により柔軟な勤務時間を与えるため、方針を変更しました。"
     },
     {
       "q": 6,
@@ -255,8 +232,7 @@
       "pos": "名詞",
       "meaning": "毛布",
       "example": "The shelter gave warm blankets to families waiting outside in the cold.",
-      "exampleTranslation": "その避難所は、寒い中で外で待っている家族に暖かい毛布を渡しました。",
-      "collocation": "warm blanket / extra blankets"
+      "exampleTranslation": "その避難所は、寒い中で外で待っている家族に暖かい毛布を渡しました。"
     },
     {
       "q": 6,
@@ -266,8 +242,7 @@
       "pos": "名詞",
       "meaning": "像、彫像",
       "example": "The museum displays ancient statues from several different parts of Asia.",
-      "exampleTranslation": "その博物館はアジアのさまざまな地域から来た古代の像を展示しています。",
-      "collocation": "bronze statue / create statues"
+      "exampleTranslation": "その博物館はアジアのさまざまな地域から来た古代の像を展示しています。"
     },
     {
       "q": 6,
@@ -277,8 +252,7 @@
       "pos": "名詞",
       "meaning": "昆虫",
       "example": "Many insects disappear when the temperature falls below freezing at night.",
-      "exampleTranslation": "夜に気温が氷点下まで下がると、多くの昆虫は姿を消します。",
-      "collocation": "small insects / insects and plants"
+      "exampleTranslation": "夜に気温が氷点下まで下がると、多くの昆虫は姿を消します。"
     },
     {
       "q": 7,
@@ -288,8 +262,7 @@
       "pos": "名詞",
       "meaning": "電池、バッテリー",
       "example": "The phone's battery ran out after I used the camera all afternoon.",
-      "exampleTranslation": "午後ずっとカメラを使った後、携帯電話のバッテリーが切れました。",
-      "collocation": "phone battery / battery charger"
+      "exampleTranslation": "午後ずっとカメラを使った後、携帯電話のバッテリーが切れました。"
     },
     {
       "q": 7,
@@ -299,8 +272,7 @@
       "pos": "名詞",
       "meaning": "レシート、領収書",
       "example": "He keeps the receipt in a safe place.",
-      "exampleTranslation": "彼は領収書を安全な場所に保管しています。",
-      "collocation": "keep the receipt / sales receipt"
+      "exampleTranslation": "彼は領収書を安全な場所に保管しています。"
     },
     {
       "q": 7,
@@ -310,8 +282,7 @@
       "pos": "名詞",
       "meaning": "ウェブサイト",
       "example": "You can find the application form on the university's official website.",
-      "exampleTranslation": "大学の公式ウェブサイトで、申込書を見つけることができます。",
-      "collocation": "visit a website / official website"
+      "exampleTranslation": "大学の公式ウェブサイトで、申込書を見つけることができます。"
     },
     {
       "q": 7,
@@ -321,8 +292,7 @@
       "pos": "名詞",
       "meaning": "枠、額縁、骨組み",
       "example": "The artist placed the finished photograph in a simple wooden frame.",
-      "exampleTranslation": "その芸術家は完成した写真を、シンプルな木製の額に入れました。",
-      "collocation": "picture frame / window frame"
+      "exampleTranslation": "その芸術家は完成した写真を、シンプルな木製の額に入れました。"
     },
     {
       "q": 8,
@@ -332,8 +302,7 @@
       "pos": "動詞",
       "meaning": "貼る、貼り付ける",
       "example": "Use a little glue to paste the colorful paper onto the cardboard.",
-      "exampleTranslation": "少量ののりを使って、色紙を厚紙に貼り付けてください。",
-      "collocation": "paste a photo / copy and paste"
+      "exampleTranslation": "少量ののりを使って、色紙を厚紙に貼り付けてください。"
     },
     {
       "q": 8,
@@ -343,8 +312,7 @@
       "pos": "動詞",
       "meaning": "責める、〜のせいにする",
       "example": "It is unfair to blame the new employee for that small mistake.",
-      "exampleTranslation": "その小さなミスを新人のせいにするのは不公平です。",
-      "collocation": "blame someone / blame A for B"
+      "exampleTranslation": "その小さなミスを新人のせいにするのは不公平です。"
     },
     {
       "q": 8,
@@ -354,8 +322,7 @@
       "pos": "動詞",
       "meaning": "信頼する",
       "example": "Children need time to trust adults they meet in a new place.",
-      "exampleTranslation": "子どもたちが新しい場所で出会った大人を信頼するには時間が必要です。",
-      "collocation": "trust your friends / build trust"
+      "exampleTranslation": "子どもたちが新しい場所で出会った大人を信頼するには時間が必要です。"
     },
     {
       "q": 8,
@@ -365,8 +332,7 @@
       "pos": "動詞",
       "meaning": "ひっかく、傷をつける",
       "example": "Be careful not to scratch the table when you move the heavy box.",
-      "exampleTranslation": "重い箱を動かすとき、テーブルを傷つけないように注意してください。",
-      "collocation": "scratch the surface / scratch your arm"
+      "exampleTranslation": "重い箱を動かすとき、テーブルを傷つけないように注意してください。"
     },
     {
       "q": 9,
@@ -376,8 +342,7 @@
       "pos": "動詞",
       "meaning": "入る、入力する、参加する",
       "example": "Visitors must enter the building through the main gate after noon.",
-      "exampleTranslation": "来訪者は正午以降、正門から建物へ入らなければなりません。",
-      "collocation": "enter a room / enter your name"
+      "exampleTranslation": "来訪者は正午以降、正門から建物へ入らなければなりません。"
     },
     {
       "q": 9,
@@ -387,8 +352,7 @@
       "pos": "動詞",
       "meaning": "従事する、関わる",
       "example": "The museum uses games to engage children during the history exhibition.",
-      "exampleTranslation": "その博物館は歴史展示の間、ゲームで子どもたちを夢中にさせます。",
-      "collocation": "engage in / engage students"
+      "exampleTranslation": "その博物館は歴史展示の間、ゲームで子どもたちを夢中にさせます。"
     },
     {
       "q": 9,
@@ -398,8 +362,7 @@
       "pos": "動詞",
       "meaning": "主張する、要求する",
       "example": "The customer came back to claim the umbrella she had left there.",
-      "exampleTranslation": "その客は、そこに置き忘れた傘を受け取るため戻ってきました。",
-      "collocation": "claim that / claim responsibility"
+      "exampleTranslation": "その客は、そこに置き忘れた傘を受け取るため戻ってきました。"
     },
     {
       "q": 9,
@@ -409,8 +372,7 @@
       "pos": "動詞",
       "meaning": "得点する、点を取る",
       "example": "Our team managed to score three goals during the second half.",
-      "exampleTranslation": "私たちのチームは後半に3得点を挙げることができました。",
-      "collocation": "score points / get a high score"
+      "exampleTranslation": "私たちのチームは後半に3得点を挙げることができました。"
     },
     {
       "q": 10,
@@ -420,8 +382,7 @@
       "pos": "動詞",
       "meaning": "痛む、うずく",
       "example": "My legs began to ache after I walked around the city all day.",
-      "exampleTranslation": "一日中街を歩き回った後、私の脚が痛み始めました。",
-      "collocation": "legs ache / have a headache"
+      "exampleTranslation": "一日中街を歩き回った後、私の脚が痛み始めました。"
     },
     {
       "q": 10,
@@ -431,8 +392,7 @@
       "pos": "動詞",
       "meaning": "なだめる、和らげる",
       "example": "A warm drink can soothe your throat when you have a bad cough.",
-      "exampleTranslation": "ひどいせきが出るとき、温かい飲み物は喉を和らげることがあります。",
-      "collocation": "soothe pain / soothe a baby"
+      "exampleTranslation": "ひどいせきが出るとき、温かい飲み物は喉を和らげることがあります。"
     },
     {
       "q": 10,
@@ -442,8 +402,7 @@
       "pos": "動詞",
       "meaning": "押す",
       "example": "Please push the button firmly until the green light appears.",
-      "exampleTranslation": "緑のランプがつくまで、そのボタンをしっかり押してください。",
-      "collocation": "push the door / push someone to do"
+      "exampleTranslation": "緑のランプがつくまで、そのボタンをしっかり押してください。"
     },
     {
       "q": 10,
@@ -453,8 +412,7 @@
       "pos": "動詞",
       "meaning": "集める、集まる",
       "example": "The volunteers gather donations for families affected by the earthquake.",
-      "exampleTranslation": "ボランティアは地震の被害を受けた家族のために寄付を集めます。",
-      "collocation": "gather information / gather around"
+      "exampleTranslation": "ボランティアは地震の被害を受けた家族のために寄付を集めます。"
     }
   ],
   "idioms": [
@@ -481,8 +439,7 @@
       "pos": "前置詞句",
       "meaning": "〜の隣に",
       "example": "The small bookstore is next to a busy cafe near the station.",
-      "exampleTranslation": "その小さな書店は駅近くのにぎやかなカフェの隣にあります。",
-      "collocation": "next to the station / sit next to"
+      "exampleTranslation": "その小さな書店は駅近くのにぎやかなカフェの隣にあります。"
     },
     {
       "q": 11,
@@ -507,8 +464,7 @@
       "pos": "前置詞句",
       "meaning": "〜を除いて、〜以外は",
       "example": "The museum is open every day except for Monday during winter.",
-      "exampleTranslation": "その博物館は冬の間、月曜日を除いて毎日開いています。",
-      "collocation": "except for one thing / except for Sunday"
+      "exampleTranslation": "その博物館は冬の間、月曜日を除いて毎日開いています。"
     },
     {
       "q": 11,
@@ -533,8 +489,7 @@
       "pos": "前置詞句",
       "meaning": "〜の向かいに",
       "example": "Our hotel is located across from the park and the public library.",
-      "exampleTranslation": "私たちのホテルは公園と公立図書館の向かいにあります。",
-      "collocation": "across from the theater / across from my house"
+      "exampleTranslation": "私たちのホテルは公園と公立図書館の向かいにあります。"
     },
     {
       "q": 11,
@@ -559,8 +514,7 @@
       "pos": "前置詞句",
       "meaning": "最大〜まで、〜次第で",
       "example": "The final choice is up to you after you hear both suggestions.",
-      "exampleTranslation": "2つの提案を聞いた後の最終的な選択は、あなた次第です。",
-      "collocation": "up to three / up to you"
+      "exampleTranslation": "2つの提案を聞いた後の最終的な選択は、あなた次第です。"
     },
     {
       "q": 12,
@@ -587,8 +541,7 @@
       "pos": "句動詞",
       "meaning": "乗る、うまくやっていく",
       "example": "We need to get on the bus before the doors close.",
-      "exampleTranslation": "ドアが閉まる前に、私たちはバスに乗らなければなりません。",
-      "collocation": "get on the bus / get on well"
+      "exampleTranslation": "ドアが閉まる前に、私たちはバスに乗らなければなりません。"
     },
     {
       "q": 12,
@@ -615,8 +568,7 @@
       "pos": "句動詞",
       "meaning": "脱ぐ、離陸する",
       "example": "The airplane will take off after the passengers fasten their seat belts.",
-      "exampleTranslation": "乗客がシートベルトを締めた後、その飛行機は離陸します。",
-      "collocation": "take off shoes / plane takes off"
+      "exampleTranslation": "乗客がシートベルトを締めた後、その飛行機は離陸します。"
     },
     {
       "q": 12,
@@ -643,8 +595,7 @@
       "pos": "句動詞",
       "meaning": "あきらめる",
       "example": "Please do not give up even when the exercise seems difficult.",
-      "exampleTranslation": "その練習問題が難しく思えても、どうかあきらめないでください。",
-      "collocation": "give up trying / never give up"
+      "exampleTranslation": "その練習問題が難しく思えても、どうかあきらめないでください。"
     },
     {
       "q": 12,
@@ -671,8 +622,7 @@
       "pos": "句動詞",
       "meaning": "気をつける、注意する",
       "example": "Look out for bicycles when you cross this narrow street.",
-      "exampleTranslation": "この狭い通りを渡るときは、自転車に気をつけてください。",
-      "collocation": "Look out! / look out for cars"
+      "exampleTranslation": "この狭い通りを渡るときは、自転車に気をつけてください。"
     },
     {
       "q": 13,
@@ -701,8 +651,7 @@
       "pos": "慣用句",
       "meaning": "問題外で、不可能で",
       "example": "Buying a new phone is out of the question.",
-      "exampleTranslation": "新しい携帯電話を購入するのは問題外です。",
-      "collocation": "That is out of the question / completely out of the question"
+      "exampleTranslation": "新しい携帯電話を購入するのは問題外です。"
     },
     {
       "q": 13,
@@ -727,8 +676,7 @@
       "pos": "慣用句",
       "meaning": "未定で、はっきりしていない",
       "example": "The plan is still up in the air.",
-      "exampleTranslation": "その計画はまだ宙に浮いている。",
-      "collocation": "plans are up in the air / still up in the air"
+      "exampleTranslation": "その計画はまだ宙に浮いている。"
     },
     {
       "q": 13,
@@ -757,8 +705,7 @@
       "pos": "慣用句",
       "meaning": "機嫌がよくて",
       "example": "He was in a good temper after receiving the good news.",
-      "exampleTranslation": "よい知らせを受けた後、彼は機嫌がよかったです。",
-      "collocation": "be in a good temper / stay in a good temper"
+      "exampleTranslation": "よい知らせを受けた後、彼は機嫌がよかったです。"
     },
     {
       "q": 13,
@@ -791,8 +738,7 @@
         ]
       },
       "example": "What I do after work is none of your business, thank you.",
-      "exampleTranslation": "仕事の後に私が何をするかは、あなたには関係ありません。",
-      "collocation": "That is none of your business / none of my business"
+      "exampleTranslation": "仕事の後に私が何をするかは、あなたには関係ありません。"
     },
     {
       "q": 14,
@@ -819,8 +765,7 @@
       "pos": "動詞句",
       "meaning": "決心する、決める",
       "example": "I cannot make up my mind until I compare the two plans.",
-      "exampleTranslation": "2つの計画を比べるまで、私は決心できません。",
-      "collocation": "make up my mind / cannot make up my mind"
+      "exampleTranslation": "2つの計画を比べるまで、私は決心できません。"
     },
     {
       "q": 14,
@@ -847,8 +792,7 @@
       "pos": "慣用句",
       "meaning": "しつこく言うのをやめる",
       "example": "Please get off my back and let me finish this work alone.",
-      "exampleTranslation": "どうかうるさく言わず、私にこの仕事を一人で終えさせてください。",
-      "collocation": "Get off my back / tell someone to get off your back"
+      "exampleTranslation": "どうかうるさく言わず、私にこの仕事を一人で終えさせてください。"
     },
     {
       "q": 14,
@@ -875,8 +819,7 @@
       "pos": "動詞句",
       "meaning": "航海に出る",
       "example": "They plan to go on a voyage around the islands next summer.",
-      "exampleTranslation": "彼らは来年の夏、島々を巡る航海に出る予定です。",
-      "collocation": "go on a voyage / long voyage"
+      "exampleTranslation": "彼らは来年の夏、島々を巡る航海に出る予定です。"
     },
     {
       "q": 14,
@@ -903,8 +846,7 @@
       "pos": "動詞句",
       "meaning": "明かりを消す",
       "example": "Please put out the light before you leave the empty room.",
-      "exampleTranslation": "誰もいない部屋を出る前に、明かりを消してください。",
-      "collocation": "put out the light / put out a fire"
+      "exampleTranslation": "誰もいない部屋を出る前に、明かりを消してください。"
     },
     {
       "q": 15,
@@ -929,8 +871,7 @@
       "pos": "動詞句",
       "meaning": "〜に取りかかる",
       "example": "Let us make a start on the project.",
-      "exampleTranslation": "プロジェクトを始めましょう。",
-      "collocation": "make a start on homework / make a start on the project"
+      "exampleTranslation": "プロジェクトを始めましょう。"
     },
     {
       "q": 15,
@@ -955,8 +896,7 @@
       "pos": "動詞句",
       "meaning": "〜を見る、確認する",
       "example": "Let's take a look at the map before choosing a route.",
-      "exampleTranslation": "道順を選ぶ前に、地図を見てみましょう。",
-      "collocation": "take a look at this / take a quick look at"
+      "exampleTranslation": "道順を選ぶ前に、地図を見てみましょう。"
     },
     {
       "q": 15,
@@ -981,8 +921,7 @@
       "pos": "動詞句",
       "meaning": "〜のために親切なことをする",
       "example": "Could you do a favor for me and carry this box upstairs?",
-      "exampleTranslation": "私のために、この箱を2階へ運んでもらえますか。",
-      "collocation": "do a favor for me / ask a favor"
+      "exampleTranslation": "私のために、この箱を2階へ運んでもらえますか。"
     },
     {
       "q": 15,
@@ -1007,8 +946,7 @@
       "pos": "動詞句",
       "meaning": "〜と少し話をする",
       "example": "I need to have a word with you.",
-      "exampleTranslation": "一言お話ししたいことがあります。",
-      "collocation": "have a word with you / have a quick word with"
+      "exampleTranslation": "一言お話ししたいことがあります。"
     }
   ]
 }

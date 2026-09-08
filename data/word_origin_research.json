@@ -324,7 +324,7 @@
   },
   "researchTarget": {
     "type": "B",
-    "count": 1255,
+    "count": 1254,
     "lemmas": [
       "auspice",
       "auspicious",
@@ -1237,7 +1237,6 @@
       "female",
       "table",
       "quickly",
-      "benefits",
       "architect",
       "engineer",
       "astronaut",
@@ -4902,6 +4901,11 @@
         "gloss": "〜へ・上に",
         "kind": "prefix"
       },
+      "ap": {
+        "gloss": "〜へ（ad-の同化形）",
+        "kind": "prefix",
+        "note": "ad-がpの前で同化した表面形。append。"
+      },
       "co": {
         "gloss": "ともに",
         "kind": "prefix"
@@ -7444,69 +7448,6 @@
           "port"
         ],
         "batch": "batch-001"
-      }
-    },
-    "proportion": {
-      "surfaceForms": [
-        "proportion"
-      ],
-      "meanings": [
-        "割合"
-      ],
-      "classification": "B",
-      "display": {
-        "type": "B",
-        "derivation": "ラテン語 pro portione（部分どうしの関係に応じて）から → 割合、比率"
-      },
-      "research": {
-        "status": "reviewed",
-        "sources": [
-          "https://www.etymonline.com/word/proportion",
-          "https://www.merriam-webster.com/dictionary/proportion"
-        ],
-        "originLanguage": "ラテン語・古フランス語・中英語",
-        "etymons": [
-          "proportion",
-          "proportio",
-          "pro portione",
-          "*partio",
-          "pars",
-          "portion"
-        ],
-        "historicalPath": [
-          "ラテン語 prō portiōne（部分どうしの関係に応じて）",
-          "古フランス語 proporcion / アングロフレンチ proporcion を経て英語 proportion",
-          "部分どうしの適切な関係から、割合・比率へ"
-        ],
-        "components": [
-          {
-            "form": "pro portione",
-            "kind": "phrase",
-            "gloss": "関係に応じて"
-          },
-          {
-            "form": "pars / *partio",
-            "kind": "root",
-            "gloss": "部分・分割"
-          }
-        ],
-        "rootCandidates": [
-          "part"
-        ],
-        "sourceNotes": [
-          {
-            "url": "https://www.etymonline.com/word/proportion",
-            "note": "proportionを古フランス語 proporcionおよびラテン語 proportionem / proportioに遡らせ、pro portione（部分どうしの関係に従って）、pro＋*partio（分割・部分、parsに関連）と説明している。portare（運ぶ）を語源としていない。"
-          },
-          {
-            "url": "https://www.merriam-webster.com/dictionary/proportion",
-            "note": "proportionの現代義として部分どうしの調和・関係、割合・比率を確認し、語源をMiddle English proporcioun、Anglo-French / Latin prōportiō、prō portiōneに遡らせている。"
-          }
-        ],
-        "semanticBridge": "部分どうしの関係や釣り合いを表す語から、全体に対する部分の割合や比率を表す現在義へつながる。",
-        "summary": "proportionはpro＋portare（運ぶ）の派生ではなく、ラテン語 pro portione（部分どうしの関係に応じて）を経た語である。現代英語のportを語根とするA型表示は避け、B型にする。",
-        "confidence": "high",
-        "notes": "2026-09-02再監査でportare（運ぶ）との混同を修正し、B型へ移行。"
       }
     },
     "rapport": {
@@ -65019,10 +64960,15 @@
       "classification": "A",
       "display": {
         "type": "A",
-        "derivation": "pend（吊るす・付ける）＋-age（〜の状態） → 何かに付いている付属物、付加物",
+        "derivation": "ap-（〜へ。ad-がpの前で同化した形）＋pend（吊るす・付ける）＋-age（〜の状態） → 何かに付いている付属物、付加物",
         "gloss": "付属物、付加物",
         "root": "pend",
         "parts": [
+          {
+            "form": "ap",
+            "kind": "prefix",
+            "gloss": "〜へ（ad-の同化形）"
+          },
           {
             "form": "pend",
             "kind": "root",
@@ -65058,9 +65004,9 @@
           "英語 appendage（付属物、付加物）"
         ],
         "semanticBridge": "何かに吊り下げたり付け加えたりするものから、主な部分に付属する部分や付加物を表す意味になった。",
-        "summary": "appendageはpend（吊るす・付ける）＋-ageで、付属物・付加物を表す。",
+        "summary": "appendageはap-（ad-の同化形）＋pend（吊るす・付ける）＋-ageで、付属物・付加物を表す。",
         "confidence": "high",
-        "notes": "既存のpend語根と-age接尾辞を再利用し、appendのad-表面形は表示上省く。",
+        "notes": "既存のpend語根と-age接尾辞を再利用し、appendではad-がpの前で同化したap-を表示する。",
         "sourceNotes": [
           {
             "url": "https://www.etymonline.com/word/appendage",
@@ -83143,74 +83089,6 @@
         ],
         "rootCandidates": [
           "gwei"
-        ],
-        "batch": "batch-037"
-      }
-    },
-    "benefits": {
-      "surfaceForms": [
-        "benefits"
-      ],
-      "meanings": [
-        "給付、恩恵"
-      ],
-      "classification": "B",
-      "display": {
-        "type": "B",
-        "derivation": "benefitの複数形。古フランス語 benfet、ラテン語 benefactum（よい行為）に由来し、恩恵・利益から給付の意味へ広がった。 → 給付、恩恵",
-        "source": "https://www.etymonline.com/word/benefit"
-      },
-      "research": {
-        "status": "reviewed",
-        "sources": [
-          "https://www.etymonline.com/word/benefit",
-          "https://www.merriam-webster.com/dictionary/benefit"
-        ],
-        "originLanguage": "ラテン語・フランス語・英語",
-        "etymons": [
-          "benefits",
-          "benefit",
-          "benfet",
-          "benefactum",
-          "bene",
-          "facere",
-          "-s"
-        ],
-        "historicalPath": [
-          "ラテン語 bene facere（よく行う）",
-          "ラテン語 benefactum（よい行為）",
-          "古フランス語 benfet・中英語 benefit",
-          "英語 benefit → benefits（複数形）"
-        ],
-        "semanticBridge": "よい行為から、その行為がもたらす利益・恩恵、さらに制度上受け取る給付へ意味が広がった。",
-        "summary": "benefitsはbenefitの複数形で、bene＋facereという複合的な語源もあるため、複合表現をB型にそろえる方針でB型に残す。",
-        "confidence": "high",
-        "notes": "bene＋facere＋-sをA型の表面分解として表示しない。",
-        "sourceNotes": [
-          {
-            "url": "https://www.etymonline.com/word/benefit",
-            "note": "benefitを古フランス語 benfet、ラテン語 benefactum、bene（よく）＋facere（する）に遡らせ、benefitsは複数形であると確認した。"
-          },
-          {
-            "url": "https://www.merriam-webster.com/dictionary/benefit",
-            "note": "benefitの現代語義として、利益・恩恵、雇用などに伴う給付を確認した。"
-          }
-        ],
-        "components": [
-          {
-            "form": "bene facere",
-            "kind": "phrase",
-            "gloss": "よく行う"
-          },
-          {
-            "form": "-s",
-            "kind": "inflection",
-            "gloss": "複数"
-          }
-        ],
-        "rootCandidates": [
-          "bene",
-          "dhe"
         ],
         "batch": "batch-037"
       }

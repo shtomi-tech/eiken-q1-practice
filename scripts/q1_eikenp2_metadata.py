@@ -401,6 +401,10 @@ EXAMPLE_OVERRIDES = {
             "I felt like taking a short walk after finishing my homework.",
             "宿題を終えた後、私は少し散歩したい気分でした。",
         ),
+        "make a start": (
+            "We should make a start before the afternoon meeting begins.",
+            "午後の会議が始まる前に、取りかかったほうがよいです。",
+        ),
     },
     "2026-1": {
         "nervously": (
@@ -675,6 +679,7 @@ def metadata(round_id: str, existing: dict) -> dict:
             "grade": "英検準2級",
             "round": round_id,
             "section": "Reading 大問1（語句空所補充）",
+            "note": "正解は公式解答と照合済み。choices は本番の出題順。answerIndex は0始まり。",
             "source": "英検公式の公開過去問PDFを、学習用JSONへ大問1だけ構造化",
             "source_problem_url": urls["problem"],
             "source_answer_url": urls["answer"],
@@ -696,6 +701,10 @@ def apply_round(round_id: str) -> None:
     words = vocab_data.get("words", [])
     idioms = vocab_data.get("idioms", [])
     all_items = [*words, *idioms]
+    # アプリが参照しないフィールドは基準セットに合わせて落とす（監査 V02）。
+    for item in all_items:
+        item.pop("collocation", None)
+        item.pop("etymology", None)
     if len(questions) != 15:
         raise ValueError(f"{round_id}: 準2級は15問である必要があります")
     if len(words) != 40 or len(idioms) != 20:
@@ -751,8 +760,10 @@ def apply_round(round_id: str) -> None:
         if len(WORD_RE.findall(example)) < 8 or len(surface_matches(example, surface)) != 1:
             raise ValueError(f"{round_id}: {surface}の例文が整合基準を満たしません")
 
-    questions_data["meta"] = metadata(round_id, questions_data.get("meta", {}))
-    vocab_data["meta"] = metadata(round_id, vocab_data.get("meta", {}))
+    # questions と vocab の meta を同一にそろえる（監査 S09）。
+    canonical_meta = metadata(round_id, {})
+    questions_data["meta"] = dict(canonical_meta)
+    vocab_data["meta"] = dict(canonical_meta)
     write_json(questions_path, questions_data)
     write_json(vocab_path, vocab_data)
 

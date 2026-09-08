@@ -1,19 +1,17 @@
 {
   "meta": {
-    "exam": "英検準2級 2025年度第2回 一次試験",
+    "grade": "英検準2級",
+    "round": "2025-2",
     "section": "Reading 大問1（語句空所補充）",
-    "source_pdf": "2025-2-1ji-p2kyu.pdf",
-    "note": "問題PDFと解答PDFをもとに、大問1の選択肢語句を学習用に整理。",
+    "note": "正解は公式解答と照合済み。choices は本番の出題順。answerIndex は0始まり。",
+    "source": "英検公式の公開過去問PDFを、学習用JSONへ大問1だけ構造化",
+    "source_problem_url": "https://www.eiken.or.jp/eiken/exam/kakomon/2025-2-1ji-p2kyu.pdf",
+    "source_answer_url": "https://www.eiken.or.jp/eiken/result/pdf/202502Fp2kyu.pdf",
     "counts": {
       "words": 40,
       "idioms": 20,
       "total": 60
-    },
-    "grade": "英検準2級",
-    "round": "2025-2",
-    "source": "英検公式の公開過去問PDFを、学習用JSONへ大問1だけ構造化",
-    "source_problem_url": "https://www.eiken.or.jp/eiken/exam/kakomon/2025-2-1ji-p2kyu.pdf",
-    "source_answer_url": "https://www.eiken.or.jp/eiken/result/pdf/202502Fp2kyu.pdf"
+    }
   },
   "words": [
     {
@@ -24,8 +22,7 @@
       "pos": "名詞",
       "meaning": "建築家",
       "example": "She works as an architect in New York.",
-      "exampleTranslation": "彼女はニューヨークで建築家として働いています。",
-      "collocation": "become an architect / a famous architect"
+      "exampleTranslation": "彼女はニューヨークで建築家として働いています。"
     },
     {
       "q": 1,
@@ -35,8 +32,7 @@
       "pos": "名詞",
       "meaning": "技術者、エンジニア",
       "example": "He is an engineer at a car company.",
-      "exampleTranslation": "彼は自動車会社のエンジニアです。",
-      "collocation": "software engineer / a skilled engineer"
+      "exampleTranslation": "彼は自動車会社のエンジニアです。"
     },
     {
       "q": 1,
@@ -46,8 +42,7 @@
       "pos": "名詞",
       "meaning": "編集者",
       "example": "After years of reporting, Angela became the editor of her local newspaper.",
-      "exampleTranslation": "数年間記者を務めた後、アンジェラは地元新聞の編集者になりました。",
-      "collocation": "become an editor / chief editor"
+      "exampleTranslation": "数年間記者を務めた後、アンジェラは地元新聞の編集者になりました。"
     },
     {
       "q": 1,
@@ -57,8 +52,7 @@
       "pos": "名詞",
       "meaning": "宇宙飛行士",
       "example": "The young astronaut trained for months before beginning the difficult space mission.",
-      "exampleTranslation": "その若い宇宙飛行士は、困難な宇宙任務を始める前に何か月も訓練しました。",
-      "collocation": "train as an astronaut / astronaut suit"
+      "exampleTranslation": "その若い宇宙飛行士は、困難な宇宙任務を始める前に何か月も訓練しました。"
     },
     {
       "q": 2,
@@ -68,8 +62,7 @@
       "pos": "名詞",
       "meaning": "数字、図",
       "example": "The financial report includes important figures from the company's sales last year.",
-      "exampleTranslation": "その財務報告書には、昨年の会社の売上に関する重要な数字が含まれています。",
-      "collocation": "sales figures / important figures"
+      "exampleTranslation": "その財務報告書には、昨年の会社の売上に関する重要な数字が含まれています。"
     },
     {
       "q": 2,
@@ -79,8 +72,7 @@
       "pos": "名詞",
       "meaning": "登場人物、性格",
       "example": "The author created several memorable characters for her new children's novel.",
-      "exampleTranslation": "その作家は新しい児童小説のために、印象に残る登場人物を何人も作りました。",
-      "collocation": "main character / build character"
+      "exampleTranslation": "その作家は新しい児童小説のために、印象に残る登場人物を何人も作りました。"
     },
     {
       "q": 2,
@@ -90,8 +82,7 @@
       "pos": "名詞",
       "meaning": "パズル、難問",
       "example": "My grandfather enjoys solving difficult puzzles with his grandchildren on weekends.",
-      "exampleTranslation": "私の祖父は週末に、孫たちと難しいパズルを解くのを楽しみます。",
-      "collocation": "solve a puzzle / jigsaw puzzles"
+      "exampleTranslation": "私の祖父は週末に、孫たちと難しいパズルを解くのを楽しみます。"
     },
     {
       "q": 2,
@@ -101,8 +92,7 @@
       "pos": "名詞",
       "meaning": "提案",
       "example": "Does anyone have any suggestions for the trip?",
-      "exampleTranslation": "誰か旅行について何か提案はありますか?",
-      "collocation": "make a suggestion / any suggestions"
+      "exampleTranslation": "誰か旅行について何か提案はありますか?"
     },
     {
       "q": 3,
@@ -112,8 +102,7 @@
       "pos": "名詞",
       "meaning": "爆発",
       "example": "The firefighters heard several loud explosions near the factory during the night.",
-      "exampleTranslation": "消防士たちは夜間、工場の近くで大きな爆発音をいくつも聞きました。",
-      "collocation": "a loud explosion / prevent explosions"
+      "exampleTranslation": "消防士たちは夜間、工場の近くで大きな爆発音をいくつも聞きました。"
     },
     {
       "q": 3,
@@ -123,8 +112,7 @@
       "pos": "名詞",
       "meaning": "材料、成分",
       "example": "We don't have all the ingredients for the cookies.",
-      "exampleTranslation": "クッキーの材料がすべて揃っていません。",
-      "collocation": "basic ingredients / mix the ingredients"
+      "exampleTranslation": "クッキーの材料がすべて揃っていません。"
     },
     {
       "q": 3,
@@ -134,8 +122,7 @@
       "pos": "名詞",
       "meaning": "参加者",
       "example": "All participants received a certificate after completing the weekend training program.",
-      "exampleTranslation": "参加者全員が週末の研修プログラムを終えた後、修了証を受け取りました。",
-      "collocation": "workshop participants / active participant"
+      "exampleTranslation": "参加者全員が週末の研修プログラムを終えた後、修了証を受け取りました。"
     },
     {
       "q": 3,
@@ -145,8 +132,7 @@
       "pos": "名詞",
       "meaning": "予報、予測",
       "example": "The latest weather forecasts predict heavy rain across the region tomorrow.",
-      "exampleTranslation": "最新の天気予報では、明日その地域全体で大雨になると予測されています。",
-      "collocation": "weather forecast / economic forecast"
+      "exampleTranslation": "最新の天気予報では、明日その地域全体で大雨になると予測されています。"
     },
     {
       "q": 4,
@@ -156,8 +142,7 @@
       "pos": "副詞",
       "meaning": "不運にも、残念ながら",
       "example": "Unfortunately, the train was delayed because a tree blocked the railway.",
-      "exampleTranslation": "残念ながら、木が線路をふさいだため、列車は遅れました。",
-      "collocation": "unfortunately, / unfortunately for him"
+      "exampleTranslation": "残念ながら、木が線路をふさいだため、列車は遅れました。"
     },
     {
       "q": 4,
@@ -167,8 +152,7 @@
       "pos": "副詞",
       "meaning": "ひどく、非常に",
       "example": "The children were awfully quiet while their parents prepared dinner downstairs.",
-      "exampleTranslation": "両親が階下で夕食を準備している間、子どもたちはひどく静かでした。",
-      "collocation": "awfully sorry / awfully hot"
+      "exampleTranslation": "両親が階下で夕食を準備している間、子どもたちはひどく静かでした。"
     },
     {
       "q": 4,
@@ -178,8 +162,7 @@
       "pos": "副詞",
       "meaning": "勇敢に",
       "example": "The captain bravely entered the burning building to rescue the trapped child.",
-      "exampleTranslation": "船長は閉じ込められた子どもを救うため、勇敢に燃えている建物へ入りました。",
-      "collocation": "act bravely / fight bravely"
+      "exampleTranslation": "船長は閉じ込められた子どもを救うため、勇敢に燃えている建物へ入りました。"
     },
     {
       "q": 4,
@@ -189,8 +172,7 @@
       "pos": "副詞",
       "meaning": "ほとんど〜ない",
       "example": "I could hardly hear the announcement because the station was extremely crowded.",
-      "exampleTranslation": "駅がとても混雑していたため、私はそのアナウンスをほとんど聞き取れませんでした。",
-      "collocation": "hardly ever / hardly any"
+      "exampleTranslation": "駅がとても混雑していたため、私はそのアナウンスをほとんど聞き取れませんでした。"
     },
     {
       "q": 5,
@@ -200,8 +182,7 @@
       "pos": "名詞",
       "meaning": "ボウル、鉢",
       "example": "Please place the clean bowls on the table before the guests arrive.",
-      "exampleTranslation": "お客さまが到着する前に、きれいなボウルをテーブルに置いてください。",
-      "collocation": "soup bowls / a bowl of rice"
+      "exampleTranslation": "お客さまが到着する前に、きれいなボウルをテーブルに置いてください。"
     },
     {
       "q": 5,
@@ -211,8 +192,7 @@
       "pos": "名詞",
       "meaning": "ロープ、綱",
       "example": "The climbers checked their ropes carefully before starting up the steep mountain.",
-      "exampleTranslation": "登山者たちは険しい山を登り始める前に、ロープを注意深く確認しました。",
-      "collocation": "climb a rope / tie with ropes"
+      "exampleTranslation": "登山者たちは険しい山を登り始める前に、ロープを注意深く確認しました。"
     },
     {
       "q": 5,
@@ -222,8 +202,7 @@
       "pos": "名詞",
       "meaning": "丸太",
       "example": "We carried several heavy logs into the cabin before the winter storm arrived.",
-      "exampleTranslation": "私たちは冬の嵐が来る前に、重い丸太を何本も小屋へ運びました。",
-      "collocation": "chop logs / a pile of logs"
+      "exampleTranslation": "私たちは冬の嵐が来る前に、重い丸太を何本も小屋へ運びました。"
     },
     {
       "q": 5,
@@ -233,8 +212,7 @@
       "pos": "名詞",
       "meaning": "光線",
       "example": "The warm rays of the morning sun entered through the bedroom window.",
-      "exampleTranslation": "朝の太陽の暖かな光線が寝室の窓から差し込みました。",
-      "collocation": "sun rays / rays of light"
+      "exampleTranslation": "朝の太陽の暖かな光線が寝室の窓から差し込みました。"
     },
     {
       "q": 6,
@@ -244,8 +222,7 @@
       "pos": "形容詞",
       "meaning": "巻き毛の",
       "example": "The little girl has curly hair that reaches her shoulders when it is dry.",
-      "exampleTranslation": "その小さな女の子は、乾くと肩まで届く巻き毛をしています。",
-      "collocation": "curly hair / curly lines"
+      "exampleTranslation": "その小さな女の子は、乾くと肩まで届く巻き毛をしています。"
     },
     {
       "q": 6,
@@ -255,8 +232,7 @@
       "pos": "形容詞",
       "meaning": "深刻な、まじめな",
       "example": "Judy has a serious problem before her wedding.",
-      "exampleTranslation": "ジュディは結婚式を前に深刻な問題を抱えている。",
-      "collocation": "a serious problem / take it seriously"
+      "exampleTranslation": "ジュディは結婚式を前に深刻な問題を抱えている。"
     },
     {
       "q": 6,
@@ -266,8 +242,7 @@
       "pos": "形容詞",
       "meaning": "安定した、着実な",
       "example": "He found a steady job after searching for work throughout the summer.",
-      "exampleTranslation": "彼は夏の間ずっと仕事を探した後、安定した仕事を見つけました。",
-      "collocation": "a steady pace / steady income"
+      "exampleTranslation": "彼は夏の間ずっと仕事を探した後、安定した仕事を見つけました。"
     },
     {
       "q": 6,
@@ -277,8 +252,7 @@
       "pos": "形容詞",
       "meaning": "注意深い",
       "example": "Please be careful when you carry this glass across the crowded kitchen.",
-      "exampleTranslation": "混雑した台所を横切ってこのグラスを運ぶときは、注意してください。",
-      "collocation": "be careful / a careful plan"
+      "exampleTranslation": "混雑した台所を横切ってこのグラスを運ぶときは、注意してください。"
     },
     {
       "q": 7,
@@ -288,8 +262,7 @@
       "pos": "動詞",
       "meaning": "赤面する",
       "example": "Some people blush when they receive unexpected praise in front of others.",
-      "exampleTranslation": "人前で思いがけず褒められると、顔を赤らめる人もいます。",
-      "collocation": "blush with embarrassment / start to blush"
+      "exampleTranslation": "人前で思いがけず褒められると、顔を赤らめる人もいます。"
     },
     {
       "q": 7,
@@ -299,8 +272,7 @@
       "pos": "動詞",
       "meaning": "（拠点を）置く、本拠地とする",
       "example": "Terry decided to base his company in Boston.",
-      "exampleTranslation": "テリーは会社の拠点をボストンに置くことにしました。",
-      "collocation": "base a company in / be based in"
+      "exampleTranslation": "テリーは会社の拠点をボストンに置くことにしました。"
     },
     {
       "q": 7,
@@ -310,8 +282,7 @@
       "pos": "動詞",
       "meaning": "曲げる",
       "example": "You should bend your knees slightly before lifting the heavy box.",
-      "exampleTranslation": "重い箱を持ち上げる前に、膝を少し曲げるべきです。",
-      "collocation": "bend the rules / bend down"
+      "exampleTranslation": "重い箱を持ち上げる前に、膝を少し曲げるべきです。"
     },
     {
       "q": 7,
@@ -321,8 +292,7 @@
       "pos": "動詞",
       "meaning": "放送する",
       "example": "The local station will broadcast the championship game live on Saturday evening.",
-      "exampleTranslation": "地元の放送局は土曜の夜に、決勝戦を生中継する予定です。",
-      "collocation": "broadcast a program / live broadcast"
+      "exampleTranslation": "地元の放送局は土曜の夜に、決勝戦を生中継する予定です。"
     },
     {
       "q": 8,
@@ -332,8 +302,7 @@
       "pos": "動詞",
       "meaning": "集めた、落ち着かせた",
       "example": "The museum collected valuable paintings from private owners across the country.",
-      "exampleTranslation": "その博物館は全国の個人所有者から貴重な絵画を集めました。",
-      "collocation": "collect data / collected works"
+      "exampleTranslation": "その博物館は全国の個人所有者から貴重な絵画を集めました。"
     },
     {
       "q": 8,
@@ -343,8 +312,7 @@
       "pos": "動詞",
       "meaning": "傷つけた",
       "example": "His rude comment hurt my feelings even though he apologized later.",
-      "exampleTranslation": "彼は後で謝りましたが、その失礼な発言は私の気持ちを傷つけました。",
-      "collocation": "hurt someone's feelings / get hurt"
+      "exampleTranslation": "彼は後で謝りましたが、その失礼な発言は私の気持ちを傷つけました。"
     },
     {
       "q": 8,
@@ -354,8 +322,7 @@
       "pos": "動詞",
       "meaning": "（記憶が）真っ白になった",
       "example": "Her mind blanked when she tried to remember his name.",
-      "exampleTranslation": "彼の名前を思い出そうとしたとき、彼女の心は真っ白になりました。",
-      "collocation": "mind blanked / blank out"
+      "exampleTranslation": "彼の名前を思い出そうとしたとき、彼女の心は真っ白になりました。"
     },
     {
       "q": 8,
@@ -365,8 +332,7 @@
       "pos": "動詞",
       "meaning": "手を振った",
       "example": "The children waved goodbye as their grandparents drove away from the station.",
-      "exampleTranslation": "祖父母が駅から車で去るとき、子どもたちは手を振って別れを告げました。",
-      "collocation": "wave goodbye / wave a flag"
+      "exampleTranslation": "祖父母が駅から車で去るとき、子どもたちは手を振って別れを告げました。"
     },
     {
       "q": 9,
@@ -376,8 +342,7 @@
       "pos": "動詞",
       "meaning": "立つ、我慢する",
       "example": "We had to stand outside the theater while the staff checked our tickets.",
-      "exampleTranslation": "係員がチケットを確認している間、私たちは劇場の外に立っていなければなりませんでした。",
-      "collocation": "stand up / can't stand it"
+      "exampleTranslation": "係員がチケットを確認している間、私たちは劇場の外に立っていなければなりませんでした。"
     },
     {
       "q": 9,
@@ -387,8 +352,7 @@
       "pos": "動詞",
       "meaning": "蒸気で調理する、蒸す",
       "example": "You can steam the vegetables gently while the rice cooks in the next pot.",
-      "exampleTranslation": "隣の鍋でご飯を炊いている間に、野菜を弱火で蒸すことができます。",
-      "collocation": "steam vegetables / steam rises"
+      "exampleTranslation": "隣の鍋でご飯を炊いている間に、野菜を弱火で蒸すことができます。"
     },
     {
       "q": 9,
@@ -398,8 +362,7 @@
       "pos": "動詞",
       "meaning": "郵送する",
       "example": "I will mail the signed documents to the office before Friday afternoon.",
-      "exampleTranslation": "私は署名した書類を金曜の午後までに事務所へ郵送します。",
-      "collocation": "mail a letter / mail order"
+      "exampleTranslation": "私は署名した書類を金曜の午後までに事務所へ郵送します。"
     },
     {
       "q": 9,
@@ -409,8 +372,7 @@
       "pos": "動詞",
       "meaning": "浮く、浮かべる",
       "example": "Small pieces of ice can float on the surface of the cold mountain lake.",
-      "exampleTranslation": "小さな氷のかけらは、冷たい山の湖の水面に浮かぶことがあります。",
-      "collocation": "float on water / float an idea"
+      "exampleTranslation": "小さな氷のかけらは、冷たい山の湖の水面に浮かぶことがあります。"
     },
     {
       "q": 10,
@@ -420,8 +382,7 @@
       "pos": "動詞",
       "meaning": "食べ物を与える",
       "example": "The zookeepers feed the hungry animals early every morning before visitors arrive.",
-      "exampleTranslation": "飼育員たちは来園者が来る前、毎朝早く空腹の動物に餌を与えます。",
-      "collocation": "feed the cat / feed information"
+      "exampleTranslation": "飼育員たちは来園者が来る前、毎朝早く空腹の動物に餌を与えます。"
     },
     {
       "q": 10,
@@ -431,8 +392,7 @@
       "pos": "動詞",
       "meaning": "共有する、分ける",
       "example": "Good friends share their worries and support each other during difficult times.",
-      "exampleTranslation": "よい友人たちは悩みを分かち合い、困難なときに互いを支えます。",
-      "collocation": "share ideas / share a room"
+      "exampleTranslation": "よい友人たちは悩みを分かち合い、困難なときに互いを支えます。"
     },
     {
       "q": 10,
@@ -442,8 +402,7 @@
       "pos": "動詞",
       "meaning": "かむ",
       "example": "Dogs often chew their favorite toys when they feel bored at home.",
-      "exampleTranslation": "犬は家で退屈すると、お気に入りのおもちゃをよくかみます。",
-      "collocation": "chew gum / chew slowly"
+      "exampleTranslation": "犬は家で退屈すると、お気に入りのおもちゃをよくかみます。"
     },
     {
       "q": 10,
@@ -453,8 +412,7 @@
       "pos": "動詞",
       "meaning": "弾ませる、跳ねる",
       "example": "He likes to bounce the ball against the wall.",
-      "exampleTranslation": "彼はボールを壁にバウンドさせるのが好きです。",
-      "collocation": "bounce a ball / bounce back"
+      "exampleTranslation": "彼はボールを壁にバウンドさせるのが好きです。"
     }
   ],
   "idioms": [
@@ -481,8 +439,7 @@
         ]
       },
       "example": "The game was postponed on account of rain.",
-      "exampleTranslation": "雨のため試合は延期された。",
-      "collocation": "on account of illness / on account of the weather"
+      "exampleTranslation": "雨のため試合は延期された。"
     },
     {
       "q": 11,
@@ -507,8 +464,7 @@
         ]
       },
       "example": "He didn't speak for fear of making a mistake.",
-      "exampleTranslation": "彼は間違いを恐れて話さなかった。",
-      "collocation": "for fear of failure / for fear of losing"
+      "exampleTranslation": "彼は間違いを恐れて話さなかった。"
     },
     {
       "q": 11,
@@ -533,8 +489,7 @@
         ]
       },
       "example": "In addition to her full-time job, Sheila teaches guitar lessons.",
-      "exampleTranslation": "シーラはフルタイムの仕事に加えて、ギターのレッスンを教えています。",
-      "collocation": "in addition to that / in addition to work"
+      "exampleTranslation": "シーラはフルタイムの仕事に加えて、ギターのレッスンを教えています。"
     },
     {
       "q": 11,
@@ -559,8 +514,7 @@
         ]
       },
       "example": "They traveled by means of a small boat.",
-      "exampleTranslation": "彼らは小さな船を使って旅行しました。",
-      "collocation": "by means of a computer / by various means"
+      "exampleTranslation": "彼らは小さな船を使って旅行しました。"
     },
     {
       "q": 12,
@@ -587,8 +541,7 @@
         ]
       },
       "example": "We went to the station to see it off.",
-      "exampleTranslation": "私たちはそれを見送りに駅へ行きました。",
-      "collocation": "see someone off / go to see it off"
+      "exampleTranslation": "私たちはそれを見送りに駅へ行きました。"
     },
     {
       "q": 12,
@@ -617,8 +570,7 @@
         ]
       },
       "example": "Students sometimes learn by heart short poems before the literature exam.",
-      "exampleTranslation": "生徒たちは文学の試験の前に、短い詩を暗記することがあります。",
-      "collocation": "learn a poem by heart / know by heart"
+      "exampleTranslation": "生徒たちは文学の試験の前に、短い詩を暗記することがあります。"
     },
     {
       "q": 12,
@@ -647,8 +599,7 @@
         ]
       },
       "example": "Many young people come of age while attending university away from home.",
-      "exampleTranslation": "多くの若者は、家を離れて大学に通う間に成人します。",
-      "collocation": "come of age at 18 / a coming-of-age story"
+      "exampleTranslation": "多くの若者は、家を離れて大学に通う間に成人します。"
     },
     {
       "q": 12,
@@ -677,8 +628,7 @@
         ]
       },
       "example": "Just take it easy before the test. You've studied hard.",
-      "exampleTranslation": "テスト前はゆっくり休んでください。あなたは一生懸命勉強しました。",
-      "collocation": "Take it easy. / take things easy"
+      "exampleTranslation": "テスト前はゆっくり休んでください。あなたは一生懸命勉強しました。"
     },
     {
       "q": 13,
@@ -707,8 +657,7 @@
         ]
       },
       "example": "By all means, call me if you need help with the difficult assignment.",
-      "exampleTranslation": "もちろん、その難しい課題で助けが必要なら、私に電話してください。",
-      "collocation": "By all means. / by all means possible"
+      "exampleTranslation": "もちろん、その難しい課題で助けが必要なら、私に電話してください。"
     },
     {
       "q": 13,
@@ -737,8 +686,7 @@
         ]
       },
       "example": "With everyone's help, we finished cleaning the classroom in no time.",
-      "exampleTranslation": "皆が手伝ってくれたので、私たちはあっという間に教室の掃除を終えました。",
-      "collocation": "finish in no time / in no time at all"
+      "exampleTranslation": "皆が手伝ってくれたので、私たちはあっという間に教室の掃除を終えました。"
     },
     {
       "q": 13,
@@ -767,8 +715,7 @@
         ]
       },
       "example": "This computer program is out of date and cannot open the newest files.",
-      "exampleTranslation": "このコンピュータープログラムは古く、最新のファイルを開けません。",
-      "collocation": "out of date information / become out of date"
+      "exampleTranslation": "このコンピュータープログラムは古く、最新のファイルを開けません。"
     },
     {
       "q": 13,
@@ -793,8 +740,7 @@
         ]
       },
       "example": "They discussed what foods to bring, which games to play, and so on.",
-      "exampleTranslation": "どの食べ物を持っていくか、どのゲームをするかなどを話し合いました。",
-      "collocation": "..., and so on / and so forth"
+      "exampleTranslation": "どの食べ物を持っていくか、どのゲームをするかなどを話し合いました。"
     },
     {
       "q": 14,
@@ -823,8 +769,7 @@
         ]
       },
       "example": "No one helped me. I made it on my own.",
-      "exampleTranslation": "誰も私を助けてくれませんでした。自分で作りました。",
-      "collocation": "on my own / do it on your own"
+      "exampleTranslation": "誰も私を助けてくれませんでした。自分で作りました。"
     },
     {
       "q": 14,
@@ -849,8 +794,7 @@
         ]
       },
       "example": "After moving to Canada, she left her hometown for good.",
-      "exampleTranslation": "カナダへ引っ越した後、彼女は故郷を永遠に離れました。",
-      "collocation": "leave for good / gone for good"
+      "exampleTranslation": "カナダへ引っ越した後、彼女は故郷を永遠に離れました。"
     },
     {
       "q": 14,
@@ -879,8 +823,7 @@
         ]
       },
       "example": "The weather changes from day to day during the spring season here.",
-      "exampleTranslation": "この地域では春の間、天気が日ごとに変わります。",
-      "collocation": "live from day to day / change from day to day"
+      "exampleTranslation": "この地域では春の間、天気が日ごとに変わります。"
     },
     {
       "q": 14,
@@ -905,8 +848,7 @@
         ]
       },
       "example": "In a word, the new restaurant was excellent and worth visiting again.",
-      "exampleTranslation": "一言で言えば、その新しいレストランはすばらしく、また訪れる価値がありました。",
-      "collocation": "in a word, / to put it in a word"
+      "exampleTranslation": "一言で言えば、その新しいレストランはすばらしく、また訪れる価値がありました。"
     },
     {
       "q": 15,
@@ -935,8 +877,7 @@
         ]
       },
       "example": "You can relax because an experienced lawyer is on your side.",
-      "exampleTranslation": "経験豊富な弁護士があなたの味方なので、安心してよいですよ。",
-      "collocation": "be on your side / have luck on your side"
+      "exampleTranslation": "経験豊富な弁護士があなたの味方なので、安心してよいですよ。"
     },
     {
       "q": 15,
@@ -965,8 +906,7 @@
         ]
       },
       "example": "Running is a good way to keep in good shape.",
-      "exampleTranslation": "ランニングは健康を維持する良い方法です。",
-      "collocation": "keep in good shape / stay in good shape"
+      "exampleTranslation": "ランニングは健康を維持する良い方法です。"
     },
     {
       "q": 15,
@@ -991,8 +931,7 @@
         ]
       },
       "example": "He stood at the front of the line.",
-      "exampleTranslation": "彼は列の先頭に立った。",
-      "collocation": "at the front of the class / at the front line"
+      "exampleTranslation": "彼は列の先頭に立った。"
     },
     {
       "q": 15,
@@ -1021,8 +960,7 @@
         ]
       },
       "example": "With any luck, the package will arrive before the birthday celebration begins.",
-      "exampleTranslation": "運がよければ、誕生日のお祝いが始まる前に荷物が届くでしょう。",
-      "collocation": "with any luck, / with a bit of luck"
+      "exampleTranslation": "運がよければ、誕生日のお祝いが始まる前に荷物が届くでしょう。"
     }
   ]
 }

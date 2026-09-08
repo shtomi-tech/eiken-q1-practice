@@ -17,7 +17,6 @@ VOCAB_FIELDS = (
     "example",
     "exampleTranslation",
     "pos",
-    "collocation",
     "ipa",
     "relatedWords",
     "selfExampleEnabled",

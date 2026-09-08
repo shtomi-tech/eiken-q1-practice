@@ -183,7 +183,7 @@ DETAILS = {
     "typifies": ("典型的に示す", "動詞", "This quiet village typifies life in the northern region.", "この静かな村は北部地域の暮らしを典型的に示している。"),
     "dispirits": ("落胆させる", "動詞", "The defeat dispirits the determined team, but it keeps trying.", "その敗北は意志の強いチームを落胆させるが、チームは挑戦を続ける。"),
     "omits": ("省く、記載しない", "動詞", "The revised report omits several figures that the auditors need to verify.", "改訂版の報告書は、監査人が確認する必要のある数字をいくつか省いている。"),
-    "clemency": ("慈悲、寛大な処置", "名詞", "The prisoner appealed to the governor for clemency.", "その囚人は知事に慈悲を求めた。"),
+    "clemency": ("慈悲、寛大な処置", "名詞", "The judge showed unexpected clemency toward the young first-time offender.", "裁判官は若い初犯者に対して思いがけず寛大な処置を示した。"),
     "demise": ("死、終焉", "名詞", "The newspaper reported the demise of the old theater.", "その新聞は古い劇場の終焉を報じた。"),
     "melancholy": ("憂鬱、物悲しさ", "名詞", "The fading light over the empty harbor filled her with melancholy.", "無人の港に差す薄れゆく光を見て、彼女は物悲しい気持ちになった。"),
     "scam": ("詐欺", "名詞", "The email was a scam designed to steal bank details.", "そのメールは銀行情報を盗むための詐欺だった。"),
@@ -441,6 +441,23 @@ def write_json(path: Path, value: dict) -> None:
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+def load_existing_ipa(name: str) -> dict[str, str]:
+    """既存 vocab の IPA を引き継ぐ。IPA は enrich_flashcard_fields.py が
+    ネット経由で付けるため、再生成でオフラインでも失わないようにする。"""
+    path = DATA_DIR / name
+    if not path.exists():
+        return {}
+    try:
+        prev = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    return {
+        w["word"]: w["ipa"]
+        for w in prev.get("words", [])
+        if w.get("word") and w.get("ipa")
+    }
+
+
 def build() -> tuple[dict, dict]:
     if len(QUESTIONS) != 25:
         raise ValueError("模試 第1回は25問である必要があります")
@@ -481,6 +498,7 @@ def build() -> tuple[dict, dict]:
             for index, question in enumerate(QUESTIONS, start=1)
         ],
     }
+    existing_ipa = load_existing_ipa("vocab_1_mock-1.json")
     words = []
     idioms = []
     for q, question in enumerate(QUESTIONS, start=1):
@@ -500,6 +518,8 @@ def build() -> tuple[dict, dict]:
                 idioms.append(item)
             else:
                 item["word"] = choice
+                if choice in existing_ipa:
+                    item["ipa"] = existing_ipa[choice]
                 words.append(item)
     if (len(words), len(idioms)) != (84, 16):
         raise ValueError(f"語句数が想定と違います: words={len(words)}, idioms={len(idioms)}")
