@@ -620,7 +620,7 @@ function meaningMission(
     el("p", { class: "label" }, "間隔復習"),
     el("h3", { id: "spacedReviewCardTitle" }, `意味だけ復習（${dataset().shortLabel}）`),
     el("p", { class: "meaningMissionLead" },
-      `${datasetSectionName()}の収録セットをまとめ、通常学習で最後まで解いた設問の語句を1回最大${MEANING_SESSION_SIZE}語句で復習します。正解すると1・3・7・14日後へ進みます。`),
+      `${datasetSectionName()}の収録セットをまとめ、通常学習で最後まで解いた設問の語句を1回最大${MEANING_SESSION_SIZE}語句で復習します。正解すると1→3→7→14→30→60→120日後へ間隔が延びます。`),
     // 行動指標は「今すぐ復習」1つに絞る。プール全体の解放数（旧・左指標）は日常判断に使わないため出さない。
     el("div", { class: "meaningMissionMetrics" },
       el("div", { class: ready && due > 0 ? "meaningMissionMetricDue" : "" }, el("strong", {}, ready ? `${due}語句` : "—"), el("span", {}, "今すぐ復習")),

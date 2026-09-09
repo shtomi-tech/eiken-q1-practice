@@ -110,7 +110,7 @@ assert.match(js, /const MEANING_SESSION_SIZE = 30;/, "MEANING_SESSION_SIZE は30
 const intervalsBlockMatch = js.match(/const MEANING_INTERVALS = \[[\s\S]*?\];/);
 assert.ok(intervalsBlockMatch, "MEANING_INTERVALS の定義が見つからない");
 const intervalsBlock = intervalsBlockMatch[0];
-for (const label of ["未実施", "要再確認", "1日後", "3日後", "7日後", "14日後"]) {
+for (const label of ["未実施", "要再確認", "1日後", "3日後", "7日後", "14日後", "30日後", "60日後", "120日後"]) {
   assert.ok(intervalsBlock.includes(label), `MEANING_INTERVALS に "${label}" が残っている必要がある`);
 }
 
@@ -143,7 +143,7 @@ assert.match(
   "対象0件・due 0件・読込中でCTAをdisabledにする分岐が必要",
 );
 
-// --- 指標は「今すぐ復習」1つ・6セルグリッド用クラス ---
+// --- 指標は「今すぐ復習」1つ・間隔内訳グリッド用クラス ---
 assert.ok(
   meaningMissionBody.includes("meaningMissionMetrics"),
   "指標コンテナ meaningMissionMetrics がJSに必要",
@@ -167,7 +167,7 @@ assert.ok(
 );
 assert.ok(
   intervalBreakdownBody.includes("meaningMissionInterval"),
-  "6セルグリッド用クラス meaningMissionInterval がJSに必要",
+  "間隔内訳グリッド用クラス meaningMissionInterval がJSに必要",
 );
 assert.ok(
   !intervalBreakdownBody.includes("meaningMissionIntervalsLabel") && !intervalBreakdownBody.includes("meaningMissionIntervalsHelp"),

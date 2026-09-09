@@ -618,7 +618,8 @@ h2 {
 .meaningMissionIntervalGrid {
   display: grid;
   gap: 6px;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  /* 9ラベル（未実施・要再確認＋7段のはしご）を3×3で割り切る。 */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-bottom: 14px;
 }
 .meaningMissionInterval {
@@ -1541,7 +1542,6 @@ details.vocabForecast:not([open]) > :not(summary) { display: none; }
 
 @media (max-width: 720px) {
   .itemList { grid-template-columns: 1fr; }
-  .meaningMissionIntervalGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .studyPlanMetrics { grid-template-columns: 1fr; }
   .vocabForecastGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .itemHead, .sectionHead { align-items: stretch; }

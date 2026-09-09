@@ -24,6 +24,13 @@ assertState(meaningResultState(0, 0, true, "good"), 1, 1);
 assertState(meaningResultState(1, 0, true, "hard"), 3, 1);
 assertState(meaningResultState(2, 5, true, "good"), 3, 1);
 assertState(meaningResultState(1, 0, false, "good"), null, 0);
+// はしごは 1/3/7/14/30/60/120 日。14日で頭打ちにせず長期間隔まで伸ばす。
+assertState(meaningResultState(3, 0, true, "good"), 14, 4);
+assertState(meaningResultState(4, 0, true, "good"), 30, 5);
+assertState(meaningResultState(5, 0, true, "good"), 60, 6);
+assertState(meaningResultState(6, 0, true, "good"), 120, 6);
+assertState(meaningResultState(99, 0, true, "good"), 120, 6);
+assertState(meaningResultState(6, 0, true, "hard"), 120, 6);
 assert.equal(nextAverageMs(undefined, 4100), 4100);
 assert.equal(nextAverageMs(7000, 4000), 6100);
 

@@ -1,5 +1,5 @@
 /* ---- 語句単位の進捗（意味だけ練習でのみ使用。既存の units とは別ブロック） ---- */
-const LEITNER_LADDER = [1, 3, 7, 14]; // 正解のたびに進む復習間隔（日）
+const LEITNER_LADDER = [1, 3, 7, 14, 30, 60, 120]; // 正解のたびに進む復習間隔（日）
 const MEANING_INTERVALS = [
   { label: "未実施" },
   { label: "要再確認" },
@@ -7,6 +7,9 @@ const MEANING_INTERVALS = [
   { days: 3, label: "3日後" },
   { days: 7, label: "7日後" },
   { days: 14, label: "14日後" },
+  { days: 30, label: "30日後" },
+  { days: 60, label: "60日後" },
+  { days: 120, label: "120日後" },
 ];
 const MEANING_SESSION_SIZE = 30; // 1回に出す語句の上限
 const MEANING_PROGRESS_VERSION = 2;

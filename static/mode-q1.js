@@ -815,7 +815,7 @@ function unit(q) {
   return state.progress.units[q];
 }
 /* ---- 語句単位の進捗（意味だけ練習でのみ使用。既存の units とは別ブロック） ---- */
-const LEITNER_LADDER = [1, 3, 7, 14]; // 正解のたびに進む復習間隔（日）
+const LEITNER_LADDER = [1, 3, 7, 14, 30, 60, 120]; // 正解のたびに進む復習間隔（日）
 const MEANING_INTERVALS = [
   { label: "未実施" },
   { label: "要再確認" },
@@ -823,6 +823,9 @@ const MEANING_INTERVALS = [
   { days: 3, label: "3日後" },
   { days: 7, label: "7日後" },
   { days: 14, label: "14日後" },
+  { days: 30, label: "30日後" },
+  { days: 60, label: "60日後" },
+  { days: 120, label: "120日後" },
 ];
 const MEANING_SESSION_SIZE = 30; // 1回に出す語句の上限
 const MEANING_PROGRESS_VERSION = 2;
@@ -2190,7 +2193,7 @@ function meaningMission(
     el("p", { class: "label" }, "間隔復習"),
     el("h3", { id: "spacedReviewCardTitle" }, `意味だけ復習（${dataset().shortLabel}）`),
     el("p", { class: "meaningMissionLead" },
-      `${datasetSectionName()}の収録セットをまとめ、通常学習で最後まで解いた設問の語句を1回最大${MEANING_SESSION_SIZE}語句で復習します。正解すると1・3・7・14日後へ進みます。`),
+      `${datasetSectionName()}の収録セットをまとめ、通常学習で最後まで解いた設問の語句を1回最大${MEANING_SESSION_SIZE}語句で復習します。正解すると1→3→7→14→30→60→120日後へ間隔が延びます。`),
     // 行動指標は「今すぐ復習」1つに絞る。プール全体の解放数（旧・左指標）は日常判断に使わないため出さない。
     el("div", { class: "meaningMissionMetrics" },
       el("div", { class: ready && due > 0 ? "meaningMissionMetricDue" : "" }, el("strong", {}, ready ? `${due}語句` : "—"), el("span", {}, "今すぐ復習")),
