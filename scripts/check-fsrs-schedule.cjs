@@ -7,7 +7,7 @@ const vm = require("node:vm");
 const { appJsWithTestExports } = require("./lib/app-source.cjs");
 
 const VENDOR = path.resolve(__dirname, "..", "static", "vendor", "fsrs", "index.umd.js");
-const EXPORTS = "{ FSRS_PARAMS, FSRS_RATING, FSRS_MAX_SCHEDULED_DAYS, meaningRating, toFsrsCard, fromFsrsCard, applyFsrsResult, applyLadderResult, migrateFsrsV1, MEANING_INTERVALS }";
+const EXPORTS = "{ FSRS_PARAMS, FSRS_RATING, FSRS_MAX_SCHEDULED_DAYS, meaningRating, toFsrsCard, fromFsrsCard, applyFsrsResult, applyLadderResult, migrateFsrsV1, MEANING_INTERVALS, meaningIntervalBucket }";
 
 // FSRS を読み込んだ環境 / 読み込めなかった環境で、それぞれ別コンテキストを作る。
 function load({ withFsrs }) {
@@ -151,6 +151,20 @@ assert.equal(
   ["未実施", "要再確認", "3日以内", "1週間", "2週間", "1か月", "3か月", "半年以上"].join(","),
   "内訳は8バケット",
 );
+// 境界は「以下」。移行直後の記録はちょうど 1/3/7/14/30/60 日になるため、
+// 「未満」だと14日の語が「1か月」に落ちる（実際に一度そうなった）。
+assert.equal(app.meaningIntervalBucket(1), "3日以内", "1日はちょうど下限でも3日以内");
+assert.equal(app.meaningIntervalBucket(3), "3日以内", "ちょうど3日は3日以内");
+assert.equal(app.meaningIntervalBucket(3.5), "1週間", "3日超は1週間バケット");
+assert.equal(app.meaningIntervalBucket(7), "1週間", "ちょうど7日は1週間");
+assert.equal(app.meaningIntervalBucket(14), "2週間", "ちょうど14日は2週間（1か月に落とさない）");
+assert.equal(app.meaningIntervalBucket(30), "1か月", "ちょうど30日は1か月");
+assert.equal(app.meaningIntervalBucket(60), "3か月", "60日は3か月バケット");
+assert.equal(app.meaningIntervalBucket(90), "3か月", "ちょうど90日は3か月");
+assert.equal(app.meaningIntervalBucket(181), "半年以上", "上限付近は半年以上");
+assert.equal(app.meaningIntervalBucket(0.5), "要再確認", "当日中は要再確認");
+assert.equal(app.meaningIntervalBucket(NaN), "要再確認", "数値にならない間隔は要再確認");
+
 const bounds = intervals.filter((entry) => entry.days !== undefined).map((entry) => entry.days);
 assert.equal(
   bounds.join(","),
