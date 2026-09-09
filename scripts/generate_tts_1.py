@@ -22,7 +22,11 @@ ROOT = Path(__file__).resolve().parents[1]
 AUDIO_ROOT = ROOT / "assets" / "audio" / "vocab"
 GRADE_CONFIG = {
     "1": {"pattern": "vocab_1_*.json", "filename": r"vocab_1_(.+)\.json", "folder": "1"},
-    "2": {"pattern": "vocab_*.json", "filename": r"vocab_(\d{4}-\d+)\.json", "folder": "2"},
+    "2": {
+        "pattern": "vocab_*.json",
+        "filename": r"vocab_(?:(?P<round>\d{4}-\d+)|2_(?P<mock_round>mock-\d+))\.json",
+        "folder": "2",
+    },
     "5": {"pattern": "vocab_5_*.json", "filename": r"vocab_5_(\d{4}-\d+)\.json", "folder": "5"},
     "pre1": {"pattern": "vocab_pre1_*.json", "filename": r"vocab_pre1_(.+)\.json", "folder": "pre1"},
     "pre2": {"pattern": "vocab_p2_*.json", "filename": r"vocab_p2_(.+)\.json", "folder": "pre2"},
@@ -51,7 +55,8 @@ def vocab_files(grade: str, round_id: str) -> list[tuple[str, Path]]:
         match = re.fullmatch(config["filename"], path.name)
         if not match:
             continue
-        current_round = match.group(1)
+        groups = match.groupdict()
+        current_round = groups.get("round") or groups.get("mock_round") or match.group(1)
         if round_id != "all" and current_round != round_id:
             continue
         files.append((current_round, path))
