@@ -1,6 +1,6 @@
 # 英検 大問1 単語アプリ
 
-英検5級・1級・2級・準2級・準1級の大問1（語彙）を扱う静的Webアプリです。5級の2026年度第1回、1級・2級・準2級・準1級の各級過去問3回分に加え、1級の模試第1回〜第9回、準2級の自作模試第1回〜第4回、国際医療福祉大学の総合型選抜基礎試験セット2回分を収録しています（合計28セット）。準2級の自作模試と国際医療福祉大学セットは英検過去問を引用していません。
+英検5級・1級・2級・準2級・準1級の大問1（語彙）を扱う静的Webアプリです。5級の2026年度第1回、1級・2級・準2級・準1級の各級過去問3回分に加え、1級の模試第1回〜第21回、2級の模試第1回〜第4回、準2級の自作模試第1回〜第4回、国際医療福祉大学の総合型選抜基礎試験セット2回分を収録しています（合計44セット）。2級・準2級の自作模試、1級の模試第10回〜第21回、国際医療福祉大学セットは英検過去問を引用していません。
 
 ## 学習の流れ
 
@@ -27,7 +27,7 @@
 | 2級 | 51 | 204 |
 | 準2級 | 105 | 420 |
 | 準1級 | 54 | 216 |
-| 1級（模試第1回〜第9回を含む） | 291 | 1164 |
+| 1級（模試第1回〜第21回を含む） | 591 | 2364 |
 | 医療福祉 基礎試験（第1回・第2回） | 30 | 120 |
 
 語句ごとの復習間隔は、その語句が属する回の進捗（`eiken_q1_progress_<datasetId>` の `items`）に保存します。級をまたいで混ざることはありません。
@@ -36,7 +36,7 @@
 
 英検5級・準2級・2級・準1級・1級の通常問題では、ホームの語彙目標カード上段に新規問題の学習計画を表示できます。常時表示は「今日 n / m問」です。新規問題は、本番形式4択へ初めて回答した `(datasetId, q)` の組です。正誤は問わず、同じ問題の解き直し・意味だけ復習は日次・週次・総問題数へ重複加算しません。医療福祉セットは英検の級ではないため対象外です。
 
-- 総問題目標の初期値は、manifest配下のその級の通常問題数です（5級15問／準2級105問／2級51問／準1級54問／1級291問）。既存データとの互換性のため保持しますが、ホームの設定・表示には出しません。
+- 総問題目標の初期値は、manifest配下のその級の通常問題数です（5級15問／準2級105問／2級51問／準1級54問／1級591問）。既存データとの互換性のため保持しますが、ホームの設定・表示には出しません。
 - 1日の問題目標の初期値は8問、週間目標はその7倍です。設定では1日の問題目標と週の開始曜日を変更できます。週次の集計・再配分ロジックは保持しますが、ホームには表示しません。
 - 日次・週次の実績は、設問の初回答時刻 `firstAnsweredAt` を利用者のローカル日付へ戻して集計します。既存履歴から補完できる場合は最古の設問回答時刻を使い、日時不明の旧回答は総数だけに含めます。
 - 週の残り日数へ再配分する値は、`ceil(週間残数 / 今週の残り日数)` です。未達分を翌週へ自動繰越はしません。
@@ -74,6 +74,18 @@
 - 1級模試第7回: `data/questions_1_mock-7.json` / `data/vocab_1_mock-7.json`
 - 1級模試第8回: `data/questions_1_mock-8.json` / `data/vocab_1_mock-8.json`
 - 1級模試第9回: `data/questions_1_mock-9.json` / `data/vocab_1_mock-9.json`
+- 1級模試第10回: `data/questions_1_mock-10.json` / `data/vocab_1_mock-10.json`
+- 1級模試第11回: `data/questions_1_mock-11.json` / `data/vocab_1_mock-11.json`
+- 1級模試第12回: `data/questions_1_mock-12.json` / `data/vocab_1_mock-12.json`
+- 1級模試第13回: `data/questions_1_mock-13.json` / `data/vocab_1_mock-13.json`
+- 1級模試第14回: `data/questions_1_mock-14.json` / `data/vocab_1_mock-14.json`
+- 1級模試第15回: `data/questions_1_mock-15.json` / `data/vocab_1_mock-15.json`
+- 1級模試第16回: `data/questions_1_mock-16.json` / `data/vocab_1_mock-16.json`
+- 1級模試第17回: `data/questions_1_mock-17.json` / `data/vocab_1_mock-17.json`
+- 1級模試第18回: `data/questions_1_mock-18.json` / `data/vocab_1_mock-18.json`
+- 1級模試第19回: `data/questions_1_mock-19.json` / `data/vocab_1_mock-19.json`
+- 1級模試第20回: `data/questions_1_mock-20.json` / `data/vocab_1_mock-20.json`
+- 1級模試第21回: `data/questions_1_mock-21.json` / `data/vocab_1_mock-21.json`
 - 国際医療福祉大学 基礎試験 第1回: `data/questions_iuhw_set-1.json` / `data/vocab_iuhw_set-1.json`
 - 国際医療福祉大学 基礎試験 第2回: `data/questions_iuhw_set-2.json` / `data/vocab_iuhw_set-2.json`
 - 熟語の核心イメージ共有辞書（データ検査・作成補助用。UIには表示しない）: `data/particle_images.json`
@@ -83,7 +95,7 @@
 - 個別再調査バッチの記録: `data/word_origin_research_batch_*.json`
 - 問題セット一覧: `data/manifest.json` の `q1`
 
-1級の模試第1回〜第9回と公式過去問3回分は、模試25問/100語句・公式22問/88語句の形式差を保ったまま、共通検査で第6回の完成条件を確認できます。第7回〜第9回は表層音声と暗記カード用原形音声の生成済みデータを含むため、専用検査を通常モードで実行できます。
+1級の模試第1回〜第21回と公式過去問3回分は、模試25問/100語句・公式22問/88語句の形式差を保ったまま、共通検査で第6回の完成条件を確認できます。第7回〜第9回は表層音声と暗記カード用原形音声の生成済みデータを含むため、専用検査を通常モードで実行できます。
 
 ```powershell
 py -3 scripts/check_eiken1_alignment.py --dataset-id eiken1-mock-6
@@ -98,7 +110,7 @@ py -3 scripts/check_eiken1_alignment.py --dataset-id iuhw-set-2
 py -3 scripts/check_eiken1_alignment.py --all
 ```
 
-1級・2級・準2級・準1級・5級と国際医療福祉大学の各セットは、公式形式の件数を保ったまま、問題文訳・語句メタデータ・例文・IPA・正答フラグの共通整合検査を実行できます。`--all` はmanifest上の全28セットを対象にします。全1級セットの独立レビュー結果は `docs/EIKEN1_ALIGNMENT_REVIEW.md`、2級と準2級・準1級の整合記録は `docs/EIKEN2_ALIGNMENT.md`、`docs/EIKENP2_ALIGNMENT.md`、`docs/EIKENP1_ALIGNMENT.md`、医療福祉セットの整合記録は `docs/IUHW_ALIGNMENT.md` に記録しています。
+1級・2級・準2級・準1級・5級と国際医療福祉大学の各セットは、公式形式の件数を保ったまま、問題文訳・語句メタデータ・例文・IPA・正答フラグの共通整合検査を実行できます。`--all` はmanifest上の全44セットを対象にします。全1級セットの独立レビュー結果は `docs/EIKEN1_ALIGNMENT_REVIEW.md`、2級と準2級・準1級の整合記録は `docs/EIKEN2_ALIGNMENT.md`、`docs/EIKENP2_ALIGNMENT.md`、`docs/EIKENP1_ALIGNMENT.md`、医療福祉セットの整合記録は `docs/IUHW_ALIGNMENT.md` に記録しています。
 
 準1級のQ1データは、全体過去問データから次で抽出します。
 
@@ -228,7 +240,7 @@ py -3 scripts/add_example_translations.py
 - `scripts/rebuild-word-origin-dictionaries.cjs`: 語源再調査台帳から表示用辞書を再生成
 - `scripts/apply-word-origin-research-batch.cjs`: 個別再調査バッチを台帳へ適用
 - `scripts/check-word-origin-research.cjs`: 1,255語の調査状況・出典・原形対応を検査
-- `scripts/check_eiken1_alignment.py`: 5級・準2級・2級・準1級・1級と医療福祉の全28セットの語句・例文・語源・音声の整合検査
+- `scripts/check_eiken1_alignment.py`: 5級・準2級・2級・準1級・1級と医療福祉の全44セットの語句・例文・語源・音声の整合検査
 - `scripts/review_official_questions.py`: 正答を伏せて2級・準2級・準1級公式問題をローカル別モデルでレビュー
 - `scripts/check-pre1-core-image-compat.cjs`: 準1級48句動詞の`word:`進捗互換と核心イメージを検査
 - `scripts/q1_eiken2_metadata.py`: 2級の例文補正・正答フラグ・出典メタデータの正本
