@@ -13,6 +13,10 @@ DATA_DIR = ROOT / "data"
 EXPECTED_IDS = {
     "eiken5-2026-1",
     *(f"eiken2-{round_id}" for round_id in ("2026-1", "2025-3", "2025-2")),
+    "eiken2-mock-1",
+    "eiken2-mock-2",
+    "eiken2-mock-3",
+    "eiken2-mock-4",
     *(f"eikenp2-{round_id}" for round_id in ("2026-1", "2025-3", "2025-2")),
     *(f"eikenp1-{round_id}" for round_id in ("2026-1", "2025-3", "2025-2")),
     *(f"eiken1-{round_id}" for round_id in ("2026-1", "2025-3", "2025-2")),

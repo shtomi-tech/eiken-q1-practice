@@ -59,6 +59,7 @@
 
 - 5級: `data/questions_5_*.json` / `data/vocab_5_*.json`
 - 2級: `data/questions_*.json` / `data/vocab_*.json`
+- 2級模試第1回〜第4回: `data/questions_2_mock-{1,2,3,4}.json` / `data/vocab_2_mock-{1,2,3,4}.json`
 - 準2級: `data/questions_p2_*.json` / `data/vocab_p2_*.json`
 - 準2級模試第1回: `data/questions_p2_mock-1.json` / `data/vocab_p2_mock-1.json`
 - 準2級模試第2回〜第4回: `data/questions_p2_mock-{2,3,4}.json` / `data/vocab_p2_mock-{2,3,4}.json`
@@ -245,6 +246,7 @@ py -3 scripts/add_example_translations.py
 - `scripts/build_q1_mock_7_data.py`: 1級模試第7回の問題・語彙データ生成
 - `scripts/build_q1_mock_8_data.py`: 1級模試第8回の問題・語彙データ生成
 - `scripts/build_q1_mock_9_data.py`: 1級模試第9回の問題・語彙データ生成
+- `scripts/build_q1_eiken2_mock_{1,2,3,4}_data.py`: 2級模試第1回〜第4回の問題・語彙データ生成
 - `scripts/build_q1_p2_mock_1_data.py`: 準2級自作模試第1回の問題・語彙データ生成
 - `scripts/build_q1_p2_mock_{2,3,4}_data.py`: 準2級自作模試第2回〜第4回の問題・語彙データ生成
 - `scripts/build_q1_iuhw_set_1_data.py`: 国際医療福祉大学セット第1回の問題・語彙データ生成
@@ -253,6 +255,7 @@ py -3 scripts/add_example_translations.py
 - `scripts/check_mock_7_data.py`: 1級模試第7回の内容・重複・音声チェック
 - `scripts/check_mock_8_data.py`: 1級模試第8回の内容・重複・音声チェック
 - `scripts/check_mock_9_data.py`: 1級模試第9回の内容・重複・音声チェック
+- `scripts/check_eiken2_mock_{1,2,3,4}_data.py`: 2級模試第1回〜第4回の内容・重複チェック
 - `scripts/check_5_data.py`: 5級2026年度第1回大問1の内容・公式解答チェック
 - `scripts/check_q1_data.py`: 28セットのデータ契約チェック
 - `scripts/check_p2_mock_data.py`: 準2級自作模試（全回）の内容チェック
