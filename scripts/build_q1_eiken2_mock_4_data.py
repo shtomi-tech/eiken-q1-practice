@@ -85,10 +85,10 @@ QUESTIONS = [
         "translation": "A：面接をオンラインで受けることはできますか。B：最初の面接なら可能ですが、2回目は直接お会いしたいと思います。",
     },
     {
-        "stem": "A: Dad, I'm going camping tomorrow. B: Take this $20 (   ) you need anything.",
+        "stem": "A: Dad, I'm going camping tomorrow and will be away overnight. B: Take this $20 (   ) you need anything.",
         "choices": ["now that", "as if", "in case", "every time"],
         "answerIndex": 2,
-        "translation": "A：お父さん、明日キャンプに行くんだ。B：何か必要な場合に備えて、この20ドルを持っていきなさい。",
+        "translation": "A：お父さん、明日キャンプに行って一晩離れているんだ。B：何か必要な場合に備えて、この20ドルを持っていきなさい。",
     },
     {
         "stem": "Wendy did not admit that she was wrong because she did not want to lose (   ) in front of her friends.",
@@ -97,16 +97,16 @@ QUESTIONS = [
         "translation": "ウェンディは友人の前で面目を失いたくなかったので、自分が間違っていたと認めなかった。",
     },
     {
-        "stem": "A: We've got to work faster, or we won't finish on time. B: But we have so much work and only have an hour left. We're not going to (   ) it.",
-        "choices": ["try", "get", "manage", "own"],
-        "answerIndex": 2,
-        "translation": "A：もっと速く働かないと、時間内に終わりません。B：でも仕事が多すぎるし、残り1時間しかありません。私たちには対処しきれません。",
+        "stem": "A: We've got to work faster, or we won't finish on time. B: But we have so much work and only have an hour left. We're not going to (   ) all this work.",
+        "choices": ["get through", "look around", "put out", "pass out"],
+        "answerIndex": 0,
+        "translation": "A：もっと速く働かないと、時間内に終わりません。B：でも仕事が多すぎるし、残り1時間しかありません。私たちはこの仕事を全部終えられそうにありません。",
     },
     {
-        "stem": "A: So, Jane, are you still planning to buy a house? B: Well, I've been having (   ). An apartment may be cheaper.",
-        "choices": ["social issues", "new beginnings", "shared values", "second thoughts"],
-        "answerIndex": 3,
-        "translation": "A：それで、ジェーン、まだ家を買うつもりですか。B：そうですね、考え直しています。アパートの方が安いかもしれません。",
+        "stem": "A: Jane, did you tell the landlord that the rent was too high? B: Yes, I (   ) the problem to the manager at our meeting yesterday.",
+        "choices": ["brought up", "looked over", "gave away", "turned out"],
+        "answerIndex": 0,
+        "translation": "A：ジェーン、家賃が高すぎると大家さんに伝えましたか。B：はい、昨日の会議でその問題を管理者に持ち出しました。",
     },
     {
         "stem": "Charles (   ) a sign to his office door using tape and asking delivery people to leave any packages outside.",
@@ -122,7 +122,7 @@ QUESTIONS = [
     },
     {
         "stem": "A: I'm pretty sure I can repair the dishwasher this time, Mom. B: No matter (   ) you do it, please make sure I don't have any more problems.",
-        "choices": ["why", "since", "how", "what"],
+        "choices": ["why", "when", "how", "where"],
         "answerIndex": 2,
         "translation": "A：今回は食器洗い機をきっと修理できると思うよ、母さん。B：どのように修理するにしても、これ以上問題が起きないようにしてちょうだい。",
     },
@@ -133,6 +133,13 @@ QUESTIONS = [
         "translation": "サムは目覚まし時計をセットしなかったに違いない。彼は駅に時間どおり着くには遅すぎる時間に起きた。",
     },
 ]
+
+# 設問の位置を語句種別の契約に合わせる。空白の有無では分類しない。
+QUESTIONS = [
+    QUESTIONS[index]
+    for index in (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 13, 16, 17, 18, 10, 11, 12, 14, 15, 19)
+]
+IDIOM_QUESTIONS = set(range(15, 21))
 
 
 DETAILS = {
@@ -184,10 +191,18 @@ DETAILS = {
     "at present": ("現在は", "副詞句", "At present, the clinic has no open appointments.", "現在、その診療所には空いている予約枠がない。"),
     "in writing": ("書面で", "副詞句", "Please send the final request in writing before Friday.", "金曜日までに最終依頼を書面で送ってください。"),
     "on hand": ("手元に、用意して", "副詞句", "The store keeps several replacement parts on hand.", "その店は交換部品をいくつか手元に用意している。"),
+    "get through": ("〜を終える、切り抜ける", "動詞句", "The team must get through all the paperwork before Friday.", "チームは金曜日までに書類作業をすべて終えなければならない。"),
+    "look around": ("見回す、見物する", "動詞句", "Visitors can look around the museum after the tour ends.", "見学が終わった後、訪問者は博物館を見て回れる。"),
+    "put out": ("〜を外へ出す、用意する", "動詞句", "The staff will put out fresh chairs before the ceremony begins.", "職員は式典が始まる前に新しい椅子を出す。"),
+    "pass out": ("〜を配る、気を失う", "動詞句", "Nurses will pass out forms before the health lecture starts.", "看護師は健康講座が始まる前に用紙を配る。"),
     "now that": ("今や〜なので", "接続詞句", "Now that the weather is warmer, we can open the windows.", "今や天気が暖かくなったので、窓を開けられる。"),
     "as if": ("まるで〜のように", "接続詞句", "He spoke as if he had already visited the distant country.", "彼はまるでその遠い国をすでに訪れたかのように話した。"),
     "in case": ("〜の場合に備えて", "接続詞句", "Take an umbrella in case the weather changes suddenly.", "天気が急に変わる場合に備えて、傘を持っていきなさい。"),
     "every time": ("〜するたびに", "接続詞句", "Every time the bell rings, the students change rooms.", "ベルが鳴るたびに、生徒たちは教室を移動する。"),
+    "brought up": ("〜を話題に出す", "動詞句", "The tenant brought up the rent problem during the meeting.", "入居者は会議中に家賃の問題を話題に出した。"),
+    "looked over": ("〜にざっと目を通した", "動詞句", "The manager looked over the report before signing the form.", "管理者は用紙に署名する前に報告書に目を通した。"),
+    "gave away": ("〜を漏らした、無料で与えた", "動詞句", "The careless remark gave away the secret to everyone.", "その不用意な発言は秘密を皆に漏らした。"),
+    "turned out": ("結局〜と分かった", "動詞句", "The investigation turned out to reveal the missing facts.", "調査の結果、欠けていた事実が明らかになった。"),
     "back": ("背中、後ろ、戻って", "名詞", "The swimmer hurt his back during practice yesterday afternoon.", "その水泳選手は昨日の午後、練習中に背中を痛めた。"),
     "money": ("お金", "名詞", "The child saved money for a bicycle throughout the summer.", "その子どもは夏の間ずっと自転車のためにお金を貯めた。"),
     "face": ("面目、顔", "名詞", "She tried to keep a calm face during the difficult interview.", "彼女は難しい面接中も落ち着いた顔を保とうとした。"),
@@ -205,13 +220,13 @@ DETAILS = {
     "wasted": ("無駄にした", "動詞", "The student wasted an entire afternoon watching old videos.", "その生徒は午後を丸ごと古い動画を見て無駄にした。"),
     "meant": ("意味した、意図した", "動詞", "The message meant that visitors should use the side entrance.", "そのメッセージは訪問者が側面入口を使うべきだという意味だった。"),
     "spent": ("使った、過ごした", "動詞", "She spent the weekend organizing old photographs with her mother.", "彼女は週末を母親と古い写真の整理に使った。"),
-    "having spent": ("使ったこと", "動詞句", "Having spent all morning on the report, he took a short break.", "報告書に午前中ずっと取り組んだので、彼は短い休憩を取った。"),
-    "has spent": ("使ってきた、過ごした", "助動詞句", "She has spent several years studying insects in the rainforest.", "彼女は数年間、熱帯雨林で昆虫を研究してきた。"),
-    "had spent": ("使っていた、過ごしていた", "助動詞句", "By noon, the visitors had spent three hours inside the museum.", "正午までに、訪問者たちは博物館の中で3時間過ごしていた。"),
+    "having spent": ("使ったこと", "動詞", "Having spent all morning on the report, he took a short break.", "報告書に午前中ずっと取り組んだので、彼は短い休憩を取った。"),
+    "has spent": ("使ってきた、過ごした", "動詞", "She has spent several years studying insects in the rainforest.", "彼女は数年間、熱帯雨林で昆虫を研究してきた。"),
+    "had spent": ("使っていた、過ごしていた", "動詞", "By noon, the visitors had spent three hours inside the museum.", "正午までに、訪問者たちは博物館の中で3時間過ごしていた。"),
     "why": ("なぜ、理由", "副詞", "Nobody understood why the machine stopped during the test.", "試験中に機械が止まった理由を誰も理解しなかった。"),
-    "since": ("〜以来、〜なので", "接続詞", "Since the road was closed, we took a longer route home.", "道路が閉鎖されていたので、私たちは家へ長い道を通った。"),
+    "when": ("いつ、〜するとき", "副詞", "Please tell me when the next train will leave the station.", "次の電車が駅を出る時間を教えてください。"),
     "how": ("どのように", "副詞", "The manual explains how the dishwasher should be repaired safely.", "説明書は食器洗い機を安全に修理する方法を説明している。"),
-    "what": ("何、〜すること", "代名詞", "Please tell me what caused the sudden change in temperature.", "急な気温の変化を引き起こしたものを教えてください。"),
+    "where": ("どこで、どこに", "副詞", "The guide explained where visitors should wait for the bus.", "ガイドは訪問者がどこでバスを待つべきか説明した。"),
     "will not have": ("持っていないことになるだろう", "助動詞句", "By tomorrow, the store will not have any fresh bread left.", "明日までには、その店には新鮮なパンが残っていないだろう。"),
     "would not have": ("持っていなかっただろう", "助動詞句", "Without your advice, I would not have made the right decision.", "あなたの助言がなければ、私は正しい決定をしていなかっただろう。"),
     "should not have": ("〜すべきではなかった", "助動詞句", "You should not have left the medicine near the young child.", "幼い子どもの近くに薬を置くべきではなかった。"),
@@ -232,13 +247,14 @@ CORE_IMAGES = {
     "as if": {"chain": [{"term": "as", "gloss": "同じように"}, {"term": "if", "gloss": "仮の条件として"}, {"gloss": "まるで〜のように"}]},
     "in case": {"chain": [{"term": "in", "gloss": "中に"}, {"term": "case", "gloss": "場合"}, {"gloss": "〜の場合に備えて"}]},
     "every time": {"chain": [{"term": "every", "gloss": "すべての"}, {"term": "time", "gloss": "時"}, {"gloss": "〜するたびに"}]},
-    "social issues": {"chain": [{"term": "social", "gloss": "社会の"}, {"term": "issues", "gloss": "問題"}, {"gloss": "社会問題"}]},
-    "new beginnings": {"chain": [{"term": "new", "gloss": "新しい"}, {"term": "beginnings", "gloss": "始まり"}, {"gloss": "新しい始まり"}]},
-    "shared values": {"chain": [{"term": "shared", "gloss": "共有された"}, {"term": "values", "gloss": "価値観"}, {"gloss": "共有する価値観"}]},
-    "second thoughts": {"chain": [{"term": "second", "gloss": "二度目の"}, {"term": "thoughts", "gloss": "考え"}, {"gloss": "考え直し、迷い"}]},
-    "having spent": {"chain": [{"term": "having", "gloss": "経験・完了を持って"}, {"term": "spent", "gloss": "使った"}, {"gloss": "使ったこと"}]},
-    "has spent": {"chain": [{"term": "has", "gloss": "現在まで続いて"}, {"term": "spent", "gloss": "使った"}, {"gloss": "使ってきた"}]},
-    "had spent": {"chain": [{"term": "had", "gloss": "過去の時点までに"}, {"term": "spent", "gloss": "使った"}, {"gloss": "その時までに使っていた"}]},
+    "get through": {"chain": [{"term": "get", "gloss": "進んで到達する"}, {"term": "through", "gloss": "通り抜けて"}, {"gloss": "仕事を最後まで終える"}]},
+    "look around": {"particle": "around", "chain": [{"term": "look", "gloss": "見る"}, {"term": "around", "gloss": "周囲へ"}, {"gloss": "周囲を見て回る"}]},
+    "put out": {"particle": "out", "particleSense": "delegate", "chain": [{"term": "put", "gloss": "置く"}, {"term": "out", "gloss": "外へ出して"}, {"gloss": "必要な物を外へ出して用意する"}]},
+    "pass out": {"particle": "out", "particleSense": "delegate", "chain": [{"term": "pass", "gloss": "渡す"}, {"term": "out", "gloss": "外へ配って"}, {"gloss": "用紙などを順に配る"}]},
+    "brought up": {"particle": "up", "particleSense": "raise", "chain": [{"term": "brought", "gloss": "運んだ"}, {"term": "up", "gloss": "上へ出して"}, {"gloss": "話題を会話の表へ出す"}]},
+    "looked over": {"particle": "over", "chain": [{"term": "looked", "gloss": "見た"}, {"term": "over", "gloss": "上から全体を越えて"}, {"gloss": "全体に目を通す"}]},
+    "gave away": {"particle": "away", "chain": [{"term": "gave", "gloss": "与えた"}, {"term": "away", "gloss": "手元から離して"}, {"gloss": "隠していたことを漏らす"}]},
+    "turned out": {"particle": "out", "particleSense": "produce", "chain": [{"term": "turned", "gloss": "向きを変えた"}, {"term": "out", "gloss": "外へ現して"}, {"gloss": "結果として明らかになる"}]},
     "will not have": {"chain": [{"term": "will", "gloss": "未来を示して"}, {"term": "have", "gloss": "持つ"}, {"gloss": "未来に持っていないことになる"}]},
     "would not have": {"chain": [{"term": "would", "gloss": "仮定の結果を示して"}, {"term": "have", "gloss": "持つ"}, {"gloss": "持っていなかっただろう"}]},
     "should not have": {"chain": [{"term": "should", "gloss": "望ましさを示して"}, {"term": "have", "gloss": "持つ・する"}, {"gloss": "〜すべきではなかった"}]},
@@ -259,7 +275,12 @@ def build() -> tuple[dict, dict]:
     missing = sorted(set(choices) - set(DETAILS))
     if missing:
         raise ValueError(f"語句情報がありません: {missing}")
-    idioms = {choice for choice in choices if " " in choice}
+    idioms = {
+        choice
+        for q, question in enumerate(QUESTIONS, start=1)
+        if q in IDIOM_QUESTIONS
+        for choice in question["choices"]
+    }
     if idioms != set(CORE_IMAGES):
         raise ValueError(f"核心イメージの定義が一致しません: {sorted(idioms ^ set(CORE_IMAGES))}")
 
@@ -268,7 +289,7 @@ def build() -> tuple[dict, dict]:
         "round": ROUND_ID,
         "section": "Reading 大問1（語句空所補充）",
         "source": "ユーザー提供のChapter 3 模擬テスト第4回原稿を基に構造化。訳・例文・語句情報は学習用に作成",
-        "counts": {"questions": 20, "words": 57, "idioms": 23, "total": 80},
+        "counts": {"questions": 20, "words": 56, "idioms": 24, "total": 80},
     }
     question_data = {
         "meta": meta,
@@ -287,7 +308,7 @@ def build() -> tuple[dict, dict]:
                 "exampleTranslation": example_translation,
                 "pos": pos,
             }
-            if " " in choice:
+            if q in IDIOM_QUESTIONS:
                 item["type"] = "idiom"
                 item["phrase"] = choice
                 item["coreImage"] = CORE_IMAGES[choice]
@@ -295,7 +316,7 @@ def build() -> tuple[dict, dict]:
             else:
                 item["word"] = choice
                 words.append(item)
-    if (len(words), len(idiom_items)) != (57, 23):
+    if (len(words), len(idiom_items)) != (56, 24):
         raise ValueError(f"語句数が想定と違います: words={len(words)}, idioms={len(idiom_items)}")
     return {"meta": meta, "words": words, "idioms": idiom_items}, question_data
 
@@ -304,7 +325,7 @@ def main() -> None:
     vocab, questions = build()
     write_json(DATA_DIR / "vocab_2_mock-4.json", vocab)
     write_json(DATA_DIR / "questions_2_mock-4.json", questions)
-    print("eiken2 mock-4: 20 questions / 80 items (57 words, 23 idioms)")
+    print("eiken2 mock-4: 20 questions / 80 items (56 words, 24 idioms)")
 
 
 if __name__ == "__main__":

@@ -103,10 +103,10 @@ QUESTIONS = [
         "translation": "A：芸術家の生活について話せることはたくさんあるけれど、要するに、芸術で生計を立てるのは難しい。B：分かっているよ。だから今は仕事を続けたいんだ。",
     },
     {
-        "stem": "Peggy's son reached to get the last piece of cake, so Peggy told him to be (   ) the other children.",
-        "choices": ["careful of", "sufficient for", "considerate of", "pleased about"],
+        "stem": "Peggy's son reached for the last piece of cake, so Peggy told him to (   ) the cake equally among the other children.",
+        "choices": ["look into", "run across", "give out", "call back"],
         "answerIndex": 2,
-        "translation": "ペギーの息子が最後のケーキに手を伸ばしたので、ペギーは他の子どもたちに配慮するよう言った。",
+        "translation": "ペギーの息子が最後のケーキに手を伸ばしたので、ペギーは他の子どもたちにケーキを平等に配るよう言った。",
     },
     {
         "stem": "Oliver checked the advertisements and (   ) several of the companies that were looking for engineers.",
@@ -122,7 +122,7 @@ QUESTIONS = [
     },
     {
         "stem": "Students are not allowed to swim in the school pool (   ) they have a teacher with them.",
-        "choices": ["whether", "without", "moreover", "unless"],
+        "choices": ["whether", "if", "moreover", "unless"],
         "answerIndex": 3,
         "translation": "生徒は、教師が一緒でない限り、学校のプールで泳ぐことを許されていない。",
     },
@@ -133,6 +133,13 @@ QUESTIONS = [
         "translation": "ガレージセールの女性はベッドフレームを200ドルで売ると言ったが、リンダは150ドルしか払わないと言った。",
     },
 ]
+
+# 設問の位置を語句種別の契約に合わせる。空白の有無では分類しない。
+QUESTIONS = [
+    QUESTIONS[index]
+    for index in (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 17, 18, 11, 12, 14, 15, 16, 19)
+]
+IDIOM_QUESTIONS = set(range(15, 21))
 
 
 DETAILS = {
@@ -200,6 +207,10 @@ DETAILS = {
     "sufficient for": ("〜に十分な", "形容詞句", "The amount of water should be sufficient for the entire hike.", "その水の量はハイキング全体に十分なはずだ。"),
     "considerate of": ("〜に配慮した", "形容詞句", "The student was considerate of others and offered his seat to an elderly passenger.", "その生徒は他人に配慮し、高齢の乗客に席を譲った。"),
     "pleased about": ("〜を喜んで、〜に満足して", "形容詞句", "The coach was pleased about the team's progress during the season.", "監督はシーズン中のチームの進歩を喜んでいた。"),
+    "give out": ("〜を配る、発する", "動詞句", "The teacher will give out the worksheets before the test begins.", "先生はテストが始まる前にワークシートを配る。"),
+    "look into": ("〜を調べる", "動詞句", "The committee will look into the complaint before making a decision.", "委員会は決定を下す前にその苦情を調べる。"),
+    "run across": ("〜に偶然出会う、横切る", "動詞句", "You may run across an old map while cleaning the storage room.", "物置を掃除していると、古い地図に偶然出会うかもしれない。"),
+    "call back": ("折り返し電話する", "動詞句", "Please leave a message, and I will call back after lunch.", "伝言を残してください。昼食後に折り返し電話します。"),
     "answered for": ("〜の責任を負った、〜を保証した", "動詞句", "The manager answered for the mistake when the customer requested an explanation.", "客が説明を求めたとき、マネージャーはそのミスの責任を負った。"),
     "applied to": ("〜に応募した、〜に適用された", "動詞句", "Oliver applied to several companies after completing his engineering course.", "オリバーは工学課程を修了した後、いくつかの会社に応募した。"),
     "led to": ("〜につながった、〜を引き起こした", "動詞句", "The careful experiment led to an important discovery in the laboratory.", "その慎重な実験は研究室での重要な発見につながった。"),
@@ -209,13 +220,13 @@ DETAILS = {
     "will have": ("〜するだろう、〜を持つことになる", "助動詞句", "By next spring, the town will have a new public library.", "来年の春までに、その町には新しい公共図書館ができるだろう。"),
     "would have": ("〜しただろう、〜だっただろう", "助動詞句", "Without your advice, I would have made the same serious mistake.", "あなたの助言がなければ、私は同じ重大なミスをしただろう。"),
     "whether": ("〜かどうか", "接続詞", "We must decide whether the event should be moved indoors.", "私たちはその行事を屋内へ移すべきかどうか決めなければならない。"),
-    "without": ("〜なしに、〜を持たずに", "前置詞", "The hikers left without checking the latest weather report.", "ハイカーたちは最新の天気予報を確認せずに出発した。"),
+    "if": ("もし〜なら", "接続詞", "The guide will call the office if the train is delayed again.", "電車がまた遅れたら、ガイドは事務所に電話する。"),
     "moreover": ("そのうえ、さらに", "副詞", "The apartment is affordable; moreover, it is close to the station.", "そのアパートは手頃なうえ、駅にも近い。"),
     "unless": ("〜でない限り", "接続詞", "You cannot enter the laboratory unless a staff member accompanies you.", "職員が同行しない限り、研究室に入ることはできない。"),
     "no more than": ("たった〜、〜しか", "数量表現", "The repair will cost no more than one hundred dollars.", "その修理には100ドルしかかからないだろう。"),
     "nothing left for": ("〜に残されたものが何もない", "表現", "After the guests ate, there was nothing left for the children.", "客が食べた後、子どもたちのために残されたものは何もなかった。"),
     "a little of": ("少しの〜", "数量表現", "Add a little of the sauce before tasting the noodles again.", "麺をもう一度味見する前に、ソースを少し加えてください。"),
-    "not up to": ("〜に達しない、〜の水準ではない", "形容詞句", "The first draft was not up to the standard required by the editor.", "最初の草稿は編集者が求める水準に達していなかった。"),
+    "not up to": ("〜に達しない、〜の水準ではない", "数量表現", "The first draft was not up to the standard required by the editor.", "最初の草稿は編集者が求める水準に達していなかった。"),
 }
 
 
@@ -232,20 +243,18 @@ CORE_IMAGES = {
     "in short": {"chain": [{"term": "in", "gloss": "範囲を絞って"}, {"term": "short", "gloss": "短く"}, {"gloss": "要するに、簡潔に言えば"}]},
     "at last": {"chain": [{"term": "at", "gloss": "ある時点に達して"}, {"term": "last", "gloss": "最後"}, {"gloss": "ついに、とうとう"}]},
     "on target": {"chain": [{"term": "on", "gloss": "対象に重なって"}, {"term": "target", "gloss": "目標"}, {"gloss": "目標どおりで、的確な"}]},
-    "careful of": {"chain": [{"term": "careful", "gloss": "注意深い"}, {"term": "of", "gloss": "対象について"}, {"gloss": "〜に注意して"}]},
-    "sufficient for": {"chain": [{"term": "sufficient", "gloss": "十分な"}, {"term": "for", "gloss": "対象に対して"}, {"gloss": "〜に十分な"}]},
-    "considerate of": {"chain": [{"term": "considerate", "gloss": "思いやりのある"}, {"term": "of", "gloss": "対象について"}, {"gloss": "〜に配慮した"}]},
-    "pleased about": {"chain": [{"term": "pleased", "gloss": "喜んだ、満足した"}, {"term": "about", "gloss": "対象について"}, {"gloss": "〜を喜んで、〜に満足して"}]},
     "answered for": {"chain": [{"term": "answered", "gloss": "答えた"}, {"term": "for", "gloss": "対象を引き受けて"}, {"gloss": "〜の責任を負った"}]},
     "applied to": {"chain": [{"term": "applied", "gloss": "申し込んだ、当てはめた"}, {"term": "to", "gloss": "対象へ向けて"}, {"gloss": "〜に応募した"}]},
     "led to": {"chain": [{"term": "led", "gloss": "導いた"}, {"term": "to", "gloss": "〜へ向かって"}, {"gloss": "〜につながった"}]},
     "kept up": {"particle": "up", "particleSense": "raise", "chain": [{"term": "keep", "gloss": "保つ"}, {"term": "up", "gloss": "高い水準へ"}, {"gloss": "同じ水準を保ってついていく"}]},
-    "will have": {"chain": [{"term": "will", "gloss": "未来を示して"}, {"term": "have", "gloss": "持つ、経験する"}, {"gloss": "将来〜するだろう"}]},
-    "would have": {"chain": [{"term": "would", "gloss": "仮定の結果を示して"}, {"term": "have", "gloss": "持つ、経験する"}, {"gloss": "実際には起きなかったことを仮に述べる"}]},
+    "give out": {"particle": "out", "particleSense": "delegate", "chain": [{"term": "give", "gloss": "与える"}, {"term": "out", "gloss": "外へ配って"}, {"gloss": "手元のものを相手へ配る"}]},
+    "look into": {"particle": "into", "chain": [{"term": "look", "gloss": "目を向ける"}, {"term": "into", "gloss": "中へ入り込んで"}, {"gloss": "詳しく調べる"}]},
+    "run across": {"particle": "across", "chain": [{"term": "run", "gloss": "走る"}, {"term": "across", "gloss": "こちら側から向こうへ"}, {"gloss": "偶然見つける、出会う"}]},
+    "call back": {"particle": "back", "chain": [{"term": "call", "gloss": "呼ぶ"}, {"term": "back", "gloss": "元へ戻して"}, {"gloss": "折り返し電話する"}]},
     "no more than": {"chain": [{"term": "no", "gloss": "ない"}, {"term": "more", "gloss": "それ以上"}, {"term": "than", "gloss": "比較して"}, {"gloss": "〜を超えない、たった〜"}]},
     "nothing left for": {"chain": [{"term": "nothing", "gloss": "何もない"}, {"term": "left", "gloss": "残された"}, {"term": "for", "gloss": "対象のために"}, {"gloss": "〜のために残されたものが何もない"}]},
     "a little of": {"chain": [{"term": "little", "gloss": "少量"}, {"term": "of", "gloss": "全体の中から"}, {"gloss": "少しの〜"}]},
-    "not up to": {"chain": [{"term": "not", "gloss": "〜でない"}, {"term": "up", "gloss": "基準まで上がって"}, {"term": "to", "gloss": "対象の水準へ"}, {"gloss": "〜に達しない、〜の水準ではない"}]},
+    "not up to": {"particle": "up to", "particleSense": "standard", "chain": [{"term": "not", "gloss": "〜でない"}, {"term": "up to", "gloss": "基準まで上がって"}, {"gloss": "〜に達しない、〜の水準ではない"}]},
 }
 
 
@@ -262,7 +271,12 @@ def build() -> tuple[dict, dict]:
     missing = sorted(set(choices) - set(DETAILS))
     if missing:
         raise ValueError(f"語句情報がありません: {missing}")
-    idioms = {choice for choice in choices if " " in choice}
+    idioms = {
+        choice
+        for q, question in enumerate(QUESTIONS, start=1)
+        if q in IDIOM_QUESTIONS
+        for choice in question["choices"]
+    }
     if idioms != set(CORE_IMAGES):
         raise ValueError(f"核心イメージの定義が一致しません: {sorted(idioms ^ set(CORE_IMAGES))}")
 
@@ -271,7 +285,7 @@ def build() -> tuple[dict, dict]:
         "round": ROUND_ID,
         "section": "Reading 大問1（語句空所補充）",
         "source": "ユーザー提供のChapter 3 模擬テスト第1回原稿を基に構造化。訳・例文・語句情報は学習用に作成",
-        "counts": {"questions": 20, "words": 54, "idioms": 26, "total": 80},
+        "counts": {"questions": 20, "words": 56, "idioms": 24, "total": 80},
     }
     question_data = {
         "meta": meta,
@@ -290,7 +304,7 @@ def build() -> tuple[dict, dict]:
                 "exampleTranslation": example_translation,
                 "pos": pos,
             }
-            if " " in choice:
+            if q in IDIOM_QUESTIONS:
                 item["type"] = "idiom"
                 item["phrase"] = choice
                 item["coreImage"] = CORE_IMAGES[choice]
@@ -298,7 +312,7 @@ def build() -> tuple[dict, dict]:
             else:
                 item["word"] = choice
                 words.append(item)
-    if (len(words), len(idiom_items)) != (54, 26):
+    if (len(words), len(idiom_items)) != (56, 24):
         raise ValueError(f"語句数が想定と違います: words={len(words)}, idioms={len(idiom_items)}")
     return {"meta": meta, "words": words, "idioms": idiom_items}, question_data
 
@@ -307,7 +321,7 @@ def main() -> None:
     vocab, questions = build()
     write_json(DATA_DIR / "vocab_2_mock-1.json", vocab)
     write_json(DATA_DIR / "questions_2_mock-1.json", questions)
-    print("eiken2 mock-1: 20 questions / 80 items (54 words, 26 idioms)")
+    print("eiken2 mock-1: 20 questions / 80 items (56 words, 24 idioms)")
 
 
 if __name__ == "__main__":

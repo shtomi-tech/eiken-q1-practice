@@ -6,8 +6,8 @@
     "source": "ユーザー提供のChapter 3 模擬テスト第2回原稿を基に構造化。訳・例文・語句情報は学習用に作成",
     "counts": {
       "questions": 20,
-      "words": 57,
-      "idioms": 23,
+      "words": 56,
+      "idioms": 24,
       "total": 80
     }
   },
@@ -124,7 +124,7 @@
       "q": 10,
       "stem": "John and Mary met by chance wherever they went. It seemed that it was their (   ) to be together.",
       "choices": [
-        "temper",
+        "motive",
         "fault",
         "trade",
         "fate"
@@ -134,42 +134,6 @@
     },
     {
       "q": 11,
-      "stem": "A: Your reports were excellent. However, (   ) of the two tests you took, you didn't do as well. That's why you received a B instead of an A. B: I see. Thank you for making it clear.",
-      "choices": [
-        "on top",
-        "in terms",
-        "in advance of",
-        "in need of"
-      ],
-      "answerIndex": 1,
-      "translation": "A：あなたのレポートはすばらしかったです。しかし、受けた2つの試験に関しては、あまり良い成績ではありませんでした。そのためAではなくBになったのです。B：分かりました。説明してくださってありがとうございます。"
-    },
-    {
-      "q": 12,
-      "stem": "Cindy loves working at the restaurant, but some of the customers are not easily satisfied because they are (   ) their food.",
-      "choices": [
-        "proud of",
-        "particular about",
-        "engaged to",
-        "stuck in"
-      ],
-      "answerIndex": 1,
-      "translation": "シンディはそのレストランで働くのが好きだが、客の中には食べ物にこだわりがあり、簡単には満足しない人もいる。"
-    },
-    {
-      "q": 13,
-      "stem": "A: Do you know where Mike is? B: He's in the park. He's (   ) his new skateboard.",
-      "choices": [
-        "turning off",
-        "graduating from",
-        "aiming at",
-        "trying out"
-      ],
-      "answerIndex": 3,
-      "translation": "A：マイクがどこにいるか知っている？ B：公園にいるよ。新しいスケートボードを試しているんだ。"
-    },
-    {
-      "q": 14,
       "stem": "A: When will the new rules be put (   ) practice? B: Sometime next month. We'll announce the exact date later.",
       "choices": [
         "within",
@@ -181,19 +145,7 @@
       "translation": "A：新しい規則はいつ実行に移されますか。B：来月のいつかです。正確な日付は後で発表します。"
     },
     {
-      "q": 15,
-      "stem": "Harold missed the beginning of the concert because he arrived at the concert hall late (   ) heavy traffic.",
-      "choices": [
-        "in return for",
-        "with respect to",
-        "as a consequence of",
-        "despite"
-      ],
-      "answerIndex": 2,
-      "translation": "ハロルドは交通渋滞が原因でコンサートホールに遅れて到着し、コンサートの冒頭を聞き逃した。"
-    },
-    {
-      "q": 16,
+      "q": 12,
       "stem": "A: Mom, I finished cleaning my room. Can I go out? B: You're by no (   ) done. Put your toys on the shelf and then make your bed.",
       "choices": [
         "means",
@@ -205,7 +157,7 @@
       "translation": "A：お母さん、部屋の掃除が終わったよ。外へ行ってもいい？ B：とても終わったとは言えないわ。おもちゃを棚に置いて、それからベッドを整えなさい。"
     },
     {
-      "q": 17,
+      "q": 13,
       "stem": "The railway track had been out of (   ) for several years. It was completely covered in grass.",
       "choices": [
         "custom",
@@ -217,7 +169,67 @@
       "translation": "その鉄道線路は何年も使われていなかった。草ですっかり覆われていた。"
     },
     {
+      "q": 14,
+      "stem": "The woman told her son that she wanted him to have his homework (   ) before dinner.",
+      "choices": [
+        "making",
+        "done",
+        "did",
+        "do"
+      ],
+      "answerIndex": 1,
+      "translation": "その女性は息子に、夕食前に宿題を終わらせておいてほしいと言った。"
+    },
+    {
+      "q": 15,
+      "stem": "A: Your reports were excellent. However, (   ) of the two tests you took, you didn't do as well. That's why you received a B instead of an A. B: I see. Thank you for making it clear.",
+      "choices": [
+        "on top",
+        "in terms",
+        "in advance of",
+        "in need of"
+      ],
+      "answerIndex": 1,
+      "translation": "A：あなたのレポートはすばらしかったです。しかし、受けた2つの試験に関しては、あまり良い成績ではありませんでした。そのためAではなくBになったのです。B：分かりました。説明してくださってありがとうございます。"
+    },
+    {
+      "q": 16,
+      "stem": "Cindy loves working at the restaurant, but some customers keep (   ) dishes to the kitchen after complaining that their food is cold.",
+      "choices": [
+        "sending back",
+        "putting out",
+        "writing down",
+        "throwing away"
+      ],
+      "answerIndex": 0,
+      "translation": "シンディはそのレストランで働くのが好きだが、料理が冷たいと文句を言って、皿を何度も厨房へ戻す客もいる。"
+    },
+    {
+      "q": 17,
+      "stem": "A: Do you know where Mike is? B: He's in the park. He's (   ) his new skateboard by practicing tricks on it.",
+      "choices": [
+        "turning off",
+        "cutting down",
+        "getting into",
+        "trying out"
+      ],
+      "answerIndex": 3,
+      "translation": "A：マイクがどこにいるか知っている？ B：公園にいるよ。新しいスケートボードを試しているんだ。"
+    },
+    {
       "q": 18,
+      "stem": "Harold missed the beginning of the concert because he arrived at the concert hall late (   ) heavy traffic.",
+      "choices": [
+        "in return for",
+        "with respect to",
+        "as a consequence of",
+        "in light of"
+      ],
+      "answerIndex": 2,
+      "translation": "ハロルドは交通渋滞が原因でコンサートホールに遅れて到着し、コンサートの冒頭を聞き逃した。"
+    },
+    {
+      "q": 19,
       "stem": "The professor is planning to retire from his job at the university next year. When he retires, he (   ) at the university for 45 years.",
       "choices": [
         "will be teaching",
@@ -229,7 +241,7 @@
       "translation": "その教授は来年、大学の仕事を退職する予定だ。退職するときには、大学で45年間教えたことになる。"
     },
     {
-      "q": 19,
+      "q": 20,
       "stem": "A: Here are three sets of keys for your new office. (   ) any more keys, let me know. B: Thank you.",
       "choices": [
         "can you require",
@@ -239,18 +251,6 @@
       ],
       "answerIndex": 1,
       "translation": "A：新しい事務所の鍵を3組用意しました。もしさらに鍵が必要なら、知らせてください。B：ありがとう。"
-    },
-    {
-      "q": 20,
-      "stem": "The woman told her son that she wanted him to have his homework (   ) before dinner.",
-      "choices": [
-        "making",
-        "done",
-        "did",
-        "do"
-      ],
-      "answerIndex": 1,
-      "translation": "その女性は息子に、夕食前に宿題を終わらせておいてほしいと言った。"
     }
   ]
 }

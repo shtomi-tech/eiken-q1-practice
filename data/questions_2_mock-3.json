@@ -6,8 +6,8 @@
     "source": "ユーザー提供のChapter 3 模擬テスト第3回原稿を基に構造化。訳・例文・語句情報は学習用に作成",
     "counts": {
       "questions": 20,
-      "words": 63,
-      "idioms": 17,
+      "words": 56,
+      "idioms": 24,
       "total": 80
     }
   },
@@ -158,42 +158,6 @@
     },
     {
       "q": 13,
-      "stem": "A: I believe this topic is unsuitable for your report. (   ), you'll have to choose a new theme. B: OK. I'll start again from the beginning.",
-      "choices": [
-        "in that case",
-        "in your favor",
-        "for example",
-        "at any time"
-      ],
-      "answerIndex": 0,
-      "translation": "A：このテーマはあなたのレポートには適さないと思います。その場合、新しいテーマを選ばなければなりません。B：分かりました。最初からやり直します。"
-    },
-    {
-      "q": 14,
-      "stem": "A: I'm really angry at Pam. I can't (   ) her behavior anymore. B: I understand how you feel. She needs to change.",
-      "choices": [
-        "look down on",
-        "deal with",
-        "get along with",
-        "make up for"
-      ],
-      "answerIndex": 1,
-      "translation": "A：パムに本当に腹を立てています。もう彼女の行動には対処できません。B：気持ちは分かります。彼女は変わる必要があります。"
-    },
-    {
-      "q": 15,
-      "stem": "A: Hi, Sam. Are you still busy with your projects? B: Yes. In fact, I'm (   ) all day long.",
-      "choices": [
-        "out of stock",
-        "on the go",
-        "in sight",
-        "under the circumstances"
-      ],
-      "answerIndex": 1,
-      "translation": "A：やあ、サム。まだプロジェクトで忙しいの？B：うん。実際、一日中動き回っているよ。"
-    },
-    {
-      "q": 16,
       "stem": "A: I'm sorry I didn't come to class for the final test. I woke up late. B: You also didn't do any homework, so I have no (   ) but to fail you this semester.",
       "choices": [
         "choice",
@@ -205,31 +169,7 @@
       "translation": "A：期末試験のために授業へ行けなくてすみません。寝坊しました。B：宿題も全くしなかったので、今学期はあなたを落とすしかありません。"
     },
     {
-      "q": 17,
-      "stem": "A: Congratulations on the birth of your baby. What's his name? B: Charles. He's named (   ) his grandfather.",
-      "choices": [
-        "from",
-        "near",
-        "under",
-        "in memory of"
-      ],
-      "answerIndex": 3,
-      "translation": "A：赤ちゃんの誕生おめでとう。名前は何？B：チャールズ。祖父を記念して名付けたんだ。"
-    },
-    {
-      "q": 18,
-      "stem": "The actor was happy to be given a part in the new movie Stormy Night. The movie was certain (   ) a big hit.",
-      "choices": [
-        "had become",
-        "to become",
-        "became",
-        "become"
-      ],
-      "answerIndex": 1,
-      "translation": "その俳優は新作映画『Stormy Night』で役をもらえてうれしかった。その映画は大ヒットになることが確実だった。"
-    },
-    {
-      "q": 19,
+      "q": 14,
       "stem": "With Madeline (   ) me with the cleaning, we'll have the whole house clean within another two hours.",
       "choices": [
         "helping",
@@ -241,13 +181,73 @@
       "translation": "マデリンが掃除を手伝ってくれているので、あと2時間以内に家全体をきれいにできるだろう。"
     },
     {
+      "q": 15,
+      "stem": "A: I believe this topic is unsuitable for your report. B: In that case, you'll have to (   ) a new theme. OK. I'll start again from the beginning.",
+      "choices": [
+        "put together",
+        "open up",
+        "sit down",
+        "get around"
+      ],
+      "answerIndex": 0,
+      "translation": "A：このテーマはあなたのレポートには適さないと思います。B：その場合、新しいテーマを考え出さなければなりません。A：分かりました。最初からやり直します。"
+    },
+    {
+      "q": 16,
+      "stem": "A: I'm really angry at Pam. I can't (   ) her behavior anymore. B: I understand how you feel. She needs to change.",
+      "choices": [
+        "look down on",
+        "deal with",
+        "get along with",
+        "make up for"
+      ],
+      "answerIndex": 1,
+      "translation": "A：パムに本当に腹を立てています。もう彼女の行動には対処できません。B：気持ちは分かります。彼女は変わる必要があります。"
+    },
+    {
+      "q": 17,
+      "stem": "A: Hi, Sam. Are you still busy with your projects? B: Yes. In fact, I'm (   ) all day long.",
+      "choices": [
+        "out of stock",
+        "on the go",
+        "in sight",
+        "under the circumstances"
+      ],
+      "answerIndex": 1,
+      "translation": "A：やあ、サム。まだプロジェクトで忙しいの？B：うん。実際、一日中動き回っているよ。"
+    },
+    {
+      "q": 18,
+      "stem": "A: Congratulations on the birth of your baby. What's his name? B: Charles. He's named (   ) his grandfather.",
+      "choices": [
+        "in front of",
+        "for the sake of",
+        "in place of",
+        "out of respect for"
+      ],
+      "answerIndex": 3,
+      "translation": "A：赤ちゃんの誕生おめでとう。名前は何？B：チャールズ。祖父を敬って名付けられたんだ。"
+    },
+    {
+      "q": 19,
+      "stem": "The actor was happy to be given a part in the new movie Stormy Night. The movie was certain (   ) a big hit.",
+      "choices": [
+        "to prevent",
+        "to become",
+        "to remain",
+        "to disappear"
+      ],
+      "answerIndex": 1,
+      "translation": "その俳優は新作映画『Stormy Night』で役をもらえてうれしかった。その映画は大ヒットになることが確実だった。"
+    },
+    {
       "q": 20,
       "stem": "Timmy was a little upset the first time his mother left him at school. (   ) he started to play with the other children, however, he was fine.",
       "choices": [
-        "the time",
-        "once",
-        "ahead",
-        "the next"
+        "so long as",
+        "right after",
+        "in the event that",
+        "assuming that"
       ],
       "answerIndex": 1,
       "translation": "ティミーは初めて母親に学校へ置いていかれたとき、少し動揺した。しかし、いったん他の子どもたちと遊び始めると大丈夫だった。"

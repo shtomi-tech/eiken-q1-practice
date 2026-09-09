@@ -108,7 +108,7 @@ def check() -> None:
         DATASET_ID,
         {"vocabUrl": f"data/{VOCAB_PATH.name}", "questionsUrl": f"data/{QUESTIONS_PATH.name}"},
     )
-    if (len(questions), len(words), len(idioms)) != (20, 63, 17):
+    if (len(questions), len(words), len(idioms)) != (20, 56, 24):
         fail(f"件数が不正です: questions={len(questions)}, words={len(words)}, idioms={len(idioms)}")
     if sum(item.get("is_answer") is True for item, _ in all_items) != 20:
         fail("正答項目の件数が20ではありません")
@@ -119,6 +119,10 @@ def check() -> None:
         fail(f"正答位置の分布が想定と違います: {answer_distribution}")
     if sum(str(question.get("stem", "")).count("A:") for question in questions) != 8:
         fail("会話文の件数が原稿の8問と一致しません")
+
+    idiom_questions = {int(item["q"]) for item in idioms}
+    if idiom_questions != set(range(15, 21)):
+        fail(f"熟語設問がQ15〜Q20に連続していません: {sorted(idiom_questions)}")
 
     items_by_q: dict[int, list[tuple[dict, str]]] = {}
     seen_surfaces: dict[str, str] = {}
@@ -144,6 +148,14 @@ def check() -> None:
             fail(f"例文の骨格が重複しています: {value}")
         seen_examples[key] = value
 
+    for q, pairs in items_by_q.items():
+        expected_bucket = "idioms" if q >= 15 else "words"
+        actual_buckets = {bucket for _, bucket in pairs}
+        if actual_buckets != {expected_bucket}:
+            fail(f"Q{q}の語句種別が混在しています: {sorted(actual_buckets)}")
+        if len({str(item.get("pos", "")) for item, _ in pairs}) > 2:
+            fail(f"Q{q}の品詞が3種類以上です")
+
     existing = existing_grade_surfaces(VOCAB_PATH.name)
     for item, bucket in all_items:
         value = surface(item, bucket)
@@ -165,6 +177,11 @@ def check() -> None:
             fail(f"全配信データの熟語phraseと重複しています: {value} ({owners[0]})")
         if not isinstance(item.get("coreImage"), dict):
             fail(f"熟語にcoreImageがありません: {value}")
+        if len(item["coreImage"].get("chain", [])) < 3:
+            fail(f"熟語の核心イメージchainが3段未満です: {value}")
+    particle_count = sum(bool(item.get("coreImage", {}).get("particle")) for item in idioms)
+    if particle_count < 6:
+        fail(f"句動詞が6件未満です: {particle_count}/24")
 
     item_surfaces = {q: [(surface(item, bucket), item) for item, bucket in pairs] for q, pairs in items_by_q.items()}
     for question in questions:
@@ -191,7 +208,7 @@ def check() -> None:
             if choice_in_stem(choice, stem):
                 fail(f"Q{q}の選択肢が設問文に出ています: {choice}")
 
-    print(f"{DATASET_ID}: content OK (20 questions / 80 items; 63 words, 17 idioms)")
+    print(f"{DATASET_ID}: content OK (20 questions / 80 items; 56 words, 24 idioms)")
 
 
 if __name__ == "__main__":

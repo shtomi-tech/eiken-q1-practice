@@ -6,8 +6,8 @@
     "source": "ユーザー提供のChapter 3 模擬テスト第1回原稿を基に構造化。訳・例文・語句情報は学習用に作成",
     "counts": {
       "questions": 20,
-      "words": 54,
-      "idioms": 26,
+      "words": 56,
+      "idioms": 24,
       "total": 80
     }
   },
@@ -146,30 +146,6 @@
     },
     {
       "q": 12,
-      "stem": "When Mike was shopping, he met his best friend from high school (   ). They decided to have coffee together and talk about the old days.",
-      "choices": [
-        "at large",
-        "out of place",
-        "by accident",
-        "in question"
-      ],
-      "answerIndex": 2,
-      "translation": "マイクが買い物をしていると、高校時代の親友に偶然会った。2人は一緒にコーヒーを飲み、昔の日々について話すことにした。"
-    },
-    {
-      "q": 13,
-      "stem": "(   ) the damage caused by the storm, the school will be closed for two days.",
-      "choices": [
-        "in accordance with",
-        "owing to",
-        "made by",
-        "compared with"
-      ],
-      "answerIndex": 1,
-      "translation": "嵐による被害のため、学校は2日間休校になる。"
-    },
-    {
-      "q": 14,
       "stem": "Sandi was given a new position. She is now in (   ) of advertising and promotion.",
       "choices": [
         "schedule",
@@ -181,43 +157,7 @@
       "translation": "サンディは新しい役職を与えられた。現在は広告と販売促進を担当している。"
     },
     {
-      "q": 15,
-      "stem": "A: There's a lot I can tell you about the life of an artist, but (   ), it's difficult to make a living from art. B: I understand that. That's why I want to keep my job for now.",
-      "choices": [
-        "in fact",
-        "in short",
-        "at last",
-        "on target"
-      ],
-      "answerIndex": 1,
-      "translation": "A：芸術家の生活について話せることはたくさんあるけれど、要するに、芸術で生計を立てるのは難しい。B：分かっているよ。だから今は仕事を続けたいんだ。"
-    },
-    {
-      "q": 16,
-      "stem": "Peggy's son reached to get the last piece of cake, so Peggy told him to be (   ) the other children.",
-      "choices": [
-        "careful of",
-        "sufficient for",
-        "considerate of",
-        "pleased about"
-      ],
-      "answerIndex": 2,
-      "translation": "ペギーの息子が最後のケーキに手を伸ばしたので、ペギーは他の子どもたちに配慮するよう言った。"
-    },
-    {
-      "q": 17,
-      "stem": "Oliver checked the advertisements and (   ) several of the companies that were looking for engineers.",
-      "choices": [
-        "answered for",
-        "applied to",
-        "led to",
-        "kept up"
-      ],
-      "answerIndex": 1,
-      "translation": "オリバーは広告を調べ、技術者を探していた会社のいくつかに応募した。"
-    },
-    {
-      "q": 18,
+      "q": 13,
       "stem": "A: I (   ) invited you to spend Christmas with my family if I'd known that you'd be alone. B: Thanks, but I prefer to spend Christmas alone.",
       "choices": [
         "have",
@@ -229,16 +169,76 @@
       "translation": "A：あなたが一人で過ごすと知っていたら、家族とクリスマスを過ごすよう誘ったのに。B：ありがとう。でもクリスマスは一人で過ごしたい。"
     },
     {
-      "q": 19,
+      "q": 14,
       "stem": "Students are not allowed to swim in the school pool (   ) they have a teacher with them.",
       "choices": [
         "whether",
-        "without",
+        "if",
         "moreover",
         "unless"
       ],
       "answerIndex": 3,
       "translation": "生徒は、教師が一緒でない限り、学校のプールで泳ぐことを許されていない。"
+    },
+    {
+      "q": 15,
+      "stem": "When Mike was shopping, he met his best friend from high school (   ). They decided to have coffee together and talk about the old days.",
+      "choices": [
+        "at large",
+        "out of place",
+        "by accident",
+        "in question"
+      ],
+      "answerIndex": 2,
+      "translation": "マイクが買い物をしていると、高校時代の親友に偶然会った。2人は一緒にコーヒーを飲み、昔の日々について話すことにした。"
+    },
+    {
+      "q": 16,
+      "stem": "(   ) the damage caused by the storm, the school will be closed for two days.",
+      "choices": [
+        "in accordance with",
+        "owing to",
+        "made by",
+        "compared with"
+      ],
+      "answerIndex": 1,
+      "translation": "嵐による被害のため、学校は2日間休校になる。"
+    },
+    {
+      "q": 17,
+      "stem": "A: There's a lot I can tell you about the life of an artist, but (   ), it's difficult to make a living from art. B: I understand that. That's why I want to keep my job for now.",
+      "choices": [
+        "in fact",
+        "in short",
+        "at last",
+        "on target"
+      ],
+      "answerIndex": 1,
+      "translation": "A：芸術家の生活について話せることはたくさんあるけれど、要するに、芸術で生計を立てるのは難しい。B：分かっているよ。だから今は仕事を続けたいんだ。"
+    },
+    {
+      "q": 18,
+      "stem": "Peggy's son reached for the last piece of cake, so Peggy told him to (   ) the cake equally among the other children.",
+      "choices": [
+        "look into",
+        "run across",
+        "give out",
+        "call back"
+      ],
+      "answerIndex": 2,
+      "translation": "ペギーの息子が最後のケーキに手を伸ばしたので、ペギーは他の子どもたちにケーキを平等に配るよう言った。"
+    },
+    {
+      "q": 19,
+      "stem": "Oliver checked the advertisements and (   ) several of the companies that were looking for engineers.",
+      "choices": [
+        "answered for",
+        "applied to",
+        "led to",
+        "kept up"
+      ],
+      "answerIndex": 1,
+      "translation": "オリバーは広告を調べ、技術者を探していた会社のいくつかに応募した。"
     },
     {
       "q": 20,

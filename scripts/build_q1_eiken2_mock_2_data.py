@@ -68,7 +68,7 @@ QUESTIONS = [
     },
     {
         "stem": "John and Mary met by chance wherever they went. It seemed that it was their (   ) to be together.",
-        "choices": ["temper", "fault", "trade", "fate"],
+        "choices": ["motive", "fault", "trade", "fate"],
         "answerIndex": 3,
         "translation": "ジョンとメアリーはどこへ行っても偶然出会った。2人が一緒になるのは運命のようだった。",
     },
@@ -79,14 +79,14 @@ QUESTIONS = [
         "translation": "A：あなたのレポートはすばらしかったです。しかし、受けた2つの試験に関しては、あまり良い成績ではありませんでした。そのためAではなくBになったのです。B：分かりました。説明してくださってありがとうございます。",
     },
     {
-        "stem": "Cindy loves working at the restaurant, but some of the customers are not easily satisfied because they are (   ) their food.",
-        "choices": ["proud of", "particular about", "engaged to", "stuck in"],
-        "answerIndex": 1,
-        "translation": "シンディはそのレストランで働くのが好きだが、客の中には食べ物にこだわりがあり、簡単には満足しない人もいる。",
+        "stem": "Cindy loves working at the restaurant, but some customers keep (   ) dishes to the kitchen after complaining that their food is cold.",
+        "choices": ["sending back", "putting out", "writing down", "throwing away"],
+        "answerIndex": 0,
+        "translation": "シンディはそのレストランで働くのが好きだが、料理が冷たいと文句を言って、皿を何度も厨房へ戻す客もいる。",
     },
     {
-        "stem": "A: Do you know where Mike is? B: He's in the park. He's (   ) his new skateboard.",
-        "choices": ["turning off", "graduating from", "aiming at", "trying out"],
+        "stem": "A: Do you know where Mike is? B: He's in the park. He's (   ) his new skateboard by practicing tricks on it.",
+        "choices": ["turning off", "cutting down", "getting into", "trying out"],
         "answerIndex": 3,
         "translation": "A：マイクがどこにいるか知っている？ B：公園にいるよ。新しいスケートボードを試しているんだ。",
     },
@@ -98,7 +98,7 @@ QUESTIONS = [
     },
     {
         "stem": "Harold missed the beginning of the concert because he arrived at the concert hall late (   ) heavy traffic.",
-        "choices": ["in return for", "with respect to", "as a consequence of", "despite"],
+        "choices": ["in return for", "with respect to", "as a consequence of", "in light of"],
         "answerIndex": 2,
         "translation": "ハロルドは交通渋滞が原因でコンサートホールに遅れて到着し、コンサートの冒頭を聞き逃した。",
     },
@@ -133,6 +133,13 @@ QUESTIONS = [
         "translation": "その女性は息子に、夕食前に宿題を終わらせておいてほしいと言った。",
     },
 ]
+
+# 設問の位置を語句種別の契約に合わせる。空白の有無では分類しない。
+QUESTIONS = [
+    QUESTIONS[index]
+    for index in (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 13, 15, 16, 19, 10, 11, 12, 14, 17, 18)
+]
+IDIOM_QUESTIONS = set(range(15, 21))
 
 
 DETAILS = {
@@ -172,7 +179,7 @@ DETAILS = {
     "vary": ("変える、異なる", "動詞", "The chef can vary the daily menu according to the season.", "そのシェフは季節に応じて毎日のメニューを変えられる。"),
     "praise": ("称賛する、ほめる", "動詞", "The coach continued to praise the players for their careful teamwork.", "監督は選手たちの慎重なチームワークをほめ続けた。"),
     "contrast": ("対照させる、対比する", "動詞", "The writer will contrast the quiet village with the noisy capital city in the next chapter.", "その作家は次の章で静かな村と騒がしい首都を対比する。"),
-    "temper": ("気性、気分", "名詞", "The patient teacher rarely lost her temper during difficult lessons.", "その忍耐強い教師は難しい授業中にもめったに腹を立てなかった。"),
+    "motive": ("動機、理由", "名詞", "The detective searched for a clear motive behind the unusual decision.", "その探偵はその珍しい決定の背後にある明確な動機を探した。"),
     "fault": ("欠点、責任、故障", "名詞", "The engineer found a fault in the machine before the test began.", "技術者は試験が始まる前に機械の故障を見つけた。"),
     "trade": ("貿易、職業、交換", "名詞", "International trade has changed greatly because of online shopping.", "オンラインショッピングによって国際貿易は大きく変わった。"),
     "fate": ("運命", "名詞", "The travelers felt that fate had brought them together at the station.", "旅行者たちは運命が駅で自分たちを引き合わせたと感じた。"),
@@ -184,9 +191,13 @@ DETAILS = {
     "particular about": ("〜にこだわって、〜について好みがうるさくて", "形容詞句", "My brother is particular about the quality of the coffee he drinks.", "私の兄は飲むコーヒーの品質にこだわっている。"),
     "engaged to": ("〜と婚約して", "形容詞句", "She is engaged to a doctor who works at the nearby hospital.", "彼女は近くの病院で働く医師と婚約している。"),
     "stuck in": ("〜にはまり込んで、〜から動けずに", "形容詞句", "The hikers were stuck in deep snow for several hours.", "ハイカーたちは数時間、深い雪にはまり込んでいた。"),
+    "sending back": ("〜を送り返す、戻す", "動詞句", "The customer is sending back the soup because it is cold.", "客はスープが冷たいので送り返している。"),
+    "putting out": ("〜を外へ出す、消す", "動詞句", "The staff is putting out fresh menus before the restaurant opens.", "店員はレストランが開く前に新しいメニューを出している。"),
+    "writing down": ("〜を書き留める", "動詞句", "The server is writing down each customer's order carefully.", "給仕係は客一人ひとりの注文を書き留めている。"),
+    "throwing away": ("〜を捨てる", "動詞句", "The cook is throwing away food that has spoiled.", "料理人は腐った食べ物を捨てている。"),
     "turning off": ("〜の電源を切る、〜を消す", "動詞句", "Turning off the lights before leaving can save a surprising amount of energy.", "出る前に照明を消すと、驚くほど多くのエネルギーを節約できる。"),
-    "graduating from": ("〜を卒業して", "動詞句", "After graduating from college, she moved to a smaller city.", "大学を卒業した後、彼女はより小さな都市へ引っ越した。"),
-    "aiming at": ("〜をねらって、〜を目指して", "動詞句", "The new advertising campaign is aiming at younger customers.", "新しい広告キャンペーンは若い客を対象としている。"),
+    "cutting down": ("〜を切り下げる、減らす", "動詞句", "The family is cutting down expenses to save for a trip.", "その家族は旅行のために貯金するため支出を減らしている。"),
+    "getting into": ("〜に入り込む、〜に夢中になる", "動詞句", "The students are getting into a new activity after school.", "生徒たちは放課後に新しい活動に夢中になっている。"),
     "trying out": ("〜を試している", "動詞句", "The players are trying out new equipment before the tournament.", "選手たちは大会前に新しい用具を試している。"),
     "within": ("〜以内に、〜の中に", "前置詞", "The package should arrive within three business days after shipping.", "荷物は発送後3営業日以内に届くはずだ。"),
     "into": ("〜の中へ、〜に", "前置詞", "The volunteers carried the boxes into the storage room carefully.", "ボランティアたちは箱を注意深く倉庫へ運び入れた。"),
@@ -195,7 +206,7 @@ DETAILS = {
     "in return for": ("〜と引き換えに", "前置詞句", "The volunteer received a meal in return for helping at the event.", "そのボランティアは行事を手伝った引き換えに食事を受け取った。"),
     "with respect to": ("〜に関して", "前置詞句", "With respect to the schedule, we will send an update tomorrow.", "予定に関しては、明日最新情報を送る。"),
     "as a consequence of": ("〜の結果として、〜が原因で", "前置詞句", "The road closed as a consequence of severe flooding near the bridge.", "橋の近くの深刻な洪水の結果、その道路は閉鎖された。"),
-    "despite": ("〜にもかかわらず", "前置詞", "Despite the heavy rain, the outdoor concert continued until midnight.", "大雨にもかかわらず、野外コンサートは深夜まで続いた。"),
+    "in light of": ("〜を考慮すると、〜に照らして", "前置詞句", "In light of the heavy traffic, we left for the airport early.", "ひどい交通渋滞を考慮して、私たちは早く空港へ向かった。"),
     "means": ("手段、方法、意味", "名詞", "Public transportation is an affordable means of traveling around the city.", "公共交通機関は市内を移動する手頃な手段だ。"),
     "plan": ("計画", "名詞", "The team made a detailed plan before starting the difficult project.", "チームは難しい計画を始める前に詳細な計画を立てた。"),
     "time": ("時間、時", "名詞", "Please arrive on time so we can begin the lesson together.", "一緒に授業を始められるよう時間どおりに来てください。"),
@@ -224,17 +235,18 @@ CORE_IMAGES = {
     "in terms": {"chain": [{"term": "in", "gloss": "範囲の中で"}, {"term": "terms", "gloss": "観点、条件"}, {"gloss": "〜に関して、〜の点で"}]},
     "in advance of": {"chain": [{"term": "advance", "gloss": "前へ進むこと"}, {"term": "of", "gloss": "〜に先立って"}, {"gloss": "〜に先立って"}]},
     "in need of": {"chain": [{"term": "need", "gloss": "必要"}, {"term": "of", "gloss": "対象について"}, {"gloss": "〜を必要として"}]},
-    "proud of": {"chain": [{"term": "proud", "gloss": "誇りに思う"}, {"term": "of", "gloss": "対象について"}, {"gloss": "〜を誇りに思って"}]},
-    "particular about": {"chain": [{"term": "particular", "gloss": "特定の点にこだわる"}, {"term": "about", "gloss": "対象について"}, {"gloss": "〜にこだわって"}]},
-    "engaged to": {"chain": [{"term": "engaged", "gloss": "関わりを約束した"}, {"term": "to", "gloss": "相手へ結びついて"}, {"gloss": "〜と婚約して"}]},
-    "stuck in": {"chain": [{"term": "stuck", "gloss": "動けずに固定された"}, {"term": "in", "gloss": "中に"}, {"gloss": "〜にはまり込んで"}]},
+    "sending back": {"particle": "back", "chain": [{"term": "send", "gloss": "送る"}, {"term": "back", "gloss": "元へ戻して"}, {"gloss": "料理を厨房へ戻す"}]},
+    "putting out": {"particle": "out", "particleSense": "delegate", "chain": [{"term": "put", "gloss": "置く"}, {"term": "out", "gloss": "外へ出して"}, {"gloss": "外へ出して用意する"}]},
+    "writing down": {"particle": "down", "particleSense": "settle", "chain": [{"term": "write", "gloss": "書く"}, {"term": "down", "gloss": "紙の上へ落ち着けて"}, {"gloss": "情報を書き留める"}]},
+    "throwing away": {"particle": "away", "chain": [{"term": "throwing", "gloss": "投げる"}, {"term": "away", "gloss": "遠くへ離して"}, {"gloss": "不要なものを捨てる"}]},
     "turning off": {"particle": "off", "particleSense": "separate", "chain": [{"term": "turn", "gloss": "向きを変える"}, {"term": "off", "gloss": "切り離して"}, {"gloss": "機器の作用を切って消す"}]},
-    "graduating from": {"chain": [{"term": "graduating", "gloss": "段階を修了して"}, {"term": "from", "gloss": "〜から離れて"}, {"gloss": "〜を卒業して"}]},
-    "aiming at": {"chain": [{"term": "aiming", "gloss": "ねらいを定めて"}, {"term": "at", "gloss": "対象へ向けて"}, {"gloss": "〜をねらって、〜を目指して"}]},
+    "cutting down": {"particle": "down", "particleSense": "reduce", "chain": [{"term": "cutting", "gloss": "切る"}, {"term": "down", "gloss": "下げて"}, {"gloss": "使う量を減らす"}]},
+    "getting into": {"particle": "into", "chain": [{"term": "getting", "gloss": "進んでいく"}, {"term": "into", "gloss": "中へ入り込んで"}, {"gloss": "活動に入り込み夢中になる"}]},
     "trying out": {"chain": [{"term": "trying", "gloss": "試して"}, {"term": "out", "gloss": "外へ出して確かめて"}, {"gloss": "実際に試してみる"}]},
     "in return for": {"chain": [{"term": "return", "gloss": "返すこと"}, {"term": "for", "gloss": "交換の対象として"}, {"gloss": "〜と引き換えに"}]},
     "with respect to": {"chain": [{"term": "respect", "gloss": "配慮、関係"}, {"term": "to", "gloss": "対象へ向けて"}, {"gloss": "〜に関して"}]},
     "as a consequence of": {"chain": [{"term": "consequence", "gloss": "結果"}, {"term": "of", "gloss": "〜について"}, {"gloss": "〜の結果として、〜が原因で"}]},
+    "in light of": {"chain": [{"term": "light", "gloss": "光、判断の手がかり"}, {"term": "of", "gloss": "〜について"}, {"gloss": "〜を考慮すると"}]},
     "will be teaching": {"chain": [{"term": "will", "gloss": "未来を示して"}, {"term": "teaching", "gloss": "教えている"}, {"gloss": "将来その時点で教えていることになる"}]},
     "has taught": {"chain": [{"term": "has", "gloss": "現在まで持続して"}, {"term": "taught", "gloss": "教えた"}, {"gloss": "過去から現在まで教えてきた"}]},
     "will teach": {"chain": [{"term": "will", "gloss": "未来を示して"}, {"term": "teach", "gloss": "教える"}, {"gloss": "将来教えるだろう"}]},
@@ -259,7 +271,12 @@ def build() -> tuple[dict, dict]:
     missing = sorted(set(choices) - set(DETAILS))
     if missing:
         raise ValueError(f"語句情報がありません: {missing}")
-    idioms = {choice for choice in choices if " " in choice}
+    idioms = {
+        choice
+        for q, question in enumerate(QUESTIONS, start=1)
+        if q in IDIOM_QUESTIONS
+        for choice in question["choices"]
+    }
     if idioms != set(CORE_IMAGES):
         raise ValueError(f"核心イメージの定義が一致しません: {sorted(idioms ^ set(CORE_IMAGES))}")
 
@@ -268,7 +285,7 @@ def build() -> tuple[dict, dict]:
         "round": ROUND_ID,
         "section": "Reading 大問1（語句空所補充）",
         "source": "ユーザー提供のChapter 3 模擬テスト第2回原稿を基に構造化。訳・例文・語句情報は学習用に作成",
-        "counts": {"questions": 20, "words": 57, "idioms": 23, "total": 80},
+        "counts": {"questions": 20, "words": 56, "idioms": 24, "total": 80},
     }
     question_data = {
         "meta": meta,
@@ -287,7 +304,7 @@ def build() -> tuple[dict, dict]:
                 "exampleTranslation": example_translation,
                 "pos": pos,
             }
-            if " " in choice:
+            if q in IDIOM_QUESTIONS:
                 item["type"] = "idiom"
                 item["phrase"] = choice
                 item["coreImage"] = CORE_IMAGES[choice]
@@ -295,7 +312,7 @@ def build() -> tuple[dict, dict]:
             else:
                 item["word"] = choice
                 words.append(item)
-    if (len(words), len(idiom_items)) != (57, 23):
+    if (len(words), len(idiom_items)) != (56, 24):
         raise ValueError(f"語句数が想定と違います: words={len(words)}, idioms={len(idiom_items)}")
     return {"meta": meta, "words": words, "idioms": idiom_items}, question_data
 
@@ -304,7 +321,7 @@ def main() -> None:
     vocab, questions = build()
     write_json(DATA_DIR / "vocab_2_mock-2.json", vocab)
     write_json(DATA_DIR / "questions_2_mock-2.json", questions)
-    print("eiken2 mock-2: 20 questions / 80 items (57 words, 23 idioms)")
+    print("eiken2 mock-2: 20 questions / 80 items (56 words, 24 idioms)")
 
 
 if __name__ == "__main__":

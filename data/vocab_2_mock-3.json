@@ -6,8 +6,8 @@
     "source": "ユーザー提供のChapter 3 模擬テスト第3回原稿を基に構造化。訳・例文・語句情報は学習用に作成",
     "counts": {
       "questions": 20,
-      "words": 63,
-      "idioms": 17,
+      "words": 56,
+      "idioms": 24,
       "total": 80
     }
   },
@@ -493,7 +493,7 @@
       "ipa": "/kˈeɪm/"
     },
     {
-      "q": 16,
+      "q": 13,
       "is_answer": true,
       "meaning": "選択、選択肢",
       "example": "The customer had no choice but to wait for a replacement.",
@@ -503,7 +503,7 @@
       "ipa": "/tʃˈɔɪs/"
     },
     {
-      "q": 16,
+      "q": 13,
       "is_answer": false,
       "meaning": "機会、可能性",
       "example": "There is little chance of finishing the road before winter.",
@@ -513,7 +513,7 @@
       "ipa": "/tʃˈæns/"
     },
     {
-      "q": 16,
+      "q": 13,
       "is_answer": false,
       "meaning": "種類、親切な",
       "example": "What kind of music does your brother listen to after school?",
@@ -523,7 +523,7 @@
       "ipa": "/kˈaɪnd/"
     },
     {
-      "q": 16,
+      "q": 13,
       "is_answer": false,
       "meaning": "分野、野原",
       "example": "She hopes to work in the field of environmental science.",
@@ -533,57 +533,7 @@
       "ipa": "/fˈild/"
     },
     {
-      "q": 17,
-      "is_answer": false,
-      "meaning": "〜から",
-      "example": "The package came from a small shop near the harbor.",
-      "exampleTranslation": "その荷物は港の近くの小さな店から届いた。",
-      "pos": "前置詞",
-      "word": "from",
-      "ipa": "/fɹˈəm/"
-    },
-    {
-      "q": 17,
-      "is_answer": false,
-      "meaning": "〜の近くに",
-      "example": "A quiet library stands near the entrance to the park.",
-      "exampleTranslation": "静かな図書館が公園の入口の近くに建っている。",
-      "pos": "前置詞",
-      "word": "near",
-      "ipa": "/nˈɪɹ/"
-    },
-    {
-      "q": 17,
-      "is_answer": false,
-      "meaning": "〜の下に、〜未満で",
-      "example": "The cat hid under the table during the loud storm.",
-      "exampleTranslation": "大きな嵐の間、猫はテーブルの下に隠れた。",
-      "pos": "前置詞",
-      "word": "under",
-      "ipa": "/ˈəndɚ/"
-    },
-    {
-      "q": 18,
-      "is_answer": false,
-      "meaning": "なった",
-      "example": "The small village became famous after the film was released.",
-      "exampleTranslation": "その小さな村は映画が公開された後で有名になった。",
-      "pos": "動詞",
-      "word": "became",
-      "ipa": "/bɪkˈeɪm/"
-    },
-    {
-      "q": 18,
-      "is_answer": false,
-      "meaning": "なる",
-      "example": "Many students become nervous before speaking to a large audience.",
-      "exampleTranslation": "多くの生徒は大勢の聴衆の前で話す前に緊張する。",
-      "pos": "動詞",
-      "word": "become",
-      "ipa": "/bɪkˈəm/"
-    },
-    {
-      "q": 19,
+      "q": 14,
       "is_answer": true,
       "meaning": "手伝っている",
       "example": "Helping older neighbors with shopping can strengthen a community.",
@@ -593,7 +543,7 @@
       "ipa": "/hˈɛlpɪŋ/"
     },
     {
-      "q": 19,
+      "q": 14,
       "is_answer": false,
       "meaning": "待っている",
       "example": "Waiting outside the theater, the fans talked about the new play.",
@@ -603,7 +553,7 @@
       "ipa": "/wˈeɪtɪŋ/"
     },
     {
-      "q": 19,
+      "q": 14,
       "is_answer": false,
       "meaning": "座っている",
       "example": "Sitting by the window, the artist sketched the passing boats.",
@@ -613,7 +563,7 @@
       "ipa": "/sˈɪtɪŋ/"
     },
     {
-      "q": 19,
+      "q": 14,
       "is_answer": false,
       "meaning": "訪れている",
       "example": "Visiting local farms gives children a better idea of where food comes from.",
@@ -621,131 +571,116 @@
       "pos": "動詞",
       "word": "visiting",
       "ipa": "/vˈɪzətɪŋ/"
-    },
-    {
-      "q": 20,
-      "is_answer": true,
-      "meaning": "いったん〜すると、かつて",
-      "example": "Once the rain stopped, the children returned to the playground.",
-      "exampleTranslation": "雨がやむと、子どもたちは遊び場へ戻った。",
-      "pos": "接続詞",
-      "word": "once",
-      "ipa": "/wˈəns/"
-    },
-    {
-      "q": 20,
-      "is_answer": false,
-      "meaning": "前方に、先に",
-      "example": "A long journey lay ahead, so the travelers rested early.",
-      "exampleTranslation": "長い旅が待っていたので、旅行者たちは早く休んだ。",
-      "pos": "副詞",
-      "word": "ahead",
-      "ipa": "/əhˈɛd/"
     }
   ],
   "idioms": [
     {
-      "q": 13,
+      "q": 15,
       "is_answer": true,
-      "meaning": "その場合は",
-      "example": "In that case, we should postpone the outdoor event until tomorrow.",
-      "exampleTranslation": "その場合は、屋外イベントを明日まで延期すべきだ。",
-      "pos": "副詞句",
+      "meaning": "〜をまとめる、組み立てる",
+      "example": "The students will put together a new theme for their science project.",
+      "exampleTranslation": "生徒たちは科学プロジェクトの新しいテーマをまとめる。",
+      "pos": "動詞句",
       "type": "idiom",
-      "phrase": "in that case",
+      "phrase": "put together",
       "coreImage": {
         "chain": [
           {
-            "term": "in",
-            "gloss": "状況の中で"
+            "term": "put",
+            "gloss": "置く"
           },
           {
-            "term": "case",
-            "gloss": "場合"
+            "term": "together",
+            "gloss": "一緒に"
           },
           {
-            "gloss": "その場合は"
+            "gloss": "考えをまとめて形にする"
           }
         ]
       }
     },
     {
-      "q": 13,
+      "q": 15,
       "is_answer": false,
-      "meaning": "あなたに有利で",
-      "example": "The final decision was in your favor after a careful review.",
-      "exampleTranslation": "慎重な審査の後、最終決定はあなたに有利なものとなった。",
-      "pos": "前置詞句",
+      "meaning": "〜を開く、打ち明ける",
+      "example": "The discussion may open up new ideas for the community.",
+      "exampleTranslation": "その議論は地域の新しい考えを開くかもしれない。",
+      "pos": "動詞句",
       "type": "idiom",
-      "phrase": "in your favor",
+      "phrase": "open up",
       "coreImage": {
+        "particle": "up",
+        "particleSense": "admit",
         "chain": [
           {
-            "term": "in",
-            "gloss": "状態の中に"
+            "term": "open",
+            "gloss": "開く"
           },
           {
-            "term": "favor",
-            "gloss": "味方、有利な扱い"
+            "term": "up",
+            "gloss": "表へ出して"
           },
           {
-            "gloss": "あなたに有利で"
+            "gloss": "新しい考えを開く"
           }
         ]
       }
     },
     {
-      "q": 13,
+      "q": 15,
       "is_answer": false,
-      "meaning": "例えば",
-      "example": "Some sports, for example tennis, can be played throughout the year.",
-      "exampleTranslation": "例えばテニスのように、一年中できるスポーツもある。",
-      "pos": "副詞句",
+      "meaning": "座る",
+      "example": "Please sit down before the doctor begins the examination.",
+      "exampleTranslation": "医師が診察を始める前に座ってください。",
+      "pos": "動詞句",
       "type": "idiom",
-      "phrase": "for example",
+      "phrase": "sit down",
       "coreImage": {
+        "particle": "down",
+        "particleSense": "descend",
         "chain": [
           {
-            "term": "for",
-            "gloss": "対象として"
+            "term": "sit",
+            "gloss": "座る"
           },
           {
-            "term": "example",
-            "gloss": "例"
+            "term": "down",
+            "gloss": "下へ"
           },
           {
-            "gloss": "例えば"
+            "gloss": "腰を下ろす"
           }
         ]
       }
     },
     {
-      "q": 13,
+      "q": 15,
       "is_answer": false,
-      "meaning": "いつでも",
-      "example": "You can contact the help desk at any time during the conference.",
-      "exampleTranslation": "会議中はいつでも案内窓口へ連絡できる。",
-      "pos": "副詞句",
+      "meaning": "〜を回避する、動き回る",
+      "example": "The guide knows how to get around the crowded market safely.",
+      "exampleTranslation": "そのガイドは混雑した市場を安全に動き回る方法を知っている。",
+      "pos": "動詞句",
       "type": "idiom",
-      "phrase": "at any time",
+      "phrase": "get around",
       "coreImage": {
+        "particle": "around",
         "chain": [
           {
-            "term": "at",
-            "gloss": "ある時点で"
+            "term": "get",
+            "gloss": "動く"
           },
           {
-            "term": "time",
-            "gloss": "時間"
+            "term": "around",
+            "gloss": "周囲へ"
           },
           {
-            "gloss": "いつでも"
+            "gloss": "周囲を動き回る"
           }
         ]
       }
     },
     {
-      "q": 14,
+      "q": 16,
       "is_answer": false,
       "meaning": "見下す",
       "example": "Good leaders do not look down on people with less experience.",
@@ -754,6 +689,8 @@
       "type": "idiom",
       "phrase": "look down on",
       "coreImage": {
+        "particle": "down",
+        "particleSense": "lower",
         "chain": [
           {
             "term": "look",
@@ -770,7 +707,7 @@
       }
     },
     {
-      "q": 14,
+      "q": 16,
       "is_answer": true,
       "meaning": "対処する、扱う",
       "example": "The counselor helped the student deal with stress before the exam.",
@@ -795,7 +732,7 @@
       }
     },
     {
-      "q": 14,
+      "q": 16,
       "is_answer": false,
       "meaning": "うまく付き合う",
       "example": "Mika can get along with her new classmates surprisingly well.",
@@ -804,6 +741,7 @@
       "type": "idiom",
       "phrase": "get along with",
       "coreImage": {
+        "particle": "along",
         "chain": [
           {
             "term": "get",
@@ -820,7 +758,7 @@
       }
     },
     {
-      "q": 14,
+      "q": 16,
       "is_answer": false,
       "meaning": "埋め合わせる",
       "example": "The extra practice helped make up for the missed training session.",
@@ -829,6 +767,8 @@
       "type": "idiom",
       "phrase": "make up for",
       "coreImage": {
+        "particle": "up",
+        "particleSense": "complete",
         "chain": [
           {
             "term": "make",
@@ -845,7 +785,7 @@
       }
     },
     {
-      "q": 15,
+      "q": 17,
       "is_answer": false,
       "meaning": "在庫切れで",
       "example": "The popular camera was out of stock at every nearby store.",
@@ -870,7 +810,7 @@
       }
     },
     {
-      "q": 15,
+      "q": 17,
       "is_answer": true,
       "meaning": "活動し続けて、忙しく動き回って",
       "example": "Traveling nurses are often on the go from morning until night.",
@@ -895,7 +835,7 @@
       }
     },
     {
-      "q": 15,
+      "q": 17,
       "is_answer": false,
       "meaning": "見えて、視界に入って",
       "example": "After three hours at sea, no island was in sight.",
@@ -920,7 +860,7 @@
       }
     },
     {
-      "q": 15,
+      "q": 17,
       "is_answer": false,
       "meaning": "この状況では",
       "example": "Under the circumstances, the coach decided to cancel the practice.",
@@ -945,26 +885,30 @@
       }
     },
     {
-      "q": 17,
-      "is_answer": true,
-      "meaning": "〜を記念して",
-      "example": "The family planted a tree in memory of their grandfather.",
-      "exampleTranslation": "その家族は祖父を記念して木を植えた。",
+      "q": 18,
+      "is_answer": false,
+      "meaning": "〜の前に",
+      "example": "The bus stopped in front of the library before the rain began.",
+      "exampleTranslation": "雨が降り始める前に、バスは図書館の前に止まった。",
       "pos": "前置詞句",
       "type": "idiom",
-      "phrase": "in memory of",
+      "phrase": "in front of",
       "coreImage": {
         "chain": [
           {
             "term": "in",
-            "gloss": "状態の中に"
+            "gloss": "中に"
           },
           {
-            "term": "memory",
-            "gloss": "記憶"
+            "term": "front",
+            "gloss": "前面"
           },
           {
-            "gloss": "〜を記念して"
+            "term": "of",
+            "gloss": "〜について"
+          },
+          {
+            "gloss": "〜の前に"
           }
         ]
       }
@@ -972,30 +916,117 @@
     {
       "q": 18,
       "is_answer": false,
-      "meaning": "なっていた",
-      "example": "By sunrise, the quiet street had become crowded with visitors.",
-      "exampleTranslation": "日の出までに、静かな通りは訪問者で混雑していた。",
-      "pos": "助動詞句",
+      "meaning": "〜のために",
+      "example": "She changed her schedule for the sake of her young children.",
+      "exampleTranslation": "彼女は幼い子どもたちのために予定を変えた。",
+      "pos": "前置詞句",
       "type": "idiom",
-      "phrase": "had become",
+      "phrase": "for the sake of",
       "coreImage": {
         "chain": [
           {
-            "term": "had",
-            "gloss": "過去のある時点までに"
+            "term": "for",
+            "gloss": "〜のために"
           },
           {
-            "term": "become",
-            "gloss": "ある状態になる"
+            "term": "sake",
+            "gloss": "目的"
           },
           {
-            "gloss": "その時までになっていた"
+            "term": "of",
+            "gloss": "〜について"
+          },
+          {
+            "gloss": "〜のためを思って"
           }
         ]
       }
     },
     {
       "q": 18,
+      "is_answer": false,
+      "meaning": "〜の代わりに",
+      "example": "The assistant attended the meeting in place of the director.",
+      "exampleTranslation": "助手は部長の代わりに会議へ出席した。",
+      "pos": "前置詞句",
+      "type": "idiom",
+      "phrase": "in place of",
+      "coreImage": {
+        "chain": [
+          {
+            "term": "in",
+            "gloss": "中に"
+          },
+          {
+            "term": "place",
+            "gloss": "場所・代わり"
+          },
+          {
+            "term": "of",
+            "gloss": "〜について"
+          },
+          {
+            "gloss": "〜の代わりに"
+          }
+        ]
+      }
+    },
+    {
+      "q": 18,
+      "is_answer": true,
+      "meaning": "〜に敬意を表して",
+      "example": "The family held a quiet ceremony out of respect for their grandfather.",
+      "exampleTranslation": "その家族は祖父に敬意を表して静かな式典を行った。",
+      "pos": "前置詞句",
+      "type": "idiom",
+      "phrase": "out of respect for",
+      "coreImage": {
+        "chain": [
+          {
+            "term": "out",
+            "gloss": "外へ向かう"
+          },
+          {
+            "term": "respect",
+            "gloss": "敬意"
+          },
+          {
+            "term": "for",
+            "gloss": "〜に対して"
+          },
+          {
+            "gloss": "〜に敬意を表して"
+          }
+        ]
+      }
+    },
+    {
+      "q": 19,
+      "is_answer": false,
+      "meaning": "防ぐために",
+      "example": "The new rule was designed to prevent accidents near the station.",
+      "exampleTranslation": "新しい規則は駅の近くの事故を防ぐために作られた。",
+      "pos": "不定詞句",
+      "type": "idiom",
+      "phrase": "to prevent",
+      "coreImage": {
+        "chain": [
+          {
+            "term": "to",
+            "gloss": "向かうことを示して"
+          },
+          {
+            "term": "prevent",
+            "gloss": "防ぐ"
+          },
+          {
+            "gloss": "防ぐために"
+          }
+        ]
+      }
+    },
+    {
+      "q": 19,
       "is_answer": true,
       "meaning": "なること",
       "example": "She hopes to become a doctor who serves rural communities.",
@@ -1020,22 +1051,51 @@
       }
     },
     {
-      "q": 20,
+      "q": 19,
       "is_answer": false,
-      "meaning": "その時",
-      "example": "The time for the meeting was changed because of the storm.",
-      "exampleTranslation": "嵐のため会議の時間が変更された。",
-      "pos": "名詞句",
+      "meaning": "そのままでいること",
+      "example": "The museum hopes to remain open during the renovation.",
+      "exampleTranslation": "その博物館は改修中も開館し続けたいと考えている。",
+      "pos": "不定詞句",
       "type": "idiom",
-      "phrase": "the time",
+      "phrase": "to remain",
       "coreImage": {
         "chain": [
           {
-            "term": "time",
-            "gloss": "時間"
+            "term": "to",
+            "gloss": "向かうことを示して"
           },
           {
-            "gloss": "その時間"
+            "term": "remain",
+            "gloss": "そのままでいる"
+          },
+          {
+            "gloss": "そのままでいること"
+          }
+        ]
+      }
+    },
+    {
+      "q": 19,
+      "is_answer": false,
+      "meaning": "消えること",
+      "example": "The dark clouds began to disappear before the afternoon concert.",
+      "exampleTranslation": "午後のコンサートの前に暗い雲が消え始めた。",
+      "pos": "不定詞句",
+      "type": "idiom",
+      "phrase": "to disappear",
+      "coreImage": {
+        "chain": [
+          {
+            "term": "to",
+            "gloss": "向かうことを示して"
+          },
+          {
+            "term": "disappear",
+            "gloss": "消える"
+          },
+          {
+            "gloss": "消えること"
           }
         ]
       }
@@ -1043,20 +1103,99 @@
     {
       "q": 20,
       "is_answer": false,
-      "meaning": "次の",
-      "example": "The next train will arrive at the platform in ten minutes.",
-      "exampleTranslation": "次の列車は10分後にホームへ到着する。",
-      "pos": "形容詞句",
+      "meaning": "〜する限り",
+      "example": "So long as the weather stays clear, the children can play outside.",
+      "exampleTranslation": "天気が晴れている限り、子どもたちは外で遊べる。",
+      "pos": "接続詞句",
       "type": "idiom",
-      "phrase": "the next",
+      "phrase": "so long as",
       "coreImage": {
         "chain": [
           {
-            "term": "next",
-            "gloss": "次の"
+            "term": "so",
+            "gloss": "そのように"
           },
           {
-            "gloss": "次のもの"
+            "term": "long",
+            "gloss": "長く"
+          },
+          {
+            "gloss": "〜する限り"
+          }
+        ]
+      }
+    },
+    {
+      "q": 20,
+      "is_answer": true,
+      "meaning": "〜した直後に",
+      "example": "Right after he started to play, Timmy smiled at the other children.",
+      "exampleTranslation": "彼が遊び始めた直後に、ティミーはほかの子どもたちにほほえんだ。",
+      "pos": "接続詞句",
+      "type": "idiom",
+      "phrase": "right after",
+      "coreImage": {
+        "chain": [
+          {
+            "term": "right",
+            "gloss": "まさに"
+          },
+          {
+            "term": "after",
+            "gloss": "後に"
+          },
+          {
+            "gloss": "〜した直後に"
+          }
+        ]
+      }
+    },
+    {
+      "q": 20,
+      "is_answer": false,
+      "meaning": "万一〜の場合に",
+      "example": "In the event that the train is delayed, call the office immediately.",
+      "exampleTranslation": "万一列車が遅れた場合は、すぐに事務所へ電話してください。",
+      "pos": "接続詞句",
+      "type": "idiom",
+      "phrase": "in the event that",
+      "coreImage": {
+        "chain": [
+          {
+            "term": "event",
+            "gloss": "出来事"
+          },
+          {
+            "term": "that",
+            "gloss": "そのこと"
+          },
+          {
+            "gloss": "万一〜の場合に"
+          }
+        ]
+      }
+    },
+    {
+      "q": 20,
+      "is_answer": false,
+      "meaning": "〜と仮定すると",
+      "example": "Assuming that the road is open, we should arrive before sunset.",
+      "exampleTranslation": "道路が通行できると仮定すれば、日没前に到着できるはずだ。",
+      "pos": "接続詞句",
+      "type": "idiom",
+      "phrase": "assuming that",
+      "coreImage": {
+        "chain": [
+          {
+            "term": "assuming",
+            "gloss": "仮定して"
+          },
+          {
+            "term": "that",
+            "gloss": "そのことを"
+          },
+          {
+            "gloss": "〜と仮定すると"
           }
         ]
       }

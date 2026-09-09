@@ -85,10 +85,10 @@ QUESTIONS = [
         "translation": "ジョシュは宿題をする代わりにビデオゲームをするのが好きだった。しかし、年齢を重ねると、もっと一生懸命勉強する必要があると理解するようになった。",
     },
     {
-        "stem": "A: I believe this topic is unsuitable for your report. (   ), you'll have to choose a new theme. B: OK. I'll start again from the beginning.",
-        "choices": ["in that case", "in your favor", "for example", "at any time"],
+        "stem": "A: I believe this topic is unsuitable for your report. B: In that case, you'll have to (   ) a new theme. OK. I'll start again from the beginning.",
+        "choices": ["put together", "open up", "sit down", "get around"],
         "answerIndex": 0,
-        "translation": "A：このテーマはあなたのレポートには適さないと思います。その場合、新しいテーマを選ばなければなりません。B：分かりました。最初からやり直します。",
+        "translation": "A：このテーマはあなたのレポートには適さないと思います。B：その場合、新しいテーマを考え出さなければなりません。A：分かりました。最初からやり直します。",
     },
     {
         "stem": "A: I'm really angry at Pam. I can't (   ) her behavior anymore. B: I understand how you feel. She needs to change.",
@@ -110,13 +110,13 @@ QUESTIONS = [
     },
     {
         "stem": "A: Congratulations on the birth of your baby. What's his name? B: Charles. He's named (   ) his grandfather.",
-        "choices": ["from", "near", "under", "in memory of"],
+        "choices": ["in front of", "for the sake of", "in place of", "out of respect for"],
         "answerIndex": 3,
-        "translation": "A：赤ちゃんの誕生おめでとう。名前は何？B：チャールズ。祖父を記念して名付けたんだ。",
+        "translation": "A：赤ちゃんの誕生おめでとう。名前は何？B：チャールズ。祖父を敬って名付けられたんだ。",
     },
     {
         "stem": "The actor was happy to be given a part in the new movie Stormy Night. The movie was certain (   ) a big hit.",
-        "choices": ["had become", "to become", "became", "become"],
+        "choices": ["to prevent", "to become", "to remain", "to disappear"],
         "answerIndex": 1,
         "translation": "その俳優は新作映画『Stormy Night』で役をもらえてうれしかった。その映画は大ヒットになることが確実だった。",
     },
@@ -128,11 +128,18 @@ QUESTIONS = [
     },
     {
         "stem": "Timmy was a little upset the first time his mother left him at school. (   ) he started to play with the other children, however, he was fine.",
-        "choices": ["the time", "once", "ahead", "the next"],
+        "choices": ["so long as", "right after", "in the event that", "assuming that"],
         "answerIndex": 1,
         "translation": "ティミーは初めて母親に学校へ置いていかれたとき、少し動揺した。しかし、いったん他の子どもたちと遊び始めると大丈夫だった。",
     },
 ]
+
+# 設問の位置を語句種別の契約に合わせる。空白の有無では分類しない。
+QUESTIONS = [
+    QUESTIONS[index]
+    for index in (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 15, 18, 12, 13, 14, 16, 17, 19)
+]
+IDIOM_QUESTIONS = set(range(15, 21))
 
 
 DETAILS = {
@@ -188,6 +195,10 @@ DETAILS = {
     "in your favor": ("あなたに有利で", "前置詞句", "The final decision was in your favor after a careful review.", "慎重な審査の後、最終決定はあなたに有利なものとなった。"),
     "for example": ("例えば", "副詞句", "Some sports, for example tennis, can be played throughout the year.", "例えばテニスのように、一年中できるスポーツもある。"),
     "at any time": ("いつでも", "副詞句", "You can contact the help desk at any time during the conference.", "会議中はいつでも案内窓口へ連絡できる。"),
+    "put together": ("〜をまとめる、組み立てる", "動詞句", "The students will put together a new theme for their science project.", "生徒たちは科学プロジェクトの新しいテーマをまとめる。"),
+    "open up": ("〜を開く、打ち明ける", "動詞句", "The discussion may open up new ideas for the community.", "その議論は地域の新しい考えを開くかもしれない。"),
+    "sit down": ("座る", "動詞句", "Please sit down before the doctor begins the examination.", "医師が診察を始める前に座ってください。"),
+    "get around": ("〜を回避する、動き回る", "動詞句", "The guide knows how to get around the crowded market safely.", "そのガイドは混雑した市場を安全に動き回る方法を知っている。"),
     "look down on": ("見下す", "句動詞", "Good leaders do not look down on people with less experience.", "よい指導者は経験の少ない人を見下さない。"),
     "deal with": ("対処する、扱う", "句動詞", "The counselor helped the student deal with stress before the exam.", "カウンセラーは試験前のストレスに対処するよう生徒を助けた。"),
     "get along with": ("うまく付き合う", "句動詞", "Mika can get along with her new classmates surprisingly well.", "ミカは新しいクラスメートとうまく付き合える。"),
@@ -200,43 +211,51 @@ DETAILS = {
     "chance": ("機会、可能性", "名詞", "There is little chance of finishing the road before winter.", "冬になる前に道路を完成させる可能性はほとんどない。"),
     "kind": ("種類、親切な", "名詞", "What kind of music does your brother listen to after school?", "あなたの弟は放課後どんな種類の音楽を聴くのですか。"),
     "field": ("分野、野原", "名詞", "She hopes to work in the field of environmental science.", "彼女は環境科学の分野で働きたいと思っている。"),
-    "from": ("〜から", "前置詞", "The package came from a small shop near the harbor.", "その荷物は港の近くの小さな店から届いた。"),
-    "near": ("〜の近くに", "前置詞", "A quiet library stands near the entrance to the park.", "静かな図書館が公園の入口の近くに建っている。"),
-    "under": ("〜の下に、〜未満で", "前置詞", "The cat hid under the table during the loud storm.", "大きな嵐の間、猫はテーブルの下に隠れた。"),
+    "in front of": ("〜の前に", "前置詞句", "The bus stopped in front of the library before the rain began.", "雨が降り始める前に、バスは図書館の前に止まった。"),
+    "for the sake of": ("〜のために", "前置詞句", "She changed her schedule for the sake of her young children.", "彼女は幼い子どもたちのために予定を変えた。"),
+    "in place of": ("〜の代わりに", "前置詞句", "The assistant attended the meeting in place of the director.", "助手は部長の代わりに会議へ出席した。"),
+    "out of respect for": ("〜に敬意を表して", "前置詞句", "The family held a quiet ceremony out of respect for their grandfather.", "その家族は祖父に敬意を表して静かな式典を行った。"),
     "in memory of": ("〜を記念して", "前置詞句", "The family planted a tree in memory of their grandfather.", "その家族は祖父を記念して木を植えた。"),
-    "had become": ("なっていた", "助動詞句", "By sunrise, the quiet street had become crowded with visitors.", "日の出までに、静かな通りは訪問者で混雑していた。"),
+    "to prevent": ("防ぐために", "不定詞句", "The new rule was designed to prevent accidents near the station.", "新しい規則は駅の近くの事故を防ぐために作られた。"),
     "to become": ("なること", "不定詞句", "She hopes to become a doctor who serves rural communities.", "彼女は地方の地域社会に尽くす医師になりたいと思っている。"),
-    "became": ("なった", "動詞", "The small village became famous after the film was released.", "その小さな村は映画が公開された後で有名になった。"),
-    "become": ("なる", "動詞", "Many students become nervous before speaking to a large audience.", "多くの生徒は大勢の聴衆の前で話す前に緊張する。"),
+    "to remain": ("そのままでいること", "不定詞句", "The museum hopes to remain open during the renovation.", "その博物館は改修中も開館し続けたいと考えている。"),
+    "to disappear": ("消えること", "不定詞句", "The dark clouds began to disappear before the afternoon concert.", "午後のコンサートの前に暗い雲が消え始めた。"),
     "helping": ("手伝っている", "動詞", "Helping older neighbors with shopping can strengthen a community.", "高齢の近所の人の買い物を手伝うことは地域を強くできる。"),
     "waiting": ("待っている", "動詞", "Waiting outside the theater, the fans talked about the new play.", "劇場の外で待ちながら、ファンたちは新しい劇について話した。"),
     "sitting": ("座っている", "動詞", "Sitting by the window, the artist sketched the passing boats.", "窓のそばに座り、その画家は通り過ぎる船をスケッチした。"),
     "visiting": ("訪れている", "動詞", "Visiting local farms gives children a better idea of where food comes from.", "地元の農場を訪れると、子どもたちは食べ物がどこから来るかよく分かる。"),
-    "the time": ("その時", "名詞句", "The time for the meeting was changed because of the storm.", "嵐のため会議の時間が変更された。"),
-    "once": ("いったん〜すると、かつて", "接続詞", "Once the rain stopped, the children returned to the playground.", "雨がやむと、子どもたちは遊び場へ戻った。"),
-    "ahead": ("前方に、先に", "副詞", "A long journey lay ahead, so the travelers rested early.", "長い旅が待っていたので、旅行者たちは早く休んだ。"),
-    "the next": ("次の", "形容詞句", "The next train will arrive at the platform in ten minutes.", "次の列車は10分後にホームへ到着する。"),
+    "so long as": ("〜する限り", "接続詞句", "So long as the weather stays clear, the children can play outside.", "天気が晴れている限り、子どもたちは外で遊べる。"),
+    "right after": ("〜した直後に", "接続詞句", "Right after he started to play, Timmy smiled at the other children.", "彼が遊び始めた直後に、ティミーはほかの子どもたちにほほえんだ。"),
+    "in the event that": ("万一〜の場合に", "接続詞句", "In the event that the train is delayed, call the office immediately.", "万一列車が遅れた場合は、すぐに事務所へ電話してください。"),
+    "assuming that": ("〜と仮定すると", "接続詞句", "Assuming that the road is open, we should arrive before sunset.", "道路が通行できると仮定すれば、日没前に到着できるはずだ。"),
 }
 
 
 CORE_IMAGES = {
-    "in that case": {"chain": [{"term": "in", "gloss": "状況の中で"}, {"term": "case", "gloss": "場合"}, {"gloss": "その場合は"}]},
-    "in your favor": {"chain": [{"term": "in", "gloss": "状態の中に"}, {"term": "favor", "gloss": "味方、有利な扱い"}, {"gloss": "あなたに有利で"}]},
-    "for example": {"chain": [{"term": "for", "gloss": "対象として"}, {"term": "example", "gloss": "例"}, {"gloss": "例えば"}]},
-    "at any time": {"chain": [{"term": "at", "gloss": "ある時点で"}, {"term": "time", "gloss": "時間"}, {"gloss": "いつでも"}]},
-    "look down on": {"chain": [{"term": "look", "gloss": "見る"}, {"term": "down", "gloss": "下へ向けて"}, {"gloss": "相手を下に見て見下す"}]},
+    "put together": {"chain": [{"term": "put", "gloss": "置く"}, {"term": "together", "gloss": "一緒に"}, {"gloss": "考えをまとめて形にする"}]},
+    "open up": {"particle": "up", "particleSense": "admit", "chain": [{"term": "open", "gloss": "開く"}, {"term": "up", "gloss": "表へ出して"}, {"gloss": "新しい考えを開く"}]},
+    "sit down": {"particle": "down", "particleSense": "descend", "chain": [{"term": "sit", "gloss": "座る"}, {"term": "down", "gloss": "下へ"}, {"gloss": "腰を下ろす"}]},
+    "get around": {"particle": "around", "chain": [{"term": "get", "gloss": "動く"}, {"term": "around", "gloss": "周囲へ"}, {"gloss": "周囲を動き回る"}]},
+    "in front of": {"chain": [{"term": "in", "gloss": "中に"}, {"term": "front", "gloss": "前面"}, {"term": "of", "gloss": "〜について"}, {"gloss": "〜の前に"}]},
+    "for the sake of": {"chain": [{"term": "for", "gloss": "〜のために"}, {"term": "sake", "gloss": "目的"}, {"term": "of", "gloss": "〜について"}, {"gloss": "〜のためを思って"}]},
+    "in place of": {"chain": [{"term": "in", "gloss": "中に"}, {"term": "place", "gloss": "場所・代わり"}, {"term": "of", "gloss": "〜について"}, {"gloss": "〜の代わりに"}]},
+    "out of respect for": {"chain": [{"term": "out", "gloss": "外へ向かう"}, {"term": "respect", "gloss": "敬意"}, {"term": "for", "gloss": "〜に対して"}, {"gloss": "〜に敬意を表して"}]},
+    "look down on": {"particle": "down", "particleSense": "lower", "chain": [{"term": "look", "gloss": "見る"}, {"term": "down", "gloss": "下へ向けて"}, {"gloss": "相手を下に見て見下す"}]},
     "deal with": {"chain": [{"term": "deal", "gloss": "取り扱う"}, {"term": "with", "gloss": "対象とともに"}, {"gloss": "〜に対処する"}]},
-    "get along with": {"chain": [{"term": "get", "gloss": "ある状態になる"}, {"term": "along", "gloss": "一緒に進んで"}, {"gloss": "相手とうまく付き合う"}]},
-    "make up for": {"chain": [{"term": "make", "gloss": "作る"}, {"term": "up", "gloss": "足りない分を埋めて"}, {"gloss": "不足を埋め合わせる"}]},
+    "get along with": {"particle": "along", "chain": [{"term": "get", "gloss": "ある状態になる"}, {"term": "along", "gloss": "一緒に進んで"}, {"gloss": "相手とうまく付き合う"}]},
+    "make up for": {"particle": "up", "particleSense": "complete", "chain": [{"term": "make", "gloss": "作る"}, {"term": "up", "gloss": "足りない分を埋めて"}, {"gloss": "不足を埋め合わせる"}]},
     "out of stock": {"chain": [{"term": "out", "gloss": "外へ出て"}, {"term": "stock", "gloss": "在庫"}, {"gloss": "在庫の外に出て、在庫切れで"}]},
     "on the go": {"chain": [{"term": "on", "gloss": "活動に接して"}, {"term": "go", "gloss": "進むこと"}, {"gloss": "動き続けて、忙しく"}]},
     "in sight": {"chain": [{"term": "in", "gloss": "範囲の中に"}, {"term": "sight", "gloss": "視界"}, {"gloss": "視界に入って"}]},
     "under the circumstances": {"chain": [{"term": "under", "gloss": "条件の下で"}, {"term": "circumstances", "gloss": "周囲の事情"}, {"gloss": "この状況では"}]},
-    "in memory of": {"chain": [{"term": "in", "gloss": "状態の中に"}, {"term": "memory", "gloss": "記憶"}, {"gloss": "〜を記念して"}]},
-    "had become": {"chain": [{"term": "had", "gloss": "過去のある時点までに"}, {"term": "become", "gloss": "ある状態になる"}, {"gloss": "その時までになっていた"}]},
+    "to prevent": {"chain": [{"term": "to", "gloss": "向かうことを示して"}, {"term": "prevent", "gloss": "防ぐ"}, {"gloss": "防ぐために"}]},
     "to become": {"chain": [{"term": "to", "gloss": "向かうことを示して"}, {"term": "become", "gloss": "ある状態になる"}, {"gloss": "〜になること"}]},
-    "the time": {"chain": [{"term": "time", "gloss": "時間"}, {"gloss": "その時間"}]},
-    "the next": {"chain": [{"term": "next", "gloss": "次の"}, {"gloss": "次のもの"}]},
+    "to remain": {"chain": [{"term": "to", "gloss": "向かうことを示して"}, {"term": "remain", "gloss": "そのままでいる"}, {"gloss": "そのままでいること"}]},
+    "to disappear": {"chain": [{"term": "to", "gloss": "向かうことを示して"}, {"term": "disappear", "gloss": "消える"}, {"gloss": "消えること"}]},
+    "so long as": {"chain": [{"term": "so", "gloss": "そのように"}, {"term": "long", "gloss": "長く"}, {"gloss": "〜する限り"}]},
+    "right after": {"chain": [{"term": "right", "gloss": "まさに"}, {"term": "after", "gloss": "後に"}, {"gloss": "〜した直後に"}]},
+    "in the event that": {"chain": [{"term": "event", "gloss": "出来事"}, {"term": "that", "gloss": "そのこと"}, {"gloss": "万一〜の場合に"}]},
+    "assuming that": {"chain": [{"term": "assuming", "gloss": "仮定して"}, {"term": "that", "gloss": "そのことを"}, {"gloss": "〜と仮定すると"}]},
 }
 
 
@@ -253,7 +272,12 @@ def build() -> tuple[dict, dict]:
     missing = sorted(set(choices) - set(DETAILS))
     if missing:
         raise ValueError(f"語句情報がありません: {missing}")
-    idioms = {choice for choice in choices if " " in choice}
+    idioms = {
+        choice
+        for q, question in enumerate(QUESTIONS, start=1)
+        if q in IDIOM_QUESTIONS
+        for choice in question["choices"]
+    }
     if idioms != set(CORE_IMAGES):
         raise ValueError(f"核心イメージの定義が一致しません: {sorted(idioms ^ set(CORE_IMAGES))}")
 
@@ -262,7 +286,7 @@ def build() -> tuple[dict, dict]:
         "round": ROUND_ID,
         "section": "Reading 大問1（語句空所補充）",
         "source": "ユーザー提供のChapter 3 模擬テスト第3回原稿を基に構造化。訳・例文・語句情報は学習用に作成",
-        "counts": {"questions": 20, "words": 63, "idioms": 17, "total": 80},
+        "counts": {"questions": 20, "words": 56, "idioms": 24, "total": 80},
     }
     question_data = {
         "meta": meta,
@@ -281,7 +305,7 @@ def build() -> tuple[dict, dict]:
                 "exampleTranslation": example_translation,
                 "pos": pos,
             }
-            if " " in choice:
+            if q in IDIOM_QUESTIONS:
                 item["type"] = "idiom"
                 item["phrase"] = choice
                 item["coreImage"] = CORE_IMAGES[choice]
@@ -289,7 +313,7 @@ def build() -> tuple[dict, dict]:
             else:
                 item["word"] = choice
                 words.append(item)
-    if (len(words), len(idiom_items)) != (63, 17):
+    if (len(words), len(idiom_items)) != (56, 24):
         raise ValueError(f"語句数が想定と違います: words={len(words)}, idioms={len(idiom_items)}")
     return {"meta": meta, "words": words, "idioms": idiom_items}, question_data
 
@@ -298,7 +322,7 @@ def main() -> None:
     vocab, questions = build()
     write_json(DATA_DIR / "vocab_2_mock-3.json", vocab)
     write_json(DATA_DIR / "questions_2_mock-3.json", questions)
-    print("eiken2 mock-3: 20 questions / 80 items (63 words, 17 idioms)")
+    print("eiken2 mock-3: 20 questions / 80 items (56 words, 24 idioms)")
 
 
 if __name__ == "__main__":
