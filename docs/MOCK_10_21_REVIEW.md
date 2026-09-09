@@ -203,11 +203,30 @@ npm test                                 # exit 0
 とる熟語は、`particle` を付けず連鎖のみのB型として扱った。
 辞書への変更は1件のみ: mock-20 で `out` / `express` を2件が参照するため、仲間例に `cry out` を1件追加した（3件→4件）。
 
+## 暗記カードの原形表示（4.5節）
+
+`pos` が動詞で出題形が `-ed` / `-ing` の語 **224件** を、`data/lemmas.json` の
+表示専用マップ `flashcardLemmas` へ追加した（96件 → 320件）。
+
+- 原形は語尾の機械的な切り落としではなく、**このセットの語彙選定に使った見出し語（原形）**へ
+  出題形を突き合わせて決めた。224件すべてが計画書の見出し語1件に一意対応することを確認済み。
+- canonical の `lemmas` / `entries` / `flashcardDisplayLemmas` は変更していないため、
+  `REVIEWED_MEANING_DIGEST` の再計算は不要（既存値の変更も0件）。
+- 語彙JSON・問題JSONの `word` / `phrase`、選択肢、進捗キーは出題形のまま。
+
+## 音声（MP3）
+
+未生成。`AZURE_SPEECH_KEY` が環境に無いため実行できていない。
+
+| 対象 | 件数 | コマンド |
+| --- | --- | --- |
+| 出題形（12セット分） | 1,200 | `py -3 scripts/generate_tts_1.py --grade 1 --round mock-N` |
+| 暗記カードの原形 | 224 | `py -3 scripts/generate_lemma_tts.py --flashcard-only` |
+
+MP3が無い間は、音声ボタンはブラウザ標準音声へフォールバックする（暗記カードは原形、
+それ以外の画面は出題形を読む）。出題形MP3を原形音声として流用する経路は無い。
+
 ## 未実施・要確認
 
-- **暗記カードの原形表示（4.5節）**: 出題形が `-ed` の動詞（`eschewed`・`ousted`・`tyrannized` など）について、
-  `data/lemmas.json` の `flashcardLemmas` へ表示専用の原形対応を追加していない。
-  `npm test` の原形辞書契約は通っているが、暗記カードは出題形のまま表示される。
 - **実ブラウザ確認（8節）**: 未実施。
-- **音声（MP3）**: 未生成。
-- **commit / push / deploy**: 未実施。
+- **音声MP3の生成**: 上記のとおりキー待ち。
