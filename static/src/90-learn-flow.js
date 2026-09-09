@@ -53,7 +53,9 @@ function weightedOrder(items) {
     const overdueDays = Number.isFinite(overdueMs) ? Math.max(0, overdueMs / dayMs) : 0;
     // lastGradeは保存しない制約のため、絶対床以上の「直近の正答RT」をHard相当として復元する。
     const hard = Number.isFinite(s.lastMs) && s.lastMs >= RT_HARD_FLOOR_MS ? 1 : 0;
-    return [item, 2 * (Number(s.wrongCount) || 0) + hard + 0.5 * overdueDays];
+    // FSRSのlapsesは累計の失敗回数。移行前の記録のために wrongCount へフォールバックする。
+    const lapses = Number.isFinite(Number(s.fsrs?.lapses)) ? Number(s.fsrs.lapses) : (Number(s.wrongCount) || 0);
+    return [item, 2 * lapses + hard + 0.5 * overdueDays];
   }));
   return shuffled.sort((a, b) => scores.get(b) - scores.get(a));
 }

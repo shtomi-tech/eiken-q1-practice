@@ -110,7 +110,7 @@ assert.match(js, /const MEANING_SESSION_SIZE = 30;/, "MEANING_SESSION_SIZE は30
 const intervalsBlockMatch = js.match(/const MEANING_INTERVALS = \[[\s\S]*?\];/);
 assert.ok(intervalsBlockMatch, "MEANING_INTERVALS の定義が見つからない");
 const intervalsBlock = intervalsBlockMatch[0];
-for (const label of ["未実施", "要再確認", "1日後", "3日後", "7日後", "14日後", "30日後", "60日後", "120日後"]) {
+for (const label of ["未実施", "要再確認", "3日以内", "1週間", "2週間", "1か月", "3か月", "半年以上"]) {
   assert.ok(intervalsBlock.includes(label), `MEANING_INTERVALS に "${label}" が残っている必要がある`);
 }
 

@@ -147,16 +147,18 @@ function otherGradeDueCounts(now = Date.now()) {
   return rows.sort((a, b) => b.count - a.count).slice(0, 3);
 }
 
-// 今回出題される語句を、直前の復習間隔で分類する。
+// 今回出題される語句を、直前の復習間隔のバケットで分類する。
 function meaningIntervalLabel(item) {
   const itemState = readItemStateOf(item);
   if (!itemState.lastAnsweredAt) return "未実施";
   if (!itemState.nextReviewAt) return "要再確認";
-  const elapsedDays = Math.round(
+  const intervalDays =
     (new Date(itemState.nextReviewAt).getTime() - new Date(itemState.lastAnsweredAt).getTime())
-      / (24 * 60 * 60 * 1000),
-  );
-  return MEANING_INTERVALS.find(({ days }) => days === elapsedDays)?.label || "要再確認";
+      / (24 * 60 * 60 * 1000);
+  // 当日中に戻ってくる語（FSRSの学習ステップ）は「要再確認」に含める。
+  if (!Number.isFinite(intervalDays) || intervalDays < 1) return "要再確認";
+  return MEANING_INTERVALS.find(({ days }) => days !== undefined && intervalDays < days)?.label
+    || "半年以上";
 }
 
 function meaningIntervalBreakdown(items) {

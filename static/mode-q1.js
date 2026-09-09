@@ -495,6 +495,7 @@ function loadProgress(datasetId = state.datasetId) {
       };
       progress.units = {};
     }
+    migrateFsrsV1(progress);
     return progress;
   } catch (e) {
     // 壊れたJSONを空データとして保存し直さないよう、原文を別キーへ退避する。
@@ -507,6 +508,56 @@ function loadProgress(datasetId = state.datasetId) {
       _recovery: { type: "corrupt-local-record", datasetId },
     };
   }
+}
+
+/* ---- FSRSへの移行（ワンショット・冪等） ----
+   過去の解答履歴からFSRS状態は再構成できない（history は直近500件で経過日数もgradeも持たない）。
+   そこで leitnerStage の到達段を「その語の安定性」とみなして初期値を与える。
+   nextReviewAt は書き換えない。移行で期限が動くと、生徒には記録の破壊に見えるため。 */
+const FSRS_MIGRATION_VERSION = 1;
+// index = leitnerStage。0は未到達（Newのまま）。
+const FSRS_MIGRATION_STABILITY = [null, 1, 3, 7, 14, 30, 60];
+function migrateFsrsV1(progress) {
+  if (!progress || typeof progress !== "object") return false;
+  if (progress.migrations && progress.migrations.fsrsV1 === FSRS_MIGRATION_VERSION) return false;
+  const lib = fsrsLib();
+  if (!lib) return false; // 未読込なら記録を書き換えない。次回の読み込みでやり直す。
+  const items = progress.items;
+  if (items && typeof items === "object" && !Array.isArray(items)) {
+    Object.keys(items).forEach((key) => {
+      const s = items[key];
+      if (!s || typeof s !== "object" || s.fsrs) return;
+      const lastReview = s.lastAnsweredAt || null;
+      const card = lib.createEmptyCard(lastReview ? new Date(lastReview) : new Date());
+      const maxStage = FSRS_MIGRATION_STABILITY.length - 1;
+      const stage = Math.min(Math.max(Number(s.leitnerStage) || 0, 0), maxStage);
+      const stability = FSRS_MIGRATION_STABILITY[stage];
+      if (stability === null || !lastReview) {
+        s.fsrs = fromFsrsCard(card); // 未実施・誤答直後は New のまま
+        return;
+      }
+      const wrong = Number(s.wrongCount) || 0;
+      s.fsrs = fromFsrsCard({
+        ...card,
+        due: new Date(s.nextReviewAt || card.due),
+        stability,
+        difficulty: Math.min(Math.max(5 + wrong, 1), 10), // 誤答が多い語ほど難しいと見なす
+        elapsed_days: 0,
+        scheduled_days: stability,
+        reps: stage + 1, // 実際の回数は不明。表示・診断用
+        lapses: wrong,
+        learning_steps: 0, // Review へ移すので当日ステップは抜けている
+        state: 2, // Review
+        last_review: new Date(lastReview),
+      });
+    });
+  }
+  progress.migrations = {
+    ...(progress.migrations || {}),
+    fsrsV1: FSRS_MIGRATION_VERSION,
+    fsrsV1At: new Date().toISOString(),
+  };
+  return true;
 }
 
 function readStudyPlanLocal(grade = currentGrade()) {
@@ -816,19 +867,92 @@ function unit(q) {
 }
 /* ---- 語句単位の進捗（意味だけ練習でのみ使用。既存の units とは別ブロック） ---- */
 const LEITNER_LADDER = [1, 3, 7, 14, 30, 60, 120]; // 正解のたびに進む復習間隔（日）
+// FSRSは連続値の間隔を返すため、内訳はバケットで数える（上限 days 未満に入る）。
 const MEANING_INTERVALS = [
   { label: "未実施" },
   { label: "要再確認" },
-  { days: 1, label: "1日後" },
-  { days: 3, label: "3日後" },
-  { days: 7, label: "7日後" },
-  { days: 14, label: "14日後" },
-  { days: 30, label: "30日後" },
-  { days: 60, label: "60日後" },
-  { days: 120, label: "120日後" },
+  { days: 3, label: "3日以内" },
+  { days: 7, label: "1週間" },
+  { days: 14, label: "2週間" },
+  { days: 30, label: "1か月" },
+  { days: 90, label: "3か月" },
+  { days: Infinity, label: "半年以上" },
 ];
 const MEANING_SESSION_SIZE = 30; // 1回に出す語句の上限
-const MEANING_PROGRESS_VERSION = 2;
+const MEANING_PROGRESS_VERSION = 3;
+
+/* ---- FSRS-6（static/vendor/fsrs の ts-fsrs UMD, グローバル名 FSRS） ----
+   間隔は語ごとの stability / difficulty から算出する。LEITNER_LADDER は
+   ライブラリが読み込めなかったときのフォールバックとしてのみ残す。 */
+const FSRS_PARAMS = Object.freeze({
+  request_retention: 0.9,  // 目標保持率。Ankiの既定と同じ
+  maximum_interval: 180,   // 英検受験という用途に合わせて短縮（既定36500日は使わない）
+  enable_short_term: true, // 1m/10m の当日ステップを使う
+  enable_fuzz: true,       // 同じ日に大量の語が固まるのを防ぐ（乱数を含む）
+});
+// ts-fsrs の Rating。Easy(4) は自己申告UIが無く根拠を作れないため使わない。
+const FSRS_RATING = Object.freeze({ again: 1, hard: 2, good: 3 });
+const FSRS_MAX_SCHEDULED_DAYS = FSRS_PARAMS.maximum_interval + 1; // 丸めで上限+1になる
+let fsrsSchedulerCache = null;
+
+function fsrsLib() {
+  return (typeof globalThis !== "undefined" && globalThis.FSRS) || null;
+}
+// ライブラリ未読込（配信漏れ・ネットワーク失敗）でも学習は止めない。呼び出し側がフォールバックする。
+function fsrsScheduler() {
+  const lib = fsrsLib();
+  if (!lib) return null;
+  if (!fsrsSchedulerCache) fsrsSchedulerCache = lib.fsrs(FSRS_PARAMS);
+  return fsrsSchedulerCache;
+}
+function fsrsDate(value, fallback) {
+  const time = value ? new Date(value).getTime() : NaN;
+  return Number.isFinite(time) ? new Date(time) : fallback;
+}
+function fsrsNumber(value, fallback) {
+  return Number.isFinite(Number(value)) ? Number(value) : fallback;
+}
+// 保存形式(JSON) → ts-fsrs の Card。日付を Date へ戻すのはこの関数だけ。
+function toFsrsCard(saved, now) {
+  const lib = fsrsLib();
+  if (!lib) return null;
+  const empty = lib.createEmptyCard(now);
+  if (!saved || typeof saved !== "object") return empty;
+  return {
+    ...empty,
+    due: fsrsDate(saved.due, empty.due),
+    stability: fsrsNumber(saved.stability, empty.stability),
+    difficulty: fsrsNumber(saved.difficulty, empty.difficulty),
+    elapsed_days: fsrsNumber(saved.elapsed_days, empty.elapsed_days),
+    scheduled_days: fsrsNumber(saved.scheduled_days, empty.scheduled_days),
+    reps: fsrsNumber(saved.reps, empty.reps),
+    lapses: fsrsNumber(saved.lapses, empty.lapses),
+    // 当日ステップの何段目かを保持する。落とすと Learning から抜けられなくなる。
+    learning_steps: fsrsNumber(saved.learning_steps, empty.learning_steps),
+    state: fsrsNumber(saved.state, empty.state),
+    last_review: saved.last_review ? fsrsDate(saved.last_review, null) : undefined,
+  };
+}
+// ts-fsrs の Card → 保存形式(JSON)。日付を ISO 文字列にするのはこの関数だけ。
+function fromFsrsCard(card) {
+  return {
+    due: new Date(card.due).toISOString(),
+    stability: card.stability,
+    difficulty: card.difficulty,
+    elapsed_days: card.elapsed_days,
+    scheduled_days: card.scheduled_days,
+    reps: card.reps,
+    lapses: card.lapses,
+    learning_steps: card.learning_steps,
+    state: card.state,
+    last_review: card.last_review ? new Date(card.last_review).toISOString() : null,
+  };
+}
+// 正誤と回答時間の判定を ts-fsrs の Rating へ写す。
+function meaningRating(isCorrect, grade) {
+  if (!isCorrect) return FSRS_RATING.again;
+  return grade === "hard" ? FSRS_RATING.hard : FSRS_RATING.good;
+}
 const LEARNING_HISTORY_LIMIT = 500;
 // ponytail: 閾値はこの4つだけ。初期値は実データを見て調整する前提。
 const RT_HARD_FLOOR_MS = 8000;
@@ -842,6 +966,7 @@ const DEFAULT_ITEM_STATE = Object.freeze({
   lastAnsweredAt: null,
   lastMs: null,
   avgMs: null,
+  fsrs: null,
 });
 
 function rtGrade(ms, medianMs) {
@@ -859,6 +984,7 @@ function medianMs(values) {
   return valid.length % 2 ? valid[middle] : (valid[middle - 1] + valid[middle]) / 2;
 }
 
+// FSRS未読込時のフォールバック。通常の間隔算出には使わない。
 function meaningResultState(stage, wrongCount, isCorrect, grade) {
   const lastStage = LEITNER_LADDER.length - 1;
   const maxStage = Number(wrongCount) >= 5 ? 1 : lastStage;
@@ -893,6 +1019,7 @@ function itemState(progress, key) {
   if (typeof s.lastAnsweredAt !== "string" && s.lastAnsweredAt !== null) s.lastAnsweredAt = null;
   if (!Number.isFinite(s.lastMs)) s.lastMs = null;
   if (!Number.isFinite(s.avgMs)) s.avgMs = null;
+  if (!s.fsrs || typeof s.fsrs !== "object") s.fsrs = null;
   return s;
 }
 function appendLearningHistory(progress, event) {
@@ -902,7 +1029,29 @@ function appendLearningHistory(progress, event) {
     progress.history.splice(0, progress.history.length - LEARNING_HISTORY_LIMIT);
   }
 }
-// 意味だけ演習の解答結果をLeitnerに反映する。item._datasetId があれば本来の回の進捗へ書く。
+// FSRSで次回を決める。ライブラリが無い場合は false を返し、呼び出し側がはしごへ落ちる。
+function applyFsrsResult(s, answeredAt, rating) {
+  const scheduler = fsrsScheduler();
+  if (!scheduler) return false;
+  const next = scheduler.next(toFsrsCard(s.fsrs, answeredAt), answeredAt, rating).card;
+  s.fsrs = fromFsrsCard(next);
+  // nextReviewAt は due の写し。期限判定・他級集計・クラウド同期はこの値だけを見る。
+  s.nextReviewAt = s.fsrs.due;
+  return true;
+}
+// FSRS未読込時のみ使う旧はしご。leitnerStage はここでだけ進む。
+function applyLadderResult(s, answeredAt, isCorrect, grade) {
+  const result = meaningResultState(s.leitnerStage, s.wrongCount, isCorrect, grade);
+  s.leitnerStage = result.nextStage;
+  if (result.intervalDays === null) {
+    s.nextReviewAt = null;
+    return;
+  }
+  const next = new Date(answeredAt);
+  next.setDate(next.getDate() + result.intervalDays);
+  s.nextReviewAt = next.toISOString();
+}
+// 意味だけ演習の解答結果を進捗へ反映する。item._datasetId があれば本来の回の進捗へ書く。
 function recordMeaningResult(item, isCorrect, responseMs) {
   const datasetId = item._datasetId || state.datasetId;
   const progress = progressFor(datasetId);
@@ -910,13 +1059,12 @@ function recordMeaningResult(item, isCorrect, responseMs) {
   const answeredAt = new Date();
   const ms = Number.isFinite(responseMs) ? responseMs : null;
   s.lastAnsweredAt = answeredAt.toISOString();
+  // 誤答は Again。正答は回答時間の判定で Hard / Good に分ける。
+  const grade = isCorrect ? rtGrade(ms, medianMs(session?.meaningRtLog || [])) : "good";
+  if (!applyFsrsResult(s, answeredAt, meaningRating(isCorrect, grade))) {
+    applyLadderResult(s, answeredAt, isCorrect, grade);
+  }
   if (isCorrect) {
-    const grade = rtGrade(ms, medianMs(session?.meaningRtLog || []));
-    const result = meaningResultState(s.leitnerStage, s.wrongCount, true, grade);
-    const next = new Date(answeredAt);
-    next.setDate(next.getDate() + result.intervalDays);
-    s.nextReviewAt = next.toISOString();
-    s.leitnerStage = result.nextStage;
     if (ms !== null) {
       // lastMs/avgMs は正答時だけ更新する。誤答は wrongCount と即時再出題で既に重みが付くため。
       s.lastMs = ms;
@@ -924,9 +1072,8 @@ function recordMeaningResult(item, isCorrect, responseMs) {
       if (ms < RT_OUTLIER_MS) (session.meaningRtLog || (session.meaningRtLog = [])).push(ms);
     }
   } else {
+    // wrongCount は出題順のフォールバックと移行時のdifficulty推定に使うため維持する。
     s.wrongCount += 1;
-    s.leitnerStage = meaningResultState(s.leitnerStage, s.wrongCount, false, "good").nextStage;
-    s.nextReviewAt = null;
   }
   appendLearningHistory(progress, {
     kind: "meaning",
@@ -1173,16 +1320,18 @@ function otherGradeDueCounts(now = Date.now()) {
   return rows.sort((a, b) => b.count - a.count).slice(0, 3);
 }
 
-// 今回出題される語句を、直前の復習間隔で分類する。
+// 今回出題される語句を、直前の復習間隔のバケットで分類する。
 function meaningIntervalLabel(item) {
   const itemState = readItemStateOf(item);
   if (!itemState.lastAnsweredAt) return "未実施";
   if (!itemState.nextReviewAt) return "要再確認";
-  const elapsedDays = Math.round(
+  const intervalDays =
     (new Date(itemState.nextReviewAt).getTime() - new Date(itemState.lastAnsweredAt).getTime())
-      / (24 * 60 * 60 * 1000),
-  );
-  return MEANING_INTERVALS.find(({ days }) => days === elapsedDays)?.label || "要再確認";
+      / (24 * 60 * 60 * 1000);
+  // 当日中に戻ってくる語（FSRSの学習ステップ）は「要再確認」に含める。
+  if (!Number.isFinite(intervalDays) || intervalDays < 1) return "要再確認";
+  return MEANING_INTERVALS.find(({ days }) => days !== undefined && intervalDays < days)?.label
+    || "半年以上";
 }
 
 function meaningIntervalBreakdown(items) {
@@ -2193,7 +2342,7 @@ function meaningMission(
     el("p", { class: "label" }, "間隔復習"),
     el("h3", { id: "spacedReviewCardTitle" }, `意味だけ復習（${dataset().shortLabel}）`),
     el("p", { class: "meaningMissionLead" },
-      `${datasetSectionName()}の収録セットをまとめ、通常学習で最後まで解いた設問の語句を1回最大${MEANING_SESSION_SIZE}語句で復習します。正解すると1→3→7→14→30→60→120日後へ間隔が延びます。`),
+      `${datasetSectionName()}の収録セットをまとめ、通常学習で最後まで解いた設問の語句を1回最大${MEANING_SESSION_SIZE}語句で復習します。正解の速さとこれまでの記録から、語句ごとに次回の日を決めます。`),
     // 行動指標は「今すぐ復習」1つに絞る。プール全体の解放数（旧・左指標）は日常判断に使わないため出さない。
     el("div", { class: "meaningMissionMetrics" },
       el("div", { class: ready && due > 0 ? "meaningMissionMetricDue" : "" }, el("strong", {}, ready ? `${due}語句` : "—"), el("span", {}, "今すぐ復習")),
@@ -2538,7 +2687,9 @@ function weightedOrder(items) {
     const overdueDays = Number.isFinite(overdueMs) ? Math.max(0, overdueMs / dayMs) : 0;
     // lastGradeは保存しない制約のため、絶対床以上の「直近の正答RT」をHard相当として復元する。
     const hard = Number.isFinite(s.lastMs) && s.lastMs >= RT_HARD_FLOOR_MS ? 1 : 0;
-    return [item, 2 * (Number(s.wrongCount) || 0) + hard + 0.5 * overdueDays];
+    // FSRSのlapsesは累計の失敗回数。移行前の記録のために wrongCount へフォールバックする。
+    const lapses = Number.isFinite(Number(s.fsrs?.lapses)) ? Number(s.fsrs.lapses) : (Number(s.wrongCount) || 0);
+    return [item, 2 * lapses + hard + 0.5 * overdueDays];
   }));
   return shuffled.sort((a, b) => scores.get(b) - scores.get(a));
 }

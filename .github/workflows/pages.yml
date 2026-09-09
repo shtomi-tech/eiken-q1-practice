@@ -47,9 +47,11 @@ jobs:
         run: |
           rm -rf _site
           mkdir -p _site/static/vendor/harness _site/data _site/assets/audio/vocab _site/assets/audio/lemma
+          mkdir -p _site/static/vendor/fsrs
           cp index.html .nojekyll _site/
           cp static/app.js static/mode-q1.js static/styles.css static/config.json _site/static/
           cp static/vendor/harness/cloud.js _site/static/vendor/harness/
+          cp static/vendor/fsrs/index.umd.js static/vendor/fsrs/LICENSE _site/static/vendor/fsrs/
           cp data/manifest.json data/lemmas.json _site/data/
           cp data/particle_images.json _site/data/
           cp data/word_roots.json data/word_origins.json _site/data/

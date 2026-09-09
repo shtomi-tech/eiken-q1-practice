@@ -164,6 +164,7 @@ function loadProgress(datasetId = state.datasetId) {
       };
       progress.units = {};
     }
+    migrateFsrsV1(progress);
     return progress;
   } catch (e) {
     // 壊れたJSONを空データとして保存し直さないよう、原文を別キーへ退避する。
@@ -176,6 +177,56 @@ function loadProgress(datasetId = state.datasetId) {
       _recovery: { type: "corrupt-local-record", datasetId },
     };
   }
+}
+
+/* ---- FSRSへの移行（ワンショット・冪等） ----
+   過去の解答履歴からFSRS状態は再構成できない（history は直近500件で経過日数もgradeも持たない）。
+   そこで leitnerStage の到達段を「その語の安定性」とみなして初期値を与える。
+   nextReviewAt は書き換えない。移行で期限が動くと、生徒には記録の破壊に見えるため。 */
+const FSRS_MIGRATION_VERSION = 1;
+// index = leitnerStage。0は未到達（Newのまま）。
+const FSRS_MIGRATION_STABILITY = [null, 1, 3, 7, 14, 30, 60];
+function migrateFsrsV1(progress) {
+  if (!progress || typeof progress !== "object") return false;
+  if (progress.migrations && progress.migrations.fsrsV1 === FSRS_MIGRATION_VERSION) return false;
+  const lib = fsrsLib();
+  if (!lib) return false; // 未読込なら記録を書き換えない。次回の読み込みでやり直す。
+  const items = progress.items;
+  if (items && typeof items === "object" && !Array.isArray(items)) {
+    Object.keys(items).forEach((key) => {
+      const s = items[key];
+      if (!s || typeof s !== "object" || s.fsrs) return;
+      const lastReview = s.lastAnsweredAt || null;
+      const card = lib.createEmptyCard(lastReview ? new Date(lastReview) : new Date());
+      const maxStage = FSRS_MIGRATION_STABILITY.length - 1;
+      const stage = Math.min(Math.max(Number(s.leitnerStage) || 0, 0), maxStage);
+      const stability = FSRS_MIGRATION_STABILITY[stage];
+      if (stability === null || !lastReview) {
+        s.fsrs = fromFsrsCard(card); // 未実施・誤答直後は New のまま
+        return;
+      }
+      const wrong = Number(s.wrongCount) || 0;
+      s.fsrs = fromFsrsCard({
+        ...card,
+        due: new Date(s.nextReviewAt || card.due),
+        stability,
+        difficulty: Math.min(Math.max(5 + wrong, 1), 10), // 誤答が多い語ほど難しいと見なす
+        elapsed_days: 0,
+        scheduled_days: stability,
+        reps: stage + 1, // 実際の回数は不明。表示・診断用
+        lapses: wrong,
+        learning_steps: 0, // Review へ移すので当日ステップは抜けている
+        state: 2, // Review
+        last_review: new Date(lastReview),
+      });
+    });
+  }
+  progress.migrations = {
+    ...(progress.migrations || {}),
+    fsrsV1: FSRS_MIGRATION_VERSION,
+    fsrsV1At: new Date().toISOString(),
+  };
+  return true;
 }
 
 function readStudyPlanLocal(grade = currentGrade()) {
