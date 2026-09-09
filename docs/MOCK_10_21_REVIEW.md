@@ -203,11 +203,34 @@ npm test                                 # exit 0
 とる熟語は、`particle` を付けず連鎖のみのB型として扱った。
 辞書への変更は1件のみ: mock-20 で `out` / `express` を2件が参照するため、仲間例に `cry out` を1件追加した（3件→4件）。
 
+## 暗記カードの原形表示（4.5節）
+
+`pos` が動詞で出題形が `-ed` / `-ing` の語 **224件** を、`data/lemmas.json` の
+表示専用マップ `flashcardLemmas` へ追加した（96件 → 320件）。
+
+- 原形は語尾の機械的な切り落としではなく、**このセットの語彙選定に使った見出し語（原形）**へ
+  出題形を突き合わせて決めた。224件すべてが計画書の見出し語1件に一意対応することを確認済み。
+- canonical の `lemmas` / `entries` / `flashcardDisplayLemmas` は変更していないため、
+  `REVIEWED_MEANING_DIGEST` の再計算は不要（既存値の変更も0件）。
+- 語彙JSON・問題JSONの `word` / `phrase`、選択肢、進捗キーは出題形のまま。
+
+## 音声（MP3）
+
+Azure Speech で生成した。キーは実行者のPowerShellの環境変数からのみ読み、リポジトリ・ログ・チャットには残していない。
+
+| 対象 | 生成数 | 出力先 | コマンド |
+| --- | --- | --- | --- |
+| 出題形（12セット × 100件） | 1,200 | `assets/audio/vocab/1/mock-N/`（熟語は `.../idiom/`） | `py -3 scripts/generate_tts_1.py --grade 1 --round mock-N` |
+| 暗記カードの原形 | 224 | `assets/audio/lemma/` | `py -3 scripts/generate_lemma_tts.py --flashcard-only` |
+
+- 全1,424件が MPEG ADTS layer III / 24 kHz / モノラルで、1KB未満のファイルは0件。
+- 語彙JSONの全 `word` / `phrase` に対応するMP3の欠落0件、`flashcardLemmas` の全原形の欠落0件。
+- 原形MP3の総数は681件で、`pages.yml` が要求する
+  `|entries ∪ flashcardLemmas.values ∪ flashcardDisplayLemmas.values|` = 681 と一致する。
+
+`pages.yml` は原形MP3の件数一致をデプロイの条件にしているため、`flashcardLemmas` への追加と
+原形MP3の生成は同じコミットで入れる必要がある（分けて push すると Pages が失敗する）。
+
 ## 未実施・要確認
 
-- **暗記カードの原形表示（4.5節）**: 出題形が `-ed` の動詞（`eschewed`・`ousted`・`tyrannized` など）について、
-  `data/lemmas.json` の `flashcardLemmas` へ表示専用の原形対応を追加していない。
-  `npm test` の原形辞書契約は通っているが、暗記カードは出題形のまま表示される。
 - **実ブラウザ確認（8節）**: 未実施。
-- **音声（MP3）**: 未生成。
-- **commit / push / deploy**: 未実施。
