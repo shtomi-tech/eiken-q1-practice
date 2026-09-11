@@ -55,10 +55,25 @@ function main() {
   let applied = 0;
 
   for (const [lemma, patch] of Object.entries(batch.entries)) {
-    assert.ok(target.has(lemma), `${lemma}: researchTargetに含まれていません`);
+    assert.ok(patch && typeof patch === "object" && !Array.isArray(patch), `${lemma}: batch entryが不正です`);
+    const isNew = !target.has(lemma);
+    if (isNew) {
+      assert.ok(Array.isArray(patch.surfaceForms) && patch.surfaceForms.length > 0, `${lemma}: 新規entryにはsurfaceFormsが必要です`);
+      assert.ok(Array.isArray(patch.meanings) && patch.meanings.length > 0, `${lemma}: 新規entryにはmeaningsが必要です`);
+      assert.equal(patch.classification, "B", `${lemma}: 新規entryはB型にしてください`);
+      ledger.entries[lemma] = {
+        surfaceForms: patch.surfaceForms,
+        meanings: patch.meanings,
+        classification: "B",
+        display: {},
+        research: {},
+      };
+      target.add(lemma);
+      ledger.researchTarget.lemmas.push(lemma);
+      ledger.researchTarget.count += 1;
+    }
     const entry = ledger.entries[lemma];
     assert.ok(entry, `${lemma}: 研究台帳に存在しません`);
-    assert.ok(patch && typeof patch === "object" && !Array.isArray(patch), `${lemma}: batch entryが不正です`);
     if (patch.classification !== undefined) {
       assert.ok(["A", "B", "C"].includes(patch.classification), `${lemma}: classificationが不正です`);
       entry.classification = patch.classification;
