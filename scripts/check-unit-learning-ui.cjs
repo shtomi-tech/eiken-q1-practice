@@ -75,8 +75,8 @@ assert.ok(
 
 // --- 完了画面（Task8） ---
 assert.ok(
-  renderDoneBody.indexOf("startLearn(nextQ)") < renderDoneBody.lastIndexOf("startFinalCheck"),
-  "誤答専用復習を挟まず、次の設問から最終チェックへ進める必要がある",
+  renderDoneBody.includes("startLearn(nextQ)") && !renderDoneBody.includes("最終チェックへ"),
+  "誤答専用復習を挟まず次の設問へ進み、全設問後に最終チェックへ誘導しない必要がある",
 );
 assert.ok(renderDoneBody.includes("この設問をもう一度学ぶ"), "誤答後は同じ設問へ戻る二次CTAが必要");
 assert.ok(renderDoneBody.includes("session.meaningCorrect < session.checkOrder.length"), "意味確認の誤答を再学習CTAの表示条件に含める必要がある");

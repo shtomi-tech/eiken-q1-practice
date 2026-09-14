@@ -54,8 +54,8 @@ assert.ok(
   "旧・最終チェック解放の煽り表示（missionNote）は復活させない",
 );
 assert.ok(
-  renderHomeBody.includes("finalCheckNote"),
-  "問題一覧に最終チェックの予告（finalCheckNote：全n問→最終チェック・80%でCLEAR・残り数）を出す必要がある",
+  !renderHomeBody.includes("finalCheckNote") && !renderHomeBody.includes("startFinalCheck"),
+  "セット完了時の最終チェックは廃止したため、ホームに予告・開始導線を出さない",
 );
 assert.ok(
   !renderHomeBody.includes("progressDetails"),

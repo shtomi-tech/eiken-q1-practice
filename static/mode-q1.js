@@ -1949,7 +1949,6 @@ function renderHomeContent() {
   const meaningResume = resume?.mode === "meaning" && !resumeIsDone;
   const coreResume = Boolean(resume && resume.mode !== "meaning" && !resumeIsDone);
   const nextQ = state.qList.find((q) => !unit(q).learned);
-  const canStartFinal = finalUnlocked();
   const hasMeaningDue = Boolean(grade && meaningDueCount > 0);
 
   if (coreResume) {
@@ -1979,12 +1978,6 @@ function renderHomeContent() {
       // 初回訪問はheroで同じ3ステップを説明済みのため、ここでは重複させない
       why: isFirstVisit ? "" : "暗記カード → 意味確認 → 本番形式の3ステップで進みます。",
       onclick: () => startLearn(nextQ),
-    };
-  } else if (canStartFinal && !final.cleared) {
-    primary = {
-      label: `最終チェック${finalTotal}問に挑戦する`,
-      why: `全${finalTotal}語の意味を通しで確認。${finalPassScore(finalTotal)}/${finalTotal}問以上（正答率80%以上）でCLEARです。`,
-      onclick: startFinalCheck,
     };
   } else if (hasMeaningDue) {
     // 間隔復習は下の独立カードを主導線にする。もう一周は二次操作へ残す。
@@ -2049,17 +2042,10 @@ function renderHomeContent() {
 
   // 層3：詳細（問題一覧。状態・種別フィルター付き）
   const path = el("section", { class: "card" });
-  // 最終チェックの予告。全設問を終える前でも、このセットのゴール（全語句・80%でCLEAR）と残数を示す。
-  const finalNote = final.cleared
-    ? `✓ このセットはCLEAR済み（最終チェック ${final.bestScore} / ${finalTotal}語）`
-    : finalUnlocked()
-      ? `全${total}問を学習済み。最終チェック（全${finalTotal}語・${finalPassScore(finalTotal)}問正解でCLEAR）に挑戦できます`
-      : `全${total}問を学習すると最終チェック（全${finalTotal}語・正答率80%でCLEAR）。あと${total - learned}問`;
   path.appendChild(el("div", { class: "pathHead" },
     el("p", { class: "label" }, "問題一覧"),
     el("h2", {}, `${datasetHeadline()}（全${total}問）`),
     el("p", { class: "hint" }, "各設問に出る4つの語句を覚えてから、その設問を解きます。クリックで開始。"),
-    el("p", { class: "hint finalCheckNote" }, finalNote),
   ));
   const statusCounts = { all: state.qList.length, notStarted: 0, inProgress: 0, done: 0, incorrect: 0 };
   const typeCounts = { all: state.qList.length, word: 0, idiom: 0 };
@@ -3791,8 +3777,6 @@ function renderDone(body) {
     const nextQ = state.qList.find((qq) => !unit(qq).learned);
     if (nextQ) {
       actions.appendChild(el("button", { class: "cta", onclick: () => startLearn(nextQ) }, `次の設問へ（第${nextQ}問） →`));
-    } else if (finalUnlocked() && !finalProgress(allVocabularyItems().length).cleared) {
-      actions.appendChild(el("button", { class: "cta finalCta", onclick: startFinalCheck }, "最終チェックへ →"));
     } else {
       actions.appendChild(el("button", { class: "cta", onclick: renderHome }, "次の学習を選ぶ →"));
     }

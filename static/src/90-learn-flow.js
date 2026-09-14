@@ -1152,8 +1152,6 @@ function renderDone(body) {
     const nextQ = state.qList.find((qq) => !unit(qq).learned);
     if (nextQ) {
       actions.appendChild(el("button", { class: "cta", onclick: () => startLearn(nextQ) }, `次の設問へ（第${nextQ}問） →`));
-    } else if (finalUnlocked() && !finalProgress(allVocabularyItems().length).cleared) {
-      actions.appendChild(el("button", { class: "cta finalCta", onclick: startFinalCheck }, "最終チェックへ →"));
     } else {
       actions.appendChild(el("button", { class: "cta", onclick: renderHome }, "次の学習を選ぶ →"));
     }
