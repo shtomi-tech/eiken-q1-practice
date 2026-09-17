@@ -4050,6 +4050,7 @@ async function boot() {
     // 旧準1級アプリのクラウド進捗は読み取り専用で一度だけ取り込む。
     legacyPre1Cloud = createCloud({
       appId: LEGACY_PRE1_APP_ID,
+      readOnly: true,
       getPayload: () => readStoredObject(LEGACY_PRE1_PROGRESS_KEY) || {},
       applyLoaded: applyLegacyPre1CloudProgress,
       onStatus: () => {},
@@ -4065,7 +4066,16 @@ async function boot() {
         progress: state.progress,
         meta: cloudMeta(),
       }),
-      applyLoaded: (progress) => { pendingCloudProgress = progress; },
+      applyLoaded: (progress, { reason } = {}) => {
+        if (reason === "init" || !reason) {
+          pendingCloudProgress = progress;
+          return;
+        }
+        // 他端末の保存を取り込んだ（タブ復帰・保存競合）。メモリ上の回の進捗も読み直す。
+        applyCloudProgress(progress);
+        if (state.datasetId) state.progress = loadProgress(state.datasetId);
+        if (!$("#homePanel").classList.contains("hide")) renderHome();
+      },
       onStatus: setShareStatus,
     });
     await cloud.init();
