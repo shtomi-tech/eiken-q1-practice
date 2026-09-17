@@ -1585,3 +1585,25 @@ details.vocabForecast:not([open]) > :not(summary) { display: none; }
 @media (max-width: 480px) {
   .studyTimeMetrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+/* ホームの折りたたみ（問題セット・問題一覧） */
+.homeFold > summary {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  list-style: none;
+  min-height: 44px;
+}
+.homeFold > summary::-webkit-details-marker { display: none; }
+.homeFold > summary::after {
+  color: var(--muted);
+  content: "開く ▾";
+  flex: 0 0 auto;
+  font-size: 13px;
+}
+.homeFold[open] > summary::after { content: "閉じる ▴"; }
+.homeFoldTitle { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.homeFoldTitle strong { font-family: var(--serif); font-size: 18px; }
+.homeFoldBody { margin-top: 12px; }

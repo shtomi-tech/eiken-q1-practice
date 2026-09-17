@@ -313,13 +313,19 @@ function renderHomeContent() {
   }
 
   // 層2：問題セットUnitカード（独立section。同じ級の過去問・模試を進捗付きで一覧表示）
-  home.appendChild(el("section", { class: "card" }, datasetPicker()));
+  // 問題セット・問題一覧は既定で閉じる（開閉状態は端末に記憶）
+  home.appendChild(el("section", { class: "card" }, homeFold(
+    "datasets",
+    el("span", { class: "homeFoldTitle" },
+      el("span", { class: "label" }, "問題セット"),
+      el("strong", {}, `${dataset().label}${datasetCleared(state.datasetId) ? " ✅" : ""}`),
+    ),
+    datasetPicker(),
+  )));
 
   // 層3：詳細（問題一覧。状態・種別フィルター付き）
-  const path = el("section", { class: "card" });
+  const path = el("div", {});
   path.appendChild(el("div", { class: "pathHead" },
-    el("p", { class: "label" }, "問題一覧"),
-    el("h2", {}, `${datasetHeadline()}（全${total}問）`),
     el("p", { class: "hint" }, "各設問に出る4つの語句を覚えてから、その設問を解きます。クリックで開始。"),
   ));
   const statusCounts = { all: state.qList.length, notStarted: 0, inProgress: 0, done: 0, incorrect: 0 };
@@ -343,7 +349,14 @@ function renderHomeContent() {
       el("button", { class: "secondaryCta", type: "button", onclick: () => resetQuestionFilters() }, "すべて表示"),
     ));
   }
-  home.appendChild(path);
+  home.appendChild(el("section", { class: "card" }, homeFold(
+    "questions",
+    el("span", { class: "homeFoldTitle" },
+      el("span", { class: "label" }, "問題一覧"),
+      el("strong", {}, `${datasetHeadline()}（全${total}問）`),
+    ),
+    path,
+  )));
 
   // 級の変更は先頭カードの右上へ移動済み。ここは「その他」（進捗リセット）だけを扱う。
   if (!sharedMode()) {
@@ -364,6 +377,22 @@ function renderHomeContent() {
     ));
     home.appendChild(utility);
   }
+}
+
+const HOME_FOLD_KEY = "eiken_q1_home_fold_v1";
+function homeFoldState() {
+  return readStoredObject(HOME_FOLD_KEY) || {};
+}
+function homeFold(id, summaryContent, body) {
+  const details = el("details", { class: "homeFold" },
+    el("summary", {}, summaryContent),
+    el("div", { class: "homeFoldBody" }, body),
+  );
+  details.open = homeFoldState()[id] === true;
+  details.addEventListener("toggle", () => {
+    writeStoredJson(HOME_FOLD_KEY, { ...homeFoldState(), [id]: details.open });
+  });
+  return details;
 }
 
 function renderGradeChoice() {
