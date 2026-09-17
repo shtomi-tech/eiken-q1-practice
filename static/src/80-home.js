@@ -743,8 +743,11 @@ function datasetSummary(datasetId, data) {
   const totalVocabulary = isCurrent
     ? allVocabularyItems().length
     : (Number.isInteger(data.totalVocabulary) ? data.totalVocabulary : null);
+  // 最終チェック未達でも、全設問を一通り学習したセットは完了として緑の印を付ける。
+  const completed = cleared || (Number.isInteger(totalQuestions) && totalQuestions > 0
+    && learnedQuestions >= totalQuestions);
   let status = "notStarted";
-  if (cleared) status = "cleared";
+  if (completed) status = "cleared";
   else if (learnedQuestions > 0) status = "inProgress";
   else if (hasResume) status = "resumable";
   return {
@@ -752,6 +755,7 @@ function datasetSummary(datasetId, data) {
     totalVocabulary,
     learnedQuestions,
     cleared,
+    completed,
     resume,
     hasResume,
     status,
@@ -786,10 +790,11 @@ function datasetUnitCard(id, data, index) {
   const actionLabel = isResumeStatus ? "途中保存あり" : label;
   const cls = ["datasetUnitCard"];
   if (isCurrent) cls.push("current");
-  if (summary.cleared) cls.push("cleared");
+  if (summary.completed) cls.push("cleared");
   if (isResumeStatus) cls.push("isResumeStatus");
   const ariaParts = [datasetSetLabel(id, data), progressLine];
   if (summary.cleared) ariaParts.push("CLEAR");
+  else if (summary.completed) ariaParts.push("学習済み");
   if (resumeText) ariaParts.push(resumeText);
   ariaParts.push(actionLabel);
   const inner = [
@@ -798,8 +803,8 @@ function datasetUnitCard(id, data, index) {
       el("span", { class: "datasetUnitCardTitle" }, datasetSetLabel(id, data)),
       el("span", { class: "datasetUnitCardMeta" }, `全${totalQ}問・${totalV}語`),
       el("span", { class: "datasetUnitCardProgress" }, progressLine),
-      summary.cleared
-        ? el("span", { class: "datasetUnitCardClear" }, "✓ CLEAR")
+      summary.completed
+        ? el("span", { class: "datasetUnitCardClear" }, summary.cleared ? "✓ CLEAR" : "✓ 学習済み")
         : null,
       summary.hasResume ? el("span", { class: "datasetUnitCardResume" }, resumeText) : null,
       el("span", { class: "datasetUnitCardAction" }, actionLabel),
@@ -835,6 +840,25 @@ function datasetUnitCard(id, data, index) {
   };
   if (isCurrent) attrs["aria-current"] = "true";
   return el("button", attrs, ...inner);
+}
+
+// 現在セットと同じ級・種別で、一覧の並び順に次の未完了セットを返す（なければ null）。
+function nextDatasetEntry() {
+  const currentId = state.datasetId;
+  const grade = gradeOf(currentId);
+  const kind = datasetSetKind(currentId);
+  const group = availableDatasets().filter(([id]) => gradeOf(id) === grade && datasetSetKind(id) === kind);
+  const index = group.findIndex(([id]) => id === currentId);
+  if (index < 0) return null;
+  const after = group.slice(index + 1).concat(group.slice(0, index));
+  return after.find(([id, data]) => !datasetSummary(id, data).completed) || null;
+}
+
+async function startNextDataset(datasetId) {
+  await switchDataset(datasetId);
+  if (state.datasetId !== datasetId || window.EikenActiveAppId !== "q1") return;
+  const nextQ = state.qList.find((q) => !unit(q).learned) || state.qList[0];
+  if (nextQ != null) startLearn(nextQ);
 }
 
 // 同じ級の問題セットを種別ごとの小見出しに分けてUnitカードで並べる。

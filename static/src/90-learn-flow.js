@@ -1153,7 +1153,16 @@ function renderDone(body) {
     if (nextQ) {
       actions.appendChild(el("button", { class: "cta", onclick: () => startLearn(nextQ) }, `次の設問へ（第${nextQ}問） →`));
     } else {
-      actions.appendChild(el("button", { class: "cta", onclick: renderHome }, "次の学習を選ぶ →"));
+      // セットを一通り終えたら、同じ種別の次のセットへそのまま進めるようにする。
+      const nextSet = nextDatasetEntry();
+      banner.appendChild(el("p", { class: "hint" }, `✓ ${datasetSetLabel(state.datasetId, dataset())}の全${state.qList.length}問を学習しました`));
+      if (nextSet) {
+        const [nextId, nextData] = nextSet;
+        actions.appendChild(el("button", { class: "cta", onclick: () => startNextDataset(nextId) },
+          `次のセットへ（${datasetSetLabel(nextId, nextData)}） →`));
+      } else {
+        actions.appendChild(el("button", { class: "cta", onclick: renderHome }, "次の学習を選ぶ →"));
+      }
     }
     if (q != null && (session.meaningCorrect < session.checkOrder.length || session.practiceResult === false)) {
       actions.appendChild(el("button", {
