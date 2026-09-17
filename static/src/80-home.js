@@ -297,6 +297,8 @@ function renderHomeContent() {
   const studyPlanNode = showStudyPlan ? studyPlanPanel(studyPlanEntries) : null;
   const goalCard = grade ? vocabGoalCard(learnedVocabulary, Boolean(pooled), studyPlanNode) : null;
   if (goalCard) home.appendChild(goalCard);
+  flushStudyTime();
+  home.appendChild(studyTimeCard());
 
   if (grade) {
     home.appendChild(meaningMission(

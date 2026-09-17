@@ -26,6 +26,7 @@ const PARTS = [
   "20-storage.js",
   "30-unit-progress.js",
   "40-cloud.js",
+  "45-study-time.js",
   "50-vocab-pool.js",
   "60-helpers.js",
   "70-data.js",

@@ -1563,3 +1563,25 @@ details.vocabForecast:not([open]) > :not(summary) { display: none; }
   .studyPlanSettingsToggle { width: 100%; }
   .vocabForecastGrid { grid-template-columns: 1fr; }
 }
+
+/* 学習時間カード */
+.studyTimeCard h3 { margin: 0; }
+.studyTimeMetrics {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 12px 0 8px;
+}
+.studyTimeMetric {
+  background: var(--surface-soft);
+  border-radius: var(--r-md);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  padding: 12px;
+}
+.studyTimeMetric strong { font-family: var(--serif); font-size: 18px; }
+@media (max-width: 480px) {
+  .studyTimeMetrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

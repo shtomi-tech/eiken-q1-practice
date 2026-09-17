@@ -57,6 +57,7 @@ async function boot() {
       ? cloudSession.student.id
       : (cloudSession.requested ? `unverified:${cloudSession.studentId || "unknown"}` : "");
     if (pendingCloudProgress) applyCloudProgress(pendingCloudProgress);
+    initStudyTime();
     applySharedUi();
 
     const legacyProgress = legacyPre1CloudProgress

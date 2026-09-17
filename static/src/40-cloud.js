@@ -20,6 +20,7 @@ function cloudMeta() {
   const legacyPlan = studyPlans[STUDY_PLAN_LEGACY_GRADE];
   return {
     lastDatasetId: state.datasetId,
+    ...studyTimeMeta(),
     ...(legacyPlan ? { studyPlanV1: legacyPlan } : {}),
     ...(Object.keys(byGrade).length ? { studyPlanByGradeV1: byGrade } : {}),
   };

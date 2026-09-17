@@ -186,6 +186,7 @@ function applyCloudProgress(map) {
   if (!map || typeof map !== "object") return;
   const isPlainObject = (value) => value && typeof value === "object" && !Array.isArray(value);
   const meta = isPlainObject(map._meta) ? map._meta : {};
+  captureCloudStudyTime(meta);
   const byGrade = isPlainObject(meta.studyPlanByGradeV1) ? meta.studyPlanByGradeV1 : {};
   const incoming = {};
   STUDY_PLAN_GRADES.forEach((grade) => {
