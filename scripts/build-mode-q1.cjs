@@ -31,7 +31,14 @@ const PARTS = [
   "60-helpers.js",
   "70-data.js",
   "80-home.js",
-  "90-learn-flow.js",
+  "82-question-list.js",
+  "84-vocab-goal.js",
+  "86-dataset-picker.js",
+  "88-answer-helpers.js",
+  "90-learn-session.js",
+  "91-flashcard.js",
+  "92-meaning-check.js",
+  "93-practice-done.js",
   "99-boot.js",
 ];
 
