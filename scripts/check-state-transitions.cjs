@@ -70,7 +70,10 @@ assert.equal((answerBody.match(/u\.firstAnsweredAt\s*=/g) || []).length, 1, "初
 assert.ok(answerBody.includes("u.lastAnsweredAt = answeredAt"), "最終回答時刻は従来どおり更新する必要があります");
 assert.ok(answerBody.includes("u.needsReview = false"), "誤答を専用復習キューへ追加してはいけません");
 
-assert.match(packageJson.scripts.test, /node --check static\/app\.js/, "static/app.jsの構文検査をnpm testへ含める必要があります");
-assert.match(packageJson.scripts.test, /scripts\/check-state-transitions\.cjs/, "状態遷移検査をnpm testへ含める必要があります");
+// npm test は scripts/run-checks.cjs の CHECKS を順に実行する。
+const checkRunner = readText("scripts/run-checks.cjs");
+assert.equal(packageJson.scripts.test, "node scripts/run-checks.cjs", "npm testはscripts/run-checks.cjsを実行する必要があります");
+assert.ok(checkRunner.includes('["--check", "static/app.js"]'), "static/app.jsの構文検査をnpm testへ含める必要があります");
+assert.ok(checkRunner.includes('["scripts/check-state-transitions.cjs"]'), "状態遷移検査をnpm testへ含める必要があります");
 
 console.log("state transitions contract: OK");
