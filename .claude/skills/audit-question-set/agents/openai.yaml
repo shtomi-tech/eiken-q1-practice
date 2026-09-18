@@ -1,0 +1,4 @@
+interface:
+  display_name: "英検Q1 問題セット形式監査"
+  short_description: "eiken-q1-practice の問題セットを英検1級セット基準で形式・構造監査する"
+  default_prompt: "$audit-question-set で eiken-q1-practice の問題セットを英検1級セット基準で形式・構造監査する。対象の datasetId か級を指定してください（省略時は全セット）。"

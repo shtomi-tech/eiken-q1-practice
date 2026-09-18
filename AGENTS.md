@@ -62,3 +62,7 @@ no API key, $0).
 大問1の問題セット（自作模試・新しい回）を追加するときは、
 `.claude/skills/add-question-set/SKILL.md` の手順に従う（Claude Code / Codex 共通の正本）。
 語彙の重複制約・機械チェック・manifest と README の組み込みまでを含む。
+
+既存セットの**形式・構造**を英検1級セット基準で監査するときは
+`.claude/skills/audit-question-set/SKILL.md` に従う（`scripts/audit_question_set.py`）。
+内容面（語義・和訳・難易度・正答一意性）は対象外。

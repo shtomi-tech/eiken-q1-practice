@@ -1,0 +1,17 @@
+{
+  "audit_id": "aud-e50002bd6071",
+  "created_at": "2026-09-09T11:56:06Z",
+  "event_type": "experience_recorded",
+  "skill_id": "audit-question-set",
+  "subject_id": "exp-f2a469c74b01",
+  "actor": "learn",
+  "details": {
+    "action": "RECORD",
+    "lesson": "Use live baselines and explicit question-type contracts, review content before structural remediation, preserve progress identity, define IPA-warning policy, and isolate write sets through deployment.",
+    "confidence": 0.7,
+    "reasoning": "Execution-result evidence exceeds the manifest confidence gate of 0.35. The experience records both the successful verification chain and the reusable contract gaps found during remediation."
+  },
+  "evidence_refs": [
+    "experience/exp-f2a469c74b01.json"
+  ]
+}

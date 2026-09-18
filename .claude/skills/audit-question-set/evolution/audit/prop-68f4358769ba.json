@@ -1,0 +1,44 @@
+{
+  "schema_name": "SkillProposal",
+  "schema_version": "1.0.0",
+  "protocol_version": "1.0.0",
+  "proposal_id": "prop-68f4358769ba",
+  "skill_id": "audit-question-set",
+  "created_at": "2026-09-09T11:56:06Z",
+  "proposer": {
+    "authority": "local",
+    "id": "learn"
+  },
+  "status": "promoted",
+  "proposal_type": "new_skill",
+  "base_version": "0.1.0",
+  "target_version": "0.2.0",
+  "change_summary": "Add a reusable governed guidance entry for live baseline discovery, explicit question-type classification, content-first remediation, progress-safe ordering, IPA-warning policy, and write-set-isolated release.",
+  "proposed_action": "ADD",
+  "proposed_payload": {
+    "skill_entry_id": "skl-73382af3faef",
+    "title": "Audit and remediate question sets without breaking semantic or release contracts",
+    "content": "- Calculate baseline membership and counts from the current manifest and data at run time; prose counts are descriptive and may be stale.\n- Determine word-versus-idiom status from an explicit per-question contract or authoritative metadata. Do not infer it solely from whitespace because multi-word modals and other lexical units are not necessarily idioms.\n- Before changing builders or generated data to satisfy structural checks, complete the content, distractor, and answer-uniqueness review. Structural conformity must not certify semantic quality.\n- Preserve stable question identity and stored q-based progress when moving idiom questions into a contiguous range. If reordering is unavoidable, document the compatibility impact and migration or reset policy before implementation.\n- Define how multi-word modal expressions are represented. If they remain word items, document IPA as optional or an accepted warning; otherwise provide a deliberate alternate representation instead of silently suppressing warnings.\n- Separate audit, report, plan, implementation, and deploy write sets. In a dirty worktree, record the pre-existing diff and stage only the intended release files.\n- Use a closed verification chain after remediation: regenerate from builders, run set-specific checkers, run check_q1_data, run npm test, rerun the scoped structural audit to ERROR 0, then verify the deployment run and published content-bearing JSON when release is requested.",
+    "version": "0.1.0",
+    "task_signature": "eiken_question_set_audit_remediation_release",
+    "keywords": [
+      "baseline",
+      "word-idiom-contract",
+      "answer-uniqueness",
+      "progress-compatibility",
+      "ipa-warning",
+      "dirty-worktree",
+      "deployment-verification"
+    ],
+    "source_experience_ids": [
+      "exp-f2a469c74b01"
+    ],
+    "updated_at": "2026-09-09T11:56:06Z"
+  },
+  "artifacts": [
+    {
+      "type": "evidence",
+      "ref": "exp-f2a469c74b01"
+    }
+  ]
+}

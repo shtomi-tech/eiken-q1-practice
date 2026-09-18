@@ -1,0 +1,40 @@
+{
+  "experience_id": "exp-f2a469c74b01",
+  "skill_id": "audit-question-set",
+  "recorded_at": "2026-09-09T11:56:06Z",
+  "task_signature": "eiken_question_set_audit_remediation_release",
+  "lesson": "Derive the baseline set count from the live manifest instead of prose; classify word versus idiom by an explicit per-question contract rather than whitespace; complete content and answer-uniqueness review before structural remediation; preserve stable question identity and progress compatibility when reordering; define an explicit policy for multi-word modal expressions and expected IPA warnings; and isolate audit, report, plan, implementation, and deploy write sets so a dirty worktree can be released by staging only intended files.",
+  "feedback_status": "negative",
+  "feedback_source": "execution_result",
+  "feedback_confidence": 0.7,
+  "execution_id": "github-actions-run-34346974979",
+  "reasoning": "The completed pipeline succeeded, but exposed six repeatable weaknesses in the current audit contract. The original audit found 14 errors and 15 warnings across seven Eiken Grade 2 sets; 29 findings were tracked into a READY implementation plan; mock sets 1 through 4 were rebuilt to 20 questions with 56 word entries, 24 idiom entries, and idioms in Q15-Q20; dedicated checkers, check_q1_data, and npm test passed; the post-fix audit reached zero errors; GitHub Pages run 34346974979 succeeded and the published JSON was checked.",
+  "metadata": {
+    "scope": "eiken-q1-practice Eiken Grade 2 seven-set structural audit and four mock-set remediation",
+    "observed_before": {
+      "errors": 14,
+      "warnings": 15,
+      "sets": 7
+    },
+    "plan_findings_tracked": 29,
+    "observed_after": {
+      "errors": 0,
+      "mock_question_count_each": 20,
+      "mock_word_count_each": 56,
+      "mock_idiom_count_each": 24,
+      "mock_idiom_question_range": "Q15-Q20"
+    },
+    "verification": [
+      "dedicated mock-1 through mock-4 checkers passed",
+      "py -3 scripts/check_q1_data.py passed",
+      "npm test passed",
+      "GitHub Pages run 34346974979 succeeded",
+      "published JSON for mock-1 through mock-4 was verified"
+    ],
+    "evidence_refs": [
+      "C:/Users/shtom/dev/eiken-q1-practice/docs/EIKEN2_STRUCTURE_AUDIT_2026-09-09.md",
+      "C:/Users/shtom/dev/eiken-q1-practice/docs/plans/2026-09-09-eiken2-structure-fixes.md",
+      "https://github.com/shtomi-tech/eiken-q1-practice/actions/runs/34346974979"
+    ]
+  }
+}

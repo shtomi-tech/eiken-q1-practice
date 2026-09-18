@@ -1,4 +1,4 @@
 interface:
   display_name: "英検Q1 セット追加・第6回基準整合"
-  short_description: "Add or align Eiken Q1 sets with mock-6 standards"
-  default_prompt: "Use $add-question-set to add a Q1 set or align an existing set with mock-6 standards."
+  short_description: "eiken-q1-practice に大問1の問題セットを追加し、既存セットを模試第6回の基準へそろえる"
+  default_prompt: "$add-question-set で eiken-q1-practice に大問1の問題セットを追加する（または既存セットを模試第6回の基準へ整合する）。対象の級と回を指定してください。"

@@ -1,0 +1,35 @@
+{
+  "schema_name": "SkillManifest",
+  "schema_version": "1.0.0",
+  "protocol_version": "1.0.0",
+  "skill_id": "audit-question-set",
+  "name": "Audit Question Set Evolution",
+  "version": "0.2.0",
+  "description": "Experience and governed proposals for the eiken-q1-practice question-set audit skill.",
+  "governance": {
+    "mode": "governed",
+    "official_status": "local"
+  },
+  "capability": {
+    "level": "native",
+    "summary": "Learn reusable audit, remediation, verification, and release practices for eiken-q1-practice question sets."
+  },
+  "compatibility": {
+    "min_protocol_version": "1.0.0",
+    "max_protocol_version": "1.0.0"
+  },
+  "metadata": {
+    "owner": "local",
+    "contract": {
+      "min_feedback_confidence": 0.35,
+      "synthesis_threshold": 15,
+      "auto_promote": true,
+      "managed_files": [
+        {
+          "path": "SKILL.md",
+          "kind": "markdown"
+        }
+      ]
+    }
+  }
+}

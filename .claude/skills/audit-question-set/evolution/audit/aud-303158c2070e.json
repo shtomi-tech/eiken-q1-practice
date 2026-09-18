@@ -1,0 +1,18 @@
+{
+  "audit_id": "aud-303158c2070e",
+  "created_at": "2026-09-09T11:56:06Z",
+  "event_type": "proposal_created",
+  "skill_id": "audit-question-set",
+  "subject_id": "prop-68f4358769ba",
+  "actor": "learn",
+  "details": {
+    "action": "PROPOSE",
+    "lesson": "Promote the verified audit-to-release lessons as one cohesive reusable guidance entry.",
+    "confidence": 0.7,
+    "reasoning": "No existing skill-bank entry matched because the workspace was newly initialized. The decision is ADD. Governed mode requires a candidate proposal and forbids direct skill_bank mutation until governor approval. No snapshot was created because skill_bank.json was not mutated; snapshot-before-mutate remains mandatory at promotion time."
+  },
+  "evidence_refs": [
+    "experience/exp-f2a469c74b01.json",
+    "audit/prop-68f4358769ba.json"
+  ]
+}
