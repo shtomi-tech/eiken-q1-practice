@@ -1,7 +1,7 @@
 # 単語語源 段階5 バッチ4（`con-` / `com-`）実装計画
 
 対象: `data/word_roots.json` / `data/word_origins.json` / `data/word_origin_excluded.json`
-関連: [WORD_ORIGIN_PHASE5_IMPL_PLAN.md](WORD_ORIGIN_PHASE5_IMPL_PLAN.md)（バッチ0＝仕組み）/ [WORD_ORIGIN_PHASE5_BATCH3_PLAN.md](WORD_ORIGIN_PHASE5_BATCH3_PLAN.md)（バッチ3）/ [WORD_ORIGIN_AUTHORING.md](WORD_ORIGIN_AUTHORING.md)（作成基準）
+関連: [WORD_ORIGIN_PHASE5_IMPL_PLAN.md](WORD_ORIGIN_PHASE5_IMPL_PLAN.md)（バッチ0＝仕組み）/ [WORD_ORIGIN_PHASE5_BATCH3_PLAN.md](WORD_ORIGIN_PHASE5_BATCH3_PLAN.md)（バッチ3）/ [WORD_ORIGIN_AUTHORING.md](../../WORD_ORIGIN_AUTHORING.md)（作成基準）
 前提: バッチ3（語根84個・A型195語・B型33語・単発語根45個）
 状態: 完了（2026-08-25）。A型20語・B型3語を追加し、語根97個・A型215語・B型36語・単発語根52個
 

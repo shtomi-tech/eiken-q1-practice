@@ -5,7 +5,7 @@
 
 - 機械で判定できる規則は `scripts/check-core-image-data.cjs` が強制する（`npm test` で実行）。
 - このファイルは、その検査に加えて**人が判断する部分**を定める。
-- 経緯は `CORE_IMAGE_PLAN.md` / `CORE_IMAGE_SENSE_PLAN.md` / `CORE_IMAGE_ROLLOUT_PLAN.md` と各 `*_FIX_PLAN.md` にあるが、**運用時に読むのはこのファイルだけでよい**。
+- 経緯は `archive/plans/` の `CORE_IMAGE_PLAN.md` / `CORE_IMAGE_SENSE_PLAN.md` / `CORE_IMAGE_ROLLOUT_PLAN.md` と各 `*_FIX_PLAN.md` にあるが、**運用時に読むのはこのファイルだけでよい**。
 
 ## 1. まず型を決める
 

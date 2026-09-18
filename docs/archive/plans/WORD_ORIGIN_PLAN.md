@@ -1,7 +1,7 @@
 # 単語カードに語源（接辞＋語根）を出す計画
 
 対象: `data/word_roots.json`（新規）/ `data/word_origins.json`（新規）/ `static/mode-q1.js` / `static/styles.css` / `scripts/` / `.github/workflows/pages.yml`
-関連: [CORE_IMAGE_PLAN.md](CORE_IMAGE_PLAN.md)（熟語版の導入）/ [CORE_IMAGE_AUTHORING.md](CORE_IMAGE_AUTHORING.md)（熟語版の作成基準）
+関連: [CORE_IMAGE_PLAN.md](CORE_IMAGE_PLAN.md)（熟語版の導入）/ [CORE_IMAGE_AUTHORING.md](../../CORE_IMAGE_AUTHORING.md)（熟語版の作成基準）
 状態: 実装済み（段階0、2026-08-24、未コミット）
 
 熟語カードの「核心イメージ」（連鎖＋不変化詞パネル）と同じ構造を、単語カードに **接辞＋語根チップ＋導出行＋同語根の仲間語パネル** として実装する。表示位置は**意味の直下**（熟語カードと同じ）。導入は**頻出語根から段階的**に行い、全語カバーは目標にしない。

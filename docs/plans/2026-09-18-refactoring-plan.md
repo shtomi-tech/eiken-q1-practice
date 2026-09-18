@@ -76,6 +76,13 @@
 - **T4-1** 完了済みの `*_PLAN.md`/`*_FIX_PLAN.md`/`*_REVIEW.md` を `docs/archive/` へ移動、現行正本（`STATE_TRANSITIONS.md`, `*_AUTHORING.md`, `*_ALIGNMENT.md`）は残す。移動対象一覧はユーザー承認後に実施し、リンク切れを検索。
 - **T4-2** 直下の `eiken2-14day-plan.html` 等の生成物置き場を決める（未追跡のため T0-1 と合わせて判断）。
 
+#### Phase 2〜4 結果（2026-09-18）
+
+- Phase 2: 並び替えはせず、既存の区切りコメント単位で**連続区間のまま**分割する方式に変更。`90-learn-flow.js` → `90-learn-session.js`/`91-flashcard.js`/`92-meaning-check.js`/`93-practice-done.js`、`80-home.js` → `80-home.js`/`82-question-list.js`/`84-vocab-goal.js`/`86-dataset-picker.js`/`88-answer-helpers.js`。`static/mode-q1.js` はバイト一致（再ビルドなしで `build --check` 通過）なので `?v=` は据え置き。T2-3（`20-storage.js`）は保存・目標・FSRS移行・再開が交互に並び、連続区間ではきれいに切れないため見送り。
+- Phase 3: T3-1 完了（`scripts/run-checks.cjs`。28件の並びが元の `&&` 連鎖と一致することを機械照合）。`npm test` の中身を検査していた `check-state-transitions.cjs` も追従。T3-2 は `readJson` が既に `app-source.cjs` にあり、残る個別の読み込みを寄せる利点が小さいため見送り。
+- Phase 4: ユーザー承認のうえ `docs/*_PLAN.md` 44本を `docs/archive/plans/` へ移動。相対リンクを書き換え、外部参照3件（`CORE_IMAGE_AUTHORING.md`、`measure-flashcard.js`、`build_q1_iuhw_set_1_data.py`）を更新。アーカイブ内で旧 `90-learn-flow.js` の行番号を引用している箇所は、当時の記録として本文を変えず、`docs/archive/plans/README.md` に分割後の対応を記載。`QUESTION_SET_AUDIT_2026-09-08.md` のリンク切れ（リポジトリ直下からの相対パスで書かれている）は既存の問題で、範囲外。
+- 各フェーズ後の `npm test` は Phase 0 の基準と同じ（CRLF 由来の `check-study-plan-ui` 1件のみ失敗、後続3件は個別実行で成功）。
+
 ## 3. 順序と並列性
 
 ```

@@ -6,7 +6,7 @@
 
 ## 0. 目的
 
-熟語は現在、単語と同じ暗記カード（`buildFlashCard()` [mode-q1.js:2192](../static/mode-q1.js)）で「意味 → 語源・なりたち → 例文」を出すだけで、実際には `idioms[]` に `etymology` がほとんど無く、**意味の丸暗記になっている**。
+熟語は現在、単語と同じ暗記カード（`buildFlashCard()` [mode-q1.js:2192](../../../static/mode-q1.js)）で「意味 → 語源・なりたち → 例文」を出すだけで、実際には `idioms[]` に `etymology` がほとんど無く、**意味の丸暗記になっている**。
 
 単語の `etymology`（語源・なりたち）に相当する枠を熟語にも用意し、
 
@@ -110,7 +110,7 @@ if (item.example) inner.appendChild(flashExampleRow(item));
 - `<details>` は既定で閉じる。開閉トグルは min-height 44px（DESIGN.md「44px以上のタップターゲットを死守」）。
 - 写真のようなアイコン（🔒 STOP ⏰）は**この段階では入れない**。テキストだけで成立する構造を先に確定し、アイコンは後から任意フィールドで足せる形にしておく。
 
-### 2-2. 意味チェックのフィードバック（`appendCheckFeedback()` [mode-q1.js:2586](../static/mode-q1.js)）
+### 2-2. 意味チェックのフィードバック（`appendCheckFeedback()` [mode-q1.js:2586](../../../static/mode-q1.js)）
 
 現在は `item.etymology` を1行出している。熟語で `coreImage` があるときは、`chain` の各 `gloss` を `→` で連結した**1行版**を同じ位置に出す（フル図はカードだけ。フィードバックは再接触が目的なので図は出さない）。
 
@@ -118,7 +118,7 @@ if (item.example) inner.appendChild(flashExampleRow(item));
 しっかり保持する → 完全に → 完全に止める → 遅らせる
 ```
 
-### 2-3. 読み込み（`boot()` [mode-q1.js:2902](../static/mode-q1.js)）
+### 2-3. 読み込み（`boot()` [mode-q1.js:2902](../../../static/mode-q1.js)）
 
 `data/lemmas.json` と同じ方式で `data/particle_images.json` を1回 fetch し、`particleMap` に入れる。**失敗しても落とさない**（catch して空オブジェクト。ファイルが無くても連鎖部分は従来通り表示される）。
 
@@ -184,4 +184,4 @@ DESIGN.md の既存トークンのみを使う。**新色・新影は足さな�
 - 進捗キー・localStorage・音声パス・4択の選択肢テキストは**一切変更しない**（`phrase` を触らないため）。
 - 単語（`words[]`）の `etymology` の表示は変更しない。
 - 生成スクリプト（`verb_images.json` を含む自動組み立て）、全570熟語のデータ整備、写真のキャラクター・吹き出し等の装飾は**このスコープ外**。
-- 完了後に更新する文書: [README.md](../README.md)（対象データの節に `data/particle_images.json` を追記）、[DESIGN.md](../DESIGN.md)（コンポーネント規範に「核心イメージブロック」を1項追記）。
+- 完了後に更新する文書: [README.md](../../../README.md)（対象データの節に `data/particle_images.json` を追記）、[DESIGN.md](../../../DESIGN.md)（コンポーネント規範に「核心イメージブロック」を1項追記）。

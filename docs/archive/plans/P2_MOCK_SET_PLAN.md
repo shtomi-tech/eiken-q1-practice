@@ -12,7 +12,7 @@
 ## 1. IDと命名
 
 `DATASET_ID_RE` が許すIDは `\d{4}-\d+` / `mock-\d+` / `set-\d+` の3種のみ
-（[mode-q1.js:34](../static/mode-q1.js)）。これを外れると `gradeOf()` が null を返し、
+（[mode-q1.js:34](../../../static/mode-q1.js)）。これを外れると `gradeOf()` が null を返し、
 **級固定フィルタからも意味だけ復習のプールからも丸ごと外れる**。
 
 | 項目 | 値 |
@@ -29,7 +29,7 @@
 ## 2. 成果物
 
 1. `scripts/build_q1_p2_mock_1_data.py` — `QUESTIONS` と `DETAILS` をベタ書きし、
-   JSON 2本を出力する。[build_q1_mock_1_data.py](../scripts/build_q1_mock_1_data.py) と同型で、
+   JSON 2本を出力する。[build_q1_mock_1_data.py](../../../scripts/build_q1_mock_1_data.py) と同型で、
    出力先と件数の検証だけ準2級向けに変える。正本がこの1ファイルに集約され、再生成できる。
 2. `data/questions_p2_mock-1.json` / `data/vocab_p2_mock-1.json` — 生成物（コミットする）。
 3. `scripts/check_p2_mock_data.py` — 生成セット専用の内容チェック（5節）。
@@ -60,7 +60,7 @@ q, is_answer, word|phrase, pos, meaning, example, exampleTranslation
 （任意）ipa, etymology, collocation
 ```
 
-- `ipa` は [enrich_flashcard_fields.py](../scripts/enrich_flashcard_fields.py) の
+- `ipa` は [enrich_flashcard_fields.py](../../../scripts/enrich_flashcard_fields.py) の
   `TARGET_PATTERN` に `vocab_p2_mock-\d+\.json` を足して Datamuse から取得する。
   取得できないものは**推測で埋めない**（同スクリプトの方針を踏襲）。
 - `etymology` は手書き（ビルドスクリプトの `ETYMOLOGY` に持ち、欠落をビルド時に検出）。
@@ -79,7 +79,7 @@ q, is_answer, word|phrase, pos, meaning, example, exampleTranslation
 
 ## 5. 品質保証
 
-原本がないため、既存の [check_q1_data.py](../scripts/check_q1_data.py) だけでは足りない。
+原本がないため、既存の [check_q1_data.py](../../../scripts/check_q1_data.py) だけでは足りない。
 同スクリプトは過去問を正しい前提として**構造しか見ていない**（4択・番号連番・
 語彙と選択肢の対応・意味重複）。内容側を別に見る。
 
@@ -125,7 +125,7 @@ UI上は「準2級・模試 第1回」と表示され、過去問と区別でき
    - 間隔復習の表の準2級行（51/45/54 と 180）に模試1回分（+15問・+60語）を反映
    - 自作模試であること（過去問ではないこと）を1行明記
 4. `index.html` のキャッシュバスターは**変更不要**。`manifest.json` は `cache: "no-store"`
-   で取得し（[mode-q1.js:61](../static/mode-q1.js)）、語彙・設問JSONは通常の fetch だが
+   で取得し（[mode-q1.js:61](../../../static/mode-q1.js)）、語彙・設問JSONは通常の fetch だが
    **今回は新規URLのため既存キャッシュと衝突しない**。JS/CSSを触った場合のみ `?v=` を上げる。
 
 ## 7. 検証

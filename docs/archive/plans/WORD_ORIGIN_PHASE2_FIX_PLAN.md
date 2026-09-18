@@ -1,7 +1,7 @@
 # 単語語源 段階2 修正計画
 
 対象: `data/word_origins.json` / `data/word_roots.json` / `data/lemmas.json` / `scripts/check-word-origin-data.cjs`
-関連: [WORD_ORIGIN_PHASE2_PLAN.md](WORD_ORIGIN_PHASE2_PLAN.md)（投入計画）/ [WORD_ORIGIN_AUTHORING.md](WORD_ORIGIN_AUTHORING.md)（作成基準）/ [WORD_ORIGIN_PHASE1_PLAN.md](WORD_ORIGIN_PHASE1_PLAN.md)（辞書）
+関連: [WORD_ORIGIN_PHASE2_PLAN.md](WORD_ORIGIN_PHASE2_PLAN.md)（投入計画）/ [WORD_ORIGIN_AUTHORING.md](../../WORD_ORIGIN_AUTHORING.md)（作成基準）/ [WORD_ORIGIN_PHASE1_PLAN.md](WORD_ORIGIN_PHASE1_PLAN.md)（辞書）
 状態: 完了（2026-08-25）。段階2の投入と同じコミットに含めた
 
 ## 0. 現状の判定

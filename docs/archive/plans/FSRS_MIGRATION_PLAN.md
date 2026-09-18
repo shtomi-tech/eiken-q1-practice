@@ -1,6 +1,6 @@
 # 間隔復習を ts-fsrs（FSRS-6）へ全面移行する実装計画
 
-対象: 「意味だけ復習」の間隔算出。現行は固定Leitnerはしご `LEITNER_LADDER = [1, 3, 7, 14, 30, 60, 120]`（[static/src/30-unit-progress.js:2](../static/src/30-unit-progress.js)）。
+対象: 「意味だけ復習」の間隔算出。現行は固定Leitnerはしご `LEITNER_LADDER = [1, 3, 7, 14, 30, 60, 120]`（[static/src/30-unit-progress.js:2](../../../static/src/30-unit-progress.js)）。
 これを ts-fsrs（FSRS-6）へ置き換える。**本書は計画のみ。実装は含まない。**
 
 前提: 2026-09-09 に A案（はしごの4段→7段延長）を実装・デプロイ済み（`abda5eb`）。本計画はその上に載る。
@@ -57,13 +57,13 @@
 
 | 箇所 | 用途 | 影響 |
 | --- | --- | --- |
-| [30-unit-progress.js:88 `recordMeaningResult`](../static/src/30-unit-progress.js) | 唯一の書き込み口 | **全面書き換え** |
-| [30-unit-progress.js:46 `meaningResultState`](../static/src/30-unit-progress.js) | はしご算出 | 通常経路から外す（実装ではフォールバック専用として残置。§10） |
-| [90-learn-flow.js:37 `isItemDue`](../static/src/90-learn-flow.js) | 期限判定 | `nextReviewAt` を維持すれば変更不要 |
-| [90-learn-flow.js:44 `weightedOrder`](../static/src/90-learn-flow.js) | 出題順（`wrongCount`・`lastMs`・期限超過） | `wrongCount` → `lapses` へ寄せる（§2.5） |
-| [50-vocab-pool.js:151 `meaningIntervalLabel`](../static/src/50-vocab-pool.js) | 内訳ラベル（`days` 完全一致） | **完全一致は成立しなくなる。バケット化必須**（§4） |
-| [50-vocab-pool.js:125 `otherGradeDueCounts`](../static/src/50-vocab-pool.js) | 他級の期限到来数 | `nextReviewAt` 維持で変更不要 |
-| [40-cloud.js:39](../static/src/40-cloud.js) | `{ [datasetId]: progress }` を丸ごと jsonb 保存 | スキーマ変更不要（自由形式JSON） |
+| [30-unit-progress.js:88 `recordMeaningResult`](../../../static/src/30-unit-progress.js) | 唯一の書き込み口 | **全面書き換え** |
+| [30-unit-progress.js:46 `meaningResultState`](../../../static/src/30-unit-progress.js) | はしご算出 | 通常経路から外す（実装ではフォールバック専用として残置。§10） |
+| [90-learn-flow.js:37 `isItemDue`](../../../static/src/90-learn-flow.js) | 期限判定 | `nextReviewAt` を維持すれば変更不要 |
+| [90-learn-flow.js:44 `weightedOrder`](../../../static/src/90-learn-flow.js) | 出題順（`wrongCount`・`lastMs`・期限超過） | `wrongCount` → `lapses` へ寄せる（§2.5） |
+| [50-vocab-pool.js:151 `meaningIntervalLabel`](../../../static/src/50-vocab-pool.js) | 内訳ラベル（`days` 完全一致） | **完全一致は成立しなくなる。バケット化必須**（§4） |
+| [50-vocab-pool.js:125 `otherGradeDueCounts`](../../../static/src/50-vocab-pool.js) | 他級の期限到来数 | `nextReviewAt` 維持で変更不要 |
+| [40-cloud.js:39](../../../static/src/40-cloud.js) | `{ [datasetId]: progress }` を丸ごと jsonb 保存 | スキーマ変更不要（自由形式JSON） |
 
 **重要**: `nextReviewAt`（ISO文字列）を FSRS の `card.due` の写しとして**必ず残す**。これを保てば due 判定・他級集計・クラウド同期は無変更で通る。
 
@@ -73,8 +73,8 @@
 
 - `static/vendor/fsrs/index.umd.js` に **バージョンを固定して実ファイルを置く**（CDN 参照にしない。オフライン・可用性のため）。既存の `static/vendor/harness/cloud.js` と同じ扱い。
 - 出所・版・取得日を `static/vendor/fsrs/README.md` に記録し、MIT ライセンス本文を `static/vendor/fsrs/LICENSE` として同梱する。
-- [index.html:29](../index.html) の `cloud.js` の直後、`mode-q1.js` の**前**に `<script src="static/vendor/fsrs/index.umd.js?v=5.4.2"></script>` を追加。`mode-q1.js` は IIFE 内で `globalThis.FSRS` を参照する。
-- **⚠ 最大の落とし穴**: [.github/workflows/pages.yml](../.github/workflows/pages.yml) の `Prepare static files` は**コピーするファイルを明示列挙している**（`cp static/vendor/harness/cloud.js _site/static/vendor/harness/`）。ここに追記しないと**本番だけ 404 になり、スケジューラが丸ごと落ちる**。ローカルでは絶対に再現しない。§5 の T2 と T7 で対応する。
+- [index.html:29](../../../index.html) の `cloud.js` の直後、`mode-q1.js` の**前**に `<script src="static/vendor/fsrs/index.umd.js?v=5.4.2"></script>` を追加。`mode-q1.js` は IIFE 内で `globalThis.FSRS` を参照する。
+- **⚠ 最大の落とし穴**: [.github/workflows/pages.yml](../../../.github/workflows/pages.yml) の `Prepare static files` は**コピーするファイルを明示列挙している**（`cp static/vendor/harness/cloud.js _site/static/vendor/harness/`）。ここに追記しないと**本番だけ 404 になり、スケジューラが丸ごと落ちる**。ローカルでは絶対に再現しない。§5 の T2 と T7 で対応する。
 
 ### 2.2 パラメータ
 
@@ -93,7 +93,7 @@ FSRS_PARAMS = {
 
 ### 2.3 正誤・反応時間 → Rating の写像
 
-現行の `rtGrade()`（8秒未満=速い / 20秒以上=遅い / 中間は当該回の中央値の1.6倍で判定, [30-unit-progress.js:27](../static/src/30-unit-progress.js)）をそのまま流用する。
+現行の `rtGrade()`（8秒未満=速い / 20秒以上=遅い / 中間は当該回の中央値の1.6倍で判定, [30-unit-progress.js:27](../../../static/src/30-unit-progress.js)）をそのまま流用する。
 
 | 現行の結果 | Rating |
 | --- | --- |
@@ -127,7 +127,7 @@ Easy を使わない判断は明示的に記録する。将来導入するなら
 ```
 
 - `Date` オブジェクトは JSON 化で文字列になるため、**読み出し時に `new Date()` へ戻す変換層**（`toFsrsCard` / `fromFsrsCard`）を1箇所に置く。ここを散らかすと日付型のバグが必ず出る。
-- `MEANING_PROGRESS_VERSION` を **2 → 3** に上げる（[30-unit-progress.js:15](../static/src/30-unit-progress.js)）。[20-storage.js:448](../static/src/20-storage.js) で保存済みセッションの復元可否に使われているため、**移行をまたぐセッション再開は破棄される**（意図した挙動。壊れた状態で再開させない）。
+- `MEANING_PROGRESS_VERSION` を **2 → 3** に上げる（[30-unit-progress.js:15](../../../static/src/30-unit-progress.js)）。[20-storage.js:448](../../../static/src/20-storage.js) で保存済みセッションの復元可否に使われているため、**移行をまたぐセッション再開は破棄される**（意図した挙動。壊れた状態で再開させない）。
 
 ### 2.5 出題順（`weightedOrder`）の扱い
 
@@ -138,7 +138,7 @@ Easy を使わない判断は明示的に記録する。将来導入するなら
 
 ### 2.6 既存データの移行
 
-既存ユーザーは `leitnerStage`（0〜6）と `nextReviewAt` を持つ。**過去の解答履歴からFSRS状態は再構成できない**（`progress.history` は直近500件かつ経過日数・gradeを持たない, [30-unit-progress.js:80](../static/src/30-unit-progress.js)）。したがって**ワンショットの近似移行**を行う。
+既存ユーザーは `leitnerStage`（0〜6）と `nextReviewAt` を持つ。**過去の解答履歴からFSRS状態は再構成できない**（`progress.history` は直近500件かつ経過日数・gradeを持たない, [30-unit-progress.js:80](../../../static/src/30-unit-progress.js)）。したがって**ワンショットの近似移行**を行う。
 
 方式: 現行はしごの間隔を「その語の安定性」とみなして初期値を与える。
 
@@ -155,12 +155,12 @@ Easy を使わない判断は明示的に記録する。将来導入するなら
 - `difficulty` は `wrongCount` から近似する: `clamp(5 + wrongCount, 1, 10)`（誤答が多い語ほど難しい）。5が中庸値。
 - `lapses = wrongCount`、`reps` は不明なので `leitnerStage + 1` を入れる（FSRS-6 の計算には使われないが、表示・診断のために保持）。
 - **`nextReviewAt` は書き換えない**。移行によって「明日出るはずだった語が今日出る／来月に飛ぶ」が起きると、生徒には記録の破壊に見える。次回の解答時から FSRS が効き始める。
-- 移行済みマークは既存の仕組みに合わせ `progress.migrations.fsrsV1` に記録する（[20-storage.js:253](../static/src/20-storage.js) の `pre1ProgressV1` と同じパターン）。**冪等**にすること。
+- 移行済みマークは既存の仕組みに合わせ `progress.migrations.fsrsV1` に記録する（[20-storage.js:253](../../../static/src/20-storage.js) の `pre1ProgressV1` と同じパターン）。**冪等**にすること。
 - `leitnerStage` は**削除せず残す**。ロールバック（§7）で必要になる。
 
 ### 2.7 容量
 
-`items` 1件あたり約7フィールド増える。1級だけで語彙3,704件、これが級×セット分の `progress` に分散する。localStorage は 5MB 程度が上限で、書き込みは既に try/catch で握り潰している（[20-storage.js:4](../static/src/20-storage.js)）。**移行前後で実際のバイト数を計測し、本書へ追記する**（T9）。閾値に近ければキー短縮の案があるが、**計測前に最適化しない**。
+`items` 1件あたり約7フィールド増える。1級だけで語彙3,704件、これが級×セット分の `progress` に分散する。localStorage は 5MB 程度が上限で、書き込みは既に try/catch で握り潰している（[20-storage.js:4](../../../static/src/20-storage.js)）。**移行前後で実際のバイト数を計測し、本書へ追記する**（T9）。閾値に近ければキー短縮の案があるが、**計測前に最適化しない**。
 
 ## 3. 変更対象ファイル
 
@@ -199,8 +199,8 @@ Easy を使わない判断は明示的に記録する。将来導入するなら
 | 3か月 | < 90日 |
 | 半年以上 | >= 90日 |
 
-- 8バケット。グリッドは `repeat(4, …)`（狭幅は `repeat(2, …)`）で 4×2 に割り切る。現在は9ラベル3×3（[static/styles.css:618](../static/styles.css)）。
-- 説明文（[80-home.js:623](../static/src/80-home.js)）は「正解すると1→3→7→…日後へ間隔が延びます」から、**固定はしごを約束しない文言**へ変更する。例: 「正解の速さとこれまでの記録から、語句ごとに次回の日を決めます。」
+- 8バケット。グリッドは `repeat(4, …)`（狭幅は `repeat(2, …)`）で 4×2 に割り切る。現在は9ラベル3×3（[static/styles.css:618](../../../static/styles.css)）。
+- 説明文（[80-home.js:623](../../../static/src/80-home.js)）は「正解すると1→3→7→…日後へ間隔が延びます」から、**固定はしごを約束しない文言**へ変更する。例: 「正解の速さとこれまでの記録から、語句ごとに次回の日を決めます。」
 - DESIGN.md の該当記述を更新する。色以外の状態表現・44px・キーボード操作の要件は現行のまま維持。
 
 ## 5. タスク
@@ -223,8 +223,8 @@ Easy を使わない判断は明示的に記録する。将来導入するなら
 
 ## 6. 検査の要点（既存契約との衝突）
 
-- [check-response-time-srs.cjs](../scripts/check-response-time-srs.cjs) は `meaningResultState(0,0,true,"good") → (1日, stage1)` 等を固定している。**T4で関数ごと消えるため、該当ブロックを書き換える**。`rtGrade` / `medianMs` / `nextAverageMs` のアサートは**残す**（Rating写像の入力として生き続けるため）。
-- [check-meaning-mission-ui.cjs:113](../scripts/check-meaning-mission-ui.cjs) は「1日後」〜「120日後」の9ラベルを必須にしている。T8 でバケット名へ差し替える。
+- [check-response-time-srs.cjs](../../../scripts/check-response-time-srs.cjs) は `meaningResultState(0,0,true,"good") → (1日, stage1)` 等を固定している。**T4で関数ごと消えるため、該当ブロックを書き換える**。`rtGrade` / `medianMs` / `nextAverageMs` のアサートは**残す**（Rating写像の入力として生き続けるため）。
+- [check-meaning-mission-ui.cjs:113](../../../scripts/check-meaning-mission-ui.cjs) は「1日後」〜「120日後」の9ラベルを必須にしている。T8 でバケット名へ差し替える。
 - `enable_fuzz: true` のため、**日数の完全一致を assert してはいけない**。検査では fuzz を無効にしたスケジューラを別途生成して境界を見る。
 
 ## 7. ロールバック

@@ -9,7 +9,7 @@
  *   window.backupFlashcardMeasurementState()
  *   window.restoreFlashcardMeasurementState()
  *
- * 出力項目の定義は docs/FLASHCARD_MEASUREMENT_PLAN.md に合わせています。
+ * 出力項目の定義は docs/archive/plans/FLASHCARD_MEASUREMENT_PLAN.md に合わせています。
  * このファイルはアプリ本体から読み込まず、測定時だけブラウザで評価します。
  */
 
@@ -279,7 +279,7 @@
       }
 
       // 実利用と同じ経路にする。送りボタンまでスクロールせずに押すと、
-      // 送り後のスクロール持ち越し（docs/FLASHCARD_MEASUREMENT_PLAN.md 4-4）が
+      // 送り後のスクロール持ち越し（docs/archive/plans/FLASHCARD_MEASUREMENT_PLAN.md 4-4）が
       // 再現せず、M12が常に true になってしまう。
       next.scrollIntoView({ block: "end" });
       await sleep(80);

@@ -26,7 +26,7 @@
 ## 1. IDと命名
 
 `DATASET_ID_RE` が許すIDは `\d{4}-\d+` / `mock-\d+` / `set-\d+` のみ
-（[mode-q1.js:34](../static/mode-q1.js)）。`mock-2` / `mock-3` / `mock-4` はこの範囲。
+（[mode-q1.js:34](../../../static/mode-q1.js)）。`mock-2` / `mock-3` / `mock-4` はこの範囲。
 
 | datasetId | label | shortLabel | questionsUrl | vocabUrl |
 | --- | --- | --- | --- | --- |
@@ -40,7 +40,7 @@
 ## 2. 成果物
 
 1. `scripts/build_q1_p2_mock_{2,3,4}_data.py` — 1セット1本（1級模試と同じ運用）。
-   [build_q1_p2_mock_1_data.py](../scripts/build_q1_p2_mock_1_data.py) と同型で、
+   [build_q1_p2_mock_1_data.py](../../../scripts/build_q1_p2_mock_1_data.py) と同型で、
    **`CORE_IMAGES` を追加で持たせる**（4.3）。正本がこの1ファイルに集約される。
 2. `data/questions_p2_mock-{2,3,4}.json` / `data/vocab_p2_mock-{2,3,4}.json` — 生成物（コミットする）。
 3. `scripts/check_p2_mock_data.py` の複数セット対応（5.1）。
@@ -73,7 +73,7 @@ q, is_answer, word|phrase, pos, meaning, example, exampleTranslation, etymology
 （熟語）type:"idiom", coreImage   （任意）ipa
 ```
 
-- `ipa` は [enrich_flashcard_fields.py](../scripts/enrich_flashcard_fields.py) で付与する。
+- `ipa` は [enrich_flashcard_fields.py](../../../scripts/enrich_flashcard_fields.py) で付与する。
   `TARGET_PATTERN` は既に `p2_mock-\d+` を含むため**スクリプト側の変更は不要**。
   取得できないものは推測で埋めない。
 - `etymology` はビルドスクリプトの `ETYMOLOGY` に持ち、欠落をビルド時に落とす。
@@ -126,7 +126,7 @@ q, is_answer, word|phrase, pos, meaning, example, exampleTranslation, etymology
 
 `scripts/check-core-image-data.cjs` は、manifest から配信される全セットの熟語に対し
 **`coreImage` を付けるか `cReasons` に理由を書くかのどちらかを必須**にしている。
-新規60熟語（20×3）は [CORE_IMAGE_AUTHORING.md](CORE_IMAGE_AUTHORING.md) に従ってA/B/Cへ分類する。
+新規60熟語（20×3）は [CORE_IMAGE_AUTHORING.md](../../CORE_IMAGE_AUTHORING.md) に従ってA/B/Cへ分類する。
 
 | 型 | 付けるもの |
 | --- | --- |
@@ -197,7 +197,7 @@ UI上は「準2級・模試 第2回〜第4回」と表示され、過去問と�
      `check_q1_data.py`「24セット」→「27セット」、
      `check_p2_mock_data.py` の説明を「準2級自作模試（全回）の内容チェック」へ
 4. `index.html` のキャッシュバスターは**変更不要**。`manifest.json` は `cache: "no-store"`
-   で取得し（[mode-q1.js:61](../static/mode-q1.js)）、語彙・設問JSONは新規URLで既存キャッシュと
+   で取得し（[mode-q1.js:61](../../../static/mode-q1.js)）、語彙・設問JSONは新規URLで既存キャッシュと
    衝突しない。JS/CSSを触った場合のみ `?v=` を上げる。
 
 ## 7. 音声（任意・別枠）

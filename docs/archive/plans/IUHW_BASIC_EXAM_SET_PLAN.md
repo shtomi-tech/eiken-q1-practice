@@ -19,7 +19,7 @@
 ## 1. IDと命名
 
 `DATASET_ID_RE` が許すIDは `\d{4}-\d+` / `mock-\d+` / `set-\d+` の3種のみ
-（[mode-q1.js:34](../static/mode-q1.js)）。年度が特定できないため `set-1` を使う。
+（[mode-q1.js:34](../../../static/mode-q1.js)）。年度が特定できないため `set-1` を使う。
 
 | 項目 | 値 |
 | --- | --- |
@@ -32,7 +32,7 @@
 
 ## 2. 出題設計
 
-既存契約（[check_q1_data.py:91](../scripts/check_q1_data.py)）は
+既存契約（[check_q1_data.py:91](../../../scripts/check_q1_data.py)）は
 **1設問 = 4選択肢 = 語彙4件（うち `is_answer` 1件）**。
 60語句 = **15問 × 4択**でちょうど収まる。易しい語（`male` / `figure` / `table` など）は
 正答にせずダミー専用として収録し、60語句すべてを意味チェック・間隔復習の対象にする。
@@ -74,7 +74,7 @@
 ## 3. 成果物
 
 1. `scripts/build_q1_iuhw_set_1_data.py` — `QUESTIONS` と `DETAILS` をベタ書きし、
-   JSON 2本を出力する。[build_q1_p2_mock_1_data.py](../scripts/build_q1_p2_mock_1_data.py)
+   JSON 2本を出力する。[build_q1_p2_mock_1_data.py](../../../scripts/build_q1_p2_mock_1_data.py)
    と同型。正本がこの1ファイルに集約され、再生成できる。
 2. `data/questions_iuhw_set-1.json` / `data/vocab_iuhw_set-1.json` — 生成物（コミットする）。
 3. `assets/audio/vocab/iuhw/set-1/` — 60語句のTTS（単語58件・熟語2件）。
@@ -106,7 +106,7 @@
 `example` / `exampleTranslation` / `pos` は必須チェック対象ではないが、
 暗記カードUIが使うため60語句すべてに入れる。
 
-## 4. コード変更（[static/mode-q1.js](../static/mode-q1.js)）
+## 4. コード変更（[static/mode-q1.js](../../../static/mode-q1.js)）
 
 英検前提のハードコードが4箇所ある。いずれも1行〜数行。
 
@@ -133,7 +133,7 @@
 
 ## 6. 音声（MP3）
 
-[generate_tts_1.py](../scripts/generate_tts_1.py) の `GRADE_CONFIG` に1行追加する。
+[generate_tts_1.py](../../../scripts/generate_tts_1.py) の `GRADE_CONFIG` に1行追加する。
 
 ```python
 "iuhw": {"pattern": "vocab_iuhw_*.json", "filename": r"vocab_iuhw_(set-\d+)\.json", "folder": "iuhw"},
@@ -151,7 +151,7 @@ py -3 scripts/generate_tts_1.py --grade iuhw --round set-1
 
 出力先は単語が `assets/audio/vocab/iuhw/set-1/<slug>.mp3`、熟語が
 `assets/audio/vocab/iuhw/set-1/idiom/<slug>.mp3`（計60ファイル）。
-MP3が無い間はブラウザ内蔵音声にフォールバックする（[mode-q1.js:1005](../static/mode-q1.js)）ため、
+MP3が無い間はブラウザ内蔵音声にフォールバックする（[mode-q1.js:1005](../../../static/mode-q1.js)）ため、
 音声生成はデータ投入後に独立して実施できる。
 
 ## 7. 作業順

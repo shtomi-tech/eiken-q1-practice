@@ -1,7 +1,7 @@
 # 単語語源表示 修正計画
 
 対象: `index.html` / `README.md` / `DESIGN.md` / `static/styles.css` / `scripts/check-word-origin-data.cjs` / `scripts/check-word-origin-ui.cjs` / `docs/WORD_ORIGIN_PLAN.md`
-関連: [WORD_ORIGIN_PLAN.md](WORD_ORIGIN_PLAN.md)（導入計画）/ [WORD_ORIGIN_AUTHORING.md](WORD_ORIGIN_AUTHORING.md)（作成基準）
+関連: [WORD_ORIGIN_PLAN.md](WORD_ORIGIN_PLAN.md)（導入計画）/ [WORD_ORIGIN_AUTHORING.md](../../WORD_ORIGIN_AUTHORING.md)（作成基準）
 状態: 実装済み（2026-08-24、未コミット）。A〜Hを反映し、`npm test` と実ブラウザで確認済み
 
 ## 0. 現状の判定

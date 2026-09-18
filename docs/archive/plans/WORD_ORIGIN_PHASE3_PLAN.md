@@ -1,7 +1,7 @@
 # 単語語源 段階3: 語根の第2波
 
 対象: `data/word_roots.json` / `data/word_origins.json` / `scripts/check-word-origin-data.cjs`
-関連: [WORD_ORIGIN_PHASE2_PLAN.md](WORD_ORIGIN_PHASE2_PLAN.md)（第1波の投入）/ [WORD_ORIGIN_PHASE2_FIX_PLAN.md](WORD_ORIGIN_PHASE2_FIX_PLAN.md)/ [WORD_ORIGIN_AUTHORING.md](WORD_ORIGIN_AUTHORING.md)（作成基準）
+関連: [WORD_ORIGIN_PHASE2_PLAN.md](WORD_ORIGIN_PHASE2_PLAN.md)（第1波の投入）/ [WORD_ORIGIN_PHASE2_FIX_PLAN.md](WORD_ORIGIN_PHASE2_FIX_PLAN.md)/ [WORD_ORIGIN_AUTHORING.md](../../WORD_ORIGIN_AUTHORING.md)（作成基準）
 前提: 段階2＝`a649b42`（語根20個・A型94語・B型12語）
 状態: 完了（2026-08-25）。13語根・A型42語・B型6語を追加し、段階3終了時点でA型136語・B型18語
 

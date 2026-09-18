@@ -2,7 +2,7 @@
 
 > 対象: `eiken-q1-practice` の暗記カード画面（STEP 1 flash）。
 > 目的: UX摩擦監査・デザイン監査（2026-08-25）の指摘のうち、**学習設計に踏み込まずに直せる範囲**を実装する。
-> 関連: [FLASHCARD_MEASUREMENT_PLAN.md](FLASHCARD_MEASUREMENT_PLAN.md)（合格基準の正本）/ [HOME_NEXT_ACTION_FIX_PLAN.md](HOME_NEXT_ACTION_FIX_PLAN.md) / [../DESIGN.md](../DESIGN.md)
+> 関連: [FLASHCARD_MEASUREMENT_PLAN.md](FLASHCARD_MEASUREMENT_PLAN.md)（合格基準の正本）/ [HOME_NEXT_ACTION_FIX_PLAN.md](HOME_NEXT_ACTION_FIX_PLAN.md) / [../DESIGN.md](../../../DESIGN.md)
 > 状態: 計画（未着手）。作成日 2026-08-25。
 
 ## 1. 直す摩擦
@@ -30,7 +30,7 @@
 
 ### 3-1. 固定バー `static/mode-q1.js`
 
-[renderFlash()](../static/mode-q1.js) の `.actions.flashNav` を、画面下部に固定する `.sessionActionBar` で包む。
+[renderFlash()](../../../static/mode-q1.js) の `.actions.flashNav` を、画面下部に固定する `.sessionActionBar` で包む。
 
 - 構成は左から「← 前のカード」「カード n / 4」「次のカード →」。**カウンタをバーの中央へ入れる**ことで⑤も同時に解消する（現在地と操作が同じ帯に収まる）。
 - バーは `.wrap` と同じ幅（最大960px）で中央寄せにし、全幅ベタ塗りにしない。
@@ -59,7 +59,7 @@ scrollFlashCardIntoView():
   window.scrollTo({ top: max(0, target), behavior: "auto" })
 ```
 
-- 呼び出しは [renderFlash()](../static/mode-q1.js) の「前のカード」「次のカード」の `onclick` の中、`renderSession()` の**後**。`renderSession()` 自体には入れない（check / practice / done まで巻き込むため）。
+- 呼び出しは [renderFlash()](../../../static/mode-q1.js) の「前のカード」「次のカード」の `onclick` の中、`renderSession()` の**後**。`renderSession()` 自体には入れない（check / practice / done まで巻き込むため）。
 - `behavior: "auto"`（即時）にする。smoothだと測定のサンプリング時刻と実際の位置がずれ、M12の判定が不安定になる。
 - 上部の sticky バーの高さを引くのは、`.flash` の上端をぴったり合わせるとカード上部がバーの下に隠れるため。
 
@@ -77,7 +77,7 @@ scrollFlashCardIntoView():
 
 ### ③ ガード中の押下フィードバック `static/mode-q1.js` / `static/styles.css`
 
-- [renderFlash()](../static/mode-q1.js) でボタンを組み立てるとき `flashNavLocked()` を見て、真なら `class` に `isGuarded` を足し `aria-disabled="true"` を付ける。残り時間後に `setTimeout` で両方を外す。
+- [renderFlash()](../../../static/mode-q1.js) でボタンを組み立てるとき `flashNavLocked()` を見て、真なら `class` に `isGuarded` を足し `aria-disabled="true"` を付ける。残り時間後に `setTimeout` で両方を外す。
 - **`disabled` 属性は使わない**。フォーカスが外れ、キーボード操作が途切れるため。
 - CSS: `.flashNav .isGuarded { opacity: .6; cursor: default; }`。450msの間だけ「受付済み」に見せる。
 - ガード自体（`FLASH_NAV_GUARD_MS = 450`、誤ダブルタップ防止）は残す。
@@ -95,7 +95,7 @@ scrollFlashCardIntoView():
 
 - 表記を「カード n / 4」に統一する（「語」と「カード」の混在をやめる）。
 - 置き場所は 3-1 の固定バー中央。
-- [sessionStickyNav()](../static/mode-q1.js) の `flashLabel`（`.sessionStickyFlash`）と、`renderFlash()` 末尾の `.cardCounter` を**削除する**。固定バーが常に見えるため、上部の重複は不要になる。
+- [sessionStickyNav()](../../../static/mode-q1.js) の `flashLabel`（`.sessionStickyFlash`）と、`renderFlash()` 末尾の `.cardCounter` を**削除する**。固定バーが常に見えるため、上部の重複は不要になる。
 - `.sessionStickyFlash` はflashステージ専用なので、他ステージへの影響はない。CSSの当該セレクタも整理する。
 
 ## 5. DESIGN.md への追記

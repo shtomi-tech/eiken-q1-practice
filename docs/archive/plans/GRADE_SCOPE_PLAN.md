@@ -13,7 +13,7 @@
 アプリ内部はすでに級単位で動いている。
 
 - `gradeOf(datasetId)` が `eiken1 / eiken2 / eikenp1 / eikenp2 / eikentopic` を返し
-  （[mode-q1.js:111](../static/mode-q1.js)）、間隔復習のプール `pooledDataByGrade`、
+  （[mode-q1.js:111](../../../static/mode-q1.js)）、間隔復習のプール `pooledDataByGrade`、
   語彙目標カード、進捗キーはすべてこの級単位。
 - 他級が露出しているのは実質3か所で、いずれも `availableDatasets()` / `DATASETS` が根。
 
@@ -24,7 +24,7 @@
 | 起動時の既定 | `DEFAULT_DATASET_ID`（manifest の `eiken2-2026-1`） | 常に2級から始まる |
 
 - 使用者の識別はすでにある。共有URL `?s=<id>&t=<token>` → `cloud.getSession()` →
-  `storageStudentId`（[mode-q1.js:22](../static/mode-q1.js)）。localStorage は
+  `storageStudentId`（[mode-q1.js:22](../../../static/mode-q1.js)）。localStorage は
   `scopedStorageKey()` で生徒ごとに分離済み。
 
 ## 2. 方式：`DATASETS` を起動時に絞る（下流は無改修）
@@ -72,12 +72,12 @@ function applyGradeScope(gradeCode) {
 let ALL_DATASET_IDS = [];        // loadManifest() の末尾で Object.keys(DATASETS) を控える
 ```
 
-- `collectAllProgress()`（[mode-q1.js:662](../static/mode-q1.js)）は `Object.keys(DATASETS)` を
+- `collectAllProgress()`（[mode-q1.js:662](../../../static/mode-q1.js)）は `Object.keys(DATASETS)` を
   走査して**全セットの進捗をまとめてクラウドへ送る** `getPayload`。絞った `DATASETS` のままだと
   他級の進捗を落とした地図でクラウドを上書きしうる。ここは `ALL_DATASET_IDS` を使う。
   （現状は `getPatch` が定義済みで `push()` がパッチ経路に入るため `getPayload` は呼ばれない。
   それでも将来 `getPatch` を外したときに黙って進捗を失う罠になるので、先に潰しておく。）
-- `applyCloudProgress()`（[mode-q1.js:840](../static/mode-q1.js)）も `DATASETS[id]` で選別するが、
+- `applyCloudProgress()`（[mode-q1.js:840](../../../static/mode-q1.js)）も `DATASETS[id]` で選別するが、
   **絞り込みより前（`boot()` の 2942行付近）に実行されるため改修不要**。この順序は崩さない。
 
 ## 3. 級の決め方（優先順）
@@ -151,7 +151,7 @@ function renderHomeContent() {
 - `Object.keys(GRADE_PREFIXES)` を 準2級→2級→準1級→1級 の順でボタン表示
 - 押下時: localStorage 保存 → `applyGradeScope(code)` → `needsGradeChoice = false`
   → `state.datasetId = loadDatasetId()` → `await loadData()` → `renderHome()`
-- ボタンは既存の `.datasetGradeChoice` を流用（`min-height: 44px` 済み、[styles.css:269](../static/styles.css)）。
+- ボタンは既存の `.datasetGradeChoice` を流用（`min-height: 44px` 済み、[styles.css:269](../../../static/styles.css)）。
   ただし `.datasetGradeChoices` は4列固定グリッドなので、選択画面では専用のクラスか
   `grid-template-columns` の上書きで縦並び／2列にする
 
@@ -186,7 +186,7 @@ function renderHomeContent() {
 `scripts/check-grade-scope.cjs` を追加し、`package.json` の `test` に連結する。
 
 現行のサンドボックスは `{ URLSearchParams, encodeURIComponent }` しか渡していない
-（[check-student-storage-scope.cjs](../scripts/check-student-storage-scope.cjs)）ため、
+（[check-student-storage-scope.cjs](../../../scripts/check-student-storage-scope.cjs)）ため、
 このテストでは追加で用意する:
 
 - `window = { location: { search: "?g=pre1" } }` と最小の `localStorage` スタブ

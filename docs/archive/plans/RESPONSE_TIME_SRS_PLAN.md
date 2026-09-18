@@ -5,13 +5,13 @@
 
 ## 0. 問題
 
-意味チェックの4択で解答時間を計測・表示するようにした（[:2313](../static/mode-q1.js)）が、**値はセッション内の表示にしか使われず、保存もスケジュール反映もされていない**。そのため「10秒迷って正解した語」と「1.5秒で即答した語」が同じ 14 日ルートに乗る。
+意味チェックの4択で解答時間を計測・表示するようにした（[:2313](../../../static/mode-q1.js)）が、**値はセッション内の表示にしか使われず、保存もスケジュール反映もされていない**。そのため「10秒迷って正解した語」と「1.5秒で即答した語」が同じ 14 日ルートに乗る。
 
 | 目標 | 現状の担保 |
 | --- | --- |
-| 正答率の改善 | 誤答で `leitnerStage=0` / `nextReviewAt=null`（[:487](../static/mode-q1.js)）＋ `wrongCount` で出題順を前倒し |
+| 正答率の改善 | 誤答で `leitnerStage=0` / `nextReviewAt=null`（[:487](../../../static/mode-q1.js)）＋ `wrongCount` で出題順を前倒し |
 | 解答時間の短縮 | **なし**（表示のみ） |
-| 間隔復習 | Leitner `[1,3,7,14]`（[:434](../static/mode-q1.js)） |
+| 間隔復習 | Leitner `[1,3,7,14]`（[:434](../../../static/mode-q1.js)） |
 
 ## 1. 方針：解答時間で Again / Hard / Good を自動採点する
 
@@ -25,7 +25,7 @@
 
 **長い間隔に進めるのは「速く正解できた語」だけ**になり、3つの目標が昇段条件という1本の軸に揃う。
 
-間隔の値そのものは `[1,3,7,14]` から変えない。`meaningIntervalLabel` は `nextReviewAt - lastAnsweredAt` の日数をラベルへ逆算している（[:710](../static/mode-q1.js)）ため、**ホームの間隔別内訳・カードUIは無改修で動く**。ここを崩さないことが本計画の制約。
+間隔の値そのものは `[1,3,7,14]` から変えない。`meaningIntervalLabel` は `nextReviewAt - lastAnsweredAt` の日数をラベルへ逆算している（[:710](../../../static/mode-q1.js)）ため、**ホームの間隔別内訳・カードUIは無改修で動く**。ここを崩さないことが本計画の制約。
 
 ## 2. 「遅い」の判定
 
@@ -56,7 +56,7 @@ function rtGrade(ms, medianMs) {
 
 ## 3. 保存するもの
 
-`progress.items[key]` に2フィールド追加。`DEFAULT_ITEM_STATE`（[:446](../static/mode-q1.js)）と `itemState`（[:456](../static/mode-q1.js)）へ既存フィールドと同じ流儀で足す。
+`progress.items[key]` に2フィールド追加。`DEFAULT_ITEM_STATE`（[:446](../../../static/mode-q1.js)）と `itemState`（[:456](../../../static/mode-q1.js)）へ既存フィールドと同じ流儀で足す。
 
 ```js
 s.lastMs = ms;                                              // 直近の反応時間
@@ -68,7 +68,7 @@ s.avgMs  = s.avgMs ? Math.round(s.avgMs * 0.7 + ms * 0.3)   // 指数移動平�
 
 未設定（`undefined`）でも Good 相当として動くよう書き、**既存レコードの移行処理は行わない**。
 
-## 4. 出題順（`weightedOrder` [:1650](../static/mode-q1.js)）
+## 4. 出題順（`weightedOrder` [:1650](../../../static/mode-q1.js)）
 
 `wrongCount` 降順のみ → 3信号の合成スコア降順へ差し替える。
 

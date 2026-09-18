@@ -117,7 +117,7 @@ work out, get rid of, go over）
 
 ### 4.3 核心イメージ（A型）の作り方
 
-[CORE_IMAGE_AUTHORING.md](CORE_IMAGE_AUTHORING.md) に従う。A型は `chain` ＋ `particle` ＋
+[CORE_IMAGE_AUTHORING.md](../../CORE_IMAGE_AUTHORING.md) に従う。A型は `chain` ＋ `particle` ＋
 `particleSense` を付ける。機械側の制約で効いてくるのは次の2点。
 
 - `particle` は `data/particle_images.json` にあるものだけ。`particleSense` はその辞書の
