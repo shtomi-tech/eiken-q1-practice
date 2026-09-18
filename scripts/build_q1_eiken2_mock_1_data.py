@@ -2,14 +2,10 @@
 
 from __future__ import annotations
 
-import json
-from pathlib import Path
+from lib.set_builders import run_eiken2_mock
 
 
-ROOT = Path(__file__).resolve().parents[1]
-DATA_DIR = ROOT / "data"
 ROUND_ID = "mock-1"
-
 
 QUESTIONS = [
     {
@@ -258,71 +254,5 @@ CORE_IMAGES = {
 }
 
 
-def write_json(path: Path, value: dict) -> None:
-    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-
-
-def build() -> tuple[dict, dict]:
-    if len(QUESTIONS) != 20:
-        raise ValueError("2級模試第1回は20問である必要があります")
-    choices = [choice for question in QUESTIONS for choice in question["choices"]]
-    if len(choices) != 80 or len(choices) != len(set(choices)):
-        raise ValueError("選択肢は重複しない80件である必要があります")
-    missing = sorted(set(choices) - set(DETAILS))
-    if missing:
-        raise ValueError(f"語句情報がありません: {missing}")
-    idioms = {
-        choice
-        for q, question in enumerate(QUESTIONS, start=1)
-        if q in IDIOM_QUESTIONS
-        for choice in question["choices"]
-    }
-    if idioms != set(CORE_IMAGES):
-        raise ValueError(f"核心イメージの定義が一致しません: {sorted(idioms ^ set(CORE_IMAGES))}")
-
-    meta = {
-        "grade": "英検2級",
-        "round": ROUND_ID,
-        "section": "Reading 大問1（語句空所補充）",
-        "source": "ユーザー提供のChapter 3 模擬テスト第1回原稿を基に構造化。訳・例文・語句情報は学習用に作成",
-        "counts": {"questions": 20, "words": 56, "idioms": 24, "total": 80},
-    }
-    question_data = {
-        "meta": meta,
-        "questions": [{"q": index, **question} for index, question in enumerate(QUESTIONS, start=1)],
-    }
-    words = []
-    idiom_items = []
-    for q, question in enumerate(QUESTIONS, start=1):
-        for index, choice in enumerate(question["choices"]):
-            meaning, pos, example, example_translation = DETAILS[choice]
-            item = {
-                "q": q,
-                "is_answer": index == question["answerIndex"],
-                "meaning": meaning,
-                "example": example,
-                "exampleTranslation": example_translation,
-                "pos": pos,
-            }
-            if q in IDIOM_QUESTIONS:
-                item["type"] = "idiom"
-                item["phrase"] = choice
-                item["coreImage"] = CORE_IMAGES[choice]
-                idiom_items.append(item)
-            else:
-                item["word"] = choice
-                words.append(item)
-    if (len(words), len(idiom_items)) != (56, 24):
-        raise ValueError(f"語句数が想定と違います: words={len(words)}, idioms={len(idiom_items)}")
-    return {"meta": meta, "words": words, "idioms": idiom_items}, question_data
-
-
-def main() -> None:
-    vocab, questions = build()
-    write_json(DATA_DIR / "vocab_2_mock-1.json", vocab)
-    write_json(DATA_DIR / "questions_2_mock-1.json", questions)
-    print("eiken2 mock-1: 20 questions / 80 items (56 words, 24 idioms)")
-
-
 if __name__ == "__main__":
-    main()
+    run_eiken2_mock(ROUND_ID, QUESTIONS, DETAILS, CORE_IMAGES, IDIOM_QUESTIONS)

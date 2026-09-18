@@ -2,17 +2,11 @@
 
 from __future__ import annotations
 
-import json
-import re
-from pathlib import Path
+from lib.set_builders import run_q1_mock_8_9
 
 
-ROOT = Path(__file__).resolve().parents[1]
-DATA_DIR = ROOT / "data"
 ROUND_ID = "mock-9"
-BLANK_RE = re.compile(r"\(\s+\)")
-WORD_RE = re.compile(r"[A-Za-z]+(?:[-'][A-Za-z]+)*")
-
+SOURCE = "ユーザー提供画像（原本表記は模擬テスト第4回）を、依頼により模試第9回として構造化。既存語句との重複を避けるため一部選択肢を置換"
 
 QUESTIONS = [
     {
@@ -293,126 +287,5 @@ CORE_IMAGES = {
 }
 
 
-def write_json(path: Path, value: dict) -> None:
-    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-
-
-def surface_variants(value: str) -> set[str]:
-    base = " ".join(str(value or "").lower().split())
-    variants = {base}
-    if base.endswith("ies") and len(base) > 3:
-        variants.add(base[:-3] + "y")
-    if base.endswith("ied") and len(base) > 3:
-        variants.add(base[:-3] + "y")
-    if base.endswith("es") and len(base) > 3:
-        variants.add(base[:-2])
-    if base.endswith("s") and len(base) > 2:
-        variants.add(base[:-1])
-    if base.endswith("ed") and len(base) > 3:
-        stem = base[:-2]
-        variants.add(stem)
-        if len(stem) > 1 and stem[-1] == stem[-2]:
-            variants.add(stem[:-1])
-        if stem.endswith("i"):
-            variants.add(stem[:-1] + "y")
-        variants.add(stem + "e")
-    if base.endswith("ing") and len(base) > 4:
-        stem = base[:-3]
-        variants.add(stem)
-        if len(stem) > 1 and stem[-1] == stem[-2]:
-            variants.add(stem[:-1])
-        variants.add(stem + "e")
-    return variants
-
-
-def build() -> tuple[dict, dict]:
-    if len(QUESTIONS) != 25:
-        raise ValueError("模試第9回は25問である必要があります")
-
-    choices = [choice for question in QUESTIONS for choice in question["choices"]]
-    if len(choices) != len(set(choices)):
-        raise ValueError("選択肢に重複があります")
-    missing = sorted(set(choices) - set(DETAILS))
-    if missing:
-        raise ValueError(f"語句情報がありません: {missing}")
-
-    seen_surfaces: dict[str, str] = {}
-    seen_examples: dict[str, str] = {}
-    for index, question in enumerate(QUESTIONS, start=1):
-        if len(question["choices"]) != 4 or question["answerIndex"] not in range(4):
-            raise ValueError(f"Q{index}の4択または正答位置が不正です")
-        if len(BLANK_RE.findall(question["stem"])) != 1:
-            raise ValueError(f"Q{index}の空所が1か所ではありません")
-        if any(re.search(rf"\b{re.escape(choice)}\b", question["stem"], flags=re.IGNORECASE) for choice in question["choices"]):
-            raise ValueError(f"Q{index}の選択肢が設問文に含まれています")
-        if re.search(r"\(\s*\)|（\s*）", question["translation"]):
-            raise ValueError(f"Q{index}の和訳に空所記号があります")
-
-    for phrase in choices:
-        if " " in phrase and phrase not in CORE_IMAGES:
-            raise ValueError(f"熟語の核心イメージがありません: {phrase}")
-
-    meta = {
-        "grade": "英検1級",
-        "round": ROUND_ID,
-        "section": "Reading 大問1（語句空所補充）",
-        "source": "ユーザー提供画像（原本表記は模擬テスト第4回）を、依頼により模試第9回として構造化。既存語句との重複を避けるため一部選択肢を置換",
-        "counts": {"words": 84, "idioms": 16, "total": 100},
-    }
-    question_data = {
-        "meta": meta,
-        "questions": [
-            {"q": index, **question}
-            for index, question in enumerate(QUESTIONS, start=1)
-        ],
-    }
-
-    words = []
-    idioms = []
-    for q, question in enumerate(QUESTIONS, start=1):
-        for index, choice in enumerate(question["choices"]):
-            meaning, pos, example, example_translation = DETAILS[choice]
-            if len(WORD_RE.findall(example)) < 8:
-                raise ValueError(f"{choice}の例文が8語未満です")
-            if len(re.findall(re.escape(choice), example, flags=re.IGNORECASE)) != 1:
-                raise ValueError(f"{choice}の例文に見出し語句が1回ありません")
-            example_key = re.sub(re.escape(choice), "( )", example, count=1, flags=re.IGNORECASE)
-            example_key = " ".join(example_key.lower().split())
-            if example_key in seen_examples:
-                raise ValueError(f"例文の骨格が重複しています: {choice} / {seen_examples[example_key]}")
-            seen_examples[example_key] = choice
-            for variant in surface_variants(choice):
-                if variant in seen_surfaces:
-                    raise ValueError(f"同一セット内で語形が重複しています: {choice} / {seen_surfaces[variant]}")
-                seen_surfaces[variant] = choice
-
-            item = {
-                "q": q,
-                "is_answer": index == question["answerIndex"],
-                "meaning": meaning,
-                "example": example,
-                "exampleTranslation": example_translation,
-                "pos": pos,
-            }
-            if " " in choice:
-                item["phrase"] = choice
-                item["coreImage"] = CORE_IMAGES[choice]
-                idioms.append(item)
-            else:
-                item["word"] = choice
-                words.append(item)
-
-    if (len(words), len(idioms)) != (84, 16):
-        raise ValueError(f"語句数が想定と違います: words={len(words)}, idioms={len(idioms)}")
-    return {"meta": meta, "words": words, "idioms": idioms}, question_data
-
-
-def main() -> None:
-    vocab, questions = build()
-    write_json(DATA_DIR / "vocab_1_mock-9.json", vocab)
-    write_json(DATA_DIR / "questions_1_mock-9.json", questions)
-    print("mock-9: 25 questions / 100 items (84 words, 16 idioms)")
-
-
 if __name__ == "__main__":
-    main()
+    run_q1_mock_8_9(ROUND_ID, QUESTIONS, DETAILS, CORE_IMAGES, SOURCE)
