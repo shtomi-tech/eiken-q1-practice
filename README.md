@@ -249,6 +249,8 @@ py -3 scripts/add_example_translations.py
 - `scripts/curate_eikenp2_data.py`: 準2級公式過去問の既存生成JSONへの整合情報の再適用
 - `scripts/q1_pre1_metadata.py`: 準1級の設問文訳・例文補正・出典メタデータの正本
 - `scripts/curate_pre1_data.py`: 準1級の既存生成JSONへの整合情報の再適用
+- `scripts/lib/set_builders.py`: 1級模試第8〜21回・2級模試・準2級模試第2回以降の生成スクリプトが共有する検証・組み立て処理
+- `scripts/verify-builder-output.py`: 生成スクリプトの出力が基準コミットとバイト一致するかの前後比較
 - `scripts/build_q1_mock_1_data.py`: 1級模試第1回の問題・語彙データ生成
 - `scripts/build_q1_mock_2_data.py`: 1級模試第2回の問題・語彙データ生成
 - `scripts/build_q1_mock_3_data.py`: 1級模試第3回の問題・語彙データ生成

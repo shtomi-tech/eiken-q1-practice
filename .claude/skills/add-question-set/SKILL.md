@@ -100,8 +100,12 @@ metadata:
 
 ## 4. ビルドスクリプト
 
-同じ級・同じ種類の**最新の既存スクリプトを型として使う**（例: 1級模試なら `scripts/build_q1_mock_5_data.py`、準2級模試なら最新の `scripts/build_q1_p2_mock_<N>_data.py`）。別の級のスクリプトを固定で流用しない。
+同じ級・同じ種類の**最新の既存スクリプトを型として使う**（例: 1級模試なら最新の `scripts/build_q1_mock_<N>_data.py`、準2級模試なら最新の `scripts/build_q1_p2_mock_<N>_data.py`）。別の級のスクリプトを固定で流用しない。
 1セット1ファイル。命名は `build_q1_<級>_<round>_data.py`。
+
+検証・組み立て処理は `scripts/lib/set_builders.py` に共通化してある（1級模試=`run_q1_mock`、2級模試=`run_eiken2_mock`、準2級模試=`run_p2_mock`）。
+新しいセットのスクリプトは `ROUND_ID`・`QUESTIONS`・`DETAILS`・`CORE_IMAGES` などの定義と、末尾での `run_*` 呼び出しだけにし、関数をコピーしない。
+共通処理を変えたときは `py -3 scripts/verify-builder-output.py --base <変更前のコミット>` を実行し、既存セットの出力が変わらないことを確かめる。
 
 必ずスクリプト側に持たせるもの:
 

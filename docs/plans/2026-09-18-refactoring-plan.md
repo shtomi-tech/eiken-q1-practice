@@ -44,6 +44,13 @@
 - **T1-5** `add-question-set` skill の `AUTHORING.md`/`CHECKS.md` のテンプレートを新形式に更新（新セット追加時に再びコピペが増えないように）。
 - 受入: `python scripts/verify-builder-output.py --base <Phase1着手前のコミット>` が全件一致、`python scripts/audit_question_set.py` と既存 check_*.py が成功。
 
+#### Phase 1 結果（2026-09-18）
+
+- T1-1 分類: 関数部が「回番号・出力ファイル名・source 文言」以外同一だったのは 1級模試第10〜21回（12本）、2級模試第1〜4回、準2級模試第2〜4回、1級模試第8・9回。1級模試第1〜7回・準2級模試第1回・IUHW第1/2回は検証内容や出力（準2級第1回は熟語に coreImage を付けない）が回ごとに異なる＝意図的差分と判断し据え置き。横展開漏れの修正はしていない。
+- T1-2/T1-3: `scripts/lib/set_builders.py` に `run_q1_mock` / `run_eiken2_mock` / `run_p2_mock` / `run_q1_mock_8_9` を集約（21本、約2,900行減）。挙動差は1級模試第8回の件数エラー文言の空白のみ（出力に影響なし）。`verify-builder-output.py` で全31本がバイト一致。
+- T1-4: **NOT_APPLICABLE**。`check_*.py` は回ごとに閾値・検査項目（正答位置分布、会話文数、語数上限など）が異なり、統合は検査を弱めるリスクが利益を上回るため据え置き。
+- T1-5: `add-question-set` SKILL.md と README に共通モジュールと検証手順を追記。README の構成一覧に1級模試第10〜21回が無いのは既存の記載漏れ（範囲外）。
+
 ### Phase 2 — 学習フロー断片の分割（リスク中）
 
 `build-mode-q1.cjs` の `PARTS` に断片を追加するだけで、連結後のコードの**並び以外は変えない**。
