@@ -29,6 +29,12 @@
 - **T0-2** ベースライン採取: `npm test` 成功ログ、全 Python build を一時ディレクトリへ出力したときの `data/` との一致確認手順を `scripts/verify-data-reproducible.*` として用意（`IMPLEMENT`）。
   - 受入: 現状で全 build スクリプトの出力が `data/` と一致するか一覧化。**一致しないスクリプトは記録するだけで直さない**（それ自体が別課題）。
 
+#### Phase 0 結果（2026-09-18, ブランチ `refactor/phase0`）
+
+- T0-1: 未コミット変更を `9164f9f` でコミット。生徒名入りの配布物（`docs/memory-sheets/`、`docs/plans/eiken2-14day-plan-qr_*.html`、`/eiken2-14day-plan.html`）は `.gitignore` に登録。
+- ベースライン `npm test`: **Windows 作業ツリーでは `check-study-plan-ui.cjs:45` で失敗**。`core.autocrlf=true` で CRLF になったソースに対して、LF 前提の複数行文字列 `'studyPlanProgress(\n      "今日"'` を検索しているため。リファクタとは無関係の既存事象（CI の LF 環境では通る想定）。後続の3チェックは個別実行で成功。各フェーズの回帰判定はこの状態を基準にする。
+- T0-2: **生成スクリプト単体では `data/` を再現しない**ことが判明。語彙JSONの `ipa` 等は生成後に別工程で追記されているため（31本中30本で差分）。よって Phase 1 の受入は「`data/` と一致」ではなく **「基準コミットの scripts/ と作業ツリーの scripts/ の出力がバイト一致」** に変更。検証は `python scripts/verify-builder-output.py [--base <commit>] [名前の一部...]`。現状 31/31 一致、1本を改変すると DIFF を検出することを確認済み。
+
 ### Phase 1 — データ生成スクリプトの共通化（効果最大・リスク中）
 
 - **T1-1** 31本の build スクリプトの関数部を相互 diff し、食い違いを分類（バグ修正の横展開漏れ / 級ごとの意図的差分）。結果を本計画に追記（`VERIFY_ONLY`）。
@@ -36,7 +42,7 @@
 - **T1-3** 各 `build_*_data.py` をデータ定義（`ROUND_ID`, `QUESTIONS`, `DETAILS`, `CORE_IMAGES`）＋ `set_builder.run(...)` 呼び出しだけに縮める。**1本ずつ置換し、毎回出力がバイト一致することを確認**。T1-1 で「意図的差分」とされたものはオプション化、「横展開漏れ」はこのタスクでは挙動を保ち、別タスクとして報告。
 - **T1-4** 同様に `check_*_data.py` 系と `load_json`/`read_json` 重複を `scripts/lib/common.py` に集約。
 - **T1-5** `add-question-set` skill の `AUTHORING.md`/`CHECKS.md` のテンプレートを新形式に更新（新セット追加時に再びコピペが増えないように）。
-- 受入: 全 build の出力が `data/` とバイト一致、`python scripts/audit_question_set.py` と既存 check_*.py が成功。
+- 受入: `python scripts/verify-builder-output.py --base <Phase1着手前のコミット>` が全件一致、`python scripts/audit_question_set.py` と既存 check_*.py が成功。
 
 ### Phase 2 — 学習フロー断片の分割（リスク中）
 
