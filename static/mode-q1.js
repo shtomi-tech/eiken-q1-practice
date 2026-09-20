@@ -3421,6 +3421,14 @@ function contextMeaningChoices(item, itemHint = null) {
   }
   const pool = Array.isArray(session.contextPool) ? session.contextPool : session.items;
   const correctMeaning = contextMeaningOf(item, itemHint);
+  const suppliedChoices = Array.isArray(item.choices)
+    ? item.choices.filter((meaning, index, meanings) => meanings.indexOf(meaning) === index)
+    : [];
+  if (suppliedChoices.length === 4 && suppliedChoices.includes(correctMeaning)) {
+    session.contextChoices = shuffle(suppliedChoices);
+    session.contextChoiceTarget = item.target;
+    return session.contextChoices;
+  }
   const distractors = shuffle(pool
     .filter((candidate) => candidate !== item && contextMeaningOf(candidate) && contextMeaningOf(candidate) !== correctMeaning)
     .map((candidate) => contextMeaningOf(candidate))
@@ -3469,7 +3477,10 @@ function renderContext(body) {
       "targetを知らないつもりで、英文の手がかりを組み合わせて意味を推測してください。"),
   );
   const story = el("div", { class: "contextStory" });
-  item.fullEnglish.forEach((sentence, index) => {
+  const displayEnglish = Array.isArray(item.mixedEnglish) && item.mixedEnglish.length === item.fullEnglish.length
+    ? item.mixedEnglish
+    : item.fullEnglish;
+  displayEnglish.forEach((sentence, index) => {
     story.appendChild(el("p", { class: "contextSentence" },
       el("span", { class: "contextSentenceNo" }, String(index + 1)),
       contextTextWithTarget(sentence, item.target),
@@ -3520,6 +3531,9 @@ function renderContext(body) {
       clueList,
       el("p", { class: "label" }, "推測の道筋"),
       el("p", { class: "contextInferencePath" }, item.inferencePath.join(" → ")),
+      item.inferenceExplanation
+        ? el("p", { class: "trans contextInferenceExplanation" }, item.inferenceExplanation)
+        : null,
     );
     card.appendChild(answer);
     card.appendChild(el("div", { class: "actions contextActions" },
