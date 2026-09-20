@@ -450,6 +450,15 @@ function saveResume() {
     practiceAnswered: Boolean(session.practiceAnswered),
     practiceResult: session.practiceResult,
     checkChoices: session._checkChoices || null,
+    contextIdx: session.contextIdx || 0,
+    contextBeforeFlash: Boolean(session.contextBeforeFlash),
+    contextOrder: (session.contextOrder || []).map(itemSnapshot),
+    contextRevealed: Boolean(session.contextRevealed),
+    contextGuess: session.contextGuess || "",
+    contextChoices: session.contextChoices || null,
+    contextChoiceTarget: session.contextChoiceTarget || "",
+    contextPicked: session.contextPicked,
+    contextCorrect: session.contextCorrect,
     responseElapsedLog: session.responseElapsedLog || [],
     meaningRtLog: session.meaningRtLog || [],
   };
@@ -489,6 +498,7 @@ async function restoreSession() {
   }
   const items = (saved.items || []).map((s) => resolveItem(s, pool)).filter(Boolean);
   let checkOrder = (saved.checkOrder || []).map((s) => resolveItem(s, pool)).filter(Boolean);
+  const contextOrder = (saved.contextOrder || []).map((s) => resolveItem(s, pool)).filter(Boolean);
   const meaningWrongItems = (saved.meaningWrongItems || []).map((s) => resolveItem(s, pool)).filter(Boolean);
   if (!resumeDataSupported(saved, items, checkOrder, meaningWrongItems)) {
     resumeRecoveryMessage = "途中記録は保持していますが、現在の問題データと一致しないため自動再開できません。第1問から再開してください。";
@@ -506,6 +516,8 @@ async function restoreSession() {
     q: saved.q == null ? null : Number(saved.q),
     items,
     checkOrder,
+    contextOrder,
+    contextPool: state.contextItems,
     meaningWrongItems,
     meaningWrongChecked: Array.isArray(saved.meaningWrongChecked) ? saved.meaningWrongChecked : [],
     _checkChoices: saved.checkChoices || null,
@@ -515,6 +527,10 @@ async function restoreSession() {
       : (Array.isArray(saved.audioElapsedLog) ? saved.audioElapsedLog : []),
     meaningRtLog: Array.isArray(saved.meaningRtLog) ? saved.meaningRtLog : [],
   };
+  if (session.mode === "learn" && session.stage === "context" && !session.contextOrder.length) {
+    session.contextOrder = items.filter((item) => contextItemFor(item));
+    session.contextBeforeFlash = true;
+  }
   resumeRecoveryMessage = "";
   resumeUnavailable = false;
   renderSession();

@@ -30,7 +30,8 @@ assert.match(spec, /eiken_q1_progress_<datasetId>/, "進捗保存境界を仕様
 assert.match(spec, /reading1:<q>/, "旧準1級移行の入力形式を仕様に記録する必要があります");
 
 assert.ok(startLearnBody.includes('mode: "learn"'), "通常学習はlearnモードで開始する必要があります");
-assert.ok(startLearnBody.includes('stage: "flash"'), "通常学習はflashから開始する必要があります");
+assert.ok(startLearnBody.includes('stage: "context"'), "通常学習は文脈推測から開始する必要があります");
+assert.ok(startLearnBody.includes("contextBeforeFlash"), "通常学習は暗記カード前の文脈推測状態を保持する必要があります");
 assert.ok(startLearnBody.includes("checkOrder"), "通常学習は意味確認順を保存する必要があります");
 assert.ok(startMeaningBody.includes('mode: "meaning"'), "意味復習はmeaningモードで開始する必要があります");
 assert.ok(startMeaningBody.includes('stage: "check"'), "意味復習はcheckから開始する必要があります");

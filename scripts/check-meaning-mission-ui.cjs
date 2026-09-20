@@ -100,7 +100,7 @@ assert.ok(
 );
 
 // --- 意味だけ復習の誤答見直し ---
-assert.ok(js.includes('meaning: ["check", "meaningReview", "done"]') && js.includes('return "meaningReview"'), "意味復習の誤答時に見直しstageへ遷移できる必要がある");
+assert.ok(js.includes('meaning: ["context", "check", "meaningReview", "done"]') && js.includes('return "meaningReview"'), "意味復習の誤答時に見直しstageへ遷移できる必要がある");
 assert.ok(meaningWrongReviewBody.includes("buildFlashCard"), "誤答した単語・熟語を暗記カードで見直せる必要がある");
 assert.ok(meaningWrongReviewBody.includes("すべて確認すると結果へ"), "全件確認後に結果へ進む導線が必要");
 assert.ok(meaningWrongReviewBody.includes("saveResume"), "誤答語句の確認状態を途中保存する必要がある");

@@ -299,12 +299,13 @@ const state = {
   questions: {},  // q -> {stem, choices, answerIndex, translation}
   qList: [],      // [1..n]
   meaningPool: { word: [], idiom: [] }, // ダミー用の意味プール
+  contextItems: [], // 現在セットのContext Discovery項目
   progress: { units: {} },
 };
 
 const RESUME_STAGE_RULES = {
-  learn: ["flash", "check", "practice", "done"],
-  meaning: ["check", "meaningReview", "done"],
+  learn: ["flash", "context", "check", "practice", "done"],
+  meaning: ["context", "check", "meaningReview", "done"],
   final: ["check", "done"],
 };
 const RESUMABLE_MODES = new Set(Object.keys(RESUME_STAGE_RULES));

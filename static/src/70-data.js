@@ -9,6 +9,7 @@ async function loadData(datasetId = state.datasetId) {
   state.questions = {};
   state.qList = [];
   state.meaningPool = { word: [], idiom: [] };
+  state.contextItems = [];
   state.progress = loadProgress(datasetId);
   const savedResume = state.progress.resume;
   if (savedResume && (!RESUMABLE_MODES.has(savedResume.mode) || !resumeStageAllowed(savedResume.mode, savedResume.stage))) {
@@ -18,9 +19,18 @@ async function loadData(datasetId = state.datasetId) {
   writeStored(datasetStorageKey(), datasetId);
 
   const current = dataset();
-  const [vocab, qs] = await Promise.all([
+  const contextPromise = current.contextUrl
+    ? fetch(current.contextUrl, { cache: "no-store" })
+      .then((r) => {
+        if (!r.ok) throw new Error(`context data: HTTP ${r.status}`);
+        return r.json();
+      })
+      .catch(() => null)
+    : Promise.resolve(null);
+  const [vocab, qs, contextPayload] = await Promise.all([
     fetch(current.vocabUrl, { cache: "no-store" }).then((r) => r.json()),
     fetch(current.questionsUrl, { cache: "no-store" }).then((r) => r.json()),
+    contextPromise,
   ]);
 
   const words = (vocab.words || []).map((w) => ({ ...w, type: "word" }));
@@ -32,6 +42,10 @@ async function loadData(datasetId = state.datasetId) {
     state.meaningPool[it.type].push(learningMeaningOf(it));
   }
   for (const q of qs.questions) state.questions[q.q] = q;
+
+  state.contextItems = Array.isArray(contextPayload?.contexts)
+    ? contextPayload.contexts
+    : [];
 
   state.qList = Object.keys(state.itemsByQ)
     .map(Number)

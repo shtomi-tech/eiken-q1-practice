@@ -8,6 +8,7 @@ const ROOT = path.resolve(__dirname, "..");
 const readJson = (file) => JSON.parse(fs.readFileSync(path.join(ROOT, file), "utf8"));
 const manifest = readJson("data/manifest.json");
 const vocab = readJson("data/vocab_2026-1.json");
+const lemmas = readJson("data/lemmas.json");
 const context = readJson("data/context_2026-1.json");
 const homeSource = fs.readFileSync(path.join(ROOT, "static/src/80-home.js"), "utf8");
 const sessionSource = fs.readFileSync(path.join(ROOT, "static/src/90-learn-session.js"), "utf8");
@@ -25,6 +26,13 @@ assert.equal(vocabItems.length, 68, "基準セットの語句数が不正です"
 assert.equal(contexts.length, vocabItems.length, "語句と文脈の件数が一致しません");
 
 const vocabTargets = new Set(vocabItems.map((item) => item.word || item.phrase));
+const cardMeaningByTarget = new Map(vocabItems.map((item) => {
+  const surface = item.word || item.phrase;
+  const lemma = item.word
+    ? (lemmas.lemmas?.[String(surface).toLowerCase()] || surface)
+    : surface;
+  return [surface, lemmas.entries?.[lemma]?.meaning || item.meaning];
+}));
 const contextTargets = new Set();
 const japanese = /[\u3040-\u30ff\u3400-\u9fff]/;
 const countOf = (text, needle) => {
@@ -37,6 +45,8 @@ for (const item of contexts) {
   assert.ok(!contextTargets.has(item.target), `文脈が重複しています: ${item.target}`);
   contextTargets.add(item.target);
   assert.ok(vocabTargets.has(item.target), `基準セットにない語句です: ${item.target}`);
+  assert.equal(item.meaning, cardMeaningByTarget.get(item.target),
+    `文脈の意味は暗記カードの意味と一致させてください: ${item.target}`);
   assert.ok(Array.isArray(item.fullEnglish) && item.fullEnglish.length >= 2 && item.fullEnglish.length <= 3,
     `英文は2〜3文にしてください: ${item.target}`);
   const story = item.fullEnglish.join(" ");
@@ -59,8 +69,10 @@ assert.match(homeSource, /function contextDiscoveryCard\(\)/, "ホームに文�
 assert.match(homeSource, /startContextPractice\(\)/, "ホームから文脈推測を開始できません");
 assert.match(sessionSource, /function startContextPractice\(\)/, "文脈推測セッションの開始処理が必要です");
 assert.match(sessionSource, /function renderContext\(body\)/, "文脈推測画面の描画処理が必要です");
-assert.match(sessionSource, /function contextMeaningChoices\(item\)/, "文脈推測の4択生成処理が必要です");
+assert.match(sessionSource, /function contextMeaningChoices\(item/, "文脈推測の4択生成処理が必要です");
 assert.match(sessionSource, /contextChoiceBtn/, "文脈推測の意味4択ボタンが必要です");
 assert.match(sessionSource, /contextPicked/, "文脈推測の選択結果を保持する必要があります");
 assert.match(sessionSource, /contextClues/, "文脈の手がかり表示が必要です");
+assert.match(sessionSource, /contextMeaningOf\(context, itemHint/, "文脈の意味は暗記カードの意味を参照する必要があります");
+assert.match(sessionSource, /enterContextOrCheck\(\)/, "既存の意味4択の前に文脈推測を挿入する必要があります");
 console.log("context discovery data and UI contract: OK (68 contexts)");
