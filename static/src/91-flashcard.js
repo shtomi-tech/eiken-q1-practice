@@ -26,6 +26,9 @@ function buildFlashCard(item) {
   head.appendChild(headContent);
   card.appendChild(head);
 
+  const contextReflection = flashContextReflection(item);
+  if (contextReflection) card.appendChild(contextReflection);
+
   const inner = el("div", { class: "flashBody" });
   inner.appendChild(flashRow("意味", learning.meaning || item.meaning, "flashMeaning"));
   if (item.coreImage) {
@@ -37,6 +40,27 @@ function buildFlashCard(item) {
   if (item.example) inner.appendChild(flashExampleRow(item));
   card.appendChild(inner);
   return card;
+}
+
+function flashContextReflection(item) {
+  if (!session || session.mode !== "learn") return null;
+  const result = session.contextResults?.[itemKeyOf(item)];
+  if (!result) return null;
+  const reflection = el("div", { class: "flashContextReflection", role: "status" },
+    el("p", { class: "flashContextReflectionLabel" }, "文脈からの推測"),
+    el("p", { class: "flashContextReflectionGuess" },
+      "あなたの推測：",
+      el("strong", {}, result.pickedMeaning),
+      result.correct ? " ✓" : "",
+    ),
+  );
+  if (!result.correct) {
+    reflection.appendChild(el("p", { class: "flashContextReflectionAnswer" },
+      "正しい意味：",
+      el("strong", {}, result.correctMeaning),
+    ));
+  }
+  return reflection;
 }
 
 function scrollFlashCardIntoView() {
@@ -172,10 +196,18 @@ function setupFlashGesture(card, canGoBack, canGoForward) {
     animateFlashGesture(card, exitTarget, velocity, () => {
       if (!card.isConnected) return;
       if (direction > 0) {
-        if (session.flashIdx === session.items.length - 1) session.stage = "check";
+        if (session.mode === "learn") {
+          if (session.learnIdx === session.items.length - 1) {
+            session.stage = "check";
+            session.learnPhase = null;
+          } else {
+            setLearnItem(session.learnIdx + 1);
+          }
+        } else if (session.flashIdx === session.items.length - 1) session.stage = "check";
         else session.flashIdx++;
       } else {
-        session.flashIdx = Math.max(0, session.flashIdx - 1);
+        if (session.mode === "learn") setLearnItem(Math.max(0, session.learnIdx - 1), "flash");
+        else session.flashIdx = Math.max(0, session.flashIdx - 1);
       }
       renderSession();
       scrollFlashCardIntoView();
@@ -293,11 +325,13 @@ function flashCoreImage(item) {
 
 function renderFlash(body) {
   const items = session.items;
-  const item = items[session.flashIdx];
+  const isLearn = session.mode === "learn";
+  const index = isLearn ? session.learnIdx : session.flashIdx;
+  const item = items[index];
 
   const flash = buildFlashCard(item);
   // 最後のカードから左へ送る操作は「意味チェックへ進む」に対応する。
-  setupFlashGesture(flash, session.flashIdx > 0, true);
+  setupFlashGesture(flash, index > 0, true);
   body.appendChild(flash);
 
   const nav = el("div", { class: "actions flashNav" });
@@ -309,18 +343,19 @@ function renderFlash(body) {
         "aria-disabled": "true",
       }
     : attrs;
-  const canGoBack = session.flashIdx > 0;
+  const canGoBack = index > 0;
   const prevAttrs = guardedAttrs(canGoBack ? { class: "ghost" } : { class: "ghost", disabled: "disabled" });
   prevAttrs.onclick = () => {
     if (!canGoBack || flashNavLocked()) return;
     armFlashNavGuard();
-    session.flashIdx--;
+    if (isLearn) setLearnItem(index - 1, "flash");
+    else session.flashIdx--;
     renderSession();
     scrollFlashCardIntoView();
   };
   const previousButton = el("button", prevAttrs, "← 前のカード");
   nav.appendChild(previousButton);
-  const last = session.flashIdx === items.length - 1;
+  const last = index === items.length - 1;
   const nextButton = el("button", guardedAttrs({
     class: "cta",
     onclick: () => {
@@ -332,15 +367,21 @@ function renderFlash(body) {
           renderHome();
           return;
         }
+        if (isLearn) {
+          advanceLearnFromFlash();
+          return;
+        }
         session.stage = "check";
         renderSession();
-      }
-      else { session.flashIdx++; renderSession(); }
+      } else if (isLearn) {
+        advanceLearnFromFlash();
+        return;
+      } else { session.flashIdx++; renderSession(); }
       scrollFlashCardIntoView();
     },
-  }), last ? "意味チェックへ進む →" : "次のカード →");
+  }), last ? "意味チェックへ進む →" : "次の語句へ →");
   nav.appendChild(el("span", { class: "flashNavCounter", "aria-live": "polite" },
-    `カード ${session.flashIdx + 1} / ${items.length}`));
+    `カード ${index + 1} / ${items.length}`));
   nav.appendChild(nextButton);
   body.appendChild(el("div", { class: "sessionActionBar" }, nav));
 

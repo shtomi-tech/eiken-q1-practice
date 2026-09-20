@@ -709,11 +709,18 @@ function resumeQuestionSupported(value) {
   const q = Number(value);
   return Number.isInteger(q) && Array.isArray(state.itemsByQ[q]) && state.itemsByQ[q].length > 0;
 }
-function resumeDataSupported(saved, items, checkOrder, meaningWrongItems = []) {
+function resumeDataSupported(saved, items, checkOrder, meaningWrongItems = [], contextOrder = []) {
   if (!resumeStageAllowed(saved.mode, saved.stage)) return false;
   if (saved.mode === "learn") {
     if (!resumeQuestionSupported(saved.q) || !items.length) return false;
-    if (saved.stage === "flash") return resumeIndexSupported(saved.flashIdx, items.length);
+    if (saved.stage === "context") {
+      if (Number.isInteger(Number(saved.learnIdx))) return resumeIndexSupported(saved.learnIdx, items.length);
+      return contextOrder.length > 0 && resumeIndexSupported(saved.contextIdx, contextOrder.length);
+    }
+    if (saved.stage === "flash") {
+      const index = Number.isInteger(Number(saved.learnIdx)) ? saved.learnIdx : saved.flashIdx;
+      return resumeIndexSupported(index, items.length);
+    }
     if (["check", "practice"].includes(saved.stage) && !checkOrder.length) return false;
     if (saved.stage === "check" && !resumeIndexSupported(saved.checkIdx, checkOrder.length)) return false;
     return true;
@@ -732,7 +739,8 @@ function resumeDescription(resume) {
   if (!resume) return "";
   if (resume.mode === "learn") {
     const stage = {
-      flash: `STEP 1 暗記カード ${Number(resume.flashIdx || 0) + 1}/${resume.items?.length || 4}`,
+      context: `STEP 1 文脈から発見 ${Number(resume.learnIdx ?? resume.contextIdx ?? 0) + 1}/${resume.items?.length || 4}`,
+      flash: `STEP 1 意味を覚える ${Number(resume.learnIdx ?? resume.flashIdx ?? 0) + 1}/${resume.items?.length || 4}`,
       check: `STEP 2 4語句の意味確認 ${Number(resume.checkIdx || 0) + 1}/${resume.checkOrder?.length || 4}`,
       practice: "STEP 3 本番形式",
       done: "完了確認",
@@ -765,6 +773,8 @@ function saveResume() {
     mode: session.mode,
     q: session.q,
     stage: session.stage,
+    learnIdx: session.learnIdx,
+    learnPhase: session.learnPhase,
     flashIdx: session.flashIdx,
     checkIdx: session.checkIdx,
     checkAnswered: Boolean(session.checkAnswered),
@@ -790,6 +800,10 @@ function saveResume() {
     contextChoiceTarget: session.contextChoiceTarget || "",
     contextPicked: session.contextPicked,
     contextCorrect: session.contextCorrect,
+    contextResults: session.contextResults || {},
+    contextAvailableTotal: session.contextAvailableTotal || 0,
+    contextTotal: session.contextTotal || 0,
+    contextCorrectCount: session.contextCorrectCount || 0,
     responseElapsedLog: session.responseElapsedLog || [],
     meaningRtLog: session.meaningRtLog || [],
   };
@@ -804,6 +818,35 @@ function clearResume() {
   resumeUnavailable = false;
   saveProgress();
 }
+
+function normalizeLearnSessionResume() {
+  if (!session || session.mode !== "learn") return;
+  const items = session.items || [];
+  const legacyContextItem = session.contextOrder?.[Number(session.contextIdx) || 0];
+  let learnIdx = Number(session.learnIdx);
+  if (!Number.isInteger(learnIdx)) {
+    learnIdx = session.stage === "context" && legacyContextItem
+      ? items.findIndex((item) => itemKeyOf(item) === itemKeyOf(legacyContextItem))
+      : Number(session.flashIdx);
+  }
+  if (!Number.isInteger(learnIdx) || learnIdx < 0 || learnIdx >= items.length) learnIdx = 0;
+  session.learnIdx = learnIdx;
+  session.flashIdx = learnIdx;
+  session.contextResults = session.contextResults && typeof session.contextResults === "object"
+    ? session.contextResults
+    : {};
+  session.contextAvailableTotal = items.filter((item) => contextItemFor(item)).length;
+  const results = Object.values(session.contextResults);
+  session.contextTotal = results.length;
+  session.contextCorrectCount = results.filter((result) => result.correct).length;
+  if (session.stage === "context" && contextItemFor(items[learnIdx])) {
+    session.learnPhase = "context";
+  } else if (session.stage === "context" || session.stage === "flash") {
+    session.learnPhase = "flash";
+    session.stage = "flash";
+  }
+}
+
 async function restoreSession() {
   const saved = state.progress.resume;
   if (!saved || !saved.mode) return false;
@@ -831,7 +874,7 @@ async function restoreSession() {
   let checkOrder = (saved.checkOrder || []).map((s) => resolveItem(s, pool)).filter(Boolean);
   const contextOrder = (saved.contextOrder || []).map((s) => resolveItem(s, pool)).filter(Boolean);
   const meaningWrongItems = (saved.meaningWrongItems || []).map((s) => resolveItem(s, pool)).filter(Boolean);
-  if (!resumeDataSupported(saved, items, checkOrder, meaningWrongItems)) {
+  if (!resumeDataSupported(saved, items, checkOrder, meaningWrongItems, contextOrder)) {
     resumeRecoveryMessage = "途中記録は保持していますが、現在の問題データと一致しないため自動再開できません。第1問から再開してください。";
     resumeUnavailable = true;
     return false;
@@ -849,6 +892,7 @@ async function restoreSession() {
     checkOrder,
     contextOrder,
     contextPool: state.contextItems,
+    contextResults: saved.contextResults && typeof saved.contextResults === "object" ? saved.contextResults : {},
     meaningWrongItems,
     meaningWrongChecked: Array.isArray(saved.meaningWrongChecked) ? saved.meaningWrongChecked : [],
     _checkChoices: saved.checkChoices || null,
@@ -858,10 +902,7 @@ async function restoreSession() {
       : (Array.isArray(saved.audioElapsedLog) ? saved.audioElapsedLog : []),
     meaningRtLog: Array.isArray(saved.meaningRtLog) ? saved.meaningRtLog : [],
   };
-  if (session.mode === "learn" && session.stage === "context" && !session.contextOrder.length) {
-    session.contextOrder = items.filter((item) => contextItemFor(item));
-    session.contextBeforeFlash = true;
-  }
+  if (session.mode === "learn") normalizeLearnSessionResume();
   resumeRecoveryMessage = "";
   resumeUnavailable = false;
   renderSession();
@@ -2162,8 +2203,8 @@ function renderHomeContent() {
   if (isFirstVisit) {
     home.appendChild(el("section", { class: "card hero" },
       el("p", { class: "label" }, "学習の流れ"),
-      el("h2", {}, `${datasetSectionName()}の語句を「覚えてから解く」`),
-      el("p", { class: "hint" }, "各設問の4つの選択肢を、意味・補足情報で覚える → 意味を確認 → 本番形式で解く、の3ステップ。"),
+      el("h2", {}, `${datasetSectionName()}の語句を「発見して→覚えて→使う」`),
+      el("p", { class: "hint" }, "文脈から意味を発見 → 暗記カードで整理 → 意味を思い出す → 本番形式で使う、の学習サイクル。"),
     ));
   }
 
@@ -2223,7 +2264,7 @@ function renderHomeContent() {
     primary = {
       label: `第${nextQ}問を学習する`,
       // 初回訪問はheroで同じ3ステップを説明済みのため、ここでは重複させない
-      why: isFirstVisit ? "" : "暗記カード → 意味確認 → 本番形式の3ステップで進みます。",
+      why: isFirstVisit ? "" : "文脈から発見 → 暗記カード → 意味確認 → 本番形式の学習サイクルで進みます。",
       onclick: () => startLearn(nextQ),
     };
   } else if (hasMeaningDue) {
@@ -2930,7 +2971,7 @@ function finalUnlocked() {
 }
 /* ============================================================
    LEARN FLOW (per question)
-   stages: flash -> check -> practice -> done
+   stages: context/flash (one word at a time) -> check -> practice -> done
    contextLearn trial: context -> flash
    ============================================================ */
 let session = null;
@@ -2945,20 +2986,70 @@ function startLearn(q) {
     renderHome();
     return false;
   }
+  const orderedItems = shuffle(items);
   session = {
     mode: "learn",
     q,
-    items: shuffle(items),
+    items: orderedItems,
     stage: "flash",
+    learnIdx: 0,
+    learnPhase: "flash",
     flashIdx: 0,
-    checkOrder: shuffle(items),
+    checkOrder: shuffle(orderedItems),
     checkIdx: 0,
     checkAnswered: false,
     meaningCorrect: 0,
+    contextPool: state.contextItems,
+    contextResults: {},
+    contextAvailableTotal: 0,
+    contextTotal: 0,
+    contextCorrectCount: 0,
+    contextRevealed: false,
+    contextChoices: null,
+    contextChoiceTarget: "",
+    contextPicked: null,
+    contextCorrect: null,
   };
+  session.contextAvailableTotal = session.items.filter((item) => contextItemFor(item)).length;
+  session.learnPhase = session.contextAvailableTotal > 0 && contextItemFor(session.items[0])
+    ? "context"
+    : "flash";
+  session.stage = session.learnPhase;
   renderSession();
   resetSessionScroll();
   return true;
+}
+
+function setLearnItem(index, phase = null) {
+  session.learnIdx = index;
+  session.flashIdx = index;
+  const item = session.items[index];
+  const nextPhase = phase || (contextItemFor(item) ? "context" : "flash");
+  session.learnPhase = nextPhase;
+  session.stage = nextPhase;
+  if (nextPhase === "context") resetContextState();
+}
+
+function enterLearnFlash() {
+  session.learnPhase = "flash";
+  session.stage = "flash";
+  session.flashIdx = session.learnIdx;
+  resetContextState();
+}
+
+function advanceLearnFromFlash() {
+  if (session.learnIdx >= session.items.length - 1) {
+    session.stage = "check";
+    session.learnPhase = null;
+    session.checkIdx = 0;
+    session.checkAnswered = false;
+    session._checkChoices = null;
+    renderSession();
+    return;
+  }
+  setLearnItem(session.learnIdx + 1);
+  renderSession();
+  resetSessionScroll();
 }
 
 // 語句の進捗を、その語句が属する回（item._datasetId、無ければ現在の回）から読み取る。
@@ -3174,6 +3265,20 @@ function resetContextState() {
   session.contextCorrect = null;
 }
 
+function recordLearnContextResult(item, pickedMeaning, correctMeaning) {
+  if (!session || session.mode !== "learn" || !item) return;
+  const key = itemKeyOf(item);
+  if (!session.contextResults || typeof session.contextResults !== "object") session.contextResults = {};
+  session.contextResults[key] = {
+    pickedMeaning,
+    correctMeaning,
+    correct: pickedMeaning === correctMeaning,
+  };
+  const results = Object.values(session.contextResults);
+  session.contextTotal = results.length;
+  session.contextCorrectCount = results.filter((result) => result.correct).length;
+}
+
 function enterContextOrCheck() {
   const item = session?.checkOrder?.[session.checkIdx];
   session.stage = shouldShowContextBefore(item) ? "context" : "check";
@@ -3235,6 +3340,7 @@ function renderSession() {
   // stage bar
   if (isFinal) panel.appendChild(finalBar());
   else if (isContext) panel.appendChild(contextProgressBar());
+  else if (session.mode === "learn" && session.stage === "flash") panel.appendChild(contextProgressBar());
   else if (isMeaning) panel.appendChild(meaningBar());
   else panel.appendChild(stageBar(session.stage));
   // 意味だけ復習・最終チェックは、それぞれ meaningBar/finalBar に位置・正誤数を集約する。
@@ -3269,6 +3375,12 @@ function focusSessionContext() {
 }
 
 function contextProgressBar() {
+  if (session.mode === "learn") {
+    return el("div", { class: "stageBar contextProgressBar" },
+      el("div", { class: "stagePill active" }, `${session.learnIdx + 1} / ${session.items.length}語句`),
+      el("div", { class: "stagePill" }, session.stage === "context" ? "文脈から発見" : "意味を覚える"),
+    );
+  }
   const integrated = session.mode !== "context";
   const beforeFlash = integrated && session.contextBeforeFlash;
   const total = beforeFlash
@@ -3322,19 +3434,31 @@ function contextMeaningChoices(item, itemHint = null) {
 }
 
 function renderContext(body) {
-  const integrated = session.mode !== "context";
-  const beforeFlash = integrated && session.contextBeforeFlash;
-  const sourceItem = integrated
+  const isStandalone = session.mode === "context";
+  const isLearn = session.mode === "learn";
+  const integrated = !isStandalone;
+  const beforeFlash = isLearn || (integrated && session.contextBeforeFlash);
+  const sourceItem = isLearn
+    ? session.items[session.learnIdx]
+    : integrated
     ? (beforeFlash ? session.contextOrder[session.contextIdx] : session.checkOrder[session.checkIdx])
     : null;
-  const item = integrated ? contextItemFor(sourceItem) : session.items[session.contextIdx];
+  const item = isLearn || integrated ? contextItemFor(sourceItem) : session.items[session.contextIdx];
   if (!item) {
-    session.stage = "check";
-    renderSession();
+    if (isLearn) {
+      enterLearnFlash();
+      renderSession();
+      resetSessionScroll();
+    } else {
+      session.stage = "check";
+      renderSession();
+    }
     return;
   }
   const correctMeaning = contextMeaningOf(item, sourceItem);
-  const last = session.mode === "context"
+  const last = isLearn
+    ? false
+    : isStandalone
     ? session.contextIdx === session.items.length - 1
     : (beforeFlash ? session.contextIdx === session.contextOrder.length - 1 : true);
   const choices = contextMeaningChoices(item, sourceItem);
@@ -3366,6 +3490,7 @@ function renderContext(body) {
           session.contextPicked = meaning;
           session.contextCorrect = meaning === correctMeaning;
           session.contextRevealed = true;
+          if (isLearn) recordLearnContextResult(sourceItem, meaning, correctMeaning);
           renderSession();
         },
       },
@@ -3382,7 +3507,7 @@ function renderContext(body) {
       ));
     });
     card.appendChild(el("div", {
-      class: `feedback contextResult ${session.contextCorrect ? "ok" : "ng"}`,
+      class: `feedback contextResult ${isLearn ? "contextNeutral" : (session.contextCorrect ? "ok" : "ng")}`,
       role: "status",
       "aria-live": "polite",
     },
@@ -3404,6 +3529,12 @@ function renderContext(body) {
         class: "cta",
         type: "button",
         onclick: () => {
+          if (isLearn) {
+            enterLearnFlash();
+            renderSession();
+            resetSessionScroll();
+            return;
+          }
           if (integrated && beforeFlash) {
             if (last) {
               session.contextBeforeFlash = false;
@@ -3435,7 +3566,7 @@ function renderContext(body) {
           session.contextCorrect = null;
           renderSession();
         },
-      }, beforeFlash ? (last ? "暗記カードへ →" : "次の語句へ →")
+      }, isLearn ? "この単語を覚える →" : beforeFlash ? (last ? "暗記カードへ →" : "次の語句へ →")
         : (integrated ? "意味4択へ →" : (last ? "文脈推測を終える" : "次の語句へ →"))),
     ));
   }
@@ -3444,6 +3575,7 @@ function renderContext(body) {
 
 function sessionLabel(q, isIdiom, isMeaning, isFinal) {
   if (isFinal) return `最終チェック ${session.checkIdx + 1} / ${session.checkOrder.length}`;
+  if (session?.mode === "learn" && session?.stage === "context") return `第${q}問 ・ 文脈から発見`;
   if (session?.mode === "context" || session?.stage === "context") return "文脈から推測";
   if (isMeaning) {
     // 位置「n / m」は meaningBar が持つ。ここでは種別名だけを出して重複を避ける。
@@ -3455,15 +3587,18 @@ function sessionLabel(q, isIdiom, isMeaning, isFinal) {
 function stageTitle(stage) {
   if (session && session.mode === "final") return `最終チェック${session.checkOrder.length}問`;
   if (session && session.mode === "meaning" && session.stage === "meaningReview") return "間違えた語句を見直す";
+  if (session && session.mode === "context") return `文脈推測 ${session.contextIdx + 1} / ${session.items.length}`;
+  if (session && session.mode === "learn" && session.stage === "context") {
+    return `STEP 1　文脈から発見（${session.learnIdx + 1} / ${session.items.length}）`;
+  }
   if (session && session.stage === "context") {
     const current = session.contextBeforeFlash ? session.contextIdx + 1 : session.checkIdx + 1;
     const total = session.contextBeforeFlash ? session.contextOrder.length : session.checkOrder.length;
     return `文脈から推測（${current} / ${total}）`;
   }
   if (session && session.mode === "meaning") return `意味だけの復習（最大${MEANING_SESSION_SIZE}語句）`;
-  if (session && session.mode === "context") return `文脈推測 ${session.contextIdx + 1} / ${session.items.length}`;
   return {
-    flash: "STEP 1　覚える（暗記カード）",
+    flash: session?.mode === "learn" ? "STEP 1　意味を覚える（暗記カード）" : "STEP 1　覚える（暗記カード）",
     check: "STEP 2　確かめる（4語句の意味確認）",
     practice: "STEP 3　解く（本番形式）",
     done: "完了",
@@ -3609,6 +3744,9 @@ function buildFlashCard(item) {
   head.appendChild(headContent);
   card.appendChild(head);
 
+  const contextReflection = flashContextReflection(item);
+  if (contextReflection) card.appendChild(contextReflection);
+
   const inner = el("div", { class: "flashBody" });
   inner.appendChild(flashRow("意味", learning.meaning || item.meaning, "flashMeaning"));
   if (item.coreImage) {
@@ -3620,6 +3758,27 @@ function buildFlashCard(item) {
   if (item.example) inner.appendChild(flashExampleRow(item));
   card.appendChild(inner);
   return card;
+}
+
+function flashContextReflection(item) {
+  if (!session || session.mode !== "learn") return null;
+  const result = session.contextResults?.[itemKeyOf(item)];
+  if (!result) return null;
+  const reflection = el("div", { class: "flashContextReflection", role: "status" },
+    el("p", { class: "flashContextReflectionLabel" }, "文脈からの推測"),
+    el("p", { class: "flashContextReflectionGuess" },
+      "あなたの推測：",
+      el("strong", {}, result.pickedMeaning),
+      result.correct ? " ✓" : "",
+    ),
+  );
+  if (!result.correct) {
+    reflection.appendChild(el("p", { class: "flashContextReflectionAnswer" },
+      "正しい意味：",
+      el("strong", {}, result.correctMeaning),
+    ));
+  }
+  return reflection;
 }
 
 function scrollFlashCardIntoView() {
@@ -3755,10 +3914,18 @@ function setupFlashGesture(card, canGoBack, canGoForward) {
     animateFlashGesture(card, exitTarget, velocity, () => {
       if (!card.isConnected) return;
       if (direction > 0) {
-        if (session.flashIdx === session.items.length - 1) session.stage = "check";
+        if (session.mode === "learn") {
+          if (session.learnIdx === session.items.length - 1) {
+            session.stage = "check";
+            session.learnPhase = null;
+          } else {
+            setLearnItem(session.learnIdx + 1);
+          }
+        } else if (session.flashIdx === session.items.length - 1) session.stage = "check";
         else session.flashIdx++;
       } else {
-        session.flashIdx = Math.max(0, session.flashIdx - 1);
+        if (session.mode === "learn") setLearnItem(Math.max(0, session.learnIdx - 1), "flash");
+        else session.flashIdx = Math.max(0, session.flashIdx - 1);
       }
       renderSession();
       scrollFlashCardIntoView();
@@ -3876,11 +4043,13 @@ function flashCoreImage(item) {
 
 function renderFlash(body) {
   const items = session.items;
-  const item = items[session.flashIdx];
+  const isLearn = session.mode === "learn";
+  const index = isLearn ? session.learnIdx : session.flashIdx;
+  const item = items[index];
 
   const flash = buildFlashCard(item);
   // 最後のカードから左へ送る操作は「意味チェックへ進む」に対応する。
-  setupFlashGesture(flash, session.flashIdx > 0, true);
+  setupFlashGesture(flash, index > 0, true);
   body.appendChild(flash);
 
   const nav = el("div", { class: "actions flashNav" });
@@ -3892,18 +4061,19 @@ function renderFlash(body) {
         "aria-disabled": "true",
       }
     : attrs;
-  const canGoBack = session.flashIdx > 0;
+  const canGoBack = index > 0;
   const prevAttrs = guardedAttrs(canGoBack ? { class: "ghost" } : { class: "ghost", disabled: "disabled" });
   prevAttrs.onclick = () => {
     if (!canGoBack || flashNavLocked()) return;
     armFlashNavGuard();
-    session.flashIdx--;
+    if (isLearn) setLearnItem(index - 1, "flash");
+    else session.flashIdx--;
     renderSession();
     scrollFlashCardIntoView();
   };
   const previousButton = el("button", prevAttrs, "← 前のカード");
   nav.appendChild(previousButton);
-  const last = session.flashIdx === items.length - 1;
+  const last = index === items.length - 1;
   const nextButton = el("button", guardedAttrs({
     class: "cta",
     onclick: () => {
@@ -3915,15 +4085,21 @@ function renderFlash(body) {
           renderHome();
           return;
         }
+        if (isLearn) {
+          advanceLearnFromFlash();
+          return;
+        }
         session.stage = "check";
         renderSession();
-      }
-      else { session.flashIdx++; renderSession(); }
+      } else if (isLearn) {
+        advanceLearnFromFlash();
+        return;
+      } else { session.flashIdx++; renderSession(); }
       scrollFlashCardIntoView();
     },
-  }), last ? "意味チェックへ進む →" : "次のカード →");
+  }), last ? "意味チェックへ進む →" : "次の語句へ →");
   nav.appendChild(el("span", { class: "flashNavCounter", "aria-live": "polite" },
-    `カード ${session.flashIdx + 1} / ${items.length}`));
+    `カード ${index + 1} / ${items.length}`));
   nav.appendChild(nextButton);
   body.appendChild(el("div", { class: "sessionActionBar" }, nav));
 
@@ -4379,10 +4555,16 @@ function renderDone(body) {
     const missed = session.checkOrder.length - session.meaningCorrect;
     banner.appendChild(el("div", { class: "big" }, `${session.meaningCorrect} / ${session.checkOrder.length}`));
     banner.appendChild(el("h2", {}, `第${q}問の4語句を学習しました`));
+    const contextTotal = Number(session.contextAvailableTotal || 0);
+    const contextCorrect = Number(session.contextCorrectCount || 0);
+    banner.appendChild(el("p", { class: "hint contextDoneSummary" },
+      contextTotal > 0
+        ? `発見　文脈から推測：${contextCorrect} / ${contextTotal}語`
+        : "発見　文脈データのない語句のみ"));
     banner.appendChild(el("p", { class: "hint" },
-      missed > 0 ? `意味を確認：${session.meaningCorrect}語つかめました（未定着 ${missed}語）` : `意味を確認：4語すべてつかめました`));
+      missed > 0 ? `定着　意味を思い出す：${session.meaningCorrect}語つかめました（未定着 ${missed}語）` : `定着　意味を思い出す：4語すべてつかめました`));
     banner.appendChild(el("p", { class: "hint" },
-      `本番形式：${session.practiceResult ? "✓ 正解" : "! 不正解"}`));
+      `応用　本番形式：${session.practiceResult ? "✓ 正解" : "! 不正解"}`));
     if (doneStudyPlan) {
       const dailyRemaining = doneStudyPlan.dailyRemaining;
       banner.appendChild(el("p", {

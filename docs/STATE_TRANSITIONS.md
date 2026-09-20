@@ -21,7 +21,10 @@
 
 ```mermaid
 flowchart LR
-  HOME[問題セット一覧] --> FLASH[STEP 1 暗記カード]
+  HOME[問題セット一覧] --> DISCOVERY[STEP 1 文脈から発見]
+  DISCOVERY --> FLASH[STEP 1 意味を覚える]
+  FLASH --> NEXT[次の語句]
+  NEXT --> DISCOVERY
   FLASH --> MEANING[STEP 2 意味チェック]
   MEANING --> PRACTICE
   MEANING --> MEANING_REVIEW[意味だけ復習・誤答見直し]
@@ -36,8 +39,9 @@ flowchart LR
 
 | 現在状態 | 操作・条件 | 次状態 | 主な保存値 |
 |---|---|---|---|
-| `Q1_UNLEARNED` | 問題を開始 | `Q1_FLASH` | `resume.mode=learn`, `stage=flash` |
-| `Q1_FLASH` | 4枚のカードを確認 | `Q1_MEANING_CHECK` | `flashIdx` |
+| `Q1_UNLEARNED` | 問題を開始。文脈がある語なら発見から開始 | `Q1_CONTEXT` または `Q1_FLASH` | `resume.mode=learn`, `learnIdx`, `learnPhase` |
+| `Q1_CONTEXT` | 文脈の4択に回答 | 同じ語の `Q1_FLASH` | `contextResults`, `contextCorrectCount` |
+| `Q1_FLASH` | 現在語のカードを確認 | 次語の `Q1_CONTEXT` / `Q1_FLASH`、最後なら `Q1_MEANING_CHECK` | `learnIdx` |
 | `Q1_MEANING_CHECK` | 意味を回答 | 回答済み表示 | `checkAnswered` |
 | `Q1_MEANING_CHECK` | 最終問 | `Q1_PRACTICE` | `stage=practice` |
 | `Q1_PRACTICE` | 4択に回答 | `Q1_DONE` | `learned`, `answerResult`, `solvedCorrect`, `wrongCount` |

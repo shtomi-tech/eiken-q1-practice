@@ -1,6 +1,6 @@
 /* ============================================================
    LEARN FLOW (per question)
-   stages: flash -> check -> practice -> done
+   stages: context/flash (one word at a time) -> check -> practice -> done
    contextLearn trial: context -> flash
    ============================================================ */
 let session = null;
@@ -15,20 +15,70 @@ function startLearn(q) {
     renderHome();
     return false;
   }
+  const orderedItems = shuffle(items);
   session = {
     mode: "learn",
     q,
-    items: shuffle(items),
+    items: orderedItems,
     stage: "flash",
+    learnIdx: 0,
+    learnPhase: "flash",
     flashIdx: 0,
-    checkOrder: shuffle(items),
+    checkOrder: shuffle(orderedItems),
     checkIdx: 0,
     checkAnswered: false,
     meaningCorrect: 0,
+    contextPool: state.contextItems,
+    contextResults: {},
+    contextAvailableTotal: 0,
+    contextTotal: 0,
+    contextCorrectCount: 0,
+    contextRevealed: false,
+    contextChoices: null,
+    contextChoiceTarget: "",
+    contextPicked: null,
+    contextCorrect: null,
   };
+  session.contextAvailableTotal = session.items.filter((item) => contextItemFor(item)).length;
+  session.learnPhase = session.contextAvailableTotal > 0 && contextItemFor(session.items[0])
+    ? "context"
+    : "flash";
+  session.stage = session.learnPhase;
   renderSession();
   resetSessionScroll();
   return true;
+}
+
+function setLearnItem(index, phase = null) {
+  session.learnIdx = index;
+  session.flashIdx = index;
+  const item = session.items[index];
+  const nextPhase = phase || (contextItemFor(item) ? "context" : "flash");
+  session.learnPhase = nextPhase;
+  session.stage = nextPhase;
+  if (nextPhase === "context") resetContextState();
+}
+
+function enterLearnFlash() {
+  session.learnPhase = "flash";
+  session.stage = "flash";
+  session.flashIdx = session.learnIdx;
+  resetContextState();
+}
+
+function advanceLearnFromFlash() {
+  if (session.learnIdx >= session.items.length - 1) {
+    session.stage = "check";
+    session.learnPhase = null;
+    session.checkIdx = 0;
+    session.checkAnswered = false;
+    session._checkChoices = null;
+    renderSession();
+    return;
+  }
+  setLearnItem(session.learnIdx + 1);
+  renderSession();
+  resetSessionScroll();
 }
 
 // 語句の進捗を、その語句が属する回（item._datasetId、無ければ現在の回）から読み取る。
@@ -244,6 +294,20 @@ function resetContextState() {
   session.contextCorrect = null;
 }
 
+function recordLearnContextResult(item, pickedMeaning, correctMeaning) {
+  if (!session || session.mode !== "learn" || !item) return;
+  const key = itemKeyOf(item);
+  if (!session.contextResults || typeof session.contextResults !== "object") session.contextResults = {};
+  session.contextResults[key] = {
+    pickedMeaning,
+    correctMeaning,
+    correct: pickedMeaning === correctMeaning,
+  };
+  const results = Object.values(session.contextResults);
+  session.contextTotal = results.length;
+  session.contextCorrectCount = results.filter((result) => result.correct).length;
+}
+
 function enterContextOrCheck() {
   const item = session?.checkOrder?.[session.checkIdx];
   session.stage = shouldShowContextBefore(item) ? "context" : "check";
@@ -305,6 +369,7 @@ function renderSession() {
   // stage bar
   if (isFinal) panel.appendChild(finalBar());
   else if (isContext) panel.appendChild(contextProgressBar());
+  else if (session.mode === "learn" && session.stage === "flash") panel.appendChild(contextProgressBar());
   else if (isMeaning) panel.appendChild(meaningBar());
   else panel.appendChild(stageBar(session.stage));
   // 意味だけ復習・最終チェックは、それぞれ meaningBar/finalBar に位置・正誤数を集約する。
@@ -339,6 +404,12 @@ function focusSessionContext() {
 }
 
 function contextProgressBar() {
+  if (session.mode === "learn") {
+    return el("div", { class: "stageBar contextProgressBar" },
+      el("div", { class: "stagePill active" }, `${session.learnIdx + 1} / ${session.items.length}語句`),
+      el("div", { class: "stagePill" }, session.stage === "context" ? "文脈から発見" : "意味を覚える"),
+    );
+  }
   const integrated = session.mode !== "context";
   const beforeFlash = integrated && session.contextBeforeFlash;
   const total = beforeFlash
@@ -392,19 +463,31 @@ function contextMeaningChoices(item, itemHint = null) {
 }
 
 function renderContext(body) {
-  const integrated = session.mode !== "context";
-  const beforeFlash = integrated && session.contextBeforeFlash;
-  const sourceItem = integrated
+  const isStandalone = session.mode === "context";
+  const isLearn = session.mode === "learn";
+  const integrated = !isStandalone;
+  const beforeFlash = isLearn || (integrated && session.contextBeforeFlash);
+  const sourceItem = isLearn
+    ? session.items[session.learnIdx]
+    : integrated
     ? (beforeFlash ? session.contextOrder[session.contextIdx] : session.checkOrder[session.checkIdx])
     : null;
-  const item = integrated ? contextItemFor(sourceItem) : session.items[session.contextIdx];
+  const item = isLearn || integrated ? contextItemFor(sourceItem) : session.items[session.contextIdx];
   if (!item) {
-    session.stage = "check";
-    renderSession();
+    if (isLearn) {
+      enterLearnFlash();
+      renderSession();
+      resetSessionScroll();
+    } else {
+      session.stage = "check";
+      renderSession();
+    }
     return;
   }
   const correctMeaning = contextMeaningOf(item, sourceItem);
-  const last = session.mode === "context"
+  const last = isLearn
+    ? false
+    : isStandalone
     ? session.contextIdx === session.items.length - 1
     : (beforeFlash ? session.contextIdx === session.contextOrder.length - 1 : true);
   const choices = contextMeaningChoices(item, sourceItem);
@@ -436,6 +519,7 @@ function renderContext(body) {
           session.contextPicked = meaning;
           session.contextCorrect = meaning === correctMeaning;
           session.contextRevealed = true;
+          if (isLearn) recordLearnContextResult(sourceItem, meaning, correctMeaning);
           renderSession();
         },
       },
@@ -452,7 +536,7 @@ function renderContext(body) {
       ));
     });
     card.appendChild(el("div", {
-      class: `feedback contextResult ${session.contextCorrect ? "ok" : "ng"}`,
+      class: `feedback contextResult ${isLearn ? "contextNeutral" : (session.contextCorrect ? "ok" : "ng")}`,
       role: "status",
       "aria-live": "polite",
     },
@@ -474,6 +558,12 @@ function renderContext(body) {
         class: "cta",
         type: "button",
         onclick: () => {
+          if (isLearn) {
+            enterLearnFlash();
+            renderSession();
+            resetSessionScroll();
+            return;
+          }
           if (integrated && beforeFlash) {
             if (last) {
               session.contextBeforeFlash = false;
@@ -505,7 +595,7 @@ function renderContext(body) {
           session.contextCorrect = null;
           renderSession();
         },
-      }, beforeFlash ? (last ? "暗記カードへ →" : "次の語句へ →")
+      }, isLearn ? "この単語を覚える →" : beforeFlash ? (last ? "暗記カードへ →" : "次の語句へ →")
         : (integrated ? "意味4択へ →" : (last ? "文脈推測を終える" : "次の語句へ →"))),
     ));
   }
@@ -514,6 +604,7 @@ function renderContext(body) {
 
 function sessionLabel(q, isIdiom, isMeaning, isFinal) {
   if (isFinal) return `最終チェック ${session.checkIdx + 1} / ${session.checkOrder.length}`;
+  if (session?.mode === "learn" && session?.stage === "context") return `第${q}問 ・ 文脈から発見`;
   if (session?.mode === "context" || session?.stage === "context") return "文脈から推測";
   if (isMeaning) {
     // 位置「n / m」は meaningBar が持つ。ここでは種別名だけを出して重複を避ける。
@@ -525,15 +616,18 @@ function sessionLabel(q, isIdiom, isMeaning, isFinal) {
 function stageTitle(stage) {
   if (session && session.mode === "final") return `最終チェック${session.checkOrder.length}問`;
   if (session && session.mode === "meaning" && session.stage === "meaningReview") return "間違えた語句を見直す";
+  if (session && session.mode === "context") return `文脈推測 ${session.contextIdx + 1} / ${session.items.length}`;
+  if (session && session.mode === "learn" && session.stage === "context") {
+    return `STEP 1　文脈から発見（${session.learnIdx + 1} / ${session.items.length}）`;
+  }
   if (session && session.stage === "context") {
     const current = session.contextBeforeFlash ? session.contextIdx + 1 : session.checkIdx + 1;
     const total = session.contextBeforeFlash ? session.contextOrder.length : session.checkOrder.length;
     return `文脈から推測（${current} / ${total}）`;
   }
   if (session && session.mode === "meaning") return `意味だけの復習（最大${MEANING_SESSION_SIZE}語句）`;
-  if (session && session.mode === "context") return `文脈推測 ${session.contextIdx + 1} / ${session.items.length}`;
   return {
-    flash: "STEP 1　覚える（暗記カード）",
+    flash: session?.mode === "learn" ? "STEP 1　意味を覚える（暗記カード）" : "STEP 1　覚える（暗記カード）",
     check: "STEP 2　確かめる（4語句の意味確認）",
     practice: "STEP 3　解く（本番形式）",
     done: "完了",

@@ -782,6 +782,10 @@ h2 {
 .contextChoices { margin: 0 18px; }
 .contextChoiceBtn { width: 100%; }
 .contextResult { margin: 16px 18px 0; }
+.contextResult.contextNeutral {
+  background: var(--surface-soft);
+  border-left-color: var(--clay);
+}
 .contextAnswer .label { margin: 14px 0 5px; }
 .contextAnswer .label:first-child { margin-top: 0; }
 .contextMeaning {
@@ -1258,6 +1262,25 @@ details.vocabForecast:not([open]) > :not(summary) { display: none; }
   gap: 12px;
   flex-wrap: wrap;
 }
+.flashContextReflection {
+  background: var(--surface-soft);
+  border-bottom: 1px solid var(--line);
+  padding: 10px 18px;
+}
+.flashContextReflectionLabel {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .08em;
+  margin: 0 0 4px;
+  text-transform: uppercase;
+}
+.flashContextReflectionGuess,
+.flashContextReflectionAnswer {
+  font-size: 13px;
+  margin: 2px 0 0;
+}
+.flashContextReflectionAnswer { color: var(--muted); }
 .flashWord { font-family: var(--serif); font-size: 30px; line-height: 1.2; }
 .flashWordLine {
   display: flex;

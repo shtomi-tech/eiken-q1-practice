@@ -377,11 +377,18 @@ function resumeQuestionSupported(value) {
   const q = Number(value);
   return Number.isInteger(q) && Array.isArray(state.itemsByQ[q]) && state.itemsByQ[q].length > 0;
 }
-function resumeDataSupported(saved, items, checkOrder, meaningWrongItems = []) {
+function resumeDataSupported(saved, items, checkOrder, meaningWrongItems = [], contextOrder = []) {
   if (!resumeStageAllowed(saved.mode, saved.stage)) return false;
   if (saved.mode === "learn") {
     if (!resumeQuestionSupported(saved.q) || !items.length) return false;
-    if (saved.stage === "flash") return resumeIndexSupported(saved.flashIdx, items.length);
+    if (saved.stage === "context") {
+      if (Number.isInteger(Number(saved.learnIdx))) return resumeIndexSupported(saved.learnIdx, items.length);
+      return contextOrder.length > 0 && resumeIndexSupported(saved.contextIdx, contextOrder.length);
+    }
+    if (saved.stage === "flash") {
+      const index = Number.isInteger(Number(saved.learnIdx)) ? saved.learnIdx : saved.flashIdx;
+      return resumeIndexSupported(index, items.length);
+    }
     if (["check", "practice"].includes(saved.stage) && !checkOrder.length) return false;
     if (saved.stage === "check" && !resumeIndexSupported(saved.checkIdx, checkOrder.length)) return false;
     return true;
@@ -400,7 +407,8 @@ function resumeDescription(resume) {
   if (!resume) return "";
   if (resume.mode === "learn") {
     const stage = {
-      flash: `STEP 1 暗記カード ${Number(resume.flashIdx || 0) + 1}/${resume.items?.length || 4}`,
+      context: `STEP 1 文脈から発見 ${Number(resume.learnIdx ?? resume.contextIdx ?? 0) + 1}/${resume.items?.length || 4}`,
+      flash: `STEP 1 意味を覚える ${Number(resume.learnIdx ?? resume.flashIdx ?? 0) + 1}/${resume.items?.length || 4}`,
       check: `STEP 2 4語句の意味確認 ${Number(resume.checkIdx || 0) + 1}/${resume.checkOrder?.length || 4}`,
       practice: "STEP 3 本番形式",
       done: "完了確認",
@@ -433,6 +441,8 @@ function saveResume() {
     mode: session.mode,
     q: session.q,
     stage: session.stage,
+    learnIdx: session.learnIdx,
+    learnPhase: session.learnPhase,
     flashIdx: session.flashIdx,
     checkIdx: session.checkIdx,
     checkAnswered: Boolean(session.checkAnswered),
@@ -458,6 +468,10 @@ function saveResume() {
     contextChoiceTarget: session.contextChoiceTarget || "",
     contextPicked: session.contextPicked,
     contextCorrect: session.contextCorrect,
+    contextResults: session.contextResults || {},
+    contextAvailableTotal: session.contextAvailableTotal || 0,
+    contextTotal: session.contextTotal || 0,
+    contextCorrectCount: session.contextCorrectCount || 0,
     responseElapsedLog: session.responseElapsedLog || [],
     meaningRtLog: session.meaningRtLog || [],
   };
@@ -472,6 +486,35 @@ function clearResume() {
   resumeUnavailable = false;
   saveProgress();
 }
+
+function normalizeLearnSessionResume() {
+  if (!session || session.mode !== "learn") return;
+  const items = session.items || [];
+  const legacyContextItem = session.contextOrder?.[Number(session.contextIdx) || 0];
+  let learnIdx = Number(session.learnIdx);
+  if (!Number.isInteger(learnIdx)) {
+    learnIdx = session.stage === "context" && legacyContextItem
+      ? items.findIndex((item) => itemKeyOf(item) === itemKeyOf(legacyContextItem))
+      : Number(session.flashIdx);
+  }
+  if (!Number.isInteger(learnIdx) || learnIdx < 0 || learnIdx >= items.length) learnIdx = 0;
+  session.learnIdx = learnIdx;
+  session.flashIdx = learnIdx;
+  session.contextResults = session.contextResults && typeof session.contextResults === "object"
+    ? session.contextResults
+    : {};
+  session.contextAvailableTotal = items.filter((item) => contextItemFor(item)).length;
+  const results = Object.values(session.contextResults);
+  session.contextTotal = results.length;
+  session.contextCorrectCount = results.filter((result) => result.correct).length;
+  if (session.stage === "context" && contextItemFor(items[learnIdx])) {
+    session.learnPhase = "context";
+  } else if (session.stage === "context" || session.stage === "flash") {
+    session.learnPhase = "flash";
+    session.stage = "flash";
+  }
+}
+
 async function restoreSession() {
   const saved = state.progress.resume;
   if (!saved || !saved.mode) return false;
@@ -499,7 +542,7 @@ async function restoreSession() {
   let checkOrder = (saved.checkOrder || []).map((s) => resolveItem(s, pool)).filter(Boolean);
   const contextOrder = (saved.contextOrder || []).map((s) => resolveItem(s, pool)).filter(Boolean);
   const meaningWrongItems = (saved.meaningWrongItems || []).map((s) => resolveItem(s, pool)).filter(Boolean);
-  if (!resumeDataSupported(saved, items, checkOrder, meaningWrongItems)) {
+  if (!resumeDataSupported(saved, items, checkOrder, meaningWrongItems, contextOrder)) {
     resumeRecoveryMessage = "途中記録は保持していますが、現在の問題データと一致しないため自動再開できません。第1問から再開してください。";
     resumeUnavailable = true;
     return false;
@@ -517,6 +560,7 @@ async function restoreSession() {
     checkOrder,
     contextOrder,
     contextPool: state.contextItems,
+    contextResults: saved.contextResults && typeof saved.contextResults === "object" ? saved.contextResults : {},
     meaningWrongItems,
     meaningWrongChecked: Array.isArray(saved.meaningWrongChecked) ? saved.meaningWrongChecked : [],
     _checkChoices: saved.checkChoices || null,
@@ -526,10 +570,7 @@ async function restoreSession() {
       : (Array.isArray(saved.audioElapsedLog) ? saved.audioElapsedLog : []),
     meaningRtLog: Array.isArray(saved.meaningRtLog) ? saved.meaningRtLog : [],
   };
-  if (session.mode === "learn" && session.stage === "context" && !session.contextOrder.length) {
-    session.contextOrder = items.filter((item) => contextItemFor(item));
-    session.contextBeforeFlash = true;
-  }
+  if (session.mode === "learn") normalizeLearnSessionResume();
   resumeRecoveryMessage = "";
   resumeUnavailable = false;
   renderSession();

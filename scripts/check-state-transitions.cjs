@@ -11,6 +11,9 @@ const startContextLearningBody = extractFunctionBody(js, "startContextLearning")
 const startMeaningBody = extractFunctionBody(js, "startMeaningPractice");
 const startFinalBody = extractFunctionBody(js, "startFinalCheck");
 const renderSessionBody = extractFunctionBody(js, "renderSession");
+const renderContextBody = extractFunctionBody(js, "renderContext");
+const renderFlashBody = extractFunctionBody(js, "renderFlash");
+const buildFlashCardBody = extractFunctionBody(js, "buildFlashCard");
 const saveResumeBody = extractFunctionBody(js, "saveResume");
 const restoreSessionBody = extractFunctionBody(js, "restoreSession");
 const finalUnlockedBody = extractFunctionBody(js, "finalUnlocked");
@@ -31,7 +34,8 @@ assert.match(spec, /eiken_q1_progress_<datasetId>/, "進捗保存境界を仕様
 assert.match(spec, /reading1:<q>/, "旧準1級移行の入力形式を仕様に記録する必要があります");
 
 assert.ok(startLearnBody.includes('mode: "learn"'), "通常学習はlearnモードで開始する必要があります");
-assert.ok(startLearnBody.includes('stage: "flash"'), "通常学習はflashから開始する必要があります");
+assert.ok(startLearnBody.includes("learnIdx: 0") && startLearnBody.includes("learnPhase: \"flash\""), "通常学習はlearnIdx/learnPhaseで語句単位の状態を持つ必要があります");
+assert.ok(startLearnBody.includes("contextAvailableTotal") && startLearnBody.includes("contextItemFor"), "通常学習は語句ごとのContext有無を判定する必要があります");
 assert.ok(!startLearnBody.includes("contextBeforeFlash"), "通常学習に文脈推測の試用状態を混ぜない必要があります");
 assert.ok(startLearnBody.includes("checkOrder"), "通常学習は意味確認順を保存する必要があります");
 assert.ok(startContextLearningBody.includes('mode: "contextLearn"')
@@ -43,6 +47,15 @@ assert.ok(startMeaningBody.includes("MEANING_SESSION_SIZE"), "意味復習は最
 assert.ok(startMeaningBody.includes("meaningWrongItems"), "意味復習は誤答語句の見直し状態を初期化する必要があります");
 assert.ok(startFinalBody.includes('mode: "final"'), "最終チェックはfinalモードで開始する必要があります");
 assert.ok(startFinalBody.includes("finalUnlocked"), "最終チェック開始時にも解放条件を検査する必要があります");
+assert.ok(renderContextBody.includes("session.items[session.learnIdx]"), "通常学習のContextはsession.itemsの現在語を表示する必要があります");
+assert.ok(renderContextBody.includes("recordLearnContextResult(sourceItem"), "Context結果を通常学習のセッションへ保存する必要があります");
+assert.ok(renderContextBody.includes("enterLearnFlash"), "通常学習のContext回答後は同じ語のFlashへ進む必要があります");
+assert.ok(renderFlashBody.includes("advanceLearnFromFlash"), "通常学習のFlash終了後は次語または意味確認へ進む必要があります");
+assert.ok(renderFlashBody.includes("setLearnItem(index - 1, \"flash\")"), "通常学習のFlash前戻りもlearnIdxを使う必要があります");
+assert.ok(buildFlashCardBody.includes("flashContextReflection"), "Context結果をFlashへ引き継いで表示する必要があります");
+assert.ok(saveResumeBody.includes("learnIdx") && saveResumeBody.includes("contextResults"), "通常学習の語句位置とContext結果を途中保存する必要があります");
+assert.ok(restoreSessionBody.includes("normalizeLearnSessionResume"), "通常学習resumeは新旧状態をnormalizeする必要があります");
+assert.ok(renderDoneBody.includes("contextCorrectCount") && renderDoneBody.includes("contextAvailableTotal"), "完了画面はContext・意味確認・本番形式を分けて表示する必要があります");
 
 for (const stage of ["flash", "check", "practice", "done"]) {
   assert.ok(renderSessionBody.includes(`session.stage === "${stage}"`) || renderSessionBody.includes(`stage === "${stage}"`), `renderSessionに${stage}の描画分岐が必要です`);

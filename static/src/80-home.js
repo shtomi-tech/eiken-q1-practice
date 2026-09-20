@@ -215,8 +215,8 @@ function renderHomeContent() {
   if (isFirstVisit) {
     home.appendChild(el("section", { class: "card hero" },
       el("p", { class: "label" }, "学習の流れ"),
-      el("h2", {}, `${datasetSectionName()}の語句を「覚えてから解く」`),
-      el("p", { class: "hint" }, "各設問の4つの選択肢を、意味・補足情報で覚える → 意味を確認 → 本番形式で解く、の3ステップ。"),
+      el("h2", {}, `${datasetSectionName()}の語句を「発見して→覚えて→使う」`),
+      el("p", { class: "hint" }, "文脈から意味を発見 → 暗記カードで整理 → 意味を思い出す → 本番形式で使う、の学習サイクル。"),
     ));
   }
 
@@ -276,7 +276,7 @@ function renderHomeContent() {
     primary = {
       label: `第${nextQ}問を学習する`,
       // 初回訪問はheroで同じ3ステップを説明済みのため、ここでは重複させない
-      why: isFirstVisit ? "" : "暗記カード → 意味確認 → 本番形式の3ステップで進みます。",
+      why: isFirstVisit ? "" : "文脈から発見 → 暗記カード → 意味確認 → 本番形式の学習サイクルで進みます。",
       onclick: () => startLearn(nextQ),
     };
   } else if (hasMeaningDue) {
