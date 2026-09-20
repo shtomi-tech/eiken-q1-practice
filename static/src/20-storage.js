@@ -454,7 +454,6 @@ function saveResume() {
     contextBeforeFlash: Boolean(session.contextBeforeFlash),
     contextOrder: (session.contextOrder || []).map(itemSnapshot),
     contextRevealed: Boolean(session.contextRevealed),
-    contextGuess: session.contextGuess || "",
     contextChoices: session.contextChoices || null,
     contextChoiceTarget: session.contextChoiceTarget || "",
     contextPicked: session.contextPicked,

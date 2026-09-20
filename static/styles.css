@@ -767,43 +767,16 @@ h2 {
   color: var(--parchment);
   padding: 0 .12em;
 }
-.contextGuessLabel,
 .contextAnswer {
   border-top: 1px solid var(--line);
   display: block;
   margin-top: 12px;
   padding: 16px 18px 0;
 }
-.contextGuessLabel {
-  color: var(--muted);
-  font-size: 12px;
-}
-.contextGuess {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: var(--r-md);
-  box-sizing: border-box;
-  color: var(--ink);
-  display: block;
-  font: inherit;
-  margin-top: 8px;
-  padding: 10px 12px;
-  resize: vertical;
-  width: 100%;
-}
-.contextGuess:focus { border-color: var(--ink); outline: 2px solid var(--clay); outline-offset: 2px; }
 .contextChoiceLabel { margin: 16px 18px 8px; }
 .contextChoices { margin: 0 18px; }
 .contextChoiceBtn { width: 100%; }
 .contextResult { margin: 16px 18px 0; }
-.contextYourGuess {
-  background: var(--surface-soft);
-  border-radius: var(--r-md);
-  color: var(--muted);
-  margin: 14px 18px 0;
-  padding: 10px 12px;
-}
-.contextYourGuess strong { color: var(--ink); display: block; font-size: 12px; margin-bottom: 4px; }
 .contextAnswer .label { margin: 14px 0 5px; }
 .contextAnswer .label:first-child { margin-top: 0; }
 .contextMeaning {

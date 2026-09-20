@@ -786,7 +786,6 @@ function saveResume() {
     contextBeforeFlash: Boolean(session.contextBeforeFlash),
     contextOrder: (session.contextOrder || []).map(itemSnapshot),
     contextRevealed: Boolean(session.contextRevealed),
-    contextGuess: session.contextGuess || "",
     contextChoices: session.contextChoices || null,
     contextChoiceTarget: session.contextChoiceTarget || "",
     contextPicked: session.contextPicked,
@@ -2952,7 +2951,6 @@ function startLearn(q) {
     contextIdx: 0,
     contextBeforeFlash: false,
     contextRevealed: false,
-    contextGuess: "",
     contextChoices: null,
     contextChoiceTarget: "",
     contextPicked: null,
@@ -3046,7 +3044,6 @@ async function startMeaningPractice(dueOnly = true, queueOverride = null) {
     contextIdx: 0,
     contextBeforeFlash: false,
     contextRevealed: false,
-    contextGuess: "",
     contextChoices: null,
     contextChoiceTarget: "",
     contextPicked: null,
@@ -3089,7 +3086,6 @@ async function startContextPractice() {
     stage: "context",
     contextIdx: 0,
     contextRevealed: false,
-    contextGuess: "",
     contextChoices: null,
     contextChoiceTarget: "",
     contextPicked: null,
@@ -3139,7 +3135,6 @@ function shouldShowContextBefore(item) {
 
 function resetContextState() {
   session.contextRevealed = false;
-  session.contextGuess = "";
   session.contextChoices = null;
   session.contextChoiceTarget = "";
   session.contextPicked = null;
@@ -3327,15 +3322,6 @@ function renderContext(body) {
   card.appendChild(story);
 
   if (!session.contextRevealed) {
-    const guess = el("textarea", {
-      class: "contextGuess",
-      rows: "2",
-      placeholder: "自分の推測をメモ（任意）",
-      "aria-label": "自分の推測",
-    });
-    guess.value = session.contextGuess || "";
-    guess.addEventListener("input", () => { session.contextGuess = guess.value; });
-    card.appendChild(el("label", { class: "contextGuessLabel" }, "推測をメモしてから、意味を4択で選ぶ", guess));
     card.appendChild(el("p", { class: "label contextChoiceLabel" }, "推測した意味は？"));
     const choiceWrap = el("div", { class: "choices contextChoices", role: "group", "aria-label": "推測した意味の4択" });
     choices.forEach((meaning, index) => {
@@ -3343,7 +3329,6 @@ function renderContext(body) {
         class: "choiceBtn contextChoiceBtn",
         type: "button",
         onclick: () => {
-          session.contextGuess = guess.value.trim();
           session.contextPicked = meaning;
           session.contextCorrect = meaning === correctMeaning;
           session.contextRevealed = true;
@@ -3355,12 +3340,6 @@ function renderContext(body) {
     });
     card.appendChild(choiceWrap);
   } else {
-    if (session.contextGuess) {
-      card.appendChild(el("p", { class: "contextYourGuess" },
-        el("strong", {}, "あなたの推測"),
-        document.createTextNode(session.contextGuess),
-      ));
-    }
     const clueList = el("ul", { class: "contextClueList" });
     item.contextClues.forEach((clue) => {
       clueList.appendChild(el("li", {},
@@ -3416,7 +3395,6 @@ function renderContext(body) {
           }
           session.contextIdx += 1;
           session.contextRevealed = false;
-          session.contextGuess = "";
           session.contextChoices = null;
           session.contextChoiceTarget = "";
           session.contextPicked = null;
