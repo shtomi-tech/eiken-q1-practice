@@ -45,7 +45,7 @@ const PARTS = [
 function build() {
   const found = fs.readdirSync(SRC_DIR).filter((f) => f.endsWith(".js")).sort();
   assert.deepEqual(found, [...PARTS].sort(), "static/src の構成と PARTS が一致していません");
-  return PARTS.map((f) => fs.readFileSync(path.join(SRC_DIR, f), "utf8")).join("");
+  return PARTS.map((f) => fs.readFileSync(path.join(SRC_DIR, f), "utf8")).join("").replace(/\r\n/g, "\n");
 }
 
 const built = build();

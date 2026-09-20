@@ -146,6 +146,25 @@ function studyPlanPanel(entries = []) {
   panel.appendChild(settings);
   return panel;
 }
+
+function contextDiscoveryCard() {
+  const current = dataset();
+  if (!current?.contextUrl) return null;
+  const total = Number(current.contextTotal) || 0;
+  return el("section", { class: "card contextDiscoveryCard", "aria-labelledby": "contextDiscoveryTitle" },
+    el("p", { class: "label" }, "Context Discovery"),
+    el("h3", { id: "contextDiscoveryTitle" }, "英文の流れから意味を推測する"),
+    el("p", { class: "contextDiscoveryLead" },
+      "日本語訳を先に見ず、英文の中の手がかりを組み合わせて語句の意味を考えます。"),
+    el("p", { class: "contextDiscoveryMeta" }, `英検2級・${total}語句から1回10語`),
+    el("button", {
+      class: "secondaryCta contextDiscoveryCta",
+      type: "button",
+      onclick: () => startContextPractice(),
+    }, "文脈推測を試す →"),
+  );
+}
+
 function renderHomeContent() {
   $("#sessionPanel").classList.add("hide");
   const home = $("#homePanel");
@@ -299,6 +318,9 @@ function renderHomeContent() {
   if (goalCard) home.appendChild(goalCard);
   flushStudyTime();
   home.appendChild(studyTimeCard());
+
+  const contextCard = contextDiscoveryCard();
+  if (contextCard) home.appendChild(contextCard);
 
   if (grade) {
     home.appendChild(meaningMission(

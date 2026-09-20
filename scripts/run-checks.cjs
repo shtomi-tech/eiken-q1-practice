@@ -22,6 +22,7 @@ const CHECKS = [
   ["scripts/check-response-time-srs.cjs"],
   ["scripts/check-fsrs-vendor.cjs"],
   ["scripts/check-fsrs-schedule.cjs"],
+  ["scripts/check-context-discovery.cjs"],
   ["scripts/check-student-storage-scope.cjs"],
   ["scripts/check-cloud-progress-namespace.cjs"],
   ["scripts/check-meaning-mission-ui.cjs"],

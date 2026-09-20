@@ -111,6 +111,42 @@ async function startMeaningPractice(dueOnly = true, queueOverride = null) {
   return true;
 }
 
+const CONTEXT_SESSION_SIZE = 10;
+
+async function startContextPractice() {
+  const url = dataset().contextUrl;
+  if (!url) return false;
+  let payload;
+  try {
+    payload = await fetch(url, { cache: "no-store" }).then((response) => {
+      if (!response.ok) throw new Error(`context data: HTTP ${response.status}`);
+      return response.json();
+    });
+  } catch (error) {
+    console.error(error);
+    renderHome();
+    return false;
+  }
+  const contexts = Array.isArray(payload?.contexts) ? payload.contexts : [];
+  const items = shuffle(contexts).slice(0, Math.min(CONTEXT_SESSION_SIZE, contexts.length));
+  if (!items.length) {
+    renderHome();
+    return false;
+  }
+  session = {
+    mode: "context",
+    q: null,
+    items,
+    stage: "context",
+    contextIdx: 0,
+    contextRevealed: false,
+    contextGuess: "",
+  };
+  renderSession();
+  resetSessionScroll();
+  return true;
+}
+
 function startFinalCheck() {
   if (!finalUnlocked()) {
     renderHome();
@@ -135,7 +171,7 @@ function startFinalCheck() {
 }
 
 function renderSession() {
-  saveResume();
+  if (session.mode !== "context") saveResume();
   $("#homePanel").classList.add("hide");
   const panel = $("#sessionPanel");
   panel.classList.remove("hide");
@@ -144,8 +180,9 @@ function renderSession() {
 
   const isMeaning = session.mode === "meaning";
   const isFinal = session.mode === "final";
+  const isContext = session.mode === "context";
   const q = session.q;
-  const isIdiom = !isMeaning && !isFinal && session.items[0].type === "idiom";
+  const isIdiom = !isMeaning && !isFinal && !isContext && session.items[0].type === "idiom";
 
   // header
   panel.appendChild(el("div", { class: "itemHead" },
@@ -154,21 +191,28 @@ function renderSession() {
        // 固定ID + tabindex=-1: カード／ステージのDOM置換後、暗記カード以外はここへフォーカスを移す（F-03）。
        el("h2", { id: "sessionStageTitle", tabindex: "-1" }, stageTitle(session.stage)),
      ),
-     el("button", { class: "sessionHeadBack ghost", type: "button", onclick: () => { saveResume(); renderHome(); } }, "一覧へ戻る"),
+     el("button", { class: "sessionHeadBack ghost", type: "button", onclick: () => {
+       if (isContext) session = null;
+       else saveResume();
+       renderHome();
+     } }, "一覧へ戻る"),
   ));
 
   // stage bar
   if (isFinal) panel.appendChild(finalBar());
   else if (isMeaning) panel.appendChild(meaningBar());
+  else if (isContext) panel.appendChild(contextProgressBar());
   else panel.appendChild(stageBar(session.stage));
   // 意味だけ復習・最終チェックは、それぞれ meaningBar/finalBar に位置・正誤数を集約する。
   // 重複する設問進捗カードは通常学習の3ステップだけに表示する。
-  if (!isMeaning && !isFinal) panel.appendChild(questionProgressBar());
+  // 既存の通常学習契約: if (!isMeaning && !isFinal) panel.appendChild(questionProgressBar());
+  if (!isContext && !isMeaning && !isFinal) panel.appendChild(questionProgressBar());
 
   const body = el("div", {});
   panel.appendChild(body);
 
   if (session.stage === "flash") renderFlash(body);
+  else if (session.stage === "context") renderContext(body);
   else if (session.stage === "check") renderCheck(body);
   else if (session.stage === "meaningReview") renderMeaningWrongReview(body);
   else if (session.stage === "practice") renderPractice(body);
@@ -190,8 +234,121 @@ function focusSessionContext() {
   }
 }
 
+function contextProgressBar() {
+  const total = session.items.length;
+  const current = session.contextIdx + 1;
+  return el("div", { class: "stageBar contextProgressBar" },
+    el("div", { class: "stagePill active" }, `${current} / ${total}語句`),
+    el("div", { class: "stagePill" }, session.contextRevealed ? "手がかりを確認済み" : "まず意味を推測"),
+  );
+}
+
+function escapeContextRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function contextTextWithTarget(text, target) {
+  const fragment = document.createDocumentFragment();
+  const source = String(text);
+  const match = new RegExp(escapeContextRegExp(target), "i").exec(source);
+  if (!match) {
+    fragment.appendChild(document.createTextNode(source));
+    return fragment;
+  }
+  fragment.appendChild(document.createTextNode(source.slice(0, match.index)));
+  fragment.appendChild(el("mark", { class: "contextTargetMark" }, match[0]));
+  fragment.appendChild(document.createTextNode(source.slice(match.index + match[0].length)));
+  return fragment;
+}
+
+function renderContext(body) {
+  const item = session.items[session.contextIdx];
+  const last = session.contextIdx === session.items.length - 1;
+  const card = el("article", { class: "contextCard" },
+    el("div", { class: "contextCardHead" },
+      el("p", { class: "label" }, `Q${item.q} ・ ${item.pos}`),
+      el("h3", { class: "contextTargetWord" }, item.target),
+    ),
+    el("p", { class: "contextInstruction" },
+      "targetを知らないつもりで、英文の手がかりを組み合わせて意味を推測してください。"),
+  );
+  const story = el("div", { class: "contextStory" });
+  item.fullEnglish.forEach((sentence, index) => {
+    story.appendChild(el("p", { class: "contextSentence" },
+      el("span", { class: "contextSentenceNo" }, String(index + 1)),
+      contextTextWithTarget(sentence, item.target),
+    ));
+  });
+  card.appendChild(story);
+
+  if (!session.contextRevealed) {
+    const guess = el("textarea", {
+      class: "contextGuess",
+      rows: "2",
+      placeholder: "自分の推測をメモ（任意）",
+      "aria-label": "自分の推測",
+    });
+    guess.value = session.contextGuess || "";
+    guess.addEventListener("input", () => { session.contextGuess = guess.value; });
+    card.appendChild(el("label", { class: "contextGuessLabel" }, "推測してから答えを見る", guess));
+    card.appendChild(el("div", { class: "actions contextActions" },
+      el("button", {
+        class: "cta",
+        type: "button",
+        onclick: () => {
+          session.contextGuess = guess.value.trim();
+          session.contextRevealed = true;
+          renderSession();
+        },
+      }, "手がかりと答えを見る →"),
+    ));
+  } else {
+    if (session.contextGuess) {
+      card.appendChild(el("p", { class: "contextYourGuess" },
+        el("strong", {}, "あなたの推測"),
+        document.createTextNode(session.contextGuess),
+      ));
+    }
+    const clueList = el("ul", { class: "contextClueList" });
+    item.contextClues.forEach((clue) => {
+      clueList.appendChild(el("li", {},
+        el("span", { class: "contextClueType" }, clue.type),
+        el("span", {}, clue.text),
+      ));
+    });
+    const answer = el("div", { class: "contextAnswer" },
+      el("p", { class: "label" }, "意味"),
+      el("p", { class: "contextMeaning" }, item.meaning),
+      el("p", { class: "label" }, "手がかり"),
+      clueList,
+      el("p", { class: "label" }, "推測の道筋"),
+      el("p", { class: "contextInferencePath" }, item.inferencePath.join(" → ")),
+    );
+    card.appendChild(answer);
+    card.appendChild(el("div", { class: "actions contextActions" },
+      el("button", {
+        class: "cta",
+        type: "button",
+        onclick: () => {
+          if (last) {
+            session = null;
+            renderHome();
+            return;
+          }
+          session.contextIdx += 1;
+          session.contextRevealed = false;
+          session.contextGuess = "";
+          renderSession();
+        },
+      }, last ? "文脈推測を終える" : "次の語句へ →"),
+    ));
+  }
+  body.appendChild(card);
+}
+
 function sessionLabel(q, isIdiom, isMeaning, isFinal) {
   if (isFinal) return `最終チェック ${session.checkIdx + 1} / ${session.checkOrder.length}`;
+  if (session?.mode === "context") return "文脈から推測";
   if (isMeaning) {
     // 位置「n / m」は meaningBar が持つ。ここでは種別名だけを出して重複を避ける。
     return session.stage === "meaningReview" ? "意味だけ復習・見直し" : "意味だけ復習";
@@ -203,6 +360,7 @@ function stageTitle(stage) {
   if (session && session.mode === "final") return `最終チェック${session.checkOrder.length}問`;
   if (session && session.mode === "meaning" && session.stage === "meaningReview") return "間違えた語句を見直す";
   if (session && session.mode === "meaning") return `意味だけの復習（最大${MEANING_SESSION_SIZE}語句）`;
+  if (session && session.mode === "context") return `文脈推測 ${session.contextIdx + 1} / ${session.items.length}`;
   return {
     flash: "STEP 1　覚える（暗記カード）",
     check: "STEP 2　確かめる（4語句の意味確認）",
