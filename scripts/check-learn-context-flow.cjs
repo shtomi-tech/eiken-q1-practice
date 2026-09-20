@@ -20,6 +20,7 @@ assert.match(startLearn, /session\.stage = session\.learnPhase/, "通常学習�
 
 assert.match(setLearnItem, /session\.learnIdx = index/, "Context/Flash共通の現在語indexが必要です");
 assert.match(setLearnItem, /contextItemFor\(item\)/, "次の語にContextがあるか判定する必要があります");
+assert.match(setLearnItem, /hasLearnContextResult\(item\)/, "回答済みContextを再表示しない判定が必要です");
 assert.match(advanceLearnFromFlash, /setLearnItem\(session\.learnIdx \+ 1\)/, "Flash後は次語のContextまたはFlashへ進む必要があります");
 assert.match(advanceLearnFromFlash, /session\.stage = "check"/, "最後のFlash後はMeaning Checkへ進む必要があります");
 
@@ -31,6 +32,7 @@ assert.doesNotMatch(renderContext, /meaningCorrect\s*[+\-]=|meaningCorrect\s*\+\
 assert.match(recordContext, /pickedMeaning/, "Context結果にpickedMeaningを保存する必要があります");
 assert.match(recordContext, /correctMeaning/, "Context結果にcorrectMeaningを保存する必要があります");
 assert.match(recordContext, /correct:/, "Context結果にcorrectを保存する必要があります");
+assert.match(recordContext, /hasOwnProperty\.call\(session\.contextResults, key\)/, "初回Context結果を上書きしない必要があります");
 assert.match(renderFlash, /session\.mode === "learn"/, "Flashは通常学習のlearnIdxを扱う必要があります");
 assert.match(renderFlash, /advanceLearnFromFlash\(\)/, "Flashの次へはContext有無に応じて遷移する必要があります");
 assert.match(renderFlash, /session\.mode === "contextLearn"/, "独立した試用Context→Flashモードを壊してはいけません");
@@ -43,8 +45,11 @@ assert.match(renderDone, /本番形式：/, "DoneはPracticeの結果を表示�
 assert.match(js, /function startContextPractice\(\)/, "独立Context Practiceを維持する必要があります");
 assert.match(js, /const contextPromise = current\.contextUrl/, "contextUrlなしdatasetを読み込めるfallbackを維持する必要があります");
 assert.match(js, /function normalizeLearnSessionResume\(\)/, "旧resumeを新しいlearnIdxへnormalizeする必要があります");
+assert.match(extractFunctionBody(js, "normalizeLearnSessionResume"), /hasLearnContextResult\(items\[learnIdx\]\)/, "resumeでも回答済みContextを再表示しない必要があります");
 assert.match(js, /contextResults: session\.contextResults/, "Context結果を通常学習resumeへ保存する必要があります");
 assert.match(resumeDescription, /resume\.learnIdx/, "resume表示はlearnIdxを使う必要があります");
 assert.match(resumeDescription, /STEP 1 文脈から発見/, "Context中のresume表示が必要です");
+const meaningStart = extractFunctionBody(js, "startMeaningPractice");
+assert.doesNotMatch(meaningStart, /enterContextOrCheck|contextOrder|contextBeforeFlash|contextIdx/, "意味復習へContext状態を混ぜてはいけません");
 
 console.log("integrated context learning flow contract: OK");

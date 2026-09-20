@@ -76,7 +76,7 @@ assert.match(sessionSource, /contextChoiceBtn/, "文脈推測の意味4択ボタ
 assert.match(sessionSource, /contextPicked/, "文脈推測の選択結果を保持する必要があります");
 assert.match(sessionSource, /contextClues/, "文脈の手がかり表示が必要です");
 assert.match(sessionSource, /contextMeaningOf\(context, itemHint/, "文脈の意味は暗記カードの意味を参照する必要があります");
-assert.match(sessionSource, /enterContextOrCheck\(\)/, "既存の意味4択の前に文脈推測を挿入する必要があります");
+assert.doesNotMatch(sessionSource, /function enterContextOrCheck\(/, "意味復習専用の旧Context統合helperを残してはいけません");
 assert.ok(!sessionSource.includes("contextGuess") && !sessionSource.includes("推測をメモ"),
   "文脈推測にメモ入力欄を追加しないでください");
 console.log("context discovery data and UI contract: OK (68 contexts)");

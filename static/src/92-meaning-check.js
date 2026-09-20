@@ -134,7 +134,7 @@ function appendCheckFeedback(box, item, surface, correct, isCorrect) {
           renderSession();
         } else {
           session.checkIdx++;
-          enterContextOrCheck();
+          session.stage = "check";
           renderSession();
         }
       },

@@ -45,10 +45,12 @@ assert.ok(startMeaningBody.includes('mode: "meaning"'), "意味復習はmeaning�
 assert.ok(startMeaningBody.includes('stage: "check"'), "意味復習はcheckから開始する必要があります");
 assert.ok(startMeaningBody.includes("MEANING_SESSION_SIZE"), "意味復習は最大件数を使う必要があります");
 assert.ok(startMeaningBody.includes("meaningWrongItems"), "意味復習は誤答語句の見直し状態を初期化する必要があります");
+assert.ok(!startMeaningBody.includes("enterContextOrCheck") && !startMeaningBody.includes("contextOrder"), "意味復習はContextを経由してはいけません");
 assert.ok(startFinalBody.includes('mode: "final"'), "最終チェックはfinalモードで開始する必要があります");
 assert.ok(startFinalBody.includes("finalUnlocked"), "最終チェック開始時にも解放条件を検査する必要があります");
 assert.ok(renderContextBody.includes("session.items[session.learnIdx]"), "通常学習のContextはsession.itemsの現在語を表示する必要があります");
 assert.ok(renderContextBody.includes("recordLearnContextResult(sourceItem"), "Context結果を通常学習のセッションへ保存する必要があります");
+assert.ok(renderContextBody.includes("hasLearnContextResult") || startLearnBody.includes("hasLearnContextResult"), "回答済みContextを再出題しない判定が必要です");
 assert.ok(renderContextBody.includes("enterLearnFlash"), "通常学習のContext回答後は同じ語のFlashへ進む必要があります");
 assert.ok(renderFlashBody.includes("advanceLearnFromFlash"), "通常学習のFlash終了後は次語または意味確認へ進む必要があります");
 assert.ok(renderFlashBody.includes("setLearnItem(index - 1, \"flash\")"), "通常学習のFlash前戻りもlearnIdxを使う必要があります");
@@ -56,6 +58,7 @@ assert.ok(buildFlashCardBody.includes("flashContextReflection"), "Context結果�
 assert.ok(saveResumeBody.includes("learnIdx") && saveResumeBody.includes("contextResults"), "通常学習の語句位置とContext結果を途中保存する必要があります");
 assert.ok(restoreSessionBody.includes("normalizeLearnSessionResume"), "通常学習resumeは新旧状態をnormalizeする必要があります");
 assert.ok(renderDoneBody.includes("contextCorrectCount") && renderDoneBody.includes("contextAvailableTotal"), "完了画面はContext・意味確認・本番形式を分けて表示する必要があります");
+assert.ok(renderDoneBody.includes("if (contextAvailableTotal > 0)"), "Contextなしdatasetでは発見行を表示してはいけません");
 
 for (const stage of ["flash", "check", "practice", "done"]) {
   assert.ok(renderSessionBody.includes(`session.stage === "${stage}"`) || renderSessionBody.includes(`stage === "${stage}"`), `renderSessionに${stage}の描画分岐が必要です`);
@@ -72,6 +75,7 @@ assert.ok(renderDoneBody.includes("clearResume"), "完了画面で再開記録�
 assert.ok(!renderDoneBody.includes("間違えた") && !renderDoneBody.includes("復習リスト"), "完了画面に誤答専用復習の導線を残してはいけません");
 
 assert.match(js, /const RESUME_STAGE_RULES\s*=\s*\{/, "再開可能なmodeごとのstage契約が必要です");
+assert.match(js, /meaning: \["check", "meaningReview", "done"\]/, "意味復習のresumeはContextを許可してはいけません");
 assert.match(js, /function resumeStageAllowed\(/, "未知のstageを弾く判定関数が必要です");
 assert.ok(restoreSessionBody.includes("resumeStageAllowed"), "restoreSessionは未対応stageを現行フローへ入れてはいけません");
 assert.ok(restoreSessionBody.includes("resumeUnavailable"), "再開できない記録は削除せず案内状態にする必要があります");

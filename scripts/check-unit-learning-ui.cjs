@@ -84,7 +84,7 @@ assert.ok(renderDoneBody.includes("session.meaningCorrect < session.checkOrder.l
 {
   const anchor = renderDoneBody.indexOf("第${q}問の4語句を学習しました");
   assert.ok(anchor !== -1, "完了バナーの学習ブランチが特定できない");
-  const learnBanner = renderDoneBody.slice(Math.max(0, anchor - 320), anchor + 620);
+  const learnBanner = renderDoneBody.slice(Math.max(0, anchor - 320), anchor + 760);
   assert.ok(
     learnBanner.includes('class: "big" }, `${session.meaningCorrect} / ${session.checkOrder.length}`'),
     "完了バナーの big は意味把握数（meaningCorrect / checkOrder.length）にする必要がある",

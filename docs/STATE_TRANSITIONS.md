@@ -23,7 +23,7 @@
 flowchart LR
   HOME[問題セット一覧] --> DISCOVERY[STEP 1 文脈から発見]
   DISCOVERY --> FLASH[STEP 1 意味を覚える]
-  FLASH --> NEXT[次の語句]
+  FLASH --> NEXT[次の語句の未回答Context / Flash]
   NEXT --> DISCOVERY
   FLASH --> MEANING[STEP 2 意味チェック]
   MEANING --> PRACTICE
@@ -41,7 +41,7 @@ flowchart LR
 |---|---|---|---|
 | `Q1_UNLEARNED` | 問題を開始。文脈がある語なら発見から開始 | `Q1_CONTEXT` または `Q1_FLASH` | `resume.mode=learn`, `learnIdx`, `learnPhase` |
 | `Q1_CONTEXT` | 文脈の4択に回答 | 同じ語の `Q1_FLASH` | `contextResults`, `contextCorrectCount` |
-| `Q1_FLASH` | 現在語のカードを確認 | 次語の `Q1_CONTEXT` / `Q1_FLASH`、最後なら `Q1_MEANING_CHECK` | `learnIdx` |
+| `Q1_FLASH` | 現在語のカードを確認 | 次語に未回答Contextがあれば `Q1_CONTEXT`、なければ `Q1_FLASH`、最後なら `Q1_MEANING_CHECK` | `learnIdx` |
 | `Q1_MEANING_CHECK` | 意味を回答 | 回答済み表示 | `checkAnswered` |
 | `Q1_MEANING_CHECK` | 最終問 | `Q1_PRACTICE` | `stage=practice` |
 | `Q1_PRACTICE` | 4択に回答 | `Q1_DONE` | `learned`, `answerResult`, `solvedCorrect`, `wrongCount` |
@@ -53,11 +53,15 @@ flowchart LR
 
 | セッション | 開始条件 | 完了条件 |
 |---|---|---|
-| `Q1_MEANING` | 「間隔復習カード」から意味練習を選ぶ | 今回の最大30語句に回答。誤答があれば `Q1_MEANING_REVIEW` へ、なければ結果へ |
+| `Q1_MEANING` | 「間隔復習カード」から意味練習を選ぶ | Contextを表示せず、今回の最大30語句に意味4択で回答。誤答があれば `Q1_MEANING_REVIEW` へ、なければ結果へ |
+| `Q1_CONTEXT` | 通常学習または「文脈推測を試す」から開始 | Contextの手がかりを組み合わせて意味を推測する。通常学習では同じ語のFlashへ進む |
+| `Q1_CONTEXT_LEARN` | ホームの「文脈→暗記カードを試す」から開始 | 独立したContext → Flash試用。通常学習・意味復習の状態とは共有しない |
 | `Q1_MEANING_REVIEW` | 意味だけ復習で誤答した語句を暗記カードで確認する | 全件で「確認した」を押すと結果へ。途中状態は `meaningWrongItems` / `meaningWrongChecked` に保存 |
 | `Q1_FINAL` | 全設問に回答済み | 全語句の正答率80%以上 |
 
-`Q1_MEANING` は全級共通で、同じ級の3回分を1つのプールとして扱う。対象は通常学習で `learned=true` になった設問の語句だけで、正解するたびに 1日→3日→7日→14日 の間隔で次回へ回る（誤答で「要再確認」に戻る）。語句単位の状態は、その語句が属する回の進捗ブロック `items` に保存する。
+通常学習は `Discovery → Encoding → Retrieval → Application`、意味だけ復習は `Retrieval only`、文脈推測練習は `Inference only`、最終チェックは `Assessment only` である。通常学習のContextは未学習語への初回推測、Meaning Checkは暗記カード後の文脈なしretrievalとして責務を分ける。
+
+`Q1_MEANING` は全級共通で、同じ級の3回分を1つのプールとして扱う。対象は通常学習で `learned=true` になった設問の語句だけで、正解するたびに 1日→3日→7日→14日 の間隔で次回へ回る（誤答で「要再確認」に戻る）。語句単位の状態は、その語句が属する回の進捗ブロック `items` に保存する。Contextの推測結果はこの成績やFSRSへ加えない。
 意味だけ復習で誤答した英単語・熟語は、同じセッションの最後に暗記カードで見直す。見直しの「確認した」は学習履歴へ記録するが、間隔の判定は意味チェックの誤答結果として扱い、通常学習の設問復習キューは作らない。
 
 ## 3. 完了条件
@@ -104,6 +108,8 @@ eiken_q1_progress_eikenp1-<roundId>.units[<q>]
 6. `learned=true` だが正誤情報がない旧記録は `answerResult="unknown"` として表示し、誤答扱いにしない。
 7. 旧形式の `cumulativeCycle` や未対応の途中記録は削除せず、現行フローから参照しない。
 8. 意味だけ復習の誤答見直しを途中離脱した場合は、確認済みの語句を保持し、残りの確認後に結果へ進める。
+9. 通常学習で一度回答したContext結果は `contextResults` に初回推測として保持し、Flashの前後移動で再出題・上書きしない。
+10. 通常学習の `A Context → A Flash → B Context → B Flash` でBを回答済みにした後、`前へ → A Flash → 次へ` と操作しても、B ContextではなくB Flashへ戻る。
 
 ## 7. 最低限の検証
 

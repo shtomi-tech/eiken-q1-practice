@@ -125,12 +125,13 @@ function renderDone(body) {
     const missed = session.checkOrder.length - session.meaningCorrect;
     banner.appendChild(el("div", { class: "big" }, `${session.meaningCorrect} / ${session.checkOrder.length}`));
     banner.appendChild(el("h2", {}, `第${q}問の4語句を学習しました`));
-    const contextTotal = Number(session.contextAvailableTotal || 0);
+    const contextAvailableTotal = Number(session.contextAvailableTotal || 0);
+    const contextTotal = Number(session.contextTotal || 0);
     const contextCorrect = Number(session.contextCorrectCount || 0);
-    banner.appendChild(el("p", { class: "hint contextDoneSummary" },
-      contextTotal > 0
-        ? `発見　文脈から推測：${contextCorrect} / ${contextTotal}語`
-        : "発見　文脈データのない語句のみ"));
+    if (contextAvailableTotal > 0) {
+      banner.appendChild(el("p", { class: "hint contextDoneSummary" },
+        `発見　文脈から推測：${contextCorrect} / ${contextTotal}語`));
+    }
     banner.appendChild(el("p", { class: "hint" },
       missed > 0 ? `定着　意味を思い出す：${session.meaningCorrect}語つかめました（未定着 ${missed}語）` : `定着　意味を思い出す：4語すべてつかめました`));
     banner.appendChild(el("p", { class: "hint" },

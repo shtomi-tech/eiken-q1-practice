@@ -305,7 +305,7 @@ const state = {
 
 const RESUME_STAGE_RULES = {
   learn: ["flash", "context", "check", "practice", "done"],
-  meaning: ["context", "check", "meaningReview", "done"],
+  meaning: ["check", "meaningReview", "done"],
   final: ["check", "done"],
 };
 const RESUMABLE_MODES = new Set(Object.keys(RESUME_STAGE_RULES));

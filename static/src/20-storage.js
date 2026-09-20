@@ -507,7 +507,9 @@ function normalizeLearnSessionResume() {
   const results = Object.values(session.contextResults);
   session.contextTotal = results.length;
   session.contextCorrectCount = results.filter((result) => result.correct).length;
-  if (session.stage === "context" && contextItemFor(items[learnIdx])) {
+  if (session.stage === "context"
+    && contextItemFor(items[learnIdx])
+    && !hasLearnContextResult(items[learnIdx])) {
     session.learnPhase = "context";
   } else if (session.stage === "context" || session.stage === "flash") {
     session.learnPhase = "flash";

@@ -319,7 +319,7 @@ const state = {
 
 const RESUME_STAGE_RULES = {
   learn: ["flash", "context", "check", "practice", "done"],
-  meaning: ["context", "check", "meaningReview", "done"],
+  meaning: ["check", "meaningReview", "done"],
   final: ["check", "done"],
 };
 const RESUMABLE_MODES = new Set(Object.keys(RESUME_STAGE_RULES));
@@ -839,7 +839,9 @@ function normalizeLearnSessionResume() {
   const results = Object.values(session.contextResults);
   session.contextTotal = results.length;
   session.contextCorrectCount = results.filter((result) => result.correct).length;
-  if (session.stage === "context" && contextItemFor(items[learnIdx])) {
+  if (session.stage === "context"
+    && contextItemFor(items[learnIdx])
+    && !hasLearnContextResult(items[learnIdx])) {
     session.learnPhase = "context";
   } else if (session.stage === "context" || session.stage === "flash") {
     session.learnPhase = "flash";
@@ -1931,6 +1933,14 @@ async function loadData(datasetId = state.datasetId) {
   state.contextItems = [];
   state.progress = loadProgress(datasetId);
   const savedResume = state.progress.resume;
+  // Phase 1で保存された「意味復習中のContext」は、現在の責務では意味チェックへ戻す。
+  // 保存データを捨てず、同じcheckIdxから純粋なretrievalとして再開する。
+  if (savedResume?.mode === "meaning" && savedResume.stage === "context") {
+    savedResume.stage = "check";
+    savedResume.contextRevealed = false;
+    savedResume.contextPicked = null;
+    savedResume.contextCorrect = null;
+  }
   if (savedResume && (!RESUMABLE_MODES.has(savedResume.mode) || !resumeStageAllowed(savedResume.mode, savedResume.stage))) {
     resumeRecoveryMessage = "以前の形式の途中記録は保持しています。現在の学習フローでは、第1問から再開してください。";
     resumeUnavailable = true;
@@ -1985,7 +1995,6 @@ function setChromeTitle(title) {
   if (titleEl) titleEl.textContent = title;
   document.title = title;
 }
-
 /* ============================================================
    HOME
    ============================================================ */
@@ -3011,7 +3020,7 @@ function startLearn(q) {
     contextCorrect: null,
   };
   session.contextAvailableTotal = session.items.filter((item) => contextItemFor(item)).length;
-  session.learnPhase = session.contextAvailableTotal > 0 && contextItemFor(session.items[0])
+  session.learnPhase = session.contextAvailableTotal > 0 && contextItemFor(session.items[0]) && !hasLearnContextResult(session.items[0])
     ? "context"
     : "flash";
   session.stage = session.learnPhase;
@@ -3024,7 +3033,7 @@ function setLearnItem(index, phase = null) {
   session.learnIdx = index;
   session.flashIdx = index;
   const item = session.items[index];
-  const nextPhase = phase || (contextItemFor(item) ? "context" : "flash");
+  const nextPhase = phase || (contextItemFor(item) && !hasLearnContextResult(item) ? "context" : "flash");
   session.learnPhase = nextPhase;
   session.stage = nextPhase;
   if (nextPhase === "context") resetContextState();
@@ -3127,17 +3136,7 @@ async function startMeaningPractice(dueOnly = true, queueOverride = null) {
     dueOnly: Boolean(grade) && dueOnly,
     meaningVersion: grade ? MEANING_PROGRESS_VERSION : null,
     meaningBatchSize: grade ? MEANING_SESSION_SIZE : null,
-    contextPool: state.contextItems,
-    contextOrder: [],
-    contextIdx: 0,
-    contextBeforeFlash: false,
-    contextRevealed: false,
-    contextChoices: null,
-    contextChoiceTarget: "",
-    contextPicked: null,
-    contextCorrect: null,
   };
-  enterContextOrCheck();
   renderSession();
   resetSessionScroll();
   return true;
@@ -3251,12 +3250,6 @@ function contextItemFor(item) {
   return pool.find((context) => contextTargetMatchesItem(context, item)) || null;
 }
 
-function shouldShowContextBefore(item) {
-  return Boolean(session
-    && session.mode === "meaning"
-    && contextItemFor(item));
-}
-
 function resetContextState() {
   session.contextRevealed = false;
   session.contextChoices = null;
@@ -3265,10 +3258,19 @@ function resetContextState() {
   session.contextCorrect = null;
 }
 
+function hasLearnContextResult(item) {
+  if (!session || session.mode !== "learn" || !item) return false;
+  const results = session.contextResults;
+  return Boolean(results
+    && typeof results === "object"
+    && Object.prototype.hasOwnProperty.call(results, itemKeyOf(item)));
+}
+
 function recordLearnContextResult(item, pickedMeaning, correctMeaning) {
   if (!session || session.mode !== "learn" || !item) return;
   const key = itemKeyOf(item);
   if (!session.contextResults || typeof session.contextResults !== "object") session.contextResults = {};
+  if (Object.prototype.hasOwnProperty.call(session.contextResults, key)) return;
   session.contextResults[key] = {
     pickedMeaning,
     correctMeaning,
@@ -3277,12 +3279,6 @@ function recordLearnContextResult(item, pickedMeaning, correctMeaning) {
   const results = Object.values(session.contextResults);
   session.contextTotal = results.length;
   session.contextCorrectCount = results.filter((result) => result.correct).length;
-}
-
-function enterContextOrCheck() {
-  const item = session?.checkOrder?.[session.checkIdx];
-  session.stage = shouldShowContextBefore(item) ? "context" : "check";
-  if (session.stage === "context") resetContextState();
 }
 
 function startFinalCheck() {
@@ -4321,7 +4317,7 @@ function appendCheckFeedback(box, item, surface, correct, isCorrect) {
           renderSession();
         } else {
           session.checkIdx++;
-          enterContextOrCheck();
+          session.stage = "check";
           renderSession();
         }
       },
@@ -4555,12 +4551,13 @@ function renderDone(body) {
     const missed = session.checkOrder.length - session.meaningCorrect;
     banner.appendChild(el("div", { class: "big" }, `${session.meaningCorrect} / ${session.checkOrder.length}`));
     banner.appendChild(el("h2", {}, `第${q}問の4語句を学習しました`));
-    const contextTotal = Number(session.contextAvailableTotal || 0);
+    const contextAvailableTotal = Number(session.contextAvailableTotal || 0);
+    const contextTotal = Number(session.contextTotal || 0);
     const contextCorrect = Number(session.contextCorrectCount || 0);
-    banner.appendChild(el("p", { class: "hint contextDoneSummary" },
-      contextTotal > 0
-        ? `発見　文脈から推測：${contextCorrect} / ${contextTotal}語`
-        : "発見　文脈データのない語句のみ"));
+    if (contextAvailableTotal > 0) {
+      banner.appendChild(el("p", { class: "hint contextDoneSummary" },
+        `発見　文脈から推測：${contextCorrect} / ${contextTotal}語`));
+    }
     banner.appendChild(el("p", { class: "hint" },
       missed > 0 ? `定着　意味を思い出す：${session.meaningCorrect}語つかめました（未定着 ${missed}語）` : `定着　意味を思い出す：4語すべてつかめました`));
     banner.appendChild(el("p", { class: "hint" },

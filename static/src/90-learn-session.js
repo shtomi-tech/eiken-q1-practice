@@ -40,7 +40,7 @@ function startLearn(q) {
     contextCorrect: null,
   };
   session.contextAvailableTotal = session.items.filter((item) => contextItemFor(item)).length;
-  session.learnPhase = session.contextAvailableTotal > 0 && contextItemFor(session.items[0])
+  session.learnPhase = session.contextAvailableTotal > 0 && contextItemFor(session.items[0]) && !hasLearnContextResult(session.items[0])
     ? "context"
     : "flash";
   session.stage = session.learnPhase;
@@ -53,7 +53,7 @@ function setLearnItem(index, phase = null) {
   session.learnIdx = index;
   session.flashIdx = index;
   const item = session.items[index];
-  const nextPhase = phase || (contextItemFor(item) ? "context" : "flash");
+  const nextPhase = phase || (contextItemFor(item) && !hasLearnContextResult(item) ? "context" : "flash");
   session.learnPhase = nextPhase;
   session.stage = nextPhase;
   if (nextPhase === "context") resetContextState();
@@ -156,17 +156,7 @@ async function startMeaningPractice(dueOnly = true, queueOverride = null) {
     dueOnly: Boolean(grade) && dueOnly,
     meaningVersion: grade ? MEANING_PROGRESS_VERSION : null,
     meaningBatchSize: grade ? MEANING_SESSION_SIZE : null,
-    contextPool: state.contextItems,
-    contextOrder: [],
-    contextIdx: 0,
-    contextBeforeFlash: false,
-    contextRevealed: false,
-    contextChoices: null,
-    contextChoiceTarget: "",
-    contextPicked: null,
-    contextCorrect: null,
   };
-  enterContextOrCheck();
   renderSession();
   resetSessionScroll();
   return true;
@@ -280,12 +270,6 @@ function contextItemFor(item) {
   return pool.find((context) => contextTargetMatchesItem(context, item)) || null;
 }
 
-function shouldShowContextBefore(item) {
-  return Boolean(session
-    && session.mode === "meaning"
-    && contextItemFor(item));
-}
-
 function resetContextState() {
   session.contextRevealed = false;
   session.contextChoices = null;
@@ -294,10 +278,19 @@ function resetContextState() {
   session.contextCorrect = null;
 }
 
+function hasLearnContextResult(item) {
+  if (!session || session.mode !== "learn" || !item) return false;
+  const results = session.contextResults;
+  return Boolean(results
+    && typeof results === "object"
+    && Object.prototype.hasOwnProperty.call(results, itemKeyOf(item)));
+}
+
 function recordLearnContextResult(item, pickedMeaning, correctMeaning) {
   if (!session || session.mode !== "learn" || !item) return;
   const key = itemKeyOf(item);
   if (!session.contextResults || typeof session.contextResults !== "object") session.contextResults = {};
+  if (Object.prototype.hasOwnProperty.call(session.contextResults, key)) return;
   session.contextResults[key] = {
     pickedMeaning,
     correctMeaning,
@@ -306,12 +299,6 @@ function recordLearnContextResult(item, pickedMeaning, correctMeaning) {
   const results = Object.values(session.contextResults);
   session.contextTotal = results.length;
   session.contextCorrectCount = results.filter((result) => result.correct).length;
-}
-
-function enterContextOrCheck() {
-  const item = session?.checkOrder?.[session.checkIdx];
-  session.stage = shouldShowContextBefore(item) ? "context" : "check";
-  if (session.stage === "context") resetContextState();
 }
 
 function startFinalCheck() {
