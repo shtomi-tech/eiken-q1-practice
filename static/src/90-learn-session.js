@@ -137,10 +137,15 @@ async function startContextPractice() {
     mode: "context",
     q: null,
     items,
+    contextPool: contexts,
     stage: "context",
     contextIdx: 0,
     contextRevealed: false,
     contextGuess: "",
+    contextChoices: null,
+    contextChoiceTarget: "",
+    contextPicked: null,
+    contextCorrect: null,
   };
   renderSession();
   resetSessionScroll();
@@ -239,7 +244,7 @@ function contextProgressBar() {
   const current = session.contextIdx + 1;
   return el("div", { class: "stageBar contextProgressBar" },
     el("div", { class: "stagePill active" }, `${current} / ${total}語句`),
-    el("div", { class: "stagePill" }, session.contextRevealed ? "手がかりを確認済み" : "まず意味を推測"),
+    el("div", { class: "stagePill" }, session.contextRevealed ? "4択に回答済み" : "まず意味を推測"),
   );
 }
 
@@ -261,9 +266,25 @@ function contextTextWithTarget(text, target) {
   return fragment;
 }
 
+function contextMeaningChoices(item) {
+  if (session.contextChoiceTarget === item.target && Array.isArray(session.contextChoices)) {
+    return session.contextChoices;
+  }
+  const pool = Array.isArray(session.contextPool) ? session.contextPool : session.items;
+  const distractors = shuffle(pool
+    .filter((candidate) => candidate !== item && candidate.meaning && candidate.meaning !== item.meaning)
+    .map((candidate) => candidate.meaning)
+    .filter((meaning, index, meanings) => meanings.indexOf(meaning) === index))
+    .slice(0, 3);
+  session.contextChoices = shuffle([item.meaning, ...distractors]);
+  session.contextChoiceTarget = item.target;
+  return session.contextChoices;
+}
+
 function renderContext(body) {
   const item = session.items[session.contextIdx];
   const last = session.contextIdx === session.items.length - 1;
+  const choices = contextMeaningChoices(item);
   const card = el("article", { class: "contextCard" },
     el("div", { class: "contextCardHead" },
       el("p", { class: "label" }, `Q${item.q} ・ ${item.pos}`),
@@ -290,18 +311,25 @@ function renderContext(body) {
     });
     guess.value = session.contextGuess || "";
     guess.addEventListener("input", () => { session.contextGuess = guess.value; });
-    card.appendChild(el("label", { class: "contextGuessLabel" }, "推測してから答えを見る", guess));
-    card.appendChild(el("div", { class: "actions contextActions" },
-      el("button", {
-        class: "cta",
+    card.appendChild(el("label", { class: "contextGuessLabel" }, "推測をメモしてから、意味を4択で選ぶ", guess));
+    card.appendChild(el("p", { class: "label contextChoiceLabel" }, "推測した意味は？"));
+    const choiceWrap = el("div", { class: "choices contextChoices", role: "group", "aria-label": "推測した意味の4択" });
+    choices.forEach((meaning, index) => {
+      choiceWrap.appendChild(el("button", {
+        class: "choiceBtn contextChoiceBtn",
         type: "button",
         onclick: () => {
           session.contextGuess = guess.value.trim();
+          session.contextPicked = meaning;
+          session.contextCorrect = meaning === item.meaning;
           session.contextRevealed = true;
           renderSession();
         },
-      }, "手がかりと答えを見る →"),
-    ));
+      },
+      el("span", { class: "key" }, String(index + 1)),
+      el("span", {}, meaning)));
+    });
+    card.appendChild(choiceWrap);
   } else {
     if (session.contextGuess) {
       card.appendChild(el("p", { class: "contextYourGuess" },
@@ -316,6 +344,15 @@ function renderContext(body) {
         el("span", {}, clue.text),
       ));
     });
+    card.appendChild(el("div", {
+      class: `feedback contextResult ${session.contextCorrect ? "ok" : "ng"}`,
+      role: "status",
+      "aria-live": "polite",
+    },
+      el("h3", {}, session.contextCorrect ? "正解！" : "おしい！"),
+      el("p", {}, `あなたの選択：${session.contextPicked}`),
+      !session.contextCorrect ? el("p", { class: "trans" }, `正しい意味：${item.meaning}`) : null,
+    ));
     const answer = el("div", { class: "contextAnswer" },
       el("p", { class: "label" }, "意味"),
       el("p", { class: "contextMeaning" }, item.meaning),
@@ -338,6 +375,10 @@ function renderContext(body) {
           session.contextIdx += 1;
           session.contextRevealed = false;
           session.contextGuess = "";
+          session.contextChoices = null;
+          session.contextChoiceTarget = "";
+          session.contextPicked = null;
+          session.contextCorrect = null;
           renderSession();
         },
       }, last ? "文脈推測を終える" : "次の語句へ →"),

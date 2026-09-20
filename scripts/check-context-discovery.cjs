@@ -59,5 +59,8 @@ assert.match(homeSource, /function contextDiscoveryCard\(\)/, "ホームに文�
 assert.match(homeSource, /startContextPractice\(\)/, "ホームから文脈推測を開始できません");
 assert.match(sessionSource, /function startContextPractice\(\)/, "文脈推測セッションの開始処理が必要です");
 assert.match(sessionSource, /function renderContext\(body\)/, "文脈推測画面の描画処理が必要です");
+assert.match(sessionSource, /function contextMeaningChoices\(item\)/, "文脈推測の4択生成処理が必要です");
+assert.match(sessionSource, /contextChoiceBtn/, "文脈推測の意味4択ボタンが必要です");
+assert.match(sessionSource, /contextPicked/, "文脈推測の選択結果を保持する必要があります");
 assert.match(sessionSource, /contextClues/, "文脈の手がかり表示が必要です");
 console.log("context discovery data and UI contract: OK (68 contexts)");

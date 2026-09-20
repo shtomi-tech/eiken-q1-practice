@@ -792,6 +792,10 @@ h2 {
   width: 100%;
 }
 .contextGuess:focus { border-color: var(--ink); outline: 2px solid var(--clay); outline-offset: 2px; }
+.contextChoiceLabel { margin: 16px 18px 8px; }
+.contextChoices { margin: 0 18px; }
+.contextChoiceBtn { width: 100%; }
+.contextResult { margin: 16px 18px 0; }
 .contextYourGuess {
   background: var(--surface-soft);
   border-radius: var(--r-md);
