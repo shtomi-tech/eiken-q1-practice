@@ -1,6 +1,16 @@
 /* ============================================================
    load data
    ============================================================ */
+function normalizeMeaningResume(saved) {
+  if (!saved || saved.mode !== "meaning" || saved.stage !== "context") return saved;
+  // Phase 1で保存されたMeaning Contextは、同じcheckIdxのretrievalへ戻す。
+  saved.stage = "check";
+  saved.contextRevealed = false;
+  saved.contextPicked = null;
+  saved.contextCorrect = null;
+  return saved;
+}
+
 async function loadData(datasetId = state.datasetId) {
   state.datasetId = datasetId;
   resumeRecoveryMessage = "";
@@ -11,15 +21,7 @@ async function loadData(datasetId = state.datasetId) {
   state.meaningPool = { word: [], idiom: [] };
   state.contextItems = [];
   state.progress = loadProgress(datasetId);
-  const savedResume = state.progress.resume;
-  // Phase 1で保存された「意味復習中のContext」は、現在の責務では意味チェックへ戻す。
-  // 保存データを捨てず、同じcheckIdxから純粋なretrievalとして再開する。
-  if (savedResume?.mode === "meaning" && savedResume.stage === "context") {
-    savedResume.stage = "check";
-    savedResume.contextRevealed = false;
-    savedResume.contextPicked = null;
-    savedResume.contextCorrect = null;
-  }
+  const savedResume = normalizeMeaningResume(state.progress.resume);
   if (savedResume && (!RESUMABLE_MODES.has(savedResume.mode) || !resumeStageAllowed(savedResume.mode, savedResume.stage))) {
     resumeRecoveryMessage = "以前の形式の途中記録は保持しています。現在の学習フローでは、第1問から再開してください。";
     resumeUnavailable = true;
