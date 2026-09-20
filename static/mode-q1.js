@@ -2104,11 +2104,19 @@ function contextDiscoveryCard() {
     el("p", { class: "contextDiscoveryLead" },
       "日本語訳を先に見ず、英文の中の手がかりを組み合わせて語句の意味を考えます。"),
     el("p", { class: "contextDiscoveryMeta" }, `英検2級・${total}語句から1回10語`),
-    el("button", {
-      class: "secondaryCta contextDiscoveryCta",
-      type: "button",
-      onclick: () => startContextPractice(),
-    }, "文脈推測を試す →"),
+    el("p", { class: "hint contextDiscoveryTrialNote" }, "どちらも通常学習の進捗には影響しません。"),
+    el("div", { class: "contextDiscoveryActions" },
+      el("button", {
+        class: "secondaryCta contextDiscoveryCta",
+        type: "button",
+        onclick: () => startContextPractice(),
+      }, "文脈推測を試す →"),
+      el("button", {
+        class: "secondaryCta contextDiscoveryCta",
+        type: "button",
+        onclick: () => startContextLearning(),
+      }, "文脈→暗記カードを試す →"),
+    ),
   );
 }
 
@@ -2922,7 +2930,8 @@ function finalUnlocked() {
 }
 /* ============================================================
    LEARN FLOW (per question)
-   stages: context -> flash -> check -> practice -> done
+   stages: flash -> check -> practice -> done
+   contextLearn trial: context -> flash
    ============================================================ */
 let session = null;
 
@@ -2940,25 +2949,13 @@ function startLearn(q) {
     mode: "learn",
     q,
     items: shuffle(items),
-    stage: "context",
+    stage: "flash",
     flashIdx: 0,
     checkOrder: shuffle(items),
     checkIdx: 0,
     checkAnswered: false,
     meaningCorrect: 0,
-    contextPool: state.contextItems,
-    contextOrder: [],
-    contextIdx: 0,
-    contextBeforeFlash: false,
-    contextRevealed: false,
-    contextChoices: null,
-    contextChoiceTarget: "",
-    contextPicked: null,
-    contextCorrect: null,
   };
-  session.contextOrder = session.items.filter((item) => contextItemFor(item));
-  session.contextBeforeFlash = session.contextOrder.length > 0;
-  if (!session.contextBeforeFlash) session.stage = "flash";
   renderSession();
   resetSessionScroll();
   return true;
@@ -3096,6 +3093,42 @@ async function startContextPractice() {
   return true;
 }
 
+function startContextLearning(q = null) {
+  const targetQ = q == null
+    ? (state.qList.find((candidate) => !unit(candidate).learned) || state.qList[0])
+    : q;
+  const items = state.itemsByQ[targetQ];
+  if (!Array.isArray(items) || !items.length) {
+    renderHome();
+    return false;
+  }
+  session = {
+    mode: "contextLearn",
+    q: targetQ,
+    items: shuffle(items),
+    stage: "context",
+    flashIdx: 0,
+    contextPool: state.contextItems,
+    contextOrder: [],
+    contextIdx: 0,
+    contextBeforeFlash: true,
+    contextRevealed: false,
+    contextChoices: null,
+    contextChoiceTarget: "",
+    contextPicked: null,
+    contextCorrect: null,
+  };
+  session.contextOrder = session.items.filter((item) => contextItemFor(item));
+  if (!session.contextOrder.length) {
+    session = null;
+    renderHome();
+    return false;
+  }
+  renderSession();
+  resetSessionScroll();
+  return true;
+}
+
 function contextTargetKey(value) {
   return String(value || "").trim().toLowerCase();
 }
@@ -3171,7 +3204,8 @@ function startFinalCheck() {
 }
 
 function renderSession() {
-  if (session.mode !== "context") saveResume();
+  const isTransientContext = session.mode === "context" || session.mode === "contextLearn";
+  if (!isTransientContext) saveResume();
   $("#homePanel").classList.add("hide");
   const panel = $("#sessionPanel");
   panel.classList.remove("hide");
@@ -3192,7 +3226,7 @@ function renderSession() {
        el("h2", { id: "sessionStageTitle", tabindex: "-1" }, stageTitle(session.stage)),
      ),
      el("button", { class: "sessionHeadBack ghost", type: "button", onclick: () => {
-       if (session.mode === "context") session = null;
+       if (isTransientContext) session = null;
        else saveResume();
        renderHome();
      } }, "一覧へ戻る"),
@@ -3875,7 +3909,15 @@ function renderFlash(body) {
     onclick: () => {
       if (flashNavLocked()) return;
       armFlashNavGuard();
-      if (last) { session.stage = "check"; renderSession(); }
+      if (last) {
+        if (session.mode === "contextLearn") {
+          session = null;
+          renderHome();
+          return;
+        }
+        session.stage = "check";
+        renderSession();
+      }
       else { session.flashIdx++; renderSession(); }
       scrollFlashCardIntoView();
     },

@@ -326,7 +326,15 @@ function renderFlash(body) {
     onclick: () => {
       if (flashNavLocked()) return;
       armFlashNavGuard();
-      if (last) { session.stage = "check"; renderSession(); }
+      if (last) {
+        if (session.mode === "contextLearn") {
+          session = null;
+          renderHome();
+          return;
+        }
+        session.stage = "check";
+        renderSession();
+      }
       else { session.flashIdx++; renderSession(); }
       scrollFlashCardIntoView();
     },

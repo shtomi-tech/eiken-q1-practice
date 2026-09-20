@@ -67,7 +67,9 @@ for (const item of contexts) {
 assert.deepEqual([...contextTargets].sort(), [...vocabTargets].sort(), "語句と文脈のtarget集合が一致しません");
 assert.match(homeSource, /function contextDiscoveryCard\(\)/, "ホームに文脈推測カードが必要です");
 assert.match(homeSource, /startContextPractice\(\)/, "ホームから文脈推測を開始できません");
+assert.match(homeSource, /startContextLearning\(\)/, "文脈推測から暗記カードへ進む試用導線が必要です");
 assert.match(sessionSource, /function startContextPractice\(\)/, "文脈推測セッションの開始処理が必要です");
+assert.match(sessionSource, /function startContextLearning\(/, "文脈推測から暗記カードへ進む試用モードが必要です");
 assert.match(sessionSource, /function renderContext\(body\)/, "文脈推測画面の描画処理が必要です");
 assert.match(sessionSource, /function contextMeaningChoices\(item/, "文脈推測の4択生成処理が必要です");
 assert.match(sessionSource, /contextChoiceBtn/, "文脈推測の意味4択ボタンが必要です");

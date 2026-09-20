@@ -157,11 +157,19 @@ function contextDiscoveryCard() {
     el("p", { class: "contextDiscoveryLead" },
       "日本語訳を先に見ず、英文の中の手がかりを組み合わせて語句の意味を考えます。"),
     el("p", { class: "contextDiscoveryMeta" }, `英検2級・${total}語句から1回10語`),
-    el("button", {
-      class: "secondaryCta contextDiscoveryCta",
-      type: "button",
-      onclick: () => startContextPractice(),
-    }, "文脈推測を試す →"),
+    el("p", { class: "hint contextDiscoveryTrialNote" }, "どちらも通常学習の進捗には影響しません。"),
+    el("div", { class: "contextDiscoveryActions" },
+      el("button", {
+        class: "secondaryCta contextDiscoveryCta",
+        type: "button",
+        onclick: () => startContextPractice(),
+      }, "文脈推測を試す →"),
+      el("button", {
+        class: "secondaryCta contextDiscoveryCta",
+        type: "button",
+        onclick: () => startContextLearning(),
+      }, "文脈→暗記カードを試す →"),
+    ),
   );
 }
 

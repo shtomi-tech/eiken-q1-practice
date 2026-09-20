@@ -705,11 +705,16 @@ h2 {
   font-size: 12px;
   margin: 0 0 14px;
 }
+.contextDiscoveryActions {
+  display: grid;
+  gap: 10px;
+  max-width: 28em;
+}
+.contextDiscoveryTrialNote { margin: -6px 0 12px; }
 .contextDiscoveryCta {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  max-width: 28em;
   text-align: left;
   width: 100%;
 }
