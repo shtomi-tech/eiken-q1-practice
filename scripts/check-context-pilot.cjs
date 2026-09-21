@@ -3,6 +3,7 @@
 const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const path = require("node:path");
+const { assertContextItem } = require("./lib/context-validator.cjs");
 
 const ROOT = path.resolve(__dirname, "..");
 const readJson = (file) => JSON.parse(fs.readFileSync(path.join(ROOT, file), "utf8"));
@@ -64,6 +65,7 @@ function validateItem(target, expectedQ) {
   assert.equal(item.q, expectedQ, `${target}: item is in the wrong pilot question`);
   assert.equal(item.meaning, vocab.meaning, `${target}: meaning must match vocabulary data`);
   assert.equal(item.pos, POS_MAP[vocab.pos], `${target}: POS must match vocabulary data`);
+  assertContextItem(item, vocab, { requireTargetSense: expectedQ === 2 });
   if (expectedQ === 2) {
     assert.ok(typeof item.targetSense === "string" && item.targetSense.trim(),
       `${target}: q=2 targetSense is required`);

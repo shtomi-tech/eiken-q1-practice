@@ -1,0 +1,614 @@
+{
+  "schemaVersion": 1,
+  "datasetId": "eiken2-2026-1",
+  "q": 3,
+  "stage": "APPROVED",
+  "items": [
+    {
+      "q": 3,
+      "type": "word",
+      "target": "difficulty",
+      "meaning": "困難、難しさ；苦労",
+      "targetSense": "困難、難しさ",
+      "pos": "noun",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "Lena had difficulty opening an old jar because the lid was stuck.",
+        "She tried several times, but the lid would not move.",
+        "Her brother finally used a towel and opened it."
+      ],
+      "mixedEnglish": [
+        "Lena had difficulty opening an old jar because the lid was stuck.",
+        "She tried several times, but the lid would not move.",
+        "Her brother finally used a towel and opened it."
+      ],
+      "contextClues": [
+        {
+          "text": "opening an old jar",
+          "type": "situation"
+        },
+        {
+          "text": "tried several times",
+          "type": "behavior"
+        },
+        {
+          "text": "lid would not move",
+          "type": "result"
+        }
+      ],
+      "inferencePath": [
+        "old jar",
+        "repeated attempts",
+        "lid would not move",
+        "an action that is hard",
+        "difficulty"
+      ],
+      "segments": [
+        [
+          {
+            "en": "Lena had ",
+            "ja": "",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "difficulty",
+            "ja": "困難、難しさ",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
+            "ja": "",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "opening an old jar",
+            "ja": "古いびんを開けること",
+            "role": "clue",
+            "clueType": "situation",
+            "useJapanese": false
+          },
+          {
+            "en": " because the lid was stuck.",
+            "ja": "",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "She ",
+            "ja": "",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "tried several times",
+            "ja": "何度も試した",
+            "role": "clue",
+            "clueType": "behavior",
+            "useJapanese": false
+          },
+          {
+            "en": ", but the ",
+            "ja": "",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "lid would not move",
+            "ja": "ふたが動かなかった",
+            "role": "clue",
+            "clueType": "result",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "ja": "",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Her brother finally used a towel and opened it.",
+            "ja": "",
+            "role": "background",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "困難、難しさ",
+        "問題",
+        "成功",
+        "方法"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「opening an old jar」「tried several times」「lid would not move」が手がかりです。何度も試しても開けにくい状況なので、difficultyはこの文脈では「困難、難しさ」だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 3,
+        "targetProtected": true,
+        "cluesProtected": true
+      },
+      "manualReview": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        }
+      },
+      "approval": {
+        "status": "approved"
+      }
+    },
+    {
+      "q": 3,
+      "type": "word",
+      "target": "glory",
+      "meaning": "栄光、名誉",
+      "targetSense": "栄光、名誉",
+      "pos": "noun",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "The young runner won the race and heard the crowd cheer.",
+        "Newspapers praised her as the town's champion.",
+        "For a moment, she enjoyed the glory of her great victory."
+      ],
+      "mixedEnglish": [
+        "The young runner won the race and heard the crowd cheer.",
+        "Newspapers praised her as the town's champion.",
+        "For a moment, she enjoyed the glory of her great victory."
+      ],
+      "contextClues": [
+        {
+          "text": "won the race",
+          "type": "cause"
+        },
+        {
+          "text": "crowd cheer",
+          "type": "result"
+        },
+        {
+          "text": "town's champion",
+          "type": "category"
+        }
+      ],
+      "inferencePath": [
+        "victory",
+        "public praise",
+        "champion",
+        "honor after great success",
+        "glory"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The young runner ",
+            "ja": "",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "won the race",
+            "ja": "レースに勝った",
+            "role": "clue",
+            "clueType": "cause",
+            "useJapanese": false
+          },
+          {
+            "en": " and heard the ",
+            "ja": "",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "crowd cheer",
+            "ja": "観客の歓声",
+            "role": "clue",
+            "clueType": "result",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "ja": "",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Newspapers praised her as the ",
+            "ja": "",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "town's champion",
+            "ja": "町のチャンピオン",
+            "role": "clue",
+            "clueType": "category",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "ja": "",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "For a moment, she enjoyed the ",
+            "ja": "",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "glory",
+            "ja": "栄光、名誉",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " of her great victory.",
+            "ja": "",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "栄光、名誉",
+        "心配",
+        "計画",
+        "約束"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「won the race」「crowd cheer」「town's champion」が手がかりです。勝利して人々から称賛された人が味わう名誉なので、gloryは「栄光、名誉」だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 3,
+        "targetProtected": true,
+        "cluesProtected": true
+      },
+      "manualReview": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        }
+      },
+      "approval": {
+        "status": "approved"
+      }
+    },
+    {
+      "q": 3,
+      "type": "word",
+      "target": "balance",
+      "meaning": "均衡、バランス；（口座の）残高",
+      "targetSense": "均衡、バランス",
+      "pos": "noun",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "The cyclist lost his balance when a strong wind hit him.",
+        "He moved his arms, slowed down, and stayed on the bike.",
+        "A few seconds later, he was riding safely again."
+      ],
+      "mixedEnglish": [
+        "The cyclist lost his balance when a strong wind hit him.",
+        "He moved his arms, slowed down, and stayed on the bike.",
+        "A few seconds later, he was riding safely again."
+      ],
+      "contextClues": [
+        {
+          "text": "strong wind hit him",
+          "type": "cause"
+        },
+        {
+          "text": "moved his arms",
+          "type": "behavior"
+        },
+        {
+          "text": "stayed on the bike",
+          "type": "result"
+        }
+      ],
+      "inferencePath": [
+        "cycling",
+        "wind",
+        "keeping the body steady",
+        "not falling",
+        "balance"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The cyclist lost his ",
+            "ja": "",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "balance",
+            "ja": "均衡、バランス",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " when a ",
+            "ja": "",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "strong wind hit him",
+            "ja": "強い風が彼に当たった",
+            "role": "clue",
+            "clueType": "cause",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "ja": "",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "He ",
+            "ja": "",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "moved his arms",
+            "ja": "腕を動かした",
+            "role": "clue",
+            "clueType": "behavior",
+            "useJapanese": false
+          },
+          {
+            "en": ", slowed down, and ",
+            "ja": "",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "stayed on the bike",
+            "ja": "自転車に乗ったままでいた",
+            "role": "clue",
+            "clueType": "result",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "ja": "",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "A few seconds later, he was riding safely again.",
+            "ja": "",
+            "role": "background",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "均衡、バランス",
+        "速度",
+        "方向",
+        "体力"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「strong wind hit him」「moved his arms」「stayed on the bike」が手がかりです。倒れないように体を安定させているので、balanceはこの文脈では「均衡、バランス」だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 3,
+        "targetProtected": true,
+        "cluesProtected": true
+      },
+      "manualReview": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        }
+      },
+      "approval": {
+        "status": "approved"
+      }
+    },
+    {
+      "q": 3,
+      "type": "word",
+      "target": "priority",
+      "meaning": "優先、優先事項",
+      "targetSense": "優先、優先事項",
+      "pos": "noun",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "The fire alarm rang at school, so the teachers moved the children outside first.",
+        "Keeping everyone safe became their top priority.",
+        "They left the books and bags in the classroom."
+      ],
+      "mixedEnglish": [
+        "The fire alarm rang at school, so the teachers moved the children outside first.",
+        "Keeping everyone safe became their top priority.",
+        "They left the books and bags in the classroom."
+      ],
+      "contextClues": [
+        {
+          "text": "moved the children outside first",
+          "type": "behavior"
+        },
+        {
+          "text": "Keeping everyone safe",
+          "type": "situation"
+        },
+        {
+          "text": "top",
+          "type": "degree"
+        }
+      ],
+      "inferencePath": [
+        "fire alarm",
+        "safety",
+        "done before other things",
+        "the most important task",
+        "priority"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The fire alarm rang at school, so the teachers ",
+            "ja": "",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "moved the children outside first",
+            "ja": "子どもたちを最初に外へ移した",
+            "role": "clue",
+            "clueType": "behavior",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "ja": "",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Keeping everyone safe",
+            "ja": "みんなの安全を守ること",
+            "role": "clue",
+            "clueType": "situation",
+            "useJapanese": false
+          },
+          {
+            "en": " became their ",
+            "ja": "",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "top",
+            "ja": "最も重要な",
+            "role": "clue",
+            "clueType": "degree",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
+            "ja": "",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "priority",
+            "ja": "優先、優先事項",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "ja": "",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "They left the books and bags in the classroom.",
+            "ja": "",
+            "role": "background",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "優先、優先事項",
+        "計画",
+        "結果",
+        "許可"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「moved the children outside first」「Keeping everyone safe」「top」が手がかりです。安全を他のことより先にしたので、priorityは「優先、優先事項」だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 3,
+        "targetProtected": true,
+        "cluesProtected": true
+      },
+      "manualReview": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        }
+      },
+      "approval": {
+        "status": "approved"
+      }
+    }
+  ]
+}

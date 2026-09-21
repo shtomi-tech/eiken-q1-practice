@@ -1,0 +1,91 @@
+{
+  "datasetId": "eiken2-2026-1",
+  "q": 3,
+  "reviewStatus": "complete",
+  "items": {
+    "difficulty": {
+      "status": "pass",
+      "checks": {
+        "senseAppropriate": "pass",
+        "senseUniquelySupported": "pass",
+        "otherKnownSensesExcluded": "pass",
+        "targetMainUnknown": "pass",
+        "clueQuality": "pass",
+        "clueIndependence": "pass",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "pass",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "pass",
+        "answerUnique": "pass"
+      },
+      "comparison": "The generated context keeps the existing jar problem but makes the repeated failed attempts and stuck lid explicit. It is at least as inferable as the existing context.",
+      "notes": "TargetSense is the difficulty-of-an-action sense; the other sense 苦労 is not used as a distractor."
+    },
+    "glory": {
+      "status": "pass",
+      "checks": {
+        "senseAppropriate": "pass",
+        "senseUniquelySupported": "pass",
+        "otherKnownSensesExcluded": "pass",
+        "targetMainUnknown": "pass",
+        "clueQuality": "pass",
+        "clueIndependence": "pass",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "pass",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "pass",
+        "answerUnique": "pass"
+      },
+      "comparison": "The generated context preserves the race, public praise, and champion setting from the existing context while making the cause and result flow more direct.",
+      "notes": "The targetSense is the honor-after-success sense represented by winning, cheering, and being named champion."
+    },
+    "balance": {
+      "status": "pass",
+      "checks": {
+        "senseAppropriate": "pass",
+        "senseUniquelySupported": "pass",
+        "otherKnownSensesExcluded": "pass",
+        "targetMainUnknown": "pass",
+        "clueQuality": "pass",
+        "clueIndependence": "pass",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "pass",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "pass",
+        "answerUnique": "pass"
+      },
+      "comparison": "The generated context retains the existing cyclist-and-wind scene. The recovery actions show the physical stability sense without mentioning money or an account.",
+      "notes": "The account-balance sense is excluded by the cycling scene and is not offered as a distractor."
+    },
+    "priority": {
+      "status": "pass",
+      "checks": {
+        "senseAppropriate": "pass",
+        "senseUniquelySupported": "pass",
+        "otherKnownSensesExcluded": "pass",
+        "targetMainUnknown": "pass",
+        "clueQuality": "pass",
+        "clueIndependence": "pass",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "pass",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "pass",
+        "answerUnique": "pass"
+      },
+      "comparison": "The generated context preserves the existing fire-alarm scene and keeps the first-action contrast clear. No extra difficult vocabulary is needed.",
+      "notes": "The first action, safety goal, and top degree marker converge on the importance/order sense of priority."
+    }
+  }
+}
