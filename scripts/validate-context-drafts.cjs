@@ -1,6 +1,7 @@
 "use strict";
 
 const { assertContextItem } = require("./lib/context-validator.cjs");
+const { assertTargetSense } = require("./lib/context-sense-validator.cjs");
 const {
   parseQs,
   pipelinePaths,
@@ -22,6 +23,9 @@ function main({ qs = parseQs(), write = true } = {}) {
   for (const item of draft.items) {
     const vocab = vocabulary.get(item.source.target);
     const runtimeShape = { ...item.source, ...item };
+    if (qs.some((q) => q >= 6)) {
+      assertTargetSense(runtimeShape, vocab);
+    }
     assertContextItem(runtimeShape, vocab, { requireTargetSense: true });
     if (item.manualReview?.status !== "pending") throw new Error(`${item.source.target}: manualReview must remain pending before review`);
     if (item.approval?.status !== "pending") throw new Error(`${item.source.target}: approval must remain pending before review`);
@@ -30,7 +34,12 @@ function main({ qs = parseQs(), write = true } = {}) {
       checks: [
         "source", "targetSense", "fullEnglish", "targetOccurrence", "contextClues",
         "segments", "targetProtection", "clueProtection", "supportReason", "choices", "explanation",
+        ...(qs.some((q) => q >= 6) ? ["senseSelection"] : []),
       ],
+    };
+    if (qs.some((q) => q >= 6)) item.senseValidation = {
+      status: "pass",
+      checks: ["source", "candidateSenses", "targetSense", "posCompatibility", "reason", "confidence"],
     };
   }
   if (write) writeJson(paths.draft, draft);

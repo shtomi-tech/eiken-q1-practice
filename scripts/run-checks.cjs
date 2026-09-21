@@ -26,6 +26,8 @@ const CHECKS = [
   ["scripts/check-context-pilot.cjs"],
   ["scripts/check-context-pipeline.cjs"],
   ["scripts/check-context-batch-q4-q5.cjs"],
+  ["scripts/check-context-sense.cjs"],
+  ["scripts/check-context-batch-q6-q7.cjs"],
   ["scripts/check-learn-context-flow.cjs"],
   ["scripts/check-learn-state-transitions.cjs"],
   ["scripts/check-student-storage-scope.cjs"],

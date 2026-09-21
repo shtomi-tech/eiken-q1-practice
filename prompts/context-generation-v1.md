@@ -11,6 +11,7 @@ Create a short Context Discovery learning item for an EIKEN learner. The target 
   "q": 3,
   "target": "...",
   "meaning": "Vocabulary Data meaning",
+  "targetSense": "The sense already selected by the Sense Selection stage",
   "pos": "noun",
   "level": "EIKEN Grade 2"
 }
@@ -18,13 +19,13 @@ Create a short Context Discovery learning item for an EIKEN learner. The target 
 
 ## Required process
 
-1. Select exactly one `targetSense` from the vocabulary meaning and record `senseSelectionReason`.
+1. Treat the supplied `targetSense` as fixed. Do not select or revise it in this step.
 2. Write `fullEnglish` first: 2–3 coherent sentences, 100% English, with the target appearing once.
 3. Extract at least two independent clues from the completed English context.
 4. Segment the English without changing its text. Protect target and clue segments.
 5. Start Japanese Support off. Set `supportDecision` to `not-needed` unless a non-clue phrase is meaningfully difficult and materially blocks comprehension. If needed, record a concrete `supportReason`.
 6. Create four target-sense choices. Do not use another known sense of the same word as a distractor.
-7. Write an inference explanation that names the clues and identifies the targetSense.
+7. Write an inference explanation that names the clues and identifies the supplied targetSense.
 
 ## Prohibitions
 
@@ -36,4 +37,4 @@ Create a short Context Discovery learning item for an EIKEN learner. The target 
 
 ## Output
 
-Return a draft item with `targetSense`, `senseSelectionReason`, `fullEnglish`, `mixedEnglish`, `contextClues`, `inferencePath`, `segments`, `supportDecision`, `choices`, `answerIndex`, and `inferenceExplanation`. Generation must leave `manualReview.status` and `approval.status` as `pending`.
+Return a draft item with the supplied `targetSense`, `fullEnglish`, `mixedEnglish`, `contextClues`, `inferencePath`, `segments`, `supportDecision`, `choices`, `answerIndex`, and `inferenceExplanation`. Sense selection, manual review, and approval are separate stages; generation must not mark them as passed.

@@ -19,8 +19,14 @@ function initialValue(entry) {
 }
 
 function contextFields(source, candidate) {
+  const senseFields = candidate.candidateSenses ? {
+    candidateSenses: candidate.candidateSenses,
+    senseConfidence: candidate.senseConfidence,
+    senseValidation: { status: "pending" },
+  } : {};
   return {
     source,
+    ...senseFields,
     targetSense: candidate.targetSense,
     senseSelectionReason: candidate.senseSelectionReason,
     fullEnglish: candidate.fullEnglish,

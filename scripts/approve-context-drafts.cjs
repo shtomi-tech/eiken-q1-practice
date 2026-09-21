@@ -1,6 +1,7 @@
 "use strict";
 
 const { assertContextItem } = require("./lib/context-validator.cjs");
+const { assertTargetSense } = require("./lib/context-sense-validator.cjs");
 const {
   parseQs,
   pipelinePaths,
@@ -25,6 +26,12 @@ function main({ qs = parseQs(), write = true } = {}) {
     const reviewItem = review.items?.[target];
     if (!reviewItem || reviewItem.status !== "pass") throw new Error(`${target}: manual review is not PASS`);
     if (draftItem.structuralValidation?.status !== "pass") throw new Error(`${target}: structural validation is not PASS`);
+    if (qs.some((q) => q >= 6)) {
+      if (draftItem.senseValidation?.status !== "pass") throw new Error(`${target}: sense validation is not PASS`);
+      assertTargetSense({ ...draftItem.source, ...draftItem }, vocabulary.get(target));
+      if (draftItem.senseConfidence === "low") throw new Error(`${target}: low-confidence sense cannot be auto-approved`);
+      if (reviewItem.senseReview?.status !== "pass") throw new Error(`${target}: sense review is not PASS`);
+    }
     if (draftItem.manualReview?.status !== "pending" || draftItem.approval?.status !== "pending") {
       throw new Error(`${target}: draft must start approval from pending states`);
     }
@@ -56,6 +63,12 @@ function main({ qs = parseQs(), write = true } = {}) {
       },
       approval: { status: "approved" },
     };
+    if (qs.some((q) => q >= 6)) {
+      runtimeItem.candidateSenses = draftItem.candidateSenses;
+      runtimeItem.senseConfidence = draftItem.senseConfidence;
+      runtimeItem.senseSelectionReason = draftItem.senseSelectionReason;
+      runtimeItem.senseValidation = draftItem.senseValidation;
+    }
     assertContextItem(runtimeItem, vocabulary.get(target), { requireTargetSense: true });
     return runtimeItem;
   });

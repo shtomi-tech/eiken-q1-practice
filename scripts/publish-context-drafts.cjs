@@ -2,6 +2,7 @@
 
 const fs = require("node:fs");
 const { assertContextItem } = require("./lib/context-validator.cjs");
+const { assertTargetSense } = require("./lib/context-sense-validator.cjs");
 const {
   ROOT,
   parseQs,
@@ -25,9 +26,25 @@ function approvedItems(approved, qs = [3]) {
     if (!qs.includes(item.q)) throw new Error(`${item.target}: publish scope is outside ${pipelinePaths(qs).label}`);
     if (item.approval?.status !== "approved") throw new Error(`${item.target}: approval is not approved`);
     if (item.manualReview?.status !== "pass") throw new Error(`${item.target}: manual review is not PASS`);
+    if (qs.some((q) => q >= 6)) {
+      if (item.senseValidation?.status !== "pass") throw new Error(`${item.target}: sense validation is not PASS`);
+      if (item.senseConfidence === "low") throw new Error(`${item.target}: low-confidence sense cannot be published`);
+      assertTargetSense(item, vocab.get(item.target));
+    }
     assertContextItem(item, vocab.get(item.target), { requireTargetSense: true });
   }
   return approved.items;
+}
+
+function runtimeItem(item) {
+  const {
+    candidateSenses,
+    senseConfidence,
+    senseSelectionReason,
+    senseValidation,
+    ...runtime
+  } = item;
+  return runtime;
 }
 
 function findRuntimeLine(lines, target, q) {
@@ -75,7 +92,7 @@ function publish({
     if (index < 0) throw new Error(`${item.target}: runtime line is missing`);
     const hadComma = nextLines[index].trimEnd().endsWith(",");
     const indent = nextLines[index].match(/^\s*/)?.[0] || "";
-    const replacement = `${indent}${JSON.stringify(item)}${hadComma ? "," : ""}`;
+    const replacement = `${indent}${JSON.stringify(runtimeItem(item))}${hadComma ? "," : ""}`;
     if (nextLines[index] !== replacement) {
       nextLines[index] = replacement;
       changedTargets.push(item.target);

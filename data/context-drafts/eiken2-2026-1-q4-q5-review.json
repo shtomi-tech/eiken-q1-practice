@@ -41,7 +41,7 @@
         "answerUnique": "pass"
       },
       "revisionLog": [
-        { "category": "SENSE", "summary": "Changed the initial narrow choice 癖 to 傾向 because the scene shows a repeated pattern, not necessarily a fixed habit." }
+        { "category": "SENSE", "before": "癖", "after": "傾向", "summary": "Changed the initial narrow choice 癖 to 傾向 because the scene shows a repeated pattern, not necessarily a fixed habit." }
       ]
     },
     "discrimination": {
@@ -80,7 +80,7 @@
         "answerUnique": "pass"
       },
       "revisionLog": [
-        { "category": "SENSE", "summary": "The age-based rejection and legal consequence support 差別, not the neutral sense 識別・区別." }
+        { "category": "SENSE", "before": "識別、区別", "after": "差別", "summary": "The age-based rejection and legal consequence support 差別, not the neutral sense 識別・区別." }
       ]
     },
     "shelter": {
@@ -119,7 +119,7 @@
         "answerUnique": "pass"
       },
       "revisionLog": [
-        { "category": "SENSE", "summary": "The cabin is a concrete safe place, so the final sense is 避難所・シェルター rather than abstract 保護." }
+        { "category": "SENSE", "before": "保護", "after": "避難所、シェルター", "summary": "The cabin is a concrete safe place, so the final sense is 避難所・シェルター rather than abstract 保護." }
       ]
     },
     "content": {
@@ -158,7 +158,7 @@
         "answerUnique": "pass"
       },
       "revisionLog": [
-        { "category": "SENSE", "summary": "The listed objects inside the box support the noun sense 中身・内容, not the adjective sense 満足して." },
+        { "category": "SENSE", "before": "満足して", "after": "中身、内容", "summary": "The listed objects inside the box support the noun sense 中身・内容, not the adjective sense 満足して." },
         { "category": "DISTRACTOR", "summary": "Removed the other known sense 満足して from the choices so the task tests context inference rather than polysemy selection." }
       ]
     },

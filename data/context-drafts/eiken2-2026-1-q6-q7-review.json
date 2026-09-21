@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 1,
+  "datasetId": "eiken2-2026-1",
+  "qs": [6, 7],
+  "reviewStatus": "complete",
+  "reviewPrompt": "prompts/context-review-v1.md",
+  "senseReviewPrompt": "prompts/context-sense-selection-v1.md",
+  "items": {
+    "typical": {
+      "initialStatus": "pass",
+      "initialSenseStatus": "pass",
+      "initialTargetSense": "典型的な",
+      "initialConfidence": "high",
+      "initialCandidateSenses": ["典型的な、いつも通りの"],
+      "senseReview": {
+        "status": "pass",
+        "checks": {
+          "posCompatible": "pass",
+          "senseAppropriate": "pass",
+          "senseCentrality": "pass",
+          "senseSpecificity": "pass",
+          "learningValue": "pass",
+          "contextFeasibility": "pass",
+          "otherSensesDistinct": "pass"
+        }
+      },
+      "status": "pass",
+      "checks": { "senseAppropriate": "pass", "senseUniquelySupported": "pass", "otherKnownSensesExcluded": "pass", "targetMainUnknown": "pass", "clueQuality": "pass", "clueIndependence": "pass", "noAnswerLeakage": "pass", "noSynonymLeakage": "pass", "contextCoherent": "pass", "difficultyAppropriate": "pass", "naturalEnglish": "pass", "supportNecessary": "pass", "distractorQuality": "pass", "answerUnique": "pass" },
+      "revisionLog": []
+    },
+    "gradual": {
+      "initialStatus": "pass",
+      "initialSenseStatus": "pass",
+      "initialTargetSense": "徐々の、段階的な",
+      "initialConfidence": "high",
+      "initialCandidateSenses": ["徐々の、段階的な"],
+      "senseReview": {
+        "status": "pass",
+        "checks": {
+          "posCompatible": "pass",
+          "senseAppropriate": "pass",
+          "senseCentrality": "pass",
+          "senseSpecificity": "pass",
+          "learningValue": "pass",
+          "contextFeasibility": "pass",
+          "otherSensesDistinct": "pass"
+        }
+      },
+      "status": "pass",
+      "checks": { "senseAppropriate": "pass", "senseUniquelySupported": "pass", "otherKnownSensesExcluded": "pass", "targetMainUnknown": "pass", "clueQuality": "pass", "clueIndependence": "pass", "noAnswerLeakage": "pass", "noSynonymLeakage": "pass", "contextCoherent": "pass", "difficultyAppropriate": "pass", "naturalEnglish": "pass", "supportNecessary": "pass", "distractorQuality": "pass", "answerUnique": "pass" },
+      "revisionLog": []
+    },
+    "chemical": {
+      "initialStatus": "revise",
+      "initialSenseStatus": "revise",
+      "initialTargetSense": "化学物質",
+      "initialConfidence": "low",
+      "initialCandidateSenses": ["化学の", "化学物質"],
+      "senseReview": {
+        "status": "pass",
+        "checks": {
+          "posCompatible": "pass",
+          "senseAppropriate": "pass",
+          "senseCentrality": "pass",
+          "senseSpecificity": "pass",
+          "learningValue": "pass",
+          "contextFeasibility": "pass",
+          "otherSensesDistinct": "pass"
+        }
+      },
+      "status": "pass",
+      "checks": { "senseAppropriate": "pass", "senseUniquelySupported": "pass", "otherKnownSensesExcluded": "pass", "targetMainUnknown": "pass", "clueQuality": "pass", "clueIndependence": "pass", "noAnswerLeakage": "pass", "noSynonymLeakage": "pass", "contextCoherent": "pass", "difficultyAppropriate": "pass", "naturalEnglish": "pass", "supportNecessary": "pass", "distractorQuality": "pass", "answerUnique": "pass" },
+      "revisionLog": [{ "category": "SENSE", "before": "化学物質", "after": "化学の", "summary": "The source POS is adjective and chemical modifies cleaner, so the noun sense cannot be selected." }]
+    },
+    "false": {
+      "initialStatus": "pass",
+      "initialSenseStatus": "pass",
+      "initialTargetSense": "誤った、偽の",
+      "initialConfidence": "high",
+      "initialCandidateSenses": ["誤った、偽の"],
+      "senseReview": {
+        "status": "pass",
+        "checks": {
+          "posCompatible": "pass",
+          "senseAppropriate": "pass",
+          "senseCentrality": "pass",
+          "senseSpecificity": "pass",
+          "learningValue": "pass",
+          "contextFeasibility": "pass",
+          "otherSensesDistinct": "pass"
+        }
+      },
+      "status": "pass",
+      "checks": { "senseAppropriate": "pass", "senseUniquelySupported": "pass", "otherKnownSensesExcluded": "pass", "targetMainUnknown": "pass", "clueQuality": "pass", "clueIndependence": "pass", "noAnswerLeakage": "pass", "noSynonymLeakage": "pass", "contextCoherent": "pass", "difficultyAppropriate": "pass", "naturalEnglish": "pass", "supportNecessary": "pass", "distractorQuality": "pass", "answerUnique": "pass" },
+      "revisionLog": []
+    },
+    "weep": {
+      "initialStatus": "pass",
+      "initialSenseStatus": "pass",
+      "initialTargetSense": "泣く",
+      "initialConfidence": "high",
+      "initialCandidateSenses": ["（涙を流して）泣く、すすり泣く"],
+      "senseReview": {
+        "status": "pass",
+        "checks": {
+          "posCompatible": "pass",
+          "senseAppropriate": "pass",
+          "senseCentrality": "pass",
+          "senseSpecificity": "pass",
+          "learningValue": "pass",
+          "contextFeasibility": "pass",
+          "otherSensesDistinct": "pass"
+        }
+      },
+      "status": "pass",
+      "checks": { "senseAppropriate": "pass", "senseUniquelySupported": "pass", "otherKnownSensesExcluded": "pass", "targetMainUnknown": "pass", "clueQuality": "pass", "clueIndependence": "pass", "noAnswerLeakage": "pass", "noSynonymLeakage": "pass", "contextCoherent": "pass", "difficultyAppropriate": "pass", "naturalEnglish": "pass", "supportNecessary": "pass", "distractorQuality": "pass", "answerUnique": "pass" },
+      "revisionLog": []
+    },
+    "occur": {
+      "initialStatus": "revise",
+      "initialSenseStatus": "revise",
+      "initialTargetSense": "（心に）浮かぶ",
+      "initialConfidence": "medium",
+      "initialCandidateSenses": ["起こる、生じる", "（心に）浮かぶ"],
+      "senseReview": {
+        "status": "pass",
+        "checks": {
+          "posCompatible": "pass",
+          "senseAppropriate": "pass",
+          "senseCentrality": "pass",
+          "senseSpecificity": "pass",
+          "learningValue": "pass",
+          "contextFeasibility": "pass",
+          "otherSensesDistinct": "pass"
+        }
+      },
+      "status": "pass",
+      "checks": { "senseAppropriate": "pass", "senseUniquelySupported": "pass", "otherKnownSensesExcluded": "pass", "targetMainUnknown": "pass", "clueQuality": "pass", "clueIndependence": "pass", "noAnswerLeakage": "pass", "noSynonymLeakage": "pass", "contextCoherent": "pass", "difficultyAppropriate": "pass", "naturalEnglish": "pass", "supportNecessary": "pass", "distractorQuality": "pass", "answerUnique": "pass" },
+      "revisionLog": [{ "category": "SENSE", "before": "（心に）浮かぶ", "after": "起こる、生じる", "summary": "The power cut is an event with a cause and result, not a thought appearing in someone's mind." }]
+    },
+    "swell": {
+      "initialStatus": "pass",
+      "initialSenseStatus": "pass",
+      "initialTargetSense": "腫れる",
+      "initialConfidence": "high",
+      "initialCandidateSenses": ["膨らむ、腫れる"],
+      "senseReview": {
+        "status": "pass",
+        "checks": {
+          "posCompatible": "pass",
+          "senseAppropriate": "pass",
+          "senseCentrality": "pass",
+          "senseSpecificity": "pass",
+          "learningValue": "pass",
+          "contextFeasibility": "pass",
+          "otherSensesDistinct": "pass"
+        }
+      },
+      "status": "pass",
+      "checks": { "senseAppropriate": "pass", "senseUniquelySupported": "pass", "otherKnownSensesExcluded": "pass", "targetMainUnknown": "pass", "clueQuality": "pass", "clueIndependence": "pass", "noAnswerLeakage": "pass", "noSynonymLeakage": "pass", "contextCoherent": "pass", "difficultyAppropriate": "pass", "naturalEnglish": "pass", "supportNecessary": "pass", "distractorQuality": "pass", "answerUnique": "pass" },
+      "revisionLog": []
+    },
+    "tap": {
+      "initialStatus": "revise",
+      "initialSenseStatus": "revise",
+      "initialTargetSense": "蛇口",
+      "initialConfidence": "low",
+      "initialCandidateSenses": ["（指などで）軽くたたく", "蛇口"],
+      "senseReview": {
+        "status": "pass",
+        "checks": {
+          "posCompatible": "pass",
+          "senseAppropriate": "pass",
+          "senseCentrality": "pass",
+          "senseSpecificity": "pass",
+          "learningValue": "pass",
+          "contextFeasibility": "pass",
+          "otherSensesDistinct": "pass"
+        }
+      },
+      "status": "pass",
+      "checks": { "senseAppropriate": "pass", "senseUniquelySupported": "pass", "otherKnownSensesExcluded": "pass", "targetMainUnknown": "pass", "clueQuality": "pass", "clueIndependence": "pass", "noAnswerLeakage": "pass", "noSynonymLeakage": "pass", "contextCoherent": "pass", "difficultyAppropriate": "pass", "naturalEnglish": "pass", "supportNecessary": "pass", "distractorQuality": "pass", "answerUnique": "pass" },
+      "revisionLog": [{ "category": "SENSE", "before": "蛇口", "after": "（指などで）軽くたたく", "summary": "The source POS is verb and the screen receives a repeated light touch, so the noun sense is impossible." }]
+    }
+  }
+}
