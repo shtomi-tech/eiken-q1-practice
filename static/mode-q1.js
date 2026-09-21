@@ -15,6 +15,7 @@ const EikenQ1App = (function () {
 const LEGACY_STORE_KEY = "eiken2_q1_v1";
 const STORE_PREFIX = "eiken_q1_progress_";
 const DATASET_KEY = "eiken_q1_dataset";
+const CONTEXT_DISCOVERY_MODE_KEY = "eiken_q1_context_discovery_mode";
 const LEGACY_PRE1_PROGRESS_KEY = "eiken_pre1_progress_v1";
 const LEGACY_PRE1_ROUND_KEY = "eiken_pre1_round";
 const LEGACY_PRE1_APP_ID = "eiken-pre1";
@@ -337,6 +338,19 @@ function writeStored(key, value) {
 }
 function writeStoredJson(key, value) {
   writeStored(key, JSON.stringify(value));
+}
+
+function contextDiscoveryModeStorageKey(datasetId = state.datasetId) {
+  return scopedStorageKey(`${CONTEXT_DISCOVERY_MODE_KEY}_${datasetId || "default"}`);
+}
+
+function contextDiscoveryEnabled() {
+  if (!dataset()?.contextUrl) return false;
+  try { return localStorage.getItem(contextDiscoveryModeStorageKey()) === "on"; } catch (e) { return false; }
+}
+
+function setContextDiscoveryEnabled(enabled) {
+  writeStored(contextDiscoveryModeStorageKey(), enabled ? "on" : "off");
 }
 function removeStored(key) {
   try { localStorage.removeItem(key); } catch (e) { /* ignore */ }
@@ -801,6 +815,7 @@ function saveResume() {
     contextPicked: session.contextPicked,
     contextCorrect: session.contextCorrect,
     contextResults: session.contextResults || {},
+    contextEnabled: session.contextEnabled !== false,
     contextAvailableTotal: session.contextAvailableTotal || 0,
     contextTotal: session.contextTotal || 0,
     contextCorrectCount: session.contextCorrectCount || 0,
@@ -835,11 +850,15 @@ function normalizeLearnSessionResume() {
   session.contextResults = session.contextResults && typeof session.contextResults === "object"
     ? session.contextResults
     : {};
-  session.contextAvailableTotal = items.filter((item) => contextItemFor(item)).length;
+  session.contextEnabled = session.contextEnabled !== false;
+  session.contextAvailableTotal = session.contextEnabled
+    ? items.filter((item) => contextItemFor(item)).length
+    : 0;
   const results = Object.values(session.contextResults);
   session.contextTotal = results.length;
   session.contextCorrectCount = results.filter((result) => result.correct).length;
-  if (session.stage === "context"
+  if (session.contextEnabled
+    && session.stage === "context"
     && contextItemFor(items[learnIdx])
     && !hasLearnContextResult(items[learnIdx])) {
     session.learnPhase = "context";
@@ -2149,20 +2168,25 @@ function studyPlanPanel(entries = []) {
 function contextDiscoveryCard() {
   const current = dataset();
   if (!current?.contextUrl) return null;
-  const total = Number(current.contextTotal) || 0;
-  return el("section", { class: "card contextDiscoveryCard", "aria-labelledby": "contextDiscoveryTitle" },
-    el("p", { class: "label" }, "Context Discovery"),
-    el("h3", { id: "contextDiscoveryTitle" }, "英文の流れから意味を推測する"),
+  const enabled = contextDiscoveryEnabled();
+  return el("section", { class: "contextDiscoveryCard", "aria-labelledby": "contextDiscoveryTitle" },
+    el("p", { class: "label" }, "学習モード"),
+    el("h3", { id: "contextDiscoveryTitle" }, `文脈推測：${enabled ? "あり" : "なし"}`),
     el("p", { class: "contextDiscoveryLead" },
-      "日本語訳を先に見ず、英文の中の手がかりを組み合わせて語句の意味を考えます。"),
-    el("p", { class: "contextDiscoveryMeta" }, `英検2級・${total}語句から1回4語`),
-    el("p", { class: "hint contextDiscoveryTrialNote" }, "通常学習の進捗には影響しません。"),
+      enabled
+        ? "通常学習で、暗記カードの前に英文から意味を推測します。"
+        : "通常学習を暗記カードから始めます。"),
+    el("p", { class: "hint contextDiscoveryTrialNote" }, "切り替えは、次に始める通常学習から反映されます。"),
     el("div", { class: "contextDiscoveryActions" },
       el("button", {
         class: "secondaryCta contextDiscoveryCta",
         type: "button",
-        onclick: () => startContextLearning(),
-      }, "文脈→暗記カードを試す →"),
+        "aria-pressed": String(enabled),
+        onclick: () => {
+          setContextDiscoveryEnabled(!enabled);
+          renderHome();
+        },
+      }, enabled ? "推測なしに切り替える" : "推測ありに切り替える"),
     ),
   );
 }
@@ -2204,13 +2228,18 @@ function renderHomeContent() {
   const isFirstVisit = learned === 0;
   // 級の変更は URL で級を固定していないときだけ。下部の「その他」ではなく先頭カードの右上へ置く。
   const canChangeGrade = !new URLSearchParams(window.location.search).has("g");
+  const useContextDiscovery = contextDiscoveryEnabled();
 
   // hero は初回訪問（まだ何も学習していない）時だけ表示し、今日の学習カードとの説明重複を避ける
   if (isFirstVisit) {
     home.appendChild(el("section", { class: "card hero" },
       el("p", { class: "label" }, "学習の流れ"),
-      el("h2", {}, `${datasetSectionName()}の語句を「発見して→覚えて→使う」`),
-      el("p", { class: "hint" }, "文脈から意味を発見 → 暗記カードで整理 → 意味を思い出す → 本番形式で使う、の学習サイクル。"),
+      el("h2", {}, useContextDiscovery
+        ? `${datasetSectionName()}の語句を「発見して→覚えて→使う」`
+        : `${datasetSectionName()}の語句を「覚えて→確かめて→使う」`),
+      el("p", { class: "hint" }, useContextDiscovery
+        ? "文脈から意味を発見 → 暗記カードで整理 → 意味を思い出す → 本番形式で使う、の学習サイクル。"
+        : "暗記カードで整理 → 意味を思い出す → 本番形式で使う、の学習サイクル。"),
     ));
   }
 
@@ -2259,6 +2288,9 @@ function renderHomeContent() {
     ));
   }
 
+  const contextModeControl = contextDiscoveryCard();
+  if (contextModeControl) summary.appendChild(contextModeControl);
+
   // おすすめ（主導線）＝状態に応じて1つだけ決める。詳細な進捗より先に置く。
   let primary;
   if (coreResume) {
@@ -2270,7 +2302,11 @@ function renderHomeContent() {
     primary = {
       label: `第${nextQ}問を学習する`,
       // 初回訪問はheroで同じ3ステップを説明済みのため、ここでは重複させない
-      why: isFirstVisit ? "" : "文脈から発見 → 暗記カード → 意味確認 → 本番形式の学習サイクルで進みます。",
+      why: isFirstVisit
+        ? ""
+        : useContextDiscovery
+        ? "文脈から発見 → 暗記カード → 意味確認 → 本番形式の学習サイクルで進みます。"
+        : "暗記カード → 意味確認 → 本番形式の学習サイクルで進みます。",
       onclick: () => startLearn(nextQ),
     };
   } else if (hasMeaningDue) {
@@ -2320,9 +2356,6 @@ function renderHomeContent() {
   if (goalCard) home.appendChild(goalCard);
   flushStudyTime();
   home.appendChild(studyTimeCard());
-
-  const contextCard = contextDiscoveryCard();
-  if (contextCard) home.appendChild(contextCard);
 
   if (grade) {
     home.appendChild(meaningMission(
@@ -2993,6 +3026,7 @@ function startLearn(q) {
     return false;
   }
   const orderedItems = shuffle(items);
+  const contextEnabled = contextDiscoveryEnabled();
   session = {
     mode: "learn",
     q,
@@ -3006,6 +3040,7 @@ function startLearn(q) {
     checkAnswered: false,
     meaningCorrect: 0,
     contextPool: state.contextItems,
+    contextEnabled,
     contextResults: {},
     contextAvailableTotal: 0,
     contextTotal: 0,
@@ -3016,7 +3051,9 @@ function startLearn(q) {
     contextPicked: null,
     contextCorrect: null,
   };
-  session.contextAvailableTotal = session.items.filter((item) => contextItemFor(item)).length;
+  session.contextAvailableTotal = contextEnabled
+    ? session.items.filter((item) => contextItemFor(item)).length
+    : 0;
   session.learnPhase = session.contextAvailableTotal > 0 && contextItemFor(session.items[0]) && !hasLearnContextResult(session.items[0])
     ? "context"
     : "flash";
@@ -3030,7 +3067,7 @@ function setLearnItem(index, phase = null) {
   session.learnIdx = index;
   session.flashIdx = index;
   const item = session.items[index];
-  const nextPhase = phase || (contextItemFor(item) && !hasLearnContextResult(item) ? "context" : "flash");
+  const nextPhase = phase || (session.contextEnabled !== false && contextItemFor(item) && !hasLearnContextResult(item) ? "context" : "flash");
   session.learnPhase = nextPhase;
   session.stage = nextPhase;
   if (nextPhase === "context") resetContextState();

@@ -118,6 +118,14 @@ noContext.advanceLearnFromFlash();
 assert.equal(noContext.session.stage, "check", "Context 0件でもFlash完走後はMeaning Checkへ進む必要があります");
 assert.equal(noContext.session.contextTotal, 0, "Context 0件ではcontextTotalが0である必要があります");
 assert.equal(noContext.session.contextAvailableTotal, 0, "Context 0件ではcontextAvailableTotalが0である必要があります");
+
+const contextModeOff = createHarness();
+contextModeOff.session.contextEnabled = false;
+contextModeOff.session.contextAvailableTotal = 0;
+contextModeOff.setLearnItem(0);
+assert.equal(contextModeOff.session.stage, "flash", "文脈推測なしモードはContextデータがあってもFlashから始める必要があります");
+contextModeOff.advanceLearnFromFlash();
+assert.equal(contextModeOff.session.stage, "flash", "文脈推測なしモードは次語もFlashへ進む必要があります");
 const doneSource = extractFunctionBody(js, "renderDone");
 assert.match(doneSource, /if \(contextAvailableTotal > 0\)/, "Context 0件ではDoneのContext行を条件付き表示にする必要があります");
 assert.doesNotMatch(doneSource, /文脈データのない語句のみ/, "Context 0件で内部データ事情をDoneへ表示してはいけません");
@@ -149,6 +157,13 @@ resumed.normalizeLearnSessionResume();
 assert.equal(resumed.session.learnIdx, 1, "resumeは同じ語のlearnIdxを保持する必要があります");
 assert.equal(resumed.session.stage, "flash", "回答済みContextのresumeはFlashから再開する必要があります");
 assert.equal(resumed.session.learnPhase, "flash", "回答済みContextのresumeはFlash phaseにする必要があります");
+
+const resumedWithoutContext = createHarness();
+resumedWithoutContext.session.contextEnabled = false;
+resumedWithoutContext.session.stage = "context";
+resumedWithoutContext.normalizeLearnSessionResume();
+assert.equal(resumedWithoutContext.session.stage, "flash", "文脈推測なしで保存した学習はFlashから再開する必要があります");
+assert.equal(resumedWithoutContext.session.contextAvailableTotal, 0, "文脈推測なしのresumeはContext件数を0に保つ必要があります");
 
 const oldMeaningResume = extractFunctionBody(js, "startMeaningPractice");
 assert.match(oldMeaningResume, /stage:\s*"check"/, "意味復習はcheckから始める必要があります");

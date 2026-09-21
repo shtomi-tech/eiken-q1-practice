@@ -16,6 +16,7 @@ function startLearn(q) {
     return false;
   }
   const orderedItems = shuffle(items);
+  const contextEnabled = contextDiscoveryEnabled();
   session = {
     mode: "learn",
     q,
@@ -29,6 +30,7 @@ function startLearn(q) {
     checkAnswered: false,
     meaningCorrect: 0,
     contextPool: state.contextItems,
+    contextEnabled,
     contextResults: {},
     contextAvailableTotal: 0,
     contextTotal: 0,
@@ -39,7 +41,9 @@ function startLearn(q) {
     contextPicked: null,
     contextCorrect: null,
   };
-  session.contextAvailableTotal = session.items.filter((item) => contextItemFor(item)).length;
+  session.contextAvailableTotal = contextEnabled
+    ? session.items.filter((item) => contextItemFor(item)).length
+    : 0;
   session.learnPhase = session.contextAvailableTotal > 0 && contextItemFor(session.items[0]) && !hasLearnContextResult(session.items[0])
     ? "context"
     : "flash";
@@ -53,7 +57,7 @@ function setLearnItem(index, phase = null) {
   session.learnIdx = index;
   session.flashIdx = index;
   const item = session.items[index];
-  const nextPhase = phase || (contextItemFor(item) && !hasLearnContextResult(item) ? "context" : "flash");
+  const nextPhase = phase || (session.contextEnabled !== false && contextItemFor(item) && !hasLearnContextResult(item) ? "context" : "flash");
   session.learnPhase = nextPhase;
   session.stage = nextPhase;
   if (nextPhase === "context") resetContextState();

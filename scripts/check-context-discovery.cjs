@@ -13,6 +13,7 @@ const vocab = readJson("data/vocab_2026-1.json");
 const lemmas = readJson("data/lemmas.json");
 const context = readJson("data/context_2026-1.json");
 const homeSource = fs.readFileSync(path.join(ROOT, "static/src/80-home.js"), "utf8");
+const storageSource = fs.readFileSync(path.join(ROOT, "static/src/20-storage.js"), "utf8");
 const sessionSource = fs.readFileSync(path.join(ROOT, "static/src/90-learn-session.js"), "utf8");
 const stylesSource = fs.readFileSync(path.join(ROOT, "static/styles.css"), "utf8");
 const pagesWorkflow = fs.readFileSync(path.join(ROOT, ".github/workflows/pages.yml"), "utf8");
@@ -63,10 +64,18 @@ assert.deepEqual([...contextTargets].sort(), [...vocabTargets].sort(), "語句�
 assert.match(homeSource, /function contextDiscoveryCard\(\)/, "ホームに文脈推測カードが必要です");
 const contextDiscoveryCardBody = extractFunctionBody(homeSource, "contextDiscoveryCard");
 assert.doesNotMatch(contextDiscoveryCardBody, /startContextPractice\(\)/, "Context Discoveryの入口を独立練習と統合練習に分けないでください");
-assert.match(contextDiscoveryCardBody, /startContextLearning\(\)/, "文脈推測から暗記カードへ進む単一導線が必要です");
+assert.doesNotMatch(contextDiscoveryCardBody, /startContextLearning\(\)/, "Context Discoveryを通常学習とは別の入口にしないでください");
+assert.match(contextDiscoveryCardBody, /setContextDiscoveryEnabled\(!enabled\)/, "文脈推測あり・なしを切り替える必要があります");
+assert.match(contextDiscoveryCardBody, /aria-pressed/, "モード切替状態を支援技術へ伝える必要があります");
 assert.equal((contextDiscoveryCardBody.match(/contextDiscoveryCta/g) || []).length, 1, "Context DiscoveryのCTAは1つにしてください");
+assert.match(storageSource, /function contextDiscoveryEnabled\(\)/, "文脈推測モードの保存値を読む必要があります");
+assert.match(extractFunctionBody(storageSource, "contextDiscoveryEnabled"), /=== "on"/, "文脈推測モードは初期状態を「なし」にしてください");
+assert.match(extractFunctionBody(storageSource, "contextDiscoveryEnabled"), /catch \(e\) \{ return false; \}/, "保存値を読めない場合も文脈推測なしへ戻してください");
+assert.match(extractFunctionBody(storageSource, "contextDiscoveryModeStorageKey"), /scopedStorageKey/, "文脈推測モードは学習者ごとに保存してください");
+assert.match(extractFunctionBody(storageSource, "contextDiscoveryModeStorageKey"), /state\.datasetId/, "文脈推測モードはdatasetごとに保存してください");
 assert.match(sessionSource, /function startContextPractice\(\)/, "文脈推測セッションの開始処理が必要です");
 assert.match(sessionSource, /function startContextLearning\(/, "文脈推測から暗記カードへ進む試用モードが必要です");
+assert.match(extractFunctionBody(sessionSource, "startLearn"), /contextDiscoveryEnabled\(\)/, "通常学習は文脈推測モードを参照する必要があります");
 assert.match(sessionSource, /function renderContext\(body\)/, "文脈推測画面の描画処理が必要です");
 assert.match(sessionSource, /class: "contextSentenceText"[^\n]+contextTextWithTarget\(sentence, item\.target\)/,
   "英文断片は語順を保つ単一inlineコンテナ内へ描画してください");

@@ -6,6 +6,19 @@ function writeStored(key, value) {
 function writeStoredJson(key, value) {
   writeStored(key, JSON.stringify(value));
 }
+
+function contextDiscoveryModeStorageKey(datasetId = state.datasetId) {
+  return scopedStorageKey(`${CONTEXT_DISCOVERY_MODE_KEY}_${datasetId || "default"}`);
+}
+
+function contextDiscoveryEnabled() {
+  if (!dataset()?.contextUrl) return false;
+  try { return localStorage.getItem(contextDiscoveryModeStorageKey()) === "on"; } catch (e) { return false; }
+}
+
+function setContextDiscoveryEnabled(enabled) {
+  writeStored(contextDiscoveryModeStorageKey(), enabled ? "on" : "off");
+}
 function removeStored(key) {
   try { localStorage.removeItem(key); } catch (e) { /* ignore */ }
 }
@@ -469,6 +482,7 @@ function saveResume() {
     contextPicked: session.contextPicked,
     contextCorrect: session.contextCorrect,
     contextResults: session.contextResults || {},
+    contextEnabled: session.contextEnabled !== false,
     contextAvailableTotal: session.contextAvailableTotal || 0,
     contextTotal: session.contextTotal || 0,
     contextCorrectCount: session.contextCorrectCount || 0,
@@ -503,11 +517,15 @@ function normalizeLearnSessionResume() {
   session.contextResults = session.contextResults && typeof session.contextResults === "object"
     ? session.contextResults
     : {};
-  session.contextAvailableTotal = items.filter((item) => contextItemFor(item)).length;
+  session.contextEnabled = session.contextEnabled !== false;
+  session.contextAvailableTotal = session.contextEnabled
+    ? items.filter((item) => contextItemFor(item)).length
+    : 0;
   const results = Object.values(session.contextResults);
   session.contextTotal = results.length;
   session.contextCorrectCount = results.filter((result) => result.correct).length;
-  if (session.stage === "context"
+  if (session.contextEnabled
+    && session.stage === "context"
     && contextItemFor(items[learnIdx])
     && !hasLearnContextResult(items[learnIdx])) {
     session.learnPhase = "context";

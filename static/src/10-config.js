@@ -1,6 +1,7 @@
 const LEGACY_STORE_KEY = "eiken2_q1_v1";
 const STORE_PREFIX = "eiken_q1_progress_";
 const DATASET_KEY = "eiken_q1_dataset";
+const CONTEXT_DISCOVERY_MODE_KEY = "eiken_q1_context_discovery_mode";
 const LEGACY_PRE1_PROGRESS_KEY = "eiken_pre1_progress_v1";
 const LEGACY_PRE1_ROUND_KEY = "eiken_pre1_round";
 const LEGACY_PRE1_APP_ID = "eiken-pre1";
