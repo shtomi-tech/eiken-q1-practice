@@ -1,6 +1,6 @@
 # Context Discovery Phase 3 pilot review
 
-対象は `q=1` の4語だけです。各項目は、100% Englishのcanonical context、必要最小限のJapanese Support、target専用4択、推論説明を持ちます。
+対象は `q=1` の4語だけです。各項目は、100% Englishのcanonical context、必要な場合だけ使うJapanese Support、target専用4択、推論説明を持ちます。
 
 ## bride
 
@@ -14,7 +14,7 @@
 
 1. At the wedding, the bride stood beside her new husband in a long white dress.
 2. Everyone watched as they promised to live together.
-3. 式の後、 guests took pictures of the happy couple.
+3. After the ceremony, guests took pictures of the happy couple.
 
 ### Clues
 
@@ -31,7 +31,7 @@
 
 ### Support decision
 
-`式の後、` だけを背景情報として日本語化しました。clueである wedding、new husband、long white dress は英語のまま残し、推測材料を保護しています。その他の語は英検2級相当の基本語で、追加Supportは不要です。
+Japanese Support: **不要**。`after` は基本語で、`ceremony` も直前の wedding から意味領域を推測できます。clueである wedding、new husband、long white dress は英語のまま残し、推測材料を保護しています。
 
 ### Inference
 
@@ -47,7 +47,7 @@
 
 ### Mixed Context
 
-1. Mikaは近所の人との問題について手紙を受け取った。
+1. Mika got a letter about a problem with her neighbor.
 2. The letter said that her neighbor wanted to take her to court.
 3. She met a lawyer, who read the papers and explained what she should do.
 
@@ -66,7 +66,7 @@
 
 ### Support decision
 
-最初の近所との問題は場面設定であり、target推測には直接必要ないため、1文全体を日本語化しました。裁判に行く、書類を読む、すべきことを説明するというclueは英語のまま残しています。`lawyer` 自体もtargetとして保護しています。
+Japanese Support: **不要**。`Mika got a letter about a problem with her neighbor` は基本語で構成され、場面設定も英文のまま理解できます。`take her to court`、`read the papers`、`explained what she should do` はclueのため英語で保護しています。
 
 ### Inference
 
@@ -101,7 +101,7 @@
 
 ### Support decision
 
-日本語化は行いません。語彙と文構造が比較的基本的で、重要な表現がすべてclueとして機能するためです。日本語化すると、武器・防衛・戦いという推測材料の一部を隠してしまいます。
+Japanese Support: **不要**。語彙と文構造が比較的基本的で、重要な表現がすべてclueとして機能します。日本語化すると、武器・防衛・戦いという推測材料の一部を隠してしまいます。
 
 ### Inference
 
@@ -117,9 +117,9 @@
 
 ### Mixed Context
 
-1. 事故の後、David needed an operation, so a surgeon came to see him.
+1. After the accident, David needed an operation, so a surgeon came to see him.
 2. The doctor carefully operated on his injured leg.
-3. 数時間後、the operation was finished and David began to recover.
+3. A few hours later, the operation was finished and David began to recover.
 
 ### Clues
 
@@ -136,7 +136,7 @@
 
 ### Support decision
 
-`事故の後、` と `数時間後、` は時間・背景情報なので日本語化しました。operation、doctor、operated on his injured leg はtargetの意味を絞る中心的なclueのため英語で保護しています。
+Japanese Support: **不要**。`After the accident` と `A few hours later` は基本的な時間・背景表現です。`needed an operation`、`doctor`、`operated on his injured leg` はtargetの意味を絞る中心的なclueのため英語で保護しています。
 
 ### Inference
 
@@ -145,8 +145,10 @@
 ## Review status
 
 - Structural validator: PASS
+- Japanese Support: 0 segments for all 4 items
 - Target occurrence: 4語とも1回
 - Context clues: 4語とも3件、すべてFull Englishに存在
 - Target / clue protection: PASS
 - Target-specific choices: 4語とも4件、正解は一意
-- Manual review required: natural English、targetが主な未知語か、直接定義・synonym leakageがないか、1つの場面として自然か
+- Structural validationとManual Review metadataを分離
+- Manual review: 4語ともPASS（自然さ、targetの未知性、clue品質、leakage、Support必要性、distractor品質）

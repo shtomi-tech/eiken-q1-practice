@@ -59,9 +59,6 @@ for (const item of contexts) {
       `clueが英文中にありません: ${item.target} / ${clue.text}`);
   }
   assert.deepEqual(item.inferencePath.at(-1), item.target, `inferencePathの末尾がtargetではありません: ${item.target}`);
-  for (const [key, value] of Object.entries(item.validation || {})) {
-    assert.equal(value, true, `validation.${key}がfalseです: ${item.target}`);
-  }
 }
 
 assert.deepEqual([...contextTargets].sort(), [...vocabTargets].sort(), "語句と文脈のtarget集合が一致しません");

@@ -69,10 +69,7 @@ function validateItem(target) {
     assert.ok(fullStory.toLowerCase().includes(clue.text.toLowerCase()), `${target}: clue is absent: ${clue.text}`);
   }
 
-  for (const key of ["senseConsistent", "posConsistent", "targetIsMainUnknown", "hasMultipleClues",
-    "noDirectDefinition", "noSynonymLeakage", "contextIsCoherent", "difficultyAppropriate", "naturalEnglish"]) {
-    assert.equal(item.validation?.[key], true, `${target}: validation.${key} must be true`);
-  }
+  assert.equal(item.validation, undefined, `${target}: pilot must not use self-reported validation booleans`);
 
   assert.ok(Array.isArray(item.segments) && item.segments.length === item.fullEnglish.length,
     `${target}: segments must align with fullEnglish`);
@@ -101,6 +98,8 @@ function validateItem(target) {
       assert.notEqual(segment.role, "target", `${target}: target cannot be Japanese`);
       assert.notEqual(segment.role, "clue", `${target}: clue cannot be Japanese`);
       assert.ok(segment.ja && JAPANESE.test(segment.ja), `${target}: Japanese support must contain Japanese text`);
+      assert.ok(typeof segment.supportReason === "string" && segment.supportReason.trim(),
+        `${target}: Japanese support must include supportReason`);
     }
   }
 
@@ -118,7 +117,10 @@ function validateItem(target) {
   assert.equal(item.quality?.clueCount, item.contextClues.length, `${target}: quality clueCount is stale`);
   assert.equal(item.quality?.targetProtected, true, `${target}: target protection metadata is required`);
   assert.equal(item.quality?.cluesProtected, true, `${target}: clue protection metadata is required`);
-  assert.equal(item.quality?.manualReview, "pass", `${target}: manual review must be marked pass`);
+  assert.ok(item.manualReview && typeof item.manualReview === "object", `${target}: manualReview metadata is required`);
+  assert.equal(typeof item.manualReview.status, "string", `${target}: manualReview.status is required`);
+  assert.ok(item.manualReview.checks && typeof item.manualReview.checks === "object",
+    `${target}: manualReview.checks are required`);
 
   return { item, vocab };
 }
@@ -130,5 +132,5 @@ assert.deepEqual(pilot.map(({ item }) => item.target), PILOT_TARGETS, "pilot tar
 console.log(`context pilot validator: OK (${PILOT_TARGETS.length} q=1 items)`);
 console.log(`manual review required: ${MANUAL_REVIEW_REQUIRED.join(", ")}`);
 for (const { item } of pilot) {
-  console.log(`\nTARGET: ${item.target}\nFULL ENGLISH:\n${item.fullEnglish.map((line) => `- ${line}`).join("\n")}\nMIXED:\n${item.mixedEnglish.map((line) => `- ${line}`).join("\n")}\nCLUES:\n${item.contextClues.map((clue) => `- ${clue.type}: ${clue.text}`).join("\n")}\nCHOICES:\n${item.choices.map((choice, index) => `${String.fromCharCode(65 + index)}. ${choice}`).join("\n")}\nANSWER: ${item.choices[item.answerIndex]}\nEXPLANATION: ${item.inferenceExplanation}\nVALIDATION: PASS`);
+  console.log(`\nTARGET: ${item.target}\nFULL ENGLISH:\n${item.fullEnglish.map((line) => `- ${line}`).join("\n")}\nMIXED:\n${item.mixedEnglish.map((line) => `- ${line}`).join("\n")}\nCLUES:\n${item.contextClues.map((clue) => `- ${clue.type}: ${clue.text}`).join("\n")}\nCHOICES:\n${item.choices.map((choice, index) => `${String.fromCharCode(65 + index)}. ${choice}`).join("\n")}\nANSWER: ${item.choices[item.answerIndex]}\nEXPLANATION: ${item.inferenceExplanation}\nJAPANESE SUPPORT: ${item.segments.flat().filter((segment) => segment.useJapanese).length} segment(s)\nSTRUCTURAL VALIDATION: PASS\nMANUAL REVIEW: ${item.manualReview.status}`);
 }
