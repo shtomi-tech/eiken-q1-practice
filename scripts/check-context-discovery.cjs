@@ -4,6 +4,7 @@ const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const path = require("node:path");
 const { occurrenceCount } = require("./lib/context-validator.cjs");
+const { extractFunctionBody } = require("./lib/app-source.cjs");
 
 const ROOT = path.resolve(__dirname, "..");
 const readJson = (file) => JSON.parse(fs.readFileSync(path.join(ROOT, file), "utf8"));
@@ -59,8 +60,10 @@ for (const item of contexts) {
 
 assert.deepEqual([...contextTargets].sort(), [...vocabTargets].sort(), "語句と文脈のtarget集合が一致しません");
 assert.match(homeSource, /function contextDiscoveryCard\(\)/, "ホームに文脈推測カードが必要です");
-assert.match(homeSource, /startContextPractice\(\)/, "ホームから文脈推測を開始できません");
-assert.match(homeSource, /startContextLearning\(\)/, "文脈推測から暗記カードへ進む試用導線が必要です");
+const contextDiscoveryCardBody = extractFunctionBody(homeSource, "contextDiscoveryCard");
+assert.doesNotMatch(contextDiscoveryCardBody, /startContextPractice\(\)/, "Context Discoveryの入口を独立練習と統合練習に分けないでください");
+assert.match(contextDiscoveryCardBody, /startContextLearning\(\)/, "文脈推測から暗記カードへ進む単一導線が必要です");
+assert.equal((contextDiscoveryCardBody.match(/contextDiscoveryCta/g) || []).length, 1, "Context DiscoveryのCTAは1つにしてください");
 assert.match(sessionSource, /function startContextPractice\(\)/, "文脈推測セッションの開始処理が必要です");
 assert.match(sessionSource, /function startContextLearning\(/, "文脈推測から暗記カードへ進む試用モードが必要です");
 assert.match(sessionSource, /function renderContext\(body\)/, "文脈推測画面の描画処理が必要です");
