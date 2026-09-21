@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "datasetId": "eiken2-2026-1",
+  "qs": [10, 11, 12, 13],
+  "items": {
+    "frown": {
+      "targetSense": "顔をしかめる、眉をひそめる",
+      "senseSelectionReason": "The only verb sense matches the visible movement of the eyebrows and unhappy face.",
+      "senseConfidence": "high",
+      "choices": ["顔をしかめる、眉をひそめる", "微笑む", "叫ぶ", "うなずく"],
+      "inferenceExplanation": "「broken window」「eyebrows moved down」「face looked unhappy」が手がかりです。壊れた窓を見て眉が下がり、不満そうな表情になったので、frownは「顔をしかめる、眉をひそめる」だと推測できます。"
+    },
+    "slip": {
+      "targetSense": "滑る",
+      "senseSelectionReason": "The wet floor, near fall, and grabbed rail uniquely support the physical slipping sense.",
+      "senseConfidence": "high",
+      "choices": ["滑る", "跳ぶ", "立ち止まる", "曲がる"],
+      "inferenceExplanation": "「wet floor」「almost fell」「grabbed the rail」が手がかりです。ぬれた床で足元を失い、転びそうになって手すりをつかんだので、slipは「滑る」だと推測できます。"
+    },
+    "guess": {
+      "targetSense": "推測する、言い当てる",
+      "senseSelectionReason": "The speaker lacks certainty and selects the most likely answer, matching the single source sense.",
+      "senseConfidence": "high",
+      "choices": ["推測する、言い当てる", "証明する", "記録する", "説明する"],
+      "inferenceExplanation": "「do not know the answer」「four choices」「seemed most likely」が手がかりです。答えを知らないまま最もありそうな選択肢を選んでいるので、guessは「推測する、言い当てる」だと推測できます。"
+    },
+    "crawl": {
+      "targetSense": "はう",
+      "senseSelectionReason": "The baby moves on hands and knees before being able to walk, selecting the crawling sense.",
+      "senseConfidence": "high",
+      "choices": ["はう", "走る", "飛ぶ", "泳ぐ"],
+      "finalFullEnglish": ["The baby cannot walk yet, so she began to crawl across the floor.", "She moved on her hands and knees toward a bright toy.", "When she reached it, she laughed."],
+      "inferenceExplanation": "「cannot walk yet」「on her hands and knees」「toward a bright toy」が手がかりです。まだ歩けない赤ちゃんが手とひざを使って床を進んでいるので、crawlは「はう」だと推測できます。"
+    },
+    "as a general rule": {
+      "targetSense": "概して、一般的に言えば",
+      "senseSelectionReason": "A usual closing time is contrasted with a Friday exception, directly supporting a rule that generally applies.",
+      "senseConfidence": "high",
+      "choices": ["概して、一般的に言えば", "例外なく", "偶然に", "急いで"],
+      "inferenceExplanation": "「our library closes at six」「However」「until eight on Fridays」が手がかりです。普段の閉館時刻に金曜日だけ例外があるため、as a general ruleは「概して、一般的に言えば」だと推測できます。"
+    },
+    "for a fresh start": {
+      "targetSense": "新たなスタートとして、心機一転",
+      "senseSelectionReason": "Moving away from old problems and building a hopeful life supports the single phrase sense.",
+      "senseConfidence": "high",
+      "choices": ["新たなスタートとして、心機一転", "最後の機会として", "思い出として", "以前と同じように"],
+      "finalFullEnglish": ["For a fresh start, Leo moved to another town and joined a sports club.", "He left his old problems behind.", "Soon, he made friends and felt hopeful about his life there."],
+      "finalContextClues": [{"text":"moved to another town","type":"situation"},{"text":"left his old problems behind","type":"cause"},{"text":"made friends and felt hopeful","type":"result"}],
+      "inferenceExplanation": "「moved to another town」「left his old problems behind」「made friends and felt hopeful」が手がかりです。以前の問題から離れて別の町で前向きな生活を築いているので、for a fresh startは「新たなスタートとして、心機一転」だと推測できます。"
+    },
+    "on a specific occasion": {
+      "targetSense": "特定の機会に",
+      "senseSelectionReason": "The contrast between most days and one dated special show supports the single phrase sense.",
+      "senseConfidence": "high",
+      "choices": ["特定の機会に", "毎日", "偶然に", "直ちに"],
+      "inferenceExplanation": "「most days」「special show」「The date is written on the website」が手がかりです。普段とは異なる特別な催しの日だけ料金が必要なので、on a specific occasionは「特定の機会に」だと推測できます。"
+    },
+    "in case of emergency": {
+      "targetSense": "緊急時には、非常の場合に備えて",
+      "senseSelectionReason": "A special hotel phone and instructions for urgent trouble support the single phrase sense.",
+      "senseConfidence": "high",
+      "choices": ["緊急時には、非常の場合に備えて", "通常営業中に", "予約のために", "休憩中に"],
+      "inferenceExplanation": "「red phone」「call the front desk」「sign explains this」が手がかりです。ホテルに特別な電話と利用案内があり、重大な事態で連絡する場面なので、in case of emergencyは「緊急時には、非常の場合に備えて」だと推測できます。"
+    },
+    "on one's own": {
+      "targetSense": "自分一人で、独力で",
+      "senseSelectionReason": "The person completes a repair with no one helping, which supports independent action.",
+      "senseConfidence": "high",
+      "choices": ["自分一人で、独力で", "他人の指示で", "順番に", "偶然に"],
+      "finalFullEnglish": ["Mika wanted to fix her bicycle on her own.", "Her father was away, and no one helped her while she worked.", "She felt proud when the wheels turned again."],
+      "finalContextClues": [{"text":"wanted to fix her bicycle","type":"situation"},{"text":"no one helped her","type":"condition"},{"text":"felt proud","type":"result"}],
+      "inferenceExplanation": "「wanted to fix her bicycle」「no one helped her」「felt proud」が手がかりです。助ける人がいない中で修理を終え、その結果を誇らしく感じているので、on one's ownは「自分一人で、独力で」だと推測できます。"
+    },
+    "on the air": {
+      "targetSense": "放送中で",
+      "senseSelectionReason": "A radio host speaks into a microphone while listeners hear the program, supporting the broadcast sense.",
+      "senseConfidence": "high",
+      "choices": ["放送中で", "録音前で", "非公開で", "休止中で"],
+      "inferenceExplanation": "「spoke into the microphone」「people in their cars could hear her」「could not stop to talk privately」が手がかりです。司会者の声がその時にリスナーへ届いているので、on the airは「放送中で」だと推測できます。"
+    },
+    "at a distance": {
+      "targetSense": "離れて、遠くから",
+      "senseSelectionReason": "The sign is unreadable until the viewers walk closer, supporting observation from far away.",
+      "senseConfidence": "high",
+      "choices": ["離れて、遠くから", "すぐ近くで", "中央で", "内側から"],
+      "finalFullEnglish": ["The sign looked small at a distance.", "When we walked closer, we could read every word.", "At first, the letters had been too small to read."],
+      "finalContextClues": [{"text":"looked small","type":"appearance"},{"text":"walked closer","type":"contrast"},{"text":"too small to read","type":"result"}],
+      "inferenceExplanation": "「looked small」「walked closer」「too small to read」が手がかりです。近づく前は文字が小さく読めなかったので、at a distanceは「離れて、遠くから」だと推測できます。"
+    },
+    "to one's surprise": {
+      "targetSense": "（人が）驚いたことに",
+      "senseSelectionReason": "The clock works despite everyone's expectation that it was broken, creating a surprising result.",
+      "senseConfidence": "high",
+      "choices": ["（人が）驚いたことに", "予想どおりに", "念のため", "急いで"],
+      "inferenceExplanation": "「old clock still worked perfectly」「thought it was broken」「owner smiled」が手がかりです。壊れていると思われた時計が動き出す予想外の結果なので、to one's surpriseは「（人が）驚いたことに」だと推測できます。"
+    },
+    "go along with": {
+      "targetSense": "（案・人に）賛成する、従う",
+      "senseSelectionReason": "Mina changes from disliking the plan to packing and joining her friends, supporting acceptance of their plan.",
+      "senseConfidence": "high",
+      "choices": ["（案・人に）賛成する、従う", "反対する", "延期する", "説明する"],
+      "inferenceExplanation": "「did not like the camping plan」「friends supported it」「packed her bag」が手がかりです。最初は嫌だった計画を受け入れて参加の準備をしたので、go along withは「（案・人に）賛成する、従う」だと推測できます。"
+    },
+    "take away from": {
+      "targetSense": "〜の価値（魅力）を損なう",
+      "senseSelectionReason": "Noise makes the film difficult to follow and less enjoyable, selecting the reduce-value sense rather than physical removal.",
+      "senseConfidence": "high",
+      "choices": ["〜の価値（魅力）を損なう", "価値を高める", "完全に理解する", "注意を向ける"],
+      "inferenceExplanation": "「Loud music」「could not hear the actors」「became enjoyable again」が手がかりです。音楽が映画を楽しむ妨げになっているので、take away fromは「〜の価値（魅力）を損なう」だと推測できます。"
+    },
+    "bring out in": {
+      "targetSense": "引き出す",
+      "senseSelectionReason": "Encouragement causes a previously hidden confidence to appear, supporting the elicit sense.",
+      "senseConfidence": "high",
+      "choices": ["引き出す", "隠す", "禁止する", "比較する"],
+      "finalFullEnglish": ["The art teacher's kind words bring out in Ken a confidence he did not show before.", "He began to share his paintings with the class.", "Later, he volunteered to show his work at the school festival."],
+      "finalContextClues": [{"text":"kind words","type":"cause"},{"text":"confidence he did not show before","type":"result"},{"text":"volunteered to show his work","type":"behavior"}],
+      "inferenceExplanation": "「kind words」「confidence he did not show before」「volunteered to show his work」が手がかりです。先生の言葉によって以前は見せなかった自信が表れたので、bring out inは「引き出す」だと推測できます。"
+    },
+    "watch out for": {
+      "targetSense": "〜に気をつける、用心する",
+      "senseSelectionReason": "Loose stones may cause a fall, and the walker changes behavior to avoid the danger.",
+      "senseConfidence": "high",
+      "choices": ["〜に気をつける、用心する", "無視する", "追いかける", "頼る"],
+      "inferenceExplanation": "「loose stones」「make you fall」「walk slowly」が手がかりです。転倒につながる石に注意しながら進む場面なので、watch out forは「〜に気をつける、用心する」だと推測できます。"
+    }
+  }
+}

@@ -37,7 +37,7 @@ function main({ qs = parseQs(), write = true } = {}) {
     }
     const runtimeItem = {
       q: draftItem.source.q,
-      type: "word",
+      type: draftItem.source.type || "word",
       target,
       meaning: draftItem.source.meaning,
       targetSense: draftItem.targetSense,

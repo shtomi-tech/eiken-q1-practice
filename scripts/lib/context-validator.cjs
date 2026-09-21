@@ -6,6 +6,8 @@ const POS_MAP = {
   "動詞": "verb",
   "形容詞": "adjective",
   "副詞": "adverb",
+  "副詞句": "adverbial phrase",
+  "句動詞": "phrasal verb",
 };
 
 function normalizeSense(value) {
@@ -34,9 +36,14 @@ function compatibleSense(meaning, targetSense) {
 }
 
 function occurrenceCount(text, target) {
-  const escaped = String(target).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const escaped = String(target).replace(/[.*+?^${}()|[\]\\]/g, "\\$&").replace("one's", "(?:one's|my|your|his|her|our|their)");
   const pattern = new RegExp(`(?<![A-Za-z])${escaped}(?![A-Za-z])`, "gi");
   return [...String(text).matchAll(pattern)].length;
+}
+
+function targetSegmentMatches(value, target) {
+  const escaped = String(target).replace(/[.*+?^${}()|[\]\\]/g, "\\$&").replace("one's", "(?:one's|my|your|his|her|our|their)");
+  return new RegExp(`^${escaped}$`, "i").test(String(value));
 }
 
 function segmentProjection(segments, useJapanese) {
@@ -93,7 +100,7 @@ function validateContextItem(item, vocab, options = {}) {
   const targetSegments = flatSegments.filter((segment) => segment.role === "target");
   check(targetSegments.length === 1, `${target}: exactly one target segment is required`);
   if (targetSegments.length === 1) {
-    check(targetSegments[0].en === target, `${target}: target segment is not protected`);
+    check(targetSegmentMatches(targetSegments[0].en, target), `${target}: target segment is not protected`);
     check(targetSegments[0].useJapanese === false, `${target}: target cannot use Japanese`);
   }
   for (const clue of item.contextClues || []) {
@@ -154,8 +161,10 @@ module.exports = {
   POS_MAP,
   compatibleSense,
   normalizeSense,
+  occurrenceCount,
   senseParts,
   segmentProjection,
+  targetSegmentMatches,
   validateContextItem,
   assertContextItem,
 };

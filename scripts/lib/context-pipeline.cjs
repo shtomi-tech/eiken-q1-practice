@@ -11,6 +11,8 @@ const POS_MAP = {
   "動詞": "verb",
   "形容詞": "adjective",
   "副詞": "adverb",
+  "副詞句": "adverbial phrase",
+  "句動詞": "phrasal verb",
 };
 
 function readJson(file) {
@@ -32,6 +34,7 @@ function sourceItems(qs) {
     .filter((item) => wanted.has(item.q))
     .map((item) => ({
       q: item.q,
+      type: item.phrase ? "idiom" : "word",
       target: item.word || item.phrase,
       meaning: item.meaning,
       pos: POS_MAP[item.pos] || item.pos,
@@ -62,6 +65,7 @@ function pipelinePaths(qs) {
   const draftDir = path.join(ROOT, "data", "context-drafts");
   return {
     label,
+    authoring: path.join(draftDir, `${DATASET_ID}-${label}-authoring.json`),
     candidate: path.join(draftDir, `${DATASET_ID}-${label}-candidates.json`),
     draft: path.join(draftDir, `${DATASET_ID}-${label}.json`),
     review: path.join(draftDir, `${DATASET_ID}-${label}-review.json`),
@@ -84,6 +88,12 @@ function sameQs(actual, qs) {
   return JSON.stringify(normalized) === JSON.stringify(qs);
 }
 
+function assertExactTargetOrder(actualTargets, expectedTargets, label = "batch") {
+  if (JSON.stringify(actualTargets) !== JSON.stringify(expectedTargets)) {
+    throw new Error(`${label} targets do not match Vocabulary Data order`);
+  }
+}
+
 module.exports = {
   ROOT,
   VOCAB_PATH,
@@ -99,4 +109,5 @@ module.exports = {
   pipelinePaths,
   metadataFor,
   sameQs,
+  assertExactTargetOrder,
 };

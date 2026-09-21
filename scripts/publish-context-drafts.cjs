@@ -16,14 +16,24 @@ const {
 const RUNTIME_PATH = require("node:path").join(ROOT, "data", "context_2026-1.json");
 
 function approvedItems(approved, qs = [3]) {
-  const expectedCount = sourceItems(qs).length;
+  const expectedSources = sourceItems(qs);
+  const expectedCount = expectedSources.length;
   if (approved.stage !== "APPROVED" || !sameQs(approved.q, qs) || !approved.items?.length ||
       (qs.length === 1 && approved.items.length !== expectedCount)) {
     throw new Error(`Publish requires APPROVED ${pipelinePaths(qs).label} items`);
   }
   const vocab = vocabularyByTarget();
+  const expectedTargets = expectedSources.map((item) => item.target);
+  const seen = new Set();
+  let previousIndex = -1;
   for (const item of approved.items) {
     if (!qs.includes(item.q)) throw new Error(`${item.target}: publish scope is outside ${pipelinePaths(qs).label}`);
+    if (seen.has(item.target)) throw new Error(`${item.target}: duplicate approved target`);
+    seen.add(item.target);
+    const sourceIndex = expectedTargets.indexOf(item.target);
+    if (sourceIndex < 0) throw new Error(`${item.target}: approved target is outside requested source items`);
+    if (sourceIndex <= previousIndex) throw new Error(`${item.target}: approved target order differs from Vocabulary Data`);
+    previousIndex = sourceIndex;
     if (item.approval?.status !== "approved") throw new Error(`${item.target}: approval is not approved`);
     if (item.manualReview?.status !== "pass") throw new Error(`${item.target}: manual review is not PASS`);
     if (qs.some((q) => q >= 6)) {
@@ -71,6 +81,8 @@ function publish({
   const resolvedApprovedPath = approvedPath || pipelinePaths(qs).approved;
   const approved = readJson(resolvedApprovedPath);
   const items = approvedItems(approved, qs);
+  const generatedTargets = sourceItems(qs).map((item) => item.target);
+  const approvedTargetSet = new Set(items.map((item) => item.target));
   const raw = fs.readFileSync(runtimePath, "utf8");
   const lines = raw.split(/\r?\n/);
   const runtime = readJson(runtimePath);
@@ -104,7 +116,14 @@ function publish({
   if (!dryRun && nextRaw !== raw) fs.writeFileSync(runtimePath, nextRaw, "utf8");
   return {
     dryRun,
+    scope: [...qs],
+    generatedTargets,
+    approvedTargets: items.map((item) => item.target),
+    blockedTargets: generatedTargets.filter((target) => !approvedTargetSet.has(target)),
+    posFilteredItems: items.filter((item) => item.filteredOutSenses?.length).map((item) => item.target),
+    lowConfidenceTargets: items.filter((item) => item.senseConfidence === "low").map((item) => item.target),
     changedTargets,
+    unchangedTargets: items.filter((item) => !changedTargets.includes(item.target)).map((item) => item.target),
     changed: nextRaw !== raw,
     itemOrderPreserved: true,
     metaCountPreserved: true,
@@ -119,6 +138,16 @@ if (require.main === module) {
     approvedPath: pipelinePaths(qs).approved,
   });
   console.log(`${result.dryRun ? "context publish dry-run" : "context published"} (${pipelinePaths(qs).label}): ${result.changedTargets.join(", ") || "no changes"}`);
+  console.log(JSON.stringify({
+    scope: result.scope,
+    generatedTargets: result.generatedTargets,
+    approvedTargets: result.approvedTargets,
+    blockedTargets: result.blockedTargets,
+    posFilteredItems: result.posFilteredItems,
+    lowConfidenceTargets: result.lowConfidenceTargets,
+    changedTargets: result.changedTargets,
+    unchangedTargets: result.unchangedTargets,
+  }));
 }
 
 module.exports = { publish, approvedItems };

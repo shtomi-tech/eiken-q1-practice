@@ -1,0 +1,4855 @@
+{
+  "schemaVersion": 1,
+  "datasetId": "eiken2-2026-1",
+  "q": [
+    10,
+    11,
+    12,
+    13
+  ],
+  "qs": [
+    10,
+    11,
+    12,
+    13
+  ],
+  "stage": "DRAFT",
+  "sourceCount": 16,
+  "initialItems": [
+    {
+      "source": {
+        "q": 10,
+        "type": "word",
+        "target": "frown",
+        "meaning": "顔をしかめる、眉をひそめる",
+        "pos": "verb",
+        "level": "EIKEN Grade 2"
+      },
+      "candidateSenses": [
+        {
+          "sense": "顔をしかめる、眉をひそめる",
+          "pos": "verb"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "顔をしかめる、眉をひそめる",
+          "pos": "verb"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseValidation": {
+        "status": "pending"
+      },
+      "targetSense": "顔をしかめる、眉をひそめる",
+      "senseSelectionReason": "The only verb sense matches the visible movement of the eyebrows and unhappy face.",
+      "fullEnglish": [
+        "Maria began to frown when she saw the broken window.",
+        "Her eyebrows moved down, and her face looked unhappy.",
+        "She asked who had hit the ball."
+      ],
+      "mixedEnglish": [
+        "Maria began to frown when she saw the broken window.",
+        "Her eyebrows moved down, and her face looked unhappy.",
+        "She asked who had hit the ball."
+      ],
+      "contextClues": [
+        {
+          "text": "broken window",
+          "type": "cause"
+        },
+        {
+          "text": "eyebrows moved down",
+          "type": "behavior"
+        },
+        {
+          "text": "face looked unhappy",
+          "type": "result"
+        }
+      ],
+      "inferencePath": [
+        "broken window",
+        "eyebrows moved down",
+        "face looked unhappy",
+        "targetSense: 顔をしかめる、眉をひそめる",
+        "frown"
+      ],
+      "segments": [
+        [
+          {
+            "en": "Maria began to ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "frown",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " when she saw the ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "broken window",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Her ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "eyebrows moved down",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ", and her ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "face looked unhappy",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "She asked who had hit the ball.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "supportDecision": "not-needed",
+      "choices": [
+        "顔をしかめる、眉をひそめる",
+        "微笑む",
+        "叫ぶ",
+        "うなずく"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「broken window」「eyebrows moved down」「face looked unhappy」が手がかりです。壊れた窓を見て眉が下がり、不満そうな表情になったので、frownは「顔をしかめる、眉をひそめる」だと推測できます。",
+      "structuralValidation": {
+        "status": "pending"
+      },
+      "manualReview": {
+        "status": "pending"
+      },
+      "approval": {
+        "status": "pending"
+      }
+    },
+    {
+      "source": {
+        "q": 10,
+        "type": "word",
+        "target": "slip",
+        "meaning": "滑る；そっと動く・抜け出す",
+        "pos": "verb",
+        "level": "EIKEN Grade 2"
+      },
+      "candidateSenses": [
+        {
+          "sense": "滑る",
+          "pos": "verb"
+        },
+        {
+          "sense": "そっと動く・抜け出す",
+          "pos": "verb"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "滑る",
+          "pos": "verb"
+        },
+        {
+          "sense": "そっと動く・抜け出す",
+          "pos": "verb"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseValidation": {
+        "status": "pending"
+      },
+      "targetSense": "滑る",
+      "senseSelectionReason": "The wet floor, near fall, and grabbed rail uniquely support the physical slipping sense.",
+      "fullEnglish": [
+        "Be careful on the wet floor, or you may slip.",
+        "A man stepped on the puddle and almost fell, but he grabbed the rail.",
+        "The cleaner put up a warning sign."
+      ],
+      "mixedEnglish": [
+        "Be careful on the wet floor, or you may slip.",
+        "A man stepped on the puddle and almost fell, but he grabbed the rail.",
+        "The cleaner put up a warning sign."
+      ],
+      "contextClues": [
+        {
+          "text": "wet floor",
+          "type": "cause"
+        },
+        {
+          "text": "almost fell",
+          "type": "result"
+        },
+        {
+          "text": "grabbed the rail",
+          "type": "behavior"
+        }
+      ],
+      "inferencePath": [
+        "wet floor",
+        "almost fell",
+        "grabbed the rail",
+        "targetSense: 滑る",
+        "slip"
+      ],
+      "segments": [
+        [
+          {
+            "en": "Be careful on the ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "wet floor",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ", or you may ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "slip",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "A man stepped on the puddle and ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "almost fell",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ", but he ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "grabbed the rail",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The cleaner put up a warning sign.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "supportDecision": "not-needed",
+      "choices": [
+        "滑る",
+        "跳ぶ",
+        "立ち止まる",
+        "曲がる"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「wet floor」「almost fell」「grabbed the rail」が手がかりです。ぬれた床で足元を失い、転びそうになって手すりをつかんだので、slipは「滑る」だと推測できます。",
+      "structuralValidation": {
+        "status": "pending"
+      },
+      "manualReview": {
+        "status": "pending"
+      },
+      "approval": {
+        "status": "pending"
+      }
+    },
+    {
+      "source": {
+        "q": 10,
+        "type": "word",
+        "target": "guess",
+        "meaning": "推測する、言い当てる",
+        "pos": "verb",
+        "level": "EIKEN Grade 2"
+      },
+      "candidateSenses": [
+        {
+          "sense": "推測する、言い当てる",
+          "pos": "verb"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "推測する、言い当てる",
+          "pos": "verb"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseValidation": {
+        "status": "pending"
+      },
+      "targetSense": "推測する、言い当てる",
+      "senseSelectionReason": "The speaker lacks certainty and selects the most likely answer, matching the single source sense.",
+      "fullEnglish": [
+        "I do not know the answer, but I will guess.",
+        "I looked at the four choices and chose the one that seemed most likely.",
+        "I was lucky and got it right."
+      ],
+      "mixedEnglish": [
+        "I do not know the answer, but I will guess.",
+        "I looked at the four choices and chose the one that seemed most likely.",
+        "I was lucky and got it right."
+      ],
+      "contextClues": [
+        {
+          "text": "do not know the answer",
+          "type": "situation"
+        },
+        {
+          "text": "four choices",
+          "type": "situation"
+        },
+        {
+          "text": "seemed most likely",
+          "type": "behavior"
+        }
+      ],
+      "inferencePath": [
+        "do not know the answer",
+        "four choices",
+        "seemed most likely",
+        "targetSense: 推測する、言い当てる",
+        "guess"
+      ],
+      "segments": [
+        [
+          {
+            "en": "I ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "do not know the answer",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ", but I will ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "guess",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "I looked at the ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "four choices",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " and chose the one that ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "seemed most likely",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "I was lucky and got it right.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "supportDecision": "not-needed",
+      "choices": [
+        "推測する、言い当てる",
+        "証明する",
+        "記録する",
+        "説明する"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「do not know the answer」「four choices」「seemed most likely」が手がかりです。答えを知らないまま最もありそうな選択肢を選んでいるので、guessは「推測する、言い当てる」だと推測できます。",
+      "structuralValidation": {
+        "status": "pending"
+      },
+      "manualReview": {
+        "status": "pending"
+      },
+      "approval": {
+        "status": "pending"
+      }
+    },
+    {
+      "source": {
+        "q": 10,
+        "type": "word",
+        "target": "crawl",
+        "meaning": "はう、ゆっくり進む",
+        "pos": "verb",
+        "level": "EIKEN Grade 2"
+      },
+      "candidateSenses": [
+        {
+          "sense": "はう、ゆっくり進む",
+          "pos": "verb"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "はう、ゆっくり進む",
+          "pos": "verb"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseValidation": {
+        "status": "pending"
+      },
+      "targetSense": "はう",
+      "senseSelectionReason": "The baby moves on hands and knees before being able to walk, selecting the crawling sense.",
+      "fullEnglish": [
+        "The baby cannot walk yet, so she crawls across the floor.",
+        "She moves on her hands and knees toward a bright toy.",
+        "When she reaches it, she laughs."
+      ],
+      "mixedEnglish": [
+        "The baby cannot walk yet, so she crawls across the floor.",
+        "She moves on her hands and knees toward a bright toy.",
+        "When she reaches it, she laughs."
+      ],
+      "contextClues": [
+        {
+          "text": "cannot walk yet",
+          "type": "cause"
+        },
+        {
+          "text": "on her hands and knees",
+          "type": "behavior"
+        },
+        {
+          "text": "toward a bright toy",
+          "type": "direction"
+        }
+      ],
+      "inferencePath": [
+        "cannot walk yet",
+        "on her hands and knees",
+        "toward a bright toy",
+        "targetSense: はう",
+        "crawl"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The baby ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "cannot walk yet",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ", so she ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "crawl",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": "s across the floor.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "She moves ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "on her hands and knees",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "toward a bright toy",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "When she reaches it, she laughs.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "supportDecision": "not-needed",
+      "choices": [
+        "はう",
+        "走る",
+        "飛ぶ",
+        "泳ぐ"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「cannot walk yet」「on her hands and knees」「toward a bright toy」が手がかりです。文脈から、crawlは「はう」だと推測できます。",
+      "structuralValidation": {
+        "status": "pending"
+      },
+      "manualReview": {
+        "status": "pending"
+      },
+      "approval": {
+        "status": "pending"
+      }
+    },
+    {
+      "source": {
+        "q": 11,
+        "type": "idiom",
+        "target": "as a general rule",
+        "meaning": "概して、一般的に言えば",
+        "pos": "adverbial phrase",
+        "level": "EIKEN Grade 2"
+      },
+      "candidateSenses": [
+        {
+          "sense": "概して、一般的に言えば",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "概して、一般的に言えば",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseValidation": {
+        "status": "pending"
+      },
+      "targetSense": "概して、一般的に言えば",
+      "senseSelectionReason": "A usual closing time is contrasted with a Friday exception, directly supporting a rule that generally applies.",
+      "fullEnglish": [
+        "As a general rule, our library closes at six.",
+        "However, it stays open until eight on Fridays.",
+        "Check the sign before you visit."
+      ],
+      "mixedEnglish": [
+        "As a general rule, our library closes at six.",
+        "However, it stays open until eight on Fridays.",
+        "Check the sign before you visit."
+      ],
+      "contextClues": [
+        {
+          "text": "our library closes at six",
+          "type": "usual situation"
+        },
+        {
+          "text": "However",
+          "type": "contrast"
+        },
+        {
+          "text": "until eight on Fridays",
+          "type": "exception"
+        }
+      ],
+      "inferencePath": [
+        "our library closes at six",
+        "However",
+        "until eight on Fridays",
+        "targetSense: 概して、一般的に言えば",
+        "as a general rule"
+      ],
+      "segments": [
+        [
+          {
+            "en": "As a general rule",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": ", ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "our library closes at six",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "However",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ", it stays open ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "until eight on Fridays",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Check the sign before you visit.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "supportDecision": "not-needed",
+      "choices": [
+        "概して、一般的に言えば",
+        "例外なく",
+        "偶然に",
+        "急いで"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「our library closes at six」「However」「until eight on Fridays」が手がかりです。普段の閉館時刻に金曜日だけ例外があるため、as a general ruleは「概して、一般的に言えば」だと推測できます。",
+      "structuralValidation": {
+        "status": "pending"
+      },
+      "manualReview": {
+        "status": "pending"
+      },
+      "approval": {
+        "status": "pending"
+      }
+    },
+    {
+      "source": {
+        "q": 11,
+        "type": "idiom",
+        "target": "for a fresh start",
+        "meaning": "新たなスタートとして、心機一転",
+        "pos": "adverbial phrase",
+        "level": "EIKEN Grade 2"
+      },
+      "candidateSenses": [
+        {
+          "sense": "新たなスタートとして、心機一転",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "新たなスタートとして、心機一転",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseValidation": {
+        "status": "pending"
+      },
+      "targetSense": "新たなスタートとして、心機一転",
+      "senseSelectionReason": "Moving away from old problems and building a hopeful life supports the single phrase sense.",
+      "fullEnglish": [
+        "For a fresh start, Leo moved to a new town and joined a sports club.",
+        "He wanted to leave his old problems behind and begin again.",
+        "Soon, he made new friends and felt hopeful."
+      ],
+      "mixedEnglish": [
+        "For a fresh start, Leo moved to a new town and joined a sports club.",
+        "He wanted to leave his old problems behind and begin again.",
+        "Soon, he made new friends and felt hopeful."
+      ],
+      "contextClues": [
+        {
+          "text": "moved to a new town",
+          "type": "situation"
+        },
+        {
+          "text": "leave his old problems behind",
+          "type": "cause"
+        },
+        {
+          "text": "begin again",
+          "type": "restatement"
+        }
+      ],
+      "inferencePath": [
+        "moved to a new town",
+        "leave his old problems behind",
+        "begin again",
+        "targetSense: 新たなスタートとして、心機一転",
+        "for a fresh start"
+      ],
+      "segments": [
+        [
+          {
+            "en": "For a fresh start",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": ", Leo ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "moved to a new town",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " and joined a sports club.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "He wanted to ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "leave his old problems behind",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " and ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "begin again",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Soon, he made new friends and felt hopeful.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "supportDecision": "not-needed",
+      "choices": [
+        "新たなスタートとして、心機一転",
+        "最後の機会として",
+        "思い出として",
+        "以前と同じように"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「moved to a new town」「leave his old problems behind」「begin again」が手がかりです。文脈から、for a fresh startは「新たなスタートとして、心機一転」だと推測できます。",
+      "structuralValidation": {
+        "status": "pending"
+      },
+      "manualReview": {
+        "status": "pending"
+      },
+      "approval": {
+        "status": "pending"
+      }
+    },
+    {
+      "source": {
+        "q": 11,
+        "type": "idiom",
+        "target": "on a specific occasion",
+        "meaning": "特定の機会に",
+        "pos": "adverbial phrase",
+        "level": "EIKEN Grade 2"
+      },
+      "candidateSenses": [
+        {
+          "sense": "特定の機会に",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "特定の機会に",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseValidation": {
+        "status": "pending"
+      },
+      "targetSense": "特定の機会に",
+      "senseSelectionReason": "The contrast between most days and one dated special show supports the single phrase sense.",
+      "fullEnglish": [
+        "The museum is free for students on most days.",
+        "On a specific occasion, however, visitors must pay because a special show is being held.",
+        "The date is written on the website."
+      ],
+      "mixedEnglish": [
+        "The museum is free for students on most days.",
+        "On a specific occasion, however, visitors must pay because a special show is being held.",
+        "The date is written on the website."
+      ],
+      "contextClues": [
+        {
+          "text": "most days",
+          "type": "usual situation"
+        },
+        {
+          "text": "special show",
+          "type": "cause"
+        },
+        {
+          "text": "The date is written on the website",
+          "type": "result"
+        }
+      ],
+      "inferencePath": [
+        "most days",
+        "special show",
+        "The date is written on the website",
+        "targetSense: 特定の機会に",
+        "on a specific occasion"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The museum is free for students on ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "most days",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "On a specific occasion",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": ", however, visitors must pay because a ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "special show",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " is being held.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The date is written on the website",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "supportDecision": "not-needed",
+      "choices": [
+        "特定の機会に",
+        "毎日",
+        "偶然に",
+        "直ちに"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「most days」「special show」「The date is written on the website」が手がかりです。普段とは異なる特別な催しの日だけ料金が必要なので、on a specific occasionは「特定の機会に」だと推測できます。",
+      "structuralValidation": {
+        "status": "pending"
+      },
+      "manualReview": {
+        "status": "pending"
+      },
+      "approval": {
+        "status": "pending"
+      }
+    },
+    {
+      "source": {
+        "q": 11,
+        "type": "idiom",
+        "target": "in case of emergency",
+        "meaning": "緊急時には、非常の場合に備えて",
+        "pos": "adverbial phrase",
+        "level": "EIKEN Grade 2"
+      },
+      "candidateSenses": [
+        {
+          "sense": "緊急時には、非常の場合に備えて",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "緊急時には、非常の場合に備えて",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseValidation": {
+        "status": "pending"
+      },
+      "targetSense": "緊急時には、非常の場合に備えて",
+      "senseSelectionReason": "A special hotel phone and instructions for urgent trouble support the single phrase sense.",
+      "fullEnglish": [
+        "The hotel has a red phone beside the elevator.",
+        "In case of emergency, guests should use it to call the front desk.",
+        "A sign explains this for everyone."
+      ],
+      "mixedEnglish": [
+        "The hotel has a red phone beside the elevator.",
+        "In case of emergency, guests should use it to call the front desk.",
+        "A sign explains this for everyone."
+      ],
+      "contextClues": [
+        {
+          "text": "red phone",
+          "type": "example"
+        },
+        {
+          "text": "call the front desk",
+          "type": "behavior"
+        },
+        {
+          "text": "sign explains this",
+          "type": "situation"
+        }
+      ],
+      "inferencePath": [
+        "red phone",
+        "call the front desk",
+        "sign explains this",
+        "targetSense: 緊急時には、非常の場合に備えて",
+        "in case of emergency"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The hotel has a ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "red phone",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " beside the elevator.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "In case of emergency",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": ", guests should use it to ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "call the front desk",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "A ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "sign explains this",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " for everyone.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "supportDecision": "not-needed",
+      "choices": [
+        "緊急時には、非常の場合に備えて",
+        "通常営業中に",
+        "予約のために",
+        "休憩中に"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「red phone」「call the front desk」「sign explains this」が手がかりです。ホテルに特別な電話と利用案内があり、重大な事態で連絡する場面なので、in case of emergencyは「緊急時には、非常の場合に備えて」だと推測できます。",
+      "structuralValidation": {
+        "status": "pending"
+      },
+      "manualReview": {
+        "status": "pending"
+      },
+      "approval": {
+        "status": "pending"
+      }
+    },
+    {
+      "source": {
+        "q": 12,
+        "type": "idiom",
+        "target": "on one's own",
+        "meaning": "自分一人で、独力で",
+        "pos": "adverbial phrase",
+        "level": "EIKEN Grade 2"
+      },
+      "candidateSenses": [
+        {
+          "sense": "自分一人で、独力で",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "自分一人で、独力で",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseValidation": {
+        "status": "pending"
+      },
+      "targetSense": "自分一人で、独力で",
+      "senseSelectionReason": "The person completes a repair with no one helping, which supports independent action.",
+      "fullEnglish": [
+        "On one's own, a person must make every choice without help.",
+        "Sara learned this when she fixed the bicycle without anyone beside her.",
+        "She felt proud when the wheels turned again."
+      ],
+      "mixedEnglish": [
+        "On one's own, a person must make every choice without help.",
+        "Sara learned this when she fixed the bicycle without anyone beside her.",
+        "She felt proud when the wheels turned again."
+      ],
+      "contextClues": [
+        {
+          "text": "make every choice without help",
+          "type": "behavior"
+        },
+        {
+          "text": "without anyone beside her",
+          "type": "situation"
+        },
+        {
+          "text": "felt proud",
+          "type": "result"
+        }
+      ],
+      "inferencePath": [
+        "make every choice without help",
+        "without anyone beside her",
+        "felt proud",
+        "targetSense: 自分一人で、独力で",
+        "on one's own"
+      ],
+      "segments": [
+        [
+          {
+            "en": "On one's own",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": ", a person must ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "make every choice without help",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Sara learned this when she fixed the bicycle ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "without anyone beside her",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "She ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "felt proud",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " when the wheels turned again.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "supportDecision": "not-needed",
+      "choices": [
+        "自分一人で、独力で",
+        "他人の指示で",
+        "順番に",
+        "偶然に"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「make every choice without help」「without anyone beside her」「felt proud」が手がかりです。文脈から、on one's ownは「自分一人で、独力で」だと推測できます。",
+      "structuralValidation": {
+        "status": "pending"
+      },
+      "manualReview": {
+        "status": "pending"
+      },
+      "approval": {
+        "status": "pending"
+      }
+    },
+    {
+      "source": {
+        "q": 12,
+        "type": "idiom",
+        "target": "on the air",
+        "meaning": "放送中で",
+        "pos": "adverbial phrase",
+        "level": "EIKEN Grade 2"
+      },
+      "candidateSenses": [
+        {
+          "sense": "放送中で",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "放送中で",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseValidation": {
+        "status": "pending"
+      },
+      "targetSense": "放送中で",
+      "senseSelectionReason": "A radio host speaks into a microphone while listeners hear the program, supporting the broadcast sense.",
+      "fullEnglish": [
+        "The radio host spoke into the microphone at seven o'clock.",
+        "The program was on the air, so people in their cars could hear her.",
+        "She could not stop to talk privately."
+      ],
+      "mixedEnglish": [
+        "The radio host spoke into the microphone at seven o'clock.",
+        "The program was on the air, so people in their cars could hear her.",
+        "She could not stop to talk privately."
+      ],
+      "contextClues": [
+        {
+          "text": "spoke into the microphone",
+          "type": "behavior"
+        },
+        {
+          "text": "people in their cars could hear her",
+          "type": "result"
+        },
+        {
+          "text": "could not stop to talk privately",
+          "type": "situation"
+        }
+      ],
+      "inferencePath": [
+        "spoke into the microphone",
+        "people in their cars could hear her",
+        "could not stop to talk privately",
+        "targetSense: 放送中で",
+        "on the air"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The radio host ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "spoke into the microphone",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " at seven o'clock.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The program was ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "on the air",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": ", so ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "people in their cars could hear her",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "She ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "could not stop to talk privately",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "supportDecision": "not-needed",
+      "choices": [
+        "放送中で",
+        "録音前で",
+        "非公開で",
+        "休止中で"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「spoke into the microphone」「people in their cars could hear her」「could not stop to talk privately」が手がかりです。司会者の声がその時にリスナーへ届いているので、on the airは「放送中で」だと推測できます。",
+      "structuralValidation": {
+        "status": "pending"
+      },
+      "manualReview": {
+        "status": "pending"
+      },
+      "approval": {
+        "status": "pending"
+      }
+    },
+    {
+      "source": {
+        "q": 12,
+        "type": "idiom",
+        "target": "at a distance",
+        "meaning": "離れて、遠くから",
+        "pos": "adverbial phrase",
+        "level": "EIKEN Grade 2"
+      },
+      "candidateSenses": [
+        {
+          "sense": "離れて、遠くから",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "離れて、遠くから",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseValidation": {
+        "status": "pending"
+      },
+      "targetSense": "離れて、遠くから",
+      "senseSelectionReason": "The sign is unreadable until the viewers walk closer, supporting observation from far away.",
+      "fullEnglish": [
+        "The sign looked small at a distance.",
+        "When we walked closer, we could read every word.",
+        "The same letters had been hard to see from far away."
+      ],
+      "mixedEnglish": [
+        "The sign looked small at a distance.",
+        "When we walked closer, we could read every word.",
+        "The same letters had been hard to see from far away."
+      ],
+      "contextClues": [
+        {
+          "text": "looked small",
+          "type": "appearance"
+        },
+        {
+          "text": "walked closer",
+          "type": "contrast"
+        },
+        {
+          "text": "from far away",
+          "type": "restatement"
+        }
+      ],
+      "inferencePath": [
+        "looked small",
+        "walked closer",
+        "from far away",
+        "targetSense: 離れて、遠くから",
+        "at a distance"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The sign ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "looked small",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "at a distance",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "When we ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "walked closer",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ", we could read every word.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The same letters had been hard to see ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "from far away",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "supportDecision": "not-needed",
+      "choices": [
+        "離れて、遠くから",
+        "すぐ近くで",
+        "中央で",
+        "内側から"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「looked small」「walked closer」「from far away」が手がかりです。文脈から、at a distanceは「離れて、遠くから」だと推測できます。",
+      "structuralValidation": {
+        "status": "pending"
+      },
+      "manualReview": {
+        "status": "pending"
+      },
+      "approval": {
+        "status": "pending"
+      }
+    },
+    {
+      "source": {
+        "q": 12,
+        "type": "idiom",
+        "target": "to one's surprise",
+        "meaning": "（人が）驚いたことに",
+        "pos": "adverbial phrase",
+        "level": "EIKEN Grade 2"
+      },
+      "candidateSenses": [
+        {
+          "sense": "（人が）驚いたことに",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "（人が）驚いたことに",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseValidation": {
+        "status": "pending"
+      },
+      "targetSense": "（人が）驚いたことに",
+      "senseSelectionReason": "The clock works despite everyone's expectation that it was broken, creating a surprising result.",
+      "fullEnglish": [
+        "To one's surprise, the old clock still worked perfectly.",
+        "Everyone had thought it was broken and ready to throw away.",
+        "The owner smiled when it began to ring."
+      ],
+      "mixedEnglish": [
+        "To one's surprise, the old clock still worked perfectly.",
+        "Everyone had thought it was broken and ready to throw away.",
+        "The owner smiled when it began to ring."
+      ],
+      "contextClues": [
+        {
+          "text": "old clock still worked perfectly",
+          "type": "result"
+        },
+        {
+          "text": "thought it was broken",
+          "type": "contrast"
+        },
+        {
+          "text": "owner smiled",
+          "type": "reaction"
+        }
+      ],
+      "inferencePath": [
+        "old clock still worked perfectly",
+        "thought it was broken",
+        "owner smiled",
+        "targetSense: （人が）驚いたことに",
+        "to one's surprise"
+      ],
+      "segments": [
+        [
+          {
+            "en": "To one's surprise",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": ", the ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "old clock still worked perfectly",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Everyone had ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "thought it was broken",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " and ready to throw away.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "owner smiled",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " when it began to ring.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "supportDecision": "not-needed",
+      "choices": [
+        "（人が）驚いたことに",
+        "予想どおりに",
+        "念のため",
+        "急いで"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「old clock still worked perfectly」「thought it was broken」「owner smiled」が手がかりです。壊れていると思われた時計が動き出す予想外の結果なので、to one's surpriseは「（人が）驚いたことに」だと推測できます。",
+      "structuralValidation": {
+        "status": "pending"
+      },
+      "manualReview": {
+        "status": "pending"
+      },
+      "approval": {
+        "status": "pending"
+      }
+    },
+    {
+      "source": {
+        "q": 13,
+        "type": "idiom",
+        "target": "go along with",
+        "meaning": "（案・人に）賛成する、従う",
+        "pos": "phrasal verb",
+        "level": "EIKEN Grade 2"
+      },
+      "candidateSenses": [
+        {
+          "sense": "（案・人に）賛成する、従う",
+          "pos": "phrasal verb"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "（案・人に）賛成する、従う",
+          "pos": "phrasal verb"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseValidation": {
+        "status": "pending"
+      },
+      "targetSense": "（案・人に）賛成する、従う",
+      "senseSelectionReason": "Mina changes from disliking the plan to packing and joining her friends, supporting acceptance of their plan.",
+      "fullEnglish": [
+        "Mina did not like the camping plan, but all her friends supported it.",
+        "At last, she decided to go along with the plan and packed her bag.",
+        "She joined them the next morning."
+      ],
+      "mixedEnglish": [
+        "Mina did not like the camping plan, but all her friends supported it.",
+        "At last, she decided to go along with the plan and packed her bag.",
+        "She joined them the next morning."
+      ],
+      "contextClues": [
+        {
+          "text": "did not like the camping plan",
+          "type": "contrast"
+        },
+        {
+          "text": "friends supported it",
+          "type": "situation"
+        },
+        {
+          "text": "packed her bag",
+          "type": "behavior"
+        }
+      ],
+      "inferencePath": [
+        "did not like the camping plan",
+        "friends supported it",
+        "packed her bag",
+        "targetSense: （案・人に）賛成する、従う",
+        "go along with"
+      ],
+      "segments": [
+        [
+          {
+            "en": "Mina ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "did not like the camping plan",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ", but all her ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "friends supported it",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "At last, she decided to ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "go along with",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " the plan and ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "packed her bag",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "She joined them the next morning.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "supportDecision": "not-needed",
+      "choices": [
+        "（案・人に）賛成する、従う",
+        "反対する",
+        "延期する",
+        "説明する"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「did not like the camping plan」「friends supported it」「packed her bag」が手がかりです。最初は嫌だった計画を受け入れて参加の準備をしたので、go along withは「（案・人に）賛成する、従う」だと推測できます。",
+      "structuralValidation": {
+        "status": "pending"
+      },
+      "manualReview": {
+        "status": "pending"
+      },
+      "approval": {
+        "status": "pending"
+      }
+    },
+    {
+      "source": {
+        "q": 13,
+        "type": "idiom",
+        "target": "take away from",
+        "meaning": "〜の価値（魅力）を損なう／〜から取り去る",
+        "pos": "phrasal verb",
+        "level": "EIKEN Grade 2"
+      },
+      "candidateSenses": [
+        {
+          "sense": "〜の価値（魅力）を損なう",
+          "pos": "phrasal verb"
+        },
+        {
+          "sense": "〜から取り去る",
+          "pos": "phrasal verb"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "〜の価値（魅力）を損なう",
+          "pos": "phrasal verb"
+        },
+        {
+          "sense": "〜から取り去る",
+          "pos": "phrasal verb"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseValidation": {
+        "status": "pending"
+      },
+      "targetSense": "〜の価値（魅力）を損なう",
+      "senseSelectionReason": "Noise makes the film difficult to follow and less enjoyable, selecting the reduce-value sense rather than physical removal.",
+      "fullEnglish": [
+        "Loud music can take away from the movie.",
+        "We could not hear the actors, so the story was hard to follow.",
+        "After the music stopped, the film became enjoyable again."
+      ],
+      "mixedEnglish": [
+        "Loud music can take away from the movie.",
+        "We could not hear the actors, so the story was hard to follow.",
+        "After the music stopped, the film became enjoyable again."
+      ],
+      "contextClues": [
+        {
+          "text": "Loud music",
+          "type": "cause"
+        },
+        {
+          "text": "could not hear the actors",
+          "type": "result"
+        },
+        {
+          "text": "became enjoyable again",
+          "type": "contrast"
+        }
+      ],
+      "inferencePath": [
+        "Loud music",
+        "could not hear the actors",
+        "became enjoyable again",
+        "targetSense: 〜の価値（魅力）を損なう",
+        "take away from"
+      ],
+      "segments": [
+        [
+          {
+            "en": "Loud music",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " can ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "take away from",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " the movie.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "We ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "could not hear the actors",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ", so the story was hard to follow.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "After the music stopped, the film ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "became enjoyable again",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "supportDecision": "not-needed",
+      "choices": [
+        "〜の価値（魅力）を損なう",
+        "価値を高める",
+        "完全に理解する",
+        "注意を向ける"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「Loud music」「could not hear the actors」「became enjoyable again」が手がかりです。音楽が映画を楽しむ妨げになっているので、take away fromは「〜の価値（魅力）を損なう」だと推測できます。",
+      "structuralValidation": {
+        "status": "pending"
+      },
+      "manualReview": {
+        "status": "pending"
+      },
+      "approval": {
+        "status": "pending"
+      }
+    },
+    {
+      "source": {
+        "q": 13,
+        "type": "idiom",
+        "target": "bring out in",
+        "meaning": "（bring out で）引き出す、世に出す",
+        "pos": "phrasal verb",
+        "level": "EIKEN Grade 2"
+      },
+      "candidateSenses": [
+        {
+          "sense": "（bring out で）引き出す、世に出す",
+          "pos": "phrasal verb"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "（bring out で）引き出す、世に出す",
+          "pos": "phrasal verb"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseValidation": {
+        "status": "pending"
+      },
+      "targetSense": "引き出す",
+      "senseSelectionReason": "Encouragement causes a previously hidden confidence to appear, supporting the elicit sense.",
+      "fullEnglish": [
+        "The art teacher's kind words bring out in Ken a new interest in painting.",
+        "Before the class, he rarely touched a brush.",
+        "Now he stays after school to practice."
+      ],
+      "mixedEnglish": [
+        "The art teacher's kind words bring out in Ken a new interest in painting.",
+        "Before the class, he rarely touched a brush.",
+        "Now he stays after school to practice."
+      ],
+      "contextClues": [
+        {
+          "text": "kind words",
+          "type": "cause"
+        },
+        {
+          "text": "new interest in painting",
+          "type": "result"
+        },
+        {
+          "text": "rarely touched a brush",
+          "type": "contrast"
+        }
+      ],
+      "inferencePath": [
+        "kind words",
+        "new interest in painting",
+        "rarely touched a brush",
+        "targetSense: 引き出す",
+        "bring out in"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The art teacher's ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "kind words",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "bring out in",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " Ken a ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "new interest in painting",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Before the class, he ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "rarely touched a brush",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Now he stays after school to practice.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "supportDecision": "not-needed",
+      "choices": [
+        "引き出す",
+        "隠す",
+        "禁止する",
+        "比較する"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「kind words」「new interest in painting」「rarely touched a brush」が手がかりです。文脈から、bring out inは「引き出す」だと推測できます。",
+      "structuralValidation": {
+        "status": "pending"
+      },
+      "manualReview": {
+        "status": "pending"
+      },
+      "approval": {
+        "status": "pending"
+      }
+    },
+    {
+      "source": {
+        "q": 13,
+        "type": "idiom",
+        "target": "watch out for",
+        "meaning": "〜に気をつける、用心する",
+        "pos": "phrasal verb",
+        "level": "EIKEN Grade 2"
+      },
+      "candidateSenses": [
+        {
+          "sense": "〜に気をつける、用心する",
+          "pos": "phrasal verb"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "〜に気をつける、用心する",
+          "pos": "phrasal verb"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseValidation": {
+        "status": "pending"
+      },
+      "targetSense": "〜に気をつける、用心する",
+      "senseSelectionReason": "Loose stones may cause a fall, and the walker changes behavior to avoid the danger.",
+      "fullEnglish": [
+        "Watch out for loose stones on this mountain path.",
+        "They may roll under your feet and make you fall.",
+        "Stay near the wall and walk slowly."
+      ],
+      "mixedEnglish": [
+        "Watch out for loose stones on this mountain path.",
+        "They may roll under your feet and make you fall.",
+        "Stay near the wall and walk slowly."
+      ],
+      "contextClues": [
+        {
+          "text": "loose stones",
+          "type": "danger"
+        },
+        {
+          "text": "make you fall",
+          "type": "result"
+        },
+        {
+          "text": "walk slowly",
+          "type": "behavior"
+        }
+      ],
+      "inferencePath": [
+        "loose stones",
+        "make you fall",
+        "walk slowly",
+        "targetSense: 〜に気をつける、用心する",
+        "watch out for"
+      ],
+      "segments": [
+        [
+          {
+            "en": "Watch out for",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "loose stones",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " on this mountain path.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "They may roll under your feet and ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "make you fall",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Stay near the wall and ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "walk slowly",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "supportDecision": "not-needed",
+      "choices": [
+        "〜に気をつける、用心する",
+        "無視する",
+        "追いかける",
+        "頼る"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「loose stones」「make you fall」「walk slowly」が手がかりです。転倒につながる石に注意しながら進む場面なので、watch out forは「〜に気をつける、用心する」だと推測できます。",
+      "structuralValidation": {
+        "status": "pending"
+      },
+      "manualReview": {
+        "status": "pending"
+      },
+      "approval": {
+        "status": "pending"
+      }
+    }
+  ],
+  "items": [
+    {
+      "source": {
+        "q": 10,
+        "type": "word",
+        "target": "frown",
+        "meaning": "顔をしかめる、眉をひそめる",
+        "pos": "verb",
+        "level": "EIKEN Grade 2"
+      },
+      "candidateSenses": [
+        {
+          "sense": "顔をしかめる、眉をひそめる",
+          "pos": "verb"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "顔をしかめる、眉をひそめる",
+          "pos": "verb"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      },
+      "targetSense": "顔をしかめる、眉をひそめる",
+      "senseSelectionReason": "The only verb sense matches the visible movement of the eyebrows and unhappy face.",
+      "fullEnglish": [
+        "Maria began to frown when she saw the broken window.",
+        "Her eyebrows moved down, and her face looked unhappy.",
+        "She asked who had hit the ball."
+      ],
+      "mixedEnglish": [
+        "Maria began to frown when she saw the broken window.",
+        "Her eyebrows moved down, and her face looked unhappy.",
+        "She asked who had hit the ball."
+      ],
+      "contextClues": [
+        {
+          "text": "broken window",
+          "type": "cause"
+        },
+        {
+          "text": "eyebrows moved down",
+          "type": "behavior"
+        },
+        {
+          "text": "face looked unhappy",
+          "type": "result"
+        }
+      ],
+      "inferencePath": [
+        "broken window",
+        "eyebrows moved down",
+        "face looked unhappy",
+        "targetSense: 顔をしかめる、眉をひそめる",
+        "frown"
+      ],
+      "segments": [
+        [
+          {
+            "en": "Maria began to ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "frown",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " when she saw the ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "broken window",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Her ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "eyebrows moved down",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ", and her ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "face looked unhappy",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "She asked who had hit the ball.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "supportDecision": "not-needed",
+      "choices": [
+        "顔をしかめる、眉をひそめる",
+        "微笑む",
+        "叫ぶ",
+        "うなずく"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「broken window」「eyebrows moved down」「face looked unhappy」が手がかりです。壊れた窓を見て眉が下がり、不満そうな表情になったので、frownは「顔をしかめる、眉をひそめる」だと推測できます。",
+      "structuralValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "targetSense",
+          "fullEnglish",
+          "targetOccurrence",
+          "contextClues",
+          "segments",
+          "targetProtection",
+          "clueProtection",
+          "supportReason",
+          "choices",
+          "explanation",
+          "senseSelection"
+        ]
+      },
+      "manualReview": {
+        "status": "pending"
+      },
+      "approval": {
+        "status": "pending"
+      }
+    },
+    {
+      "source": {
+        "q": 10,
+        "type": "word",
+        "target": "slip",
+        "meaning": "滑る；そっと動く・抜け出す",
+        "pos": "verb",
+        "level": "EIKEN Grade 2"
+      },
+      "candidateSenses": [
+        {
+          "sense": "滑る",
+          "pos": "verb"
+        },
+        {
+          "sense": "そっと動く・抜け出す",
+          "pos": "verb"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "滑る",
+          "pos": "verb"
+        },
+        {
+          "sense": "そっと動く・抜け出す",
+          "pos": "verb"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      },
+      "targetSense": "滑る",
+      "senseSelectionReason": "The wet floor, near fall, and grabbed rail uniquely support the physical slipping sense.",
+      "fullEnglish": [
+        "Be careful on the wet floor, or you may slip.",
+        "A man stepped on the puddle and almost fell, but he grabbed the rail.",
+        "The cleaner put up a warning sign."
+      ],
+      "mixedEnglish": [
+        "Be careful on the wet floor, or you may slip.",
+        "A man stepped on the puddle and almost fell, but he grabbed the rail.",
+        "The cleaner put up a warning sign."
+      ],
+      "contextClues": [
+        {
+          "text": "wet floor",
+          "type": "cause"
+        },
+        {
+          "text": "almost fell",
+          "type": "result"
+        },
+        {
+          "text": "grabbed the rail",
+          "type": "behavior"
+        }
+      ],
+      "inferencePath": [
+        "wet floor",
+        "almost fell",
+        "grabbed the rail",
+        "targetSense: 滑る",
+        "slip"
+      ],
+      "segments": [
+        [
+          {
+            "en": "Be careful on the ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "wet floor",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ", or you may ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "slip",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "A man stepped on the puddle and ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "almost fell",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ", but he ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "grabbed the rail",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The cleaner put up a warning sign.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "supportDecision": "not-needed",
+      "choices": [
+        "滑る",
+        "跳ぶ",
+        "立ち止まる",
+        "曲がる"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「wet floor」「almost fell」「grabbed the rail」が手がかりです。ぬれた床で足元を失い、転びそうになって手すりをつかんだので、slipは「滑る」だと推測できます。",
+      "structuralValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "targetSense",
+          "fullEnglish",
+          "targetOccurrence",
+          "contextClues",
+          "segments",
+          "targetProtection",
+          "clueProtection",
+          "supportReason",
+          "choices",
+          "explanation",
+          "senseSelection"
+        ]
+      },
+      "manualReview": {
+        "status": "pending"
+      },
+      "approval": {
+        "status": "pending"
+      }
+    },
+    {
+      "source": {
+        "q": 10,
+        "type": "word",
+        "target": "guess",
+        "meaning": "推測する、言い当てる",
+        "pos": "verb",
+        "level": "EIKEN Grade 2"
+      },
+      "candidateSenses": [
+        {
+          "sense": "推測する、言い当てる",
+          "pos": "verb"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "推測する、言い当てる",
+          "pos": "verb"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      },
+      "targetSense": "推測する、言い当てる",
+      "senseSelectionReason": "The speaker lacks certainty and selects the most likely answer, matching the single source sense.",
+      "fullEnglish": [
+        "I do not know the answer, but I will guess.",
+        "I looked at the four choices and chose the one that seemed most likely.",
+        "I was lucky and got it right."
+      ],
+      "mixedEnglish": [
+        "I do not know the answer, but I will guess.",
+        "I looked at the four choices and chose the one that seemed most likely.",
+        "I was lucky and got it right."
+      ],
+      "contextClues": [
+        {
+          "text": "do not know the answer",
+          "type": "situation"
+        },
+        {
+          "text": "four choices",
+          "type": "situation"
+        },
+        {
+          "text": "seemed most likely",
+          "type": "behavior"
+        }
+      ],
+      "inferencePath": [
+        "do not know the answer",
+        "four choices",
+        "seemed most likely",
+        "targetSense: 推測する、言い当てる",
+        "guess"
+      ],
+      "segments": [
+        [
+          {
+            "en": "I ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "do not know the answer",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ", but I will ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "guess",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "I looked at the ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "four choices",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " and chose the one that ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "seemed most likely",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "I was lucky and got it right.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "supportDecision": "not-needed",
+      "choices": [
+        "推測する、言い当てる",
+        "証明する",
+        "記録する",
+        "説明する"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「do not know the answer」「four choices」「seemed most likely」が手がかりです。答えを知らないまま最もありそうな選択肢を選んでいるので、guessは「推測する、言い当てる」だと推測できます。",
+      "structuralValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "targetSense",
+          "fullEnglish",
+          "targetOccurrence",
+          "contextClues",
+          "segments",
+          "targetProtection",
+          "clueProtection",
+          "supportReason",
+          "choices",
+          "explanation",
+          "senseSelection"
+        ]
+      },
+      "manualReview": {
+        "status": "pending"
+      },
+      "approval": {
+        "status": "pending"
+      }
+    },
+    {
+      "source": {
+        "q": 10,
+        "type": "word",
+        "target": "crawl",
+        "meaning": "はう、ゆっくり進む",
+        "pos": "verb",
+        "level": "EIKEN Grade 2"
+      },
+      "candidateSenses": [
+        {
+          "sense": "はう、ゆっくり進む",
+          "pos": "verb"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "はう、ゆっくり進む",
+          "pos": "verb"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      },
+      "targetSense": "はう",
+      "senseSelectionReason": "The baby moves on hands and knees before being able to walk, selecting the crawling sense.",
+      "fullEnglish": [
+        "The baby cannot walk yet, so she began to crawl across the floor.",
+        "She moved on her hands and knees toward a bright toy.",
+        "When she reached it, she laughed."
+      ],
+      "mixedEnglish": [
+        "The baby cannot walk yet, so she began to crawl across the floor.",
+        "She moved on her hands and knees toward a bright toy.",
+        "When she reached it, she laughed."
+      ],
+      "contextClues": [
+        {
+          "text": "cannot walk yet",
+          "type": "cause"
+        },
+        {
+          "text": "on her hands and knees",
+          "type": "behavior"
+        },
+        {
+          "text": "toward a bright toy",
+          "type": "direction"
+        }
+      ],
+      "inferencePath": [
+        "cannot walk yet",
+        "on her hands and knees",
+        "toward a bright toy",
+        "targetSense: はう",
+        "crawl"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The baby ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "cannot walk yet",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ", so she began to ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "crawl",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " across the floor.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "She moved ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "on her hands and knees",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "toward a bright toy",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "When she reached it, she laughed.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "supportDecision": "not-needed",
+      "choices": [
+        "はう",
+        "走る",
+        "飛ぶ",
+        "泳ぐ"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「cannot walk yet」「on her hands and knees」「toward a bright toy」が手がかりです。まだ歩けない赤ちゃんが手とひざを使って床を進んでいるので、crawlは「はう」だと推測できます。",
+      "structuralValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "targetSense",
+          "fullEnglish",
+          "targetOccurrence",
+          "contextClues",
+          "segments",
+          "targetProtection",
+          "clueProtection",
+          "supportReason",
+          "choices",
+          "explanation",
+          "senseSelection"
+        ]
+      },
+      "manualReview": {
+        "status": "pending"
+      },
+      "approval": {
+        "status": "pending"
+      }
+    },
+    {
+      "source": {
+        "q": 11,
+        "type": "idiom",
+        "target": "as a general rule",
+        "meaning": "概して、一般的に言えば",
+        "pos": "adverbial phrase",
+        "level": "EIKEN Grade 2"
+      },
+      "candidateSenses": [
+        {
+          "sense": "概して、一般的に言えば",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "概して、一般的に言えば",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      },
+      "targetSense": "概して、一般的に言えば",
+      "senseSelectionReason": "A usual closing time is contrasted with a Friday exception, directly supporting a rule that generally applies.",
+      "fullEnglish": [
+        "As a general rule, our library closes at six.",
+        "However, it stays open until eight on Fridays.",
+        "Check the sign before you visit."
+      ],
+      "mixedEnglish": [
+        "As a general rule, our library closes at six.",
+        "However, it stays open until eight on Fridays.",
+        "Check the sign before you visit."
+      ],
+      "contextClues": [
+        {
+          "text": "our library closes at six",
+          "type": "usual situation"
+        },
+        {
+          "text": "However",
+          "type": "contrast"
+        },
+        {
+          "text": "until eight on Fridays",
+          "type": "exception"
+        }
+      ],
+      "inferencePath": [
+        "our library closes at six",
+        "However",
+        "until eight on Fridays",
+        "targetSense: 概して、一般的に言えば",
+        "as a general rule"
+      ],
+      "segments": [
+        [
+          {
+            "en": "As a general rule",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": ", ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "our library closes at six",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "However",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ", it stays open ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "until eight on Fridays",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Check the sign before you visit.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "supportDecision": "not-needed",
+      "choices": [
+        "概して、一般的に言えば",
+        "例外なく",
+        "偶然に",
+        "急いで"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「our library closes at six」「However」「until eight on Fridays」が手がかりです。普段の閉館時刻に金曜日だけ例外があるため、as a general ruleは「概して、一般的に言えば」だと推測できます。",
+      "structuralValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "targetSense",
+          "fullEnglish",
+          "targetOccurrence",
+          "contextClues",
+          "segments",
+          "targetProtection",
+          "clueProtection",
+          "supportReason",
+          "choices",
+          "explanation",
+          "senseSelection"
+        ]
+      },
+      "manualReview": {
+        "status": "pending"
+      },
+      "approval": {
+        "status": "pending"
+      }
+    },
+    {
+      "source": {
+        "q": 11,
+        "type": "idiom",
+        "target": "for a fresh start",
+        "meaning": "新たなスタートとして、心機一転",
+        "pos": "adverbial phrase",
+        "level": "EIKEN Grade 2"
+      },
+      "candidateSenses": [
+        {
+          "sense": "新たなスタートとして、心機一転",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "新たなスタートとして、心機一転",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      },
+      "targetSense": "新たなスタートとして、心機一転",
+      "senseSelectionReason": "Moving away from old problems and building a hopeful life supports the single phrase sense.",
+      "fullEnglish": [
+        "For a fresh start, Leo moved to another town and joined a sports club.",
+        "He left his old problems behind.",
+        "Soon, he made friends and felt hopeful about his life there."
+      ],
+      "mixedEnglish": [
+        "For a fresh start, Leo moved to another town and joined a sports club.",
+        "He left his old problems behind.",
+        "Soon, he made friends and felt hopeful about his life there."
+      ],
+      "contextClues": [
+        {
+          "text": "moved to another town",
+          "type": "situation"
+        },
+        {
+          "text": "left his old problems behind",
+          "type": "cause"
+        },
+        {
+          "text": "made friends and felt hopeful",
+          "type": "result"
+        }
+      ],
+      "inferencePath": [
+        "moved to another town",
+        "left his old problems behind",
+        "made friends and felt hopeful",
+        "targetSense: 新たなスタートとして、心機一転",
+        "for a fresh start"
+      ],
+      "segments": [
+        [
+          {
+            "en": "For a fresh start",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": ", Leo ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "moved to another town",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " and joined a sports club.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "He ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "left his old problems behind",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Soon, he ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "made friends and felt hopeful",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " about his life there.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "supportDecision": "not-needed",
+      "choices": [
+        "新たなスタートとして、心機一転",
+        "最後の機会として",
+        "思い出として",
+        "以前と同じように"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「moved to another town」「left his old problems behind」「made friends and felt hopeful」が手がかりです。以前の問題から離れて別の町で前向きな生活を築いているので、for a fresh startは「新たなスタートとして、心機一転」だと推測できます。",
+      "structuralValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "targetSense",
+          "fullEnglish",
+          "targetOccurrence",
+          "contextClues",
+          "segments",
+          "targetProtection",
+          "clueProtection",
+          "supportReason",
+          "choices",
+          "explanation",
+          "senseSelection"
+        ]
+      },
+      "manualReview": {
+        "status": "pending"
+      },
+      "approval": {
+        "status": "pending"
+      }
+    },
+    {
+      "source": {
+        "q": 11,
+        "type": "idiom",
+        "target": "on a specific occasion",
+        "meaning": "特定の機会に",
+        "pos": "adverbial phrase",
+        "level": "EIKEN Grade 2"
+      },
+      "candidateSenses": [
+        {
+          "sense": "特定の機会に",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "特定の機会に",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      },
+      "targetSense": "特定の機会に",
+      "senseSelectionReason": "The contrast between most days and one dated special show supports the single phrase sense.",
+      "fullEnglish": [
+        "The museum is free for students on most days.",
+        "On a specific occasion, however, visitors must pay because a special show is being held.",
+        "The date is written on the website."
+      ],
+      "mixedEnglish": [
+        "The museum is free for students on most days.",
+        "On a specific occasion, however, visitors must pay because a special show is being held.",
+        "The date is written on the website."
+      ],
+      "contextClues": [
+        {
+          "text": "most days",
+          "type": "usual situation"
+        },
+        {
+          "text": "special show",
+          "type": "cause"
+        },
+        {
+          "text": "The date is written on the website",
+          "type": "result"
+        }
+      ],
+      "inferencePath": [
+        "most days",
+        "special show",
+        "The date is written on the website",
+        "targetSense: 特定の機会に",
+        "on a specific occasion"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The museum is free for students on ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "most days",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "On a specific occasion",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": ", however, visitors must pay because a ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "special show",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " is being held.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The date is written on the website",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "supportDecision": "not-needed",
+      "choices": [
+        "特定の機会に",
+        "毎日",
+        "偶然に",
+        "直ちに"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「most days」「special show」「The date is written on the website」が手がかりです。普段とは異なる特別な催しの日だけ料金が必要なので、on a specific occasionは「特定の機会に」だと推測できます。",
+      "structuralValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "targetSense",
+          "fullEnglish",
+          "targetOccurrence",
+          "contextClues",
+          "segments",
+          "targetProtection",
+          "clueProtection",
+          "supportReason",
+          "choices",
+          "explanation",
+          "senseSelection"
+        ]
+      },
+      "manualReview": {
+        "status": "pending"
+      },
+      "approval": {
+        "status": "pending"
+      }
+    },
+    {
+      "source": {
+        "q": 11,
+        "type": "idiom",
+        "target": "in case of emergency",
+        "meaning": "緊急時には、非常の場合に備えて",
+        "pos": "adverbial phrase",
+        "level": "EIKEN Grade 2"
+      },
+      "candidateSenses": [
+        {
+          "sense": "緊急時には、非常の場合に備えて",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "緊急時には、非常の場合に備えて",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      },
+      "targetSense": "緊急時には、非常の場合に備えて",
+      "senseSelectionReason": "A special hotel phone and instructions for urgent trouble support the single phrase sense.",
+      "fullEnglish": [
+        "The hotel has a red phone beside the elevator.",
+        "In case of emergency, guests should use it to call the front desk.",
+        "A sign explains this for everyone."
+      ],
+      "mixedEnglish": [
+        "The hotel has a red phone beside the elevator.",
+        "In case of emergency, guests should use it to call the front desk.",
+        "A sign explains this for everyone."
+      ],
+      "contextClues": [
+        {
+          "text": "red phone",
+          "type": "example"
+        },
+        {
+          "text": "call the front desk",
+          "type": "behavior"
+        },
+        {
+          "text": "sign explains this",
+          "type": "situation"
+        }
+      ],
+      "inferencePath": [
+        "red phone",
+        "call the front desk",
+        "sign explains this",
+        "targetSense: 緊急時には、非常の場合に備えて",
+        "in case of emergency"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The hotel has a ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "red phone",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " beside the elevator.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "In case of emergency",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": ", guests should use it to ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "call the front desk",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "A ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "sign explains this",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " for everyone.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "supportDecision": "not-needed",
+      "choices": [
+        "緊急時には、非常の場合に備えて",
+        "通常営業中に",
+        "予約のために",
+        "休憩中に"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「red phone」「call the front desk」「sign explains this」が手がかりです。ホテルに特別な電話と利用案内があり、重大な事態で連絡する場面なので、in case of emergencyは「緊急時には、非常の場合に備えて」だと推測できます。",
+      "structuralValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "targetSense",
+          "fullEnglish",
+          "targetOccurrence",
+          "contextClues",
+          "segments",
+          "targetProtection",
+          "clueProtection",
+          "supportReason",
+          "choices",
+          "explanation",
+          "senseSelection"
+        ]
+      },
+      "manualReview": {
+        "status": "pending"
+      },
+      "approval": {
+        "status": "pending"
+      }
+    },
+    {
+      "source": {
+        "q": 12,
+        "type": "idiom",
+        "target": "on one's own",
+        "meaning": "自分一人で、独力で",
+        "pos": "adverbial phrase",
+        "level": "EIKEN Grade 2"
+      },
+      "candidateSenses": [
+        {
+          "sense": "自分一人で、独力で",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "自分一人で、独力で",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      },
+      "targetSense": "自分一人で、独力で",
+      "senseSelectionReason": "The person completes a repair with no one helping, which supports independent action.",
+      "fullEnglish": [
+        "Mika wanted to fix her bicycle on her own.",
+        "Her father was away, and no one helped her while she worked.",
+        "She felt proud when the wheels turned again."
+      ],
+      "mixedEnglish": [
+        "Mika wanted to fix her bicycle on her own.",
+        "Her father was away, and no one helped her while she worked.",
+        "She felt proud when the wheels turned again."
+      ],
+      "contextClues": [
+        {
+          "text": "wanted to fix her bicycle",
+          "type": "situation"
+        },
+        {
+          "text": "no one helped her",
+          "type": "condition"
+        },
+        {
+          "text": "felt proud",
+          "type": "result"
+        }
+      ],
+      "inferencePath": [
+        "wanted to fix her bicycle",
+        "no one helped her",
+        "felt proud",
+        "targetSense: 自分一人で、独力で",
+        "on one's own"
+      ],
+      "segments": [
+        [
+          {
+            "en": "Mika ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "wanted to fix her bicycle",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "on her own",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Her father was away, and ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "no one helped her",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " while she worked.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "She ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "felt proud",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " when the wheels turned again.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "supportDecision": "not-needed",
+      "choices": [
+        "自分一人で、独力で",
+        "他人の指示で",
+        "順番に",
+        "偶然に"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「wanted to fix her bicycle」「no one helped her」「felt proud」が手がかりです。助ける人がいない中で修理を終え、その結果を誇らしく感じているので、on one's ownは「自分一人で、独力で」だと推測できます。",
+      "structuralValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "targetSense",
+          "fullEnglish",
+          "targetOccurrence",
+          "contextClues",
+          "segments",
+          "targetProtection",
+          "clueProtection",
+          "supportReason",
+          "choices",
+          "explanation",
+          "senseSelection"
+        ]
+      },
+      "manualReview": {
+        "status": "pending"
+      },
+      "approval": {
+        "status": "pending"
+      }
+    },
+    {
+      "source": {
+        "q": 12,
+        "type": "idiom",
+        "target": "on the air",
+        "meaning": "放送中で",
+        "pos": "adverbial phrase",
+        "level": "EIKEN Grade 2"
+      },
+      "candidateSenses": [
+        {
+          "sense": "放送中で",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "放送中で",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      },
+      "targetSense": "放送中で",
+      "senseSelectionReason": "A radio host speaks into a microphone while listeners hear the program, supporting the broadcast sense.",
+      "fullEnglish": [
+        "The radio host spoke into the microphone at seven o'clock.",
+        "The program was on the air, so people in their cars could hear her.",
+        "She could not stop to talk privately."
+      ],
+      "mixedEnglish": [
+        "The radio host spoke into the microphone at seven o'clock.",
+        "The program was on the air, so people in their cars could hear her.",
+        "She could not stop to talk privately."
+      ],
+      "contextClues": [
+        {
+          "text": "spoke into the microphone",
+          "type": "behavior"
+        },
+        {
+          "text": "people in their cars could hear her",
+          "type": "result"
+        },
+        {
+          "text": "could not stop to talk privately",
+          "type": "situation"
+        }
+      ],
+      "inferencePath": [
+        "spoke into the microphone",
+        "people in their cars could hear her",
+        "could not stop to talk privately",
+        "targetSense: 放送中で",
+        "on the air"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The radio host ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "spoke into the microphone",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " at seven o'clock.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The program was ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "on the air",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": ", so ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "people in their cars could hear her",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "She ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "could not stop to talk privately",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "supportDecision": "not-needed",
+      "choices": [
+        "放送中で",
+        "録音前で",
+        "非公開で",
+        "休止中で"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「spoke into the microphone」「people in their cars could hear her」「could not stop to talk privately」が手がかりです。司会者の声がその時にリスナーへ届いているので、on the airは「放送中で」だと推測できます。",
+      "structuralValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "targetSense",
+          "fullEnglish",
+          "targetOccurrence",
+          "contextClues",
+          "segments",
+          "targetProtection",
+          "clueProtection",
+          "supportReason",
+          "choices",
+          "explanation",
+          "senseSelection"
+        ]
+      },
+      "manualReview": {
+        "status": "pending"
+      },
+      "approval": {
+        "status": "pending"
+      }
+    },
+    {
+      "source": {
+        "q": 12,
+        "type": "idiom",
+        "target": "at a distance",
+        "meaning": "離れて、遠くから",
+        "pos": "adverbial phrase",
+        "level": "EIKEN Grade 2"
+      },
+      "candidateSenses": [
+        {
+          "sense": "離れて、遠くから",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "離れて、遠くから",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      },
+      "targetSense": "離れて、遠くから",
+      "senseSelectionReason": "The sign is unreadable until the viewers walk closer, supporting observation from far away.",
+      "fullEnglish": [
+        "The sign looked small at a distance.",
+        "When we walked closer, we could read every word.",
+        "At first, the letters had been too small to read."
+      ],
+      "mixedEnglish": [
+        "The sign looked small at a distance.",
+        "When we walked closer, we could read every word.",
+        "At first, the letters had been too small to read."
+      ],
+      "contextClues": [
+        {
+          "text": "looked small",
+          "type": "appearance"
+        },
+        {
+          "text": "walked closer",
+          "type": "contrast"
+        },
+        {
+          "text": "too small to read",
+          "type": "result"
+        }
+      ],
+      "inferencePath": [
+        "looked small",
+        "walked closer",
+        "too small to read",
+        "targetSense: 離れて、遠くから",
+        "at a distance"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The sign ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "looked small",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "at a distance",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "When we ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "walked closer",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ", we could read every word.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "At first, the letters had been ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "too small to read",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "supportDecision": "not-needed",
+      "choices": [
+        "離れて、遠くから",
+        "すぐ近くで",
+        "中央で",
+        "内側から"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「looked small」「walked closer」「too small to read」が手がかりです。近づく前は文字が小さく読めなかったので、at a distanceは「離れて、遠くから」だと推測できます。",
+      "structuralValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "targetSense",
+          "fullEnglish",
+          "targetOccurrence",
+          "contextClues",
+          "segments",
+          "targetProtection",
+          "clueProtection",
+          "supportReason",
+          "choices",
+          "explanation",
+          "senseSelection"
+        ]
+      },
+      "manualReview": {
+        "status": "pending"
+      },
+      "approval": {
+        "status": "pending"
+      }
+    },
+    {
+      "source": {
+        "q": 12,
+        "type": "idiom",
+        "target": "to one's surprise",
+        "meaning": "（人が）驚いたことに",
+        "pos": "adverbial phrase",
+        "level": "EIKEN Grade 2"
+      },
+      "candidateSenses": [
+        {
+          "sense": "（人が）驚いたことに",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "（人が）驚いたことに",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      },
+      "targetSense": "（人が）驚いたことに",
+      "senseSelectionReason": "The clock works despite everyone's expectation that it was broken, creating a surprising result.",
+      "fullEnglish": [
+        "To one's surprise, the old clock still worked perfectly.",
+        "Everyone had thought it was broken and ready to throw away.",
+        "The owner smiled when it began to ring."
+      ],
+      "mixedEnglish": [
+        "To one's surprise, the old clock still worked perfectly.",
+        "Everyone had thought it was broken and ready to throw away.",
+        "The owner smiled when it began to ring."
+      ],
+      "contextClues": [
+        {
+          "text": "old clock still worked perfectly",
+          "type": "result"
+        },
+        {
+          "text": "thought it was broken",
+          "type": "contrast"
+        },
+        {
+          "text": "owner smiled",
+          "type": "reaction"
+        }
+      ],
+      "inferencePath": [
+        "old clock still worked perfectly",
+        "thought it was broken",
+        "owner smiled",
+        "targetSense: （人が）驚いたことに",
+        "to one's surprise"
+      ],
+      "segments": [
+        [
+          {
+            "en": "To one's surprise",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": ", the ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "old clock still worked perfectly",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Everyone had ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "thought it was broken",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " and ready to throw away.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "owner smiled",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " when it began to ring.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "supportDecision": "not-needed",
+      "choices": [
+        "（人が）驚いたことに",
+        "予想どおりに",
+        "念のため",
+        "急いで"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「old clock still worked perfectly」「thought it was broken」「owner smiled」が手がかりです。壊れていると思われた時計が動き出す予想外の結果なので、to one's surpriseは「（人が）驚いたことに」だと推測できます。",
+      "structuralValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "targetSense",
+          "fullEnglish",
+          "targetOccurrence",
+          "contextClues",
+          "segments",
+          "targetProtection",
+          "clueProtection",
+          "supportReason",
+          "choices",
+          "explanation",
+          "senseSelection"
+        ]
+      },
+      "manualReview": {
+        "status": "pending"
+      },
+      "approval": {
+        "status": "pending"
+      }
+    },
+    {
+      "source": {
+        "q": 13,
+        "type": "idiom",
+        "target": "go along with",
+        "meaning": "（案・人に）賛成する、従う",
+        "pos": "phrasal verb",
+        "level": "EIKEN Grade 2"
+      },
+      "candidateSenses": [
+        {
+          "sense": "（案・人に）賛成する、従う",
+          "pos": "phrasal verb"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "（案・人に）賛成する、従う",
+          "pos": "phrasal verb"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      },
+      "targetSense": "（案・人に）賛成する、従う",
+      "senseSelectionReason": "Mina changes from disliking the plan to packing and joining her friends, supporting acceptance of their plan.",
+      "fullEnglish": [
+        "Mina did not like the camping plan, but all her friends supported it.",
+        "At last, she decided to go along with the plan and packed her bag.",
+        "She joined them the next morning."
+      ],
+      "mixedEnglish": [
+        "Mina did not like the camping plan, but all her friends supported it.",
+        "At last, she decided to go along with the plan and packed her bag.",
+        "She joined them the next morning."
+      ],
+      "contextClues": [
+        {
+          "text": "did not like the camping plan",
+          "type": "contrast"
+        },
+        {
+          "text": "friends supported it",
+          "type": "situation"
+        },
+        {
+          "text": "packed her bag",
+          "type": "behavior"
+        }
+      ],
+      "inferencePath": [
+        "did not like the camping plan",
+        "friends supported it",
+        "packed her bag",
+        "targetSense: （案・人に）賛成する、従う",
+        "go along with"
+      ],
+      "segments": [
+        [
+          {
+            "en": "Mina ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "did not like the camping plan",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ", but all her ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "friends supported it",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "At last, she decided to ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "go along with",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " the plan and ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "packed her bag",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "She joined them the next morning.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "supportDecision": "not-needed",
+      "choices": [
+        "（案・人に）賛成する、従う",
+        "反対する",
+        "延期する",
+        "説明する"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「did not like the camping plan」「friends supported it」「packed her bag」が手がかりです。最初は嫌だった計画を受け入れて参加の準備をしたので、go along withは「（案・人に）賛成する、従う」だと推測できます。",
+      "structuralValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "targetSense",
+          "fullEnglish",
+          "targetOccurrence",
+          "contextClues",
+          "segments",
+          "targetProtection",
+          "clueProtection",
+          "supportReason",
+          "choices",
+          "explanation",
+          "senseSelection"
+        ]
+      },
+      "manualReview": {
+        "status": "pending"
+      },
+      "approval": {
+        "status": "pending"
+      }
+    },
+    {
+      "source": {
+        "q": 13,
+        "type": "idiom",
+        "target": "take away from",
+        "meaning": "〜の価値（魅力）を損なう／〜から取り去る",
+        "pos": "phrasal verb",
+        "level": "EIKEN Grade 2"
+      },
+      "candidateSenses": [
+        {
+          "sense": "〜の価値（魅力）を損なう",
+          "pos": "phrasal verb"
+        },
+        {
+          "sense": "〜から取り去る",
+          "pos": "phrasal verb"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "〜の価値（魅力）を損なう",
+          "pos": "phrasal verb"
+        },
+        {
+          "sense": "〜から取り去る",
+          "pos": "phrasal verb"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      },
+      "targetSense": "〜の価値（魅力）を損なう",
+      "senseSelectionReason": "Noise makes the film difficult to follow and less enjoyable, selecting the reduce-value sense rather than physical removal.",
+      "fullEnglish": [
+        "Loud music can take away from the movie.",
+        "We could not hear the actors, so the story was hard to follow.",
+        "After the music stopped, the film became enjoyable again."
+      ],
+      "mixedEnglish": [
+        "Loud music can take away from the movie.",
+        "We could not hear the actors, so the story was hard to follow.",
+        "After the music stopped, the film became enjoyable again."
+      ],
+      "contextClues": [
+        {
+          "text": "Loud music",
+          "type": "cause"
+        },
+        {
+          "text": "could not hear the actors",
+          "type": "result"
+        },
+        {
+          "text": "became enjoyable again",
+          "type": "contrast"
+        }
+      ],
+      "inferencePath": [
+        "Loud music",
+        "could not hear the actors",
+        "became enjoyable again",
+        "targetSense: 〜の価値（魅力）を損なう",
+        "take away from"
+      ],
+      "segments": [
+        [
+          {
+            "en": "Loud music",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " can ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "take away from",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " the movie.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "We ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "could not hear the actors",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ", so the story was hard to follow.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "After the music stopped, the film ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "became enjoyable again",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "supportDecision": "not-needed",
+      "choices": [
+        "〜の価値（魅力）を損なう",
+        "価値を高める",
+        "完全に理解する",
+        "注意を向ける"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「Loud music」「could not hear the actors」「became enjoyable again」が手がかりです。音楽が映画を楽しむ妨げになっているので、take away fromは「〜の価値（魅力）を損なう」だと推測できます。",
+      "structuralValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "targetSense",
+          "fullEnglish",
+          "targetOccurrence",
+          "contextClues",
+          "segments",
+          "targetProtection",
+          "clueProtection",
+          "supportReason",
+          "choices",
+          "explanation",
+          "senseSelection"
+        ]
+      },
+      "manualReview": {
+        "status": "pending"
+      },
+      "approval": {
+        "status": "pending"
+      }
+    },
+    {
+      "source": {
+        "q": 13,
+        "type": "idiom",
+        "target": "bring out in",
+        "meaning": "（bring out で）引き出す、世に出す",
+        "pos": "phrasal verb",
+        "level": "EIKEN Grade 2"
+      },
+      "candidateSenses": [
+        {
+          "sense": "（bring out で）引き出す、世に出す",
+          "pos": "phrasal verb"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "（bring out で）引き出す、世に出す",
+          "pos": "phrasal verb"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      },
+      "targetSense": "引き出す",
+      "senseSelectionReason": "Encouragement causes a previously hidden confidence to appear, supporting the elicit sense.",
+      "fullEnglish": [
+        "The art teacher's kind words bring out in Ken a confidence he did not show before.",
+        "He began to share his paintings with the class.",
+        "Later, he volunteered to show his work at the school festival."
+      ],
+      "mixedEnglish": [
+        "The art teacher's kind words bring out in Ken a confidence he did not show before.",
+        "He began to share his paintings with the class.",
+        "Later, he volunteered to show his work at the school festival."
+      ],
+      "contextClues": [
+        {
+          "text": "kind words",
+          "type": "cause"
+        },
+        {
+          "text": "confidence he did not show before",
+          "type": "result"
+        },
+        {
+          "text": "volunteered to show his work",
+          "type": "behavior"
+        }
+      ],
+      "inferencePath": [
+        "kind words",
+        "confidence he did not show before",
+        "volunteered to show his work",
+        "targetSense: 引き出す",
+        "bring out in"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The art teacher's ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "kind words",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "bring out in",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " Ken a ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "confidence he did not show before",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "He began to share his paintings with the class.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Later, he ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "volunteered to show his work",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " at the school festival.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "supportDecision": "not-needed",
+      "choices": [
+        "引き出す",
+        "隠す",
+        "禁止する",
+        "比較する"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「kind words」「confidence he did not show before」「volunteered to show his work」が手がかりです。先生の言葉によって以前は見せなかった自信が表れたので、bring out inは「引き出す」だと推測できます。",
+      "structuralValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "targetSense",
+          "fullEnglish",
+          "targetOccurrence",
+          "contextClues",
+          "segments",
+          "targetProtection",
+          "clueProtection",
+          "supportReason",
+          "choices",
+          "explanation",
+          "senseSelection"
+        ]
+      },
+      "manualReview": {
+        "status": "pending"
+      },
+      "approval": {
+        "status": "pending"
+      }
+    },
+    {
+      "source": {
+        "q": 13,
+        "type": "idiom",
+        "target": "watch out for",
+        "meaning": "〜に気をつける、用心する",
+        "pos": "phrasal verb",
+        "level": "EIKEN Grade 2"
+      },
+      "candidateSenses": [
+        {
+          "sense": "〜に気をつける、用心する",
+          "pos": "phrasal verb"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "〜に気をつける、用心する",
+          "pos": "phrasal verb"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      },
+      "targetSense": "〜に気をつける、用心する",
+      "senseSelectionReason": "Loose stones may cause a fall, and the walker changes behavior to avoid the danger.",
+      "fullEnglish": [
+        "Watch out for loose stones on this mountain path.",
+        "They may roll under your feet and make you fall.",
+        "Stay near the wall and walk slowly."
+      ],
+      "mixedEnglish": [
+        "Watch out for loose stones on this mountain path.",
+        "They may roll under your feet and make you fall.",
+        "Stay near the wall and walk slowly."
+      ],
+      "contextClues": [
+        {
+          "text": "loose stones",
+          "type": "danger"
+        },
+        {
+          "text": "make you fall",
+          "type": "result"
+        },
+        {
+          "text": "walk slowly",
+          "type": "behavior"
+        }
+      ],
+      "inferencePath": [
+        "loose stones",
+        "make you fall",
+        "walk slowly",
+        "targetSense: 〜に気をつける、用心する",
+        "watch out for"
+      ],
+      "segments": [
+        [
+          {
+            "en": "Watch out for",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "loose stones",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " on this mountain path.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "They may roll under your feet and ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "make you fall",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Stay near the wall and ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "walk slowly",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "supportDecision": "not-needed",
+      "choices": [
+        "〜に気をつける、用心する",
+        "無視する",
+        "追いかける",
+        "頼る"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「loose stones」「make you fall」「walk slowly」が手がかりです。転倒につながる石に注意しながら進む場面なので、watch out forは「〜に気をつける、用心する」だと推測できます。",
+      "structuralValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "targetSense",
+          "fullEnglish",
+          "targetOccurrence",
+          "contextClues",
+          "segments",
+          "targetProtection",
+          "clueProtection",
+          "supportReason",
+          "choices",
+          "explanation",
+          "senseSelection"
+        ]
+      },
+      "manualReview": {
+        "status": "pending"
+      },
+      "approval": {
+        "status": "pending"
+      }
+    }
+  ]
+}

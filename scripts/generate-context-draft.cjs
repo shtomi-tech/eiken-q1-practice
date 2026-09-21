@@ -6,6 +6,7 @@ const {
   readJson,
   sourceItems,
   writeJson,
+  assertExactTargetOrder,
 } = require("./lib/context-pipeline.cjs");
 const { filterEligibleSenses } = require("./lib/context-sense-validator.cjs");
 
@@ -55,11 +56,9 @@ function main({ qs = parseQs(), write = true } = {}) {
   const paths = pipelinePaths(qs);
   const sources = sourceItems(qs);
   const candidates = readJson(paths.candidate).items || {};
-  const sourceTargets = sources.map((item) => item.target).sort();
-  const candidateTargets = Object.keys(candidates).sort();
-  if (JSON.stringify(sourceTargets) !== JSON.stringify(candidateTargets)) {
-    throw new Error(`Candidate targets do not match Vocabulary Data for ${paths.label}: ${candidateTargets.join(", ")}`);
-  }
+  const sourceTargets = sources.map((item) => item.target);
+  const candidateTargets = Object.keys(candidates);
+  assertExactTargetOrder(candidateTargets, sourceTargets, `${paths.label} candidates`);
 
   const initialItems = [];
   const items = sources.map((source) => {

@@ -135,8 +135,8 @@ function main() {
   assert.equal(runtime.contexts.length, 68);
   assert.deepEqual(runtime.contexts.map((item) => item.target), vocabItems().map((item) => item.word || item.phrase));
   const baseline = JSON.parse(childProcess.execFileSync("git", ["show", `${BASE_COMMIT}:data/context_2026-1.json`], { cwd: ROOT, encoding: "utf8" }));
-  const unchanged = (item) => item.q <= 7 || item.q >= 10;
-  assert.deepEqual(runtime.contexts.filter(unchanged), baseline.contexts.filter(unchanged), "q=1..7 and q=10+ must remain unchanged");
+  const unchanged = (item) => item.q <= 7;
+  assert.deepEqual(runtime.contexts.filter(unchanged), baseline.contexts.filter(unchanged), "q=1..7 must remain unchanged");
 
   const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), "context-pos-batch-"));
   try {

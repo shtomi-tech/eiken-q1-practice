@@ -3,6 +3,7 @@
 const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const path = require("node:path");
+const { occurrenceCount } = require("./lib/context-validator.cjs");
 
 const ROOT = path.resolve(__dirname, "..");
 const readJson = (file) => JSON.parse(fs.readFileSync(path.join(ROOT, file), "utf8"));
@@ -35,11 +36,6 @@ const cardMeaningByTarget = new Map(vocabItems.map((item) => {
 }));
 const contextTargets = new Set();
 const japanese = /[\u3040-\u30ff\u3400-\u9fff]/;
-const countOf = (text, needle) => {
-  const source = String(text).toLowerCase();
-  const target = String(needle).toLowerCase();
-  return target ? source.split(target).length - 1 : 0;
-};
 
 for (const item of contexts) {
   assert.ok(!contextTargets.has(item.target), `文脈が重複しています: ${item.target}`);
@@ -50,7 +46,7 @@ for (const item of contexts) {
   assert.ok(Array.isArray(item.fullEnglish) && item.fullEnglish.length >= 2 && item.fullEnglish.length <= 3,
     `英文は2〜3文にしてください: ${item.target}`);
   const story = item.fullEnglish.join(" ");
-  assert.equal(countOf(story, item.target), 1, `targetは英文中に1回だけ必要です: ${item.target}`);
+  assert.equal(occurrenceCount(story, item.target), 1, `targetは英文中に1回だけ必要です: ${item.target}`);
   assert.ok(!japanese.test(story), `fullEnglishに日本語が混ざっています: ${item.target}`);
   assert.ok(Array.isArray(item.contextClues) && item.contextClues.length >= 2,
     `context clueが不足しています: ${item.target}`);
