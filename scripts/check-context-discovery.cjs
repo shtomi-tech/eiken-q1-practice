@@ -14,6 +14,7 @@ const lemmas = readJson("data/lemmas.json");
 const context = readJson("data/context_2026-1.json");
 const homeSource = fs.readFileSync(path.join(ROOT, "static/src/80-home.js"), "utf8");
 const sessionSource = fs.readFileSync(path.join(ROOT, "static/src/90-learn-session.js"), "utf8");
+const stylesSource = fs.readFileSync(path.join(ROOT, "static/styles.css"), "utf8");
 const pagesWorkflow = fs.readFileSync(path.join(ROOT, ".github/workflows/pages.yml"), "utf8");
 
 const dataset = manifest.q1["eiken2-2026-1"];
@@ -67,6 +68,12 @@ assert.equal((contextDiscoveryCardBody.match(/contextDiscoveryCta/g) || []).leng
 assert.match(sessionSource, /function startContextPractice\(\)/, "文脈推測セッションの開始処理が必要です");
 assert.match(sessionSource, /function startContextLearning\(/, "文脈推測から暗記カードへ進む試用モードが必要です");
 assert.match(sessionSource, /function renderContext\(body\)/, "文脈推測画面の描画処理が必要です");
+assert.match(sessionSource, /class: "contextSentenceText"[^\n]+contextTextWithTarget\(sentence, item\.target\)/,
+  "英文断片は語順を保つ単一inlineコンテナ内へ描画してください");
+assert.match(extractFunctionBody(sessionSource, "contextTextWithTarget"), /one's\|my\|your\|his\|her\|our\|their/,
+  "one'sを含む語句は本文中の所有格へ置き換わっても強調できる必要があります");
+assert.match(stylesSource, /\.contextSentenceText\s*\{[^}]*flex:\s*1 1 auto;[^}]*min-width:\s*0;/s,
+  "英文コンテナは行番号の隣で自然に折り返せる必要があります");
 assert.match(sessionSource, /function contextMeaningChoices\(item/, "文脈推測の4択生成処理が必要です");
 assert.match(sessionSource, /contextChoiceBtn/, "文脈推測の意味4択ボタンが必要です");
 assert.match(sessionSource, /contextPicked/, "文脈推測の選択結果を保持する必要があります");

@@ -3400,7 +3400,8 @@ function escapeContextRegExp(value) {
 function contextTextWithTarget(text, target) {
   const fragment = document.createDocumentFragment();
   const source = String(text);
-  const match = new RegExp(escapeContextRegExp(target), "i").exec(source);
+  const targetPattern = escapeContextRegExp(target).replace("one's", "(?:one's|my|your|his|her|our|their)");
+  const match = new RegExp(targetPattern, "i").exec(source);
   if (!match) {
     fragment.appendChild(document.createTextNode(source));
     return fragment;
@@ -3479,7 +3480,7 @@ function renderContext(body) {
   displayEnglish.forEach((sentence, index) => {
     story.appendChild(el("p", { class: "contextSentence" },
       el("span", { class: "contextSentenceNo" }, String(index + 1)),
-      contextTextWithTarget(sentence, item.target),
+      el("span", { class: "contextSentenceText" }, contextTextWithTarget(sentence, item.target)),
     ));
   });
   card.appendChild(story);

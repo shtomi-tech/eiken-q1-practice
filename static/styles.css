@@ -766,6 +766,10 @@ h2 {
   font-size: 11px;
   padding-top: 5px;
 }
+.contextSentenceText {
+  flex: 1 1 auto;
+  min-width: 0;
+}
 .contextTargetMark {
   background: var(--clay);
   border-radius: 3px;
