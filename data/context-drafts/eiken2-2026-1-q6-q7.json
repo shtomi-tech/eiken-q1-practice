@@ -26,6 +26,13 @@
           "pos": "adjective"
         }
       ],
+      "eligibleSenses": [
+        {
+          "sense": "典型的な、いつも通りの",
+          "pos": "adjective"
+        }
+      ],
+      "filteredOutSenses": [],
       "senseConfidence": "high",
       "senseValidation": {
         "status": "pending"
@@ -135,6 +142,13 @@
           "pos": "adjective"
         }
       ],
+      "eligibleSenses": [
+        {
+          "sense": "徐々の、段階的な",
+          "pos": "adjective"
+        }
+      ],
+      "filteredOutSenses": [],
       "senseConfidence": "high",
       "senseValidation": {
         "status": "pending"
@@ -263,6 +277,19 @@
           "pos": "noun"
         }
       ],
+      "eligibleSenses": [
+        {
+          "sense": "化学の",
+          "pos": "adjective"
+        }
+      ],
+      "filteredOutSenses": [
+        {
+          "sense": "化学物質",
+          "pos": "noun",
+          "reason": "source-pos-mismatch"
+        }
+      ],
       "senseConfidence": "low",
       "senseValidation": {
         "status": "pending"
@@ -387,6 +414,13 @@
           "pos": "adjective"
         }
       ],
+      "eligibleSenses": [
+        {
+          "sense": "誤った、偽の",
+          "pos": "adjective"
+        }
+      ],
+      "filteredOutSenses": [],
       "senseConfidence": "high",
       "senseValidation": {
         "status": "pending"
@@ -501,6 +535,13 @@
           "pos": "verb"
         }
       ],
+      "eligibleSenses": [
+        {
+          "sense": "（涙を流して）泣く、すすり泣く",
+          "pos": "verb"
+        }
+      ],
+      "filteredOutSenses": [],
       "senseConfidence": "high",
       "senseValidation": {
         "status": "pending"
@@ -634,6 +675,17 @@
           "pos": "verb"
         }
       ],
+      "eligibleSenses": [
+        {
+          "sense": "起こる、生じる",
+          "pos": "verb"
+        },
+        {
+          "sense": "（心に）浮かぶ",
+          "pos": "verb"
+        }
+      ],
+      "filteredOutSenses": [],
       "senseConfidence": "medium",
       "senseValidation": {
         "status": "pending"
@@ -743,6 +795,13 @@
           "pos": "verb"
         }
       ],
+      "eligibleSenses": [
+        {
+          "sense": "膨らむ、腫れる",
+          "pos": "verb"
+        }
+      ],
+      "filteredOutSenses": [],
       "senseConfidence": "high",
       "senseValidation": {
         "status": "pending"
@@ -859,6 +918,19 @@
         {
           "sense": "蛇口",
           "pos": "noun"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "（指などで）軽くたたく",
+          "pos": "verb"
+        }
+      ],
+      "filteredOutSenses": [
+        {
+          "sense": "蛇口",
+          "pos": "noun",
+          "reason": "source-pos-mismatch"
         }
       ],
       "senseConfidence": "low",
@@ -992,12 +1064,21 @@
           "pos": "adjective"
         }
       ],
+      "eligibleSenses": [
+        {
+          "sense": "典型的な、いつも通りの",
+          "pos": "adjective"
+        }
+      ],
+      "filteredOutSenses": [],
       "senseConfidence": "high",
       "senseValidation": {
         "status": "pass",
         "checks": [
           "source",
           "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
           "targetSense",
           "posCompatibility",
           "reason",
@@ -1123,12 +1204,21 @@
           "pos": "adjective"
         }
       ],
+      "eligibleSenses": [
+        {
+          "sense": "徐々の、段階的な",
+          "pos": "adjective"
+        }
+      ],
+      "filteredOutSenses": [],
       "senseConfidence": "high",
       "senseValidation": {
         "status": "pass",
         "checks": [
           "source",
           "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
           "targetSense",
           "posCompatibility",
           "reason",
@@ -1273,12 +1363,27 @@
           "pos": "noun"
         }
       ],
+      "eligibleSenses": [
+        {
+          "sense": "化学の",
+          "pos": "adjective"
+        }
+      ],
+      "filteredOutSenses": [
+        {
+          "sense": "化学物質",
+          "pos": "noun",
+          "reason": "source-pos-mismatch"
+        }
+      ],
       "senseConfidence": "high",
       "senseValidation": {
         "status": "pass",
         "checks": [
           "source",
           "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
           "targetSense",
           "posCompatibility",
           "reason",
@@ -1419,12 +1524,21 @@
           "pos": "adjective"
         }
       ],
+      "eligibleSenses": [
+        {
+          "sense": "誤った、偽の",
+          "pos": "adjective"
+        }
+      ],
+      "filteredOutSenses": [],
       "senseConfidence": "high",
       "senseValidation": {
         "status": "pass",
         "checks": [
           "source",
           "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
           "targetSense",
           "posCompatibility",
           "reason",
@@ -1555,12 +1669,21 @@
           "pos": "verb"
         }
       ],
+      "eligibleSenses": [
+        {
+          "sense": "（涙を流して）泣く、すすり泣く",
+          "pos": "verb"
+        }
+      ],
+      "filteredOutSenses": [],
       "senseConfidence": "high",
       "senseValidation": {
         "status": "pass",
         "checks": [
           "source",
           "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
           "targetSense",
           "posCompatibility",
           "reason",
@@ -1710,12 +1833,25 @@
           "pos": "verb"
         }
       ],
+      "eligibleSenses": [
+        {
+          "sense": "起こる、生じる",
+          "pos": "verb"
+        },
+        {
+          "sense": "（心に）浮かぶ",
+          "pos": "verb"
+        }
+      ],
+      "filteredOutSenses": [],
       "senseConfidence": "high",
       "senseValidation": {
         "status": "pass",
         "checks": [
           "source",
           "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
           "targetSense",
           "posCompatibility",
           "reason",
@@ -1841,12 +1977,21 @@
           "pos": "verb"
         }
       ],
+      "eligibleSenses": [
+        {
+          "sense": "膨らむ、腫れる",
+          "pos": "verb"
+        }
+      ],
+      "filteredOutSenses": [],
       "senseConfidence": "high",
       "senseValidation": {
         "status": "pass",
         "checks": [
           "source",
           "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
           "targetSense",
           "posCompatibility",
           "reason",
@@ -1981,12 +2126,27 @@
           "pos": "noun"
         }
       ],
+      "eligibleSenses": [
+        {
+          "sense": "（指などで）軽くたたく",
+          "pos": "verb"
+        }
+      ],
+      "filteredOutSenses": [
+        {
+          "sense": "蛇口",
+          "pos": "noun",
+          "reason": "source-pos-mismatch"
+        }
+      ],
       "senseConfidence": "high",
       "senseValidation": {
         "status": "pass",
         "checks": [
           "source",
           "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
           "targetSense",
           "posCompatibility",
           "reason",

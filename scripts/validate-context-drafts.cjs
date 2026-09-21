@@ -24,7 +24,7 @@ function main({ qs = parseQs(), write = true } = {}) {
     const vocab = vocabulary.get(item.source.target);
     const runtimeShape = { ...item.source, ...item };
     if (qs.some((q) => q >= 6)) {
-      assertTargetSense(runtimeShape, vocab);
+      assertTargetSense(runtimeShape, vocab, { requireEligibleSenses: true });
     }
     assertContextItem(runtimeShape, vocab, { requireTargetSense: true });
     if (item.manualReview?.status !== "pending") throw new Error(`${item.source.target}: manualReview must remain pending before review`);
@@ -39,7 +39,7 @@ function main({ qs = parseQs(), write = true } = {}) {
     };
     if (qs.some((q) => q >= 6)) item.senseValidation = {
       status: "pass",
-      checks: ["source", "candidateSenses", "targetSense", "posCompatibility", "reason", "confidence"],
+      checks: ["source", "candidateSenses", "eligibleSenses", "filteredOutSenses", "targetSense", "posCompatibility", "reason", "confidence"],
     };
   }
   if (write) writeJson(paths.draft, draft);

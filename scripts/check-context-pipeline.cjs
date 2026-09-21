@@ -109,9 +109,9 @@ function main() {
   }
 
   const baseline = JSON.parse(childProcess.execFileSync("git", ["show", `${BASE_COMMIT}:data/context_2026-1.json`], { cwd: ROOT, encoding: "utf8" }));
-  assert.deepEqual(runtime.contexts.filter((item) => item.q <= 2 || item.q >= 8),
-    baseline.contexts.filter((item) => item.q <= 2 || item.q >= 8),
-    "q=1, q=2, and q=8+ runtime items must remain unchanged during q=3 proof");
+  assert.deepEqual(runtime.contexts.filter((item) => item.q <= 2),
+    baseline.contexts.filter((item) => item.q <= 2),
+    "q=1 and q=2 runtime items must remain unchanged during q=3 proof");
   assert.equal(JSON.stringify(runtime.contexts.filter((item) => item.q === 3).map((item) => item.target)),
     JSON.stringify(q3Sources.map((item) => item.word || item.phrase)), "q=3 order must follow Vocabulary Data");
 

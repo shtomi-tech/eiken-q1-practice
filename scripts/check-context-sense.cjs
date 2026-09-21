@@ -11,6 +11,7 @@ const {
 } = require("./lib/context-pipeline.cjs");
 const {
   candidateSensesFromMeaning,
+  filterEligibleSenses,
   validateTargetSense,
 } = require("./lib/context-sense-validator.cjs");
 
@@ -36,7 +37,11 @@ function senseItem(target, selection) {
 function assertFinal(target) {
   const entry = q67Candidates[target];
   assert.ok(entry?.final, `${target}: final selection is missing`);
-  const result = validateTargetSense(senseItem(target, entry.final), vocabulary.get(target));
+  const item = senseItem(target, entry.final);
+  const filtered = filterEligibleSenses(item.candidateSenses, item.pos);
+  item.eligibleSenses ||= filtered.eligibleSenses;
+  item.filteredOutSenses ||= filtered.filteredOutSenses;
+  const result = validateTargetSense(item, vocabulary.get(target), { requireEligibleSenses: true });
   assert.equal(result.status, "pass", `${target}: final selection failed: ${result.errors.join(" / ")}`);
 }
 
@@ -49,6 +54,26 @@ const expectedGroups = {
 for (const [target, expected] of Object.entries(expectedGroups)) {
   const parsed = candidateSensesFromMeaning(vocabulary.get(target).meaning, source(target).pos).map((item) => item.sense);
   assert.deepEqual(parsed, expected, `${target}: parsed candidate senses changed`);
+}
+const prefilterExpectations = {
+  chemical: {
+    eligible: ["化学の"],
+    filtered: ["化学物質"],
+  },
+  tap: {
+    eligible: ["（指などで）軽くたたく"],
+    filtered: ["蛇口"],
+  },
+  occur: {
+    eligible: ["起こる、生じる", "（心に）浮かぶ"],
+    filtered: [],
+  },
+};
+for (const [target, expected] of Object.entries(prefilterExpectations)) {
+  const item = q67Candidates[target].final;
+  const filtered = filterEligibleSenses(item.candidateSenses, source(target).pos);
+  assert.deepEqual(filtered.eligibleSenses.map((candidate) => candidate.sense), expected.eligible, `${target}: eligible pre-filter regression changed`);
+  assert.deepEqual(filtered.filteredOutSenses.map((candidate) => candidate.sense), expected.filtered, `${target}: filtered pre-filter regression changed`);
 }
 
 const q45Review = readJson(pipelinePaths([4, 5]).review).items;

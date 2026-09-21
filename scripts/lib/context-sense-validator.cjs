@@ -49,6 +49,15 @@ function candidateSensesFromMeaning(meaning, pos) {
   }));
 }
 
+function filterEligibleSenses(candidateSenses, sourcePos) {
+  const candidates = (candidateSenses || []).map(normalizeCandidate);
+  const eligibleSenses = candidates.filter((candidate) => candidate.pos === sourcePos);
+  const filteredOutSenses = candidates
+    .filter((candidate) => candidate.pos !== sourcePos)
+    .map((candidate) => ({ ...candidate, reason: "source-pos-mismatch" }));
+  return { eligibleSenses, filteredOutSenses };
+}
+
 function normalizeCandidate(candidate) {
   return {
     sense: String(candidate?.sense || "").trim(),
@@ -84,18 +93,67 @@ function validateTargetSense(item, vocab, options = {}) {
     check(Boolean(match), `${target}: missing candidate sense group: ${expectedGroup.sense}`);
     if (match) check(match.pos === expectedGroup.pos, `${target}: candidate sense POS is stale: ${match.sense}`);
   }
+  const hasPrefilterFields = options.requireEligibleSenses === true
+    || Array.isArray(item.eligibleSenses)
+    || Array.isArray(item.filteredOutSenses);
+  const expectedPrefilter = filterEligibleSenses(expected, vocabPos);
+  let eligible = [];
+  let filtered = [];
+  if (hasPrefilterFields) {
+    check(Array.isArray(item.eligibleSenses), `${target}: eligibleSenses are required`);
+    check(Array.isArray(item.filteredOutSenses), `${target}: filteredOutSenses are required`);
+    eligible = (item.eligibleSenses || []).map(normalizeCandidate);
+    filtered = (item.filteredOutSenses || []).map((candidate) => ({
+      ...normalizeCandidate(candidate),
+      reason: candidate.reason,
+    }));
+    check(eligible.length > 0, `${target}: eligibleSenses must contain at least one sense`);
+    check(
+      JSON.stringify(eligible) === JSON.stringify(expectedPrefilter.eligibleSenses),
+      `${target}: eligibleSenses do not match deterministic POS pre-filter`,
+    );
+    check(
+      filtered.length === expectedPrefilter.filteredOutSenses.length,
+      `${target}: filteredOutSenses count does not match deterministic POS pre-filter`,
+    );
+    for (const expectedFiltered of expectedPrefilter.filteredOutSenses) {
+      const match = filtered.find((candidate) => candidate.sense === expectedFiltered.sense && candidate.pos === expectedFiltered.pos);
+      check(Boolean(match), `${target}: missing filtered-out sense: ${expectedFiltered.sense}`);
+      if (match) check(match.reason === "source-pos-mismatch", `${target}: wrong filtered-out reason: ${match.sense}`);
+    }
+    for (const candidate of eligible) {
+      check(expected.some((group) => group.sense === candidate.sense && group.pos === candidate.pos),
+        `${target}: eligible sense is outside candidateSenses: ${candidate.sense}`);
+      check(candidate.pos === vocabPos, `${target}: eligible sense is POS-incompatible: ${candidate.sense}`);
+    }
+    for (const candidate of filtered) {
+      check(!eligible.some((eligibleSense) => eligibleSense.sense === candidate.sense && eligibleSense.pos === candidate.pos),
+        `${target}: filtered-out sense remains eligible: ${candidate.sense}`);
+      check(!candidate.reason || candidate.reason === "source-pos-mismatch",
+        `${target}: wrong filtered-out reason: ${candidate.sense}`);
+    }
+  }
   const targetGroup = expected.find((group) => compatibleSense(group.sense, item.targetSense));
   check(Boolean(targetGroup), `${target}: targetSense is outside the candidate sense space`);
   if (targetGroup) {
     check(targetGroup.pos === vocabPos, `${target}: targetSense is not POS-compatible with source`);
     const targetCandidate = actual.find((candidate) => normalizeSense(candidate.sense) === normalizeSense(targetGroup.sense));
     if (targetCandidate) check(targetCandidate.pos === vocabPos, `${target}: selected candidate sense is POS-incompatible`);
+    if (hasPrefilterFields) {
+      check(eligible.some((candidate) => compatibleSense(candidate.sense, targetGroup.sense)),
+        `${target}: targetSense is outside eligibleSenses`);
+      check(!filtered.some((candidate) => compatibleSense(candidate.sense, targetGroup.sense)),
+        `${target}: filtered-out sense was selected as targetSense`);
+    }
   }
 
   return {
     status: errors.length ? "fail" : "pass",
     errors,
     candidateSenses: actual,
+    eligibleSenses: hasPrefilterFields ? eligible : undefined,
+    filteredOutSenses: hasPrefilterFields ? filtered : undefined,
+    expectedPrefilter,
     targetGroup,
     confidence: item.senseConfidence,
     lowConfidence: item.senseConfidence === "low",
@@ -114,6 +172,7 @@ module.exports = {
   splitMeaningGroups,
   cleanSense,
   candidateSensesFromMeaning,
+  filterEligibleSenses,
   validateTargetSense,
   assertTargetSense,
 };

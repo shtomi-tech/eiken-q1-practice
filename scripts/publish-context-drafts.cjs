@@ -29,7 +29,7 @@ function approvedItems(approved, qs = [3]) {
     if (qs.some((q) => q >= 6)) {
       if (item.senseValidation?.status !== "pass") throw new Error(`${item.target}: sense validation is not PASS`);
       if (item.senseConfidence === "low") throw new Error(`${item.target}: low-confidence sense cannot be published`);
-      assertTargetSense(item, vocab.get(item.target));
+      assertTargetSense(item, vocab.get(item.target), { requireEligibleSenses: true });
     }
     assertContextItem(item, vocab.get(item.target), { requireTargetSense: true });
   }
@@ -39,6 +39,8 @@ function approvedItems(approved, qs = [3]) {
 function runtimeItem(item) {
   const {
     candidateSenses,
+    eligibleSenses,
+    filteredOutSenses,
     senseConfidence,
     senseSelectionReason,
     senseValidation,

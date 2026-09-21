@@ -7,6 +7,7 @@ const {
   sourceItems,
   writeJson,
 } = require("./lib/context-pipeline.cjs");
+const { filterEligibleSenses } = require("./lib/context-sense-validator.cjs");
 
 function candidateValue(entry) {
   if (entry && entry.final) return entry.final;
@@ -15,12 +16,18 @@ function candidateValue(entry) {
 
 function initialValue(entry) {
   if (entry && entry.initial) return entry.initial;
-  return null;
+  if (entry && entry.final) return entry.final;
+  return entry;
 }
 
 function contextFields(source, candidate) {
+  const prefilter = candidate.candidateSenses
+    ? filterEligibleSenses(candidate.candidateSenses, source.pos)
+    : null;
   const senseFields = candidate.candidateSenses ? {
     candidateSenses: candidate.candidateSenses,
+    eligibleSenses: candidate.eligibleSenses || prefilter.eligibleSenses,
+    filteredOutSenses: candidate.filteredOutSenses || prefilter.filteredOutSenses,
     senseConfidence: candidate.senseConfidence,
     senseValidation: { status: "pending" },
   } : {};

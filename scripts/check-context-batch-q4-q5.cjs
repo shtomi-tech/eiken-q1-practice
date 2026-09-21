@@ -143,9 +143,9 @@ function main() {
     "runtime target order must remain Vocabulary order");
 
   const baseline = JSON.parse(childProcess.execFileSync("git", ["show", `${BASE_COMMIT}:data/context_2026-1.json`], { cwd: ROOT, encoding: "utf8" }));
-  const unchanged = (item) => item.q <= 3 || item.q >= 8;
+  const unchanged = (item) => item.q <= 3;
   assert.deepEqual(runtime.contexts.filter(unchanged), baseline.contexts.filter(unchanged),
-    "q=1..3 and q=8+ reference items must remain unchanged");
+    "q=1..3 reference items must remain unchanged");
   assert.deepEqual(runtime.contexts.filter((item) => item.q === 4 || item.q === 5).map((item) => item.target), sources.map((item) => item.target),
     "q=4/q=5 runtime target order must follow Vocabulary Data");
 

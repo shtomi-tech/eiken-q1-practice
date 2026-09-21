@@ -1,4 +1,4 @@
-# Context Discovery target sense selection prompt v1
+# Context Discovery target sense selection prompt v1 (POS-aware)
 
 ## Role
 
@@ -8,32 +8,45 @@ Select the single target sense that a Context Discovery item will teach. This is
 
 ```json
 {
-  "target": "scale",
-  "meaning": "規模；目盛り；はかり；うろこ",
-  "pos": "noun",
-  "level": "EIKEN Grade 2"
+  "target": "occur",
+  "meaning": "起こる、生じる；（心に）浮かぶ",
+  "pos": "verb",
+  "level": "EIKEN Grade 2",
+  "candidateSenses": [
+    { "sense": "起こる、生じる", "pos": "verb" },
+    { "sense": "（心に）浮かぶ", "pos": "verb" }
+  ],
+  "eligibleSenses": [
+    { "sense": "起こる、生じる", "pos": "verb" },
+    { "sense": "（心に）浮かぶ", "pos": "verb" }
+  ],
+  "filteredOutSenses": []
 }
 ```
 
 ## Required process
 
-1. Parse the meaning into sense groups. Keep close expressions such as `育む、促進する` together; separate groups divided by `/`, `／`, or `；`.
-2. Use the source POS as a hard filter. Do not select a noun sense for an adjective source, or an adjective sense for a noun source.
-3. Choose one sense with appropriate learning value and appropriate specificity. Do not choose a narrow sense only because it is easy to write a context for.
-4. Explain why the selected sense is supported and why the other major senses are distinct.
-5. Return `high`, `medium`, or `low` confidence. Low confidence requires manual review and cannot be auto-approved.
+1. Parse the meaning into `candidateSenses`. Keep close expressions such as `育む、促進する` together; separate groups divided by `/`, `／`, or `；`.
+2. Deterministically compare each candidate POS with the source POS. Put compatible candidates in `eligibleSenses` and put every incompatible candidate in `filteredOutSenses` with `reason: "source-pos-mismatch"`. Do not send filtered candidates to selection and never restore them.
+3. If no candidate remains eligible, return a validation failure. If one remains, it is the deterministic candidate, but it still requires pedagogical review.
+4. If several eligible candidates remain, choose one with appropriate learning value and specificity. Do not choose a narrow sense only because it is easy to write a context for.
+5. Explain why the selected sense is supported and why the other eligible major senses are distinct.
+6. Return `high`, `medium`, or `low` confidence. Low confidence requires manual review and cannot be auto-approved.
 
 ## Output
 
 ```json
 {
   "candidateSenses": [
-    { "sense": "規模", "pos": "noun" },
-    { "sense": "目盛り", "pos": "noun" },
-    { "sense": "はかり", "pos": "noun" },
-    { "sense": "うろこ", "pos": "noun" }
+    { "sense": "起こる、生じる", "pos": "verb" },
+    { "sense": "（心に）浮かぶ", "pos": "verb" }
   ],
-  "targetSense": "はかり",
+  "eligibleSenses": [
+    { "sense": "起こる、生じる", "pos": "verb" },
+    { "sense": "（心に）浮かぶ", "pos": "verb" }
+  ],
+  "filteredOutSenses": [],
+  "targetSense": "起こる、生じる",
   "senseSelectionReason": "...",
   "senseConfidence": "high"
 }

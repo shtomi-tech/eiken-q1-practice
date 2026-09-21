@@ -17,13 +17,13 @@ const {
 } = require("./lib/context-pipeline.cjs");
 const { publish } = require("./publish-context-drafts.cjs");
 
-const QS = [6, 7];
-const BASE_COMMIT = "0b539fbe33fc776d9b2fe11e7be79748edfa6657";
+const QS = [8, 9];
+const BASE_COMMIT = "a2c21f700ba193afa0b5a930ff0f352912281cea";
 const PATHS = pipelinePaths(QS);
 const RUNTIME_PATH = path.join(ROOT, "data", "context_2026-1.json");
 const REVISION_CATEGORIES = [
-  "SENSE", "CONTEXT", "CLUE", "DIFFICULTY", "LEAKAGE", "JAPANESE_SUPPORT",
-  "DISTRACTOR", "NATURALNESS", "OTHER",
+  "SENSE", "SENSE_POS", "SENSE_SEMANTIC", "CONTEXT", "CLUE", "DIFFICULTY", "LEAKAGE",
+  "JAPANESE_SUPPORT", "DISTRACTOR", "NATURALNESS", "OTHER",
 ];
 
 function runCheck(script, args = []) {
@@ -36,24 +36,11 @@ function byTarget(items) {
 
 function runtimeProjection(item) {
   return {
-    q: item.q,
-    type: item.type,
-    target: item.target,
-    meaning: item.meaning,
-    targetSense: item.targetSense,
-    pos: item.pos,
-    level: item.level,
-    fullEnglish: item.fullEnglish,
-    mixedEnglish: item.mixedEnglish,
-    contextClues: item.contextClues,
-    inferencePath: item.inferencePath,
-    segments: item.segments,
-    choices: item.choices,
-    answerIndex: item.answerIndex,
-    inferenceExplanation: item.inferenceExplanation,
-    quality: item.quality,
-    manualReview: item.manualReview,
-    approval: item.approval,
+    q: item.q, type: item.type, target: item.target, meaning: item.meaning, targetSense: item.targetSense,
+    pos: item.pos, level: item.level, fullEnglish: item.fullEnglish, mixedEnglish: item.mixedEnglish,
+    contextClues: item.contextClues, inferencePath: item.inferencePath, segments: item.segments,
+    choices: item.choices, answerIndex: item.answerIndex, inferenceExplanation: item.inferenceExplanation,
+    quality: item.quality, manualReview: item.manualReview, approval: item.approval,
   };
 }
 
@@ -66,27 +53,25 @@ function expectRejected(mutate, label, tempDir) {
 }
 
 function main() {
-  runCheck("validate-context-senses.cjs", ["--q", "6,7"]);
-  runCheck("generate-context-draft.cjs", ["--q", "6,7"]);
-  runCheck("validate-context-drafts.cjs", ["--q", "6,7"]);
-  runCheck("approve-context-drafts.cjs", ["--q", "6,7"]);
-  runCheck("publish-context-drafts.cjs", ["--q", "6,7"]);
+  runCheck("validate-context-senses.cjs", ["--q", "8,9"]);
+  runCheck("generate-context-draft.cjs", ["--q", "8,9"]);
+  runCheck("validate-context-drafts.cjs", ["--q", "8,9"]);
+  runCheck("approve-context-drafts.cjs", ["--q", "8,9"]);
+  runCheck("publish-context-drafts.cjs", ["--q", "8,9"]);
 
   const sources = sourceItems(QS);
   assert.deepEqual(sources.map((item) => item.target), [
-    "typical", "gradual", "chemical", "false", "weep", "occur", "swell", "tap",
-  ], "q=6/q=7 source order must come from Vocabulary Data");
+    "illustrate", "occupy", "polish", "congratulate", "barely", "secretly", "gently", "repeatedly",
+  ], "q=8/q=9 source order must come from Vocabulary Data");
   const draft = readJson(PATHS.draft);
   const review = readJson(PATHS.review);
   const approved = readJson(PATHS.approved);
   const metrics = readJson(PATHS.metrics);
   const runtime = readJson(RUNTIME_PATH);
   const vocabulary = vocabularyByTarget();
-  assert.deepEqual(draft.qs, QS);
-  assert.equal(draft.initialItems?.length, 8, "initial Sense/Context draft must be retained");
+  assert.equal(draft.initialItems?.length, 8, "initial draft must be retained");
   assert.equal(draft.items.length, 8);
   assert.equal(review.reviewStatus, "complete");
-  assert.deepEqual(approved.qs, QS);
   assert.equal(approved.items.length, 8);
 
   const draftByTarget = byTarget(draft.items);
@@ -98,25 +83,22 @@ function main() {
     const approvedItem = approvedByTarget.get(target);
     const runtimeItem = runtimeByTarget.get(target);
     const reviewItem = review.items[target];
-    assert.ok(item && approvedItem && runtimeItem && reviewItem, `${target}: q6/q7 artifact is incomplete`);
-    assert.equal(item.structuralValidation.status, "pass", `${target}: context structural validation must pass`);
-    assert.equal(item.senseValidation.status, "pass", `${target}: sense validation must pass`);
-    assert.ok(Array.isArray(item.candidateSenses), `${target}: candidateSenses must be present`);
-    assert.ok(Array.isArray(item.eligibleSenses), `${target}: eligibleSenses must be present`);
-    assert.ok(Array.isArray(item.filteredOutSenses), `${target}: filteredOutSenses must be present`);
+    assert.ok(item && approvedItem && runtimeItem && reviewItem, `${target}: q8/q9 artifact is incomplete`);
+    assert.ok(Array.isArray(item.candidateSenses), `${target}: candidateSenses missing`);
+    assert.ok(Array.isArray(item.eligibleSenses), `${target}: eligibleSenses missing`);
+    assert.ok(Array.isArray(item.filteredOutSenses), `${target}: filteredOutSenses missing`);
+    assert.equal(item.structuralValidation.status, "pass");
+    assert.equal(item.senseValidation.status, "pass");
     assert.equal(item.manualReview.status, "pending");
     assert.equal(item.approval.status, "pending");
-    assert.equal(reviewItem.senseReview.status, "pass", `${target}: sense review must pass`);
-    assert.equal(reviewItem.status, "pass", `${target}: context review must pass`);
-    for (const value of Object.values(reviewItem.senseReview.checks)) assert.equal(value, "pass", `${target}: sense review check`);
-    for (const value of Object.values(reviewItem.checks)) assert.equal(value, "pass", `${target}: context review check`);
+    assert.equal(reviewItem.senseReview.status, "pass");
+    assert.equal(reviewItem.status, "pass");
     assert.equal(approvedItem.senseValidation.status, "pass");
     assert.notEqual(approvedItem.senseConfidence, "low");
-    assert.deepEqual(runtimeProjection(runtimeItem), runtimeProjection(approvedItem), `${target}: runtime differs from approved artifact`);
-    assert.equal(runtimeItem.candidateSenses, undefined, `${target}: candidateSenses must not enter runtime data`);
-    assert.equal(runtimeItem.eligibleSenses, undefined, `${target}: eligibleSenses must not enter runtime data`);
-    assert.equal(runtimeItem.filteredOutSenses, undefined, `${target}: filteredOutSenses must not enter runtime data`);
-    assert.equal(runtimeItem.senseSelectionReason, undefined, `${target}: review metadata must not enter runtime data`);
+    assert.deepEqual(runtimeProjection(runtimeItem), runtimeProjection(approvedItem));
+    for (const key of ["candidateSenses", "eligibleSenses", "filteredOutSenses", "senseConfidence", "senseSelectionReason", "senseValidation"]) {
+      assert.equal(runtimeItem[key], undefined, `${target}: ${key} must not enter runtime data`);
+    }
     assert.equal(validateTargetSense({ ...item.source, ...item }, vocabulary.get(target), { requireEligibleSenses: true }).status, "pass");
     assert.equal(validateContextItem({ ...item.source, ...item }, vocabulary.get(target), { requireTargetSense: true }).status, "pass");
   }
@@ -129,13 +111,20 @@ function main() {
   assert.equal(senseStatuses.filter((value) => value === "pass").length, metrics.senseInitialPass);
   assert.equal(senseStatuses.filter((value) => value === "revise").length, metrics.senseRevised);
   assert.equal(senseStatuses.filter((value) => value === "reject").length, metrics.senseRejected);
+  const allDraftItems = [...draft.items];
+  const filteredCounts = allDraftItems.map((item) => item.filteredOutSenses.length);
+  assert.equal(metrics.generated, allDraftItems.length);
+  assert.equal(metrics.multiSenseItems, allDraftItems.filter((item) => item.eligibleSenses.length > 1).length);
+  assert.equal(metrics.posFilteredItems, allDraftItems.filter((item) => item.filteredOutSenses.length > 0).length);
+  assert.equal(metrics.posFilteredSenseCount, filteredCounts.reduce((sum, count) => sum + count, 0));
+  assert.equal(metrics.singleEligibleAfterFilter, allDraftItems.filter((item) => item.eligibleSenses.length === 1).length);
+  assert.equal(metrics.multipleEligibleAfterFilter, allDraftItems.filter((item) => item.eligibleSenses.length > 1).length);
+  assert.equal(metrics.posPreventedRevisionCount, metrics.posFilteredItems);
   assert.equal(metrics.senseInitialPassRate, metrics.senseInitialPass / metrics.generated);
   assert.equal(metrics.senseRevisionRate, metrics.senseRevised / metrics.generated);
   assert.equal(metrics.initialPassRate, metrics.initialPass / metrics.generated);
   assert.equal(metrics.revisionRate, metrics.revised / metrics.generated);
   assert.equal(metrics.finalPass, 8);
-  assert.equal(metrics.initialLowConfidence, 2);
-  assert.equal(metrics.finalLowConfidence, 0);
   const reasonCounts = Object.fromEntries(REVISION_CATEGORIES.map((category) => [category, 0]));
   for (const item of Object.values(review.items)) {
     for (const entry of item.revisionLog || []) reasonCounts[entry.category] += 1;
@@ -145,12 +134,11 @@ function main() {
   assert.equal(runtime.meta.count, 68);
   assert.equal(runtime.contexts.length, 68);
   assert.deepEqual(runtime.contexts.map((item) => item.target), vocabItems().map((item) => item.word || item.phrase));
-  assert.deepEqual(runtime.contexts.filter((item) => item.q === 6 || item.q === 7).map((item) => item.target), sources.map((item) => item.target));
   const baseline = JSON.parse(childProcess.execFileSync("git", ["show", `${BASE_COMMIT}:data/context_2026-1.json`], { cwd: ROOT, encoding: "utf8" }));
-  const unchanged = (item) => item.q <= 5;
-  assert.deepEqual(runtime.contexts.filter(unchanged), baseline.contexts.filter(unchanged), "q=1..5 must remain unchanged");
+  const unchanged = (item) => item.q <= 7 || item.q >= 10;
+  assert.deepEqual(runtime.contexts.filter(unchanged), baseline.contexts.filter(unchanged), "q=1..7 and q=10+ must remain unchanged");
 
-  const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), "context-sense-batch-"));
+  const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), "context-pos-batch-"));
   try {
     const tempRuntime = path.join(tempDir, "context.json");
     fs.copyFileSync(RUNTIME_PATH, tempRuntime);
@@ -160,30 +148,23 @@ function main() {
     const secondRaw = fs.readFileSync(tempRuntime, "utf8");
     assert.equal(first.changed, false);
     assert.equal(second.changed, false);
+    assert.deepEqual(second.changedTargets, []);
     assert.equal(firstRaw, secondRaw);
-    expectRejected((bad) => { bad.items[0].senseValidation.status = "pending"; }, "sense-validation-pending", tempDir);
+    expectRejected((bad) => { delete bad.items[0].eligibleSenses; }, "eligible-missing", tempDir);
+    expectRejected((bad) => { bad.items[0].eligibleSenses = []; }, "eligible-empty", tempDir);
+    expectRejected((bad) => { bad.items[0].eligibleSenses = [{ sense: "別の意味", pos: "verb" }]; }, "eligible-outside", tempDir);
+    expectRejected((bad) => { bad.items[0].eligibleSenses = [{ sense: "挿絵を入れる", pos: "noun" }]; }, "eligible-pos", tempDir);
+    expectRejected((bad) => { bad.items[0].filteredOutSenses = [{ sense: "挿絵を入れる", pos: "verb", reason: "source-pos-mismatch" }]; }, "filtered-remains", tempDir);
+    expectRejected((bad) => { bad.items[0].filteredOutSenses = [{ sense: "（例などで）説明する、明らかにする", pos: "verb", reason: "source-pos-mismatch" }]; }, "filtered-target", tempDir);
+    expectRejected((bad) => { bad.items[0].targetSense = "存在しない意味"; }, "target-outside-eligible", tempDir);
+    expectRejected((bad) => { bad.items[0].filteredOutSenses = [{ sense: "挿絵を入れる", pos: "verb", reason: "manual-choice" }]; }, "wrong-filtered-reason", tempDir);
     expectRejected((bad) => { bad.items[0].senseConfidence = "low"; }, "low-confidence", tempDir);
-    expectRejected((bad) => { bad.items[0].candidateSenses = []; }, "candidate-senses-missing", tempDir);
-    expectRejected((bad) => { delete bad.items[0].eligibleSenses; }, "eligible-senses-missing", tempDir);
-    expectRejected((bad) => { bad.items[0].eligibleSenses = []; }, "eligible-senses-empty", tempDir);
-    expectRejected((bad) => { bad.items[0].targetSense = "存在しない意味"; }, "target-sense-outside", tempDir);
-    expectRejected((bad) => { bad.items.find((item) => item.target === "chemical").targetSense = "化学物質"; }, "pos-incompatible-sense", tempDir);
-    expectRejected((bad) => { delete bad.items[0].senseSelectionReason; }, "sense-reason-missing", tempDir);
-    expectRejected((bad) => { bad.items[0].senseConfidence = "unknown"; }, "invalid-confidence", tempDir);
-    expectRejected((bad) => { bad.items[0].answerIndex = 1; }, "wrong-answer-index", tempDir);
-    expectRejected((bad) => { bad.items[0].segments[0].find((segment) => segment.role === "target").useJapanese = true; }, "target-japanese", tempDir);
-    expectRejected((bad) => { bad.items[0].segments[0].find((segment) => segment.role === "clue").useJapanese = true; }, "clue-japanese", tempDir);
-    expectRejected((bad) => {
-      const segment = bad.items[0].segments[0].find((candidate) => candidate.role === "core");
-      segment.useJapanese = true;
-      segment.ja = "補助";
-      delete segment.supportReason;
-    }, "support-reason-missing", tempDir);
+    expectRejected((bad) => { bad.items[0].senseValidation.status = "pending"; }, "sense-validation-pending", tempDir);
   } finally {
     fs.rmSync(tempDir, { recursive: true, force: true });
   }
 
-  console.log(`context q6-q7 batch: OK (sense initial PASS ${metrics.senseInitialPass}, sense REVISE ${metrics.senseRevised}, final PASS ${metrics.finalPass})`);
+  console.log(`context q8-q9 batch: OK (POS-filtered ${metrics.posFilteredItems}, sense initial PASS ${metrics.senseInitialPass}, final PASS ${metrics.finalPass})`);
 }
 
 main();

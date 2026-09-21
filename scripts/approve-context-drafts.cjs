@@ -28,7 +28,7 @@ function main({ qs = parseQs(), write = true } = {}) {
     if (draftItem.structuralValidation?.status !== "pass") throw new Error(`${target}: structural validation is not PASS`);
     if (qs.some((q) => q >= 6)) {
       if (draftItem.senseValidation?.status !== "pass") throw new Error(`${target}: sense validation is not PASS`);
-      assertTargetSense({ ...draftItem.source, ...draftItem }, vocabulary.get(target));
+      assertTargetSense({ ...draftItem.source, ...draftItem }, vocabulary.get(target), { requireEligibleSenses: true });
       if (draftItem.senseConfidence === "low") throw new Error(`${target}: low-confidence sense cannot be auto-approved`);
       if (reviewItem.senseReview?.status !== "pass") throw new Error(`${target}: sense review is not PASS`);
     }
@@ -65,6 +65,8 @@ function main({ qs = parseQs(), write = true } = {}) {
     };
     if (qs.some((q) => q >= 6)) {
       runtimeItem.candidateSenses = draftItem.candidateSenses;
+      runtimeItem.eligibleSenses = draftItem.eligibleSenses;
+      runtimeItem.filteredOutSenses = draftItem.filteredOutSenses;
       runtimeItem.senseConfidence = draftItem.senseConfidence;
       runtimeItem.senseSelectionReason = draftItem.senseSelectionReason;
       runtimeItem.senseValidation = draftItem.senseValidation;

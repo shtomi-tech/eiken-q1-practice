@@ -2,375 +2,64 @@
   "schemaVersion": 1,
   "datasetId": "eiken2-2026-1",
   "q": [
-    6,
-    7
+    8,
+    9
   ],
   "qs": [
-    6,
-    7
+    8,
+    9
   ],
   "stage": "APPROVED",
   "items": [
     {
-      "q": 6,
+      "q": 8,
       "type": "word",
-      "target": "typical",
-      "meaning": "典型的な、いつも通りの",
-      "targetSense": "典型的な",
-      "pos": "adjective",
+      "target": "illustrate",
+      "meaning": "（例などで）説明する、明らかにする；挿絵を入れる",
+      "targetSense": "（例などで）説明する、明らかにする",
+      "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "A typical school day for Emi starts at eight and ends at three.",
-        "She has classes, eats lunch with friends, and does homework afterward.",
-        "Nothing unusual happens."
+        "The teacher used a simple picture to illustrate how water moves through a plant.",
+        "The arrows showed the path from the roots to the leaves.",
+        "After seeing the picture, the students understood the process."
       ],
       "mixedEnglish": [
-        "A typical school day for Emi starts at eight and ends at three.",
-        "She has classes, eats lunch with friends, and does homework afterward.",
-        "Nothing unusual happens."
+        "The teacher used a simple picture to illustrate how water moves through a plant.",
+        "The arrows showed the path from the roots to the leaves.",
+        "After seeing the picture, the students understood the process."
       ],
       "contextClues": [
         {
-          "text": "starts at eight and ends at three",
+          "text": "used a simple picture",
+          "type": "behavior"
+        },
+        {
+          "text": "arrows showed the path",
           "type": "example"
         },
         {
-          "text": "has classes, eats lunch with friends, and does homework",
-          "type": "example"
-        },
-        {
-          "text": "Nothing unusual happens",
-          "type": "contrast"
-        }
-      ],
-      "inferencePath": [
-        "school day",
-        "usual schedule",
-        "nothing unusual",
-        "normal for that kind of day",
-        "targetSense: 典型的な",
-        "typical"
-      ],
-      "segments": [
-        [
-          {
-            "en": "A ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "typical",
-            "role": "target",
-            "useJapanese": false
-          },
-          {
-            "en": " school day for Emi ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "starts at eight and ends at three.",
-            "role": "clue",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "She has classes, eats lunch with friends, and does homework afterward.",
-            "role": "clue",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "Nothing unusual happens.",
-            "role": "clue",
-            "useJapanese": false
-          }
-        ]
-      ],
-      "choices": [
-        "典型的な",
-        "珍しい",
-        "一時的な",
-        "危険な"
-      ],
-      "answerIndex": 0,
-      "inferenceExplanation": "「starts at eight and ends at three」「has classes, eats lunch with friends, and does homework」「Nothing unusual happens」が手がかりです。学校の普通の一日を表しているので、typicalは「典型的な」だと推測できます。",
-      "quality": {
-        "targetOccurrence": 1,
-        "clueCount": 3,
-        "targetProtected": true,
-        "cluesProtected": true
-      },
-      "manualReview": {
-        "status": "pass",
-        "checks": {
-          "senseAppropriate": "pass",
-          "senseUniquelySupported": "pass",
-          "otherKnownSensesExcluded": "pass",
-          "targetMainUnknown": "pass",
-          "clueQuality": "pass",
-          "clueIndependence": "pass",
-          "noAnswerLeakage": "pass",
-          "noSynonymLeakage": "pass",
-          "contextCoherent": "pass",
-          "difficultyAppropriate": "pass",
-          "naturalEnglish": "pass",
-          "supportNecessary": "pass",
-          "distractorQuality": "pass",
-          "answerUnique": "pass"
-        }
-      },
-      "approval": {
-        "status": "approved"
-      },
-      "candidateSenses": [
-        {
-          "sense": "典型的な、いつも通りの",
-          "pos": "adjective"
-        }
-      ],
-      "eligibleSenses": [
-        {
-          "sense": "典型的な、いつも通りの",
-          "pos": "adjective"
-        }
-      ],
-      "filteredOutSenses": [],
-      "senseConfidence": "high",
-      "senseSelectionReason": "The routine school schedule and the absence of anything unusual support the central adjective sense 典型的な、いつも通りの.",
-      "senseValidation": {
-        "status": "pass",
-        "checks": [
-          "source",
-          "candidateSenses",
-          "eligibleSenses",
-          "filteredOutSenses",
-          "targetSense",
-          "posCompatibility",
-          "reason",
-          "confidence"
-        ]
-      }
-    },
-    {
-      "q": 6,
-      "type": "word",
-      "target": "gradual",
-      "meaning": "徐々の、段階的な",
-      "targetSense": "徐々の、段階的な",
-      "pos": "adjective",
-      "level": "EIKEN Grade 2",
-      "fullEnglish": [
-        "The gradual change in the weather was easy to miss.",
-        "The mornings became a little warmer each week, and the snow slowly disappeared.",
-        "By April, people no longer needed heavy coats."
-      ],
-      "mixedEnglish": [
-        "The gradual change in the weather was easy to miss.",
-        "The mornings became a little warmer each week, and the snow slowly disappeared.",
-        "By April, people no longer needed heavy coats."
-      ],
-      "contextClues": [
-        {
-          "text": "easy to miss",
+          "text": "students understood the process",
           "type": "result"
-        },
-        {
-          "text": "a little warmer each week",
-          "type": "change"
-        },
-        {
-          "text": "slowly disappeared",
-          "type": "behavior"
         }
       ],
       "inferencePath": [
-        "weather change",
-        "small steps",
-        "slow movement over weeks",
-        "happening little by little",
-        "targetSense: 徐々の、段階的な",
-        "gradual"
+        "teacher",
+        "picture and arrows",
+        "a process becomes clear",
+        "explain with an example or picture",
+        "targetSense: （例などで）説明する、明らかにする",
+        "illustrate"
       ],
       "segments": [
         [
           {
-            "en": "The ",
+            "en": "The teacher ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "gradual",
-            "role": "target",
-            "useJapanese": false
-          },
-          {
-            "en": " change in the weather was ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "easy to miss.",
-            "role": "clue",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "The mornings became ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "a little warmer each week",
-            "role": "clue",
-            "useJapanese": false
-          },
-          {
-            "en": ", and the snow ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "slowly disappeared.",
-            "role": "clue",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "By April, people no longer needed heavy coats.",
-            "role": "core",
-            "useJapanese": false
-          }
-        ]
-      ],
-      "choices": [
-        "徐々の、段階的な",
-        "突然の",
-        "正確な",
-        "重い"
-      ],
-      "answerIndex": 0,
-      "inferenceExplanation": "「easy to miss」「a little warmer each week」「slowly disappeared」が手がかりです。変化が少しずつ進んでいるので、gradualは「徐々の、段階的な」だと推測できます。",
-      "quality": {
-        "targetOccurrence": 1,
-        "clueCount": 3,
-        "targetProtected": true,
-        "cluesProtected": true
-      },
-      "manualReview": {
-        "status": "pass",
-        "checks": {
-          "senseAppropriate": "pass",
-          "senseUniquelySupported": "pass",
-          "otherKnownSensesExcluded": "pass",
-          "targetMainUnknown": "pass",
-          "clueQuality": "pass",
-          "clueIndependence": "pass",
-          "noAnswerLeakage": "pass",
-          "noSynonymLeakage": "pass",
-          "contextCoherent": "pass",
-          "difficultyAppropriate": "pass",
-          "naturalEnglish": "pass",
-          "supportNecessary": "pass",
-          "distractorQuality": "pass",
-          "answerUnique": "pass"
-        }
-      },
-      "approval": {
-        "status": "approved"
-      },
-      "candidateSenses": [
-        {
-          "sense": "徐々の、段階的な",
-          "pos": "adjective"
-        }
-      ],
-      "eligibleSenses": [
-        {
-          "sense": "徐々の、段階的な",
-          "pos": "adjective"
-        }
-      ],
-      "filteredOutSenses": [],
-      "senseConfidence": "high",
-      "senseSelectionReason": "Small weekly changes and a slow result provide several independent clues for 徐々の、段階的な.",
-      "senseValidation": {
-        "status": "pass",
-        "checks": [
-          "source",
-          "candidateSenses",
-          "eligibleSenses",
-          "filteredOutSenses",
-          "targetSense",
-          "posCompatibility",
-          "reason",
-          "confidence"
-        ]
-      }
-    },
-    {
-      "q": 6,
-      "type": "word",
-      "target": "chemical",
-      "meaning": "化学の／（名）化学物質",
-      "targetSense": "化学の",
-      "pos": "adjective",
-      "level": "EIKEN Grade 2",
-      "fullEnglish": [
-        "The pool worker used a chemical cleaner to kill harmful germs in the water.",
-        "He wore gloves while handling it.",
-        "After the treatment, the water became safer for swimmers."
-      ],
-      "mixedEnglish": [
-        "The pool worker used a chemical cleaner to kill harmful germs in the water.",
-        "He wore gloves while handling it.",
-        "After the treatment, the water became safer for swimmers."
-      ],
-      "contextClues": [
-        {
-          "text": "cleaner",
-          "type": "category"
-        },
-        {
-          "text": "kill harmful germs",
-          "type": "function"
-        },
-        {
-          "text": "wore gloves while handling it",
-          "type": "behavior"
-        }
-      ],
-      "inferencePath": [
-        "cleaner",
-        "germs",
-        "gloves",
-        "related to science and cleaning",
-        "targetSense: 化学の",
-        "chemical"
-      ],
-      "segments": [
-        [
-          {
-            "en": "The pool worker used a ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "chemical",
-            "role": "target",
-            "useJapanese": false
-          },
-          {
-            "en": " ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "cleaner",
+            "en": "used a simple picture",
             "role": "clue",
             "useJapanese": false
           },
@@ -380,197 +69,39 @@
             "useJapanese": false
           },
           {
-            "en": "kill harmful germs",
-            "role": "clue",
-            "useJapanese": false
-          },
-          {
-            "en": " in the water.",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "He wore gloves while handling it.",
-            "role": "clue",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "After the treatment, the water became safer for swimmers.",
-            "role": "core",
-            "useJapanese": false
-          }
-        ]
-      ],
-      "choices": [
-        "化学の",
-        "自然の",
-        "歴史的な",
-        "個人的な"
-      ],
-      "answerIndex": 0,
-      "inferenceExplanation": "「cleaner」「kill harmful germs」「wore gloves while handling it」が手がかりです。掃除や科学に関係するcleanerを説明する形容詞なので、chemicalは「化学の」だと推測できます。",
-      "quality": {
-        "targetOccurrence": 1,
-        "clueCount": 3,
-        "targetProtected": true,
-        "cluesProtected": true
-      },
-      "manualReview": {
-        "status": "pass",
-        "checks": {
-          "senseAppropriate": "pass",
-          "senseUniquelySupported": "pass",
-          "otherKnownSensesExcluded": "pass",
-          "targetMainUnknown": "pass",
-          "clueQuality": "pass",
-          "clueIndependence": "pass",
-          "noAnswerLeakage": "pass",
-          "noSynonymLeakage": "pass",
-          "contextCoherent": "pass",
-          "difficultyAppropriate": "pass",
-          "naturalEnglish": "pass",
-          "supportNecessary": "pass",
-          "distractorQuality": "pass",
-          "answerUnique": "pass"
-        }
-      },
-      "approval": {
-        "status": "approved"
-      },
-      "candidateSenses": [
-        {
-          "sense": "化学の",
-          "pos": "adjective"
-        },
-        {
-          "sense": "化学物質",
-          "pos": "noun"
-        }
-      ],
-      "eligibleSenses": [
-        {
-          "sense": "化学の",
-          "pos": "adjective"
-        }
-      ],
-      "filteredOutSenses": [
-        {
-          "sense": "化学物質",
-          "pos": "noun",
-          "reason": "source-pos-mismatch"
-        }
-      ],
-      "senseConfidence": "high",
-      "senseSelectionReason": "The source is an adjective and chemical modifies cleaner; the pool treatment context supports the adjective sense 化学の, not the noun 化学物質.",
-      "senseValidation": {
-        "status": "pass",
-        "checks": [
-          "source",
-          "candidateSenses",
-          "eligibleSenses",
-          "filteredOutSenses",
-          "targetSense",
-          "posCompatibility",
-          "reason",
-          "confidence"
-        ]
-      }
-    },
-    {
-      "q": 6,
-      "type": "word",
-      "target": "false",
-      "meaning": "誤った、偽の",
-      "targetSense": "誤った、偽の",
-      "pos": "adjective",
-      "level": "EIKEN Grade 2",
-      "fullEnglish": [
-        "The message said the museum was closed, but that was false.",
-        "When we arrived, people were entering through the open doors.",
-        "We learned that the message had given us the wrong information."
-      ],
-      "mixedEnglish": [
-        "The message said the museum was closed, but that was false.",
-        "When we arrived, people were entering through the open doors.",
-        "We learned that the message had given us the wrong information."
-      ],
-      "contextClues": [
-        {
-          "text": "museum was closed",
-          "type": "claim"
-        },
-        {
-          "text": "people were entering through the open doors",
-          "type": "contrast"
-        },
-        {
-          "text": "wrong information",
-          "type": "restatement"
-        }
-      ],
-      "inferencePath": [
-        "message",
-        "real situation",
-        "claim and reality do not match",
-        "not true",
-        "targetSense: 誤った、偽の",
-        "false"
-      ],
-      "segments": [
-        [
-          {
-            "en": "The message said the ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "museum was closed",
-            "role": "clue",
-            "useJapanese": false
-          },
-          {
-            "en": ", but that was ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "false",
+            "en": "illustrate",
             "role": "target",
             "useJapanese": false
           },
           {
-            "en": ".",
+            "en": " how water moves through a plant.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "When we arrived, people were entering through the open doors.",
+            "en": "The arrows showed the path from the roots to the leaves.",
             "role": "clue",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "We learned that the message had given us the wrong information.",
+            "en": "After seeing the picture, the students understood the process.",
             "role": "clue",
             "useJapanese": false
           }
         ]
       ],
       "choices": [
-        "誤った、偽の",
-        "正確な",
-        "親切な",
-        "安全な"
+        "（例などで）説明する、明らかにする",
+        "描く",
+        "測る",
+        "隠す"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「museum was closed」「people were entering through the open doors」「wrong information」が手がかりです。伝えられたことと現実が違うので、falseは「誤った、偽の」だと推測できます。",
+      "inferenceExplanation": "「used a simple picture」「arrows showed the path」「students understood the process」が手がかりです。絵と矢印で仕組みを分かりやすくしているので、illustrateは「（例などで）説明する、明らかにする」だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 3,
@@ -601,182 +132,27 @@
       },
       "candidateSenses": [
         {
-          "sense": "誤った、偽の",
-          "pos": "adjective"
-        }
-      ],
-      "eligibleSenses": [
-        {
-          "sense": "誤った、偽の",
-          "pos": "adjective"
-        }
-      ],
-      "filteredOutSenses": [],
-      "senseConfidence": "high",
-      "senseSelectionReason": "The claim that the museum was closed conflicts with what people see, supporting 誤った、偽の.",
-      "senseValidation": {
-        "status": "pass",
-        "checks": [
-          "source",
-          "candidateSenses",
-          "eligibleSenses",
-          "filteredOutSenses",
-          "targetSense",
-          "posCompatibility",
-          "reason",
-          "confidence"
-        ]
-      }
-    },
-    {
-      "q": 7,
-      "type": "word",
-      "target": "weep",
-      "meaning": "（涙を流して）泣く、すすり泣く",
-      "targetSense": "泣く",
-      "pos": "verb",
-      "level": "EIKEN Grade 2",
-      "fullEnglish": [
-        "After the sad movie ended, the child began to weep.",
-        "Tears ran down her face, and she tried to hide them with her hands.",
-        "Her mother hugged her until she felt better."
-      ],
-      "mixedEnglish": [
-        "After the sad movie ended, the child began to weep.",
-        "Tears ran down her face, and she tried to hide them with her hands.",
-        "Her mother hugged her until she felt better."
-      ],
-      "contextClues": [
-        {
-          "text": "sad movie",
-          "type": "cause"
+          "sense": "（例などで）説明する、明らかにする",
+          "pos": "verb"
         },
         {
-          "text": "Tears ran down her face",
-          "type": "result"
-        },
-        {
-          "text": "hide them with her hands",
-          "type": "behavior"
-        }
-      ],
-      "inferencePath": [
-        "sadness",
-        "tears",
-        "hiding her face",
-        "cry with tears",
-        "targetSense: 泣く",
-        "weep"
-      ],
-      "segments": [
-        [
-          {
-            "en": "After the ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "sad movie",
-            "role": "clue",
-            "useJapanese": false
-          },
-          {
-            "en": " ended, the child began to ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "weep",
-            "role": "target",
-            "useJapanese": false
-          },
-          {
-            "en": ".",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "Tears ran down her face",
-            "role": "clue",
-            "useJapanese": false
-          },
-          {
-            "en": ", and she tried to ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "hide them with her hands",
-            "role": "clue",
-            "useJapanese": false
-          },
-          {
-            "en": ".",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "Her mother hugged her until she felt better.",
-            "role": "core",
-            "useJapanese": false
-          }
-        ]
-      ],
-      "choices": [
-        "泣く",
-        "笑う",
-        "眠る",
-        "歌う"
-      ],
-      "answerIndex": 0,
-      "inferenceExplanation": "「sad movie」「Tears ran down her face」「hide them with her hands」が手がかりです。悲しい映画の後に涙を流しているので、weepは「泣く」だと推測できます。",
-      "quality": {
-        "targetOccurrence": 1,
-        "clueCount": 3,
-        "targetProtected": true,
-        "cluesProtected": true
-      },
-      "manualReview": {
-        "status": "pass",
-        "checks": {
-          "senseAppropriate": "pass",
-          "senseUniquelySupported": "pass",
-          "otherKnownSensesExcluded": "pass",
-          "targetMainUnknown": "pass",
-          "clueQuality": "pass",
-          "clueIndependence": "pass",
-          "noAnswerLeakage": "pass",
-          "noSynonymLeakage": "pass",
-          "contextCoherent": "pass",
-          "difficultyAppropriate": "pass",
-          "naturalEnglish": "pass",
-          "supportNecessary": "pass",
-          "distractorQuality": "pass",
-          "answerUnique": "pass"
-        }
-      },
-      "approval": {
-        "status": "approved"
-      },
-      "candidateSenses": [
-        {
-          "sense": "（涙を流して）泣く、すすり泣く",
+          "sense": "挿絵を入れる",
           "pos": "verb"
         }
       ],
       "eligibleSenses": [
         {
-          "sense": "（涙を流して）泣く、すすり泣く",
+          "sense": "（例などで）説明する、明らかにする",
+          "pos": "verb"
+        },
+        {
+          "sense": "挿絵を入れる",
           "pos": "verb"
         }
       ],
       "filteredOutSenses": [],
       "senseConfidence": "high",
-      "senseSelectionReason": "The cause, visible tears, and attempt to hide them all support the verb sense 泣く within the source group.",
+      "senseSelectionReason": "The teacher uses a picture and arrows to make a process clear, which supports the explanatory sense rather than the book-design sense.",
       "senseValidation": {
         "status": "pass",
         "checks": [
@@ -792,54 +168,64 @@
       }
     },
     {
-      "q": 7,
+      "q": 8,
       "type": "word",
-      "target": "occur",
-      "meaning": "起こる、生じる；（心に）浮かぶ",
-      "targetSense": "起こる、生じる",
+      "target": "occupy",
+      "meaning": "占める、占領する；（人を）従事させる",
+      "targetSense": "占める、占領する",
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "A power cut can occur during a storm.",
-        "The lights suddenly go out, and people stop using their computers.",
-        "After a few minutes, the electricity may return."
+        "A large sofa can occupy most of the living room.",
+        "There is only a small space left between it and the table.",
+        "We moved the table to make more room."
       ],
       "mixedEnglish": [
-        "A power cut can occur during a storm.",
-        "The lights suddenly go out, and people stop using their computers.",
-        "After a few minutes, the electricity may return."
+        "A large sofa can occupy most of the living room.",
+        "There is only a small space left between it and the table.",
+        "We moved the table to make more room."
       ],
       "contextClues": [
         {
-          "text": "during a storm",
-          "type": "cause"
+          "text": "large sofa",
+          "type": "example"
         },
         {
-          "text": "lights suddenly go out",
+          "text": "most of the living room",
+          "type": "amount"
+        },
+        {
+          "text": "only a small space left",
           "type": "result"
-        },
-        {
-          "text": "electricity may return",
-          "type": "time"
         }
       ],
       "inferencePath": [
-        "storm",
-        "power cut",
-        "lights go out",
-        "an event happens",
-        "targetSense: 起こる、生じる",
-        "occur"
+        "sofa",
+        "living room",
+        "little space remains",
+        "take up a place or area",
+        "targetSense: 占める、占領する",
+        "occupy"
       ],
       "segments": [
         [
           {
-            "en": "A power cut can ",
+            "en": "A ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "occur",
+            "en": "large sofa",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " can ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "occupy",
             "role": "target",
             "useJapanese": false
           },
@@ -849,34 +235,39 @@
             "useJapanese": false
           },
           {
-            "en": "during a storm.",
+            "en": "most of the living room",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "There is only a small space left between it and the table.",
             "role": "clue",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "The lights suddenly go out, and people stop using their computers.",
-            "role": "clue",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "After a few minutes, the electricity may return.",
+            "en": "We moved the table to make more room.",
             "role": "clue",
             "useJapanese": false
           }
         ]
       ],
       "choices": [
-        "起こる、生じる",
+        "占める、占領する",
         "避ける",
-        "戻る",
-        "消える"
+        "縮める",
+        "空ける"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「during a storm」「lights suddenly go out」「electricity may return」が手がかりです。停電という出来事が起きているので、occurは「起こる、生じる」だと推測できます。",
+      "inferenceExplanation": "「large sofa」「most of the living room」「only a small space left」が手がかりです。ソファが部屋の大部分を取り、残りの空間が少ないので、occupyは「占める、占領する」だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 3,
@@ -907,27 +298,27 @@
       },
       "candidateSenses": [
         {
-          "sense": "起こる、生じる",
+          "sense": "占める、占領する",
           "pos": "verb"
         },
         {
-          "sense": "（心に）浮かぶ",
+          "sense": "（人を）従事させる",
           "pos": "verb"
         }
       ],
       "eligibleSenses": [
         {
-          "sense": "起こる、生じる",
+          "sense": "占める、占領する",
           "pos": "verb"
         },
         {
-          "sense": "（心に）浮かぶ",
+          "sense": "（人を）従事させる",
           "pos": "verb"
         }
       ],
       "filteredOutSenses": [],
       "senseConfidence": "high",
-      "senseSelectionReason": "The power cut is an event during a storm; lights go out and electricity returns, so the event sense 起こる、生じる is uniquely supported rather than the thought sense.",
+      "senseSelectionReason": "The sofa takes up most of the room and leaves little space, so the area sense is supported.",
       "senseValidation": {
         "status": "pass",
         "checks": [
@@ -943,65 +334,369 @@
       }
     },
     {
-      "q": 7,
+      "q": 8,
       "type": "word",
-      "target": "swell",
-      "meaning": "膨らむ、腫れる",
-      "targetSense": "腫れる",
+      "target": "polish",
+      "meaning": "磨く；（技などを）洗練する",
+      "targetSense": "磨く",
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "After Tom hurt his ankle, it began to swell.",
-        "The area grew larger and tighter during the afternoon.",
-        "He put ice on it and went to a doctor."
+        "The old table looked dull, so Ben used a cloth to polish it.",
+        "He rubbed the surface until it became smooth and shiny.",
+        "The table looked almost new."
       ],
       "mixedEnglish": [
-        "After Tom hurt his ankle, it began to swell.",
-        "The area grew larger and tighter during the afternoon.",
-        "He put ice on it and went to a doctor."
+        "The old table looked dull, so Ben used a cloth to polish it.",
+        "He rubbed the surface until it became smooth and shiny.",
+        "The table looked almost new."
       ],
       "contextClues": [
         {
-          "text": "hurt his ankle",
-          "type": "cause"
+          "text": "looked dull",
+          "type": "situation"
         },
         {
-          "text": "grew larger and tighter",
-          "type": "result"
-        },
-        {
-          "text": "put ice on it",
+          "text": "rubbed the surface",
           "type": "behavior"
+        },
+        {
+          "text": "smooth and shiny",
+          "type": "result"
         }
       ],
       "inferencePath": [
-        "injury",
-        "ankle",
-        "larger and tighter",
-        "become bigger because of injury",
-        "targetSense: 腫れる",
-        "swell"
+        "old table",
+        "cloth",
+        "rubbing",
+        "smooth and shiny surface",
+        "targetSense: 磨く",
+        "polish"
       ],
       "segments": [
         [
           {
-            "en": "After Tom ",
+            "en": "The old table ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "hurt his ankle",
+            "en": "looked dull",
             "role": "clue",
             "useJapanese": false
           },
           {
-            "en": ", it began to ",
+            "en": ", so Ben used a cloth to ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "swell",
+            "en": "polish",
             "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " it.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "He rubbed the surface until it became smooth and shiny.",
+            "role": "clue",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The table looked almost new.",
+            "role": "clue",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "磨く",
+        "壊す",
+        "隠す",
+        "借りる"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「looked dull」「rubbed the surface」「smooth and shiny」が手がかりです。布で表面をこすって新品のようにしているので、polishは「磨く」だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 3,
+        "targetProtected": true,
+        "cluesProtected": true
+      },
+      "manualReview": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        }
+      },
+      "approval": {
+        "status": "approved"
+      },
+      "candidateSenses": [
+        {
+          "sense": "磨く",
+          "pos": "verb"
+        },
+        {
+          "sense": "（技などを）洗練する",
+          "pos": "verb"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "磨く",
+          "pos": "verb"
+        },
+        {
+          "sense": "（技などを）洗練する",
+          "pos": "verb"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseSelectionReason": "A cloth is rubbed on a dull table until its surface is smooth and shiny, so the physical cleaning sense is supported.",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      }
+    },
+    {
+      "q": 8,
+      "type": "word",
+      "target": "congratulate",
+      "meaning": "祝う、祝辞を述べる",
+      "targetSense": "祝う、祝辞を述べる",
+      "pos": "verb",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "When Yuki won the art contest, her classmates came to congratulate her.",
+        "They shook her hand and said they were happy for her.",
+        "Yuki thanked them with a big smile."
+      ],
+      "mixedEnglish": [
+        "When Yuki won the art contest, her classmates came to congratulate her.",
+        "They shook her hand and said they were happy for her.",
+        "Yuki thanked them with a big smile."
+      ],
+      "contextClues": [
+        {
+          "text": "won the art contest",
+          "type": "cause"
+        },
+        {
+          "text": "shook her hand",
+          "type": "behavior"
+        },
+        {
+          "text": "happy for her",
+          "type": "speech"
+        }
+      ],
+      "inferencePath": [
+        "success",
+        "friends",
+        "kind words and a handshake",
+        "show happiness about someone's success",
+        "targetSense: 祝う、祝辞を述べる",
+        "congratulate"
+      ],
+      "segments": [
+        [
+          {
+            "en": "When Yuki ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "won the art contest",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ", her classmates came to ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "congratulate",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " her.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "They shook her hand and said they were happy for her.",
+            "role": "clue",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Yuki thanked them with a big smile.",
+            "role": "clue",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "祝う、祝辞を述べる",
+        "謝る",
+        "競う",
+        "忘れる"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「won the art contest」「shook her hand」「happy for her」が手がかりです。成功を喜んで手を握り、うれしいと言っているので、congratulateは「祝う、祝辞を述べる」だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 3,
+        "targetProtected": true,
+        "cluesProtected": true
+      },
+      "manualReview": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        }
+      },
+      "approval": {
+        "status": "approved"
+      },
+      "candidateSenses": [
+        {
+          "sense": "祝う、祝辞を述べる",
+          "pos": "verb"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "祝う、祝辞を述べる",
+          "pos": "verb"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseSelectionReason": "Classmates respond to Yuki's contest success with a handshake and words of happiness.",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      }
+    },
+    {
+      "q": 9,
+      "type": "word",
+      "target": "barely",
+      "meaning": "かろうじて、やっと（〜ない）",
+      "targetSense": "かろうじて、やっと（〜ない）",
+      "pos": "adverb",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "The bus was barely moving because of the heavy snow.",
+        "It went so slowly that people walking nearby almost passed it.",
+        "The driver reached the station after a long time."
+      ],
+      "mixedEnglish": [
+        "The bus was barely moving because of the heavy snow.",
+        "It went so slowly that people walking nearby almost passed it.",
+        "The driver reached the station after a long time."
+      ],
+      "contextClues": [
+        {
+          "text": "heavy snow",
+          "type": "cause"
+        },
+        {
+          "text": "so slowly",
+          "type": "degree"
+        },
+        {
+          "text": "almost passed it",
+          "type": "contrast"
+        }
+      ],
+      "inferencePath": [
+        "snow",
+        "bus",
+        "very slow movement",
+        "only just moving",
+        "targetSense: かろうじて、やっと（〜ない）",
+        "barely"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The bus was ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "barely",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " moving because of the ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "heavy snow",
+            "role": "clue",
             "useJapanese": false
           },
           {
@@ -1012,27 +707,27 @@
         ],
         [
           {
-            "en": "The area grew larger and tighter during the afternoon.",
+            "en": "It went so slowly that people walking nearby almost passed it.",
             "role": "clue",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "He put ice on it and went to a doctor.",
+            "en": "The driver reached the station after a long time.",
             "role": "clue",
             "useJapanese": false
           }
         ]
       ],
       "choices": [
-        "腫れる",
-        "冷える",
-        "乾く",
-        "縮む"
+        "かろうじて、やっと（〜ない）",
+        "完全に",
+        "すぐに",
+        "静かに"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「hurt his ankle」「grew larger and tighter」「put ice on it」が手がかりです。けがをした足首が大きく張っているので、swellは「腫れる」だと推測できます。",
+      "inferenceExplanation": "「heavy snow」「so slowly」「almost passed it」が手がかりです。バスがほとんど進まず、歩く人に追い越されそうなので、barelyは「かろうじて、やっと（〜ない）」だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 3,
@@ -1063,19 +758,19 @@
       },
       "candidateSenses": [
         {
-          "sense": "膨らむ、腫れる",
-          "pos": "verb"
+          "sense": "かろうじて、やっと（〜ない）",
+          "pos": "adverb"
         }
       ],
       "eligibleSenses": [
         {
-          "sense": "膨らむ、腫れる",
-          "pos": "verb"
+          "sense": "かろうじて、やっと（〜ない）",
+          "pos": "adverb"
         }
       ],
       "filteredOutSenses": [],
       "senseConfidence": "high",
-      "senseSelectionReason": "The injured body part becomes larger and tighter and is treated with ice, which supports 腫れる within the source group.",
+      "senseSelectionReason": "The bus moves very slowly in heavy snow and is almost passed by people walking.",
       "senseValidation": {
         "status": "pass",
         "checks": [
@@ -1091,77 +786,55 @@
       }
     },
     {
-      "q": 7,
+      "q": 9,
       "type": "word",
-      "target": "tap",
-      "meaning": "（指などで）軽くたたく／（名）蛇口",
-      "targetSense": "（指などで）軽くたたく",
-      "pos": "verb",
+      "target": "secretly",
+      "meaning": "こっそりと、密かに",
+      "targetSense": "こっそりと、密かに",
+      "pos": "adverb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "When the screen did not respond, Aya began to tap it with one finger.",
-        "She touched the same spot lightly several times, but nothing happened.",
-        "Then she cleaned the screen and tried again."
+        "The children secretly prepared a birthday gift for their teacher.",
+        "They hid the box under a desk and spoke quietly when she came near.",
+        "She knew nothing about the plan."
       ],
       "mixedEnglish": [
-        "When the screen did not respond, Aya began to tap it with one finger.",
-        "She touched the same spot lightly several times, but nothing happened.",
-        "Then she cleaned the screen and tried again."
+        "The children secretly prepared a birthday gift for their teacher.",
+        "They hid the box under a desk and spoke quietly when she came near.",
+        "She knew nothing about the plan."
       ],
       "contextClues": [
         {
-          "text": "with one finger",
+          "text": "prepared a birthday gift",
+          "type": "situation"
+        },
+        {
+          "text": "hid the box",
           "type": "behavior"
         },
         {
-          "text": "touched the same spot lightly",
-          "type": "restatement"
-        },
-        {
-          "text": "several times",
-          "type": "repetition"
+          "text": "She knew nothing about the plan",
+          "type": "result"
         }
       ],
       "inferencePath": [
-        "screen",
-        "one finger",
-        "light touch",
-        "touch something quickly and lightly",
-        "targetSense: （指などで）軽くたたく",
-        "tap"
+        "gift",
+        "hidden box",
+        "quiet voices",
+        "without another person knowing",
+        "targetSense: こっそりと、密かに",
+        "secretly"
       ],
       "segments": [
         [
           {
-            "en": "When the screen did not respond, Aya began to ",
+            "en": "The children ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "tap",
+            "en": "secretly",
             "role": "target",
-            "useJapanese": false
-          },
-          {
-            "en": " it ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "with one finger.",
-            "role": "clue",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "She ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "touched the same spot lightly",
-            "role": "clue",
             "useJapanese": false
           },
           {
@@ -1170,32 +843,39 @@
             "useJapanese": false
           },
           {
-            "en": "several times",
+            "en": "prepared a birthday gift",
             "role": "clue",
             "useJapanese": false
           },
           {
-            "en": ", but nothing happened.",
+            "en": " for their teacher.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "Then she cleaned the screen and tried again.",
-            "role": "core",
+            "en": "They hid the box under a desk and spoke quietly when she came near.",
+            "role": "clue",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "She knew nothing about the plan.",
+            "role": "clue",
             "useJapanese": false
           }
         ]
       ],
       "choices": [
-        "（指などで）軽くたたく",
-        "握る",
-        "引く",
-        "投げる"
+        "こっそりと、密かに",
+        "公然と",
+        "明るく",
+        "一緒に"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「with one finger」「touched the same spot lightly」「several times」が手がかりです。画面を指で軽く繰り返し触れているので、tapは「（指などで）軽くたたく」だと推測できます。",
+      "inferenceExplanation": "「prepared a birthday gift」「hid the box」「She knew nothing about the plan」が手がかりです。箱を隠し、先生に知られないようにしているので、secretlyは「こっそりと、密かに」だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 3,
@@ -1226,29 +906,315 @@
       },
       "candidateSenses": [
         {
-          "sense": "（指などで）軽くたたく",
-          "pos": "verb"
-        },
-        {
-          "sense": "蛇口",
-          "pos": "noun"
+          "sense": "こっそりと、密かに",
+          "pos": "adverb"
         }
       ],
       "eligibleSenses": [
         {
-          "sense": "（指などで）軽くたたく",
-          "pos": "verb"
+          "sense": "こっそりと、密かに",
+          "pos": "adverb"
         }
       ],
-      "filteredOutSenses": [
-        {
-          "sense": "蛇口",
-          "pos": "noun",
-          "reason": "source-pos-mismatch"
-        }
-      ],
+      "filteredOutSenses": [],
       "senseConfidence": "high",
-      "senseSelectionReason": "The source is a verb and the screen receives a light repeated touch, so the verb sense （指などで）軽くたたく is selected rather than the noun 蛇口.",
+      "senseSelectionReason": "The children hide the gift, speak quietly, and keep the plan unknown to their teacher.",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      }
+    },
+    {
+      "q": 9,
+      "type": "word",
+      "target": "gently",
+      "meaning": "やさしく、穏やかに",
+      "targetSense": "やさしく、穏やかに",
+      "pos": "adverb",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "The nurse gently lifted the sleeping baby.",
+        "She moved slowly and used both hands so that the baby would not wake up.",
+        "The baby continued to sleep."
+      ],
+      "mixedEnglish": [
+        "The nurse gently lifted the sleeping baby.",
+        "She moved slowly and used both hands so that the baby would not wake up.",
+        "The baby continued to sleep."
+      ],
+      "contextClues": [
+        {
+          "text": "sleeping baby",
+          "type": "situation"
+        },
+        {
+          "text": "moved slowly",
+          "type": "behavior"
+        },
+        {
+          "text": "would not wake up",
+          "type": "purpose"
+        }
+      ],
+      "inferencePath": [
+        "sleeping baby",
+        "slow movement",
+        "careful handling",
+        "in a soft and careful way",
+        "targetSense: やさしく、穏やかに",
+        "gently"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The nurse ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "gently",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " lifted the ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "sleeping baby",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "She moved slowly and used both hands so that the baby would not wake up.",
+            "role": "clue",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The baby continued to sleep.",
+            "role": "clue",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "やさしく、穏やかに",
+        "急に",
+        "強く",
+        "汚く"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「sleeping baby」「moved slowly」「would not wake up」が手がかりです。赤ちゃんを起こさないようにゆっくり動かしているので、gentlyは「やさしく、穏やかに」だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 3,
+        "targetProtected": true,
+        "cluesProtected": true
+      },
+      "manualReview": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        }
+      },
+      "approval": {
+        "status": "approved"
+      },
+      "candidateSenses": [
+        {
+          "sense": "やさしく、穏やかに",
+          "pos": "adverb"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "やさしく、穏やかに",
+          "pos": "adverb"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseSelectionReason": "The nurse moves slowly and carefully so the sleeping baby will not wake.",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      }
+    },
+    {
+      "q": 9,
+      "type": "word",
+      "target": "repeatedly",
+      "meaning": "繰り返し、何度も",
+      "targetSense": "繰り返し、何度も",
+      "pos": "adverb",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "The alarm repeatedly rang during the night.",
+        "It stopped for a minute and then made the same loud sound again.",
+        "Finally, Dad replaced the battery."
+      ],
+      "mixedEnglish": [
+        "The alarm repeatedly rang during the night.",
+        "It stopped for a minute and then made the same loud sound again.",
+        "Finally, Dad replaced the battery."
+      ],
+      "contextClues": [
+        {
+          "text": "during the night",
+          "type": "situation"
+        },
+        {
+          "text": "again",
+          "type": "repetition"
+        },
+        {
+          "text": "replaced the battery",
+          "type": "result"
+        }
+      ],
+      "inferencePath": [
+        "alarm",
+        "same sound",
+        "stopped and started again",
+        "many times",
+        "targetSense: 繰り返し、何度も",
+        "repeatedly"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The alarm ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "repeatedly",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " rang ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "during the night",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "It stopped for a minute and then made the same loud sound again.",
+            "role": "clue",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Finally, Dad replaced the battery.",
+            "role": "clue",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "繰り返し、何度も",
+        "一度だけ",
+        "まれに",
+        "すぐに"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「during the night」「again」「replaced the battery」が手がかりです。同じ音が止まってはまた鳴り、電池を交換しているので、repeatedlyは「繰り返し、何度も」だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 3,
+        "targetProtected": true,
+        "cluesProtected": true
+      },
+      "manualReview": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        }
+      },
+      "approval": {
+        "status": "approved"
+      },
+      "candidateSenses": [
+        {
+          "sense": "繰り返し、何度も",
+          "pos": "adverb"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "繰り返し、何度も",
+          "pos": "adverb"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseSelectionReason": "The alarm stops and makes the same sound again during the night, so the repeated-action sense is direct.",
       "senseValidation": {
         "status": "pass",
         "checks": [
