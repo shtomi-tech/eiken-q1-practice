@@ -8,7 +8,11 @@ const ROOT = path.resolve(__dirname, "..");
 const readJson = (file) => JSON.parse(fs.readFileSync(path.join(ROOT, file), "utf8"));
 const contextData = readJson("data/context_2026-1.json");
 const vocabData = readJson("data/vocab_2026-1.json");
-const PILOT_TARGETS = ["bride", "lawyer", "warrior", "surgeon"];
+const PILOT_GROUPS = {
+  1: ["bride", "lawyer", "warrior", "surgeon"],
+  2: ["globe", "branch", "scale", "trail"],
+};
+const PILOT_TARGETS = Object.values(PILOT_GROUPS).flat();
 const JAPANESE = /[\u3040-\u30ff\u3400-\u9fff]/;
 const POS_MAP = {
   "名詞": "noun",
@@ -22,6 +26,9 @@ const MANUAL_REVIEW_REQUIRED = [
   "direct definition absence",
   "synonym leakage absence",
   "single coherent scene",
+  "sense is pedagogically appropriate",
+  "targetSense is uniquely supported",
+  "other known senses are excluded",
 ];
 
 function escapeRegExp(value) {
@@ -49,14 +56,23 @@ function segmentProjection(segments, useJapanese) {
   }).join(""));
 }
 
-function validateItem(target) {
+function validateItem(target, expectedQ) {
   const vocab = vocabularyItem(target);
   const item = contextItem(target);
   assert.ok(vocab, `${target}: vocabulary item is missing`);
   assert.ok(item, `${target}: context item is missing`);
-  assert.equal(item.q, 1, `${target}: pilot must remain in q=1`);
+  assert.equal(item.q, expectedQ, `${target}: item is in the wrong pilot question`);
   assert.equal(item.meaning, vocab.meaning, `${target}: meaning must match vocabulary data`);
   assert.equal(item.pos, POS_MAP[vocab.pos], `${target}: POS must match vocabulary data`);
+  if (expectedQ === 2) {
+    assert.ok(typeof item.targetSense === "string" && item.targetSense.trim(),
+      `${target}: q=2 targetSense is required`);
+    assert.notEqual(item.targetSense, item.meaning, `${target}: targetSense must identify a narrower sense`);
+    assert.ok(item.meaning.includes(item.targetSense), `${target}: targetSense must be included in vocabulary meaning`);
+  } else {
+    assert.equal(item.targetSense, undefined, `${target}: q=1 golden sample should keep the legacy sense shape`);
+  }
+  const correctSense = item.targetSense || item.meaning;
   assert.ok(Array.isArray(item.fullEnglish) && item.fullEnglish.length >= 2 && item.fullEnglish.length <= 3,
     `${target}: fullEnglish must contain 2-3 sentences`);
   const fullStory = item.fullEnglish.join(" ");
@@ -105,10 +121,19 @@ function validateItem(target) {
 
   assert.ok(Array.isArray(item.choices) && item.choices.length === 4, `${target}: exactly four choices are required`);
   assert.equal(new Set(item.choices).size, 4, `${target}: choices must be unique`);
-  assert.equal(item.choices.filter((choice) => choice === item.meaning).length, 1,
-    `${target}: correct meaning must appear exactly once in choices`);
-  assert.equal(item.choices[item.answerIndex], item.meaning, `${target}: answerIndex must point to the meaning`);
+  assert.equal(item.choices.filter((choice) => choice === correctSense).length, 1,
+    `${target}: correct target sense must appear exactly once in choices`);
+  assert.equal(item.choices[item.answerIndex], correctSense, `${target}: answerIndex must point to targetSense`);
+  if (expectedQ === 2) {
+    const knownSenses = item.meaning.split(/[；;]/).flatMap((part) => part.split("、"))
+      .map((sense) => sense.trim()).filter(Boolean);
+    const otherSenses = knownSenses.filter((sense) => sense !== item.targetSense);
+    assert.ok(item.choices.every((choice) => !otherSenses.includes(choice)),
+      `${target}: choices must not use another known sense as a distractor`);
+  }
   assert.ok(item.inferenceExplanation, `${target}: inferenceExplanation is required`);
+  assert.ok(item.inferenceExplanation.includes(correctSense),
+    `${target}: inferenceExplanation must identify targetSense`);
   for (const clue of item.contextClues) {
     assert.ok(item.inferenceExplanation.toLowerCase().includes(clue.text.toLowerCase()),
       `${target}: explanation must refer to clue: ${clue.text}`);
@@ -126,11 +151,14 @@ function validateItem(target) {
 }
 
 assert.equal(contextData.meta?.count, 68, "context dataset count must remain 68");
-const pilot = PILOT_TARGETS.map(validateItem);
+const targetQuestion = new Map(Object.entries(PILOT_GROUPS).flatMap(([q, targets]) => targets.map((target) => [target, Number(q)])));
+const pilot = PILOT_TARGETS.map((target) => validateItem(target, targetQuestion.get(target)));
 assert.deepEqual(pilot.map(({ item }) => item.target), PILOT_TARGETS, "pilot target order must be stable");
 
-console.log(`context pilot validator: OK (${PILOT_TARGETS.length} q=1 items)`);
+console.log(`context pilot validator: OK (${PILOT_TARGETS.length} items: q=1 golden sample + q=2 pilot)`);
 console.log(`manual review required: ${MANUAL_REVIEW_REQUIRED.join(", ")}`);
 for (const { item } of pilot) {
-  console.log(`\nTARGET: ${item.target}\nFULL ENGLISH:\n${item.fullEnglish.map((line) => `- ${line}`).join("\n")}\nMIXED:\n${item.mixedEnglish.map((line) => `- ${line}`).join("\n")}\nCLUES:\n${item.contextClues.map((clue) => `- ${clue.type}: ${clue.text}`).join("\n")}\nCHOICES:\n${item.choices.map((choice, index) => `${String.fromCharCode(65 + index)}. ${choice}`).join("\n")}\nANSWER: ${item.choices[item.answerIndex]}\nEXPLANATION: ${item.inferenceExplanation}\nJAPANESE SUPPORT: ${item.segments.flat().filter((segment) => segment.useJapanese).length} segment(s)\nSTRUCTURAL VALIDATION: PASS\nMANUAL REVIEW: ${item.manualReview.status}`);
+  const otherSenses = item.meaning.split(/[；;]/).flatMap((part) => part.split("、"))
+    .map((sense) => sense.trim()).filter((sense) => sense && sense !== (item.targetSense || item.meaning));
+  console.log(`\nTARGET: ${item.target}\nFULL MEANING: ${item.meaning}\nTARGET SENSE: ${item.targetSense || item.meaning}\nOTHER SENSES: ${otherSenses.length ? otherSenses.join(" / ") : "none"}\nFULL ENGLISH:\n${item.fullEnglish.map((line) => `- ${line}`).join("\n")}\nMIXED:\n${item.mixedEnglish.map((line) => `- ${line}`).join("\n")}\nCLUES:\n${item.contextClues.map((clue) => `- ${clue.type}: ${clue.text}`).join("\n")}\nCHOICES:\n${item.choices.map((choice, index) => `${String.fromCharCode(65 + index)}. ${choice}`).join("\n")}\nANSWER: ${item.choices[item.answerIndex]}\nEXPLANATION: ${item.inferenceExplanation}\nJAPANESE SUPPORT: ${item.segments.flat().filter((segment) => segment.useJapanese).length} segment(s)\nSTRUCTURAL VALIDATION: PASS\nMANUAL REVIEW: ${item.manualReview.status}`);
 }

@@ -9,6 +9,7 @@ const setLearnItem = extractFunctionBody(js, "setLearnItem");
 const advanceLearnFromFlash = extractFunctionBody(js, "advanceLearnFromFlash");
 const renderContext = extractFunctionBody(js, "renderContext");
 const contextChoices = extractFunctionBody(js, "contextMeaningChoices");
+const contextMeaning = extractFunctionBody(js, "contextMeaningOf");
 const renderFlash = extractFunctionBody(js, "renderFlash");
 const renderCheck = extractFunctionBody(js, "renderCheck");
 const renderDone = extractFunctionBody(js, "renderDone");
@@ -31,6 +32,8 @@ assert.match(renderContext, /item\.mixedEnglish/, "Contextは教材側のMixed C
 assert.match(renderContext, /item\.inferenceExplanation/, "Contextは教材側の推論説明を表示できる必要があります");
 assert.match(contextChoices, /item\.choices/, "Contextは教材側のtarget専用4択を利用できる必要があります");
 assert.match(contextChoices, /suppliedChoices\.length === 4/, "Context専用4択は4件そろった場合だけ優先する必要があります");
+assert.match(contextMeaning, /context\.targetSense/, "Contextは新schemaのtargetSenseを優先する必要があります");
+assert.match(contextMeaning, /learningMeaningOf\(item\)/, "旧Context itemはVocabulary meaningへfallbackする必要があります");
 assert.match(renderContext, /この単語を覚える →/, "Context回答後は同じ語を覚える導線が必要です");
 assert.doesNotMatch(renderContext, /meaningCorrect\s*[+\-]=|meaningCorrect\s*\+\+/, "Contextの正誤をMeaning Checkの成績へ混ぜてはいけません");
 

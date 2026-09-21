@@ -3240,6 +3240,7 @@ function contextVocabularyItem(context, itemHint = null) {
 }
 
 function contextMeaningOf(context, itemHint = null) {
+  if (context?.targetSense) return String(context.targetSense);
   const item = contextVocabularyItem(context, itemHint);
   return item ? learningMeaningOf(item) : String(context?.meaning || "");
 }
