@@ -532,34 +532,15 @@ function renderContext(body) {
     });
     card.appendChild(choiceWrap);
   } else {
-    const clueList = el("ul", { class: "contextClueList" });
-    item.contextClues.forEach((clue) => {
-      clueList.appendChild(el("li", {},
-        el("span", { class: "contextClueType" }, clue.type),
-        el("span", {}, clue.text),
-      ));
-    });
     card.appendChild(el("div", {
       class: `feedback contextResult ${isLearn ? "contextNeutral" : (session.contextCorrect ? "ok" : "ng")}`,
       role: "status",
       "aria-live": "polite",
     },
       el("h3", {}, session.contextCorrect ? "正解！" : "おしい！"),
-      el("p", {}, `あなたの選択：${session.contextPicked}`),
-      !session.contextCorrect ? el("p", { class: "trans" }, `正しい意味：${correctMeaning}`) : null,
+      el("p", {}, `正しい意味：${correctMeaning}`),
+      !session.contextCorrect ? el("p", { class: "trans" }, `あなたの選択：${session.contextPicked}`) : null,
     ));
-    const answer = el("div", { class: "contextAnswer" },
-      el("p", { class: "label" }, "意味"),
-      el("p", { class: "contextMeaning" }, correctMeaning),
-      el("p", { class: "label" }, "手がかり"),
-      clueList,
-      el("p", { class: "label" }, "推測の道筋"),
-      el("p", { class: "contextInferencePath" }, item.inferencePath.join(" → ")),
-      item.inferenceExplanation
-        ? el("p", { class: "trans contextInferenceExplanation" }, item.inferenceExplanation)
-        : null,
-    );
-    card.appendChild(answer);
     card.appendChild(el("div", { class: "actions contextActions" },
       el("button", {
         class: "cta",

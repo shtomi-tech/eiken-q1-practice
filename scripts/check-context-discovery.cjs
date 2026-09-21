@@ -77,6 +77,7 @@ assert.match(sessionSource, /function startContextPractice\(\)/, "文脈推測�
 assert.match(sessionSource, /function startContextLearning\(/, "文脈推測から暗記カードへ進む試用モードが必要です");
 assert.match(extractFunctionBody(sessionSource, "startLearn"), /contextDiscoveryEnabled\(\)/, "通常学習は文脈推測モードを参照する必要があります");
 assert.match(sessionSource, /function renderContext\(body\)/, "文脈推測画面の描画処理が必要です");
+const renderContextBody = extractFunctionBody(sessionSource, "renderContext");
 assert.match(sessionSource, /class: "contextSentenceText"[^\n]+contextTextWithTarget\(sentence, item\.target\)/,
   "英文断片は語順を保つ単一inlineコンテナ内へ描画してください");
 assert.match(extractFunctionBody(sessionSource, "contextTextWithTarget"), /one's\|my\|your\|his\|her\|our\|their/,
@@ -86,7 +87,13 @@ assert.match(stylesSource, /\.contextSentenceText\s*\{[^}]*flex:\s*1 1 auto;[^}]
 assert.match(sessionSource, /function contextMeaningChoices\(item/, "文脈推測の4択生成処理が必要です");
 assert.match(sessionSource, /contextChoiceBtn/, "文脈推測の意味4択ボタンが必要です");
 assert.match(sessionSource, /contextPicked/, "文脈推測の選択結果を保持する必要があります");
-assert.match(sessionSource, /contextClues/, "文脈の手がかり表示が必要です");
+assert.match(renderContextBody, /正しい意味：\$\{correctMeaning\}/,
+  "回答後に正しい意味を表示する必要があります");
+assert.match(renderContextBody, /この単語を覚える →/,
+  "回答後に暗記カードへ進むボタンが必要です");
+assert.doesNotMatch(renderContextBody,
+  /contextClueList|contextAnswer|item\.inferencePath|item\.inferenceExplanation/,
+  "回答後に意味の詳細解説を表示してはいけません");
 assert.match(sessionSource, /contextMeaningOf\(context, itemHint/, "文脈の意味は暗記カードの意味を参照する必要があります");
 assert.doesNotMatch(sessionSource, /function enterContextOrCheck\(/, "意味復習専用の旧Context統合helperを残してはいけません");
 assert.ok(!sessionSource.includes("contextGuess") && !sessionSource.includes("推測をメモ"),

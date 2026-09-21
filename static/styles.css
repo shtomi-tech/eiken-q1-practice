@@ -780,12 +780,6 @@ h2 {
   color: var(--parchment);
   padding: 0 .12em;
 }
-.contextAnswer {
-  border-top: 1px solid var(--line);
-  display: block;
-  margin-top: 12px;
-  padding: 16px 18px 0;
-}
 .contextChoiceLabel { margin: 16px 18px 8px; }
 .contextChoices { margin: 0 18px; }
 .contextChoiceBtn { width: 100%; }
@@ -794,47 +788,11 @@ h2 {
   background: var(--surface-soft);
   border-left-color: var(--clay);
 }
-.contextAnswer .label { margin: 14px 0 5px; }
-.contextAnswer .label:first-child { margin-top: 0; }
-.contextMeaning {
-  font-family: var(--serif);
-  font-size: 25px;
-  font-weight: 600;
-  margin: 0;
-}
-.contextClueList {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.contextClueList li {
-  align-items: baseline;
-  border-bottom: 1px solid var(--line);
-  display: flex;
-  gap: 10px;
-  padding: 8px 0;
-}
-.contextClueList li:last-child { border-bottom: 0; }
-.contextClueType {
-  color: var(--muted);
-  flex: 0 0 7.5em;
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: .04em;
-  text-transform: uppercase;
-}
-.contextInferencePath {
-  color: var(--muted);
-  line-height: 1.6;
-  margin: 0;
-}
 .contextActions { margin: 16px 18px 0; }
 .contextActions:last-child { padding-bottom: 18px; }
 
 @media (max-width: 600px) {
   .contextSentence { font-size: 18px; }
-  .contextClueList li { display: block; }
-  .contextClueType { display: block; margin-bottom: 3px; }
 }
 
 .meaningWrongReview {
