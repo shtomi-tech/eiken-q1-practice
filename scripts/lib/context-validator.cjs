@@ -8,6 +8,8 @@ const POS_MAP = {
   "副詞": "adverb",
   "副詞句": "adverbial phrase",
   "句動詞": "phrasal verb",
+  "名詞句": "noun phrase",
+  "形容詞句": "adjective phrase",
 };
 
 function normalizeSense(value) {

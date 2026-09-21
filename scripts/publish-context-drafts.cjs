@@ -3,6 +3,7 @@
 const fs = require("node:fs");
 const { assertContextItem } = require("./lib/context-validator.cjs");
 const { assertTargetSense } = require("./lib/context-sense-validator.cjs");
+const { assertLeakagePublishable } = require("./lib/context-leakage-validator.cjs");
 const {
   ROOT,
   parseQs,
@@ -41,6 +42,7 @@ function approvedItems(approved, qs = [3]) {
       if (item.senseConfidence === "low") throw new Error(`${item.target}: low-confidence sense cannot be published`);
       assertTargetSense(item, vocab.get(item.target), { requireEligibleSenses: true });
     }
+    if (item.q >= 14) assertLeakagePublishable(item);
     assertContextItem(item, vocab.get(item.target), { requireTargetSense: true });
   }
   return approved.items;
@@ -54,6 +56,9 @@ function runtimeItem(item) {
     senseConfidence,
     senseSelectionReason,
     senseValidation,
+    leakageValidation,
+    leakageFindings,
+    leakageReview,
     ...runtime
   } = item;
   return runtime;
@@ -122,6 +127,11 @@ function publish({
     blockedTargets: generatedTargets.filter((target) => !approvedTargetSet.has(target)),
     posFilteredItems: items.filter((item) => item.filteredOutSenses?.length).map((item) => item.target),
     lowConfidenceTargets: items.filter((item) => item.senseConfidence === "low").map((item) => item.target),
+    leakagePassTargets: items.filter((item) => item.leakageValidation?.status === "pass").map((item) => item.target),
+    leakageWarnTargets: items.filter((item) => item.leakageValidation?.status === "warn").map((item) => item.target),
+    leakageFailTargets: items.filter((item) => item.leakageValidation?.status === "fail").map((item) => item.target),
+    leakageWarnAcceptedTargets: items.filter((item) => item.leakageValidation?.status === "warn" && item.leakageReview?.status === "accepted").map((item) => item.target),
+    leakageWarnPendingTargets: items.filter((item) => item.leakageValidation?.status === "warn" && item.leakageReview?.status !== "accepted").map((item) => item.target),
     changedTargets,
     unchangedTargets: items.filter((item) => !changedTargets.includes(item.target)).map((item) => item.target),
     changed: nextRaw !== raw,
@@ -145,6 +155,11 @@ if (require.main === module) {
     blockedTargets: result.blockedTargets,
     posFilteredItems: result.posFilteredItems,
     lowConfidenceTargets: result.lowConfidenceTargets,
+    leakagePassTargets: result.leakagePassTargets,
+    leakageWarnTargets: result.leakageWarnTargets,
+    leakageFailTargets: result.leakageFailTargets,
+    leakageWarnAcceptedTargets: result.leakageWarnAcceptedTargets,
+    leakageWarnPendingTargets: result.leakageWarnPendingTargets,
     changedTargets: result.changedTargets,
     unchangedTargets: result.unchangedTargets,
   }));

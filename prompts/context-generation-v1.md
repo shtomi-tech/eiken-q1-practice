@@ -31,6 +31,9 @@ Create a short Context Discovery learning item for an EIKEN learner. The target 
 
 - Do not directly define or translate the target in the context.
 - Do not use a simple synonym that gives away the answer.
+- Do not immediately restate the target with an answer-equivalent paraphrase.
+- Do not expose the Japanese target sense before the learner answers.
+- Prefer observable evidence, behavior, cause, effect, contrast, result, and situation over definitions.
 - Do not Japanese-translate the target or a clue.
 - Do not force a fixed Japanese ratio.
 - Do not use advanced non-clue vocabulary when simpler English works.

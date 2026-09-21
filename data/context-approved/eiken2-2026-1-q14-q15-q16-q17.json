@@ -1,0 +1,2826 @@
+{
+  "schemaVersion": 1,
+  "datasetId": "eiken2-2026-1",
+  "q": [
+    14,
+    15,
+    16,
+    17
+  ],
+  "qs": [
+    14,
+    15,
+    16,
+    17
+  ],
+  "stage": "APPROVED",
+  "items": [
+    {
+      "q": 14,
+      "type": "idiom",
+      "target": "a series of",
+      "meaning": "一連の、ひと続きの",
+      "targetSense": "一連の、ひと続きの",
+      "pos": "noun phrase",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "The doctor ordered a series of tests after the first result looked unusual.",
+        "Each test checked a different part of the body.",
+        "After all of them, she knew what treatment to choose."
+      ],
+      "mixedEnglish": [
+        "The doctor ordered a series of tests after the first result looked unusual.",
+        "Each test checked a different part of the body.",
+        "After all of them, she knew what treatment to choose."
+      ],
+      "contextClues": [
+        {
+          "text": "first result looked unusual",
+          "type": "cause"
+        },
+        {
+          "text": "Each test checked a different part",
+          "type": "example"
+        },
+        {
+          "text": "After all of them",
+          "type": "sequence"
+        }
+      ],
+      "inferencePath": [
+        "first result looked unusual",
+        "Each test checked a different part",
+        "After all of them",
+        "targetSense: 一連の、ひと続きの",
+        "a series of"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The doctor ordered ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "a series of",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " tests after the ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "first result looked unusual",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Each test checked a different part",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " of the body.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "After all of them",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ", she knew what treatment to choose.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "一連の、ひと続きの",
+        "一つだけの",
+        "無関係な",
+        "偶然の"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「first result looked unusual」「Each test checked a different part」「After all of them」が手がかりです。関連する複数の検査を順番に行っているので、a series ofは「一連の、ひと続きの」だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 3,
+        "targetProtected": true,
+        "cluesProtected": true
+      },
+      "manualReview": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        }
+      },
+      "approval": {
+        "status": "approved"
+      },
+      "candidateSenses": [
+        {
+          "sense": "一連の、ひと続きの",
+          "pos": "noun phrase"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "一連の、ひと続きの",
+          "pos": "noun phrase"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseSelectionReason": "Several related medical tests are performed one after another.",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      },
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "leakageReview": {
+        "status": "pass",
+        "reason": "Leakage pre-check found no final leakage."
+      }
+    },
+    {
+      "q": 14,
+      "type": "idiom",
+      "target": "the edge of",
+      "meaning": "〜の端、縁",
+      "targetSense": "〜の端、縁",
+      "pos": "noun phrase",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "A small bird stood on the edge of the roof.",
+        "Its feet were close to the rain gutter as it looked down at the street.",
+        "Then it flew back to a tree."
+      ],
+      "mixedEnglish": [
+        "A small bird stood on the edge of the roof.",
+        "Its feet were close to the rain gutter as it looked down at the street.",
+        "Then it flew back to a tree."
+      ],
+      "contextClues": [
+        {
+          "text": "roof",
+          "type": "location"
+        },
+        {
+          "text": "close to the rain gutter",
+          "type": "position"
+        },
+        {
+          "text": "looked down at the street",
+          "type": "behavior"
+        }
+      ],
+      "inferencePath": [
+        "roof",
+        "close to the rain gutter",
+        "looked down at the street",
+        "targetSense: 〜の端、縁",
+        "the edge of"
+      ],
+      "segments": [
+        [
+          {
+            "en": "A small bird stood on ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "the edge of",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " the ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "roof",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Its feet were ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "close to the rain gutter",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " as it ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "looked down at the street",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Then it flew back to a tree.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "〜の端、縁",
+        "中央",
+        "表面",
+        "内部"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「roof」「close to the rain gutter」「looked down at the street」が手がかりです。鳥が屋根の雨どいに近い場所から下を見ているので、the edge ofは「〜の端、縁」だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 3,
+        "targetProtected": true,
+        "cluesProtected": true
+      },
+      "manualReview": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        }
+      },
+      "approval": {
+        "status": "approved"
+      },
+      "candidateSenses": [
+        {
+          "sense": "〜の端、縁",
+          "pos": "noun phrase"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "〜の端、縁",
+          "pos": "noun phrase"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseSelectionReason": "The bird is near the rain gutter and looks down from the roof boundary.",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      },
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "leakageReview": {
+        "status": "pass",
+        "reason": "Leakage pre-check found no final leakage."
+      }
+    },
+    {
+      "q": 14,
+      "type": "idiom",
+      "target": "a member of",
+      "meaning": "〜の一員、メンバー",
+      "targetSense": "〜の一員、メンバー",
+      "pos": "noun phrase",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "Ken is a member of the school orchestra.",
+        "He plays the violin with twenty other students.",
+        "They practice together every Tuesday."
+      ],
+      "mixedEnglish": [
+        "Ken is a member of the school orchestra.",
+        "He plays the violin with twenty other students.",
+        "They practice together every Tuesday."
+      ],
+      "contextClues": [
+        {
+          "text": "school orchestra",
+          "type": "group"
+        },
+        {
+          "text": "with twenty other students",
+          "type": "category"
+        },
+        {
+          "text": "practice together",
+          "type": "behavior"
+        }
+      ],
+      "inferencePath": [
+        "school orchestra",
+        "with twenty other students",
+        "practice together",
+        "targetSense: 〜の一員、メンバー",
+        "a member of"
+      ],
+      "segments": [
+        [
+          {
+            "en": "Ken is ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "a member of",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " the ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "school orchestra",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "He plays the violin ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "with twenty other students",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "They ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "practice together",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " every Tuesday.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "〜の一員、メンバー",
+        "指導者",
+        "観客",
+        "対戦相手"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「school orchestra」「with twenty other students」「practice together」が手がかりです。Kenが他の生徒と同じ楽団で活動しているので、a member ofは「〜の一員、メンバー」だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 3,
+        "targetProtected": true,
+        "cluesProtected": true
+      },
+      "manualReview": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        }
+      },
+      "approval": {
+        "status": "approved"
+      },
+      "candidateSenses": [
+        {
+          "sense": "〜の一員、メンバー",
+          "pos": "noun phrase"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "〜の一員、メンバー",
+          "pos": "noun phrase"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseSelectionReason": "Ken plays and practices together with the other students in one orchestra.",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      },
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "leakageReview": {
+        "status": "pass",
+        "reason": "Leakage pre-check found no final leakage."
+      }
+    },
+    {
+      "q": 14,
+      "type": "idiom",
+      "target": "the back of",
+      "meaning": "〜の後ろ、裏",
+      "targetSense": "〜の後ろ、裏",
+      "pos": "noun phrase",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "I found my keys at the back of the drawer.",
+        "I had to remove several old letters before I could reach them.",
+        "They had been hidden there for days."
+      ],
+      "mixedEnglish": [
+        "I found my keys at the back of the drawer.",
+        "I had to remove several old letters before I could reach them.",
+        "They had been hidden there for days."
+      ],
+      "contextClues": [
+        {
+          "text": "drawer",
+          "type": "location"
+        },
+        {
+          "text": "remove several old letters before I could reach them",
+          "type": "behavior"
+        },
+        {
+          "text": "hidden there for days",
+          "type": "result"
+        }
+      ],
+      "inferencePath": [
+        "drawer",
+        "remove several old letters before I could reach them",
+        "hidden there for days",
+        "targetSense: 〜の後ろ、裏",
+        "the back of"
+      ],
+      "segments": [
+        [
+          {
+            "en": "I found my keys at ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "the back of",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " the ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "drawer",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "I had to ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "remove several old letters before I could reach them",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "They had been ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "hidden there for days",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "〜の後ろ、裏",
+        "手前",
+        "中央",
+        "外側"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「drawer」「remove several old letters before I could reach them」「hidden there for days」が手がかりです。手前の物を除かなければ届かない位置に鍵があったので、the back ofは「〜の後ろ、裏」だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 3,
+        "targetProtected": true,
+        "cluesProtected": true
+      },
+      "manualReview": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        }
+      },
+      "approval": {
+        "status": "approved"
+      },
+      "candidateSenses": [
+        {
+          "sense": "〜の後ろ、裏",
+          "pos": "noun phrase"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "〜の後ろ、裏",
+          "pos": "noun phrase"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseSelectionReason": "The keys require removing objects in front before they can be reached.",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      },
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "leakageReview": {
+        "status": "pass",
+        "reason": "Leakage pre-check found no final leakage."
+      }
+    },
+    {
+      "q": 15,
+      "type": "idiom",
+      "target": "in other words",
+      "meaning": "言い換えれば、つまり",
+      "targetSense": "言い換えれば、つまり",
+      "pos": "adverbial phrase",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "The store is closed today; in other words, you cannot buy anything there now.",
+        "We will have to come back tomorrow.",
+        "The sign on the door gives the same message."
+      ],
+      "mixedEnglish": [
+        "The store is closed today; in other words, you cannot buy anything there now.",
+        "We will have to come back tomorrow.",
+        "The sign on the door gives the same message."
+      ],
+      "contextClues": [
+        {
+          "text": "store is closed today",
+          "type": "situation"
+        },
+        {
+          "text": "you cannot buy anything there now",
+          "type": "restatement"
+        },
+        {
+          "text": "same message",
+          "type": "confirmation"
+        }
+      ],
+      "inferencePath": [
+        "store is closed today",
+        "you cannot buy anything there now",
+        "same message",
+        "targetSense: 言い換えれば、つまり",
+        "in other words"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "store is closed today",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": "; ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "in other words",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": ", ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "you cannot buy anything there now",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "We will have to come back tomorrow.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The sign on the door gives the ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "same message",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "言い換えれば、つまり",
+        "たとえば",
+        "それにもかかわらず",
+        "結局"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「store is closed today」「you cannot buy anything there now」「same message」が手がかりです。二つの文が同じ内容を別の表現で伝えているので、in other wordsは「言い換えれば、つまり」だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 3,
+        "targetProtected": true,
+        "cluesProtected": true
+      },
+      "manualReview": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        }
+      },
+      "approval": {
+        "status": "approved"
+      },
+      "candidateSenses": [
+        {
+          "sense": "言い換えれば、つまり",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "言い換えれば、つまり",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseSelectionReason": "The second statement gives the practical meaning of the first statement.",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      },
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "leakageReview": {
+        "status": "pass",
+        "reason": "Leakage pre-check found no final leakage."
+      }
+    },
+    {
+      "q": 15,
+      "type": "idiom",
+      "target": "in the beginning",
+      "meaning": "最初は、初めのうちは",
+      "targetSense": "最初は、初めのうちは",
+      "pos": "adverbial phrase",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "In the beginning, the puppy was afraid of the stairs.",
+        "It stayed on the floor and watched the other dogs.",
+        "After a week, it started to climb them."
+      ],
+      "mixedEnglish": [
+        "In the beginning, the puppy was afraid of the stairs.",
+        "It stayed on the floor and watched the other dogs.",
+        "After a week, it started to climb them."
+      ],
+      "contextClues": [
+        {
+          "text": "was afraid of the stairs",
+          "type": "initial situation"
+        },
+        {
+          "text": "stayed on the floor",
+          "type": "behavior"
+        },
+        {
+          "text": "After a week",
+          "type": "time"
+        }
+      ],
+      "inferencePath": [
+        "was afraid of the stairs",
+        "stayed on the floor",
+        "After a week",
+        "targetSense: 最初は、初めのうちは",
+        "in the beginning"
+      ],
+      "segments": [
+        [
+          {
+            "en": "In the beginning",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": ", the puppy ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "was afraid of the stairs",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "It ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "stayed on the floor",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " and watched the other dogs.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "After a week",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ", it started to climb them.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "最初は、初めのうちは",
+        "最後には",
+        "同時に",
+        "突然"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「was afraid of the stairs」「stayed on the floor」「After a week」が手がかりです。最初の状態と一週間後の変化を比べているので、in the beginningは「最初は、初めのうちは」だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 3,
+        "targetProtected": true,
+        "cluesProtected": true
+      },
+      "manualReview": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        }
+      },
+      "approval": {
+        "status": "approved"
+      },
+      "candidateSenses": [
+        {
+          "sense": "最初は、初めのうちは",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "最初は、初めのうちは",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseSelectionReason": "The puppy's early fear is contrasted with its behavior after a week.",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      },
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "leakageReview": {
+        "status": "pass",
+        "reason": "Leakage pre-check found no final leakage."
+      }
+    },
+    {
+      "q": 15,
+      "type": "idiom",
+      "target": "back and forth",
+      "meaning": "行ったり来たり、前後に",
+      "targetSense": "行ったり来たり、前後に",
+      "pos": "adverbial phrase",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "The tennis players ran back and forth across the court.",
+        "Each one hit the ball to the other side, then moved back again.",
+        "The long game made them tired."
+      ],
+      "mixedEnglish": [
+        "The tennis players ran back and forth across the court.",
+        "Each one hit the ball to the other side, then moved back again.",
+        "The long game made them tired."
+      ],
+      "contextClues": [
+        {
+          "text": "across the court",
+          "type": "location"
+        },
+        {
+          "text": "to the other side, then moved back again",
+          "type": "movement"
+        },
+        {
+          "text": "long game",
+          "type": "situation"
+        }
+      ],
+      "inferencePath": [
+        "across the court",
+        "to the other side, then moved back again",
+        "long game",
+        "targetSense: 行ったり来たり、前後に",
+        "back and forth"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The tennis players ran ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "back and forth",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "across the court",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Each one hit the ball ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "to the other side, then moved back again",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "long game",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " made them tired.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "行ったり来たり、前後に",
+        "一方向に",
+        "その場で",
+        "上下に"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「across the court」「to the other side, then moved back again」「long game」が手がかりです。選手がコートの両側を繰り返し移動しているので、back and forthは「行ったり来たり、前後に」だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 3,
+        "targetProtected": true,
+        "cluesProtected": true
+      },
+      "manualReview": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        }
+      },
+      "approval": {
+        "status": "approved"
+      },
+      "candidateSenses": [
+        {
+          "sense": "行ったり来たり、前後に",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "行ったり来たり、前後に",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseSelectionReason": "The players repeatedly move between the two sides of the court.",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      },
+      "leakageValidation": {
+        "status": "warn",
+        "findings": [
+          {
+            "type": "PARAPHRASE_LEAKAGE",
+            "text": "to the other side, then moved back again",
+            "severity": "warning",
+            "reason": "This expression may be answer-equivalent to back and forth."
+          }
+        ]
+      },
+      "leakageReview": {
+        "status": "accepted",
+        "reason": "The movement description is a concrete tennis action, not an explicit definition."
+      }
+    },
+    {
+      "q": 15,
+      "type": "idiom",
+      "target": "on the contrary",
+      "meaning": "それどころか、（前言を否定して）逆に",
+      "targetSense": "それどころか、（前言を否定して）逆に",
+      "pos": "adverbial phrase",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "I thought the test would be easy.",
+        "On the contrary, the last question was very difficult, and many students needed extra time.",
+        "My first idea was wrong."
+      ],
+      "mixedEnglish": [
+        "I thought the test would be easy.",
+        "On the contrary, the last question was very difficult, and many students needed extra time.",
+        "My first idea was wrong."
+      ],
+      "contextClues": [
+        {
+          "text": "thought the test would be easy",
+          "type": "expectation"
+        },
+        {
+          "text": "very difficult",
+          "type": "contrast"
+        },
+        {
+          "text": "My first idea was wrong",
+          "type": "confirmation"
+        }
+      ],
+      "inferencePath": [
+        "thought the test would be easy",
+        "very difficult",
+        "My first idea was wrong",
+        "targetSense: それどころか、（前言を否定して）逆に",
+        "on the contrary"
+      ],
+      "segments": [
+        [
+          {
+            "en": "I ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "thought the test would be easy",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "On the contrary",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": ", the last question was ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "very difficult",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ", and many students needed extra time.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "My first idea was wrong",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "それどころか、（前言を否定して）逆に",
+        "同様に",
+        "その結果",
+        "たとえば"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「thought the test would be easy」「very difficult」「My first idea was wrong」が手がかりです。最初の予想とは反対の結果になったので、on the contraryは「それどころか、（前言を否定して）逆に」だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 3,
+        "targetProtected": true,
+        "cluesProtected": true
+      },
+      "manualReview": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        }
+      },
+      "approval": {
+        "status": "approved"
+      },
+      "candidateSenses": [
+        {
+          "sense": "それどころか、（前言を否定して）逆に",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "それどころか、（前言を否定して）逆に",
+          "pos": "adverbial phrase"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseSelectionReason": "The difficult result directly opposes the expectation that the test would be easy.",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      },
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "leakageReview": {
+        "status": "pass",
+        "reason": "Leakage pre-check found no final leakage."
+      }
+    },
+    {
+      "q": 16,
+      "type": "idiom",
+      "target": "distinct from",
+      "meaning": "〜とは異なる、別個の",
+      "targetSense": "〜とは異なる、別個の",
+      "pos": "adjective phrase",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "The two birds look similar, but the red mark makes one distinct from the other.",
+        "Its color is easy to see in the sunlight.",
+        "The guide told us that they are different species."
+      ],
+      "mixedEnglish": [
+        "The two birds look similar, but the red mark makes one distinct from the other.",
+        "Its color is easy to see in the sunlight.",
+        "The guide told us that they are different species."
+      ],
+      "contextClues": [
+        {
+          "text": "look similar",
+          "type": "contrast"
+        },
+        {
+          "text": "red mark",
+          "type": "example"
+        },
+        {
+          "text": "different species",
+          "type": "result"
+        }
+      ],
+      "inferencePath": [
+        "look similar",
+        "red mark",
+        "different species",
+        "targetSense: 〜とは異なる、別個の",
+        "distinct from"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The two birds ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "look similar",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ", but the ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "red mark",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " makes one ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "distinct from",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " the other.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Its color is easy to see in the sunlight.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The guide told us that they are ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "different species",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "〜とは異なる、別個の",
+        "同一の",
+        "含まれる",
+        "近接した"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「look similar」「red mark」「different species」が手がかりです。似ている二羽を印と種類の違いで区別しているので、distinct fromは「〜とは異なる、別個の」だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 3,
+        "targetProtected": true,
+        "cluesProtected": true
+      },
+      "manualReview": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        }
+      },
+      "approval": {
+        "status": "approved"
+      },
+      "candidateSenses": [
+        {
+          "sense": "〜とは異なる、別個の",
+          "pos": "adjective phrase"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "〜とは異なる、別個の",
+          "pos": "adjective phrase"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseSelectionReason": "A visible mark separates one bird from another despite their similar appearance.",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      },
+      "leakageValidation": {
+        "status": "warn",
+        "findings": [
+          {
+            "type": "SYNONYM_LEAKAGE",
+            "text": "different species",
+            "severity": "warning",
+            "reason": "This expression may be answer-equivalent to distinct from."
+          }
+        ]
+      },
+      "leakageReview": {
+        "status": "accepted",
+        "reason": "Different species is a confirmation clue supported by the visible red mark."
+      }
+    },
+    {
+      "q": 16,
+      "type": "idiom",
+      "target": "composed of",
+      "meaning": "〜から構成されている",
+      "targetSense": "〜から構成されている",
+      "pos": "adjective phrase",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "The team is composed of five students from different classes.",
+        "They meet every Friday and share the work.",
+        "Together, they prepare one presentation."
+      ],
+      "mixedEnglish": [
+        "The team is composed of five students from different classes.",
+        "They meet every Friday and share the work.",
+        "Together, they prepare one presentation."
+      ],
+      "contextClues": [
+        {
+          "text": "five students",
+          "type": "quantity"
+        },
+        {
+          "text": "from different classes",
+          "type": "category"
+        },
+        {
+          "text": "share the work",
+          "type": "behavior"
+        }
+      ],
+      "inferencePath": [
+        "five students",
+        "from different classes",
+        "share the work",
+        "targetSense: 〜から構成されている",
+        "composed of"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The team is ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "composed of",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "five students",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "from different classes",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "They meet every Friday and ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "share the work",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Together, they prepare one presentation.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "〜から構成されている",
+        "分離されている",
+        "覆われている",
+        "隠されている"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「five students」「from different classes」「share the work」が手がかりです。異なるクラスの五人が一つのチームを作っているので、composed ofは「〜から構成されている」だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 3,
+        "targetProtected": true,
+        "cluesProtected": true
+      },
+      "manualReview": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        }
+      },
+      "approval": {
+        "status": "approved"
+      },
+      "candidateSenses": [
+        {
+          "sense": "〜から構成されている",
+          "pos": "adjective phrase"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "〜から構成されている",
+          "pos": "adjective phrase"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseSelectionReason": "Five students from different classes form one working team.",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      },
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "leakageReview": {
+        "status": "pass",
+        "reason": "Leakage pre-check found no final leakage."
+      }
+    },
+    {
+      "q": 16,
+      "type": "idiom",
+      "target": "absent from",
+      "meaning": "〜を欠席して、〜にいない",
+      "targetSense": "〜を欠席して、〜にいない",
+      "pos": "adjective phrase",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "Ken was absent from school because he had a high fever.",
+        "His desk was empty, and his name was marked on the list.",
+        "He returned after three days."
+      ],
+      "mixedEnglish": [
+        "Ken was absent from school because he had a high fever.",
+        "His desk was empty, and his name was marked on the list.",
+        "He returned after three days."
+      ],
+      "contextClues": [
+        {
+          "text": "high fever",
+          "type": "cause"
+        },
+        {
+          "text": "desk was empty",
+          "type": "result"
+        },
+        {
+          "text": "returned after three days",
+          "type": "contrast"
+        }
+      ],
+      "inferencePath": [
+        "high fever",
+        "desk was empty",
+        "returned after three days",
+        "targetSense: 〜を欠席して、〜にいない",
+        "absent from"
+      ],
+      "segments": [
+        [
+          {
+            "en": "Ken was ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "absent from",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " school because he had a ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "high fever",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "His ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "desk was empty",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ", and his name was marked on the list.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "He ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "returned after three days",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "〜を欠席して、〜にいない",
+        "参加して",
+        "早退して",
+        "到着して"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「high fever」「desk was empty」「returned after three days」が手がかりです。病気で机が空き、数日後に戻ったので、absent fromは「〜を欠席して、〜にいない」だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 3,
+        "targetProtected": true,
+        "cluesProtected": true
+      },
+      "manualReview": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        }
+      },
+      "approval": {
+        "status": "approved"
+      },
+      "candidateSenses": [
+        {
+          "sense": "〜を欠席して、〜にいない",
+          "pos": "adjective phrase"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "〜を欠席して、〜にいない",
+          "pos": "adjective phrase"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseSelectionReason": "Illness causes an empty desk and a later return to school.",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      },
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "leakageReview": {
+        "status": "pass",
+        "reason": "Leakage pre-check found no final leakage."
+      }
+    },
+    {
+      "q": 16,
+      "type": "idiom",
+      "target": "threatening to",
+      "meaning": "〜すると脅して／〜しそうで",
+      "targetSense": "〜しそうで",
+      "pos": "adjective phrase",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "The dark clouds were threatening to bring heavy rain.",
+        "People hurried home and closed their windows.",
+        "Soon, water began to fall."
+      ],
+      "mixedEnglish": [
+        "The dark clouds were threatening to bring heavy rain.",
+        "People hurried home and closed their windows.",
+        "Soon, water began to fall."
+      ],
+      "contextClues": [
+        {
+          "text": "dark clouds",
+          "type": "cause"
+        },
+        {
+          "text": "hurried home",
+          "type": "behavior"
+        },
+        {
+          "text": "water began to fall",
+          "type": "result"
+        }
+      ],
+      "inferencePath": [
+        "dark clouds",
+        "hurried home",
+        "water began to fall",
+        "targetSense: 〜しそうで",
+        "threatening to"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "dark clouds",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " were ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "threatening to",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " bring heavy rain.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "People ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "hurried home",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " and closed their windows.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Soon, ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "water began to fall",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "〜しそうで",
+        "完了して",
+        "避けて",
+        "忘れて"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「dark clouds」「hurried home」「water began to fall」が手がかりです。暗い雲を見て人々が雨に備え、実際に降り始めたので、threatening toは「〜しそうで」だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 3,
+        "targetProtected": true,
+        "cluesProtected": true
+      },
+      "manualReview": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        }
+      },
+      "approval": {
+        "status": "approved"
+      },
+      "candidateSenses": [
+        {
+          "sense": "〜すると脅して",
+          "pos": "adjective phrase"
+        },
+        {
+          "sense": "〜しそうで",
+          "pos": "adjective phrase"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "〜すると脅して",
+          "pos": "adjective phrase"
+        },
+        {
+          "sense": "〜しそうで",
+          "pos": "adjective phrase"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseSelectionReason": "Dark clouds and people's preparations show that heavy rain appears likely soon.",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      },
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "leakageReview": {
+        "status": "pass",
+        "reason": "Leakage pre-check found no final leakage."
+      }
+    },
+    {
+      "q": 17,
+      "type": "idiom",
+      "target": "lay off",
+      "meaning": "（従業員を）一時解雇する、レイオフする",
+      "targetSense": "（従業員を）一時解雇する、レイオフする",
+      "pos": "phrasal verb",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "The factory lost many orders, so it had to lay off twenty workers.",
+        "The workers stopped coming to the factory, although the company hoped to hire them again later.",
+        "They received help finding new jobs."
+      ],
+      "mixedEnglish": [
+        "The factory lost many orders, so it had to lay off twenty workers.",
+        "The workers stopped coming to the factory, although the company hoped to hire them again later.",
+        "They received help finding new jobs."
+      ],
+      "contextClues": [
+        {
+          "text": "lost many orders",
+          "type": "cause"
+        },
+        {
+          "text": "workers stopped coming to the factory",
+          "type": "result"
+        },
+        {
+          "text": "finding new jobs",
+          "type": "situation"
+        }
+      ],
+      "inferencePath": [
+        "lost many orders",
+        "workers stopped coming to the factory",
+        "finding new jobs",
+        "targetSense: （従業員を）一時解雇する、レイオフする",
+        "lay off"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The factory ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "lost many orders",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ", so it had to ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "lay off",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " twenty workers.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "workers stopped coming to the factory",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ", although the company hoped to hire them again later.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "They received help ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "finding new jobs",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "（従業員を）一時解雇する、レイオフする",
+        "昇進させる",
+        "採用する",
+        "訓練する"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「lost many orders」「workers stopped coming to the factory」「finding new jobs」が手がかりです。注文減少で従業員が仕事を離れ、新しい職を探しているので、lay offは「（従業員を）一時解雇する、レイオフする」だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 3,
+        "targetProtected": true,
+        "cluesProtected": true
+      },
+      "manualReview": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        }
+      },
+      "approval": {
+        "status": "approved"
+      },
+      "candidateSenses": [
+        {
+          "sense": "（従業員を）一時解雇する、レイオフする",
+          "pos": "phrasal verb"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "（従業員を）一時解雇する、レイオフする",
+          "pos": "phrasal verb"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseSelectionReason": "Lost orders cause workers to stop coming, while possible rehiring shows the employment sense.",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      },
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "leakageReview": {
+        "status": "pass",
+        "reason": "Leakage pre-check found no final leakage."
+      }
+    },
+    {
+      "q": 17,
+      "type": "idiom",
+      "target": "flip over",
+      "meaning": "ひっくり返る、裏返す",
+      "targetSense": "ひっくり返る、裏返す",
+      "pos": "phrasal verb",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "Please flip over the card to see the picture on the other side.",
+        "First, only the blank back was visible.",
+        "After you turn it around, a red bird appears."
+      ],
+      "mixedEnglish": [
+        "Please flip over the card to see the picture on the other side.",
+        "First, only the blank back was visible.",
+        "After you turn it around, a red bird appears."
+      ],
+      "contextClues": [
+        {
+          "text": "card",
+          "type": "object"
+        },
+        {
+          "text": "other side",
+          "type": "contrast"
+        },
+        {
+          "text": "turn it around",
+          "type": "restatement"
+        }
+      ],
+      "inferencePath": [
+        "card",
+        "other side",
+        "turn it around",
+        "targetSense: ひっくり返る、裏返す",
+        "flip over"
+      ],
+      "segments": [
+        [
+          {
+            "en": "Please ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "flip over",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " the ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "card",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " to see the picture on the ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "other side",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "First, only the blank back was visible.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "After you ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "turn it around",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ", a red bird appears.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "ひっくり返る、裏返す",
+        "折りたたむ",
+        "切り取る",
+        "押し込む"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「card」「other side」「turn it around」が手がかりです。カードの見えている面を変えて反対側の絵を出すので、flip overは「ひっくり返る、裏返す」だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 3,
+        "targetProtected": true,
+        "cluesProtected": true
+      },
+      "manualReview": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        }
+      },
+      "approval": {
+        "status": "approved"
+      },
+      "candidateSenses": [
+        {
+          "sense": "ひっくり返る、裏返す",
+          "pos": "phrasal verb"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "ひっくり返る、裏返す",
+          "pos": "phrasal verb"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseSelectionReason": "A card changes from its blank back to the picture on its other side.",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      },
+      "leakageValidation": {
+        "status": "warn",
+        "findings": [
+          {
+            "type": "SYNONYM_LEAKAGE",
+            "text": "turn it around",
+            "severity": "warning",
+            "reason": "This expression may be answer-equivalent to flip over."
+          }
+        ]
+      },
+      "leakageReview": {
+        "status": "accepted",
+        "reason": "Turning the card is observable behavior and does not translate or define the phrasal verb."
+      }
+    },
+    {
+      "q": 17,
+      "type": "idiom",
+      "target": "bring about",
+      "meaning": "引き起こす、もたらす",
+      "targetSense": "引き起こす、もたらす",
+      "pos": "phrasal verb",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "The new bus line may bring about big changes in the town.",
+        "People will reach work faster, and fewer cars may use the road.",
+        "The mayor expects these results next year."
+      ],
+      "mixedEnglish": [
+        "The new bus line may bring about big changes in the town.",
+        "People will reach work faster, and fewer cars may use the road.",
+        "The mayor expects these results next year."
+      ],
+      "contextClues": [
+        {
+          "text": "new bus line",
+          "type": "cause"
+        },
+        {
+          "text": "reach work faster",
+          "type": "result"
+        },
+        {
+          "text": "fewer cars may use the road",
+          "type": "result"
+        }
+      ],
+      "inferencePath": [
+        "new bus line",
+        "reach work faster",
+        "fewer cars may use the road",
+        "targetSense: 引き起こす、もたらす",
+        "bring about"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "new bus line",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " may ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "bring about",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " big changes in the town.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "People will ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "reach work faster",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ", and ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "fewer cars may use the road",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The mayor expects these results next year.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "引き起こす、もたらす",
+        "防ぐ",
+        "記録する",
+        "予測する"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「new bus line」「reach work faster」「fewer cars may use the road」が手がかりです。新しい路線が町の移動や交通に変化を生むので、bring aboutは「引き起こす、もたらす」だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 3,
+        "targetProtected": true,
+        "cluesProtected": true
+      },
+      "manualReview": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        }
+      },
+      "approval": {
+        "status": "approved"
+      },
+      "candidateSenses": [
+        {
+          "sense": "引き起こす、もたらす",
+          "pos": "phrasal verb"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "引き起こす、もたらす",
+          "pos": "phrasal verb"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseSelectionReason": "The new bus line is followed by several changes in travel and traffic.",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      },
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "leakageReview": {
+        "status": "pass",
+        "reason": "Leakage pre-check found no final leakage."
+      }
+    },
+    {
+      "q": 17,
+      "type": "idiom",
+      "target": "catch up",
+      "meaning": "追いつく；（遅れを）取り戻す",
+      "targetSense": "（遅れを）取り戻す",
+      "pos": "phrasal verb",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "Hiro missed a week of school, so he had to catch up with his classmates.",
+        "He borrowed their notes and studied every evening.",
+        "After two weeks, he understood the new lessons."
+      ],
+      "mixedEnglish": [
+        "Hiro missed a week of school, so he had to catch up with his classmates.",
+        "He borrowed their notes and studied every evening.",
+        "After two weeks, he understood the new lessons."
+      ],
+      "contextClues": [
+        {
+          "text": "missed a week of school",
+          "type": "cause"
+        },
+        {
+          "text": "borrowed their notes",
+          "type": "behavior"
+        },
+        {
+          "text": "understood the new lessons",
+          "type": "result"
+        }
+      ],
+      "inferencePath": [
+        "missed a week of school",
+        "borrowed their notes",
+        "understood the new lessons",
+        "targetSense: （遅れを）取り戻す",
+        "catch up"
+      ],
+      "segments": [
+        [
+          {
+            "en": "Hiro ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "missed a week of school",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ", so he had to ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "catch up",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " with his classmates.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "He ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "borrowed their notes",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": " and studied every evening.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "After two weeks, he ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "understood the new lessons",
+            "role": "clue",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "（遅れを）取り戻す",
+        "追い越す",
+        "あきらめる",
+        "休憩する"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「missed a week of school」「borrowed their notes」「understood the new lessons」が手がかりです。欠席で生じた学習の遅れを勉強で埋めたので、catch upは「（遅れを）取り戻す」だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 3,
+        "targetProtected": true,
+        "cluesProtected": true
+      },
+      "manualReview": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        }
+      },
+      "approval": {
+        "status": "approved"
+      },
+      "candidateSenses": [
+        {
+          "sense": "追いつく",
+          "pos": "phrasal verb"
+        },
+        {
+          "sense": "（遅れを）取り戻す",
+          "pos": "phrasal verb"
+        }
+      ],
+      "eligibleSenses": [
+        {
+          "sense": "追いつく",
+          "pos": "phrasal verb"
+        },
+        {
+          "sense": "（遅れを）取り戻す",
+          "pos": "phrasal verb"
+        }
+      ],
+      "filteredOutSenses": [],
+      "senseConfidence": "high",
+      "senseSelectionReason": "A missed week creates a learning delay that Hiro removes through notes and extra study.",
+      "senseValidation": {
+        "status": "pass",
+        "checks": [
+          "source",
+          "candidateSenses",
+          "eligibleSenses",
+          "filteredOutSenses",
+          "targetSense",
+          "posCompatibility",
+          "reason",
+          "confidence"
+        ]
+      },
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "leakageReview": {
+        "status": "pass",
+        "reason": "Leakage pre-check found no final leakage."
+      }
+    }
+  ]
+}

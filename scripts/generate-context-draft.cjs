@@ -9,6 +9,7 @@ const {
   assertExactTargetOrder,
 } = require("./lib/context-pipeline.cjs");
 const { filterEligibleSenses } = require("./lib/context-sense-validator.cjs");
+const { validateContextLeakage } = require("./lib/context-leakage-validator.cjs");
 
 function candidateValue(entry) {
   if (entry && entry.final) return entry.final;
@@ -32,7 +33,7 @@ function contextFields(source, candidate) {
     senseConfidence: candidate.senseConfidence,
     senseValidation: { status: "pending" },
   } : {};
-  return {
+  const item = {
     source,
     ...senseFields,
     targetSense: candidate.targetSense,
@@ -50,6 +51,8 @@ function contextFields(source, candidate) {
     manualReview: { status: "pending" },
     approval: { status: "pending" },
   };
+  if (source.q >= 14) item.leakageValidation = validateContextLeakage({ ...source, ...item });
+  return item;
 }
 
 function main({ qs = parseQs(), write = true } = {}) {

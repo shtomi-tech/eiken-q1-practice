@@ -2,6 +2,7 @@
 
 const { assertContextItem } = require("./lib/context-validator.cjs");
 const { assertTargetSense } = require("./lib/context-sense-validator.cjs");
+const { validateContextLeakage } = require("./lib/context-leakage-validator.cjs");
 const {
   parseQs,
   pipelinePaths,
@@ -26,6 +27,11 @@ function main({ qs = parseQs(), write = true } = {}) {
     if (qs.some((q) => q >= 6)) {
       assertTargetSense(runtimeShape, vocab, { requireEligibleSenses: true });
     }
+    if (item.source.q >= 14) {
+      const leakage = validateContextLeakage(runtimeShape);
+      if (leakage.status === "fail") throw new Error(`${item.source.target}: final leakage validation is FAIL`);
+      item.leakageValidation = leakage;
+    }
     assertContextItem(runtimeShape, vocab, { requireTargetSense: true });
     if (item.manualReview?.status !== "pending") throw new Error(`${item.source.target}: manualReview must remain pending before review`);
     if (item.approval?.status !== "pending") throw new Error(`${item.source.target}: approval must remain pending before review`);
@@ -35,6 +41,7 @@ function main({ qs = parseQs(), write = true } = {}) {
         "source", "targetSense", "fullEnglish", "targetOccurrence", "contextClues",
         "segments", "targetProtection", "clueProtection", "supportReason", "choices", "explanation",
         ...(qs.some((q) => q >= 6) ? ["senseSelection"] : []),
+        ...(item.source.q >= 14 ? ["leakagePreCheck"] : []),
       ],
     };
     if (qs.some((q) => q >= 6)) item.senseValidation = {

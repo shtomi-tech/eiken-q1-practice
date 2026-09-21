@@ -1,0 +1,998 @@
+{
+  "schemaVersion": 1,
+  "datasetId": "eiken2-2026-1",
+  "qs": [
+    14,
+    15,
+    16,
+    17
+  ],
+  "reviewStatus": "complete",
+  "reviewPrompt": "prompts/context-review-v1.md",
+  "senseReviewPrompt": "prompts/context-sense-selection-v1.md",
+  "batchDiversity": {
+    "status": "pass",
+    "checks": {
+      "sceneDiversity": "pass",
+      "sentencePatternDiversity": "pass",
+      "clueDiversity": "pass",
+      "distractorDiversity": "pass",
+      "leakageAvoidanceDiversity": "pass"
+    },
+    "reason": "Medical, roof, school, sport, weather, workplace, transport, and object-handling scenes use varied evidence patterns rather than one leakage-avoidance template."
+  },
+  "items": {
+    "a series of": {
+      "initialStatus": "pass",
+      "initialSenseStatus": "pass",
+      "initialTargetSense": "一連の、ひと続きの",
+      "initialConfidence": "high",
+      "initialCandidateSenses": [
+        "一連の、ひと続きの"
+      ],
+      "initialEligibleSenses": [
+        "一連の、ひと続きの"
+      ],
+      "initialFilteredOutSenses": [],
+      "initialLeakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "finalLeakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "leakageReview": {
+        "status": "pass",
+        "reason": "Leakage pre-check found no final leakage."
+      },
+      "senseReview": {
+        "status": "pass",
+        "checks": {
+          "posCompatible": "pass",
+          "senseAppropriate": "pass",
+          "senseCentrality": "pass",
+          "senseSpecificity": "pass",
+          "learningValue": "pass",
+          "contextFeasibility": "pass",
+          "otherSensesDistinct": "pass"
+        }
+      },
+      "status": "pass",
+      "checks": {
+        "senseAppropriate": "pass",
+        "senseUniquelySupported": "pass",
+        "otherKnownSensesExcluded": "pass",
+        "targetMainUnknown": "pass",
+        "clueQuality": "pass",
+        "clueIndependence": "pass",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "pass",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "pass",
+        "answerUnique": "pass"
+      },
+      "revisionLog": []
+    },
+    "the edge of": {
+      "initialStatus": "revise",
+      "initialSenseStatus": "pass",
+      "initialTargetSense": "〜の端、縁",
+      "initialConfidence": "high",
+      "initialCandidateSenses": [
+        "〜の端、縁"
+      ],
+      "initialEligibleSenses": [
+        "〜の端、縁"
+      ],
+      "initialFilteredOutSenses": [],
+      "initialLeakageValidation": {
+        "status": "warn",
+        "findings": [
+          {
+            "type": "SYNONYM_LEAKAGE",
+            "text": "farthest part",
+            "severity": "warning",
+            "reason": "This expression may be answer-equivalent to the edge of."
+          }
+        ]
+      },
+      "finalLeakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "leakageReview": {
+        "status": "pass",
+        "reason": "Leakage pre-check found no final leakage."
+      },
+      "senseReview": {
+        "status": "pass",
+        "checks": {
+          "posCompatible": "pass",
+          "senseAppropriate": "pass",
+          "senseCentrality": "pass",
+          "senseSpecificity": "pass",
+          "learningValue": "pass",
+          "contextFeasibility": "pass",
+          "otherSensesDistinct": "pass"
+        }
+      },
+      "status": "pass",
+      "checks": {
+        "senseAppropriate": "pass",
+        "senseUniquelySupported": "pass",
+        "otherKnownSensesExcluded": "pass",
+        "targetMainUnknown": "pass",
+        "clueQuality": "pass",
+        "clueIndependence": "pass",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "pass",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "pass",
+        "answerUnique": "pass"
+      },
+      "revisionLog": [
+        {
+          "category": "LEAKAGE",
+          "leakageType": "SYNONYM_LEAKAGE",
+          "stage": "manual-review",
+          "critical": false,
+          "before": "farthest part",
+          "after": "close to the rain gutter and looked down",
+          "reason": "The initial synonym was stronger than necessary; observable position evidence preserves inferability."
+        }
+      ]
+    },
+    "a member of": {
+      "initialStatus": "pass",
+      "initialSenseStatus": "pass",
+      "initialTargetSense": "〜の一員、メンバー",
+      "initialConfidence": "high",
+      "initialCandidateSenses": [
+        "〜の一員、メンバー"
+      ],
+      "initialEligibleSenses": [
+        "〜の一員、メンバー"
+      ],
+      "initialFilteredOutSenses": [],
+      "initialLeakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "finalLeakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "leakageReview": {
+        "status": "pass",
+        "reason": "Leakage pre-check found no final leakage."
+      },
+      "senseReview": {
+        "status": "pass",
+        "checks": {
+          "posCompatible": "pass",
+          "senseAppropriate": "pass",
+          "senseCentrality": "pass",
+          "senseSpecificity": "pass",
+          "learningValue": "pass",
+          "contextFeasibility": "pass",
+          "otherSensesDistinct": "pass"
+        }
+      },
+      "status": "pass",
+      "checks": {
+        "senseAppropriate": "pass",
+        "senseUniquelySupported": "pass",
+        "otherKnownSensesExcluded": "pass",
+        "targetMainUnknown": "pass",
+        "clueQuality": "pass",
+        "clueIndependence": "pass",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "pass",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "pass",
+        "answerUnique": "pass"
+      },
+      "revisionLog": []
+    },
+    "the back of": {
+      "initialStatus": "revise",
+      "initialSenseStatus": "pass",
+      "initialTargetSense": "〜の後ろ、裏",
+      "initialConfidence": "high",
+      "initialCandidateSenses": [
+        "〜の後ろ、裏"
+      ],
+      "initialEligibleSenses": [
+        "〜の後ろ、裏"
+      ],
+      "initialFilteredOutSenses": [],
+      "initialLeakageValidation": {
+        "status": "fail",
+        "findings": [
+          {
+            "type": "SYNONYM_LEAKAGE",
+            "text": "behind",
+            "severity": "warning",
+            "reason": "This expression may be answer-equivalent to the back of."
+          },
+          {
+            "type": "SYNONYM_LEAKAGE",
+            "text": "far from the front",
+            "severity": "warning",
+            "reason": "This expression may be answer-equivalent to the back of."
+          },
+          {
+            "type": "PARAPHRASE_LEAKAGE",
+            "text": "behind + far from the front",
+            "severity": "failure",
+            "reason": "Multiple answer-equivalent paraphrases make inference unnecessary."
+          }
+        ]
+      },
+      "finalLeakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "leakageReview": {
+        "status": "pass",
+        "reason": "Leakage pre-check found no final leakage."
+      },
+      "senseReview": {
+        "status": "pass",
+        "checks": {
+          "posCompatible": "pass",
+          "senseAppropriate": "pass",
+          "senseCentrality": "pass",
+          "senseSpecificity": "pass",
+          "learningValue": "pass",
+          "contextFeasibility": "pass",
+          "otherSensesDistinct": "pass"
+        }
+      },
+      "status": "pass",
+      "checks": {
+        "senseAppropriate": "pass",
+        "senseUniquelySupported": "pass",
+        "otherKnownSensesExcluded": "pass",
+        "targetMainUnknown": "pass",
+        "clueQuality": "pass",
+        "clueIndependence": "pass",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "pass",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "pass",
+        "answerUnique": "pass"
+      },
+      "revisionLog": [
+        {
+          "category": "LEAKAGE",
+          "leakageType": "PARAPHRASE_LEAKAGE",
+          "stage": "pre-review",
+          "critical": true,
+          "before": "behind some old letters + far from the front",
+          "after": "letters had to be removed before the keys could be reached",
+          "reason": "Two answer-equivalent paraphrases caused Leakage FAIL and were replaced before manual review."
+        }
+      ]
+    },
+    "in other words": {
+      "initialStatus": "pass",
+      "initialSenseStatus": "pass",
+      "initialTargetSense": "言い換えれば、つまり",
+      "initialConfidence": "high",
+      "initialCandidateSenses": [
+        "言い換えれば、つまり"
+      ],
+      "initialEligibleSenses": [
+        "言い換えれば、つまり"
+      ],
+      "initialFilteredOutSenses": [],
+      "initialLeakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "finalLeakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "leakageReview": {
+        "status": "pass",
+        "reason": "Leakage pre-check found no final leakage."
+      },
+      "senseReview": {
+        "status": "pass",
+        "checks": {
+          "posCompatible": "pass",
+          "senseAppropriate": "pass",
+          "senseCentrality": "pass",
+          "senseSpecificity": "pass",
+          "learningValue": "pass",
+          "contextFeasibility": "pass",
+          "otherSensesDistinct": "pass"
+        }
+      },
+      "status": "pass",
+      "checks": {
+        "senseAppropriate": "pass",
+        "senseUniquelySupported": "pass",
+        "otherKnownSensesExcluded": "pass",
+        "targetMainUnknown": "pass",
+        "clueQuality": "pass",
+        "clueIndependence": "pass",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "pass",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "pass",
+        "answerUnique": "pass"
+      },
+      "revisionLog": []
+    },
+    "in the beginning": {
+      "initialStatus": "pass",
+      "initialSenseStatus": "pass",
+      "initialTargetSense": "最初は、初めのうちは",
+      "initialConfidence": "high",
+      "initialCandidateSenses": [
+        "最初は、初めのうちは"
+      ],
+      "initialEligibleSenses": [
+        "最初は、初めのうちは"
+      ],
+      "initialFilteredOutSenses": [],
+      "initialLeakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "finalLeakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "leakageReview": {
+        "status": "pass",
+        "reason": "Leakage pre-check found no final leakage."
+      },
+      "senseReview": {
+        "status": "pass",
+        "checks": {
+          "posCompatible": "pass",
+          "senseAppropriate": "pass",
+          "senseCentrality": "pass",
+          "senseSpecificity": "pass",
+          "learningValue": "pass",
+          "contextFeasibility": "pass",
+          "otherSensesDistinct": "pass"
+        }
+      },
+      "status": "pass",
+      "checks": {
+        "senseAppropriate": "pass",
+        "senseUniquelySupported": "pass",
+        "otherKnownSensesExcluded": "pass",
+        "targetMainUnknown": "pass",
+        "clueQuality": "pass",
+        "clueIndependence": "pass",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "pass",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "pass",
+        "answerUnique": "pass"
+      },
+      "revisionLog": []
+    },
+    "back and forth": {
+      "initialStatus": "pass",
+      "initialSenseStatus": "pass",
+      "initialTargetSense": "行ったり来たり、前後に",
+      "initialConfidence": "high",
+      "initialCandidateSenses": [
+        "行ったり来たり、前後に"
+      ],
+      "initialEligibleSenses": [
+        "行ったり来たり、前後に"
+      ],
+      "initialFilteredOutSenses": [],
+      "initialLeakageValidation": {
+        "status": "warn",
+        "findings": [
+          {
+            "type": "PARAPHRASE_LEAKAGE",
+            "text": "to the other side, then moved back again",
+            "severity": "warning",
+            "reason": "This expression may be answer-equivalent to back and forth."
+          }
+        ]
+      },
+      "finalLeakageValidation": {
+        "status": "warn",
+        "findings": [
+          {
+            "type": "PARAPHRASE_LEAKAGE",
+            "text": "to the other side, then moved back again",
+            "severity": "warning",
+            "reason": "This expression may be answer-equivalent to back and forth."
+          }
+        ]
+      },
+      "leakageReview": {
+        "status": "accepted",
+        "reason": "The movement description is a concrete tennis action, not an explicit definition."
+      },
+      "senseReview": {
+        "status": "pass",
+        "checks": {
+          "posCompatible": "pass",
+          "senseAppropriate": "pass",
+          "senseCentrality": "pass",
+          "senseSpecificity": "pass",
+          "learningValue": "pass",
+          "contextFeasibility": "pass",
+          "otherSensesDistinct": "pass"
+        }
+      },
+      "status": "pass",
+      "checks": {
+        "senseAppropriate": "pass",
+        "senseUniquelySupported": "pass",
+        "otherKnownSensesExcluded": "pass",
+        "targetMainUnknown": "pass",
+        "clueQuality": "pass",
+        "clueIndependence": "pass",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "pass",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "pass",
+        "answerUnique": "pass"
+      },
+      "revisionLog": []
+    },
+    "on the contrary": {
+      "initialStatus": "pass",
+      "initialSenseStatus": "pass",
+      "initialTargetSense": "それどころか、（前言を否定して）逆に",
+      "initialConfidence": "high",
+      "initialCandidateSenses": [
+        "それどころか、（前言を否定して）逆に"
+      ],
+      "initialEligibleSenses": [
+        "それどころか、（前言を否定して）逆に"
+      ],
+      "initialFilteredOutSenses": [],
+      "initialLeakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "finalLeakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "leakageReview": {
+        "status": "pass",
+        "reason": "Leakage pre-check found no final leakage."
+      },
+      "senseReview": {
+        "status": "pass",
+        "checks": {
+          "posCompatible": "pass",
+          "senseAppropriate": "pass",
+          "senseCentrality": "pass",
+          "senseSpecificity": "pass",
+          "learningValue": "pass",
+          "contextFeasibility": "pass",
+          "otherSensesDistinct": "pass"
+        }
+      },
+      "status": "pass",
+      "checks": {
+        "senseAppropriate": "pass",
+        "senseUniquelySupported": "pass",
+        "otherKnownSensesExcluded": "pass",
+        "targetMainUnknown": "pass",
+        "clueQuality": "pass",
+        "clueIndependence": "pass",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "pass",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "pass",
+        "answerUnique": "pass"
+      },
+      "revisionLog": []
+    },
+    "distinct from": {
+      "initialStatus": "pass",
+      "initialSenseStatus": "pass",
+      "initialTargetSense": "〜とは異なる、別個の",
+      "initialConfidence": "high",
+      "initialCandidateSenses": [
+        "〜とは異なる、別個の"
+      ],
+      "initialEligibleSenses": [
+        "〜とは異なる、別個の"
+      ],
+      "initialFilteredOutSenses": [],
+      "initialLeakageValidation": {
+        "status": "warn",
+        "findings": [
+          {
+            "type": "SYNONYM_LEAKAGE",
+            "text": "different species",
+            "severity": "warning",
+            "reason": "This expression may be answer-equivalent to distinct from."
+          }
+        ]
+      },
+      "finalLeakageValidation": {
+        "status": "warn",
+        "findings": [
+          {
+            "type": "SYNONYM_LEAKAGE",
+            "text": "different species",
+            "severity": "warning",
+            "reason": "This expression may be answer-equivalent to distinct from."
+          }
+        ]
+      },
+      "leakageReview": {
+        "status": "accepted",
+        "reason": "Different species is a confirmation clue supported by the visible red mark."
+      },
+      "senseReview": {
+        "status": "pass",
+        "checks": {
+          "posCompatible": "pass",
+          "senseAppropriate": "pass",
+          "senseCentrality": "pass",
+          "senseSpecificity": "pass",
+          "learningValue": "pass",
+          "contextFeasibility": "pass",
+          "otherSensesDistinct": "pass"
+        }
+      },
+      "status": "pass",
+      "checks": {
+        "senseAppropriate": "pass",
+        "senseUniquelySupported": "pass",
+        "otherKnownSensesExcluded": "pass",
+        "targetMainUnknown": "pass",
+        "clueQuality": "pass",
+        "clueIndependence": "pass",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "pass",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "pass",
+        "answerUnique": "pass"
+      },
+      "revisionLog": []
+    },
+    "composed of": {
+      "initialStatus": "pass",
+      "initialSenseStatus": "pass",
+      "initialTargetSense": "〜から構成されている",
+      "initialConfidence": "high",
+      "initialCandidateSenses": [
+        "〜から構成されている"
+      ],
+      "initialEligibleSenses": [
+        "〜から構成されている"
+      ],
+      "initialFilteredOutSenses": [],
+      "initialLeakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "finalLeakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "leakageReview": {
+        "status": "pass",
+        "reason": "Leakage pre-check found no final leakage."
+      },
+      "senseReview": {
+        "status": "pass",
+        "checks": {
+          "posCompatible": "pass",
+          "senseAppropriate": "pass",
+          "senseCentrality": "pass",
+          "senseSpecificity": "pass",
+          "learningValue": "pass",
+          "contextFeasibility": "pass",
+          "otherSensesDistinct": "pass"
+        }
+      },
+      "status": "pass",
+      "checks": {
+        "senseAppropriate": "pass",
+        "senseUniquelySupported": "pass",
+        "otherKnownSensesExcluded": "pass",
+        "targetMainUnknown": "pass",
+        "clueQuality": "pass",
+        "clueIndependence": "pass",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "pass",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "pass",
+        "answerUnique": "pass"
+      },
+      "revisionLog": []
+    },
+    "absent from": {
+      "initialStatus": "pass",
+      "initialSenseStatus": "pass",
+      "initialTargetSense": "〜を欠席して、〜にいない",
+      "initialConfidence": "high",
+      "initialCandidateSenses": [
+        "〜を欠席して、〜にいない"
+      ],
+      "initialEligibleSenses": [
+        "〜を欠席して、〜にいない"
+      ],
+      "initialFilteredOutSenses": [],
+      "initialLeakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "finalLeakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "leakageReview": {
+        "status": "pass",
+        "reason": "Leakage pre-check found no final leakage."
+      },
+      "senseReview": {
+        "status": "pass",
+        "checks": {
+          "posCompatible": "pass",
+          "senseAppropriate": "pass",
+          "senseCentrality": "pass",
+          "senseSpecificity": "pass",
+          "learningValue": "pass",
+          "contextFeasibility": "pass",
+          "otherSensesDistinct": "pass"
+        }
+      },
+      "status": "pass",
+      "checks": {
+        "senseAppropriate": "pass",
+        "senseUniquelySupported": "pass",
+        "otherKnownSensesExcluded": "pass",
+        "targetMainUnknown": "pass",
+        "clueQuality": "pass",
+        "clueIndependence": "pass",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "pass",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "pass",
+        "answerUnique": "pass"
+      },
+      "revisionLog": []
+    },
+    "threatening to": {
+      "initialStatus": "pass",
+      "initialSenseStatus": "pass",
+      "initialTargetSense": "〜しそうで",
+      "initialConfidence": "high",
+      "initialCandidateSenses": [
+        "〜すると脅して",
+        "〜しそうで"
+      ],
+      "initialEligibleSenses": [
+        "〜すると脅して",
+        "〜しそうで"
+      ],
+      "initialFilteredOutSenses": [],
+      "initialLeakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "finalLeakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "leakageReview": {
+        "status": "pass",
+        "reason": "Leakage pre-check found no final leakage."
+      },
+      "senseReview": {
+        "status": "pass",
+        "checks": {
+          "posCompatible": "pass",
+          "senseAppropriate": "pass",
+          "senseCentrality": "pass",
+          "senseSpecificity": "pass",
+          "learningValue": "pass",
+          "contextFeasibility": "pass",
+          "otherSensesDistinct": "pass"
+        }
+      },
+      "status": "pass",
+      "checks": {
+        "senseAppropriate": "pass",
+        "senseUniquelySupported": "pass",
+        "otherKnownSensesExcluded": "pass",
+        "targetMainUnknown": "pass",
+        "clueQuality": "pass",
+        "clueIndependence": "pass",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "pass",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "pass",
+        "answerUnique": "pass"
+      },
+      "revisionLog": []
+    },
+    "lay off": {
+      "initialStatus": "pass",
+      "initialSenseStatus": "pass",
+      "initialTargetSense": "（従業員を）一時解雇する、レイオフする",
+      "initialConfidence": "high",
+      "initialCandidateSenses": [
+        "（従業員を）一時解雇する、レイオフする"
+      ],
+      "initialEligibleSenses": [
+        "（従業員を）一時解雇する、レイオフする"
+      ],
+      "initialFilteredOutSenses": [],
+      "initialLeakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "finalLeakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "leakageReview": {
+        "status": "pass",
+        "reason": "Leakage pre-check found no final leakage."
+      },
+      "senseReview": {
+        "status": "pass",
+        "checks": {
+          "posCompatible": "pass",
+          "senseAppropriate": "pass",
+          "senseCentrality": "pass",
+          "senseSpecificity": "pass",
+          "learningValue": "pass",
+          "contextFeasibility": "pass",
+          "otherSensesDistinct": "pass"
+        }
+      },
+      "status": "pass",
+      "checks": {
+        "senseAppropriate": "pass",
+        "senseUniquelySupported": "pass",
+        "otherKnownSensesExcluded": "pass",
+        "targetMainUnknown": "pass",
+        "clueQuality": "pass",
+        "clueIndependence": "pass",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "pass",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "pass",
+        "answerUnique": "pass"
+      },
+      "revisionLog": []
+    },
+    "flip over": {
+      "initialStatus": "pass",
+      "initialSenseStatus": "pass",
+      "initialTargetSense": "ひっくり返る、裏返す",
+      "initialConfidence": "high",
+      "initialCandidateSenses": [
+        "ひっくり返る、裏返す"
+      ],
+      "initialEligibleSenses": [
+        "ひっくり返る、裏返す"
+      ],
+      "initialFilteredOutSenses": [],
+      "initialLeakageValidation": {
+        "status": "warn",
+        "findings": [
+          {
+            "type": "SYNONYM_LEAKAGE",
+            "text": "turn it around",
+            "severity": "warning",
+            "reason": "This expression may be answer-equivalent to flip over."
+          }
+        ]
+      },
+      "finalLeakageValidation": {
+        "status": "warn",
+        "findings": [
+          {
+            "type": "SYNONYM_LEAKAGE",
+            "text": "turn it around",
+            "severity": "warning",
+            "reason": "This expression may be answer-equivalent to flip over."
+          }
+        ]
+      },
+      "leakageReview": {
+        "status": "accepted",
+        "reason": "Turning the card is observable behavior and does not translate or define the phrasal verb."
+      },
+      "senseReview": {
+        "status": "pass",
+        "checks": {
+          "posCompatible": "pass",
+          "senseAppropriate": "pass",
+          "senseCentrality": "pass",
+          "senseSpecificity": "pass",
+          "learningValue": "pass",
+          "contextFeasibility": "pass",
+          "otherSensesDistinct": "pass"
+        }
+      },
+      "status": "pass",
+      "checks": {
+        "senseAppropriate": "pass",
+        "senseUniquelySupported": "pass",
+        "otherKnownSensesExcluded": "pass",
+        "targetMainUnknown": "pass",
+        "clueQuality": "pass",
+        "clueIndependence": "pass",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "pass",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "pass",
+        "answerUnique": "pass"
+      },
+      "revisionLog": []
+    },
+    "bring about": {
+      "initialStatus": "pass",
+      "initialSenseStatus": "pass",
+      "initialTargetSense": "引き起こす、もたらす",
+      "initialConfidence": "high",
+      "initialCandidateSenses": [
+        "引き起こす、もたらす"
+      ],
+      "initialEligibleSenses": [
+        "引き起こす、もたらす"
+      ],
+      "initialFilteredOutSenses": [],
+      "initialLeakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "finalLeakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "leakageReview": {
+        "status": "pass",
+        "reason": "Leakage pre-check found no final leakage."
+      },
+      "senseReview": {
+        "status": "pass",
+        "checks": {
+          "posCompatible": "pass",
+          "senseAppropriate": "pass",
+          "senseCentrality": "pass",
+          "senseSpecificity": "pass",
+          "learningValue": "pass",
+          "contextFeasibility": "pass",
+          "otherSensesDistinct": "pass"
+        }
+      },
+      "status": "pass",
+      "checks": {
+        "senseAppropriate": "pass",
+        "senseUniquelySupported": "pass",
+        "otherKnownSensesExcluded": "pass",
+        "targetMainUnknown": "pass",
+        "clueQuality": "pass",
+        "clueIndependence": "pass",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "pass",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "pass",
+        "answerUnique": "pass"
+      },
+      "revisionLog": []
+    },
+    "catch up": {
+      "initialStatus": "pass",
+      "initialSenseStatus": "pass",
+      "initialTargetSense": "（遅れを）取り戻す",
+      "initialConfidence": "high",
+      "initialCandidateSenses": [
+        "追いつく",
+        "（遅れを）取り戻す"
+      ],
+      "initialEligibleSenses": [
+        "追いつく",
+        "（遅れを）取り戻す"
+      ],
+      "initialFilteredOutSenses": [],
+      "initialLeakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "finalLeakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "leakageReview": {
+        "status": "pass",
+        "reason": "Leakage pre-check found no final leakage."
+      },
+      "senseReview": {
+        "status": "pass",
+        "checks": {
+          "posCompatible": "pass",
+          "senseAppropriate": "pass",
+          "senseCentrality": "pass",
+          "senseSpecificity": "pass",
+          "learningValue": "pass",
+          "contextFeasibility": "pass",
+          "otherSensesDistinct": "pass"
+        }
+      },
+      "status": "pass",
+      "checks": {
+        "senseAppropriate": "pass",
+        "senseUniquelySupported": "pass",
+        "otherKnownSensesExcluded": "pass",
+        "targetMainUnknown": "pass",
+        "clueQuality": "pass",
+        "clueIndependence": "pass",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "pass",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "pass",
+        "answerUnique": "pass"
+      },
+      "revisionLog": []
+    }
+  }
+}

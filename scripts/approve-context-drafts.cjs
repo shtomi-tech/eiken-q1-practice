@@ -2,6 +2,7 @@
 
 const { assertContextItem } = require("./lib/context-validator.cjs");
 const { assertTargetSense } = require("./lib/context-sense-validator.cjs");
+const { assertLeakagePublishable } = require("./lib/context-leakage-validator.cjs");
 const {
   parseQs,
   pipelinePaths,
@@ -31,6 +32,10 @@ function main({ qs = parseQs(), write = true } = {}) {
       assertTargetSense({ ...draftItem.source, ...draftItem }, vocabulary.get(target), { requireEligibleSenses: true });
       if (draftItem.senseConfidence === "low") throw new Error(`${target}: low-confidence sense cannot be auto-approved`);
       if (reviewItem.senseReview?.status !== "pass") throw new Error(`${target}: sense review is not PASS`);
+    }
+    if (draftItem.source.q >= 14) {
+      draftItem.leakageReview = reviewItem.leakageReview;
+      assertLeakagePublishable(draftItem);
     }
     if (draftItem.manualReview?.status !== "pending" || draftItem.approval?.status !== "pending") {
       throw new Error(`${target}: draft must start approval from pending states`);
@@ -70,6 +75,10 @@ function main({ qs = parseQs(), write = true } = {}) {
       runtimeItem.senseConfidence = draftItem.senseConfidence;
       runtimeItem.senseSelectionReason = draftItem.senseSelectionReason;
       runtimeItem.senseValidation = draftItem.senseValidation;
+    }
+    if (draftItem.source.q >= 14) {
+      runtimeItem.leakageValidation = draftItem.leakageValidation;
+      runtimeItem.leakageReview = reviewItem.leakageReview;
     }
     assertContextItem(runtimeItem, vocabulary.get(target), { requireTargetSense: true });
     return runtimeItem;

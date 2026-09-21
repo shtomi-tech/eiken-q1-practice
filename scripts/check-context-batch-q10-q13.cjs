@@ -126,8 +126,8 @@ function main() {
   assert.equal(runtime.contexts.length, 68);
   assert.deepEqual(runtime.contexts.map((item) => item.target), vocabItems().map((item) => item.word || item.phrase));
   const baseline = JSON.parse(childProcess.execFileSync("git", ["show", `${BASE_COMMIT}:data/context_2026-1.json`], { cwd: ROOT, encoding: "utf8" }));
-  const unchanged = (item) => item.q <= 9 || item.q >= 14;
-  assert.deepEqual(runtime.contexts.filter(unchanged), baseline.contexts.filter(unchanged), "q=1..9 and q=14+ changed");
+  const unchanged = (item) => item.q <= 9;
+  assert.deepEqual(runtime.contexts.filter(unchanged), baseline.contexts.filter(unchanged), "q=1..9 changed");
 
   assert.throws(() => assertExactTargetOrder(targets.slice(1), targets, "missing-target"));
   assert.throws(() => assertExactTargetOrder([...targets, targets[0]], targets, "duplicate-target"));

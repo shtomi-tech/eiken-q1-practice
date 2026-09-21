@@ -13,6 +13,8 @@ const POS_MAP = {
   "副詞": "adverb",
   "副詞句": "adverbial phrase",
   "句動詞": "phrasal verb",
+  "名詞句": "noun phrase",
+  "形容詞句": "adjective phrase",
 };
 
 function readJson(file) {
@@ -69,6 +71,7 @@ function pipelinePaths(qs) {
     candidate: path.join(draftDir, `${DATASET_ID}-${label}-candidates.json`),
     draft: path.join(draftDir, `${DATASET_ID}-${label}.json`),
     review: path.join(draftDir, `${DATASET_ID}-${label}-review.json`),
+    reviewPlan: path.join(draftDir, `${DATASET_ID}-${label}-review-plan.json`),
     approved: path.join(ROOT, "data", "context-approved", `${DATASET_ID}-${label}.json`),
     metrics: path.join(ROOT, "data", "context-pipeline-metrics", `${DATASET_ID}-${label}.json`),
   };

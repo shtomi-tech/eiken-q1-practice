@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "datasetId": "eiken2-2026-1",
+  "qs": [14, 15, 16, 17],
+  "batchDiversity": {
+    "status": "pass",
+    "checks": { "sceneDiversity": "pass", "sentencePatternDiversity": "pass", "clueDiversity": "pass", "distractorDiversity": "pass", "leakageAvoidanceDiversity": "pass" },
+    "reason": "Medical, roof, school, sport, weather, workplace, transport, and object-handling scenes use varied evidence patterns rather than one leakage-avoidance template."
+  },
+  "items": {
+    "a series of": { "initialStatus": "pass" },
+    "the edge of": { "initialStatus": "revise", "revisionLog": [{ "category": "LEAKAGE", "leakageType": "SYNONYM_LEAKAGE", "stage": "manual-review", "critical": false, "before": "farthest part", "after": "close to the rain gutter and looked down", "reason": "The initial synonym was stronger than necessary; observable position evidence preserves inferability." }] },
+    "a member of": { "initialStatus": "pass" },
+    "the back of": { "initialStatus": "revise", "revisionLog": [{ "category": "LEAKAGE", "leakageType": "PARAPHRASE_LEAKAGE", "stage": "pre-review", "critical": true, "before": "behind some old letters + far from the front", "after": "letters had to be removed before the keys could be reached", "reason": "Two answer-equivalent paraphrases caused Leakage FAIL and were replaced before manual review." }] },
+    "in other words": { "initialStatus": "pass" },
+    "in the beginning": { "initialStatus": "pass" },
+    "back and forth": { "initialStatus": "pass", "leakageReview": { "status": "accepted", "reason": "The movement description is a concrete tennis action, not an explicit definition." } },
+    "on the contrary": { "initialStatus": "pass" },
+    "distinct from": { "initialStatus": "pass", "leakageReview": { "status": "accepted", "reason": "Different species is a confirmation clue supported by the visible red mark." } },
+    "composed of": { "initialStatus": "pass" },
+    "absent from": { "initialStatus": "pass" },
+    "threatening to": { "initialStatus": "pass" },
+    "lay off": { "initialStatus": "pass" },
+    "flip over": { "initialStatus": "pass", "leakageReview": { "status": "accepted", "reason": "Turning the card is observable behavior and does not translate or define the phrasal verb." } },
+    "bring about": { "initialStatus": "pass" },
+    "catch up": { "initialStatus": "pass" }
+  }
+}
