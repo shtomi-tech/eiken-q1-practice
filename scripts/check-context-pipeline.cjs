@@ -9,7 +9,7 @@ const { validateContextItem } = require("./lib/context-validator.cjs");
 const { publish } = require("./publish-context-drafts.cjs");
 
 const ROOT = path.resolve(__dirname, "..");
-const BASE_COMMIT = "a9f9a786c81840971490e5f11c384ae98b91d9e4";
+const BASE_COMMIT = "64d25f54375490519856d787b5be67bff45d5fe3";
 const RUNTIME_PATH = path.join(ROOT, "data", "context_2026-1.json");
 const VOCAB_PATH = path.join(ROOT, "data", "vocab_2026-1.json");
 const DRAFT_PATH = path.join(ROOT, "data", "context-drafts", "eiken2-2026-1-q3.json");
@@ -109,8 +109,9 @@ function main() {
   }
 
   const baseline = JSON.parse(childProcess.execFileSync("git", ["show", `${BASE_COMMIT}:data/context_2026-1.json`], { cwd: ROOT, encoding: "utf8" }));
-  assert.deepEqual(runtime.contexts.filter((item) => item.q !== 3), baseline.contexts.filter((item) => item.q !== 3),
-    "q=1, q=2, and q=4+ runtime items must remain unchanged");
+  assert.deepEqual(runtime.contexts.filter((item) => item.q <= 2 || item.q >= 6),
+    baseline.contexts.filter((item) => item.q <= 2 || item.q >= 6),
+    "q=1, q=2, and q=6+ runtime items must remain unchanged during q=3 proof");
   assert.equal(JSON.stringify(runtime.contexts.filter((item) => item.q === 3).map((item) => item.target)),
     JSON.stringify(q3Sources.map((item) => item.word || item.phrase)), "q=3 order must follow Vocabulary Data");
 

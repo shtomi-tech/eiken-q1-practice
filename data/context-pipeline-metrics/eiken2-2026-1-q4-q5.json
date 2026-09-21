@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "datasetId": "eiken2-2026-1",
+  "qs": [4, 5],
+  "generated": 8,
+  "initialPass": 3,
+  "revised": 5,
+  "rejected": 0,
+  "finalPass": 8,
+  "initialPassRate": 0.375,
+  "revisionRate": 0.625,
+  "japaneseSupportUsed": 0,
+  "revisionReasons": {
+    "SENSE": 4,
+    "CONTEXT": 1,
+    "CLUE": 1,
+    "DIFFICULTY": 0,
+    "LEAKAGE": 0,
+    "JAPANESE_SUPPORT": 0,
+    "DISTRACTOR": 1,
+    "NATURALNESS": 0,
+    "OTHER": 0
+  },
+  "items": {
+    "tendency": { "initialStatus": "revise", "finalStatus": "pass", "revisionCategories": ["SENSE"] },
+    "discrimination": { "initialStatus": "revise", "finalStatus": "pass", "revisionCategories": ["SENSE"] },
+    "shelter": { "initialStatus": "revise", "finalStatus": "pass", "revisionCategories": ["SENSE"] },
+    "content": { "initialStatus": "revise", "finalStatus": "pass", "revisionCategories": ["SENSE", "DISTRACTOR"] },
+    "foster": { "initialStatus": "revise", "finalStatus": "pass", "revisionCategories": ["CLUE", "CONTEXT"] },
+    "hate": { "initialStatus": "pass", "finalStatus": "pass", "revisionCategories": [] },
+    "divide": { "initialStatus": "pass", "finalStatus": "pass", "revisionCategories": [] },
+    "pronounce": { "initialStatus": "pass", "finalStatus": "pass", "revisionCategories": [] }
+  }
+}

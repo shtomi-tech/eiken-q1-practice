@@ -1,0 +1,317 @@
+{
+  "schemaVersion": 1,
+  "datasetId": "eiken2-2026-1",
+  "qs": [4, 5],
+  "reviewStatus": "complete",
+  "reviewPrompt": "prompts/context-review-v1.md",
+  "items": {
+    "tendency": {
+      "initialStatus": "revise",
+      "initialChecks": {
+        "senseAppropriate": "revise",
+        "senseUniquelySupported": "revise",
+        "otherKnownSensesExcluded": "pass",
+        "targetMainUnknown": "pass",
+        "clueQuality": "pass",
+        "clueIndependence": "pass",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "pass",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "pass",
+        "answerUnique": "pass"
+      },
+      "status": "pass",
+      "checks": {
+        "senseAppropriate": "pass",
+        "senseUniquelySupported": "pass",
+        "otherKnownSensesExcluded": "pass",
+        "targetMainUnknown": "pass",
+        "clueQuality": "pass",
+        "clueIndependence": "pass",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "pass",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "pass",
+        "answerUnique": "pass"
+      },
+      "revisionLog": [
+        { "category": "SENSE", "summary": "Changed the initial narrow choice 癖 to 傾向 because the scene shows a repeated pattern, not necessarily a fixed habit." }
+      ]
+    },
+    "discrimination": {
+      "initialStatus": "revise",
+      "initialChecks": {
+        "senseAppropriate": "revise",
+        "senseUniquelySupported": "revise",
+        "otherKnownSensesExcluded": "revise",
+        "targetMainUnknown": "pass",
+        "clueQuality": "pass",
+        "clueIndependence": "pass",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "pass",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "pass",
+        "answerUnique": "pass"
+      },
+      "status": "pass",
+      "checks": {
+        "senseAppropriate": "pass",
+        "senseUniquelySupported": "pass",
+        "otherKnownSensesExcluded": "pass",
+        "targetMainUnknown": "pass",
+        "clueQuality": "pass",
+        "clueIndependence": "pass",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "pass",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "pass",
+        "answerUnique": "pass"
+      },
+      "revisionLog": [
+        { "category": "SENSE", "summary": "The age-based rejection and legal consequence support 差別, not the neutral sense 識別・区別." }
+      ]
+    },
+    "shelter": {
+      "initialStatus": "revise",
+      "initialChecks": {
+        "senseAppropriate": "revise",
+        "senseUniquelySupported": "revise",
+        "otherKnownSensesExcluded": "revise",
+        "targetMainUnknown": "pass",
+        "clueQuality": "pass",
+        "clueIndependence": "pass",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "pass",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "pass",
+        "answerUnique": "pass"
+      },
+      "status": "pass",
+      "checks": {
+        "senseAppropriate": "pass",
+        "senseUniquelySupported": "pass",
+        "otherKnownSensesExcluded": "pass",
+        "targetMainUnknown": "pass",
+        "clueQuality": "pass",
+        "clueIndependence": "pass",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "pass",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "pass",
+        "answerUnique": "pass"
+      },
+      "revisionLog": [
+        { "category": "SENSE", "summary": "The cabin is a concrete safe place, so the final sense is 避難所・シェルター rather than abstract 保護." }
+      ]
+    },
+    "content": {
+      "initialStatus": "revise",
+      "initialChecks": {
+        "senseAppropriate": "revise",
+        "senseUniquelySupported": "revise",
+        "otherKnownSensesExcluded": "revise",
+        "targetMainUnknown": "pass",
+        "clueQuality": "pass",
+        "clueIndependence": "pass",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "pass",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "revise",
+        "answerUnique": "revise"
+      },
+      "status": "pass",
+      "checks": {
+        "senseAppropriate": "pass",
+        "senseUniquelySupported": "pass",
+        "otherKnownSensesExcluded": "pass",
+        "targetMainUnknown": "pass",
+        "clueQuality": "pass",
+        "clueIndependence": "pass",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "pass",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "pass",
+        "answerUnique": "pass"
+      },
+      "revisionLog": [
+        { "category": "SENSE", "summary": "The listed objects inside the box support the noun sense 中身・内容, not the adjective sense 満足して." },
+        { "category": "DISTRACTOR", "summary": "Removed the other known sense 満足して from the choices so the task tests context inference rather than polysemy selection." }
+      ]
+    },
+    "foster": {
+      "initialStatus": "revise",
+      "initialChecks": {
+        "senseAppropriate": "pass",
+        "senseUniquelySupported": "pass",
+        "otherKnownSensesExcluded": "pass",
+        "targetMainUnknown": "pass",
+        "clueQuality": "revise",
+        "clueIndependence": "revise",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "revise",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "pass",
+        "answerUnique": "pass"
+      },
+      "status": "pass",
+      "checks": {
+        "senseAppropriate": "pass",
+        "senseUniquelySupported": "pass",
+        "otherKnownSensesExcluded": "pass",
+        "targetMainUnknown": "pass",
+        "clueQuality": "pass",
+        "clueIndependence": "pass",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "pass",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "pass",
+        "answerUnique": "pass"
+      },
+      "revisionLog": [
+        { "category": "CLUE", "summary": "Expanded the activity clue from only reading to reading, asking questions, and sharing ideas, then added confidence as a distinct result." },
+        { "category": "CONTEXT", "summary": "Replaced the weak final sentence with a time-based result so growth is visible across the mini-story." }
+      ]
+    },
+    "hate": {
+      "initialStatus": "pass",
+      "initialChecks": {
+        "senseAppropriate": "pass",
+        "senseUniquelySupported": "pass",
+        "otherKnownSensesExcluded": "pass",
+        "targetMainUnknown": "pass",
+        "clueQuality": "pass",
+        "clueIndependence": "pass",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "pass",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "pass",
+        "answerUnique": "pass"
+      },
+      "status": "pass",
+      "checks": {
+        "senseAppropriate": "pass",
+        "senseUniquelySupported": "pass",
+        "otherKnownSensesExcluded": "pass",
+        "targetMainUnknown": "pass",
+        "clueQuality": "pass",
+        "clueIndependence": "pass",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "pass",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "pass",
+        "answerUnique": "pass"
+      },
+      "revisionLog": []
+    },
+    "divide": {
+      "initialStatus": "pass",
+      "initialChecks": {
+        "senseAppropriate": "pass",
+        "senseUniquelySupported": "pass",
+        "otherKnownSensesExcluded": "pass",
+        "targetMainUnknown": "pass",
+        "clueQuality": "pass",
+        "clueIndependence": "pass",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "pass",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "pass",
+        "answerUnique": "pass"
+      },
+      "status": "pass",
+      "checks": {
+        "senseAppropriate": "pass",
+        "senseUniquelySupported": "pass",
+        "otherKnownSensesExcluded": "pass",
+        "targetMainUnknown": "pass",
+        "clueQuality": "pass",
+        "clueIndependence": "pass",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "pass",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "pass",
+        "answerUnique": "pass"
+      },
+      "revisionLog": []
+    },
+    "pronounce": {
+      "initialStatus": "pass",
+      "initialChecks": {
+        "senseAppropriate": "pass",
+        "senseUniquelySupported": "pass",
+        "otherKnownSensesExcluded": "pass",
+        "targetMainUnknown": "pass",
+        "clueQuality": "pass",
+        "clueIndependence": "pass",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "pass",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "pass",
+        "answerUnique": "pass"
+      },
+      "status": "pass",
+      "checks": {
+        "senseAppropriate": "pass",
+        "senseUniquelySupported": "pass",
+        "otherKnownSensesExcluded": "pass",
+        "targetMainUnknown": "pass",
+        "clueQuality": "pass",
+        "clueIndependence": "pass",
+        "noAnswerLeakage": "pass",
+        "noSynonymLeakage": "pass",
+        "contextCoherent": "pass",
+        "difficultyAppropriate": "pass",
+        "naturalEnglish": "pass",
+        "supportNecessary": "pass",
+        "distractorQuality": "pass",
+        "answerUnique": "pass"
+      },
+      "revisionLog": []
+    }
+  }
+}

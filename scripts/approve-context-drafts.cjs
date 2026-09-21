@@ -1,30 +1,23 @@
 "use strict";
 
-const fs = require("node:fs");
-const path = require("node:path");
 const { assertContextItem } = require("./lib/context-validator.cjs");
+const {
+  parseQs,
+  pipelinePaths,
+  readJson,
+  vocabularyByTarget,
+  sameQs,
+  writeJson,
+} = require("./lib/context-pipeline.cjs");
 
-const ROOT = path.resolve(__dirname, "..");
-const VOCAB_PATH = path.join(ROOT, "data", "vocab_2026-1.json");
-const DRAFT_PATH = path.join(ROOT, "data", "context-drafts", "eiken2-2026-1-q3.json");
-const REVIEW_PATH = path.join(ROOT, "data", "context-drafts", "eiken2-2026-1-q3-review.json");
-const APPROVED_PATH = path.join(ROOT, "data", "context-approved", "eiken2-2026-1-q3.json");
-
-function readJson(file) {
-  return JSON.parse(fs.readFileSync(file, "utf8"));
-}
-
-function vocabularyByTarget() {
-  const vocab = readJson(VOCAB_PATH);
-  return new Map([...(vocab.words || []), ...(vocab.idioms || [])]
-    .map((item) => [item.word || item.phrase, item]));
-}
-
-function main({ write = true } = {}) {
-  const draft = readJson(DRAFT_PATH);
-  const review = readJson(REVIEW_PATH);
+function main({ qs = parseQs(), write = true } = {}) {
+  const paths = pipelinePaths(qs);
+  const draft = readJson(paths.draft);
+  const review = readJson(paths.review);
   const vocabulary = vocabularyByTarget();
-  if (draft.q !== 3 || draft.items?.length !== 4) throw new Error("Only the four q=3 draft items may be approved");
+  if (!sameQs(draft.q, qs) || draft.items?.length !== draft.sourceCount) {
+    throw new Error(`Only the selected ${paths.label} draft items may be approved`);
+  }
   if (review.reviewStatus !== "complete") throw new Error("Manual review is not complete");
 
   const items = draft.items.map((draftItem) => {
@@ -69,18 +62,20 @@ function main({ write = true } = {}) {
   const approved = {
     schemaVersion: 1,
     datasetId: "eiken2-2026-1",
-    q: 3,
+    q: qs.length === 1 ? qs[0] : qs,
+    qs: [...qs],
     stage: "APPROVED",
     items,
   };
-  if (write) fs.writeFileSync(APPROVED_PATH, `${JSON.stringify(approved, null, 2)}\n`, "utf8");
+  if (write) writeJson(paths.approved, approved);
   return approved;
 }
 
 if (require.main === module) {
   const checkOnly = process.argv.includes("--check");
-  const approved = main({ write: !checkOnly });
-  console.log(`${checkOnly ? "approved draft check" : "approved draft written"}: ${approved.items.map((item) => item.target).join(", ")}`);
+  const qs = parseQs();
+  const approved = main({ qs, write: !checkOnly });
+  console.log(`${checkOnly ? "approved draft check" : "approved draft written"} (${pipelinePaths(qs).label}): ${approved.items.map((item) => item.target).join(", ")}`);
 }
 
 module.exports = { main };

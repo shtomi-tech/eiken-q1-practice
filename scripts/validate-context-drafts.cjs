@@ -1,27 +1,24 @@
 "use strict";
 
-const fs = require("node:fs");
-const path = require("node:path");
 const { assertContextItem } = require("./lib/context-validator.cjs");
+const {
+  parseQs,
+  pipelinePaths,
+  readJson,
+  sourceItems,
+  vocabularyByTarget,
+  sameQs,
+  writeJson,
+} = require("./lib/context-pipeline.cjs");
 
-const ROOT = path.resolve(__dirname, "..");
-const VOCAB_PATH = path.join(ROOT, "data", "vocab_2026-1.json");
-const DRAFT_PATH = path.join(ROOT, "data", "context-drafts", "eiken2-2026-1-q3.json");
-
-function readJson(file) {
-  return JSON.parse(fs.readFileSync(file, "utf8"));
-}
-
-function vocabByTarget() {
-  const vocab = readJson(VOCAB_PATH);
-  return new Map([...(vocab.words || []), ...(vocab.idioms || [])]
-    .map((item) => [item.word || item.phrase, item]));
-}
-
-function main({ write = true } = {}) {
-  const draft = readJson(DRAFT_PATH);
-  const vocabulary = vocabByTarget();
-  if (draft.q !== 3 || draft.items?.length !== 4) throw new Error("The q=3 draft must contain exactly four items");
+function main({ qs = parseQs(), write = true } = {}) {
+  const paths = pipelinePaths(qs);
+  const draft = readJson(paths.draft);
+  const vocabulary = vocabularyByTarget();
+  const sources = sourceItems(qs);
+  if (!sameQs(draft.q, qs) || !sameQs(draft.qs || draft.q, qs) || draft.items?.length !== sources.length) {
+    throw new Error(`The ${paths.label} draft must contain exactly ${sources.length} source items`);
+  }
   for (const item of draft.items) {
     const vocab = vocabulary.get(item.source.target);
     const runtimeShape = { ...item.source, ...item };
@@ -36,14 +33,15 @@ function main({ write = true } = {}) {
       ],
     };
   }
-  if (write) fs.writeFileSync(DRAFT_PATH, `${JSON.stringify(draft, null, 2)}\n`, "utf8");
+  if (write) writeJson(paths.draft, draft);
   return draft;
 }
 
 if (require.main === module) {
   const checkOnly = process.argv.includes("--check");
-  const draft = main({ write: !checkOnly });
-  console.log(`q=3 structural validation: PASS (${draft.items.length} items)`);
+  const qs = parseQs();
+  const draft = main({ qs, write: !checkOnly });
+  console.log(`${pipelinePaths(qs).label} structural validation: PASS (${draft.items.length} items)`);
 }
 
 module.exports = { main };

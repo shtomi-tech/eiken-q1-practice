@@ -20,7 +20,7 @@ function normalizeSense(value) {
 function senseParts(value) {
   return String(value || "")
     .split(/[；;]/)
-    .flatMap((part) => part.split(/[、,]/))
+    .flatMap((part) => part.split(/[、,／/]/))
     .map((part) => part.trim())
     .filter(Boolean);
 }
