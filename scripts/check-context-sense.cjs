@@ -14,6 +14,7 @@ const {
   filterEligibleSenses,
   validateTargetSense,
 } = require("./lib/context-sense-validator.cjs");
+const { compatibleSense } = require("./lib/context-validator.cjs");
 
 const VOCAB_PATH = path.join(ROOT, "data", "vocab_2026-1.json");
 const vocab = readJson(VOCAB_PATH);
@@ -101,7 +102,15 @@ const context = readJson(path.join(ROOT, "data", "context_2026-1.json"));
 for (const [target, expected] of Object.entries(positives)) {
   const item = context.contexts.find((candidate) => candidate.target === target);
   assert.equal(item.targetSense, expected, `${target}: positive sense fixture changed`);
+  assert.equal(compatibleSense(item.meaning, expected), true, `${target}: hardened compatibility rejected approved sense`);
 }
+
+for (const target of ["chemical", "tap", "occur", "illustrate", "occupy", "polish"]) {
+  const item = context.contexts.find((candidate) => candidate.target === target);
+  assert.equal(compatibleSense(item.meaning, item.targetSense), true, `${target}: hardened compatibility rejected fixture`);
+}
+assert.equal(compatibleSense("差別；識別、区別", "差"), false, "substring-only sense must not be compatible");
+assert.equal(compatibleSense("規模；目盛り；はかり；うろこ", "はか"), false, "partial sense must not be compatible");
 
 const q67VocabTargets = [...(vocab.words || []), ...(vocab.idioms || [])]
   .filter((item) => item.q === 6 || item.q === 7)

@@ -68,12 +68,16 @@ function duplicateKeys(text, file) {
   return duplicates;
 }
 
-const directory = path.join(ROOT, "data", "context-pipeline-metrics");
-const files = fs.readdirSync(directory).filter((file) => file.endsWith(".json")).sort();
-for (const file of files) {
+const directories = ["context-pipeline-metrics", "context-audits"];
+const files = directories.flatMap((name) => {
+  const directory = path.join(ROOT, "data", name);
+  if (!fs.existsSync(directory)) return [];
+  return fs.readdirSync(directory).filter((file) => file.endsWith(".json")).sort().map((file) => ({ directory, file }));
+});
+for (const { directory, file } of files) {
   const duplicates = duplicateKeys(fs.readFileSync(path.join(directory, file), "utf8"), file);
   assert.deepEqual(duplicates, [], `${file}: duplicate JSON keys: ${duplicates.join(", ")}`);
 }
-console.log(`context pipeline metrics duplicate-key check: OK (${files.length} files)`);
+console.log(`context pipeline/audit duplicate-key check: OK (${files.length} files)`);
 
 module.exports = { duplicateKeys };

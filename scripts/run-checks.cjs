@@ -34,6 +34,7 @@ const CHECKS = [
   ["scripts/check-context-batch-q10-q13.cjs"],
   ["scripts/check-context-leakage.cjs"],
   ["scripts/check-context-batch-q14-q17.cjs"],
+  ["scripts/check-context-full-dataset.cjs"],
   ["scripts/check-learn-context-flow.cjs"],
   ["scripts/check-learn-state-transitions.cjs"],
   ["scripts/check-student-storage-scope.cjs"],

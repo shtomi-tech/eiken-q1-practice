@@ -1,0 +1,3314 @@
+{
+  "schemaVersion": 1,
+  "datasetId": "eiken2-2026-1",
+  "baselineCommit": "5ce31e1007e50e41a92dd78ce9d4cd0e19060b56",
+  "scope": {
+    "qMin": 1,
+    "qMax": 17,
+    "vocabularyCount": 68,
+    "contextCount": 68,
+    "itemsPerQ": 4,
+    "targetOrderMatch": true
+  },
+  "summary": {
+    "totalItems": 68,
+    "passItems": 64,
+    "warnItems": 4,
+    "reviseItems": 0,
+    "passRate": 0.9411764705882353,
+    "warnRate": 0.058823529411764705,
+    "revisionRate": 0,
+    "criticalFindings": 0,
+    "majorFindings": 0,
+    "minorFindings": 4,
+    "leakagePass": 64,
+    "leakageWarn": 4,
+    "leakageFail": 0,
+    "reviewedWarn": 4,
+    "unreviewedWarn": 0,
+    "japaneseSupportUsed": 0,
+    "multiSenseItems": 21
+  },
+  "categoryMetrics": {
+    "SENSE": 0,
+    "CONTEXT": 0,
+    "CLUE": 0,
+    "LEAKAGE": 4,
+    "DIFFICULTY": 0,
+    "NATURALNESS": 0,
+    "DISTRACTOR": 0,
+    "EXPLANATION": 0,
+    "JAPANESE_SUPPORT": 0,
+    "DIVERSITY": 0,
+    "DATA_INTEGRITY": 0
+  },
+  "severityMetrics": {
+    "critical": 0,
+    "major": 0,
+    "minor": 4
+  },
+  "qMetrics": {
+    "q1": {
+      "pass": 4,
+      "warn": 0,
+      "revise": 0
+    },
+    "q2": {
+      "pass": 4,
+      "warn": 0,
+      "revise": 0
+    },
+    "q3": {
+      "pass": 4,
+      "warn": 0,
+      "revise": 0
+    },
+    "q4": {
+      "pass": 4,
+      "warn": 0,
+      "revise": 0
+    },
+    "q5": {
+      "pass": 4,
+      "warn": 0,
+      "revise": 0
+    },
+    "q6": {
+      "pass": 4,
+      "warn": 0,
+      "revise": 0
+    },
+    "q7": {
+      "pass": 4,
+      "warn": 0,
+      "revise": 0
+    },
+    "q8": {
+      "pass": 4,
+      "warn": 0,
+      "revise": 0
+    },
+    "q9": {
+      "pass": 4,
+      "warn": 0,
+      "revise": 0
+    },
+    "q10": {
+      "pass": 4,
+      "warn": 0,
+      "revise": 0
+    },
+    "q11": {
+      "pass": 4,
+      "warn": 0,
+      "revise": 0
+    },
+    "q12": {
+      "pass": 3,
+      "warn": 1,
+      "revise": 0
+    },
+    "q13": {
+      "pass": 4,
+      "warn": 0,
+      "revise": 0
+    },
+    "q14": {
+      "pass": 4,
+      "warn": 0,
+      "revise": 0
+    },
+    "q15": {
+      "pass": 3,
+      "warn": 1,
+      "revise": 0
+    },
+    "q16": {
+      "pass": 3,
+      "warn": 1,
+      "revise": 0
+    },
+    "q17": {
+      "pass": 3,
+      "warn": 1,
+      "revise": 0
+    }
+  },
+  "phaseMetrics": {
+    "q1": {
+      "pass": 4,
+      "warn": 0,
+      "revise": 0
+    },
+    "q2": {
+      "pass": 4,
+      "warn": 0,
+      "revise": 0
+    },
+    "q3": {
+      "pass": 4,
+      "warn": 0,
+      "revise": 0
+    },
+    "q4-q5": {
+      "pass": 8,
+      "warn": 0,
+      "revise": 0
+    },
+    "q6-q7": {
+      "pass": 8,
+      "warn": 0,
+      "revise": 0
+    },
+    "q8-q9": {
+      "pass": 8,
+      "warn": 0,
+      "revise": 0
+    },
+    "q10-q13": {
+      "pass": 15,
+      "warn": 1,
+      "revise": 0
+    },
+    "q14-q17": {
+      "pass": 13,
+      "warn": 3,
+      "revise": 0
+    }
+  },
+  "multiSenseInventory": [
+    {
+      "q": 2,
+      "target": "branch",
+      "targetSense": "枝"
+    },
+    {
+      "q": 2,
+      "target": "scale",
+      "targetSense": "はかり"
+    },
+    {
+      "q": 2,
+      "target": "trail",
+      "targetSense": "（山などの）小道"
+    },
+    {
+      "q": 3,
+      "target": "difficulty",
+      "targetSense": "困難、難しさ"
+    },
+    {
+      "q": 3,
+      "target": "balance",
+      "targetSense": "均衡、バランス"
+    },
+    {
+      "q": 4,
+      "target": "discrimination",
+      "targetSense": "差別"
+    },
+    {
+      "q": 4,
+      "target": "shelter",
+      "targetSense": "避難所、シェルター"
+    },
+    {
+      "q": 4,
+      "target": "content",
+      "targetSense": "中身、内容"
+    },
+    {
+      "q": 5,
+      "target": "foster",
+      "targetSense": "育む、促進する"
+    },
+    {
+      "q": 5,
+      "target": "divide",
+      "targetSense": "分ける、分割する"
+    },
+    {
+      "q": 5,
+      "target": "pronounce",
+      "targetSense": "発音する"
+    },
+    {
+      "q": 6,
+      "target": "chemical",
+      "targetSense": "化学の"
+    },
+    {
+      "q": 7,
+      "target": "occur",
+      "targetSense": "起こる、生じる"
+    },
+    {
+      "q": 7,
+      "target": "tap",
+      "targetSense": "（指などで）軽くたたく"
+    },
+    {
+      "q": 8,
+      "target": "illustrate",
+      "targetSense": "（例などで）説明する、明らかにする"
+    },
+    {
+      "q": 8,
+      "target": "occupy",
+      "targetSense": "占める、占領する"
+    },
+    {
+      "q": 8,
+      "target": "polish",
+      "targetSense": "磨く"
+    },
+    {
+      "q": 10,
+      "target": "slip",
+      "targetSense": "滑る"
+    },
+    {
+      "q": 13,
+      "target": "take away from",
+      "targetSense": "〜の価値（魅力）を損なう"
+    },
+    {
+      "q": 16,
+      "target": "threatening to",
+      "targetSense": "〜しそうで"
+    },
+    {
+      "q": 17,
+      "target": "catch up",
+      "targetSense": "（遅れを）取り戻す"
+    }
+  ],
+  "diversityAudit": {
+    "status": "pass",
+    "checks": {
+      "sceneDiversity": "pass",
+      "sentencePatternDiversity": "pass",
+      "clueDiversity": "pass",
+      "distractorDiversity": "pass"
+    },
+    "reason": "The 68 contexts span school, home, travel, medicine, weather, work, sport, and public settings with varied behavioral, causal, contrastive, and result clues."
+  },
+  "entries": [
+    {
+      "target": "bride",
+      "q": 1,
+      "effectiveTargetSense": "花嫁、新婦",
+      "legacyTargetSenseFallback": true,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "lawyer",
+      "q": 1,
+      "effectiveTargetSense": "弁護士、法律家",
+      "legacyTargetSenseFallback": true,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "warrior",
+      "q": 1,
+      "effectiveTargetSense": "戦士、武人",
+      "legacyTargetSenseFallback": true,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "surgeon",
+      "q": 1,
+      "effectiveTargetSense": "外科医",
+      "legacyTargetSenseFallback": true,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "globe",
+      "q": 2,
+      "effectiveTargetSense": "地球儀",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "branch",
+      "q": 2,
+      "effectiveTargetSense": "枝",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": true,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "scale",
+      "q": 2,
+      "effectiveTargetSense": "はかり",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": true,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "trail",
+      "q": 2,
+      "effectiveTargetSense": "（山などの）小道",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": true,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "difficulty",
+      "q": 3,
+      "effectiveTargetSense": "困難、難しさ",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": true,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "glory",
+      "q": 3,
+      "effectiveTargetSense": "栄光、名誉",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "balance",
+      "q": 3,
+      "effectiveTargetSense": "均衡、バランス",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": true,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "priority",
+      "q": 3,
+      "effectiveTargetSense": "優先、優先事項",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "tendency",
+      "q": 4,
+      "effectiveTargetSense": "傾向",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "discrimination",
+      "q": 4,
+      "effectiveTargetSense": "差別",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": true,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "shelter",
+      "q": 4,
+      "effectiveTargetSense": "避難所、シェルター",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": true,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "content",
+      "q": 4,
+      "effectiveTargetSense": "中身、内容",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": true,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "foster",
+      "q": 5,
+      "effectiveTargetSense": "育む、促進する",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": true,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "hate",
+      "q": 5,
+      "effectiveTargetSense": "ひどく嫌う",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "divide",
+      "q": 5,
+      "effectiveTargetSense": "分ける、分割する",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": true,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "pronounce",
+      "q": 5,
+      "effectiveTargetSense": "発音する",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": true,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "typical",
+      "q": 6,
+      "effectiveTargetSense": "典型的な",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "gradual",
+      "q": 6,
+      "effectiveTargetSense": "徐々の、段階的な",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "chemical",
+      "q": 6,
+      "effectiveTargetSense": "化学の",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": true,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "false",
+      "q": 6,
+      "effectiveTargetSense": "誤った、偽の",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "weep",
+      "q": 7,
+      "effectiveTargetSense": "泣く",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "occur",
+      "q": 7,
+      "effectiveTargetSense": "起こる、生じる",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": true,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "swell",
+      "q": 7,
+      "effectiveTargetSense": "腫れる",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "tap",
+      "q": 7,
+      "effectiveTargetSense": "（指などで）軽くたたく",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": true,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "illustrate",
+      "q": 8,
+      "effectiveTargetSense": "（例などで）説明する、明らかにする",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": true,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "occupy",
+      "q": 8,
+      "effectiveTargetSense": "占める、占領する",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": true,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "polish",
+      "q": 8,
+      "effectiveTargetSense": "磨く",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": true,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "congratulate",
+      "q": 8,
+      "effectiveTargetSense": "祝う、祝辞を述べる",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "barely",
+      "q": 9,
+      "effectiveTargetSense": "かろうじて、やっと（〜ない）",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "secretly",
+      "q": 9,
+      "effectiveTargetSense": "こっそりと、密かに",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "gently",
+      "q": 9,
+      "effectiveTargetSense": "やさしく、穏やかに",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "repeatedly",
+      "q": 9,
+      "effectiveTargetSense": "繰り返し、何度も",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "frown",
+      "q": 10,
+      "effectiveTargetSense": "顔をしかめる、眉をひそめる",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "slip",
+      "q": 10,
+      "effectiveTargetSense": "滑る",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": true,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "guess",
+      "q": 10,
+      "effectiveTargetSense": "推測する、言い当てる",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "crawl",
+      "q": 10,
+      "effectiveTargetSense": "はう",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "as a general rule",
+      "q": 11,
+      "effectiveTargetSense": "概して、一般的に言えば",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "for a fresh start",
+      "q": 11,
+      "effectiveTargetSense": "新たなスタートとして、心機一転",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "on a specific occasion",
+      "q": 11,
+      "effectiveTargetSense": "特定の機会に",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "in case of emergency",
+      "q": 11,
+      "effectiveTargetSense": "緊急時には、非常の場合に備えて",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "on one's own",
+      "q": 12,
+      "effectiveTargetSense": "自分一人で、独力で",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "warn",
+        "findings": [
+          {
+            "type": "PARAPHRASE_LEAKAGE",
+            "text": "no one helped",
+            "severity": "warning",
+            "reason": "This expression may be answer-equivalent to on one's own."
+          }
+        ]
+      },
+      "initialAudit": {
+        "status": "warn",
+        "findings": [
+          {
+            "category": "LEAKAGE",
+            "severity": "minor",
+            "subtype": "PARAPHRASE_LEAKAGE",
+            "reason": "This expression may be answer-equivalent to on one's own.",
+            "text": "no one helped"
+          }
+        ]
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "No one helped is strong behavioral evidence, but the learner must still connect the whole repair scene to independent action."
+      },
+      "finalAudit": {
+        "status": "warn",
+        "findings": [
+          {
+            "category": "LEAKAGE",
+            "severity": "minor",
+            "subtype": "PARAPHRASE_LEAKAGE",
+            "reason": "This expression may be answer-equivalent to on one's own.",
+            "text": "no one helped"
+          }
+        ]
+      },
+      "revision": null
+    },
+    {
+      "target": "on the air",
+      "q": 12,
+      "effectiveTargetSense": "放送中で",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "at a distance",
+      "q": 12,
+      "effectiveTargetSense": "離れて、遠くから",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "to one's surprise",
+      "q": 12,
+      "effectiveTargetSense": "（人が）驚いたことに",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "go along with",
+      "q": 13,
+      "effectiveTargetSense": "（案・人に）賛成する、従う",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "take away from",
+      "q": 13,
+      "effectiveTargetSense": "〜の価値（魅力）を損なう",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": true,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "bring out in",
+      "q": 13,
+      "effectiveTargetSense": "引き出す",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "watch out for",
+      "q": 13,
+      "effectiveTargetSense": "〜に気をつける、用心する",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "a series of",
+      "q": 14,
+      "effectiveTargetSense": "一連の、ひと続きの",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "the edge of",
+      "q": 14,
+      "effectiveTargetSense": "〜の端、縁",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "a member of",
+      "q": 14,
+      "effectiveTargetSense": "〜の一員、メンバー",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "the back of",
+      "q": 14,
+      "effectiveTargetSense": "〜の後ろ、裏",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "in other words",
+      "q": 15,
+      "effectiveTargetSense": "言い換えれば、つまり",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "in the beginning",
+      "q": 15,
+      "effectiveTargetSense": "最初は、初めのうちは",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "back and forth",
+      "q": 15,
+      "effectiveTargetSense": "行ったり来たり、前後に",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "warn",
+        "findings": [
+          {
+            "type": "PARAPHRASE_LEAKAGE",
+            "text": "to the other side, then moved back again",
+            "severity": "warning",
+            "reason": "This expression may be answer-equivalent to back and forth."
+          }
+        ]
+      },
+      "initialAudit": {
+        "status": "warn",
+        "findings": [
+          {
+            "category": "LEAKAGE",
+            "severity": "minor",
+            "subtype": "PARAPHRASE_LEAKAGE",
+            "reason": "This expression may be answer-equivalent to back and forth.",
+            "text": "to the other side, then moved back again"
+          }
+        ]
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Movement to the other side and back is strong motion evidence rather than an explicit definition."
+      },
+      "finalAudit": {
+        "status": "warn",
+        "findings": [
+          {
+            "category": "LEAKAGE",
+            "severity": "minor",
+            "subtype": "PARAPHRASE_LEAKAGE",
+            "reason": "This expression may be answer-equivalent to back and forth.",
+            "text": "to the other side, then moved back again"
+          }
+        ]
+      },
+      "revision": null
+    },
+    {
+      "target": "on the contrary",
+      "q": 15,
+      "effectiveTargetSense": "それどころか、（前言を否定して）逆に",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "distinct from",
+      "q": 16,
+      "effectiveTargetSense": "〜とは異なる、別個の",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "warn",
+        "findings": [
+          {
+            "type": "SYNONYM_LEAKAGE",
+            "text": "different species",
+            "severity": "warning",
+            "reason": "This expression may be answer-equivalent to distinct from."
+          }
+        ]
+      },
+      "initialAudit": {
+        "status": "warn",
+        "findings": [
+          {
+            "category": "LEAKAGE",
+            "severity": "minor",
+            "subtype": "SYNONYM_LEAKAGE",
+            "reason": "This expression may be answer-equivalent to distinct from.",
+            "text": "different species"
+          }
+        ]
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Different species confirms a visible contrast; it does not translate or directly define the target phrase."
+      },
+      "finalAudit": {
+        "status": "warn",
+        "findings": [
+          {
+            "category": "LEAKAGE",
+            "severity": "minor",
+            "subtype": "SYNONYM_LEAKAGE",
+            "reason": "This expression may be answer-equivalent to distinct from.",
+            "text": "different species"
+          }
+        ]
+      },
+      "revision": null
+    },
+    {
+      "target": "composed of",
+      "q": 16,
+      "effectiveTargetSense": "〜から構成されている",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "absent from",
+      "q": 16,
+      "effectiveTargetSense": "〜を欠席して、〜にいない",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "threatening to",
+      "q": 16,
+      "effectiveTargetSense": "〜しそうで",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": true,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "lay off",
+      "q": 17,
+      "effectiveTargetSense": "（従業員を）一時解雇する、レイオフする",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "flip over",
+      "q": 17,
+      "effectiveTargetSense": "ひっくり返る、裏返す",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "warn",
+        "findings": [
+          {
+            "type": "SYNONYM_LEAKAGE",
+            "text": "turn it around",
+            "severity": "warning",
+            "reason": "This expression may be answer-equivalent to flip over."
+          }
+        ]
+      },
+      "initialAudit": {
+        "status": "warn",
+        "findings": [
+          {
+            "category": "LEAKAGE",
+            "severity": "minor",
+            "subtype": "SYNONYM_LEAKAGE",
+            "reason": "This expression may be answer-equivalent to flip over.",
+            "text": "turn it around"
+          }
+        ]
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Turning the card around is observable behavior, while the other-side result still carries the inference."
+      },
+      "finalAudit": {
+        "status": "warn",
+        "findings": [
+          {
+            "category": "LEAKAGE",
+            "severity": "minor",
+            "subtype": "SYNONYM_LEAKAGE",
+            "reason": "This expression may be answer-equivalent to flip over.",
+            "text": "turn it around"
+          }
+        ]
+      },
+      "revision": null
+    },
+    {
+      "target": "bring about",
+      "q": 17,
+      "effectiveTargetSense": "引き起こす、もたらす",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": false,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    },
+    {
+      "target": "catch up",
+      "q": 17,
+      "effectiveTargetSense": "（遅れを）取り戻す",
+      "legacyTargetSenseFallback": false,
+      "senseCompatible": true,
+      "multiSense": true,
+      "japaneseSupportSegments": 0,
+      "structuralValidation": "pass",
+      "leakageValidation": {
+        "status": "pass",
+        "findings": []
+      },
+      "initialAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "manualAudit": {
+        "status": "pass",
+        "checks": {
+          "senseAppropriate": "pass",
+          "senseUniquelySupported": "pass",
+          "otherKnownSensesExcluded": "pass",
+          "targetMainUnknown": "pass",
+          "clueQuality": "pass",
+          "clueIndependence": "pass",
+          "noAnswerLeakage": "pass",
+          "noSynonymLeakage": "pass",
+          "contextCoherent": "pass",
+          "difficultyAppropriate": "pass",
+          "naturalEnglish": "pass",
+          "supportNecessary": "pass",
+          "distractorQuality": "pass",
+          "answerUnique": "pass"
+        },
+        "reason": "Manual audit found no pedagogical or naturalness issue."
+      },
+      "finalAudit": {
+        "status": "pass",
+        "findings": []
+      },
+      "revision": null
+    }
+  ]
+}

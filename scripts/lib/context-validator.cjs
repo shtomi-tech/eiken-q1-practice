@@ -32,9 +32,7 @@ function senseParts(value) {
 function compatibleSense(meaning, targetSense) {
   const targetParts = senseParts(targetSense).map(normalizeSense).filter(Boolean);
   const meaningParts = senseParts(meaning).map(normalizeSense).filter(Boolean);
-  return targetParts.some((target) => meaningParts.some((meaningPart) => (
-    target === meaningPart || target.includes(meaningPart) || meaningPart.includes(target)
-  )));
+  return targetParts.some((target) => meaningParts.includes(target));
 }
 
 function occurrenceCount(text, target) {
