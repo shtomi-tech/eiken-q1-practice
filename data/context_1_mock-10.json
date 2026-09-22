@@ -6152,16 +6152,16 @@
       "level": "EIKEN Grade 1",
       "fullEnglish": [
         "The doctor's handwriting on the form was almost completely illegible.",
-        "The pharmacist could not tell an from an and had to telephone the clinic."
+        "The pharmacist could not read the name of the medicine and had to telephone the clinic."
       ],
       "mixedEnglish": [
         "The doctor's handwriting on the form was almost completely illegible.",
-        "The pharmacist could not tell an from an and had to telephone the clinic."
+        "The pharmacist could not read the name of the medicine and had to telephone the clinic."
       ],
       "contextClues": [
         {
-          "text": "The pharmacist could not tell an",
-          "type": "detail"
+          "text": "could not read the name of the medicine",
+          "type": "result"
         },
         {
           "text": "had to telephone the clinic",
@@ -6169,7 +6169,7 @@
         }
       ],
       "inferencePath": [
-        "The pharmacist could not tell an",
+        "could not read the name of the medicine",
         "had to telephone the clinic",
         "targetSense: 読めない",
         "illegible"
@@ -6194,13 +6194,18 @@
         ],
         [
           {
-            "en": "The pharmacist could not tell an",
-            "role": "clue",
-            "clueType": "detail",
+            "en": "The pharmacist ",
+            "role": "core",
             "useJapanese": false
           },
           {
-            "en": " from an and ",
+            "en": "could not read the name of the medicine",
+            "role": "clue",
+            "clueType": "result",
+            "useJapanese": false
+          },
+          {
+            "en": " and ",
             "role": "core",
             "useJapanese": false
           },
@@ -6224,7 +6229,7 @@
         "短い"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「The pharmacist could not tell an」と「had to telephone the clinic」という手がかりから、薬剤師は文字を判別できず、診療所へ電話せざるを得なかったと述べられています。そのため、illegibleは「読めない」だと推測できます。",
+      "inferenceExplanation": "「could not read the name of the medicine」と「had to telephone the clinic」という手がかりから、薬剤師は薬の名を読み取れず、診療所へ電話せざるを得なかったと述べられています。そのため、illegibleは「読めない」だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
