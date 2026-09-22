@@ -77,6 +77,11 @@ no API key, $0).
   `data/manifest.json` の `contextUrl` / `contextTotal` も更新する。
 - 検証: `scripts/check-context-eiken1-datasets.cjs`（`npm test` に含む）。
   2級と同じ `context-validator` / `context-leakage-validator` を通す。
+  解説に想定外の文字体系（キリル文字など）が混ざっていないかも確認する。
+- 1文目は語彙データの example をそのまま使うため、そこだけを根拠に
+  `DIRECT_DEFINITION`（"that is" が関係詞として現れる等）と判定された場合に限り、
+  原稿へ `"leakageReview": {"status": "accepted", "reason": "…"}` を書いて通す。
+  それ以外の leakage FAIL は本文を書き直す。
 
 アプリ側は級を問わず manifest の `contextUrl` があるセットで文脈推測を有効にするため、
 コードの変更は不要。
