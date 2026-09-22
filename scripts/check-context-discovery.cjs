@@ -92,6 +92,12 @@ assert.match(sessionSource, /contextChoiceBtn/, "文脈推測の意味4択ボタ
 assert.match(sessionSource, /contextPicked/, "文脈推測の選択結果を保持する必要があります");
 assert.match(renderContextBody, /正しい意味：\$\{correctMeaning\}/,
   "回答後に正しい意味を表示する必要があります");
+assert.match(sessionSource, /function contextExampleTranslationOf\(context, itemHint/,
+  "文脈例文の訳を語彙データから取得する必要があります");
+assert.match(extractFunctionBody(sessionSource, "contextExampleTranslationOf"), /example === firstSentence/,
+  "文脈の1文目と暗記カード例文が一致する場合だけ訳を表示してください");
+assert.match(renderContextBody, /例文の訳：\$\{exampleTranslation\}/,
+  "回答後に文脈例文の訳を表示する必要があります");
 assert.match(renderContextBody, /この単語を覚える →/,
   "回答後に暗記カードへ進むボタンが必要です");
 assert.doesNotMatch(renderContextBody,

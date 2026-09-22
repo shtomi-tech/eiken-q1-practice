@@ -3277,6 +3277,14 @@ function contextMeaningOf(context, itemHint = null) {
   return item ? learningMeaningOf(item) : String(context?.meaning || "");
 }
 
+function contextExampleTranslationOf(context, itemHint = null) {
+  const item = contextVocabularyItem(context, itemHint);
+  const firstSentence = Array.isArray(context?.fullEnglish) ? String(context.fullEnglish[0] || "").trim() : "";
+  const example = String(item?.example || "").trim();
+  const translation = String(item?.exampleTranslation || "").trim();
+  return firstSentence && example === firstSentence ? translation : "";
+}
+
 function contextItemFor(item) {
   if (!item || (item._datasetId && item._datasetId !== state.datasetId)) return null;
   const pool = Array.isArray(session?.contextPool) && session.contextPool.length
@@ -3496,6 +3504,7 @@ function renderContext(body) {
     return;
   }
   const correctMeaning = contextMeaningOf(item, sourceItem);
+  const exampleTranslation = contextExampleTranslationOf(item, sourceItem);
   const last = isLearn
     ? false
     : isStandalone
@@ -3549,6 +3558,7 @@ function renderContext(body) {
     },
       el("h3", {}, session.contextCorrect ? "正解！" : "おしい！"),
       el("p", {}, `正しい意味：${correctMeaning}`),
+      exampleTranslation ? el("p", { class: "trans contextExampleTranslation" }, `例文の訳：${exampleTranslation}`) : null,
       !session.contextCorrect ? el("p", { class: "trans" }, `あなたの選択：${session.contextPicked}`) : null,
     ));
     card.appendChild(el("div", { class: "actions contextActions" },

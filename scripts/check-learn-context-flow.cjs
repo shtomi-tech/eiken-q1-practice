@@ -30,6 +30,7 @@ assert.match(renderContext, /session\.items\[session\.learnIdx\]/, "通常学習
 assert.match(renderContext, /recordLearnContextResult\(sourceItem, meaning, correctMeaning\)/, "ContextのpickedMeaning/correctMeaningを保存する必要があります");
 assert.match(renderContext, /item\.mixedEnglish/, "Contextは教材側のMixed Contextを優先表示できる必要があります");
 assert.match(renderContext, /正しい意味：\$\{correctMeaning\}/, "Context回答後は正しい意味を表示する必要があります");
+assert.match(renderContext, /例文の訳：\$\{exampleTranslation\}/, "Context回答後は例文の訳を表示する必要があります");
 assert.doesNotMatch(renderContext, /item\.inferenceExplanation|item\.inferencePath|contextClueList|contextAnswer/,
   "Context回答後に意味の詳しい解説・手がかり・推測の道筋を表示しないでください");
 assert.match(contextChoices, /item\.choices/, "Contextは教材側のtarget専用4択を利用できる必要があります");
