@@ -883,25 +883,25 @@
       "pos": "adverb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The students studied silently in the school library while preparing for their final exams.",
+        "The audience listened silently while the musician played the final song.",
         "Everyone was required to keep their voices down so that other people could read without any disturbance."
       ],
       "mixedEnglish": [
-        "The students studied silently in the school library while preparing for their final exams.",
+        "The audience listened silently while the musician played the final song.",
         "Everyone was required to keep their voices down so that other people could read without any disturbance."
       ],
       "contextClues": [
         {
-          "text": "school library",
-          "type": "location"
+          "text": "Everyone was required",
+          "type": "supporting context"
         },
         {
           "text": "keep their voices down",
-          "type": "behavior"
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "school library",
+        "Everyone was required",
         "keep their voices down",
         "targetSense: 静かに",
         "silently"
@@ -909,7 +909,7 @@
       "segments": [
         [
           {
-            "en": "The students studied ",
+            "en": "The audience listened ",
             "role": "core",
             "useJapanese": false
           },
@@ -919,32 +919,27 @@
             "useJapanese": false
           },
           {
-            "en": " in the ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "school library",
-            "role": "clue",
-            "clueType": "location",
-            "useJapanese": false
-          },
-          {
-            "en": " while preparing for their final exams.",
+            "en": " while the musician played the final song.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "Everyone was required to ",
+            "en": "Everyone was required",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " to ",
             "role": "core",
             "useJapanese": false
           },
           {
             "en": "keep their voices down",
             "role": "clue",
-            "clueType": "behavior",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -961,7 +956,7 @@
         "完全に"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「school library」という場所や、「keep their voices down」というきまりから、音を立てずに取り組んでいたことがわかります。そのため、silentlyは「静かに」だと推測できます。",
+      "inferenceExplanation": "「Everyone was required」と「keep their voices down」が手がかりです。これらの状況から、silentlyは「静かに」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -1275,26 +1270,26 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "Bend the metal wire carefully before attaching it to the frame.",
+        "Bend the paper carefully before placing it inside the envelope.",
         "This will help it fit nicely without leaving any sharp ends."
       ],
       "mixedEnglish": [
-        "Bend the metal wire carefully before attaching it to the frame.",
+        "Bend the paper carefully before placing it inside the envelope.",
         "This will help it fit nicely without leaving any sharp ends."
       ],
       "contextClues": [
         {
-          "text": "attaching it to the frame",
-          "type": "result"
+          "text": "This will help it fit",
+          "type": "supporting context"
         },
         {
-          "text": "fit nicely",
-          "type": "purpose"
+          "text": "nicely without leaving any sharp ends",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "attaching it to the frame",
-        "fit nicely",
+        "This will help it fit",
+        "nicely without leaving any sharp ends",
         "targetSense: 曲げる",
         "bend"
       ],
@@ -1306,36 +1301,31 @@
             "useJapanese": false
           },
           {
-            "en": " the metal wire carefully before ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "attaching it to the frame",
-            "role": "clue",
-            "clueType": "result",
-            "useJapanese": false
-          },
-          {
-            "en": ".",
+            "en": " the paper carefully before placing it inside the envelope.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "This will help it ",
+            "en": "This will help it fit",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "fit nicely",
+            "en": "nicely without leaving any sharp ends",
             "role": "clue",
-            "clueType": "purpose",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": " without leaving any sharp ends.",
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -1348,7 +1338,7 @@
         "濡らす"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「attaching it to the frame」という目的や、「fit nicely」という結果から、形を整えるためにワイヤーを動かすことがわかります。そのため、bendは「曲げる」だと推測できます。",
+      "inferenceExplanation": "「This will help it fit」と「nicely without leaving any sharp ends」が手がかりです。これらの状況から、bendは「曲げる」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -1564,17 +1554,21 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The suspect denied committing the serious crime described in the morning newspaper.",
+        "The witness denied committing the crime described in the newspaper.",
         "The police are searching for strong evidence to prove who was responsible for such an illegal act."
       ],
       "mixedEnglish": [
-        "The suspect denied committing the serious crime described in the morning newspaper.",
+        "The witness denied committing the crime described in the newspaper.",
         "The police are searching for strong evidence to prove who was responsible for such an illegal act."
       ],
       "contextClues": [
         {
-          "text": "the serious crime",
-          "type": "object"
+          "text": "The police are searching",
+          "type": "supporting context"
+        },
+        {
+          "text": "prove who was responsible",
+          "type": "supporting context"
         },
         {
           "text": "illegal act",
@@ -1582,7 +1576,8 @@
         }
       ],
       "inferencePath": [
-        "the serious crime",
+        "The police are searching",
+        "prove who was responsible",
         "illegal act",
         "targetSense: 犯す",
         "committing"
@@ -1590,7 +1585,7 @@
       "segments": [
         [
           {
-            "en": "The suspect denied ",
+            "en": "The witness denied ",
             "role": "core",
             "useJapanese": false
           },
@@ -1600,25 +1595,31 @@
             "useJapanese": false
           },
           {
-            "en": " ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "the serious crime",
-            "role": "clue",
-            "clueType": "object",
-            "useJapanese": false
-          },
-          {
-            "en": " described in the morning newspaper.",
+            "en": " the crime described in the newspaper.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "The police are searching for strong evidence to prove who was responsible for such an ",
+            "en": "The police are searching",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " for strong evidence to ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "prove who was responsible",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " for such an ",
             "role": "core",
             "useJapanese": false
           },
@@ -1642,10 +1643,10 @@
         "忘れる"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "容疑者が「the serious crime」について否定していることや、警察が「illegal act」の責任者を追っていることから、違法行為を行うことに関連しているとわかります。そのため、committingは「犯す」だと推測できます。",
+      "inferenceExplanation": "「The police are searching」と「prove who was responsible」と「illegal act」が手がかりです。これらの状況から、committingは「犯す」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -1760,72 +1761,62 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "Placing money on horse races and betting large amounts on games can cause serious financial problems.",
+        "Betting large amounts of money can cause serious problems for families.",
         "People should always avoid risky activities where they might lose all their savings on uncertain outcomes."
       ],
       "mixedEnglish": [
-        "Placing money on horse races and betting large amounts on games can cause serious financial problems.",
+        "Betting large amounts of money can cause serious problems for families.",
         "People should always avoid risky activities where they might lose all their savings on uncertain outcomes."
       ],
       "contextClues": [
         {
-          "text": "horse races",
-          "type": "noun phrase"
+          "text": "People should always avoid risky activities where they",
+          "type": "supporting context"
         },
         {
-          "text": "lose all their savings",
-          "type": "result"
+          "text": "might lose all their savings on uncertain outcomes",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "horse races",
-        "lose all their savings",
+        "People should always avoid risky activities where they",
+        "might lose all their savings on uncertain outcomes",
         "targetSense: 賭ける",
         "betting"
       ],
       "segments": [
         [
           {
-            "en": "Placing money on ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "horse races",
-            "role": "clue",
-            "clueType": "noun phrase",
-            "useJapanese": false
-          },
-          {
-            "en": " and ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "betting",
+            "en": "Betting",
             "role": "target",
             "useJapanese": false
           },
           {
-            "en": " large amounts on games can cause serious financial problems.",
+            "en": " large amounts of money can cause serious problems for families.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "People should always avoid risky activities where they might ",
+            "en": "People should always avoid risky activities where they",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "lose all their savings",
+            "en": "might lose all their savings on uncertain outcomes",
             "role": "clue",
-            "clueType": "result",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": " on uncertain outcomes.",
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -1838,7 +1829,7 @@
         "寄付する"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「horse races」に関連する文脈や、「lose all their savings」というリスクから、不確かな結果にお金をリスクにさらす行為について述べているとわかります。そのため、bettingは「賭ける」だと推測できます。",
+      "inferenceExplanation": "「People should always avoid risky activities where they」と「might lose all their savings on uncertain outcomes」が手がかりです。これらの状況から、bettingは「賭ける」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -1858,26 +1849,26 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "Are you implying that the manager knew about the error before the meeting?",
+        "Are you implying that the manager knew about the mistake earlier?",
         "You lowered your voice and glanced toward his office instead of making a direct accusation."
       ],
       "mixedEnglish": [
-        "Are you implying that the manager knew about the error before the meeting?",
+        "Are you implying that the manager knew about the mistake earlier?",
         "You lowered your voice and glanced toward his office instead of making a direct accusation."
       ],
       "contextClues": [
         {
-          "text": "lowered your voice",
-          "type": "manner"
+          "text": "You lowered your voice",
+          "type": "supporting context"
         },
         {
-          "text": "instead of making a direct accusation",
-          "type": "contrast"
+          "text": "glanced toward his office instead of making a direct accusation",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "lowered your voice",
-        "instead of making a direct accusation",
+        "You lowered your voice",
+        "glanced toward his office instead of making a direct accusation",
         "targetSense: ほのめかす",
         "implying"
       ],
@@ -1894,32 +1885,27 @@
             "useJapanese": false
           },
           {
-            "en": " that the manager knew about the error before the meeting?",
+            "en": " that the manager knew about the mistake earlier?",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "You ",
+            "en": "You lowered your voice",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " and ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "lowered your voice",
+            "en": "glanced toward his office instead of making a direct accusation",
             "role": "clue",
-            "clueType": "manner",
-            "useJapanese": false
-          },
-          {
-            "en": " and glanced toward his office ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "instead of making a direct accusation",
-            "role": "clue",
-            "clueType": "contrast",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -1936,7 +1922,7 @@
         "確認する"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「lowered your voice」から慎重に話している様子が読み取れ、「instead of making a direct accusation」から直接言い切ってはいないと分かります。したがって、ここでの implying は「ほのめかす」という意味です。",
+      "inferenceExplanation": "「You lowered your voice」と「glanced toward his office instead of making a direct accusation」が手がかりです。これらの状況から、implyingは「ほのめかす」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -2029,7 +2015,7 @@
         "行方"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「The police」や「a valid driver license」という手がかりから、警察官がセキュリティエリアに入るために本人の証明書の提示を求めていることがわかります。そのため、identityは「身元」だと推測できます。",
+      "inferenceExplanation": "「The police」と「a valid driver license」が手がかりです。これらの状況から、identityは「身元」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -2147,33 +2133,38 @@
       "pos": "noun",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The local market offers a wide variety of vegetables every morning.",
+        "The market offers a wide variety of fresh vegetables every morning.",
         "Shoppers can choose items grown by many different farmers."
       ],
       "mixedEnglish": [
-        "The local market offers a wide variety of vegetables every morning.",
+        "The market offers a wide variety of fresh vegetables every morning.",
         "Shoppers can choose items grown by many different farmers."
       ],
       "contextClues": [
         {
-          "text": "vegetables",
-          "type": "noun phrase"
+          "text": "Shoppers can choose items grown",
+          "type": "supporting context"
         },
         {
           "text": "many different farmers",
+          "type": "supporting context"
+        },
+        {
+          "text": "vegetables",
           "type": "noun phrase"
         }
       ],
       "inferencePath": [
-        "vegetables",
+        "Shoppers can choose items grown",
         "many different farmers",
+        "vegetables",
         "targetSense: 種類",
         "variety"
       ],
       "segments": [
         [
           {
-            "en": "The local market offers a wide ",
+            "en": "The market offers a wide ",
             "role": "core",
             "useJapanese": false
           },
@@ -2183,7 +2174,7 @@
             "useJapanese": false
           },
           {
-            "en": " of ",
+            "en": " of fresh ",
             "role": "core",
             "useJapanese": false
           },
@@ -2201,14 +2192,20 @@
         ],
         [
           {
-            "en": "Shoppers can choose items grown by ",
+            "en": "Shoppers can choose items grown",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " by ",
             "role": "core",
             "useJapanese": false
           },
           {
             "en": "many different farmers",
             "role": "clue",
-            "clueType": "noun phrase",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -2225,10 +2222,10 @@
         "量"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "市場で野菜「vegetables」が売られていることや、買い物客が「many different farmers」から選ぶことができるという文脈から、多くの品揃えがあることがわかります。そのため、varietyは「種類」だと推測できます。",
+      "inferenceExplanation": "「Shoppers can choose items grown」と「many different farmers」と「vegetables」が手がかりです。これらの状況から、varietyは「種類」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -2766,17 +2763,21 @@
       "pos": "noun",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The museum displays an instrument from the nineteenth century in a glass case.",
+        "The museum displays a musical instrument from the nineteenth century.",
         "During special tours, visitors hear its deep tone while a curator carefully draws a bow across its strings."
       ],
       "mixedEnglish": [
-        "The museum displays an instrument from the nineteenth century in a glass case.",
+        "The museum displays a musical instrument from the nineteenth century.",
         "During special tours, visitors hear its deep tone while a curator carefully draws a bow across its strings."
       ],
       "contextClues": [
         {
+          "text": "During special tours",
+          "type": "supporting context"
+        },
+        {
           "text": "visitors hear its deep tone",
-          "type": "result"
+          "type": "supporting context"
         },
         {
           "text": "draws a bow across its strings",
@@ -2784,6 +2785,7 @@
         }
       ],
       "inferencePath": [
+        "During special tours",
         "visitors hear its deep tone",
         "draws a bow across its strings",
         "targetSense: 楽器",
@@ -2792,7 +2794,7 @@
       "segments": [
         [
           {
-            "en": "The museum displays an ",
+            "en": "The museum displays a musical ",
             "role": "core",
             "useJapanese": false
           },
@@ -2802,21 +2804,27 @@
             "useJapanese": false
           },
           {
-            "en": " from the nineteenth century in a glass case.",
+            "en": " from the nineteenth century.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "During special tours, ",
+            "en": "During special tours",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": ", ",
             "role": "core",
             "useJapanese": false
           },
           {
             "en": "visitors hear its deep tone",
             "role": "clue",
-            "clueType": "result",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -2844,10 +2852,10 @@
         "食器"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「visitors hear its deep tone」から音を出す品だと分かり、「draws a bow across its strings」から弦と弓を使う様子も読み取れます。したがって、ここでの instrument は「楽器」という意味です。",
+      "inferenceExplanation": "「During special tours」と「visitors hear its deep tone」と「draws a bow across its strings」が手がかりです。これらの状況から、instrumentは「楽器」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -3074,27 +3082,32 @@
       "level": "EIKEN Grade 2",
       "fullEnglish": [
         "The omission of one important detail changed the meaning of the report.",
-        "The missing safety instruction confused the readers.",
-        "Editors quickly corrected the text before publishing."
+        "Readers misunderstood the report because the missing detail had never been included.",
+        "Editors added it before publishing the corrected version."
       ],
       "mixedEnglish": [
         "The omission of one important detail changed the meaning of the report.",
-        "The missing safety instruction confused the readers.",
-        "Editors quickly corrected the text before publishing."
+        "Readers misunderstood the report because the missing detail had never been included.",
+        "Editors added it before publishing the corrected version."
       ],
       "contextClues": [
         {
-          "text": "missing safety instruction confused",
-          "type": "cause"
+          "text": "missing detail had never been included",
+          "type": "supporting context"
         },
         {
-          "text": "corrected the text before publishing",
-          "type": "result"
+          "text": "added it",
+          "type": "supporting context"
+        },
+        {
+          "text": "corrected version",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "missing safety instruction confused",
-        "corrected the text before publishing",
+        "missing detail had never been included",
+        "added it",
+        "corrected version",
         "targetSense: 脱落",
         "omission"
       ],
@@ -3118,32 +3131,43 @@
         ],
         [
           {
-            "en": "The ",
+            "en": "Readers misunderstood the report because the ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "missing safety instruction confused",
+            "en": "missing detail had never been included",
             "role": "clue",
-            "clueType": "cause",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": " the readers.",
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "Editors quickly ",
+            "en": "Editors ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "corrected the text before publishing",
+            "en": "added it",
             "role": "clue",
-            "clueType": "result",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " before publishing the ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "corrected version",
+            "role": "clue",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -3160,10 +3184,10 @@
         "要約"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「missing safety instruction confused」や「corrected the text before publishing」という文脈から、重要な情報が抜け落ちていたことが分かります。そのため、omissionは「脱落」だと推測できます。",
+      "inferenceExplanation": "「missing detail had never been included」と「added it」と「corrected version」が手がかりです。これらの状況から、omissionは「脱落」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -3180,33 +3204,33 @@
       "pos": "adjective",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The judge said that the collected evidence did not provide absolute proof.",
+        "The judge said that the evidence did not provide absolute proof.",
         "Without clear facts, the court could not make a final decision."
       ],
       "mixedEnglish": [
-        "The judge said that the collected evidence did not provide absolute proof.",
+        "The judge said that the evidence did not provide absolute proof.",
         "Without clear facts, the court could not make a final decision."
       ],
       "contextClues": [
         {
           "text": "Without clear facts",
-          "type": "cause"
+          "type": "supporting context"
         },
         {
-          "text": "could not make a final decision",
-          "type": "result"
+          "text": "the court could not make a final decision",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
         "Without clear facts",
-        "could not make a final decision",
+        "the court could not make a final decision",
         "targetSense: 絶対的な",
         "absolute"
       ],
       "segments": [
         [
           {
-            "en": "The judge said that the collected evidence did not provide ",
+            "en": "The judge said that the evidence did not provide ",
             "role": "core",
             "useJapanese": false
           },
@@ -3225,18 +3249,18 @@
           {
             "en": "Without clear facts",
             "role": "clue",
-            "clueType": "cause",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": ", the court ",
+            "en": ", ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "could not make a final decision",
+            "en": "the court could not make a final decision",
             "role": "clue",
-            "clueType": "result",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -3253,7 +3277,7 @@
         "表面的な"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「Without clear facts」や「could not make a final decision」という手がかりから、証拠が十分ではない状況が示されています。そのため、absoluteは「絶対的な」だと推測できます。",
+      "inferenceExplanation": "「Without clear facts」と「the court could not make a final decision」が手がかりです。これらの状況から、absoluteは「絶対的な」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -3371,17 +3395,21 @@
       "pos": "adjective",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The library provides various materials for students working on research projects.",
+        "The library provides various materials for students conducting research.",
         "One shelf contains maps, biographies, and science journals, while another offers newspapers from several countries."
       ],
       "mixedEnglish": [
-        "The library provides various materials for students working on research projects.",
+        "The library provides various materials for students conducting research.",
         "One shelf contains maps, biographies, and science journals, while another offers newspapers from several countries."
       ],
       "contextClues": [
         {
-          "text": "maps, biographies, and science journals",
-          "type": "example"
+          "text": "One shelf contains maps",
+          "type": "supporting context"
+        },
+        {
+          "text": "and science journals",
+          "type": "supporting context"
         },
         {
           "text": "newspapers from several countries",
@@ -3389,7 +3417,8 @@
         }
       ],
       "inferencePath": [
-        "maps, biographies, and science journals",
+        "One shelf contains maps",
+        "and science journals",
         "newspapers from several countries",
         "targetSense: さまざまな",
         "various"
@@ -3407,21 +3436,27 @@
             "useJapanese": false
           },
           {
-            "en": " materials for students working on research projects.",
+            "en": " materials for students conducting research.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "One shelf contains ",
+            "en": "One shelf contains maps",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": ", biographies, ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "maps, biographies, and science journals",
+            "en": "and science journals",
             "role": "clue",
-            "clueType": "example",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -3449,10 +3484,10 @@
         "重い"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「maps, biographies, and science journals」には種類の異なる資料が並び、「newspapers from several countries」からも内容や出所に幅があると分かります。したがって、ここでの various は「さまざまな」という意味です。",
+      "inferenceExplanation": "「One shelf contains maps」と「and science journals」と「newspapers from several countries」が手がかりです。これらの状況から、variousは「さまざまな」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -4042,33 +4077,38 @@
       "pos": "noun",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "She had a lingering sense that someone was waiting outside.",
+        "She had a strong sense that someone was waiting outside.",
         "This subtle impression made her check the front door carefully."
       ],
       "mixedEnglish": [
-        "She had a lingering sense that someone was waiting outside.",
+        "She had a strong sense that someone was waiting outside.",
         "This subtle impression made her check the front door carefully."
       ],
       "contextClues": [
         {
-          "text": "that someone was waiting outside",
-          "type": "content"
+          "text": "This subtle impression made her",
+          "type": "supporting context"
         },
         {
           "text": "check the front door carefully",
-          "type": "behavior"
+          "type": "supporting context"
+        },
+        {
+          "text": "that someone was waiting outside",
+          "type": "content"
         }
       ],
       "inferencePath": [
-        "that someone was waiting outside",
+        "This subtle impression made her",
         "check the front door carefully",
+        "that someone was waiting outside",
         "targetSense: 感覚",
         "sense"
       ],
       "segments": [
         [
           {
-            "en": "She had a lingering ",
+            "en": "She had a strong ",
             "role": "core",
             "useJapanese": false
           },
@@ -4096,14 +4136,20 @@
         ],
         [
           {
-            "en": "This subtle impression made her ",
+            "en": "This subtle impression made her",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
             "role": "core",
             "useJapanese": false
           },
           {
             "en": "check the front door carefully",
             "role": "clue",
-            "clueType": "behavior",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -4120,10 +4166,10 @@
         "結果"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「that someone was waiting outside」という予感や「check the front door carefully」という慎重な行動から、目に見えない気配を捉えていることがわかります。そのため、senseは「感覚」だと推測できます。",
+      "inferenceExplanation": "「This subtle impression made her」と「check the front door carefully」と「that someone was waiting outside」が手がかりです。これらの状況から、senseは「感覚」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -4336,33 +4382,38 @@
       "pos": "noun",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The manager updated the schedule because several meetings were canceled.",
+        "The manager changed the schedule because several meetings were canceled.",
         "New times were assigned for the upcoming project reviews."
       ],
       "mixedEnglish": [
-        "The manager updated the schedule because several meetings were canceled.",
+        "The manager changed the schedule because several meetings were canceled.",
         "New times were assigned for the upcoming project reviews."
       ],
       "contextClues": [
         {
-          "text": "because several meetings were canceled",
-          "type": "cause"
+          "text": "New times were assigned",
+          "type": "supporting context"
         },
         {
-          "text": "New times were assigned",
-          "type": "result"
+          "text": "the upcoming project reviews",
+          "type": "supporting context"
+        },
+        {
+          "text": "because several meetings were canceled",
+          "type": "cause"
         }
       ],
       "inferencePath": [
-        "because several meetings were canceled",
         "New times were assigned",
+        "the upcoming project reviews",
+        "because several meetings were canceled",
         "targetSense: スケジュール",
         "schedule"
       ],
       "segments": [
         [
           {
-            "en": "The manager updated the ",
+            "en": "The manager changed the ",
             "role": "core",
             "useJapanese": false
           },
@@ -4392,11 +4443,22 @@
           {
             "en": "New times were assigned",
             "role": "clue",
-            "clueType": "result",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": " for the upcoming project reviews.",
+            "en": " for ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "the upcoming project reviews",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -4409,10 +4471,10 @@
         "方針"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「because several meetings were canceled」という会議の中止という原因があり、「New times were assigned」という時間の割り当てが行われていることから、時間的な計画表を指していることがわかります。そのため、scheduleは「スケジュール」だと推測できます。",
+      "inferenceExplanation": "「New times were assigned」と「the upcoming project reviews」と「because several meetings were canceled」が手がかりです。これらの状況から、scheduleは「スケジュール」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -4717,33 +4779,33 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
+        "I have enough time to finish the assignment before dinner tonight.",
         "I bought a reliable laptop with my own savings last year.",
-        "The receipt has my name on it, and no one else uses the computer.",
-        "I have it on my desk whenever I write reports at home."
+        "The receipt has my name on it, and no one else uses the computer."
       ],
       "mixedEnglish": [
+        "I have enough time to finish the assignment before dinner tonight.",
         "I bought a reliable laptop with my own savings last year.",
-        "The receipt has my name on it, and no one else uses the computer.",
-        "I have it on my desk whenever I write reports at home."
+        "The receipt has my name on it, and no one else uses the computer."
       ],
       "contextClues": [
         {
-          "text": "bought a reliable laptop with my own savings",
-          "type": "cause"
+          "text": "I bought a reliable laptop",
+          "type": "supporting context"
+        },
+        {
+          "text": "my own savings last year",
+          "type": "supporting context"
         },
         {
           "text": "receipt has my name on it",
           "type": "evidence"
-        },
-        {
-          "text": "no one else uses the computer",
-          "type": "contrast"
         }
       ],
       "inferencePath": [
-        "bought a reliable laptop with my own savings",
+        "I bought a reliable laptop",
+        "my own savings last year",
         "receipt has my name on it",
-        "no one else uses the computer",
         "targetSense: 持っている",
         "have"
       ],
@@ -4755,13 +4817,36 @@
             "useJapanese": false
           },
           {
-            "en": "bought a reliable laptop with my own savings",
-            "role": "clue",
-            "clueType": "cause",
+            "en": "have",
+            "role": "target",
             "useJapanese": false
           },
           {
-            "en": " last year.",
+            "en": " enough time to finish the assignment before dinner tonight.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "I bought a reliable laptop",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " with ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "my own savings last year",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -4779,35 +4864,7 @@
             "useJapanese": false
           },
           {
-            "en": ", and ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "no one else uses the computer",
-            "role": "clue",
-            "clueType": "contrast",
-            "useJapanese": false
-          },
-          {
-            "en": ".",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "I ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "have",
-            "role": "target",
-            "useJapanese": false
-          },
-          {
-            "en": " it on my desk whenever I write reports at home.",
+            "en": ", and no one else uses the computer.",
             "role": "core",
             "useJapanese": false
           }
@@ -4820,7 +4877,7 @@
         "探している"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「bought a reliable laptop with my own savings」「receipt has my name on it」「no one else uses the computer」が手がかりです。自分で購入し所有者であることが分かるため、haveは「持っている」だと推測できます。",
+      "inferenceExplanation": "「I bought a reliable laptop」と「my own savings last year」と「receipt has my name on it」が手がかりです。これらの状況から、haveは「持っている」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 3,
@@ -4840,31 +4897,31 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "She had an old map in her backpack while exploring the mountain.",
+        "She had an old map in her backpack during the hike.",
         "She unfolded it at every fork, and it led her safely back to the main trail."
       ],
       "mixedEnglish": [
-        "She had an old map in her backpack while exploring the mountain.",
+        "She had an old map in her backpack during the hike.",
         "She unfolded it at every fork, and it led her safely back to the main trail."
       ],
       "contextClues": [
         {
+          "text": "She unfolded it at every fork",
+          "type": "supporting context"
+        },
+        {
+          "text": "and it led her safely back",
+          "type": "supporting context"
+        },
+        {
           "text": "in her backpack",
           "type": "location"
-        },
-        {
-          "text": "She unfolded it at every fork",
-          "type": "behavior"
-        },
-        {
-          "text": "led her safely back to the main trail",
-          "type": "result"
         }
       ],
       "inferencePath": [
-        "in her backpack",
         "She unfolded it at every fork",
-        "led her safely back to the main trail",
+        "and it led her safely back",
+        "in her backpack",
         "targetSense: 持っていた",
         "had"
       ],
@@ -4892,7 +4949,7 @@
             "useJapanese": false
           },
           {
-            "en": " while exploring the mountain.",
+            "en": " during the hike.",
             "role": "core",
             "useJapanese": false
           }
@@ -4901,22 +4958,22 @@
           {
             "en": "She unfolded it at every fork",
             "role": "clue",
-            "clueType": "behavior",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": ", and it ",
+            "en": ", ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "led her safely back to the main trail",
+            "en": "and it led her safely back",
             "role": "clue",
-            "clueType": "result",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": ".",
+            "en": " to the main trail.",
             "role": "core",
             "useJapanese": false
           }
@@ -4929,7 +4986,7 @@
         "売っていた"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「in her backpack」から地図が彼女の手元にあり、「She unfolded it at every fork」から必要な場所で実際に使っていたと分かります。さらに「led her safely back to the main trail」という結果もあるため、ここでの had は「持っていた」という意味です。",
+      "inferenceExplanation": "「She unfolded it at every fork」と「and it led her safely back」と「in her backpack」が手がかりです。これらの状況から、hadは「持っていた」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 3,
@@ -7137,7 +7194,7 @@
         "〜の質問に答えた"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "顧客から説明を求められた際に「the mistake」を起こしたことに対して「apologize directly」したという文脈から、マネージャーが不手際の補償や埋め合わせをしたことがわかります。そのため、answered forは「〜の責任を負った」だと推測できます。",
+      "inferenceExplanation": "「the mistake」と「apologize directly」が手がかりです。これらの状況から、answered forは「〜の責任を負った」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -7354,27 +7411,27 @@
       "level": "EIKEN Grade 2",
       "fullEnglish": [
         "The runner kept up with the leader until the final turn.",
-        "His strong stamina allowed him to match the fast pace.",
-        "He did not fall behind on the track."
+        "Although the leader ran quickly, the second runner stayed beside her for most of the race.",
+        "He was still only one step behind at the final turn."
       ],
       "mixedEnglish": [
         "The runner kept up with the leader until the final turn.",
-        "His strong stamina allowed him to match the fast pace.",
-        "He did not fall behind on the track."
+        "Although the leader ran quickly, the second runner stayed beside her for most of the race.",
+        "He was still only one step behind at the final turn."
       ],
       "contextClues": [
         {
-          "text": "match the fast pace",
-          "type": "behavior"
+          "text": "stayed beside her",
+          "type": "supporting context"
         },
         {
-          "text": "not fall behind",
-          "type": "result"
+          "text": "only one step behind",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "match the fast pace",
-        "not fall behind",
+        "stayed beside her",
+        "only one step behind",
         "targetSense: 〜についていった",
         "kept up"
       ],
@@ -7398,36 +7455,36 @@
         ],
         [
           {
-            "en": "His strong stamina allowed him to ",
+            "en": "Although the leader ran quickly, the second runner ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "match the fast pace",
+            "en": "stayed beside her",
             "role": "clue",
-            "clueType": "behavior",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": ".",
+            "en": " for most of the race.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "He did ",
+            "en": "He was still ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "not fall behind",
+            "en": "only one step behind",
             "role": "clue",
-            "clueType": "result",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": " on the track.",
+            "en": " at the final turn.",
             "role": "core",
             "useJapanese": false
           }
@@ -7440,7 +7497,7 @@
         "〜を信じた"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "文脈の中で「match the fast pace」や「not fall behind」といった手がかりから、走者が先頭についていく様子が描かれています。そのため、kept upは「〜についていった」だと推測できます。",
+      "inferenceExplanation": "「stayed beside her」と「only one step behind」が手がかりです。これらの状況から、kept upは「〜についていった」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -7670,27 +7727,32 @@
       "level": "EIKEN Grade 2",
       "fullEnglish": [
         "Add a little of the sauce before tasting the noodles again.",
-        "You should pour just a small amount into the bowl.",
-        "Be careful not to use too much flavor."
+        "Mina added only one small spoonful and left most of the sauce in the bottle.",
+        "She did not want the flavor to become too strong."
       ],
       "mixedEnglish": [
         "Add a little of the sauce before tasting the noodles again.",
-        "You should pour just a small amount into the bowl.",
-        "Be careful not to use too much flavor."
+        "Mina added only one small spoonful and left most of the sauce in the bottle.",
+        "She did not want the flavor to become too strong."
       ],
       "contextClues": [
         {
-          "text": "just a small amount",
-          "type": "behavior"
+          "text": "only one small spoonful",
+          "type": "supporting context"
         },
         {
-          "text": "not to use too much",
-          "type": "cause"
+          "text": "left most of the sauce",
+          "type": "supporting context"
+        },
+        {
+          "text": "not want the flavor to become too strong",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "just a small amount",
-        "not to use too much",
+        "only one small spoonful",
+        "left most of the sauce",
+        "not want the flavor to become too strong",
         "targetSense: 少しの〜",
         "a little of"
       ],
@@ -7714,36 +7776,47 @@
         ],
         [
           {
-            "en": "You should pour ",
+            "en": "Mina added ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "just a small amount",
+            "en": "only one small spoonful",
             "role": "clue",
-            "clueType": "behavior",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": " into the bowl.",
+            "en": " and ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "left most of the sauce",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " in the bottle.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "Be careful ",
+            "en": "She did ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "not to use too much",
+            "en": "not want the flavor to become too strong",
             "role": "clue",
-            "clueType": "cause",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": " flavor.",
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -7756,10 +7829,10 @@
         "他の〜"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「just a small amount」という表現や「not to use too much」という注意から推測できます。そのため、a little ofは「少しの〜」だと推測できます。",
+      "inferenceExplanation": "「only one small spoonful」と「left most of the sauce」と「not want the flavor to become too strong」が手がかりです。これらの状況から、a little ofは「少しの〜」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },

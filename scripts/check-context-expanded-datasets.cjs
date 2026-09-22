@@ -40,6 +40,8 @@ for (const [datasetId, [vocabName, contextName]] of Object.entries(CONFIG)) {
     assert.ok(vocabItem, `${datasetId}/${item.target}: unexpected target`);
     const result = validateContextItem(item, vocabItem, { requireTargetSense: true });
     assert.equal(result.status, "pass", `${datasetId}/${item.target}: ${result.errors.join(" | ")}`);
+    assert.equal(item.fullEnglish[0], vocabItem.example,
+      `${datasetId}/${item.target}: first sentence must repeat the vocabulary example verbatim`);
   }
   total += payload.contexts.length;
 }

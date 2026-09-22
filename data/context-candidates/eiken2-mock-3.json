@@ -867,26 +867,26 @@
       "pos": "noun",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "This method of communication is still useful when modern technology fails completely.",
+        "This method of communication is still useful during emergencies.",
         "People can rely on it during emergencies."
       ],
       "mixedEnglish": [
-        "This method of communication is still useful when modern technology fails completely.",
+        "This method of communication is still useful during emergencies.",
         "People can rely on it during emergencies."
       ],
       "contextClues": [
         {
-          "text": "modern technology fails completely",
-          "type": "cause"
+          "text": "People can rely",
+          "type": "supporting context"
         },
         {
-          "text": "rely on it",
-          "type": "behavior"
+          "text": "on it during emergencies",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "modern technology fails completely",
-        "rely on it",
+        "People can rely",
+        "on it during emergencies",
         "targetSense: 方法",
         "method"
       ],
@@ -903,36 +903,31 @@
             "useJapanese": false
           },
           {
-            "en": " of communication is still useful when ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "modern technology fails completely",
-            "role": "clue",
-            "clueType": "cause",
-            "useJapanese": false
-          },
-          {
-            "en": ".",
+            "en": " of communication is still useful during emergencies.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "People can ",
+            "en": "People can rely",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "rely on it",
+            "en": "on it during emergencies",
             "role": "clue",
-            "clueType": "behavior",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": " during emergencies.",
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -945,7 +940,7 @@
         "理由"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「modern technology fails completely」という状況や「rely on it」という行動から、それが現代の技術が使えないときに頼る手段であることがわかります。そのため、methodは「方法」だと推測できます。",
+      "inferenceExplanation": "「People can rely」と「on it during emergencies」が手がかりです。これらの状況から、methodは「方法」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -1739,19 +1734,23 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The fresh milk spoiled quickly in the warm summer kitchen.",
+        "The warm weather spoiled the fresh milk before breakfast the next day.",
         "It emitted a strong, unpleasant smell when opened.",
         "Everyone agreed that drinking it would cause a stomachache."
       ],
       "mixedEnglish": [
-        "The fresh milk spoiled quickly in the warm summer kitchen.",
+        "The warm weather spoiled the fresh milk before breakfast the next day.",
         "It emitted a strong, unpleasant smell when opened.",
         "Everyone agreed that drinking it would cause a stomachache."
       ],
       "contextClues": [
         {
-          "text": "strong, unpleasant smell",
-          "type": "result"
+          "text": "It emitted a strong,",
+          "type": "supporting context"
+        },
+        {
+          "text": "unpleasant smell when opened",
+          "type": "supporting context"
         },
         {
           "text": "cause a stomachache",
@@ -1759,7 +1758,8 @@
         }
       ],
       "inferencePath": [
-        "strong, unpleasant smell",
+        "It emitted a strong,",
+        "unpleasant smell when opened",
         "cause a stomachache",
         "targetSense: だめになった",
         "spoiled"
@@ -1767,7 +1767,7 @@
       "segments": [
         [
           {
-            "en": "The fresh milk ",
+            "en": "The warm weather ",
             "role": "core",
             "useJapanese": false
           },
@@ -1777,25 +1777,31 @@
             "useJapanese": false
           },
           {
-            "en": " quickly in the warm summer kitchen.",
+            "en": " the fresh milk before breakfast the next day.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "It emitted a ",
+            "en": "It emitted a strong,",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "strong, unpleasant smell",
+            "en": "unpleasant smell when opened",
             "role": "clue",
-            "clueType": "result",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": " when opened.",
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -1826,10 +1832,10 @@
         "こぼれた"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「strong, unpleasant smell」という結果や「cause a stomachache」という危険性から、牛乳が飲めない状態になっていることがわかります。そのため、spoiledは「だめになった」だと推測できます。",
+      "inferenceExplanation": "「It emitted a strong,」と「unpleasant smell when opened」と「cause a stomachache」が手がかりです。これらの状況から、spoiledは「だめになった」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -2896,19 +2902,23 @@
       "pos": "adjective",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The students were eager to start the new art project.",
+        "The eager students arrived early to meet the visiting scientist.",
         "They gathered all their supplies before class began.",
         "Everyone smiled while waiting for the teacher's instructions."
       ],
       "mixedEnglish": [
-        "The students were eager to start the new art project.",
+        "The eager students arrived early to meet the visiting scientist.",
         "They gathered all their supplies before class began.",
         "Everyone smiled while waiting for the teacher's instructions."
       ],
       "contextClues": [
         {
-          "text": "gathered all their supplies",
-          "type": "behavior"
+          "text": "They gathered all their",
+          "type": "supporting context"
+        },
+        {
+          "text": "supplies before class began",
+          "type": "supporting context"
         },
         {
           "text": "smiled while waiting",
@@ -2916,7 +2926,8 @@
         }
       ],
       "inferencePath": [
-        "gathered all their supplies",
+        "They gathered all their",
+        "supplies before class began",
         "smiled while waiting",
         "targetSense: 熱望して",
         "eager"
@@ -2924,7 +2935,7 @@
       "segments": [
         [
           {
-            "en": "The students were ",
+            "en": "The ",
             "role": "core",
             "useJapanese": false
           },
@@ -2934,25 +2945,31 @@
             "useJapanese": false
           },
           {
-            "en": " to start the new art project.",
+            "en": " students arrived early to meet the visiting scientist.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "They ",
+            "en": "They gathered all their",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "gathered all their supplies",
+            "en": "supplies before class began",
             "role": "clue",
-            "clueType": "behavior",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": " before class began.",
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -2983,10 +3000,10 @@
         "退屈して"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「gathered all their supplies」という行動や「smiled while waiting」という様子から、生徒たちが新しいプロジェクトに対して非常に強い関心を持ち、待ちきれない様子であることがわかります。そのため、eagerは「熱望して」だと推測できます。",
+      "inferenceExplanation": "「They gathered all their」と「supplies before class began」と「smiled while waiting」が手がかりです。これらの状況から、eagerは「熱望して」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -3213,27 +3230,32 @@
       "level": "EIKEN Grade 2",
       "fullEnglish": [
         "The newspaper avoided political topics in its weekend family section.",
-        "Instead, it focused on local community events, sports news, and lighthearted lifestyle features.",
-        "The editors wanted to keep the weekend reading relaxing for everyone at home."
+        "Articles about elections, government policy, and national leaders appeared in another section.",
+        "The family pages contained sports and community events instead."
       ],
       "mixedEnglish": [
         "The newspaper avoided political topics in its weekend family section.",
-        "Instead, it focused on local community events, sports news, and lighthearted lifestyle features.",
-        "The editors wanted to keep the weekend reading relaxing for everyone at home."
+        "Articles about elections, government policy, and national leaders appeared in another section.",
+        "The family pages contained sports and community events instead."
       ],
       "contextClues": [
         {
-          "text": "local community events",
-          "type": "contrast"
+          "text": "elections, government policy, and national leaders",
+          "type": "supporting context"
         },
         {
-          "text": "weekend reading relaxing",
-          "type": "result"
+          "text": "another section",
+          "type": "supporting context"
+        },
+        {
+          "text": "sports and community events instead",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "local community events",
-        "weekend reading relaxing",
+        "elections, government policy, and national leaders",
+        "another section",
+        "sports and community events instead",
         "targetSense: 政治の",
         "political"
       ],
@@ -3257,36 +3279,47 @@
         ],
         [
           {
-            "en": "Instead, it focused on ",
+            "en": "Articles about ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "local community events",
+            "en": "elections, government policy, and national leaders",
             "role": "clue",
-            "clueType": "contrast",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": ", sports news, and lighthearted lifestyle features.",
+            "en": " appeared in ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "another section",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "The editors wanted to keep the ",
+            "en": "The family pages contained ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "weekend reading relaxing",
+            "en": "sports and community events instead",
             "role": "clue",
-            "clueType": "result",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": " for everyone at home.",
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -3299,10 +3332,10 @@
         "教育の"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "週末の家族向けセクションで避けられた話題として「local community events」や「weekend reading relaxing」という手掛かりがあります。そのため、politicalは「政治の」だと推測できます。",
+      "inferenceExplanation": "「elections, government policy, and national leaders」と「another section」と「sports and community events instead」が手がかりです。これらの状況から、politicalは「政治の」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -3510,33 +3543,33 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The lawyer appealed the court decision to a higher legal authority.",
+        "The colorful advertisement appealed to young customers in the city.",
         "She hoped the judges would change the previous verdict."
       ],
       "mixedEnglish": [
-        "The lawyer appealed the court decision to a higher legal authority.",
+        "The colorful advertisement appealed to young customers in the city.",
         "She hoped the judges would change the previous verdict."
       ],
       "contextClues": [
         {
-          "text": "court decision",
-          "type": "context"
+          "text": "She hoped the judges",
+          "type": "supporting context"
         },
         {
-          "text": "higher legal authority",
-          "type": "location"
+          "text": "would change the previous verdict",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "court decision",
-        "higher legal authority",
+        "She hoped the judges",
+        "would change the previous verdict",
         "targetSense: 訴えた",
         "appealed"
       ],
       "segments": [
         [
           {
-            "en": "The lawyer ",
+            "en": "The colorful advertisement ",
             "role": "core",
             "useJapanese": false
           },
@@ -3546,36 +3579,31 @@
             "useJapanese": false
           },
           {
-            "en": " the ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "court decision",
-            "role": "clue",
-            "clueType": "context",
-            "useJapanese": false
-          },
-          {
-            "en": " to a ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "higher legal authority",
-            "role": "clue",
-            "clueType": "location",
-            "useJapanese": false
-          },
-          {
-            "en": ".",
+            "en": " to young customers in the city.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "She hoped the judges would change the previous verdict.",
+            "en": "She hoped the judges",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "would change the previous verdict",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -3588,7 +3616,7 @@
         "困惑させた"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「court decision」に対して「higher legal authority」へ働きかけたという文脈から、裁判や決定に対して不服を申し立てたことが分かります。そのため、appealedは「訴えた」だと推測できます。",
+      "inferenceExplanation": "「She hoped the judges」と「would change the previous verdict」が手がかりです。これらの状況から、appealedは「訴えた」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -4581,33 +4609,35 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The expert presented a report related to the sudden economic changes.",
-        "The company managers reviewed the financial data and market trends carefully."
+        "The speaker related the personal story to the larger social issue.",
+        "He explained how one family's experience reflected a problem faced by many people.",
+        "The audience could see the connection between the two subjects."
       ],
       "mixedEnglish": [
-        "The expert presented a report related to the sudden economic changes.",
-        "The company managers reviewed the financial data and market trends carefully."
+        "The speaker related the personal story to the larger social issue.",
+        "He explained how one family's experience reflected a problem faced by many people.",
+        "The audience could see the connection between the two subjects."
       ],
       "contextClues": [
         {
-          "text": "sudden economic changes",
-          "type": "cause"
+          "text": "one family's experience reflected a problem",
+          "type": "supporting context"
         },
         {
-          "text": "market trends carefully",
-          "type": "behavior"
+          "text": "connection between the two subjects",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "sudden economic changes",
-        "market trends carefully",
+        "one family's experience reflected a problem",
+        "connection between the two subjects",
         "targetSense: 関連した",
         "related"
       ],
       "segments": [
         [
           {
-            "en": "The expert presented a report ",
+            "en": "The speaker ",
             "role": "core",
             "useJapanese": false
           },
@@ -4617,32 +4647,39 @@
             "useJapanese": false
           },
           {
-            "en": " to the ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "sudden economic changes",
-            "role": "clue",
-            "clueType": "cause",
-            "useJapanese": false
-          },
-          {
-            "en": ".",
+            "en": " the personal story to the larger social issue.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "The company managers reviewed the financial data and ",
+            "en": "He explained how ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "market trends carefully",
+            "en": "one family's experience reflected a problem",
             "role": "clue",
-            "clueType": "behavior",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " faced by many people.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The audience could see the ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "connection between the two subjects",
+            "role": "clue",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -4659,7 +4696,7 @@
         "無視した"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "文脈の中で「sudden economic changes」という要因や、専門家が「market trends carefully」を分析していることから、報告書が経済の動向に結びついていることがわかります。そのため、relatedは「関連した」だと推測できます。",
+      "inferenceExplanation": "「one family's experience reflected a problem」と「connection between the two subjects」が手がかりです。これらの状況から、relatedは「関連した」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -5293,72 +5330,62 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The students are busy helping at the community center this afternoon.",
+        "Helping older neighbors with shopping can strengthen a community.",
         "They organize books and serve tea to elderly residents with a smile."
       ],
       "mixedEnglish": [
-        "The students are busy helping at the community center this afternoon.",
+        "Helping older neighbors with shopping can strengthen a community.",
         "They organize books and serve tea to elderly residents with a smile."
       ],
       "contextClues": [
         {
-          "text": "organize books",
-          "type": "behavior"
+          "text": "They organize books and serve tea",
+          "type": "supporting context"
         },
         {
-          "text": "elderly residents",
-          "type": "situation"
+          "text": "to elderly residents with a smile",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "organize books",
-        "elderly residents",
+        "They organize books and serve tea",
+        "to elderly residents with a smile",
         "targetSense: 手伝っている",
         "helping"
       ],
       "segments": [
         [
           {
-            "en": "The students are busy ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "helping",
+            "en": "Helping",
             "role": "target",
             "useJapanese": false
           },
           {
-            "en": " at the community center this afternoon.",
+            "en": " older neighbors with shopping can strengthen a community.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "They ",
+            "en": "They organize books and serve tea",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "organize books",
+            "en": "to elderly residents with a smile",
             "role": "clue",
-            "clueType": "behavior",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": " and serve tea to ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "elderly residents",
-            "role": "clue",
-            "clueType": "situation",
-            "useJapanese": false
-          },
-          {
-            "en": " with a smile.",
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -5371,7 +5398,7 @@
         "待っている"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "文脈の中で学生たちが「organize books」という作業を行っており、「elderly residents」に対して親切に対応していることから、彼らがボランティア活動に勤しんでいることがわかります。そのため、helpingは「手伝っている」だと推測できます。",
+      "inferenceExplanation": "「They organize books and serve tea」と「to elderly residents with a smile」が手がかりです。これらの状況から、helpingは「手伝っている」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -5595,72 +5622,62 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The tourists are currently visiting the ancient temple on the hill.",
+        "Visiting local farms gives children a better idea of where food comes from.",
         "They take many photos of the old wooden buildings and talk with local guides."
       ],
       "mixedEnglish": [
-        "The tourists are currently visiting the ancient temple on the hill.",
+        "Visiting local farms gives children a better idea of where food comes from.",
         "They take many photos of the old wooden buildings and talk with local guides."
       ],
       "contextClues": [
         {
-          "text": "ancient temple",
-          "type": "situation"
+          "text": "They take many photos of the old",
+          "type": "supporting context"
         },
         {
-          "text": "old wooden buildings",
-          "type": "situation"
+          "text": "wooden buildings and talk with local guides",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "ancient temple",
-        "old wooden buildings",
+        "They take many photos of the old",
+        "wooden buildings and talk with local guides",
         "targetSense: 訪れている",
         "visiting"
       ],
       "segments": [
         [
           {
-            "en": "The tourists are currently ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "visiting",
+            "en": "Visiting",
             "role": "target",
             "useJapanese": false
           },
           {
-            "en": " the ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "ancient temple",
-            "role": "clue",
-            "clueType": "situation",
-            "useJapanese": false
-          },
-          {
-            "en": " on the hill.",
+            "en": " local farms gives children a better idea of where food comes from.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "They take many photos of the ",
+            "en": "They take many photos of the old",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "old wooden buildings",
+            "en": "wooden buildings and talk with local guides",
             "role": "clue",
-            "clueType": "situation",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": " and talk with local guides.",
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -5673,7 +5690,7 @@
         "観察している"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "文脈の中で旅行者たちが「ancient temple」や「old wooden buildings」の写真を撮影していることから、彼らが歴史ある建造物に赴いていることがわかります。そのため、visitingは「訪れている」だと推測できます。",
+      "inferenceExplanation": "「They take many photos of the old」と「wooden buildings and talk with local guides」が手がかりです。これらの状況から、visitingは「訪れている」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -5800,33 +5817,35 @@
       "pos": "動詞句",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The librarian had to open up the heavy wooden doors at eight o'clock.",
-        "Many waiting students entered the quiet reading room immediately."
+        "The discussion may open up new ideas for the community.",
+        "Residents had considered only one old solution before the meeting.",
+        "By the end, they had proposed several new ways to improve the neighborhood."
       ],
       "mixedEnglish": [
-        "The librarian had to open up the heavy wooden doors at eight o'clock.",
-        "Many waiting students entered the quiet reading room immediately."
+        "The discussion may open up new ideas for the community.",
+        "Residents had considered only one old solution before the meeting.",
+        "By the end, they had proposed several new ways to improve the neighborhood."
       ],
       "contextClues": [
         {
-          "text": "heavy wooden doors",
-          "type": "object"
+          "text": "only one old solution before the meeting",
+          "type": "supporting context"
         },
         {
-          "text": "waiting students entered",
-          "type": "result"
+          "text": "proposed several new ways",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "heavy wooden doors",
-        "waiting students entered",
+        "only one old solution before the meeting",
+        "proposed several new ways",
         "targetSense: 〜を開く",
         "open up"
       ],
       "segments": [
         [
           {
-            "en": "The librarian had to ",
+            "en": "The discussion may ",
             "role": "core",
             "useJapanese": false
           },
@@ -5836,36 +5855,43 @@
             "useJapanese": false
           },
           {
-            "en": " the ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "heavy wooden doors",
-            "role": "clue",
-            "clueType": "object",
-            "useJapanese": false
-          },
-          {
-            "en": " at eight o'clock.",
+            "en": " new ideas for the community.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "Many ",
+            "en": "Residents had considered ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "waiting students entered",
+            "en": "only one old solution before the meeting",
             "role": "clue",
-            "clueType": "result",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": " the quiet reading room immediately.",
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "By the end, they had ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "proposed several new ways",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " to improve the neighborhood.",
             "role": "core",
             "useJapanese": false
           }
@@ -5878,7 +5904,7 @@
         "〜を失う"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「heavy wooden doors」を操作して「waiting students entered」できたという文脈から、入り口の扉を使える状態にしたことがわかります。そのため、open upは「〜を開く」だと推測できます。",
+      "inferenceExplanation": "「only one old solution before the meeting」と「proposed several new ways」が手がかりです。これらの状況から、open upは「〜を開く」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -6912,33 +6938,33 @@
       "pos": "前置詞句",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The historical monument stands directly in front of the town hall.",
+        "The bus stopped in front of the library before the rain began.",
         "Visitors must walk past that large stone statue to enter the main entrance doors."
       ],
       "mixedEnglish": [
-        "The historical monument stands directly in front of the town hall.",
+        "The bus stopped in front of the library before the rain began.",
         "Visitors must walk past that large stone statue to enter the main entrance doors."
       ],
       "contextClues": [
         {
-          "text": "the town hall",
-          "type": "landmark"
+          "text": "Visitors must walk past that large stone statue",
+          "type": "supporting context"
         },
         {
-          "text": "main entrance doors",
-          "type": "landmark"
+          "text": "enter the main entrance doors",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "the town hall",
-        "main entrance doors",
+        "Visitors must walk past that large stone statue",
+        "enter the main entrance doors",
         "targetSense: 〜の前に",
         "in front of"
       ],
       "segments": [
         [
           {
-            "en": "The historical monument stands directly ",
+            "en": "The bus stopped ",
             "role": "core",
             "useJapanese": false
           },
@@ -6948,32 +6974,27 @@
             "useJapanese": false
           },
           {
-            "en": " ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "the town hall",
-            "role": "clue",
-            "clueType": "landmark",
-            "useJapanese": false
-          },
-          {
-            "en": ".",
+            "en": " the library before the rain began.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "Visitors must walk past that large stone statue to enter the ",
+            "en": "Visitors must walk past that large stone statue",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " to ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "main entrance doors",
+            "en": "enter the main entrance doors",
             "role": "clue",
-            "clueType": "landmark",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -6990,7 +7011,7 @@
         "〜の遠くに"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「the town hall」の建物や「main entrance doors」へと向かう動線に関する記述から、記念碑が主要な入口の真向かいに位置していることがわかります。そのため、in front ofは「〜の前に」だと推測できます。",
+      "inferenceExplanation": "「Visitors must walk past that large stone statue」と「enter the main entrance doors」が手がかりです。これらの状況から、in front ofは「〜の前に」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,

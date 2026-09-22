@@ -291,51 +291,40 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The police quickly found the thief who stole money from the bank.",
-        "They decided to arrest him before he could escape to another country."
+        "The police will arrest the suspect near the station after collecting evidence.",
+        "Officers plan to place him in handcuffs and take him to the police station.",
+        "He will not be free to leave while they question him."
       ],
       "mixedEnglish": [
-        "The police quickly found the thief who stole money from the bank.",
-        "They decided to arrest him before he could escape to another country."
+        "The police will arrest the suspect near the station after collecting evidence.",
+        "Officers plan to place him in handcuffs and take him to the police station.",
+        "He will not be free to leave while they question him."
       ],
       "contextClues": [
         {
-          "text": "found the thief",
-          "type": "cause"
+          "text": "place him in handcuffs",
+          "type": "supporting context"
         },
         {
-          "text": "before he could escape",
-          "type": "situation"
+          "text": "take him to the police station",
+          "type": "supporting context"
+        },
+        {
+          "text": "not be free to leave",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "found the thief",
-        "before he could escape",
+        "place him in handcuffs",
+        "take him to the police station",
+        "not be free to leave",
         "targetSense: 逮捕する",
         "arrest"
       ],
       "segments": [
         [
           {
-            "en": "The police quickly ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "found the thief",
-            "role": "clue",
-            "clueType": "cause",
-            "useJapanese": false
-          },
-          {
-            "en": " who stole money from the bank.",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "They decided to ",
+            "en": "The police will ",
             "role": "core",
             "useJapanese": false
           },
@@ -345,18 +334,54 @@
             "useJapanese": false
           },
           {
-            "en": " him ",
+            "en": " the suspect near the station after collecting evidence.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Officers plan to ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "before he could escape",
+            "en": "place him in handcuffs",
             "role": "clue",
-            "clueType": "situation",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": " to another country.",
+            "en": " and ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "take him to the police station",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "He will ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "not be free to leave",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " while they question him.",
             "role": "core",
             "useJapanese": false
           }
@@ -369,10 +394,10 @@
         "雇用する"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「found the thief」や「before he could escape」という文脈から、警察が泥棒をどうしようとしているのかを考えると、arrestは「逮捕する」だと推測できます。",
+      "inferenceExplanation": "「place him in handcuffs」と「take him to the police station」と「not be free to leave」が手がかりです。これらの状況から、arrestは「逮捕する」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       }
@@ -386,46 +411,33 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "No rain fell in the agricultural region for almost half a year.",
-        "Many local farmers began to suffer because their crops dried up and died."
+        "Many farmers suffer from drought when the rainy season arrives late.",
+        "No rain fell in the agricultural region for almost half a year."
       ],
       "mixedEnglish": [
-        "No rain fell in the agricultural region for almost half a year.",
-        "Many local farmers began to suffer because their crops dried up and died."
+        "Many farmers suffer from drought when the rainy season arrives late.",
+        "No rain fell in the agricultural region for almost half a year."
       ],
       "contextClues": [
         {
-          "text": "No rain fell",
-          "type": "cause"
+          "text": "No rain fell in the agricultural region",
+          "type": "supporting context"
         },
         {
-          "text": "crops dried up and died",
-          "type": "result"
+          "text": "almost half a year",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "No rain fell",
-        "crops dried up and died",
+        "No rain fell in the agricultural region",
+        "almost half a year",
         "targetSense: 苦しむ",
         "suffer"
       ],
       "segments": [
         [
           {
-            "en": "No rain fell",
-            "role": "clue",
-            "clueType": "cause",
-            "useJapanese": false
-          },
-          {
-            "en": " in the agricultural region for almost half a year.",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "Many local farmers began to ",
+            "en": "Many farmers ",
             "role": "core",
             "useJapanese": false
           },
@@ -435,14 +447,27 @@
             "useJapanese": false
           },
           {
-            "en": " because their ",
+            "en": " from drought when the rainy season arrives late.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "No rain fell in the agricultural region",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " for ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "crops dried up and died",
+            "en": "almost half a year",
             "role": "clue",
-            "clueType": "result",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -459,7 +484,7 @@
         "参加する"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「No rain fell」や「crops dried up and died」という状況から、農家がどのような状態になっているかを考えると、sufferは「苦しむ」だと推測できます。",
+      "inferenceExplanation": "「No rain fell in the agricultural region」と「almost half a year」が手がかりです。これらの状況から、sufferは「苦しむ」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -566,51 +591,40 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The small local shop became very popular among students and office workers.",
-        "The owner wants to expand the building to add more tables and seats."
+        "The city plans to expand its subway system over the next decade.",
+        "Officials will add two new lines and build twenty more stations.",
+        "Trains will reach neighborhoods that currently have no subway service."
       ],
       "mixedEnglish": [
-        "The small local shop became very popular among students and office workers.",
-        "The owner wants to expand the building to add more tables and seats."
+        "The city plans to expand its subway system over the next decade.",
+        "Officials will add two new lines and build twenty more stations.",
+        "Trains will reach neighborhoods that currently have no subway service."
       ],
       "contextClues": [
         {
-          "text": "became very popular",
-          "type": "cause"
+          "text": "add two new lines",
+          "type": "supporting context"
         },
         {
-          "text": "add more tables and seats",
-          "type": "result"
+          "text": "build twenty more stations",
+          "type": "supporting context"
+        },
+        {
+          "text": "reach neighborhoods that currently have no subway service",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "became very popular",
-        "add more tables and seats",
+        "add two new lines",
+        "build twenty more stations",
+        "reach neighborhoods that currently have no subway service",
         "targetSense: 拡大する",
         "expand"
       ],
       "segments": [
         [
           {
-            "en": "The small local shop ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "became very popular",
-            "role": "clue",
-            "clueType": "cause",
-            "useJapanese": false
-          },
-          {
-            "en": " among students and office workers.",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "The owner wants to ",
+            "en": "The city plans to ",
             "role": "core",
             "useJapanese": false
           },
@@ -620,14 +634,50 @@
             "useJapanese": false
           },
           {
-            "en": " the building to ",
+            "en": " its subway system over the next decade.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Officials will ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "add more tables and seats",
+            "en": "add two new lines",
             "role": "clue",
-            "clueType": "result",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " and ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "build twenty more stations",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Trains will ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "reach neighborhoods that currently have no subway service",
+            "role": "clue",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -644,10 +694,10 @@
         "売却する"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「became very popular」や「add more tables and seats」という状況から、店主が建物をどうしようとしているのかを考えると、expandは「拡大する」だと推測できます。",
+      "inferenceExplanation": "「add two new lines」と「build twenty more stations」と「reach neighborhoods that currently have no subway service」が手がかりです。これらの状況から、expandは「拡大する」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       }
@@ -661,51 +711,35 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "Her older sister chose to pursue a career in art instead of business.",
-        "This personal choice would later influence her younger sibling to also study painting."
+        "Her teacher continues to influence her decision to become a scientist.",
+        "Her teacher's encouragement made science seem like the right career for her.",
+        "She often remembers that advice when planning her future."
       ],
       "mixedEnglish": [
-        "Her older sister chose to pursue a career in art instead of business.",
-        "This personal choice would later influence her younger sibling to also study painting."
+        "Her teacher continues to influence her decision to become a scientist.",
+        "Her teacher's encouragement made science seem like the right career for her.",
+        "She often remembers that advice when planning her future."
       ],
       "contextClues": [
         {
-          "text": "chose to pursue a career in art",
-          "type": "cause"
+          "text": "made science seem like the right career",
+          "type": "supporting context"
         },
         {
-          "text": "also study painting",
-          "type": "result"
+          "text": "remembers that advice",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "chose to pursue a career in art",
-        "also study painting",
+        "made science seem like the right career",
+        "remembers that advice",
         "targetSense: 影響を与える",
         "influence"
       ],
       "segments": [
         [
           {
-            "en": "Her older sister ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "chose to pursue a career in art",
-            "role": "clue",
-            "clueType": "cause",
-            "useJapanese": false
-          },
-          {
-            "en": " instead of business.",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "This personal choice would later ",
+            "en": "Her teacher continues to ",
             "role": "core",
             "useJapanese": false
           },
@@ -715,18 +749,43 @@
             "useJapanese": false
           },
           {
-            "en": " her younger sibling to ",
+            "en": " her decision to become a scientist.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Her teacher's encouragement ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "also study painting",
+            "en": "made science seem like the right career",
             "role": "clue",
-            "clueType": "result",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": ".",
+            "en": " for her.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "She often ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "remembers that advice",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " when planning her future.",
             "role": "core",
             "useJapanese": false
           }
@@ -739,7 +798,7 @@
         "忘却する"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「chose to pursue a career in art」という姉の選択が「also study painting」という妹の行動を引き起こしていることから、influenceは「影響を与える」だと推測できます。",
+      "inferenceExplanation": "「made science seem like the right career」と「remembers that advice」が手がかりです。これらの状況から、influenceは「影響を与える」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -756,46 +815,33 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "Armed men broke into the jewelry shop late at night.",
-        "They managed to rob the store before the police arrived."
+        "Thieves may rob the bank if the alarm system stops working.",
+        "Armed men broke into the jewelry shop late at night."
       ],
       "mixedEnglish": [
-        "Armed men broke into the jewelry shop late at night.",
-        "They managed to rob the store before the police arrived."
+        "Thieves may rob the bank if the alarm system stops working.",
+        "Armed men broke into the jewelry shop late at night."
       ],
       "contextClues": [
         {
-          "text": "Armed men broke into the jewelry shop",
-          "type": "situation"
+          "text": "Armed men broke",
+          "type": "supporting context"
         },
         {
-          "text": "before the police arrived",
-          "type": "situation"
+          "text": "the jewelry shop late at night",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "Armed men broke into the jewelry shop",
-        "before the police arrived",
+        "Armed men broke",
+        "the jewelry shop late at night",
         "targetSense: 奪う",
         "rob"
       ],
       "segments": [
         [
           {
-            "en": "Armed men broke into the jewelry shop",
-            "role": "clue",
-            "clueType": "situation",
-            "useJapanese": false
-          },
-          {
-            "en": " late at night.",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "They managed to ",
+            "en": "Thieves may ",
             "role": "core",
             "useJapanese": false
           },
@@ -805,14 +851,27 @@
             "useJapanese": false
           },
           {
-            "en": " the store ",
+            "en": " the bank if the alarm system stops working.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Armed men broke",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " into ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "before the police arrived",
+            "en": "the jewelry shop late at night",
             "role": "clue",
-            "clueType": "situation",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -829,7 +888,7 @@
         "貸す"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「Armed men broke into the jewelry shop」という状況や、「before the police arrived」という背景から、犯行の様子が描かれています。そのため、robは「奪う」だと推測できます。",
+      "inferenceExplanation": "「Armed men broke」と「the jewelry shop late at night」が手がかりです。これらの状況から、robは「奪う」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -846,25 +905,25 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "He studied hard for many months to pass the difficult exam.",
-        "Passing it will help him qualify for the higher position."
+        "She hopes to qualify for the Olympics after years of training.",
+        "He studied hard for many months to pass the difficult exam."
       ],
       "mixedEnglish": [
-        "He studied hard for many months to pass the difficult exam.",
-        "Passing it will help him qualify for the higher position."
+        "She hopes to qualify for the Olympics after years of training.",
+        "He studied hard for many months to pass the difficult exam."
       ],
       "contextClues": [
         {
-          "text": "studied hard for many months",
-          "type": "cause"
+          "text": "He studied hard",
+          "type": "supporting context"
         },
         {
           "text": "pass the difficult exam",
-          "type": "cause"
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "studied hard for many months",
+        "He studied hard",
         "pass the difficult exam",
         "targetSense: 資格を得る",
         "qualify"
@@ -872,36 +931,7 @@
       "segments": [
         [
           {
-            "en": "He ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "studied hard for many months",
-            "role": "clue",
-            "clueType": "cause",
-            "useJapanese": false
-          },
-          {
-            "en": " to ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "pass the difficult exam",
-            "role": "clue",
-            "clueType": "cause",
-            "useJapanese": false
-          },
-          {
-            "en": ".",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "Passing it will help him ",
+            "en": "She hopes to ",
             "role": "core",
             "useJapanese": false
           },
@@ -911,7 +941,31 @@
             "useJapanese": false
           },
           {
-            "en": " for the higher position.",
+            "en": " for the Olympics after years of training.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "He studied hard",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " for many months to ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "pass the difficult exam",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -924,7 +978,7 @@
         "遅れる"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「studied hard for many months」や「pass the difficult exam」という努力の過程から、試験に合格した結果得られるものが示されています。そのため、qualifyは「資格を得る」だと推測できます。",
+      "inferenceExplanation": "「He studied hard」と「pass the difficult exam」が手がかりです。これらの状況から、qualifyは「資格を得る」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -941,51 +995,33 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The clerk placed the bag of fresh apples on the scale.",
-        "He needed to weigh them carefully to calculate the total price."
+        "The nurse will weigh the baby immediately after he is born.",
+        "The clerk placed the bag of fresh apples on the scale."
       ],
       "mixedEnglish": [
-        "The clerk placed the bag of fresh apples on the scale.",
-        "He needed to weigh them carefully to calculate the total price."
+        "The nurse will weigh the baby immediately after he is born.",
+        "The clerk placed the bag of fresh apples on the scale."
       ],
       "contextClues": [
         {
-          "text": "placed the bag of fresh apples on the scale",
-          "type": "situation"
+          "text": "The clerk placed the bag",
+          "type": "supporting context"
         },
         {
-          "text": "calculate the total price",
-          "type": "result"
+          "text": "of fresh apples on the scale",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "placed the bag of fresh apples on the scale",
-        "calculate the total price",
+        "The clerk placed the bag",
+        "of fresh apples on the scale",
         "targetSense: 重さを量る",
         "weigh"
       ],
       "segments": [
         [
           {
-            "en": "The clerk ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "placed the bag of fresh apples on the scale",
-            "role": "clue",
-            "clueType": "situation",
-            "useJapanese": false
-          },
-          {
-            "en": ".",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "He needed to ",
+            "en": "The nurse will ",
             "role": "core",
             "useJapanese": false
           },
@@ -995,14 +1031,27 @@
             "useJapanese": false
           },
           {
-            "en": " them carefully to ",
+            "en": " the baby immediately after he is born.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The clerk placed the bag",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "calculate the total price",
+            "en": "of fresh apples on the scale",
             "role": "clue",
-            "clueType": "result",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -1019,7 +1068,7 @@
         "並べる"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「placed the bag of fresh apples on the scale」という行動や、「calculate the total price」という目的から、何を測定しているかがわかります。そのため、weighは「重さを量る」だと推測できます。",
+      "inferenceExplanation": "「The clerk placed the bag」と「of fresh apples on the scale」が手がかりです。これらの状況から、weighは「重さを量る」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -1036,46 +1085,40 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "A sudden thick fog rolled over the mountain trail.",
-        "The hikers watched the path disappear in the thick white mist."
+        "The sun will disappear behind the clouds within a few minutes.",
+        "A thick gray cloud is moving across it, and soon the bright circle will no longer be visible.",
+        "The light will return after the cloud passes."
       ],
       "mixedEnglish": [
-        "A sudden thick fog rolled over the mountain trail.",
-        "The hikers watched the path disappear in the thick white mist."
+        "The sun will disappear behind the clouds within a few minutes.",
+        "A thick gray cloud is moving across it, and soon the bright circle will no longer be visible.",
+        "The light will return after the cloud passes."
       ],
       "contextClues": [
         {
-          "text": "A sudden thick fog rolled over",
-          "type": "cause"
+          "text": "cloud is moving across it",
+          "type": "supporting context"
         },
         {
-          "text": "in the thick white mist",
-          "type": "situation"
+          "text": "no longer be visible",
+          "type": "supporting context"
+        },
+        {
+          "text": "light will return",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "A sudden thick fog rolled over",
-        "in the thick white mist",
+        "cloud is moving across it",
+        "no longer be visible",
+        "light will return",
         "targetSense: 消える",
         "disappear"
       ],
       "segments": [
         [
           {
-            "en": "A sudden thick fog rolled over",
-            "role": "clue",
-            "clueType": "cause",
-            "useJapanese": false
-          },
-          {
-            "en": " the mountain trail.",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "The hikers watched the path ",
+            "en": "The sun will ",
             "role": "core",
             "useJapanese": false
           },
@@ -1085,18 +1128,54 @@
             "useJapanese": false
           },
           {
-            "en": " ",
+            "en": " behind the clouds within a few minutes.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "A thick gray ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "in the thick white mist",
+            "en": "cloud is moving across it",
             "role": "clue",
-            "clueType": "situation",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": ", and soon the bright circle will ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "no longer be visible",
+            "role": "clue",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
             "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "light will return",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " after the cloud passes.",
             "role": "core",
             "useJapanese": false
           }
@@ -1109,10 +1188,10 @@
         "広がる"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「A sudden thick fog rolled over」という状況や、「in the thick white mist」という環境から、視界から見えなくなる様子が描かれています。そのため、disappearは「消える」だと推測できます。",
+      "inferenceExplanation": "「cloud is moving across it」と「no longer be visible」と「light will return」が手がかりです。これらの状況から、disappearは「消える」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       }
@@ -1126,51 +1205,33 @@
       "pos": "noun",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The scientist built a compact metal unit to measure underground temperature.",
-        "This clever device operates on solar power and sends daily reports to the laboratory."
+        "This small device can measure your heart rate accurately.",
+        "The scientist built a compact metal unit to measure underground temperature."
       ],
       "mixedEnglish": [
-        "The scientist built a compact metal unit to measure underground temperature.",
-        "This clever device operates on solar power and sends daily reports to the laboratory."
+        "This small device can measure your heart rate accurately.",
+        "The scientist built a compact metal unit to measure underground temperature."
       ],
       "contextClues": [
         {
-          "text": "built a compact metal unit",
-          "type": "cause"
+          "text": "The scientist built a compact metal unit",
+          "type": "supporting context"
         },
         {
-          "text": "operates on solar power",
-          "type": "behavior"
+          "text": "measure underground temperature",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "built a compact metal unit",
-        "operates on solar power",
+        "The scientist built a compact metal unit",
+        "measure underground temperature",
         "targetSense: 装置",
         "device"
       ],
       "segments": [
         [
           {
-            "en": "The scientist ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "built a compact metal unit",
-            "role": "clue",
-            "clueType": "cause",
-            "useJapanese": false
-          },
-          {
-            "en": " to measure underground temperature.",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "This clever ",
+            "en": "This small ",
             "role": "core",
             "useJapanese": false
           },
@@ -1180,18 +1241,31 @@
             "useJapanese": false
           },
           {
-            "en": " ",
+            "en": " can measure your heart rate accurately.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The scientist built a compact metal unit",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " to ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "operates on solar power",
+            "en": "measure underground temperature",
             "role": "clue",
-            "clueType": "behavior",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": " and sends daily reports to the laboratory.",
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -1204,7 +1278,7 @@
         "計画"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「built a compact metal unit」という制作の背景や、「operates on solar power」という駆動方式から、物理的な道具であることがわかります。そのため、deviceは「装置」だと推測できます。",
+      "inferenceExplanation": "「The scientist built a compact metal unit」と「measure underground temperature」が手がかりです。これらの状況から、deviceは「装置」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -1221,46 +1295,75 @@
       "pos": "noun",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The loud music from the next apartment kept the family awake all night.",
-        "They decided to submit a formal complaint to the building manager."
+        "The hotel received a serious complaint about noise from a guest.",
+        "The guest said loud music had kept her awake all night and asked the manager to solve the problem.",
+        "The manager apologized and moved her to another room."
       ],
       "mixedEnglish": [
-        "The loud music from the next apartment kept the family awake all night.",
-        "They decided to submit a formal complaint to the building manager."
+        "The hotel received a serious complaint about noise from a guest.",
+        "The guest said loud music had kept her awake all night and asked the manager to solve the problem.",
+        "The manager apologized and moved her to another room."
       ],
       "contextClues": [
         {
-          "text": "The loud music from the next apartment",
-          "type": "cause"
+          "text": "kept her awake all night",
+          "type": "supporting context"
         },
         {
-          "text": "kept the family awake all night",
-          "type": "cause"
+          "text": "asked the manager to solve the problem",
+          "type": "supporting context"
+        },
+        {
+          "text": "manager apologized",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "The loud music from the next apartment",
-        "kept the family awake all night",
+        "kept her awake all night",
+        "asked the manager to solve the problem",
+        "manager apologized",
         "targetSense: 苦情",
         "complaint"
       ],
       "segments": [
         [
           {
-            "en": "The loud music from the next apartment",
-            "role": "clue",
-            "clueType": "cause",
-            "useJapanese": false
-          },
-          {
-            "en": " ",
+            "en": "The hotel received a serious ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "kept the family awake all night",
+            "en": "complaint",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " about noise from a guest.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The guest said loud music had ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "kept her awake all night",
             "role": "clue",
-            "clueType": "cause",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " and ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "asked the manager to solve the problem",
+            "role": "clue",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -1271,17 +1374,18 @@
         ],
         [
           {
-            "en": "They decided to submit a formal ",
+            "en": "The ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "complaint",
-            "role": "target",
+            "en": "manager apologized",
+            "role": "clue",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": " to the building manager.",
+            "en": " and moved her to another room.",
             "role": "core",
             "useJapanese": false
           }
@@ -1294,10 +1398,10 @@
         "質問"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「The loud music from the next apartment」という迷惑な出来事と「kept the family awake all night」という結果から、管理人に伝えるべき内容が推測できます。そのため、complaintは「苦情」だと推測できます。",
+      "inferenceExplanation": "「kept her awake all night」と「asked the manager to solve the problem」と「manager apologized」が手がかりです。これらの状況から、complaintは「苦情」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       }
@@ -1311,51 +1415,33 @@
       "pos": "noun",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The interviewer asked the candidate about his daily work duties.",
-        "He proudly stated his occupation as a software engineer."
+        "Please state your name, age, and occupation on the form.",
+        "The interviewer asked the candidate about his daily work duties."
       ],
       "mixedEnglish": [
-        "The interviewer asked the candidate about his daily work duties.",
-        "He proudly stated his occupation as a software engineer."
+        "Please state your name, age, and occupation on the form.",
+        "The interviewer asked the candidate about his daily work duties."
       ],
       "contextClues": [
         {
-          "text": "asked the candidate about his daily work duties",
-          "type": "situation"
+          "text": "The interviewer asked the candidate",
+          "type": "supporting context"
         },
         {
-          "text": "as a software engineer",
-          "type": "result"
+          "text": "about his daily work duties",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "asked the candidate about his daily work duties",
-        "as a software engineer",
+        "The interviewer asked the candidate",
+        "about his daily work duties",
         "targetSense: 職業",
         "occupation"
       ],
       "segments": [
         [
           {
-            "en": "The interviewer ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "asked the candidate about his daily work duties",
-            "role": "clue",
-            "clueType": "situation",
-            "useJapanese": false
-          },
-          {
-            "en": ".",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "He proudly stated his ",
+            "en": "Please state your name, age, and ",
             "role": "core",
             "useJapanese": false
           },
@@ -1365,14 +1451,27 @@
             "useJapanese": false
           },
           {
+            "en": " on the form.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The interviewer asked the candidate",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
             "en": " ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "as a software engineer",
+            "en": "about his daily work duties",
             "role": "clue",
-            "clueType": "result",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -1389,7 +1488,7 @@
         "年齢"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「asked the candidate about his daily work duties」という面接の状況や、「as a software engineer」という返答の内容から、尋ねられた項目がわかります。そのため、occupationは「職業」だと推測できます。",
+      "inferenceExplanation": "「The interviewer asked the candidate」と「about his daily work duties」が手がかりです。これらの状況から、occupationは「職業」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -1406,51 +1505,40 @@
       "pos": "noun",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "My grandmother often shares pieces of wisdom passed down for generations in our village.",
-        "She reminded me that a well-known proverb teaches us patience during difficult times."
+        "\"Actions speak louder than words\" is a well-known proverb.",
+        "The short saying has been repeated for generations because it expresses practical wisdom.",
+        "People quote it when actions and words do not match."
       ],
       "mixedEnglish": [
-        "My grandmother often shares pieces of wisdom passed down for generations in our village.",
-        "She reminded me that a well-known proverb teaches us patience during difficult times."
+        "\"Actions speak louder than words\" is a well-known proverb.",
+        "The short saying has been repeated for generations because it expresses practical wisdom.",
+        "People quote it when actions and words do not match."
       ],
       "contextClues": [
         {
-          "text": "pieces of wisdom passed down for generations",
-          "type": "cause"
+          "text": "short saying",
+          "type": "supporting context"
         },
         {
-          "text": "teaches us patience during difficult times",
-          "type": "result"
+          "text": "repeated for generations",
+          "type": "supporting context"
+        },
+        {
+          "text": "practical wisdom",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "pieces of wisdom passed down for generations",
-        "teaches us patience during difficult times",
+        "short saying",
+        "repeated for generations",
+        "practical wisdom",
         "targetSense: ことわざ",
         "proverb"
       ],
       "segments": [
         [
           {
-            "en": "My grandmother often shares ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "pieces of wisdom passed down for generations",
-            "role": "clue",
-            "clueType": "cause",
-            "useJapanese": false
-          },
-          {
-            "en": " in our village.",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "She reminded me that a well-known ",
+            "en": "\"Actions speak louder than words\" is a well-known ",
             "role": "core",
             "useJapanese": false
           },
@@ -1460,18 +1548,54 @@
             "useJapanese": false
           },
           {
-            "en": " ",
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "teaches us patience during difficult times",
+            "en": "short saying",
             "role": "clue",
-            "clueType": "result",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " has been ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "repeated for generations",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " because it expresses ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "practical wisdom",
+            "role": "clue",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
             "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "People quote it when actions and words do not match.",
             "role": "core",
             "useJapanese": false
           }
@@ -1484,10 +1608,10 @@
         "約束"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「pieces of wisdom passed down for generations」という表現や、「teaches us patience during difficult times」という教訓的な役割から、昔から伝えられてきた短い教えであることがわかります。そのため、proverbは「ことわざ」だと推測できます。",
+      "inferenceExplanation": "「short saying」と「repeated for generations」と「practical wisdom」が手がかりです。これらの状況から、proverbは「ことわざ」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       }
@@ -1501,51 +1625,40 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "She received a very nice job offer yesterday.",
-        "She was happy to accept the position and start a new career."
+        "She decided to accept the job offer after discussing it with her family.",
+        "She signed the employment contract and told the company she would begin on Monday.",
+        "The manager then removed the position from the list of available jobs."
       ],
       "mixedEnglish": [
-        "She received a very nice job offer yesterday.",
-        "She was happy to accept the position and start a new career."
+        "She decided to accept the job offer after discussing it with her family.",
+        "She signed the employment contract and told the company she would begin on Monday.",
+        "The manager then removed the position from the list of available jobs."
       ],
       "contextClues": [
         {
-          "text": "job offer",
-          "type": "situation"
+          "text": "signed the employment contract",
+          "type": "supporting context"
         },
         {
-          "text": "start a new career",
-          "type": "result"
+          "text": "would begin on Monday",
+          "type": "supporting context"
+        },
+        {
+          "text": "removed the position",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "job offer",
-        "start a new career",
+        "signed the employment contract",
+        "would begin on Monday",
+        "removed the position",
         "targetSense: 受け入れる",
         "accept"
       ],
       "segments": [
         [
           {
-            "en": "She received a very nice ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "job offer",
-            "role": "clue",
-            "clueType": "situation",
-            "useJapanese": false
-          },
-          {
-            "en": " yesterday.",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "She was happy to ",
+            "en": "She decided to ",
             "role": "core",
             "useJapanese": false
           },
@@ -1555,18 +1668,54 @@
             "useJapanese": false
           },
           {
-            "en": " the position and ",
+            "en": " the job offer after discussing it with her family.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "She ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "start a new career",
+            "en": "signed the employment contract",
             "role": "clue",
-            "clueType": "result",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " and told the company she ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "would begin on Monday",
+            "role": "clue",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
             "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The manager then ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "removed the position",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " from the list of available jobs.",
             "role": "core",
             "useJapanese": false
           }
@@ -1579,10 +1728,10 @@
         "見直す"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「job offer」という場面や、「start a new career」という結果から推測すると、彼女は新しい職の提案に対して前向きな返事をすることになります。そのため、acceptは「受け入れる」だと推測できます。",
+      "inferenceExplanation": "「signed the employment contract」と「would begin on Monday」と「removed the position」が手がかりです。これらの状況から、acceptは「受け入れる」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       }
@@ -1596,51 +1745,33 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The heavy roller rolled slowly over the muddy ground.",
-        "It worked to flatten the bumpy surface before pouring concrete."
+        "The strong storm could flatten several trees in the city park.",
+        "The heavy roller rolled slowly over the muddy ground."
       ],
       "mixedEnglish": [
-        "The heavy roller rolled slowly over the muddy ground.",
-        "It worked to flatten the bumpy surface before pouring concrete."
+        "The strong storm could flatten several trees in the city park.",
+        "The heavy roller rolled slowly over the muddy ground."
       ],
       "contextClues": [
         {
-          "text": "heavy roller",
-          "type": "situation"
+          "text": "The heavy roller rolled",
+          "type": "supporting context"
         },
         {
-          "text": "bumpy surface",
-          "type": "cause"
+          "text": "slowly over the muddy ground",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "heavy roller",
-        "bumpy surface",
+        "The heavy roller rolled",
+        "slowly over the muddy ground",
         "targetSense: 平らにする",
         "flatten"
       ],
       "segments": [
         [
           {
-            "en": "The ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "heavy roller",
-            "role": "clue",
-            "clueType": "situation",
-            "useJapanese": false
-          },
-          {
-            "en": " rolled slowly over the muddy ground.",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "It worked to ",
+            "en": "The strong storm could ",
             "role": "core",
             "useJapanese": false
           },
@@ -1650,18 +1781,31 @@
             "useJapanese": false
           },
           {
-            "en": " the ",
+            "en": " several trees in the city park.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The heavy roller rolled",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "bumpy surface",
+            "en": "slowly over the muddy ground",
             "role": "clue",
-            "clueType": "cause",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": " before pouring concrete.",
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -1674,7 +1818,7 @@
         "積み重ねる"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「heavy roller」が使用されていることや、「bumpy surface」に対して作業が行われることから、地面を整える動作であることがわかります。そのため、flattenは「平らにする」だと推測できます。",
+      "inferenceExplanation": "「The heavy roller rolled」と「slowly over the muddy ground」が手がかりです。これらの状況から、flattenは「平らにする」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -1691,51 +1835,33 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The child was afraid of falling off the tall horse.",
-        "He had to grip the saddle tightly with both hands."
+        "The suspenseful novel can grip readers from its very first page.",
+        "The child was afraid of falling off the tall horse."
       ],
       "mixedEnglish": [
-        "The child was afraid of falling off the tall horse.",
-        "He had to grip the saddle tightly with both hands."
+        "The suspenseful novel can grip readers from its very first page.",
+        "The child was afraid of falling off the tall horse."
       ],
       "contextClues": [
         {
-          "text": "afraid of falling",
-          "type": "situation"
+          "text": "The child was afraid of",
+          "type": "supporting context"
         },
         {
-          "text": "tightly with both hands",
-          "type": "behavior"
+          "text": "falling off the tall horse",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "afraid of falling",
-        "tightly with both hands",
+        "The child was afraid of",
+        "falling off the tall horse",
         "targetSense: しっかりつかむ",
         "grip"
       ],
       "segments": [
         [
           {
-            "en": "The child was ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "afraid of falling",
-            "role": "clue",
-            "clueType": "situation",
-            "useJapanese": false
-          },
-          {
-            "en": " off the tall horse.",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "He had to ",
+            "en": "The suspenseful novel can ",
             "role": "core",
             "useJapanese": false
           },
@@ -1745,14 +1871,27 @@
             "useJapanese": false
           },
           {
-            "en": " the saddle ",
+            "en": " readers from its very first page.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The child was afraid of",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "tightly with both hands",
+            "en": "falling off the tall horse",
             "role": "clue",
-            "clueType": "behavior",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -1769,7 +1908,7 @@
         "押し上げる"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「afraid of falling」という不安な状況において、「tightly with both hands」で動作を行うことから、身体を支えるために鞍を力強く握ることがわかります。そのため、gripは「しっかりつかむ」だと推測できます。",
+      "inferenceExplanation": "「The child was afraid of」と「falling off the tall horse」が手がかりです。これらの状況から、gripは「しっかりつかむ」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -1786,51 +1925,35 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "Tom knew his mother was worried about his late return.",
-        "He wanted to promise that he would be home by ten."
+        "He will promise to call her as soon as he arrives.",
+        "He wants her to be certain that he will contact her immediately.",
+        "She trusts that he will keep his word."
       ],
       "mixedEnglish": [
-        "Tom knew his mother was worried about his late return.",
-        "He wanted to promise that he would be home by ten."
+        "He will promise to call her as soon as he arrives.",
+        "He wants her to be certain that he will contact her immediately.",
+        "She trusts that he will keep his word."
       ],
       "contextClues": [
         {
-          "text": "worried about his late return",
-          "type": "situation"
+          "text": "be certain that he will contact her",
+          "type": "supporting context"
         },
         {
-          "text": "home by ten",
-          "type": "result"
+          "text": "keep his word",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "worried about his late return",
-        "home by ten",
+        "be certain that he will contact her",
+        "keep his word",
         "targetSense: 約束する",
         "promise"
       ],
       "segments": [
         [
           {
-            "en": "Tom knew his mother was ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "worried about his late return",
-            "role": "clue",
-            "clueType": "situation",
-            "useJapanese": false
-          },
-          {
-            "en": ".",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "He wanted to ",
+            "en": "He will ",
             "role": "core",
             "useJapanese": false
           },
@@ -1840,14 +1963,39 @@
             "useJapanese": false
           },
           {
-            "en": " that he would be ",
+            "en": " to call her as soon as he arrives.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "He wants her to ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "home by ten",
+            "en": "be certain that he will contact her",
             "role": "clue",
-            "clueType": "result",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " immediately.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "She trusts that he will ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "keep his word",
+            "role": "clue",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -1864,7 +2012,7 @@
         "予想する"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「worried about his late return」という母親の心配を解消するために「home by ten」に戻ると伝える文脈から、相手に確かに行動すると伝える行為であることがわかります。そのため、promiseは「約束する」だと推測できます。",
+      "inferenceExplanation": "「be certain that he will contact her」と「keep his word」が手がかりです。これらの状況から、promiseは「約束する」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -1881,26 +2029,26 @@
       "pos": "adjective",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "A massive storm hit the coastal town yesterday.",
+        "A massive earthquake struck the region last night.",
         "It destroyed many houses and left thousands of people without power."
       ],
       "mixedEnglish": [
-        "A massive storm hit the coastal town yesterday.",
+        "A massive earthquake struck the region last night.",
         "It destroyed many houses and left thousands of people without power."
       ],
       "contextClues": [
         {
-          "text": "destroyed many houses",
-          "type": "result"
+          "text": "It destroyed many houses",
+          "type": "supporting context"
         },
         {
-          "text": "thousands of people without power",
-          "type": "result"
+          "text": "left thousands of people without power",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "destroyed many houses",
-        "thousands of people without power",
+        "It destroyed many houses",
+        "left thousands of people without power",
         "targetSense: 巨大な",
         "massive"
       ],
@@ -1917,32 +2065,27 @@
             "useJapanese": false
           },
           {
-            "en": " storm hit the coastal town yesterday.",
+            "en": " earthquake struck the region last night.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "It ",
+            "en": "It destroyed many houses",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " and ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "destroyed many houses",
+            "en": "left thousands of people without power",
             "role": "clue",
-            "clueType": "result",
-            "useJapanese": false
-          },
-          {
-            "en": " and left ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "thousands of people without power",
-            "role": "clue",
-            "clueType": "result",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -1959,7 +2102,7 @@
         "不規則な"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「destroyed many houses」や「thousands of people without power」といった甚大な被害をもたらした結果から、嵐の規模が非常に大きかったことがわかります。そのため、massiveは「巨大な」だと推測できます。",
+      "inferenceExplanation": "「It destroyed many houses」と「left thousands of people without power」が手がかりです。これらの状況から、massiveは「巨大な」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -1976,51 +2119,33 @@
       "pos": "adjective",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The company decided to keep the report confidential.",
-        "It was intended only for internal use among department managers."
+        "The company is dealing with some internal problems.",
+        "The company decided to keep the report confidential."
       ],
       "mixedEnglish": [
-        "The company decided to keep the report confidential.",
-        "It was intended only for internal use among department managers."
+        "The company is dealing with some internal problems.",
+        "The company decided to keep the report confidential."
       ],
       "contextClues": [
         {
-          "text": "keep the report confidential",
-          "type": "behavior"
+          "text": "The company decided",
+          "type": "supporting context"
         },
         {
-          "text": "among department managers",
-          "type": "situation"
+          "text": "keep the report confidential",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
+        "The company decided",
         "keep the report confidential",
-        "among department managers",
         "targetSense: 内部の",
         "internal"
       ],
       "segments": [
         [
           {
-            "en": "The company decided to ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "keep the report confidential",
-            "role": "clue",
-            "clueType": "behavior",
-            "useJapanese": false
-          },
-          {
-            "en": ".",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "It was intended only for ",
+            "en": "The company is dealing with some ",
             "role": "core",
             "useJapanese": false
           },
@@ -2030,14 +2155,27 @@
             "useJapanese": false
           },
           {
-            "en": " use ",
+            "en": " problems.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The company decided",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " to ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "among department managers",
+            "en": "keep the report confidential",
             "role": "clue",
-            "clueType": "situation",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -2054,7 +2192,7 @@
         "海外の"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「keep the report confidential」として外部に出さず、「among department managers」の範囲だけで共有されることから、組織の外ではなく中だけで使われるものであることがわかります。そのため、internalは「内部の」だと推測できます。",
+      "inferenceExplanation": "「The company decided」と「keep the report confidential」が手がかりです。これらの状況から、internalは「内部の」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -2071,33 +2209,38 @@
       "pos": "adjective",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "Maya's performance remained consistent throughout the season.",
+        "Her performance has been consistent throughout the season.",
         "She scored at least two goals in nearly every match and never had a bad game."
       ],
       "mixedEnglish": [
-        "Maya's performance remained consistent throughout the season.",
+        "Her performance has been consistent throughout the season.",
         "She scored at least two goals in nearly every match and never had a bad game."
       ],
       "contextClues": [
         {
-          "text": "throughout the season",
-          "type": "time"
+          "text": "She scored at least two goals in nearly every match",
+          "type": "supporting context"
         },
         {
           "text": "never had a bad game",
-          "type": "result"
+          "type": "supporting context"
+        },
+        {
+          "text": "throughout the season",
+          "type": "time"
         }
       ],
       "inferencePath": [
-        "throughout the season",
+        "She scored at least two goals in nearly every match",
         "never had a bad game",
+        "throughout the season",
         "targetSense: 一貫した",
         "consistent"
       ],
       "segments": [
         [
           {
-            "en": "Maya's performance remained ",
+            "en": "Her performance has been ",
             "role": "core",
             "useJapanese": false
           },
@@ -2125,14 +2268,20 @@
         ],
         [
           {
-            "en": "She scored at least two goals in nearly every match and ",
+            "en": "She scored at least two goals in nearly every match",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " and ",
             "role": "core",
             "useJapanese": false
           },
           {
             "en": "never had a bad game",
             "role": "clue",
-            "clueType": "result",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -2149,10 +2298,10 @@
         "厳格な"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「throughout the season」から長い期間について述べていることがわかり、「never had a bad game」から好調な状態が崩れなかったと判断できます。したがって、consistent は「一貫した」という意味だと推測できます。",
+      "inferenceExplanation": "「She scored at least two goals in nearly every match」と「never had a bad game」と「throughout the season」が手がかりです。これらの状況から、consistentは「一貫した」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       }
@@ -2853,43 +3002,39 @@
       "level": "EIKEN Grade 2",
       "fullEnglish": [
         "They spent their honeymoon at a beach resort.",
-        "The hotel overlooked the blue ocean and had a large pool."
+        "Their room faced the ocean, and the property had a pool, restaurants, and activities for guests.",
+        "They stayed there for a week without needing to travel elsewhere."
       ],
       "mixedEnglish": [
         "They spent their honeymoon at a beach resort.",
-        "The hotel overlooked the blue ocean and had a large pool."
+        "Their room faced the ocean, and the property had a pool, restaurants, and activities for guests.",
+        "They stayed there for a week without needing to travel elsewhere."
       ],
       "contextClues": [
         {
-          "text": "their honeymoon",
-          "type": "occasion"
+          "text": "room faced the ocean",
+          "type": "supporting context"
         },
         {
-          "text": "overlooked the blue ocean",
-          "type": "location"
+          "text": "pool, restaurants, and activities for guests",
+          "type": "supporting context"
+        },
+        {
+          "text": "stayed there for a week",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "their honeymoon",
-        "overlooked the blue ocean",
+        "room faced the ocean",
+        "pool, restaurants, and activities for guests",
+        "stayed there for a week",
         "targetSense: 行楽地",
         "resort"
       ],
       "segments": [
         [
           {
-            "en": "They spent ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "their honeymoon",
-            "role": "clue",
-            "clueType": "occasion",
-            "useJapanese": false
-          },
-          {
-            "en": " at a beach ",
+            "en": "They spent their honeymoon at a beach ",
             "role": "core",
             "useJapanese": false
           },
@@ -2906,18 +3051,47 @@
         ],
         [
           {
-            "en": "The hotel ",
+            "en": "Their ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "overlooked the blue ocean",
+            "en": "room faced the ocean",
             "role": "clue",
-            "clueType": "location",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": " and had a large pool.",
+            "en": ", and the property had a ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "pool, restaurants, and activities for guests",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "They ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "stayed there for a week",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " without needing to travel elsewhere.",
             "role": "core",
             "useJapanese": false
           }
@@ -2930,10 +3104,10 @@
         "宿泊施設"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「their honeymoon」や「overlooked the blue ocean」という手掛かりから、新婚旅行で海辺の観光地を訪れたことがわかります。そのため、resortは「行楽地」だと推測できます。",
+      "inferenceExplanation": "「room faced the ocean」と「pool, restaurants, and activities for guests」と「stayed there for a week」が手がかりです。これらの状況から、resortは「行楽地」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       }
@@ -2947,33 +3121,33 @@
       "pos": "noun",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The chef added cinnamon to the mixture before placing it in the oven.",
+        "The chef added spices to the mixture before baking it.",
         "Flour, eggs, milk, and sugar were already together in the large bowl."
       ],
       "mixedEnglish": [
-        "The chef added cinnamon to the mixture before placing it in the oven.",
+        "The chef added spices to the mixture before baking it.",
         "Flour, eggs, milk, and sugar were already together in the large bowl."
       ],
       "contextClues": [
         {
-          "text": "placing it in the oven",
-          "type": "action"
+          "text": "Flour, eggs, milk, and sugar were",
+          "type": "supporting context"
         },
         {
-          "text": "Flour, eggs, milk, and sugar",
-          "type": "composition"
+          "text": "already together in the large bowl",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "placing it in the oven",
-        "Flour, eggs, milk, and sugar",
+        "Flour, eggs, milk, and sugar were",
+        "already together in the large bowl",
         "targetSense: 混合物",
         "mixture"
       ],
       "segments": [
         [
           {
-            "en": "The chef added cinnamon to the ",
+            "en": "The chef added spices to the ",
             "role": "core",
             "useJapanese": false
           },
@@ -2983,31 +3157,31 @@
             "useJapanese": false
           },
           {
-            "en": " before ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "placing it in the oven",
-            "role": "clue",
-            "clueType": "action",
-            "useJapanese": false
-          },
-          {
-            "en": ".",
+            "en": " before baking it.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "Flour, eggs, milk, and sugar",
+            "en": "Flour, eggs, milk, and sugar were",
             "role": "clue",
-            "clueType": "composition",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": " were already together in the large bowl.",
+            "en": " ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "already together in the large bowl",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -3020,7 +3194,7 @@
         "調理器具"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「Flour, eggs, milk, and sugar」という複数の材料が大きなボウルに入っており、その後に「placing it in the oven」とあることから、焼く前の材料が一つになったものを指すとわかります。したがって、mixture は「混合物」という意味だと推測できます。",
+      "inferenceExplanation": "「Flour, eggs, milk, and sugar were」と「already together in the large bowl」が手がかりです。これらの状況から、mixtureは「混合物」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -3553,27 +3727,32 @@
       "level": "EIKEN Grade 2",
       "fullEnglish": [
         "Democracy allows citizens to choose their own leaders.",
-        "People vote in elections.",
-        "Everyone has a voice in government."
+        "Every adult can vote, and the candidate with enough public support takes office.",
+        "Citizens can replace leaders in the next election."
       ],
       "mixedEnglish": [
         "Democracy allows citizens to choose their own leaders.",
-        "People vote in elections.",
-        "Everyone has a voice in government."
+        "Every adult can vote, and the candidate with enough public support takes office.",
+        "Citizens can replace leaders in the next election."
       ],
       "contextClues": [
         {
-          "text": "choose their own leaders",
-          "type": "result"
+          "text": "Every adult can vote",
+          "type": "supporting context"
         },
         {
-          "text": "vote in elections",
-          "type": "behavior"
+          "text": "public support",
+          "type": "supporting context"
+        },
+        {
+          "text": "replace leaders in the next election",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "choose their own leaders",
-        "vote in elections",
+        "Every adult can vote",
+        "public support",
+        "replace leaders in the next election",
         "targetSense: 民主主義",
         "democracy"
       ],
@@ -3585,43 +3764,49 @@
             "useJapanese": false
           },
           {
-            "en": " allows citizens to ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "choose their own leaders",
-            "role": "clue",
-            "clueType": "result",
-            "useJapanese": false
-          },
-          {
-            "en": ".",
+            "en": " allows citizens to choose their own leaders.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "People ",
+            "en": "Every adult can vote",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": ", and the candidate with enough ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "vote in elections",
+            "en": "public support",
             "role": "clue",
-            "clueType": "behavior",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": ".",
+            "en": " takes office.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "Everyone has a voice in government.",
+            "en": "Citizens can ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "replace leaders in the next election",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -3634,10 +3819,10 @@
         "教育"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「choose their own leaders」や「vote in elections」という手がかりから、市民が選挙で自分たちの代表を選ぶ仕組みについて述べていることがわかります。そのため、democracyは「民主主義」だと推測できます。",
+      "inferenceExplanation": "「Every adult can vote」と「public support」と「replace leaders in the next election」が手がかりです。これらの状況から、democracyは「民主主義」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       }
@@ -4405,38 +4590,39 @@
       "level": "EIKEN Grade 2",
       "fullEnglish": [
         "Our vacation plans are still up in the air.",
-        "We have not decided where to go yet."
+        "We have not chosen the dates, and no tickets have been bought because two family members may be unable to travel.",
+        "We will decide after everyone confirms their schedule."
       ],
       "mixedEnglish": [
         "Our vacation plans are still up in the air.",
-        "We have not decided where to go yet."
+        "We have not chosen the dates, and no tickets have been bought because two family members may be unable to travel.",
+        "We will decide after everyone confirms their schedule."
       ],
       "contextClues": [
         {
-          "text": "Our vacation plans",
-          "type": "subject"
+          "text": "not chosen the dates",
+          "type": "supporting context"
         },
         {
-          "text": "not decided",
-          "type": "status"
+          "text": "no tickets have been bought",
+          "type": "supporting context"
+        },
+        {
+          "text": "decide after everyone confirms",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "Our vacation plans",
-        "not decided",
+        "not chosen the dates",
+        "no tickets have been bought",
+        "decide after everyone confirms",
         "targetSense: 未定で",
         "up in the air"
       ],
       "segments": [
         [
           {
-            "en": "Our vacation plans",
-            "role": "clue",
-            "clueType": "subject",
-            "useJapanese": false
-          },
-          {
-            "en": " are still ",
+            "en": "Our vacation plans are still ",
             "role": "core",
             "useJapanese": false
           },
@@ -4458,13 +4644,42 @@
             "useJapanese": false
           },
           {
-            "en": "not decided",
+            "en": "not chosen the dates",
             "role": "clue",
-            "clueType": "status",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": " where to go yet.",
+            "en": ", and ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "no tickets have been bought",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " because two family members may be unable to travel.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "We will ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "decide after everyone confirms",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " their schedule.",
             "role": "core",
             "useJapanese": false
           }
@@ -4477,10 +4692,10 @@
         "中止で"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「Our vacation plans」や「not decided」という手がかりから、計画がまだ決まっていない状態であることがわかります。そのため、up in the airは「未定で」だと推測できます。",
+      "inferenceExplanation": "「not chosen the dates」と「no tickets have been bought」と「decide after everyone confirms」が手がかりです。これらの状況から、up in the airは「未定で」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       }
@@ -5406,26 +5621,31 @@
       "pos": "phrasal verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "Please turn in your homework by Friday morning before class begins.",
+        "Please turn in your homework by Friday morning before the class begins.",
         "The teacher will collect everyone's papers and grade them over the weekend."
       ],
       "mixedEnglish": [
-        "Please turn in your homework by Friday morning before class begins.",
+        "Please turn in your homework by Friday morning before the class begins.",
         "The teacher will collect everyone's papers and grade them over the weekend."
       ],
       "contextClues": [
         {
-          "text": "your homework",
-          "type": "object"
+          "text": "The teacher will collect everyone's papers",
+          "type": "supporting context"
         },
         {
           "text": "grade them over the weekend",
-          "type": "result"
+          "type": "supporting context"
+        },
+        {
+          "text": "your homework",
+          "type": "object"
         }
       ],
       "inferencePath": [
-        "your homework",
+        "The teacher will collect everyone's papers",
         "grade them over the weekend",
+        "your homework",
         "targetSense: 提出する",
         "turn in"
       ],
@@ -5453,21 +5673,27 @@
             "useJapanese": false
           },
           {
-            "en": " by Friday morning before class begins.",
+            "en": " by Friday morning before the class begins.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "The teacher will collect everyone's papers and ",
+            "en": "The teacher will collect everyone's papers",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " and ",
             "role": "core",
             "useJapanese": false
           },
           {
             "en": "grade them over the weekend",
             "role": "clue",
-            "clueType": "result",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -5484,10 +5710,10 @@
         "延期する"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "対象が「your homework」であり、先生が後で「grade them over the weekend」とあることから、宿題を先生に渡すよう求めていると考えられます。したがって、turn in は「提出する」という意味だと推測できます。",
+      "inferenceExplanation": "「The teacher will collect everyone's papers」と「grade them over the weekend」と「your homework」が手がかりです。これらの状況から、turn inは「提出する」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       }
@@ -5586,44 +5812,33 @@
       "pos": "phrasal verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "Mountain lions hunt deer and small mammals in the forest, and they feed on fresh meat.",
+        "Giant pandas feed on bamboo in their natural mountain habitat.",
         "Their sharp teeth help them tear flesh after a successful hunt."
       ],
       "mixedEnglish": [
-        "Mountain lions hunt deer and small mammals in the forest, and they feed on fresh meat.",
+        "Giant pandas feed on bamboo in their natural mountain habitat.",
         "Their sharp teeth help them tear flesh after a successful hunt."
       ],
       "contextClues": [
         {
-          "text": "hunt deer and small mammals",
-          "type": "behavior"
+          "text": "Their sharp teeth help them tear flesh",
+          "type": "supporting context"
         },
         {
-          "text": "Their sharp teeth",
-          "type": "physical feature"
+          "text": "a successful hunt",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "hunt deer and small mammals",
-        "Their sharp teeth",
+        "Their sharp teeth help them tear flesh",
+        "a successful hunt",
         "targetSense: 〜を食べて生きる",
         "feed on"
       ],
       "segments": [
         [
           {
-            "en": "Mountain lions ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "hunt deer and small mammals",
-            "role": "clue",
-            "clueType": "behavior",
-            "useJapanese": false
-          },
-          {
-            "en": " in the forest, and they ",
+            "en": "Giant pandas ",
             "role": "core",
             "useJapanese": false
           },
@@ -5633,20 +5848,31 @@
             "useJapanese": false
           },
           {
-            "en": " fresh meat.",
+            "en": " bamboo in their natural mountain habitat.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "Their sharp teeth",
+            "en": "Their sharp teeth help them tear flesh",
             "role": "clue",
-            "clueType": "physical feature",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": " help them tear flesh after a successful hunt.",
+            "en": " after ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "a successful hunt",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -5659,7 +5885,7 @@
         "〜を恐れて逃げる"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「hunt deer and small mammals」という行動と「Their sharp teeth」という身体的特徴から、マウンテンライオンが捕らえた動物の肉を栄養源にしていると考えられます。したがって、feed on は「〜を食べて生きる」という意味だと推測できます。",
+      "inferenceExplanation": "「Their sharp teeth help them tear flesh」と「a successful hunt」が手がかりです。これらの状況から、feed onは「〜を食べて生きる」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -5676,26 +5902,31 @@
       "pos": "phrasal verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "Hang on a minute; I'll be right back with my coat.",
+        "Hang on a minute, I'll be right back.",
         "The bus was not due for another five minutes, so Anna remained beside the door."
       ],
       "mixedEnglish": [
-        "Hang on a minute; I'll be right back with my coat.",
+        "Hang on a minute, I'll be right back.",
         "The bus was not due for another five minutes, so Anna remained beside the door."
       ],
       "contextClues": [
         {
-          "text": "I'll be right back",
-          "type": "time"
+          "text": "The bus was not due",
+          "type": "supporting context"
         },
         {
-          "text": "The bus was not due for another five minutes",
-          "type": "situation"
+          "text": "another five minutes",
+          "type": "supporting context"
+        },
+        {
+          "text": "I'll be right back",
+          "type": "time"
         }
       ],
       "inferencePath": [
+        "The bus was not due",
+        "another five minutes",
         "I'll be right back",
-        "The bus was not due for another five minutes",
         "targetSense: 待つ",
         "hang on"
       ],
@@ -5707,7 +5938,7 @@
             "useJapanese": false
           },
           {
-            "en": " a minute; ",
+            "en": " a minute, ",
             "role": "core",
             "useJapanese": false
           },
@@ -5718,16 +5949,27 @@
             "useJapanese": false
           },
           {
-            "en": " with my coat.",
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "The bus was not due for another five minutes",
+            "en": "The bus was not due",
             "role": "clue",
-            "clueType": "situation",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " for ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "another five minutes",
+            "role": "clue",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -5744,10 +5986,10 @@
         "忘れる"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「I'll be right back」から話し手がすぐ戻る予定だとわかり、「The bus was not due for another five minutes」から急いで出発する必要もないと判断できます。したがって、hang on は「待つ」という意味だと推測できます。",
+      "inferenceExplanation": "「The bus was not due」と「another five minutes」と「I'll be right back」が手がかりです。これらの状況から、hang onは「待つ」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       }
@@ -5761,17 +6003,21 @@
       "pos": "adjective phrase",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "After running up the long flight of stairs, Ken leaned against the wall with his heart pounding.",
-        "He was completely out of breath and needed several minutes before he could speak normally."
+        "After running up the stairs, he was out of breath.",
+        "After running up the long flight of stairs, Ken leaned against the wall with his heart pounding."
       ],
       "mixedEnglish": [
-        "After running up the long flight of stairs, Ken leaned against the wall with his heart pounding.",
-        "He was completely out of breath and needed several minutes before he could speak normally."
+        "After running up the stairs, he was out of breath.",
+        "After running up the long flight of stairs, Ken leaned against the wall with his heart pounding."
       ],
       "contextClues": [
         {
-          "text": "running up the long flight of stairs",
-          "type": "cause"
+          "text": "After running up the long flight of stairs",
+          "type": "supporting context"
+        },
+        {
+          "text": "Ken leaned against the wall",
+          "type": "supporting context"
         },
         {
           "text": "his heart pounding",
@@ -5779,7 +6025,8 @@
         }
       ],
       "inferencePath": [
-        "running up the long flight of stairs",
+        "After running up the long flight of stairs",
+        "Ken leaned against the wall",
         "his heart pounding",
         "targetSense: 息切れして",
         "out of breath"
@@ -5787,18 +6034,41 @@
       "segments": [
         [
           {
-            "en": "After ",
+            "en": "After running up the stairs, he was ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "running up the long flight of stairs",
-            "role": "clue",
-            "clueType": "cause",
+            "en": "out of breath",
+            "role": "target",
             "useJapanese": false
           },
           {
-            "en": ", Ken leaned against the wall with ",
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "After running up the long flight of stairs",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": ", ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "Ken leaned against the wall",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " with ",
             "role": "core",
             "useJapanese": false
           },
@@ -5813,23 +6083,6 @@
             "role": "core",
             "useJapanese": false
           }
-        ],
-        [
-          {
-            "en": "He was completely ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "out of breath",
-            "role": "target",
-            "useJapanese": false
-          },
-          {
-            "en": " and needed several minutes before he could speak normally.",
-            "role": "core",
-            "useJapanese": false
-          }
         ]
       ],
       "choices": [
@@ -5839,10 +6092,10 @@
         "お腹を空かせて"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「running up the long flight of stairs」という激しい運動の直後で、「his heart pounding」という身体の反応も見られます。したがって、out of breath は「息切れして」という意味だと推測できます。",
+      "inferenceExplanation": "「After running up the long flight of stairs」と「Ken leaned against the wall」と「his heart pounding」が手がかりです。これらの状況から、out of breathは「息切れして」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       }
@@ -5951,25 +6204,25 @@
       "pos": "adjective phrase",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "This new app is easy to use, even for people who rarely use smartphones.",
+        "This new app is very easy to use.",
         "My grandfather completed the setup without instructions and found every button on his first try."
       ],
       "mixedEnglish": [
-        "This new app is easy to use, even for people who rarely use smartphones.",
+        "This new app is very easy to use.",
         "My grandfather completed the setup without instructions and found every button on his first try."
       ],
       "contextClues": [
         {
-          "text": "completed the setup without instructions",
-          "type": "result"
+          "text": "My grandfather completed the setup without instructions",
+          "type": "supporting context"
         },
         {
           "text": "found every button on his first try",
-          "type": "result"
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "completed the setup without instructions",
+        "My grandfather completed the setup without instructions",
         "found every button on his first try",
         "targetSense: 使いやすい",
         "easy to use"
@@ -5977,7 +6230,7 @@
       "segments": [
         [
           {
-            "en": "This new app is ",
+            "en": "This new app is very ",
             "role": "core",
             "useJapanese": false
           },
@@ -5987,21 +6240,16 @@
             "useJapanese": false
           },
           {
-            "en": ", even for people who rarely use smartphones.",
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "My grandfather ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "completed the setup without instructions",
+            "en": "My grandfather completed the setup without instructions",
             "role": "clue",
-            "clueType": "result",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -6012,7 +6260,7 @@
           {
             "en": "found every button on his first try",
             "role": "clue",
-            "clueType": "result",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -6029,7 +6277,7 @@
         "人気のある"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「completed the setup without instructions」から説明を読まなくても設定できたことがわかり、「found every button on his first try」から操作に迷わなかったこともわかります。したがって、easy to use は「使いやすい」という意味だと推測できます。",
+      "inferenceExplanation": "「My grandfather completed the setup without instructions」と「found every button on his first try」が手がかりです。これらの状況から、easy to useは「使いやすい」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -6046,39 +6294,33 @@
       "pos": "adjective phrase",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The city library provides textbooks to all local students free of charge.",
+        "The museum offers guided tours free of charge on Sundays.",
         "Parents never have to open their wallets when borrowing study guides for their children."
       ],
       "mixedEnglish": [
-        "The city library provides textbooks to all local students free of charge.",
+        "The museum offers guided tours free of charge on Sundays.",
         "Parents never have to open their wallets when borrowing study guides for their children."
       ],
       "contextClues": [
         {
-          "text": "The city library",
-          "type": "cause"
+          "text": "Parents never have",
+          "type": "supporting context"
         },
         {
-          "text": "Never have to open their wallets",
-          "type": "result"
+          "text": "open their wallets",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "The city library",
-        "Never have to open their wallets",
+        "Parents never have",
+        "open their wallets",
         "targetSense: 無料で",
         "free of charge"
       ],
       "segments": [
         [
           {
-            "en": "The city library",
-            "role": "clue",
-            "clueType": "cause",
-            "useJapanese": false
-          },
-          {
-            "en": " provides textbooks to all local students ",
+            "en": "The museum offers guided tours ",
             "role": "core",
             "useJapanese": false
           },
@@ -6088,21 +6330,27 @@
             "useJapanese": false
           },
           {
-            "en": ".",
+            "en": " on Sundays.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "Parents ",
+            "en": "Parents never have",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " to ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "never have to open their wallets",
+            "en": "open their wallets",
             "role": "clue",
-            "clueType": "result",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -6119,7 +6367,7 @@
         "少人数で"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「The city library」や「Never have to open their wallets」という手掛かりから、お金を使わずにテキストを受け取れる状況を読み取ることができます。そのため、free of chargeは「無料で」だと推測できます。",
+      "inferenceExplanation": "「Parents never have」と「open their wallets」が手がかりです。これらの状況から、free of chargeは「無料で」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -6136,44 +6384,40 @@
       "pos": "noun phrase",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "Tom held a red paintbrush in his right hand and the other of the two brushes in his left.",
-        "He carefully applied different colors to opposite corners of the canvas."
+        "One twin is quiet, and the other of the pair is very talkative.",
+        "There are only two twins in the pair: one rarely speaks, while the second talks constantly.",
+        "Their personalities are almost opposite."
       ],
       "mixedEnglish": [
-        "Tom held a red paintbrush in his right hand and the other of the two brushes in his left.",
-        "He carefully applied different colors to opposite corners of the canvas."
+        "One twin is quiet, and the other of the pair is very talkative.",
+        "There are only two twins in the pair: one rarely speaks, while the second talks constantly.",
+        "Their personalities are almost opposite."
       ],
       "contextClues": [
         {
-          "text": "In his right hand",
-          "type": "contrast"
+          "text": "only two twins",
+          "type": "supporting context"
         },
         {
-          "text": "In his left",
-          "type": "behavior"
+          "text": "one rarely speaks",
+          "type": "supporting context"
+        },
+        {
+          "text": "the second talks constantly",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "In his right hand",
-        "In his left",
+        "only two twins",
+        "one rarely speaks",
+        "the second talks constantly",
         "targetSense: （2つのうち）もう一方の",
         "the other of"
       ],
       "segments": [
         [
           {
-            "en": "Tom held a red paintbrush ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "in his right hand",
-            "role": "clue",
-            "clueType": "contrast",
-            "useJapanese": false
-          },
-          {
-            "en": " and ",
+            "en": "One twin is quiet, and ",
             "role": "core",
             "useJapanese": false
           },
@@ -6183,14 +6427,43 @@
             "useJapanese": false
           },
           {
-            "en": " the two brushes ",
+            "en": " the pair is very talkative.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "There are ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "in his left",
+            "en": "only two twins",
             "role": "clue",
-            "clueType": "behavior",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " in the pair: ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "one rarely speaks",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": ", while ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "the second talks constantly",
+            "role": "clue",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -6201,7 +6474,7 @@
         ],
         [
           {
-            "en": "He carefully applied different colors to opposite corners of the canvas.",
+            "en": "Their personalities are almost opposite.",
             "role": "core",
             "useJapanese": false
           }
@@ -6214,10 +6487,10 @@
         "それぞれの"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「In his right hand」という対比や「In his left」という手の位置の描写から、2つの絵筆のそれぞれの位置関係を表していることがわかります。そのため、the other ofは「（2つのうち）もう一方の」だと推測できます。",
+      "inferenceExplanation": "「only two twins」と「one rarely speaks」と「the second talks constantly」が手がかりです。これらの状況から、the other ofは「（2つのうち）もう一方の」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       }

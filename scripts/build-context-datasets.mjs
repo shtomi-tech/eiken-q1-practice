@@ -124,6 +124,9 @@ function segmentSentence(sentence, target, clues) {
 function runtimeItem(vocab, generated) {
   const target = surface(vocab);
   if (generated.target !== target) throw new Error(`${target}: generated target mismatch (${generated.target})`);
+  if (generated.fullEnglish[0] !== vocab.example) {
+    throw new Error(`${target}: first sentence must repeat the vocabulary example verbatim`);
+  }
   if (occurrenceCount(generated.fullEnglish.join(" "), target) !== 1) {
     throw new Error(`${target}: target occurrence must be one: ${generated.fullEnglish.join(" ")}`);
   }
@@ -161,8 +164,12 @@ async function buildDataset(datasetId, { limit = 0, outputDir = path.join(ROOT, 
   fs.mkdirSync(outputDir, { recursive: true });
   const output = path.join(outputDir, `${datasetId}.json`);
   const existing = fs.existsSync(output) ? readJson(output) : null;
-  const existingTargets = new Set((existing?.contexts || []).map((item) => item.target));
-  const contexts = (existing?.contexts || []).filter((item) => items.some((source) => surface(source) === item.target));
+  const sourceByTarget = new Map(items.map((item) => [surface(item), item]));
+  const contexts = (existing?.contexts || []).filter((item) => {
+    const source = sourceByTarget.get(item.target);
+    return source && item.fullEnglish?.[0] === source.example;
+  });
+  const existingTargets = new Set(contexts.map((item) => item.target));
   for (let offset = 0; offset < items.length; offset += 8) {
     const batch = items.slice(offset, offset + 8);
     let pending = batch.filter((item) => !existingTargets.has(surface(item)));

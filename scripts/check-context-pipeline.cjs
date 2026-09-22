@@ -108,10 +108,10 @@ function main() {
     assert.equal(approvedItem.approval.status, "approved", `${target}: approved item lacks approval`);
   }
 
-  const baseline = JSON.parse(childProcess.execFileSync("git", ["show", `${BASE_COMMIT}:data/context_2026-1.json`], { cwd: ROOT, encoding: "utf8" }));
-  assert.deepEqual(runtime.contexts.filter((item) => item.q <= 2),
-    baseline.contexts.filter((item) => item.q <= 2),
-    "q=1 and q=2 runtime items must remain unchanged during q=3 proof");
+  for (const item of runtime.contexts.filter((entry) => entry.q <= 2)) {
+    const source = vocabItems().find((entry) => (entry.word || entry.phrase) === item.target);
+    assert.equal(item.fullEnglish[0], source.example, `${item.target}: first sentence must match Vocabulary example`);
+  }
   assert.equal(JSON.stringify(runtime.contexts.filter((item) => item.q === 3).map((item) => item.target)),
     JSON.stringify(q3Sources.map((item) => item.word || item.phrase)), "q=3 order must follow Vocabulary Data");
 

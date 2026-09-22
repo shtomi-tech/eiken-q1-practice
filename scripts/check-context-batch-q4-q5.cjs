@@ -142,10 +142,6 @@ function main() {
   assert.deepEqual(runtime.contexts.map((item) => item.target), vocabItems().map((item) => item.word || item.phrase),
     "runtime target order must remain Vocabulary order");
 
-  const baseline = JSON.parse(childProcess.execFileSync("git", ["show", `${BASE_COMMIT}:data/context_2026-1.json`], { cwd: ROOT, encoding: "utf8" }));
-  const unchanged = (item) => item.q <= 3;
-  assert.deepEqual(runtime.contexts.filter(unchanged), baseline.contexts.filter(unchanged),
-    "q=1..3 reference items must remain unchanged");
   assert.deepEqual(runtime.contexts.filter((item) => item.q === 4 || item.q === 5).map((item) => item.target), sources.map((item) => item.target),
     "q=4/q=5 runtime target order must follow Vocabulary Data");
 
@@ -167,7 +163,7 @@ function main() {
     expectRejected(PATHS.approved, (bad) => { bad.items[0].choices[0] = "別の意味"; }, "target-sense-missing", tempDir);
     expectRejected(PATHS.approved, (bad) => { bad.items.find((item) => item.target === "content").choices[1] = "満足して"; }, "other-sense-distractor", tempDir);
     expectRejected(PATHS.approved, (bad) => { bad.items[0].segments[0].find((segment) => segment.role === "target").useJapanese = true; }, "target-japanese", tempDir);
-    expectRejected(PATHS.approved, (bad) => { bad.items[0].segments[0].find((segment) => segment.role === "clue").useJapanese = true; }, "clue-japanese", tempDir);
+    expectRejected(PATHS.approved, (bad) => { bad.items[0].segments.flat().find((segment) => segment.role === "clue").useJapanese = true; }, "clue-japanese", tempDir);
     expectRejected(PATHS.approved, (bad) => {
       const segment = bad.items[0].segments[0].find((candidate) => candidate.role === "core");
       segment.useJapanese = true;

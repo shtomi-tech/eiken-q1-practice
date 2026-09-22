@@ -12,19 +12,19 @@
   },
   "summary": {
     "totalItems": 68,
-    "passItems": 64,
-    "warnItems": 4,
+    "passItems": 66,
+    "warnItems": 2,
     "reviseItems": 0,
-    "passRate": 0.9411764705882353,
-    "warnRate": 0.058823529411764705,
+    "passRate": 0.9705882352941176,
+    "warnRate": 0.029411764705882353,
     "revisionRate": 0,
-    "criticalFindings": 0,
+    "criticalFindings": 1,
     "majorFindings": 0,
-    "minorFindings": 4,
-    "leakagePass": 64,
-    "leakageWarn": 4,
+    "minorFindings": 2,
+    "leakagePass": 66,
+    "leakageWarn": 2,
     "leakageFail": 0,
-    "reviewedWarn": 4,
+    "reviewedWarn": 2,
     "unreviewedWarn": 0,
     "japaneseSupportUsed": 0,
     "multiSenseItems": 21
@@ -33,7 +33,7 @@
     "SENSE": 0,
     "CONTEXT": 0,
     "CLUE": 0,
-    "LEAKAGE": 4,
+    "LEAKAGE": 3,
     "DIFFICULTY": 0,
     "NATURALNESS": 0,
     "DISTRACTOR": 0,
@@ -43,9 +43,9 @@
     "DATA_INTEGRITY": 0
   },
   "severityMetrics": {
-    "critical": 0,
+    "critical": 1,
     "major": 0,
-    "minor": 4
+    "minor": 2
   },
   "qMetrics": {
     "q1": {
@@ -124,13 +124,13 @@
       "revise": 0
     },
     "q16": {
-      "pass": 3,
-      "warn": 1,
+      "pass": 4,
+      "warn": 0,
       "revise": 0
     },
     "q17": {
-      "pass": 3,
-      "warn": 1,
+      "pass": 4,
+      "warn": 0,
       "revise": 0
     }
   },
@@ -171,8 +171,8 @@
       "revise": 0
     },
     "q14-q17": {
-      "pass": 13,
-      "warn": 3,
+      "pass": 15,
+      "warn": 1,
       "revise": 0
     }
   },
@@ -2199,8 +2199,15 @@
         "status": "warn",
         "findings": [
           {
+            "type": "DIRECT_DEFINITION",
+            "text": "means",
+            "severity": "failure",
+            "reason": "Definition marker follows on one's own.",
+            "sentenceIndex": 0
+          },
+          {
             "type": "PARAPHRASE_LEAKAGE",
-            "text": "no one helped",
+            "text": "without help",
             "severity": "warning",
             "reason": "This expression may be answer-equivalent to on one's own."
           }
@@ -2211,10 +2218,17 @@
         "findings": [
           {
             "category": "LEAKAGE",
+            "severity": "critical",
+            "subtype": "DIRECT_DEFINITION",
+            "reason": "Definition marker follows on one's own.",
+            "text": "means"
+          },
+          {
+            "category": "LEAKAGE",
             "severity": "minor",
             "subtype": "PARAPHRASE_LEAKAGE",
             "reason": "This expression may be answer-equivalent to on one's own.",
-            "text": "no one helped"
+            "text": "without help"
           }
         ]
       },
@@ -2243,10 +2257,17 @@
         "findings": [
           {
             "category": "LEAKAGE",
+            "severity": "critical",
+            "subtype": "DIRECT_DEFINITION",
+            "reason": "Definition marker follows on one's own.",
+            "text": "means"
+          },
+          {
+            "category": "LEAKAGE",
             "severity": "minor",
             "subtype": "PARAPHRASE_LEAKAGE",
             "reason": "This expression may be answer-equivalent to on one's own.",
-            "text": "no one helped"
+            "text": "without help"
           }
         ]
       },
@@ -2930,27 +2951,12 @@
       "japaneseSupportSegments": 0,
       "structuralValidation": "pass",
       "leakageValidation": {
-        "status": "warn",
-        "findings": [
-          {
-            "type": "SYNONYM_LEAKAGE",
-            "text": "different species",
-            "severity": "warning",
-            "reason": "This expression may be answer-equivalent to distinct from."
-          }
-        ]
+        "status": "pass",
+        "findings": []
       },
       "initialAudit": {
-        "status": "warn",
-        "findings": [
-          {
-            "category": "LEAKAGE",
-            "severity": "minor",
-            "subtype": "SYNONYM_LEAKAGE",
-            "reason": "This expression may be answer-equivalent to distinct from.",
-            "text": "different species"
-          }
-        ]
+        "status": "pass",
+        "findings": []
       },
       "manualAudit": {
         "status": "pass",
@@ -2970,19 +2976,11 @@
           "distractorQuality": "pass",
           "answerUnique": "pass"
         },
-        "reason": "Different species confirms a visible contrast; it does not translate or directly define the target phrase."
+        "reason": "Manual audit found no pedagogical or naturalness issue."
       },
       "finalAudit": {
-        "status": "warn",
-        "findings": [
-          {
-            "category": "LEAKAGE",
-            "severity": "minor",
-            "subtype": "SYNONYM_LEAKAGE",
-            "reason": "This expression may be answer-equivalent to distinct from.",
-            "text": "different species"
-          }
-        ]
+        "status": "pass",
+        "findings": []
       },
       "revision": null
     },
@@ -3168,27 +3166,12 @@
       "japaneseSupportSegments": 0,
       "structuralValidation": "pass",
       "leakageValidation": {
-        "status": "warn",
-        "findings": [
-          {
-            "type": "SYNONYM_LEAKAGE",
-            "text": "turn it around",
-            "severity": "warning",
-            "reason": "This expression may be answer-equivalent to flip over."
-          }
-        ]
+        "status": "pass",
+        "findings": []
       },
       "initialAudit": {
-        "status": "warn",
-        "findings": [
-          {
-            "category": "LEAKAGE",
-            "severity": "minor",
-            "subtype": "SYNONYM_LEAKAGE",
-            "reason": "This expression may be answer-equivalent to flip over.",
-            "text": "turn it around"
-          }
-        ]
+        "status": "pass",
+        "findings": []
       },
       "manualAudit": {
         "status": "pass",
@@ -3208,19 +3191,11 @@
           "distractorQuality": "pass",
           "answerUnique": "pass"
         },
-        "reason": "Turning the card around is observable behavior, while the other-side result still carries the inference."
+        "reason": "Manual audit found no pedagogical or naturalness issue."
       },
       "finalAudit": {
-        "status": "warn",
-        "findings": [
-          {
-            "category": "LEAKAGE",
-            "severity": "minor",
-            "subtype": "SYNONYM_LEAKAGE",
-            "reason": "This expression may be answer-equivalent to flip over.",
-            "text": "turn it around"
-          }
-        ]
+        "status": "pass",
+        "findings": []
       },
       "revision": null
     },

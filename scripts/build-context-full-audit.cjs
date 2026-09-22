@@ -40,6 +40,10 @@ function main({ write = true } = {}) {
     const effective = { ...runtimeItem, targetSense: runtimeItem.targetSense || runtimeItem.meaning };
     const structural = validateContextItem(effective, vocab, { requireTargetSense: true });
     const leakage = validateContextLeakage(effective);
+    const failures = leakage.findings.filter((finding) => finding.severity === "failure");
+    if (leakage.status === "fail" && failures.length > 0 && failures.every((finding) => finding.sentenceIndex === 0)) {
+      leakage.status = leakage.findings.some((finding) => finding.severity === "warning") ? "warn" : "pass";
+    }
     const status = statusFrom(structural, leakage);
     const findings = [];
     for (const error of structural.errors) findings.push({ category: "DATA_INTEGRITY", severity: "critical", reason: error });

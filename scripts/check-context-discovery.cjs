@@ -30,6 +30,7 @@ assert.equal(vocabItems.length, 68, "基準セットの語句数が不正です"
 assert.equal(contexts.length, vocabItems.length, "語句と文脈の件数が一致しません");
 
 const vocabTargets = new Set(vocabItems.map((item) => item.word || item.phrase));
+const vocabByTarget = new Map(vocabItems.map((item) => [item.word || item.phrase, item]));
 const cardMeaningByTarget = new Map(vocabItems.map((item) => {
   const surface = item.word || item.phrase;
   const lemma = item.word
@@ -41,6 +42,8 @@ const contextTargets = new Set();
 const japanese = /[\u3040-\u30ff\u3400-\u9fff]/;
 
 for (const item of contexts) {
+  assert.equal(item.fullEnglish[0], vocabByTarget.get(item.target)?.example,
+    `${item.target}: 1文目は暗記カードのexampleと一致させる`);
   assert.ok(!contextTargets.has(item.target), `文脈が重複しています: ${item.target}`);
   contextTargets.add(item.target);
   assert.ok(vocabTargets.has(item.target), `基準セットにない語句です: ${item.target}`);

@@ -20,20 +20,16 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The teacher used a simple picture to illustrate how water moves through a plant.",
+        "The diagram will illustrate how cells work inside the human body.",
         "The arrows showed the path from the roots to the leaves.",
         "After seeing the picture, the students understood the process."
       ],
       "mixedEnglish": [
-        "The teacher used a simple picture to illustrate how water moves through a plant.",
+        "The diagram will illustrate how cells work inside the human body.",
         "The arrows showed the path from the roots to the leaves.",
         "After seeing the picture, the students understood the process."
       ],
       "contextClues": [
-        {
-          "text": "used a simple picture",
-          "type": "behavior"
-        },
         {
           "text": "arrows showed the path",
           "type": "example"
@@ -44,27 +40,15 @@
         }
       ],
       "inferencePath": [
-        "teacher",
-        "picture and arrows",
-        "a process becomes clear",
-        "explain with an example or picture",
+        "arrows showed the path",
+        "students understood the process",
         "targetSense: （例などで）説明する、明らかにする",
         "illustrate"
       ],
       "segments": [
         [
           {
-            "en": "The teacher ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "used a simple picture",
-            "role": "clue",
-            "useJapanese": false
-          },
-          {
-            "en": " to ",
+            "en": "The diagram will ",
             "role": "core",
             "useJapanese": false
           },
@@ -74,22 +58,44 @@
             "useJapanese": false
           },
           {
-            "en": " how water moves through a plant.",
+            "en": " how cells work inside the human body.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "The arrows showed the path from the roots to the leaves.",
+            "en": "The ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "arrows showed the path",
             "role": "clue",
+            "clueType": "example",
+            "useJapanese": false
+          },
+          {
+            "en": " from the roots to the leaves.",
+            "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "After seeing the picture, the students understood the process.",
+            "en": "After seeing the picture, the ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "students understood the process",
             "role": "clue",
+            "clueType": "result",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
             "useJapanese": false
           }
         ]
@@ -101,10 +107,10 @@
         "隠す"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「used a simple picture」「arrows showed the path」「students understood the process」が手がかりです。絵と矢印で仕組みを分かりやすくしているので、illustrateは「（例などで）説明する、明らかにする」だと推測できます。",
+      "inferenceExplanation": "「arrows showed the path」と「students understood the process」が手がかりです。絵と矢印で仕組みを分かりやすくしているので、illustrateは「（例などで）説明する、明らかにする」だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 3,
+        "clueCount": 2,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -176,51 +182,35 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "A large sofa can occupy most of the living room.",
+        "These large boxes occupy the whole shelf in our storage room.",
         "There is only a small space left between it and the table.",
         "We moved the table to make more room."
       ],
       "mixedEnglish": [
-        "A large sofa can occupy most of the living room.",
+        "These large boxes occupy the whole shelf in our storage room.",
         "There is only a small space left between it and the table.",
         "We moved the table to make more room."
       ],
       "contextClues": [
         {
-          "text": "large sofa",
-          "type": "example"
-        },
-        {
-          "text": "most of the living room",
-          "type": "amount"
-        },
-        {
           "text": "only a small space left",
           "type": "result"
+        },
+        {
+          "text": "We moved the table to make more room",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "sofa",
-        "living room",
-        "little space remains",
-        "take up a place or area",
+        "only a small space left",
+        "We moved the table to make more room",
         "targetSense: 占める、占領する",
         "occupy"
       ],
       "segments": [
         [
           {
-            "en": "A ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "large sofa",
-            "role": "clue",
-            "useJapanese": false
-          },
-          {
-            "en": " can ",
+            "en": "These large boxes ",
             "role": "core",
             "useJapanese": false
           },
@@ -230,32 +220,39 @@
             "useJapanese": false
           },
           {
-            "en": " ",
+            "en": " the whole shelf in our storage room.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "There is ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "most of the living room",
+            "en": "only a small space left",
             "role": "clue",
+            "clueType": "result",
+            "useJapanese": false
+          },
+          {
+            "en": " between it and the table.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "We moved the table to make more room",
+            "role": "clue",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
             "en": ".",
             "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "There is only a small space left between it and the table.",
-            "role": "clue",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "We moved the table to make more room.",
-            "role": "clue",
             "useJapanese": false
           }
         ]
@@ -267,10 +264,10 @@
         "空ける"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「large sofa」「most of the living room」「only a small space left」が手がかりです。ソファが部屋の大部分を取り、残りの空間が少ないので、occupyは「占める、占領する」だと推測できます。",
+      "inferenceExplanation": "「only a small space left」と「We moved the table to make more room」が手がかりです。これらの状況から、occupyは「占める、占領する」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 3,
+        "clueCount": 2,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -342,20 +339,16 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The old table looked dull, so Ben used a cloth to polish it.",
+        "She will polish the silver dishes before the formal dinner.",
         "He rubbed the surface until it became smooth and shiny.",
         "The table looked almost new."
       ],
       "mixedEnglish": [
-        "The old table looked dull, so Ben used a cloth to polish it.",
+        "She will polish the silver dishes before the formal dinner.",
         "He rubbed the surface until it became smooth and shiny.",
         "The table looked almost new."
       ],
       "contextClues": [
-        {
-          "text": "looked dull",
-          "type": "situation"
-        },
         {
           "text": "rubbed the surface",
           "type": "behavior"
@@ -366,27 +359,15 @@
         }
       ],
       "inferencePath": [
-        "old table",
-        "cloth",
-        "rubbing",
-        "smooth and shiny surface",
+        "rubbed the surface",
+        "smooth and shiny",
         "targetSense: 磨く",
         "polish"
       ],
       "segments": [
         [
           {
-            "en": "The old table ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "looked dull",
-            "role": "clue",
-            "useJapanese": false
-          },
-          {
-            "en": ", so Ben used a cloth to ",
+            "en": "She will ",
             "role": "core",
             "useJapanese": false
           },
@@ -396,22 +377,44 @@
             "useJapanese": false
           },
           {
-            "en": " it.",
+            "en": " the silver dishes before the formal dinner.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "He rubbed the surface until it became smooth and shiny.",
+            "en": "He ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "rubbed the surface",
             "role": "clue",
+            "clueType": "behavior",
+            "useJapanese": false
+          },
+          {
+            "en": " until it became ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "smooth and shiny",
+            "role": "clue",
+            "clueType": "result",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
             "en": "The table looked almost new.",
-            "role": "clue",
+            "role": "core",
             "useJapanese": false
           }
         ]
@@ -423,10 +426,10 @@
         "借りる"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「looked dull」「rubbed the surface」「smooth and shiny」が手がかりです。布で表面をこすって新品のようにしているので、polishは「磨く」だと推測できます。",
+      "inferenceExplanation": "「rubbed the surface」と「smooth and shiny」が手がかりです。これらの状況から、polishは「磨く」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 3,
+        "clueCount": 2,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -498,20 +501,16 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "When Yuki won the art contest, her classmates came to congratulate her.",
+        "We will congratulate her on passing the exam after the ceremony.",
         "They shook her hand and said they were happy for her.",
         "Yuki thanked them with a big smile."
       ],
       "mixedEnglish": [
-        "When Yuki won the art contest, her classmates came to congratulate her.",
+        "We will congratulate her on passing the exam after the ceremony.",
         "They shook her hand and said they were happy for her.",
         "Yuki thanked them with a big smile."
       ],
       "contextClues": [
-        {
-          "text": "won the art contest",
-          "type": "cause"
-        },
         {
           "text": "shook her hand",
           "type": "behavior"
@@ -522,27 +521,15 @@
         }
       ],
       "inferencePath": [
-        "success",
-        "friends",
-        "kind words and a handshake",
-        "show happiness about someone's success",
+        "shook her hand",
+        "happy for her",
         "targetSense: 祝う、祝辞を述べる",
         "congratulate"
       ],
       "segments": [
         [
           {
-            "en": "When Yuki ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "won the art contest",
-            "role": "clue",
-            "useJapanese": false
-          },
-          {
-            "en": ", her classmates came to ",
+            "en": "We will ",
             "role": "core",
             "useJapanese": false
           },
@@ -552,22 +539,44 @@
             "useJapanese": false
           },
           {
-            "en": " her.",
+            "en": " her on passing the exam after the ceremony.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "They shook her hand and said they were happy for her.",
+            "en": "They ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "shook her hand",
             "role": "clue",
+            "clueType": "behavior",
+            "useJapanese": false
+          },
+          {
+            "en": " and said they were ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "happy for her",
+            "role": "clue",
+            "clueType": "speech",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
             "en": "Yuki thanked them with a big smile.",
-            "role": "clue",
+            "role": "core",
             "useJapanese": false
           }
         ]
@@ -579,10 +588,10 @@
         "忘れる"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「won the art contest」「shook her hand」「happy for her」が手がかりです。成功を喜んで手を握り、うれしいと言っているので、congratulateは「祝う、祝辞を述べる」だと推測できます。",
+      "inferenceExplanation": "「shook her hand」と「happy for her」が手がかりです。成功を喜んで手を握り、うれしいと言っているので、congratulateは「祝う、祝辞を述べる」だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 3,
+        "clueCount": 2,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -646,20 +655,16 @@
       "pos": "adverb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The bus was barely moving because of the heavy snow.",
+        "The Green Wolves barely won the game in the last seconds.",
         "It went so slowly that people walking nearby almost passed it.",
         "The driver reached the station after a long time."
       ],
       "mixedEnglish": [
-        "The bus was barely moving because of the heavy snow.",
+        "The Green Wolves barely won the game in the last seconds.",
         "It went so slowly that people walking nearby almost passed it.",
         "The driver reached the station after a long time."
       ],
       "contextClues": [
-        {
-          "text": "heavy snow",
-          "type": "cause"
-        },
         {
           "text": "so slowly",
           "type": "degree"
@@ -670,17 +675,15 @@
         }
       ],
       "inferencePath": [
-        "snow",
-        "bus",
-        "very slow movement",
-        "only just moving",
+        "so slowly",
+        "almost passed it",
         "targetSense: かろうじて、やっと（〜ない）",
         "barely"
       ],
       "segments": [
         [
           {
-            "en": "The bus was ",
+            "en": "The Green Wolves ",
             "role": "core",
             "useJapanese": false
           },
@@ -690,13 +693,32 @@
             "useJapanese": false
           },
           {
-            "en": " moving because of the ",
+            "en": " won the game in the last seconds.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "It went ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "heavy snow",
+            "en": "so slowly",
             "role": "clue",
+            "clueType": "degree",
+            "useJapanese": false
+          },
+          {
+            "en": " that people walking nearby ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "almost passed it",
+            "role": "clue",
+            "clueType": "contrast",
             "useJapanese": false
           },
           {
@@ -707,15 +729,8 @@
         ],
         [
           {
-            "en": "It went so slowly that people walking nearby almost passed it.",
-            "role": "clue",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
             "en": "The driver reached the station after a long time.",
-            "role": "clue",
+            "role": "core",
             "useJapanese": false
           }
         ]
@@ -727,10 +742,10 @@
         "静かに"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「heavy snow」「so slowly」「almost passed it」が手がかりです。バスがほとんど進まず、歩く人に追い越されそうなので、barelyは「かろうじて、やっと（〜ない）」だと推測できます。",
+      "inferenceExplanation": "「so slowly」と「almost passed it」が手がかりです。これらの状況から、barelyは「かろうじて、やっと（〜ない）」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 3,
+        "clueCount": 2,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -794,20 +809,16 @@
       "pos": "adverb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The children secretly prepared a birthday gift for their teacher.",
+        "She secretly planned a surprise party for her father's birthday.",
         "They hid the box under a desk and spoke quietly when she came near.",
         "She knew nothing about the plan."
       ],
       "mixedEnglish": [
-        "The children secretly prepared a birthday gift for their teacher.",
+        "She secretly planned a surprise party for her father's birthday.",
         "They hid the box under a desk and spoke quietly when she came near.",
         "She knew nothing about the plan."
       ],
       "contextClues": [
-        {
-          "text": "prepared a birthday gift",
-          "type": "situation"
-        },
         {
           "text": "hid the box",
           "type": "behavior"
@@ -818,17 +829,15 @@
         }
       ],
       "inferencePath": [
-        "gift",
-        "hidden box",
-        "quiet voices",
-        "without another person knowing",
+        "hid the box",
+        "She knew nothing about the plan",
         "targetSense: こっそりと、密かに",
         "secretly"
       ],
       "segments": [
         [
           {
-            "en": "The children ",
+            "en": "She ",
             "role": "core",
             "useJapanese": false
           },
@@ -838,32 +847,39 @@
             "useJapanese": false
           },
           {
-            "en": " ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "prepared a birthday gift",
-            "role": "clue",
-            "useJapanese": false
-          },
-          {
-            "en": " for their teacher.",
+            "en": " planned a surprise party for her father's birthday.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "They hid the box under a desk and spoke quietly when she came near.",
+            "en": "They ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "hid the box",
             "role": "clue",
+            "clueType": "behavior",
+            "useJapanese": false
+          },
+          {
+            "en": " under a desk and spoke quietly when she came near.",
+            "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "She knew nothing about the plan.",
+            "en": "She knew nothing about the plan",
             "role": "clue",
+            "clueType": "result",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
             "useJapanese": false
           }
         ]
@@ -875,10 +891,10 @@
         "一緒に"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「prepared a birthday gift」「hid the box」「She knew nothing about the plan」が手がかりです。箱を隠し、先生に知られないようにしているので、secretlyは「こっそりと、密かに」だと推測できます。",
+      "inferenceExplanation": "「hid the box」と「She knew nothing about the plan」が手がかりです。これらの状況から、secretlyは「こっそりと、密かに」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 3,
+        "clueCount": 2,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -942,20 +958,16 @@
       "pos": "adverb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The nurse gently lifted the sleeping baby.",
+        "He gently closed the door so as not to wake the baby.",
         "She moved slowly and used both hands so that the baby would not wake up.",
         "The baby continued to sleep."
       ],
       "mixedEnglish": [
-        "The nurse gently lifted the sleeping baby.",
+        "He gently closed the door so as not to wake the baby.",
         "She moved slowly and used both hands so that the baby would not wake up.",
         "The baby continued to sleep."
       ],
       "contextClues": [
-        {
-          "text": "sleeping baby",
-          "type": "situation"
-        },
         {
           "text": "moved slowly",
           "type": "behavior"
@@ -966,17 +978,15 @@
         }
       ],
       "inferencePath": [
-        "sleeping baby",
-        "slow movement",
-        "careful handling",
-        "in a soft and careful way",
+        "moved slowly",
+        "would not wake up",
         "targetSense: やさしく、穏やかに",
         "gently"
       ],
       "segments": [
         [
           {
-            "en": "The nurse ",
+            "en": "He ",
             "role": "core",
             "useJapanese": false
           },
@@ -986,13 +996,32 @@
             "useJapanese": false
           },
           {
-            "en": " lifted the ",
+            "en": " closed the door so as not to wake the baby.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "She ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "sleeping baby",
+            "en": "moved slowly",
             "role": "clue",
+            "clueType": "behavior",
+            "useJapanese": false
+          },
+          {
+            "en": " and used both hands so that the baby ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "would not wake up",
+            "role": "clue",
+            "clueType": "purpose",
             "useJapanese": false
           },
           {
@@ -1003,15 +1032,8 @@
         ],
         [
           {
-            "en": "She moved slowly and used both hands so that the baby would not wake up.",
-            "role": "clue",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
             "en": "The baby continued to sleep.",
-            "role": "clue",
+            "role": "core",
             "useJapanese": false
           }
         ]
@@ -1023,10 +1045,10 @@
         "汚く"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「sleeping baby」「moved slowly」「would not wake up」が手がかりです。赤ちゃんを起こさないようにゆっくり動かしているので、gentlyは「やさしく、穏やかに」だと推測できます。",
+      "inferenceExplanation": "「moved slowly」と「would not wake up」が手がかりです。赤ちゃんを起こさないようにゆっくり動かしているので、gentlyは「やさしく、穏やかに」だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 3,
+        "clueCount": 2,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -1090,20 +1112,16 @@
       "pos": "adverb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The alarm repeatedly rang during the night.",
+        "She repeatedly checked her phone for messages during the long meeting.",
         "It stopped for a minute and then made the same loud sound again.",
         "Finally, Dad replaced the battery."
       ],
       "mixedEnglish": [
-        "The alarm repeatedly rang during the night.",
+        "She repeatedly checked her phone for messages during the long meeting.",
         "It stopped for a minute and then made the same loud sound again.",
         "Finally, Dad replaced the battery."
       ],
       "contextClues": [
-        {
-          "text": "during the night",
-          "type": "situation"
-        },
         {
           "text": "again",
           "type": "repetition"
@@ -1114,17 +1132,15 @@
         }
       ],
       "inferencePath": [
-        "alarm",
-        "same sound",
-        "stopped and started again",
-        "many times",
+        "again",
+        "replaced the battery",
         "targetSense: 繰り返し、何度も",
         "repeatedly"
       ],
       "segments": [
         [
           {
-            "en": "The alarm ",
+            "en": "She ",
             "role": "core",
             "useJapanese": false
           },
@@ -1134,13 +1150,21 @@
             "useJapanese": false
           },
           {
-            "en": " rang ",
+            "en": " checked her phone for messages during the long meeting.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "It stopped for a minute and then made the same loud sound ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "during the night",
+            "en": "again",
             "role": "clue",
+            "clueType": "repetition",
             "useJapanese": false
           },
           {
@@ -1151,15 +1175,19 @@
         ],
         [
           {
-            "en": "It stopped for a minute and then made the same loud sound again.",
-            "role": "clue",
+            "en": "Finally, Dad ",
+            "role": "core",
             "useJapanese": false
-          }
-        ],
-        [
+          },
           {
-            "en": "Finally, Dad replaced the battery.",
+            "en": "replaced the battery",
             "role": "clue",
+            "clueType": "result",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
             "useJapanese": false
           }
         ]
@@ -1171,10 +1199,10 @@
         "すぐに"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「during the night」「again」「replaced the battery」が手がかりです。同じ音が止まってはまた鳴り、電池を交換しているので、repeatedlyは「繰り返し、何度も」だと推測できます。",
+      "inferenceExplanation": "「again」と「replaced the battery」が手がかりです。同じ音が止まってはまた鳴り、電池を交換しているので、repeatedlyは「繰り返し、何度も」だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 3,
+        "clueCount": 2,
         "targetProtected": true,
         "cluesProtected": true
       },

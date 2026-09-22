@@ -17,16 +17,11 @@ const CONFIG = {
 function readJson(file) { return JSON.parse(fs.readFileSync(file, "utf8")); }
 function writeJson(file, value) { fs.writeFileSync(file, `${JSON.stringify(value, null, 2)}\n`, "utf8"); }
 function surface(item) { return item.word || item.phrase; }
-function exactTargetCount(text, target) {
-  const escaped = target.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  return [...text.matchAll(new RegExp(`(?<![A-Za-z])${escaped}(?![A-Za-z])`, "gi"))].length;
-}
-
 async function regenerate(records) {
   const prompt = `Revise every EIKEN Grade 2 Context Discovery item according to its review issues. The source target, meaning, POS, and allowedTargetSenses are fixed. Do not complain that a fixed target is too easy; create the best valid inferencing context for it.\n
 Rules:\n
 - targetSense must be copied exactly from allowedTargetSenses and fit the new context grammatically.\n
-- Write a coherent 2-3 sentence scene containing the target exactly once with precisely the supplied spelling. Never pluralize, conjugate, or otherwise alter the target. You may replace the existing example when needed.\n
+- Write a coherent 2-3 sentence scene. The first sentence MUST be the supplied example verbatim; it already contains the target. Add 1-2 supporting sentences about the same scene. The target must occur exactly once in the whole context.\n
 - Include 2-3 meaningful independent clue phrases copied exactly from one sentence each. They cannot contain, cross, or overlap the target or each other.\n
 - Avoid direct definitions, Japanese exposure, and answer-equivalent synonym restatements. Use observable situation, behavior, contrast, cause, and result.\n
 - Four unique Japanese choices; targetSense at index 0; no other target sense; only one contextually valid answer.\n
@@ -65,7 +60,7 @@ async function main() {
         const records = pending.map((entry) => {
           const source = vocabByTarget.get(entry.target);
           const current = contextByTarget.get(entry.target);
-          return { target: entry.target, meaning: source.meaning, pos: source.pos, allowedTargetSenses: current.meaning.split(/[；;、,／/]/).map((v) => v.trim()).filter(Boolean), current, issues: entry.issues };
+          return { target: entry.target, meaning: source.meaning, pos: source.pos, allowedTargetSenses: current.meaning.split(/[；;、,／/]/).map((v) => v.trim()).filter(Boolean), example: source.example, current, issues: entry.issues };
         });
         const generated = await regenerate(records);
         const next = [];
@@ -73,9 +68,6 @@ async function main() {
           const entry = pending[index];
           const source = vocabByTarget.get(entry.target);
           const revised = generated[index];
-          if (exactTargetCount(revised.fullEnglish.join(" "), entry.target) !== 1) {
-            revised.fullEnglish = [source.example, ...revised.fullEnglish].slice(0, 3);
-          }
           try { contextByTarget.set(entry.target, runtimeItem(source, revised)); }
           catch (error) {
             if (attempt === 8) throw error;

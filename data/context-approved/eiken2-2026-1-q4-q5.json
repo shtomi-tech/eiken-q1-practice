@@ -20,46 +20,35 @@
       "pos": "noun",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "When Aya gets nervous, she has a tendency to speak very quickly.",
+        "You have a tendency to be quiet when you're worried.",
         "Her friends notice the same thing before every speech.",
         "She tries to slow down by taking deep breaths."
       ],
       "mixedEnglish": [
-        "When Aya gets nervous, she has a tendency to speak very quickly.",
+        "You have a tendency to be quiet when you're worried.",
         "Her friends notice the same thing before every speech.",
         "She tries to slow down by taking deep breaths."
       ],
       "contextClues": [
         {
-          "text": "gets nervous",
-          "type": "cause"
-        },
-        {
-          "text": "speak very quickly",
-          "type": "behavior"
-        },
-        {
           "text": "same thing before every speech",
           "type": "repetition"
+        },
+        {
+          "text": "She tries to slow down by taking deep breaths",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "nervousness",
-        "same behavior",
-        "happens again and again",
-        "a usual pattern",
+        "same thing before every speech",
+        "She tries to slow down by taking deep breaths",
         "targetSense: 傾向",
         "tendency"
       ],
       "segments": [
         [
           {
-            "en": "When Aya gets nervous",
-            "role": "clue",
-            "useJapanese": false
-          },
-          {
-            "en": ", she has a ",
+            "en": "You have a ",
             "role": "core",
             "useJapanese": false
           },
@@ -69,21 +58,38 @@
             "useJapanese": false
           },
           {
-            "en": " to speak very quickly.",
-            "role": "clue",
+            "en": " to be quiet when you're worried.",
+            "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "Her friends notice the same thing before every speech.",
+            "en": "Her friends notice the ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "same thing before every speech",
             "role": "clue",
+            "clueType": "repetition",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "She tries to slow down by taking deep breaths.",
+            "en": "She tries to slow down by taking deep breaths",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -96,10 +102,10 @@
         "計画"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「gets nervous」「speak very quickly」「same thing before every speech」が手がかりです。緊張すると同じ行動が繰り返されるので、tendencyはこの文脈では「傾向」だと推測できます。",
+      "inferenceExplanation": "「same thing before every speech」と「She tries to slow down by taking deep breaths」が手がかりです。これらの状況から、tendencyは「傾向」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 3,
+        "clueCount": 2,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -135,13 +141,13 @@
       "pos": "noun",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
+        "Strong laws should protect every worker from discrimination at work.",
         "The company rejected Maya because of her age, even though she had the right skills.",
-        "The manager said that such discrimination was against the law.",
         "The company later changed its hiring rules."
       ],
       "mixedEnglish": [
+        "Strong laws should protect every worker from discrimination at work.",
         "The company rejected Maya because of her age, even though she had the right skills.",
-        "The manager said that such discrimination was against the law.",
         "The company later changed its hiring rules."
       ],
       "contextClues": [
@@ -152,42 +158,18 @@
         {
           "text": "right skills",
           "type": "contrast"
-        },
-        {
-          "text": "against the law",
-          "type": "result"
         }
       ],
       "inferencePath": [
-        "unfair rejection",
-        "age",
+        "rejected Maya because of her age",
         "right skills",
-        "against the law",
-        "unfair treatment",
         "targetSense: 差別",
         "discrimination"
       ],
       "segments": [
         [
           {
-            "en": "The company rejected Maya because of her age",
-            "role": "clue",
-            "useJapanese": false
-          },
-          {
-            "en": ", even though she had the ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "right skills.",
-            "role": "clue",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "The manager said that such ",
+            "en": "Strong laws should protect every worker from ",
             "role": "core",
             "useJapanese": false
           },
@@ -197,8 +179,37 @@
             "useJapanese": false
           },
           {
-            "en": " was against the law.",
+            "en": " at work.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The company ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "rejected Maya because of her age",
             "role": "clue",
+            "clueType": "cause",
+            "useJapanese": false
+          },
+          {
+            "en": ", even though she had the ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "right skills",
+            "role": "clue",
+            "clueType": "contrast",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
             "useJapanese": false
           }
         ],
@@ -217,10 +228,10 @@
         "昇進"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「rejected Maya because of her age」「right skills」「against the law」が手がかりです。能力がある人を年齢だけで不公平に扱い、法律にも反する場面なので、discriminationは「差別」だと推測できます。",
+      "inferenceExplanation": "「rejected Maya because of her age」と「right skills」が手がかりです。能力がある人を年齢だけで不公平に扱い、法律にも反する場面なので、discriminationは「差別」だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 3,
+        "clueCount": 2,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -256,13 +267,13 @@
       "pos": "noun",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
+        "The hikers found shelter from the heavy rain inside an old cabin.",
         "The hikers were caught in heavy rain.",
-        "They found shelter in a small wooden cabin and stayed there until the storm ended.",
         "The dry room kept them warm."
       ],
       "mixedEnglish": [
+        "The hikers found shelter from the heavy rain inside an old cabin.",
         "The hikers were caught in heavy rain.",
-        "They found shelter in a small wooden cabin and stayed there until the storm ended.",
         "The dry room kept them warm."
       ],
       "contextClues": [
@@ -271,33 +282,20 @@
           "type": "cause"
         },
         {
-          "text": "small wooden cabin",
-          "type": "example"
-        },
-        {
           "text": "kept them warm",
           "type": "result"
         }
       ],
       "inferencePath": [
-        "bad weather",
-        "cabin",
-        "staying inside",
-        "safe place from weather",
+        "caught in heavy rain",
+        "kept them warm",
         "targetSense: 避難所、シェルター",
         "shelter"
       ],
       "segments": [
         [
           {
-            "en": "The hikers were caught in heavy rain.",
-            "role": "clue",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "They found ",
+            "en": "The hikers found ",
             "role": "core",
             "useJapanese": false
           },
@@ -307,20 +305,44 @@
             "useJapanese": false
           },
           {
-            "en": " in a small wooden cabin",
-            "role": "clue",
-            "useJapanese": false
-          },
-          {
-            "en": " and stayed there until the storm ended.",
+            "en": " from the heavy rain inside an old cabin.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "The dry room kept them warm.",
+            "en": "The hikers were ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "caught in heavy rain",
             "role": "clue",
+            "clueType": "cause",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The dry room ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "kept them warm",
+            "role": "clue",
+            "clueType": "result",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
             "useJapanese": false
           }
         ]
@@ -332,10 +354,10 @@
         "食事"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「caught in heavy rain」「small wooden cabin」「kept them warm」が手がかりです。嵐の間に入り、雨や寒さから身を守る具体的な場所なので、shelterは「避難所、シェルター」だと推測できます。",
+      "inferenceExplanation": "「caught in heavy rain」と「kept them warm」が手がかりです。嵐の間に入り、雨や寒さから身を守る具体的な場所なので、shelterは「避難所、シェルター」だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 3,
+        "clueCount": 2,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -371,20 +393,16 @@
       "pos": "noun",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "Tom opened the box to check its content.",
+        "The content of the message was very important.",
         "Inside were a notebook, two pens, and a small key.",
         "He put everything back before closing the lid."
       ],
       "mixedEnglish": [
-        "Tom opened the box to check its content.",
+        "The content of the message was very important.",
         "Inside were a notebook, two pens, and a small key.",
         "He put everything back before closing the lid."
       ],
       "contextClues": [
-        {
-          "text": "opened the box",
-          "type": "behavior"
-        },
         {
           "text": "Inside were a notebook, two pens, and a small key",
           "type": "example"
@@ -395,28 +413,34 @@
         }
       ],
       "inferencePath": [
-        "box",
-        "things inside",
-        "checking what is there",
-        "what a container holds",
+        "Inside were a notebook, two pens, and a small key",
+        "put everything back",
         "targetSense: 中身、内容",
         "content"
       ],
       "segments": [
         [
           {
-            "en": "Tom opened the box",
-            "role": "clue",
-            "useJapanese": false
-          },
-          {
-            "en": " to check its ",
+            "en": "The ",
             "role": "core",
             "useJapanese": false
           },
           {
             "en": "content",
             "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " of the message was very important.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Inside were a notebook, two pens, and a small key",
+            "role": "clue",
+            "clueType": "example",
             "useJapanese": false
           },
           {
@@ -427,15 +451,14 @@
         ],
         [
           {
-            "en": "Inside were a notebook, two pens, and a small key.",
-            "role": "clue",
+            "en": "He ",
+            "role": "core",
             "useJapanese": false
-          }
-        ],
-        [
+          },
           {
-            "en": "He put everything back",
+            "en": "put everything back",
             "role": "clue",
+            "clueType": "result",
             "useJapanese": false
           },
           {
@@ -452,10 +475,10 @@
         "手紙"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「opened the box」「Inside were a notebook, two pens, and a small key」「put everything back」が手がかりです。箱の中に入っている物を確認しているので、contentは「中身、内容」だと推測できます。",
+      "inferenceExplanation": "「Inside were a notebook, two pens, and a small key」と「put everything back」が手がかりです。箱の中に入っている物を確認しているので、contentは「中身、内容」だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 3,
+        "clueCount": 2,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -491,13 +514,13 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
+        "Teachers try to foster leadership qualities in their students.",
         "The club gives children time to read, ask questions, and share ideas.",
-        "These activities foster a love of learning.",
         "Over time, the children become more confident."
       ],
       "mixedEnglish": [
+        "Teachers try to foster leadership qualities in their students.",
         "The club gives children time to read, ask questions, and share ideas.",
-        "These activities foster a love of learning.",
         "Over time, the children become more confident."
       ],
       "contextClues": [
@@ -506,43 +529,20 @@
           "type": "behavior"
         },
         {
-          "text": "a love of learning",
-          "type": "result"
-        },
-        {
           "text": "become more confident",
           "type": "result"
         }
       ],
       "inferencePath": [
-        "learning activities",
-        "love of learning",
-        "greater confidence",
-        "help a feeling or ability grow",
+        "read, ask questions, and share ideas",
+        "become more confident",
         "targetSense: 育む、促進する",
         "foster"
       ],
       "segments": [
         [
           {
-            "en": "The club gives children time to ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "read, ask questions, and share ideas",
-            "role": "clue",
-            "useJapanese": false
-          },
-          {
-            "en": ".",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "These activities ",
+            "en": "Teachers try to ",
             "role": "core",
             "useJapanese": false
           },
@@ -552,8 +552,26 @@
             "useJapanese": false
           },
           {
-            "en": " a love of learning.",
+            "en": " leadership qualities in their students.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The club gives children time to ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "read, ask questions, and share ideas",
             "role": "clue",
+            "clueType": "behavior",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
             "useJapanese": false
           }
         ],
@@ -566,6 +584,7 @@
           {
             "en": "become more confident",
             "role": "clue",
+            "clueType": "result",
             "useJapanese": false
           },
           {
@@ -582,10 +601,10 @@
         "測る"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「read, ask questions, and share ideas」「a love of learning」「become more confident」が手がかりです。活動によって学ぶ気持ちと自信が時間とともに育っているので、fosterは「育む、促進する」だと推測できます。",
+      "inferenceExplanation": "「read, ask questions, and share ideas」と「become more confident」が手がかりです。活動によって学ぶ気持ちと自信が時間とともに育っているので、fosterは「育む、促進する」だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 3,
+        "clueCount": 2,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -621,20 +640,16 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "I hate waiting in long lines at the airport.",
+        "I hate getting up early on cold winter mornings.",
         "Even when I have a book, the slow movement makes me tired.",
         "I feel much better when I finally reach the desk."
       ],
       "mixedEnglish": [
-        "I hate waiting in long lines at the airport.",
+        "I hate getting up early on cold winter mornings.",
         "Even when I have a book, the slow movement makes me tired.",
         "I feel much better when I finally reach the desk."
       ],
       "contextClues": [
-        {
-          "text": "waiting in long lines",
-          "type": "situation"
-        },
         {
           "text": "makes me tired",
           "type": "result"
@@ -645,10 +660,8 @@
         }
       ],
       "inferencePath": [
-        "long wait",
-        "tired feeling",
-        "relief when it ends",
-        "a very strong dislike",
+        "makes me tired",
+        "feel much better",
         "targetSense: ひどく嫌う",
         "hate"
       ],
@@ -665,8 +678,8 @@
             "useJapanese": false
           },
           {
-            "en": " waiting in long lines at the airport.",
-            "role": "clue",
+            "en": " getting up early on cold winter mornings.",
+            "role": "core",
             "useJapanese": false
           }
         ],
@@ -677,15 +690,27 @@
             "useJapanese": false
           },
           {
-            "en": "makes me tired.",
+            "en": "makes me tired",
             "role": "clue",
+            "clueType": "result",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "I feel much better",
+            "en": "I ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "feel much better",
             "role": "clue",
+            "clueType": "contrast",
             "useJapanese": false
           },
           {
@@ -702,10 +727,10 @@
         "選ぶ"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「waiting in long lines」「makes me tired」「feel much better」が手がかりです。長い列に強い不快感を持ち、終わると気分がよくなるので、hateは「ひどく嫌う」だと推測できます。",
+      "inferenceExplanation": "「makes me tired」と「feel much better」が手がかりです。これらの状況から、hateは「ひどく嫌う」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 3,
+        "clueCount": 2,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -741,12 +766,12 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The teacher asked us to divide the cake into eight equal pieces.",
+        "Please divide the cake into eight equal pieces for the children.",
         "We used a knife so that each child would get the same amount.",
         "No one received a larger piece."
       ],
       "mixedEnglish": [
-        "The teacher asked us to divide the cake into eight equal pieces.",
+        "Please divide the cake into eight equal pieces for the children.",
         "We used a knife so that each child would get the same amount.",
         "No one received a larger piece."
       ],
@@ -765,17 +790,16 @@
         }
       ],
       "inferencePath": [
-        "one cake",
-        "eight pieces",
-        "same amount for each child",
-        "separate into equal parts",
+        "eight equal pieces",
+        "each child would get the same amount",
+        "No one received a larger piece",
         "targetSense: 分ける、分割する",
         "divide"
       ],
       "segments": [
         [
           {
-            "en": "The teacher asked us to ",
+            "en": "Please ",
             "role": "core",
             "useJapanese": false
           },
@@ -790,22 +814,45 @@
             "useJapanese": false
           },
           {
-            "en": "eight equal pieces.",
+            "en": "eight equal pieces",
             "role": "clue",
+            "clueType": "result",
+            "useJapanese": false
+          },
+          {
+            "en": " for the children.",
+            "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "We used a knife so that each child would get the same amount.",
+            "en": "We used a knife so that ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "each child would get the same amount",
             "role": "clue",
+            "clueType": "purpose",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "No one received a larger piece.",
+            "en": "No one received a larger piece",
             "role": "clue",
+            "clueType": "contrast",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
             "useJapanese": false
           }
         ]
@@ -817,7 +864,7 @@
         "焼く"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「eight equal pieces」「each child would get the same amount」「No one received a larger piece」が手がかりです。ケーキを同じ量になるよう分けているので、divideは「分ける、分割する」だと推測できます。",
+      "inferenceExplanation": "「eight equal pieces」と「each child would get the same amount」と「No one received a larger piece」が手がかりです。ケーキを同じ量になるよう分けているので、divideは「分ける、分割する」だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 3,
@@ -856,20 +903,16 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "Before the speech, Ken practiced how to pronounce the new names.",
+        "Can you pronounce this difficult word clearly for the class?",
         "He listened to the teacher and repeated each sound.",
         "This time, the guests understood every name."
       ],
       "mixedEnglish": [
-        "Before the speech, Ken practiced how to pronounce the new names.",
+        "Can you pronounce this difficult word clearly for the class?",
         "He listened to the teacher and repeated each sound.",
         "This time, the guests understood every name."
       ],
       "contextClues": [
-        {
-          "text": "practiced",
-          "type": "behavior"
-        },
         {
           "text": "repeated each sound",
           "type": "behavior"
@@ -880,22 +923,15 @@
         }
       ],
       "inferencePath": [
-        "new names",
-        "sounds",
-        "repeating after a teacher",
-        "say a word correctly",
+        "repeated each sound",
+        "guests understood every name",
         "targetSense: 発音する",
         "pronounce"
       ],
       "segments": [
         [
           {
-            "en": "Before the speech, Ken practiced",
-            "role": "clue",
-            "useJapanese": false
-          },
-          {
-            "en": " how to ",
+            "en": "Can you ",
             "role": "core",
             "useJapanese": false
           },
@@ -905,22 +941,44 @@
             "useJapanese": false
           },
           {
-            "en": " the new names.",
+            "en": " this difficult word clearly for the class?",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "He listened to the teacher and repeated each sound.",
+            "en": "He listened to the teacher and ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "repeated each sound",
             "role": "clue",
+            "clueType": "behavior",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "This time, the guests understood every name.",
+            "en": "This time, the ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "guests understood every name",
             "role": "clue",
+            "clueType": "result",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
             "useJapanese": false
           }
         ]
@@ -932,10 +990,10 @@
         "書き直す"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「practiced」「repeated each sound」「guests understood every name」が手がかりです。先生の後に音を繰り返して名前を正しく言えるようにしているので、pronounceは「発音する」だと推測できます。",
+      "inferenceExplanation": "「repeated each sound」と「guests understood every name」が手がかりです。先生の後に音を繰り返して名前を正しく言えるようにしているので、pronounceは「発音する」だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 3,
+        "clueCount": 2,
         "targetProtected": true,
         "cluesProtected": true
       },

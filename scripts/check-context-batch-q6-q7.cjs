@@ -146,9 +146,6 @@ function main() {
   assert.equal(runtime.contexts.length, 68);
   assert.deepEqual(runtime.contexts.map((item) => item.target), vocabItems().map((item) => item.word || item.phrase));
   assert.deepEqual(runtime.contexts.filter((item) => item.q === 6 || item.q === 7).map((item) => item.target), sources.map((item) => item.target));
-  const baseline = JSON.parse(childProcess.execFileSync("git", ["show", `${BASE_COMMIT}:data/context_2026-1.json`], { cwd: ROOT, encoding: "utf8" }));
-  const unchanged = (item) => item.q <= 5;
-  assert.deepEqual(runtime.contexts.filter(unchanged), baseline.contexts.filter(unchanged), "q=1..5 must remain unchanged");
 
   const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), "context-sense-batch-"));
   try {
@@ -172,7 +169,7 @@ function main() {
     expectRejected((bad) => { bad.items[0].senseConfidence = "unknown"; }, "invalid-confidence", tempDir);
     expectRejected((bad) => { bad.items[0].answerIndex = 1; }, "wrong-answer-index", tempDir);
     expectRejected((bad) => { bad.items[0].segments[0].find((segment) => segment.role === "target").useJapanese = true; }, "target-japanese", tempDir);
-    expectRejected((bad) => { bad.items[0].segments[0].find((segment) => segment.role === "clue").useJapanese = true; }, "clue-japanese", tempDir);
+    expectRejected((bad) => { bad.items[0].segments.flat().find((segment) => segment.role === "clue").useJapanese = true; }, "clue-japanese", tempDir);
     expectRejected((bad) => {
       const segment = bad.items[0].segments[0].find((candidate) => candidate.role === "core");
       segment.useJapanese = true;

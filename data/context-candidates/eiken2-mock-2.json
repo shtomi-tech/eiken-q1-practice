@@ -123,44 +123,33 @@
       "pos": "noun",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The hospital scheduled three operations for Monday morning.",
+        "The hospital performs several operations every week for local patients.",
         "An anesthesiologist prepared the patients, while their families waited for news in a quiet room."
       ],
       "mixedEnglish": [
-        "The hospital scheduled three operations for Monday morning.",
+        "The hospital performs several operations every week for local patients.",
         "An anesthesiologist prepared the patients, while their families waited for news in a quiet room."
       ],
       "contextClues": [
         {
-          "text": "The hospital scheduled three",
-          "type": "situation"
-        },
-        {
           "text": "An anesthesiologist prepared the patients",
-          "type": "behavior"
+          "type": "supporting context"
         },
         {
-          "text": "their families waited for news",
-          "type": "result"
+          "text": "while their families waited",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "The hospital scheduled three",
         "An anesthesiologist prepared the patients",
-        "their families waited for news",
+        "while their families waited",
         "targetSense: 手術",
         "operations"
       ],
       "segments": [
         [
           {
-            "en": "The hospital scheduled three",
-            "role": "clue",
-            "clueType": "situation",
-            "useJapanese": false
-          },
-          {
-            "en": " ",
+            "en": "The hospital performs several ",
             "role": "core",
             "useJapanese": false
           },
@@ -170,7 +159,7 @@
             "useJapanese": false
           },
           {
-            "en": " for Monday morning.",
+            "en": " every week for local patients.",
             "role": "core",
             "useJapanese": false
           }
@@ -179,22 +168,22 @@
           {
             "en": "An anesthesiologist prepared the patients",
             "role": "clue",
-            "clueType": "behavior",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": ", while ",
+            "en": ", ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "their families waited for news",
+            "en": "while their families waited",
             "role": "clue",
-            "clueType": "result",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": " in a quiet room.",
+            "en": " for news in a quiet room.",
             "role": "core",
             "useJapanese": false
           }
@@ -207,10 +196,10 @@
         "研修"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「The hospital scheduled three」から病院で予定された医療行為だと分かり、「An anesthesiologist prepared the patients」から麻酔を伴う処置が想像できます。さらに「their families waited for news」という状況も踏まえると、operations は「手術」を指します。",
+      "inferenceExplanation": "「An anesthesiologist prepared the patients」と「while their families waited」が手がかりです。これらの状況から、operationsは「手術」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 3,
+        "clueCount": 2,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -1643,26 +1632,31 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The child pretended to be asleep when his father entered the bedroom.",
+        "The child pretended to be asleep when his father entered the room.",
         "He wanted to avoid being scolded for staying up late."
       ],
       "mixedEnglish": [
-        "The child pretended to be asleep when his father entered the bedroom.",
+        "The child pretended to be asleep when his father entered the room.",
         "He wanted to avoid being scolded for staying up late."
       ],
       "contextClues": [
         {
-          "text": "asleep",
-          "type": "state"
+          "text": "avoid being scolded",
+          "type": "supporting context"
         },
         {
-          "text": "avoid being scolded",
-          "type": "action"
+          "text": "staying up late",
+          "type": "supporting context"
+        },
+        {
+          "text": "asleep",
+          "type": "state"
         }
       ],
       "inferencePath": [
-        "asleep",
         "avoid being scolded",
+        "staying up late",
+        "asleep",
         "targetSense: ふりをした",
         "pretended"
       ],
@@ -1690,7 +1684,7 @@
             "useJapanese": false
           },
           {
-            "en": " when his father entered the bedroom.",
+            "en": " when his father entered the room.",
             "role": "core",
             "useJapanese": false
           }
@@ -1704,11 +1698,22 @@
           {
             "en": "avoid being scolded",
             "role": "clue",
-            "clueType": "action",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": " for staying up late.",
+            "en": " for ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "staying up late",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -1721,10 +1726,10 @@
         "なきだした"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「asleep」や「avoid being scolded」という手かかりから、子供が寝ている状態を作ろうとしたことがわかります。そのため、pretendedは「ふりをした」だと推測できます。",
+      "inferenceExplanation": "「avoid being scolded」と「staying up late」と「asleep」が手がかりです。これらの状況から、pretendedは「ふりをした」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -1840,25 +1845,32 @@
       "level": "EIKEN Grade 2",
       "fullEnglish": [
         "The number of visitors decreased after the museum raised its entrance fee.",
-        "Fewer people bought tickets on weekends."
+        "Weekend ticket sales fell from five hundred to fewer than two hundred.",
+        "The museum halls became much quieter."
       ],
       "mixedEnglish": [
         "The number of visitors decreased after the museum raised its entrance fee.",
-        "Fewer people bought tickets on weekends."
+        "Weekend ticket sales fell from five hundred to fewer than two hundred.",
+        "The museum halls became much quieter."
       ],
       "contextClues": [
         {
-          "text": "raised its entrance fee",
-          "type": "cause"
+          "text": "fell from five hundred",
+          "type": "supporting context"
         },
         {
-          "text": "Fewer people",
-          "type": "result"
+          "text": "fewer than two hundred",
+          "type": "supporting context"
+        },
+        {
+          "text": "became much quieter",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "raised its entrance fee",
-        "Fewer people",
+        "fell from five hundred",
+        "fewer than two hundred",
+        "became much quieter",
         "targetSense: 減少した",
         "decreased"
       ],
@@ -1875,14 +1887,32 @@
             "useJapanese": false
           },
           {
-            "en": " after the museum ",
+            "en": " after the museum raised its entrance fee.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Weekend ticket sales ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "raised its entrance fee",
+            "en": "fell from five hundred",
             "role": "clue",
-            "clueType": "cause",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " to ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "fewer than two hundred",
+            "role": "clue",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -1893,13 +1923,18 @@
         ],
         [
           {
-            "en": "Fewer people",
-            "role": "clue",
-            "clueType": "result",
+            "en": "The museum halls ",
+            "role": "core",
             "useJapanese": false
           },
           {
-            "en": " bought tickets on weekends.",
+            "en": "became much quieter",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -1912,10 +1947,10 @@
         "注目した"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「raised its entrance fee」や「Fewer people」という手かかりから、料金が上がったことで来場者の数が少なくなったことがわかります。そのため、decreasedは「減少した」だと推測できます。",
+      "inferenceExplanation": "「fell from five hundred」と「fewer than two hundred」と「became much quieter」が手がかりです。これらの状況から、decreasedは「減少した」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -2618,62 +2653,33 @@
       "pos": "noun",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The island nation heavily depends on imported energy to keep its economy running.",
-        "Developing wind and solar power will help the country secure a stable domestic resource for the future."
+        "The library is an important resource for students doing research.",
+        "The island nation heavily depends on imported energy to keep its economy running."
       ],
       "mixedEnglish": [
-        "The island nation heavily depends on imported energy to keep its economy running.",
-        "Developing wind and solar power will help the country secure a stable domestic resource for the future."
+        "The library is an important resource for students doing research.",
+        "The island nation heavily depends on imported energy to keep its economy running."
       ],
       "contextClues": [
         {
-          "text": "imported energy",
-          "type": "cause"
+          "text": "The island nation heavily depends on imported energy",
+          "type": "supporting context"
         },
         {
-          "text": "wind and solar power",
-          "type": "action"
+          "text": "keep its economy running",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "imported energy",
-        "wind and solar power",
+        "The island nation heavily depends on imported energy",
+        "keep its economy running",
         "targetSense: 資源",
         "resource"
       ],
       "segments": [
         [
           {
-            "en": "The island nation heavily depends on ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "imported energy",
-            "role": "clue",
-            "clueType": "cause",
-            "useJapanese": false
-          },
-          {
-            "en": " to keep its economy running.",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "Developing ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "wind and solar power",
-            "role": "clue",
-            "clueType": "action",
-            "useJapanese": false
-          },
-          {
-            "en": " will help the country secure a stable domestic ",
+            "en": "The library is an important ",
             "role": "core",
             "useJapanese": false
           },
@@ -2683,7 +2689,31 @@
             "useJapanese": false
           },
           {
-            "en": " for the future.",
+            "en": " for students doing research.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The island nation heavily depends on imported energy",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " to ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "keep its economy running",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -2696,7 +2726,7 @@
         "規則"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「imported energy」や「wind and solar power」という手がかりから、国が必要とするエネルギーの供給源について述べていることがわかります。そのため、resourceは「資源」だと推測できます。",
+      "inferenceExplanation": "「The island nation heavily depends on imported energy」と「keep its economy running」が手がかりです。これらの状況から、resourceは「資源」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -4188,39 +4218,33 @@
       "pos": "前置詞",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The warm sunlight came through the curtains into the dark room.",
+        "The sunlight came through the curtains during the quiet morning.",
         "It lit up the furniture and woke the sleeping cat on the floor."
       ],
       "mixedEnglish": [
-        "The warm sunlight came through the curtains into the dark room.",
+        "The sunlight came through the curtains during the quiet morning.",
         "It lit up the furniture and woke the sleeping cat on the floor."
       ],
       "contextClues": [
         {
-          "text": "The warm sunlight came",
-          "type": "cause"
+          "text": "It lit up the furniture",
+          "type": "supporting context"
         },
         {
-          "text": "lit up the furniture",
-          "type": "result"
+          "text": "woke the sleeping cat on the floor",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "The warm sunlight came",
-        "lit up the furniture",
+        "It lit up the furniture",
+        "woke the sleeping cat on the floor",
         "targetSense: 〜を通って",
         "through"
       ],
       "segments": [
         [
           {
-            "en": "The warm sunlight came",
-            "role": "clue",
-            "clueType": "cause",
-            "useJapanese": false
-          },
-          {
-            "en": " ",
+            "en": "The sunlight came ",
             "role": "core",
             "useJapanese": false
           },
@@ -4230,25 +4254,31 @@
             "useJapanese": false
           },
           {
-            "en": " the curtains into the dark room.",
+            "en": " the curtains during the quiet morning.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "It ",
+            "en": "It lit up the furniture",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " and ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "lit up the furniture",
+            "en": "woke the sleeping cat on the floor",
             "role": "clue",
-            "clueType": "result",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": " and woke the sleeping cat on the floor.",
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -4261,7 +4291,7 @@
         "〜のまわりで"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「The warm sunlight came」と「lit up the furniture」という手がかりから、光が窓の布の隙間を進んで室内に入ってきたことがわかります。そのため、throughは「〜を通って」だと推測できます。",
+      "inferenceExplanation": "「It lit up the furniture」と「woke the sleeping cat on the floor」が手がかりです。これらの状況から、throughは「〜を通って」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -4281,39 +4311,40 @@
       "pos": "前置詞",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The outdoor temperature stayed above zero during the sunny winter afternoon.",
-        "The gentle sunlight melted all the ice on the garden path completely."
+        "The temperature stayed above zero throughout the winter afternoon.",
+        "The thermometer's lowest reading was three degrees, so the water never froze.",
+        "Every recorded number was greater than 0°C."
       ],
       "mixedEnglish": [
-        "The outdoor temperature stayed above zero during the sunny winter afternoon.",
-        "The gentle sunlight melted all the ice on the garden path completely."
+        "The temperature stayed above zero throughout the winter afternoon.",
+        "The thermometer's lowest reading was three degrees, so the water never froze.",
+        "Every recorded number was greater than 0°C."
       ],
       "contextClues": [
         {
-          "text": "The outdoor temperature stayed",
-          "type": "subject"
+          "text": "lowest reading was three degrees",
+          "type": "supporting context"
         },
         {
-          "text": "melted all the ice",
-          "type": "result"
+          "text": "water never froze",
+          "type": "supporting context"
+        },
+        {
+          "text": "greater than 0°C",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "The outdoor temperature stayed",
-        "melted all the ice",
+        "lowest reading was three degrees",
+        "water never froze",
+        "greater than 0°C",
         "targetSense: 〜より上に",
         "above"
       ],
       "segments": [
         [
           {
-            "en": "The outdoor temperature stayed",
-            "role": "clue",
-            "clueType": "subject",
-            "useJapanese": false
-          },
-          {
-            "en": " ",
+            "en": "The temperature stayed ",
             "role": "core",
             "useJapanese": false
           },
@@ -4323,25 +4354,54 @@
             "useJapanese": false
           },
           {
-            "en": " zero during the sunny winter afternoon.",
+            "en": " zero throughout the winter afternoon.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "The gentle sunlight ",
+            "en": "The thermometer's ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "melted all the ice",
+            "en": "lowest reading was three degrees",
             "role": "clue",
-            "clueType": "result",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": " on the garden path completely.",
+            "en": ", so the ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "water never froze",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Every recorded number was ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "greater than 0°C",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -4354,10 +4414,10 @@
         "〜の中に"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「The outdoor temperature stayed」と「melted all the ice」という手がかりから、気温が氷点下ではなく一定の基準を上回っていたことがわかります。そのため、aboveは「〜より上に」だと推測できます。",
+      "inferenceExplanation": "「lowest reading was three degrees」と「water never froze」と「greater than 0°C」が手がかりです。これらの状況から、aboveは「〜より上に」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -4752,27 +4812,27 @@
       "level": "EIKEN Grade 2",
       "fullEnglish": [
         "It is a local custom to share food with visitors during festivals.",
-        "People in the village always welcome travelers with open arms and local dishes.",
-        "Visitors are often surprised by this generous tradition."
+        "Families in the area have followed this practice for many generations.",
+        "Children learn to do the same thing from their parents."
       ],
       "mixedEnglish": [
         "It is a local custom to share food with visitors during festivals.",
-        "People in the village always welcome travelers with open arms and local dishes.",
-        "Visitors are often surprised by this generous tradition."
+        "Families in the area have followed this practice for many generations.",
+        "Children learn to do the same thing from their parents."
       ],
       "contextClues": [
         {
-          "text": "share food with visitors during festivals",
-          "type": "behavior"
+          "text": "followed this practice for many generations",
+          "type": "supporting context"
         },
         {
-          "text": "welcome travelers with open arms",
-          "type": "situation"
+          "text": "learn to do the same thing from their parents",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "share food with visitors during festivals",
-        "welcome travelers with open arms",
+        "followed this practice for many generations",
+        "learn to do the same thing from their parents",
         "targetSense: 習慣",
         "custom"
       ],
@@ -4789,14 +4849,21 @@
             "useJapanese": false
           },
           {
-            "en": " to ",
+            "en": " to share food with visitors during festivals.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Families in the area have ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "share food with visitors during festivals",
+            "en": "followed this practice for many generations",
             "role": "clue",
-            "clueType": "behavior",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -4807,25 +4874,18 @@
         ],
         [
           {
-            "en": "People in the village always ",
+            "en": "Children ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "welcome travelers with open arms",
+            "en": "learn to do the same thing from their parents",
             "role": "clue",
-            "clueType": "situation",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": " and local dishes.",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "Visitors are often surprised by this generous tradition.",
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -4838,7 +4898,7 @@
         "方針"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「share food with visitors during festivals」や「welcome travelers with open arms」という文脈から、地元の人々が行っていることについて述べていることがわかります。そのため、customは「習慣」だと推測できます。",
+      "inferenceExplanation": "「followed this practice for many generations」と「learn to do the same thing from their parents」が手がかりです。これらの状況から、customは「習慣」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -5485,19 +5545,23 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The city council plans to do a comprehensive investigation next month.",
+        "What can we do to make the classroom more comfortable?",
         "Experts will gather detailed data to update the aging public infrastructure.",
         "Citizens are hoping these measures will prevent future safety issues."
       ],
       "mixedEnglish": [
-        "The city council plans to do a comprehensive investigation next month.",
+        "What can we do to make the classroom more comfortable?",
         "Experts will gather detailed data to update the aging public infrastructure.",
         "Citizens are hoping these measures will prevent future safety issues."
       ],
       "contextClues": [
         {
-          "text": "gather detailed data",
-          "type": "behavior"
+          "text": "Experts will gather detailed data",
+          "type": "supporting context"
+        },
+        {
+          "text": "update the aging public infrastructure",
+          "type": "supporting context"
         },
         {
           "text": "prevent future safety issues",
@@ -5505,7 +5569,8 @@
         }
       ],
       "inferencePath": [
-        "gather detailed data",
+        "Experts will gather detailed data",
+        "update the aging public infrastructure",
         "prevent future safety issues",
         "targetSense: 行う",
         "do"
@@ -5513,7 +5578,7 @@
       "segments": [
         [
           {
-            "en": "The city council plans to ",
+            "en": "What can we ",
             "role": "core",
             "useJapanese": false
           },
@@ -5523,25 +5588,31 @@
             "useJapanese": false
           },
           {
-            "en": " a comprehensive investigation next month.",
+            "en": " to make the classroom more comfortable?",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "Experts will ",
+            "en": "Experts will gather detailed data",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " to ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "gather detailed data",
+            "en": "update the aging public infrastructure",
             "role": "clue",
-            "clueType": "behavior",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": " to update the aging public infrastructure.",
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -5572,10 +5643,10 @@
         "忘れる"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「gather detailed data」や「prevent future safety issues」という手がかりから、市議会が調査やプロジェクトを実行・実施しようとしていることがわかります。そのため、doは「行う」だと推測できます。",
+      "inferenceExplanation": "「Experts will gather detailed data」と「update the aging public infrastructure」と「prevent future safety issues」が手がかりです。これらの状況から、doは「行う」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -5588,83 +5659,81 @@
       "type": "idiom",
       "target": "on top",
       "meaning": "上に、さらに",
-      "targetSense": "さらに",
+      "targetSense": "上に",
       "pos": "adverbial phrase",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The local factory had already lost its largest customer and was struggling to pay its workers.",
-        "On top of that, a fire destroyed its main warehouse, leaving the company with another serious problem."
+        "The keys were on top of the cabinet beside the window.",
+        "Mika had to stand on a chair to reach them.",
+        "Nothing covered the keys, so she could see them from below."
       ],
       "mixedEnglish": [
-        "The local factory had already lost its largest customer and was struggling to pay its workers.",
-        "On top of that, a fire destroyed its main warehouse, leaving the company with another serious problem."
+        "The keys were on top of the cabinet beside the window.",
+        "Mika had to stand on a chair to reach them.",
+        "Nothing covered the keys, so she could see them from below."
       ],
       "contextClues": [
         {
-          "text": "had already lost its largest customer",
-          "type": "situation"
+          "text": "stand on a chair to reach them",
+          "type": "supporting context"
         },
         {
-          "text": "a fire destroyed its main warehouse",
-          "type": "event"
-        },
-        {
-          "text": "another serious problem",
-          "type": "result"
+          "text": "see them from below",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "had already lost its largest customer",
-        "a fire destroyed its main warehouse",
-        "another serious problem",
-        "targetSense: さらに",
+        "stand on a chair to reach them",
+        "see them from below",
+        "targetSense: 上に",
         "on top"
       ],
       "segments": [
         [
           {
-            "en": "The local factory ",
+            "en": "The keys were ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "had already lost its largest customer",
-            "role": "clue",
-            "clueType": "situation",
+            "en": "on top",
+            "role": "target",
             "useJapanese": false
           },
           {
-            "en": " and was struggling to pay its workers.",
+            "en": " of the cabinet beside the window.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "On top",
-            "role": "target",
-            "useJapanese": false
-          },
-          {
-            "en": " of that, ",
+            "en": "Mika had to ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "a fire destroyed its main warehouse",
+            "en": "stand on a chair to reach them",
             "role": "clue",
-            "clueType": "event",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": ", leaving the company with ",
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Nothing covered the keys, so she could ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "another serious problem",
+            "en": "see them from below",
             "role": "clue",
-            "clueType": "result",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -5675,16 +5744,16 @@
         ]
       ],
       "choices": [
-        "さらに",
-        "突然",
-        "代わりに",
-        "ついに"
+        "上に",
+        "下に",
+        "中に",
+        "近くに"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「had already lost its largest customer」で問題がすでにあったと分かり、その後に「a fire destroyed its main warehouse」が起きています。「another serious problem」とも述べられているため、on top は問題が加わることを示す「さらに」です。",
+      "inferenceExplanation": "「stand on a chair to reach them」と「see them from below」が手がかりです。これらの状況から、on topは「上に」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 3,
+        "clueCount": 2,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -5701,84 +5770,58 @@
       "pos": "前置詞句",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The new smartphone is exceptional in terms of battery performance.",
+        "In terms of safety, this design is better than the older one.",
         "Users can stream videos all day without recharging, although its camera is fairly ordinary."
       ],
       "mixedEnglish": [
-        "The new smartphone is exceptional in terms of battery performance.",
+        "In terms of safety, this design is better than the older one.",
         "Users can stream videos all day without recharging, although its camera is fairly ordinary."
       ],
       "contextClues": [
         {
-          "text": "battery performance",
-          "type": "aspect"
+          "text": "Users can stream videos all day without recharging",
+          "type": "supporting context"
         },
         {
-          "text": "stream videos all day without recharging",
-          "type": "evidence"
-        },
-        {
-          "text": "its camera is fairly ordinary",
-          "type": "contrast"
+          "text": "although its camera is fairly ordinary",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "battery performance",
-        "stream videos all day without recharging",
-        "its camera is fairly ordinary",
+        "Users can stream videos all day without recharging",
+        "although its camera is fairly ordinary",
         "targetSense: 〜の点で",
         "in terms"
       ],
       "segments": [
         [
           {
-            "en": "The new smartphone is exceptional ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "in terms",
+            "en": "In terms",
             "role": "target",
             "useJapanese": false
           },
           {
-            "en": " of ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "battery performance",
-            "role": "clue",
-            "clueType": "aspect",
-            "useJapanese": false
-          },
-          {
-            "en": ".",
+            "en": " of safety, this design is better than the older one.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "Users can ",
+            "en": "Users can stream videos all day without recharging",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": ", ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "stream videos all day without recharging",
+            "en": "although its camera is fairly ordinary",
             "role": "clue",
-            "clueType": "evidence",
-            "useJapanese": false
-          },
-          {
-            "en": ", although ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "its camera is fairly ordinary",
-            "role": "clue",
-            "clueType": "contrast",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -5795,10 +5838,10 @@
         "〜の結果として"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「battery performance」が評価対象となる側面を示し、「stream videos all day without recharging」がその評価を裏付けています。一方で「its camera is fairly ordinary」と別の側面が対比されているため、in terms は「〜の点で」を表します。",
+      "inferenceExplanation": "「Users can stream videos all day without recharging」と「although its camera is fairly ordinary」が手がかりです。これらの状況から、in termsは「〜の点で」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 3,
+        "clueCount": 2,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -6012,25 +6055,27 @@
       "level": "EIKEN Grade 2",
       "fullEnglish": [
         "The customer is sending back the soup because it is cold.",
-        "He wants the kitchen to heat it up again immediately."
+        "The customer asked the server to take the cold bowl to the kitchen.",
+        "She wanted a hot replacement instead."
       ],
       "mixedEnglish": [
         "The customer is sending back the soup because it is cold.",
-        "He wants the kitchen to heat it up again immediately."
+        "The customer asked the server to take the cold bowl to the kitchen.",
+        "She wanted a hot replacement instead."
       ],
       "contextClues": [
         {
-          "text": "because it is cold",
-          "type": "cause"
+          "text": "take the cold bowl to the kitchen",
+          "type": "supporting context"
         },
         {
-          "text": "heat it up again",
-          "type": "result"
+          "text": "wanted a hot replacement",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "because it is cold",
-        "heat it up again",
+        "take the cold bowl to the kitchen",
+        "wanted a hot replacement",
         "targetSense: 〜を送り返す",
         "sending back"
       ],
@@ -6047,14 +6092,21 @@
             "useJapanese": false
           },
           {
-            "en": " the soup ",
+            "en": " the soup because it is cold.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The customer asked the server to ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "because it is cold",
+            "en": "take the cold bowl to the kitchen",
             "role": "clue",
-            "clueType": "cause",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -6065,18 +6117,18 @@
         ],
         [
           {
-            "en": "He wants the kitchen to ",
+            "en": "She ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "heat it up again",
+            "en": "wanted a hot replacement",
             "role": "clue",
-            "clueType": "result",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": " immediately.",
+            "en": " instead.",
             "role": "core",
             "useJapanese": false
           }
@@ -6089,7 +6141,7 @@
         "〜を味わう"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「because it is cold」や「heat it up again」という手がかりから、食べ物を厨房に戻して温め直してもらう状況がわかります。そのため、sending backは「〜を送り返す」だと推測できます。",
+      "inferenceExplanation": "「take the cold bowl to the kitchen」と「wanted a hot replacement」が手がかりです。これらの状況から、sending backは「〜を送り返す」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -6109,35 +6161,35 @@
       "pos": "動詞句",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The restaurant staff is putting out the garbage bags before closing time.",
+        "The staff is putting out fresh menus before the restaurant opens.",
         "They carry heavy bins to the alley behind the kitchen for the morning collection.",
         "Stray cats often gather around the area at night."
       ],
       "mixedEnglish": [
-        "The restaurant staff is putting out the garbage bags before closing time.",
+        "The staff is putting out fresh menus before the restaurant opens.",
         "They carry heavy bins to the alley behind the kitchen for the morning collection.",
         "Stray cats often gather around the area at night."
       ],
       "contextClues": [
         {
-          "text": "the garbage bags",
-          "type": "situation"
+          "text": "They carry heavy bins",
+          "type": "supporting context"
         },
         {
-          "text": "carry heavy bins to the alley behind the kitchen",
-          "type": "behavior"
+          "text": "the alley behind the kitchen",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "the garbage bags",
-        "carry heavy bins to the alley behind the kitchen",
+        "They carry heavy bins",
+        "the alley behind the kitchen",
         "targetSense: 〜を外へ出す",
         "putting out"
       ],
       "segments": [
         [
           {
-            "en": "The restaurant staff is ",
+            "en": "The staff is ",
             "role": "core",
             "useJapanese": false
           },
@@ -6147,32 +6199,27 @@
             "useJapanese": false
           },
           {
-            "en": " ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "the garbage bags",
-            "role": "clue",
-            "clueType": "situation",
-            "useJapanese": false
-          },
-          {
-            "en": " before closing time.",
+            "en": " fresh menus before the restaurant opens.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "They ",
+            "en": "They carry heavy bins",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " to ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "carry heavy bins to the alley behind the kitchen",
+            "en": "the alley behind the kitchen",
             "role": "clue",
-            "clueType": "behavior",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -6196,7 +6243,7 @@
         "〜を探す"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「the garbage bags」や「carry heavy bins to the alley behind the kitchen」という手がかりから、ゴミ袋などを外に運び出していることがわかります。そのため、putting outは「〜を外へ出す」だと推測できます。",
+      "inferenceExplanation": "「They carry heavy bins」と「the alley behind the kitchen」が手がかりです。これらの状況から、putting outは「〜を外へ出す」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -6217,25 +6264,32 @@
       "level": "EIKEN Grade 2",
       "fullEnglish": [
         "The server is writing down each customer's order carefully.",
-        "She holds a notepad and a pen to record every meal choice."
+        "She used a pen and notepad so that she would not forget any dish.",
+        "The kitchen received an exact written list."
       ],
       "mixedEnglish": [
         "The server is writing down each customer's order carefully.",
-        "She holds a notepad and a pen to record every meal choice."
+        "She used a pen and notepad so that she would not forget any dish.",
+        "The kitchen received an exact written list."
       ],
       "contextClues": [
         {
-          "text": "customer's order",
-          "type": "situation"
+          "text": "used a pen and notepad",
+          "type": "supporting context"
         },
         {
-          "text": "record every meal choice",
-          "type": "behavior"
+          "text": "not forget any dish",
+          "type": "supporting context"
+        },
+        {
+          "text": "written list",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "customer's order",
-        "record every meal choice",
+        "used a pen and notepad",
+        "not forget any dish",
+        "written list",
         "targetSense: 〜を書き留める",
         "writing down"
       ],
@@ -6252,32 +6306,50 @@
             "useJapanese": false
           },
           {
-            "en": " each ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "customer's order",
-            "role": "clue",
-            "clueType": "situation",
-            "useJapanese": false
-          },
-          {
-            "en": " carefully.",
+            "en": " each customer's order carefully.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "She holds a notepad and a pen to ",
+            "en": "She ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "record every meal choice",
+            "en": "used a pen and notepad",
             "role": "clue",
-            "clueType": "behavior",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " so that she would ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "not forget any dish",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The kitchen received an exact ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "written list",
+            "role": "clue",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -6294,10 +6366,10 @@
         "〜を配る"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「customer's order」や「record every meal choice」という手がかりから、注文の内容を記録していることがわかります。そのため、writing downは「〜を書き留める」だと推測できます。",
+      "inferenceExplanation": "「used a pen and notepad」と「not forget any dish」と「written list」が手がかりです。これらの状況から、writing downは「〜を書き留める」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -7283,38 +7355,33 @@
       "pos": "動詞句",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "Professor Lee has taught science at this university since its laboratory opened twenty years ago.",
+        "He has taught science at this university since the new building opened.",
         "Former students still remember his classroom demonstrations, and the department recently honored his long career in education."
       ],
       "mixedEnglish": [
-        "Professor Lee has taught science at this university since its laboratory opened twenty years ago.",
+        "He has taught science at this university since the new building opened.",
         "Former students still remember his classroom demonstrations, and the department recently honored his long career in education."
       ],
       "contextClues": [
         {
-          "text": "since its laboratory opened twenty years ago",
-          "type": "duration"
-        },
-        {
           "text": "Former students still remember his classroom demonstrations",
-          "type": "evidence"
+          "type": "supporting context"
         },
         {
-          "text": "his long career in education",
-          "type": "career"
+          "text": "and the department recently honored his long career in education",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "since its laboratory opened twenty years ago",
         "Former students still remember his classroom demonstrations",
-        "his long career in education",
+        "and the department recently honored his long career in education",
         "targetSense: 教えてきた",
         "has taught"
       ],
       "segments": [
         [
           {
-            "en": "Professor Lee ",
+            "en": "He ",
             "role": "core",
             "useJapanese": false
           },
@@ -7324,18 +7391,7 @@
             "useJapanese": false
           },
           {
-            "en": " science at this university ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "since its laboratory opened twenty years ago",
-            "role": "clue",
-            "clueType": "duration",
-            "useJapanese": false
-          },
-          {
-            "en": ".",
+            "en": " science at this university since the new building opened.",
             "role": "core",
             "useJapanese": false
           }
@@ -7344,18 +7400,18 @@
           {
             "en": "Former students still remember his classroom demonstrations",
             "role": "clue",
-            "clueType": "evidence",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": ", and the department recently honored ",
+            "en": ", ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "his long career in education",
+            "en": "and the department recently honored his long career in education",
             "role": "clue",
-            "clueType": "career",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -7372,10 +7428,10 @@
         "支えてきた"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「since its laboratory opened twenty years ago」から過去から現在まで続く活動だと分かります。また、「Former students still remember his classroom demonstrations」と「his long career in education」は、学生に授業を行ってきた人物であることを示すため、has taught は「教えてきた」です。",
+      "inferenceExplanation": "「Former students still remember his classroom demonstrations」と「and the department recently honored his long career in education」が手がかりです。これらの状況から、has taughtは「教えてきた」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 3,
+        "clueCount": 2,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -7596,23 +7652,23 @@
       "pos": "動詞句",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "Before confirming the equipment order, the manager asked, Do you require any additional chairs?",
+        "The manager asked, Do you require any additional equipment for the event?",
         "The organizer checked the guest list and counted the seats already available.",
         "Her answer would decide whether the company added more chairs to the delivery."
       ],
       "mixedEnglish": [
-        "Before confirming the equipment order, the manager asked, Do you require any additional chairs?",
+        "The manager asked, Do you require any additional equipment for the event?",
         "The organizer checked the guest list and counted the seats already available.",
         "Her answer would decide whether the company added more chairs to the delivery."
       ],
       "contextClues": [
         {
-          "text": "checked the guest list",
-          "type": "behavior"
+          "text": "The organizer checked the guest list",
+          "type": "supporting context"
         },
         {
           "text": "counted the seats already available",
-          "type": "behavior"
+          "type": "supporting context"
         },
         {
           "text": "whether the company added more chairs",
@@ -7620,7 +7676,7 @@
         }
       ],
       "inferencePath": [
-        "checked the guest list",
+        "The organizer checked the guest list",
         "counted the seats already available",
         "whether the company added more chairs",
         "targetSense: あなたは必要としますか",
@@ -7629,7 +7685,7 @@
       "segments": [
         [
           {
-            "en": "Before confirming the equipment order, the manager asked, ",
+            "en": "The manager asked, ",
             "role": "core",
             "useJapanese": false
           },
@@ -7639,21 +7695,16 @@
             "useJapanese": false
           },
           {
-            "en": " any additional chairs?",
+            "en": " any additional equipment for the event?",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "The organizer ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "checked the guest list",
+            "en": "The organizer checked the guest list",
             "role": "clue",
-            "clueType": "behavior",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -7664,7 +7715,7 @@
           {
             "en": "counted the seats already available",
             "role": "clue",
-            "clueType": "behavior",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -7699,7 +7750,7 @@
         "あなたは設置しましたか"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「checked the guest list」「counted the seats already available」「whether the company added more chairs」が手がかりです。追加の椅子が必要か確認しているため、do you requireは「あなたは必要としますか」だと推測できます。",
+      "inferenceExplanation": "「The organizer checked the guest list」と「counted the seats already available」と「whether the company added more chairs」が手がかりです。これらの状況から、do you requireは「あなたは必要としますか」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 3,
@@ -7821,58 +7872,40 @@
       "pos": "動詞句",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
+        "The clerk asked, Did you require a receipt for the purchase?",
         "After the customer paid, the clerk pointed to the receipt printer.",
-        "She asked, Did you require a printed receipt for your records?",
         "The customer said yes, so the clerk pressed the print button."
       ],
       "mixedEnglish": [
+        "The clerk asked, Did you require a receipt for the purchase?",
         "After the customer paid, the clerk pointed to the receipt printer.",
-        "She asked, Did you require a printed receipt for your records?",
         "The customer said yes, so the clerk pressed the print button."
       ],
       "contextClues": [
         {
-          "text": "pointed to the receipt printer",
-          "type": "behavior"
+          "text": "After the customer paid",
+          "type": "supporting context"
+        },
+        {
+          "text": "the clerk pointed",
+          "type": "supporting context"
         },
         {
           "text": "customer said yes",
           "type": "response"
-        },
-        {
-          "text": "pressed the print button",
-          "type": "result"
         }
       ],
       "inferencePath": [
-        "pointed to the receipt printer",
+        "After the customer paid",
+        "the clerk pointed",
         "customer said yes",
-        "pressed the print button",
         "targetSense: あなたは〜を必要としましたか",
         "did you require"
       ],
       "segments": [
         [
           {
-            "en": "After the customer paid, the clerk ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "pointed to the receipt printer",
-            "role": "clue",
-            "clueType": "behavior",
-            "useJapanese": false
-          },
-          {
-            "en": ".",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "She asked, ",
+            "en": "The clerk asked, ",
             "role": "core",
             "useJapanese": false
           },
@@ -7882,7 +7915,31 @@
             "useJapanese": false
           },
           {
-            "en": " a printed receipt for your records?",
+            "en": " a receipt for the purchase?",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "After the customer paid",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": ", ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "the clerk pointed",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " to the receipt printer.",
             "role": "core",
             "useJapanese": false
           }
@@ -7900,18 +7957,7 @@
             "useJapanese": false
           },
           {
-            "en": ", so the clerk ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "pressed the print button",
-            "role": "clue",
-            "clueType": "result",
-            "useJapanese": false
-          },
-          {
-            "en": ".",
+            "en": ", so the clerk pressed the print button.",
             "role": "core",
             "useJapanese": false
           }
@@ -7924,7 +7970,7 @@
         "あなたは〜を返品しましたか"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「pointed to the receipt printer」「customer said yes」「pressed the print button」が手がかりです。店員の問いに客が肯定し、その結果として印刷した流れから、did you requireは「あなたは〜を必要としましたか」だと推測できます。",
+      "inferenceExplanation": "「After the customer paid」と「the clerk pointed」と「customer said yes」が手がかりです。これらの状況から、did you requireは「あなたは〜を必要としましたか」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 3,
@@ -7944,58 +7990,40 @@
       "pos": "動詞句",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
+        "The form records which documents you required for the application.",
         "The application screen displayed three identification papers with red stars beside them.",
-        "The online form saved which documents you required for the process.",
         "It would not let you continue until all three were selected."
       ],
       "mixedEnglish": [
+        "The form records which documents you required for the application.",
         "The application screen displayed three identification papers with red stars beside them.",
-        "The online form saved which documents you required for the process.",
         "It would not let you continue until all three were selected."
       ],
       "contextClues": [
         {
+          "text": "The application screen displayed three identification papers",
+          "type": "supporting context"
+        },
+        {
           "text": "red stars beside them",
-          "type": "symbol"
+          "type": "supporting context"
         },
         {
           "text": "would not let you continue",
           "type": "result"
-        },
-        {
-          "text": "until all three were selected",
-          "type": "condition"
         }
       ],
       "inferencePath": [
+        "The application screen displayed three identification papers",
         "red stars beside them",
         "would not let you continue",
-        "until all three were selected",
         "targetSense: あなたが必要とした",
         "you required"
       ],
       "segments": [
         [
           {
-            "en": "The application screen displayed three identification papers with ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "red stars beside them",
-            "role": "clue",
-            "clueType": "symbol",
-            "useJapanese": false
-          },
-          {
-            "en": ".",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "The online form saved which documents ",
+            "en": "The form records which documents ",
             "role": "core",
             "useJapanese": false
           },
@@ -8005,7 +8033,31 @@
             "useJapanese": false
           },
           {
-            "en": " for the process.",
+            "en": " for the application.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The application screen displayed three identification papers",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " with ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "red stars beside them",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -8023,18 +8075,7 @@
             "useJapanese": false
           },
           {
-            "en": " ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "until all three were selected",
-            "role": "clue",
-            "clueType": "condition",
-            "useJapanese": false
-          },
-          {
-            "en": ".",
+            "en": " until all three were selected.",
             "role": "core",
             "useJapanese": false
           }
@@ -8047,7 +8088,7 @@
         "あなたが作成した"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「red stars beside them」「would not let you continue」「until all three were selected」が手がかりです。印が付いた三つを選ばなければ先へ進めない状況から、you requiredは「あなたが必要とした」だと推測できます。",
+      "inferenceExplanation": "「The application screen displayed three identification papers」と「red stars beside them」と「would not let you continue」が手がかりです。これらの状況から、you requiredは「あなたが必要とした」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 3,

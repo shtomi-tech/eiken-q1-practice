@@ -230,8 +230,8 @@ EXAMPLE_OVERRIDES = {
             "その猫は嵐が始まる前に、無事に帰宅しました。",
         ),
         "as fast as": (
-            "The athlete ran as fast as she could during the final race.",
-            "その選手は決勝レースで、できる限り速く走りました。",
+            "The athlete ran as fast as the current champion during the final race.",
+            "その選手は決勝レースで、現チャンピオンと同じくらい速く走りました。",
         ),
         "as well as": (
             "She speaks Spanish as well as English at work and at home.",
