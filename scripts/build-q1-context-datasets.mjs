@@ -119,6 +119,9 @@ function runtimeItem(vocab, source) {
     inferenceExplanation: explanationFor(source, target, sense),
     quality: { targetOccurrence: 1, clueCount: clues.length, targetProtected: true, cluesProtected: true },
   };
+  if (/[\u0400-\u04ff\uac00-\ud7af\u0600-\u06ff]/.test(item.inferenceExplanation)) {
+    throw new Error(`${target}: inferenceExplanation contains unexpected non-Japanese script`);
+  }
   const result = validateContextItem(item, vocab, { requireTargetSense: true });
   if (result.status !== "pass") throw new Error(`${target}: ${result.errors.join(" | ")}`);
   const leakage = validateContextLeakage(item);
