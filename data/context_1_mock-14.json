@@ -3437,11 +3437,11 @@
       "level": "EIKEN Grade 1",
       "fullEnglish": [
         "The auction price astounded even the dealers who had valued it.",
-        "They had expected two million yen, and the hammer fell at ninety."
+        "They had expected two million yen, and the hammer fell at ninety million."
       ],
       "mixedEnglish": [
         "The auction price astounded even the dealers who had valued it.",
-        "They had expected two million yen, and the hammer fell at ninety."
+        "They had expected two million yen, and the hammer fell at ninety million."
       ],
       "contextClues": [
         {
@@ -3449,13 +3449,13 @@
           "type": "contrast"
         },
         {
-          "text": "the hammer fell at ninety",
+          "text": "the hammer fell at ninety million",
           "type": "result"
         }
       ],
       "inferencePath": [
         "They had expected two million yen",
-        "the hammer fell at ninety",
+        "the hammer fell at ninety million",
         "targetSense: 仰天させた",
         "astounded"
       ],
@@ -3490,7 +3490,7 @@
             "useJapanese": false
           },
           {
-            "en": "the hammer fell at ninety",
+            "en": "the hammer fell at ninety million",
             "role": "clue",
             "clueType": "result",
             "useJapanese": false
@@ -3509,7 +3509,7 @@
         "退屈させた"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「They had expected two million yen」と「the hammer fell at ninety」という手がかりから、二百万円と見ていたのに、九千万円で落札されたと述べられています。そのため、astoundedは「仰天させた」だと推測できます。",
+      "inferenceExplanation": "「They had expected two million yen」と「the hammer fell at ninety million」という手がかりから、二百万円と見ていたのに、九千万円で落札されたと述べられています。そのため、astoundedは「仰天させた」だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -7644,7 +7644,7 @@
         "残業した"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「Tools were put down」と「two men sat in the van until the car returned」という手がかりから、道具を置き、二人は車が戻るまで運転席にいたと述べられています。そのため、goofed offは「サボった」だと推測できます。",
+      "inferenceExplanation": "「Tools were put down」と「two men sat in the van until the car returned」という手がかりから、道具を置き、二人は車が戻るまでバンの中に座っていたと述べられています。そのため、goofed offは「サボった」だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
