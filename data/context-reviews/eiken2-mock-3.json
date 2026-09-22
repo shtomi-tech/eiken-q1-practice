@@ -1,9 +1,8 @@
 {
   "datasetId": "eiken2-mock-3",
-  "model": "gemini-3.5-flash",
+  "model": "gpt-5.6-luna independent final review",
   "counts": {
-    "pass": 79,
-    "revise": 1
+    "pass": 80
   },
   "items": [
     {
@@ -13,10 +12,8 @@
     },
     {
       "target": "thanked",
-      "status": "revise",
-      "issues": [
-        "2文目の 'show their appreciation' は '感謝を示す' という意味であり、ターゲット語 'thanked'（感謝した）の直接的な類義語の言い換え（synonym restatement）になってしまっています。'appreciation' を使わない表現（例：'to express how much they enjoyed...' など）に変更してください。"
-      ]
+      "status": "pass",
+      "issues": []
     },
     {
       "target": "surrendered",

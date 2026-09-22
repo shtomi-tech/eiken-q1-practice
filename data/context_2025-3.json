@@ -4,7 +4,7 @@
     "grade": "EIKEN Grade 2",
     "source": "Reviewed mini-contexts for lexical inferencing",
     "version": 1,
-    "count": 65
+    "count": 68
   },
   "contexts": [
     {
@@ -3821,6 +3821,126 @@
     {
       "q": 11,
       "type": "idiom",
+      "target": "shake hands",
+      "meaning": "握手する",
+      "targetSense": "握手する",
+      "pos": "動詞句",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "After the final point, the two tennis players met at the net.",
+        "They each held out a right hand, joined them briefly, and moved them up and down once.",
+        "The crowd applauded as they chose to shake hands before leaving the court."
+      ],
+      "mixedEnglish": [
+        "After the final point, the two tennis players met at the net.",
+        "They each held out a right hand, joined them briefly, and moved them up and down once.",
+        "The crowd applauded as they chose to shake hands before leaving the court."
+      ],
+      "contextClues": [
+        {
+          "text": "held out a right hand",
+          "type": "behavior"
+        },
+        {
+          "text": "joined them briefly",
+          "type": "behavior"
+        },
+        {
+          "text": "moved them up and down once",
+          "type": "behavior"
+        }
+      ],
+      "inferencePath": [
+        "held out a right hand",
+        "joined them briefly",
+        "moved them up and down once",
+        "targetSense: 握手する",
+        "shake hands"
+      ],
+      "segments": [
+        [
+          {
+            "en": "After the final point, the two tennis players met at the net.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "They each ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "held out a right hand",
+            "role": "clue",
+            "clueType": "behavior",
+            "useJapanese": false
+          },
+          {
+            "en": ", ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "joined them briefly",
+            "role": "clue",
+            "clueType": "behavior",
+            "useJapanese": false
+          },
+          {
+            "en": ", and ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "moved them up and down once",
+            "role": "clue",
+            "clueType": "behavior",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The crowd applauded as they chose to ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "shake hands",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " before leaving the court.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "握手する",
+        "お辞儀する",
+        "抱き合う",
+        "手を振る"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「held out a right hand」「joined them briefly」「moved them up and down once」が手がかりです。互いの右手を合わせて上下に動かす動作なので、shake handsは「握手する」だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 3,
+        "targetProtected": true,
+        "cluesProtected": true
+      }
+    },
+    {
+      "q": 11,
+      "type": "idiom",
       "target": "give way",
       "meaning": "道を譲る、崩れる、屈する",
       "targetSense": "道を譲る",
@@ -6242,6 +6362,112 @@
     {
       "q": 17,
       "type": "idiom",
+      "target": "as far as",
+      "meaning": "〜する限りでは、〜まで",
+      "targetSense": "〜する限りでは",
+      "pos": "接続詞句",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "As far as I know, no train has been canceled, but I have not checked the latest station notice.",
+        "Mia therefore described her information as incomplete and advised us to confirm it before leaving."
+      ],
+      "mixedEnglish": [
+        "As far as I know, no train has been canceled, but I have not checked the latest station notice.",
+        "Mia therefore described her information as incomplete and advised us to confirm it before leaving."
+      ],
+      "contextClues": [
+        {
+          "text": "I know",
+          "type": "knowledge_scope"
+        },
+        {
+          "text": "I have not checked the latest station notice",
+          "type": "limitation"
+        },
+        {
+          "text": "described her information as incomplete",
+          "type": "qualification"
+        }
+      ],
+      "inferencePath": [
+        "I know",
+        "I have not checked the latest station notice",
+        "described her information as incomplete",
+        "targetSense: 〜する限りでは",
+        "as far as"
+      ],
+      "segments": [
+        [
+          {
+            "en": "As far as",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "I know",
+            "role": "clue",
+            "clueType": "knowledge_scope",
+            "useJapanese": false
+          },
+          {
+            "en": ", no train has been canceled, but ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "I have not checked the latest station notice",
+            "role": "clue",
+            "clueType": "limitation",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Mia therefore ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "described her information as incomplete",
+            "role": "clue",
+            "clueType": "qualification",
+            "useJapanese": false
+          },
+          {
+            "en": " and advised us to confirm it before leaving.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "〜する限りでは",
+        "〜する間は",
+        "〜するけれども",
+        "〜した後で"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「I know」は話し手の知識の範囲を示しています。また、「I have not checked the latest station notice」と「described her information as incomplete」から、情報が確実な範囲に限られていると分かるため、targetSenseは「〜する限りでは」です。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 3,
+        "targetProtected": true,
+        "cluesProtected": true
+      }
+    },
+    {
+      "q": 17,
+      "type": "idiom",
       "target": "as long as",
       "meaning": "〜する限り、〜でありさえすれば",
       "targetSense": "〜する限り",
@@ -6325,6 +6551,117 @@
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
+        "targetProtected": true,
+        "cluesProtected": true
+      }
+    },
+    {
+      "q": 17,
+      "type": "idiom",
+      "target": "as well as",
+      "meaning": "〜だけでなく、〜と同じくらい上手に",
+      "targetSense": "〜だけでなく",
+      "pos": "接続詞句",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "The school offers chess as well as photography after class.",
+        "Students may enroll in both activities, and neither one replaces the other."
+      ],
+      "mixedEnglish": [
+        "The school offers chess as well as photography after class.",
+        "Students may enroll in both activities, and neither one replaces the other."
+      ],
+      "contextClues": [
+        {
+          "text": "offers chess",
+          "type": "offering"
+        },
+        {
+          "text": "photography after class",
+          "type": "additional_offering"
+        },
+        {
+          "text": "both activities",
+          "type": "inclusion"
+        }
+      ],
+      "inferencePath": [
+        "offers chess",
+        "photography after class",
+        "both activities",
+        "targetSense: 〜だけでなく",
+        "as well as"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The school ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "offers chess",
+            "role": "clue",
+            "clueType": "offering",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "as well as",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "photography after class",
+            "role": "clue",
+            "clueType": "additional_offering",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Students may enroll in ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "both activities",
+            "role": "clue",
+            "clueType": "inclusion",
+            "useJapanese": false
+          },
+          {
+            "en": ", and neither one replaces the other.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "〜だけでなく",
+        "〜と比べて",
+        "〜の代わりに",
+        "〜を除いて"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「offers chess」と「photography after class」から二つの講座が提供されており、「both activities」から両方が含まれると分かります。そのため、targetSenseは「〜だけでなく」です。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       }

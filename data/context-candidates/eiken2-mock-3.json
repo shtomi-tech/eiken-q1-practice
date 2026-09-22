@@ -119,27 +119,27 @@
       "level": "EIKEN Grade 2",
       "fullEnglish": [
         "The visitors thanked the guide after the long tour of the museum.",
-        "They smiled warmly and shook hands to show their appreciation for the detailed explanations.",
-        "The expert was very glad to help them learn about the history."
+        "As they prepared to leave, they smiled warmly and shook hands with her.",
+        "One visitor said that her detailed explanations had made the history easy to understand."
       ],
       "mixedEnglish": [
         "The visitors thanked the guide after the long tour of the museum.",
-        "They smiled warmly and shook hands to show their appreciation for the detailed explanations.",
-        "The expert was very glad to help them learn about the history."
+        "As they prepared to leave, they smiled warmly and shook hands with her.",
+        "One visitor said that her detailed explanations had made the history easy to understand."
       ],
       "contextClues": [
         {
-          "text": "smiled warmly and shook hands",
+          "text": "smiled warmly and shook hands with her",
           "type": "gesture"
         },
         {
-          "text": "show their appreciation",
-          "type": "attitude"
+          "text": "her detailed explanations had made the history easy to understand",
+          "type": "positive result"
         }
       ],
       "inferencePath": [
-        "smiled warmly and shook hands",
-        "show their appreciation",
+        "smiled warmly and shook hands with her",
+        "her detailed explanations had made the history easy to understand",
         "targetSense: 感謝した",
         "thanked"
       ],
@@ -163,36 +163,36 @@
         ],
         [
           {
-            "en": "They ",
+            "en": "As they prepared to leave, they ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "smiled warmly and shook hands",
+            "en": "smiled warmly and shook hands with her",
             "role": "clue",
             "clueType": "gesture",
             "useJapanese": false
           },
           {
-            "en": " to ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "show their appreciation",
-            "role": "clue",
-            "clueType": "attitude",
-            "useJapanese": false
-          },
-          {
-            "en": " for the detailed explanations.",
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "The expert was very glad to help them learn about the history.",
+            "en": "One visitor said that ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "her detailed explanations had made the history easy to understand",
+            "role": "clue",
+            "clueType": "positive result",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -205,7 +205,7 @@
         "質問した"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "文脈の中で「smiled warmly and shook hands」や「show their appreciation」という様子から、訪問者たちが案内人に好意的な態度を示したことがわかります。そのため、thankedは「感謝した」だと推測できます。",
+      "inferenceExplanation": "「smiled warmly and shook hands with her」という好意的な身ぶりから、訪問者たちがガイドに敬意を示していることが読み取れます。また、「her detailed explanations had made the history easy to understand」から、ガイドの説明が役に立ったと感じていたこともわかるため、targetSenseは「感謝した」と判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,

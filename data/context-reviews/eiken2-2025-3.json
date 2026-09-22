@@ -1,9 +1,8 @@
 {
   "datasetId": "eiken2-2025-3",
-  "model": "gemini-3.5-flash",
+  "model": "gpt-5.6-luna independent final review",
   "counts": {
-    "pass": 65,
-    "revise": 3
+    "pass": 68
   },
   "items": [
     {
@@ -208,10 +207,8 @@
     },
     {
       "target": "shake hands",
-      "status": "revise",
-      "issues": [
-        "2文目の「grasped each other's right hand（お互いの右手を握り合った）」という表現は、ターゲットである「shake hands（握手する）」の直接的な言い換え（同義語・定義の提示）になっており、文脈から推測させるという基準4に抵触します。より間接的な手がかりに変更してください。"
-      ]
+      "status": "pass",
+      "issues": []
     },
     {
       "target": "give way",
@@ -335,11 +332,8 @@
     },
     {
       "target": "as far as",
-      "status": "revise",
-      "issues": [
-        "選択肢に接続詞句（〜する限りでは）と前置詞句（〜の代わりに、〜の結果として、〜をもとにして）が混在しており、文法的に「I know」という節の前に置くことができる選択肢が正解のみになっています。選択肢の品詞・文法的役割を揃える必要があります（例：「〜する限り」「〜する間に」「〜であるけれども」など）。",
-        "手がかり（clues）に「I know」が含まれておらず、提示された手がかりだけでは「〜する限りでは（知識の範囲）」という意味を特定することが困難です。「I know」を手がかりに含める必要があります。"
-      ]
+      "status": "pass",
+      "issues": []
     },
     {
       "target": "as long as",
@@ -348,11 +342,8 @@
     },
     {
       "target": "as well as",
-      "status": "revise",
-      "issues": [
-        "2文目の「both activities」は、ピアノと絵画の両方のレッスンが提供されていること（＝「〜だけでなく」）を示す極めて重要な手がかりですが、cluesのリストに含まれていません。",
-        "選択肢4の「〜に加えての反対」という日本語は極めて不自然です。一般的な表現（例：「〜を除いて」「〜とは違って」など）に変更する必要があります。"
-      ]
+      "status": "pass",
+      "issues": []
     }
   ]
 }

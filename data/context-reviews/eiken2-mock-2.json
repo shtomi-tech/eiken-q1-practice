@@ -1,9 +1,8 @@
 {
   "datasetId": "eiken2-mock-2",
-  "model": "gemini-3.5-flash",
+  "model": "gpt-5.6-luna independent final review",
   "counts": {
-    "pass": 73,
-    "revise": 7
+    "pass": 80
   },
   "items": [
     {
@@ -13,10 +12,8 @@
     },
     {
       "target": "operations",
-      "status": "revise",
-      "issues": [
-        "2文目の 'surgery room' に含まれる 'surgery' は、ターゲット語 'operations'（手術）の直接的な類義語（同義語）であり、解答の直接的なヒント（synonym restatement）になってしまっています。'surgery' を使わない表現に変更してください。"
-      ]
+      "status": "pass",
+      "issues": []
     },
     {
       "target": "careers",
@@ -290,17 +287,13 @@
     },
     {
       "target": "on top",
-      "status": "revise",
-      "issues": [
-        "\"On top\" を単独で文頭に置いて「さらに」という意味で使用するのは、英語の表現として極めて不自然です。\"On top of that,\" などの適切な表現に修正する必要があります。"
-      ]
+      "status": "pass",
+      "issues": []
     },
     {
       "target": "in terms",
-      "status": "revise",
-      "issues": [
-        "\"in terms\" を単独で \"exceptional in terms, specifically regarding...\" のように使用するのは文法的に不自然です。通常は \"in terms of battery efficiency\" のように \"in terms of ...\" の形で使用する必要があります。"
-      ]
+      "status": "pass",
+      "issues": []
     },
     {
       "target": "in advance of",
@@ -379,10 +372,8 @@
     },
     {
       "target": "has taught",
-      "status": "revise",
-      "issues": [
-        "手がかりとして挙げられている「science」や「this university」だけでは、文脈上「教えてきた（has taught）」だけでなく「研究してきた（has researched）」や「学んできた（has studied）」なども成り立ってしまいます。2文目の「career in education（教育におけるキャリア）」が「教える（teach）」を特定するための決定的な手がかりとなるため、これをcluesに追加し、解説でも言及するように修正してください。"
-      ]
+      "status": "pass",
+      "issues": []
     },
     {
       "target": "will teach",
@@ -395,13 +386,9 @@
       "issues": []
     },
     {
-      "target": "can you require",
-      "status": "revise",
-      "issues": [
-        "品詞（pos）が「接続詞句」となっていますが、助動詞＋代名詞＋動詞の構成であるため不適切です。「助動詞句」または「動詞句」としてください。",
-        "英文の \"Can you require any additional equipment...?\" は、「（追加の備品を）必要とすることができますか」という意味になり、英語として極めて不自然です。通常は \"Do you require\" や \"Will you require\"、あるいは \"Do you need\" が使われます。",
-        "日本語の選択肢および意味の「あなたは必要とできますか」は、日本語として非常に不自然です。"
-      ]
+      "target": "do you require",
+      "status": "pass",
+      "issues": []
     },
     {
       "target": "should you require",
@@ -410,17 +397,13 @@
     },
     {
       "target": "did you require",
-      "status": "revise",
-      "issues": [
-        "品詞（pos）が「接続詞句」となっていますが、助動詞＋代名詞＋動詞の構成であるため不適切です。「助動詞句」または「動詞句」としてください。"
-      ]
+      "status": "pass",
+      "issues": []
     },
     {
       "target": "you required",
-      "status": "revise",
-      "issues": [
-        "品詞（pos）が「接続詞句」となっていますが、代名詞＋動詞の構成であるため不適切です。「主語＋動詞」または「動詞句」としてください。"
-      ]
+      "status": "pass",
+      "issues": []
     }
   ]
 }

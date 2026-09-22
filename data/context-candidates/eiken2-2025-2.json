@@ -2137,12 +2137,12 @@
       "pos": "adjective",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "Her performance has been consistent throughout the season.",
-        "She always plays at the exact same high level every week."
+        "Maya's performance remained consistent throughout the season.",
+        "She scored at least two goals in nearly every match and never had a bad game."
       ],
       "mixedEnglish": [
-        "Her performance has been consistent throughout the season.",
-        "She always plays at the exact same high level every week."
+        "Maya's performance remained consistent throughout the season.",
+        "She scored at least two goals in nearly every match and never had a bad game."
       ],
       "contextClues": [
         {
@@ -2150,20 +2150,20 @@
           "type": "time"
         },
         {
-          "text": "same high level",
-          "type": "state"
+          "text": "never had a bad game",
+          "type": "result"
         }
       ],
       "inferencePath": [
         "throughout the season",
-        "same high level",
+        "never had a bad game",
         "targetSense: 一貫した",
         "consistent"
       ],
       "segments": [
         [
           {
-            "en": "Her performance has been ",
+            "en": "Maya's performance remained ",
             "role": "core",
             "useJapanese": false
           },
@@ -2191,18 +2191,18 @@
         ],
         [
           {
-            "en": "She always plays at the exact ",
+            "en": "She scored at least two goals in nearly every match and ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "same high level",
+            "en": "never had a bad game",
             "role": "clue",
-            "clueType": "state",
+            "clueType": "result",
             "useJapanese": false
           },
           {
-            "en": " every week.",
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -2215,7 +2215,7 @@
         "厳格な"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "彼女のパフォーマンスが「throughout the season」を通じて「same high level」であることから、その状態が崩れていないことがわかります。そのため、consistentは「一貫した」だと推測できます。",
+      "inferenceExplanation": "「throughout the season」から長い期間について述べていることがわかり、「never had a bad game」から好調な状態が崩れなかったと判断できます。したがって、consistent は「一貫した」という意味だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -3040,44 +3040,33 @@
       "pos": "noun",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The chef added spices to the mixture before baking it.",
-        "The various ingredients blended together to create a unique flavor."
+        "The chef added cinnamon to the mixture before placing it in the oven.",
+        "Flour, eggs, milk, and sugar were already together in the large bowl."
       ],
       "mixedEnglish": [
-        "The chef added spices to the mixture before baking it.",
-        "The various ingredients blended together to create a unique flavor."
+        "The chef added cinnamon to the mixture before placing it in the oven.",
+        "Flour, eggs, milk, and sugar were already together in the large bowl."
       ],
       "contextClues": [
         {
-          "text": "added spices",
+          "text": "placing it in the oven",
           "type": "action"
         },
         {
-          "text": "various ingredients blended together",
+          "text": "Flour, eggs, milk, and sugar",
           "type": "composition"
         }
       ],
       "inferencePath": [
-        "added spices",
-        "various ingredients blended together",
+        "placing it in the oven",
+        "Flour, eggs, milk, and sugar",
         "targetSense: 混合物",
         "mixture"
       ],
       "segments": [
         [
           {
-            "en": "The chef ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "added spices",
-            "role": "clue",
-            "clueType": "action",
-            "useJapanese": false
-          },
-          {
-            "en": " to the ",
+            "en": "The chef added cinnamon to the ",
             "role": "core",
             "useJapanese": false
           },
@@ -3087,25 +3076,31 @@
             "useJapanese": false
           },
           {
-            "en": " before baking it.",
+            "en": " before ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "placing it in the oven",
+            "role": "clue",
+            "clueType": "action",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "The ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "various ingredients blended together",
+            "en": "Flour, eggs, milk, and sugar",
             "role": "clue",
             "clueType": "composition",
             "useJapanese": false
           },
           {
-            "en": " to create a unique flavor.",
+            "en": " were already together in the large bowl.",
             "role": "core",
             "useJapanese": false
           }
@@ -3118,7 +3113,7 @@
         "調理器具"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「added spices」や「various ingredients blended together」という手掛かりから、いくつかの材料が混ぜ合わされた状態のものを指していることがわかります。そのため、mixtureは「混合物」だと推測できます。",
+      "inferenceExplanation": "「Flour, eggs, milk, and sugar」という複数の材料が大きなボウルに入っており、その後に「placing it in the oven」とあることから、焼く前の材料が一つになったものを指すとわかります。したがって、mixture は「混合物」という意味だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -5579,12 +5574,12 @@
       "pos": "phrasal verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "Please turn in your homework by Friday morning before the class begins.",
-        "The teacher will grade all the papers over the weekend."
+        "Please turn in your homework by Friday morning before class begins.",
+        "The teacher will collect everyone's papers and grade them over the weekend."
       ],
       "mixedEnglish": [
-        "Please turn in your homework by Friday morning before the class begins.",
-        "The teacher will grade all the papers over the weekend."
+        "Please turn in your homework by Friday morning before class begins.",
+        "The teacher will collect everyone's papers and grade them over the weekend."
       ],
       "contextClues": [
         {
@@ -5592,13 +5587,13 @@
           "type": "object"
         },
         {
-          "text": "grade all the papers",
-          "type": "cause"
+          "text": "grade them over the weekend",
+          "type": "result"
         }
       ],
       "inferencePath": [
         "your homework",
-        "grade all the papers",
+        "grade them over the weekend",
         "targetSense: 提出する",
         "turn in"
       ],
@@ -5626,25 +5621,25 @@
             "useJapanese": false
           },
           {
-            "en": " by Friday morning before the class begins.",
+            "en": " by Friday morning before class begins.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "The teacher will ",
+            "en": "The teacher will collect everyone's papers and ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "grade all the papers",
+            "en": "grade them over the weekend",
             "role": "clue",
-            "clueType": "cause",
+            "clueType": "result",
             "useJapanese": false
           },
           {
-            "en": " over the weekend.",
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -5657,7 +5652,7 @@
         "延期する"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「your homework」や「grade all the papers」という手掛かりから、宿題を先生にどうするかを考えて、そのため、turn inは「提出する」だと推測できます。",
+      "inferenceExplanation": "対象が「your homework」であり、先生が後で「grade them over the weekend」とあることから、宿題を先生に渡すよう求めていると考えられます。したがって、turn in は「提出する」という意味だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -5745,7 +5740,7 @@
         "埋める"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「The heavy snow」や「No cars could enter or leave」という手掛かりから、大雪によって村がどうなったかを考えて、そのため、cut offは「切り離す」だと推測できます。",
+      "inferenceExplanation": "「The heavy snow」が原因となり、「No cars could enter or leave」という状態が数日間続いたことから、村と外部との行き来が断たれたと考えられます。したがって、cut off は「切り離す」という意味だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -5765,44 +5760,44 @@
       "pos": "phrasal verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "Mountain lions live in dense forests and rocky regions. These large predators hunt deer and small mammals to survive, and they feed on fresh meat every day.",
-        "They never eat plants or seeds in the wild."
+        "Mountain lions hunt deer and small mammals in the forest, and they feed on fresh meat.",
+        "Their sharp teeth help them tear flesh after a successful hunt."
       ],
       "mixedEnglish": [
-        "Mountain lions live in dense forests and rocky regions. These large predators hunt deer and small mammals to survive, and they feed on fresh meat every day.",
-        "They never eat plants or seeds in the wild."
+        "Mountain lions hunt deer and small mammals in the forest, and they feed on fresh meat.",
+        "Their sharp teeth help them tear flesh after a successful hunt."
       ],
       "contextClues": [
         {
-          "text": "hunt deer and small mammals to survive",
-          "type": "cause"
+          "text": "hunt deer and small mammals",
+          "type": "behavior"
         },
         {
-          "text": "never eat plants or seeds",
-          "type": "contrast"
+          "text": "Their sharp teeth",
+          "type": "physical feature"
         }
       ],
       "inferencePath": [
-        "hunt deer and small mammals to survive",
-        "never eat plants or seeds",
+        "hunt deer and small mammals",
+        "Their sharp teeth",
         "targetSense: 〜を食べて生きる",
         "feed on"
       ],
       "segments": [
         [
           {
-            "en": "Mountain lions live in dense forests and rocky regions. These large predators ",
+            "en": "Mountain lions ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "hunt deer and small mammals to survive",
+            "en": "hunt deer and small mammals",
             "role": "clue",
-            "clueType": "cause",
+            "clueType": "behavior",
             "useJapanese": false
           },
           {
-            "en": ", and they ",
+            "en": " in the forest, and they ",
             "role": "core",
             "useJapanese": false
           },
@@ -5812,25 +5807,20 @@
             "useJapanese": false
           },
           {
-            "en": " fresh meat every day.",
+            "en": " fresh meat.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "They ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "never eat plants or seeds",
+            "en": "Their sharp teeth",
             "role": "clue",
-            "clueType": "contrast",
+            "clueType": "physical feature",
             "useJapanese": false
           },
           {
-            "en": " in the wild.",
+            "en": " help them tear flesh after a successful hunt.",
             "role": "core",
             "useJapanese": false
           }
@@ -5843,7 +5833,7 @@
         "〜を恐れて逃げる"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「hunt deer and small mammals to survive」や「never eat plants or seeds」という手掛かりから、肉食動物が獲物を捕らえて命を維持している様子を考えて、そのため、feed onは「〜を食べて生きる」だと推測できます。",
+      "inferenceExplanation": "「hunt deer and small mammals」という行動と「Their sharp teeth」という身体的特徴から、マウンテンライオンが捕らえた動物の肉を栄養源にしていると考えられます。したがって、feed on は「〜を食べて生きる」という意味だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -5863,28 +5853,26 @@
       "pos": "phrasal verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "Hang on a minute, I'll be right back.",
-        "I need to grab my coat before we leave the house.",
-        "Please hold your position for a moment while I check the door."
+        "Hang on a minute; I'll be right back with my coat.",
+        "The bus was not due for another five minutes, so Anna remained beside the door."
       ],
       "mixedEnglish": [
-        "Hang on a minute, I'll be right back.",
-        "I need to grab my coat before we leave the house.",
-        "Please hold your position for a moment while I check the door."
+        "Hang on a minute; I'll be right back with my coat.",
+        "The bus was not due for another five minutes, so Anna remained beside the door."
       ],
       "contextClues": [
         {
-          "text": "grab my coat",
-          "type": "cause"
+          "text": "I'll be right back",
+          "type": "time"
         },
         {
-          "text": "leave the house",
-          "type": "result"
+          "text": "The bus was not due for another five minutes",
+          "type": "situation"
         }
       ],
       "inferencePath": [
-        "grab my coat",
-        "leave the house",
+        "I'll be right back",
+        "The bus was not due for another five minutes",
         "targetSense: 待つ",
         "hang on"
       ],
@@ -5896,43 +5884,31 @@
             "useJapanese": false
           },
           {
-            "en": " a minute, I'll be right back.",
+            "en": " a minute; ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "I'll be right back",
+            "role": "clue",
+            "clueType": "time",
+            "useJapanese": false
+          },
+          {
+            "en": " with my coat.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "I need to ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "grab my coat",
+            "en": "The bus was not due for another five minutes",
             "role": "clue",
-            "clueType": "cause",
+            "clueType": "situation",
             "useJapanese": false
           },
           {
-            "en": " before we ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "leave the house",
-            "role": "clue",
-            "clueType": "result",
-            "useJapanese": false
-          },
-          {
-            "en": ".",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "Please hold your position for a moment while I check the door.",
+            "en": ", so Anna remained beside the door.",
             "role": "core",
             "useJapanese": false
           }
@@ -5945,7 +5921,7 @@
         "忘れる"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「grab my coat」や「leave the house」という手掛かりから、外出の準備をしている相手に対してその場で少し留まるよう求めていることがわかります。そのため、hang onは「待つ」だと推測できます。",
+      "inferenceExplanation": "「I'll be right back」から話し手がすぐ戻る予定だとわかり、「The bus was not due for another five minutes」から急いで出発する必要もないと判断できます。したがって、hang on は「待つ」という意味だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -5965,12 +5941,12 @@
       "pos": "adjective phrase",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "After running up the long flight of stairs, he stopped to lean against the wall. He needed to sit down on a nearby chair and wait for his heart rate to calm down.",
-        "He was completely out of breath."
+        "After running up the long flight of stairs, Ken leaned against the wall with his heart pounding.",
+        "He was completely out of breath and needed several minutes before he could speak normally."
       ],
       "mixedEnglish": [
-        "After running up the long flight of stairs, he stopped to lean against the wall. He needed to sit down on a nearby chair and wait for his heart rate to calm down.",
-        "He was completely out of breath."
+        "After running up the long flight of stairs, Ken leaned against the wall with his heart pounding.",
+        "He was completely out of breath and needed several minutes before he could speak normally."
       ],
       "contextClues": [
         {
@@ -5978,13 +5954,13 @@
           "type": "cause"
         },
         {
-          "text": "wait for his heart rate to calm down",
-          "type": "result"
+          "text": "his heart pounding",
+          "type": "physical state"
         }
       ],
       "inferencePath": [
         "running up the long flight of stairs",
-        "wait for his heart rate to calm down",
+        "his heart pounding",
         "targetSense: 息切れして",
         "out of breath"
       ],
@@ -6002,14 +5978,14 @@
             "useJapanese": false
           },
           {
-            "en": ", he stopped to lean against the wall. He needed to sit down on a nearby chair and ",
+            "en": ", Ken leaned against the wall with ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "wait for his heart rate to calm down",
+            "en": "his heart pounding",
             "role": "clue",
-            "clueType": "result",
+            "clueType": "physical state",
             "useJapanese": false
           },
           {
@@ -6030,7 +6006,7 @@
             "useJapanese": false
           },
           {
-            "en": ".",
+            "en": " and needed several minutes before he could speak normally.",
             "role": "core",
             "useJapanese": false
           }
@@ -6043,7 +6019,7 @@
         "お腹を空かせて"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「running up the long flight of stairs」や「wait for his heart rate to calm down」という手掛かりから、階段を急いで上った後の身体の状態を考えて、そのため、out of breathは「息切れして」だと推測できます。",
+      "inferenceExplanation": "「running up the long flight of stairs」という激しい運動の直後で、「his heart pounding」という身体の反応も見られます。したがって、out of breath は「息切れして」という意味だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -6064,38 +6040,43 @@
       "level": "EIKEN Grade 2",
       "fullEnglish": [
         "The dog was taken to the vet against its will.",
-        "It did not want to go inside the building at all."
+        "It dug its paws into the ground while its owner pulled the leash toward the clinic."
       ],
       "mixedEnglish": [
         "The dog was taken to the vet against its will.",
-        "It did not want to go inside the building at all."
+        "It dug its paws into the ground while its owner pulled the leash toward the clinic."
       ],
       "contextClues": [
         {
-          "text": "The dog",
-          "type": "cause"
+          "text": "taken to the vet",
+          "type": "action"
         },
         {
-          "text": "did not want to go",
-          "type": "contrast"
+          "text": "dug its paws into the ground",
+          "type": "resistance"
         }
       ],
       "inferencePath": [
-        "The dog",
-        "did not want to go",
+        "taken to the vet",
+        "dug its paws into the ground",
         "targetSense: 意志に反して",
         "against its will"
       ],
       "segments": [
         [
           {
-            "en": "The dog",
-            "role": "clue",
-            "clueType": "cause",
+            "en": "The dog was ",
+            "role": "core",
             "useJapanese": false
           },
           {
-            "en": " was taken to the vet ",
+            "en": "taken to the vet",
+            "role": "clue",
+            "clueType": "action",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
             "role": "core",
             "useJapanese": false
           },
@@ -6117,13 +6098,13 @@
             "useJapanese": false
           },
           {
-            "en": "did not want to go",
+            "en": "dug its paws into the ground",
             "role": "clue",
-            "clueType": "contrast",
+            "clueType": "resistance",
             "useJapanese": false
           },
           {
-            "en": " inside the building at all.",
+            "en": " while its owner pulled the leash toward the clinic.",
             "role": "core",
             "useJapanese": false
           }
@@ -6136,7 +6117,7 @@
         "突然に"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「The dog」や「did not want to go」という手掛かりから、行きたくないのに連れていかれた状況を考えて、そのため、against its willは「意志に反して」だと推測できます。",
+      "inferenceExplanation": "犬が「taken to the vet」とある一方で、「dug its paws into the ground」という抵抗する行動を取っています。このことから、犬が自ら望んで移動したのではないと考えられるため、against its will は「意志に反して」という意味だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -6156,39 +6137,33 @@
       "pos": "adjective phrase",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "This new app is very easy to use.",
-        "Even elderly people can learn how to operate it quickly."
+        "This new app is easy to use, even for people who rarely use smartphones.",
+        "My grandfather completed the setup without instructions and found every button on his first try."
       ],
       "mixedEnglish": [
-        "This new app is very easy to use.",
-        "Even elderly people can learn how to operate it quickly."
+        "This new app is easy to use, even for people who rarely use smartphones.",
+        "My grandfather completed the setup without instructions and found every button on his first try."
       ],
       "contextClues": [
         {
-          "text": "This new app",
-          "type": "cause"
+          "text": "completed the setup without instructions",
+          "type": "result"
         },
         {
-          "text": "Even elderly people can learn",
+          "text": "found every button on his first try",
           "type": "result"
         }
       ],
       "inferencePath": [
-        "This new app",
-        "Even elderly people can learn",
+        "completed the setup without instructions",
+        "found every button on his first try",
         "targetSense: 使いやすい",
         "easy to use"
       ],
       "segments": [
         [
           {
-            "en": "This new app",
-            "role": "clue",
-            "clueType": "cause",
-            "useJapanese": false
-          },
-          {
-            "en": " is very ",
+            "en": "This new app is ",
             "role": "core",
             "useJapanese": false
           },
@@ -6198,20 +6173,36 @@
             "useJapanese": false
           },
           {
-            "en": ".",
+            "en": ", even for people who rarely use smartphones.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "Even elderly people can learn",
+            "en": "My grandfather ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "completed the setup without instructions",
             "role": "clue",
             "clueType": "result",
             "useJapanese": false
           },
           {
-            "en": " how to operate it quickly.",
+            "en": " and ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "found every button on his first try",
+            "role": "clue",
+            "clueType": "result",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -6224,7 +6215,7 @@
         "人気のある"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「This new app」や「Even elderly people can learn」という手掛かりから、誰でも簡単に操作できる性質を考えて、そのため、easy to useは「使いやすい」だと推測できます。",
+      "inferenceExplanation": "「completed the setup without instructions」から説明を読まなくても設定できたことがわかり、「found every button on his first try」から操作に迷わなかったこともわかります。したがって、easy to use は「使いやすい」という意味だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -6435,35 +6426,33 @@
       "pos": "noun phrase",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "She made the most of her time abroad.",
-        "Jane spent her summer vacation reading thick novels and writing detailed summaries. She devoted most of her time away from school to quiet indoor hobbies.",
-        "She enjoyed every quiet afternoon."
+        "Ken's draft contained “the most of” before “the students,” but his teacher crossed out the first word.",
+        "Twenty-eight of the thirty students had chosen the same answer, so Ken was referring to nearly the whole class."
       ],
       "mixedEnglish": [
-        "She made the most of her time abroad.",
-        "Jane spent her summer vacation reading thick novels and writing detailed summaries. She devoted most of her time away from school to quiet indoor hobbies.",
-        "She enjoyed every quiet afternoon."
+        "Ken's draft contained “the most of” before “the students,” but his teacher crossed out the first word.",
+        "Twenty-eight of the thirty students had chosen the same answer, so Ken was referring to nearly the whole class."
       ],
       "contextClues": [
         {
-          "text": "reading thick novels",
-          "type": "behavior"
+          "text": "Twenty-eight of the thirty students",
+          "type": "quantity"
         },
         {
-          "text": "writing detailed summaries",
-          "type": "behavior"
+          "text": "nearly the whole class",
+          "type": "proportion"
         }
       ],
       "inferencePath": [
-        "reading thick novels",
-        "writing detailed summaries",
+        "Twenty-eight of the thirty students",
+        "nearly the whole class",
         "targetSense: （通例 the をつけず most of で）〜の大部分",
         "the most of"
       ],
       "segments": [
         [
           {
-            "en": "She made ",
+            "en": "Ken's draft contained “",
             "role": "core",
             "useJapanese": false
           },
@@ -6473,43 +6462,31 @@
             "useJapanese": false
           },
           {
-            "en": " her time abroad.",
+            "en": "” before “the students,” but his teacher crossed out the first word.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "Jane spent her summer vacation ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "reading thick novels",
+            "en": "Twenty-eight of the thirty students",
             "role": "clue",
-            "clueType": "behavior",
+            "clueType": "quantity",
             "useJapanese": false
           },
           {
-            "en": " and ",
+            "en": " had chosen the same answer, so Ken was referring to ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "writing detailed summaries",
+            "en": "nearly the whole class",
             "role": "clue",
-            "clueType": "behavior",
+            "clueType": "proportion",
             "useJapanese": false
           },
           {
-            "en": ". She devoted most of her time away from school to quiet indoor hobbies.",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "She enjoyed every quiet afternoon.",
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -6522,7 +6499,7 @@
         "〜の一部"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「reading thick novels」や「writing detailed summaries」という手掛かりから、休暇の多くの時間を読書や執筆に費やしている行動を考えて、そのため、the most ofは「（通例 the をつけず most of で）〜の大部分」だと推測できます。",
+      "inferenceExplanation": "「Twenty-eight of the thirty students」、「nearly the whole class」が手がかりです。これらの状況から、the most ofは「（通例 the をつけず most of で）〜の大部分」だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -6543,11 +6520,11 @@
       "level": "EIKEN Grade 2",
       "fullEnglish": [
         "A dolphin is a kind of mammal, not a fish.",
-        "It breathes air through a blowhole and gives birth to live babies."
+        "It has lungs, gives birth to live young, and nurses its babies."
       ],
       "mixedEnglish": [
         "A dolphin is a kind of mammal, not a fish.",
-        "It breathes air through a blowhole and gives birth to live babies."
+        "It has lungs, gives birth to live young, and nurses its babies."
       ],
       "contextClues": [
         {
@@ -6555,13 +6532,13 @@
           "type": "contrast"
         },
         {
-          "text": "breathes air",
-          "type": "behavior"
+          "text": "nurses its babies",
+          "type": "characteristic"
         }
       ],
       "inferencePath": [
         "not a fish",
-        "breathes air",
+        "nurses its babies",
         "targetSense: 一種の",
         "a kind of"
       ],
@@ -6596,18 +6573,18 @@
         ],
         [
           {
-            "en": "It ",
+            "en": "It has lungs, gives birth to live young, and ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "breathes air",
+            "en": "nurses its babies",
             "role": "clue",
-            "clueType": "behavior",
+            "clueType": "characteristic",
             "useJapanese": false
           },
           {
-            "en": " through a blowhole and gives birth to live babies.",
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -6620,7 +6597,7 @@
         "危険な"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「not a fish」という対比や「breathes air」という特徴から、クジラやイルカが哺乳類のカテゴリーに属する分類であることがわかります。そのため、a kind ofは「一種の」だと推測できます。",
+      "inferenceExplanation": "「not a fish」という対比に加え、イルカが「nurses its babies」という哺乳類の特徴を持つことが示されています。したがって、イルカを哺乳類の仲間として分類する a kind of は「一種の」という意味だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,

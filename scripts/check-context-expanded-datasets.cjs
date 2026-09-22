@@ -24,11 +24,14 @@ for (const [datasetId, [vocabName, contextName]] of Object.entries(CONFIG)) {
   const source = [...(vocab.words || []), ...(vocab.idioms || [])];
   const sourceByTarget = new Map(source.map((item) => [surface(item), item]));
   const payload = read(contextName);
+  const review = read(path.join("context-reviews", `${datasetId}.json`));
+  const approvedTargets = review.items.filter((item) => item.status === "pass").map((item) => item.target);
   assert.equal(payload.meta.datasetId, datasetId, `${datasetId}: datasetId mismatch`);
   assert.equal(payload.meta.count, payload.contexts.length, `${datasetId}: context count mismatch`);
   assert.equal(manifest[datasetId].contextUrl, `data/${contextName}`, `${datasetId}: manifest contextUrl mismatch`);
   assert.equal(manifest[datasetId].contextTotal, payload.contexts.length, `${datasetId}: manifest contextTotal mismatch`);
   assert.equal(new Set(payload.contexts.map((item) => item.target)).size, payload.contexts.length, `${datasetId}: duplicate target`);
+  assert.deepEqual(payload.contexts.map((item) => item.target), approvedTargets, `${datasetId}: runtime must contain every and only review-passed target`);
   const sourceOrder = source.map(surface);
   const projectedOrder = payload.contexts.map((item) => sourceOrder.indexOf(item.target));
   assert.ok(projectedOrder.every((value, index) => value >= 0 && (index === 0 || value > projectedOrder[index - 1])), `${datasetId}: context order differs from Vocabulary Data`);
@@ -40,5 +43,10 @@ for (const [datasetId, [vocabName, contextName]] of Object.entries(CONFIG)) {
   }
   total += payload.contexts.length;
 }
-assert.equal(total, 419, "review-approved expanded context total changed unexpectedly");
+assert.equal(total, 455, "review-approved expanded context total changed unexpectedly");
+const remaining = Object.keys(CONFIG).flatMap((datasetId) => {
+  const review = read(path.join("context-reviews", `${datasetId}.json`));
+  return review.items.filter((item) => item.status === "revise").map((item) => `${datasetId}/${item.target}`);
+});
+assert.deepEqual(remaining, ["eiken2-2025-2/the most of"], "only the invalid official distractor may remain excluded");
 console.log(`expanded context datasets: OK (${total} reviewed contexts across 6 datasets)`);

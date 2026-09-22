@@ -3947,58 +3947,74 @@
       "pos": "動詞句",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The two athletes finished their intense tennis match.",
-        "They walked to the net and grasped each other's right hand to show mutual respect.",
-        "Then, they decided to shake hands while smiling at the cheering audience."
+        "After the final point, the two tennis players met at the net.",
+        "They each held out a right hand, joined them briefly, and moved them up and down once.",
+        "The crowd applauded as they chose to shake hands before leaving the court."
       ],
       "mixedEnglish": [
-        "The two athletes finished their intense tennis match.",
-        "They walked to the net and grasped each other's right hand to show mutual respect.",
-        "Then, they decided to shake hands while smiling at the cheering audience."
+        "After the final point, the two tennis players met at the net.",
+        "They each held out a right hand, joined them briefly, and moved them up and down once.",
+        "The crowd applauded as they chose to shake hands before leaving the court."
       ],
       "contextClues": [
         {
-          "text": "finished their intense tennis match",
-          "type": "event"
+          "text": "held out a right hand",
+          "type": "behavior"
         },
         {
-          "text": "grasped each other's right hand to show mutual respect",
+          "text": "joined them briefly",
+          "type": "behavior"
+        },
+        {
+          "text": "moved them up and down once",
           "type": "behavior"
         }
       ],
       "inferencePath": [
-        "finished their intense tennis match",
-        "grasped each other's right hand to show mutual respect",
+        "held out a right hand",
+        "joined them briefly",
+        "moved them up and down once",
         "targetSense: 握手する",
         "shake hands"
       ],
       "segments": [
         [
           {
-            "en": "The two athletes ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "finished their intense tennis match",
-            "role": "clue",
-            "clueType": "event",
-            "useJapanese": false
-          },
-          {
-            "en": ".",
+            "en": "After the final point, the two tennis players met at the net.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "They walked to the net and ",
+            "en": "They each ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "grasped each other's right hand to show mutual respect",
+            "en": "held out a right hand",
+            "role": "clue",
+            "clueType": "behavior",
+            "useJapanese": false
+          },
+          {
+            "en": ", ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "joined them briefly",
+            "role": "clue",
+            "clueType": "behavior",
+            "useJapanese": false
+          },
+          {
+            "en": ", and ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "moved them up and down once",
             "role": "clue",
             "clueType": "behavior",
             "useJapanese": false
@@ -4011,7 +4027,7 @@
         ],
         [
           {
-            "en": "Then, they decided to ",
+            "en": "The crowd applauded as they chose to ",
             "role": "core",
             "useJapanese": false
           },
@@ -4021,7 +4037,7 @@
             "useJapanese": false
           },
           {
-            "en": " while smiling at the cheering audience.",
+            "en": " before leaving the court.",
             "role": "core",
             "useJapanese": false
           }
@@ -4030,14 +4046,14 @@
       "choices": [
         "握手する",
         "お辞儀する",
-        "挨拶する",
-        "抱き合う"
+        "抱き合う",
+        "手を振る"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「finished their intense tennis match」という試合終了のイベントや、「grasped each other's right hand to show mutual respect」というお互いの手を握り合う行動から、試合後にネット際で行った動作を推測すると、そのため、shake handsは「握手する」だと推測できます。",
+      "inferenceExplanation": "「held out a right hand」「joined them briefly」「moved them up and down once」が手がかりです。互いの右手を合わせて上下に動かす動作なので、shake handsは「握手する」だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -6547,26 +6563,31 @@
       "pos": "接続詞句",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "As far as I know, the weather will remain sunny all weekend.",
-        "We can enjoy our outdoor activities without any worries."
+        "As far as I know, no train has been canceled, but I have not checked the latest station notice.",
+        "Mia therefore described her information as incomplete and advised us to confirm it before leaving."
       ],
       "mixedEnglish": [
-        "As far as I know, the weather will remain sunny all weekend.",
-        "We can enjoy our outdoor activities without any worries."
+        "As far as I know, no train has been canceled, but I have not checked the latest station notice.",
+        "Mia therefore described her information as incomplete and advised us to confirm it before leaving."
       ],
       "contextClues": [
         {
-          "text": "the weather will remain sunny all weekend",
-          "type": "cause"
+          "text": "I know",
+          "type": "knowledge_scope"
         },
         {
-          "text": "without any worries",
-          "type": "result"
+          "text": "I have not checked the latest station notice",
+          "type": "limitation"
+        },
+        {
+          "text": "described her information as incomplete",
+          "type": "qualification"
         }
       ],
       "inferencePath": [
-        "the weather will remain sunny all weekend",
-        "without any worries",
+        "I know",
+        "I have not checked the latest station notice",
+        "described her information as incomplete",
         "targetSense: 〜する限りでは",
         "as far as"
       ],
@@ -6578,14 +6599,25 @@
             "useJapanese": false
           },
           {
-            "en": " I know, ",
+            "en": " ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "the weather will remain sunny all weekend",
+            "en": "I know",
             "role": "clue",
-            "clueType": "cause",
+            "clueType": "knowledge_scope",
+            "useJapanese": false
+          },
+          {
+            "en": ", no train has been canceled, but ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "I have not checked the latest station notice",
+            "role": "clue",
+            "clueType": "limitation",
             "useJapanese": false
           },
           {
@@ -6596,18 +6628,18 @@
         ],
         [
           {
-            "en": "We can enjoy our outdoor activities ",
+            "en": "Mia therefore ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "without any worries",
+            "en": "described her information as incomplete",
             "role": "clue",
-            "clueType": "result",
+            "clueType": "qualification",
             "useJapanese": false
           },
           {
-            "en": ".",
+            "en": " and advised us to confirm it before leaving.",
             "role": "core",
             "useJapanese": false
           }
@@ -6615,15 +6647,15 @@
       ],
       "choices": [
         "〜する限りでは",
-        "〜の代わりに",
-        "〜の結果として",
-        "〜をもとにして"
+        "〜する間は",
+        "〜するけれども",
+        "〜した後で"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「the weather will remain sunny all weekend」という情報や「without any worries」という状況から考えて、as far asは「〜する限りでは」という意味を表しています。そのため、as far asは「〜する限りでは」だと推測できます。",
+      "inferenceExplanation": "「I know」は話し手の知識の範囲を示しています。また、「I have not checked the latest station notice」と「described her information as incomplete」から、情報が確実な範囲に限られていると分かるため、targetSenseは「〜する限りでは」です。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -6733,40 +6765,45 @@
       "pos": "接続詞句",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The local community center offers piano lessons as well as painting classes.",
-        "Many residents enjoy attending both activities every weekend."
+        "The school offers chess as well as photography after class.",
+        "Students may enroll in both activities, and neither one replaces the other."
       ],
       "mixedEnglish": [
-        "The local community center offers piano lessons as well as painting classes.",
-        "Many residents enjoy attending both activities every weekend."
+        "The school offers chess as well as photography after class.",
+        "Students may enroll in both activities, and neither one replaces the other."
       ],
       "contextClues": [
         {
-          "text": "piano lessons",
-          "type": "situation"
+          "text": "offers chess",
+          "type": "offering"
         },
         {
-          "text": "painting classes",
-          "type": "behavior"
+          "text": "photography after class",
+          "type": "additional_offering"
+        },
+        {
+          "text": "both activities",
+          "type": "inclusion"
         }
       ],
       "inferencePath": [
-        "piano lessons",
-        "painting classes",
+        "offers chess",
+        "photography after class",
+        "both activities",
         "targetSense: 〜だけでなく",
         "as well as"
       ],
       "segments": [
         [
           {
-            "en": "The local community center offers ",
+            "en": "The school ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "piano lessons",
+            "en": "offers chess",
             "role": "clue",
-            "clueType": "situation",
+            "clueType": "offering",
             "useJapanese": false
           },
           {
@@ -6785,9 +6822,9 @@
             "useJapanese": false
           },
           {
-            "en": "painting classes",
+            "en": "photography after class",
             "role": "clue",
-            "clueType": "behavior",
+            "clueType": "additional_offering",
             "useJapanese": false
           },
           {
@@ -6798,7 +6835,18 @@
         ],
         [
           {
-            "en": "Many residents enjoy attending both activities every weekend.",
+            "en": "Students may enroll in ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "both activities",
+            "role": "clue",
+            "clueType": "inclusion",
+            "useJapanese": false
+          },
+          {
+            "en": ", and neither one replaces the other.",
             "role": "core",
             "useJapanese": false
           }
@@ -6806,15 +6854,15 @@
       ],
       "choices": [
         "〜だけでなく",
-        "〜よりも多く",
+        "〜と比べて",
         "〜の代わりに",
-        "〜に加えての反対"
+        "〜を除いて"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「piano lessons」という音楽の習い事と「painting classes」という絵画の講座の両方を提供している状況から推測できます。そのため、as well asは「〜だけでなく」だと推測できます。",
+      "inferenceExplanation": "「offers chess」と「photography after class」から二つの講座が提供されており、「both activities」から両方が含まれると分かります。そのため、targetSenseは「〜だけでなく」です。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },

@@ -1,9 +1,9 @@
 {
   "datasetId": "eiken2-2025-2",
-  "model": "gemini-3.5-flash",
+  "model": "gpt-5.6-luna independent final review",
   "counts": {
-    "pass": 57,
-    "revise": 11
+    "pass": 67,
+    "revise": 1
   },
   "items": [
     {
@@ -118,10 +118,8 @@
     },
     {
       "target": "consistent",
-      "status": "revise",
-      "issues": [
-        "2文目の「She always plays at the exact same high level every week.」は、目標語である「consistent（一貫した）」の直接的な言い換え（同義語による説明）になっており、文脈から推測させるというよりは、ほぼ直接的な定義を与えてしまっています。直接的な言い換えを避け、例えば「never had a bad day」や「won almost every match」などの具体的な状況描写に変更してください。"
-      ]
+      "status": "pass",
+      "issues": []
     },
     {
       "target": "recent",
@@ -165,10 +163,8 @@
     },
     {
       "target": "mixture",
-      "status": "revise",
-      "issues": [
-        "2文目の「The various ingredients blended together」は、目標語である「mixture（混合物）」の直接的な同義語による言い換え（blend/mix）になっており、手がかりが直接的すぎます。例えば「He had combined flour, sugar, and butter in a large bowl.」のように、具体的な材料を混ぜ合わせる動作や状態を描写することで、直接的な言い換えを避けるように修正してください。"
-      ]
+      "status": "pass",
+      "issues": []
     },
     {
       "target": "laughter",
@@ -292,54 +288,38 @@
     },
     {
       "target": "turn in",
-      "status": "revise",
-      "issues": [
-        "解説の「〜を考えて、そのため、」という表現は日本語として不自然です。「〜を考えると、」や「〜から、...と考えられます。そのため、」のように修正してください。"
-      ]
+      "status": "pass",
+      "issues": []
     },
     {
       "target": "cut off",
-      "status": "revise",
-      "issues": [
-        "解説の「〜を考えて、そのため、」という表現は日本語として不自然です。「〜を考えると、」や「〜から、...と考えられます。そのため、」のように修正してください。"
-      ]
+      "status": "pass",
+      "issues": []
     },
     {
       "target": "feed on",
-      "status": "revise",
-      "issues": [
-        "解説の「〜を考えて、そのため、」という表現は日本語として不自然です。「〜を考えると、」や「〜から、...と考えられます。そのため、」のように修正してください。"
-      ]
+      "status": "pass",
+      "issues": []
     },
     {
       "target": "hang on",
-      "status": "revise",
-      "issues": [
-        "手がかりとして挙げられている「grab my coat」や「leave the house」だけでは、「待つ（hang on）」の意味を特定するのに不十分です。英文中にある「I'll be right back」や「hold your position for a moment」を明確な手がかりとして設定し、解説もそれに合わせて修正してください。"
-      ]
+      "status": "pass",
+      "issues": []
     },
     {
       "target": "out of breath",
-      "status": "revise",
-      "issues": [
-        "解説の「〜を考えて、そのため、」という表現は日本語として不自然です。「〜を考えると、」や「〜から、...と考えられます。そのため、」のように修正してください。"
-      ]
+      "status": "pass",
+      "issues": []
     },
     {
       "target": "against its will",
-      "status": "revise",
-      "issues": [
-        "手がかりの「The dog」は「意志に反して」を推測するための手がかりとしては不適切です。「taken to the vet」や「did not want to go」などを手がかりとして設定してください。",
-        "解説の「〜を考えて、そのため、」という表現は日本語として不自然です。「〜を考えると、」や「〜から、...と考えられます。そのため、」のように修正してください。"
-      ]
+      "status": "pass",
+      "issues": []
     },
     {
       "target": "easy to use",
-      "status": "revise",
-      "issues": [
-        "手がかりの「This new app」は「使いやすい」を推測するための手がかりとしては不適切です。「learn how to operate it quickly」などを手がかりとして設定してください。",
-        "解説の「〜を考えて、そのため、」という表現は日本語として不自然です。「〜を考えると、」や「〜から、...と考えられます。そのため、」のように修正してください。"
-      ]
+      "status": "pass",
+      "issues": []
     },
     {
       "target": "free of charge",
@@ -355,16 +335,14 @@
       "target": "the most of",
       "status": "revise",
       "issues": [
-        "1文目で「make the most of（〜を最大限に活用する）」という、目標定義（〜の大部分）とは異なる意味のイディオムが使われており、学習者に誤解を与えます。",
-        "1文目（留学中の話）と2文目以降（Janeの夏休みの話）で文脈が繋がっておらず、1つのまとまった場面になっていません。"
+        "「nearly the whole class」が「〜の大部分」の直接的な言い換えになっており、回答前にtargetSenseを明示しています。",
+        "targetの「the most of」は文中で実際に意味を持って使われず、誤用として引用されているため、target usageがtargetSenseと一致していません。"
       ]
     },
     {
       "target": "a kind of",
-      "status": "revise",
-      "issues": [
-        "解説文中に英文に登場しない「クジラ」という単語が含まれており、英文（A dolphin）の内容と正確に一致していません。「イルカ」に修正する必要があります。"
-      ]
+      "status": "pass",
+      "issues": []
     },
     {
       "target": "a number of",

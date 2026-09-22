@@ -423,35 +423,35 @@
       "pos": "noun",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The museum displays legends about the island's first settlers.",
-        "The local elders shared mysterious tales about ancient dragons.",
-        "Children listened closely to these magical stories by the evening fire."
+        "The village museum features legends about sailors who vanished near the island.",
+        "According to the oldest residents, ghostly lights still appear above the sea on stormy nights.",
+        "Families have passed these accounts down for many generations."
       ],
       "mixedEnglish": [
-        "The museum displays legends about the island's first settlers.",
-        "The local elders shared mysterious tales about ancient dragons.",
-        "Children listened closely to these magical stories by the evening fire."
+        "The village museum features legends about sailors who vanished near the island.",
+        "According to the oldest residents, ghostly lights still appear above the sea on stormy nights.",
+        "Families have passed these accounts down for many generations."
       ],
       "contextClues": [
         {
-          "text": "mysterious tales about ancient dragons",
-          "type": "cause"
+          "text": "ghostly lights still appear above the sea",
+          "type": "content"
         },
         {
-          "text": "magical stories by the evening fire",
-          "type": "result"
+          "text": "passed these accounts down for many generations",
+          "type": "tradition"
         }
       ],
       "inferencePath": [
-        "mysterious tales about ancient dragons",
-        "magical stories by the evening fire",
+        "ghostly lights still appear above the sea",
+        "passed these accounts down for many generations",
         "targetSense: 伝説",
         "legends"
       ],
       "segments": [
         [
           {
-            "en": "The museum displays ",
+            "en": "The village museum features ",
             "role": "core",
             "useJapanese": false
           },
@@ -461,39 +461,39 @@
             "useJapanese": false
           },
           {
-            "en": " about the island's first settlers.",
+            "en": " about sailors who vanished near the island.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "The local elders shared ",
+            "en": "According to the oldest residents, ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "mysterious tales about ancient dragons",
+            "en": "ghostly lights still appear above the sea",
             "role": "clue",
-            "clueType": "cause",
+            "clueType": "content",
             "useJapanese": false
           },
           {
-            "en": ".",
+            "en": " on stormy nights.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "Children listened closely to these ",
+            "en": "Families have ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "magical stories by the evening fire",
+            "en": "passed these accounts down for many generations",
             "role": "clue",
-            "clueType": "result",
+            "clueType": "tradition",
             "useJapanese": false
           },
           {
@@ -505,12 +505,12 @@
       ],
       "choices": [
         "伝説",
-        "道具",
-        "地図",
-        "法律"
+        "記録",
+        "規則",
+        "展示品"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「mysterious tales about ancient dragons」や「magical stories by the evening fire」という手がかりから、年長者たちが古いドラゴンに関する不思議で魔法のような物語を子どもたちに語り聞かせていることが読み取れます。そのため、legendsは「伝説」だと推測できます。",
+      "inferenceExplanation": "「ghostly lights still appear above the sea」から不思議な出来事を扱う内容だと分かり、「passed these accounts down for many generations」から代々語り継がれてきたものだと分かります。したがって、legends は「伝説」を表します。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -1813,35 +1813,35 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The factory repeatedly violated the safety rules during the major construction project.",
-        "The company failed to follow the official environmental regulations.",
-        "Government inspectors quickly discovered the harmful chemicals released into the river."
+        "The factory violated the environmental regulations by dumping waste into the river at night.",
+        "Inspectors found toxic chemicals downstream the next morning.",
+        "The authorities imposed a heavy fine after reviewing the evidence."
       ],
       "mixedEnglish": [
-        "The factory repeatedly violated the safety rules during the major construction project.",
-        "The company failed to follow the official environmental regulations.",
-        "Government inspectors quickly discovered the harmful chemicals released into the river."
+        "The factory violated the environmental regulations by dumping waste into the river at night.",
+        "Inspectors found toxic chemicals downstream the next morning.",
+        "The authorities imposed a heavy fine after reviewing the evidence."
       ],
       "contextClues": [
         {
-          "text": "failed to follow the official environmental regulations",
-          "type": "cause"
+          "text": "toxic chemicals downstream",
+          "type": "evidence"
         },
         {
-          "text": "harmful chemicals released into the river",
-          "type": "result"
+          "text": "imposed a heavy fine",
+          "type": "consequence"
         }
       ],
       "inferencePath": [
-        "failed to follow the official environmental regulations",
-        "harmful chemicals released into the river",
+        "toxic chemicals downstream",
+        "imposed a heavy fine",
         "targetSense: 違反した",
         "violated"
       ],
       "segments": [
         [
           {
-            "en": "The factory repeatedly ",
+            "en": "The factory ",
             "role": "core",
             "useJapanese": false
           },
@@ -1851,43 +1851,43 @@
             "useJapanese": false
           },
           {
-            "en": " the safety rules during the major construction project.",
+            "en": " the environmental regulations by dumping waste into the river at night.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "The company ",
+            "en": "Inspectors found ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "failed to follow the official environmental regulations",
+            "en": "toxic chemicals downstream",
             "role": "clue",
-            "clueType": "cause",
+            "clueType": "evidence",
             "useJapanese": false
           },
           {
-            "en": ".",
+            "en": " the next morning.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "Government inspectors quickly discovered the ",
+            "en": "The authorities ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "harmful chemicals released into the river",
+            "en": "imposed a heavy fine",
             "role": "clue",
-            "clueType": "result",
+            "clueType": "consequence",
             "useJapanese": false
           },
           {
-            "en": ".",
+            "en": " after reviewing the evidence.",
             "role": "core",
             "useJapanese": false
           }
@@ -1900,7 +1900,7 @@
         "延期した"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「failed to follow the official environmental regulations」や「harmful chemicals released into the river」という手がかりから、工場が公式の環境規則を守らなかったために有害な化学物質が川に放出され、規則に背いたことがわかります。そのため、violatedは「違反した」だと推測できます。",
+      "inferenceExplanation": "「toxic chemicals downstream」は工場の行為が環境に害を与えた証拠であり、「imposed a heavy fine」は規則に背いたことへの処分を示しています。したがって、violated は「違反した」を表します。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -2214,35 +2214,40 @@
       "pos": "adverb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "Please reserve a ticket beforehand because the popular hall fills very quickly.",
-        "You should secure your admission early to avoid standing in long lines later.",
-        "Doing this will ensure you get a good seat for the performance."
+        "Please reserve a seat beforehand because only fifty people can enter the hall.",
+        "By noon on performance days, every ticket is usually gone.",
+        "People who wait until they reach the door often cannot get inside."
       ],
       "mixedEnglish": [
-        "Please reserve a ticket beforehand because the popular hall fills very quickly.",
-        "You should secure your admission early to avoid standing in long lines later.",
-        "Doing this will ensure you get a good seat for the performance."
+        "Please reserve a seat beforehand because only fifty people can enter the hall.",
+        "By noon on performance days, every ticket is usually gone.",
+        "People who wait until they reach the door often cannot get inside."
       ],
       "contextClues": [
         {
-          "text": "avoid standing in long lines",
-          "type": "action"
+          "text": "every ticket is usually gone",
+          "type": "result"
         },
         {
-          "text": "popular hall fills very quickly",
-          "type": "reason"
+          "text": "wait until they reach the door",
+          "type": "contrast"
+        },
+        {
+          "text": "cannot get inside",
+          "type": "consequence"
         }
       ],
       "inferencePath": [
-        "avoid standing in long lines",
-        "popular hall fills very quickly",
+        "every ticket is usually gone",
+        "wait until they reach the door",
+        "cannot get inside",
         "targetSense: 前もって",
         "beforehand"
       ],
       "segments": [
         [
           {
-            "en": "Please reserve a ticket ",
+            "en": "Please reserve a seat ",
             "role": "core",
             "useJapanese": false
           },
@@ -2252,14 +2257,21 @@
             "useJapanese": false
           },
           {
-            "en": " because the ",
+            "en": " because only fifty people can enter the hall.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "By noon on performance days, ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "popular hall fills very quickly",
+            "en": "every ticket is usually gone",
             "role": "clue",
-            "clueType": "reason",
+            "clueType": "result",
             "useJapanese": false
           },
           {
@@ -2270,25 +2282,29 @@
         ],
         [
           {
-            "en": "You should secure your admission early to ",
+            "en": "People who ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "avoid standing in long lines",
+            "en": "wait until they reach the door",
             "role": "clue",
-            "clueType": "action",
+            "clueType": "contrast",
             "useJapanese": false
           },
           {
-            "en": " later.",
+            "en": " often ",
             "role": "core",
             "useJapanese": false
-          }
-        ],
-        [
+          },
           {
-            "en": "Doing this will ensure you get a good seat for the performance.",
+            "en": "cannot get inside",
+            "role": "clue",
+            "clueType": "consequence",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -2301,10 +2317,10 @@
         "徐々に"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「avoid standing in long lines」や「popular hall fills very quickly」という手がかりから、長い行列を避けるために事前の手配が必要であることがわかります。そのため、beforehandは「前もって」だと推測できます。",
+      "inferenceExplanation": "「every ticket is usually gone」、「wait until they reach the door」、「cannot get inside」が手がかりです。予定より前に準備する必要があるため、beforehandは「前もって」だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -2527,27 +2543,27 @@
       "level": "EIKEN Grade 2",
       "fullEnglish": [
         "Students were asked to memorize the poem for next week's class.",
-        "They need to recite every single line correctly from memory.",
-        "The teacher checked their progress during the afternoon session."
+        "During the test, their books would remain closed.",
+        "Each student had to reproduce every line in the correct order."
       ],
       "mixedEnglish": [
         "Students were asked to memorize the poem for next week's class.",
-        "They need to recite every single line correctly from memory.",
-        "The teacher checked their progress during the afternoon session."
+        "During the test, their books would remain closed.",
+        "Each student had to reproduce every line in the correct order."
       ],
       "contextClues": [
         {
-          "text": "recite every single line",
-          "type": "behavior"
+          "text": "their books would remain closed",
+          "type": "condition"
         },
         {
-          "text": "from memory",
-          "type": "cause"
+          "text": "reproduce every line in the correct order",
+          "type": "required_behavior"
         }
       ],
       "inferencePath": [
-        "recite every single line",
-        "from memory",
+        "their books would remain closed",
+        "reproduce every line in the correct order",
         "targetSense: 暗記する",
         "memorize"
       ],
@@ -2571,25 +2587,14 @@
         ],
         [
           {
-            "en": "They need to ",
+            "en": "During the test, ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "recite every single line",
+            "en": "their books would remain closed",
             "role": "clue",
-            "clueType": "behavior",
-            "useJapanese": false
-          },
-          {
-            "en": " correctly ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "from memory",
-            "role": "clue",
-            "clueType": "cause",
+            "clueType": "condition",
             "useJapanese": false
           },
           {
@@ -2600,7 +2605,18 @@
         ],
         [
           {
-            "en": "The teacher checked their progress during the afternoon session.",
+            "en": "Each student had to ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "reproduce every line in the correct order",
+            "role": "clue",
+            "clueType": "required_behavior",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -2608,12 +2624,12 @@
       ],
       "choices": [
         "暗記する",
+        "要約する",
         "翻訳する",
-        "作曲する",
-        "朗読する"
+        "印刷する"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「recite every single line」や「from memory」という文脈から、詩のすべての行を頭に入れる必要があることが読み取れます。そのため、memorizeは「暗記する」だと推測できます。",
+      "inferenceExplanation": "「their books would remain closed」という条件で、「reproduce every line in the correct order」する必要があるため、詩の全文を頭に入れておくことが求められています。したがって、memorize は「暗記する」を表します。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -2634,27 +2650,32 @@
       "level": "EIKEN Grade 2",
       "fullEnglish": [
         "We intend to finish the community garden before summer begins.",
-        "All the volunteers are working hard every weekend.",
-        "Our main goal is to create a green space for everyone."
+        "The completion date is written into our project plan, and each volunteer has accepted a weekly task.",
+        "Even if donations decrease, the group has decided to continue until the work is done."
       ],
       "mixedEnglish": [
         "We intend to finish the community garden before summer begins.",
-        "All the volunteers are working hard every weekend.",
-        "Our main goal is to create a green space for everyone."
+        "The completion date is written into our project plan, and each volunteer has accepted a weekly task.",
+        "Even if donations decrease, the group has decided to continue until the work is done."
       ],
       "contextClues": [
         {
-          "text": "working hard",
-          "type": "behavior"
+          "text": "written into our project plan",
+          "type": "planning_evidence"
         },
         {
-          "text": "main goal",
-          "type": "cause"
+          "text": "each volunteer has accepted a weekly task",
+          "type": "commitment_evidence"
+        },
+        {
+          "text": "decided to continue until the work is done",
+          "type": "decision"
         }
       ],
       "inferencePath": [
-        "working hard",
-        "main goal",
+        "written into our project plan",
+        "each volunteer has accepted a weekly task",
+        "decided to continue until the work is done",
         "targetSense: 意図する",
         "intend"
       ],
@@ -2678,36 +2699,47 @@
         ],
         [
           {
-            "en": "All the volunteers are ",
+            "en": "The completion date is ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "working hard",
+            "en": "written into our project plan",
             "role": "clue",
-            "clueType": "behavior",
+            "clueType": "planning_evidence",
             "useJapanese": false
           },
           {
-            "en": " every weekend.",
+            "en": ", and ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "each volunteer has accepted a weekly task",
+            "role": "clue",
+            "clueType": "commitment_evidence",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "Our ",
+            "en": "Even if donations decrease, the group has ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "main goal",
+            "en": "decided to continue until the work is done",
             "role": "clue",
-            "clueType": "cause",
+            "clueType": "decision",
             "useJapanese": false
           },
           {
-            "en": " is to create a green space for everyone.",
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -2720,10 +2752,10 @@
         "提案する"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「working hard」や「main goal」という文脈から、夏が来る前に庭の完成を計画していることが読み取れます。そのため、intendは「意図する」だと推測できます。",
+      "inferenceExplanation": "「written into our project plan」と「each volunteer has accepted a weekly task」から、単なる期待ではなく具体的に実行を計画していると分かります。さらに「decided to continue until the work is done」は完了まで続ける決定を示すため、intend は「意図する」を表します。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -4895,26 +4927,33 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "She spent the weekend organizing old photographs with her mother.",
-        "They had gathered many boxes from the attic and sorted them carefully."
+        "She spent most of her savings on a new camera for her photography course.",
+        "Only a few coins remained in her account afterward.",
+        "She postponed buying a bicycle until she could earn more money."
       ],
       "mixedEnglish": [
-        "She spent the weekend organizing old photographs with her mother.",
-        "They had gathered many boxes from the attic and sorted them carefully."
+        "She spent most of her savings on a new camera for her photography course.",
+        "Only a few coins remained in her account afterward.",
+        "She postponed buying a bicycle until she could earn more money."
       ],
       "contextClues": [
         {
-          "text": "organizing old photographs",
-          "type": "activity"
+          "text": "Only a few coins remained in her account",
+          "type": "result"
         },
         {
-          "text": "with her mother",
-          "type": "companion"
+          "text": "postponed buying a bicycle",
+          "type": "consequence"
+        },
+        {
+          "text": "earn more money",
+          "type": "recovery_action"
         }
       ],
       "inferencePath": [
-        "organizing old photographs",
-        "with her mother",
+        "Only a few coins remained in her account",
+        "postponed buying a bicycle",
+        "earn more money",
         "targetSense: 使った",
         "spent"
       ],
@@ -4931,25 +4970,45 @@
             "useJapanese": false
           },
           {
-            "en": " the weekend ",
+            "en": " most of her savings on a new camera for her photography course.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Only a few coins remained in her account",
+            "role": "clue",
+            "clueType": "result",
+            "useJapanese": false
+          },
+          {
+            "en": " afterward.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "She ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "organizing old photographs",
+            "en": "postponed buying a bicycle",
             "role": "clue",
-            "clueType": "activity",
+            "clueType": "consequence",
             "useJapanese": false
           },
           {
-            "en": " ",
+            "en": " until she could ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "with her mother",
+            "en": "earn more money",
             "role": "clue",
-            "clueType": "companion",
+            "clueType": "recovery_action",
             "useJapanese": false
           },
           {
@@ -4957,26 +5016,19 @@
             "role": "core",
             "useJapanese": false
           }
-        ],
-        [
-          {
-            "en": "They had gathered many boxes from the attic and sorted them carefully.",
-            "role": "core",
-            "useJapanese": false
-          }
         ]
       ],
       "choices": [
         "使った",
-        "壊した",
-        "隠した",
-        "見つけた"
+        "貯めた",
+        "借りた",
+        "失くした"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「organizing old photographs」や「with her mother」といった手がかりから、休日を母親と一緒に古い写真の整理に充てていた場面がわかります。そのため、spentは「使った」だと推測できます。",
+      "inferenceExplanation": "「Only a few coins remained in her account」から貯金の大部分が減ったと分かり、「postponed buying a bicycle」と「earn more money」から、カメラのためにお金を支出した結果だと判断できます。したがって、spent は「使った」を表します。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -4993,76 +5045,97 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "Having spent all his savings on the broken car, he could not afford a new bicycle.",
-        "His empty wallet made him realize his poor financial decisions.",
-        "He needed to save money carefully for the next few months."
+        "He regretted having spent the entire travel fund on an expensive watch.",
+        "His friends left for Paris while he stayed home with an empty bank account.",
+        "He later sold the watch and began rebuilding the fund."
       ],
       "mixedEnglish": [
-        "Having spent all his savings on the broken car, he could not afford a new bicycle.",
-        "His empty wallet made him realize his poor financial decisions.",
-        "He needed to save money carefully for the next few months."
+        "He regretted having spent the entire travel fund on an expensive watch.",
+        "His friends left for Paris while he stayed home with an empty bank account.",
+        "He later sold the watch and began rebuilding the fund."
       ],
       "contextClues": [
         {
-          "text": "empty wallet",
-          "type": "result"
+          "text": "stayed home with an empty bank account",
+          "type": "consequence"
         },
         {
-          "text": "save money carefully",
-          "type": "behavior"
+          "text": "sold the watch",
+          "type": "corrective_action"
+        },
+        {
+          "text": "began rebuilding the fund",
+          "type": "recovery_action"
         }
       ],
       "inferencePath": [
-        "empty wallet",
-        "save money carefully",
+        "stayed home with an empty bank account",
+        "sold the watch",
+        "began rebuilding the fund",
         "targetSense: 使ったこと",
         "having spent"
       ],
       "segments": [
         [
           {
-            "en": "Having spent",
+            "en": "He regretted ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "having spent",
             "role": "target",
             "useJapanese": false
           },
           {
-            "en": " all his savings on the broken car, he could not afford a new bicycle.",
+            "en": " the entire travel fund on an expensive watch.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "His ",
+            "en": "His friends left for Paris while he ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "empty wallet",
+            "en": "stayed home with an empty bank account",
             "role": "clue",
-            "clueType": "result",
+            "clueType": "consequence",
             "useJapanese": false
           },
           {
-            "en": " made him realize his poor financial decisions.",
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "He needed to ",
+            "en": "He later ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "save money carefully",
+            "en": "sold the watch",
             "role": "clue",
-            "clueType": "behavior",
+            "clueType": "corrective_action",
             "useJapanese": false
           },
           {
-            "en": " for the next few months.",
+            "en": " and ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "began rebuilding the fund",
+            "role": "clue",
+            "clueType": "recovery_action",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -5075,10 +5148,10 @@
         "終わらせたこと"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「empty wallet」という結果や、「save money carefully」という行動の手掛かりから、貯金をすべて車につぎ込んでしまった過去の行為が示されています。そのため、having spentは「使ったこと」だと推測できます。",
+      "inferenceExplanation": "「stayed home with an empty bank account」は旅行資金がなくなった結果を示し、「sold the watch」と「began rebuilding the fund」はその行為を後悔して立て直そうとする様子を示しています。したがって、having spent は「使ったこと」を表します。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -5761,39 +5834,40 @@
       "pos": "adjective phrase",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The train bound for Osaka leaves from platform three.",
-        "Passengers should check their tickets before getting on."
+        "The train bound for Osaka leaves from platform three at nine o'clock.",
+        "Osaka is its final destination, and all passengers must get off there.",
+        "The station board lists Kyoto and Kobe as stops along the route."
       ],
       "mixedEnglish": [
-        "The train bound for Osaka leaves from platform three.",
-        "Passengers should check their tickets before getting on."
+        "The train bound for Osaka leaves from platform three at nine o'clock.",
+        "Osaka is its final destination, and all passengers must get off there.",
+        "The station board lists Kyoto and Kobe as stops along the route."
       ],
       "contextClues": [
         {
-          "text": "The train",
-          "type": "subject"
+          "text": "Osaka is its final destination",
+          "type": "destination"
         },
         {
-          "text": "leaves from platform three",
-          "type": "action"
+          "text": "all passengers must get off there",
+          "type": "terminal_action"
+        },
+        {
+          "text": "Kyoto and Kobe as stops along the route",
+          "type": "route_contrast"
         }
       ],
       "inferencePath": [
-        "The train",
-        "leaves from platform three",
+        "Osaka is its final destination",
+        "all passengers must get off there",
+        "Kyoto and Kobe as stops along the route",
         "targetSense: 〜行きの",
         "bound for"
       ],
       "segments": [
         [
           {
-            "en": "The train",
-            "role": "clue",
-            "clueType": "subject",
-            "useJapanese": false
-          },
-          {
-            "en": " ",
+            "en": "The train ",
             "role": "core",
             "useJapanese": false
           },
@@ -5803,14 +5877,27 @@
             "useJapanese": false
           },
           {
-            "en": " Osaka ",
+            "en": " Osaka leaves from platform three at nine o'clock.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Osaka is its final destination",
+            "role": "clue",
+            "clueType": "destination",
+            "useJapanese": false
+          },
+          {
+            "en": ", and ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "leaves from platform three",
+            "en": "all passengers must get off there",
             "role": "clue",
-            "clueType": "action",
+            "clueType": "terminal_action",
             "useJapanese": false
           },
           {
@@ -5821,7 +5908,18 @@
         ],
         [
           {
-            "en": "Passengers should check their tickets before getting on.",
+            "en": "The station board lists ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "Kyoto and Kobe as stops along the route",
+            "role": "clue",
+            "clueType": "route_contrast",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -5834,10 +5932,10 @@
         "〜で止まる"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「The train」が「leaves from platform three」から出発することから、列車が向かう方向を示していることが分かります。そのため、bound forは「〜行きの」だと推測できます。",
+      "inferenceExplanation": "「Osaka is its final destination」と「all passengers must get off there」から、大阪が単なる停車駅ではなく終着地だと分かります。また、「Kyoto and Kobe as stops along the route」と対比されているため、bound for は「〜行きの」を表します。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -5968,39 +6066,40 @@
       "pos": "adjective phrase",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The students were engaged in a lively discussion about the novel.",
-        "Everyone shared their opinions with great enthusiasm."
+        "The researchers were engaged in a five-year study of coastal wildlife.",
+        "They collected field data every morning and analyzed samples in the laboratory each afternoon.",
+        "The project occupied nearly all of their working hours."
       ],
       "mixedEnglish": [
-        "The students were engaged in a lively discussion about the novel.",
-        "Everyone shared their opinions with great enthusiasm."
+        "The researchers were engaged in a five-year study of coastal wildlife.",
+        "They collected field data every morning and analyzed samples in the laboratory each afternoon.",
+        "The project occupied nearly all of their working hours."
       ],
       "contextClues": [
         {
-          "text": "The students",
-          "type": "subject"
+          "text": "collected field data every morning",
+          "type": "work_activity"
         },
         {
-          "text": "a lively discussion",
-          "type": "object"
+          "text": "analyzed samples in the laboratory each afternoon",
+          "type": "work_activity"
+        },
+        {
+          "text": "occupied nearly all of their working hours",
+          "type": "duration"
         }
       ],
       "inferencePath": [
-        "The students",
-        "a lively discussion",
+        "collected field data every morning",
+        "analyzed samples in the laboratory each afternoon",
+        "occupied nearly all of their working hours",
         "targetSense: 〜に従事して",
         "engaged in"
       ],
       "segments": [
         [
           {
-            "en": "The students",
-            "role": "clue",
-            "clueType": "subject",
-            "useJapanese": false
-          },
-          {
-            "en": " were ",
+            "en": "The researchers were ",
             "role": "core",
             "useJapanese": false
           },
@@ -6010,25 +6109,54 @@
             "useJapanese": false
           },
           {
-            "en": " ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "a lively discussion",
-            "role": "clue",
-            "clueType": "object",
-            "useJapanese": false
-          },
-          {
-            "en": " about the novel.",
+            "en": " a five-year study of coastal wildlife.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "Everyone shared their opinions with great enthusiasm.",
+            "en": "They ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "collected field data every morning",
+            "role": "clue",
+            "clueType": "work_activity",
+            "useJapanese": false
+          },
+          {
+            "en": " and ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "analyzed samples in the laboratory each afternoon",
+            "role": "clue",
+            "clueType": "work_activity",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The project ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "occupied nearly all of their working hours",
+            "role": "clue",
+            "clueType": "duration",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -6041,10 +6169,10 @@
         "〜を観察して"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「The students」が「a lively discussion」を行っている状況から、何かに熱心に参加していることが分かります。そのため、engaged inは「〜に従事して」だと推測できます。",
+      "inferenceExplanation": "「collected field data every morning」と「analyzed samples in the laboratory each afternoon」は継続的な研究活動を示しています。さらに「occupied nearly all of their working hours」から仕事として深く取り組んでいたと分かるため、engaged in は「〜に従事して」を表します。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -7753,44 +7881,51 @@
       "q": 20,
       "type": "idiom",
       "target": "would not have",
-      "meaning": "持っていなかっただろう",
-      "targetSense": "持っていなかっただろう",
+      "meaning": "〜しなかっただろう",
+      "targetSense": "〜しなかっただろう",
       "pos": "助動詞句",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "If I had remembered my umbrella this morning, I would not have this cold rain soaking through my clothes right now.",
-        "My forgetfulness left me completely unprepared for the sudden storm."
+        "Without the map, we would not have found the mountain cabin before dark.",
+        "The trail signs had disappeared under the snow.",
+        "The marked route guided us safely to the door."
       ],
       "mixedEnglish": [
-        "If I had remembered my umbrella this morning, I would not have this cold rain soaking through my clothes right now.",
-        "My forgetfulness left me completely unprepared for the sudden storm."
+        "Without the map, we would not have found the mountain cabin before dark.",
+        "The trail signs had disappeared under the snow.",
+        "The marked route guided us safely to the door."
       ],
       "contextClues": [
         {
-          "text": "If I had remembered my umbrella this morning",
-          "type": "cause"
+          "text": "Without the map",
+          "type": "condition"
         },
         {
-          "text": "My forgetfulness left me completely unprepared",
+          "text": "trail signs had disappeared",
+          "type": "difficulty"
+        },
+        {
+          "text": "guided us safely to the door",
           "type": "result"
         }
       ],
       "inferencePath": [
-        "If I had remembered my umbrella this morning",
-        "My forgetfulness left me completely unprepared",
-        "targetSense: 持っていなかっただろう",
+        "Without the map",
+        "trail signs had disappeared",
+        "guided us safely to the door",
+        "targetSense: 〜しなかっただろう",
         "would not have"
       ],
       "segments": [
         [
           {
-            "en": "If I had remembered my umbrella this morning",
+            "en": "Without the map",
             "role": "clue",
-            "clueType": "cause",
+            "clueType": "condition",
             "useJapanese": false
           },
           {
-            "en": ", I ",
+            "en": ", we ",
             "role": "core",
             "useJapanese": false
           },
@@ -7800,36 +7935,59 @@
             "useJapanese": false
           },
           {
-            "en": " this cold rain soaking through my clothes right now.",
+            "en": " found the mountain cabin before dark.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "My forgetfulness left me completely unprepared",
+            "en": "The ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "trail signs had disappeared",
+            "role": "clue",
+            "clueType": "difficulty",
+            "useJapanese": false
+          },
+          {
+            "en": " under the snow.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The marked route ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "guided us safely to the door",
             "role": "clue",
             "clueType": "result",
             "useJapanese": false
           },
           {
-            "en": " for the sudden storm.",
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
         ]
       ],
       "choices": [
-        "持っていなかっただろう",
-        "知らなかっただろう",
-        "行かなかっただろう",
-        "言わなかっただろう"
+        "〜しなかっただろう",
+        "〜する必要はない",
+        "〜してはいけない",
+        "〜するはずだ"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「If I had remembered my umbrella this morning」と「My forgetfulness left me completely unprepared」という手がかりから、傘を持参しなかったために雨に濡れる事態を招いたことがわかります。そのため、would not haveは「持っていなかっただろう」だと推測できます。",
+      "inferenceExplanation": "「Without the map」「trail signs had disappeared」「guided us safely to the door」が手がかりです。地図がなければ小屋を見つけられなかったという仮定なので、would not haveは「〜しなかっただろう」だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },

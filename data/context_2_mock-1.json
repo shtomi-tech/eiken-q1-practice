@@ -4,7 +4,7 @@
     "grade": "EIKEN Grade 2",
     "source": "Reviewed mini-contexts for lexical inferencing",
     "version": 1,
-    "count": 75
+    "count": 80
   },
   "contexts": [
     {
@@ -1793,6 +1793,101 @@
       }
     },
     {
+      "q": 5,
+      "type": "word",
+      "target": "implying",
+      "meaning": "ほのめかす、暗示する",
+      "targetSense": "ほのめかす",
+      "pos": "verb",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "Are you implying that the manager knew about the error before the meeting?",
+        "You lowered your voice and glanced toward his office instead of making a direct accusation."
+      ],
+      "mixedEnglish": [
+        "Are you implying that the manager knew about the error before the meeting?",
+        "You lowered your voice and glanced toward his office instead of making a direct accusation."
+      ],
+      "contextClues": [
+        {
+          "text": "lowered your voice",
+          "type": "manner"
+        },
+        {
+          "text": "instead of making a direct accusation",
+          "type": "contrast"
+        }
+      ],
+      "inferencePath": [
+        "lowered your voice",
+        "instead of making a direct accusation",
+        "targetSense: ほのめかす",
+        "implying"
+      ],
+      "segments": [
+        [
+          {
+            "en": "Are you ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "implying",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " that the manager knew about the error before the meeting?",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "You ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "lowered your voice",
+            "role": "clue",
+            "clueType": "manner",
+            "useJapanese": false
+          },
+          {
+            "en": " and glanced toward his office ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "instead of making a direct accusation",
+            "role": "clue",
+            "clueType": "contrast",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "ほのめかす",
+        "否定する",
+        "謝罪する",
+        "確認する"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「lowered your voice」から慎重に話している様子が読み取れ、「instead of making a direct accusation」から直接言い切ってはいないと分かります。したがって、ここでの implying は「ほのめかす」という意味です。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 2,
+        "targetProtected": true,
+        "cluesProtected": true
+      }
+    },
+    {
       "q": 6,
       "type": "word",
       "target": "identity",
@@ -2581,6 +2676,101 @@
     {
       "q": 8,
       "type": "word",
+      "target": "instrument",
+      "meaning": "器具、楽器",
+      "targetSense": "楽器",
+      "pos": "noun",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "The museum displays an instrument from the nineteenth century in a glass case.",
+        "During special tours, visitors hear its deep tone while a curator carefully draws a bow across its strings."
+      ],
+      "mixedEnglish": [
+        "The museum displays an instrument from the nineteenth century in a glass case.",
+        "During special tours, visitors hear its deep tone while a curator carefully draws a bow across its strings."
+      ],
+      "contextClues": [
+        {
+          "text": "visitors hear its deep tone",
+          "type": "result"
+        },
+        {
+          "text": "draws a bow across its strings",
+          "type": "behavior"
+        }
+      ],
+      "inferencePath": [
+        "visitors hear its deep tone",
+        "draws a bow across its strings",
+        "targetSense: 楽器",
+        "instrument"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The museum displays an ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "instrument",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " from the nineteenth century in a glass case.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "During special tours, ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "visitors hear its deep tone",
+            "role": "clue",
+            "clueType": "result",
+            "useJapanese": false
+          },
+          {
+            "en": " while a curator carefully ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "draws a bow across its strings",
+            "role": "clue",
+            "clueType": "behavior",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "楽器",
+        "家具",
+        "衣装",
+        "食器"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「visitors hear its deep tone」から音を出す品だと分かり、「draws a bow across its strings」から弦と弓を使う様子も読み取れます。したがって、ここでの instrument は「楽器」という意味です。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 2,
+        "targetProtected": true,
+        "cluesProtected": true
+      }
+    },
+    {
+      "q": 8,
+      "type": "word",
       "target": "achievement",
       "meaning": "業績、達成",
       "targetSense": "業績",
@@ -3063,6 +3253,101 @@
       ],
       "answerIndex": 0,
       "inferenceExplanation": "文脈の中で「the difficult problem」を解決するために「found a practical solution」という行動をとっていることから、生徒の優れた能力が示されています。そのため、intelligentは「賢い」だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 2,
+        "targetProtected": true,
+        "cluesProtected": true
+      }
+    },
+    {
+      "q": 9,
+      "type": "word",
+      "target": "various",
+      "meaning": "さまざまな",
+      "targetSense": "さまざまな",
+      "pos": "adjective",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "The library provides various materials for students working on research projects.",
+        "One shelf contains maps, biographies, and science journals, while another offers newspapers from several countries."
+      ],
+      "mixedEnglish": [
+        "The library provides various materials for students working on research projects.",
+        "One shelf contains maps, biographies, and science journals, while another offers newspapers from several countries."
+      ],
+      "contextClues": [
+        {
+          "text": "maps, biographies, and science journals",
+          "type": "example"
+        },
+        {
+          "text": "newspapers from several countries",
+          "type": "range"
+        }
+      ],
+      "inferencePath": [
+        "maps, biographies, and science journals",
+        "newspapers from several countries",
+        "targetSense: さまざまな",
+        "various"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The library provides ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "various",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " materials for students working on research projects.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "One shelf contains ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "maps, biographies, and science journals",
+            "role": "clue",
+            "clueType": "example",
+            "useJapanese": false
+          },
+          {
+            "en": ", while another offers ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "newspapers from several countries",
+            "role": "clue",
+            "clueType": "range",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "さまざまな",
+        "古い",
+        "高価な",
+        "重い"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「maps, biographies, and science journals」には種類の異なる資料が並び、「newspapers from several countries」からも内容や出所に幅があると分かります。したがって、ここでの various は「さまざまな」という意味です。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -4275,6 +4560,232 @@
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
+        "targetProtected": true,
+        "cluesProtected": true
+      }
+    },
+    {
+      "q": 13,
+      "type": "word",
+      "target": "have",
+      "meaning": "持っている、〜する",
+      "targetSense": "持っている",
+      "pos": "verb",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "I bought a reliable laptop with my own savings last year.",
+        "The receipt has my name on it, and no one else uses the computer.",
+        "I have it on my desk whenever I write reports at home."
+      ],
+      "mixedEnglish": [
+        "I bought a reliable laptop with my own savings last year.",
+        "The receipt has my name on it, and no one else uses the computer.",
+        "I have it on my desk whenever I write reports at home."
+      ],
+      "contextClues": [
+        {
+          "text": "bought a reliable laptop with my own savings",
+          "type": "cause"
+        },
+        {
+          "text": "receipt has my name on it",
+          "type": "evidence"
+        },
+        {
+          "text": "no one else uses the computer",
+          "type": "contrast"
+        }
+      ],
+      "inferencePath": [
+        "bought a reliable laptop with my own savings",
+        "receipt has my name on it",
+        "no one else uses the computer",
+        "targetSense: 持っている",
+        "have"
+      ],
+      "segments": [
+        [
+          {
+            "en": "I ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "bought a reliable laptop with my own savings",
+            "role": "clue",
+            "clueType": "cause",
+            "useJapanese": false
+          },
+          {
+            "en": " last year.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "receipt has my name on it",
+            "role": "clue",
+            "clueType": "evidence",
+            "useJapanese": false
+          },
+          {
+            "en": ", and ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "no one else uses the computer",
+            "role": "clue",
+            "clueType": "contrast",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "I ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "have",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " it on my desk whenever I write reports at home.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "持っている",
+        "借りている",
+        "修理している",
+        "探している"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「bought a reliable laptop with my own savings」「receipt has my name on it」「no one else uses the computer」が手がかりです。自分で購入し所有者であることが分かるため、haveは「持っている」だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 3,
+        "targetProtected": true,
+        "cluesProtected": true
+      }
+    },
+    {
+      "q": 13,
+      "type": "word",
+      "target": "had",
+      "meaning": "持っていた、〜した",
+      "targetSense": "持っていた",
+      "pos": "verb",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "She had an old map in her backpack while exploring the mountain.",
+        "She unfolded it at every fork, and it led her safely back to the main trail."
+      ],
+      "mixedEnglish": [
+        "She had an old map in her backpack while exploring the mountain.",
+        "She unfolded it at every fork, and it led her safely back to the main trail."
+      ],
+      "contextClues": [
+        {
+          "text": "in her backpack",
+          "type": "location"
+        },
+        {
+          "text": "She unfolded it at every fork",
+          "type": "behavior"
+        },
+        {
+          "text": "led her safely back to the main trail",
+          "type": "result"
+        }
+      ],
+      "inferencePath": [
+        "in her backpack",
+        "She unfolded it at every fork",
+        "led her safely back to the main trail",
+        "targetSense: 持っていた",
+        "had"
+      ],
+      "segments": [
+        [
+          {
+            "en": "She ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "had",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " an old map ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "in her backpack",
+            "role": "clue",
+            "clueType": "location",
+            "useJapanese": false
+          },
+          {
+            "en": " while exploring the mountain.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "She unfolded it at every fork",
+            "role": "clue",
+            "clueType": "behavior",
+            "useJapanese": false
+          },
+          {
+            "en": ", and it ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "led her safely back to the main trail",
+            "role": "clue",
+            "clueType": "result",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "持っていた",
+        "なくしていた",
+        "描いていた",
+        "売っていた"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「in her backpack」から地図が彼女の手元にあり、「She unfolded it at every fork」から必要な場所で実際に使っていたと分かります。さらに「led her safely back to the main trail」という結果もあるため、ここでの had は「持っていた」という意味です。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       }

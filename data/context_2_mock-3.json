@@ -4,7 +4,7 @@
     "grade": "EIKEN Grade 2",
     "source": "Reviewed mini-contexts for lexical inferencing",
     "version": 1,
-    "count": 79
+    "count": 80
   },
   "contexts": [
     {
@@ -99,6 +99,110 @@
       ],
       "answerIndex": 0,
       "inferenceExplanation": "文脈の中で「His face turned completely red」や「hide under his desk」という描写から、生徒が非常に居心地の悪い状況に置かれたことがわかります。そのため、embarrassedは「恥ずかしい思いをさせた」だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 2,
+        "targetProtected": true,
+        "cluesProtected": true
+      }
+    },
+    {
+      "q": 1,
+      "type": "word",
+      "target": "thanked",
+      "meaning": "感謝した",
+      "targetSense": "感謝した",
+      "pos": "verb",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "The visitors thanked the guide after the long tour of the museum.",
+        "As they prepared to leave, they smiled warmly and shook hands with her.",
+        "One visitor said that her detailed explanations had made the history easy to understand."
+      ],
+      "mixedEnglish": [
+        "The visitors thanked the guide after the long tour of the museum.",
+        "As they prepared to leave, they smiled warmly and shook hands with her.",
+        "One visitor said that her detailed explanations had made the history easy to understand."
+      ],
+      "contextClues": [
+        {
+          "text": "smiled warmly and shook hands with her",
+          "type": "gesture"
+        },
+        {
+          "text": "her detailed explanations had made the history easy to understand",
+          "type": "positive result"
+        }
+      ],
+      "inferencePath": [
+        "smiled warmly and shook hands with her",
+        "her detailed explanations had made the history easy to understand",
+        "targetSense: 感謝した",
+        "thanked"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The visitors ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "thanked",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " the guide after the long tour of the museum.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "As they prepared to leave, they ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "smiled warmly and shook hands with her",
+            "role": "clue",
+            "clueType": "gesture",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "One visitor said that ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "her detailed explanations had made the history easy to understand",
+            "role": "clue",
+            "clueType": "positive result",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "感謝した",
+        "批判した",
+        "無視した",
+        "質問した"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「smiled warmly and shook hands with her」という好意的な身ぶりから、訪問者たちがガイドに敬意を示していることが読み取れます。また、「her detailed explanations had made the history easy to understand」から、ガイドの説明が役に立ったと感じていたこともわかるため、targetSenseは「感謝した」と判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,

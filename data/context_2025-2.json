@@ -4,7 +4,7 @@
     "grade": "EIKEN Grade 2",
     "source": "Reviewed mini-contexts for lexical inferencing",
     "version": 1,
-    "count": 57
+    "count": 67
   },
   "contexts": [
     {
@@ -2065,6 +2065,101 @@
     {
       "q": 6,
       "type": "word",
+      "target": "consistent",
+      "meaning": "一貫した、矛盾のない",
+      "targetSense": "一貫した",
+      "pos": "adjective",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "Maya's performance remained consistent throughout the season.",
+        "She scored at least two goals in nearly every match and never had a bad game."
+      ],
+      "mixedEnglish": [
+        "Maya's performance remained consistent throughout the season.",
+        "She scored at least two goals in nearly every match and never had a bad game."
+      ],
+      "contextClues": [
+        {
+          "text": "throughout the season",
+          "type": "time"
+        },
+        {
+          "text": "never had a bad game",
+          "type": "result"
+        }
+      ],
+      "inferencePath": [
+        "throughout the season",
+        "never had a bad game",
+        "targetSense: 一貫した",
+        "consistent"
+      ],
+      "segments": [
+        [
+          {
+            "en": "Maya's performance remained ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "consistent",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "throughout the season",
+            "role": "clue",
+            "clueType": "time",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "She scored at least two goals in nearly every match and ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "never had a bad game",
+            "role": "clue",
+            "clueType": "result",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "一貫した",
+        "熱心な",
+        "寛大な",
+        "厳格な"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「throughout the season」から長い期間について述べていることがわかり、「never had a bad game」から好調な状態が崩れなかったと判断できます。したがって、consistent は「一貫した」という意味だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 2,
+        "targetProtected": true,
+        "cluesProtected": true
+      }
+    },
+    {
+      "q": 6,
+      "type": "word",
       "target": "recent",
       "meaning": "最近の",
       "targetSense": "最近の",
@@ -2836,6 +2931,96 @@
       ],
       "answerIndex": 0,
       "inferenceExplanation": "「their honeymoon」や「overlooked the blue ocean」という手掛かりから、新婚旅行で海辺の観光地を訪れたことがわかります。そのため、resortは「行楽地」だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 2,
+        "targetProtected": true,
+        "cluesProtected": true
+      }
+    },
+    {
+      "q": 8,
+      "type": "word",
+      "target": "mixture",
+      "meaning": "混合物、混ぜ合わせたもの",
+      "targetSense": "混合物",
+      "pos": "noun",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "The chef added cinnamon to the mixture before placing it in the oven.",
+        "Flour, eggs, milk, and sugar were already together in the large bowl."
+      ],
+      "mixedEnglish": [
+        "The chef added cinnamon to the mixture before placing it in the oven.",
+        "Flour, eggs, milk, and sugar were already together in the large bowl."
+      ],
+      "contextClues": [
+        {
+          "text": "placing it in the oven",
+          "type": "action"
+        },
+        {
+          "text": "Flour, eggs, milk, and sugar",
+          "type": "composition"
+        }
+      ],
+      "inferencePath": [
+        "placing it in the oven",
+        "Flour, eggs, milk, and sugar",
+        "targetSense: 混合物",
+        "mixture"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The chef added cinnamon to the ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "mixture",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " before ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "placing it in the oven",
+            "role": "clue",
+            "clueType": "action",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Flour, eggs, milk, and sugar",
+            "role": "clue",
+            "clueType": "composition",
+            "useJapanese": false
+          },
+          {
+            "en": " were already together in the large bowl.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "混合物",
+        "隠し味",
+        "完成品",
+        "調理器具"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「Flour, eggs, milk, and sugar」という複数の材料が大きなボウルに入っており、その後に「placing it in the oven」とあることから、焼く前の材料が一つになったものを指すとわかります。したがって、mixture は「混合物」という意味だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -5213,6 +5398,646 @@
       }
     },
     {
+      "q": 15,
+      "type": "idiom",
+      "target": "turn in",
+      "meaning": "提出する；（口語で）寝る",
+      "targetSense": "提出する",
+      "pos": "phrasal verb",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "Please turn in your homework by Friday morning before class begins.",
+        "The teacher will collect everyone's papers and grade them over the weekend."
+      ],
+      "mixedEnglish": [
+        "Please turn in your homework by Friday morning before class begins.",
+        "The teacher will collect everyone's papers and grade them over the weekend."
+      ],
+      "contextClues": [
+        {
+          "text": "your homework",
+          "type": "object"
+        },
+        {
+          "text": "grade them over the weekend",
+          "type": "result"
+        }
+      ],
+      "inferencePath": [
+        "your homework",
+        "grade them over the weekend",
+        "targetSense: 提出する",
+        "turn in"
+      ],
+      "segments": [
+        [
+          {
+            "en": "Please ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "turn in",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "your homework",
+            "role": "clue",
+            "clueType": "object",
+            "useJapanese": false
+          },
+          {
+            "en": " by Friday morning before class begins.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The teacher will collect everyone's papers and ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "grade them over the weekend",
+            "role": "clue",
+            "clueType": "result",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "提出する",
+        "壊す",
+        "片付ける",
+        "延期する"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "対象が「your homework」であり、先生が後で「grade them over the weekend」とあることから、宿題を先生に渡すよう求めていると考えられます。したがって、turn in は「提出する」という意味だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 2,
+        "targetProtected": true,
+        "cluesProtected": true
+      }
+    },
+    {
+      "q": 15,
+      "type": "idiom",
+      "target": "cut off",
+      "meaning": "切り離す、遮断する",
+      "targetSense": "切り離す",
+      "pos": "phrasal verb",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "The heavy snow cut off the village from the rest of the town.",
+        "No cars could enter or leave the area for several days."
+      ],
+      "mixedEnglish": [
+        "The heavy snow cut off the village from the rest of the town.",
+        "No cars could enter or leave the area for several days."
+      ],
+      "contextClues": [
+        {
+          "text": "The heavy snow",
+          "type": "cause"
+        },
+        {
+          "text": "No cars could enter or leave",
+          "type": "result"
+        }
+      ],
+      "inferencePath": [
+        "The heavy snow",
+        "No cars could enter or leave",
+        "targetSense: 切り離す",
+        "cut off"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The heavy snow",
+            "role": "clue",
+            "clueType": "cause",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "cut off",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " the village from the rest of the town.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "No cars could enter or leave",
+            "role": "clue",
+            "clueType": "result",
+            "useJapanese": false
+          },
+          {
+            "en": " the area for several days.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "切り離す",
+        "案内する",
+        "取り戻す",
+        "埋める"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「The heavy snow」が原因となり、「No cars could enter or leave」という状態が数日間続いたことから、村と外部との行き来が断たれたと考えられます。したがって、cut off は「切り離す」という意味だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 2,
+        "targetProtected": true,
+        "cluesProtected": true
+      }
+    },
+    {
+      "q": 15,
+      "type": "idiom",
+      "target": "feed on",
+      "meaning": "〜を食べて生きる、〜を常食とする",
+      "targetSense": "〜を食べて生きる",
+      "pos": "phrasal verb",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "Mountain lions hunt deer and small mammals in the forest, and they feed on fresh meat.",
+        "Their sharp teeth help them tear flesh after a successful hunt."
+      ],
+      "mixedEnglish": [
+        "Mountain lions hunt deer and small mammals in the forest, and they feed on fresh meat.",
+        "Their sharp teeth help them tear flesh after a successful hunt."
+      ],
+      "contextClues": [
+        {
+          "text": "hunt deer and small mammals",
+          "type": "behavior"
+        },
+        {
+          "text": "Their sharp teeth",
+          "type": "physical feature"
+        }
+      ],
+      "inferencePath": [
+        "hunt deer and small mammals",
+        "Their sharp teeth",
+        "targetSense: 〜を食べて生きる",
+        "feed on"
+      ],
+      "segments": [
+        [
+          {
+            "en": "Mountain lions ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "hunt deer and small mammals",
+            "role": "clue",
+            "clueType": "behavior",
+            "useJapanese": false
+          },
+          {
+            "en": " in the forest, and they ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "feed on",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " fresh meat.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Their sharp teeth",
+            "role": "clue",
+            "clueType": "physical feature",
+            "useJapanese": false
+          },
+          {
+            "en": " help them tear flesh after a successful hunt.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "〜を食べて生きる",
+        "〜を隠して守る",
+        "〜の世話をする",
+        "〜を恐れて逃げる"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「hunt deer and small mammals」という行動と「Their sharp teeth」という身体的特徴から、マウンテンライオンが捕らえた動物の肉を栄養源にしていると考えられます。したがって、feed on は「〜を食べて生きる」という意味だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 2,
+        "targetProtected": true,
+        "cluesProtected": true
+      }
+    },
+    {
+      "q": 15,
+      "type": "idiom",
+      "target": "hang on",
+      "meaning": "待つ；しがみつく",
+      "targetSense": "待つ",
+      "pos": "phrasal verb",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "Hang on a minute; I'll be right back with my coat.",
+        "The bus was not due for another five minutes, so Anna remained beside the door."
+      ],
+      "mixedEnglish": [
+        "Hang on a minute; I'll be right back with my coat.",
+        "The bus was not due for another five minutes, so Anna remained beside the door."
+      ],
+      "contextClues": [
+        {
+          "text": "I'll be right back",
+          "type": "time"
+        },
+        {
+          "text": "The bus was not due for another five minutes",
+          "type": "situation"
+        }
+      ],
+      "inferencePath": [
+        "I'll be right back",
+        "The bus was not due for another five minutes",
+        "targetSense: 待つ",
+        "hang on"
+      ],
+      "segments": [
+        [
+          {
+            "en": "Hang on",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " a minute; ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "I'll be right back",
+            "role": "clue",
+            "clueType": "time",
+            "useJapanese": false
+          },
+          {
+            "en": " with my coat.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The bus was not due for another five minutes",
+            "role": "clue",
+            "clueType": "situation",
+            "useJapanese": false
+          },
+          {
+            "en": ", so Anna remained beside the door.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "待つ",
+        "急ぐ",
+        "諦める",
+        "忘れる"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「I'll be right back」から話し手がすぐ戻る予定だとわかり、「The bus was not due for another five minutes」から急いで出発する必要もないと判断できます。したがって、hang on は「待つ」という意味だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 2,
+        "targetProtected": true,
+        "cluesProtected": true
+      }
+    },
+    {
+      "q": 16,
+      "type": "idiom",
+      "target": "out of breath",
+      "meaning": "息切れして",
+      "targetSense": "息切れして",
+      "pos": "adjective phrase",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "After running up the long flight of stairs, Ken leaned against the wall with his heart pounding.",
+        "He was completely out of breath and needed several minutes before he could speak normally."
+      ],
+      "mixedEnglish": [
+        "After running up the long flight of stairs, Ken leaned against the wall with his heart pounding.",
+        "He was completely out of breath and needed several minutes before he could speak normally."
+      ],
+      "contextClues": [
+        {
+          "text": "running up the long flight of stairs",
+          "type": "cause"
+        },
+        {
+          "text": "his heart pounding",
+          "type": "physical state"
+        }
+      ],
+      "inferencePath": [
+        "running up the long flight of stairs",
+        "his heart pounding",
+        "targetSense: 息切れして",
+        "out of breath"
+      ],
+      "segments": [
+        [
+          {
+            "en": "After ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "running up the long flight of stairs",
+            "role": "clue",
+            "clueType": "cause",
+            "useJapanese": false
+          },
+          {
+            "en": ", Ken leaned against the wall with ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "his heart pounding",
+            "role": "clue",
+            "clueType": "physical state",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "He was completely ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "out of breath",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " and needed several minutes before he could speak normally.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "息切れして",
+        "嬉しそうに",
+        "眠そうに",
+        "お腹を空かせて"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「running up the long flight of stairs」という激しい運動の直後で、「his heart pounding」という身体の反応も見られます。したがって、out of breath は「息切れして」という意味だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 2,
+        "targetProtected": true,
+        "cluesProtected": true
+      }
+    },
+    {
+      "q": 16,
+      "type": "idiom",
+      "target": "against its will",
+      "meaning": "意志に反して、いやいやながら",
+      "targetSense": "意志に反して",
+      "pos": "adverbial phrase",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "The dog was taken to the vet against its will.",
+        "It dug its paws into the ground while its owner pulled the leash toward the clinic."
+      ],
+      "mixedEnglish": [
+        "The dog was taken to the vet against its will.",
+        "It dug its paws into the ground while its owner pulled the leash toward the clinic."
+      ],
+      "contextClues": [
+        {
+          "text": "taken to the vet",
+          "type": "action"
+        },
+        {
+          "text": "dug its paws into the ground",
+          "type": "resistance"
+        }
+      ],
+      "inferencePath": [
+        "taken to the vet",
+        "dug its paws into the ground",
+        "targetSense: 意志に反して",
+        "against its will"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The dog was ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "taken to the vet",
+            "role": "clue",
+            "clueType": "action",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "against its will",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "It ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "dug its paws into the ground",
+            "role": "clue",
+            "clueType": "resistance",
+            "useJapanese": false
+          },
+          {
+            "en": " while its owner pulled the leash toward the clinic.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "意志に反して",
+        "喜んで",
+        "静かに",
+        "突然に"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "犬が「taken to the vet」とある一方で、「dug its paws into the ground」という抵抗する行動を取っています。このことから、犬が自ら望んで移動したのではないと考えられるため、against its will は「意志に反して」という意味だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 2,
+        "targetProtected": true,
+        "cluesProtected": true
+      }
+    },
+    {
+      "q": 16,
+      "type": "idiom",
+      "target": "easy to use",
+      "meaning": "使いやすい",
+      "targetSense": "使いやすい",
+      "pos": "adjective phrase",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "This new app is easy to use, even for people who rarely use smartphones.",
+        "My grandfather completed the setup without instructions and found every button on his first try."
+      ],
+      "mixedEnglish": [
+        "This new app is easy to use, even for people who rarely use smartphones.",
+        "My grandfather completed the setup without instructions and found every button on his first try."
+      ],
+      "contextClues": [
+        {
+          "text": "completed the setup without instructions",
+          "type": "result"
+        },
+        {
+          "text": "found every button on his first try",
+          "type": "result"
+        }
+      ],
+      "inferencePath": [
+        "completed the setup without instructions",
+        "found every button on his first try",
+        "targetSense: 使いやすい",
+        "easy to use"
+      ],
+      "segments": [
+        [
+          {
+            "en": "This new app is ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "easy to use",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": ", even for people who rarely use smartphones.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "My grandfather ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "completed the setup without instructions",
+            "role": "clue",
+            "clueType": "result",
+            "useJapanese": false
+          },
+          {
+            "en": " and ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "found every button on his first try",
+            "role": "clue",
+            "clueType": "result",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "使いやすい",
+        "高価な",
+        "複雑な",
+        "人気のある"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「completed the setup without instructions」から説明を読まなくても設定できたことがわかり、「found every button on his first try」から操作に迷わなかったこともわかります。したがって、easy to use は「使いやすい」という意味だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 2,
+        "targetProtected": true,
+        "cluesProtected": true
+      }
+    },
+    {
       "q": 16,
       "type": "idiom",
       "target": "free of charge",
@@ -5390,6 +6215,101 @@
       ],
       "answerIndex": 0,
       "inferenceExplanation": "「In his right hand」という対比や「In his left」という手の位置の描写から、2つの絵筆のそれぞれの位置関係を表していることがわかります。そのため、the other ofは「（2つのうち）もう一方の」だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 2,
+        "targetProtected": true,
+        "cluesProtected": true
+      }
+    },
+    {
+      "q": 17,
+      "type": "idiom",
+      "target": "a kind of",
+      "meaning": "一種の",
+      "targetSense": "一種の",
+      "pos": "noun phrase",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "A dolphin is a kind of mammal, not a fish.",
+        "It has lungs, gives birth to live young, and nurses its babies."
+      ],
+      "mixedEnglish": [
+        "A dolphin is a kind of mammal, not a fish.",
+        "It has lungs, gives birth to live young, and nurses its babies."
+      ],
+      "contextClues": [
+        {
+          "text": "not a fish",
+          "type": "contrast"
+        },
+        {
+          "text": "nurses its babies",
+          "type": "characteristic"
+        }
+      ],
+      "inferencePath": [
+        "not a fish",
+        "nurses its babies",
+        "targetSense: 一種の",
+        "a kind of"
+      ],
+      "segments": [
+        [
+          {
+            "en": "A dolphin is ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "a kind of",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " mammal, ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "not a fish",
+            "role": "clue",
+            "clueType": "contrast",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "It has lungs, gives birth to live young, and ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "nurses its babies",
+            "role": "clue",
+            "clueType": "characteristic",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "一種の",
+        "大きな",
+        "珍しい",
+        "危険な"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「not a fish」という対比に加え、イルカが「nurses its babies」という哺乳類の特徴を持つことが示されています。したがって、イルカを哺乳類の仲間として分類する a kind of は「一種の」という意味だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,

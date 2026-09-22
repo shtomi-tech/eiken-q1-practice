@@ -224,7 +224,7 @@ DETAILS = {
     "how": ("どのように", "副詞", "The manual explains how the dishwasher should be repaired safely.", "説明書は食器洗い機を安全に修理する方法を説明している。"),
     "where": ("どこで、どこに", "副詞", "The guide explained where visitors should wait for the bus.", "ガイドは訪問者がどこでバスを待つべきか説明した。"),
     "will not have": ("持っていないことになるだろう", "助動詞句", "By tomorrow, the store will not have any fresh bread left.", "明日までには、その店には新鮮なパンが残っていないだろう。"),
-    "would not have": ("持っていなかっただろう", "助動詞句", "Without your advice, I would not have made the right decision.", "あなたの助言がなければ、私は正しい決定をしていなかっただろう。"),
+    "would not have": ("〜しなかっただろう", "助動詞句", "Without your advice, I would not have made the right decision.", "あなたの助言がなければ、私は正しい決定をしなかっただろう。"),
     "should not have": ("〜すべきではなかった", "助動詞句", "You should not have left the medicine near the young child.", "幼い子どもの近くに薬を置くべきではなかった。"),
     "must not have": ("〜したはずがない、〜しなかったに違いない", "助動詞句", "The lights are off, so they must not have arrived home yet.", "明かりが消えているので、彼らはまだ帰宅していないに違いない。"),
 }
@@ -252,7 +252,7 @@ CORE_IMAGES = {
     "gave away": {"particle": "away", "chain": [{"term": "gave", "gloss": "与えた"}, {"term": "away", "gloss": "手元から離して"}, {"gloss": "隠していたことを漏らす"}]},
     "turned out": {"particle": "out", "particleSense": "produce", "chain": [{"term": "turned", "gloss": "向きを変えた"}, {"term": "out", "gloss": "外へ現して"}, {"gloss": "結果として明らかになる"}]},
     "will not have": {"chain": [{"term": "will", "gloss": "未来を示して"}, {"term": "have", "gloss": "持つ"}, {"gloss": "未来に持っていないことになる"}]},
-    "would not have": {"chain": [{"term": "would", "gloss": "仮定の結果を示して"}, {"term": "have", "gloss": "持つ"}, {"gloss": "持っていなかっただろう"}]},
+    "would not have": {"chain": [{"term": "would", "gloss": "仮定の結果を示して"}, {"term": "not have", "gloss": "完了形を否定して"}, {"gloss": "〜しなかっただろう"}]},
     "should not have": {"chain": [{"term": "should", "gloss": "望ましさを示して"}, {"term": "have", "gloss": "持つ・する"}, {"gloss": "〜すべきではなかった"}]},
     "must not have": {"chain": [{"term": "must", "gloss": "強い判断を示して"}, {"term": "have", "gloss": "持つ・する"}, {"gloss": "〜したはずがない"}]},
 }

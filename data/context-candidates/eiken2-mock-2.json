@@ -123,41 +123,44 @@
       "pos": "noun",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The hospital performs several operations every week for local patients.",
-        "Doctors work hard in the surgery room to help sick people.",
-        "Medical care is very important for recovery."
+        "The hospital scheduled three operations for Monday morning.",
+        "An anesthesiologist prepared the patients, while their families waited for news in a quiet room."
       ],
       "mixedEnglish": [
-        "The hospital performs several operations every week for local patients.",
-        "Doctors work hard in the surgery room to help sick people.",
-        "Medical care is very important for recovery."
+        "The hospital scheduled three operations for Monday morning.",
+        "An anesthesiologist prepared the patients, while their families waited for news in a quiet room."
       ],
       "contextClues": [
         {
-          "text": "The hospital performs",
+          "text": "The hospital scheduled three",
           "type": "situation"
         },
         {
-          "text": "in the surgery room",
-          "type": "situation"
+          "text": "An anesthesiologist prepared the patients",
+          "type": "behavior"
+        },
+        {
+          "text": "their families waited for news",
+          "type": "result"
         }
       ],
       "inferencePath": [
-        "The hospital performs",
-        "in the surgery room",
+        "The hospital scheduled three",
+        "An anesthesiologist prepared the patients",
+        "their families waited for news",
         "targetSense: 手術",
         "operations"
       ],
       "segments": [
         [
           {
-            "en": "The hospital performs",
+            "en": "The hospital scheduled three",
             "role": "clue",
             "clueType": "situation",
             "useJapanese": false
           },
           {
-            "en": " several ",
+            "en": " ",
             "role": "core",
             "useJapanese": false
           },
@@ -167,32 +170,31 @@
             "useJapanese": false
           },
           {
-            "en": " every week for local patients.",
+            "en": " for Monday morning.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "Doctors work hard ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "in the surgery room",
+            "en": "An anesthesiologist prepared the patients",
             "role": "clue",
-            "clueType": "situation",
+            "clueType": "behavior",
             "useJapanese": false
           },
           {
-            "en": " to help sick people.",
+            "en": ", while ",
             "role": "core",
             "useJapanese": false
-          }
-        ],
-        [
+          },
           {
-            "en": "Medical care is very important for recovery.",
+            "en": "their families waited for news",
+            "role": "clue",
+            "clueType": "result",
+            "useJapanese": false
+          },
+          {
+            "en": " in a quiet room.",
             "role": "core",
             "useJapanese": false
           }
@@ -200,15 +202,15 @@
       ],
       "choices": [
         "手術",
-        "研究",
+        "検査",
         "面会",
-        "検査"
+        "研修"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「The hospital performs」や「in the surgery room」という手がかりから、病院で医療行為が行われている状況が読み取れます。そのため、operationsは「手術」だと推測できます。",
+      "inferenceExplanation": "「The hospital scheduled three」から病院で予定された医療行為だと分かり、「An anesthesiologist prepared the patients」から麻酔を伴う処置が想像できます。さらに「their families waited for news」という状況も踏まえると、operations は「手術」を指します。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -5590,46 +5592,49 @@
       "pos": "adverbial phrase",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The local factory faced severe financial losses after the sudden market crash.",
-        "On top, a major fire damaged their primary warehouse and worsened the crisis.",
-        "The company ultimately had to declare bankruptcy."
+        "The local factory had already lost its largest customer and was struggling to pay its workers.",
+        "On top of that, a fire destroyed its main warehouse, leaving the company with another serious problem."
       ],
       "mixedEnglish": [
-        "The local factory faced severe financial losses after the sudden market crash.",
-        "On top, a major fire damaged their primary warehouse and worsened the crisis.",
-        "The company ultimately had to declare bankruptcy."
+        "The local factory had already lost its largest customer and was struggling to pay its workers.",
+        "On top of that, a fire destroyed its main warehouse, leaving the company with another serious problem."
       ],
       "contextClues": [
         {
-          "text": "severe financial losses",
+          "text": "had already lost its largest customer",
           "type": "situation"
         },
         {
-          "text": "a major fire damaged their primary warehouse",
-          "type": "cause"
+          "text": "a fire destroyed its main warehouse",
+          "type": "event"
+        },
+        {
+          "text": "another serious problem",
+          "type": "result"
         }
       ],
       "inferencePath": [
-        "severe financial losses",
-        "a major fire damaged their primary warehouse",
+        "had already lost its largest customer",
+        "a fire destroyed its main warehouse",
+        "another serious problem",
         "targetSense: さらに",
         "on top"
       ],
       "segments": [
         [
           {
-            "en": "The local factory faced ",
+            "en": "The local factory ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "severe financial losses",
+            "en": "had already lost its largest customer",
             "role": "clue",
             "clueType": "situation",
             "useJapanese": false
           },
           {
-            "en": " after the sudden market crash.",
+            "en": " and was struggling to pay its workers.",
             "role": "core",
             "useJapanese": false
           }
@@ -5641,25 +5646,29 @@
             "useJapanese": false
           },
           {
-            "en": ", ",
+            "en": " of that, ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "a major fire damaged their primary warehouse",
+            "en": "a fire destroyed its main warehouse",
             "role": "clue",
-            "clueType": "cause",
+            "clueType": "event",
             "useJapanese": false
           },
           {
-            "en": " and worsened the crisis.",
+            "en": ", leaving the company with ",
             "role": "core",
             "useJapanese": false
-          }
-        ],
-        [
+          },
           {
-            "en": "The company ultimately had to declare bankruptcy.",
+            "en": "another serious problem",
+            "role": "clue",
+            "clueType": "result",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -5667,15 +5676,15 @@
       ],
       "choices": [
         "さらに",
-        "すぐに",
-        "たまに",
-        "密かに"
+        "突然",
+        "代わりに",
+        "ついに"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「severe financial losses」や「a major fire damaged their primary warehouse」という手がかりから、困難な状況の上にさらに別の問題が重なったことがわかります。そのため、on topは「さらに」だと推測できます。",
+      "inferenceExplanation": "「had already lost its largest customer」で問題がすでにあったと分かり、その後に「a fire destroyed its main warehouse」が起きています。「another serious problem」とも述べられているため、on top は問題が加わることを示す「さらに」です。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -5692,35 +5701,38 @@
       "pos": "前置詞句",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The new smartphone model is exceptional in terms, specifically regarding battery efficiency.",
-        "Users can stream videos and play games for hours without recharging.",
-        "This technological breakthrough has amazed mobile industry experts."
+        "The new smartphone is exceptional in terms of battery performance.",
+        "Users can stream videos all day without recharging, although its camera is fairly ordinary."
       ],
       "mixedEnglish": [
-        "The new smartphone model is exceptional in terms, specifically regarding battery efficiency.",
-        "Users can stream videos and play games for hours without recharging.",
-        "This technological breakthrough has amazed mobile industry experts."
+        "The new smartphone is exceptional in terms of battery performance.",
+        "Users can stream videos all day without recharging, although its camera is fairly ordinary."
       ],
       "contextClues": [
         {
-          "text": "battery efficiency",
-          "type": "situation"
+          "text": "battery performance",
+          "type": "aspect"
         },
         {
-          "text": "stream videos and play games for hours without recharging",
-          "type": "behavior"
+          "text": "stream videos all day without recharging",
+          "type": "evidence"
+        },
+        {
+          "text": "its camera is fairly ordinary",
+          "type": "contrast"
         }
       ],
       "inferencePath": [
-        "battery efficiency",
-        "stream videos and play games for hours without recharging",
+        "battery performance",
+        "stream videos all day without recharging",
+        "its camera is fairly ordinary",
         "targetSense: 〜の点で",
         "in terms"
       ],
       "segments": [
         [
           {
-            "en": "The new smartphone model is exceptional ",
+            "en": "The new smartphone is exceptional ",
             "role": "core",
             "useJapanese": false
           },
@@ -5730,14 +5742,14 @@
             "useJapanese": false
           },
           {
-            "en": ", specifically regarding ",
+            "en": " of ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "battery efficiency",
+            "en": "battery performance",
             "role": "clue",
-            "clueType": "situation",
+            "clueType": "aspect",
             "useJapanese": false
           },
           {
@@ -5753,9 +5765,20 @@
             "useJapanese": false
           },
           {
-            "en": "stream videos and play games for hours without recharging",
+            "en": "stream videos all day without recharging",
             "role": "clue",
-            "clueType": "behavior",
+            "clueType": "evidence",
+            "useJapanese": false
+          },
+          {
+            "en": ", although ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "its camera is fairly ordinary",
+            "role": "clue",
+            "clueType": "contrast",
             "useJapanese": false
           },
           {
@@ -5763,26 +5786,19 @@
             "role": "core",
             "useJapanese": false
           }
-        ],
-        [
-          {
-            "en": "This technological breakthrough has amazed mobile industry experts.",
-            "role": "core",
-            "useJapanese": false
-          }
         ]
       ],
       "choices": [
         "〜の点で",
-        "〜のおかげで",
         "〜の代わりに",
-        "〜にもかかわらず"
+        "〜にもかかわらず",
+        "〜の結果として"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「battery efficiency」や「stream videos and play games for hours without recharging」という手がかりから、ある特定の部分において優れていることがわかります。そのため、in termsは「〜の点で」だと推測できます。",
+      "inferenceExplanation": "「battery performance」が評価対象となる側面を示し、「stream videos all day without recharging」がその評価を裏付けています。一方で「its camera is fairly ordinary」と別の側面が対比されているため、in terms は「〜の点で」を表します。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -7264,36 +7280,41 @@
       "target": "has taught",
       "meaning": "教えてきた、教えたことがある",
       "targetSense": "教えてきた",
-      "pos": "助動詞句",
+      "pos": "動詞句",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "He has taught science at this university since the new building opened.",
-        "Many students in the department respect his long career in education."
+        "Professor Lee has taught science at this university since its laboratory opened twenty years ago.",
+        "Former students still remember his classroom demonstrations, and the department recently honored his long career in education."
       ],
       "mixedEnglish": [
-        "He has taught science at this university since the new building opened.",
-        "Many students in the department respect his long career in education."
+        "Professor Lee has taught science at this university since its laboratory opened twenty years ago.",
+        "Former students still remember his classroom demonstrations, and the department recently honored his long career in education."
       ],
       "contextClues": [
         {
-          "text": "science",
-          "type": "subject"
+          "text": "since its laboratory opened twenty years ago",
+          "type": "duration"
         },
         {
-          "text": "this university",
-          "type": "location"
+          "text": "Former students still remember his classroom demonstrations",
+          "type": "evidence"
+        },
+        {
+          "text": "his long career in education",
+          "type": "career"
         }
       ],
       "inferencePath": [
-        "science",
-        "this university",
+        "since its laboratory opened twenty years ago",
+        "Former students still remember his classroom demonstrations",
+        "his long career in education",
         "targetSense: 教えてきた",
         "has taught"
       ],
       "segments": [
         [
           {
-            "en": "He ",
+            "en": "Professor Lee ",
             "role": "core",
             "useJapanese": false
           },
@@ -7303,36 +7324,42 @@
             "useJapanese": false
           },
           {
-            "en": " ",
+            "en": " science at this university ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "science",
+            "en": "since its laboratory opened twenty years ago",
             "role": "clue",
-            "clueType": "subject",
+            "clueType": "duration",
             "useJapanese": false
           },
           {
-            "en": " at ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "this university",
-            "role": "clue",
-            "clueType": "location",
-            "useJapanese": false
-          },
-          {
-            "en": " since the new building opened.",
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "Many students in the department respect his long career in education.",
+            "en": "Former students still remember his classroom demonstrations",
+            "role": "clue",
+            "clueType": "evidence",
+            "useJapanese": false
+          },
+          {
+            "en": ", and the department recently honored ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "his long career in education",
+            "role": "clue",
+            "clueType": "career",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -7340,15 +7367,15 @@
       ],
       "choices": [
         "教えてきた",
-        "見つけてきた",
-        "話してきた",
+        "研究してきた",
+        "学んできた",
         "支えてきた"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "文脈の中で「science」や「this university」という手がかりから、大学で理科の科目を長年扱っていることが分かります。そのため、has taughtは「教えてきた」だと推測できます。",
+      "inferenceExplanation": "「since its laboratory opened twenty years ago」から過去から現在まで続く活動だと分かります。また、「Former students still remember his classroom demonstrations」と「his long career in education」は、学生に授業を行ってきた人物であることを示すため、has taught は「教えてきた」です。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -7563,98 +7590,119 @@
     {
       "q": 20,
       "type": "idiom",
-      "target": "can you require",
-      "meaning": "あなたは必要とできますか",
-      "targetSense": "あなたは必要とできますか",
-      "pos": "接続詞句",
+      "target": "do you require",
+      "meaning": "あなたは必要としますか",
+      "targetSense": "あなたは必要としますか",
+      "pos": "動詞句",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The manager asked, Can you require any additional equipment for the event?",
-        "Every staff member needs to submit their final supply list by Friday.",
-        "Proper planning helps ensure everything runs smoothly on the day."
+        "Before confirming the equipment order, the manager asked, Do you require any additional chairs?",
+        "The organizer checked the guest list and counted the seats already available.",
+        "Her answer would decide whether the company added more chairs to the delivery."
       ],
       "mixedEnglish": [
-        "The manager asked, Can you require any additional equipment for the event?",
-        "Every staff member needs to submit their final supply list by Friday.",
-        "Proper planning helps ensure everything runs smoothly on the day."
+        "Before confirming the equipment order, the manager asked, Do you require any additional chairs?",
+        "The organizer checked the guest list and counted the seats already available.",
+        "Her answer would decide whether the company added more chairs to the delivery."
       ],
       "contextClues": [
         {
-          "text": "The manager asked",
-          "type": "actor"
+          "text": "checked the guest list",
+          "type": "behavior"
         },
         {
-          "text": "additional equipment",
-          "type": "object"
+          "text": "counted the seats already available",
+          "type": "behavior"
+        },
+        {
+          "text": "whether the company added more chairs",
+          "type": "result"
         }
       ],
       "inferencePath": [
-        "The manager asked",
-        "additional equipment",
-        "targetSense: あなたは必要とできますか",
-        "can you require"
+        "checked the guest list",
+        "counted the seats already available",
+        "whether the company added more chairs",
+        "targetSense: あなたは必要としますか",
+        "do you require"
       ],
       "segments": [
         [
           {
-            "en": "The manager asked",
-            "role": "clue",
-            "clueType": "actor",
-            "useJapanese": false
-          },
-          {
-            "en": ", ",
+            "en": "Before confirming the equipment order, the manager asked, ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "Can you require",
+            "en": "Do you require",
             "role": "target",
             "useJapanese": false
           },
           {
-            "en": " any ",
+            "en": " any additional chairs?",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The organizer ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "additional equipment",
+            "en": "checked the guest list",
             "role": "clue",
-            "clueType": "object",
+            "clueType": "behavior",
             "useJapanese": false
           },
           {
-            "en": " for the event?",
+            "en": " and ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "counted the seats already available",
+            "role": "clue",
+            "clueType": "behavior",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "Every staff member needs to submit their final supply list by Friday.",
+            "en": "Her answer would decide ",
             "role": "core",
             "useJapanese": false
-          }
-        ],
-        [
+          },
           {
-            "en": "Proper planning helps ensure everything runs smoothly on the day.",
+            "en": "whether the company added more chairs",
+            "role": "clue",
+            "clueType": "result",
+            "useJapanese": false
+          },
+          {
+            "en": " to the delivery.",
             "role": "core",
             "useJapanese": false
           }
         ]
       ],
       "choices": [
-        "あなたは必要とできますか",
-        "あなたが必要とした",
-        "もしあなたが必要とするなら",
-        "あなたは必要としたか"
+        "あなたは必要としますか",
+        "あなたは購入しましたか",
+        "あなたは返却しますか",
+        "あなたは設置しましたか"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「The manager asked」や「additional equipment」という手がかりから、イベントに向けて追加の物品を求めることができるか尋ねていることがわかります。そのため、can you requireは「あなたは必要とできますか」だと推測できます。",
+      "inferenceExplanation": "「checked the guest list」「counted the seats already available」「whether the company added more chairs」が手がかりです。追加の椅子が必要か確認しているため、do you requireは「あなたは必要としますか」だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -7768,46 +7816,63 @@
       "q": 20,
       "type": "idiom",
       "target": "did you require",
-      "meaning": "あなたは必要としましたか",
-      "targetSense": "あなたは必要としましたか",
-      "pos": "接続詞句",
+      "meaning": "あなたは〜を必要としましたか",
+      "targetSense": "あなたは〜を必要としましたか",
+      "pos": "動詞句",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The clerk asked, Did you require a receipt for the purchase?",
-        "The customer checked his wallet before answering the polite question.",
-        "The transaction was completed quickly at the register."
+        "After the customer paid, the clerk pointed to the receipt printer.",
+        "She asked, Did you require a printed receipt for your records?",
+        "The customer said yes, so the clerk pressed the print button."
       ],
       "mixedEnglish": [
-        "The clerk asked, Did you require a receipt for the purchase?",
-        "The customer checked his wallet before answering the polite question.",
-        "The transaction was completed quickly at the register."
+        "After the customer paid, the clerk pointed to the receipt printer.",
+        "She asked, Did you require a printed receipt for your records?",
+        "The customer said yes, so the clerk pressed the print button."
       ],
       "contextClues": [
         {
-          "text": "The clerk asked",
-          "type": "actor"
+          "text": "pointed to the receipt printer",
+          "type": "behavior"
         },
         {
-          "text": "a receipt",
-          "type": "object"
+          "text": "customer said yes",
+          "type": "response"
+        },
+        {
+          "text": "pressed the print button",
+          "type": "result"
         }
       ],
       "inferencePath": [
-        "The clerk asked",
-        "a receipt",
-        "targetSense: あなたは必要としましたか",
+        "pointed to the receipt printer",
+        "customer said yes",
+        "pressed the print button",
+        "targetSense: あなたは〜を必要としましたか",
         "did you require"
       ],
       "segments": [
         [
           {
-            "en": "The clerk asked",
-            "role": "clue",
-            "clueType": "actor",
+            "en": "After the customer paid, the clerk ",
+            "role": "core",
             "useJapanese": false
           },
           {
-            "en": ", ",
+            "en": "pointed to the receipt printer",
+            "role": "clue",
+            "clueType": "behavior",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "She asked, ",
             "role": "core",
             "useJapanese": false
           },
@@ -7817,48 +7882,52 @@
             "useJapanese": false
           },
           {
-            "en": " ",
+            "en": " a printed receipt for your records?",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "a receipt",
+            "en": "customer said yes",
             "role": "clue",
-            "clueType": "object",
+            "clueType": "response",
             "useJapanese": false
           },
           {
-            "en": " for the purchase?",
+            "en": ", so the clerk ",
             "role": "core",
             "useJapanese": false
-          }
-        ],
-        [
+          },
           {
-            "en": "The customer checked his wallet before answering the polite question.",
-            "role": "core",
+            "en": "pressed the print button",
+            "role": "clue",
+            "clueType": "result",
             "useJapanese": false
-          }
-        ],
-        [
+          },
           {
-            "en": "The transaction was completed quickly at the register.",
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
         ]
       ],
       "choices": [
-        "あなたは必要としましたか",
-        "あなたは必要とする",
-        "もしあなたが必要とするなら",
-        "あなたが必要とした"
+        "あなたは〜を必要としましたか",
+        "あなたは〜を印刷しましたか",
+        "あなたは〜を支払いましたか",
+        "あなたは〜を返品しましたか"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "文脈には「The clerk asked」という過去の対話や「a receipt」という購入時の確認事項に関する手がかりがあります。これらから、過去の時点で何かが必要だったかを尋ねているため、did you requireは「あなたは必要としましたか」だと推測できます。",
+      "inferenceExplanation": "「pointed to the receipt printer」「customer said yes」「pressed the print button」が手がかりです。店員の問いに客が肯定し、その結果として印刷した流れから、did you requireは「あなたは〜を必要としましたか」だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -7872,61 +7941,50 @@
       "target": "you required",
       "meaning": "あなたが必要とした",
       "targetSense": "あなたが必要とした",
-      "pos": "接続詞句",
+      "pos": "動詞句",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The form records which documents you required for the application.",
-        "Applicants should review all the instructions carefully before submitting.",
-        "Missing information may cause unnecessary delays in processing."
+        "The application screen displayed three identification papers with red stars beside them.",
+        "The online form saved which documents you required for the process.",
+        "It would not let you continue until all three were selected."
       ],
       "mixedEnglish": [
-        "The form records which documents you required for the application.",
-        "Applicants should review all the instructions carefully before submitting.",
-        "Missing information may cause unnecessary delays in processing."
+        "The application screen displayed three identification papers with red stars beside them.",
+        "The online form saved which documents you required for the process.",
+        "It would not let you continue until all three were selected."
       ],
       "contextClues": [
         {
-          "text": "The form records",
-          "type": "object"
+          "text": "red stars beside them",
+          "type": "symbol"
         },
         {
-          "text": "for the application",
-          "type": "purpose"
+          "text": "would not let you continue",
+          "type": "result"
+        },
+        {
+          "text": "until all three were selected",
+          "type": "condition"
         }
       ],
       "inferencePath": [
-        "The form records",
-        "for the application",
+        "red stars beside them",
+        "would not let you continue",
+        "until all three were selected",
         "targetSense: あなたが必要とした",
         "you required"
       ],
       "segments": [
         [
           {
-            "en": "The form records",
-            "role": "clue",
-            "clueType": "object",
-            "useJapanese": false
-          },
-          {
-            "en": " which documents ",
+            "en": "The application screen displayed three identification papers with ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "you required",
-            "role": "target",
-            "useJapanese": false
-          },
-          {
-            "en": " ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "for the application",
+            "en": "red stars beside them",
             "role": "clue",
-            "clueType": "purpose",
+            "clueType": "symbol",
             "useJapanese": false
           },
           {
@@ -7937,14 +7995,46 @@
         ],
         [
           {
-            "en": "Applicants should review all the instructions carefully before submitting.",
+            "en": "The online form saved which documents ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "you required",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " for the process.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "Missing information may cause unnecessary delays in processing.",
+            "en": "It ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "would not let you continue",
+            "role": "clue",
+            "clueType": "result",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "until all three were selected",
+            "role": "clue",
+            "clueType": "condition",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -7952,15 +8042,15 @@
       ],
       "choices": [
         "あなたが必要とした",
-        "あなたが必要とする",
-        "もしあなたが必要とするなら",
-        "あなたは必要としたか"
+        "あなたが提出した",
+        "あなたが紛失した",
+        "あなたが作成した"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "文脈には「The form records」という記録に関する説明や「for the application」という目的を示す手がかりがあります。これらから、申請手続きにおいて過去に求められたものを示しているため、you requiredは「あなたが必要とした」だと推測できます。",
+      "inferenceExplanation": "「red stars beside them」「would not let you continue」「until all three were selected」が手がかりです。印が付いた三つを選ばなければ先へ進めない状況から、you requiredは「あなたが必要とした」だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },

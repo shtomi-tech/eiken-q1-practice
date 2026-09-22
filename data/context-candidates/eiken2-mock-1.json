@@ -1858,26 +1858,26 @@
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "Are you implying that the manager knew about the mistake earlier?",
-        "Your serious look showed that she kept the secret on purpose."
+        "Are you implying that the manager knew about the error before the meeting?",
+        "You lowered your voice and glanced toward his office instead of making a direct accusation."
       ],
       "mixedEnglish": [
-        "Are you implying that the manager knew about the mistake earlier?",
-        "Your serious look showed that she kept the secret on purpose."
+        "Are you implying that the manager knew about the error before the meeting?",
+        "You lowered your voice and glanced toward his office instead of making a direct accusation."
       ],
       "contextClues": [
         {
-          "text": "knew about the mistake",
-          "type": "cause"
+          "text": "lowered your voice",
+          "type": "manner"
         },
         {
-          "text": "kept the secret on purpose",
-          "type": "result"
+          "text": "instead of making a direct accusation",
+          "type": "contrast"
         }
       ],
       "inferencePath": [
-        "knew about the mistake",
-        "kept the secret on purpose",
+        "lowered your voice",
+        "instead of making a direct accusation",
         "targetSense: ほのめかす",
         "implying"
       ],
@@ -1894,32 +1894,32 @@
             "useJapanese": false
           },
           {
-            "en": " that the manager ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "knew about the mistake",
-            "role": "clue",
-            "clueType": "cause",
-            "useJapanese": false
-          },
-          {
-            "en": " earlier?",
+            "en": " that the manager knew about the error before the meeting?",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "Your serious look showed that she ",
+            "en": "You ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "kept the secret on purpose",
+            "en": "lowered your voice",
             "role": "clue",
-            "clueType": "result",
+            "clueType": "manner",
+            "useJapanese": false
+          },
+          {
+            "en": " and glanced toward his office ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "instead of making a direct accusation",
+            "role": "clue",
+            "clueType": "contrast",
             "useJapanese": false
           },
           {
@@ -1931,12 +1931,12 @@
       ],
       "choices": [
         "ほのめかす",
-        "無視する",
-        "理解する",
-        "計画する"
+        "否定する",
+        "謝罪する",
+        "確認する"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「knew about the mistake」や「kept the secret on purpose」という手がかりから、相手がマネージャーの隠し事を遠回しに指摘していることがわかります。そのため、implyingは「ほのめかす」だと推測できます。",
+      "inferenceExplanation": "「lowered your voice」から慎重に話している様子が読み取れ、「instead of making a direct accusation」から直接言い切ってはいないと分かります。したがって、ここでの implying は「ほのめかす」という意味です。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -2766,35 +2766,33 @@
       "pos": "noun",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The museum displays a musical instrument from the nineteenth century.",
-        "The museum displays a rare wooden item from the nineteenth century.",
-        "Visitors can listen to its unique sound and appreciate how it was crafted by a famous European artisan."
+        "The museum displays an instrument from the nineteenth century in a glass case.",
+        "During special tours, visitors hear its deep tone while a curator carefully draws a bow across its strings."
       ],
       "mixedEnglish": [
-        "The museum displays a musical instrument from the nineteenth century.",
-        "The museum displays a rare wooden item from the nineteenth century.",
-        "Visitors can listen to its unique sound and appreciate how it was crafted by a famous European artisan."
+        "The museum displays an instrument from the nineteenth century in a glass case.",
+        "During special tours, visitors hear its deep tone while a curator carefully draws a bow across its strings."
       ],
       "contextClues": [
         {
-          "text": "listen to its unique sound",
-          "type": "behavior"
+          "text": "visitors hear its deep tone",
+          "type": "result"
         },
         {
-          "text": "crafted by a famous European artisan",
-          "type": "cause"
+          "text": "draws a bow across its strings",
+          "type": "behavior"
         }
       ],
       "inferencePath": [
-        "listen to its unique sound",
-        "crafted by a famous European artisan",
+        "visitors hear its deep tone",
+        "draws a bow across its strings",
         "targetSense: 楽器",
         "instrument"
       ],
       "segments": [
         [
           {
-            "en": "The museum displays a musical ",
+            "en": "The museum displays an ",
             "role": "core",
             "useJapanese": false
           },
@@ -2804,39 +2802,32 @@
             "useJapanese": false
           },
           {
-            "en": " from the nineteenth century.",
+            "en": " from the nineteenth century in a glass case.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "The museum displays a rare wooden item from the nineteenth century.",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "Visitors can ",
+            "en": "During special tours, ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "listen to its unique sound",
+            "en": "visitors hear its deep tone",
+            "role": "clue",
+            "clueType": "result",
+            "useJapanese": false
+          },
+          {
+            "en": " while a curator carefully ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "draws a bow across its strings",
             "role": "clue",
             "clueType": "behavior",
-            "useJapanese": false
-          },
-          {
-            "en": " and appreciate how it was ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "crafted by a famous European artisan",
-            "role": "clue",
-            "clueType": "cause",
             "useJapanese": false
           },
           {
@@ -2848,12 +2839,12 @@
       ],
       "choices": [
         "楽器",
-        "絵画",
+        "家具",
         "衣装",
-        "家具"
+        "食器"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「listen to its unique sound」や「crafted by a famous European artisan」という説明から、それが音を鳴らすものだと分かります。そのため、instrumentは「楽器」だと推測できます。",
+      "inferenceExplanation": "「visitors hear its deep tone」から音を出す品だと分かり、「draws a bow across its strings」から弦と弓を使う様子も読み取れます。したがって、ここでの instrument は「楽器」という意味です。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -3380,28 +3371,26 @@
       "pos": "adjective",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "The library provides various materials for students conducting research.",
-        "The library provides many academic resources for students conducting research.",
-        "People can easily find textbooks and novels on many distinct topics."
+        "The library provides various materials for students working on research projects.",
+        "One shelf contains maps, biographies, and science journals, while another offers newspapers from several countries."
       ],
       "mixedEnglish": [
-        "The library provides various materials for students conducting research.",
-        "The library provides many academic resources for students conducting research.",
-        "People can easily find textbooks and novels on many distinct topics."
+        "The library provides various materials for students working on research projects.",
+        "One shelf contains maps, biographies, and science journals, while another offers newspapers from several countries."
       ],
       "contextClues": [
         {
-          "text": "academic resources",
-          "type": "object"
+          "text": "maps, biographies, and science journals",
+          "type": "example"
         },
         {
-          "text": "on many distinct topics",
-          "type": "attribute"
+          "text": "newspapers from several countries",
+          "type": "range"
         }
       ],
       "inferencePath": [
-        "academic resources",
-        "on many distinct topics",
+        "maps, biographies, and science journals",
+        "newspapers from several countries",
         "targetSense: さまざまな",
         "various"
       ],
@@ -3418,39 +3407,32 @@
             "useJapanese": false
           },
           {
-            "en": " materials for students conducting research.",
+            "en": " materials for students working on research projects.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "The library provides many ",
+            "en": "One shelf contains ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "academic resources",
+            "en": "maps, biographies, and science journals",
             "role": "clue",
-            "clueType": "object",
+            "clueType": "example",
             "useJapanese": false
           },
           {
-            "en": " for students conducting research.",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "People can easily find textbooks and novels ",
+            "en": ", while another offers ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "on many distinct topics",
+            "en": "newspapers from several countries",
             "role": "clue",
-            "clueType": "attribute",
+            "clueType": "range",
             "useJapanese": false
           },
           {
@@ -3467,7 +3449,7 @@
         "重い"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「academic resources」や「on many distinct topics」という手がかりから、図書館が多岐にわたる資料を揃えていることがわかります。そのため、variousは「さまざまな」だと推測できます。",
+      "inferenceExplanation": "「maps, biographies, and science journals」には種類の異なる資料が並び、「newspapers from several countries」からも内容や出所に幅があると分かります。したがって、ここでの various は「さまざまな」という意味です。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -4732,33 +4714,87 @@
       "target": "have",
       "meaning": "持っている、〜する",
       "targetSense": "持っている",
-      "pos": "助動詞",
+      "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "I have a reliable laptop to complete my research project.",
-        "It is always on my desk ready for daily use."
+        "I bought a reliable laptop with my own savings last year.",
+        "The receipt has my name on it, and no one else uses the computer.",
+        "I have it on my desk whenever I write reports at home."
       ],
       "mixedEnglish": [
-        "I have a reliable laptop to complete my research project.",
-        "It is always on my desk ready for daily use."
+        "I bought a reliable laptop with my own savings last year.",
+        "The receipt has my name on it, and no one else uses the computer.",
+        "I have it on my desk whenever I write reports at home."
       ],
       "contextClues": [
         {
-          "text": "a reliable laptop",
-          "type": "object"
+          "text": "bought a reliable laptop with my own savings",
+          "type": "cause"
         },
         {
-          "text": "on my desk",
-          "type": "location"
+          "text": "receipt has my name on it",
+          "type": "evidence"
+        },
+        {
+          "text": "no one else uses the computer",
+          "type": "contrast"
         }
       ],
       "inferencePath": [
-        "a reliable laptop",
-        "on my desk",
+        "bought a reliable laptop with my own savings",
+        "receipt has my name on it",
+        "no one else uses the computer",
         "targetSense: 持っている",
         "have"
       ],
       "segments": [
+        [
+          {
+            "en": "I ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "bought a reliable laptop with my own savings",
+            "role": "clue",
+            "clueType": "cause",
+            "useJapanese": false
+          },
+          {
+            "en": " last year.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "receipt has my name on it",
+            "role": "clue",
+            "clueType": "evidence",
+            "useJapanese": false
+          },
+          {
+            "en": ", and ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "no one else uses the computer",
+            "role": "clue",
+            "clueType": "contrast",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
         [
           {
             "en": "I ",
@@ -4771,36 +4807,7 @@
             "useJapanese": false
           },
           {
-            "en": " ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "a reliable laptop",
-            "role": "clue",
-            "clueType": "object",
-            "useJapanese": false
-          },
-          {
-            "en": " to complete my research project.",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "It is always ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "on my desk",
-            "role": "clue",
-            "clueType": "location",
-            "useJapanese": false
-          },
-          {
-            "en": " ready for daily use.",
+            "en": " it on my desk whenever I write reports at home.",
             "role": "core",
             "useJapanese": false
           }
@@ -4808,15 +4815,15 @@
       ],
       "choices": [
         "持っている",
-        "知っている",
-        "望んでいる",
-        "作っている"
+        "借りている",
+        "修理している",
+        "探している"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「a reliable laptop」という物品を所有しており、「on my desk」に置いて普段から使用している状況から、自分の手元に置いていることがわかります。そのため、haveは「持っている」だと推測できます。",
+      "inferenceExplanation": "「bought a reliable laptop with my own savings」「receipt has my name on it」「no one else uses the computer」が手がかりです。自分で購入し所有者であることが分かるため、haveは「持っている」だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },
@@ -4830,29 +4837,34 @@
       "target": "had",
       "meaning": "持っていた、〜した",
       "targetSense": "持っていた",
-      "pos": "助動詞",
+      "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "She had an old map when she explored the mountain.",
-        "It guided her safely back to the trail."
+        "She had an old map in her backpack while exploring the mountain.",
+        "She unfolded it at every fork, and it led her safely back to the main trail."
       ],
       "mixedEnglish": [
-        "She had an old map when she explored the mountain.",
-        "It guided her safely back to the trail."
+        "She had an old map in her backpack while exploring the mountain.",
+        "She unfolded it at every fork, and it led her safely back to the main trail."
       ],
       "contextClues": [
         {
-          "text": "an old map",
-          "type": "object"
+          "text": "in her backpack",
+          "type": "location"
         },
         {
-          "text": "guided her safely",
+          "text": "She unfolded it at every fork",
+          "type": "behavior"
+        },
+        {
+          "text": "led her safely back to the main trail",
           "type": "result"
         }
       ],
       "inferencePath": [
-        "an old map",
-        "guided her safely",
+        "in her backpack",
+        "She unfolded it at every fork",
+        "led her safely back to the main trail",
         "targetSense: 持っていた",
         "had"
       ],
@@ -4869,36 +4881,42 @@
             "useJapanese": false
           },
           {
-            "en": " ",
+            "en": " an old map ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "an old map",
+            "en": "in her backpack",
             "role": "clue",
-            "clueType": "object",
+            "clueType": "location",
             "useJapanese": false
           },
           {
-            "en": " when she explored the mountain.",
+            "en": " while exploring the mountain.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "It ",
+            "en": "She unfolded it at every fork",
+            "role": "clue",
+            "clueType": "behavior",
+            "useJapanese": false
+          },
+          {
+            "en": ", and it ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "guided her safely",
+            "en": "led her safely back to the main trail",
             "role": "clue",
             "clueType": "result",
             "useJapanese": false
           },
           {
-            "en": " back to the trail.",
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
@@ -4906,15 +4924,15 @@
       ],
       "choices": [
         "持っていた",
-        "知っていた",
-        "見ていた",
-        "聞いていた"
+        "なくしていた",
+        "描いていた",
+        "売っていた"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「an old map」という紙の資料を携行しており、「guided her safely」という道案内としての役割を果たした過去の状況から、そのアイテムを所有していたことがわかります。そのため、hadは「持っていた」だと推測できます。",
+      "inferenceExplanation": "「in her backpack」から地図が彼女の手元にあり、「She unfolded it at every fork」から必要な場所で実際に使っていたと分かります。さらに「led her safely back to the main trail」という結果もあるため、ここでの had は「持っていた」という意味です。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },
