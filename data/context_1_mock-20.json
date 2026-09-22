@@ -2171,33 +2171,33 @@
       "pos": "noun",
       "level": "EIKEN Grade 1",
       "fullEnglish": [
-        "Investigators ruled out arson within a day of the fire.",
-        "No fuel was found, and the wiring in the ceiling had clearly failed."
+        "Investigators confirmed arson within a day of the fire.",
+        "Cans of fuel were found by the back door, and a camera recorded someone leaving through it at midnight."
       ],
       "mixedEnglish": [
-        "Investigators ruled out arson within a day of the fire.",
-        "No fuel was found, and the wiring in the ceiling had clearly failed."
+        "Investigators confirmed arson within a day of the fire.",
+        "Cans of fuel were found by the back door, and a camera recorded someone leaving through it at midnight."
       ],
       "contextClues": [
         {
-          "text": "No fuel was found",
+          "text": "Cans of fuel were found by the back door",
           "type": "detail"
         },
         {
-          "text": "the wiring in the ceiling had clearly failed",
-          "type": "detail"
+          "text": "a camera recorded someone leaving through it at midnight",
+          "type": "behavior"
         }
       ],
       "inferencePath": [
-        "No fuel was found",
-        "the wiring in the ceiling had clearly failed",
+        "Cans of fuel were found by the back door",
+        "a camera recorded someone leaving through it at midnight",
         "targetSense: 放火",
         "arson"
       ],
       "segments": [
         [
           {
-            "en": "Investigators ruled out ",
+            "en": "Investigators confirmed ",
             "role": "core",
             "useJapanese": false
           },
@@ -2214,7 +2214,7 @@
         ],
         [
           {
-            "en": "No fuel was found",
+            "en": "Cans of fuel were found by the back door",
             "role": "clue",
             "clueType": "detail",
             "useJapanese": false
@@ -2225,9 +2225,9 @@
             "useJapanese": false
           },
           {
-            "en": "the wiring in the ceiling had clearly failed",
+            "en": "a camera recorded someone leaving through it at midnight",
             "role": "clue",
-            "clueType": "detail",
+            "clueType": "behavior",
             "useJapanese": false
           },
           {
@@ -2244,7 +2244,7 @@
         "保険金請求"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「No fuel was found」と「the wiring in the ceiling had clearly failed」という手がかりから、燃料も見つからず、天井の配線が明らかに壊れていたと述べられています。そのため、arsonは「放火」だと推測できます。",
+      "inferenceExplanation": "「Cans of fuel were found by the back door」と「a camera recorded someone leaving through it at midnight」という手がかりから、裏口のそばで燃料の缶が見つかり、深夜にそこから立ち去る人物がカメラに記録されていたと述べられています。そのため、arsonは「放火」だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,

@@ -42,6 +42,8 @@ def vocab_entry(data: dict, target: str) -> dict:
 
 
 def set_field(obj: dict, key: str, old: str, new: str) -> None:
+    if obj[key] == new:  # 適用済み
+        return
     if obj[key] != old:
         raise SystemExit(f"{key}: 想定と異なる値 {obj[key]!r}")
     obj[key] = new
@@ -72,7 +74,7 @@ def main() -> None:
         if "meanings" in entry:
             set_field(entry, "meanings", ["釉薬、光沢"], ["糖衣、つや出し"])
         d = entry["display"].get("derivation")
-        if d is not None:
+        if d is not None and not d.endswith("→ 糖衣、つや出し"):
             if not d.endswith("→ 釉薬、光沢"):
                 raise SystemExit(f"{p}: glaze の derivation 末尾が想定と異なる")
             entry["display"]["derivation"] = d[: -len("釉薬、光沢")] + "糖衣、つや出し"
@@ -110,7 +112,7 @@ def main() -> None:
             set_field(entry["display"], "gloss", "救い出す", "抜け出す")
         # derivation の本文は台帳ごとに異なるため、末尾の語義だけを差し替える
         d = entry["display"].get("derivation")
-        if d is not None:
+        if d is not None and not d.endswith("→ 抜け出す、脱出する"):
             if not d.endswith("→ 救い出す、脱出させる"):
                 raise SystemExit(f"{p}: extricate の derivation 末尾が想定と異なる")
             entry["display"]["derivation"] = d[: -len("救い出す、脱出させる")] + "抜け出す、脱出する"
@@ -129,19 +131,47 @@ def main() -> None:
         "道具を置き、二人は車が戻るまでバンの中に座っていたと述べられています",
     )
     item = src_item(s, "astounded")
-    item["sentences"] = [
-        sent.replace("the hammer fell at ninety.", "the hammer fell at ninety million.")
-        for sent in item["sentences"]
-    ]
-    item["clues"] = [
-        [text.replace("the hammer fell at ninety", "the hammer fell at ninety million"), kind]
-        for text, kind in item["clues"]
-    ]
-    if "ninety million" not in json.dumps(item, ensure_ascii=False):
-        raise SystemExit("astounded: 置換できなかった")
+    if "ninety million" not in json.dumps(item, ensure_ascii=False):  # 未適用のときだけ置換
+        item["sentences"] = [
+            sent.replace("fell at ninety.", "fell at ninety million.") for sent in item["sentences"]
+        ]
+        item["clues"] = [
+            [text.replace("fell at ninety", "fell at ninety million"), kind]
+            for text, kind in item["clues"]
+        ]
+        if "ninety million" not in json.dumps(item, ensure_ascii=False):
+            raise SystemExit("astounded: 置換できなかった")
     save(p, s)
     changes.append("goofed off: 解説の「運転席」を「バンの中」へ（原稿）")
     changes.append("astounded: 英文の「at ninety」に単位を補う（原稿）")
+
+    # 6. arson: 1文目が「放火ではなかった」と述べており、手がかりが語義と逆を向いていた。
+    #    1文目は語彙データの example と一致させる規則のため、例文ごと差し替える。
+    example = "Investigators confirmed arson within a day of the fire."
+    p = Path("data/vocab_1_mock-20.json")
+    v = load(p)
+    entry = vocab_entry(v, "arson")
+    set_field(entry, "example", "Investigators ruled out arson within a day of the fire.", example)
+    set_field(
+        entry,
+        "exampleTranslation",
+        "捜査員は火災の翌日までに放火の可能性を排除した。",
+        "捜査員は火災の翌日までに放火だと断定した。",
+    )
+    save(p, v)
+
+    p = Path("data/context-src/eiken1-mock-20.json")
+    s = load(p)
+    item = src_item(s, "arson")
+    clue1 = "Cans of fuel were found by the back door"
+    clue2 = "a camera recorded someone leaving through it at midnight"
+    item["sentences"] = [example, f"{clue1}, and {clue2}."]
+    item["clues"] = [[clue1, "detail"], [clue2, "behavior"]]
+    item["reason"] = (
+        "裏口のそばで燃料の缶が見つかり、深夜にそこから立ち去る人物がカメラに記録されていたと述べられています"
+    )
+    save(p, s)
+    changes.append("arson: 手がかりが語義と逆を向いていたため例文と文脈を差し替え（語彙データ・原稿）")
 
     for c in changes:
         print(c)
