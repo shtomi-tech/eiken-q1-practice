@@ -1,0 +1,2509 @@
+{
+  "meta": {
+    "round": "mock-18",
+    "grade": "英検1級",
+    "source": "手作業で作成した文脈推測原稿"
+  },
+  "items": [
+    {
+      "q": 1,
+      "target": "partisan",
+      "sense": "熱烈な支持者",
+      "sentences": [
+        "He was too much of a partisan to chair a neutral inquiry.",
+        "He had campaigned for one side for twenty years and still paid its membership."
+      ],
+      "clues": [
+        [
+          "He had campaigned for one side for twenty years",
+          "detail"
+        ],
+        [
+          "still paid its membership",
+          "detail"
+        ]
+      ],
+      "distractors": [
+        "中立の専門家",
+        "傍観者",
+        "批判者"
+      ],
+      "reason": "二十年一方の側のために運動し、今も会費を払っていると述べられています"
+    },
+    {
+      "q": 1,
+      "target": "outage",
+      "sense": "停電",
+      "sentences": [
+        "The outage affected every household on the eastern side of town.",
+        "Lights went out at nine, and refrigerators stayed off until the next morning."
+      ],
+      "clues": [
+        [
+          "Lights went out at nine",
+          "detail"
+        ],
+        [
+          "refrigerators stayed off until the next morning",
+          "result"
+        ]
+      ],
+      "distractors": [
+        "断水",
+        "通信規制",
+        "値上げ"
+      ],
+      "reason": "九時に灯りが消え、翌朝まで冷蔵庫も止まっていたと述べられています"
+    },
+    {
+      "q": 1,
+      "target": "progeny",
+      "sense": "子孫",
+      "sentences": [
+        "The stallion's progeny won three major races that season.",
+        "Two of his sons and one daughter took the biggest prizes that year."
+      ],
+      "clues": [
+        [
+          "Two of his sons and one daughter",
+          "detail"
+        ],
+        [
+          "took the biggest prizes that year",
+          "result"
+        ]
+      ],
+      "distractors": [
+        "調教師",
+        "厩舎",
+        "飼料"
+      ],
+      "reason": "その年、息子二頭と娘一頭が最大の賞を得たと述べられています"
+    },
+    {
+      "q": 1,
+      "target": "redress",
+      "sense": "救済",
+      "sentences": [
+        "Tenants sought redress through a tribunal rather than the courts.",
+        "They asked to have the rent increase cancelled and their deposits returned."
+      ],
+      "clues": [
+        [
+          "They asked to have the rent increase cancelled",
+          "content"
+        ],
+        [
+          "their deposits returned",
+          "content"
+        ]
+      ],
+      "distractors": [
+        "罰金",
+        "立ち退き",
+        "値上げ"
+      ],
+      "reason": "賃料の引き上げの取り消しと、敷金の返還を求めたと述べられています"
+    },
+    {
+      "q": 2,
+      "target": "suffrage",
+      "sense": "選挙権",
+      "sentences": [
+        "Universal suffrage was not achieved here until after the war.",
+        "Women could not vote before 1946, and neither could men without property."
+      ],
+      "clues": [
+        [
+          "Women could not vote before 1946",
+          "detail"
+        ],
+        [
+          "neither could men without property",
+          "detail"
+        ]
+      ],
+      "distractors": [
+        "義務教育",
+        "国籍",
+        "労働権"
+      ],
+      "reason": "一九四六年まで女性は投票できず、財産のない男性も同様だったと述べられています"
+    },
+    {
+      "q": 2,
+      "target": "rampage",
+      "sense": "暴れ回ること",
+      "sentences": [
+        "An elephant on the rampage destroyed two fences and a shed.",
+        "It ran through the compound for half an hour before keepers calmed it."
+      ],
+      "clues": [
+        [
+          "It ran through the compound for half an hour",
+          "detail"
+        ],
+        [
+          "before keepers calmed it",
+          "time"
+        ]
+      ],
+      "distractors": [
+        "脱走の準備",
+        "水浴び",
+        "出産"
+      ],
+      "reason": "飼育係が落ち着かせるまで、半時間敷地内を走り回ったと述べられています"
+    },
+    {
+      "q": 2,
+      "target": "rampart",
+      "sense": "城壁",
+      "sentences": [
+        "Visitors can still walk along the medieval rampart above the river.",
+        "The wall is four meters thick and once had a tower at each corner."
+      ],
+      "clues": [
+        [
+          "The wall is four meters thick",
+          "detail"
+        ],
+        [
+          "once had a tower at each corner",
+          "detail"
+        ]
+      ],
+      "distractors": [
+        "桟橋",
+        "水路",
+        "広場"
+      ],
+      "reason": "厚さ四メートルの壁で、かつて各隅に塔があったと述べられています"
+    },
+    {
+      "q": 2,
+      "target": "fruition",
+      "sense": "実現",
+      "sentences": [
+        "The plan came to fruition eleven years after it was first drawn.",
+        "The building opened in May, and every room was used by September."
+      ],
+      "clues": [
+        [
+          "The building opened in May",
+          "result"
+        ],
+        [
+          "every room was used by September",
+          "result"
+        ]
+      ],
+      "distractors": [
+        "白紙撤回",
+        "延期",
+        "構想段階"
+      ],
+      "reason": "五月に建物が開き、九月にはどの部屋も使われていたと述べられています"
+    },
+    {
+      "q": 3,
+      "target": "acrimony",
+      "sense": "辛辣さ",
+      "sentences": [
+        "The partnership ended in acrimony and a long legal dispute.",
+        "They stopped speaking in June and wrote insults through their lawyers for two years."
+      ],
+      "clues": [
+        [
+          "They stopped speaking in June",
+          "detail"
+        ],
+        [
+          "wrote insults through their lawyers for two years",
+          "detail"
+        ]
+      ],
+      "distractors": [
+        "友情",
+        "静かな合意",
+        "感謝"
+      ],
+      "reason": "六月に口をきかなくなり、二年のあいだ弁護士を通じて罵り合ったと述べられています"
+    },
+    {
+      "q": 3,
+      "target": "hegemony",
+      "sense": "覇権",
+      "sentences": [
+        "The port lost its commercial hegemony in the eighteenth century.",
+        "Its share of the trade fell from two thirds to a tenth in fifty years."
+      ],
+      "clues": [
+        [
+          "Its share of the trade fell from two thirds to a tenth",
+          "detail"
+        ],
+        [
+          "in fifty years",
+          "time"
+        ]
+      ],
+      "distractors": [
+        "景観",
+        "独立",
+        "漁業権"
+      ],
+      "reason": "五十年で交易の取り分が三分の二から十分の一に落ちたと述べられています"
+    },
+    {
+      "q": 3,
+      "target": "blunder",
+      "sense": "大失策",
+      "sentences": [
+        "A simple blunder in the schedule cost the tour two performances.",
+        "Two cities were booked for the same night, and neither concert could be held."
+      ],
+      "clues": [
+        [
+          "Two cities were booked for the same night",
+          "detail"
+        ],
+        [
+          "neither concert could be held",
+          "result"
+        ]
+      ],
+      "distractors": [
+        "名案",
+        "増便",
+        "倹約"
+      ],
+      "reason": "同じ夜に二つの都市が押さえられ、どちらの公演もできなかったと述べられています"
+    },
+    {
+      "q": 3,
+      "target": "stench",
+      "sense": "悪臭",
+      "sentences": [
+        "The stench of the tannery reached the village whenever the wind turned.",
+        "People closed their windows, and two families moved away because of it."
+      ],
+      "clues": [
+        [
+          "People closed their windows",
+          "result"
+        ],
+        [
+          "two families moved away because of it",
+          "result"
+        ]
+      ],
+      "distractors": [
+        "騒音",
+        "煙",
+        "水質汚染"
+      ],
+      "reason": "住民は窓を閉め、それが理由で二世帯が転居したと述べられています"
+    },
+    {
+      "q": 4,
+      "target": "rubble",
+      "sense": "瓦礫",
+      "sentences": [
+        "Volunteers cleared the rubble from the school yard by hand.",
+        "Broken blocks and roof tiles filled two hundred wheelbarrows."
+      ],
+      "clues": [
+        [
+          "Broken blocks and roof tiles",
+          "detail"
+        ],
+        [
+          "filled two hundred wheelbarrows",
+          "result"
+        ]
+      ],
+      "distractors": [
+        "落ち葉",
+        "雪",
+        "机と椅子"
+      ],
+      "reason": "割れた塊や屋根瓦が、手押し車二百台分になったと述べられています"
+    },
+    {
+      "q": 4,
+      "target": "ingenuity",
+      "sense": "創意工夫",
+      "sentences": [
+        "The design shows real ingenuity in the use of very cheap materials.",
+        "Old bottles form the windows, and the roof is held up by bicycle frames."
+      ],
+      "clues": [
+        [
+          "Old bottles form the windows",
+          "detail"
+        ],
+        [
+          "the roof is held up by bicycle frames",
+          "detail"
+        ]
+      ],
+      "distractors": [
+        "浪費",
+        "模倣",
+        "強度不足"
+      ],
+      "reason": "古い瓶が窓になり、屋根は自転車の枠で支えられていると述べられています"
+    },
+    {
+      "q": 4,
+      "target": "clout",
+      "sense": "影響力",
+      "sentences": [
+        "A small union with surprising clout blocked the whole reorganization.",
+        "It had only ninety members and could stop every crane on the site."
+      ],
+      "clues": [
+        [
+          "It had only ninety members",
+          "situation"
+        ],
+        [
+          "could stop every crane on the site",
+          "result"
+        ]
+      ],
+      "distractors": [
+        "資金",
+        "会員数",
+        "知名度のなさ"
+      ],
+      "reason": "会員は九十人しかいないのに、現場のすべての起重機を止められたと述べられています"
+    },
+    {
+      "q": 4,
+      "target": "kickback",
+      "sense": "リベート",
+      "sentences": [
+        "Two inspectors were dismissed for accepting a kickback from the contractor.",
+        "Each received an envelope after signing the certificate of completion."
+      ],
+      "clues": [
+        [
+          "Each received an envelope",
+          "detail"
+        ],
+        [
+          "after signing the certificate of completion",
+          "time"
+        ]
+      ],
+      "distractors": [
+        "残業代",
+        "表彰",
+        "苦情"
+      ],
+      "reason": "完了の証明に署名した後、それぞれ封筒を受け取ったと述べられています"
+    },
+    {
+      "q": 5,
+      "target": "tycoon",
+      "sense": "大立者",
+      "sentences": [
+        "A shipping tycoon paid for the entire concert hall.",
+        "He owned forty vessels and gave the city nine hundred million yen."
+      ],
+      "clues": [
+        [
+          "He owned forty vessels",
+          "detail"
+        ],
+        [
+          "gave the city nine hundred million yen",
+          "detail"
+        ]
+      ],
+      "distractors": [
+        "楽団員",
+        "市議",
+        "建築家"
+      ],
+      "reason": "船四十隻を持ち、市に九億円を寄せたと述べられています"
+    },
+    {
+      "q": 5,
+      "target": "scruple",
+      "sense": "良心のとがめ",
+      "sentences": [
+        "He had not the slightest scruple about reading other people's mail.",
+        "He opened envelopes on the hall table and never mentioned it to anyone."
+      ],
+      "clues": [
+        [
+          "He opened envelopes on the hall table",
+          "behavior"
+        ],
+        [
+          "never mentioned it to anyone",
+          "behavior"
+        ]
+      ],
+      "distractors": [
+        "関心",
+        "能力",
+        "権限"
+      ],
+      "reason": "玄関の卓の封筒を開け、そのことを誰にも言わなかったと述べられています"
+    },
+    {
+      "q": 5,
+      "target": "memento",
+      "sense": "記念品",
+      "sentences": [
+        "The watch is a memento of her first year at sea.",
+        "She has kept it for forty years although it stopped working in 1987."
+      ],
+      "clues": [
+        [
+          "She has kept it for forty years",
+          "behavior"
+        ],
+        [
+          "although it stopped working in 1987",
+          "contrast"
+        ]
+      ],
+      "distractors": [
+        "贈答品",
+        "戦利品",
+        "展示品"
+      ],
+      "reason": "一九八七年に止まったのに、四十年手元に置いていると述べられています"
+    },
+    {
+      "q": 5,
+      "target": "protagonist",
+      "sense": "主人公",
+      "sentences": [
+        "The protagonist of the novel never speaks in the first three chapters.",
+        "Everything is seen through her eyes, and the other characters talk about her constantly."
+      ],
+      "clues": [
+        [
+          "Everything is seen through her eyes",
+          "detail"
+        ],
+        [
+          "the other characters talk about her constantly",
+          "detail"
+        ]
+      ],
+      "distractors": [
+        "語り手不在",
+        "脇役",
+        "著者"
+      ],
+      "reason": "すべてが彼女の目を通して描かれ、他の人物も彼女の話ばかりしていると述べられています"
+    },
+    {
+      "q": 6,
+      "target": "inhibition",
+      "sense": "抑制",
+      "sentences": [
+        "The drug reduces inhibition, which is why driving is forbidden.",
+        "Patients act on impulses they would normally hold back."
+      ],
+      "clues": [
+        [
+          "Patients act on impulses",
+          "result"
+        ],
+        [
+          "they would normally hold back",
+          "detail"
+        ]
+      ],
+      "distractors": [
+        "痛み",
+        "食欲",
+        "体温"
+      ],
+      "reason": "普段なら抑える衝動のままに行動してしまうと述べられています"
+    },
+    {
+      "q": 6,
+      "target": "haven",
+      "sense": "避難所",
+      "sentences": [
+        "The marshes are a haven for birds that winter in the south.",
+        "Nine species rest there in October, and no hunting is allowed."
+      ],
+      "clues": [
+        [
+          "Nine species rest there in October",
+          "detail"
+        ],
+        [
+          "no hunting is allowed",
+          "detail"
+        ]
+      ],
+      "distractors": [
+        "障害",
+        "繁華街",
+        "牧場"
+      ],
+      "reason": "十月に九種が羽を休め、狩猟も禁じられていると述べられています"
+    },
+    {
+      "q": 6,
+      "target": "bureaucrat",
+      "sense": "官僚",
+      "sentences": [
+        "A cautious bureaucrat delayed the permit for another eight months.",
+        "He asked for two more documents and forwarded the file to a third department."
+      ],
+      "clues": [
+        [
+          "He asked for two more documents",
+          "behavior"
+        ],
+        [
+          "forwarded the file to a third department",
+          "behavior"
+        ]
+      ],
+      "distractors": [
+        "建築主",
+        "弁護士",
+        "住民代表"
+      ],
+      "reason": "追加の書類を二点求め、書類一式を三つ目の部署へ回したと述べられています"
+    },
+    {
+      "q": 6,
+      "target": "parity",
+      "sense": "同等",
+      "sentences": [
+        "The union demanded parity with workers at the northern plant.",
+        "They wanted the same hourly rate and the same holidays, to the day."
+      ],
+      "clues": [
+        [
+          "They wanted the same hourly rate",
+          "content"
+        ],
+        [
+          "the same holidays, to the day",
+          "content"
+        ]
+      ],
+      "distractors": [
+        "優遇",
+        "減給",
+        "分離"
+      ],
+      "reason": "同じ時間給と、日数まで同じ休日を求めたと述べられています"
+    },
+    {
+      "q": 7,
+      "target": "denizen",
+      "sense": "生息するもの",
+      "sentences": [
+        "The otter is a shy denizen of these upland streams.",
+        "It lives along nine kilometers of the river and is seen perhaps twice a year."
+      ],
+      "clues": [
+        [
+          "It lives along nine kilometers of the river",
+          "detail"
+        ],
+        [
+          "is seen perhaps twice a year",
+          "detail"
+        ]
+      ],
+      "distractors": [
+        "訪問者",
+        "侵入種",
+        "保護団体"
+      ],
+      "reason": "川沿いの九キロに暮らし、見られるのは年に二度ほどだと述べられています"
+    },
+    {
+      "q": 7,
+      "target": "ruckus",
+      "sense": "騒動",
+      "sentences": [
+        "A ruckus in the corridor brought two members of staff running.",
+        "Someone was shouting, and a metal bin had been knocked over."
+      ],
+      "clues": [
+        [
+          "Someone was shouting",
+          "detail"
+        ],
+        [
+          "a metal bin had been knocked over",
+          "detail"
+        ]
+      ],
+      "distractors": [
+        "静寂",
+        "停電",
+        "来客"
+      ],
+      "reason": "誰かが叫んでおり、金属の屑籠が倒されていたと述べられています"
+    },
+    {
+      "q": 7,
+      "target": "equilibrium",
+      "sense": "均衡",
+      "sentences": [
+        "The market found a new equilibrium after the tariffs were removed.",
+        "Prices moved for three weeks and then stayed within one percent for a year."
+      ],
+      "clues": [
+        [
+          "Prices moved for three weeks",
+          "situation"
+        ],
+        [
+          "stayed within one percent for a year",
+          "result"
+        ]
+      ],
+      "distractors": [
+        "暴落",
+        "規制",
+        "独占"
+      ],
+      "reason": "三週間動いた価格が、その後一年は一パーセント以内に収まったと述べられています"
+    },
+    {
+      "q": 7,
+      "target": "lineage",
+      "sense": "血統",
+      "sentences": [
+        "The family traces its lineage to a fourteenth-century merchant.",
+        "Parish records name every generation between him and the present owner."
+      ],
+      "clues": [
+        [
+          "Parish records name every generation",
+          "detail"
+        ],
+        [
+          "between him and the present owner",
+          "detail"
+        ]
+      ],
+      "distractors": [
+        "財産目録",
+        "家紋の意匠",
+        "移住の経路"
+      ],
+      "reason": "教区の記録が、その商人から現在の当主までの各世代を記していると述べられています"
+    },
+    {
+      "q": 8,
+      "target": "maim",
+      "sense": "重傷を負わせる",
+      "sentences": [
+        "Landmines continue to maim farmers decades after the fighting ended.",
+        "Nine people lost a leg in the district last year alone."
+      ],
+      "clues": [
+        [
+          "Nine people lost a leg in the district",
+          "result"
+        ],
+        [
+          "last year alone",
+          "time"
+        ]
+      ],
+      "distractors": [
+        "驚かせる",
+        "立ち退かせる",
+        "雇う"
+      ],
+      "reason": "昨年だけでその地区の九人が脚を失ったと述べられています"
+    },
+    {
+      "q": 8,
+      "target": "pare",
+      "sense": "削減する",
+      "sentences": [
+        "The council had to pare its cultural budget by a third.",
+        "Two festivals were cancelled, and one library lost its Saturday opening."
+      ],
+      "clues": [
+        [
+          "Two festivals were cancelled",
+          "result"
+        ],
+        [
+          "one library lost its Saturday opening",
+          "result"
+        ]
+      ],
+      "distractors": [
+        "増額する",
+        "公開する",
+        "繰り越す"
+      ],
+      "reason": "祭り二つが取りやめになり、図書館一つは土曜の開館を失ったと述べられています"
+    },
+    {
+      "q": 8,
+      "target": "scorn",
+      "sense": "軽蔑する",
+      "sentences": [
+        "Purists scorn any recording made outside a concert hall.",
+        "They call such discs worthless and refuse to review them at all."
+      ],
+      "clues": [
+        [
+          "They call such discs worthless",
+          "behavior"
+        ],
+        [
+          "refuse to review them at all",
+          "behavior"
+        ]
+      ],
+      "distractors": [
+        "称賛する",
+        "収集する",
+        "制作する"
+      ],
+      "reason": "そうした盤を無価値と呼び、批評も一切拒むと述べられています"
+    },
+    {
+      "q": 8,
+      "target": "wriggle",
+      "sense": "身をよじる",
+      "sentences": [
+        "The puppy would wriggle out of any collar they tried.",
+        "It twisted its shoulders and head until the strap slipped over its ears."
+      ],
+      "clues": [
+        [
+          "It twisted its shoulders and head",
+          "action"
+        ],
+        [
+          "until the strap slipped over its ears",
+          "result"
+        ]
+      ],
+      "distractors": [
+        "じっとする",
+        "吠える",
+        "走り去る"
+      ],
+      "reason": "肩と頭をひねり、帯が耳を越えて外れるまで動いたと述べられています"
+    },
+    {
+      "q": 9,
+      "target": "mesmerize",
+      "sense": "魅了する",
+      "sentences": [
+        "A skilled storyteller can mesmerize an audience of any age.",
+        "Children and adults alike sit without moving for the whole forty minutes."
+      ],
+      "clues": [
+        [
+          "Children and adults alike sit without moving",
+          "result"
+        ],
+        [
+          "for the whole forty minutes",
+          "time"
+        ]
+      ],
+      "distractors": [
+        "退屈させる",
+        "解散させる",
+        "怖がらせる"
+      ],
+      "reason": "子どもも大人も四十分のあいだ動かずに座っていると述べられています"
+    },
+    {
+      "q": 9,
+      "target": "behold",
+      "sense": "(目にして)眺める",
+      "sentences": [
+        "Visitors climb the tower to behold the whole valley at once.",
+        "From the top they can see nine villages and both rivers on a clear day."
+      ],
+      "clues": [
+        [
+          "From the top they can see nine villages",
+          "result"
+        ],
+        [
+          "both rivers on a clear day",
+          "detail"
+        ]
+      ],
+      "distractors": [
+        "休息する",
+        "撮影を禁じられる",
+        "測量する"
+      ],
+      "reason": "晴れた日には頂から九つの村と二本の川が見えると述べられています"
+    },
+    {
+      "q": 9,
+      "target": "sabotage",
+      "sense": "破壊工作をする",
+      "sentences": [
+        "Someone tried to sabotage the ventilation system during the night shift.",
+        "Two filters had been cut, and a switch was found taped in the off position."
+      ],
+      "clues": [
+        [
+          "Two filters had been cut",
+          "detail"
+        ],
+        [
+          "a switch was found taped in the off position",
+          "detail"
+        ]
+      ],
+      "distractors": [
+        "点検する",
+        "改良する",
+        "清掃する"
+      ],
+      "reason": "濾過装置二つが切られ、開閉器が切の位置で留められていたと述べられています"
+    },
+    {
+      "q": 9,
+      "target": "remit",
+      "sense": "送金する",
+      "sentences": [
+        "Workers remit part of their wages to families in the south every month.",
+        "Around a third of each pay packet leaves the city by bank transfer."
+      ],
+      "clues": [
+        [
+          "Around a third of each pay packet",
+          "detail"
+        ],
+        [
+          "leaves the city by bank transfer",
+          "result"
+        ]
+      ],
+      "distractors": [
+        "貯蓄する",
+        "使い切る",
+        "申告する"
+      ],
+      "reason": "給与の三分の一ほどが、振込で市外へ出ていくと述べられています"
+    },
+    {
+      "q": 10,
+      "target": "yielded",
+      "sense": "生み出した",
+      "sentences": [
+        "The orchard yielded twice as much fruit as the previous season.",
+        "Nine tons were picked in September, against four the year before."
+      ],
+      "clues": [
+        [
+          "Nine tons were picked in September",
+          "detail"
+        ],
+        [
+          "against four the year before",
+          "contrast"
+        ]
+      ],
+      "distractors": [
+        "枯れた",
+        "売られた",
+        "放棄された"
+      ],
+      "reason": "前年の四トンに対し、九月に九トンが収穫されたと述べられています"
+    },
+    {
+      "q": 10,
+      "target": "transpired",
+      "sense": "(事が)判明した",
+      "sentences": [
+        "It transpired that the letter had been sent to the wrong department.",
+        "Nobody knew until a clerk found it in a tray three weeks later."
+      ],
+      "clues": [
+        [
+          "Nobody knew until a clerk found it in a tray",
+          "detail"
+        ],
+        [
+          "three weeks later",
+          "time"
+        ]
+      ],
+      "distractors": [
+        "否定された",
+        "予告された",
+        "撤回された"
+      ],
+      "reason": "三週間後に事務員が受け皿の中で見つけるまで、誰も知らなかったと述べられています"
+    },
+    {
+      "q": 10,
+      "target": "adjourned",
+      "sense": "(会議を)休会にした",
+      "sentences": [
+        "The chair adjourned the meeting until the following Tuesday.",
+        "Papers were left on the table, and the same agenda was taken up six days later."
+      ],
+      "clues": [
+        [
+          "Papers were left on the table",
+          "detail"
+        ],
+        [
+          "the same agenda was taken up six days later",
+          "result"
+        ]
+      ],
+      "distractors": [
+        "閉会した",
+        "公開にした",
+        "採決した"
+      ],
+      "reason": "書類は卓に残され、六日後に同じ議題が取り上げられたと述べられています"
+    },
+    {
+      "q": 10,
+      "target": "defaced",
+      "sense": "(表面を)汚した",
+      "sentences": [
+        "Someone defaced every poster along the station platform.",
+        "Black paint covered the faces, and two sheets were torn across the middle."
+      ],
+      "clues": [
+        [
+          "Black paint covered the faces",
+          "result"
+        ],
+        [
+          "two sheets were torn across the middle",
+          "result"
+        ]
+      ],
+      "distractors": [
+        "貼り替えた",
+        "撮影した",
+        "覆いをかけた"
+      ],
+      "reason": "顔が黒い塗料で覆われ、二枚は中央から裂かれていたと述べられています"
+    },
+    {
+      "q": 11,
+      "target": "accosted",
+      "sense": "(見知らぬ人に)近づいて話しかけた",
+      "sentences": [
+        "A journalist accosted the minister as he left the building.",
+        "She stepped in front of him on the pavement and began asking about the contract."
+      ],
+      "clues": [
+        [
+          "She stepped in front of him on the pavement",
+          "action"
+        ],
+        [
+          "began asking about the contract",
+          "action"
+        ]
+      ],
+      "distractors": [
+        "見送った",
+        "撮影だけした",
+        "予約を取った"
+      ],
+      "reason": "歩道で行く手に立ち、契約について問い始めたと述べられています"
+    },
+    {
+      "q": 11,
+      "target": "parried",
+      "sense": "受け流した",
+      "sentences": [
+        "She parried the question with a joke about the weather.",
+        "She never mentioned the figure, and the room laughed instead of pressing her."
+      ],
+      "clues": [
+        [
+          "She never mentioned the figure",
+          "result"
+        ],
+        [
+          "the room laughed instead of pressing her",
+          "result"
+        ]
+      ],
+      "distractors": [
+        "正面から答えた",
+        "記録を示した",
+        "質問を遮った"
+      ],
+      "reason": "数字には触れず、場は追及せずに笑ったと述べられています"
+    },
+    {
+      "q": 11,
+      "target": "fathomed",
+      "sense": "(真意などを)理解した",
+      "sentences": [
+        "Nobody has ever fathomed why the letters were never posted.",
+        "They were written, sealed, and stamped, and then kept in a drawer for forty years."
+      ],
+      "clues": [
+        [
+          "They were written, sealed, and stamped",
+          "situation"
+        ],
+        [
+          "kept in a drawer for forty years",
+          "situation"
+        ]
+      ],
+      "distractors": [
+        "公開した",
+        "破棄した",
+        "配達した"
+      ],
+      "reason": "書かれ封をされ切手も貼られた手紙が、四十年引き出しにあったと述べられています"
+    },
+    {
+      "q": 11,
+      "target": "forfeited",
+      "sense": "(権利を)失った",
+      "sentences": [
+        "The team forfeited the match by arriving two hours late.",
+        "The result was recorded as a defeat although no ball was kicked."
+      ],
+      "clues": [
+        [
+          "The result was recorded as a defeat",
+          "result"
+        ],
+        [
+          "although no ball was kicked",
+          "contrast"
+        ]
+      ],
+      "distractors": [
+        "勝ち取った",
+        "延期させた",
+        "抗議した"
+      ],
+      "reason": "一球も蹴られないまま、結果は敗戦として記録されたと述べられています"
+    },
+    {
+      "q": 12,
+      "target": "wagered",
+      "sense": "賭けた",
+      "sentences": [
+        "He wagered a week's wages on a horse he had never seen.",
+        "He put the money down at the window and tore up the slip an hour later."
+      ],
+      "clues": [
+        [
+          "He put the money down at the window",
+          "action"
+        ],
+        [
+          "tore up the slip an hour later",
+          "result"
+        ]
+      ],
+      "distractors": [
+        "貯めた",
+        "寄付した",
+        "借りた"
+      ],
+      "reason": "窓口で金を置き、一時間後にはその券を破いたと述べられています"
+    },
+    {
+      "q": 12,
+      "target": "rustled",
+      "sense": "かさかさ音を立てた",
+      "sentences": [
+        "Dry leaves rustled underfoot along the whole length of the path.",
+        "Every step made a light dry sound, and birds moved away ahead of us."
+      ],
+      "clues": [
+        [
+          "Every step made a light dry sound",
+          "detail"
+        ],
+        [
+          "birds moved away ahead of us",
+          "result"
+        ]
+      ],
+      "distractors": [
+        "濡れて滑った",
+        "燃えた",
+        "積まれた"
+      ],
+      "reason": "一歩ごとに軽い乾いた音がし、前方の鳥が離れていったと述べられています"
+    },
+    {
+      "q": 12,
+      "target": "ambled",
+      "sense": "ぶらぶら歩いた",
+      "sentences": [
+        "The old horse ambled across the field toward the gate.",
+        "It took ten minutes to cover two hundred meters and stopped twice to graze."
+      ],
+      "clues": [
+        [
+          "It took ten minutes to cover two hundred meters",
+          "detail"
+        ],
+        [
+          "stopped twice to graze",
+          "behavior"
+        ]
+      ],
+      "distractors": [
+        "駆けた",
+        "跳ねた",
+        "立ちすくんだ"
+      ],
+      "reason": "二百メートルに十分かけ、草を食べるため二度止まったと述べられています"
+    },
+    {
+      "q": 12,
+      "target": "allotted",
+      "sense": "割り当てた",
+      "sentences": [
+        "The organizers allotted each speaker exactly twelve minutes for the presentation.",
+        "A bell rang at eleven minutes, and the microphone was switched off at twelve."
+      ],
+      "clues": [
+        [
+          "A bell rang at eleven minutes",
+          "detail"
+        ],
+        [
+          "the microphone was switched off at twelve",
+          "result"
+        ]
+      ],
+      "distractors": [
+        "延長した",
+        "短縮を求めた",
+        "自由にさせた"
+      ],
+      "reason": "十一分で鈴が鳴り、十二分で拡声器が切られたと述べられています"
+    },
+    {
+      "q": 13,
+      "target": "dangle",
+      "sense": "ぶら下げる",
+      "sentences": [
+        "Do not dangle your feet over the side of the boat.",
+        "Keep them inside, because the propeller runs close to the surface here."
+      ],
+      "clues": [
+        [
+          "Keep them inside",
+          "instruction"
+        ],
+        [
+          "the propeller runs close to the surface here",
+          "reason"
+        ]
+      ],
+      "distractors": [
+        "洗う",
+        "組む",
+        "乾かす"
+      ],
+      "reason": "この辺りは羽根が水面近くを回るため、足は中に入れておくよう言われています"
+    },
+    {
+      "q": 13,
+      "target": "allude",
+      "sense": "それとなく言及する",
+      "sentences": [
+        "The report does not allude to the earlier investigation at all.",
+        "Its two hundred pages never mention 2016, even in a footnote."
+      ],
+      "clues": [
+        [
+          "Its two hundred pages never mention 2016",
+          "detail"
+        ],
+        [
+          "even in a footnote",
+          "detail"
+        ]
+      ],
+      "distractors": [
+        "詳述する",
+        "反論する",
+        "引用する"
+      ],
+      "reason": "二百ページのどこにも、脚注にさえ二〇一六年が出てこないと述べられています"
+    },
+    {
+      "q": 13,
+      "target": "galvanize",
+      "sense": "活気づける",
+      "sentences": [
+        "A single photograph can galvanize public opinion overnight.",
+        "One image of the beach brought forty thousand signatures in two days."
+      ],
+      "clues": [
+        [
+          "One image of the beach",
+          "situation"
+        ],
+        [
+          "brought forty thousand signatures in two days",
+          "result"
+        ]
+      ],
+      "distractors": [
+        "鎮める",
+        "分断する",
+        "記録する"
+      ],
+      "reason": "浜辺の一枚の写真が、二日で四万の署名を集めたと述べられています"
+    },
+    {
+      "q": 13,
+      "target": "scuttle",
+      "sense": "(船を)自沈させる",
+      "sentences": [
+        "The captain gave the order to scuttle the ship at dawn.",
+        "Valves were opened below the waterline so that the enemy could not take her."
+      ],
+      "clues": [
+        [
+          "Valves were opened below the waterline",
+          "action"
+        ],
+        [
+          "so that the enemy could not take her",
+          "purpose"
+        ]
+      ],
+      "distractors": [
+        "曳航する",
+        "修理する",
+        "降伏させる"
+      ],
+      "reason": "敵に奪われないよう、喫水線の下の弁が開かれたと述べられています"
+    },
+    {
+      "q": 14,
+      "target": "lured",
+      "sense": "おびき寄せた",
+      "sentences": [
+        "Cheap rents lured young designers into the disused mill.",
+        "Forty studios opened in two years because the space cost a fifth of the city rate."
+      ],
+      "clues": [
+        [
+          "Forty studios opened in two years",
+          "result"
+        ],
+        [
+          "the space cost a fifth of the city rate",
+          "cause"
+        ]
+      ],
+      "distractors": [
+        "追い出した",
+        "登録させた",
+        "訓練した"
+      ],
+      "reason": "市中の五分の一の賃料だったため、二年で四十の工房が開いたと述べられています"
+    },
+    {
+      "q": 14,
+      "target": "elicited",
+      "sense": "引き出した",
+      "sentences": [
+        "The survey elicited responses from more than nine thousand households.",
+        "A simple two-page form was returned by four out of five families."
+      ],
+      "clues": [
+        [
+          "A simple two-page form was returned",
+          "action"
+        ],
+        [
+          "by four out of five families",
+          "result"
+        ]
+      ],
+      "distractors": [
+        "拒まれた",
+        "集計されなかった",
+        "中止された"
+      ],
+      "reason": "二ページの簡単な用紙が、五世帯のうち四世帯から返されたと述べられています"
+    },
+    {
+      "q": 14,
+      "target": "lambasted",
+      "sense": "こっぴどく非難した",
+      "sentences": [
+        "Reviewers lambasted the production for its careless translation.",
+        "Three papers listed the errors line by line and called the text unusable."
+      ],
+      "clues": [
+        [
+          "Three papers listed the errors line by line",
+          "behavior"
+        ],
+        [
+          "called the text unusable",
+          "behavior"
+        ]
+      ],
+      "distractors": [
+        "絶賛した",
+        "無視した",
+        "翻訳を手伝った"
+      ],
+      "reason": "三紙が誤りを一行ずつ並べ、その台本は使えないと評したと述べられています"
+    },
+    {
+      "q": 14,
+      "target": "plundered",
+      "sense": "略奪した",
+      "sentences": [
+        "Invading armies plundered the abbey and burned its library.",
+        "They carried off the silver and the bells and left nothing in the cellars."
+      ],
+      "clues": [
+        [
+          "They carried off the silver and the bells",
+          "action"
+        ],
+        [
+          "left nothing in the cellars",
+          "result"
+        ]
+      ],
+      "distractors": [
+        "再建した",
+        "寄進した",
+        "警備した"
+      ],
+      "reason": "銀器と鐘を持ち去り、地下にも何も残さなかったと述べられています"
+    },
+    {
+      "q": 15,
+      "target": "counterfeit",
+      "sense": "偽造の",
+      "sentences": [
+        "Bank staff are trained to recognize counterfeit notes by touch.",
+        "Real paper has raised ink, and the copies feel completely smooth."
+      ],
+      "clues": [
+        [
+          "Real paper has raised ink",
+          "contrast"
+        ],
+        [
+          "the copies feel completely smooth",
+          "detail"
+        ]
+      ],
+      "distractors": [
+        "旧版の",
+        "高額の",
+        "破れた"
+      ],
+      "reason": "本物の紙は印刷が盛り上がっているのに、写しは全く滑らかだと述べられています"
+    },
+    {
+      "q": 15,
+      "target": "insidious",
+      "sense": "知らぬ間に進行する",
+      "sentences": [
+        "Damp is an insidious problem that appears only years later.",
+        "Nothing shows on the surface while the timber behind the plaster slowly rots."
+      ],
+      "clues": [
+        [
+          "Nothing shows on the surface",
+          "detail"
+        ],
+        [
+          "the timber behind the plaster slowly rots",
+          "detail"
+        ]
+      ],
+      "distractors": [
+        "すぐ目に見える",
+        "一時的な",
+        "無害な"
+      ],
+      "reason": "表面には何も出ないまま、漆喰の裏の木材がゆっくり腐ると述べられています"
+    },
+    {
+      "q": 15,
+      "target": "defamatory",
+      "sense": "名誉毀損の",
+      "sentences": [
+        "The publisher withdrew a chapter said to be defamatory.",
+        "It stated as fact that a named surgeon had been drunk during an operation."
+      ],
+      "clues": [
+        [
+          "It stated as fact that a named surgeon had been drunk",
+          "detail"
+        ],
+        [
+          "during an operation",
+          "detail"
+        ]
+      ],
+      "distractors": [
+        "称賛する",
+        "匿名の",
+        "技術的な"
+      ],
+      "reason": "名前を挙げた医師が手術中に酔っていたと、事実として書いていたと述べられています"
+    },
+    {
+      "q": 15,
+      "target": "meticulous",
+      "sense": "細心の",
+      "sentences": [
+        "His meticulous notes made the later reconstruction of the machine possible.",
+        "He recorded the position of every screw and the order of each step."
+      ],
+      "clues": [
+        [
+          "He recorded the position of every screw",
+          "behavior"
+        ],
+        [
+          "the order of each step",
+          "detail"
+        ]
+      ],
+      "distractors": [
+        "大ざっぱな",
+        "走り書きの",
+        "紛失した"
+      ],
+      "reason": "螺子一本ごとの位置と、各手順の順序まで記録していたと述べられています"
+    },
+    {
+      "q": 16,
+      "target": "nonchalant",
+      "sense": "平然とした",
+      "sentences": [
+        "He was oddly nonchalant about losing the entire deposit.",
+        "He shrugged, ordered coffee, and talked about football for the rest of the hour."
+      ],
+      "clues": [
+        [
+          "He shrugged, ordered coffee",
+          "behavior"
+        ],
+        [
+          "talked about football for the rest of the hour",
+          "behavior"
+        ]
+      ],
+      "distractors": [
+        "激怒した",
+        "青ざめた",
+        "涙ぐんだ"
+      ],
+      "reason": "肩をすくめて珈琲を頼み、残りの一時間は蹴球の話をしていたと述べられています"
+    },
+    {
+      "q": 16,
+      "target": "implausible",
+      "sense": "ありそうもない",
+      "sentences": [
+        "The alibi seemed implausible from the very first hearing.",
+        "He claimed to have walked forty kilometers in three hours in the rain."
+      ],
+      "clues": [
+        [
+          "He claimed to have walked forty kilometers in three hours",
+          "detail"
+        ],
+        [
+          "in the rain",
+          "detail"
+        ]
+      ],
+      "distractors": [
+        "確かな",
+        "詳細な",
+        "裏づけられた"
+      ],
+      "reason": "雨の中を三時間で四十キロ歩いたと述べたと書かれています"
+    },
+    {
+      "q": 16,
+      "target": "dogmatic",
+      "sense": "独断的な",
+      "sentences": [
+        "He is dogmatic about methods he has never actually tested.",
+        "He says there is only one correct way and refuses to read any study about the others."
+      ],
+      "clues": [
+        [
+          "He says there is only one correct way",
+          "behavior"
+        ],
+        [
+          "refuses to read any study about the others",
+          "behavior"
+        ]
+      ],
+      "distractors": [
+        "柔軟な",
+        "実証的な",
+        "無関心な"
+      ],
+      "reason": "正しい方法は一つだけだと言い、他の研究を読むことも拒むと述べられています"
+    },
+    {
+      "q": 16,
+      "target": "voracious",
+      "sense": "貪欲な",
+      "sentences": [
+        "She is a voracious reader who finishes a novel every two days.",
+        "Her library card shows nine hundred loans in three years."
+      ],
+      "clues": [
+        [
+          "Her library card shows nine hundred loans",
+          "detail"
+        ],
+        [
+          "in three years",
+          "time"
+        ]
+      ],
+      "distractors": [
+        "気の乗らない",
+        "遅い",
+        "批評家の"
+      ],
+      "reason": "三年で九百件の貸出が図書館の記録に残っていると述べられています"
+    },
+    {
+      "q": 17,
+      "target": "lugubrious",
+      "sense": "もの悲しい",
+      "sentences": [
+        "A lugubrious tune from the next room made everyone quiet.",
+        "It was played slowly on a low string, and two people asked for it to stop."
+      ],
+      "clues": [
+        [
+          "It was played slowly on a low string",
+          "detail"
+        ],
+        [
+          "two people asked for it to stop",
+          "result"
+        ]
+      ],
+      "distractors": [
+        "軽快な",
+        "賑やかな",
+        "荘厳で明るい"
+      ],
+      "reason": "低い弦でゆっくり弾かれ、二人がやめてほしいと言ったと述べられています"
+    },
+    {
+      "q": 17,
+      "target": "banal",
+      "sense": "陳腐な",
+      "sentences": [
+        "The dialogue is banal, though the photography is remarkable.",
+        "Characters say only what the audience has heard in a hundred other films."
+      ],
+      "clues": [
+        [
+          "Characters say only what the audience has heard",
+          "detail"
+        ],
+        [
+          "in a hundred other films",
+          "detail"
+        ]
+      ],
+      "distractors": [
+        "斬新な",
+        "難解な",
+        "詩的な"
+      ],
+      "reason": "登場人物が他の百本の映画で聞いたことしか言わないと述べられています"
+    },
+    {
+      "q": 17,
+      "target": "precarious",
+      "sense": "不安定な",
+      "sentences": [
+        "The ladder rested in a precarious position against the wet wall.",
+        "Its feet stood on moss, and it shifted whenever anyone climbed two steps."
+      ],
+      "clues": [
+        [
+          "Its feet stood on moss",
+          "detail"
+        ],
+        [
+          "it shifted whenever anyone climbed two steps",
+          "result"
+        ]
+      ],
+      "distractors": [
+        "安全な",
+        "固定された",
+        "水平な"
+      ],
+      "reason": "脚が苔の上にあり、二段上るたびにずれたと述べられています"
+    },
+    {
+      "q": 17,
+      "target": "nocturnal",
+      "sense": "夜行性の",
+      "sentences": [
+        "Most of the mammals on the island are strictly nocturnal.",
+        "They leave their burrows after sunset and return before the sky lightens."
+      ],
+      "clues": [
+        [
+          "They leave their burrows after sunset",
+          "detail"
+        ],
+        [
+          "return before the sky lightens",
+          "detail"
+        ]
+      ],
+      "distractors": [
+        "日中活動の",
+        "冬眠する",
+        "水生の"
+      ],
+      "reason": "日没後に巣穴を出て、空が明るむ前に戻ると述べられています"
+    },
+    {
+      "q": 18,
+      "target": "languid",
+      "sense": "気だるい",
+      "sentences": [
+        "A languid breeze barely moved the flags above the entrance.",
+        "The cloth lifted once in a minute and hung still the rest of the time."
+      ],
+      "clues": [
+        [
+          "The cloth lifted once in a minute",
+          "detail"
+        ],
+        [
+          "hung still the rest of the time",
+          "detail"
+        ]
+      ],
+      "distractors": [
+        "激しい",
+        "冷たい",
+        "渦を巻く"
+      ],
+      "reason": "布は一分に一度持ち上がるだけで、あとは垂れたままだったと述べられています"
+    },
+    {
+      "q": 18,
+      "target": "chivalrous",
+      "sense": "騎士道的な",
+      "sentences": [
+        "A chivalrous gesture from the older player won over the crowd.",
+        "He helped his opponent up and gave him the ball for the free kick."
+      ],
+      "clues": [
+        [
+          "He helped his opponent up",
+          "behavior"
+        ],
+        [
+          "gave him the ball for the free kick",
+          "behavior"
+        ]
+      ],
+      "distractors": [
+        "卑劣な",
+        "抗議の",
+        "偶然の"
+      ],
+      "reason": "相手を起こし、直接蹴球のために球を渡したと述べられています"
+    },
+    {
+      "q": 18,
+      "target": "insubstantial",
+      "sense": "実質のない",
+      "sentences": [
+        "The case against her was insubstantial and quickly collapsed.",
+        "It rested on one witness who withdrew, and no document was ever produced."
+      ],
+      "clues": [
+        [
+          "It rested on one witness who withdrew",
+          "detail"
+        ],
+        [
+          "no document was ever produced",
+          "detail"
+        ]
+      ],
+      "distractors": [
+        "強固な",
+        "詳細な",
+        "長期の"
+      ],
+      "reason": "取り下げた証人一人に頼り、文書も一つも出されなかったと述べられています"
+    },
+    {
+      "q": 18,
+      "target": "homely",
+      "sense": "飾り気のない",
+      "sentences": [
+        "The inn serves homely food at a very fair price.",
+        "Bread is baked in the kitchen, and the same three stews appear every week."
+      ],
+      "clues": [
+        [
+          "Bread is baked in the kitchen",
+          "detail"
+        ],
+        [
+          "the same three stews appear every week",
+          "detail"
+        ]
+      ],
+      "distractors": [
+        "高級な",
+        "異国風の",
+        "冷めた"
+      ],
+      "reason": "パンは台所で焼かれ、同じ煮込み三種が毎週出ると述べられています"
+    },
+    {
+      "q": 19,
+      "target": "subdued",
+      "sense": "控えめな",
+      "sentences": [
+        "The mood in the office was subdued after the announcement.",
+        "Nobody played music, and conversations stopped when anyone walked past."
+      ],
+      "clues": [
+        [
+          "Nobody played music",
+          "detail"
+        ],
+        [
+          "conversations stopped when anyone walked past",
+          "detail"
+        ]
+      ],
+      "distractors": [
+        "陽気な",
+        "騒がしい",
+        "怒りに満ちた"
+      ],
+      "reason": "音楽をかける人もなく、誰かが通ると会話が止まったと述べられています"
+    },
+    {
+      "q": 19,
+      "target": "lurid",
+      "sense": "どぎつい",
+      "sentences": [
+        "The paper printed a lurid account of a very ordinary quarrel.",
+        "It used the word bloodbath twice about an argument over a parking space."
+      ],
+      "clues": [
+        [
+          "It used the word bloodbath twice",
+          "detail"
+        ],
+        [
+          "about an argument over a parking space",
+          "contrast"
+        ]
+      ],
+      "distractors": [
+        "抑制の効いた",
+        "短い",
+        "正確な"
+      ],
+      "reason": "駐車場所をめぐる口論について、血の海という語を二度使ったと述べられています"
+    },
+    {
+      "q": 19,
+      "target": "trite",
+      "sense": "使い古された",
+      "sentences": [
+        "The advice sounds trite but works remarkably well in practice.",
+        "Everyone has heard it since childhood, and yet nine of ten patients improve."
+      ],
+      "clues": [
+        [
+          "Everyone has heard it since childhood",
+          "detail"
+        ],
+        [
+          "nine of ten patients improve",
+          "contrast"
+        ]
+      ],
+      "distractors": [
+        "独創的な",
+        "難解な",
+        "危険な"
+      ],
+      "reason": "誰もが子どもの頃から聞いている言葉なのに、十人のうち九人が改善すると述べられています"
+    },
+    {
+      "q": 19,
+      "target": "adroit",
+      "sense": "巧みな",
+      "sentences": [
+        "An adroit chairman kept the meeting to its allotted hour.",
+        "He cut two long speeches short without offending anyone and still took every vote."
+      ],
+      "clues": [
+        [
+          "He cut two long speeches short without offending anyone",
+          "behavior"
+        ],
+        [
+          "still took every vote",
+          "result"
+        ]
+      ],
+      "distractors": [
+        "不器用な",
+        "強引な",
+        "無力な"
+      ],
+      "reason": "長い発言二つを気分を害さずに切り上げ、採決もすべて行ったと述べられています"
+    },
+    {
+      "q": 20,
+      "target": "barbaric",
+      "sense": "野蛮な",
+      "sentences": [
+        "The practice was outlawed as barbaric in the previous century.",
+        "It involved public whipping, and crowds were invited to watch."
+      ],
+      "clues": [
+        [
+          "It involved public whipping",
+          "detail"
+        ],
+        [
+          "crowds were invited to watch",
+          "detail"
+        ]
+      ],
+      "distractors": [
+        "洗練された",
+        "宗教的な",
+        "無害な"
+      ],
+      "reason": "公開での鞭打ちを伴い、群衆が見物に招かれたと述べられています"
+    },
+    {
+      "q": 20,
+      "target": "detrimental",
+      "sense": "有害な",
+      "sentences": [
+        "Constant interruption is detrimental to any careful work.",
+        "Error rates double when a task is broken off more than four times an hour."
+      ],
+      "clues": [
+        [
+          "Error rates double",
+          "result"
+        ],
+        [
+          "when a task is broken off more than four times an hour",
+          "condition"
+        ]
+      ],
+      "distractors": [
+        "有益な",
+        "中立の",
+        "必要な"
+      ],
+      "reason": "一時間に四度以上中断されると、誤りの率が倍になると述べられています"
+    },
+    {
+      "q": 20,
+      "target": "desultory",
+      "sense": "とりとめのない",
+      "sentences": [
+        "A desultory conversation continued until the train arrived.",
+        "They spoke about the rain, then a film, then nothing at all for ten minutes."
+      ],
+      "clues": [
+        [
+          "They spoke about the rain, then a film",
+          "detail"
+        ],
+        [
+          "then nothing at all for ten minutes",
+          "detail"
+        ]
+      ],
+      "distractors": [
+        "活発な",
+        "筋の通った",
+        "事務的な"
+      ],
+      "reason": "雨のこと、映画のことと移り、十分間は何も話さなかったと述べられています"
+    },
+    {
+      "q": 20,
+      "target": "derisive",
+      "sense": "あざけるような",
+      "sentences": [
+        "A derisive laugh from the back row unsettled the speaker.",
+        "Someone repeated his last words in a high voice, and others joined in."
+      ],
+      "clues": [
+        [
+          "Someone repeated his last words in a high voice",
+          "behavior"
+        ],
+        [
+          "others joined in",
+          "result"
+        ]
+      ],
+      "distractors": [
+        "温かい",
+        "控えめな",
+        "驚いた"
+      ],
+      "reason": "誰かが彼の最後の言葉を高い声で真似し、他の者も加わったと述べられています"
+    },
+    {
+      "q": 21,
+      "target": "marginally",
+      "sense": "わずかに",
+      "sentences": [
+        "The second design is marginally cheaper but much heavier.",
+        "It saves two thousand yen and adds nine kilograms."
+      ],
+      "clues": [
+        [
+          "It saves two thousand yen",
+          "detail"
+        ],
+        [
+          "adds nine kilograms",
+          "contrast"
+        ]
+      ],
+      "distractors": [
+        "大幅に",
+        "全く",
+        "二倍に"
+      ],
+      "reason": "二千円安くなる一方、九キロ重くなると述べられています"
+    },
+    {
+      "q": 21,
+      "target": "bashfully",
+      "sense": "恥ずかしそうに",
+      "sentences": [
+        "He bashfully accepted the prize and left the stage quickly.",
+        "He looked at his shoes, said four words, and would not face the cameras."
+      ],
+      "clues": [
+        [
+          "He looked at his shoes, said four words",
+          "behavior"
+        ],
+        [
+          "would not face the cameras",
+          "behavior"
+        ]
+      ],
+      "distractors": [
+        "堂々と",
+        "不満げに",
+        "長々と"
+      ],
+      "reason": "靴を見て四語だけ述べ、撮影機の方も向かなかったと述べられています"
+    },
+    {
+      "q": 21,
+      "target": "intently",
+      "sense": "じっと",
+      "sentences": [
+        "The children watched intently as the potter shaped the bowl.",
+        "Not one of them spoke, and their eyes followed his hands for ten minutes."
+      ],
+      "clues": [
+        [
+          "Not one of them spoke",
+          "detail"
+        ],
+        [
+          "their eyes followed his hands for ten minutes",
+          "detail"
+        ]
+      ],
+      "distractors": [
+        "ぼんやりと",
+        "ちらりと",
+        "嫌そうに"
+      ],
+      "reason": "誰も口をきかず、十分のあいだ手の動きを目で追ったと述べられています"
+    },
+    {
+      "q": 21,
+      "target": "tenaciously",
+      "sense": "粘り強く",
+      "sentences": [
+        "She tenaciously pursued the records through four separate archives.",
+        "She wrote thirty letters and travelled to two cities at her own expense."
+      ],
+      "clues": [
+        [
+          "She wrote thirty letters",
+          "behavior"
+        ],
+        [
+          "travelled to two cities at her own expense",
+          "behavior"
+        ]
+      ],
+      "distractors": [
+        "気軽に",
+        "半ばで諦めて",
+        "代理を通して"
+      ],
+      "reason": "三十通の手紙を書き、自費で二つの都市へ足を運んだと述べられています"
+    },
+    {
+      "q": 22,
+      "target": "doted on",
+      "sense": "溺愛した",
+      "sentences": [
+        "Their grandmother doted on the youngest child quite openly.",
+        "She saved the best seat for him and sent presents twice a month."
+      ],
+      "clues": [
+        [
+          "She saved the best seat for him",
+          "behavior"
+        ],
+        [
+          "sent presents twice a month",
+          "behavior"
+        ]
+      ],
+      "distractors": [
+        "厳しく躾けた",
+        "冷たく扱った",
+        "忘れていた"
+      ],
+      "reason": "一番良い席を取っておき、月に二度贈り物を送ったと述べられています"
+    },
+    {
+      "q": 22,
+      "target": "stitched up",
+      "sense": "(人を)はめた",
+      "sentences": [
+        "The witness claimed he had been stitched up by his own partner.",
+        "He said the documents in his desk had been placed there by someone else."
+      ],
+      "clues": [
+        [
+          "He said the documents in his desk",
+          "detail"
+        ],
+        [
+          "had been placed there by someone else",
+          "content"
+        ]
+      ],
+      "distractors": [
+        "治療された",
+        "昇進させられた",
+        "弁護された"
+      ],
+      "reason": "机の中の書類は他の誰かが置いたものだと述べたと書かれています"
+    },
+    {
+      "q": 22,
+      "target": "whisked away",
+      "sense": "さっと連れ去った",
+      "sentences": [
+        "Officials whisked away the visiting minister before anyone could ask questions.",
+        "Two cars waited at the side door, and he was gone within thirty seconds."
+      ],
+      "clues": [
+        [
+          "Two cars waited at the side door",
+          "detail"
+        ],
+        [
+          "he was gone within thirty seconds",
+          "result"
+        ]
+      ],
+      "distractors": [
+        "紹介した",
+        "待たせた",
+        "会見させた"
+      ],
+      "reason": "脇の扉に車二台が待ち、三十秒で姿が消えたと述べられています"
+    },
+    {
+      "q": 22,
+      "target": "passed over",
+      "sense": "(昇進などで)見送った",
+      "sentences": [
+        "He was passed over for the post he had been promised.",
+        "Someone from another office was appointed, and he stayed at the same desk."
+      ],
+      "clues": [
+        [
+          "Someone from another office was appointed",
+          "result"
+        ],
+        [
+          "he stayed at the same desk",
+          "result"
+        ]
+      ],
+      "distractors": [
+        "抜擢された",
+        "辞退した",
+        "異動を願った"
+      ],
+      "reason": "別の部署の人が任じられ、彼は同じ席に留まったと述べられています"
+    },
+    {
+      "q": 23,
+      "target": "raked in",
+      "sense": "(金を)荒稼ぎした",
+      "sentences": [
+        "The stall raked in more money on Saturday than all week.",
+        "It took three hundred thousand yen in six hours, against ninety in five days."
+      ],
+      "clues": [
+        [
+          "It took three hundred thousand yen in six hours",
+          "detail"
+        ],
+        [
+          "against ninety in five days",
+          "contrast"
+        ]
+      ],
+      "distractors": [
+        "損を出した",
+        "閉めていた",
+        "値下げした"
+      ],
+      "reason": "五日で九万円だったところ、六時間で三十万円を売り上げたと述べられています"
+    },
+    {
+      "q": 23,
+      "target": "swore by",
+      "sense": "(~を)絶対だと信じた",
+      "sentences": [
+        "My grandfather swore by cold water for every minor ailment.",
+        "He recommended it for headaches, cuts, and sleeplessness alike, and used nothing else."
+      ],
+      "clues": [
+        [
+          "He recommended it for headaches, cuts, and sleeplessness",
+          "behavior"
+        ],
+        [
+          "used nothing else",
+          "behavior"
+        ]
+      ],
+      "distractors": [
+        "~を疑った",
+        "~を禁じた",
+        "~を売った"
+      ],
+      "reason": "頭痛にも切り傷にも不眠にもそれを勧め、他は使わなかったと述べられています"
+    },
+    {
+      "q": 23,
+      "target": "hinged on",
+      "sense": "(~に)かかっていた",
+      "sentences": [
+        "Everything hinged on whether the ferry could sail that night.",
+        "If it stayed in port, the wedding, the catering, and the flights all collapsed."
+      ],
+      "clues": [
+        [
+          "If it stayed in port",
+          "condition"
+        ],
+        [
+          "the wedding, the catering, and the flights all collapsed",
+          "result"
+        ]
+      ],
+      "distractors": [
+        "~とは無関係だった",
+        "~を左右した側",
+        "~の後に決まった"
+      ],
+      "reason": "船が港に留まれば、婚礼も料理も便もすべて崩れると述べられています"
+    },
+    {
+      "q": 23,
+      "target": "snuffed out",
+      "sense": "(火や希望を)消した",
+      "sentences": [
+        "A late goal snuffed out any hope of promotion that season.",
+        "The gap became impossible with two matches left, and the manager resigned on Monday."
+      ],
+      "clues": [
+        [
+          "The gap became impossible with two matches left",
+          "result"
+        ],
+        [
+          "the manager resigned on Monday",
+          "result"
+        ]
+      ],
+      "distractors": [
+        "かき立てた",
+        "つないだ",
+        "覆した"
+      ],
+      "reason": "残り二試合で差が絶望的になり、監督も月曜に辞任したと述べられています"
+    },
+    {
+      "q": 24,
+      "target": "lived up to",
+      "sense": "(期待に)応えた",
+      "sentences": [
+        "The restaurant lived up to everything the guidebook had promised.",
+        "Every dish arrived as described, and the bill matched the printed prices exactly."
+      ],
+      "clues": [
+        [
+          "Every dish arrived as described",
+          "result"
+        ],
+        [
+          "the bill matched the printed prices exactly",
+          "result"
+        ]
+      ],
+      "distractors": [
+        "期待を裏切った",
+        "閉店していた",
+        "値上げしていた"
+      ],
+      "reason": "どの皿も説明どおりに出され、勘定も表示の値段と正確に一致したと述べられています"
+    },
+    {
+      "q": 24,
+      "target": "rattled off",
+      "sense": "すらすらと述べた",
+      "sentences": [
+        "The child rattled off the names of every planet in order.",
+        "He did it in eleven seconds without pausing once."
+      ],
+      "clues": [
+        [
+          "He did it in eleven seconds",
+          "detail"
+        ],
+        [
+          "without pausing once",
+          "detail"
+        ]
+      ],
+      "distractors": [
+        "言い間違えた",
+        "黙り込んだ",
+        "書き取った"
+      ],
+      "reason": "十一秒で、一度も詰まらずに言ったと述べられています"
+    },
+    {
+      "q": 24,
+      "target": "stood out from",
+      "sense": "(~より)際立った",
+      "sentences": [
+        "Her application stood out from four hundred others on the pile.",
+        "Two readers picked it independently as the best they had seen that year."
+      ],
+      "clues": [
+        [
+          "Two readers picked it independently",
+          "result"
+        ],
+        [
+          "as the best they had seen that year",
+          "detail"
+        ]
+      ],
+      "distractors": [
+        "~に埋もれた",
+        "~と同等だった",
+        "~より劣った"
+      ],
+      "reason": "二人の審査者が別々に、その年最良のものとして選んだと述べられています"
+    },
+    {
+      "q": 24,
+      "target": "zeroed in on",
+      "sense": "(~に)狙いを定めた",
+      "sentences": [
+        "Investigators zeroed in on a single supplier within a week.",
+        "After checking nine firms they set the others aside and examined only its invoices."
+      ],
+      "clues": [
+        [
+          "After checking nine firms",
+          "situation"
+        ],
+        [
+          "examined only its invoices",
+          "result"
+        ]
+      ],
+      "distractors": [
+        "~を除外した",
+        "~を見落とした",
+        "~を公表した"
+      ],
+      "reason": "九社を調べた後、他は脇に置いてその請求書だけを調べたと述べられています"
+    },
+    {
+      "q": 25,
+      "target": "come by",
+      "sense": "手に入れる",
+      "sentences": [
+        "Fresh milk was hard to come by in the mountain villages.",
+        "One van arrived twice a week, and it was usually empty by nine."
+      ],
+      "clues": [
+        [
+          "One van arrived twice a week",
+          "detail"
+        ],
+        [
+          "it was usually empty by nine",
+          "result"
+        ]
+      ],
+      "distractors": [
+        "保存する",
+        "運ぶ",
+        "飲む"
+      ],
+      "reason": "車が週に二度来るだけで、九時にはたいてい売り切れたと述べられています"
+    },
+    {
+      "q": 25,
+      "target": "chime in",
+      "sense": "口を挟む",
+      "sentences": [
+        "A neighbor would chime in whenever the subject of parking arose.",
+        "He added his own complaint to every discussion, even from the next garden."
+      ],
+      "clues": [
+        [
+          "He added his own complaint to every discussion",
+          "behavior"
+        ],
+        [
+          "even from the next garden",
+          "detail"
+        ]
+      ],
+      "distractors": [
+        "黙っている",
+        "立ち去る",
+        "話題を変える"
+      ],
+      "reason": "隣の庭からでも、どの話にも自分の不満を差し込んだと述べられています"
+    },
+    {
+      "q": 25,
+      "target": "answer back",
+      "sense": "口答えする",
+      "sentences": [
+        "Pupils here are not afraid to answer back when they disagree.",
+        "They question a teacher's reasoning out loud, and the staff encourage it."
+      ],
+      "clues": [
+        [
+          "They question a teacher's reasoning out loud",
+          "behavior"
+        ],
+        [
+          "the staff encourage it",
+          "result"
+        ]
+      ],
+      "distractors": [
+        "黙って従う",
+        "筆記する",
+        "退室する"
+      ],
+      "reason": "教師の論を声に出して問い直し、職員もそれを励ますと述べられています"
+    },
+    {
+      "q": 25,
+      "target": "crouch down",
+      "sense": "しゃがみ込む",
+      "sentences": [
+        "You have to crouch down to get through the low doorway.",
+        "The opening is a meter and a half high, and even children bend their heads."
+      ],
+      "clues": [
+        [
+          "The opening is a meter and a half high",
+          "reason"
+        ],
+        [
+          "even children bend their heads",
+          "result"
+        ]
+      ],
+      "distractors": [
+        "跳び越える",
+        "回り込む",
+        "背伸びする"
+      ],
+      "reason": "開口部が一・五メートルしかなく、子どもでも頭を下げると述べられています"
+    }
+  ]
+}
