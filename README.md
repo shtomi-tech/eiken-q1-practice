@@ -106,6 +106,8 @@
 - 単語の語源分解（表示専用・原形キー）: `data/word_origins.json`
 - 単語語源の個別再調査台帳（authoring正本）: `data/word_origin_research.json`
 - 個別再調査バッチの記録: `data/word_origin_research_batch_*.json`
+- 文脈推測データ（2級・生成＋レビュー）: `data/context_*.json`
+- 文脈推測データ（1級・人が作成）: `data/context-src/eiken1-*.json`（原稿）/ `data/context_1_*.json`（生成物）
 - 問題セット一覧: `data/manifest.json` の `q1`
 
 1級の模試第1回〜第21回と公式過去問3回分は、模試25問/100語句・公式22問/88語句の形式差を保ったまま、共通検査で第6回の完成条件を確認できます。第7回〜第9回は表層音声と暗記カード用原形音声の生成済みデータを含むため、専用検査を通常モードで実行できます。
