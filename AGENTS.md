@@ -86,6 +86,21 @@ no API key, $0).
 アプリ側は級を問わず manifest の `contextUrl` があるセットで文脈推測を有効にするため、
 コードの変更は不要。
 
+### Jev による内容点検
+
+語義・手がかり・解説の内容面は機械チェックでは判定できないため、
+`scripts/jev_check_contexts.py`（TypeSafe System One）で点検する。
+`TYPESAFE_API_KEY` が必要。1件につき6つの判定（正解選択・複数成立・語義・
+手がかりの十分性・答えの露出・解説の一致）を投げ、基準に触れた項目だけを報告する。
+
+```bash
+python scripts/jev_check_contexts.py data/context_1_mock-1.json --sample 5   # 傾向を見る
+python scripts/jev_check_contexts.py data/context_1_*.json --concurrency 12  # 全件
+```
+
+結果は `out/jev-context-<datasetId>.json`（`out/` は .gitignore 済み）。
+語句空所補充の側は `scripts/jev_check_questions.py` が担当する。
+
 ## 問題セットの追加
 
 大問1の問題セット（自作模試・新しい回）を追加するときは、
