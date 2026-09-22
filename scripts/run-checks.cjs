@@ -24,6 +24,7 @@ const CHECKS = [
   ["scripts/check-fsrs-schedule.cjs"],
   ["scripts/check-context-discovery.cjs"],
   ["scripts/check-context-expanded-datasets.cjs"],
+  ["scripts/check-context-eiken1-datasets.cjs"],
   ["scripts/check-context-pilot.cjs"],
   ["scripts/check-context-pipeline.cjs"],
   ["scripts/check-context-batch-q4-q5.cjs"],

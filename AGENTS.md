@@ -57,6 +57,30 @@ no API key, $0).
 `scripts/check-*.cjs` はアプリのソースをテキストとして読む。読み込みと
 `extractFunctionBody` は `scripts/lib/app-source.cjs` に集約してあるので、そちらを使う。
 
+## 文脈推測（Context Discovery）データの追加
+
+2級セットは `scripts/build-context-datasets.mjs`（Gemini生成）→ レビュー →
+`scripts/publish-expanded-context-datasets.mjs` の流れで `data/context_*.json` を作る。
+
+1級セットは人が書いた原稿から組み立てる。
+
+- 原稿: `data/context-src/eiken1-<round>.json`
+  - 各項目は `q` / `target` / `sense` / `sentences` / `clues` / `distractors` / `reason`。
+  - `sentences[0]` は語彙データの `example` をそのまま置く（2文または3文）。
+  - `target` は全体でちょうど1回。`clues` は1文の中に収まり、targetや他のclueと重ならない。
+  - `sense` は語彙データの `meaning` を「、；／,」で分けた要素のいずれか。
+  - `distractors` は3つ。その語の別の語義は使わない。
+  - `reason` は「〜と述べられています」のような理由の本文だけを書く。手がかりの引用と
+    「そのため、TARGETは「SENSE」だと推測できます。」は組み立て側が付ける。
+- 組み立て: `node scripts/build-q1-context-datasets.mjs [round ...]`
+  （引数なしで原稿のある全roundを再生成する）。`data/context_1_<round>.json` を書き出し、
+  `data/manifest.json` の `contextUrl` / `contextTotal` も更新する。
+- 検証: `scripts/check-context-eiken1-datasets.cjs`（`npm test` に含む）。
+  2級と同じ `context-validator` / `context-leakage-validator` を通す。
+
+アプリ側は級を問わず manifest の `contextUrl` があるセットで文脈推測を有効にするため、
+コードの変更は不要。
+
 ## 問題セットの追加
 
 大問1の問題セット（自作模試・新しい回）を追加するときは、
