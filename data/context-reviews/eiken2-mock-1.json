@@ -1,0 +1,421 @@
+{
+  "datasetId": "eiken2-mock-1",
+  "model": "gemini-3.5-flash",
+  "counts": {
+    "pass": 75,
+    "revise": 5
+  },
+  "items": [
+    {
+      "target": "flee",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "require",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "tolerate",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "delay",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "intention",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "introduction",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "allowance",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "investment",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "simply",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "silently",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "safely",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "surely",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "heal",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "bend",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "cure",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "elect",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "committing",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "adjusting",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "betting",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "implying",
+      "status": "revise",
+      "issues": [
+        "2文目の「Your serious look showed that she kept the secret on purpose.」において、「あなたの真面目な表情（Your serious look）」が「彼女が故意に秘密にしていたこと（she kept the secret on purpose）」を直接示した（showed）とするのは、因果関係・文脈として不自然です（「あなたが、彼女が故意に秘密にしていたと考えていることを示した」などの文脈であるべきです）。"
+      ]
+    },
+    {
+      "target": "identity",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "magnificence",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "variety",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "scenery",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "justify",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "restrict",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "estimate",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "reveal",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "instrument",
+      "status": "revise",
+      "issues": [
+        "英文の1文目（The museum displays a musical instrument...）と2文目（The museum displays a rare wooden item...）が重複しており、不自然な文章構成になっています。",
+        "ターゲット語 \"instrument\" に対して \"musical instrument\" と修飾語が付いているため、文脈から推測するまでもなく「楽器」であることが直接的に示されてしまっています（基準4に抵触）。"
+      ]
+    },
+    {
+      "target": "achievement",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "admission",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "omission",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "absolute",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "intelligent",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "various",
+      "status": "revise",
+      "issues": [
+        "英文の1文目と2文目がほぼ同じ内容（The library provides various materials... と The library provides many academic resources...）を繰り返しており、不自然な文章になっています。不要な文を削除するか、文脈を整理してください。"
+      ]
+    },
+    {
+      "target": "punctual",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "replacement",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "critic",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "criminal",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "detective",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "feel",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "sense",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "sight",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "area",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "schedule",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "board",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "payment",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "charge",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "have",
+      "status": "revise",
+      "issues": [
+        "品詞（pos）が「助動詞」となっていますが、英文（I have a reliable laptop...）におけるhaveは一般動詞（他動詞）として機能しています。品詞を「動詞」に修正してください。"
+      ]
+    },
+    {
+      "target": "had",
+      "status": "revise",
+      "issues": [
+        "品詞（pos）が「助動詞」となっていますが、英文（She had an old map...）におけるhadは一般動詞（他動詞）として機能しています。品詞を「動詞」に修正してください。"
+      ]
+    },
+    {
+      "target": "will have",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "would have",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "whether",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "if",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "moreover",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "unless",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "at large",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "out of place",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "by accident",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "in question",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "in accordance with",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "owing to",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "made by",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "compared with",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "in fact",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "in short",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "at last",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "on target",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "look into",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "run across",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "give out",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "call back",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "answered for",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "applied to",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "led to",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "kept up",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "no more than",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "nothing left for",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "a little of",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "not up to",
+      "status": "pass",
+      "issues": []
+    }
+  ]
+}

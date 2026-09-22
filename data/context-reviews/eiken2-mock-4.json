@@ -1,0 +1,430 @@
+{
+  "datasetId": "eiken2-mock-4",
+  "model": "gemini-3.5-flash",
+  "counts": {
+    "pass": 70,
+    "revise": 10
+  },
+  "items": [
+    {
+      "target": "emotional",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "romantic",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "jealous",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "invisible",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "legends",
+      "status": "revise",
+      "issues": [
+        "「The museum displays legends...」という表現は不自然です。伝説（legends）は口承や物語であるため、博物館が物理的に「展示する（displays）」の対象としては不適切です。「The museum features legends...」や「The museum displays exhibits about the legends...」のように修正する必要があります。"
+      ]
+    },
+    {
+      "target": "citizens",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "strangers",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "opposites",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "referred",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "admitted",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "folded",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "raised",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "complexity",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "geometry",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "structure",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "enthusiasm",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "evaluated",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "composed",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "violated",
+      "status": "revise",
+      "issues": [
+        "2文目の 'failed to follow' は target である 'violated' の直接的な同義語の言い換え（synonym restatement）になっており、推測のプロセスを経ずに答えが分かってしまいます。"
+      ]
+    },
+    {
+      "target": "destroyed",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "concretely",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "seriously",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "beforehand",
+      "status": "revise",
+      "issues": [
+        "2文目の 'early' は target である 'beforehand' の直接的な同義語の言い換え（synonym restatement）になっており、推測のプロセスを経ずに答えが分かってしまいます。"
+      ]
+    },
+    {
+      "target": "permanently",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "spare",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "memorize",
+      "status": "revise",
+      "issues": [
+        "2文目の 'from memory' に target である 'memorize' の派生語（memory）が含まれており、語幹が共通しているため、推測のプロセスを経ずに答えが分かってしまいます（解答の露出に近いです）。"
+      ]
+    },
+    {
+      "target": "intend",
+      "status": "revise",
+      "issues": [
+        "手がかり（working hard, main goal）だけでは、選択肢の『期待する』や『約束する』などと『意図する』を明確に区別して1つに絞り込むことが困難です。より『意図する（〜するつもりである）』に固有の手がかりを追加する必要があります。"
+      ]
+    },
+    {
+      "target": "compete",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "concept",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "license",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "psychology",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "violence",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "tracked",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "rotated",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "declared",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "converted",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "souvenirs",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "prospects",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "shifts",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "vacancies",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "back",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "money",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "face",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "way",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "filled",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "stuck",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "wasted",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "meant",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "spent",
+      "status": "revise",
+      "issues": [
+        "英文中のspentは「（時間を）過ごした」の意味で使われていますが、targetSenseおよび正解の選択肢が「使った」になっています。文脈に合うようにtargetSenseや選択肢を「過ごした」にするか、英文を「お金や資源を使った」という意味のものに変更する必要があります。"
+      ]
+    },
+    {
+      "target": "having spent",
+      "status": "revise",
+      "issues": [
+        "英文中のHaving spentは分詞構文（〜してしまったので）として使われていますが、targetSenseおよび選択肢が「使ったこと」（動名詞の完了形）の意味になっており、文脈上の役割と一致していません。"
+      ]
+    },
+    {
+      "target": "has spent",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "had spent",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "why",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "when",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "how",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "where",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "similar to",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "bound for",
+      "status": "revise",
+      "issues": [
+        "手がかり（The train, leaves from platform three）だけでは、列車が「大阪行き（〜行きの）」なのか「大阪に止まる（〜で止まる）」のか「大阪から来た（〜から来た）」のかを一意に特定することが困難です。「目的地が大阪である」ことを示すより明確な手がかり（例：final destination や heading to など）を文脈に加える必要があります。"
+      ]
+    },
+    {
+      "target": "typical of",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "engaged in",
+      "status": "revise",
+      "issues": [
+        "英文では「議論を行っている（参加している）」という意味で engaged in が使われていますが、targetSenseおよび正解の選択肢が「〜に従事して」となっており、文脈（a lively discussion）に対して日本語の訳語が不自然です。ターゲットの意味が「〜に従事して」であれば、仕事や研究などの活動を文脈にする必要があります。"
+      ]
+    },
+    {
+      "target": "in person",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "at present",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "in writing",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "on hand",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "now that",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "as if",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "in case",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "every time",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "get through",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "look around",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "put out",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "pass out",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "brought up",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "looked over",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "gave away",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "turned out",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "will not have",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "would not have",
+      "status": "revise",
+      "issues": [
+        "targetSenseの「持っていなかっただろう」に対し、英文中の 'would not have this cold rain soaking...' における 'have' は「（被害などを）経験する、〜が...している状態にある」という意味（have + O + -ing）で使われており、「持っている（所有する）」という意味から外れています。'If I had lost my wallet, I would not have any money right now.' のように、純粋に「所有していない」という意味になる文脈に修正することをお勧めします。"
+      ]
+    },
+    {
+      "target": "should not have",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "target": "must not have",
+      "status": "pass",
+      "issues": []
+    }
+  ]
+}
