@@ -23,6 +23,11 @@ const rounds = fs.readdirSync(SRC_DIR)
   .sort();
 assert.ok(rounds.length > 0, "英検1級のContext原稿が1件も見つかりません");
 
+function leakageAccepted(sourceItems, target) {
+  const entry = sourceItems.find((item) => item.target === target);
+  return entry?.leakageReview?.status === "accepted";
+}
+
 const manifest = read("manifest.json").q1;
 let total = 0;
 for (const round of rounds) {
@@ -32,6 +37,7 @@ for (const round of rounds) {
   const source = [...(vocab.words || []), ...(vocab.idioms || [])];
   const sourceByTarget = new Map(source.map((item) => [surface(item), item]));
   const payload = read(contextName);
+  const authored = JSON.parse(fs.readFileSync(path.join(SRC_DIR, `${datasetId}.json`), "utf8")).items;
 
   assert.equal(payload.meta.datasetId, datasetId, `${datasetId}: datasetId mismatch`);
   assert.equal(payload.meta.grade, "EIKEN Grade 1", `${datasetId}: grade mismatch`);
@@ -57,7 +63,15 @@ for (const round of rounds) {
     assert.ok(!/[\u0400-\u04ff\uac00-\ud7af\u0600-\u06ff]/.test(item.inferenceExplanation),
       `${datasetId}/${item.target}: 解説に想定外の文字体系が混入している`);
     const leakage = validateContextLeakage(item);
-    assert.notEqual(leakage.status, "fail", `${datasetId}/${item.target}: leakage FAIL`);
+    if (leakage.status === "fail") {
+      // 1文目（語彙データのexample）だけを根拠とするDIRECT_DEFINITIONは、
+      // 原稿でleakageReviewを"accepted"にした場合のみ許容する。
+      const failures = leakage.findings.filter((finding) => finding.severity === "failure");
+      const onlyExampleMarkers = failures.length > 0
+        && failures.every((finding) => finding.type === "DIRECT_DEFINITION" && finding.sentenceIndex === 0);
+      assert.ok(onlyExampleMarkers && leakageAccepted(authored, item.target),
+        `${datasetId}/${item.target}: leakage FAIL`);
+    }
   }
   total += payload.contexts.length;
 }

@@ -125,6 +125,15 @@ function runtimeItem(vocab, source) {
   const result = validateContextItem(item, vocab, { requireTargetSense: true });
   if (result.status !== "pass") throw new Error(`${target}: ${result.errors.join(" | ")}`);
   const leakage = validateContextLeakage(item);
+  // 1文目は語彙データの example をそのまま使うため、そこだけを根拠とする
+  // DIRECT_DEFINITION（"that is" のような語句が関係詞として現れる場合）は
+  // 原稿側で leakageReview を "accepted" にしたときに限り通す。
+  const fixableFailures = (leakage.findings || []).filter((finding) => finding.severity === "failure");
+  const onlyExampleMarkers = fixableFailures.length > 0
+    && fixableFailures.every((finding) => finding.type === "DIRECT_DEFINITION" && finding.sentenceIndex === 0);
+  if (leakage.status === "fail" && onlyExampleMarkers && source.leakageReview?.status === "accepted") {
+    leakage.status = leakage.findings.some((finding) => finding.severity === "warning") ? "warn" : "pass";
+  }
   if (leakage.status === "fail") {
     throw new Error(`${target}: leakage ${leakage.status}: ${leakage.findings.map((f) => `${f.type}/${f.text}`).join(", ")}`);
   }
