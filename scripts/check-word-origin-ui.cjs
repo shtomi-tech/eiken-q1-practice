@@ -33,6 +33,10 @@ assert.equal(css.includes(".flashEtym"), false, "旧flashEtymルールを残し�
 for (const marker of ["wordOriginFor", "originChain", "coreChain", 'el("ol"', "originChip", "originDerivation", "originChipKind", "originChipForm", "originChipGloss"]) {
   assert.ok(flashWordOriginBody.includes(marker), `flashWordOrigin に ${marker} が必要です`);
 }
+assert.ok(flashWordOriginBody.includes('el("strong", {}, "語源・なりたち")'), "語源の見出しは全カードで統一する必要があります");
+assert.equal(flashWordOriginBody.includes("語源のイメージ"), false, "旧語源見出しを残してはいけません");
+assert.ok(flashWordOriginBody.indexOf("row.appendChild(chips)") < flashWordOriginBody.indexOf('class: "originDerivation"'), "A型は構成チップを導出文より先に表示する必要があります");
+assert.ok(flashWordOriginBody.indexOf('class: "originDerivation"') < flashWordOriginBody.indexOf("row.appendChild(chain)"), "A型の導出文は語源の連鎖より先に表示する必要があります");
 assert.ok(flashWordOriginBody.includes("type === \"B\""), "B型の語源を表示できる必要があります");
 assert.ok(flashWordOriginBody.includes("origin.derivation"), "B型は導出文がある場合に表示する必要があります");
 assert.equal(flashWordOriginBody.includes("originChip-summary"), false, "B型の概要チップを表示してはいけません");

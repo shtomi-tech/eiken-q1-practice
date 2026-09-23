@@ -4070,7 +4070,27 @@ function flashWordOrigin(item) {
   const origin = wordOriginFor(item);
   if (!origin) return null;
   const row = el("div", { class: "flashRow wordOriginRow" });
-  row.appendChild(el("strong", {}, Array.isArray(origin.chain) ? "語源のイメージ" : "語源・なりたち"));
+  row.appendChild(el("strong", {}, "語源・なりたち"));
+
+  if (origin.type === "A" && Array.isArray(origin.parts) && origin.parts.length) {
+    const chips = el("div", { class: "originChips", "aria-label": "語源の構成" });
+    origin.parts.forEach((part, index) => {
+      if (index) chips.appendChild(el("span", { class: "originChipJoin", "aria-hidden": "true" }, "+"));
+      const kind = originKindLabel(part.kind);
+      chips.appendChild(el("span", {
+        class: `originChip originChip-${part.kind}`,
+        "aria-label": `${kind} ${part.form}：${part.gloss}`,
+      },
+      el("span", { class: "originChipKind" }, kind),
+      el("span", { class: "originChipForm" }, part.form),
+      el("span", { class: "originChipGloss" }, part.gloss)));
+    });
+    row.appendChild(chips);
+  }
+
+  if (origin.type === "A" && origin.derivation) {
+    row.appendChild(el("p", { class: "originDerivation" }, origin.derivation));
+  }
 
   if (Array.isArray(origin.chain) && origin.chain.length) {
     const chain = el("ol", { class: "coreChain originChain", "aria-label": "語源の連鎖" });
@@ -4090,23 +4110,6 @@ function flashWordOrigin(item) {
     return origin.derivation ? row : null;
   }
   if (origin.type !== "A") return row;
-
-  if (Array.isArray(origin.parts) && origin.parts.length) {
-    const chips = el("div", { class: "originChips", "aria-label": "語源の構成" });
-    origin.parts.forEach((part, index) => {
-      if (index) chips.appendChild(el("span", { class: "originChipJoin", "aria-hidden": "true" }, "+"));
-      const kind = originKindLabel(part.kind);
-      chips.appendChild(el("span", {
-        class: `originChip originChip-${part.kind}`,
-        "aria-label": `${kind} ${part.form}：${part.gloss}`,
-      },
-      el("span", { class: "originChipKind" }, kind),
-      el("span", { class: "originChipForm" }, part.form),
-      el("span", { class: "originChipGloss" }, part.gloss)));
-    });
-    row.appendChild(chips);
-  }
-  if (origin.derivation) row.appendChild(el("p", { class: "originDerivation" }, origin.derivation));
   return row;
 }
 
