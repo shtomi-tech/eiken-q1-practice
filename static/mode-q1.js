@@ -315,6 +315,7 @@ const state = {
   qList: [],      // [1..n]
   meaningPool: { word: [], idiom: [] }, // ダミー用の意味プール
   contextItems: [], // 現在セットのContext Discovery項目
+  contextTranslations: {}, // target -> 2文目の確定訳
   progress: { units: {} },
 };
 
@@ -1960,6 +1961,7 @@ async function loadData(datasetId = state.datasetId) {
   state.qList = [];
   state.meaningPool = { word: [], idiom: [] };
   state.contextItems = [];
+  state.contextTranslations = {};
   state.progress = loadProgress(datasetId);
   const savedResume = normalizeMeaningResume(state.progress.resume);
   if (savedResume && (!RESUMABLE_MODES.has(savedResume.mode) || !resumeStageAllowed(savedResume.mode, savedResume.stage))) {
@@ -1977,10 +1979,19 @@ async function loadData(datasetId = state.datasetId) {
       })
       .catch(() => null)
     : Promise.resolve(null);
-  const [vocab, qs, contextPayload] = await Promise.all([
+  const contextTranslationPromise = current.contextTranslationUrl
+    ? fetch(current.contextTranslationUrl, { cache: "no-store" })
+      .then((r) => {
+        if (!r.ok) throw new Error(`context translation data: HTTP ${r.status}`);
+        return r.json();
+      })
+      .catch(() => null)
+    : Promise.resolve(null);
+  const [vocab, qs, contextPayload, contextTranslationPayload] = await Promise.all([
     fetch(current.vocabUrl, { cache: "no-store" }).then((r) => r.json()),
     fetch(current.questionsUrl, { cache: "no-store" }).then((r) => r.json()),
     contextPromise,
+    contextTranslationPromise,
   ]);
 
   const words = (vocab.words || []).map((w) => ({ ...w, type: "word" }));
@@ -1996,6 +2007,10 @@ async function loadData(datasetId = state.datasetId) {
   state.contextItems = Array.isArray(contextPayload?.contexts)
     ? contextPayload.contexts
     : [];
+  state.contextTranslations = Object.fromEntries(
+    (Array.isArray(contextTranslationPayload?.items) ? contextTranslationPayload.items : [])
+      .map((item) => [item.target, item]),
+  );
 
   state.qList = Object.keys(state.itemsByQ)
     .map(Number)
@@ -3285,6 +3300,14 @@ function contextExampleTranslationOf(context, itemHint = null) {
   return firstSentence && example === firstSentence ? translation : "";
 }
 
+function contextSecondSentenceTranslationOf(context) {
+  const entry = state.contextTranslations?.[context?.target];
+  const secondSentence = Array.isArray(context?.fullEnglish) ? String(context.fullEnglish[1] || "").trim() : "";
+  return secondSentence && String(entry?.english || "").trim() === secondSentence
+    ? String(entry.japanese || "").trim()
+    : "";
+}
+
 function contextItemFor(item) {
   if (!item || (item._datasetId && item._datasetId !== state.datasetId)) return null;
   const pool = Array.isArray(session?.contextPool) && session.contextPool.length
@@ -3505,6 +3528,7 @@ function renderContext(body) {
   }
   const correctMeaning = contextMeaningOf(item, sourceItem);
   const exampleTranslation = contextExampleTranslationOf(item, sourceItem);
+  const secondSentenceTranslation = contextSecondSentenceTranslationOf(item);
   const last = isLearn
     ? false
     : isStandalone
@@ -3559,6 +3583,7 @@ function renderContext(body) {
       el("h3", {}, session.contextCorrect ? "正解！" : "おしい！"),
       el("p", {}, `正しい意味：${correctMeaning}`),
       exampleTranslation ? el("p", { class: "trans contextExampleTranslation" }, `例文の訳：${exampleTranslation}`) : null,
+      secondSentenceTranslation ? el("p", { class: "trans contextSecondSentenceTranslation" }, `2文目の訳：${secondSentenceTranslation}`) : null,
       !session.contextCorrect ? el("p", { class: "trans" }, `あなたの選択：${session.contextPicked}`) : null,
     ));
     card.appendChild(el("div", { class: "actions contextActions" },

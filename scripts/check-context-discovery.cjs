@@ -98,6 +98,10 @@ assert.match(extractFunctionBody(sessionSource, "contextExampleTranslationOf"), 
   "文脈の1文目と暗記カード例文が一致する場合だけ訳を表示してください");
 assert.match(renderContextBody, /例文の訳：\$\{exampleTranslation\}/,
   "回答後に文脈例文の訳を表示する必要があります");
+assert.match(sessionSource, /function contextSecondSentenceTranslationOf\(context\)/,
+  "文脈の2文目の訳を取得する必要があります");
+assert.match(renderContextBody, /2文目の訳：\$\{secondSentenceTranslation\}/,
+  "回答後に文脈の2文目の訳を表示する必要があります");
 assert.match(renderContextBody, /この単語を覚える →/,
   "回答後に暗記カードへ進むボタンが必要です");
 assert.doesNotMatch(renderContextBody,

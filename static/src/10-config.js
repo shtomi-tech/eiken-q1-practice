@@ -301,6 +301,7 @@ const state = {
   qList: [],      // [1..n]
   meaningPool: { word: [], idiom: [] }, // ダミー用の意味プール
   contextItems: [], // 現在セットのContext Discovery項目
+  contextTranslations: {}, // target -> 2文目の確定訳
   progress: { units: {} },
 };
 

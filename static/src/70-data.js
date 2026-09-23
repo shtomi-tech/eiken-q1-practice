@@ -20,6 +20,7 @@ async function loadData(datasetId = state.datasetId) {
   state.qList = [];
   state.meaningPool = { word: [], idiom: [] };
   state.contextItems = [];
+  state.contextTranslations = {};
   state.progress = loadProgress(datasetId);
   const savedResume = normalizeMeaningResume(state.progress.resume);
   if (savedResume && (!RESUMABLE_MODES.has(savedResume.mode) || !resumeStageAllowed(savedResume.mode, savedResume.stage))) {
@@ -37,10 +38,19 @@ async function loadData(datasetId = state.datasetId) {
       })
       .catch(() => null)
     : Promise.resolve(null);
-  const [vocab, qs, contextPayload] = await Promise.all([
+  const contextTranslationPromise = current.contextTranslationUrl
+    ? fetch(current.contextTranslationUrl, { cache: "no-store" })
+      .then((r) => {
+        if (!r.ok) throw new Error(`context translation data: HTTP ${r.status}`);
+        return r.json();
+      })
+      .catch(() => null)
+    : Promise.resolve(null);
+  const [vocab, qs, contextPayload, contextTranslationPayload] = await Promise.all([
     fetch(current.vocabUrl, { cache: "no-store" }).then((r) => r.json()),
     fetch(current.questionsUrl, { cache: "no-store" }).then((r) => r.json()),
     contextPromise,
+    contextTranslationPromise,
   ]);
 
   const words = (vocab.words || []).map((w) => ({ ...w, type: "word" }));
@@ -56,6 +66,10 @@ async function loadData(datasetId = state.datasetId) {
   state.contextItems = Array.isArray(contextPayload?.contexts)
     ? contextPayload.contexts
     : [];
+  state.contextTranslations = Object.fromEntries(
+    (Array.isArray(contextTranslationPayload?.items) ? contextTranslationPayload.items : [])
+      .map((item) => [item.target, item]),
+  );
 
   state.qList = Object.keys(state.itemsByQ)
     .map(Number)
