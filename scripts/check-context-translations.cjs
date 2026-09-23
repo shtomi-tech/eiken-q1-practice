@@ -17,6 +17,9 @@ for (const [datasetId, dataset] of Object.entries(manifest.q1)) {
   assert.ok(dataset.contextTranslationUrl, `${datasetId}: contextTranslationUrl is required`);
   const contexts = readJson(dataset.contextUrl).contexts;
   const translations = readJson(dataset.contextTranslationUrl);
+  contexts.forEach((context) => {
+    assert.equal(context.fullEnglish.length, 2, `${datasetId} ${context.target}: context must have exactly two sentences`);
+  });
   assert.equal(translations.schemaVersion, 1, `${datasetId}: unknown translation schema`);
   assert.equal(translations.datasetId, datasetId, `${datasetId}: datasetId mismatch`);
   assert.equal(translations.count, contexts.length, `${datasetId}: count mismatch`);

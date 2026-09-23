@@ -49,8 +49,8 @@ for (const item of contexts) {
   assert.ok(vocabTargets.has(item.target), `基準セットにない語句です: ${item.target}`);
   assert.equal(item.meaning, cardMeaningByTarget.get(item.target),
     `文脈の意味は暗記カードの意味と一致させてください: ${item.target}`);
-  assert.ok(Array.isArray(item.fullEnglish) && item.fullEnglish.length >= 2 && item.fullEnglish.length <= 3,
-    `英文は2〜3文にしてください: ${item.target}`);
+  assert.ok(Array.isArray(item.fullEnglish) && item.fullEnglish.length === 2,
+    `英文は2文構成にしてください: ${item.target}`);
   const story = item.fullEnglish.join(" ");
   assert.equal(occurrenceCount(story, item.target), 1, `targetは英文中に1回だけ必要です: ${item.target}`);
   assert.ok(!japanese.test(story), `fullEnglishに日本語が混ざっています: ${item.target}`);

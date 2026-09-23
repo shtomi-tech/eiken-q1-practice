@@ -58,6 +58,7 @@ for (const round of rounds) {
     assert.ok(vocabItem, `${datasetId}/${item.target}: unexpected target`);
     assert.equal(item.level, "EIKEN Grade 1", `${datasetId}/${item.target}: level mismatch`);
     assert.equal(item.fullEnglish[0], vocabItem.example, `${datasetId}/${item.target}: 1文目は語彙データのexampleと一致させる`);
+    assert.equal(item.fullEnglish.length, 2, `${datasetId}/${item.target}: context must have exactly two sentences`);
     const result = validateContextItem(item, vocabItem, { requireTargetSense: true });
     assert.equal(result.status, "pass", `${datasetId}/${item.target}: ${result.errors.join(" | ")}`);
     assert.ok(!/[\u0400-\u04ff\uac00-\ud7af\u0600-\u06ff]/.test(item.inferenceExplanation),

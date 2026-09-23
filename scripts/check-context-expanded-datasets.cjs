@@ -38,6 +38,7 @@ for (const [datasetId, [vocabName, contextName]] of Object.entries(CONFIG)) {
   for (const item of payload.contexts) {
     const vocabItem = sourceByTarget.get(item.target);
     assert.ok(vocabItem, `${datasetId}/${item.target}: unexpected target`);
+    assert.equal(item.fullEnglish.length, 2, `${datasetId}/${item.target}: context must have exactly two sentences`);
     const result = validateContextItem(item, vocabItem, { requireTargetSense: true });
     assert.equal(result.status, "pass", `${datasetId}/${item.target}: ${result.errors.join(" | ")}`);
     assert.equal(item.fullEnglish[0], vocabItem.example,
