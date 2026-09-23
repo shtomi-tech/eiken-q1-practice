@@ -22,6 +22,8 @@ const dataset = manifest.q1["eiken2-2026-1"];
 assert.equal(dataset.contextUrl, "data/context_2026-1.json", "2級第1セットのcontextUrlが必要");
 assert.equal(dataset.contextTotal, 68, "2級第1セットの文脈数が必要");
 assert.match(pagesWorkflow, /cp data\/context_\*\.json _site\/data\//, "Pages公開物に文脈データを含める必要があります");
+assert.match(pagesWorkflow, /cp data\/context-translations\/\*\.json _site\/data\/context-translations\//,
+  "Pages公開物に文脈の訳データを含める必要があります");
 assert.equal(context.meta.count, 68, "文脈データの件数メタデータが不正です");
 
 const vocabItems = [...(vocab.words || []), ...(vocab.idioms || [])];
