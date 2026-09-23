@@ -42,6 +42,35 @@ function applyDictionaryPatch(ledger, dictionary) {
   return counts;
 }
 
+function applyExclusionsPatch(ledger, exclusions, batchEntries) {
+  if (exclusions === undefined) return 0;
+  assert.ok(exclusions && typeof exclusions === "object" && !Array.isArray(exclusions), "batch.exclusionsが不正です");
+  let applied = 0;
+  ledger.exclusions = ledger.exclusions || {};
+  const allowedGroups = new Set(["general", ...Object.keys(ledger.dictionary?.roots || {})]);
+  for (const [group, values] of Object.entries(exclusions)) {
+    nonEmpty(group, "batch.exclusionsのgroup");
+    assert.ok(allowedGroups.has(group), `batch.exclusions.${group}: 語根名またはgeneralを指定してください`);
+    assert.ok(values && typeof values === "object" && !Array.isArray(values), `batch.exclusions.${group}が不正です`);
+    ledger.exclusions[group] = ledger.exclusions[group] || {};
+    for (const [lemma, rawReason] of Object.entries(values)) {
+      nonEmpty(lemma, `batch.exclusions.${group}のlemma`);
+      const reason = nonEmpty(rawReason, `batch.exclusions.${group}.${lemma}`);
+      assert.equal(Object.prototype.hasOwnProperty.call(batchEntries, lemma), false, `${lemma}: 同じbatch内で語源entryと除外理由を両方指定できません`);
+      const existingEntry = ledger.entries[lemma];
+      assert.ok(!existingEntry || existingEntry.classification === "C", `${lemma}: origin entryをC型除外へ変更するには明示的な再分類が必要です`);
+      const existingReason = ledger.exclusions[group][lemma];
+      if (existingReason !== undefined) {
+        assert.equal(existingReason, reason, `${lemma}: 既存の除外理由と一致しません`);
+        continue;
+      }
+      ledger.exclusions[group][lemma] = reason;
+      applied += 1;
+    }
+  }
+  return applied;
+}
+
 function main() {
   const batchPath = process.argv[2];
   assert.ok(batchPath, "使い方: node scripts/apply-word-origin-research-batch.cjs <batch.json>");
@@ -96,6 +125,7 @@ function main() {
   }
 
   const dictionaryCounts = applyDictionaryPatch(ledger, batch.dictionary);
+  const appliedExclusions = applyExclusionsPatch(ledger, batch.exclusions, batch.entries);
   ledger.meta.lastAppliedBatch = batchId;
   ledger.meta.appliedBatches = [
     ...(Array.isArray(ledger.meta.appliedBatches) ? ledger.meta.appliedBatches : (previousBatch ? [{ batchId: previousBatch }] : [])),
@@ -104,10 +134,11 @@ function main() {
       entries: applied,
       roots: dictionaryCounts.roots,
       affixes: dictionaryCounts.affixes,
+      exclusions: appliedExclusions,
     },
   ];
   writeJson(RESEARCH_PATH, ledger);
-  console.log(`word origin research batch: applied ${applied} entries (${batchId}), dictionary ${JSON.stringify(dictionaryCounts)}`);
+  console.log(`word origin research batch: applied ${applied} entries and ${appliedExclusions} exclusions (${batchId}), dictionary ${JSON.stringify(dictionaryCounts)}`);
   return 0;
 }
 
