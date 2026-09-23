@@ -44,6 +44,7 @@ const CHECKS = [
   ["scripts/check-cloud-progress-namespace.cjs"],
   ["scripts/check-meaning-mission-ui.cjs"],
   ["scripts/check-unit-learning-ui.cjs"],
+  ["scripts/check-context-feedback-ui.cjs"],
   ["scripts/check-practice-feedback-ui.cjs"],
   ["scripts/check-lemma-headword.cjs"],
   ["scripts/check-vocab-goal-ui.cjs"],

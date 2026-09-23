@@ -28,6 +28,14 @@ assert.match(advanceLearnFromFlash, /session\.stage = "check"/, "最後のFlash�
 
 assert.match(renderContext, /session\.items\[session\.learnIdx\]/, "通常学習のContextは現在のsession.itemsを参照する必要があります");
 assert.match(renderContext, /recordLearnContextResult\(sourceItem, meaning, correctMeaning\)/, "ContextのpickedMeaning/correctMeaningを保存する必要があります");
+assert.match(renderContext, /choices contextChoices\$\{session\.contextRevealed \? " contextChoicesAnswered"/, "Contextの4択は回答後も残す必要があります");
+assert.match(renderContext, /if \(session\.contextRevealed\) \{\s*button\.disabled = true;/, "回答後のContext選択肢はdisabledにする必要があります");
+assert.match(renderContext, /classList\.add\("correct"\)/, "Contextの正解選択肢へcorrect classが必要です");
+assert.match(renderContext, /classList\.add\("wrong"\)/, "Contextで選んだ誤答へwrong classが必要です");
+assert.match(renderContext, /contextChoiceDim/, "回答後は正解と自分の回答以外を弱める必要があります");
+assert.match(renderContext, /contextChoiceState/, "Contextの状態は選択肢上のテキストでも示す必要があります");
+assert.match(renderContext, /contextResult \$\{isCorrect \? "ok" : "ng"\}/, "通常学習でもContextの正誤クラスを使う必要があります");
+assert.match(renderContext, /contextResultTitle/, "Contextの結果タイトルを用意する必要があります");
 assert.match(renderContext, /item\.mixedEnglish/, "Contextは教材側のMixed Contextを優先表示できる必要があります");
 assert.match(renderContext, /正しい意味：\$\{correctMeaning\}/, "Context回答後は正しい意味を表示する必要があります");
 assert.match(renderContext, /例文の訳：\$\{exampleTranslation\}/, "Context回答後は例文の訳を表示する必要があります");

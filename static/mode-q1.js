@@ -3425,10 +3425,12 @@ function renderSession() {
 
 // カード・ステージをDOM置換した後、フォーカスを現在の内容へ一元的に移す（F-03）。
 // 旧「次のカード」等の削除済み要素にフォーカスが残ると、次のTabが新画面の先頭から始まらない。
-// 暗記カードは現在語句（.flashWord）、他ステージはセッション見出し（#sessionStageTitle）。
+// 暗記カードは現在語句（.flashWord）、回答済みContextは結果見出し、それ以外はセッション見出し。
 // スクロール位置は変えない（送り後の scrollFlashCardIntoView などと競合させない）。
 function focusSessionContext() {
-  const target = session && session.stage === "flash"
+  const target = session && session.stage === "context" && session.contextRevealed === true
+    ? $("#contextResultTitle")
+    : session && session.stage === "flash"
     ? $("#sessionPanel .flash .flashWord")
     : $("#sessionStageTitle");
   if (target && typeof target.focus === "function") {
@@ -3555,36 +3557,59 @@ function renderContext(body) {
   });
   card.appendChild(story);
 
-  if (!session.contextRevealed) {
-    card.appendChild(el("p", { class: "label contextChoiceLabel" }, "推測した意味は？"));
-    const choiceWrap = el("div", { class: "choices contextChoices", role: "group", "aria-label": "推測した意味の4択" });
-    choices.forEach((meaning, index) => {
-      choiceWrap.appendChild(el("button", {
-        class: "choiceBtn contextChoiceBtn",
-        type: "button",
-        onclick: () => {
-          session.contextPicked = meaning;
-          session.contextCorrect = meaning === correctMeaning;
-          session.contextRevealed = true;
-          if (isLearn) recordLearnContextResult(sourceItem, meaning, correctMeaning);
-          renderSession();
-        },
+  card.appendChild(el("p", { class: "label contextChoiceLabel" }, "推測した意味は？"));
+  const choiceWrap = el("div", {
+    class: `choices contextChoices${session.contextRevealed ? " contextChoicesAnswered" : ""}`,
+    role: "group",
+    "aria-label": "推測した意味の4択",
+  });
+  choices.forEach((meaning, index) => {
+    const isCorrectChoice = meaning === correctMeaning;
+    const isPicked = meaning === session.contextPicked;
+    const isDim = session.contextRevealed && !isCorrectChoice && !isPicked;
+    const button = el("button", {
+      class: `choiceBtn contextChoiceBtn${isDim ? " contextChoiceDim" : ""}`,
+      type: "button",
+      onclick: () => {
+        if (session.contextRevealed) return;
+        session.contextPicked = meaning;
+        session.contextCorrect = meaning === correctMeaning;
+        session.contextRevealed = true;
+        if (isLearn) recordLearnContextResult(sourceItem, meaning, correctMeaning);
+        renderSession();
       },
-      el("span", { class: "key" }, String(index + 1)),
-      el("span", {}, meaning)));
-    });
-    card.appendChild(choiceWrap);
-  } else {
+    },
+    el("span", { class: "key" }, String(index + 1)),
+    el("span", { class: "contextChoiceText" }, meaning));
+    if (session.contextRevealed) {
+      button.disabled = true;
+      if (isCorrectChoice) button.classList.add("correct");
+      else if (isPicked) button.classList.add("wrong");
+      if (isCorrectChoice) button.appendChild(el("span", { class: "contextChoiceState" }, "✓ 正解"));
+      else if (isPicked) button.appendChild(el("span", { class: "contextChoiceState" }, "あなたの回答"));
+    }
+    choiceWrap.appendChild(button);
+  });
+  card.appendChild(choiceWrap);
+
+  if (session.contextRevealed) {
+    const isCorrect = session.contextCorrect === true;
     card.appendChild(el("div", {
-      class: `feedback contextResult ${isLearn ? "contextNeutral" : (session.contextCorrect ? "ok" : "ng")}`,
+      class: `feedback contextResult ${isCorrect ? "ok" : "ng"}`,
       role: "status",
       "aria-live": "polite",
     },
-      el("h3", {}, session.contextCorrect ? "正解！" : "おしい！"),
+      el("div", { class: "contextResultHead" },
+        el("span", { class: "contextResultIcon", "aria-hidden": "true" }, isCorrect ? "✓" : "!"),
+        el("div", {},
+          el("h3", { class: "contextResultTitle", id: "contextResultTitle", tabindex: "-1" }, isCorrect ? "正解！" : "おしい！"),
+          el("p", { class: "contextResultLead" }, isCorrect ? "文脈から意味を見抜けました" : "正解を確認してから覚えましょう"),
+        ),
+      ),
       el("p", {}, `正しい意味：${correctMeaning}`),
+      !isCorrect ? el("p", { class: "trans" }, `あなたの選択：${session.contextPicked}`) : null,
       exampleTranslation ? el("p", { class: "trans contextExampleTranslation" }, `例文の訳：${exampleTranslation}`) : null,
       secondSentenceTranslation ? el("p", { class: "trans contextSecondSentenceTranslation" }, `2文目の訳：${secondSentenceTranslation}`) : null,
-      !session.contextCorrect ? el("p", { class: "trans" }, `あなたの選択：${session.contextPicked}`) : null,
     ));
     card.appendChild(el("div", { class: "actions contextActions" },
       el("button", {

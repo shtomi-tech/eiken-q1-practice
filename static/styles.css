@@ -783,16 +783,67 @@ h2 {
 .contextChoiceLabel { margin: 16px 18px 8px; }
 .contextChoices { margin: 0 18px; }
 .contextChoiceBtn { width: 100%; }
+.contextChoiceText { flex: 1 1 auto; min-width: 0; }
+.contextChoicesAnswered .contextChoiceBtn:disabled {
+  cursor: default;
+  opacity: 1;
+}
+.contextChoicesAnswered .contextChoiceBtn:hover:disabled {
+  background: var(--paper);
+  color: var(--ink);
+}
+.contextChoicesAnswered .contextChoiceBtn.contextChoiceDim { opacity: .56; }
+.contextChoiceState {
+  color: var(--muted);
+  flex: 0 1 auto;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  margin-left: auto;
+  min-width: 0;
+  text-align: right;
+}
+.contextChoiceBtn.correct .contextChoiceState { color: var(--ok-text); }
+.contextChoiceBtn.wrong .contextChoiceState { color: var(--ng); }
 .contextResult { margin: 16px 18px 0; }
-.contextResult.contextNeutral {
-  background: var(--surface-soft);
-  border-left-color: var(--clay);
+.contextResultHead {
+  align-items: flex-start;
+  display: flex;
+  gap: 12px;
+}
+.contextResultHead > div { min-width: 0; }
+.contextResultIcon {
+  align-items: center;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  display: inline-flex;
+  flex: 0 0 34px;
+  font-family: var(--mono);
+  font-size: 15px;
+  font-weight: 700;
+  height: 34px;
+  justify-content: center;
+  line-height: 1;
+  width: 34px;
+}
+.contextResult.ok .contextResultIcon {
+  color: var(--ok-text);
+  animation: kStatusCheck var(--motion-feedback) var(--ease-spring-soft);
+}
+.contextResult.ng .contextResultIcon { color: var(--ng); }
+.contextResultHead .contextResultTitle { margin: 0; }
+.contextResultHead .contextResultLead {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.4;
+  margin: 4px 0 0;
 }
 .contextActions { margin: 16px 18px 0; }
 .contextActions:last-child { padding-bottom: 18px; }
 
 @media (max-width: 600px) {
   .contextSentence { font-size: 18px; }
+  .contextChoiceState { font-size: 10px; max-width: 6.5em; }
 }
 
 .meaningWrongReview {
