@@ -164,6 +164,41 @@ QUESTIONS = [
 ]
 
 
+_CONTEXT_ADDITIONS = {
+    2: ("Customers complained that the kitchen staff had ignored the blocked drain throughout the entire dinner service.", "客たちは、厨房の職員が夕食の営業中ずっと詰まった排水口を放置したと苦情を述べた。"),
+    3: ("Their improvised solution kept essential supplies moving between the islands.", "彼らの即興の解決策により、島々の間で必需品を運び続けられた。"),
+    4: ("Each object reminded her of a project she had completed there.", "それぞれの品は、そこで終えた仕事を彼女に思い出させた。"),
+    5: ("The agreement ended a dispute that had divided the staff for years.", "その協定は、何年も職員を分断していた争いを終わらせた。"),
+    6: ("The fish returned once the water plants stabilized the pond.", "水草が池を安定させると、魚が戻ってきた。"),
+    8: ("The pumps were left unguarded while the two engineers prepared to leave.", "2人の技術者が立ち去る準備をしている間、ポンプは無人になっていた。"),
+    10: ("He had never seen the stranger before and felt immediately threatened.", "彼はその見知らぬ男に会ったことがなく、すぐに脅威を感じた。"),
+    12: ("The crew opened the valves after capture became unavoidable.", "拿捕が避けられなくなった後、乗組員は弁を開いた。"),
+    15: ("The witnesses' accounts made his version impossible to accept.", "目撃者たちの証言により、彼の説明は受け入れられなかった。"),
+    17: ("Reviewers found gaps in the evidence needed to support the claim.", "批評家たちは、その主張を裏付ける証拠に不足があると気づいた。"),
+    19: ("The pattern left him exhausted and unable to meet his deadlines.", "その習慣により彼は疲れ果て、締め切りを守れなくなった。"),
+    22: ("Without that letter, the court could not establish who had signed.", "その手紙がなければ、裁判所は誰が署名したか確定できなかった。"),
+}
+_DIALOGUE_UPDATES = {
+    0: (
+        "A: Why were the northern homes cold this morning? B: A sudden power (   ) left three districts without heating for almost eleven hours.",
+        "A: 今朝、なぜ北部の家々は寒かったのですか。 B: 突然の停電により、3地区が11時間近く暖房のない状態になりました。",
+    ),
+    1: (
+        "A: Did women in the colony vote before women in the mother country? B: Yes. They won full (   ) more than a decade earlier.",
+        "A: その植民地の女性は本国の女性より先に投票できたのですか。 B: はい。10年以上早く完全な選挙権を勝ち取りました。",
+    ),
+}
+for _index, _question in enumerate(QUESTIONS):
+    if _index in _DIALOGUE_UPDATES:
+        _question["stem"], _question["translation"] = _DIALOGUE_UPDATES[_index]
+        continue
+    if _index not in _CONTEXT_ADDITIONS:
+        continue
+    _suffix, _translation_suffix = _CONTEXT_ADDITIONS[_index]
+    _question["stem"] = f'{_question["stem"].rstrip()} {_suffix}'
+    _question["translation"] = f'{_question["translation"].rstrip()} {_translation_suffix}'
+
+
 DETAILS = {
     # Q1
     "partisan": ("熱烈な支持者、パルチザン", "名詞", "He was too much of a partisan to chair a neutral inquiry.", "彼は熱烈な支持者でありすぎて、中立な調査の議長は務まらなかった。"),

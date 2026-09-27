@@ -453,5 +453,54 @@ CORE_IMAGES = {
 }
 
 
+def _apply_past_paper_style() -> None:
+    dialogue_contexts = {
+        2: (
+            "Did the airline expect travelers to accept the new carry-on fee? B: Apparently not; passengers' fierce (   ) forced it to withdraw the decision within a week.",
+            "その航空会社は新しい機内持ち込み料金を旅行客が受け入れると思っていたの？ B：どうやら違ったようだ。乗客の激しい反発で、1週間以内にその決定を撤回した。",
+        ),
+        10: (
+            "The reporters kept asking about the settlement. B: They did, but neither company (   ) its detailed terms under the confidentiality agreement.",
+            "記者たちは和解について尋ね続けていた。 B：そうだったが、秘密保持契約のため、どちらの会社も詳細な条件を漏らさなかった。",
+        ),
+    }
+    context_updates = {
+        1: ("The story made the laboratory's technical work feel more human.", "その話によって、研究所の専門的な仕事がより身近に感じられた。"),
+        3: ("Lawmakers later rewrote the provision to prevent similar abuse.", "議員たちは後に、同じような悪用を防ぐためその規定を書き直した。"),
+        4: ("The victims' families said the sentence was still too lenient.", "被害者の家族は、その判決でもまだ軽すぎると述べた。"),
+        5: ("The report linked the delay to years of neglected maintenance.", "その報告書は、遅れの原因を何年にもわたる整備不足と結びつけた。"),
+        6: ("Counselors said the change would encourage earlier treatment.", "カウンセラーたちは、その変化が早期治療を促すと述べた。"),
+        8: ("She wanted her published work judged without online distractions.", "彼女は、オンライン上の雑音なしに発表した作品を評価してほしかった。"),
+        9: ("Residents said the number of complaints increased soon afterward.", "住民たちは、その後まもなく苦情の数が増えたと述べた。"),
+        11: ("The replacement was selected before the next campaign began.", "次の選挙運動が始まる前に、後任が選ばれた。"),
+        12: ("The recording gave investigators an independent reason to trust her.", "その録音によって、捜査官には彼女を信頼する別の根拠ができた。"),
+        13: ("His editor had warned him repeatedly about the approaching deadline.", "編集者は迫る締め切りについて、彼に何度も警告していた。"),
+        14: ("The restriction remained in force until the contract expired.", "その制限は契約が満了するまで有効だった。"),
+        15: ("The regulator noticed that the copies had been made after midnight.", "規制当局は、その複製が深夜に作られたことに気づいた。"),
+        16: ("Inspectors can close the facility if it fails.", "検査官は、基準を満たさない施設を閉鎖できる。"),
+        17: ("A financial adviser urged her to spread the risk.", "金融アドバイザーは、リスクを分散するよう彼女に勧めた。"),
+        18: ("Everyone felt comfortable enough to stay after work.", "皆が仕事の後も残っていられるほど居心地よく感じた。"),
+        19: ("Her manner made the waiting villagers feel invisible.", "彼女の態度によって、待っていた村人たちは無視されたように感じた。"),
+        20: ("The investigation found that both officials knew about the fraud.", "捜査によって、両方の役人が詐欺を知っていたことが判明した。"),
+        21: ("The dry intervals lasted long enough to lower the water level.", "雨の降らない期間が十分長く続き、水位が下がった。"),
+        22: ("Officials wanted to prevent another year of unchecked expansion.", "当局は、無制限の拡大がまた1年続くのを防ごうとした。"),
+        23: ("She refused to let the criticism affect her concentration.", "彼女は批判によって集中力を乱されることを拒んだ。"),
+        24: ("The evidence pointed instead to an electrical fault.", "証拠は、むしろ電気系統の故障を示していた。"),
+        25: ("The unexpected success attracted buyers from several countries.", "予想外の成功によって、いくつかの国から買い手が集まった。"),
+    }
+    for number, question in enumerate(QUESTIONS, start=1):
+        if number in dialogue_contexts:
+            context, context_translation = dialogue_contexts[number]
+            question["stem"] = f"A: {context}"
+            question["translation"] = f"A：{context_translation}"
+        elif number in context_updates:
+            context, context_translation = context_updates[number]
+            question["stem"] += f" {context}"
+            question["translation"] += f" {context_translation}"
+
+
+_apply_past_paper_style()
+
+
 if __name__ == "__main__":
     run_q1_mock(ROUND_ID, QUESTIONS, DETAILS, CORE_IMAGES)

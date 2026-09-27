@@ -164,6 +164,42 @@ QUESTIONS = [
 ]
 
 
+# Align the mock with the official stem profile while keeping the tested
+# vocabulary item, choices, and answer position unchanged.
+_CONTEXT_ADDITIONS = {
+    2: ("The branch had to respond quickly when two villages lost power.", "2つの村が停電した際、支店は迅速に対応しなければならなかった。"),
+    3: ("The observers said the result mocked the voters' stated choice.", "監視団は、その結果が有権者の意思表示を茶化していると述べた。"),
+    4: ("Colleagues rely on him whenever a disagreement threatens a deadline.", "締め切りが口論で危うくなると、同僚はいつも彼を頼りにする。"),
+    5: ("The cancellation left hundreds of passengers stranded far from home.", "欠航により、何百人もの乗客が故郷から遠く離れて足止めされた。"),
+    7: ("The road was the villagers' only route to the nearest hospital.", "その道路は、村人が最寄りの病院へ行く唯一の道だった。"),
+    10: ("The campaign targeted children before the winter outbreak reached the province.", "その運動は、冬の流行が州に広がる前に子どもたちを対象にした。"),
+    12: ("Her colleagues knew the news had been expected for several weeks.", "同僚たちは、その知らせが数週間前から予想されていたと知っていた。"),
+    14: ("Travelers praised the quiet landscape and its carefully preserved stone cottages.", "旅行者たちは、静かな景観と丁寧に保存された石造りの小屋を称賛した。"),
+    16: ("No regular bus service reaches the plateau during the winter months.", "冬の間、その高原には定期バスが運行していない。"),
+    19: ("Even the fishing boats moved slowly because the water was so still.", "水面がとても静かだったため、漁船でさえゆっくり進んだ。"),
+    23: ("The figures looked reassuring, but the missing money remained unexplained.", "数字は安心できそうに見えたが、なくなった資金は説明されないままだった。"),
+}
+_DIALOGUE_UPDATES = {
+    0: (
+        "A: Did the premiere recover after the first technical problem? B: No, it got worse: the sound failed twice and half the cast missed their cues, so the opening night was a complete (   ).",
+        "A: 初演は最初の技術的な問題の後、立て直せましたか。 B: いいえ、さらに悪化しました。音響は2度止まり、出演者の半数が出のきっかけを外したので、初日は完全な失敗でした。",
+    ),
+    1: (
+        "A: Can the laboratory keep operating after the inspectors' visit? B: No. Several altered records meant it lost its (   ) last year.",
+        "A: その研究所は検査官の訪問後も運営を続けられますか。 B: いいえ。複数の記録が改ざんされていたため、昨年その認定を失いました。",
+    ),
+}
+for _index, _question in enumerate(QUESTIONS):
+    if _index in _DIALOGUE_UPDATES:
+        _question["stem"], _question["translation"] = _DIALOGUE_UPDATES[_index]
+        continue
+    if _index not in _CONTEXT_ADDITIONS:
+        continue
+    _suffix, _translation_suffix = _CONTEXT_ADDITIONS[_index]
+    _question["stem"] = f'{_question["stem"].rstrip()} {_suffix}'
+    _question["translation"] = f'{_question["translation"].rstrip()} {_translation_suffix}'
+
+
 DETAILS = {
     # Q1
     "fiasco": ("大失敗", "名詞", "The launch turned into a fiasco when the software crashed on stage.", "壇上でソフトウェアが停止し、その発表会は大失敗になった。"),

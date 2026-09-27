@@ -441,5 +441,55 @@ CORE_IMAGES = {
 }
 
 
+def _apply_past_paper_style() -> None:
+    dialogue_contexts = {
+        8: (
+            "Why did he remain silent during the verdict? B: He (   ) his fists at his sides and said nothing.",
+            "彼はなぜ評決の間、黙っていたの？ B：彼は両脇で拳を固く握り、何も言わなかった。",
+        ),
+        24: (
+            "Did she pass the entrance examination? B: Yes, she (   ) it without difficulty and began the two-year course in April.",
+            "彼女は入学試験に合格したの？ B：はい、難なく突破し、4月に2年間の課程を始めた。",
+        ),
+    }
+    context_updates = {
+        1: ("The road survey warned drivers about the hidden drop.", "道路調査は、見えにくい崖下にドライバーが注意するよう警告した。"),
+        2: ("The court ordered further examinations before deciding the case.", "裁判所は事件を決める前に、さらなる検査を命じた。"),
+        3: ("The controlled collapse left the neighboring buildings untouched.", "制御された崩壊によって、隣接する建物は無傷のまま残った。"),
+        4: ("Visitors attended the concerts throughout the week of celebrations.", "祝賀週間を通じて、訪問者たちはコンサートに参加した。"),
+        5: ("The explanation made the difficult argument accessible to non-specialists.", "その説明によって、難しい議論が専門家でない人にも理解できるものになった。"),
+        6: ("The bank refused to proceed without property as security.", "銀行は担保となる財産なしには手続きを進めなかった。"),
+        7: ("He regarded the painful walk as repayment for his actions.", "彼はその苦しい歩みを自分の行為への償いと考えた。"),
+        9: ("The instructor required students to memorize each changing form.", "教師は学生たちに、それぞれの変化形を暗記させた。"),
+        10: ("The gust also scattered napkins across the outdoor table.", "その突風は屋外のテーブル全体にナプキンもまき散らした。"),
+        11: ("The talks remained closed despite pressure from several allies.", "複数の同盟国から圧力があったにもかかわらず、交渉は閉ざされたままだった。"),
+        12: ("He signed the papers before boarding a ship abroad.", "彼は海外行きの船に乗る前に書類へ署名した。"),
+        13: ("She kept the letter in a drawer instead of mailing it.", "彼女はその手紙を郵送せず、引き出しにしまった。"),
+        14: ("Passengers were told to pack liquids within the permitted limit.", "乗客は液体を許可された量以内に収めるよう言われた。"),
+        15: ("She read during every spare moment of the long journey.", "彼女は長い旅の空き時間ごとに読書をした。"),
+        16: ("The committee valued results more than elegant theory.", "委員会は洗練された理論よりも結果を重視した。"),
+        17: ("The statement ended the debate among the committee members.", "その声明によって委員会内の議論は終わった。"),
+        18: ("The children watched the clouds and waited for clear skies.", "子どもたちは雲を眺め、晴れるのを待った。"),
+        19: ("The display remained visible after the lights had been switched off.", "照明が消された後も、その表示は見え続けた。"),
+        20: ("The declaration offered no legal route for removing them.", "その宣言は、それらを取り除く法的な道を認めなかった。"),
+        21: ("He realized the mistake only after the folder was gone.", "彼はフォルダーが消えた後で初めて、その間違いに気づいた。"),
+        22: ("The gap widened during the period of rapid national growth.", "その差は国全体が急成長した時期に広がった。"),
+        23: ("She felt calm only after hearing the surgeon's announcement.", "彼女は外科医の発表を聞いて初めて安心した。"),
+        25: ("The improvised device restored communication before nightfall.", "その間に合わせの装置によって、日暮れ前に通信が復旧した。"),
+    }
+    for number, question in enumerate(QUESTIONS, start=1):
+        if number in dialogue_contexts:
+            context, context_translation = dialogue_contexts[number]
+            question["stem"] = f"A: {context}"
+            question["translation"] = f"A：{context_translation}"
+        elif number in context_updates:
+            context, context_translation = context_updates[number]
+            question["stem"] += f" {context}"
+            question["translation"] += f" {context_translation}"
+
+
+_apply_past_paper_style()
+
+
 if __name__ == "__main__":
     run_q1_mock(ROUND_ID, QUESTIONS, DETAILS, CORE_IMAGES)

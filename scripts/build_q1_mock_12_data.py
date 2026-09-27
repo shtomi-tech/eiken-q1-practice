@@ -445,5 +445,55 @@ CORE_IMAGES = {
 }
 
 
+def _apply_past_paper_style() -> None:
+    dialogue_contexts = {
+        4: (
+            "Why did the nurse treat the climber's arm? B: He had fallen on a sharp rock, so she cleaned a deep (   ) before dressing it.",
+            "なぜ看護師はその登山者の腕を手当てしたの？ B：彼は鋭い岩の上に落ちたので、看護師は傷口を覆う前に深い裂傷を洗浄した。",
+        ),
+        23: (
+            "Why did the airline reduce its regional schedule? B: It (   ) it after fuel prices rose for a fourth quarter.",
+            "なぜその航空会社は地域路線の運行を減らしたの？ B：燃料価格が4四半期連続で上がった後、運行を削減した。",
+        ),
+    }
+    context_updates = {
+        1: ("The organizers wanted every supporter involved in routine decisions.", "主催者たちは、すべての支持者に日常の決定へ関わってほしかった。"),
+        2: ("The audience remained standing until the singer left the stage.", "聴衆は歌手が舞台を去るまで立ち続けた。"),
+        3: ("The captain noticed that even simple tasks were taking longer.", "船長は、簡単な作業でさえ時間がかかっていることに気づいた。"),
+        5: ("The short stay gave them time to visit the old harbor.", "その短い滞在で、彼らは古い港を訪れる時間を得た。"),
+        6: ("Guests soon began talking with one another instead of leaving early.", "客たちはすぐに帰る代わりに、互いに話し始めた。"),
+        7: ("Without it, local shops would have struggled to survive.", "それがなければ、地元の店は生き残るのに苦労しただろう。"),
+        8: ("The workers were afraid to complain while he remained in charge.", "彼が責任者でいる間、作業員たちは苦情を言うのを恐れていた。"),
+        9: ("The advertisement disappeared from the company's website the next day.", "その広告は翌日、会社のウェブサイトから消えた。"),
+        10: ("The light rain left the outdoor equipment damp.", "弱い雨で屋外の設備は湿ったままになった。"),
+        11: ("No juror could contact reporters or relatives during deliberations.", "評議中、陪審員は記者や親族と連絡を取れなかった。"),
+        12: ("The defenders ran out of food before help arrived.", "援軍が到着する前に、守備隊は食料を使い果たした。"),
+        13: ("The campaigners celebrated the change as a major victory.", "運動家たちはその変化を大きな勝利として祝った。"),
+        14: ("The message was finally understood after years of failed attempts.", "何年も試みが失敗した後、ついにそのメッセージが理解された。"),
+        15: ("Nobody in the newsroom had time to take a break.", "ニュース編集室では、誰も休憩を取る時間がなかった。"),
+        16: ("The committee understood the findings without reading a longer report.", "委員会は、より長い報告書を読まずに調査結果を理解した。"),
+        17: ("His speeches sounded impressive but offered no workable proposal.", "彼の演説は印象的に聞こえたが、実行可能な提案はなかった。"),
+        18: ("The smell lingered after the workers opened the windows.", "作業員が窓を開けた後も、そのにおいは残った。"),
+        19: ("Even the judge paused before asking whether he was serious.", "裁判官でさえ、本人が本気か尋ねる前にためらった。"),
+        20: ("Travel no longer excited him after so many years on the road.", "何年も旅を続けた後、旅行はもう彼を興奮させなかった。"),
+        21: ("She placed each pastry carefully so the icing stayed intact.", "彼女はアイシングが崩れないよう、菓子を一つずつ丁寧に置いた。"),
+        22: ("His supervisor noticed that he never volunteered for new work.", "上司は、彼が新しい仕事を決して進んで引き受けないことに気づいた。"),
+        24: ("The trial succeeded, so officials extended it nationwide.", "試験運用が成功したので、当局は全国へ拡大した。"),
+        25: ("They had not yet selected one proposal for development.", "彼らはまだ開発する提案を一つに絞っていなかった。"),
+    }
+    for number, question in enumerate(QUESTIONS, start=1):
+        if number in dialogue_contexts:
+            context, context_translation = dialogue_contexts[number]
+            question["stem"] = f"A: {context}"
+            question["translation"] = f"A：{context_translation}"
+        elif number in context_updates:
+            context, context_translation = context_updates[number]
+            question["stem"] += f" {context}"
+            question["translation"] += f" {context_translation}"
+
+
+_apply_past_paper_style()
+
+
 if __name__ == "__main__":
     run_q1_mock(ROUND_ID, QUESTIONS, DETAILS, CORE_IMAGES)

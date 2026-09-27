@@ -451,5 +451,55 @@ CORE_IMAGES = {
 }
 
 
+def _apply_past_paper_style() -> None:
+    dialogue_contexts = {
+        8: (
+            "Have residents accepted the company's public apology? B: No; it did little to (   ) their anger after weeks of complaints.",
+            "住民は会社の公式謝罪を受け入れたの？ B：いいえ。何週間も苦情が続いた後では、その謝罪は怒りを和らげるのにほとんど役立たなかった。",
+        ),
+        24: (
+            "Why did she leave the meeting? B: She (   ) after the committee dismissed her proposal without discussion.",
+            "なぜ彼女は会議を退出したの？ B：委員会が議論なしに彼女の提案を退けた後、彼女は怒って飛び出した。",
+        ),
+    }
+    context_updates = {
+        1: ("News outlets sent reporters to the site from across the country.", "全国の報道機関が現場へ記者を送り込んだ。"),
+        2: ("Patients with serious conditions were referred to the main hospital.", "重い症状の患者は本院へ紹介された。"),
+        3: ("Several officers had warned him that the plan was unsafe.", "数人の将校が、その計画は危険だと彼に警告していた。"),
+        4: ("The device worked well enough to keep the seedlings alive.", "その装置は苗を生かしておける程度にはうまく機能した。"),
+        5: ("The auctioneer said the buyer could request independent evidence.", "競売人は、買い手が独立した証拠を求めてもよいと述べた。"),
+        6: ("She continued rehearsing even when the orchestra lacked funding.", "彼女は楽団に資金がなかった時期も練習を続けた。"),
+        7: ("He avoided crowded trains and traveled before the rush began.", "彼は混雑した列車を避け、ラッシュが始まる前に移動した。"),
+        9: ("The driver eventually stopped pulling and called for help.", "運転手はついに引っ張るのをやめ、助けを呼んだ。"),
+        10: ("Factories switched materials when imported cotton became cheaper.", "輸入綿花が安くなると、工場は材料を切り替えた。"),
+        11: ("The operation could not begin until the damaged nerve was removed.", "損傷した神経が取り除かれるまで、手術は始められなかった。"),
+        12: ("Auditors found that the missing funds had paid his private debts.", "監査人は、なくなった資金が彼の個人的な借金の返済に使われたと突き止めた。"),
+        13: ("The power station supplied electricity to every village on the island.", "その発電所は島のすべての村に電力を供給した。"),
+        14: ("Public confidence returned after the changes were introduced.", "改革が導入された後、国民の信頼が戻った。"),
+        15: ("The images were designed to influence viewers without their awareness.", "その映像は、視聴者が気づかないうちに影響を与えるよう作られていた。"),
+        16: ("The visitor left quickly after hearing the answer.", "訪問者はその返事を聞くとすぐに立ち去った。"),
+        17: ("The climbers ate it because no other meal was available.", "他に食事がなかったので、登山者たちはそれを食べた。"),
+        18: ("A closer audit was scheduled for the following morning.", "翌朝、より詳しい監査が予定された。"),
+        19: ("The judge dismissed it once the original documents were shown.", "元の書類が示されると、裁判官はそれを退けた。"),
+        20: ("Water ran off the surface without entering the material.", "水は素材の中へ入らず、表面を流れ落ちた。"),
+        21: ("The increase was especially rapid during the second year.", "増加は2年目に特に急速だった。"),
+        22: ("The reserve was needed before winter donations arrived.", "その蓄えは、冬の寄付が届く前に必要だった。"),
+        23: ("The apprentice finally agreed to enter the national competition.", "その見習いはついに全国大会へ出ることに同意した。"),
+        25: ("Without its organizers, the campaign lost momentum and ended quietly.", "主催者がいなくなると、その運動は勢いを失い静かに終わった。"),
+    }
+    for number, question in enumerate(QUESTIONS, start=1):
+        if number in dialogue_contexts:
+            context, context_translation = dialogue_contexts[number]
+            question["stem"] = f"A: {context}"
+            question["translation"] = f"A：{context_translation}"
+        elif number in context_updates:
+            context, context_translation = context_updates[number]
+            question["stem"] += f" {context}"
+            question["translation"] += f" {context_translation}"
+
+
+_apply_past_paper_style()
+
+
 if __name__ == "__main__":
     run_q1_mock(ROUND_ID, QUESTIONS, DETAILS, CORE_IMAGES)

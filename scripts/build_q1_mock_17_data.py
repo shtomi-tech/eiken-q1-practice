@@ -164,6 +164,41 @@ QUESTIONS = [
 ]
 
 
+_CONTEXT_ADDITIONS = {
+    2: ("The restriction was meant to pressure the neighboring country economically.", "その制限は、隣国に経済的な圧力をかけるためのものだった。"),
+    3: ("The new strain spread faster and caused much more severe symptoms.", "その新しい株はより速く広がり、はるかに重い症状を引き起こした。"),
+    4: ("He regarded the demand as an insult from officials who knew his family.", "彼はその要求を、自分の家族を知る役人からの侮辱だと受け止めた。"),
+    5: ("The unusually harsh ruling surprised even experienced defense lawyers.", "その異例に厳しい判決は、経験豊富な弁護士たちさえ驚かせた。"),
+    6: ("She found the missing artifact while searching for an unrelated document.", "彼女は無関係な文書を探しているときに、失われた工芸品を見つけた。"),
+    8: ("The head teacher warned that another offense would bring a suspension.", "校長は、もう一度違反すれば停学になると警告した。"),
+    10: ("The storm destroyed nesting sites that had survived for generations.", "その嵐は、何世代も残ってきた営巣地を破壊した。"),
+    12: ("The garrison had no supplies left and could not hold out.", "その守備隊には物資が残っておらず、持ちこたえられなかった。"),
+    14: ("The issue became a target of shifting public anger and approval.", "その問題は、世論の怒りと支持が移り変わる対象になった。"),
+    17: ("Workers needed special equipment to move it through the building safely.", "作業員は、それを建物内で安全に運ぶための特別な装備を必要とした。"),
+    20: ("Restorers matched every original detail before reopening the kitchen to visitors.", "修復担当者は、台所を訪問者に再公開する前に原状の細部を全て合わせた。"),
+    22: ("They carried only enough food to remain inside until the weather cleared.", "彼らは天候が回復するまで中にこもれるだけの食料しか運ばなかった。"),
+}
+_DIALOGUE_UPDATES = {
+    0: (
+        "A: Why was traffic stopped at the junction yesterday? B: Two delivery drivers had a loud (   ), and the argument blocked the junction for almost twenty minutes.",
+        "A: 昨日、なぜ交差点の交通が止まったのですか。 B: 2人の配送運転手が大声で口論し、その言い争いが交差点を20分近くふさぎました。",
+    ),
+    1: (
+        "A: What does the first sight of swallows usually signal here? B: People regard their return as a (   ) of spring in this region.",
+        "A: ここでは、最初にツバメを見ると通常何を知らせると考えますか。 B: この地域では、ツバメの帰還を春の前触れと見なしています。",
+    ),
+}
+for _index, _question in enumerate(QUESTIONS):
+    if _index in _DIALOGUE_UPDATES:
+        _question["stem"], _question["translation"] = _DIALOGUE_UPDATES[_index]
+        continue
+    if _index not in _CONTEXT_ADDITIONS:
+        continue
+    _suffix, _translation_suffix = _CONTEXT_ADDITIONS[_index]
+    _question["stem"] = f'{_question["stem"].rstrip()} {_suffix}'
+    _question["translation"] = f'{_question["translation"].rstrip()} {_translation_suffix}'
+
+
 DETAILS = {
     # Q1
     "debutante": ("社交界にデビューする女性", "名詞", "The photograph shows a debutante being presented at court in 1935.", "その写真は1935年に宮廷に紹介される社交界デビューの女性を写している。"),

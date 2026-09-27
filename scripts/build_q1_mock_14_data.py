@@ -452,5 +452,55 @@ CORE_IMAGES = {
 }
 
 
+def _apply_past_paper_style() -> None:
+    dialogue_contexts = {
+        2: (
+            "What happened after the final whistle? B: A (   ) broke out between two groups of supporters.",
+            "試合終了の笛の後、何が起きたの？ B：2組のサポーターの間で乱闘が起きた。",
+        ),
+        24: (
+            "Who led the ceremony? B: The council (   ) the new mayor at a short ceremony attended by only forty people.",
+            "誰が式典を主催したの？ B：評議会が、わずか40人が出席した短い式典で新市長を宣誓就任させた。",
+        ),
+    }
+    context_updates = {
+        1: ("The owner said the disruption had become impossible to ignore.", "店主は、その混乱をもう無視できなくなったと述べた。"),
+        3: ("Neither available option would protect the committee from criticism.", "どちらの選択肢でも、委員会を批判から守ることはできなかった。"),
+        4: ("Officials credited the improvement to cleaner drinking water.", "当局は、改善の理由をより清潔な飲料水にあるとした。"),
+        5: ("The disagreement continued even after several elders intervened.", "数人の長老が介入した後も、その対立は続いた。"),
+        6: ("Productivity fell as employees waited for news about their jobs.", "従業員が仕事についての知らせを待つ間、生産性は低下した。"),
+        7: ("Support increased once readers could see the proposal's benefits.", "読者がその提案の利点を理解すると、支持が増えた。"),
+        8: ("The work ended after inspectors found no remaining nests.", "検査官が残った巣を見つけられなかった後、作業は終了した。"),
+        9: ("Several employees later told investigators they had felt threatened.", "数人の従業員は後に、脅されたように感じたと捜査官に話した。"),
+        10: ("Workers extinguished the fire before it reached the fuel store.", "作業員は火が燃料庫に達する前に消火した。"),
+        11: ("The young heir was forced to remain in exile.", "若い後継者は追放されたままでいることを強いられた。"),
+        12: ("The children remained motionless until the story finally ended.", "子どもたちは物語がついに終わるまで動かなかった。"),
+        13: ("His colleagues considered the reaction especially unprofessional.", "同僚たちは、その反応は特にプロらしくないと考えた。"),
+        14: ("He rejected the accusation and pointed to the original records.", "彼はその非難を退け、元の記録を指し示した。"),
+        15: ("The thick growth covered the rocks along the stream.", "濃い草木が小川沿いの岩を覆っていた。"),
+        16: ("Visitors encountered paintings, clothing, tools, and armor together.", "訪問者は絵画や衣服、道具、甲冑を一緒に目にした。"),
+        17: ("The recording later showed that his account was false.", "その録音によって後に、彼の説明がうそだと分かった。"),
+        18: ("The figures were nearly identical in every monthly report.", "その数値は毎月の報告書でほとんど同じだった。"),
+        19: ("The organizers used a private entrance and kept no record.", "主催者たちは裏口を使い、記録を残さなかった。"),
+        20: ("The mechanism worked despite its simple appearance.", "その仕組みは見た目が単純なのに機能した。"),
+        21: ("The bridge carried little traffic despite the expense.", "その橋は費用がかかるのに、交通量が少なかった。"),
+        22: ("The supervisor noticed that both men avoided their assigned tasks.", "上司は、2人とも割り当てられた仕事を避けていることに気づいた。"),
+        23: ("The final cut occupied far more of the finished film.", "完成版では、最終編集された場面がはるかに大きな部分を占めた。"),
+        25: ("The detailed version was ready for public consultation by spring.", "詳細版は春までに一般の意見を聞ける状態になった。"),
+    }
+    for number, question in enumerate(QUESTIONS, start=1):
+        if number in dialogue_contexts:
+            context, context_translation = dialogue_contexts[number]
+            question["stem"] = f"A: {context}"
+            question["translation"] = f"A：{context_translation}"
+        elif number in context_updates:
+            context, context_translation = context_updates[number]
+            question["stem"] += f" {context}"
+            question["translation"] += f" {context_translation}"
+
+
+_apply_past_paper_style()
+
+
 if __name__ == "__main__":
     run_q1_mock(ROUND_ID, QUESTIONS, DETAILS, CORE_IMAGES)

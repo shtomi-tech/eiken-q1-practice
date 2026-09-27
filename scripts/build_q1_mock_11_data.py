@@ -448,5 +448,53 @@ CORE_IMAGES = {
 }
 
 
+def _apply_past_paper_style() -> None:
+    dialogue_contexts = {
+        8: (
+            "Did the construction firm make its loan payments last winter? B: No; it (   ) on them, so the bank seized two unfinished properties.",
+            "その建設会社は昨冬、ローンを返済したの？ B：いいえ。返済を滞らせたので、銀行は未完成の不動産を2件差し押さえた。",
+        ),
+        12: (
+            "What happened to the businessman outside his hotel? B: Two men (   ) him and demanded a ransom from his company.",
+            "ホテルの外でその実業家に何が起きたの？ B：2人の男が彼を誘拐し、会社に身代金を要求した。",
+        ),
+    }
+    context_updates = {
+        2: ("Observers said the proceedings had ignored every normal safeguard.", "傍聴人たちは、その手続きが通常の安全策をすべて無視していたと述べた。"),
+        3: ("The meeting took place behind closed doors before the vote.", "その会合は投票前に非公開で行われた。"),
+        4: ("The gift continues to support students from low-income families.", "その寄付は今も低所得家庭の学生を支えている。"),
+        5: ("The records included names, dates, and several family photographs.", "記録には名前や日付、家族写真がいくつか含まれていた。"),
+        6: ("The dentist said delaying treatment would make the damage worse.", "歯科医は、治療を遅らせると損傷が悪化すると述べた。"),
+        7: ("The readings help engineers predict when the tower may sway.", "その測定値は、塔が揺れる時期を技術者が予測するのに役立つ。"),
+        9: ("The change was celebrated even though enforcement remained uneven.", "施行にはばらつきが残ったものの、その変化は祝われた。"),
+        10: ("Neighbors called the owner after hearing the repeated sound.", "近所の人々は、その音を何度も聞いた後で飼い主に連絡した。"),
+        11: ("The procedure was introduced after several workers became ill.", "数人の作業員が病気になった後、その手順が導入された。"),
+        13: ("The workers continued until the mixture became thick and smooth.", "作業員たちは、混合物が濃く滑らかになるまで続けた。"),
+        14: ("Many families had left the area in search of safety.", "多くの家族が安全を求めてその地域を離れていた。"),
+        15: ("The captain would not allow the ferry to depart early.", "船長はフェリーを早く出発させようとしなかった。"),
+        17: ("Her careful inspection prevented a serious accident.", "彼女の入念な検査によって、重大な事故が防がれた。"),
+        18: ("He preferred writing because speaking before classmates frightened him.", "クラスメートの前で話すのが怖かったので、彼は書くほうを好んだ。"),
+        19: ("Even its largest competitors were still experimenting with the technology.", "最大手の競合企業でさえ、まだその技術を試している段階だった。"),
+        20: ("The agreement changed the borders and ended years of uncertainty.", "その合意は国境を変え、何年も続いた不確実さを終わらせた。"),
+        21: ("Researchers still lacked a reliable lead after repeated experiments.", "何度も実験した後も、研究者たちには信頼できる手がかりがなかった。"),
+        22: ("The demonstrations soon blocked traffic near the headquarters.", "そのデモはすぐに本部付近の交通を妨げた。"),
+        23: ("They planned to save enough money for a summer journey.", "彼らは夏の旅行に十分な資金を貯めるつもりだった。"),
+        24: ("The decision ended his right to practice medicine.", "その決定によって、彼が医療行為をする権利は失われた。"),
+        25: ("The investors later learned that the promised gains were impossible.", "投資家たちは後に、約束された利益が不可能だったと知った。"),
+    }
+    for number, question in enumerate(QUESTIONS, start=1):
+        if number in dialogue_contexts:
+            context, context_translation = dialogue_contexts[number]
+            question["stem"] = f"A: {context}"
+            question["translation"] = f"A：{context_translation}"
+        elif number in context_updates:
+            context, context_translation = context_updates[number]
+            question["stem"] += f" {context}"
+            question["translation"] += f" {context_translation}"
+
+
+_apply_past_paper_style()
+
+
 if __name__ == "__main__":
     run_q1_mock(ROUND_ID, QUESTIONS, DETAILS, CORE_IMAGES)

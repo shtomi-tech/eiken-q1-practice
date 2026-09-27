@@ -164,6 +164,40 @@ QUESTIONS = [
 ]
 
 
+_CONTEXT_ADDITIONS = {
+    2: ("The society rejected excess at celebrations and urged restraint in private life.", "その団体は祝い事での過度な行動を退け、私生活でも節制を勧めた。"),
+    3: ("Patients discovered that his impressive title concealed no medical training whatsoever.", "患者たちは、その立派な肩書きに医学教育が全く伴っていないと知った。"),
+    4: ("The hearing was transferred after both sides challenged the court's authority in writing.", "双方が裁判所の権限に書面で異議を唱えた後、審理は移された。"),
+    5: ("The audience stood because her performance captured the aria's original emotion with remarkable precision.", "彼女の演奏がアリア本来の感情を驚くほど正確に表したため、聴衆は立ち上がった。"),
+    7: ("He chose herbs from the morning delivery to finish every plate before serving it.", "彼は朝の納品から選んだハーブで、提供前の皿を一枚ずつ仕上げた。"),
+    10: ("Firefighters worked through the twisted metal until the trapped driver was finally free.", "消防士たちは、閉じ込められた運転手がようやく自由になるまで、ねじれた金属をかき分けた。"),
+    12: ("The missing funds were discovered when the renovation bills came due that winter.", "その冬、改修費の請求期限が来たときに、なくなった資金が発見された。"),
+    14: ("Visitors found the scene unsettling despite the artist's playful technique and bright colors.", "芸術家の遊び心ある技法と明るい色彩にもかかわらず、訪問者はその光景を不気味に感じた。"),
+    17: ("Residents said the noise made sleep impossible throughout the summer construction period.", "住民たちは、夏の工事期間中ずっとその騒音で眠れなかったと話した。"),
+    20: ("His words were an exaggeration, but the reporters printed them literally in two newspapers.", "彼の言葉は誇張だったが、記者たちは2紙で文字どおりの事実として印刷した。"),
+    23: ("The review ignored the author's illness and focused only on the novel's faults.", "その書評は著者の病気を無視し、小説の欠点だけに焦点を当てた。"),
+}
+_DIALOGUE_UPDATES = {
+    0: (
+        "A: Was the wooden bridge built to last permanently? B: No, it was only a (   ) until the concrete bridge was finished.",
+        "A: その木橋は恒久的に使うために造られたのですか。 B: いいえ、コンクリート橋が完成するまでの間に合わせにすぎませんでした。",
+    ),
+    1: (
+        "A: Their diet and daily walking seem unusual. B: Researchers attribute the islanders' (   ) to both factors, along with their active daily routines throughout the year.",
+        "A: 彼らの食事と日々の歩行は珍しいようです。 B: 研究者は、島民の長寿はその両方と年間を通した活発な日課によるものだと考えています。",
+    ),
+}
+for _index, _question in enumerate(QUESTIONS):
+    if _index in _DIALOGUE_UPDATES:
+        _question["stem"], _question["translation"] = _DIALOGUE_UPDATES[_index]
+        continue
+    if _index not in _CONTEXT_ADDITIONS:
+        continue
+    _suffix, _translation_suffix = _CONTEXT_ADDITIONS[_index]
+    _question["stem"] = f'{_question["stem"].rstrip()} {_suffix}'
+    _question["translation"] = f'{_question["translation"].rstrip()} {_translation_suffix}'
+
+
 DETAILS = {
     # Q1
     "stopgap": ("間に合わせ、一時しのぎ", "名詞", "The tent served as a stopgap while the roof was being replaced.", "屋根の葺き替えの間、そのテントが一時しのぎの役目を果たした。"),
@@ -218,7 +252,7 @@ DETAILS = {
     # Q11
     "exhale": ("息を吐く", "動詞", "Divers are taught to exhale steadily as they rise.", "潜水者は浮上する際に一定して息を吐くよう教えられる。"),
     "juggle": ("やりくりする、お手玉をする", "動詞", "She has to juggle two jobs and a course in the evenings.", "彼女は夜に2つの仕事と講座をやりくりしなければならない。"),
-    "extricate": ("救い出す、脱出させる", "動詞", "It is easier to enter such an agreement than to extricate yourself later.", "そうした契約は結ぶほうが、後で抜け出すよりも簡単である。"),
+    "extricate": ("抜け出す、脱出する", "動詞", "It is easier to enter such an agreement than to extricate yourself later.", "そうした契約は結ぶほうが、後で抜け出すよりも簡単である。"),
     "improvise": ("即興で作る、間に合わせる", "動詞", "The band had to improvise when the sheet music went missing.", "楽譜がなくなったとき、その楽団は即興で演奏しなければならなかった。"),
     # Q12
     "discard": ("捨てる、処分する", "動詞", "Please discard any container that shows signs of damage.", "損傷の跡がある容器はすべて廃棄してください。"),

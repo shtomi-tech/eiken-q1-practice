@@ -164,6 +164,40 @@ QUESTIONS = [
 ]
 
 
+_CONTEXT_ADDITIONS = {
+    2: ("Doctors now expect most patients to recover fully when treatment begins early.", "医師たちは現在、早期に治療を始めれば、ほとんどの患者が完全に回復すると予想している。"),
+    3: ("The case changed public opinion and pushed ministers to act after years of delay.", "その事件は世論を変え、何年もの遅れの後に大臣たちを行動へ向かわせた。"),
+    4: ("Protection declined even though participants followed the prescribed schedule throughout the study.", "研究期間を通じて参加者が定められた予定を守ったにもかかわらず、保護効果は低下した。"),
+    5: ("The report examined costs, flooding risks, and access for crews working there.", "その報告書は、費用、洪水の危険、そこで作業する人員の進入路を調べた。"),
+    7: ("The program paired newcomers with neighbors during weekly community activities at the center.", "その事業は、センターで毎週行う地域活動中に、新来者と近隣住民を組み合わせた。"),
+    8: ("Independent teams used the same method but reached different results in testing.", "独立したチームが同じ方法を使ったが、実験では異なる結果に達した。"),
+    11: ("The evidence came from three hospitals treating similar patients during the recovery period.", "その証拠は、回復期間中に似た患者を治療した3つの病院から得られた。"),
+    14: ("The rule protects the food from spoiling during long deliveries across the region.", "その規則は、地域を横断する長時間の配送中に食品が傷むのを防ぐ。"),
+    16: ("Visitors notice the expensive decoration before they see the building's history inside.", "訪問者は、建物内部の歴史を見る前に高価な装飾に気づく。"),
+    22: ("Volunteers decorated every doorway before the outdoor opening ceremony began that evening.", "ボランティアは、その夕方に屋外の開会式が始まる前、全ての出入口を飾り付けた。"),
+    23: ("The family reduced every expense to make the money last through winter.", "その一家は、冬を越してお金を持たせるため、あらゆる出費を減らした。"),
+}
+_DIALOGUE_UPDATES = {
+    0: (
+        "A: Can we treat every figure in this report as final? B: No. Each page carries a (   ) saying the figures are provisional.",
+        "A: この報告書の全ての数値を確定値として扱えますか。 B: いいえ。各ページに数値が暫定的だと記した免責事項があります。",
+    ),
+    1: (
+        "A: Does the brass still shine after all those years? B: Yes; after eighty years in the hallway, it has lost none of its (   ).",
+        "A: その真鍮はそれだけの年月を経ても輝いていますか。 B: はい。玄関ホールで80年を経ても、その光沢を全く失っていません。",
+    ),
+}
+for _index, _question in enumerate(QUESTIONS):
+    if _index in _DIALOGUE_UPDATES:
+        _question["stem"], _question["translation"] = _DIALOGUE_UPDATES[_index]
+        continue
+    if _index not in _CONTEXT_ADDITIONS:
+        continue
+    _suffix, _translation_suffix = _CONTEXT_ADDITIONS[_index]
+    _question["stem"] = f'{_question["stem"].rstrip()} {_suffix}'
+    _question["translation"] = f'{_question["translation"].rstrip()} {_translation_suffix}'
+
+
 DETAILS = {
     # Q1
     "disclaimer": ("免責事項、権利放棄", "名詞", "A short disclaimer appears at the foot of every page.", "各ページの下部に短い免責事項が記載されている。"),

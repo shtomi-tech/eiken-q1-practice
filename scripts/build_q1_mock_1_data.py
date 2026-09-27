@@ -527,6 +527,37 @@ def build() -> tuple[dict, dict]:
     return vocab_data, question_data
 
 
+def _rebalance_dialogues() -> None:
+    replacements = {
+        5: (
+            "News reports revealed that Saving Our Kids had collected charitable donations for years. Investigators later discovered that the organization was all just a ( ).",
+            "ニュース報道で、Saving Our Kidsが何年も慈善寄付を集めていたことが明らかになった。捜査官は後に、その団体が実はただの詐欺だったと突き止めた。",
+        ),
+        6: (
+            "The hotel looked filthy from the moment the travelers entered. Its name, \"Greenhill Luxury Suites,\" was a ( ), so the owners planned to rename it \"Garbage Rooms.\"",
+            "旅行客が入った瞬間から、そのホテルは汚れて見えた。「グリーンヒル・ラグジュアリー・スイーツ」という名前は誤称だったので、経営者は「ごみ部屋」に改名する予定だった。",
+        ),
+        10: (
+            "Dr. Rogers often revealed confidential information in casual remarks about the laboratory. His colleagues worried that he was showing ( ) despite the research being top-secret.",
+            "ロジャース博士は研究所について何気ない発言の中で、機密情報をしばしば漏らした。同僚たちは、研究が極秘であるにもかかわらず、博士が軽率な言動を示しているのではないかと心配した。",
+        ),
+        23: (
+            "Wendy kept thinking about something Vince had said earlier and stopped working on the project. Meg told her to ( ) so they could finish it that night.",
+            "ウェンディは先ほどヴィンスに言われたことを考え続け、課題の作業を止めていた。メグは、その夜に終えられるよう、気を取り直すよう彼女に言った。",
+        ),
+        25: (
+            "The boss offered Steve a raise in exchange for ignoring money missing from an account. Steve's colleague asked whether he thought Steve could simply be ( ) like that.",
+            "上司は口座からなくなった金を見逃す代わりにスティーブへ昇給を持ちかけた。同僚は、そんなふうにスティーブを簡単に買収できると思っているのか尋ねた。",
+        ),
+    }
+    for number, (stem, translation) in replacements.items():
+        QUESTIONS[number - 1]["stem"] = stem
+        QUESTIONS[number - 1]["translation"] = translation
+
+
+_rebalance_dialogues()
+
+
 def main() -> None:
     vocab, questions = build()
     write_json(DATA_DIR / "vocab_1_mock-1.json", vocab)

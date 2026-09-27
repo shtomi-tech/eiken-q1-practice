@@ -394,6 +394,41 @@ def build() -> tuple[dict, dict]:
     return vocab_data, question_data
 
 
+def _rebalance_dialogues() -> None:
+    replacements = {
+        6: (
+            "The software was used to send private information between offices. It automatically ( ) every message so that outsiders could not read it.",
+            "そのソフトウェアはオフィス間で個人情報を送るために使われた。外部の人が読めないよう、すべてのメッセージを自動的に暗号化した。",
+        ),
+        8: (
+            "The salary was ordinary, but the job offered excellent ( ). The employee could use a company car and received generous health insurance.",
+            "給料は普通だったが、その仕事にはすばらしい福利厚生があった。従業員は社用車を使え、とても手厚い健康保険も受けられた。",
+        ),
+        10: (
+            "Jane bought another purse with money from her parents. Her friend said she was being ( ) with it and was not surprised by the purchase.",
+            "ジェーンは親からもらったお金でまたバッグを買った。友人は、彼女がそのお金を軽率に扱っていると言い、その買い物に驚かなかった。",
+        ),
+        14: (
+            "A party continued next door until dawn. The neighbors made such ( ) noise that Troy could not sleep at all.",
+            "隣の家のパーティーは夜明けまで続いた。近所の人々が絶え間ない騒音を立てたため、トロイはまったく眠れなかった。",
+        ),
+        22: (
+            "Tina interrupted a client call because she had an emergency. She apologized for having to ( ) before explaining that she needed to speak immediately.",
+            "ティナは緊急事態があったため、顧客との通話に割り込んだ。すぐに話さなければならないと説明する前に、割り込んだことを謝った。",
+        ),
+        23: (
+            "The factory was enormous because it was expected to ( ) more than 100 new cars every day. Visitors were surprised by its scale.",
+            "その工場は毎日100台を超える新車を大量生産すると見込まれていたため、非常に大きかった。見学者たちはその規模に驚いた。",
+        ),
+    }
+    for number, (stem, translation) in replacements.items():
+        QUESTIONS[number - 1]["stem"] = stem
+        QUESTIONS[number - 1]["translation"] = translation
+
+
+_rebalance_dialogues()
+
+
 def main() -> None:
     vocab, questions = build()
     write_json(DATA_DIR / "vocab_1_mock-5.json", vocab)

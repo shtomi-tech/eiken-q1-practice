@@ -164,6 +164,40 @@ QUESTIONS = [
 ]
 
 
+_CONTEXT_ADDITIONS = {
+    2: ("Doctors advised him to rest because the fever returned whenever he stood.", "医師たちは、立ち上がるたびに熱がぶり返したため、彼に休むよう助言した。"),
+    3: ("The fresh cut helped the flowers absorb water during the hot afternoon.", "新しい切り口は、暑い午後に花が水を吸うのに役立った。"),
+    4: ("The expression vanished when the auditor produced a second set of receipts.", "監査人が2組目の領収書を示すと、その表情は消えた。"),
+    5: ("The conclusion depends on the assumption that both samples came from one tree.", "その結論は、2つの試料が同じ木から採られたという仮定に基づいている。"),
+    8: ("Search teams covered every slope before the remaining daylight ran out completely.", "捜索隊は、残りの明るいうちに全ての斜面を調べた。"),
+    10: ("The younger players copied his routine before important matches throughout the season.", "若い選手たちは、シーズンを通じて重要な試合の前に彼の習慣をまねた。"),
+    12: ("Officials wanted to prevent the leak from causing unnecessary public alarm nationwide.", "当局は、その漏出が全国で不要な社会不安を招くのを防ごうとした。"),
+    15: ("Guests noticed that he avoided every conversation and stayed near the door.", "客たちは、彼が全ての会話を避けてドアの近くにいたことに気づいた。"),
+    18: ("The witness's careful wording left investigators unsure what he actually knew then.", "その証人の慎重な言い回しにより、捜査員は当時何を知っていたのか分からなかった。"),
+    21: ("The apprentices had ignored a safety warning from the foreman earlier that morning.", "その見習いたちは、その朝早く現場監督から受けた安全上の警告を無視していた。"),
+    24: ("Its crew had saved fuel for the final stretch of the race.", "乗組員はレース終盤の区間のために燃料を節約していた。"),
+}
+_DIALOGUE_UPDATES = {
+    0: (
+        "A: How was passing military plans treated under the old law? B: It was punishable as (   ) when the plans went to a foreign government.",
+        "A: 古い法律では、軍事計画を渡すことはどのように扱われましたか。 B: 計画を外国政府に渡した場合、反逆罪として処罰されました。",
+    ),
+    1: (
+        "A: The fund sounds attractive, but should we invest immediately? B: Read the (   ) carefully before committing any money to the fund.",
+        "A: そのファンドは魅力的に聞こえますが、すぐに投資すべきですか。 B: そのファンドにお金を出す前に、目論見書を注意深く読んでください。",
+    ),
+}
+for _index, _question in enumerate(QUESTIONS):
+    if _index in _DIALOGUE_UPDATES:
+        _question["stem"], _question["translation"] = _DIALOGUE_UPDATES[_index]
+        continue
+    if _index not in _CONTEXT_ADDITIONS:
+        continue
+    _suffix, _translation_suffix = _CONTEXT_ADDITIONS[_index]
+    _question["stem"] = f'{_question["stem"].rstrip()} {_suffix}'
+    _question["translation"] = f'{_question["translation"].rstrip()} {_translation_suffix}'
+
+
 DETAILS = {
     # Q1
     "treason": ("反逆罪、国家反逆", "名詞", "The charge of treason carried the death penalty until 1965.", "反逆罪の罪状は1965年まで死刑を伴っていた。"),
@@ -196,7 +230,7 @@ DETAILS = {
     "repertoire": ("レパートリー、演目", "名詞", "The quartet added four modern pieces to its repertoire.", "そのカルテットは演目に現代曲を4曲加えた。"),
     "reparation": ("賠償、償い", "名詞", "The treaty required reparation for damage done to the harbor.", "その条約は港湾に与えた損害への賠償を求めた。"),
     # Q7
-    "arson": ("放火", "名詞", "Investigators ruled out arson within a day of the fire.", "捜査員は火災の翌日までに放火の可能性を排除した。"),
+    "arson": ("放火", "名詞", "Investigators confirmed arson within a day of the fire.", "捜査員は火災の翌日までに放火だと断定した。"),
     "penchant": ("強い好み、傾向", "名詞", "He has a penchant for buying maps he will never use.", "彼には決して使わない地図を買い込む癖がある。"),
     "installment": ("分割払いの1回分、一部", "名詞", "The first installment is due thirty days after delivery.", "第1回の分割払いは納品の30日後が期日である。"),
     "gratuity": ("心づけ、チップ", "名詞", "A modest gratuity is included in the printed price.", "ささやかな心づけが表示価格に含まれている。"),
