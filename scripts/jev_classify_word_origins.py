@@ -40,6 +40,8 @@ LINEAGE = {
     "greek": "Traced back to Ancient Greek (including via Latin or French from Greek).",
     "germanic": "Native Germanic: Old English, Proto-Germanic, Old Norse, Dutch, Low German, or other Germanic sources.",
     "french_non_latin": "Old French or Anglo-Norman whose deeper source is Frankish/Germanic, Celtic, or not stated.",
+    "mixed": "An English compound joining Germanic and Latin/Greek elements (e.g. dead + line).",
+    "english": "Formed inside English from English words or affixes; no older source language is given.",
     "other": "Some other language family, e.g. Arabic, Hebrew, Persian, Sanskrit, Chinese, Japanese, Native American, Celtic.",
     "unknown": "The text says the origin is unknown, uncertain, or disputed, and gives nothing to judge the lineage from.",
 }
