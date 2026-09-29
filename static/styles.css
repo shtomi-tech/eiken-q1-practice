@@ -1426,6 +1426,30 @@ details.vocabForecast:not([open]) > :not(summary) { display: none; }
   font-size: 14px;
   line-height: 1.6;
 }
+.originComposition {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  margin: 12px 0 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.originResult {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  margin: 5px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.originCueLabel {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .05em;
+}
+.originResultText { font-weight: 600; }
 .coreChain {
   display: grid;
   grid-auto-flow: column;

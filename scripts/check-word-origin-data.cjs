@@ -7,6 +7,7 @@ const DATA_DIR = path.join(ROOT, "data");
 const LEMMA_PATH = path.join(DATA_DIR, "lemmas.json");
 const ROOTS_PATH = path.join(DATA_DIR, "word_roots.json");
 const ORIGINS_PATH = path.join(DATA_DIR, "word_origins.json");
+const RESEARCH_PATH = path.join(DATA_DIR, "word_origin_research.json");
 const EXCLUDED_PATH = path.join(DATA_DIR, "word_origin_excluded.json");
 const MANIFEST_PATH = path.join(DATA_DIR, "manifest.json");
 const PAGES_WORKFLOW_PATH = path.join(ROOT, ".github", "workflows", "pages.yml");
@@ -102,6 +103,7 @@ assert.ok(fs.existsSync(PAGES_WORKFLOW_PATH), ".github/workflows/pages.yml が�
 const lemmaData = readJson(LEMMA_PATH);
 const rootsData = readJson(ROOTS_PATH);
 const originsData = readJson(ORIGINS_PATH);
+const originResearch = readJson(RESEARCH_PATH);
 const manifest = readJson(MANIFEST_PATH);
 
 assert.ok(rootsData && typeof rootsData === "object", "word_roots.json はオブジェクトである必要があります");
@@ -195,6 +197,8 @@ for (const [lemma, reason] of cReasons) {
 const originEntries = Object.entries(originsData.origins);
 assert.ok(originEntries.length >= 3, "段階0ではパイロット語を3語以上登録してください");
 const aOriginsByRoot = new Map();
+let memoryCueCount = 0;
+let compoundMemoryCueCount = 0;
 for (const [lemma, origin] of originEntries) {
   assert.ok(vocabularyMeanings.has(lemma), `${lemma}: lemmas適用後の語彙データに存在しません`);
   assert.ok(origin && typeof origin === "object" && !Array.isArray(origin), `${lemma}: originが不正です`);
@@ -208,6 +212,30 @@ for (const [lemma, origin] of originEntries) {
     const sources = validateOriginSources(origin.sources, `${lemma}.sources`);
     if (origin.source !== undefined) assert.ok(sources.includes(origin.source), `${lemma}.source はsourcesにも含めてください`);
   }
+  if (origin.memoryCue !== undefined) {
+    const cue = origin.memoryCue;
+    assert.ok(cue && typeof cue === "object" && !Array.isArray(cue), `${lemma}.memoryCue が不正です`);
+    assert.ok(Array.isArray(cue.parts) && cue.parts.length >= 2, `${lemma}.memoryCue.parts が必要です`);
+    nonEmptyString(cue.composition, `${lemma}.memoryCue.composition`);
+    const cueResult = nonEmptyString(cue.result, `${lemma}.memoryCue.result`);
+    assert.ok(
+      vocabularyMeanings.get(lemma).some((meaning) => normalize(meaning).includes(normalize(cueResult)) || meaningOverlap(cueResult, meaning)),
+      `${lemma}.memoryCue.result は語彙データの中心義と結び付けてください`,
+    );
+    cue.parts.forEach((part, index) => {
+      const label = `${lemma}.memoryCue.parts[${index}]`;
+      assert.ok(part && typeof part === "object" && !Array.isArray(part), `${label} が不正です`);
+      nonEmptyString(part.form, `${label}.form`);
+      nonEmptyString(part.kind, `${label}.kind`);
+      nonEmptyString(part.gloss, `${label}.gloss`);
+    });
+    memoryCueCount += 1;
+    if (origin.type === "A") {
+      assert.deepEqual(cue.parts, origin.parts, `${lemma}: A型のmemoryCue.partsは既存partsを保ってください`);
+    } else {
+      compoundMemoryCueCount += 1;
+    }
+  }
   if (origin.chain !== undefined) {
     validateOriginChain(origin.chain, `${lemma}.chain`);
     const finalGloss = normalize(origin.chain.at(-1).gloss);
@@ -218,7 +246,10 @@ for (const [lemma, origin] of originEntries) {
   }
   assert.equal(cReasons.has(lemma), false, `${lemma}: C型一覧の語にoriginsを付けてはいけません`);
 
-  if (origin.type === "A") {
+    if (origin.type === "A") {
+    if (originResearch.entries?.[lemma]?.research?.status === "reviewed") {
+      assert.ok(origin.memoryCue, `${lemma}: 出典確認済みA型には組み立て形式のmemoryCueが必要です`);
+    }
     const gloss = nonEmptyString(origin.gloss, `${lemma}.gloss`);
     assert.ok(Array.from(gloss).length <= 16, `${lemma}.gloss は16文字以内にしてください`);
     assert.ok(
@@ -260,11 +291,12 @@ for (const [lemma, origin] of originEntries) {
     assert.equal(origin.root, undefined, `${lemma}: B型にrootは付けません`);
   }
 
-  assert.ok(
-    vocabularyMeanings.get(lemma).some((meaning) => meaningOverlap(origin.derivation, meaning)),
-    `${lemma}: derivationの末尾がvocab meaningの中心義と結び付いていません`,
-  );
+assert.ok(
+  vocabularyMeanings.get(lemma).some((meaning) => meaningOverlap(origin.derivation, meaning)),
+  `${lemma}: derivationの末尾がvocab meaningの中心義と結び付いていません`,
+);
 }
+assert.ok(compoundMemoryCueCount >= 1, "出典確認済みの複合語memoryCueが必要です");
 
 const mock6ManifestEntry = manifest.q1["eiken1-mock-6"];
 assert.ok(mock6ManifestEntry && mock6ManifestEntry.vocabUrl, "英検1級模試第6回のvocabUrlが必要です");
@@ -299,4 +331,4 @@ assert.ok(manifest.q1 && typeof manifest.q1 === "object", "manifest.q1 が必要
 const singleRootCount = [...aOriginsByRoot.values()].filter((lemmas) => lemmas.length === 1).length;
 console.log(`word origin roots: ${Object.keys(rootsData.roots).length} roots / ${singleRootCount} single-word roots`);
 console.log(`mock-6 word origin chain: OK (${mock6Vocab.words.length} words)`);
-console.log(`word origin data contract: OK (${originEntries.length} origins / ${Object.keys(rootsData.roots).length} roots)`);
+console.log(`word origin data contract: OK (${originEntries.length} origins / ${Object.keys(rootsData.roots).length} roots / ${memoryCueCount} memory cues, including ${compoundMemoryCueCount} compounds)`);

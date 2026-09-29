@@ -11,7 +11,9 @@ function readJson(filePath) {
 }
 
 function writeJson(filePath, value) {
-  fs.writeFileSync(filePath, `${JSON.stringify(value, null, 2)}\n`, "utf8");
+  const lineEnding = fs.readFileSync(filePath, "utf8").includes("\r\n") ? "\r\n" : "\n";
+  const content = `${JSON.stringify(value, null, 2)}\n`;
+  fs.writeFileSync(filePath, lineEnding === "\n" ? content : content.replace(/\n/g, lineEnding), "utf8");
 }
 
 function nonEmpty(value, label) {
@@ -85,7 +87,8 @@ function main() {
 
   for (const [lemma, patch] of Object.entries(batch.entries)) {
     assert.ok(patch && typeof patch === "object" && !Array.isArray(patch), `${lemma}: batch entryが不正です`);
-    const isNew = !target.has(lemma);
+    // researchTarget is a review-scope list, not the source of truth for entry existence.
+    const isNew = !ledger.entries[lemma];
     if (isNew) {
       assert.ok(Array.isArray(patch.surfaceForms) && patch.surfaceForms.length > 0, `${lemma}: 新規entryにはsurfaceFormsが必要です`);
       assert.ok(Array.isArray(patch.meanings) && patch.meanings.length > 0, `${lemma}: 新規entryにはmeaningsが必要です`);

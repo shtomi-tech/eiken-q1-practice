@@ -175,6 +175,18 @@ function displayFor(entry) {
       display.sources = sources;
     }
   }
+  if (entry.classification === "A" && research.status === "reviewed"
+    && Array.isArray(display.parts) && display.parts.length && !display.memoryCue) {
+    const composition = String(research.semanticBridge || "").trim();
+    const result = String(display.gloss || entry.meanings?.[0] || "").trim();
+    if (composition && result) {
+      display.memoryCue = {
+        parts: clone(display.parts),
+        composition,
+        result,
+      };
+    }
+  }
   return display;
 }
 

@@ -267,9 +267,11 @@ function flashWordOrigin(item) {
   const row = el("div", { class: "flashRow wordOriginRow" });
   row.appendChild(el("strong", {}, "語源・なりたち"));
 
-  if (origin.type === "A" && Array.isArray(origin.parts) && origin.parts.length) {
+  const memoryCue = origin.memoryCue && typeof origin.memoryCue === "object" ? origin.memoryCue : null;
+  const parts = Array.isArray(memoryCue?.parts) ? memoryCue.parts : (origin.type === "A" ? origin.parts : null);
+  if (Array.isArray(parts) && parts.length) {
     const chips = el("div", { class: "originChips", "aria-label": "語源の構成" });
-    origin.parts.forEach((part, index) => {
+    parts.forEach((part, index) => {
       if (index) chips.appendChild(el("span", { class: "originChipJoin", "aria-hidden": "true" }, "+"));
       const kind = originKindLabel(part.kind);
       chips.appendChild(el("span", {
@@ -283,7 +285,14 @@ function flashWordOrigin(item) {
     row.appendChild(chips);
   }
 
-  if (origin.type === "A" && origin.derivation) {
+  if (memoryCue?.composition && memoryCue?.result) {
+    row.appendChild(el("p", { class: "originComposition" },
+      el("span", { class: "originCueLabel" }, "組み立て"),
+      el("span", {}, memoryCue.composition)));
+    row.appendChild(el("p", { class: "originResult" },
+      el("span", { class: "originCueLabel" }, "今の意味"),
+      el("span", { class: "originResultText" }, memoryCue.result)));
+  } else if (origin.type === "A" && origin.derivation) {
     row.appendChild(el("p", { class: "originDerivation" }, origin.derivation));
   }
 
@@ -301,8 +310,8 @@ function flashWordOrigin(item) {
   }
 
   if (origin.type === "B") {
-    if (origin.derivation) row.appendChild(el("p", { class: "originDerivation" }, origin.derivation));
-    return origin.derivation ? row : null;
+    if (!memoryCue && origin.derivation) row.appendChild(el("p", { class: "originDerivation" }, origin.derivation));
+    return memoryCue || origin.derivation ? row : null;
   }
   if (origin.type !== "A") return row;
   return row;

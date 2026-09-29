@@ -8,7 +8,7 @@
       "reviewed": "一語ごとに2つ以上の独立ホストの出典URLを確認し、語源の経路と意味のつながりを要約する。",
       "decomposition": "綴りの類似だけで語根や接辞を割り当てず、出典が支える場合だけA型にする。"
     },
-    "lastAppliedBatch": "batch-078",
+    "lastAppliedBatch": "batch-052-memory-cue-rollout",
     "appliedBatches": [
       {
         "batchId": "batch-001"
@@ -495,6 +495,13 @@
       {
         "batchId": "batch-078",
         "entries": 17,
+        "roots": 0,
+        "affixes": 0,
+        "exclusions": 0
+      },
+      {
+        "batchId": "batch-052-memory-cue-rollout",
+        "entries": 18,
         "roots": 0,
         "affixes": 0,
         "exclusions": 0
@@ -43236,7 +43243,23 @@
       "classification": "B",
       "display": {
         "type": "B",
-        "derivation": "pin（ピン）＋point（点）からなる英語の複合語で、針の先ほどの一点を指すことから → 正確に突き止める"
+        "derivation": "pin（ピン）＋point（点）からなる英語の複合語で、針の先ほどの一点を指すことから → 正確に突き止める",
+        "memoryCue": {
+          "parts": [
+            {
+              "form": "pin",
+              "kind": "base",
+              "gloss": "ピン"
+            },
+            {
+              "form": "point",
+              "kind": "base",
+              "gloss": "点"
+            }
+          ],
+          "composition": "針先ほどの小さな一点を指す表現から、位置・原因・問題などを正確に特定する動詞へ用法が広がった。",
+          "result": "正確に突き止める"
+        }
       },
       "research": {
         "status": "reviewed",
@@ -43285,7 +43308,7 @@
           "pin",
           "point"
         ],
-        "batch": "batch-013"
+        "batch": "batch-052-memory-cue-rollout"
       }
     },
     "pique": {
@@ -46537,7 +46560,23 @@
       "classification": "B",
       "display": {
         "type": "B",
-        "derivation": "walk（歩く、立ち去る）＋out（外へ）からなる英語の複合表現で、会議などから集団で出て抗議することへ → ストライキ、集団退場"
+        "derivation": "walk（歩く、立ち去る）＋out（外へ）からなる英語の複合表現で、会議などから集団で出て抗議することへ → ストライキ、集団退場",
+        "memoryCue": {
+          "parts": [
+            {
+              "form": "walk",
+              "kind": "base",
+              "gloss": "歩く・立ち去る"
+            },
+            {
+              "form": "out",
+              "kind": "base",
+              "gloss": "外へ"
+            }
+          ],
+          "composition": "その場から歩いて出る行為が、意見への抗議として集団で退場すること、さらに労働者のストライキを指すようになった。",
+          "result": "ストライキ、集団退場"
+        }
       },
       "research": {
         "status": "reviewed",
@@ -46586,7 +46625,7 @@
           "walk",
           "out"
         ],
-        "batch": "batch-015"
+        "batch": "batch-052-memory-cue-rollout"
       }
     },
     "whet": {
@@ -49878,7 +49917,23 @@
       "classification": "B",
       "display": {
         "type": "B",
-        "derivation": "hap（運、偶然）＋hazard（危険、さいころの賭け）からなる複合語 → 無計画な、でたらめな"
+        "derivation": "hap（運、偶然）＋hazard（危険、さいころの賭け）からなる複合語 → 無計画な、でたらめな",
+        "memoryCue": {
+          "parts": [
+            {
+              "form": "hap",
+              "kind": "base",
+              "gloss": "運、偶然"
+            },
+            {
+              "form": "hazard",
+              "kind": "base",
+              "gloss": "危険、賭け"
+            }
+          ],
+          "composition": "偶然や賭けに任せるイメージから、計画も秩序もなく偶然に進む状態を表す形容詞になった。",
+          "result": "無計画な、でたらめな"
+        }
       },
       "research": {
         "status": "reviewed",
@@ -49930,7 +49985,7 @@
           "hap",
           "hazard"
         ],
-        "batch": "batch-017"
+        "batch": "batch-052-memory-cue-rollout"
       }
     },
     "heedless": {
@@ -50023,7 +50078,23 @@
       "classification": "B",
       "display": {
         "type": "B",
-        "derivation": "hind（後ろの）＋sight（見ること、視力）からなる複合語。foresightとの対比で広がった → 後知恵"
+        "derivation": "hind（後ろの）＋sight（見ること、視力）からなる複合語。foresightとの対比で広がった → 後知恵",
+        "memoryCue": {
+          "parts": [
+            {
+              "form": "hind",
+              "kind": "base",
+              "gloss": "後ろの"
+            },
+            {
+              "form": "sight",
+              "kind": "base",
+              "gloss": "見ること"
+            }
+          ],
+          "composition": "後ろを見るという文字通りの構成が、出来事の後から事情や正しい判断が見えるという比喩的な意味になった。",
+          "result": "後知恵"
+        }
       },
       "research": {
         "status": "reviewed",
@@ -50076,7 +50147,7 @@
           "hind",
           "sight"
         ],
-        "batch": "batch-017"
+        "batch": "batch-052-memory-cue-rollout"
       }
     },
     "implore": {
@@ -50347,7 +50418,23 @@
       "classification": "B",
       "display": {
         "type": "B",
-        "derivation": "lack（欠けている、不足）＋luster（輝き、光沢）からなる複合語 → ぱっとしない、精彩を欠く"
+        "derivation": "lack（欠けている、不足）＋luster（輝き、光沢）からなる複合語 → ぱっとしない、精彩を欠く",
+        "memoryCue": {
+          "parts": [
+            {
+              "form": "lack",
+              "kind": "base",
+              "gloss": "不足"
+            },
+            {
+              "form": "luster",
+              "kind": "base",
+              "gloss": "輝き"
+            }
+          ],
+          "composition": "輝きが不足しているという視覚的な意味から、活気・興味・卓越性などがなく、ぱっとしない状態を表す比喩へ広がった。",
+          "result": "ぱっとしない、精彩を欠く"
+        }
       },
       "research": {
         "status": "reviewed",
@@ -50399,7 +50486,7 @@
           "lack",
           "lustr"
         ],
-        "batch": "batch-017"
+        "batch": "batch-052-memory-cue-rollout"
       }
     },
     "lament": {
@@ -62669,7 +62756,23 @@
       "classification": "B",
       "display": {
         "type": "B",
-        "derivation": "英語 quag（沼地）＋mire（泥沼）の複合語。二つの独立した語から成るため、単一語根のA型ではなく複合表現として扱う → 泥沼、難局"
+        "derivation": "英語 quag（沼地）＋mire（泥沼）の複合語。二つの独立した語から成るため、単一語根のA型ではなく複合表現として扱う → 泥沼、難局",
+        "memoryCue": {
+          "parts": [
+            {
+              "form": "quag",
+              "kind": "base",
+              "gloss": "沼地"
+            },
+            {
+              "form": "mire",
+              "kind": "base",
+              "gloss": "泥沼"
+            }
+          ],
+          "composition": "二つの沼地語を重ねた実際のぬかるみから、問題が複雑で容易に抜け出せない難局を表すようになった。",
+          "result": "泥沼、難局"
+        }
       },
       "research": {
         "status": "reviewed",
@@ -62715,7 +62818,7 @@
           }
         ],
         "rootCandidates": [],
-        "batch": "batch-024"
+        "batch": "batch-052-memory-cue-rollout"
       }
     },
     "menace": {
@@ -79076,7 +79179,23 @@
       "classification": "B",
       "display": {
         "type": "B",
-        "derivation": "new（新しいもの）＋paper（紙）からなる英語の複合語で、定期的に発行されるニュースの紙面を表す。 → 新聞"
+        "derivation": "new（新しいもの）＋paper（紙）からなる英語の複合語で、定期的に発行されるニュースの紙面を表す。 → 新聞",
+        "memoryCue": {
+          "parts": [
+            {
+              "form": "news",
+              "kind": "word",
+              "gloss": "新しい知らせ"
+            },
+            {
+              "form": "paper",
+              "kind": "word",
+              "gloss": "紙、文書"
+            }
+          ],
+          "composition": "新しい知らせを載せた紙という具体的な複合から、定期刊行されるニュース媒体全体を表す語へ定着した。",
+          "result": "新聞"
+        }
       },
       "research": {
         "status": "reviewed",
@@ -79129,7 +79248,7 @@
           "new",
           "papyr"
         ],
-        "batch": "batch-033"
+        "batch": "batch-052-memory-cue-rollout"
       }
     },
     "lunch": {
@@ -83813,7 +83932,23 @@
       "display": {
         "type": "B",
         "derivation": "in（中へ、内に）＋come（来る）からなる英語の複合語で、入って来る金銭や収入を表す。 → 所得",
-        "source": "https://www.etymonline.com/word/income"
+        "source": "https://www.etymonline.com/word/income",
+        "memoryCue": {
+          "parts": [
+            {
+              "form": "in",
+              "kind": "word",
+              "gloss": "中へ、内に"
+            },
+            {
+              "form": "come",
+              "kind": "word",
+              "gloss": "来る"
+            }
+          ],
+          "composition": "中へ来るものという空間的な複合から、入って来る金銭や一定期間の所得を表す語へ定着した。",
+          "result": "所得"
+        }
       },
       "research": {
         "status": "reviewed",
@@ -83864,7 +83999,7 @@
           "in",
           "gwa"
         ],
-        "batch": "batch-036"
+        "batch": "batch-052-memory-cue-rollout"
       }
     },
     "per": {
@@ -86201,7 +86336,23 @@
       "classification": "B",
       "display": {
         "type": "B",
-        "derivation": "broad（広く）＋cast（投げる、まく）からなる英語の複合語。種を広くまく意味から放送・広報へ発達した。 → 放送する"
+        "derivation": "broad（広く）＋cast（投げる、まく）からなる英語の複合語。種を広くまく意味から放送・広報へ発達した。 → 放送する",
+        "memoryCue": {
+          "parts": [
+            {
+              "form": "broad",
+              "kind": "word",
+              "gloss": "広く"
+            },
+            {
+              "form": "cast",
+              "kind": "word",
+              "gloss": "投げる、まく"
+            }
+          ],
+          "composition": "種を広い範囲へ投げまくことから、情報や電波を広く行き渡らせることへ意味が移った。",
+          "result": "放送する"
+        }
       },
       "research": {
         "status": "reviewed",
@@ -86254,7 +86405,7 @@
           "braid",
           "kast"
         ],
-        "batch": "batch-038"
+        "batch": "batch-052-memory-cue-rollout"
       }
     },
     "hurt": {
@@ -87905,7 +88056,23 @@
       "classification": "B",
       "display": {
         "type": "B",
-        "derivation": "world（世界）＋wide（広い）からなる英語の複合語。 → 世界中で、世界規模の"
+        "derivation": "world（世界）＋wide（広い）からなる英語の複合語。 → 世界中で、世界規模の",
+        "memoryCue": {
+          "parts": [
+            {
+              "form": "world",
+              "kind": "word",
+              "gloss": "世界"
+            },
+            {
+              "form": "wide",
+              "kind": "word",
+              "gloss": "広い"
+            }
+          ],
+          "composition": "世界全体と同じ広さであることから、地理的に全世界に及ぶこと、規模が全世界的であることへ意味が定着した。",
+          "result": "世界中で（の）"
+        }
       },
       "research": {
         "status": "reviewed",
@@ -87959,7 +88126,7 @@
           "ald",
           "wi"
         ],
-        "batch": "batch-039"
+        "batch": "batch-052-memory-cue-rollout"
       }
     },
     "shy": {
@@ -90003,7 +90170,23 @@
       "classification": "B",
       "display": {
         "type": "B",
-        "derivation": "web（網、ウェブ）＋site（場所）からなる英語の複合語。 → ウェブサイト"
+        "derivation": "web（網、ウェブ）＋site（場所）からなる英語の複合語。 → ウェブサイト",
+        "memoryCue": {
+          "parts": [
+            {
+              "form": "web",
+              "kind": "word",
+              "gloss": "網、ウェブ"
+            },
+            {
+              "form": "site",
+              "kind": "word",
+              "gloss": "場所"
+            }
+          ],
+          "composition": "網状の仕組みを表すwebと、場所を表すsiteが結びつき、インターネット上の情報の場所を表す複合語になった。",
+          "result": "ウェブサイト"
+        }
       },
       "research": {
         "status": "reviewed",
@@ -90057,7 +90240,7 @@
           "tkei",
           "si"
         ],
-        "batch": "batch-040"
+        "batch": "batch-052-memory-cue-rollout"
       }
     },
     "frame": {
@@ -95788,7 +95971,23 @@
       "classification": "B",
       "display": {
         "type": "B",
-        "derivation": "fund（資金）とraiser（集める人・もの）からなる複合表現。資金を集める活動や催し → 募金活動、資金集めの催し"
+        "derivation": "fund（資金）とraiser（集める人・もの）からなる複合表現。資金を集める活動や催し → 募金活動、資金集めの催し",
+        "memoryCue": {
+          "parts": [
+            {
+              "form": "fund",
+              "kind": "compound",
+              "gloss": "資金"
+            },
+            {
+              "form": "raiser",
+              "kind": "compound",
+              "gloss": "集める人・もの"
+            }
+          ],
+          "composition": "資金を集めるという複合的な行為から、資金集めをする人や催しを表す語になった。",
+          "result": "募金活動、資金集めの催し"
+        }
       },
       "research": {
         "status": "reviewed",
@@ -95839,7 +96038,7 @@
           "fund",
           "rais"
         ],
-        "batch": "batch-044"
+        "batch": "batch-052-memory-cue-rollout"
       }
     },
     "recipe": {
@@ -96165,7 +96364,23 @@
       "classification": "B",
       "display": {
         "type": "B",
-        "derivation": "land（土地）とlord（主人）からなる複合表現。土地や建物を所有して貸す人 → 家主、大家"
+        "derivation": "land（土地）とlord（主人）からなる複合表現。土地や建物を所有して貸す人 → 家主、大家",
+        "memoryCue": {
+          "parts": [
+            {
+              "form": "land",
+              "kind": "compound",
+              "gloss": "土地・建物"
+            },
+            {
+              "form": "lord",
+              "kind": "compound",
+              "gloss": "主人・所有者"
+            }
+          ],
+          "composition": "土地や建物の主人という複合的な関係から、賃貸する所有者を表す語になった。",
+          "result": "家主、大家"
+        }
       },
       "research": {
         "status": "reviewed",
@@ -96215,7 +96430,7 @@
           "land",
           "lord"
         ],
-        "batch": "batch-044"
+        "batch": "batch-052-memory-cue-rollout"
       }
     },
     "tourist": {
@@ -96591,7 +96806,23 @@
       "classification": "B",
       "display": {
         "type": "B",
-        "derivation": "side（側）とwalk（歩くこと）からなる複合表現。道路の側を歩くための通路 → 歩道"
+        "derivation": "side（側）とwalk（歩くこと）からなる複合表現。道路の側を歩くための通路 → 歩道",
+        "memoryCue": {
+          "parts": [
+            {
+              "form": "side",
+              "kind": "compound",
+              "gloss": "側"
+            },
+            {
+              "form": "walk",
+              "kind": "compound",
+              "gloss": "歩くこと・通路"
+            }
+          ],
+          "composition": "道路の側を歩くための通路という複合的な意味から、歩道を表す語になった。",
+          "result": "歩道"
+        }
       },
       "research": {
         "status": "reviewed",
@@ -96641,7 +96872,7 @@
           "side",
           "walk"
         ],
-        "batch": "batch-044"
+        "batch": "batch-052-memory-cue-rollout"
       }
     },
     "ancient": {
@@ -102009,7 +102240,23 @@
       "classification": "B",
       "display": {
         "type": "B",
-        "derivation": "out（外に）とlaw（法律）からなる複合表現。法律の外に置くことから → 非合法化する、禁止する"
+        "derivation": "out（外に）とlaw（法律）からなる複合表現。法律の外に置くことから → 非合法化する、禁止する",
+        "memoryCue": {
+          "parts": [
+            {
+              "form": "out",
+              "kind": "compound",
+              "gloss": "外に"
+            },
+            {
+              "form": "law",
+              "kind": "compound",
+              "gloss": "法律"
+            }
+          ],
+          "composition": "法の外に置くという複合的な扱いから、法律で禁止する意味へ発達した。",
+          "result": "非合法化する、禁止する"
+        }
       },
       "research": {
         "status": "reviewed",
@@ -102059,7 +102306,7 @@
           "out",
           "lag"
         ],
-        "batch": "batch-047"
+        "batch": "batch-052-memory-cue-rollout"
       }
     },
     "plead": {
@@ -102367,7 +102614,23 @@
       "classification": "B",
       "display": {
         "type": "B",
-        "derivation": "faint（弱い）とhearted（心をもつ）からなる複合表現。心が弱く勇気に欠ける状態 → 臆病な、気弱な"
+        "derivation": "faint（弱い）とhearted（心をもつ）からなる複合表現。心が弱く勇気に欠ける状態 → 臆病な、気弱な",
+        "memoryCue": {
+          "parts": [
+            {
+              "form": "faint",
+              "kind": "compound",
+              "gloss": "弱い"
+            },
+            {
+              "form": "hearted",
+              "kind": "compound",
+              "gloss": "心をもつ"
+            }
+          ],
+          "composition": "弱い心をもつという複合的な表現から、勇気や決断力に欠ける性質を表すようになった。",
+          "result": "臆病な、気弱な"
+        }
       },
       "research": {
         "status": "reviewed",
@@ -102418,7 +102681,7 @@
           "faint",
           "heart"
         ],
-        "batch": "batch-047"
+        "batch": "batch-052-memory-cue-rollout"
       }
     },
     "perilous": {
@@ -111061,7 +111324,23 @@
       "classification": "B",
       "display": {
         "type": "B",
-        "derivation": "英語 out（外へ）＋break（破れ出る）の複合語で、病気や戦争が突然破れ出ることから → 発生、流行"
+        "derivation": "英語 out（外へ）＋break（破れ出る）の複合語で、病気や戦争が突然破れ出ることから → 発生、流行",
+        "memoryCue": {
+          "parts": [
+            {
+              "form": "out",
+              "kind": "prefix",
+              "gloss": "外へ"
+            },
+            {
+              "form": "break",
+              "kind": "base",
+              "gloss": "破れ出る"
+            }
+          ],
+          "composition": "内にたまったものが一気に破れて外へ出るという像が、病気や暴動が突然広がることの表現になった。",
+          "result": "発生、流行"
+        }
       },
       "research": {
         "status": "reviewed",
@@ -111105,7 +111384,8 @@
         "rootCandidates": [],
         "semanticBridge": "内にたまったものが一気に破れて外へ出るという像が、病気や暴動が突然広がることの表現になった。",
         "summary": "日常語どうしの複合語で、ラテン語系の語根分解を当てはめる必要がないためB型にする。",
-        "confidence": "high"
+        "confidence": "high",
+        "batch": "batch-052-memory-cue-rollout"
       }
     },
     "closure": {
@@ -113335,7 +113615,23 @@
       "classification": "B",
       "display": {
         "type": "B",
-        "derivation": "英語 tax（ラテン語 taxare「査定する」に由来）＋payer（払う人）の複合語 → 納税者"
+        "derivation": "英語 tax（ラテン語 taxare「査定する」に由来）＋payer（払う人）の複合語 → 納税者",
+        "memoryCue": {
+          "parts": [
+            {
+              "form": "tax",
+              "kind": "base",
+              "gloss": "税"
+            },
+            {
+              "form": "payer",
+              "kind": "base",
+              "gloss": "払う人"
+            }
+          ],
+          "composition": "税を査定されて支払う側という関係が、そのまま一語の複合名詞になった。",
+          "result": "納税者"
+        }
       },
       "research": {
         "status": "reviewed",
@@ -113380,7 +113676,8 @@
         "rootCandidates": [],
         "semanticBridge": "税を査定されて支払う側という関係が、そのまま一語の複合名詞になった。",
         "summary": "英語内で作られた複合語で、ラテン語系の語根分解を当てはめる必要がないためB型にする。",
-        "confidence": "high"
+        "confidence": "high",
+        "batch": "batch-052-memory-cue-rollout"
       }
     },
     "employers": {

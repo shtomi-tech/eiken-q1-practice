@@ -30,13 +30,14 @@ assert.equal(buildFlashCardBody.includes("item.etymology"), false, "単語カー
 assert.equal(js.includes("flashEtym"), false, "旧flashEtymクラスを残してはいけません");
 assert.equal(css.includes(".flashEtym"), false, "旧flashEtymルールを残してはいけません");
 
-for (const marker of ["wordOriginFor", "originChain", "coreChain", 'el("ol"', "originChip", "originDerivation", "originChipKind", "originChipForm", "originChipGloss"]) {
+for (const marker of ["wordOriginFor", "originChain", "coreChain", 'el("ol"', "originChip", "originDerivation", "originComposition", "originResult", "memoryCue", "originChipKind", "originChipForm", "originChipGloss"]) {
   assert.ok(flashWordOriginBody.includes(marker), `flashWordOrigin に ${marker} が必要です`);
 }
 assert.ok(flashWordOriginBody.includes('el("strong", {}, "語源・なりたち")'), "語源の見出しは全カードで統一する必要があります");
 assert.equal(flashWordOriginBody.includes("語源のイメージ"), false, "旧語源見出しを残してはいけません");
-assert.ok(flashWordOriginBody.indexOf("row.appendChild(chips)") < flashWordOriginBody.indexOf('class: "originDerivation"'), "A型は構成チップを導出文より先に表示する必要があります");
-assert.ok(flashWordOriginBody.indexOf('class: "originDerivation"') < flashWordOriginBody.indexOf("row.appendChild(chain)"), "A型の導出文は語源の連鎖より先に表示する必要があります");
+assert.ok(flashWordOriginBody.indexOf("row.appendChild(chips)") < flashWordOriginBody.indexOf('class: "originComposition"'), "構成チップは組み立て説明より先に表示する必要があります");
+assert.ok(flashWordOriginBody.indexOf('class: "originComposition"') < flashWordOriginBody.indexOf('class: "originResult"'), "組み立て説明は現在の意味より先に表示する必要があります");
+assert.ok(flashWordOriginBody.indexOf('class: "originResult"') < flashWordOriginBody.indexOf("row.appendChild(chain)"), "組み立て形式は語源チェーンより先に表示する必要があります");
 assert.ok(flashWordOriginBody.includes("type === \"B\""), "B型の語源を表示できる必要があります");
 assert.ok(flashWordOriginBody.includes("origin.derivation"), "B型は導出文がある場合に表示する必要があります");
 assert.equal(flashWordOriginBody.includes("originChip-summary"), false, "B型の概要チップを表示してはいけません");
@@ -74,6 +75,10 @@ for (const selector of [
   ".originChipForm",
   ".originChipGloss",
   ".originDerivation",
+  ".originComposition",
+  ".originResult",
+  ".originCueLabel",
+  ".originResultText",
 ]) {
   cssRule(css, selector);
 }
@@ -81,6 +86,8 @@ assert.match(cssRule(css, ".originChip"), /flex-wrap:\s*wrap/, "語源チップ�
 assert.match(cssRule(css, ".originChipKind"), /width:\s*100%/, "種別ラベルは1行を占める必要があります");
 assert.doesNotMatch(cssRule(css, ".originDerivation"), /border-top\s*:/, "語源の導出文を独立した罫線で分けてはいけません");
 assert.doesNotMatch(cssRule(css, ".originDerivation"), /padding-top\s*:/, "語源の導出文に独立ブロック用の上余白を置いてはいけません");
+assert.match(cssRule(css, ".originComposition"), /display:\s*flex/, "組み立て説明とラベルを読みやすく整列させてください");
+assert.match(cssRule(css, ".originResult"), /display:\s*flex/, "組み立てから得られる意味とラベルを読みやすく整列させてください");
 assert.match(css, /@media\s*\(max-width:\s*480px\)/, "モバイル用の語源レイアウト規則が必要です");
 assert.match(indexHtml, /static\/styles\.css\?v=[^"'\s]+/, "styles.cssのキャッシュバスターが必要です");
 assert.match(indexHtml, /static\/mode-q1\.js\?v=[^"'\s]+/, "mode-q1.jsのキャッシュバスターが必要です");

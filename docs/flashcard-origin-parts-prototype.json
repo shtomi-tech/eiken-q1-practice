@@ -1,0 +1,407 @@
+{
+  "title": "語源の部品から意味を組み立てる",
+  "date": "2026-09-29",
+  "prototypeOnly": true,
+  "principle": "parts/gloss + parts/gloss → composition of parts → current Japanese meaning",
+  "notice": "記憶用の短い説明は既存の出典付き語源記述に沿って編集。A型の構成要素は個別に確認済みの台帳から採用。",
+  "cards": [
+    {
+      "word": "abbreviate",
+      "meaning": "短縮する、略す",
+      "kind": "word-parts",
+      "kindLabel": "接辞・語根",
+      "parts": [
+        {
+          "form": "ab",
+          "kind": "prefix",
+          "gloss": "〜へ・強意"
+        },
+        {
+          "form": "brevi",
+          "kind": "root",
+          "gloss": "短い"
+        },
+        {
+          "form": "-ate",
+          "kind": "suffix",
+          "gloss": "〜にする"
+        }
+      ],
+      "composition": "短い形にする",
+      "result": "短縮する、略す",
+      "sources": [
+        "https://www.etymonline.com/word/abbreviate",
+        "https://www.merriam-webster.com/dictionary/abbreviate"
+      ],
+      "originalDerivation": "ab（〜へ・強意）＋brevi（短い）＋-ate（〜にする） → 短い状態にする、短縮する・略す"
+    },
+    {
+      "word": "aberration",
+      "meaning": "異常、逸脱",
+      "kind": "word-parts",
+      "kindLabel": "接辞・語根",
+      "parts": [
+        {
+          "form": "ab",
+          "kind": "prefix",
+          "gloss": "離れて"
+        },
+        {
+          "form": "err",
+          "kind": "root",
+          "gloss": "さまよう・外れる"
+        },
+        {
+          "form": "-ation",
+          "kind": "suffix",
+          "gloss": "〜すること"
+        }
+      ],
+      "composition": "ab（離れて）＋err（道から外れる）＋-ation（こと・結果）",
+      "result": "道筋を外れた結果＝異常、逸脱",
+      "sources": [
+        "https://www.etymonline.com/word/aberration",
+        "https://www.merriam-webster.com/dictionary/aberration"
+      ],
+      "originalDerivation": "ab-（離れて）＋err（さまよう）＋-ation（行為・結果） → 道筋から外れた異常、逸脱"
+    },
+    {
+      "word": "abruptly",
+      "meaning": "突然に、ぶっきらぼうに",
+      "kind": "word-parts",
+      "kindLabel": "接辞・語根",
+      "parts": [
+        {
+          "form": "ab",
+          "kind": "prefix",
+          "gloss": "離れて"
+        },
+        {
+          "form": "rupt",
+          "kind": "root",
+          "gloss": "壊す・破る"
+        },
+        {
+          "form": "-ly",
+          "kind": "suffix",
+          "gloss": "〜な状態で"
+        }
+      ],
+      "composition": "ab（離れて）＋rupt（壊す・切る）＋-ly（〜な状態で）",
+      "result": "途中で切るように＝突然に、ぶっきらぼうに",
+      "sources": [
+        "https://www.etymonline.com/word/abrupt",
+        "https://www.merriam-webster.com/dictionary/abruptly"
+      ],
+      "originalDerivation": "ab（離れて）＋rupt（壊す・破る）＋-ly（〜な状態で） → 途中で切れたように、突然に・ぶっきらぼうに"
+    },
+    {
+      "word": "acclaim",
+      "meaning": "称賛、賞賛",
+      "kind": "word-parts",
+      "kindLabel": "接辞・語根",
+      "parts": [
+        {
+          "form": "ac",
+          "kind": "prefix",
+          "gloss": "〜へ・近くへ"
+        },
+        {
+          "form": "claim",
+          "kind": "root",
+          "gloss": "叫ぶ・主張する"
+        }
+      ],
+      "composition": "ac-（ad-「〜へ」の形）＋claim（叫ぶ・主張する）",
+      "result": "声を上げて称える＝称賛",
+      "sources": [
+        "https://www.etymonline.com/word/acclaim",
+        "https://www.merriam-webster.com/dictionary/acclaim"
+      ],
+      "originalDerivation": "ac-（ad-『〜へ』の同化形）＋claim（叫ぶ・主張する） → 声を上げて称賛し、称賛、賞賛"
+    },
+    {
+      "word": "abstention",
+      "meaning": "棄権、控えること",
+      "kind": "word-parts",
+      "kindLabel": "接辞・語根",
+      "parts": [
+        {
+          "form": "abs",
+          "kind": "prefix",
+          "gloss": "離れて"
+        },
+        {
+          "form": "ten",
+          "kind": "root",
+          "gloss": "保つ"
+        },
+        {
+          "form": "-ion",
+          "kind": "suffix",
+          "gloss": "〜すること"
+        }
+      ],
+      "composition": "abs-（離れて）＋ten（保つ）＋-ion（こと）",
+      "result": "自分を離して保つこと＝参加・行動を控える",
+      "sources": [
+        "https://www.etymonline.com/word/abstention",
+        "https://en.wiktionary.org/wiki/abstention"
+      ],
+      "originalDerivation": "手を出さず離れたところに身を保つ（仲間：abstain＝控える、retain＝保持する） → 棄権、控えること"
+    },
+    {
+      "word": "agnostic",
+      "meaning": "不可知論の、不可知論者",
+      "kind": "word-parts",
+      "kindLabel": "接辞・語根",
+      "parts": [
+        {
+          "form": "a",
+          "kind": "prefix",
+          "gloss": "〜でない"
+        },
+        {
+          "form": "gnost",
+          "kind": "root",
+          "gloss": "知る"
+        },
+        {
+          "form": "-ic",
+          "kind": "suffix",
+          "gloss": "〜に関する"
+        }
+      ],
+      "composition": "a-（〜でない）＋gnost（知る）＋-ic（〜に関する）",
+      "result": "神について「知ることはできない」とする立場",
+      "sources": [
+        "https://www.etymonline.com/word/agnostic",
+        "https://www.merriam-webster.com/dictionary/agnostic"
+      ],
+      "originalDerivation": "a-（〜でない）＋gnost（知る）＋-ic（〜に関する） → 知ることができないとする、不可知論の"
+    },
+    {
+      "word": "anesthetic",
+      "meaning": "麻酔薬",
+      "kind": "word-parts",
+      "kindLabel": "接辞・語根",
+      "parts": [
+        {
+          "form": "an",
+          "kind": "prefix",
+          "gloss": "〜でない"
+        },
+        {
+          "form": "esthet",
+          "kind": "root",
+          "gloss": "感じる・知覚する"
+        },
+        {
+          "form": "-ic",
+          "kind": "suffix",
+          "gloss": "〜に関する"
+        }
+      ],
+      "composition": "an-（〜でない）＋esthet（感じる）＋-ic（〜に関する）",
+      "result": "感覚をなくすもの＝麻酔薬",
+      "sources": [
+        "https://www.etymonline.com/word/anesthetic",
+        "https://www.merriam-webster.com/dictionary/anesthetic"
+      ],
+      "originalDerivation": "an-（〜でない）＋esthet（感じる）＋-ic（〜に関する） → 感覚をなくすもの、麻酔薬"
+    },
+    {
+      "word": "benevolent",
+      "meaning": "慈悲深い、善意の",
+      "kind": "word-parts",
+      "kindLabel": "接辞・語根",
+      "parts": [
+        {
+          "form": "bene",
+          "kind": "prefix",
+          "gloss": "よく・善く"
+        },
+        {
+          "form": "vol",
+          "kind": "root",
+          "gloss": "望む・意志"
+        },
+        {
+          "form": "-ent",
+          "kind": "suffix",
+          "gloss": "〜する性質の"
+        }
+      ],
+      "composition": "bene（よく・善く）＋vol（望む・意志）＋-ent（〜の性質）",
+      "result": "人によいことを望む性質＝慈悲深い",
+      "sources": [
+        "https://www.etymonline.com/word/benevolent",
+        "https://www.merriam-webster.com/dictionary/benevolent"
+      ],
+      "originalDerivation": "bene-（よく・善く）＋vol（望む）＋-ent（〜する性質の） → 人のためを望む、慈悲深い"
+    },
+    {
+      "word": "precaution",
+      "meaning": "予防措置、用心",
+      "kind": "word-parts",
+      "kindLabel": "接辞・語根",
+      "parts": [
+        {
+          "form": "pre",
+          "kind": "prefix",
+          "gloss": "前もって"
+        },
+        {
+          "form": "caut",
+          "kind": "root",
+          "gloss": "用心する・警戒する"
+        },
+        {
+          "form": "-ion",
+          "kind": "suffix",
+          "gloss": "〜すること"
+        }
+      ],
+      "composition": "pre-（前もって）＋caut（用心する）＋-ion（こと）",
+      "result": "前もって用心すること＝予防措置",
+      "sources": [
+        "https://www.etymonline.com/word/precaution",
+        "https://www.merriam-webster.com/dictionary/precaution"
+      ],
+      "originalDerivation": "pre（前もって）＋caut（用心する・警戒する）＋-ion（〜すること） → 前もって警戒すること、予防措置・用心"
+    },
+    {
+      "word": "perennial",
+      "meaning": "長年続く、恒久的な",
+      "kind": "word-parts",
+      "kindLabel": "接辞・語根",
+      "parts": [
+        {
+          "form": "per",
+          "kind": "prefix",
+          "gloss": "通して・徹底的に"
+        },
+        {
+          "form": "enn",
+          "kind": "root",
+          "gloss": "年"
+        },
+        {
+          "form": "-al",
+          "kind": "suffix",
+          "gloss": "〜に関する"
+        }
+      ],
+      "composition": "per-（通して）＋enn（年）＋-al（〜に関する）",
+      "result": "年を通して続く＝長年続く",
+      "sources": [
+        "https://www.etymonline.com/word/perennial",
+        "https://www.merriam-webster.com/dictionary/perennial"
+      ],
+      "originalDerivation": "per-（通して）＋enn（年）＋-al（〜に関する） → 年を通して続く、長年続く"
+    },
+    {
+      "word": "landlord",
+      "meaning": "家主、大家",
+      "kind": "compound",
+      "kindLabel": "英語の複合語",
+      "parts": [
+        {
+          "form": "land",
+          "kind": "root",
+          "gloss": "土地"
+        },
+        {
+          "form": "lord",
+          "kind": "root",
+          "gloss": "主人"
+        }
+      ],
+      "composition": "land（土地）＋lord（主人）",
+      "result": "土地・建物を貸す主人＝家主、大家",
+      "sources": [
+        "https://www.etymonline.com/word/landlord",
+        "https://www.merriam-webster.com/dictionary/landlord"
+      ],
+      "originalDerivation": "land（土地）とlord（主人）からなる複合表現。土地や建物を所有して貸す人 → 家主、大家"
+    },
+    {
+      "word": "fundraiser",
+      "meaning": "募金活動、資金集めの催し",
+      "kind": "compound",
+      "kindLabel": "英語の複合語",
+      "parts": [
+        {
+          "form": "fund",
+          "kind": "root",
+          "gloss": "資金"
+        },
+        {
+          "form": "raiser",
+          "kind": "root",
+          "gloss": "集める人・催し"
+        }
+      ],
+      "composition": "fund（資金）＋raiser（集める人・催し）",
+      "result": "資金を集める人・催し＝募金活動",
+      "sources": [
+        "https://www.etymonline.com/word/fund",
+        "https://www.merriam-webster.com/dictionary/fundraiser"
+      ],
+      "originalDerivation": "fund（資金）とraiser（集める人・もの）からなる複合表現。資金を集める活動や催し → 募金活動、資金集めの催し"
+    },
+    {
+      "word": "income",
+      "meaning": "所得",
+      "kind": "compound",
+      "kindLabel": "英語の複合語",
+      "parts": [
+        {
+          "form": "in",
+          "kind": "prefix",
+          "gloss": "中へ"
+        },
+        {
+          "form": "come",
+          "kind": "root",
+          "gloss": "来る"
+        }
+      ],
+      "composition": "in（中へ）＋come（来る）",
+      "result": "入ってくるお金＝所得",
+      "sources": [
+        "https://www.etymonline.com/word/income",
+        "https://www.merriam-webster.com/dictionary/income"
+      ],
+      "originalDerivation": "in（中へ、内に）＋come（来る）からなる英語の複合語で、入って来る金銭や収入を表す。 → 所得"
+    }
+  ],
+  "omittedExamples": [
+    {
+      "word": "field",
+      "meaning": "分野、野原",
+      "derivation": "古英語 feldから英語 fieldへ。 → 分野、野原",
+      "sources": [
+        "https://www.etymonline.com/word/field",
+        "https://www.dictionary.com/browse/field"
+      ]
+    },
+    {
+      "word": "longevity",
+      "meaning": "長寿、長続きすること",
+      "derivation": "ラテン語 longus（長い）＋aevum（一生）。長い一生を生きること（仲間：long、age＝年齢） → 長寿、長続きすること",
+      "sources": [
+        "https://www.etymonline.com/word/longevity",
+        "https://en.wiktionary.org/wiki/longevity",
+        "https://www.etymonline.com/word/age"
+      ]
+    }
+  ],
+  "checks": {
+    "allWordsExistInVocab": true,
+    "allMeaningsMatchVocab": true,
+    "allOriginsHaveAtLeastTwoSources": true,
+    "ATypeEntriesReviewed": true,
+    "changesToProductionDataOrApp": false
+  }
+}

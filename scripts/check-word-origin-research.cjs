@@ -107,6 +107,21 @@ function main() {
       if (entry.classification === "B") {
         assert.equal(entry.display.root, undefined, `${lemma}: B型にrootは付けません`);
         assert.equal(entry.display.parts, undefined, `${lemma}: B型にpartsは付けません`);
+        if (entry.display.memoryCue !== undefined) {
+          const cue = entry.display.memoryCue;
+          assert.ok(cue && typeof cue === "object" && !Array.isArray(cue), `${lemma}.display.memoryCueが不正です`);
+          assert.ok(Array.isArray(cue.parts) && cue.parts.length >= 2, `${lemma}.display.memoryCue.partsが必要です`);
+          assert.equal(cue.parts.length, research.components.length, `${lemma}.display.memoryCue.partsは調査済みcomponentsと揃えてください`);
+          cue.parts.forEach((part, index) => {
+            const component = research.components[index];
+            assert.notEqual(component.display, false, `${lemma}.research.components[${index}] は表示許可された部品である必要があります`);
+            assert.equal(part.form, component.form, `${lemma}.display.memoryCue.parts[${index}].formがcomponentsと異なります`);
+            assert.equal(part.kind, component.kind, `${lemma}.display.memoryCue.parts[${index}].kindがcomponentsと異なります`);
+            assert.equal(part.gloss, component.gloss, `${lemma}.display.memoryCue.parts[${index}].glossがcomponentsと異なります`);
+          });
+          assert.equal(cue.composition, research.semanticBridge, `${lemma}.display.memoryCue.compositionはsemanticBridgeと揃えてください`);
+          assert.ok(entry.meanings.some((meaning) => normalize(meaning) === normalize(cue.result)), `${lemma}.display.memoryCue.resultはmeaningsに含めてください`);
+        }
       }
     }
 
