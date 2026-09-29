@@ -2,21 +2,51 @@ name: Deploy to GitHub Pages
 
 on:
   push:
+  pull_request:
     branches:
       - main
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install pinned Jev SDK
+        run: python -m pip install --requirement requirements-jev.txt
+
+      - name: Run tests
+        run: npm test
+
+      - name: Check Q1 data contract
+        run: python3 scripts/check_q1_data.py
+
   deploy:
+    needs: test
+    if: github.ref == 'refs/heads/main'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -36,9 +66,6 @@ jobs:
           APP_BASE_URL: ${{ secrets.APP_BASE_URL }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
-
-      - name: Check Q1 data contract
-        run: python3 scripts/check_q1_data.py
 
       - name: Configure Pages
         uses: actions/configure-pages@v5

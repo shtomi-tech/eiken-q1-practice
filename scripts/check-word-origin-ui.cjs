@@ -40,6 +40,8 @@ assert.ok(flashWordOriginBody.indexOf('class: "originComposition"') < flashWordO
 assert.ok(flashWordOriginBody.indexOf('class: "originResult"') < flashWordOriginBody.indexOf("row.appendChild(chain)"), "組み立て形式は語源チェーンより先に表示する必要があります");
 assert.ok(flashWordOriginBody.includes("type === \"B\""), "B型の語源を表示できる必要があります");
 assert.ok(flashWordOriginBody.includes("origin.derivation"), "B型は導出文がある場合に表示する必要があります");
+assert.ok(flashWordOriginBody.includes('if (origin.type === "A") contents.push(el("span", { class: "originChipKind" }, kind))'), "A型は接辞・語根の種別を表示する必要があります");
+assert.ok(flashWordOriginBody.includes('const partLabel = origin.type === "A" ? kind + " " : "構成要素 ";'), "B型は種別ラベルを隠し、構成要素として読み上げる必要があります");
 assert.equal(flashWordOriginBody.includes("originChip-summary"), false, "B型の概要チップを表示してはいけません");
 assert.equal(flashWordOriginBody.includes("構成要素に分解せず一行で確認"), false, "B型の概要文を表示してはいけません");
 // 単語カードは情報量を抑えるため、語根パネル（語根名・注記・仲間語リスト）を出さない。

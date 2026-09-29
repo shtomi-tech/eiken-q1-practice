@@ -1,0 +1,1137 @@
+{
+  "schemaVersion": 1,
+  "title": "Jev word-origin classification and batch-052 selection audit",
+  "run": {
+    "executedAtUtc": "2026-09-29T02:40:07.822193+00:00",
+    "source": {
+      "path": "data/word_origins.json",
+      "sha256": "9efd5f9768484723d273c1f2f35eb1c7293ba52ab347e837886646e4f7a332f6"
+    },
+    "classifier": {
+      "path": "scripts/jev_classify_word_origins.py",
+      "version": "legacy run; source SHA-256 is the identifier",
+      "sha256": "fc4c87fc5d5b6530cf8ea85b09645183f1f9f4472e8522d77a736a576b3c8dcf"
+    },
+    "sdk": {
+      "distribution": "typesafe-sdk",
+      "version": "0.7.1"
+    },
+    "model": {
+      "requested": null,
+      "resolved": [],
+      "defaultIfNoEnvironmentOverride": "jev-latest",
+      "status": "not_recorded",
+      "note": "The archived run omitted model fields. The client was constructed without an explicit model; TYPESAFE_DEFAULT_MODEL could have overridden the SDK default, so the actual model cannot be confirmed."
+    },
+    "requested": 2787,
+    "succeeded": 2787,
+    "failed": 0,
+    "uniqueWordLemmasInManifest": 2907,
+    "matchedOriginEntries": 2787,
+    "noOriginEntry": 120,
+    "lowConfidenceThreshold": 0.5,
+    "lowConfidenceCount": 159
+  },
+  "categoryCounts": {
+    "接辞・語根の組み立て": 1088,
+    "具体的イメージからの比喩": 132,
+    "意味の変遷": 172,
+    "他言語からの借用（意味ほぼ同じ）": 1088,
+    "固有名詞由来": 4,
+    "英語内の複合・短縮・混成": 55,
+    "英語の原形・派生元を示すだけ": 206,
+    "擬音・擬態": 9,
+    "由来不詳・諸説": 33
+  },
+  "selection": {
+    "batchId": "batch-052-memory-cue-rollout",
+    "category": "compound_clipping",
+    "candidateCount": 55,
+    "acceptedCount": 18,
+    "excludedCount": 37,
+    "criteria": [
+      "Jevの主分類がcompound_clippingであること",
+      "個別調査済みであること",
+      "現在の語形に対応する表示可能な2部品に分けられること",
+      "語形・語義の複雑さにより誤解を招くものを採用しないこと"
+    ],
+    "acceptedWords": [
+      "broadcast",
+      "fainthearted",
+      "fundraiser",
+      "haphazard",
+      "hindsight",
+      "income",
+      "lackluster",
+      "landlord",
+      "newspaper",
+      "outbreak",
+      "outlaw",
+      "pinpoint",
+      "quagmire",
+      "sidewalk",
+      "taxpayers",
+      "walkout",
+      "website",
+      "worldwide"
+    ],
+    "candidates": [
+      {
+        "word": "altogether",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.85,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "all",
+            "kind": "base",
+            "display": false
+          },
+          {
+            "form": "together",
+            "kind": "base",
+            "display": false
+          }
+        ],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "component_not_approved_for_display"
+        ],
+        "reasonBasis": null
+      },
+      {
+        "word": "beforehand",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.99,
+        "researchStatus": "reviewed",
+        "components": [],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "not_two_individually_represented_components"
+        ],
+        "reasonBasis": null
+      },
+      {
+        "word": "broadcast",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.77,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "broad",
+            "kind": "word",
+            "display": true
+          },
+          {
+            "form": "cast",
+            "kind": "word",
+            "display": true
+          }
+        ],
+        "decision": "accepted",
+        "exclusionReasons": [],
+        "reasonBasis": null
+      },
+      {
+        "word": "cute",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.76,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "acute",
+            "kind": "word",
+            "display": true
+          }
+        ],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "not_two_individually_represented_components"
+        ],
+        "reasonBasis": null
+      },
+      {
+        "word": "deadline",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.9,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "dead + line",
+            "kind": "compound",
+            "display": true
+          }
+        ],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "not_two_individually_represented_components"
+        ],
+        "reasonBasis": null
+      },
+      {
+        "word": "deadlock",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.68,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "dead",
+            "kind": "base",
+            "display": false
+          },
+          {
+            "form": "lock",
+            "kind": "base",
+            "display": false
+          }
+        ],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "component_not_approved_for_display"
+        ],
+        "reasonBasis": null
+      },
+      {
+        "word": "down",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.29,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "ofdune",
+            "kind": "phrase",
+            "display": true
+          },
+          {
+            "form": "dunn",
+            "kind": "word",
+            "display": true
+          }
+        ],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "classifier_low_confidence"
+        ],
+        "reasonBasis": null
+      },
+      {
+        "word": "downplay",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.65,
+        "researchStatus": "reviewed",
+        "components": [],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "not_two_individually_represented_components"
+        ],
+        "reasonBasis": null
+      },
+      {
+        "word": "exam",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.95,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "exam",
+            "kind": "base",
+            "display": true
+          }
+        ],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "not_two_individually_represented_components"
+        ],
+        "reasonBasis": null
+      },
+      {
+        "word": "fainthearted",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.96,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "faint",
+            "kind": "compound",
+            "display": true
+          },
+          {
+            "form": "hearted",
+            "kind": "compound",
+            "display": true
+          }
+        ],
+        "decision": "accepted",
+        "exclusionReasons": [],
+        "reasonBasis": null
+      },
+      {
+        "word": "fireworks",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.98,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "fire + work",
+            "kind": "compound",
+            "display": true
+          }
+        ],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "not_two_individually_represented_components"
+        ],
+        "reasonBasis": null
+      },
+      {
+        "word": "forecast",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.48,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "fore-",
+            "kind": "word",
+            "display": true
+          },
+          {
+            "form": "cast",
+            "kind": "word",
+            "display": true
+          }
+        ],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "classifier_low_confidence"
+        ],
+        "reasonBasis": null
+      },
+      {
+        "word": "forthcoming",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.9,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "forth",
+            "kind": "compound",
+            "display": true
+          },
+          {
+            "form": "coming",
+            "kind": "compound",
+            "display": true
+          }
+        ],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "manual_exclusion_for_complex_form_or_meaning"
+        ],
+        "reasonBasis": "batch note records this exclusion rule but did not retain a word-specific review note"
+      },
+      {
+        "word": "fundraiser",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 1,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "fund",
+            "kind": "compound",
+            "display": true
+          },
+          {
+            "form": "raiser",
+            "kind": "compound",
+            "display": true
+          }
+        ],
+        "decision": "accepted",
+        "exclusionReasons": [],
+        "reasonBasis": null
+      },
+      {
+        "word": "haphazard",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.91,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "hap",
+            "kind": "base",
+            "display": true
+          },
+          {
+            "form": "hazard",
+            "kind": "base",
+            "display": true
+          }
+        ],
+        "decision": "accepted",
+        "exclusionReasons": [],
+        "reasonBasis": null
+      },
+      {
+        "word": "headway",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.62,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "head",
+            "kind": "base",
+            "display": false
+          },
+          {
+            "form": "way",
+            "kind": "base",
+            "display": false
+          }
+        ],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "component_not_approved_for_display"
+        ],
+        "reasonBasis": null
+      },
+      {
+        "word": "hindsight",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.81,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "hind",
+            "kind": "base",
+            "display": true
+          },
+          {
+            "form": "sight",
+            "kind": "base",
+            "display": true
+          }
+        ],
+        "decision": "accepted",
+        "exclusionReasons": [],
+        "reasonBasis": null
+      },
+      {
+        "word": "income",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.75,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "in",
+            "kind": "word",
+            "display": true
+          },
+          {
+            "form": "come",
+            "kind": "word",
+            "display": true
+          }
+        ],
+        "decision": "accepted",
+        "exclusionReasons": [],
+        "reasonBasis": null
+      },
+      {
+        "word": "lackluster",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.96,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "lack",
+            "kind": "base",
+            "display": true
+          },
+          {
+            "form": "luster",
+            "kind": "base",
+            "display": true
+          }
+        ],
+        "decision": "accepted",
+        "exclusionReasons": [],
+        "reasonBasis": null
+      },
+      {
+        "word": "landlord",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 1,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "land",
+            "kind": "compound",
+            "display": true
+          },
+          {
+            "form": "lord",
+            "kind": "compound",
+            "display": true
+          }
+        ],
+        "decision": "accepted",
+        "exclusionReasons": [],
+        "reasonBasis": null
+      },
+      {
+        "word": "layman",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.87,
+        "researchStatus": "reviewed",
+        "components": [],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "not_two_individually_represented_components"
+        ],
+        "reasonBasis": null
+      },
+      {
+        "word": "lighthouse",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.99,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "light + house",
+            "kind": "compound",
+            "display": true
+          }
+        ],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "not_two_individually_represented_components"
+        ],
+        "reasonBasis": null
+      },
+      {
+        "word": "lunch",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.99,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "luncheon",
+            "kind": "word",
+            "display": true
+          }
+        ],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "not_two_individually_represented_components"
+        ],
+        "reasonBasis": null
+      },
+      {
+        "word": "mainstay",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.89,
+        "researchStatus": "reviewed",
+        "components": [],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "not_two_individually_represented_components"
+        ],
+        "reasonBasis": null
+      },
+      {
+        "word": "makeshift",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.77,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "make",
+            "kind": "base",
+            "display": false
+          },
+          {
+            "form": "shift",
+            "kind": "base",
+            "display": false
+          }
+        ],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "component_not_approved_for_display"
+        ],
+        "reasonBasis": null
+      },
+      {
+        "word": "moreover",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.91,
+        "researchStatus": "reviewed",
+        "components": [],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "not_two_individually_represented_components"
+        ],
+        "reasonBasis": null
+      },
+      {
+        "word": "neighbor",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.45,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "neah + gebur",
+            "kind": "compound",
+            "display": true
+          }
+        ],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "not_two_individually_represented_components",
+          "classifier_low_confidence"
+        ],
+        "reasonBasis": null
+      },
+      {
+        "word": "newspaper",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 1,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "news",
+            "kind": "word",
+            "display": true
+          },
+          {
+            "form": "paper",
+            "kind": "word",
+            "display": true
+          }
+        ],
+        "decision": "accepted",
+        "exclusionReasons": [],
+        "reasonBasis": null
+      },
+      {
+        "word": "nightmares",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.99,
+        "researchStatus": "reviewed",
+        "components": [],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "not_two_individually_represented_components"
+        ],
+        "reasonBasis": null
+      },
+      {
+        "word": "onrush",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.93,
+        "researchStatus": "reviewed",
+        "components": [],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "not_two_individually_represented_components"
+        ],
+        "reasonBasis": null
+      },
+      {
+        "word": "outbreak",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.77,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "out",
+            "kind": "prefix",
+            "display": true
+          },
+          {
+            "form": "break",
+            "kind": "base",
+            "display": true
+          }
+        ],
+        "decision": "accepted",
+        "exclusionReasons": [],
+        "reasonBasis": null
+      },
+      {
+        "word": "outlaw",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.86,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "out",
+            "kind": "compound",
+            "display": true
+          },
+          {
+            "form": "law",
+            "kind": "compound",
+            "display": true
+          }
+        ],
+        "decision": "accepted",
+        "exclusionReasons": [],
+        "reasonBasis": null
+      },
+      {
+        "word": "outreach",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.68,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "out",
+            "kind": "base",
+            "display": true
+          },
+          {
+            "form": "reach",
+            "kind": "base",
+            "display": true
+          }
+        ],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "manual_exclusion_for_complex_form_or_meaning"
+        ],
+        "reasonBasis": "batch note records this exclusion rule but did not retain a word-specific review note"
+      },
+      {
+        "word": "overlap",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.67,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "over",
+            "kind": "word",
+            "display": true
+          },
+          {
+            "form": "lap",
+            "kind": "word",
+            "display": true
+          }
+        ],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "manual_exclusion_for_complex_form_or_meaning"
+        ],
+        "reasonBasis": "batch note records this exclusion rule but did not retain a word-specific review note"
+      },
+      {
+        "word": "overseas",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.59,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "over",
+            "kind": "prefix",
+            "display": true
+          },
+          {
+            "form": "sea",
+            "kind": "base",
+            "display": true
+          }
+        ],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "manual_exclusion_for_complex_form_or_meaning"
+        ],
+        "reasonBasis": "batch note records this exclusion rule but did not retain a word-specific review note"
+      },
+      {
+        "word": "oversight",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.51,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "over",
+            "kind": "compound",
+            "display": true
+          },
+          {
+            "form": "sight",
+            "kind": "compound",
+            "display": true
+          }
+        ],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "manual_exclusion_for_complex_form_or_meaning"
+        ],
+        "reasonBasis": "batch note records this exclusion rule but did not retain a word-specific review note"
+      },
+      {
+        "word": "painstaking",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.98,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "pain",
+            "kind": "base",
+            "display": false
+          },
+          {
+            "form": "taking",
+            "kind": "base",
+            "display": false
+          }
+        ],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "component_not_approved_for_display"
+        ],
+        "reasonBasis": null
+      },
+      {
+        "word": "payoff",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.63,
+        "researchStatus": "reviewed",
+        "components": [],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "not_two_individually_represented_components"
+        ],
+        "reasonBasis": null
+      },
+      {
+        "word": "perk",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.91,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "perquisite",
+            "kind": "base",
+            "display": false
+          }
+        ],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "not_two_individually_represented_components",
+          "component_not_approved_for_display"
+        ],
+        "reasonBasis": null
+      },
+      {
+        "word": "pinpoint",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.77,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "pin",
+            "kind": "base",
+            "display": true
+          },
+          {
+            "form": "point",
+            "kind": "base",
+            "display": true
+          }
+        ],
+        "decision": "accepted",
+        "exclusionReasons": [],
+        "reasonBasis": null
+      },
+      {
+        "word": "pitfall",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.7,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "pit",
+            "kind": "base",
+            "display": true
+          },
+          {
+            "form": "fall",
+            "kind": "base",
+            "display": true
+          }
+        ],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "manual_exclusion_for_complex_form_or_meaning"
+        ],
+        "reasonBasis": "batch note records this exclusion rule but did not retain a word-specific review note"
+      },
+      {
+        "word": "pushover",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.46,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "push",
+            "kind": "base",
+            "display": true
+          },
+          {
+            "form": "over",
+            "kind": "base",
+            "display": true
+          }
+        ],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "classifier_low_confidence"
+        ],
+        "reasonBasis": null
+      },
+      {
+        "word": "quagmire",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 1,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "quag",
+            "kind": "base",
+            "display": true
+          },
+          {
+            "form": "mire",
+            "kind": "base",
+            "display": true
+          }
+        ],
+        "decision": "accepted",
+        "exclusionReasons": [],
+        "reasonBasis": null
+      },
+      {
+        "word": "sidewalk",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 1,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "side",
+            "kind": "compound",
+            "display": true
+          },
+          {
+            "form": "walk",
+            "kind": "compound",
+            "display": true
+          }
+        ],
+        "decision": "accepted",
+        "exclusionReasons": [],
+        "reasonBasis": null
+      },
+      {
+        "word": "spearhead",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.48,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "spear",
+            "kind": "base",
+            "display": true
+          },
+          {
+            "form": "head",
+            "kind": "base",
+            "display": true
+          }
+        ],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "classifier_low_confidence"
+        ],
+        "reasonBasis": null
+      },
+      {
+        "word": "spellbound",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.38,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "spell",
+            "kind": "base",
+            "display": false
+          },
+          {
+            "form": "bound",
+            "kind": "base",
+            "display": false
+          }
+        ],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "component_not_approved_for_display",
+          "classifier_low_confidence"
+        ],
+        "reasonBasis": null
+      },
+      {
+        "word": "steadfast",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.48,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "stedefæst",
+            "kind": "base",
+            "display": true
+          }
+        ],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "not_two_individually_represented_components",
+          "classifier_low_confidence"
+        ],
+        "reasonBasis": null
+      },
+      {
+        "word": "stopgap",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.93,
+        "researchStatus": "reviewed",
+        "components": [],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "not_two_individually_represented_components"
+        ],
+        "reasonBasis": null
+      },
+      {
+        "word": "taxpayers",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.95,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "tax",
+            "kind": "base",
+            "display": true
+          },
+          {
+            "form": "payer",
+            "kind": "base",
+            "display": true
+          }
+        ],
+        "decision": "accepted",
+        "exclusionReasons": [],
+        "reasonBasis": null
+      },
+      {
+        "word": "upstart",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.65,
+        "researchStatus": "reviewed",
+        "components": [],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "not_two_individually_represented_components"
+        ],
+        "reasonBasis": null
+      },
+      {
+        "word": "uptight",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.57,
+        "researchStatus": "reviewed",
+        "components": [],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "not_two_individually_represented_components"
+        ],
+        "reasonBasis": null
+      },
+      {
+        "word": "walkout",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.92,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "walk",
+            "kind": "base",
+            "display": true
+          },
+          {
+            "form": "out",
+            "kind": "base",
+            "display": true
+          }
+        ],
+        "decision": "accepted",
+        "exclusionReasons": [],
+        "reasonBasis": null
+      },
+      {
+        "word": "website",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.99,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "web",
+            "kind": "word",
+            "display": true
+          },
+          {
+            "form": "site",
+            "kind": "word",
+            "display": true
+          }
+        ],
+        "decision": "accepted",
+        "exclusionReasons": [],
+        "reasonBasis": null
+      },
+      {
+        "word": "worldwide",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.99,
+        "researchStatus": "reviewed",
+        "components": [
+          {
+            "form": "world",
+            "kind": "word",
+            "display": true
+          },
+          {
+            "form": "wide",
+            "kind": "word",
+            "display": true
+          }
+        ],
+        "decision": "accepted",
+        "exclusionReasons": [],
+        "reasonBasis": null
+      },
+      {
+        "word": "yardstick",
+        "classifierCategory": "compound_clipping",
+        "classifierConfidence": 0.8,
+        "researchStatus": "reviewed",
+        "components": [],
+        "decision": "excluded",
+        "exclusionReasons": [
+          "not_two_individually_represented_components"
+        ],
+        "reasonBasis": null
+      }
+    ]
+  }
+}

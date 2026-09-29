@@ -1,6 +1,7 @@
 const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const path = require("node:path");
+const { assertBatchNotApplied } = require("./lib/word-origin-batches.cjs");
 const util = require("node:util");
 
 const ROOT = path.resolve(__dirname, "..");
@@ -81,7 +82,7 @@ function main() {
   const batchId = nonEmpty(batch.meta?.batchId, "batch.meta.batchId");
   assert.ok(batch.entries && typeof batch.entries === "object" && !Array.isArray(batch.entries), "batch.entriesが必要です");
   const previousBatch = ledger.meta?.lastAppliedBatch;
-  assert.notEqual(previousBatch, batchId, `${batchId}: 既に最後に適用されています`);
+  assertBatchNotApplied(ledger.meta, batchId);
   const target = new Set(ledger.researchTarget?.lemmas || []);
   let applied = 0;
 
