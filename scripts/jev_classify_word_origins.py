@@ -10,6 +10,9 @@ from __future__ import annotations
 
 import argparse
 import asyncio
+from datetime import datetime, timezone
+from hashlib import sha256
+from importlib.metadata import version as package_version
 import json
 import os
 import random
@@ -23,6 +26,8 @@ ORIGINS_PATH = ROOT / "data" / "word_origins.json"
 CONCURRENCY = 6
 # Choice の確信度がこれ未満なら「要確認」として報告する
 LOW_CONFIDENCE = 0.5
+CLASSIFIER_VERSION = "word-origin-explanation-kind-v2"
+DEFAULT_MODEL = "jev-latest"
 
 CATEGORIES = {
     "affix_root": (
@@ -98,6 +103,22 @@ def entry_state(word: str, entry: dict) -> dict:
     return {"word": word, "entry": kept}
 
 
+def file_sha256(path: Path) -> str:
+    digest = sha256()
+    with path.open("rb") as source:
+        for chunk in iter(lambda: source.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def error_record(word: str, exc: Exception) -> dict:
+    message = str(exc).strip() or type(exc).__name__
+    api_key = os.environ.get("TYPESAFE_API_KEY")
+    if api_key:
+        message = message.replace(api_key, "[REDACTED]")
+    return {"word": word, "error": f"{type(exc).__name__}: {message}"}
+
+
 async def classify(client: AsyncTypeSafeClient, word: str, entry: dict, sem: asyncio.Semaphore) -> dict:
     async with sem:
         res = await client.system_one(state=entry_state(word, entry), questions=QUESTIONS)
@@ -111,6 +132,78 @@ async def classify(client: AsyncTypeSafeClient, word: str, entry: dict, sem: asy
         "confidence": round(kind.confidence, 3),
         "probabilities": {k: round(v, 3) for k, v in sorted(kind.probabilities.items(), key=lambda x: -x[1])},
         "derivation": entry.get("derivation", ""),
+        "model": getattr(res, "model", None),
+    }
+
+
+async def classify_one(client: AsyncTypeSafeClient, word: str, entry: dict, sem: asyncio.Semaphore) -> tuple[dict | None, dict | None]:
+    try:
+        return await classify(client, word, entry, sem), None
+    except Exception as exc:  # 1件の失敗で全体を止めず、語と一緒に記録する
+        return None, error_record(word, exc)
+
+
+async def classify_items(
+    client: AsyncTypeSafeClient,
+    items: list[tuple[str, dict]],
+    concurrency: int,
+    progress=None,
+) -> tuple[list[dict], list[dict]]:
+    sem = asyncio.Semaphore(concurrency)
+    tasks = [classify_one(client, word, entry, sem) for word, entry in items]
+    results, errors = [], []
+    for completed, task in enumerate(asyncio.as_completed(tasks), start=1):
+        result, error = await task
+        if result is not None:
+            results.append(result)
+        if error is not None:
+            errors.append(error)
+        if progress and (completed % 200 == 0 or completed == len(tasks)):
+            progress(completed, len(tasks))
+    results.sort(key=lambda row: row["word"])
+    errors.sort(key=lambda row: row["word"])
+    return results, errors
+
+
+def build_report(items: list[tuple[str, dict]], results: list[dict], errors: list[dict], args: argparse.Namespace) -> dict:
+    counts = Counter(result["kind"] for result in results)
+    by_type = Counter((result["dataType"], result["kind"]) for result in results)
+    low = [result["word"] for result in results if result["confidence"] < LOW_CONFIDENCE]
+    resolved_models = sorted({result["model"] for result in results if result.get("model")})
+    return {
+        "source": ORIGINS_PATH.relative_to(ROOT).as_posix(),
+        "evaluationType": "heuristic_classification",
+        "warning": "Jevの参考分類。語源の正誤は判定していません。",
+        "metadata": {
+            "schemaVersion": 1,
+            "createdAtUtc": datetime.now(timezone.utc).isoformat(),
+            "sourceSha256": file_sha256(ORIGINS_PATH),
+            "classifier": {
+                "version": CLASSIFIER_VERSION,
+                "path": Path(__file__).resolve().relative_to(ROOT).as_posix(),
+                "sha256": file_sha256(Path(__file__).resolve()),
+            },
+            "sdk": {
+                "distribution": "typesafe-sdk",
+                "version": package_version("typesafe-sdk"),
+            },
+            "model": {
+                "requested": args.model,
+                "resolved": resolved_models,
+            },
+            "requested": len(items),
+            "succeeded": len(results),
+            "failed": len(errors),
+        },
+        "requested": len(items),
+        "succeeded": len(results),
+        "failed": len(errors),
+        "errors": errors,
+        "counts": {LABELS_JA[k]: counts[k] for k in CATEGORIES},
+        "countsByDataType": {f"{t}:{LABELS_JA[k]}": n for (t, k), n in sorted(by_type.items())},
+        "lowConfidenceThreshold": LOW_CONFIDENCE,
+        "lowConfidenceWords": low,
+        "results": results,
     }
 
 
@@ -127,48 +220,41 @@ async def main_async(args: argparse.Namespace) -> int:
         raise SystemExit(f"出力先がすでに存在します（上書きしません）: {out}")
     out.parent.mkdir(parents=True, exist_ok=True)
 
-    sem = asyncio.Semaphore(args.concurrency)
-    async with AsyncTypeSafeClient() as client:
-        tasks = [classify(client, w, e, sem) for w, e in items]
-        results, errors = [], []
-        for coro in asyncio.as_completed(tasks):
-            try:
-                results.append(await coro)
-            except Exception as exc:  # 1件の失敗で全体を止めない
-                errors.append(repr(exc))
-            if len(results) % 200 == 0:
-                print(f"  {len(results)}/{len(items)}", flush=True)
+    async with AsyncTypeSafeClient(model=args.model) as client:
+        results, errors = await classify_items(
+            client,
+            items,
+            args.concurrency,
+            progress=lambda done, total: print(f"  {done}/{total}", flush=True),
+        )
 
-    results.sort(key=lambda r: r["word"])
-    counts = Counter(r["kind"] for r in results)
-    by_type = Counter((r["dataType"], r["kind"]) for r in results)
-    low = [r["word"] for r in results if r["confidence"] < LOW_CONFIDENCE]
-    summary = {
-        "source": str(ORIGINS_PATH),
-        "evaluationType": "heuristic_classification",
-        "warning": "Jevの参考分類。語源の正誤は判定していません。",
-        "total": len(results),
-        "errors": errors,
-        "counts": {LABELS_JA[k]: counts[k] for k in CATEGORIES},
-        "countsByDataType": {f"{t}:{LABELS_JA[k]}": n for (t, k), n in sorted(by_type.items())},
-        "lowConfidenceThreshold": LOW_CONFIDENCE,
-        "lowConfidenceWords": low,
-        "results": results,
-    }
+    summary = build_report(items, results, errors, args)
     out.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(json.dumps({k: summary[k] for k in ("total", "counts")}, ensure_ascii=False, indent=2))
-    print(f"要確認（確信度<{LOW_CONFIDENCE}）: {len(low)}件, エラー: {len(errors)}件 -> {out}")
+    print(json.dumps({k: summary[k] for k in ("requested", "succeeded", "failed", "counts")}, ensure_ascii=False, indent=2))
+    print(f"要確認（確信度<{LOW_CONFIDENCE}）: {len(summary['lowConfidenceWords'])}件, エラー: {len(errors)}件 -> {out}")
     return 0 if not errors else 1
 
 
-def main() -> int:
+def positive_int(value: str) -> int:
+    parsed = int(value)
+    if parsed < 1:
+        raise argparse.ArgumentTypeError("1以上を指定してください")
+    return parsed
+
+
+def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(description="Jevで語源・なりたちの記載内容を分類します")
     p.add_argument("--output", type=Path, default=ROOT / "out" / "jev-word-origin-kinds.json")
     p.add_argument("--overwrite", action="store_true", help="既存の出力を上書きする")
-    p.add_argument("--sample", type=int, default=None, help="無作為にN件だけ処理する")
+    p.add_argument("--sample", type=positive_int, default=None, help="無作為にN件だけ処理する")
     p.add_argument("--seed", type=int, default=0)
-    p.add_argument("--concurrency", type=int, default=CONCURRENCY)
-    return asyncio.run(main_async(p.parse_args()))
+    p.add_argument("--concurrency", type=positive_int, default=CONCURRENCY)
+    p.add_argument("--model", default=DEFAULT_MODEL, help="TypeSafe model ID (default: jev-latest)")
+    return p
+
+
+def main() -> int:
+    return asyncio.run(main_async(build_parser().parse_args()))
 
 
 if __name__ == "__main__":

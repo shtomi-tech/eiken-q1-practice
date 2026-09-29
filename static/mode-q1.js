@@ -4079,13 +4079,17 @@ function flashWordOrigin(item) {
     parts.forEach((part, index) => {
       if (index) chips.appendChild(el("span", { class: "originChipJoin", "aria-hidden": "true" }, "+"));
       const kind = originKindLabel(part.kind);
+      const partLabel = origin.type === "A" ? kind + " " : "構成要素 ";
+      const contents = [];
+      if (origin.type === "A") contents.push(el("span", { class: "originChipKind" }, kind));
+      contents.push(
+        el("span", { class: "originChipForm" }, part.form),
+        el("span", { class: "originChipGloss" }, part.gloss),
+      );
       chips.appendChild(el("span", {
-        class: `originChip originChip-${part.kind}`,
-        "aria-label": `${kind} ${part.form}：${part.gloss}`,
-      },
-      el("span", { class: "originChipKind" }, kind),
-      el("span", { class: "originChipForm" }, part.form),
-      el("span", { class: "originChipGloss" }, part.gloss)));
+        class: "originChip originChip-" + part.kind,
+        "aria-label": partLabel + part.form + "：" + part.gloss,
+      }, ...contents));
     });
     row.appendChild(chips);
   }

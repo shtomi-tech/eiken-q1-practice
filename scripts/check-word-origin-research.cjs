@@ -1,6 +1,7 @@
 const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const path = require("node:path");
+const { validateAppliedBatchHistory } = require("./lib/word-origin-batches.cjs");
 
 const ROOT = path.resolve(__dirname, "..");
 const DATA_DIR = path.join(ROOT, "data");
@@ -66,6 +67,7 @@ function main() {
   assert.ok(fs.existsSync(RESEARCH_PATH), "data/word_origin_research.json が必要です");
   const ledger = readJson(RESEARCH_PATH);
   assert.equal(ledger.meta?.schemaVersion, 1, "研究台帳のschemaVersionは1である必要があります");
+  validateAppliedBatchHistory(ledger.meta);
   assert.ok(ledger.entries && typeof ledger.entries === "object" && !Array.isArray(ledger.entries), "entries辞書が必要です");
   assert.ok(ledger.dictionary?.roots && typeof ledger.dictionary.roots === "object", "dictionary.rootsが必要です");
   assert.ok(ledger.dictionary?.affixes && typeof ledger.dictionary.affixes === "object", "dictionary.affixesが必要です");
@@ -109,6 +111,10 @@ function main() {
         assert.equal(entry.display.parts, undefined, `${lemma}: B型にpartsは付けません`);
         if (entry.display.memoryCue !== undefined) {
           const cue = entry.display.memoryCue;
+          assert.ok(
+            Array.isArray(cue?.parts) && cue.parts.every((part) => part && typeof part.form === "string" && entry.display.derivation.toLowerCase().includes(part.form.toLowerCase())),
+            lemma + ".display.derivationにmemoryCueの部品すべてを含めてください",
+          );
           assert.ok(cue && typeof cue === "object" && !Array.isArray(cue), `${lemma}.display.memoryCueが不正です`);
           assert.ok(Array.isArray(cue.parts) && cue.parts.length >= 2, `${lemma}.display.memoryCue.partsが必要です`);
           assert.equal(cue.parts.length, research.components.length, `${lemma}.display.memoryCue.partsは調査済みcomponentsと揃えてください`);
