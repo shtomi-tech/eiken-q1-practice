@@ -3050,6 +3050,415 @@
       "gloss": "大きい・偉大な",
       "origin": "ラテン語 magnus",
       "note": "大きさや偉大さ。magnifyではmagnとして現れる。"
+    },
+    "agil": {
+      "gloss": "素早く動ける",
+      "origin": "ラテン語 agilis（agere「動かす」から）",
+      "note": "agile（アジャイル）。"
+    },
+    "lign": {
+      "gloss": "線",
+      "origin": "ラテン語 linea",
+      "note": "線に沿って並べるイメージ。line（ライン）・linear。"
+    },
+    "culp": {
+      "gloss": "落ち度・罪",
+      "origin": "ラテン語 culpa",
+      "note": "責められるべき過ちのイメージ。culprit（犯人）。"
+    },
+    "orbit": {
+      "gloss": "車輪のわだち・軌道",
+      "origin": "ラテン語 orbita",
+      "note": "決まった通り道のイメージ。orbit（軌道）。"
+    },
+    "humil": {
+      "gloss": "低い・地面に近い",
+      "origin": "ラテン語 humilis（humus「地面」から）",
+      "note": "地面近くまで低いイメージ。humble（謙虚な）。"
+    },
+    "palp": {
+      "gloss": "触れる",
+      "origin": "ラテン語 palpare",
+      "note": "そっと手で触れるイメージ。palpable（明白な）。"
+    },
+    "trud": {
+      "gloss": "押す",
+      "origin": "ラテン語 trudere",
+      "note": "力で押し出すイメージ。intrude（押し入る）・intrusive。",
+      "variants": ["trus"]
+    },
+    "fan": {
+      "gloss": "神殿",
+      "origin": "ラテン語 fanum",
+      "note": "神聖な場所のイメージ。fanatic（熱狂的な）、その短縮形の fan（ファン）。"
+    },
+    "ram": {
+      "gloss": "枝",
+      "origin": "ラテン語 ramus",
+      "note": "木の枝が分かれるイメージ。ramify（枝分かれする）。"
+    },
+    "pugn": {
+      "gloss": "戦う",
+      "origin": "ラテン語 pugnare",
+      "note": "相手に向かって戦うイメージ。pugnacious（けんか好きな）。"
+    },
+    "tal": {
+      "gloss": "同じ種類の",
+      "origin": "ラテン語 talis / talio",
+      "note": "同じものでお返しするイメージ。lex talionis（同害報復法）。"
+    },
+    "jug": {
+      "gloss": "くびき（牛をつなぐ横木）",
+      "origin": "ラテン語 iugum",
+      "note": "くびきでつなぐイメージ。conjugate（結合する）、yoke と同じ祖先。"
+    },
+    "horr": {
+      "gloss": "身震いする・毛が逆立つ",
+      "origin": "ラテン語 horrere",
+      "note": "恐怖で毛が逆立つイメージ。horror・horrible。"
+    },
+    "acr": {
+      "gloss": "鋭い",
+      "origin": "ラテン語 acer / acris",
+      "note": "刺すように鋭いイメージ。eager（熱心な）・acrimony。acu（acute）とは同じ祖先の別のラテン語。"
+    },
+    "judic": {
+      "gloss": "裁く",
+      "origin": "ラテン語 iudicare",
+      "note": "裁判官として判断を下すイメージ。judicial・prejudice。既存の judg（judge）と同じラテン語 iudicare。"
+    },
+    "grav": {
+      "gloss": "重い",
+      "origin": "ラテン語 gravis",
+      "note": "重みがのしかかるイメージ。gravity・grave（重大な）。"
+    },
+    "alter": {
+      "gloss": "他方の・別の",
+      "origin": "ラテン語 alter",
+      "note": "二者のうちのもう一方というイメージ。alternate・alter。"
+    },
+    "crat": {
+      "gloss": "力・支配",
+      "origin": "ギリシャ語 kratos",
+      "note": "力で治めるイメージ。democracy（民衆の支配）。"
+    },
+    "gnit": {
+      "gloss": "知る",
+      "origin": "ラテン語 gnoscere / cognitus",
+      "note": "物事を知るようになるイメージ。recognize（認識する）・cognitive。"
+    },
+    "mensur": {
+      "gloss": "測る",
+      "origin": "ラテン語 mensura / mensurare",
+      "note": "物差しで測るイメージ。measure（メジャー）・dimension（同系）。"
+    },
+    "punct": {
+      "gloss": "刺す",
+      "origin": "ラテン語 pungere / punctus",
+      "note": "先の尖ったもので突くイメージ。puncture（パンク）・point。"
+    },
+    "figur": {
+      "gloss": "形づくる",
+      "origin": "ラテン語 figura / figurare",
+      "note": "形を作るイメージ。figure（フィギュア）・transfigure。"
+    },
+    "glomer": {
+      "gloss": "玉にする",
+      "origin": "ラテン語 glomus（glomeris）/ glomerare",
+      "note": "毛糸玉のように丸めて塊にするイメージ。conglomerate（コングロマリット）。"
+    },
+    "fraud": {
+      "gloss": "だます・不正",
+      "origin": "ラテン語 fraus / fraudare",
+      "note": "人をだまして損をさせるイメージ。fraud（詐欺）、fraudulent。"
+    },
+    "demon": {
+      "gloss": "悪魔・霊",
+      "origin": "ギリシャ語 daimon",
+      "note": "もとは神と人の間にいる霊・守護霊。キリスト教で悪霊の意味になった。demonic（悪魔的な）、デーモン。"
+    },
+    "spond": {
+      "gloss": "約束する",
+      "origin": "ラテン語 spondere",
+      "note": "厳かに約束するイメージ。sponsor（スポンサー＝保証を約束する人）、respond（約束を返す＝応じる）。"
+    },
+    "fid": {
+      "gloss": "信頼する",
+      "origin": "ラテン語 fidere",
+      "note": "人や物を信じて頼るイメージ。confident（自信のある）。"
+    },
+    "sert": {
+      "gloss": "並べてつなぐ",
+      "origin": "ラテン語 serere",
+      "note": "ものを一列につなぎ並べるイメージ。insert、series。"
+    },
+    "bell": {
+      "gloss": "美しい",
+      "origin": "ラテン語 bellus",
+      "note": "きれいで整ったイメージ。belle（美女）、beauty。bellum（戦争）由来の bel（rebel）とは別の語根。"
+    },
+    "gross": {
+      "gloss": "大きい・かたまり",
+      "origin": "後期ラテン語 grossus",
+      "note": "大きくて分厚いかたまりのイメージ。gross（総体の）、グロス（12ダース）。古典ラテン語にはなく、それ以前の由来は不詳。"
+    },
+    "rud": {
+      "gloss": "粗い・未熟な",
+      "origin": "ラテン語 rudis",
+      "note": "磨かれていない荒削りのイメージ。rude（粗野な）。"
+    },
+    "hilar": {
+      "gloss": "陽気な",
+      "origin": "ラテン語 hilaris（ギリシャ語 hilaros から）",
+      "note": "晴れやかで陽気なイメージ。hilarious（とても愉快な）。"
+    },
+    "felic": {
+      "gloss": "実り豊か・幸せ",
+      "origin": "ラテン語 felix",
+      "note": "作物が実る豊かさが幸せにつながるイメージ。felicitate（祝う）。"
+    },
+    "ferv": {
+      "gloss": "沸く・燃える",
+      "origin": "ラテン語 fervere",
+      "note": "ぐつぐつ沸き立つイメージ。fervor（熱情）、effervescent（泡立つ）。"
+    },
+    "fidel": {
+      "gloss": "忠実な",
+      "origin": "ラテン語 fidelis",
+      "note": "信頼に応える誠実さのイメージ。infidelity（不貞）。"
+    },
+    "fig": {
+      "gloss": "こねて形づくる",
+      "origin": "ラテン語 fingere / figura",
+      "note": "粘土をこねて形を作るイメージ。figure、fiction（作り話）。"
+    },
+    "fiss": {
+      "gloss": "割る・裂く",
+      "origin": "ラテン語 findere / fissus",
+      "note": "縦に裂けるイメージ。fission（核分裂）。"
+    },
+    "foli": {
+      "gloss": "葉",
+      "origin": "ラテン語 folium",
+      "note": "木の葉のイメージ。foil（ホイル）、portfolio。"
+    },
+    "frig": {
+      "gloss": "冷たい",
+      "origin": "ラテン語 frigere / frigus",
+      "note": "冷え切っているイメージ。refrigerator（冷蔵庫）。"
+    },
+    "fruit": {
+      "gloss": "味わう・実り",
+      "origin": "ラテン語 frui / fructus",
+      "note": "実りを味わい楽しむイメージ。fruit、frugal。"
+    },
+    "fug": {
+      "gloss": "逃げる",
+      "origin": "ラテン語 fugere",
+      "note": "その場から逃げ去るイメージ。refuge（避難所）、refugee（難民）。",
+      "variants": ["fugit"]
+    },
+    "licit": {
+      "gloss": "許される",
+      "origin": "ラテン語 licitus（licere＝許されている）",
+      "note": "許可されている状態のイメージ。license（許可証）。"
+    },
+    "me": {
+      "gloss": "通る・進む",
+      "origin": "ラテン語 meare",
+      "note": "通り抜けて進むイメージ。permeate（染み込む）。"
+    },
+    "cub": {
+      "gloss": "横になる",
+      "origin": "ラテン語 cubare",
+      "note": "体を横たえて寝るイメージ。cubicle（小さな個室。元は寝室）。"
+    },
+    "anim": {
+      "gloss": "息・生命",
+      "origin": "ラテン語 anima",
+      "note": "息をして生きているイメージ。animal・animation。"
+    },
+    "dign": {
+      "gloss": "ふさわしい・価値がある",
+      "origin": "ラテン語 dignus",
+      "note": "それにふさわしい価値があるイメージ。dignity・dignify。"
+    },
+    "fant": {
+      "gloss": "話す",
+      "origin": "ラテン語 fans（fari）",
+      "note": "言葉を話すイメージ。infant（話せない者＝乳幼児）。"
+    },
+    "san": {
+      "gloss": "健全な",
+      "origin": "ラテン語 sanus",
+      "note": "心身が健やかなイメージ。sane・sanitary。"
+    },
+    "scrut": {
+      "gloss": "念入りに調べる",
+      "origin": "ラテン語 scrutari",
+      "note": "隅々まで探って調べるイメージ。scrutiny（綿密な調査）。"
+    },
+    "ciner": {
+      "gloss": "灰",
+      "origin": "ラテン語 cinis",
+      "note": "燃えて残った灰のイメージ。incinerator（焼却炉）。"
+    },
+    "flict": {
+      "gloss": "打ちつける",
+      "origin": "ラテン語 fligere",
+      "note": "強く打ちつけるイメージ。afflict・conflict。"
+    },
+    "pud": {
+      "gloss": "恥じる",
+      "origin": "ラテン語 pudere",
+      "note": "恥ずかしさを感じさせるイメージ。impudent（恥知らずの）。"
+    },
+    "sinu": {
+      "gloss": "曲がりくねる・湾曲",
+      "origin": "ラテン語 sinus",
+      "note": "くねった曲線や入り組んだくぼみのイメージ。sinus（副鼻腔）、sinuous（曲がりくねった）。"
+    },
+    "still": {
+      "gloss": "滴",
+      "origin": "ラテン語 stilla",
+      "note": "ぽたりと落ちる一滴のイメージ。distill（蒸留する）。形容詞の still（静かな）とは別の語。"
+    },
+    "veter": {
+      "gloss": "古い",
+      "origin": "ラテン語 vetus",
+      "note": "長い年月を経たイメージ。veteran（ベテラン）。"
+    },
+    "irasc": {
+      "gloss": "怒る",
+      "origin": "ラテン語 irasci",
+      "note": "怒り（ira）が湧くイメージ。ire、irate。"
+    },
+    "fut": {
+      "gloss": "叩く",
+      "origin": "ラテン語 *futare（推定形。refutare に残る）",
+      "note": "叩いて押し返すイメージ。refute（論破する）。futile の futil とは別の語根。"
+    },
+    "jocul": {
+      "gloss": "小さな冗談",
+      "origin": "ラテン語 ioculus",
+      "note": "ちょっとした冗談・戯れのイメージ。joke（ジョーク）、juggle。"
+    },
+    "junct": {
+      "gloss": "つなぐ",
+      "origin": "ラテン語 iunctus / iungere",
+      "note": "二つをつなぎ合わせるイメージ。junction、join。"
+    },
+    "lacer": {
+      "gloss": "引き裂かれた",
+      "origin": "ラテン語 lacer",
+      "note": "ぼろぼろに裂けたイメージ。lacerate（引き裂く）。"
+    },
+    "lass": {
+      "gloss": "疲れた・ぐったりした",
+      "origin": "ラテン語 lassus",
+      "note": "力が抜けてぐったり疲れたイメージ。alas（ああ。もとは「ああ疲れた」）。"
+    },
+    "nasc": {
+      "gloss": "生まれる",
+      "origin": "ラテン語 nasci",
+      "note": "生まれ出るイメージ。native・renaissance（再生）。"
+    },
+    "nox": {
+      "gloss": "害",
+      "origin": "ラテン語 noxa",
+      "note": "傷や損害を与えるイメージ。noxious（有害な）。夜を表す nox（nocturnal）とは別の語。"
+    },
+    "stin": {
+      "gloss": "立つ",
+      "origin": "ラテン語 *stinare（stare＝立つ の仲間）",
+      "note": "踏ん張って立ち続けるイメージ。stand・station と同源。"
+    },
+    "opul": {
+      "gloss": "富",
+      "origin": "ラテン語 opulentus（ops）",
+      "note": "富や力があふれるイメージ。opulent・copious（豊富な。同じ ops から）。"
+    },
+    "orat": {
+      "gloss": "祈る・弁じる",
+      "origin": "ラテン語 orare / oratus",
+      "note": "人前で祈り、語るイメージ。orator（演説者）・orate。"
+    },
+    "jur": {
+      "gloss": "誓う",
+      "origin": "ラテン語 iurare",
+      "note": "神や法に誓いを立てるイメージ。jury（陪審員＝宣誓した人々）。"
+    },
+    "vas": {
+      "gloss": "行く・通る",
+      "origin": "ラテン語 vadere",
+      "note": "vadere（行く）の過去分詞 vasus の形。通り抜けて進むイメージ。invasion（侵入）、evasion（回避）。"
+    },
+    "sci": {
+      "gloss": "知る",
+      "origin": "ラテン語 scire",
+      "note": "知るイメージ。science（科学）・conscious（意識している）。"
+    },
+    "pag": {
+      "gloss": "固定する",
+      "origin": "ラテン語 pangere",
+      "note": "杭や若枝を打ち込んで留めつけるイメージ。pact（協定）。"
+    },
+    "muner": {
+      "gloss": "贈り物・務め",
+      "origin": "ラテン語 munus / munerari",
+      "note": "贈り物や果たすべき務めのイメージ。municipal（自治体の）。"
+    },
+    "splend": {
+      "gloss": "輝く",
+      "origin": "ラテン語 splendere",
+      "note": "明るく光り輝くイメージ。splendid（壮麗な）。"
+    },
+    "prehens": {
+      "gloss": "つかむ",
+      "origin": "ラテン語 prehendere",
+      "note": "しっかりつかまえるイメージ。comprehend・apprehend。",
+      "variants": ["prehend"]
+    },
+    "tac": {
+      "gloss": "黙る",
+      "origin": "ラテン語 tacere",
+      "note": "口をつぐむイメージ。tacit（暗黙の）・taciturn（無口な）。",
+      "variants": ["tic"]
+    },
+    "satir": {
+      "gloss": "盛り合わせの皿・風刺詩",
+      "origin": "ラテン語 satira（satura）",
+      "note": "満載の皿から、雑多な題材の風刺詩へ。satire。"
+    },
+    "sembl": {
+      "gloss": "似る・見える",
+      "origin": "ラテン語 simulare",
+      "note": "似て見えるイメージ。resemble（似ている）。"
+    },
+    "sever": {
+      "gloss": "引き離す",
+      "origin": "ラテン語 separare",
+      "note": "離して分けるイメージ。sever・separate。"
+    },
+    "strat": {
+      "gloss": "層・敷き広げる",
+      "origin": "ラテン語 stratum / sternere",
+      "note": "平らに敷き広げた層のイメージ。stratum（地層）、street（石を敷いた道）。"
+    },
+    "limin": {
+      "gloss": "敷居・入口",
+      "origin": "ラテン語 limen",
+      "note": "戸口の敷居、境目のイメージ。preliminary（予備の＝敷居の手前の）。"
+    },
+    "cinct": {
+      "gloss": "帯で締める",
+      "origin": "ラテン語 cingere / cinctus",
+      "note": "腰帯できゅっと締める・ぐるりと囲むイメージ。precinct（囲まれた区域）、cinch（鞍の腹帯）。"
+    },
+    "tim": {
+      "gloss": "恐れる",
+      "origin": "ラテン語 timere",
+      "note": "恐れて身がすくむイメージ。timid（臆病な）。"
     }
   },
   "affixes": {
