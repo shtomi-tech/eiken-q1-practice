@@ -12,6 +12,7 @@ const MEANING_INTERVALS = [
   { days: Infinity, label: "半年以上" },
 ];
 const MEANING_SESSION_SIZE = 30; // 1回に出す語句の上限
+const MEANING_DAILY_LIMIT = 120; // 間隔復習は1日の回答数も制限する
 const MEANING_PROGRESS_VERSION = 3;
 
 /* ---- FSRS-6（static/vendor/fsrs の ts-fsrs UMD, グローバル名 FSRS） ----
@@ -162,6 +163,31 @@ function appendLearningHistory(progress, event) {
     progress.history.splice(0, progress.history.length - LEARNING_HISTORY_LIMIT);
   }
 }
+function spacedReviewDayKey(date = new Date()) {
+  const value = new Date(date);
+  const year = value.getFullYear();
+  const month = String(value.getMonth() + 1).padStart(2, "0");
+  const day = String(value.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+function legacySpacedReviewDailyCount(progress, date) {
+  return (Array.isArray(progress.history) ? progress.history : []).filter((event) => {
+    if (!event || event.kind !== "meaning"
+      || Object.prototype.hasOwnProperty.call(event, "spacedReview")
+      || typeof event.at !== "string") return false;
+    const timestamp = new Date(event.at).getTime();
+    return Number.isFinite(timestamp) && spacedReviewDayKey(timestamp) === date;
+  }).length;
+}
+// 日別件数は問題履歴（直近500件）とは別に保持し、通常学習の記録数に左右されないようにする。
+function recordSpacedReviewDailyAnswer(progress, answeredAt) {
+  const date = spacedReviewDayKey(answeredAt);
+  const saved = progress.spacedReviewDaily;
+  const previous = saved?.date === date && Number.isInteger(saved.count) && saved.count >= 0
+    ? saved.count
+    : legacySpacedReviewDailyCount(progress, date);
+  progress.spacedReviewDaily = { date, count: previous + 1 };
+}
 // FSRSで次回を決める。ライブラリが無い場合は false を返し、呼び出し側がはしごへ落ちる。
 function applyFsrsResult(s, answeredAt, rating) {
   const scheduler = fsrsScheduler();
@@ -208,8 +234,10 @@ function recordMeaningResult(item, isCorrect, responseMs) {
     // wrongCount は出題順のフォールバックと移行時のdifficulty推定に使うため維持する。
     s.wrongCount += 1;
   }
+  if (session?.dueOnly) recordSpacedReviewDailyAnswer(progress, answeredAt);
   appendLearningHistory(progress, {
     kind: "meaning",
+    spacedReview: Boolean(session?.dueOnly),
     type: item.type,
     surface: surfaceOf(item),
     result: isCorrect ? "correct" : "wrong",
@@ -250,4 +278,3 @@ function finalProgress(finalTotal) {
   }
   return f;
 }
-

@@ -118,7 +118,8 @@ function meaningMission(
 ) {
   const learned = summary.learned;
   const due = summary.due;
-  const batch = nextQueue.length || Math.min(due, MEANING_SESSION_SIZE);
+  const todayRemaining = Number.isInteger(summary.dailyRemaining) ? summary.dailyRemaining : MEANING_DAILY_LIMIT;
+  const batch = Math.min(nextQueue.length || Math.min(due, MEANING_SESSION_SIZE), todayRemaining);
   const remaining = Math.max(0, due - batch);
   const mission = el("section", {
     class: "card spacedReviewCard",
@@ -127,7 +128,7 @@ function meaningMission(
     el("p", { class: "label" }, "間隔復習"),
     el("h3", { id: "spacedReviewCardTitle" }, `意味だけ復習（${dataset().shortLabel}）`),
     el("p", { class: "meaningMissionLead" },
-      `${datasetSectionName()}の収録セットをまとめ、通常学習で最後まで解いた設問の語句を1回最大${MEANING_SESSION_SIZE}語句で復習します。正解の速さとこれまでの記録から、語句ごとに次回の日を決めます。`),
+      `${datasetSectionName()}の収録セットをまとめ、通常学習で最後まで解いた設問の語句を1回最大${MEANING_SESSION_SIZE}語句・1日最大${MEANING_DAILY_LIMIT}問で復習します。正解の速さとこれまでの記録から、語句ごとに次回の日を決めます。`),
     // 行動指標は「今すぐ復習」1つに絞る。プール全体の解放数（旧・左指標）は日常判断に使わないため出さない。
     el("div", { class: "meaningMissionMetrics" },
       el("div", { class: ready && due > 0 ? "meaningMissionMetricDue" : "" }, el("strong", {}, ready ? `${due}語句` : "—"), el("span", {}, "今すぐ復習")),
@@ -172,15 +173,23 @@ function meaningMission(
     buttonLabel = "意味だけ復習の続きを再開する";
     delete buttonAttrs.disabled;
     buttonAttrs.onclick = async () => { if (!(await restoreSession())) renderHome(); };
+    if (todayRemaining === 0) note = `今日の出題上限${MEANING_DAILY_LIMIT}問に達しました。未出題の復習語句は翌日に回ります。`;
   } else if (ready && learned === 0) {
     buttonLabel = "通常学習後に利用できます";
   } else if (ready && due === 0) {
     buttonLabel = "今すぐ復習する語句はありません";
+  } else if (ready && todayRemaining === 0) {
+    buttonLabel = "今日の上限に達しました";
+    note = `今日の出題上限${MEANING_DAILY_LIMIT}問に達しました。復習待ちの${due}語句は翌日に回ります。`;
   } else if (ready) {
     buttonLabel = `今日の復習を始める（${batch}語句）`;
     delete buttonAttrs.disabled;
     buttonAttrs.onclick = () => startMeaningPractice(true, nextQueue);
-    if (remaining > 0) note = `今すぐ復習する${due}語句のうち、今回は${batch}語句を出題します。残り${remaining}語句は次回に回ります。`;
+    if (remaining > 0) {
+      note = todayRemaining <= MEANING_SESSION_SIZE && batch >= todayRemaining
+        ? `今日の上限まであと${batch}問です。残り${remaining}語句は翌日に回ります。`
+        : `今すぐ復習する${due}語句のうち、今回は${batch}語句を出題します。残り${remaining}語句は次回に回ります。`;
+    }
   }
   // 1画面の塗りCTAは1つ。主CTAがある限り、間隔復習は二次操作に落とす。
   // 主CTAが null（通常学習が終わり、間隔復習が実質の主導線になる分岐）のときだけ塗りのまま残す。

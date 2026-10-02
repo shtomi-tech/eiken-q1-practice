@@ -79,6 +79,17 @@ function renderCheck(body) {
         // 平均は今回の解答を取り込む前の値を見せる（「前回まで」との比較にするため）。
         session.checkPrevAvgMs = readItemStateOf(item).avgMs;
         recordMeaningResult(item, isCorrect, responseMs);
+        if (session.dueOnly) {
+          const dailyRemaining = Number.isInteger(session.meaningDailyRemaining)
+            ? Math.max(0, session.meaningDailyRemaining - 1)
+            : meaningReviewDailyRemaining();
+          session.meaningDailyRemaining = dailyRemaining;
+          if (dailyRemaining === 0 && session.checkIdx < session.checkOrder.length - 1) {
+            // 途中再開分も含め、上限に達した回答をその日の最後にする。
+            session.checkOrder = session.checkOrder.slice(0, session.checkIdx + 1);
+            session.items = session.checkOrder;
+          }
+        }
       }
       saveResume();
       refreshMeaningBar();

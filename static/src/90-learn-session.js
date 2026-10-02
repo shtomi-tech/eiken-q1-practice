@@ -116,14 +116,16 @@ function weightedOrder(items) {
 }
 // dueOnly=true: 復習日が来た語だけ。未学習語句や次回予定の語句は補充しない。
 function meaningPracticeQueue(items, dueOnly) {
+  const limit = dueOnly ? Math.min(MEANING_SESSION_SIZE, meaningReviewDailyRemaining()) : MEANING_SESSION_SIZE;
   return withProgressReadCache(() => {
     const candidates = dueOnly ? items.filter((it) => isItemDue(it)) : items;
-    return weightedOrder(candidates).slice(0, MEANING_SESSION_SIZE);
+    return weightedOrder(candidates).slice(0, limit);
   });
 }
 
 async function startMeaningPractice(dueOnly = true, queueOverride = null) {
   const grade = currentGrade();
+  let limit = MEANING_SESSION_SIZE;
   let queue;
   if (grade) {
     let pooled;
@@ -134,8 +136,10 @@ async function startMeaningPractice(dueOnly = true, queueOverride = null) {
       renderHome();
       return false;
     }
+    const dailyRemaining = dueOnly ? meaningReviewDailyRemaining() : null;
+    limit = dueOnly ? Math.min(MEANING_SESSION_SIZE, dailyRemaining) : MEANING_SESSION_SIZE;
     queue = Array.isArray(queueOverride)
-      ? queueOverride
+      ? queueOverride.slice(0, limit)
       // await をまたがない同期ブロックとしてまとめて読む
       : withProgressReadCache(() => meaningPracticeQueue(learnedPooledItems(pooled.items), dueOnly));
   } else {
@@ -160,6 +164,7 @@ async function startMeaningPractice(dueOnly = true, queueOverride = null) {
     dueOnly: Boolean(grade) && dueOnly,
     meaningVersion: grade ? MEANING_PROGRESS_VERSION : null,
     meaningBatchSize: grade ? MEANING_SESSION_SIZE : null,
+    meaningDailyRemaining: grade && dueOnly ? limit : null,
   };
   renderSession();
   resetSessionScroll();
