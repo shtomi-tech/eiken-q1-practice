@@ -109,9 +109,29 @@ function meaningDistractors(item, count = 3) {
   return shuffle(candidates).slice(0, count);
 }
 
+const SPACED_REVIEW_GRADE_CODES = new Set(["eiken5", "eikenp2", "eiken2", "eikenp1", "eiken1"]);
+function meaningReviewDailyCount(now = new Date()) {
+  const today = spacedReviewDayKey(now);
+  const source = Object.keys(ALL_DATASETS).length ? ALL_DATASETS : DATASETS;
+  return withProgressReadCache(() => Object.keys(source).reduce((total, datasetId) => {
+    if (!SPACED_REVIEW_GRADE_CODES.has(gradeOf(datasetId))) return total;
+    const progress = progressFor(datasetId) || {};
+    const saved = progress.spacedReviewDaily;
+    const count = saved?.date === today
+      ? saved.count
+      : legacySpacedReviewDailyCount(progress, today);
+    return total + (Number.isInteger(count) && count > 0 ? count : 0);
+  }, 0));
+}
+function meaningReviewDailyRemaining(now = new Date()) {
+  return Math.max(0, MEANING_DAILY_LIMIT - meaningReviewDailyCount(now));
+}
+
 function meaningPracticeSummary() {
   const pooled = pooledData();
-  if (!pooled) return { total: 0, learned: 0, due: 0, locked: 0 };
+  const dailyAnswered = meaningReviewDailyCount();
+  const dailyRemaining = Math.max(0, MEANING_DAILY_LIMIT - dailyAnswered);
+  if (!pooled) return { total: 0, learned: 0, due: 0, locked: 0, dailyAnswered, dailyRemaining };
   const learned = learnedPooledItems(pooled.items);
   const due = learned.filter((item) => isItemDue(item));
   return {
@@ -119,6 +139,8 @@ function meaningPracticeSummary() {
     learned: learned.length,
     due: due.length,
     locked: Math.max(0, pooled.items.length - learned.length),
+    dailyAnswered,
+    dailyRemaining,
   };
 }
 
@@ -223,4 +245,3 @@ function applySharedUi() {
 function sharedMode() {
   return Boolean(cloud && cloud.isEnabled());
 }
-

@@ -562,20 +562,43 @@ async function restoreSession() {
   let checkOrder = (saved.checkOrder || []).map((s) => resolveItem(s, pool)).filter(Boolean);
   const contextOrder = (saved.contextOrder || []).map((s) => resolveItem(s, pool)).filter(Boolean);
   const meaningWrongItems = (saved.meaningWrongItems || []).map((s) => resolveItem(s, pool)).filter(Boolean);
-  if (!resumeDataSupported(saved, items, checkOrder, meaningWrongItems, contextOrder)) {
+  let restoredSnapshot = saved;
+  if (saved.mode === "meaning" && saved.dueOnly && saved.stage === "check") {
+    const checkIdx = Math.max(0, Number(saved.checkIdx) || 0);
+    const completedInSession = Math.min(checkOrder.length, checkIdx + (saved.checkAnswered ? 1 : 0));
+    const dailyRemaining = meaningReviewDailyRemaining();
+    if (dailyRemaining === 0 && !saved.checkAnswered) {
+      checkOrder = checkOrder.slice(0, Math.min(checkOrder.length, checkIdx));
+      if (!checkOrder.length) {
+        clearResume();
+        return false;
+      }
+      restoredSnapshot = {
+        ...saved,
+        stage: meaningWrongItems.length ? "meaningReview" : "done",
+        checkIdx: checkOrder.length - 1,
+        checkAnswered: false,
+        checkPicked: null,
+        checkCorrect: null,
+      };
+    } else {
+      checkOrder = checkOrder.slice(0, Math.min(checkOrder.length, completedInSession + dailyRemaining));
+    }
+  }
+  if (!resumeDataSupported(restoredSnapshot, items, checkOrder, meaningWrongItems, contextOrder)) {
     resumeRecoveryMessage = "途中記録は保持していますが、現在の問題データと一致しないため自動再開できません。第1問から再開してください。";
     resumeUnavailable = true;
     return false;
   }
-  if (saved.mode === "meaning" && currentGrade()
-    && (saved.meaningVersion !== MEANING_PROGRESS_VERSION
-      || saved.meaningBatchSize !== MEANING_SESSION_SIZE
+  if (restoredSnapshot.mode === "meaning" && currentGrade()
+    && (restoredSnapshot.meaningVersion !== MEANING_PROGRESS_VERSION
+      || restoredSnapshot.meaningBatchSize !== MEANING_SESSION_SIZE
       || checkOrder.length > MEANING_SESSION_SIZE)) {
     return Boolean(await startMeaningPractice(true));
   }
   session = {
-    ...saved,
-    q: saved.q == null ? null : Number(saved.q),
+    ...restoredSnapshot,
+    q: restoredSnapshot.q == null ? null : Number(restoredSnapshot.q),
     items,
     checkOrder,
     contextOrder,
@@ -590,6 +613,9 @@ async function restoreSession() {
       : (Array.isArray(saved.audioElapsedLog) ? saved.audioElapsedLog : []),
     meaningRtLog: Array.isArray(saved.meaningRtLog) ? saved.meaningRtLog : [],
   };
+  if (session.mode === "meaning" && session.dueOnly) {
+    session.meaningDailyRemaining = meaningReviewDailyRemaining();
+  }
   if (session.mode === "learn") normalizeLearnSessionResume();
   resumeRecoveryMessage = "";
   resumeUnavailable = false;

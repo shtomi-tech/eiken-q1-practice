@@ -896,20 +896,43 @@ async function restoreSession() {
   let checkOrder = (saved.checkOrder || []).map((s) => resolveItem(s, pool)).filter(Boolean);
   const contextOrder = (saved.contextOrder || []).map((s) => resolveItem(s, pool)).filter(Boolean);
   const meaningWrongItems = (saved.meaningWrongItems || []).map((s) => resolveItem(s, pool)).filter(Boolean);
-  if (!resumeDataSupported(saved, items, checkOrder, meaningWrongItems, contextOrder)) {
+  let restoredSnapshot = saved;
+  if (saved.mode === "meaning" && saved.dueOnly && saved.stage === "check") {
+    const checkIdx = Math.max(0, Number(saved.checkIdx) || 0);
+    const completedInSession = Math.min(checkOrder.length, checkIdx + (saved.checkAnswered ? 1 : 0));
+    const dailyRemaining = meaningReviewDailyRemaining();
+    if (dailyRemaining === 0 && !saved.checkAnswered) {
+      checkOrder = checkOrder.slice(0, Math.min(checkOrder.length, checkIdx));
+      if (!checkOrder.length) {
+        clearResume();
+        return false;
+      }
+      restoredSnapshot = {
+        ...saved,
+        stage: meaningWrongItems.length ? "meaningReview" : "done",
+        checkIdx: checkOrder.length - 1,
+        checkAnswered: false,
+        checkPicked: null,
+        checkCorrect: null,
+      };
+    } else {
+      checkOrder = checkOrder.slice(0, Math.min(checkOrder.length, completedInSession + dailyRemaining));
+    }
+  }
+  if (!resumeDataSupported(restoredSnapshot, items, checkOrder, meaningWrongItems, contextOrder)) {
     resumeRecoveryMessage = "途中記録は保持していますが、現在の問題データと一致しないため自動再開できません。第1問から再開してください。";
     resumeUnavailable = true;
     return false;
   }
-  if (saved.mode === "meaning" && currentGrade()
-    && (saved.meaningVersion !== MEANING_PROGRESS_VERSION
-      || saved.meaningBatchSize !== MEANING_SESSION_SIZE
+  if (restoredSnapshot.mode === "meaning" && currentGrade()
+    && (restoredSnapshot.meaningVersion !== MEANING_PROGRESS_VERSION
+      || restoredSnapshot.meaningBatchSize !== MEANING_SESSION_SIZE
       || checkOrder.length > MEANING_SESSION_SIZE)) {
     return Boolean(await startMeaningPractice(true));
   }
   session = {
-    ...saved,
-    q: saved.q == null ? null : Number(saved.q),
+    ...restoredSnapshot,
+    q: restoredSnapshot.q == null ? null : Number(restoredSnapshot.q),
     items,
     checkOrder,
     contextOrder,
@@ -924,6 +947,9 @@ async function restoreSession() {
       : (Array.isArray(saved.audioElapsedLog) ? saved.audioElapsedLog : []),
     meaningRtLog: Array.isArray(saved.meaningRtLog) ? saved.meaningRtLog : [],
   };
+  if (session.mode === "meaning" && session.dueOnly) {
+    session.meaningDailyRemaining = meaningReviewDailyRemaining();
+  }
   if (session.mode === "learn") normalizeLearnSessionResume();
   resumeRecoveryMessage = "";
   resumeUnavailable = false;
@@ -958,6 +984,7 @@ const MEANING_INTERVALS = [
   { days: Infinity, label: "半年以上" },
 ];
 const MEANING_SESSION_SIZE = 30; // 1回に出す語句の上限
+const MEANING_DAILY_LIMIT = 120; // 間隔復習は1日の回答数も制限する
 const MEANING_PROGRESS_VERSION = 3;
 
 /* ---- FSRS-6（static/vendor/fsrs の ts-fsrs UMD, グローバル名 FSRS） ----
@@ -1108,6 +1135,31 @@ function appendLearningHistory(progress, event) {
     progress.history.splice(0, progress.history.length - LEARNING_HISTORY_LIMIT);
   }
 }
+function spacedReviewDayKey(date = new Date()) {
+  const value = new Date(date);
+  const year = value.getFullYear();
+  const month = String(value.getMonth() + 1).padStart(2, "0");
+  const day = String(value.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+function legacySpacedReviewDailyCount(progress, date) {
+  return (Array.isArray(progress.history) ? progress.history : []).filter((event) => {
+    if (!event || event.kind !== "meaning"
+      || Object.prototype.hasOwnProperty.call(event, "spacedReview")
+      || typeof event.at !== "string") return false;
+    const timestamp = new Date(event.at).getTime();
+    return Number.isFinite(timestamp) && spacedReviewDayKey(timestamp) === date;
+  }).length;
+}
+// 日別件数は問題履歴（直近500件）とは別に保持し、通常学習の記録数に左右されないようにする。
+function recordSpacedReviewDailyAnswer(progress, answeredAt) {
+  const date = spacedReviewDayKey(answeredAt);
+  const saved = progress.spacedReviewDaily;
+  const previous = saved?.date === date && Number.isInteger(saved.count) && saved.count >= 0
+    ? saved.count
+    : legacySpacedReviewDailyCount(progress, date);
+  progress.spacedReviewDaily = { date, count: previous + 1 };
+}
 // FSRSで次回を決める。ライブラリが無い場合は false を返し、呼び出し側がはしごへ落ちる。
 function applyFsrsResult(s, answeredAt, rating) {
   const scheduler = fsrsScheduler();
@@ -1154,8 +1206,10 @@ function recordMeaningResult(item, isCorrect, responseMs) {
     // wrongCount は出題順のフォールバックと移行時のdifficulty推定に使うため維持する。
     s.wrongCount += 1;
   }
+  if (session?.dueOnly) recordSpacedReviewDailyAnswer(progress, answeredAt);
   appendLearningHistory(progress, {
     kind: "meaning",
+    spacedReview: Boolean(session?.dueOnly),
     type: item.type,
     surface: surfaceOf(item),
     result: isCorrect ? "correct" : "wrong",
@@ -1196,7 +1250,6 @@ function finalProgress(finalTotal) {
   }
   return f;
 }
-
 /* ============================================================
    cloud sync（生徒別・共有URL ?s=&t=）— harness/cloud.js を利用
    共通スキーマ app_students / app_progress（app="eiken2-q1"）。
@@ -1550,9 +1603,29 @@ function meaningDistractors(item, count = 3) {
   return shuffle(candidates).slice(0, count);
 }
 
+const SPACED_REVIEW_GRADE_CODES = new Set(["eiken5", "eikenp2", "eiken2", "eikenp1", "eiken1"]);
+function meaningReviewDailyCount(now = new Date()) {
+  const today = spacedReviewDayKey(now);
+  const source = Object.keys(ALL_DATASETS).length ? ALL_DATASETS : DATASETS;
+  return withProgressReadCache(() => Object.keys(source).reduce((total, datasetId) => {
+    if (!SPACED_REVIEW_GRADE_CODES.has(gradeOf(datasetId))) return total;
+    const progress = progressFor(datasetId) || {};
+    const saved = progress.spacedReviewDaily;
+    const count = saved?.date === today
+      ? saved.count
+      : legacySpacedReviewDailyCount(progress, today);
+    return total + (Number.isInteger(count) && count > 0 ? count : 0);
+  }, 0));
+}
+function meaningReviewDailyRemaining(now = new Date()) {
+  return Math.max(0, MEANING_DAILY_LIMIT - meaningReviewDailyCount(now));
+}
+
 function meaningPracticeSummary() {
   const pooled = pooledData();
-  if (!pooled) return { total: 0, learned: 0, due: 0, locked: 0 };
+  const dailyAnswered = meaningReviewDailyCount();
+  const dailyRemaining = Math.max(0, MEANING_DAILY_LIMIT - dailyAnswered);
+  if (!pooled) return { total: 0, learned: 0, due: 0, locked: 0, dailyAnswered, dailyRemaining };
   const learned = learnedPooledItems(pooled.items);
   const due = learned.filter((item) => isItemDue(item));
   return {
@@ -1560,6 +1633,8 @@ function meaningPracticeSummary() {
     learned: learned.length,
     due: due.length,
     locked: Math.max(0, pooled.items.length - learned.length),
+    dailyAnswered,
+    dailyRemaining,
   };
 }
 
@@ -1664,7 +1739,6 @@ function applySharedUi() {
 function sharedMode() {
   return Boolean(cloud && cloud.isEnabled());
 }
-
 /* ---- helpers ---- */
 const $ = (sel) => document.querySelector(sel);
 function el(tag, attrs = {}, ...kids) {
@@ -2700,7 +2774,8 @@ function meaningMission(
 ) {
   const learned = summary.learned;
   const due = summary.due;
-  const batch = nextQueue.length || Math.min(due, MEANING_SESSION_SIZE);
+  const todayRemaining = Number.isInteger(summary.dailyRemaining) ? summary.dailyRemaining : MEANING_DAILY_LIMIT;
+  const batch = Math.min(nextQueue.length || Math.min(due, MEANING_SESSION_SIZE), todayRemaining);
   const remaining = Math.max(0, due - batch);
   const mission = el("section", {
     class: "card spacedReviewCard",
@@ -2709,7 +2784,7 @@ function meaningMission(
     el("p", { class: "label" }, "間隔復習"),
     el("h3", { id: "spacedReviewCardTitle" }, `意味だけ復習（${dataset().shortLabel}）`),
     el("p", { class: "meaningMissionLead" },
-      `${datasetSectionName()}の収録セットをまとめ、通常学習で最後まで解いた設問の語句を1回最大${MEANING_SESSION_SIZE}語句で復習します。正解の速さとこれまでの記録から、語句ごとに次回の日を決めます。`),
+      `${datasetSectionName()}の収録セットをまとめ、通常学習で最後まで解いた設問の語句を1回最大${MEANING_SESSION_SIZE}語句・1日最大${MEANING_DAILY_LIMIT}問で復習します。正解の速さとこれまでの記録から、語句ごとに次回の日を決めます。`),
     // 行動指標は「今すぐ復習」1つに絞る。プール全体の解放数（旧・左指標）は日常判断に使わないため出さない。
     el("div", { class: "meaningMissionMetrics" },
       el("div", { class: ready && due > 0 ? "meaningMissionMetricDue" : "" }, el("strong", {}, ready ? `${due}語句` : "—"), el("span", {}, "今すぐ復習")),
@@ -2754,15 +2829,23 @@ function meaningMission(
     buttonLabel = "意味だけ復習の続きを再開する";
     delete buttonAttrs.disabled;
     buttonAttrs.onclick = async () => { if (!(await restoreSession())) renderHome(); };
+    if (todayRemaining === 0) note = `今日の出題上限${MEANING_DAILY_LIMIT}問に達しました。未出題の復習語句は翌日に回ります。`;
   } else if (ready && learned === 0) {
     buttonLabel = "通常学習後に利用できます";
   } else if (ready && due === 0) {
     buttonLabel = "今すぐ復習する語句はありません";
+  } else if (ready && todayRemaining === 0) {
+    buttonLabel = "今日の上限に達しました";
+    note = `今日の出題上限${MEANING_DAILY_LIMIT}問に達しました。復習待ちの${due}語句は翌日に回ります。`;
   } else if (ready) {
     buttonLabel = `今日の復習を始める（${batch}語句）`;
     delete buttonAttrs.disabled;
     buttonAttrs.onclick = () => startMeaningPractice(true, nextQueue);
-    if (remaining > 0) note = `今すぐ復習する${due}語句のうち、今回は${batch}語句を出題します。残り${remaining}語句は次回に回ります。`;
+    if (remaining > 0) {
+      note = todayRemaining <= MEANING_SESSION_SIZE && batch >= todayRemaining
+        ? `今日の上限まであと${batch}問です。残り${remaining}語句は翌日に回ります。`
+        : `今すぐ復習する${due}語句のうち、今回は${batch}語句を出題します。残り${remaining}語句は次回に回ります。`;
+    }
   }
   // 1画面の塗りCTAは1つ。主CTAがある限り、間隔復習は二次操作に落とす。
   // 主CTAが null（通常学習が終わり、間隔復習が実質の主導線になる分岐）のときだけ塗りのまま残す。
@@ -3141,14 +3224,16 @@ function weightedOrder(items) {
 }
 // dueOnly=true: 復習日が来た語だけ。未学習語句や次回予定の語句は補充しない。
 function meaningPracticeQueue(items, dueOnly) {
+  const limit = dueOnly ? Math.min(MEANING_SESSION_SIZE, meaningReviewDailyRemaining()) : MEANING_SESSION_SIZE;
   return withProgressReadCache(() => {
     const candidates = dueOnly ? items.filter((it) => isItemDue(it)) : items;
-    return weightedOrder(candidates).slice(0, MEANING_SESSION_SIZE);
+    return weightedOrder(candidates).slice(0, limit);
   });
 }
 
 async function startMeaningPractice(dueOnly = true, queueOverride = null) {
   const grade = currentGrade();
+  let limit = MEANING_SESSION_SIZE;
   let queue;
   if (grade) {
     let pooled;
@@ -3159,8 +3244,10 @@ async function startMeaningPractice(dueOnly = true, queueOverride = null) {
       renderHome();
       return false;
     }
+    const dailyRemaining = dueOnly ? meaningReviewDailyRemaining() : null;
+    limit = dueOnly ? Math.min(MEANING_SESSION_SIZE, dailyRemaining) : MEANING_SESSION_SIZE;
     queue = Array.isArray(queueOverride)
-      ? queueOverride
+      ? queueOverride.slice(0, limit)
       // await をまたがない同期ブロックとしてまとめて読む
       : withProgressReadCache(() => meaningPracticeQueue(learnedPooledItems(pooled.items), dueOnly));
   } else {
@@ -3185,6 +3272,7 @@ async function startMeaningPractice(dueOnly = true, queueOverride = null) {
     dueOnly: Boolean(grade) && dueOnly,
     meaningVersion: grade ? MEANING_PROGRESS_VERSION : null,
     meaningBatchSize: grade ? MEANING_SESSION_SIZE : null,
+    meaningDailyRemaining: grade && dueOnly ? limit : null,
   };
   renderSession();
   resetSessionScroll();
@@ -4369,6 +4457,17 @@ function renderCheck(body) {
         // 平均は今回の解答を取り込む前の値を見せる（「前回まで」との比較にするため）。
         session.checkPrevAvgMs = readItemStateOf(item).avgMs;
         recordMeaningResult(item, isCorrect, responseMs);
+        if (session.dueOnly) {
+          const dailyRemaining = Number.isInteger(session.meaningDailyRemaining)
+            ? Math.max(0, session.meaningDailyRemaining - 1)
+            : meaningReviewDailyRemaining();
+          session.meaningDailyRemaining = dailyRemaining;
+          if (dailyRemaining === 0 && session.checkIdx < session.checkOrder.length - 1) {
+            // 途中再開分も含め、上限に達した回答をその日の最後にする。
+            session.checkOrder = session.checkOrder.slice(0, session.checkIdx + 1);
+            session.items = session.checkOrder;
+          }
+        }
       }
       saveResume();
       refreshMeaningBar();
@@ -4622,6 +4721,7 @@ function renderDone(body) {
     ? studyPlanSummary(new Date(), currentStudyPlan(grade), gradeQuestionEntries(grade))
     : null;
   const meaningSummary = isMeaning && currentGrade() ? meaningPracticeSummary() : null;
+  const meaningDailyRemaining = meaningSummary?.dailyRemaining ?? MEANING_DAILY_LIMIT;
   const banner = el("div", { class: "doneBanner" });
   banner.appendChild(el("p", { class: "label", style: "color:rgba(250,249,246,.72)" }, "Step Complete"));
   if (isFinal) {
@@ -4650,7 +4750,9 @@ function renderDone(body) {
         role: "status",
         "aria-live": "polite",
       }, meaningSummary.due > 0
-        ? `今すぐ復習する残り：${meaningSummary.due}語句`
+        ? meaningDailyRemaining === 0
+          ? `今日の出題上限に達しました。復習待ちの${meaningSummary.due}語句は翌日に回ります。`
+          : `今すぐ復習する残り：${meaningSummary.due}語句`
         : "今すぐ復習する語句はありません"));
     }
   } else {
@@ -4694,9 +4796,9 @@ function renderDone(body) {
       actions.appendChild(el("button", { class: "cta finalCta", onclick: startFinalCheck }, `もう一度${session.checkOrder.length}問に挑戦する`));
     }
   } else if (isMeaning) {
-    if (meaningSummary && meaningSummary.due > 0) {
+    if (meaningSummary && meaningSummary.due > 0 && meaningDailyRemaining > 0) {
       actions.appendChild(el("button", { class: "cta meaningCta", onclick: () => startMeaningPractice(true) },
-        `次の意味だけ復習（今回${Math.min(meaningSummary.due, MEANING_SESSION_SIZE)}語句）へ →`));
+        `次の意味だけ復習（今回${Math.min(meaningSummary.due, MEANING_SESSION_SIZE, meaningDailyRemaining)}語句）へ →`));
     } else if (!meaningSummary) {
       actions.appendChild(el("button", { class: "cta meaningCta", onclick: () => startMeaningPractice(session.dueOnly) },
         "もう一度、意味だけの復習をする"));

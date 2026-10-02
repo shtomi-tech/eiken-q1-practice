@@ -89,6 +89,7 @@ function renderDone(body) {
     ? studyPlanSummary(new Date(), currentStudyPlan(grade), gradeQuestionEntries(grade))
     : null;
   const meaningSummary = isMeaning && currentGrade() ? meaningPracticeSummary() : null;
+  const meaningDailyRemaining = meaningSummary?.dailyRemaining ?? MEANING_DAILY_LIMIT;
   const banner = el("div", { class: "doneBanner" });
   banner.appendChild(el("p", { class: "label", style: "color:rgba(250,249,246,.72)" }, "Step Complete"));
   if (isFinal) {
@@ -117,7 +118,9 @@ function renderDone(body) {
         role: "status",
         "aria-live": "polite",
       }, meaningSummary.due > 0
-        ? `今すぐ復習する残り：${meaningSummary.due}語句`
+        ? meaningDailyRemaining === 0
+          ? `今日の出題上限に達しました。復習待ちの${meaningSummary.due}語句は翌日に回ります。`
+          : `今すぐ復習する残り：${meaningSummary.due}語句`
         : "今すぐ復習する語句はありません"));
     }
   } else {
@@ -161,9 +164,9 @@ function renderDone(body) {
       actions.appendChild(el("button", { class: "cta finalCta", onclick: startFinalCheck }, `もう一度${session.checkOrder.length}問に挑戦する`));
     }
   } else if (isMeaning) {
-    if (meaningSummary && meaningSummary.due > 0) {
+    if (meaningSummary && meaningSummary.due > 0 && meaningDailyRemaining > 0) {
       actions.appendChild(el("button", { class: "cta meaningCta", onclick: () => startMeaningPractice(true) },
-        `次の意味だけ復習（今回${Math.min(meaningSummary.due, MEANING_SESSION_SIZE)}語句）へ →`));
+        `次の意味だけ復習（今回${Math.min(meaningSummary.due, MEANING_SESSION_SIZE, meaningDailyRemaining)}語句）へ →`));
     } else if (!meaningSummary) {
       actions.appendChild(el("button", { class: "cta meaningCta", onclick: () => startMeaningPractice(session.dueOnly) },
         "もう一度、意味だけの復習をする"));
