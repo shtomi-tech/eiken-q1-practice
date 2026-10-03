@@ -10,7 +10,7 @@ const ORIGINS_PATH = path.join(DATA_DIR, "word_origins.json");
 const RESEARCH_PATH = path.join(DATA_DIR, "word_origin_research.json");
 const EXCLUDED_PATH = path.join(DATA_DIR, "word_origin_excluded.json");
 const MANIFEST_PATH = path.join(DATA_DIR, "manifest.json");
-const PAGES_WORKFLOW_PATH = path.join(ROOT, ".github", "workflows", "pages.yml");
+const PAGES_WORKFLOW_PATH = path.join(ROOT, "scripts", "prepare-site.sh");
 
 function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, "utf8"));
@@ -98,7 +98,7 @@ assert.ok(fs.existsSync(ROOTS_PATH), "data/word_roots.json が必要です");
 assert.ok(fs.existsSync(ORIGINS_PATH), "data/word_origins.json が必要です");
 assert.ok(fs.existsSync(EXCLUDED_PATH), "data/word_origin_excluded.json が必要です");
 assert.ok(fs.existsSync(MANIFEST_PATH), "data/manifest.json が必要です");
-assert.ok(fs.existsSync(PAGES_WORKFLOW_PATH), ".github/workflows/pages.yml が必要です");
+assert.ok(fs.existsSync(PAGES_WORKFLOW_PATH), "scripts/prepare-site.sh が必要です");
 
 const lemmaData = readJson(LEMMA_PATH);
 const rootsData = readJson(ROOTS_PATH);

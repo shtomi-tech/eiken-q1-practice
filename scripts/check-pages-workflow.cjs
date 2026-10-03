@@ -30,5 +30,15 @@ assert.ok(
   deployJob.indexOf("needs: test") < deployJob.indexOf("uses: actions/deploy-pages@v4"),
   "the deployment action must remain inside the CI-gated deploy job",
 );
+assert.match(deployJob, /run: bash scripts\/prepare-site\.sh/, "Pages must build _site with the shared prepare script");
+
+const cloudflareJob = jobSection("deploy-cloudflare");
+assert.match(cloudflareJob, /^\s+needs: test$/m, "Cloudflare deployment must depend on successful CI");
+assert.match(cloudflareJob, /^\s+if: github\.ref == 'refs\/heads\/main'$/m, "only main may deploy to Cloudflare");
+assert.match(cloudflareJob, /run: bash scripts\/prepare-site\.sh/, "Cloudflare must build _site with the shared prepare script");
+assert.ok(
+  cloudflareJob.indexOf("needs: test") < cloudflareJob.indexOf("uses: cloudflare/wrangler-action@v3"),
+  "the wrangler deploy must remain inside the CI-gated Cloudflare job",
+);
 
 console.log("Pages workflow gate: OK (pull request/push tests must pass before main deploy)");
