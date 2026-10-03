@@ -39,6 +39,7 @@ const PARTS = [
   "91-flashcard.js",
   "92-meaning-check.js",
   "93-practice-done.js",
+  "94-written-meaning.js",
   "99-boot.js",
 ];
 

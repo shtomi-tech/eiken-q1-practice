@@ -229,6 +229,14 @@ GitHubリポジトリのSecretsに次を登録すると有効になります。�
 - `CLOUDFLARE_ACCOUNT_ID`: CloudflareのアカウントID
 - `CLOUDFLARE_APP_BASE_URL`（任意）: Cloudflare側の公開URL。未設定なら `APP_BASE_URL` を使います
 
+#### Cloudflare版だけの新機能
+
+新しい機能は Cloudflare 版にだけ出します。Cloudflare のデプロイジョブだけが `DEPLOY_TARGET=cloudflare` で `scripts/write-config.mjs` を実行し、`static/config.json` に `"deployTarget": "cloudflare"` を書きます。アプリは `featureEnabled(name)`（`static/src/10-config.js`）でこれを見て、`CLOUDFLARE_ONLY_FEATURES` に挙げた機能を出し分けます。GitHub Pages・Netlify・config.json の無いローカルでは出ません。新機能を足すときは、この配列に名前を加えて入口を `featureEnabled` で閉じてください。ローカルで確かめるときは `static/config.json` に `"deployTarget": "cloudflare"` を書きます。
+
+現在の Cloudflare 版限定機能:
+
+- **例文を見て意味を書く**（`writtenMeaning`）: 意味だけ復習カードの「例文を見て意味を書く」から、通常学習を終えた語句を1回10語句出題します。例文の下線部の意味を書くと、Worker の `/api/grade-meaning`（`worker/index.mjs`）が TypeSafe Jev（`jev-1.13.0`）で意味の近さを採点します。正解の語義と表記ゆれ程度で一致する答えは Jev に送らず正解にします。Jev の確信度が0.8未満・採点できないときは、判定を参考表示して自己採点に戻します。結果は学習履歴（`kind: "written-meaning"`）にだけ残し、間隔復習の予定は変えません。正解と例文はブラウザから受け取らず、配信中の `data/manifest.json`・`data/vocab_*.json`・`data/lemmas.json` から引きます。Worker の Secret に `TYPESAFE_API_KEY` が必要です（Cloudflare ダッシュボードの Variables & Secrets、または `npx wrangler secret put TYPESAFE_API_KEY`）。未設定の間は自己採点だけで動きます。
+
 公開物の組み立ては `scripts/prepare-site.sh` に共通化しています。ローカルでは `static/config.json` を用意したうえで `bash scripts/prepare-site.sh` → `npx wrangler deploy` でも配信できます。localStorageはドメインごとに分かれるため、匿名利用の進捗はGitHub Pages版と共有されません（生徒別URLのSupabase同期は共通です）。
 
 生徒別URLの `?s=<id>&t=<token>` では、共通Supabaseスキーマの `app_students` / `app_progress` に `app=eiken2-q1` として進捗を同期します。総合アプリ側のQ1進捗と同じ行を共有するため、スマホとPCの学習内容が端末をまたいで復元されます。匿名利用では従来どおりローカル保存だけで動作します。

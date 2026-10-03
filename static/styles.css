@@ -1809,3 +1809,32 @@ details.vocabForecast:not([open]) > :not(summary) { display: none; }
 .homeFoldTitle { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 .homeFoldTitle strong { font-family: var(--serif); font-size: 18px; }
 .homeFoldBody { margin-top: 12px; }
+
+/* ---- 例文を見て意味を書く（Cloudflare 版限定） ---- */
+.writtenMeaningEntry { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); }
+.writtenMeaningEntry .hint { margin: 4px 0 10px; }
+.writtenForm { display: grid; gap: 8px; }
+.writtenInputRow { display: flex; gap: 8px; flex-wrap: wrap; }
+.writtenAnswerInput {
+  flex: 1 1 12em;
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: #fff;
+  color: var(--ink);
+  font-size: 18px;
+}
+.writtenAnswerInput:disabled { background: var(--surface-soft); color: var(--muted); }
+.writtenFormSub { display: flex; justify-content: flex-end; }
+.writtenGrading { margin-top: 12px; }
+.feedback.partial { border-left-color: var(--warn); }
+.feedback.partial h3 { color: var(--warn); }
+.writtenSelf .answerActions { flex-wrap: wrap; }
+.writtenResultList { list-style: none; padding: 0; margin: 16px 0; display: grid; gap: 8px; }
+.writtenResult { display: grid; gap: 2px; padding: 10px 12px; border-left: 4px solid var(--line); background: var(--parchment); border-radius: var(--r-md); }
+.writtenResult.correct { border-left-color: var(--ok); }
+.writtenResult.partial { border-left-color: var(--warn); }
+.writtenResult.wrong { border-left-color: var(--ng); }
+.writtenResult span { color: var(--muted); font-size: 14px; }
+.writtenPrompt { font-size: 15px; color: var(--muted); }

@@ -61,6 +61,8 @@ const CHECKS = [
   ["scripts/check-home-priority-ui.cjs"],
   ["scripts/check-flashcard-nav-ui.cjs"],
   ["scripts/check-meaning-example-ui.cjs"],
+  ["scripts/check-grade-meaning-worker.mjs"],
+  ["scripts/check-written-meaning-ui.cjs"],
 ];
 
 for (const args of CHECKS) {

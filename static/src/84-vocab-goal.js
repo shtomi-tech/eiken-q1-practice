@@ -196,6 +196,8 @@ function meaningMission(
   if (hasPrimaryCta) buttonAttrs.class = "secondaryCta meaningMissionCta";
   mission.appendChild(el("button", buttonAttrs, buttonLabel));
   if (note) mission.appendChild(el("p", { class: "hint" }, note));
+  const written = writtenMeaningEntry(ready, learnedItems);
+  if (written) mission.appendChild(written);
   return mission;
 }
 

@@ -117,6 +117,8 @@ jobs:
           APP_BASE_URL: ${{ secrets.CLOUDFLARE_APP_BASE_URL || secrets.APP_BASE_URL }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          # 新機能は Cloudflare 版だけに出す（GitHub Pages 側は空のまま）。
+          DEPLOY_TARGET: cloudflare
 
       - name: Prepare static files
         if: steps.cf.outputs.enabled == 'true'
