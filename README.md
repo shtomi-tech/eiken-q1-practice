@@ -219,6 +219,18 @@ py -3 scripts/add_example_translations.py
 
 元の総合アプリと既存の公開URLは変更していません。
 
+### Cloudflareでの公開
+
+`main` へのpushで、GitHub Pagesと並行して Cloudflare Workers（静的アセット）にも同じ `_site/` を配信します（`.github/workflows/pages.yml` の `deploy-cloudflare` ジョブ、設定は `wrangler.jsonc`）。公開URLは `https://eiken-q1-practice.<アカウントのサブドメイン>.workers.dev/` です。
+
+GitHubリポジトリのSecretsに次を登録すると有効になります。未登録の間はジョブがスキップされ、GitHub Pagesのデプロイには影響しません。
+
+- `CLOUDFLARE_API_TOKEN`: 「Edit Cloudflare Workers」テンプレートで作成したAPIトークン
+- `CLOUDFLARE_ACCOUNT_ID`: CloudflareのアカウントID
+- `CLOUDFLARE_APP_BASE_URL`（任意）: Cloudflare側の公開URL。未設定なら `APP_BASE_URL` を使います
+
+公開物の組み立ては `scripts/prepare-site.sh` に共通化しています。ローカルでは `static/config.json` を用意したうえで `bash scripts/prepare-site.sh` → `npx wrangler deploy` でも配信できます。localStorageはドメインごとに分かれるため、匿名利用の進捗はGitHub Pages版と共有されません（生徒別URLのSupabase同期は共通です）。
+
 生徒別URLの `?s=<id>&t=<token>` では、共通Supabaseスキーマの `app_students` / `app_progress` に `app=eiken2-q1` として進捗を同期します。総合アプリ側のQ1進捗と同じ行を共有するため、スマホとPCの学習内容が端末をまたいで復元されます。匿名利用では従来どおりローカル保存だけで動作します。
 
 `app=eiken-q1-practice` は2026-08-09〜2026-08-12に独立版だけが使っていた旧分岐IDです。既存の `eiken-q1-practice` 行はロールバック用バックアップとして残していますが、現在は読み書きしません。

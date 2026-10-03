@@ -1,0 +1,9 @@
+{
+  // Cloudflare Workers（静的アセットのみ）での公開設定。
+  // 公開物は scripts/prepare-site.sh が生成する _site/。
+  "name": "eiken-q1-practice",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./_site"
+  }
+}
