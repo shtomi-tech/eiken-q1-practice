@@ -52,7 +52,28 @@ assert.deepEqual(logic.decideWrittenAiGrade({ grade: "wrong", confidence: 0.5 })
 assert.deepEqual(logic.decideWrittenAiGrade(null), { auto: false, grade: null });
 assert.deepEqual(logic.decideWrittenAiGrade({ grade: "easy", confidence: 1 }), { auto: false, grade: null });
 
+// --- 段階式の流れ: 単語だけ → 例文 → 答え、と再出題の位置 ---
+const flow = new Function([
+  source.match(/const WRITTEN_REASK_GAP = \d+;/)[0],
+  extractFunctionBody(source, "writtenNextStep"),
+  extractFunctionBody(source, "writtenReaskIndex"),
+  "return { writtenNextStep, writtenReaskIndex };",
+].join("\n"))();
+assert.deepEqual(flow.writtenNextStep("word", false, "correct"), { next: "result", outcome: "learned" });
+assert.deepEqual(flow.writtenNextStep("word", false, "partial"), { next: "example" }, "部分正解でも例文のヒントへ");
+assert.deepEqual(flow.writtenNextStep("word", false, "wrong"), { next: "example" });
+assert.deepEqual(flow.writtenNextStep("example", false, "correct"), { next: "result", outcome: "shaky" });
+assert.deepEqual(flow.writtenNextStep("example", false, "wrong"), { next: "answer", outcome: "notLearned" });
+assert.deepEqual(flow.writtenNextStep("word", true, "correct"), { next: "result", reaskResult: "correct" });
+assert.deepEqual(flow.writtenNextStep("word", true, "wrong"), { next: "answer", reaskResult: "wrong" }, "再出題は例文を挟まない");
+assert.equal(flow.writtenReaskIndex("notLearned", 0, 10), 4, "未習得は数問あと");
+assert.equal(flow.writtenReaskIndex("notLearned", 8, 10), 10, "末尾を越えない");
+assert.equal(flow.writtenReaskIndex("shaky", 2, 10), 10, "あやふやは最後");
+assert.equal(flow.writtenReaskIndex("learned", 2, 10), -1, "覚えた語は再出題しない");
+assert.match(extractFunctionBody(source, "recordWrittenResult"), /if \(entry\.reask\)[\s\S]*else[\s\S]*writtenQueue\.splice/,
+  "再出題の結果では、さらに再出題を積まない");
+
 // 書いて答える演習は途中保存しない（resume の形を変えない）
 assert.match(source, /session\.mode === "contextLearn" \|\| session\.mode === "written";\n\s+if \(!isTransientContext\) saveResume\(\);/);
 
-console.log("written meaning UI: OK (Cloudflare 版限定・表記ゆれ一致・Jev 判定の採否)");
+console.log("written meaning UI: OK (Cloudflare 版限定・表記ゆれ一致・Jev 判定の採否・段階式の流れ)");

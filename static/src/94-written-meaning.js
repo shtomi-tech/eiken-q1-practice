@@ -1,16 +1,24 @@
-/* ---- 例文を見て意味を書く（Cloudflare 版限定。featureEnabled("writtenMeaning")） ----
+/* ---- 意味を書く演習（Cloudflare 版限定。featureEnabled("writtenMeaning")） ----
    意味だけ復習の対象（通常学習を終えた語句）から出題し、書いた答えを Jev で意味の近さで採点する。
+   出題は段階式: まず単語だけで書く → 誤答・わからない → 例文をヒントにもう一度 → それでも誤答 → 答えを確認。
+   単語だけで正解＝覚えた、例文で正解＝あやふや（セッションの最後にもう一度）、答えを見た＝未習得
+   （数問あとに単語だけでもう一度）。記憶から引き出す負荷を先に掛け、例文は補助に回す
+   （例文あり・なしの定着比較のリサーチより）。
    採点は Cloudflare Worker の /api/grade-meaning（worker/index.mjs）。Worker が無い・失敗した・
    確信度が低いときは自己採点に戻す。間隔復習（FSRS）の記録には混ぜず、学習履歴にだけ残す。
    参考: kobun-vocab-learning の「選択肢なしで思い出す」。 */
 const WRITTEN_SESSION_SIZE = 10;
+// 答えを見た語を、何問あとにもう一度出すか。
+const WRITTEN_REASK_GAP = 3;
 const WRITTEN_GRADE_URL = "api/grade-meaning";
 // Jev の判定を自動で採用する確信度の下限（kobun-vocab-learning で jev-1.13.0 について決めた値）。
 const WRITTEN_AI_AUTO_THRESHOLD = 0.8;
 const WRITTEN_MAX_ANSWER_LENGTH = 60;
 const WRITTEN_GRADES = ["correct", "partial", "wrong"];
 const WRITTEN_NO_ANSWER = /^(?:わから(?:ない|ん|ず)|分から(?:ない|ん|ず)|わかりません|分かりません|しらない|知らない|知りません|不明|忘れた|[?？・…ー―\-.。、\s])+$/;
+const WRITTEN_OUTCOME_LABELS = { learned: "単語だけで正解", shaky: "例文で正解", notLearned: "答えを確認" };
 
+// 2段目のヒントに例文を使うため、例文の中に出題形が見つかる語句だけを出す。
 function writtenMeaningItems(items = []) {
   return items.filter((item) => exampleMatch(item));
 }
@@ -23,41 +31,65 @@ function writtenMeaningEntry(ready, learnedItems = []) {
   const size = Math.min(WRITTEN_SESSION_SIZE, items.length);
   return el("div", { class: "writtenMeaningEntry" },
     el("p", { class: "label" }, "書いて答える"),
-    el("p", { class: "hint" }, "例文の下線部の意味を自分の言葉で書きます。言い回しが違っても、意味が合っていれば正解です。"),
+    el("p", { class: "hint" }, "単語を見て意味を自分の言葉で書きます。わからなければ例文がヒントに出ます。言い回しが違っても、意味が合っていれば正解です。"),
     el("button", {
       class: "secondaryCta writtenMeaningCta",
       type: "button",
       onclick: () => startWrittenMeaning(items),
-    }, `例文を見て意味を書く（${size}語句）`),
+    }, `単語を見て意味を書く（${size}語句）`),
   );
 }
 
 function startWrittenMeaning(items) {
-  const queue = shuffle(writtenMeaningItems(items)).slice(0, WRITTEN_SESSION_SIZE);
-  if (!queue.length) {
+  const picked = shuffle(writtenMeaningItems(items)).slice(0, WRITTEN_SESSION_SIZE);
+  if (!picked.length) {
     renderHome();
     return false;
   }
   session = {
     mode: "written",
     q: null,
-    items: queue,
+    items: picked,
     stage: "written",
-    writtenIdx: 0,
+    // 出題順。{ item, reask }。あやふや・未習得の語は reask: true で後ろへ差し込む。
+    writtenQueue: picked.map((item) => ({ item, reask: false })),
+    writtenPos: 0,
+    // 語句ごとの結果。{ item, outcome, answers: [], reaskResult }
     writtenResults: [],
   };
-  resetWrittenItem();
+  resetWrittenTurn();
   renderSession();
   resetSessionScroll();
   return true;
 }
 
-function resetWrittenItem() {
+function resetWrittenTurn() {
+  session.writtenStep = "word"; // word → example（初回の誤答・わからない）
+  session.writtenPhase = "input"; // input → grading → self → result | answer
   session.writtenAnswer = "";
-  session.writtenPhase = "input"; // input → grading → result | self
+  session.writtenAnswers = [];
   session.writtenAi = null;
-  session.writtenGrade = null;
   session.writtenGradedBy = null;
+  session.writtenOutcome = null;
+}
+
+/**
+ * 1回の採点結果から次の段階を決める純粋ロジック。
+ * step: "word" | "example"、reask: 再出題か、grade: "correct" | "partial" | "wrong"。
+ * 戻り値の next は "example"（例文をヒントにもう一度）| "result"（正解で次へ）| "answer"（答えを確認）。
+ */
+function writtenNextStep(step, reask, grade) {
+  const correct = grade === "correct";
+  if (reask) return { next: correct ? "result" : "answer", reaskResult: correct ? "correct" : "wrong" };
+  if (step === "word") return correct ? { next: "result", outcome: "learned" } : { next: "example" };
+  return correct ? { next: "result", outcome: "shaky" } : { next: "answer", outcome: "notLearned" };
+}
+
+/** 再出題を差し込む位置。未習得は数問あと、あやふやはセッションの最後。 */
+function writtenReaskIndex(outcome, pos, length, gap = WRITTEN_REASK_GAP) {
+  if (outcome === "notLearned") return Math.min(pos + 1 + gap, length);
+  if (outcome === "shaky") return length;
+  return -1;
 }
 
 function normalizeWrittenMeaning(value) {
@@ -110,17 +142,21 @@ async function requestWrittenGrade(item, answer) {
   }
 }
 
-async function submitWrittenAnswer(item, rawAnswer) {
+function currentWrittenEntry() {
+  return session.writtenQueue[session.writtenPos];
+}
+
+async function submitWrittenAnswer(rawAnswer) {
   const answer = String(rawAnswer || "").trim().slice(0, WRITTEN_MAX_ANSWER_LENGTH);
   if (!answer || session.writtenPhase !== "input") return;
+  const { item } = currentWrittenEntry();
   session.writtenAnswer = answer;
-  const correct = learningMeaningOf(item);
   if (WRITTEN_NO_ANSWER.test(answer)) {
-    finishWrittenItem(item, "wrong", "local");
+    applyWrittenGrade("wrong", "local");
     return;
   }
-  if (writtenLocalMatch(answer, correct) || writtenLocalMatch(answer, item.meaning)) {
-    finishWrittenItem(item, "correct", "local");
+  if (writtenLocalMatch(answer, learningMeaningOf(item)) || writtenLocalMatch(answer, item.meaning)) {
+    applyWrittenGrade("correct", "local");
     return;
   }
   session.writtenPhase = "grading";
@@ -132,64 +168,125 @@ async function submitWrittenAnswer(item, rawAnswer) {
   session.writtenAi = result;
   const decision = decideWrittenAiGrade(result);
   if (decision.auto) {
-    finishWrittenItem(item, decision.grade, "ai");
+    applyWrittenGrade(decision.grade, "ai");
     return;
   }
   session.writtenPhase = "self";
   renderSession();
 }
 
-function finishWrittenItem(item, grade, gradedBy) {
-  session.writtenGrade = WRITTEN_GRADES.includes(grade) ? grade : "wrong";
+function applyWrittenGrade(grade, gradedBy) {
+  const entry = currentWrittenEntry();
+  const safeGrade = WRITTEN_GRADES.includes(grade) ? grade : "wrong";
   session.writtenGradedBy = gradedBy;
-  session.writtenPhase = "result";
-  session.writtenResults.push({ item, grade: session.writtenGrade, answer: session.writtenAnswer });
+  session.writtenAnswers.push({ step: session.writtenStep, answer: session.writtenAnswer, grade: safeGrade, gradedBy });
+  const step = writtenNextStep(session.writtenStep, entry.reask, safeGrade);
+  if (step.next === "example") {
+    session.writtenStep = "example";
+    session.writtenPhase = "input";
+    session.writtenAnswer = "";
+    session.writtenAi = null;
+    renderSession();
+    return;
+  }
+  recordWrittenResult(entry, step);
+  session.writtenPhase = step.next;
+  renderSession();
+}
+
+function recordWrittenResult(entry, step) {
+  const { item } = entry;
+  if (entry.reask) {
+    const result = session.writtenResults.find((r) => r.item === item);
+    if (result) result.reaskResult = step.reaskResult;
+  } else {
+    session.writtenOutcome = step.outcome;
+    session.writtenResults.push({ item, outcome: step.outcome, answers: session.writtenAnswers.slice(), reaskResult: null });
+    const at = writtenReaskIndex(step.outcome, session.writtenPos, session.writtenQueue.length);
+    if (at >= 0) session.writtenQueue.splice(at, 0, { item, reask: true });
+  }
   const datasetId = item._datasetId || state.datasetId;
   const progress = progressFor(datasetId);
   appendLearningHistory(progress, {
     kind: "written-meaning",
     type: item.type,
     surface: surfaceOf(item),
-    result: session.writtenGrade,
-    gradedBy,
+    result: entry.reask ? `reask-${step.reaskResult}` : step.outcome,
+    hintUsed: session.writtenAnswers.some((a) => a.step === "example"),
+    gradedBy: session.writtenGradedBy,
   });
   saveProgressFor(datasetId, progress);
+}
+
+function advanceWritten() {
+  if (session.writtenPos >= session.writtenQueue.length - 1) {
+    session.stage = "writtenDone";
+  } else {
+    session.writtenPos++;
+    resetWrittenTurn();
+  }
   renderSession();
 }
 
 function writtenStageBar() {
   const results = session.writtenResults || [];
-  const correct = results.filter((r) => r.grade === "correct").length;
+  const learned = results.filter((r) => r.outcome === "learned").length;
   if (session.stage === "writtenDone") {
     return el("div", { class: "stageBar meaningBar" },
       el("div", { class: "stagePill active" }, `${session.items.length}語句`),
-      el("div", { class: "stagePill" }, `正解 ${correct}`),
+      el("div", { class: "stagePill" }, `単語だけで正解 ${learned}`),
     );
   }
   return el("div", { class: "stageBar meaningBar" },
-    el("div", { class: "stagePill active" }, `${session.writtenIdx + 1} / ${session.items.length}語句`),
-    el("div", { class: "stagePill" }, `回答済 ${results.length} / 正解 ${correct}`),
+    el("div", { class: "stagePill active" }, `${session.writtenPos + 1} / ${session.writtenQueue.length}問`),
+    el("div", { class: "stagePill" }, `単語だけで正解 ${learned} / ${session.items.length}`),
   );
 }
-
-const WRITTEN_GRADE_LABELS = { correct: "正解", partial: "部分的に正解", wrong: "不正解" };
 
 function renderWritten(body) {
   if (session.stage === "writtenDone") {
     renderWrittenDone(body);
     return;
   }
-  const item = session.items[session.writtenIdx];
-  const surface = surfaceOf(item);
-  const correct = learningMeaningOf(item);
-  const example = exampleMatch(item);
+  const entry = currentWrittenEntry();
+  const { item } = entry;
+  const headword = canonicalHeadwordOf(item);
+  const showExample = session.writtenStep === "example" || session.writtenPhase === "answer";
 
   const box = el("div", { class: "quizBox writtenBox" });
-  box.appendChild(el("div", { class: "askExampleHead" }, buildVocabAudioButton(item, "quizListenButton")));
-  const askExample = el("p", { class: "askExample" });
-  askExample.appendChild(buildExampleText(item, example));
-  box.appendChild(el("div", { class: "askExampleLine" }, askExample));
+  if (entry.reask) box.appendChild(el("p", { class: "writtenReaskBadge" }, "もう一度"));
+  box.appendChild(el("div", { class: "askWordLine" },
+    el("p", { class: "askWord" }, headword),
+    buildVocabAudioButton(item, "quizListenButton"),
+  ));
+  if (showExample) {
+    const askExample = el("p", { class: "askExample" });
+    askExample.appendChild(buildExampleText(item, exampleMatch(item)));
+    box.appendChild(el("div", { class: "askExampleLine writtenHintExample" }, askExample));
+  }
 
+  const previous = session.writtenAnswers.filter((a) => a.step === "word");
+  if (session.writtenStep === "example" && session.writtenPhase !== "answer" && previous.length) {
+    box.appendChild(el("p", { class: "hint writtenPrevious" },
+      `1回目の答え：${previous[previous.length - 1].answer}　→ 例文をヒントにもう一度書いてください。`));
+  }
+
+  if (session.writtenPhase === "input" || session.writtenPhase === "grading" || session.writtenPhase === "self") {
+    box.appendChild(writtenForm(headword));
+  }
+  if (session.writtenPhase === "grading") {
+    box.appendChild(el("p", { class: "hint writtenGrading", role: "status", "aria-live": "polite" }, "採点しています…"));
+  } else if (session.writtenPhase === "self") {
+    box.appendChild(writtenSelfGrade(item, headword));
+  } else if (session.writtenPhase === "result") {
+    box.appendChild(writtenCorrectFeedback(entry, headword));
+  } else if (session.writtenPhase === "answer") {
+    box.appendChild(writtenAnswerReveal(entry, headword));
+  }
+  body.appendChild(box);
+}
+
+function writtenForm(headword) {
   const inputId = "writtenAnswerInput";
   const input = el("input", {
     id: inputId,
@@ -203,100 +300,102 @@ function renderWritten(body) {
   });
   input.value = session.writtenAnswer || "";
   const submitBtn = el("button", { class: "cta", type: "submit" }, "採点する");
+  const prompt = session.writtenStep === "example"
+    ? `例文の下線部「${headword}」の意味を書いてください`
+    : `「${headword}」の意味を書いてください`;
   const form = el("form", { class: "writtenForm" },
-    el("label", { class: "writtenPrompt", for: inputId }, `下線部「${surface}」の意味を書いてください`),
+    el("label", { class: "writtenPrompt", for: inputId }, prompt),
     el("div", { class: "writtenInputRow" }, input, submitBtn),
   );
-  const unknownBtn = el("button", { class: "ghost smallGhost", type: "button" }, "わからない");
+  const unknownBtn = el("button", { class: "ghost smallGhost", type: "button" },
+    session.writtenStep === "word" && !currentWrittenEntry().reask ? "わからない（例文を見る）" : "わからない（答えを見る）");
   form.appendChild(el("div", { class: "writtenFormSub" }, unknownBtn));
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    submitWrittenAnswer(item, input.value);
+    submitWrittenAnswer(input.value);
   });
   unknownBtn.addEventListener("click", () => {
     if (session.writtenPhase !== "input") return;
     session.writtenAnswer = "わからない";
-    finishWrittenItem(item, "wrong", "local");
+    applyWrittenGrade("wrong", "local");
   });
   if (session.writtenPhase !== "input") {
     input.disabled = true;
     submitBtn.disabled = true;
     unknownBtn.disabled = true;
-  }
-  box.appendChild(form);
-
-  if (session.writtenPhase === "grading") {
-    box.appendChild(el("p", { class: "hint writtenGrading", role: "status", "aria-live": "polite" }, "採点しています…"));
-  } else if (session.writtenPhase === "self") {
-    box.appendChild(writtenSelfGrade(item, surface, correct));
-  } else if (session.writtenPhase === "result") {
-    box.appendChild(writtenFeedback(item, surface, correct));
-  }
-  body.appendChild(box);
-
-  if (session.writtenPhase === "input") {
+  } else {
     requestAnimationFrame(() => input.focus({ preventScroll: true }));
   }
+  return form;
 }
 
-function writtenAnswerLines(item, surface, correct) {
-  const lines = [
-    el("p", {}, `あなたの答え：${session.writtenAnswer}`),
-    el("p", {}, `${surface}：${correct}`),
-  ];
-  if (item.exampleTranslation) {
-    lines.push(el("p", { class: "trans" }, `例文訳：${item.exampleTranslation}`));
-  }
-  return lines;
-}
-
-function writtenSelfGrade(item, surface, correct) {
-  const ai = session.writtenAi;
-  const decision = decideWrittenAiGrade(ai);
+function writtenSelfGrade(item, headword) {
+  const decision = decideWrittenAiGrade(session.writtenAi);
   const wrap = el("div", { class: "feedback writtenFeedback writtenSelf", role: "status", "aria-live": "polite" },
     el("h3", {}, "答え合わせ"),
-    ...writtenAnswerLines(item, surface, correct),
+    el("p", {}, `あなたの答え：${session.writtenAnswer}`),
+    el("p", {}, `${headword}：${learningMeaningOf(item)}`),
     el("p", { class: "hint" }, decision.grade
-      ? `AIの判定は「${WRITTEN_GRADE_LABELS[decision.grade]}」でしたが、確信が低いため自分で判定してください。`
+      ? `AIの判定は「${{ correct: "正解", partial: "部分的に正解", wrong: "不正解" }[decision.grade]}」でしたが、確信が低いため自分で判定してください。`
       : "自動採点を使えなかったため、自分で判定してください。"),
   );
-  const buttons = WRITTEN_GRADES.map((grade) => el("button", {
+  const buttons = [["correct", "合っていた"], ["wrong", "違った"]].map(([grade, label]) => el("button", {
     class: "ghost writtenSelfBtn",
     type: "button",
-    onclick: () => finishWrittenItem(item, grade, "self"),
-  }, { correct: "合っていた", partial: "一部だけ合っていた", wrong: "違った" }[grade]));
+    onclick: () => applyWrittenGrade(grade, "self"),
+  }, label));
   const actions = answerActions(...buttons);
   wrap.appendChild(actions);
   revealAnswerActions(actions);
   return wrap;
 }
 
-function writtenFeedback(item, surface, correct) {
-  const grade = session.writtenGrade;
-  const tone = grade === "correct" ? "ok" : grade === "partial" ? "partial" : "ng";
-  const heading = { correct: "正解！", partial: "おしい（部分的に正解）", wrong: "不正解" }[grade];
-  const fb = el("div", { class: `feedback writtenFeedback ${tone}`, role: "status", "aria-live": "polite" },
+function writtenAiNote() {
+  if (session.writtenGradedBy !== "ai" || !session.writtenAi) return null;
+  return el("p", { class: "hint" },
+    `AIが意味の近さで採点しました（確信度 ${Math.round(Number(session.writtenAi.confidence) * 100)}%）`);
+}
+
+function writtenCorrectFeedback(entry, headword) {
+  const { item } = entry;
+  const heading = entry.reask
+    ? "正解！ 今度は単語だけで思い出せました"
+    : session.writtenOutcome === "learned"
+      ? "正解！ 単語だけで思い出せました"
+      : "正解！ 例文を手がかりに思い出せました";
+  const fb = el("div", { class: "feedback writtenFeedback ok", role: "status", "aria-live": "polite" },
     el("h3", {}, heading),
-    ...writtenAnswerLines(item, surface, correct),
+    el("p", {}, `あなたの答え：${session.writtenAnswer}`),
+    el("p", {}, `${headword}：${learningMeaningOf(item)}`),
   );
-  if (session.writtenGradedBy === "ai" && session.writtenAi) {
-    fb.appendChild(el("p", { class: "hint" },
-      `AIが意味の近さで採点しました（確信度 ${Math.round(Number(session.writtenAi.confidence) * 100)}%）`));
+  if (!entry.reask && session.writtenOutcome === "shaky") {
+    fb.appendChild(el("p", { class: "hint" }, "まだあやふやなので、最後にもう一度単語だけで出します。"));
   }
-  const last = session.writtenIdx === session.items.length - 1;
-  const actions = answerActions(el("button", {
-    class: "cta",
-    type: "button",
-    onclick: () => {
-      if (last) {
-        session.stage = "writtenDone";
-      } else {
-        session.writtenIdx++;
-        resetWrittenItem();
-      }
-      renderSession();
-    },
-  }, last ? "結果を見る →" : "次へ →"));
+  const ai = writtenAiNote();
+  if (ai) fb.appendChild(ai);
+  const last = session.writtenPos >= session.writtenQueue.length - 1;
+  const actions = answerActions(el("button", { class: "cta", type: "button", onclick: advanceWritten },
+    last ? "結果を見る →" : "次へ →"));
+  fb.appendChild(actions);
+  revealAnswerActions(actions);
+  return fb;
+}
+
+/** 答えを例文と並べて確認させる。確認ボタンを押すまで次へ進めない。 */
+function writtenAnswerReveal(entry, headword) {
+  const { item } = entry;
+  const fb = el("div", { class: "feedback writtenFeedback ng", role: "status", "aria-live": "polite" },
+    el("h3", {}, "答えを確認しましょう"),
+    el("p", { class: "writtenAnswerMeaning" }, `${headword}：${learningMeaningOf(item)}`),
+  );
+  session.writtenAnswers.forEach((a) => {
+    fb.appendChild(el("p", { class: "trans" }, `${a.step === "word" ? "単語だけ" : "例文あり"}の答え：${a.answer}`));
+  });
+  if (item.exampleTranslation) fb.appendChild(el("p", { class: "trans" }, `例文訳：${item.exampleTranslation}`));
+  fb.appendChild(el("p", { class: "hint" }, entry.reask
+    ? "上の例文の中で、意味を確かめてから進んでください。"
+    : `上の例文の中で、意味を確かめてから進んでください。${WRITTEN_REASK_GAP}問ほどあとに、もう一度単語だけで出します。`));
+  const actions = answerActions(el("button", { class: "cta", type: "button", onclick: advanceWritten }, "確認した →"));
   fb.appendChild(actions);
   revealAnswerActions(actions);
   return fb;
@@ -304,18 +403,24 @@ function writtenFeedback(item, surface, correct) {
 
 function renderWrittenDone(body) {
   const results = session.writtenResults || [];
-  const correct = results.filter((r) => r.grade === "correct").length;
+  const count = (outcome) => results.filter((r) => r.outcome === outcome).length;
+  const reasked = results.filter((r) => r.reaskResult);
   const banner = el("div", { class: "doneBanner" },
     el("p", { class: "label", style: "color:rgba(250,249,246,.72)" }, "Step Complete"),
-    el("div", { class: "big" }, `${correct} / ${session.items.length}`),
-    el("h2", {}, `例文を見て意味を書く ${session.items.length}語句を完了しました`),
+    el("div", { class: "big" }, `${count("learned")} / ${session.items.length}`),
+    el("h2", {}, "単語だけで思い出せた語句"),
+    el("p", { class: "hint", style: "color:rgba(250,249,246,.72)" },
+      `例文で正解 ${count("shaky")}・答えを確認 ${count("notLearned")}${reasked.length
+        ? `・再出題で正解 ${reasked.filter((r) => r.reaskResult === "correct").length} / ${reasked.length}`
+        : ""}`),
   );
   body.appendChild(banner);
   const list = el("ul", { class: "writtenResultList" });
   results.forEach((r) => {
-    list.appendChild(el("li", { class: `writtenResult ${r.grade}` },
-      el("strong", {}, `${WRITTEN_GRADE_LABELS[r.grade]}　${surfaceOf(r.item)}`),
-      el("span", {}, `${learningMeaningOf(r.item)}（あなたの答え：${r.answer}）`),
+    const reask = r.reaskResult ? `／再出題：${r.reaskResult === "correct" ? "正解" : "不正解"}` : "";
+    list.appendChild(el("li", { class: `writtenResult ${r.outcome}` },
+      el("strong", {}, `${WRITTEN_OUTCOME_LABELS[r.outcome]}　${canonicalHeadwordOf(r.item)}`),
+      el("span", {}, `${learningMeaningOf(r.item)}${reask}`),
     ));
   });
   body.appendChild(list);

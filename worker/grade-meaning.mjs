@@ -83,7 +83,7 @@ export function buildJevRequest(key, answer) {
       grade: {
         type: "choice",
         instructions: {
-          task: "A Japanese student is reviewing English vocabulary for the Eiken test. They read the English sentence `item.example_sentence`, in which `item.surface` appears, and wrote in `student_answer` what they think `item.surface` means (usually in Japanese). Grade `student_answer` against the answer key `item.meanings` (Japanese glosses). `item.example_translation` is a Japanese translation of the sentence, for reference only.",
+          task: "A Japanese student is reviewing English vocabulary for the Eiken test. They saw `item.surface` (first on its own, and on a second try also in the English sentence `item.example_sentence`) and wrote in `student_answer` what they think it means (usually in Japanese). Grade `student_answer` against the answer key `item.meanings` (Japanese glosses). `item.example_translation` is a Japanese translation of the sentence, for reference only.",
           rules: [
             "Judge meaning, not wording: synonyms, paraphrases, hiragana instead of kanji, a different part-of-speech ending (e.g. 〜する / 〜すること / 〜な), and missing punctuation are all fine.",
             "`item.meanings` may list several senses separated by 、 or ；. Correctly giving the core of any one sense is enough to be correct, even if it is not the sense used in the sentence.",

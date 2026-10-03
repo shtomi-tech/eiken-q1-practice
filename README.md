@@ -235,7 +235,7 @@ GitHubリポジトリのSecretsに次を登録すると有効になります。�
 
 現在の Cloudflare 版限定機能:
 
-- **例文を見て意味を書く**（`writtenMeaning`）: 意味だけ復習カードの「例文を見て意味を書く」から、通常学習を終えた語句を1回10語句出題します。例文の下線部の意味を書くと、Worker の `/api/grade-meaning`（`worker/index.mjs`）が TypeSafe Jev（`jev-1.13.0`）で意味の近さを採点します。正解の語義と表記ゆれ程度で一致する答えは Jev に送らず正解にします。Jev の確信度が0.8未満・採点できないときは、判定を参考表示して自己採点に戻します。結果は学習履歴（`kind: "written-meaning"`）にだけ残し、間隔復習の予定は変えません。正解と例文はブラウザから受け取らず、配信中の `data/manifest.json`・`data/vocab_*.json`・`data/lemmas.json` から引きます。Worker の Secret に `TYPESAFE_API_KEY` が必要です（Cloudflare ダッシュボードの Variables & Secrets、または `npx wrangler secret put TYPESAFE_API_KEY`）。未設定の間は自己採点だけで動きます。
+- **意味を書く**（`writtenMeaning`）: 意味だけ復習カードの「単語を見て意味を書く」から、通常学習を終えた語句を1回10語句出題します。まず単語だけで意味を書き、誤答・わからないときは例文をヒントにもう一度、それでも誤答なら答えを例文と並べて確認します。単語だけで正解＝覚えた、例文で正解＝あやふや（セッションの最後にもう一度）、答えを見た＝未習得（3問ほどあとに単語だけでもう一度）として扱います。記憶から引き出す負荷を先に掛け、例文は補助に回す設計です。採点は Worker の `/api/grade-meaning`（`worker/index.mjs`）が TypeSafe Jev（`jev-1.13.0`）で意味の近さを判定します。正解の語義と表記ゆれ程度で一致する答えは Jev に送らず正解にし、確信度0.8未満・採点できないときは自己採点に戻します。結果は学習履歴（`kind: "written-meaning"`）にだけ残し、間隔復習の予定は変えません。正解と例文はブラウザから受け取らず、配信中の `data/manifest.json`・`data/vocab_*.json`・`data/lemmas.json` から引きます。Worker の Secret に `TYPESAFE_API_KEY` が必要です（Cloudflare ダッシュボードの Variables & Secrets、または `npx wrangler secret put TYPESAFE_API_KEY`）。未設定の間は自己採点だけで動きます。
 
 公開物の組み立ては `scripts/prepare-site.sh` に共通化しています。ローカルでは `static/config.json` を用意したうえで `bash scripts/prepare-site.sh` → `npx wrangler deploy` でも配信できます。localStorageはドメインごとに分かれるため、匿名利用の進捗はGitHub Pages版と共有されません（生徒別URLのSupabase同期は共通です）。
 

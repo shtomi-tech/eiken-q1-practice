@@ -658,7 +658,7 @@ function sessionLabel(q, isIdiom, isMeaning, isFinal) {
 
 function stageTitle(stage) {
   if (session && session.mode === "written") {
-    return stage === "writtenDone" ? "例文を見て意味を書く・結果" : `例文を見て意味を書く（${session.writtenIdx + 1} / ${session.items.length}）`;
+    return stage === "writtenDone" ? "意味を書く・結果" : `意味を書く（${session.writtenPos + 1} / ${session.writtenQueue.length}問）`;
   }
   if (session && session.mode === "final") return `最終チェック${session.checkOrder.length}問`;
   if (session && session.mode === "meaning" && session.stage === "meaningReview") return "間違えた語句を見直す";
