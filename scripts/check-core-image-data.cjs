@@ -6,7 +6,7 @@ const ROOT = path.resolve(__dirname, "..");
 const DATA_DIR = path.join(ROOT, "data");
 const PARTICLE_PATH = path.join(DATA_DIR, "particle_images.json");
 const MANIFEST_PATH = path.join(DATA_DIR, "manifest.json");
-const PAGES_WORKFLOW_PATH = path.join(ROOT, ".github", "workflows", "pages.yml");
+const PAGES_WORKFLOW_PATH = path.join(ROOT, "scripts", "prepare-site.sh");
 
 function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, "utf8"));
@@ -72,7 +72,7 @@ function hasParticleTerm(chain, particle) {
 
 assert.ok(fs.existsSync(PARTICLE_PATH), "data/particle_images.json が必要です");
 assert.ok(fs.existsSync(MANIFEST_PATH), "data/manifest.json が必要です");
-assert.ok(fs.existsSync(PAGES_WORKFLOW_PATH), ".github/workflows/pages.yml が必要です");
+assert.ok(fs.existsSync(PAGES_WORKFLOW_PATH), "scripts/prepare-site.sh が必要です");
 assert.match(
   fs.readFileSync(PAGES_WORKFLOW_PATH, "utf8"),
   /cp data\/particle_images\.json _site\/data\//,

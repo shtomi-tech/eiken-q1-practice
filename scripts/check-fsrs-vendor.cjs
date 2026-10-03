@@ -1,6 +1,6 @@
 // vendoring した ts-fsrs が「本番でも配信される」ことを機械的に守るための検査。
 //
-// pages.yml の Prepare static files はコピー対象を明示列挙しているため、
+// scripts/prepare-site.sh はコピー対象を明示列挙しているため、
 // 追記を忘れると本番だけ 404 になり、ローカルでは絶対に再現しない。
 // ここが落ちる状態でデプロイしてはいけない。
 const assert = require("node:assert/strict");
@@ -40,15 +40,15 @@ assert.ok(vendorReadme.includes(EXPECTED_VERSION), "vendor README に版を記�
 assert.ok(vendorReadme.includes(EXPECTED_SHA256), "vendor README に sha256 を記録する必要がある");
 
 // --- 本番へコピーされる（これが本検査の主目的） ---
-const workflow = read(".github/workflows/pages.yml");
+const workflow = read("scripts/prepare-site.sh");
 assert.ok(
   workflow.includes("_site/static/vendor/fsrs"),
-  "pages.yml が _site/static/vendor/fsrs を作る必要がある（漏れると本番だけ404）",
+  "prepare-site.sh が _site/static/vendor/fsrs を作る必要がある（漏れると本番だけ404）",
 );
 assert.match(
   workflow,
   /cp\s+static\/vendor\/fsrs\/index\.umd\.js[^\n]*_site\/static\/vendor\/fsrs\//,
-  "pages.yml が vendor/fsrs/index.umd.js を _site へコピーする必要がある（漏れると本番だけ404）",
+  "prepare-site.sh が vendor/fsrs/index.umd.js を _site へコピーする必要がある（漏れると本番だけ404）",
 );
 
 // --- 読み込み順（vendor が mode-q1.js より前） ---

@@ -16,7 +16,7 @@ const homeSource = fs.readFileSync(path.join(ROOT, "static/src/80-home.js"), "ut
 const storageSource = fs.readFileSync(path.join(ROOT, "static/src/20-storage.js"), "utf8");
 const sessionSource = fs.readFileSync(path.join(ROOT, "static/src/90-learn-session.js"), "utf8");
 const stylesSource = fs.readFileSync(path.join(ROOT, "static/styles.css"), "utf8");
-const pagesWorkflow = fs.readFileSync(path.join(ROOT, ".github/workflows/pages.yml"), "utf8");
+const pagesWorkflow = fs.readFileSync(path.join(ROOT, "scripts/prepare-site.sh"), "utf8");
 
 const dataset = manifest.q1["eiken2-2026-1"];
 assert.equal(dataset.contextUrl, "data/context_2026-1.json", "2級第1セットのcontextUrlが必要");

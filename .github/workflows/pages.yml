@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy (GitHub Pages / Cloudflare)
 
 on:
   push:
@@ -71,30 +71,7 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Prepare static files
-        run: |
-          rm -rf _site
-          mkdir -p _site/static/vendor/harness _site/data _site/assets/audio/vocab _site/assets/audio/lemma
-          mkdir -p _site/data/context-translations
-          mkdir -p _site/static/vendor/fsrs
-          cp index.html .nojekyll _site/
-          cp static/app.js static/mode-q1.js static/styles.css static/config.json _site/static/
-          cp static/vendor/harness/cloud.js _site/static/vendor/harness/
-          cp static/vendor/fsrs/index.umd.js static/vendor/fsrs/LICENSE _site/static/vendor/fsrs/
-          cp data/manifest.json data/lemmas.json _site/data/
-          cp data/context_*.json _site/data/
-          cp data/context-translations/*.json _site/data/context-translations/
-          cp data/particle_images.json _site/data/
-          cp data/word_roots.json data/word_origins.json _site/data/
-          cp data/questions_[0-9]*.json data/questions_p2_*.json data/questions_pre1_*.json _site/data/
-          cp data/vocab_[0-9]*.json data/vocab_p2_*.json data/vocab_pre1_*.json _site/data/
-          cp data/questions_iuhw_*.json data/vocab_iuhw_*.json _site/data/
-          cp -R assets/audio/vocab/* _site/assets/audio/vocab/
-          cp -R assets/audio/lemma/* _site/assets/audio/lemma/
-          expected_lemma_audio_count=$(node -e 'const fs=require("fs"); const data=JSON.parse(fs.readFileSync("data/lemmas.json", "utf8")); const entries=Object.keys(data.entries || {}); const display=Object.values(data.flashcardLemmas || {}); const displayOnly=Object.values(data.flashcardDisplayLemmas || {}); console.log(new Set([...entries, ...display, ...displayOnly]).size)')
-          lemma_audio_count=$(find assets/audio/lemma -type f -name '*.mp3' | wc -l)
-          site_lemma_audio_count=$(find _site/assets/audio/lemma -type f -name '*.mp3' | wc -l)
-          test "$lemma_audio_count" -eq "$expected_lemma_audio_count"
-          test "$site_lemma_audio_count" -eq "$expected_lemma_audio_count"
+        run: bash scripts/prepare-site.sh
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -104,3 +81,51 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  deploy-cloudflare:
+    needs: test
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Cloudflare credentials
+        id: cf
+        run: |
+          if [ -n "$CLOUDFLARE_API_TOKEN" ] && [ -n "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::notice::CLOUDFLARE_API_TOKEN / CLOUDFLARE_ACCOUNT_ID が未設定のため Cloudflare デプロイをスキップします"
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+          fi
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+      - name: Checkout
+        if: steps.cf.outputs.enabled == 'true'
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        if: steps.cf.outputs.enabled == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Generate runtime config
+        if: steps.cf.outputs.enabled == 'true'
+        run: node scripts/write-config.mjs
+        env:
+          APP_BASE_URL: ${{ secrets.CLOUDFLARE_APP_BASE_URL || secrets.APP_BASE_URL }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+
+      - name: Prepare static files
+        if: steps.cf.outputs.enabled == 'true'
+        run: bash scripts/prepare-site.sh
+
+      - name: Deploy to Cloudflare Workers
+        if: steps.cf.outputs.enabled == 'true'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy
