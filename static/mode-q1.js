@@ -84,7 +84,7 @@ let wordOriginMap = {};
 // 公開先ごとの機能の出し分け。新機能は Cloudflare 版だけに出す。
 // deployTarget は scripts/write-config.mjs が static/config.json に書く（Cloudflare のデプロイだけ "cloudflare"）。
 // GitHub Pages・Netlify・config.json の無いローカルでは空なので、ここに挙げた機能は出ない。
-const CLOUDFLARE_ONLY_FEATURES = ["writtenMeaning"];
+const CLOUDFLARE_ONLY_FEATURES = ["writtenMeaning", "homeTabs"];
 let appConfig = {};
 async function loadAppConfig() {
   try {
@@ -2304,6 +2304,7 @@ function renderHomeContent() {
   const home = $("#homePanel");
   home.classList.remove("hide");
   home.innerHTML = "";
+  homeTabMarks = [];
   if (needsGradeChoice) {
     setChromeTitle("英検 大問1 単語アプリ");
     return renderGradeChoice();
@@ -2338,6 +2339,7 @@ function renderHomeContent() {
   const canChangeGrade = !new URLSearchParams(window.location.search).has("g");
   const useContextDiscovery = contextDiscoveryEnabled();
 
+  homeTabStart(home, "today");
   // hero は初回訪問（まだ何も学習していない）時だけ表示し、今日の学習カードとの説明重複を避ける
   if (isFirstVisit) {
     home.appendChild(el("section", { class: "card hero" },
@@ -2442,7 +2444,12 @@ function renderHomeContent() {
   } else {
     summary.appendChild(el("div", { class: "recommend" },
       el("p", { class: "recEyebrow" }, "▶ 今日の復習"),
-      el("p", { class: "recWhy" }, "通常学習は完了しています。今日の間隔復習は下のカードから開始します。"),
+      el("p", { class: "recWhy" }, homeTabsEnabled()
+        ? "通常学習は完了しています。今日の間隔復習は「復習」から開始します。"
+        : "通常学習は完了しています。今日の間隔復習は下のカードから開始します。"),
+      homeTabsEnabled()
+        ? el("button", { class: "cta startCta", type: "button", onclick: () => selectHomeTab("review", true) }, "今日の復習へ")
+        : null,
     ));
     summary.appendChild(el("div", { class: "secondaryActions" },
       el("p", { class: "label" }, "通常学習をやり直す"),
@@ -2465,6 +2472,7 @@ function renderHomeContent() {
   flushStudyTime();
   home.appendChild(studyTimeCard());
 
+  homeTabStart(home, "review");
   if (grade) {
     home.appendChild(meaningMission(
       meaningSummary,
@@ -2477,6 +2485,11 @@ function renderHomeContent() {
     ));
   }
 
+  homeTabStart(home, "write");
+  const writtenCard = grade ? writtenMeaningCard(Boolean(pooled), meaningItems) : null;
+  if (writtenCard) home.appendChild(writtenCard);
+
+  homeTabStart(home, "sets");
   // 層2：問題セットUnitカード（独立section。同じ級の過去問・模試を進捗付きで一覧表示）
   // 問題セット・問題一覧は既定で閉じる（開閉状態は端末に記憶）
   home.appendChild(el("section", { class: "card" }, homeFold(
@@ -2542,6 +2555,100 @@ function renderHomeContent() {
     ));
     home.appendChild(utility);
   }
+  arrangeHomeTabs(home, { review: hasMeaningDue ? meaningDueCount : 0 });
+}
+
+/* ---- ホームのタブ（Cloudflare 版限定。featureEnabled("homeTabs")） ----
+   1列に積んでいたホームを「今日・復習・書く・問題」の4面に分ける。
+   描画中に homeTabStart で区切りを付け、最後に arrangeHomeTabs で各面へ振り分ける。
+   タブが無い公開先では区切りを無視し、従来どおり1列のまま表示する。 */
+const HOME_TABS = [
+  { id: "today", label: "今日" },
+  { id: "review", label: "復習" },
+  { id: "write", label: "書く" },
+  { id: "sets", label: "問題" },
+];
+const HOME_TAB_KEY = "eiken_q1_home_tab_v1";
+let homeTabMarks = [];
+function homeTabsEnabled() {
+  return featureEnabled("homeTabs");
+}
+function homeTabStart(home, id) {
+  homeTabMarks.push({ id, from: home.children.length });
+}
+function storedHomeTab() {
+  const fromHash = String(window.location.hash || "").replace(/^#/, "");
+  if (HOME_TABS.some((tab) => tab.id === fromHash)) return fromHash;
+  try {
+    const stored = localStorage.getItem(HOME_TAB_KEY);
+    if (HOME_TABS.some((tab) => tab.id === stored)) return stored;
+  } catch (e) { /* ignore */ }
+  return "today";
+}
+function selectHomeTab(id, focus = false) {
+  const bar = document.querySelector(".homeTabs");
+  if (!bar) return;
+  writeStored(HOME_TAB_KEY, id);
+  try { history.replaceState(null, "", `${window.location.pathname}${window.location.search}#${id}`); } catch (e) { /* ignore */ }
+  bar.querySelectorAll("[role=tab]").forEach((button) => {
+    const selected = button.dataset.tab === id;
+    button.setAttribute("aria-selected", String(selected));
+    button.tabIndex = selected ? 0 : -1;
+    if (selected && focus) button.focus();
+  });
+  document.querySelectorAll(".homeTabPanel").forEach((panel) => {
+    panel.hidden = panel.dataset.tab !== id;
+  });
+  if (bar.getBoundingClientRect().top < 0) bar.scrollIntoView({ block: "start" });
+}
+function arrangeHomeTabs(home, badges) {
+  const marks = homeTabMarks;
+  homeTabMarks = [];
+  if (!homeTabsEnabled() || !marks.length) return;
+  const panels = {};
+  HOME_TABS.forEach((tab) => {
+    panels[tab.id] = el("div", {
+      class: "homeTabPanel",
+      id: `homeTabPanel-${tab.id}`,
+      role: "tabpanel",
+      "aria-labelledby": `homeTab-${tab.id}`,
+      "data-tab": tab.id,
+    });
+  });
+  Array.from(home.children).forEach((node, index) => {
+    let id = marks[0].id;
+    marks.forEach((mark) => { if (index >= mark.from) id = mark.id; });
+    panels[id].appendChild(node);
+  });
+  const tabs = HOME_TABS.filter((tab) => panels[tab.id].children.length);
+  if (!tabs.length) return;
+  const stored = storedHomeTab();
+  const active = tabs.some((tab) => tab.id === stored) ? stored : tabs[0].id;
+  const bar = el("div", { class: "homeTabs", role: "tablist", "aria-label": "ホームの表示" });
+  tabs.forEach((tab, i) => {
+    const badge = Number(badges[tab.id]) || 0;
+    const button = el("button", {
+      class: "homeTab",
+      id: `homeTab-${tab.id}`,
+      type: "button",
+      role: "tab",
+      "aria-controls": `homeTabPanel-${tab.id}`,
+      "data-tab": tab.id,
+      onclick: () => selectHomeTab(tab.id),
+    }, el("span", {}, tab.label), badge
+      ? el("span", { class: "homeTabBadge", "aria-label": `${badge}語句` }, String(badge))
+      : null);
+    button.addEventListener("keydown", (event) => {
+      const step = event.key === "ArrowRight" ? 1 : event.key === "ArrowLeft" ? -1 : 0;
+      if (!step) return;
+      event.preventDefault();
+      selectHomeTab(tabs[(i + step + tabs.length) % tabs.length].id, true);
+    });
+    bar.appendChild(button);
+  });
+  home.appendChild(bar);
+  tabs.forEach((tab) => home.appendChild(panels[tab.id]));
+  selectHomeTab(active);
 }
 
 const HOME_FOLD_KEY = "eiken_q1_home_fold_v1";
@@ -2553,7 +2660,9 @@ function homeFold(id, summaryContent, body) {
     el("summary", {}, summaryContent),
     el("div", { class: "homeFoldBody" }, body),
   );
-  details.open = homeFoldState()[id] === true;
+  // タブ表示では「問題」タブの先頭なので、触っていなければ問題セットは開いておく。
+  const stored = homeFoldState()[id];
+  details.open = stored === undefined ? homeTabsEnabled() && id === "datasets" : stored === true;
   details.addEventListener("toggle", () => {
     writeStoredJson(HOME_FOLD_KEY, { ...homeFoldState(), [id]: details.open });
   });
@@ -2791,6 +2900,8 @@ function meaningMission(
   coreResume = false,
   hasPrimaryCta = false,
 ) {
+  // ホームのタブ表示では「復習」タブが1画面になるので、そこでの主導線として塗りのCTAにする。
+  if (homeTabsEnabled()) hasPrimaryCta = false;
   const learned = summary.learned;
   const due = summary.due;
   const todayRemaining = Number.isInteger(summary.dailyRemaining) ? summary.dailyRemaining : MEANING_DAILY_LIMIT;
@@ -2871,8 +2982,6 @@ function meaningMission(
   if (hasPrimaryCta) buttonAttrs.class = "secondaryCta meaningMissionCta";
   mission.appendChild(el("button", buttonAttrs, buttonLabel));
   if (note) mission.appendChild(el("p", { class: "hint" }, note));
-  const written = writtenMeaningEntry(ready, learnedItems);
-  if (written) mission.appendChild(written);
   return mission;
 }
 
@@ -3774,7 +3883,7 @@ function renderContext(body) {
 }
 
 function sessionLabel(q, isIdiom, isMeaning, isFinal) {
-  if (session?.mode === "written") return "書いて答える";
+  if (session?.mode === "written") return "書いて覚える";
   if (isFinal) return `最終チェック ${session.checkIdx + 1} / ${session.checkOrder.length}`;
   if (session?.mode === "learn" && session?.stage === "context") return `第${q}問 ・ 文脈から発見`;
   if (session?.mode === "context" || session?.stage === "context") return "文脈から推測";
@@ -4888,25 +4997,74 @@ function writtenMeaningItems(items = []) {
   return items.filter((item) => exampleMatch(item));
 }
 
-/** 意味だけ復習カードに置く入口。Cloudflare 版以外・対象語句が無いときは null。 */
-function writtenMeaningEntry(ready, learnedItems = []) {
-  if (!featureEnabled("writtenMeaning") || !ready) return null;
-  const items = writtenMeaningItems(learnedItems);
-  if (!items.length) return null;
-  const size = Math.min(WRITTEN_SESSION_SIZE, items.length);
-  return el("div", { class: "writtenMeaningEntry" },
-    el("p", { class: "label" }, "書いて答える"),
-    el("p", { class: "hint" }, "単語を見て意味を自分の言葉で書きます。わからなければ例文がヒントに出ます。言い回しが違っても、意味が合っていれば正解です。"),
-    el("button", {
-      class: "secondaryCta writtenMeaningCta",
-      type: "button",
-      onclick: () => startWrittenMeaning(items),
-    }, `単語を見て意味を書く（${size}語句）`),
-  );
+const WRITTEN_SIZE_CHOICES = [5, 10, 20];
+const WRITTEN_SIZE_KEY = "eiken_q1_written_size_v1";
+
+function writtenSizeChoices(available) {
+  return [...new Set(WRITTEN_SIZE_CHOICES.map((size) => Math.min(size, available)))].filter((size) => size > 0);
 }
 
-function startWrittenMeaning(items) {
-  const picked = shuffle(writtenMeaningItems(items)).slice(0, WRITTEN_SESSION_SIZE);
+function preferredWrittenSize(choices) {
+  let stored = WRITTEN_SESSION_SIZE;
+  try { stored = Number(localStorage.getItem(WRITTEN_SIZE_KEY)) || WRITTEN_SESSION_SIZE; } catch (e) { /* ignore */ }
+  return choices.includes(stored) ? stored : choices[choices.length - 1];
+}
+
+/**
+ * 「書く」の独立カード。意味だけ復習とは別の入口として、ホームの「書く」タブに置く。
+ * Cloudflare 版以外では null。対象語句が無いときも、何をすれば使えるかを示す。
+ */
+function writtenMeaningCard(ready, learnedItems = []) {
+  if (!featureEnabled("writtenMeaning")) return null;
+  const items = ready ? writtenMeaningItems(learnedItems) : [];
+  const card = el("section", { class: "card writtenMeaningCard", "aria-labelledby": "writtenMeaningTitle" },
+    el("p", { class: "label" }, "書いて覚える"),
+    el("h3", { id: "writtenMeaningTitle" }, `単語の意味を書く（${dataset().shortLabel}）`),
+    el("p", { class: "writtenMeaningLead" },
+      "選択肢なしで、単語を見て意味を自分の言葉で書きます。言い回しが違っても、意味が合っていれば正解です。"),
+    el("ol", { class: "writtenMeaningSteps" },
+      el("li", {}, el("strong", {}, "単語だけ"), el("span", {}, "まず何も見ずに書く")),
+      el("li", {}, el("strong", {}, "例文ヒント"), el("span", {}, "わからなければ例文を見てもう一度")),
+      el("li", {}, el("strong", {}, "答えを確認"), el("span", {}, "数問あとに単語だけでもう一度")),
+    ),
+  );
+  const ctaClass = homeTabsEnabled() ? "cta writtenMeaningCta" : "secondaryCta writtenMeaningCta";
+  if (!ready || !items.length) {
+    card.appendChild(el("button", { class: ctaClass, type: "button", disabled: "disabled" },
+      ready ? "通常学習後に利用できます" : "対象を確認中…"));
+    if (ready) card.appendChild(el("p", { class: "hint" }, "通常学習で本番形式まで解いた語句から出題します。"));
+    return card;
+  }
+  const choices = writtenSizeChoices(items.length);
+  let size = preferredWrittenSize(choices);
+  const startBtn = el("button", { class: ctaClass, type: "button", onclick: () => startWrittenMeaning(items, size) });
+  const sizeButtons = choices.map((choice) => el("button", {
+    class: "writtenSizeChoice",
+    type: "button",
+    onclick: () => {
+      size = choice;
+      writeStored(WRITTEN_SIZE_KEY, String(choice));
+      sync();
+    },
+  }, `${choice}語句`));
+  function sync() {
+    sizeButtons.forEach((button, i) => button.setAttribute("aria-pressed", String(choices[i] === size)));
+    startBtn.textContent = `書きはじめる（${size}語句）`;
+  }
+  sync();
+  card.appendChild(el("div", { class: "writtenSizeRow" },
+    el("span", { class: "fieldLabel", id: "writtenSizeLabel" }, "1回の語句数"),
+    el("div", { class: "writtenSizeChoices", role: "group", "aria-labelledby": "writtenSizeLabel" }, ...sizeButtons),
+  ));
+  card.appendChild(startBtn);
+  card.appendChild(el("p", { class: "hint" },
+    `出題できる語句：${items.length}語句（通常学習を終えた語句から毎回ランダム）。採点はAIが意味の近さで行い、判定が難しいときは自分で判定します。`));
+  return card;
+}
+
+function startWrittenMeaning(items, size = WRITTEN_SESSION_SIZE) {
+  const pool = writtenMeaningItems(items);
+  const picked = shuffle(pool).slice(0, size);
   if (!picked.length) {
     renderHome();
     return false;
@@ -4915,6 +5073,9 @@ function startWrittenMeaning(items) {
     mode: "written",
     q: null,
     items: picked,
+    // 結果画面の「続けて書く」用。
+    writtenPool: pool,
+    writtenSize: size,
     stage: "written",
     // 出題順。{ item, reask }。あやふや・未習得の語は reask: true で後ろへ差し込む。
     writtenQueue: picked.map((item) => ({ item, reask: false })),
@@ -5289,8 +5450,11 @@ function renderWrittenDone(body) {
     ));
   });
   body.appendChild(list);
+  const { writtenPool, writtenSize } = session;
   body.appendChild(el("div", { class: "actions" },
-    el("button", { class: "cta", type: "button", onclick: () => { session = null; renderHome(); } }, "一覧へ戻る"),
+    el("button", { class: "cta", type: "button", onclick: () => startWrittenMeaning(writtenPool, writtenSize) },
+      `続けて書く（${Math.min(writtenSize, writtenPool.length)}語句）`),
+    el("button", { class: "secondaryCta", type: "button", onclick: () => { session = null; renderHome(); } }, "ホームへ戻る"),
   ));
 }
 /* ============================================================

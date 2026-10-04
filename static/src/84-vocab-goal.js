@@ -116,6 +116,8 @@ function meaningMission(
   coreResume = false,
   hasPrimaryCta = false,
 ) {
+  // ホームのタブ表示では「復習」タブが1画面になるので、そこでの主導線として塗りのCTAにする。
+  if (homeTabsEnabled()) hasPrimaryCta = false;
   const learned = summary.learned;
   const due = summary.due;
   const todayRemaining = Number.isInteger(summary.dailyRemaining) ? summary.dailyRemaining : MEANING_DAILY_LIMIT;
@@ -196,8 +198,6 @@ function meaningMission(
   if (hasPrimaryCta) buttonAttrs.class = "secondaryCta meaningMissionCta";
   mission.appendChild(el("button", buttonAttrs, buttonLabel));
   if (note) mission.appendChild(el("p", { class: "hint" }, note));
-  const written = writtenMeaningEntry(ready, learnedItems);
-  if (written) mission.appendChild(written);
   return mission;
 }
 

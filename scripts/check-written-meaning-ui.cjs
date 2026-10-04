@@ -1,6 +1,6 @@
 "use strict";
 
-// 「例文を見て意味を書く」が Cloudflare 版だけに出ること、表記ゆれ一致・Jev 判定の採否を検証する。
+// 「単語の意味を書く」とホームのタブが Cloudflare 版だけに出ること、表記ゆれ一致・Jev 判定の採否を検証する。
 
 const assert = require("node:assert/strict");
 const { appJs, readText, extractFunctionBody } = require("./lib/app-source.cjs");
@@ -20,8 +20,17 @@ feature.setConfig({ deployTarget: "" });
 assert.equal(feature.featureEnabled("writtenMeaning"), false, "GitHub Pages 版では出さない");
 feature.setConfig({ deployTarget: "cloudflare" });
 assert.equal(feature.featureEnabled("writtenMeaning"), true, "Cloudflare 版では出す");
-assert.match(extractFunctionBody(source, "writtenMeaningEntry"), /if \(!featureEnabled\("writtenMeaning"\)/,
+assert.equal(feature.featureEnabled("homeTabs"), true, "ホームのタブも Cloudflare 版では出す");
+feature.setConfig({ deployTarget: "" });
+assert.equal(feature.featureEnabled("homeTabs"), false, "ホームのタブは GitHub Pages 版では出さない");
+assert.match(extractFunctionBody(source, "writtenMeaningCard"), /if \(!featureEnabled\("writtenMeaning"\)\) return null;/,
   "入口は featureEnabled で閉じる");
+assert.match(extractFunctionBody(source, "homeTabsEnabled"), /return featureEnabled\("homeTabs"\);/);
+assert.match(extractFunctionBody(source, "arrangeHomeTabs"), /if \(!homeTabsEnabled\(\) \|\| !marks\.length\) return;/,
+  "タブが無い公開先ではホームを並べ替えない");
+// 書く演習は意味だけ復習カードの中ではなく、ホームの独立カードとして置く
+assert.doesNotMatch(extractFunctionBody(source, "meaningMission"), /writtenMeaning/);
+assert.match(extractFunctionBody(source, "renderHomeContent"), /homeTabStart\(home, "write"\);\s+const writtenCard = grade \? writtenMeaningCard\(/);
 
 // config.json の deployTarget は Cloudflare のデプロイジョブだけが入れる
 const workflow = readText(".github/workflows/pages.yml").replace(/\r\n/g, "\n");
