@@ -70,7 +70,7 @@ let wordOriginMap = {};
 // 公開先ごとの機能の出し分け。新機能は Cloudflare 版だけに出す。
 // deployTarget は scripts/write-config.mjs が static/config.json に書く（Cloudflare のデプロイだけ "cloudflare"）。
 // GitHub Pages・Netlify・config.json の無いローカルでは空なので、ここに挙げた機能は出ない。
-const CLOUDFLARE_ONLY_FEATURES = ["writtenMeaning"];
+const CLOUDFLARE_ONLY_FEATURES = ["writtenMeaning", "homeTabs"];
 let appConfig = {};
 async function loadAppConfig() {
   try {

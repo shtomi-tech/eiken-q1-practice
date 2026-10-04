@@ -23,25 +23,74 @@ function writtenMeaningItems(items = []) {
   return items.filter((item) => exampleMatch(item));
 }
 
-/** 意味だけ復習カードに置く入口。Cloudflare 版以外・対象語句が無いときは null。 */
-function writtenMeaningEntry(ready, learnedItems = []) {
-  if (!featureEnabled("writtenMeaning") || !ready) return null;
-  const items = writtenMeaningItems(learnedItems);
-  if (!items.length) return null;
-  const size = Math.min(WRITTEN_SESSION_SIZE, items.length);
-  return el("div", { class: "writtenMeaningEntry" },
-    el("p", { class: "label" }, "書いて答える"),
-    el("p", { class: "hint" }, "単語を見て意味を自分の言葉で書きます。わからなければ例文がヒントに出ます。言い回しが違っても、意味が合っていれば正解です。"),
-    el("button", {
-      class: "secondaryCta writtenMeaningCta",
-      type: "button",
-      onclick: () => startWrittenMeaning(items),
-    }, `単語を見て意味を書く（${size}語句）`),
-  );
+const WRITTEN_SIZE_CHOICES = [5, 10, 20];
+const WRITTEN_SIZE_KEY = "eiken_q1_written_size_v1";
+
+function writtenSizeChoices(available) {
+  return [...new Set(WRITTEN_SIZE_CHOICES.map((size) => Math.min(size, available)))].filter((size) => size > 0);
 }
 
-function startWrittenMeaning(items) {
-  const picked = shuffle(writtenMeaningItems(items)).slice(0, WRITTEN_SESSION_SIZE);
+function preferredWrittenSize(choices) {
+  let stored = WRITTEN_SESSION_SIZE;
+  try { stored = Number(localStorage.getItem(WRITTEN_SIZE_KEY)) || WRITTEN_SESSION_SIZE; } catch (e) { /* ignore */ }
+  return choices.includes(stored) ? stored : choices[choices.length - 1];
+}
+
+/**
+ * 「書く」の独立カード。意味だけ復習とは別の入口として、ホームの「書く」タブに置く。
+ * Cloudflare 版以外では null。対象語句が無いときも、何をすれば使えるかを示す。
+ */
+function writtenMeaningCard(ready, learnedItems = []) {
+  if (!featureEnabled("writtenMeaning")) return null;
+  const items = ready ? writtenMeaningItems(learnedItems) : [];
+  const card = el("section", { class: "card writtenMeaningCard", "aria-labelledby": "writtenMeaningTitle" },
+    el("p", { class: "label" }, "書いて覚える"),
+    el("h3", { id: "writtenMeaningTitle" }, `単語の意味を書く（${dataset().shortLabel}）`),
+    el("p", { class: "writtenMeaningLead" },
+      "選択肢なしで、単語を見て意味を自分の言葉で書きます。言い回しが違っても、意味が合っていれば正解です。"),
+    el("ol", { class: "writtenMeaningSteps" },
+      el("li", {}, el("strong", {}, "単語だけ"), el("span", {}, "まず何も見ずに書く")),
+      el("li", {}, el("strong", {}, "例文ヒント"), el("span", {}, "わからなければ例文を見てもう一度")),
+      el("li", {}, el("strong", {}, "答えを確認"), el("span", {}, "数問あとに単語だけでもう一度")),
+    ),
+  );
+  const ctaClass = homeTabsEnabled() ? "cta writtenMeaningCta" : "secondaryCta writtenMeaningCta";
+  if (!ready || !items.length) {
+    card.appendChild(el("button", { class: ctaClass, type: "button", disabled: "disabled" },
+      ready ? "通常学習後に利用できます" : "対象を確認中…"));
+    if (ready) card.appendChild(el("p", { class: "hint" }, "通常学習で本番形式まで解いた語句から出題します。"));
+    return card;
+  }
+  const choices = writtenSizeChoices(items.length);
+  let size = preferredWrittenSize(choices);
+  const startBtn = el("button", { class: ctaClass, type: "button", onclick: () => startWrittenMeaning(items, size) });
+  const sizeButtons = choices.map((choice) => el("button", {
+    class: "writtenSizeChoice",
+    type: "button",
+    onclick: () => {
+      size = choice;
+      writeStored(WRITTEN_SIZE_KEY, String(choice));
+      sync();
+    },
+  }, `${choice}語句`));
+  function sync() {
+    sizeButtons.forEach((button, i) => button.setAttribute("aria-pressed", String(choices[i] === size)));
+    startBtn.textContent = `書きはじめる（${size}語句）`;
+  }
+  sync();
+  card.appendChild(el("div", { class: "writtenSizeRow" },
+    el("span", { class: "fieldLabel", id: "writtenSizeLabel" }, "1回の語句数"),
+    el("div", { class: "writtenSizeChoices", role: "group", "aria-labelledby": "writtenSizeLabel" }, ...sizeButtons),
+  ));
+  card.appendChild(startBtn);
+  card.appendChild(el("p", { class: "hint" },
+    `出題できる語句：${items.length}語句（通常学習を終えた語句から毎回ランダム）。採点はAIが意味の近さで行い、判定が難しいときは自分で判定します。`));
+  return card;
+}
+
+function startWrittenMeaning(items, size = WRITTEN_SESSION_SIZE) {
+  const pool = writtenMeaningItems(items);
+  const picked = shuffle(pool).slice(0, size);
   if (!picked.length) {
     renderHome();
     return false;
@@ -50,6 +99,9 @@ function startWrittenMeaning(items) {
     mode: "written",
     q: null,
     items: picked,
+    // 結果画面の「続けて書く」用。
+    writtenPool: pool,
+    writtenSize: size,
     stage: "written",
     // 出題順。{ item, reask }。あやふや・未習得の語は reask: true で後ろへ差し込む。
     writtenQueue: picked.map((item) => ({ item, reask: false })),
@@ -424,7 +476,10 @@ function renderWrittenDone(body) {
     ));
   });
   body.appendChild(list);
+  const { writtenPool, writtenSize } = session;
   body.appendChild(el("div", { class: "actions" },
-    el("button", { class: "cta", type: "button", onclick: () => { session = null; renderHome(); } }, "一覧へ戻る"),
+    el("button", { class: "cta", type: "button", onclick: () => startWrittenMeaning(writtenPool, writtenSize) },
+      `続けて書く（${Math.min(writtenSize, writtenPool.length)}語句）`),
+    el("button", { class: "secondaryCta", type: "button", onclick: () => { session = null; renderHome(); } }, "ホームへ戻る"),
   ));
 }

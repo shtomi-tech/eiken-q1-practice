@@ -178,6 +178,7 @@ function renderHomeContent() {
   const home = $("#homePanel");
   home.classList.remove("hide");
   home.innerHTML = "";
+  homeTabMarks = [];
   if (needsGradeChoice) {
     setChromeTitle("英検 大問1 単語アプリ");
     return renderGradeChoice();
@@ -212,6 +213,7 @@ function renderHomeContent() {
   const canChangeGrade = !new URLSearchParams(window.location.search).has("g");
   const useContextDiscovery = contextDiscoveryEnabled();
 
+  homeTabStart(home, "today");
   // hero は初回訪問（まだ何も学習していない）時だけ表示し、今日の学習カードとの説明重複を避ける
   if (isFirstVisit) {
     home.appendChild(el("section", { class: "card hero" },
@@ -316,7 +318,12 @@ function renderHomeContent() {
   } else {
     summary.appendChild(el("div", { class: "recommend" },
       el("p", { class: "recEyebrow" }, "▶ 今日の復習"),
-      el("p", { class: "recWhy" }, "通常学習は完了しています。今日の間隔復習は下のカードから開始します。"),
+      el("p", { class: "recWhy" }, homeTabsEnabled()
+        ? "通常学習は完了しています。今日の間隔復習は「復習」から開始します。"
+        : "通常学習は完了しています。今日の間隔復習は下のカードから開始します。"),
+      homeTabsEnabled()
+        ? el("button", { class: "cta startCta", type: "button", onclick: () => selectHomeTab("review", true) }, "今日の復習へ")
+        : null,
     ));
     summary.appendChild(el("div", { class: "secondaryActions" },
       el("p", { class: "label" }, "通常学習をやり直す"),
@@ -339,6 +346,7 @@ function renderHomeContent() {
   flushStudyTime();
   home.appendChild(studyTimeCard());
 
+  homeTabStart(home, "review");
   if (grade) {
     home.appendChild(meaningMission(
       meaningSummary,
@@ -351,6 +359,11 @@ function renderHomeContent() {
     ));
   }
 
+  homeTabStart(home, "write");
+  const writtenCard = grade ? writtenMeaningCard(Boolean(pooled), meaningItems) : null;
+  if (writtenCard) home.appendChild(writtenCard);
+
+  homeTabStart(home, "sets");
   // 層2：問題セットUnitカード（独立section。同じ級の過去問・模試を進捗付きで一覧表示）
   // 問題セット・問題一覧は既定で閉じる（開閉状態は端末に記憶）
   home.appendChild(el("section", { class: "card" }, homeFold(
@@ -416,6 +429,100 @@ function renderHomeContent() {
     ));
     home.appendChild(utility);
   }
+  arrangeHomeTabs(home, { review: hasMeaningDue ? meaningDueCount : 0 });
+}
+
+/* ---- ホームのタブ（Cloudflare 版限定。featureEnabled("homeTabs")） ----
+   1列に積んでいたホームを「今日・復習・書く・問題」の4面に分ける。
+   描画中に homeTabStart で区切りを付け、最後に arrangeHomeTabs で各面へ振り分ける。
+   タブが無い公開先では区切りを無視し、従来どおり1列のまま表示する。 */
+const HOME_TABS = [
+  { id: "today", label: "今日" },
+  { id: "review", label: "復習" },
+  { id: "write", label: "書く" },
+  { id: "sets", label: "問題" },
+];
+const HOME_TAB_KEY = "eiken_q1_home_tab_v1";
+let homeTabMarks = [];
+function homeTabsEnabled() {
+  return featureEnabled("homeTabs");
+}
+function homeTabStart(home, id) {
+  homeTabMarks.push({ id, from: home.children.length });
+}
+function storedHomeTab() {
+  const fromHash = String(window.location.hash || "").replace(/^#/, "");
+  if (HOME_TABS.some((tab) => tab.id === fromHash)) return fromHash;
+  try {
+    const stored = localStorage.getItem(HOME_TAB_KEY);
+    if (HOME_TABS.some((tab) => tab.id === stored)) return stored;
+  } catch (e) { /* ignore */ }
+  return "today";
+}
+function selectHomeTab(id, focus = false) {
+  const bar = document.querySelector(".homeTabs");
+  if (!bar) return;
+  writeStored(HOME_TAB_KEY, id);
+  try { history.replaceState(null, "", `${window.location.pathname}${window.location.search}#${id}`); } catch (e) { /* ignore */ }
+  bar.querySelectorAll("[role=tab]").forEach((button) => {
+    const selected = button.dataset.tab === id;
+    button.setAttribute("aria-selected", String(selected));
+    button.tabIndex = selected ? 0 : -1;
+    if (selected && focus) button.focus();
+  });
+  document.querySelectorAll(".homeTabPanel").forEach((panel) => {
+    panel.hidden = panel.dataset.tab !== id;
+  });
+  if (bar.getBoundingClientRect().top < 0) bar.scrollIntoView({ block: "start" });
+}
+function arrangeHomeTabs(home, badges) {
+  const marks = homeTabMarks;
+  homeTabMarks = [];
+  if (!homeTabsEnabled() || !marks.length) return;
+  const panels = {};
+  HOME_TABS.forEach((tab) => {
+    panels[tab.id] = el("div", {
+      class: "homeTabPanel",
+      id: `homeTabPanel-${tab.id}`,
+      role: "tabpanel",
+      "aria-labelledby": `homeTab-${tab.id}`,
+      "data-tab": tab.id,
+    });
+  });
+  Array.from(home.children).forEach((node, index) => {
+    let id = marks[0].id;
+    marks.forEach((mark) => { if (index >= mark.from) id = mark.id; });
+    panels[id].appendChild(node);
+  });
+  const tabs = HOME_TABS.filter((tab) => panels[tab.id].children.length);
+  if (!tabs.length) return;
+  const stored = storedHomeTab();
+  const active = tabs.some((tab) => tab.id === stored) ? stored : tabs[0].id;
+  const bar = el("div", { class: "homeTabs", role: "tablist", "aria-label": "ホームの表示" });
+  tabs.forEach((tab, i) => {
+    const badge = Number(badges[tab.id]) || 0;
+    const button = el("button", {
+      class: "homeTab",
+      id: `homeTab-${tab.id}`,
+      type: "button",
+      role: "tab",
+      "aria-controls": `homeTabPanel-${tab.id}`,
+      "data-tab": tab.id,
+      onclick: () => selectHomeTab(tab.id),
+    }, el("span", {}, tab.label), badge
+      ? el("span", { class: "homeTabBadge", "aria-label": `${badge}語句` }, String(badge))
+      : null);
+    button.addEventListener("keydown", (event) => {
+      const step = event.key === "ArrowRight" ? 1 : event.key === "ArrowLeft" ? -1 : 0;
+      if (!step) return;
+      event.preventDefault();
+      selectHomeTab(tabs[(i + step + tabs.length) % tabs.length].id, true);
+    });
+    bar.appendChild(button);
+  });
+  home.appendChild(bar);
+  tabs.forEach((tab) => home.appendChild(panels[tab.id]));
+  selectHomeTab(active);
 }
 
 const HOME_FOLD_KEY = "eiken_q1_home_fold_v1";
@@ -427,7 +534,9 @@ function homeFold(id, summaryContent, body) {
     el("summary", {}, summaryContent),
     el("div", { class: "homeFoldBody" }, body),
   );
-  details.open = homeFoldState()[id] === true;
+  // タブ表示では「問題」タブの先頭なので、触っていなければ問題セットは開いておく。
+  const stored = homeFoldState()[id];
+  details.open = stored === undefined ? homeTabsEnabled() && id === "datasets" : stored === true;
   details.addEventListener("toggle", () => {
     writeStoredJson(HOME_FOLD_KEY, { ...homeFoldState(), [id]: details.open });
   });

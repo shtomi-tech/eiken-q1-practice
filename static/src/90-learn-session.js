@@ -645,7 +645,7 @@ function renderContext(body) {
 }
 
 function sessionLabel(q, isIdiom, isMeaning, isFinal) {
-  if (session?.mode === "written") return "書いて答える";
+  if (session?.mode === "written") return "書いて覚える";
   if (isFinal) return `最終チェック ${session.checkIdx + 1} / ${session.checkOrder.length}`;
   if (session?.mode === "learn" && session?.stage === "context") return `第${q}問 ・ 文脈から発見`;
   if (session?.mode === "context" || session?.stage === "context") return "文脈から推測";

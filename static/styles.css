@@ -1811,8 +1811,6 @@ details.vocabForecast:not([open]) > :not(summary) { display: none; }
 .homeFoldBody { margin-top: 12px; }
 
 /* ---- 例文を見て意味を書く（Cloudflare 版限定） ---- */
-.writtenMeaningEntry { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); }
-.writtenMeaningEntry .hint { margin: 4px 0 10px; }
 .writtenForm { display: grid; gap: 8px; }
 .writtenInputRow { display: flex; gap: 8px; flex-wrap: wrap; }
 .writtenAnswerInput {
@@ -1840,3 +1838,86 @@ details.vocabForecast:not([open]) > :not(summary) { display: none; }
 .writtenAnswerMeaning { font-size: 18px; font-weight: 600; }
 .writtenResult span { color: var(--muted); font-size: 14px; }
 .writtenPrompt { font-size: 15px; color: var(--muted); }
+
+/* ---- ホームのタブ（Cloudflare 版限定。featureEnabled("homeTabs")） ---- */
+.homeTabs {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  gap: 4px;
+  margin: -4px 0 16px;
+  padding: 4px;
+  background: var(--chrome-bg);
+  -webkit-backdrop-filter: blur(18px) saturate(120%);
+  backdrop-filter: blur(18px) saturate(120%);
+  border: 1px solid var(--chrome-line);
+  border-radius: var(--r-lg);
+}
+@media (prefers-reduced-transparency: reduce) {
+  .homeTabs { background: var(--parchment); -webkit-backdrop-filter: none; backdrop-filter: none; }
+}
+.homeTab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 0;
+  background: transparent;
+  color: var(--muted);
+  font-weight: 600;
+  padding: 8px 6px;
+}
+.homeTab:hover:not(:disabled) { background: var(--surface-soft); color: var(--ink); }
+.homeTab[aria-selected="true"],
+.homeTab[aria-selected="true"]:hover:not(:disabled) { background: var(--ink); color: var(--parchment); }
+.homeTabBadge {
+  min-width: 20px;
+  padding: 1px 6px;
+  border-radius: var(--r-pill);
+  background: var(--clay);
+  color: var(--parchment);
+  font-family: var(--mono);
+  font-size: 11px;
+  line-height: 18px;
+}
+.homeTabPanel[hidden] { display: none; }
+
+/* ---- 書いて覚える（独立カード） ---- */
+.writtenMeaningCard h3 { margin: 4px 0 8px; }
+.writtenMeaningLead { margin: 0 0 12px; }
+.writtenMeaningSteps {
+  list-style: none;
+  counter-reset: writtenStep;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0 0 16px;
+  padding: 0;
+}
+.writtenMeaningSteps li {
+  counter-increment: writtenStep;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 12px;
+  border-radius: var(--r-md);
+  background: var(--surface-soft);
+  font-size: 13px;
+  color: var(--muted);
+}
+.writtenMeaningSteps li strong { color: var(--ink); font-size: 14px; }
+.writtenMeaningSteps li strong::before {
+  content: counter(writtenStep) ". ";
+  font-family: var(--mono);
+  color: var(--clay-hover);
+}
+@media (max-width: 560px) { .writtenMeaningSteps { grid-template-columns: 1fr; } }
+.writtenSizeRow { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
+.writtenSizeChoices { display: flex; gap: 8px; }
+.writtenSizeChoice { background: transparent; color: var(--ink); border: 1px solid var(--line); font-weight: 500; }
+.writtenSizeChoice:hover:not(:disabled) { background: var(--surface-soft); }
+.writtenSizeChoice[aria-pressed="true"] { background: var(--surface-strong); border-color: var(--ink); font-weight: 600; }
+.writtenMeaningCta { width: 100%; }
+.writtenMeaningCard .hint { margin-top: 10px; }
