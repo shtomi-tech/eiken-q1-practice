@@ -5,7 +5,9 @@ const configPath = resolve("static/config.json");
 const config = {
   appBaseUrl: process.env.APP_BASE_URL || process.env.URL || "",
   supabaseUrl: process.env.SUPABASE_URL || "",
-  supabaseAnonKey: process.env.SUPABASE_ANON_KEY || ""
+  supabaseAnonKey: process.env.SUPABASE_ANON_KEY || "",
+  // 公開先。"cloudflare" のときだけ新機能（static/src/10-config.js の CLOUDFLARE_ONLY_FEATURES）を出す。
+  deployTarget: process.env.DEPLOY_TARGET || ""
 };
 
 mkdirSync(dirname(configPath), { recursive: true });

@@ -351,7 +351,8 @@ function startFinalCheck() {
 }
 
 function renderSession() {
-  const isTransientContext = session.mode === "context" || session.mode === "contextLearn";
+  // 書いて答える演習（written）も途中保存しない。
+  const isTransientContext = session.mode === "context" || session.mode === "contextLearn" || session.mode === "written";
   if (!isTransientContext) saveResume();
   $("#homePanel").classList.add("hide");
   const panel = $("#sessionPanel");
@@ -362,6 +363,7 @@ function renderSession() {
   const isMeaning = session.mode === "meaning";
   const isFinal = session.mode === "final";
   const isContext = session.mode === "context" || session.stage === "context";
+  const isWritten = session.mode === "written";
   const q = session.q;
   const isIdiom = !isMeaning && !isFinal && !isContext && session.items[0].type === "idiom";
 
@@ -380,7 +382,8 @@ function renderSession() {
   ));
 
   // stage bar
-  if (isFinal) panel.appendChild(finalBar());
+  if (isWritten) panel.appendChild(writtenStageBar());
+  else if (isFinal) panel.appendChild(finalBar());
   else if (isContext) panel.appendChild(contextProgressBar());
   else if (session.mode === "learn" && session.stage === "flash") panel.appendChild(contextProgressBar());
   else if (isMeaning) panel.appendChild(meaningBar());
@@ -388,7 +391,7 @@ function renderSession() {
   // 意味だけ復習・最終チェックは、それぞれ meaningBar/finalBar に位置・正誤数を集約する。
   // 重複する設問進捗カードは通常学習の3ステップだけに表示する。
   // 既存の通常学習契約: if (!isMeaning && !isFinal) panel.appendChild(questionProgressBar());
-  if (!isContext && !isMeaning && !isFinal) panel.appendChild(questionProgressBar());
+  if (!isContext && !isMeaning && !isFinal && !isWritten) panel.appendChild(questionProgressBar());
 
   const body = el("div", {});
   panel.appendChild(body);
@@ -399,6 +402,7 @@ function renderSession() {
   else if (session.stage === "meaningReview") renderMeaningWrongReview(body);
   else if (session.stage === "practice") renderPractice(body);
   else if (session.stage === "done") renderDone(body);
+  else if (session.stage === "written" || session.stage === "writtenDone") renderWritten(body);
 
   focusSessionContext();
 }
@@ -641,6 +645,7 @@ function renderContext(body) {
 }
 
 function sessionLabel(q, isIdiom, isMeaning, isFinal) {
+  if (session?.mode === "written") return "書いて答える";
   if (isFinal) return `最終チェック ${session.checkIdx + 1} / ${session.checkOrder.length}`;
   if (session?.mode === "learn" && session?.stage === "context") return `第${q}問 ・ 文脈から発見`;
   if (session?.mode === "context" || session?.stage === "context") return "文脈から推測";
@@ -652,6 +657,9 @@ function sessionLabel(q, isIdiom, isMeaning, isFinal) {
 }
 
 function stageTitle(stage) {
+  if (session && session.mode === "written") {
+    return stage === "writtenDone" ? "意味を書く・結果" : `意味を書く（${session.writtenPos + 1} / ${session.writtenQueue.length}問）`;
+  }
   if (session && session.mode === "final") return `最終チェック${session.checkOrder.length}問`;
   if (session && session.mode === "meaning" && session.stage === "meaningReview") return "間違えた語句を見直す";
   if (session && session.mode === "context") return `文脈推測 ${session.contextIdx + 1} / ${session.items.length}`;

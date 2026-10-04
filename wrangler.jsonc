@@ -1,9 +1,14 @@
 {
-  // Cloudflare Workers（静的アセットのみ）での公開設定。
-  // 公開物は scripts/prepare-site.sh が生成する _site/。
+  // Cloudflare Workers での公開設定。
+  // 公開物は scripts/prepare-site.sh が生成する _site/（静的アセット）。
+  // /api/* だけ worker/index.mjs が処理する（例文を見て意味を書く演習の Jev 採点）。
+  // Secret `TYPESAFE_API_KEY` が必要。GitHub Pages / Netlify はこの設定を使わない。
   "name": "eiken-q1-practice",
+  "main": "worker/index.mjs",
   "compatibility_date": "2026-10-01",
   "assets": {
-    "directory": "./_site"
+    "directory": "./_site",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
   }
 }

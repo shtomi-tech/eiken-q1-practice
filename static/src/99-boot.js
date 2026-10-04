@@ -5,7 +5,7 @@ let booted = false;
 
 async function boot() {
   try {
-    await loadManifest();
+    await Promise.all([loadManifest(), loadAppConfig()]);
     try {
       const lemmaData = await fetch("data/lemmas.json", { cache: "no-store" }).then((r) => r.json());
       lemmaMap = lemmaData && lemmaData.lemmas && typeof lemmaData.lemmas === "object" && !Array.isArray(lemmaData.lemmas)

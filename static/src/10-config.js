@@ -67,6 +67,25 @@ const VOCAB_GOALS = {
   let flashcardDisplayLemmaMap = {};
 let wordOriginMap = {};
 
+// 公開先ごとの機能の出し分け。新機能は Cloudflare 版だけに出す。
+// deployTarget は scripts/write-config.mjs が static/config.json に書く（Cloudflare のデプロイだけ "cloudflare"）。
+// GitHub Pages・Netlify・config.json の無いローカルでは空なので、ここに挙げた機能は出ない。
+const CLOUDFLARE_ONLY_FEATURES = ["writtenMeaning"];
+let appConfig = {};
+async function loadAppConfig() {
+  try {
+    const response = await fetch("static/config.json", { cache: "no-store" });
+    const json = response.ok ? await response.json() : null;
+    appConfig = json && typeof json === "object" && !Array.isArray(json) ? json : {};
+  } catch (e) {
+    appConfig = {};
+  }
+}
+function featureEnabled(name) {
+  if (!CLOUDFLARE_ONLY_FEATURES.includes(name)) return true;
+  return appConfig.deployTarget === "cloudflare";
+}
+
 function isValidIsoDate(value) {
   return typeof value === "string"
     && /^\d{4}-\d{2}-\d{2}T/.test(value)
