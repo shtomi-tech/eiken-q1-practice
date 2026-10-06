@@ -84,7 +84,7 @@ let wordOriginMap = {};
 // 公開先ごとの機能の出し分け。新機能は Cloudflare 版だけに出す。
 // deployTarget は scripts/write-config.mjs が static/config.json に書く（Cloudflare のデプロイだけ "cloudflare"）。
 // GitHub Pages・Netlify・config.json の無いローカルでは空なので、ここに挙げた機能は出ない。
-const CLOUDFLARE_ONLY_FEATURES = ["writtenMeaning", "homeTabs"];
+const CLOUDFLARE_ONLY_FEATURES = ["writtenMeaning", "homeTabs", "reviewBeyondCap"];
 let appConfig = {};
 async function loadAppConfig() {
   try {
@@ -787,7 +787,8 @@ function resumeDescription(resume) {
       const total = Array.isArray(resume.meaningWrongItems) ? resume.meaningWrongItems.length : 0;
       return `意味だけ復習・誤答見直し ${checked}/${total}`;
     }
-    const label = resume.dueOnly ? "意味だけ復習" : "全語句の意味確認";
+    const label = resume.meaningBeyondCap ? "意味だけ復習（上限後の追加分）"
+      : resume.dueOnly ? "意味だけ復習" : "全語句の意味確認";
     return `${label} ${Number(resume.checkIdx || 0) + 1}/${resume.checkOrder?.length || 1}`;
   }
   if (resume.mode === "final") return `最終チェック ${Number(resume.checkIdx || 0) + 1}/${resume.checkOrder?.length || 1}`;
@@ -819,6 +820,7 @@ function saveResume() {
     meaningCorrect: session.meaningCorrect || 0,
     finalCorrect: session.finalCorrect || 0,
     dueOnly: Boolean(session.dueOnly),
+    meaningBeyondCap: Boolean(session.meaningBeyondCap),
     meaningVersion: session.meaningVersion || null,
     meaningBatchSize: session.meaningBatchSize || null,
     meaningWrongItems: (session.meaningWrongItems || []).map(itemSnapshot),
@@ -916,7 +918,7 @@ async function restoreSession() {
   const contextOrder = (saved.contextOrder || []).map((s) => resolveItem(s, pool)).filter(Boolean);
   const meaningWrongItems = (saved.meaningWrongItems || []).map((s) => resolveItem(s, pool)).filter(Boolean);
   let restoredSnapshot = saved;
-  if (saved.mode === "meaning" && saved.dueOnly && saved.stage === "check") {
+  if (saved.mode === "meaning" && saved.dueOnly && !saved.meaningBeyondCap && saved.stage === "check") {
     const checkIdx = Math.max(0, Number(saved.checkIdx) || 0);
     const completedInSession = Math.min(checkOrder.length, checkIdx + (saved.checkAnswered ? 1 : 0));
     const dailyRemaining = meaningReviewDailyRemaining();
@@ -947,7 +949,7 @@ async function restoreSession() {
     && (restoredSnapshot.meaningVersion !== MEANING_PROGRESS_VERSION
       || restoredSnapshot.meaningBatchSize !== MEANING_SESSION_SIZE
       || checkOrder.length > MEANING_SESSION_SIZE)) {
-    return Boolean(await startMeaningPractice(true));
+    return Boolean(await startMeaningPractice(true, null, Boolean(restoredSnapshot.meaningBeyondCap)));
   }
   session = {
     ...restoredSnapshot,
@@ -966,7 +968,7 @@ async function restoreSession() {
       : (Array.isArray(saved.audioElapsedLog) ? saved.audioElapsedLog : []),
     meaningRtLog: Array.isArray(saved.meaningRtLog) ? saved.meaningRtLog : [],
   };
-  if (session.mode === "meaning" && session.dueOnly) {
+  if (session.mode === "meaning" && session.dueOnly && !session.meaningBeyondCap) {
     session.meaningDailyRemaining = meaningReviewDailyRemaining();
   }
   if (session.mode === "learn") normalizeLearnSessionResume();
@@ -2959,11 +2961,18 @@ function meaningMission(
     buttonLabel = "意味だけ復習の続きを再開する";
     delete buttonAttrs.disabled;
     buttonAttrs.onclick = async () => { if (!(await restoreSession())) renderHome(); };
-    if (todayRemaining === 0) note = `今日の出題上限${MEANING_DAILY_LIMIT}問に達しました。未出題の復習語句は翌日に回ります。`;
+    if (todayRemaining === 0 && !meaningResume.meaningBeyondCap) note = `今日の出題上限${MEANING_DAILY_LIMIT}問に達しました。未出題の復習語句は翌日に回ります。`;
   } else if (ready && learned === 0) {
     buttonLabel = "通常学習後に利用できます";
   } else if (ready && due === 0) {
     buttonLabel = "今すぐ復習する語句はありません";
+  } else if (ready && todayRemaining === 0 && reviewBeyondCapEnabled()) {
+    // 上限は既定のまま。続けるかどうかは本人が選ぶので、塗りのCTAにはしない。
+    buttonLabel = `さらに復習する（${Math.min(due, MEANING_SESSION_SIZE)}語句）`;
+    buttonAttrs.class = "secondaryCta meaningMissionCta meaningBeyondCapCta";
+    delete buttonAttrs.disabled;
+    buttonAttrs.onclick = () => startMeaningPractice(true, null, true);
+    note = `今日の出題上限${MEANING_DAILY_LIMIT}問に達しました。復習待ちの${due}語句は翌日に回りますが、希望すれば続けて解けます。結果は通常どおり次回の日に反映されます。`;
   } else if (ready && todayRemaining === 0) {
     buttonLabel = "今日の上限に達しました";
     note = `今日の出題上限${MEANING_DAILY_LIMIT}問に達しました。復習待ちの${due}語句は翌日に回ります。`;
@@ -3353,15 +3362,23 @@ function weightedOrder(items) {
   return shuffled.sort((a, b) => scores.get(b) - scores.get(a));
 }
 // dueOnly=true: 復習日が来た語だけ。未学習語句や次回予定の語句は補充しない。
-function meaningPracticeQueue(items, dueOnly) {
-  const limit = dueOnly ? Math.min(MEANING_SESSION_SIZE, meaningReviewDailyRemaining()) : MEANING_SESSION_SIZE;
+// beyondCap=true: 1日の上限に達した後、本人が選んで続ける分。1回分の上限だけを守る。
+function meaningPracticeQueue(items, dueOnly, beyondCap = false) {
+  const limit = dueOnly && !beyondCap
+    ? Math.min(MEANING_SESSION_SIZE, meaningReviewDailyRemaining())
+    : MEANING_SESSION_SIZE;
   return withProgressReadCache(() => {
     const candidates = dueOnly ? items.filter((it) => isItemDue(it)) : items;
     return weightedOrder(candidates).slice(0, limit);
   });
 }
 
-async function startMeaningPractice(dueOnly = true, queueOverride = null) {
+// 上限後に続けて解ける機能（Cloudflare 版のみ）が有効か。
+function reviewBeyondCapEnabled() {
+  return featureEnabled("reviewBeyondCap");
+}
+
+async function startMeaningPractice(dueOnly = true, queueOverride = null, beyondCap = false) {
   const grade = currentGrade();
   let limit = MEANING_SESSION_SIZE;
   let queue;
@@ -3374,12 +3391,12 @@ async function startMeaningPractice(dueOnly = true, queueOverride = null) {
       renderHome();
       return false;
     }
-    const dailyRemaining = dueOnly ? meaningReviewDailyRemaining() : null;
-    limit = dueOnly ? Math.min(MEANING_SESSION_SIZE, dailyRemaining) : MEANING_SESSION_SIZE;
+    beyondCap = Boolean(beyondCap) && dueOnly && reviewBeyondCapEnabled();
+    limit = dueOnly && !beyondCap ? Math.min(MEANING_SESSION_SIZE, meaningReviewDailyRemaining()) : MEANING_SESSION_SIZE;
     queue = Array.isArray(queueOverride)
       ? queueOverride.slice(0, limit)
       // await をまたがない同期ブロックとしてまとめて読む
-      : withProgressReadCache(() => meaningPracticeQueue(learnedPooledItems(pooled.items), dueOnly));
+      : withProgressReadCache(() => meaningPracticeQueue(learnedPooledItems(pooled.items), dueOnly, beyondCap));
   } else {
     // 級を判定できないdatasetIdへの保険。現在の回の語句だけで組む。
     queue = shuffle(allVocabularyItems()).slice(0, MEANING_SESSION_SIZE);
@@ -3402,7 +3419,9 @@ async function startMeaningPractice(dueOnly = true, queueOverride = null) {
     dueOnly: Boolean(grade) && dueOnly,
     meaningVersion: grade ? MEANING_PROGRESS_VERSION : null,
     meaningBatchSize: grade ? MEANING_SESSION_SIZE : null,
-    meaningDailyRemaining: grade && dueOnly ? limit : null,
+    meaningDailyRemaining: grade && dueOnly && !beyondCap ? limit : null,
+    // 上限後の追加分。回答は間隔復習の記録へ通常どおり反映し、1日の上限による打ち切りだけをしない。
+    meaningBeyondCap: Boolean(grade) && beyondCap,
   };
   renderSession();
   resetSessionScroll();
@@ -4595,7 +4614,7 @@ function renderCheck(body) {
         // 平均は今回の解答を取り込む前の値を見せる（「前回まで」との比較にするため）。
         session.checkPrevAvgMs = readItemStateOf(item).avgMs;
         recordMeaningResult(item, isCorrect, responseMs);
-        if (session.dueOnly) {
+        if (session.dueOnly && !session.meaningBeyondCap) {
           const dailyRemaining = Number.isInteger(session.meaningDailyRemaining)
             ? Math.max(0, session.meaningDailyRemaining - 1)
             : meaningReviewDailyRemaining();
@@ -4889,7 +4908,9 @@ function renderDone(body) {
         "aria-live": "polite",
       }, meaningSummary.due > 0
         ? meaningDailyRemaining === 0
-          ? `今日の出題上限に達しました。復習待ちの${meaningSummary.due}語句は翌日に回ります。`
+          ? reviewBeyondCapEnabled()
+            ? `今日の出題上限に達しました。復習待ちの${meaningSummary.due}語句は、希望すれば続けて解けます。`
+            : `今日の出題上限に達しました。復習待ちの${meaningSummary.due}語句は翌日に回ります。`
           : `今すぐ復習する残り：${meaningSummary.due}語句`
         : "今すぐ復習する語句はありません"));
     }
@@ -4937,6 +4958,12 @@ function renderDone(body) {
     if (meaningSummary && meaningSummary.due > 0 && meaningDailyRemaining > 0) {
       actions.appendChild(el("button", { class: "cta meaningCta", onclick: () => startMeaningPractice(true) },
         `次の意味だけ復習（今回${Math.min(meaningSummary.due, MEANING_SESSION_SIZE, meaningDailyRemaining)}語句）へ →`));
+    } else if (meaningSummary && meaningSummary.due > 0 && reviewBeyondCapEnabled()) {
+      // 1日の上限に達した後は、本人が選んだときだけ続ける。
+      actions.appendChild(el("button", {
+        class: "secondaryCta meaningCta meaningBeyondCapCta",
+        onclick: () => startMeaningPractice(true, null, true),
+      }, `さらに復習する（今回${Math.min(meaningSummary.due, MEANING_SESSION_SIZE)}語句） →`));
     } else if (!meaningSummary) {
       actions.appendChild(el("button", { class: "cta meaningCta", onclick: () => startMeaningPractice(session.dueOnly) },
         "もう一度、意味だけの復習をする"));
