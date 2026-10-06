@@ -63,6 +63,7 @@ const CHECKS = [
   ["scripts/check-meaning-example-ui.cjs"],
   ["scripts/check-grade-meaning-worker.mjs"],
   ["scripts/check-written-meaning-ui.cjs"],
+  ["scripts/check-review-beyond-cap.cjs"],
 ];
 
 for (const args of CHECKS) {

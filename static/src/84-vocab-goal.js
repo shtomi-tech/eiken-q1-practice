@@ -175,11 +175,18 @@ function meaningMission(
     buttonLabel = "意味だけ復習の続きを再開する";
     delete buttonAttrs.disabled;
     buttonAttrs.onclick = async () => { if (!(await restoreSession())) renderHome(); };
-    if (todayRemaining === 0) note = `今日の出題上限${MEANING_DAILY_LIMIT}問に達しました。未出題の復習語句は翌日に回ります。`;
+    if (todayRemaining === 0 && !meaningResume.meaningBeyondCap) note = `今日の出題上限${MEANING_DAILY_LIMIT}問に達しました。未出題の復習語句は翌日に回ります。`;
   } else if (ready && learned === 0) {
     buttonLabel = "通常学習後に利用できます";
   } else if (ready && due === 0) {
     buttonLabel = "今すぐ復習する語句はありません";
+  } else if (ready && todayRemaining === 0 && reviewBeyondCapEnabled()) {
+    // 上限は既定のまま。続けるかどうかは本人が選ぶので、塗りのCTAにはしない。
+    buttonLabel = `さらに復習する（${Math.min(due, MEANING_SESSION_SIZE)}語句）`;
+    buttonAttrs.class = "secondaryCta meaningMissionCta meaningBeyondCapCta";
+    delete buttonAttrs.disabled;
+    buttonAttrs.onclick = () => startMeaningPractice(true, null, true);
+    note = `今日の出題上限${MEANING_DAILY_LIMIT}問に達しました。復習待ちの${due}語句は翌日に回りますが、希望すれば続けて解けます。結果は通常どおり次回の日に反映されます。`;
   } else if (ready && todayRemaining === 0) {
     buttonLabel = "今日の上限に達しました";
     note = `今日の出題上限${MEANING_DAILY_LIMIT}問に達しました。復習待ちの${due}語句は翌日に回ります。`;

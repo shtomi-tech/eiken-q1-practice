@@ -434,7 +434,8 @@ function resumeDescription(resume) {
       const total = Array.isArray(resume.meaningWrongItems) ? resume.meaningWrongItems.length : 0;
       return `意味だけ復習・誤答見直し ${checked}/${total}`;
     }
-    const label = resume.dueOnly ? "意味だけ復習" : "全語句の意味確認";
+    const label = resume.meaningBeyondCap ? "意味だけ復習（上限後の追加分）"
+      : resume.dueOnly ? "意味だけ復習" : "全語句の意味確認";
     return `${label} ${Number(resume.checkIdx || 0) + 1}/${resume.checkOrder?.length || 1}`;
   }
   if (resume.mode === "final") return `最終チェック ${Number(resume.checkIdx || 0) + 1}/${resume.checkOrder?.length || 1}`;
@@ -466,6 +467,7 @@ function saveResume() {
     meaningCorrect: session.meaningCorrect || 0,
     finalCorrect: session.finalCorrect || 0,
     dueOnly: Boolean(session.dueOnly),
+    meaningBeyondCap: Boolean(session.meaningBeyondCap),
     meaningVersion: session.meaningVersion || null,
     meaningBatchSize: session.meaningBatchSize || null,
     meaningWrongItems: (session.meaningWrongItems || []).map(itemSnapshot),
@@ -563,7 +565,7 @@ async function restoreSession() {
   const contextOrder = (saved.contextOrder || []).map((s) => resolveItem(s, pool)).filter(Boolean);
   const meaningWrongItems = (saved.meaningWrongItems || []).map((s) => resolveItem(s, pool)).filter(Boolean);
   let restoredSnapshot = saved;
-  if (saved.mode === "meaning" && saved.dueOnly && saved.stage === "check") {
+  if (saved.mode === "meaning" && saved.dueOnly && !saved.meaningBeyondCap && saved.stage === "check") {
     const checkIdx = Math.max(0, Number(saved.checkIdx) || 0);
     const completedInSession = Math.min(checkOrder.length, checkIdx + (saved.checkAnswered ? 1 : 0));
     const dailyRemaining = meaningReviewDailyRemaining();
@@ -594,7 +596,7 @@ async function restoreSession() {
     && (restoredSnapshot.meaningVersion !== MEANING_PROGRESS_VERSION
       || restoredSnapshot.meaningBatchSize !== MEANING_SESSION_SIZE
       || checkOrder.length > MEANING_SESSION_SIZE)) {
-    return Boolean(await startMeaningPractice(true));
+    return Boolean(await startMeaningPractice(true, null, Boolean(restoredSnapshot.meaningBeyondCap)));
   }
   session = {
     ...restoredSnapshot,
@@ -613,7 +615,7 @@ async function restoreSession() {
       : (Array.isArray(saved.audioElapsedLog) ? saved.audioElapsedLog : []),
     meaningRtLog: Array.isArray(saved.meaningRtLog) ? saved.meaningRtLog : [],
   };
-  if (session.mode === "meaning" && session.dueOnly) {
+  if (session.mode === "meaning" && session.dueOnly && !session.meaningBeyondCap) {
     session.meaningDailyRemaining = meaningReviewDailyRemaining();
   }
   if (session.mode === "learn") normalizeLearnSessionResume();

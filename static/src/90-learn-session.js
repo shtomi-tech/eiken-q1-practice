@@ -115,15 +115,23 @@ function weightedOrder(items) {
   return shuffled.sort((a, b) => scores.get(b) - scores.get(a));
 }
 // dueOnly=true: 復習日が来た語だけ。未学習語句や次回予定の語句は補充しない。
-function meaningPracticeQueue(items, dueOnly) {
-  const limit = dueOnly ? Math.min(MEANING_SESSION_SIZE, meaningReviewDailyRemaining()) : MEANING_SESSION_SIZE;
+// beyondCap=true: 1日の上限に達した後、本人が選んで続ける分。1回分の上限だけを守る。
+function meaningPracticeQueue(items, dueOnly, beyondCap = false) {
+  const limit = dueOnly && !beyondCap
+    ? Math.min(MEANING_SESSION_SIZE, meaningReviewDailyRemaining())
+    : MEANING_SESSION_SIZE;
   return withProgressReadCache(() => {
     const candidates = dueOnly ? items.filter((it) => isItemDue(it)) : items;
     return weightedOrder(candidates).slice(0, limit);
   });
 }
 
-async function startMeaningPractice(dueOnly = true, queueOverride = null) {
+// 上限後に続けて解ける機能（Cloudflare 版のみ）が有効か。
+function reviewBeyondCapEnabled() {
+  return featureEnabled("reviewBeyondCap");
+}
+
+async function startMeaningPractice(dueOnly = true, queueOverride = null, beyondCap = false) {
   const grade = currentGrade();
   let limit = MEANING_SESSION_SIZE;
   let queue;
@@ -136,12 +144,12 @@ async function startMeaningPractice(dueOnly = true, queueOverride = null) {
       renderHome();
       return false;
     }
-    const dailyRemaining = dueOnly ? meaningReviewDailyRemaining() : null;
-    limit = dueOnly ? Math.min(MEANING_SESSION_SIZE, dailyRemaining) : MEANING_SESSION_SIZE;
+    beyondCap = Boolean(beyondCap) && dueOnly && reviewBeyondCapEnabled();
+    limit = dueOnly && !beyondCap ? Math.min(MEANING_SESSION_SIZE, meaningReviewDailyRemaining()) : MEANING_SESSION_SIZE;
     queue = Array.isArray(queueOverride)
       ? queueOverride.slice(0, limit)
       // await をまたがない同期ブロックとしてまとめて読む
-      : withProgressReadCache(() => meaningPracticeQueue(learnedPooledItems(pooled.items), dueOnly));
+      : withProgressReadCache(() => meaningPracticeQueue(learnedPooledItems(pooled.items), dueOnly, beyondCap));
   } else {
     // 級を判定できないdatasetIdへの保険。現在の回の語句だけで組む。
     queue = shuffle(allVocabularyItems()).slice(0, MEANING_SESSION_SIZE);
@@ -164,7 +172,9 @@ async function startMeaningPractice(dueOnly = true, queueOverride = null) {
     dueOnly: Boolean(grade) && dueOnly,
     meaningVersion: grade ? MEANING_PROGRESS_VERSION : null,
     meaningBatchSize: grade ? MEANING_SESSION_SIZE : null,
-    meaningDailyRemaining: grade && dueOnly ? limit : null,
+    meaningDailyRemaining: grade && dueOnly && !beyondCap ? limit : null,
+    // 上限後の追加分。回答は間隔復習の記録へ通常どおり反映し、1日の上限による打ち切りだけをしない。
+    meaningBeyondCap: Boolean(grade) && beyondCap,
   };
   renderSession();
   resetSessionScroll();

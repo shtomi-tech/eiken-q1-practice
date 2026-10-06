@@ -119,7 +119,9 @@ function renderDone(body) {
         "aria-live": "polite",
       }, meaningSummary.due > 0
         ? meaningDailyRemaining === 0
-          ? `今日の出題上限に達しました。復習待ちの${meaningSummary.due}語句は翌日に回ります。`
+          ? reviewBeyondCapEnabled()
+            ? `今日の出題上限に達しました。復習待ちの${meaningSummary.due}語句は、希望すれば続けて解けます。`
+            : `今日の出題上限に達しました。復習待ちの${meaningSummary.due}語句は翌日に回ります。`
           : `今すぐ復習する残り：${meaningSummary.due}語句`
         : "今すぐ復習する語句はありません"));
     }
@@ -167,6 +169,12 @@ function renderDone(body) {
     if (meaningSummary && meaningSummary.due > 0 && meaningDailyRemaining > 0) {
       actions.appendChild(el("button", { class: "cta meaningCta", onclick: () => startMeaningPractice(true) },
         `次の意味だけ復習（今回${Math.min(meaningSummary.due, MEANING_SESSION_SIZE, meaningDailyRemaining)}語句）へ →`));
+    } else if (meaningSummary && meaningSummary.due > 0 && reviewBeyondCapEnabled()) {
+      // 1日の上限に達した後は、本人が選んだときだけ続ける。
+      actions.appendChild(el("button", {
+        class: "secondaryCta meaningCta meaningBeyondCapCta",
+        onclick: () => startMeaningPractice(true, null, true),
+      }, `さらに復習する（今回${Math.min(meaningSummary.due, MEANING_SESSION_SIZE)}語句） →`));
     } else if (!meaningSummary) {
       actions.appendChild(el("button", { class: "cta meaningCta", onclick: () => startMeaningPractice(session.dueOnly) },
         "もう一度、意味だけの復習をする"));

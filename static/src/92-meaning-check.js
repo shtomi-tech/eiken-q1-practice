@@ -79,7 +79,7 @@ function renderCheck(body) {
         // 平均は今回の解答を取り込む前の値を見せる（「前回まで」との比較にするため）。
         session.checkPrevAvgMs = readItemStateOf(item).avgMs;
         recordMeaningResult(item, isCorrect, responseMs);
-        if (session.dueOnly) {
+        if (session.dueOnly && !session.meaningBeyondCap) {
           const dailyRemaining = Number.isInteger(session.meaningDailyRemaining)
             ? Math.max(0, session.meaningDailyRemaining - 1)
             : meaningReviewDailyRemaining();
