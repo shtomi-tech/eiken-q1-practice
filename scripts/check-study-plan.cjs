@@ -199,7 +199,7 @@ assert.equal(plan.migrateFirstAnsweredAt(legacy), false, "移行は冪等にす�
   assert.equal(by.write.remaining, 4);
   assert.equal(s1.activeCount, 3);
   const capped = plan.dailyQuotaSummary(now, quotaPlan, { reviewDone: 30, reviewDue: 500 });
-  assert.equal(capped.items.find((item) => item.id === "review").goal, 100, "復習は最大100語句");
+  assert.equal(capped.items.find((item) => item.id === "review").goal, 120, "復習は最大120語句");
   const none = plan.dailyQuotaSummary(now, quotaPlan, { writeEnabled: false });
   assert.equal(none.items.find((item) => item.id === "review").active, true, "期限が無い日も復習は達成として数える");
   assert.equal(none.items.find((item) => item.id === "review").remaining, 0);
