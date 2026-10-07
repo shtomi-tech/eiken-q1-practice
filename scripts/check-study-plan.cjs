@@ -16,6 +16,9 @@ const exposed = [
   "migrateFirstAnsweredAt",
   "studyPlanStorageKey",
   "isStudyPlanGrade",
+  "normalizeDailyQuota",
+  "countEventsToday",
+  "dailyQuotaSummary",
 ];
 
 assert.match(js, /const STUDY_PLAN_KEY = "eiken_q1_study_plan_v1";/);
@@ -165,5 +168,42 @@ assert.equal(legacy.units[2].firstAnsweredAt, iso(localDate(2026, 8, 20)), "既�
 assert.equal(legacy.units[3].firstAnsweredAt, undefined, "日時不明の旧回答へ推測日時を作らない");
 assert.equal(legacy.migrations.studyPlanFirstAnsweredAtV1, 1);
 assert.equal(plan.migrateFirstAnsweredAt(legacy), false, "移行は冪等にする");
+
+// --- 1日のノルマ（今日・復習・書く） ---
+{
+  const at = (h, m = 0, d = 2) => new Date(2026, 8, d, h, m).toISOString();
+  const now = new Date(2026, 8, 2, 12);
+  const quotaPlan = { version: 1, questionGoal: 50, dailyQuestionGoal: 3, weekStartsOn: 1 };
+  assert.equal(plan.normalizeDailyQuota(null).write, 10, "書くの既定は1回分の10語句");
+  assert.equal(plan.normalizeDailyQuota({ write: 0 }).write, 0, "0はノルマから外す");
+  assert.equal(plan.normalizeDailyQuota({ write: 61 }).write, 10, "上限超えは既定へ");
+  assert.equal(plan.normalizeDailyQuota({ write: "" }).write, 10, "空文字は0扱いにせず既定へ");
+  const history = [
+    { kind: "written-meaning", result: "learned", at: at(9) },
+    { kind: "written-meaning", result: "reask-correct", at: at(9, 5) },
+    { kind: "written-meaning", result: "shaky", at: at(9, 0, 1) },
+    { kind: "question", at: at(10) },
+  ];
+  assert.equal(plan.countEventsToday(history, now, (e) => e.kind === "written-meaning"), 2, "今日の分だけ数える");
+  const entries = [
+    { datasetId: "eiken1-2024-1", q: 1, unit: { firstAnsweredAt: at(8) } },
+    { datasetId: "eiken1-2024-1", q: 2, unit: { firstAnsweredAt: at(8, 0, 1) } },
+  ];
+  const s1 = plan.dailyQuotaSummary(now, { ...quotaPlan, dailyQuota: { write: 5 } }, { entries, reviewDone: 4, reviewDue: 6, history });
+  const by = Object.fromEntries(s1.items.map((item) => [item.id, item]));
+  assert.equal(by.today.done, 1);
+  assert.equal(by.today.remaining, 2, "今日は 3−1");
+  assert.equal(by.review.goal, 10, "復習の目標は 今日答えた4 + 期限6");
+  assert.equal(by.review.remaining, 6);
+  assert.equal(by.write.done, 1, "再出題・前日分は数えない");
+  assert.equal(by.write.remaining, 4);
+  assert.equal(s1.activeCount, 3);
+  const capped = plan.dailyQuotaSummary(now, quotaPlan, { reviewDone: 30, reviewDue: 500 });
+  assert.equal(capped.items.find((item) => item.id === "review").goal, 100, "復習は最大100語句");
+  const none = plan.dailyQuotaSummary(now, quotaPlan, { writeEnabled: false });
+  assert.equal(none.items.find((item) => item.id === "review").active, true, "期限が無い日も復習は達成として数える");
+  assert.equal(none.items.find((item) => item.id === "review").remaining, 0);
+  assert.equal(none.items.find((item) => item.id === "write").active, false, "書く演習が無い公開先では書くを外す");
+}
 
 console.log("study plan logic contract: OK");

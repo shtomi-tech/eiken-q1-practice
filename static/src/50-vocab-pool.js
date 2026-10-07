@@ -110,11 +110,13 @@ function meaningDistractors(item, count = 3) {
 }
 
 const SPACED_REVIEW_GRADE_CODES = new Set(["eiken5", "eikenp2", "eiken2", "eikenp1", "eiken1"]);
-function meaningReviewDailyCount(now = new Date()) {
+// grade を渡すとその級の分だけを数える（1日のノルマ用）。省略時は1日の上限と同じく全級の合計。
+function meaningReviewDailyCount(now = new Date(), grade = null) {
   const today = spacedReviewDayKey(now);
   const source = Object.keys(ALL_DATASETS).length ? ALL_DATASETS : DATASETS;
   return withProgressReadCache(() => Object.keys(source).reduce((total, datasetId) => {
     if (!SPACED_REVIEW_GRADE_CODES.has(gradeOf(datasetId))) return total;
+    if (grade && gradeOf(datasetId) !== grade) return total;
     const progress = progressFor(datasetId) || {};
     const saved = progress.spacedReviewDaily;
     const count = saved?.date === today

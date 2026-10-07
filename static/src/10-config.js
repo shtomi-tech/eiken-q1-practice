@@ -70,7 +70,7 @@ let wordOriginMap = {};
 // 公開先ごとの機能の出し分け。新機能は Cloudflare 版だけに出す。
 // deployTarget は scripts/write-config.mjs が static/config.json に書く（Cloudflare のデプロイだけ "cloudflare"）。
 // GitHub Pages・Netlify・config.json の無いローカルでは空なので、ここに挙げた機能は出ない。
-const CLOUDFLARE_ONLY_FEATURES = ["writtenMeaning", "homeTabs", "reviewBeyondCap"];
+const CLOUDFLARE_ONLY_FEATURES = ["writtenMeaning", "homeTabs", "reviewBeyondCap", "dailyQuota"];
 let appConfig = {};
 async function loadAppConfig() {
   try {
@@ -204,6 +204,69 @@ function studyPlanSummary(now = new Date(), plan = {}, entries = []) {
     weekStart,
     weekEnd,
   };
+}
+
+// --- 1日のノルマ（今日・復習・書く。古文単語アプリから移植） ---
+// 今日: 新しく解いた設問（dailyQuestionGoal と同じ値・同じ数え方）。
+// 復習: 設定せず「今日答えた数 + いま期限が来ている数」を上限 REVIEW_QUOTA_MAX で自動に決める。
+//       答えるほど期限の数が減るので、目標は動かずに残りだけが減る。期限の語句が無ければ目標0（達成）。
+// 書く: 意味を書く演習で出題された語句（もう一度の再出題は数えない）。0 でノルマから外す。
+// 数は記録の時刻から毎回数え直すので、日付が変われば0に戻る。設定は学習目標（studyPlan）の dailyQuota に保存する。
+const REVIEW_QUOTA_MAX = 100;
+const DAILY_QUOTA_LIMITS = { write: { def: 10, max: 60 } };
+
+function normalizeDailyQuota(candidate) {
+  const source = candidate && typeof candidate === "object" && !Array.isArray(candidate) ? candidate : {};
+  return Object.fromEntries(Object.entries(DAILY_QUOTA_LIMITS).map(([id, { def, max }]) => {
+    // 空文字・null は Number() で 0 になるため、未設定として既定値へ戻す。
+    const raw = source[id];
+    const value = raw === "" || raw == null ? NaN : Number(raw);
+    return [id, Number.isInteger(value) && value >= 0 && value <= max ? value : def];
+  }));
+}
+
+function countEventsToday(events, now = new Date(), predicate = () => true) {
+  const todayStart = startOfLocalDay(now);
+  const tomorrowStart = new Date(todayStart);
+  tomorrowStart.setDate(tomorrowStart.getDate() + 1);
+  return (Array.isArray(events) ? events : []).filter((event) => {
+    if (!event || !isValidIsoDate(event.at) || !predicate(event)) return false;
+    const at = new Date(event.at).getTime();
+    return at >= todayStart.getTime() && at < tomorrowStart.getTime();
+  }).length;
+}
+
+function dailyQuotaSummary(now = new Date(), plan = {}, {
+  entries = [],
+  reviewDone = 0,
+  reviewDue = 0,
+  history = [],
+  writeEnabled = true,
+} = {}) {
+  const quota = normalizeDailyQuota(plan?.dailyQuota);
+  const nonNegative = (value) => Math.max(0, Math.floor(Number(value) || 0));
+  const done = {
+    today: studyPlanSummary(now, plan, entries).answeredToday,
+    review: nonNegative(reviewDone),
+    write: countEventsToday(history, now, (event) => event.kind === "written-meaning"
+      && !String(event.result || "").startsWith("reask-")),
+  };
+  const goals = {
+    today: Math.max(1, Number(plan?.dailyQuestionGoal) || 1),
+    review: Math.min(REVIEW_QUOTA_MAX, done.review + nonNegative(reviewDue)),
+    write: writeEnabled ? quota.write : 0,
+  };
+  const items = ["today", "review", "write"].map((id) => ({
+    id,
+    goal: goals[id],
+    done: done[id],
+    remaining: Math.max(0, goals[id] - done[id]),
+    // 復習は自動なので常にノルマに含める（目標0なら達成）。
+    active: id === "review" || goals[id] > 0,
+  }));
+  const active = items.filter((item) => item.active);
+  const achievedCount = active.filter((item) => item.remaining === 0).length;
+  return { items, activeCount: active.length, achievedCount, allDone: achievedCount === active.length };
 }
 
 function vocabularyForecast(plan = {}) {
