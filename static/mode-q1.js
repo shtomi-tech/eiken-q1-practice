@@ -226,7 +226,7 @@ function studyPlanSummary(now = new Date(), plan = {}, entries = []) {
 //       答えるほど期限の数が減るので、目標は動かずに残りだけが減る。期限の語句が無ければ目標0（達成）。
 // 書く: 意味を書く演習で出題された語句（もう一度の再出題は数えない）。0 でノルマから外す。
 // 数は記録の時刻から毎回数え直すので、日付が変われば0に戻る。設定は学習目標（studyPlan）の dailyQuota に保存する。
-const REVIEW_QUOTA_MAX = 100;
+const REVIEW_QUOTA_MAX = 120; // 意味だけ復習の1日の出題上限（MEANING_DAILY_LIMIT）と同じ
 const DAILY_QUOTA_LIMITS = { write: { def: 10, max: 60 } };
 
 function normalizeDailyQuota(candidate) {
