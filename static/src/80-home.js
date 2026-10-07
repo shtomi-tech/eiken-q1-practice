@@ -147,6 +147,168 @@ function studyPlanPanel(entries = []) {
   return panel;
 }
 
+// --- 1日のノルマ（今日の面の先頭。Cloudflare 版限定 featureEnabled("dailyQuota")） ---
+// 今日・復習・書くの残り数を出す。計算は dailyQuotaSummary（10-config.js）。
+const DAILY_QUOTA_ITEMS = {
+  today: { label: "今日", unit: "問", note: "新しい設問を解く", tab: null },
+  review: { label: "復習", unit: "語句", note: `期限が来た語句から自動（最大${REVIEW_QUOTA_MAX}語句）`, tab: "review" },
+  write: { label: "書く", unit: "語句", note: "意味を書く演習で答える", tab: "write" },
+};
+
+function gradeHistoryEvents(grade) {
+  return withProgressReadCache(() => gradeDatasetIds(grade).flatMap((id) => {
+    const history = (progressFor(id) || {}).history;
+    return Array.isArray(history) ? history : [];
+  }));
+}
+
+function dailyQuotaCard(entries = [], reviewDue = 0, reviewReady = true) {
+  const grade = currentGrade();
+  const plan = currentStudyPlan(grade) || defaultStudyPlan(grade);
+  const limit = studyPlanQuestionLimit(grade);
+  const writeEnabled = featureEnabled("writtenMeaning");
+  const summary = dailyQuotaSummary(new Date(), plan, {
+    entries,
+    reviewDone: meaningReviewDailyCount(new Date(), grade),
+    reviewDue,
+    history: gradeHistoryEvents(grade),
+    writeEnabled,
+  });
+  // 語彙の読み込み前は期限の数が分からないので、復習の行を出さない（読み込み後に再描画される）。
+  const items = summary.items.filter((item) => item.active && (item.id !== "review" || reviewReady));
+  const achieved = items.filter((item) => item.remaining === 0).length;
+  const allDone = items.length > 0 && achieved === items.length;
+  const num = (value) => Number(value).toLocaleString("ja-JP");
+
+  const list = el("ul", { class: "quotaList" });
+  items.forEach((item) => {
+    const meta = DAILY_QUOTA_ITEMS[item.id];
+    const done = item.remaining === 0;
+    const shown = Math.min(item.done, item.goal);
+    const track = el("div", {
+      class: "studyPlanProgress quotaTrack",
+      role: "progressbar",
+      "aria-label": `${meta.label}のノルマ`,
+      "aria-valuemin": "0",
+      "aria-valuemax": String(Math.max(1, item.goal)),
+      "aria-valuenow": String(item.goal > 0 ? shown : 1),
+      "aria-valuetext": done ? `${meta.label}は達成` : `${meta.label}はあと${item.remaining}${meta.unit}`,
+    });
+    const fill = el("span", { class: "studyPlanProgressFill" });
+    fill.style.width = item.goal > 0 ? `${(shown / item.goal) * 100}%` : "100%";
+    track.appendChild(fill);
+    const jump = meta.tab && homeTabsEnabled() ? el("button", {
+      class: "quotaJump",
+      type: "button",
+      "aria-label": `${meta.label}を開く`,
+      onclick: () => selectHomeTab(meta.tab, true),
+    }, "開く →") : null;
+    list.appendChild(el("li", { class: `quotaRow${done ? " is-done" : ""}` },
+      el("div", { class: "quotaRowHead" },
+        el("strong", { class: "quotaLabel" }, meta.label),
+        el("span", { class: "quotaCount" }, item.goal > 0
+          ? `${num(shown)} / ${num(item.goal)}${meta.unit}`
+          : "期限の来た語句なし"),
+        el("span", { class: "quotaRemain" }, done ? "✓ 達成" : `あと${num(item.remaining)}${meta.unit}`),
+      ),
+      track,
+      el("div", { class: "quotaRowFoot" }, el("span", { class: "quotaNote" }, meta.note), jump),
+    ));
+  });
+
+  // 設定。今日は学習目標の「1日の問題目標」と同じ値。復習は自動なので入力欄を置かない。
+  const settingsId = "dailyQuotaSettings";
+  const settingsToggle = el("button", {
+    class: "ghost studyPlanSettingsToggle",
+    type: "button",
+    "aria-expanded": "false",
+    "aria-controls": settingsId,
+  }, "ノルマを設定");
+  const settings = el("form", { class: "studyPlanSettings hide", id: settingsId, "aria-labelledby": "dailyQuotaSettingsTitle" });
+  const quota = normalizeDailyQuota(plan.dailyQuota);
+  const todayInput = el("input", { type: "number", min: "1", max: String(limit), value: String(plan.dailyQuestionGoal), inputmode: "numeric", name: "quota-today" });
+  const writeMax = DAILY_QUOTA_LIMITS.write.max;
+  const writeInput = writeEnabled
+    ? el("input", { type: "number", min: "0", max: String(writeMax), value: String(quota.write), inputmode: "numeric", name: "quota-write" })
+    : null;
+  const error = el("p", { class: "studyPlanFormError", role: "alert", "aria-live": "polite" });
+  const field = (label, input, hint) => el("label", { class: "studyPlanField" },
+    el("span", { class: "fieldLabel" }, label),
+    input,
+    el("span", { class: "studyPlanFieldHint" }, hint),
+  );
+  const closeSettings = () => {
+    todayInput.value = String(plan.dailyQuestionGoal);
+    if (writeInput) writeInput.value = String(quota.write);
+    error.textContent = "";
+    settings.classList.add("hide");
+    settingsToggle.setAttribute("aria-expanded", "false");
+    settingsToggle.focus();
+  };
+  settings.appendChild(el("h4", { id: "dailyQuotaSettingsTitle" }, "1日のノルマ"));
+  settings.appendChild(el("p", { class: "hint" },
+    `復習は、その時点で期限が来ている語句数から自動で決まります（最大${REVIEW_QUOTA_MAX}語句）。${writeInput ? "書くを0にするとノルマから外します。" : ""}`));
+  settings.appendChild(el("div", { class: "studyPlanFields" },
+    field("今日（問）", todayInput, `新しい設問（1〜${num(limit)}）`),
+    writeInput ? field("書く（語句）", writeInput, `意味を書く演習（0〜${writeMax}）`) : null,
+  ));
+  settings.appendChild(error);
+  settings.appendChild(el("div", { class: "actions studyPlanFormActions" },
+    el("button", { class: "cta", type: "submit" }, "保存"),
+    el("button", { class: "ghost", type: "button", onclick: closeSettings }, "キャンセル"),
+  ));
+  settings.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const read = (input) => (input.value.trim() === "" ? NaN : Number(input.value));
+    const dailyQuestionGoal = read(todayInput);
+    if (!Number.isInteger(dailyQuestionGoal) || dailyQuestionGoal < 1 || dailyQuestionGoal > limit) {
+      error.textContent = `今日は1〜${num(limit)}問で入力してください。`;
+      todayInput.focus();
+      return;
+    }
+    const write = writeInput ? read(writeInput) : quota.write;
+    if (!Number.isInteger(write) || write < 0 || write > writeMax) {
+      error.textContent = `書くは0〜${writeMax}語句で入力してください。`;
+      writeInput?.focus();
+      return;
+    }
+    studyPlans[grade] = normalizeStudyPlan({
+      ...plan,
+      dailyQuestionGoal,
+      dailyQuota: normalizeDailyQuota({ ...quota, write }),
+    }, limit);
+    saveStudyPlan(grade);
+    if (cloud) cloud.queueSave({
+      datasetId: state.datasetId,
+      progress: state.progress,
+      meta: cloudMeta(),
+    });
+    renderHome();
+  });
+  settingsToggle.addEventListener("click", () => {
+    if (settings.classList.contains("hide")) {
+      settings.classList.remove("hide");
+      settingsToggle.setAttribute("aria-expanded", "true");
+      todayInput.focus();
+    } else {
+      closeSettings();
+    }
+  });
+
+  const headline = allDone ? "✓ 今日のノルマ達成" : `${num(items.length)}項目中 ${num(achieved)}項目達成`;
+  return el("section", { class: `card dailyQuota${allDone ? " is-done" : ""}`, "aria-labelledby": "dailyQuotaTitle" },
+    el("div", { class: "studyPlanHead" },
+      el("div", {},
+        el("p", { class: "label" }, "1日のノルマ"),
+        el("h2", { id: "dailyQuotaTitle" }, headline),
+      ),
+      settingsToggle,
+    ),
+    list,
+    settings,
+  );
+}
+
 function contextDiscoveryCard() {
   const current = dataset();
   if (!current?.contextUrl) return null;
@@ -225,6 +387,10 @@ function renderHomeContent() {
         ? "文脈から意味を発見 → 暗記カードで整理 → 意味を思い出す → 本番形式で使う、の学習サイクル。"
         : "暗記カードで整理 → 意味を思い出す → 本番形式で使う、の学習サイクル。"),
     ));
+  }
+
+  if (showStudyPlan && featureEnabled("dailyQuota")) {
+    home.appendChild(dailyQuotaCard(studyPlanEntries, meaningDueCount, Boolean(pooled)));
   }
 
   // 層1：今日の学習（現在セット名・主CTA・その理由）。問題セット選択は独立sectionへ分離。
