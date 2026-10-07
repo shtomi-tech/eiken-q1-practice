@@ -8,6 +8,8 @@
   --surface-soft: #f5f0e8;
   --surface-strong: #e8e0d2;
   --line: #e6dfd8;
+  /* 操作要素（ghostボタン・ノルマボタン）の通常時の枠。罫線用の --line より強くし、非テキスト3:1を満たす（古文アプリと共通）。 */
+  --control-border: #8a8478;
   --rule-underline: 1.5px solid var(--ink);
   --muted: #615c54;
   --clay: #a9583e;
@@ -23,6 +25,9 @@
   --r-md: 8px;
   --r-lg: 12px;
   --r-pill: 9999px;
+  /* カードの内側と間隔。間隔は常に内側より広くし、カードの境界を余白で読めるようにする（古文アプリと共通）。 */
+  --card-padding: 24px;
+  --card-gap: 32px;
   --motion-press: 80ms;
   --motion-release: 180ms;
   --motion-feedback: 200ms;
@@ -120,7 +125,7 @@ button:hover { background: #000; }
 button:disabled { opacity: .45; cursor: default; }
 button:active:not(:disabled) { transform: scale(.97); transition-duration: var(--motion-press); }
 
-button.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+button.ghost { background: transparent; color: var(--ink); border: 1px solid var(--control-border); }
 button.ghost:hover:not(:disabled) { background: var(--ink); color: var(--parchment); border-color: var(--ink); }
 .smallGhost { min-height: 44px; padding: 10px 14px; font-size: 12px; }
 
@@ -134,7 +139,11 @@ select, input {
   padding: 8px 10px;
 }
 
-.wrap { max-width: 960px; margin: 0 auto; padding: 24px 16px 64px; }
+.wrap { max-width: 960px; margin: 0 auto; padding: 40px 16px 64px; }
+@media (max-width: 640px) {
+  :root { --card-padding: 18px; --card-gap: 24px; }
+  .wrap { padding-top: 24px; }
+}
 
 .top {
   position: relative;
@@ -231,8 +240,8 @@ h2 {
 .card {
   background: var(--paper);
   border-radius: var(--r-lg);
-  margin-bottom: 16px;
-  padding: 20px;
+  margin-bottom: var(--card-gap);
+  padding: var(--card-padding);
 }
 
 .hero { background: var(--ink); color: var(--parchment); }
@@ -1174,7 +1183,7 @@ h2 {
 .top { z-index: 10; }
 .quotaMenu { margin-left: auto; align-self: flex-start; }
 .quotaMenu[hidden] { display: none; }
-.quotaMenuButton { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 6px 14px; border: 1px solid var(--line); border-radius: var(--r-pill); background: var(--parchment); color: var(--ink); font-weight: 600; cursor: pointer; }
+.quotaMenuButton { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 6px 14px; border: 1px solid var(--control-border); border-radius: var(--r-pill); background: var(--parchment); color: var(--ink); font-weight: 600; cursor: pointer; }
 .quotaMenuButton:hover, .quotaMenuButton[aria-expanded="true"] { background: var(--paper); }
 .quotaMenuCount { min-width: 20px; padding: 1px 6px; border-radius: var(--r-pill); background: var(--clay); color: var(--parchment); font-family: var(--mono); font-size: 11px; line-height: 18px; text-align: center; }
 .quotaMenuButton.is-done .quotaMenuCount { background: var(--ok); }
