@@ -162,7 +162,8 @@ function gradeHistoryEvents(grade) {
   }));
 }
 
-function dailyQuotaCard(entries = [], reviewDue = 0, reviewReady = true) {
+// タブのバッジとノルマカードが同じ集計を使うよう、描画のたびに1回だけ数える。
+function dailyQuotaState(entries = [], reviewDue = 0, reviewReady = true) {
   const grade = currentGrade();
   const plan = currentStudyPlan(grade) || defaultStudyPlan(grade);
   const limit = studyPlanQuestionLimit(grade);
@@ -178,6 +179,26 @@ function dailyQuotaCard(entries = [], reviewDue = 0, reviewReady = true) {
   const items = summary.items.filter((item) => item.active && (item.id !== "review" || reviewReady));
   const achieved = items.filter((item) => item.remaining === 0).length;
   const allDone = items.length > 0 && achieved === items.length;
+  return { grade, plan, limit, writeEnabled, items, achieved, allDone };
+}
+
+// タブのバッジ。ノルマの残り数を出し、達成した項目は ✓。ノルマに含めていない項目には付けない。
+function quotaTabBadges(quota) {
+  const num = (value) => Number(value).toLocaleString("ja-JP");
+  return Object.fromEntries(quota.items.map((item) => {
+    const meta = DAILY_QUOTA_ITEMS[item.id];
+    const done = item.remaining === 0;
+    return [item.id, {
+      done,
+      text: done ? "✓" : num(item.remaining),
+      label: done ? `${meta.label}のノルマ達成` : `${meta.label}のノルマ あと${item.remaining}${meta.unit}`,
+    }];
+  }));
+}
+
+const QUOTA_OPEN_KEY = "eiken_q1_quota_open_v1";
+
+function dailyQuotaCard({ grade, plan, limit, writeEnabled, items, achieved, allDone }) {
   const num = (value) => Number(value).toLocaleString("ja-JP");
 
   const list = el("ul", { class: "quotaList" });
@@ -296,16 +317,34 @@ function dailyQuotaCard(entries = [], reviewDue = 0, reviewReady = true) {
   });
 
   const headline = allDone ? "✓ 今日のノルマ達成" : `${num(items.length)}項目中 ${num(achieved)}項目達成`;
+  // 中身（各項目と設定）はふだん畳んでおき、ボタンで開く。残り数はタブのバッジで見える。
+  const bodyId = "dailyQuotaBody";
+  const body = el("div", { class: "quotaBody", id: bodyId }, el("div", { class: "quotaBodyActions" }, settingsToggle), list, settings);
+  let open = false;
+  try { open = localStorage.getItem(QUOTA_OPEN_KEY) === "1"; } catch (e) { /* ignore */ }
+  body.hidden = !open;
+  const bodyToggle = el("button", {
+    class: "ghost studyPlanSettingsToggle quotaBodyToggle",
+    type: "button",
+    "aria-expanded": String(open),
+    "aria-controls": bodyId,
+  }, open ? "閉じる" : "ノルマを表示");
+  bodyToggle.addEventListener("click", () => {
+    const next = body.hidden;
+    body.hidden = !next;
+    bodyToggle.setAttribute("aria-expanded", String(next));
+    bodyToggle.textContent = next ? "閉じる" : "ノルマを表示";
+    writeStored(QUOTA_OPEN_KEY, next ? "1" : "0");
+  });
   return el("section", { class: `card dailyQuota${allDone ? " is-done" : ""}`, "aria-labelledby": "dailyQuotaTitle" },
     el("div", { class: "studyPlanHead" },
       el("div", {},
         el("p", { class: "label" }, "1日のノルマ"),
         el("h2", { id: "dailyQuotaTitle" }, headline),
       ),
-      settingsToggle,
+      bodyToggle,
     ),
-    list,
-    settings,
+    body,
   );
 }
 
@@ -389,9 +428,10 @@ function renderHomeContent() {
     ));
   }
 
-  if (showStudyPlan && featureEnabled("dailyQuota")) {
-    home.appendChild(dailyQuotaCard(studyPlanEntries, meaningDueCount, Boolean(pooled)));
-  }
+  const quota = showStudyPlan && featureEnabled("dailyQuota")
+    ? dailyQuotaState(studyPlanEntries, meaningDueCount, Boolean(pooled))
+    : null;
+  if (quota) home.appendChild(dailyQuotaCard(quota));
 
   // 層1：今日の学習（現在セット名・主CTA・その理由）。問題セット選択は独立sectionへ分離。
   const summary = el("section", { class: "card" });
@@ -595,7 +635,10 @@ function renderHomeContent() {
     ));
     home.appendChild(utility);
   }
-  arrangeHomeTabs(home, { review: hasMeaningDue ? meaningDueCount : 0 });
+  // ノルマがある公開先ではタブにノルマの残り数を、無い公開先では従来どおり復習の期限数を出す。
+  arrangeHomeTabs(home, quota ? quotaTabBadges(quota) : {
+    review: hasMeaningDue ? { text: String(meaningDueCount), label: `${meaningDueCount}語句` } : null,
+  });
 }
 
 /* ---- ホームのタブ（Cloudflare 版限定。featureEnabled("homeTabs")） ----
@@ -666,7 +709,7 @@ function arrangeHomeTabs(home, badges) {
   const active = tabs.some((tab) => tab.id === stored) ? stored : tabs[0].id;
   const bar = el("div", { class: "homeTabs", role: "tablist", "aria-label": "ホームの表示" });
   tabs.forEach((tab, i) => {
-    const badge = Number(badges[tab.id]) || 0;
+    const badge = badges[tab.id];
     const button = el("button", {
       class: "homeTab",
       id: `homeTab-${tab.id}`,
@@ -676,7 +719,7 @@ function arrangeHomeTabs(home, badges) {
       "data-tab": tab.id,
       onclick: () => selectHomeTab(tab.id),
     }, el("span", {}, tab.label), badge
-      ? el("span", { class: "homeTabBadge", "aria-label": `${badge}語句` }, String(badge))
+      ? el("span", { class: `homeTabBadge${badge.done ? " is-done" : ""}`, "aria-label": badge.label }, badge.text)
       : null);
     button.addEventListener("keydown", (event) => {
       const step = event.key === "ArrowRight" ? 1 : event.key === "ArrowLeft" ? -1 : 0;
