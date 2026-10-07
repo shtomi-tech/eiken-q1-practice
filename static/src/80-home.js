@@ -196,8 +196,6 @@ function quotaTabBadges(quota) {
   }));
 }
 
-const QUOTA_OPEN_KEY = "eiken_q1_quota_open_v1";
-
 function dailyQuotaCard({ grade, plan, limit, writeEnabled, items, achieved, allDone }) {
   const num = (value) => Number(value).toLocaleString("ja-JP");
 
@@ -317,35 +315,80 @@ function dailyQuotaCard({ grade, plan, limit, writeEnabled, items, achieved, all
   });
 
   const headline = allDone ? "✓ 今日のノルマ達成" : `${num(items.length)}項目中 ${num(achieved)}項目達成`;
-  // 中身（各項目と設定）はふだん畳んでおき、ボタンで開く。残り数はタブのバッジで見える。
-  const bodyId = "dailyQuotaBody";
-  const body = el("div", { class: "quotaBody", id: bodyId }, el("div", { class: "quotaBodyActions" }, settingsToggle), list, settings);
-  let open = false;
-  try { open = localStorage.getItem(QUOTA_OPEN_KEY) === "1"; } catch (e) { /* ignore */ }
-  body.hidden = !open;
-  const bodyToggle = el("button", {
-    class: "ghost studyPlanSettingsToggle quotaBodyToggle",
-    type: "button",
-    "aria-expanded": String(open),
-    "aria-controls": bodyId,
-  }, open ? "閉じる" : "ノルマを表示");
-  bodyToggle.addEventListener("click", () => {
-    const next = body.hidden;
-    body.hidden = !next;
-    bodyToggle.setAttribute("aria-expanded", String(next));
-    bodyToggle.textContent = next ? "閉じる" : "ノルマを表示";
-    writeStored(QUOTA_OPEN_KEY, next ? "1" : "0");
-  });
-  return el("section", { class: `card dailyQuota${allDone ? " is-done" : ""}`, "aria-labelledby": "dailyQuotaTitle" },
+  return el("section", { class: `quotaPanel${allDone ? " is-done" : ""}`, "aria-labelledby": "dailyQuotaTitle" },
     el("div", { class: "studyPlanHead" },
       el("div", {},
         el("p", { class: "label" }, "1日のノルマ"),
         el("h2", { id: "dailyQuotaTitle" }, headline),
       ),
-      bodyToggle,
+      settingsToggle,
     ),
-    body,
+    list,
+    settings,
   );
+}
+
+// 画面右上の「ノルマ」ボタン。押すとノルマの中身（各項目と設定）を下に開く。残り数はふだんタブのバッジで見える。
+// ホームを描き直すたびに中身を作り直し、開いていたかどうかは quotaMenuOpen で引き継ぐ。quota が null なら外す。
+let quotaMenuOpen = false;
+let quotaMenuWired = false;
+function closeQuotaMenu() {
+  quotaMenuOpen = false;
+  $("#quotaMenuPanel")?.setAttribute("hidden", "");
+  $(".quotaMenuButton")?.setAttribute("aria-expanded", "false");
+}
+function mountQuotaMenu(quota) {
+  const header = $(".top");
+  if (!header) return;
+  let menu = $("#quotaMenu");
+  if (!quota) {
+    menu?.remove();
+    return;
+  }
+  if (!menu) {
+    menu = el("div", { class: "quotaMenu", id: "quotaMenu" });
+    header.appendChild(menu);
+  }
+  menu.innerHTML = "";
+  const { items, achieved, allDone } = quota;
+  const panelId = "quotaMenuPanel";
+  const button = el("button", {
+    class: `quotaMenuButton${allDone ? " is-done" : ""}`,
+    type: "button",
+    "aria-expanded": String(quotaMenuOpen),
+    "aria-controls": panelId,
+    "aria-label": allDone ? "1日のノルマ（達成）" : `1日のノルマ（${items.length}項目中${achieved}項目達成）`,
+  }, el("span", {}, "ノルマ"), items.length
+    ? el("span", { class: "quotaMenuCount" }, allDone ? "✓" : `${achieved}/${items.length}`)
+    : null);
+  const panel = el("div", { class: "quotaMenuPanel", id: panelId }, dailyQuotaCard(quota));
+  panel.hidden = !quotaMenuOpen;
+  button.addEventListener("click", () => {
+    quotaMenuOpen = panel.hidden;
+    panel.hidden = !quotaMenuOpen;
+    button.setAttribute("aria-expanded", String(quotaMenuOpen));
+  });
+  menu.append(button, panel);
+  const home = $("#homePanel");
+  menu.hidden = Boolean(home?.classList.contains("hide"));
+  if (quotaMenuWired) return;
+  quotaMenuWired = true;
+  // 外側を押すか Esc で閉じる。
+  document.addEventListener("click", (event) => {
+    if (quotaMenuOpen && !$("#quotaMenu")?.contains(event.target)) closeQuotaMenu();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape" || !quotaMenuOpen) return;
+    closeQuotaMenu();
+    $(".quotaMenuButton")?.focus();
+  });
+  // 学習中（ホームを隠している間）はボタンも隠す。
+  if (home && typeof MutationObserver === "function") {
+    new MutationObserver(() => {
+      const current = $("#quotaMenu");
+      if (current) current.hidden = home.classList.contains("hide");
+    }).observe(home, { attributes: true, attributeFilter: ["class"] });
+  }
 }
 
 function contextDiscoveryCard() {
@@ -431,7 +474,7 @@ function renderHomeContent() {
   const quota = showStudyPlan && featureEnabled("dailyQuota")
     ? dailyQuotaState(studyPlanEntries, meaningDueCount, Boolean(pooled))
     : null;
-  if (quota) home.appendChild(dailyQuotaCard(quota));
+  mountQuotaMenu(quota);
 
   // 層1：今日の学習（現在セット名・主CTA・その理由）。問題セット選択は独立sectionへ分離。
   const summary = el("section", { class: "card" });
