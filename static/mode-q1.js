@@ -4375,11 +4375,15 @@ function buildFlashCard(item) {
     || (item.type === "word" ? flashcardLemmaMap[surfaceKey] : "");
   const headword = displayLemma || canonicalHeadwordOf(item);
   const learning = learningEntryOf(item);
+  // A display-only lemma must not inherit the inflected source pronunciation.
+  const displayIpa = headword === canonicalHeadwordOf(item)
+    ? learning.ipa
+    : lemmaEntries[String(headword).toLowerCase()]?.ipa || "";
   const wordLine = el("div", { class: "flashWordLine" },
     // tabindex=-1: カード置換後に focusSessionContext() がここへフォーカスを移す（F-03）。語句テキストは変更しない。
     el("div", { class: "flashWord", tabindex: "-1" }, headword),
   );
-  if (learning.ipa) wordLine.appendChild(el("div", { class: "flashIpa" }, learning.ipa));
+  if (displayIpa) wordLine.appendChild(el("div", { class: "flashIpa" }, displayIpa));
   if (vocabularyAudioEnabled(item)) wordLine.appendChild(buildVocabAudioButton(item, "flashListenButton", true));
   const headContent = el("div", {}, wordLine);
   if (headword !== surface) {
