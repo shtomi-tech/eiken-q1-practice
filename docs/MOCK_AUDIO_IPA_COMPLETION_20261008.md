@@ -48,4 +48,4 @@ npm test
 FFmpegの場所は PowerShell スクリプトの `-Ffmpeg` で指定できる。合成には Windows の Microsoft Zira Desktop を使う。
 再実行のインベントリはその時点の不足一覧になる。初回の42件の記録は上記audit JSONに保持する。
 
-今回の補完について、コミット・プッシュ・デプロイは未実施。
+この補完記録の作成時点では未公開。公開状態は後続のGit履歴・リリース記録を参照。
