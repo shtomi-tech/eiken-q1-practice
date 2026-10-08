@@ -70,7 +70,7 @@ let wordOriginMap = {};
 // 公開先ごとの機能の出し分け。新機能は Cloudflare 版だけに出す。
 // deployTarget は scripts/write-config.mjs が static/config.json に書く（Cloudflare のデプロイだけ "cloudflare"）。
 // GitHub Pages・Netlify・config.json の無いローカルでは空なので、ここに挙げた機能は出ない。
-const CLOUDFLARE_ONLY_FEATURES = ["writtenMeaning", "homeTabs", "reviewBeyondCap", "dailyQuota"];
+const CLOUDFLARE_ONLY_FEATURES = ["writtenMeaning", "homeTabs", "reviewBeyondCap", "dailyQuota", "appRename"];
 let appConfig = {};
 async function loadAppConfig() {
   try {
@@ -84,6 +84,16 @@ async function loadAppConfig() {
 function featureEnabled(name) {
   if (!CLOUDFLARE_ONLY_FEATURES.includes(name)) return true;
   return appConfig.deployTarget === "cloudflare";
+}
+// アプリの表示名。復習・書く・文脈推測まで広がったので Cloudflare 版は「語彙トレーニング」と名乗る。
+// index.html の静的な <title> / 見出しは全公開先で共通のため旧名のままにし、描画時に差し替える。
+const APP_NAME_LEGACY = "英検 大問1 単語アプリ";
+const APP_NAME = "英検 語彙トレーニング";
+function appName() {
+  return featureEnabled("appRename") ? APP_NAME : APP_NAME_LEGACY;
+}
+function appNameSuffix() {
+  return featureEnabled("appRename") ? "語彙トレーニング" : "単語アプリ";
 }
 
 function isValidIsoDate(value) {
