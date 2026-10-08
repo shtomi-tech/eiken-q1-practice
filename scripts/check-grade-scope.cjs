@@ -87,7 +87,7 @@ assert.match(
 
 const home = js.slice(js.indexOf("function renderHomeContent("), js.indexOf("/* ---- 問題一覧", js.indexOf("function renderHomeContent(")));
 assert.match(home, /if \(needsGradeChoice\) \{[\s\S]*renderGradeChoice\(\);/);
-assert.match(home, /setChromeTitle\("英検 大問1 単語アプリ"\)/);
+assert.match(home, /setChromeTitle\(appName\(\)\)/);
 assert.match(home, /級を変更/);
 const picker = js.slice(js.indexOf("function datasetPicker("), js.indexOf("function answerActions", js.indexOf("function datasetPicker(")));
 assert.match(picker, /grades\.length > 1/);
