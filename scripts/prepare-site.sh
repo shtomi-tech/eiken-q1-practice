@@ -24,5 +24,29 @@ cp -R assets/audio/lemma/* _site/assets/audio/lemma/
 expected_lemma_audio_count=$(node -e 'const fs=require("fs"); const data=JSON.parse(fs.readFileSync("data/lemmas.json", "utf8")); const entries=Object.keys(data.entries || {}); const display=Object.values(data.flashcardLemmas || {}); const displayOnly=Object.values(data.flashcardDisplayLemmas || {}); console.log(new Set([...entries, ...display, ...displayOnly]).size)')
 lemma_audio_count=$(find assets/audio/lemma -type f -name '*.mp3' | wc -l)
 site_lemma_audio_count=$(find _site/assets/audio/lemma -type f -name '*.mp3' | wc -l)
-test "$lemma_audio_count" -eq "$expected_lemma_audio_count"
-test "$site_lemma_audio_count" -eq "$expected_lemma_audio_count"
+# Retired cards may retain audio for existing learner history. Verify required
+# coverage and every copied file rather than treating archived audio as an error.
+test "$lemma_audio_count" -ge "$expected_lemma_audio_count"
+test "$site_lemma_audio_count" -eq "$lemma_audio_count"
+node <<'NODE'
+const fs = require('fs');
+const assert = require('node:assert/strict');
+const data = JSON.parse(fs.readFileSync('data/lemmas.json', 'utf8'));
+const required = new Set([
+  ...Object.keys(data.entries || {}),
+  ...Object.values(data.flashcardLemmas || {}),
+  ...Object.values(data.flashcardDisplayLemmas || {}),
+]);
+const slug = value => String(value).toLowerCase().replace(/[’']/g, "'")
+  .replace(/\b(one's|his|her|my|your|our|their|its)\b/g, '@poss')
+  .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+for (const lemma of required) {
+  const file = `_site/assets/audio/lemma/${slug(lemma)}.mp3`;
+  assert.ok(fs.existsSync(file) && fs.statSync(file).size > 0, `Missing lemma audio: ${lemma}`);
+}
+for (const file of fs.readdirSync('assets/audio/lemma').filter(file => file.endsWith('.mp3'))) {
+  assert.ok(fs.readFileSync(`assets/audio/lemma/${file}`).equals(
+    fs.readFileSync(`_site/assets/audio/lemma/${file}`)), `Copied lemma audio differs: ${file}`);
+}
+console.log(`Lemma audio: ${required.size} required; all copied files verified.`);
+NODE
