@@ -204,6 +204,10 @@ assert.equal(plan.migrateFirstAnsweredAt(legacy), false, "移行は冪等にす�
   assert.equal(none.items.find((item) => item.id === "review").active, true, "期限が無い日も復習は達成として数える");
   assert.equal(none.items.find((item) => item.id === "review").remaining, 0);
   assert.equal(none.items.find((item) => item.id === "write").active, false, "書く演習が無い公開先では書くを外す");
+  const off = plan.dailyQuotaSummary(now, { ...quotaPlan, dailyQuota: { today: 0 } }, { entries });
+  assert.equal(off.items.find((item) => item.id === "today").active, false, "今日を0にするとノルマから外す");
+  assert.equal(plan.normalizeDailyQuota({ today: 0 }).today, 0, "外す印は保存する");
+  assert.equal("today" in plan.normalizeDailyQuota({ today: 5 }), false, "今日の数は dailyQuestionGoal と共有し、外す印以外は持たない");
 }
 
 console.log("study plan logic contract: OK");
