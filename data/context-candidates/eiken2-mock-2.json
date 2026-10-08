@@ -7201,74 +7201,58 @@
     {
       "q": 19,
       "type": "idiom",
-      "target": "will be teaching",
-      "meaning": "教えていることになるだろう",
-      "targetSense": "教えていることになるだろう",
-      "pos": "助動詞句",
+      "target": "bit by bit",
+      "meaning": "少しずつ",
+      "targetSense": "少しずつ",
+      "pos": "adverbial phrase",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "Next year, she will be teaching English at a school abroad.",
-        "She will be standing in front of a new classroom continuously throughout the entire term, and her adventure in another country is about to begin very soon."
+        "Bit by bit, she learned to speak Japanese.",
+        "At first she knew only a few words, but she added several new expressions every week, and after a year, she could hold a long conversation."
       ],
       "mixedEnglish": [
-        "Next year, she will be teaching English at a school abroad.",
-        "She will be standing in front of a new classroom continuously throughout the entire term, and her adventure in another country is about to begin very soon."
+        "Bit by bit, she learned to speak Japanese.",
+        "At first she knew only a few words, but she added several new expressions every week, and after a year, she could hold a long conversation."
       ],
       "contextClues": [
         {
-          "text": "throughout the entire term",
-          "type": "duration"
+          "text": "added several new expressions every week",
+          "type": "supporting context"
         },
         {
-          "text": "at a school abroad",
-          "type": "location"
+          "text": "After a year",
+          "type": "supporting context"
         }
       ],
       "inferencePath": [
-        "throughout the entire term",
-        "at a school abroad",
-        "targetSense: 教えていることになるだろう",
-        "will be teaching"
+        "added several new expressions every week",
+        "After a year",
+        "targetSense: 少しずつ",
+        "bit by bit"
       ],
       "segments": [
         [
           {
-            "en": "Next year, she ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "will be teaching",
+            "en": "Bit by bit",
             "role": "target",
             "useJapanese": false
           },
           {
-            "en": " English ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "at a school abroad",
-            "role": "clue",
-            "clueType": "location",
-            "useJapanese": false
-          },
-          {
-            "en": ".",
+            "en": ", she learned to speak Japanese.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "She will be standing in front of a new classroom continuously ",
+            "en": "At first she knew only a few words, but she ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "throughout the entire term",
+            "en": "added several new expressions every week",
             "role": "clue",
-            "clueType": "duration",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -7277,20 +7261,26 @@
             "useJapanese": false
           },
           {
-            "en": "her adventure in another country is about to begin very soon.",
+            "en": "after a year",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": ", she could hold a long conversation.",
             "role": "core",
             "useJapanese": false
           }
         ]
       ],
       "choices": [
-        "教えていることになるだろう",
-        "教えていただろう",
-        "教えるつもりだ",
-        "教えているところだ"
+        "少しずつ",
+        "一気に",
+        "突然に",
+        "たまに"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「throughout the entire term」や「at a school abroad」という手がかりから、ある期間にわたってその授業を継続している未来の様子がわかります。そのため、will be teachingは「教えていることになるだろう」だと推測できます。",
+      "inferenceExplanation": "「added several new expressions every week」と「After a year」が手がかりです。これらの状況から、bit by bitは「少しずつ」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -7304,134 +7294,45 @@
     {
       "q": 19,
       "type": "idiom",
-      "target": "has taught",
-      "meaning": "教えてきた、教えたことがある",
-      "targetSense": "教えてきた",
-      "pos": "動詞句",
+      "target": "far and away",
+      "meaning": "はるかに、断然",
+      "targetSense": "はるかに",
+      "pos": "adverbial phrase",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "He has taught science at this university since the new building opened.",
-        "Former students still remember his classroom demonstrations, and the department recently honored his long career in education."
+        "This is far and away the best restaurant in town.",
+        "Every dish they serve is prepared with incredible care and fresh ingredients."
       ],
       "mixedEnglish": [
-        "He has taught science at this university since the new building opened.",
-        "Former students still remember his classroom demonstrations, and the department recently honored his long career in education."
+        "This is far and away the best restaurant in town.",
+        "Every dish they serve is prepared with incredible care and fresh ingredients."
       ],
       "contextClues": [
         {
-          "text": "Former students still remember his classroom demonstrations",
-          "type": "supporting context"
+          "text": "the best restaurant in town",
+          "type": "degree"
         },
         {
-          "text": "and the department recently honored his long career in education",
-          "type": "supporting context"
+          "text": "incredible care and fresh ingredients",
+          "type": "cause"
         }
       ],
       "inferencePath": [
-        "Former students still remember his classroom demonstrations",
-        "and the department recently honored his long career in education",
-        "targetSense: 教えてきた",
-        "has taught"
+        "the best restaurant in town",
+        "incredible care and fresh ingredients",
+        "targetSense: はるかに",
+        "far and away"
       ],
       "segments": [
         [
           {
-            "en": "He ",
+            "en": "This is ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "has taught",
+            "en": "far and away",
             "role": "target",
-            "useJapanese": false
-          },
-          {
-            "en": " science at this university since the new building opened.",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "Former students still remember his classroom demonstrations",
-            "role": "clue",
-            "clueType": "supporting context",
-            "useJapanese": false
-          },
-          {
-            "en": ", ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "and the department recently honored his long career in education",
-            "role": "clue",
-            "clueType": "supporting context",
-            "useJapanese": false
-          },
-          {
-            "en": ".",
-            "role": "core",
-            "useJapanese": false
-          }
-        ]
-      ],
-      "choices": [
-        "教えてきた",
-        "研究してきた",
-        "学んできた",
-        "支えてきた"
-      ],
-      "answerIndex": 0,
-      "inferenceExplanation": "「Former students still remember his classroom demonstrations」と「and the department recently honored his long career in education」が手がかりです。これらの状況から、has taughtは「教えてきた」を表すと判断できます。",
-      "quality": {
-        "targetOccurrence": 1,
-        "clueCount": 2,
-        "targetProtected": true,
-        "cluesProtected": true
-      },
-      "manualReview": {
-        "status": "pending"
-      }
-    },
-    {
-      "q": 19,
-      "type": "idiom",
-      "target": "will teach",
-      "meaning": "教えるだろう",
-      "targetSense": "教えるだろう",
-      "pos": "助動詞句",
-      "level": "EIKEN Grade 2",
-      "fullEnglish": [
-        "The visiting professor will teach a special class next Saturday.",
-        "Many students are looking forward to attending the lecture, and all necessary materials have already been prepared in advance."
-      ],
-      "mixedEnglish": [
-        "The visiting professor will teach a special class next Saturday.",
-        "Many students are looking forward to attending the lecture, and all necessary materials have already been prepared in advance."
-      ],
-      "contextClues": [
-        {
-          "text": "The visiting professor",
-          "type": "subject"
-        },
-        {
-          "text": "next Saturday",
-          "type": "time"
-        }
-      ],
-      "inferencePath": [
-        "The visiting professor",
-        "next Saturday",
-        "targetSense: 教えるだろう",
-        "will teach"
-      ],
-      "segments": [
-        [
-          {
-            "en": "The visiting professor",
-            "role": "clue",
-            "clueType": "subject",
             "useJapanese": false
           },
           {
@@ -7440,19 +7341,9 @@
             "useJapanese": false
           },
           {
-            "en": "will teach",
-            "role": "target",
-            "useJapanese": false
-          },
-          {
-            "en": " a special class ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "next Saturday",
+            "en": "the best restaurant in town",
             "role": "clue",
-            "clueType": "time",
+            "clueType": "degree",
             "useJapanese": false
           },
           {
@@ -7463,30 +7354,31 @@
         ],
         [
           {
-            "en": "Many students are looking forward to attending the lecture",
+            "en": "Every dish they serve is prepared with ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": ", and ",
-            "role": "core",
+            "en": "incredible care and fresh ingredients",
+            "role": "clue",
+            "clueType": "cause",
             "useJapanese": false
           },
           {
-            "en": "all necessary materials have already been prepared in advance.",
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
         ]
       ],
       "choices": [
-        "教えるだろう",
-        "教えている",
-        "教えた",
-        "教えていた"
+        "はるかに",
+        "ほとんど",
+        "おそらく",
+        "明らかに"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "文脈には「The visiting professor」や「next Saturday」という将来の予定に関する手がかりがあります。これらから、未来の特定の時点に行われる予定や予測を表しているため、will teachは「教えるだろう」だと推測できます。",
+      "inferenceExplanation": "「the best restaurant in town」という表現や「incredible care and fresh ingredients」という文脈から、他と比べてその程度がずば抜けていることがわかります。そのため、far and awayは「はるかに」だと推測できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,
@@ -7500,74 +7392,74 @@
     {
       "q": 19,
       "type": "idiom",
-      "target": "will have taught",
-      "meaning": "教えたことになるだろう",
-      "targetSense": "教えたことになるだろう",
-      "pos": "助動詞句",
+      "target": "all or nothing",
+      "meaning": "全か無かの、一か八かの",
+      "targetSense": "全か無かの",
+      "pos": "形容詞句・名詞句",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "By next June, the professor will have taught here for forty-five years.",
-        "His long career has been dedicated to scientific research and education, and a special celebration ceremony is planned to honor his retirement."
+        "The risky investment forced the committee to choose an all or nothing strategy.",
+        "The business owner faced a major risk, and the stakes were extremely high."
       ],
       "mixedEnglish": [
-        "By next June, the professor will have taught here for forty-five years.",
-        "His long career has been dedicated to scientific research and education, and a special celebration ceremony is planned to honor his retirement."
+        "The risky investment forced the committee to choose an all or nothing strategy.",
+        "The business owner faced a major risk, and the stakes were extremely high."
       ],
       "contextClues": [
         {
-          "text": "By next June",
-          "type": "time"
+          "text": "The business owner",
+          "type": "supporting context"
         },
         {
-          "text": "for forty-five years",
-          "type": "duration"
+          "text": "faced a major risk",
+          "type": "supporting context"
+        },
+        {
+          "text": "The stakes were extremely high",
+          "type": "consequence"
         }
       ],
       "inferencePath": [
-        "By next June",
-        "for forty-five years",
-        "targetSense: 教えたことになるだろう",
-        "will have taught"
+        "The business owner",
+        "faced a major risk",
+        "The stakes were extremely high",
+        "targetSense: 全か無かの",
+        "all or nothing"
       ],
       "segments": [
         [
           {
-            "en": "By next June",
-            "role": "clue",
-            "clueType": "time",
-            "useJapanese": false
-          },
-          {
-            "en": ", the professor ",
+            "en": "The risky investment forced the committee to choose an ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "will have taught",
+            "en": "all or nothing",
             "role": "target",
             "useJapanese": false
           },
           {
-            "en": " here ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "for forty-five years",
-            "role": "clue",
-            "clueType": "duration",
-            "useJapanese": false
-          },
-          {
-            "en": ".",
+            "en": " strategy.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "His long career has been dedicated to scientific research and education",
+            "en": "The business owner",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
             "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "faced a major risk",
+            "role": "clue",
+            "clueType": "supporting context",
             "useJapanese": false
           },
           {
@@ -7576,20 +7468,124 @@
             "useJapanese": false
           },
           {
-            "en": "a special celebration ceremony is planned to honor his retirement.",
+            "en": "the stakes were extremely high",
+            "role": "clue",
+            "clueType": "consequence",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
             "role": "core",
             "useJapanese": false
           }
         ]
       ],
       "choices": [
-        "教えたことになるだろう",
-        "教えているだろう",
-        "教えるだろう",
-        "教えていた"
+        "全か無かの",
+        "計画的な",
+        "慎重な",
+        "効率的な"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "文脈には「By next June」という未来の期限と「for forty-five years」という期間を示す手がかりがあります。これらから、未来の時点までにその状態が完了し、その期間に達していることを表しているため、will have taughtは「教えたことになるだろう」だと推測できます。",
+      "inferenceExplanation": "「The business owner」と「faced a major risk」と「The stakes were extremely high」が手がかりです。これらの状況から、all or nothingは「全か無かの」を表すと判断できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 3,
+        "targetProtected": true,
+        "cluesProtected": true
+      },
+      "manualReview": {
+        "status": "pending"
+      }
+    },
+    {
+      "q": 19,
+      "type": "idiom",
+      "target": "safe and sound",
+      "meaning": "無事で、ぴんぴんして",
+      "targetSense": "無事で",
+      "pos": "adjective phrase",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "The cat came home safe and sound before the storm began.",
+        "The hikers returned from the dark mountain, and their families hugged them with joy."
+      ],
+      "mixedEnglish": [
+        "The cat came home safe and sound before the storm began.",
+        "The hikers returned from the dark mountain, and their families hugged them with joy."
+      ],
+      "contextClues": [
+        {
+          "text": "The hikers returned",
+          "type": "supporting context"
+        },
+        {
+          "text": "the dark mountain",
+          "type": "supporting context"
+        }
+      ],
+      "inferencePath": [
+        "The hikers returned",
+        "the dark mountain",
+        "targetSense: 無事で",
+        "safe and sound"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The cat came home ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "safe and sound",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " before the storm began.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The hikers returned",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " from ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "the dark mountain",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": ", and ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "their families hugged them with joy.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "無事で",
+        "急いで",
+        "疲れて",
+        "ひそかに"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「The hikers returned」と「the dark mountain」が手がかりです。これらの状況から、safe and soundは「無事で」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 2,

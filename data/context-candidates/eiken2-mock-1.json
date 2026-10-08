@@ -4751,72 +4751,356 @@
     {
       "q": 13,
       "type": "word",
-      "target": "have",
-      "meaning": "持っている、〜する",
-      "targetSense": "持っている",
+      "target": "exist",
+      "meaning": "存在する",
+      "targetSense": "存在する",
       "pos": "verb",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "I have enough time to finish the assignment before dinner tonight.",
-        "I bought a reliable laptop with my own savings last year, and the receipt has my name on it, and no one else uses the computer."
+        "Many different opinions exist in the class about the new rule.",
+        "Students share various thoughts during the discussion."
       ],
       "mixedEnglish": [
-        "I have enough time to finish the assignment before dinner tonight.",
-        "I bought a reliable laptop with my own savings last year, and the receipt has my name on it, and no one else uses the computer."
+        "Many different opinions exist in the class about the new rule.",
+        "Students share various thoughts during the discussion."
       ],
       "contextClues": [
         {
-          "text": "I bought a reliable laptop",
-          "type": "supporting context"
+          "text": "Many different opinions",
+          "type": "subject"
         },
         {
-          "text": "my own savings last year",
-          "type": "supporting context"
-        },
-        {
-          "text": "receipt has my name on it",
-          "type": "evidence"
+          "text": "in the class",
+          "type": "location"
         }
       ],
       "inferencePath": [
-        "I bought a reliable laptop",
-        "my own savings last year",
-        "receipt has my name on it",
-        "targetSense: 持っている",
-        "have"
+        "Many different opinions",
+        "in the class",
+        "targetSense: 存在する",
+        "exist"
       ],
       "segments": [
         [
           {
-            "en": "I ",
+            "en": "Many different opinions",
+            "role": "clue",
+            "clueType": "subject",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "have",
+            "en": "exist",
             "role": "target",
             "useJapanese": false
           },
           {
-            "en": " enough time to finish the assignment before dinner tonight.",
+            "en": " ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "in the class",
+            "role": "clue",
+            "clueType": "location",
+            "useJapanese": false
+          },
+          {
+            "en": " about the new rule.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "I bought a reliable laptop",
+            "en": "Students share various thoughts during the discussion.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "存在する",
+        "拡大する",
+        "反対する",
+        "強調する"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「Many different opinions」や「in the class」という手がかりから、クラスの中に多様な意見があることが分かります。そのため、existは「存在する」だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 2,
+        "targetProtected": true,
+        "cluesProtected": true
+      },
+      "manualReview": {
+        "status": "pending"
+      }
+    },
+    {
+      "q": 13,
+      "type": "word",
+      "target": "react",
+      "meaning": "反応する",
+      "targetSense": "反応する",
+      "pos": "verb",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "How did your husband react when you told him about the baby?",
+        "He looked very surprised at the news."
+      ],
+      "mixedEnglish": [
+        "How did your husband react when you told him about the baby?",
+        "He looked very surprised at the news."
+      ],
+      "contextClues": [
+        {
+          "text": "How did",
+          "type": "question"
+        },
+        {
+          "text": "looked very surprised",
+          "type": "result"
+        }
+      ],
+      "inferencePath": [
+        "How did",
+        "looked very surprised",
+        "targetSense: 反応する",
+        "react"
+      ],
+      "segments": [
+        [
+          {
+            "en": "How did",
+            "role": "clue",
+            "clueType": "question",
+            "useJapanese": false
+          },
+          {
+            "en": " your husband ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "react",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " when you told him about the baby?",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "He ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "looked very surprised",
+            "role": "clue",
+            "clueType": "result",
+            "useJapanese": false
+          },
+          {
+            "en": " at the news.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "反応する",
+        "到着する",
+        "納得する",
+        "連絡する"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「How did」という問いかけや「looked very surprised」という様子から、ニュースを聞いたときの返答や様子が分かります。そのため、reactは「反応する」だと推測できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 2,
+        "targetProtected": true,
+        "cluesProtected": true
+      },
+      "manualReview": {
+        "status": "pending"
+      }
+    },
+    {
+      "q": 13,
+      "type": "word",
+      "target": "seize",
+      "meaning": "つかむ、奪い取る",
+      "targetSense": "つかむ",
+      "pos": "verb",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "The police will seize the stolen goods if the court approves the warrant.",
+        "It pulled it away quickly before the other animals in the tree could react."
+      ],
+      "mixedEnglish": [
+        "The police will seize the stolen goods if the court approves the warrant.",
+        "It pulled it away quickly before the other animals in the tree could react."
+      ],
+      "contextClues": [
+        {
+          "text": "It pulled it away quickly",
+          "type": "supporting context"
+        },
+        {
+          "text": "the other animals in the tree could react",
+          "type": "supporting context"
+        }
+      ],
+      "inferencePath": [
+        "It pulled it away quickly",
+        "the other animals in the tree could react",
+        "targetSense: つかむ",
+        "seize"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The police will ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "seize",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " the stolen goods if the court approves the warrant.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "It pulled it away quickly",
             "role": "clue",
             "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": " with ",
+            "en": " before ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "my own savings last year",
+            "en": "the other animals in the tree could react",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "つかむ",
+        "隠す",
+        "売却する",
+        "破壊する"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「It pulled it away quickly」と「the other animals in the tree could react」が手がかりです。これらの状況から、seizeは「つかむ」を表すと判断できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 2,
+        "targetProtected": true,
+        "cluesProtected": true
+      },
+      "manualReview": {
+        "status": "pending"
+      }
+    },
+    {
+      "q": 13,
+      "type": "word",
+      "target": "disappear",
+      "meaning": "消える、姿を消す",
+      "targetSense": "消える",
+      "pos": "verb",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "The bright stars disappear when morning sunlight reaches the quiet valley.",
+        "They are easy to see in the dark sky but can no longer be seen after the sky becomes bright, and they become visible again the following night."
+      ],
+      "mixedEnglish": [
+        "The bright stars disappear when morning sunlight reaches the quiet valley.",
+        "They are easy to see in the dark sky but can no longer be seen after the sky becomes bright, and they become visible again the following night."
+      ],
+      "contextClues": [
+        {
+          "text": "can no longer be seen",
+          "type": "supporting context"
+        },
+        {
+          "text": "after the sky becomes bright",
+          "type": "supporting context"
+        },
+        {
+          "text": "visible again the following night",
+          "type": "supporting context"
+        }
+      ],
+      "inferencePath": [
+        "can no longer be seen",
+        "after the sky becomes bright",
+        "visible again the following night",
+        "targetSense: 消える",
+        "disappear"
+      ],
+      "segments": [
+        [
+          {
+            "en": "The bright stars ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "disappear",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " when morning sunlight reaches the quiet valley.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "They are easy to see in the dark sky but ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "can no longer be seen",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "after the sky becomes bright",
             "role": "clue",
             "clueType": "supporting context",
             "useJapanese": false
@@ -4827,209 +5111,14 @@
             "useJapanese": false
           },
           {
-            "en": "the ",
+            "en": "they become ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "receipt has my name on it",
-            "role": "clue",
-            "clueType": "evidence",
-            "useJapanese": false
-          },
-          {
-            "en": ", and no one else uses the computer.",
-            "role": "core",
-            "useJapanese": false
-          }
-        ]
-      ],
-      "choices": [
-        "持っている",
-        "借りている",
-        "修理している",
-        "探している"
-      ],
-      "answerIndex": 0,
-      "inferenceExplanation": "「I bought a reliable laptop」と「my own savings last year」と「receipt has my name on it」が手がかりです。これらの状況から、haveは「持っている」を表すと判断できます。",
-      "quality": {
-        "targetOccurrence": 1,
-        "clueCount": 3,
-        "targetProtected": true,
-        "cluesProtected": true
-      },
-      "manualReview": {
-        "status": "pending"
-      }
-    },
-    {
-      "q": 13,
-      "type": "word",
-      "target": "had",
-      "meaning": "持っていた、〜した",
-      "targetSense": "持っていた",
-      "pos": "verb",
-      "level": "EIKEN Grade 2",
-      "fullEnglish": [
-        "She had an old map in her backpack during the hike.",
-        "She unfolded it at every fork, and it led her safely back to the main trail."
-      ],
-      "mixedEnglish": [
-        "She had an old map in her backpack during the hike.",
-        "She unfolded it at every fork, and it led her safely back to the main trail."
-      ],
-      "contextClues": [
-        {
-          "text": "She unfolded it at every fork",
-          "type": "supporting context"
-        },
-        {
-          "text": "and it led her safely back",
-          "type": "supporting context"
-        },
-        {
-          "text": "in her backpack",
-          "type": "location"
-        }
-      ],
-      "inferencePath": [
-        "She unfolded it at every fork",
-        "and it led her safely back",
-        "in her backpack",
-        "targetSense: 持っていた",
-        "had"
-      ],
-      "segments": [
-        [
-          {
-            "en": "She ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "had",
-            "role": "target",
-            "useJapanese": false
-          },
-          {
-            "en": " an old map ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "in her backpack",
-            "role": "clue",
-            "clueType": "location",
-            "useJapanese": false
-          },
-          {
-            "en": " during the hike.",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "She unfolded it at every fork",
+            "en": "visible again the following night",
             "role": "clue",
             "clueType": "supporting context",
-            "useJapanese": false
-          },
-          {
-            "en": ", ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "and it led her safely back",
-            "role": "clue",
-            "clueType": "supporting context",
-            "useJapanese": false
-          },
-          {
-            "en": " to the main trail.",
-            "role": "core",
-            "useJapanese": false
-          }
-        ]
-      ],
-      "choices": [
-        "持っていた",
-        "なくしていた",
-        "描いていた",
-        "売っていた"
-      ],
-      "answerIndex": 0,
-      "inferenceExplanation": "「She unfolded it at every fork」と「and it led her safely back」と「in her backpack」が手がかりです。これらの状況から、hadは「持っていた」を表すと判断できます。",
-      "quality": {
-        "targetOccurrence": 1,
-        "clueCount": 3,
-        "targetProtected": true,
-        "cluesProtected": true
-      },
-      "manualReview": {
-        "status": "pending"
-      }
-    },
-    {
-      "q": 13,
-      "type": "word",
-      "target": "will have",
-      "meaning": "〜するだろう、〜を持つことになる",
-      "targetSense": "〜を持つことになる",
-      "pos": "助動詞句",
-      "level": "EIKEN Grade 2",
-      "fullEnglish": [
-        "By next spring, the town will have a new public library.",
-        "Residents are very excited to borrow books and use the study rooms there."
-      ],
-      "mixedEnglish": [
-        "By next spring, the town will have a new public library.",
-        "Residents are very excited to borrow books and use the study rooms there."
-      ],
-      "contextClues": [
-        {
-          "text": "By next spring",
-          "type": "time"
-        },
-        {
-          "text": "a new public library",
-          "type": "object"
-        }
-      ],
-      "inferencePath": [
-        "By next spring",
-        "a new public library",
-        "targetSense: 〜を持つことになる",
-        "will have"
-      ],
-      "segments": [
-        [
-          {
-            "en": "By next spring",
-            "role": "clue",
-            "clueType": "time",
-            "useJapanese": false
-          },
-          {
-            "en": ", the town ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "will have",
-            "role": "target",
-            "useJapanese": false
-          },
-          {
-            "en": " ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "a new public library",
-            "role": "clue",
-            "clueType": "object",
             "useJapanese": false
           },
           {
@@ -5037,119 +5126,19 @@
             "role": "core",
             "useJapanese": false
           }
-        ],
-        [
-          {
-            "en": "Residents are very excited to borrow books and use the study rooms there.",
-            "role": "core",
-            "useJapanese": false
-          }
         ]
       ],
       "choices": [
-        "〜を持つことになる",
-        "〜しただろう",
-        "〜だっただろう",
-        "〜するべきである"
+        "消える",
+        "輝く",
+        "移動する",
+        "集まる"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「By next spring」と「a new public library」という手がかりから、将来的に新しい施設が完成して所有する状態になることがわかります。そのため、will haveは「〜を持つことになる」だと推測できます。",
+      "inferenceExplanation": "「can no longer be seen」と「after the sky becomes bright」と「visible again the following night」が手がかりです。これらの状況から、disappearは「消える」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
-        "clueCount": 2,
-        "targetProtected": true,
-        "cluesProtected": true
-      },
-      "manualReview": {
-        "status": "pending"
-      }
-    },
-    {
-      "q": 13,
-      "type": "word",
-      "target": "would have",
-      "meaning": "〜しただろう、〜だっただろう",
-      "targetSense": "〜しただろう",
-      "pos": "助動詞句",
-      "level": "EIKEN Grade 2",
-      "fullEnglish": [
-        "Without your advice, I would have made the same serious mistake.",
-        "Your timely warning helped me avoid a costly error."
-      ],
-      "mixedEnglish": [
-        "Without your advice, I would have made the same serious mistake.",
-        "Your timely warning helped me avoid a costly error."
-      ],
-      "contextClues": [
-        {
-          "text": "Without your advice",
-          "type": "condition"
-        },
-        {
-          "text": "the same serious mistake",
-          "type": "result"
-        }
-      ],
-      "inferencePath": [
-        "Without your advice",
-        "the same serious mistake",
-        "targetSense: 〜しただろう",
-        "would have"
-      ],
-      "segments": [
-        [
-          {
-            "en": "Without your advice",
-            "role": "clue",
-            "clueType": "condition",
-            "useJapanese": false
-          },
-          {
-            "en": ", I ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "would have",
-            "role": "target",
-            "useJapanese": false
-          },
-          {
-            "en": " made ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "the same serious mistake",
-            "role": "clue",
-            "clueType": "result",
-            "useJapanese": false
-          },
-          {
-            "en": ".",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "Your timely warning helped me avoid a costly error.",
-            "role": "core",
-            "useJapanese": false
-          }
-        ]
-      ],
-      "choices": [
-        "〜しただろう",
-        "〜する予定である",
-        "〜しなければならない",
-        "〜できたかもしれない"
-      ],
-      "answerIndex": 0,
-      "inferenceExplanation": "「Without your advice」や「the same serious mistake」という手がかりから、過去の状況においてもし助言がなければ起こり得た仮想の結果を表していることがわかります。そのため、would haveは「〜しただろう」だと推測できます。",
-      "quality": {
-        "targetOccurrence": 1,
-        "clueCount": 2,
+        "clueCount": 3,
         "targetProtected": true,
         "cluesProtected": true
       },

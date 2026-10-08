@@ -13,7 +13,6 @@ PAIRS = """
 committing|commit
 adjusting|adjust
 betting|bet
-had|have
 made by|be made by
 answered for|answer for
 applied to|apply to
@@ -125,7 +124,8 @@ def main():
     path = ROOT / 'data/lemmas.json'
     data = json.loads(path.read_text(encoding='utf-8'))
     mapping = data.setdefault('flashcardDisplayLemmas', {})
-    assert len(MAPPING) == 105
+    # had was retired with the tense-only Q13 repair on 2026-10-08.
+    assert len(MAPPING) == 104
     changed = {}
     for surface, lemma in MAPPING.items():
         old = mapping.get(surface)

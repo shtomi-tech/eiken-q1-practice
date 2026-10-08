@@ -1,0 +1,1660 @@
+{
+  "baselineCommit": "d1db34873f3034d038b607686ac79b7baca206ec",
+  "reason": "Tense-only items replaced by contextual vocabulary/idioms. Original supplied material, card metadata and etymology evidence retained here; old MP3s retained in place.",
+  "retiredItems": [
+    {
+      "dataset": "eiken2-mock-1",
+      "q": 13,
+      "question": {
+        "q": 13,
+        "stem": "A: I (   ) invited you to spend Christmas with my family if I'd known that you'd be alone. B: Thanks, but I prefer to spend Christmas alone.",
+        "choices": [
+          "have",
+          "had",
+          "will have",
+          "would have"
+        ],
+        "answerIndex": 3,
+        "translation": "A：あなたが一人で過ごすと知っていたら、家族とクリスマスを過ごすよう誘ったのに。B：ありがとう。でもクリスマスは一人で過ごしたい。"
+      },
+      "words": [
+        {
+          "q": 13,
+          "is_answer": false,
+          "meaning": "持っている、〜する",
+          "example": "I have enough time to finish the assignment before dinner tonight.",
+          "exampleTranslation": "私は今夜の夕食前に課題を終える時間が十分にある。",
+          "pos": "動詞",
+          "word": "have",
+          "ipa": "/hˈæv/"
+        },
+        {
+          "q": 13,
+          "is_answer": false,
+          "meaning": "持っていた、〜した",
+          "example": "She had an old map in her backpack during the hike.",
+          "exampleTranslation": "彼女はハイキング中、リュックに古い地図を持っていた。",
+          "pos": "動詞",
+          "word": "had",
+          "ipa": "/hˈæd/"
+        },
+        {
+          "q": 13,
+          "is_answer": false,
+          "meaning": "〜するだろう、〜を持つことになる",
+          "example": "By next spring, the town will have a new public library.",
+          "exampleTranslation": "来年の春までに、その町には新しい公共図書館ができるだろう。",
+          "pos": "助動詞句",
+          "word": "will have",
+          "ipa": "/wˈɪlhˈæv/"
+        },
+        {
+          "q": 13,
+          "is_answer": true,
+          "meaning": "〜しただろう、〜だっただろう",
+          "example": "Without your advice, I would have made the same serious mistake.",
+          "exampleTranslation": "あなたの助言がなければ、私は同じ重大なミスをしただろう。",
+          "pos": "助動詞句",
+          "word": "would have"
+        }
+      ],
+      "idioms": [],
+      "contexts": [
+        {
+          "q": 13,
+          "type": "word",
+          "target": "have",
+          "meaning": "持っている、〜する",
+          "targetSense": "持っている",
+          "pos": "verb",
+          "level": "EIKEN Grade 2",
+          "fullEnglish": [
+            "I have enough time to finish the assignment before dinner tonight.",
+            "I bought a reliable laptop with my own savings last year, and the receipt has my name on it, and no one else uses the computer."
+          ],
+          "mixedEnglish": [
+            "I have enough time to finish the assignment before dinner tonight.",
+            "I bought a reliable laptop with my own savings last year, and the receipt has my name on it, and no one else uses the computer."
+          ],
+          "contextClues": [
+            {
+              "text": "I bought a reliable laptop",
+              "type": "supporting context"
+            },
+            {
+              "text": "my own savings last year",
+              "type": "supporting context"
+            },
+            {
+              "text": "receipt has my name on it",
+              "type": "evidence"
+            }
+          ],
+          "inferencePath": [
+            "I bought a reliable laptop",
+            "my own savings last year",
+            "receipt has my name on it",
+            "targetSense: 持っている",
+            "have"
+          ],
+          "segments": [
+            [
+              {
+                "en": "I ",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": "have",
+                "role": "target",
+                "useJapanese": false
+              },
+              {
+                "en": " enough time to finish the assignment before dinner tonight.",
+                "role": "core",
+                "useJapanese": false
+              }
+            ],
+            [
+              {
+                "en": "I bought a reliable laptop",
+                "role": "clue",
+                "clueType": "supporting context",
+                "useJapanese": false
+              },
+              {
+                "en": " with ",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": "my own savings last year",
+                "role": "clue",
+                "clueType": "supporting context",
+                "useJapanese": false
+              },
+              {
+                "en": ", and ",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": "the ",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": "receipt has my name on it",
+                "role": "clue",
+                "clueType": "evidence",
+                "useJapanese": false
+              },
+              {
+                "en": ", and no one else uses the computer.",
+                "role": "core",
+                "useJapanese": false
+              }
+            ]
+          ],
+          "choices": [
+            "持っている",
+            "借りている",
+            "修理している",
+            "探している"
+          ],
+          "answerIndex": 0,
+          "inferenceExplanation": "「I bought a reliable laptop」と「my own savings last year」と「receipt has my name on it」が手がかりです。これらの状況から、haveは「持っている」を表すと判断できます。",
+          "quality": {
+            "targetOccurrence": 1,
+            "clueCount": 3,
+            "targetProtected": true,
+            "cluesProtected": true
+          }
+        },
+        {
+          "q": 13,
+          "type": "word",
+          "target": "had",
+          "meaning": "持っていた、〜した",
+          "targetSense": "持っていた",
+          "pos": "verb",
+          "level": "EIKEN Grade 2",
+          "fullEnglish": [
+            "She had an old map in her backpack during the hike.",
+            "She unfolded it at every fork, and it led her safely back to the main trail."
+          ],
+          "mixedEnglish": [
+            "She had an old map in her backpack during the hike.",
+            "She unfolded it at every fork, and it led her safely back to the main trail."
+          ],
+          "contextClues": [
+            {
+              "text": "She unfolded it at every fork",
+              "type": "supporting context"
+            },
+            {
+              "text": "and it led her safely back",
+              "type": "supporting context"
+            },
+            {
+              "text": "in her backpack",
+              "type": "location"
+            }
+          ],
+          "inferencePath": [
+            "She unfolded it at every fork",
+            "and it led her safely back",
+            "in her backpack",
+            "targetSense: 持っていた",
+            "had"
+          ],
+          "segments": [
+            [
+              {
+                "en": "She ",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": "had",
+                "role": "target",
+                "useJapanese": false
+              },
+              {
+                "en": " an old map ",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": "in her backpack",
+                "role": "clue",
+                "clueType": "location",
+                "useJapanese": false
+              },
+              {
+                "en": " during the hike.",
+                "role": "core",
+                "useJapanese": false
+              }
+            ],
+            [
+              {
+                "en": "She unfolded it at every fork",
+                "role": "clue",
+                "clueType": "supporting context",
+                "useJapanese": false
+              },
+              {
+                "en": ", ",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": "and it led her safely back",
+                "role": "clue",
+                "clueType": "supporting context",
+                "useJapanese": false
+              },
+              {
+                "en": " to the main trail.",
+                "role": "core",
+                "useJapanese": false
+              }
+            ]
+          ],
+          "choices": [
+            "持っていた",
+            "なくしていた",
+            "描いていた",
+            "売っていた"
+          ],
+          "answerIndex": 0,
+          "inferenceExplanation": "「She unfolded it at every fork」と「and it led her safely back」と「in her backpack」が手がかりです。これらの状況から、hadは「持っていた」を表すと判断できます。",
+          "quality": {
+            "targetOccurrence": 1,
+            "clueCount": 3,
+            "targetProtected": true,
+            "cluesProtected": true
+          }
+        },
+        {
+          "q": 13,
+          "type": "word",
+          "target": "will have",
+          "meaning": "〜するだろう、〜を持つことになる",
+          "targetSense": "〜を持つことになる",
+          "pos": "助動詞句",
+          "level": "EIKEN Grade 2",
+          "fullEnglish": [
+            "By next spring, the town will have a new public library.",
+            "Residents are very excited to borrow books and use the study rooms there."
+          ],
+          "mixedEnglish": [
+            "By next spring, the town will have a new public library.",
+            "Residents are very excited to borrow books and use the study rooms there."
+          ],
+          "contextClues": [
+            {
+              "text": "By next spring",
+              "type": "time"
+            },
+            {
+              "text": "a new public library",
+              "type": "object"
+            }
+          ],
+          "inferencePath": [
+            "By next spring",
+            "a new public library",
+            "targetSense: 〜を持つことになる",
+            "will have"
+          ],
+          "segments": [
+            [
+              {
+                "en": "By next spring",
+                "role": "clue",
+                "clueType": "time",
+                "useJapanese": false
+              },
+              {
+                "en": ", the town ",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": "will have",
+                "role": "target",
+                "useJapanese": false
+              },
+              {
+                "en": " ",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": "a new public library",
+                "role": "clue",
+                "clueType": "object",
+                "useJapanese": false
+              },
+              {
+                "en": ".",
+                "role": "core",
+                "useJapanese": false
+              }
+            ],
+            [
+              {
+                "en": "Residents are very excited to borrow books and use the study rooms there.",
+                "role": "core",
+                "useJapanese": false
+              }
+            ]
+          ],
+          "choices": [
+            "〜を持つことになる",
+            "〜しただろう",
+            "〜だっただろう",
+            "〜するべきである"
+          ],
+          "answerIndex": 0,
+          "inferenceExplanation": "「By next spring」と「a new public library」という手がかりから、将来的に新しい施設が完成して所有する状態になることがわかります。そのため、will haveは「〜を持つことになる」だと推測できます。",
+          "quality": {
+            "targetOccurrence": 1,
+            "clueCount": 2,
+            "targetProtected": true,
+            "cluesProtected": true
+          }
+        },
+        {
+          "q": 13,
+          "type": "word",
+          "target": "would have",
+          "meaning": "〜しただろう、〜だっただろう",
+          "targetSense": "〜しただろう",
+          "pos": "助動詞句",
+          "level": "EIKEN Grade 2",
+          "fullEnglish": [
+            "Without your advice, I would have made the same serious mistake.",
+            "Your timely warning helped me avoid a costly error."
+          ],
+          "mixedEnglish": [
+            "Without your advice, I would have made the same serious mistake.",
+            "Your timely warning helped me avoid a costly error."
+          ],
+          "contextClues": [
+            {
+              "text": "Without your advice",
+              "type": "condition"
+            },
+            {
+              "text": "the same serious mistake",
+              "type": "result"
+            }
+          ],
+          "inferencePath": [
+            "Without your advice",
+            "the same serious mistake",
+            "targetSense: 〜しただろう",
+            "would have"
+          ],
+          "segments": [
+            [
+              {
+                "en": "Without your advice",
+                "role": "clue",
+                "clueType": "condition",
+                "useJapanese": false
+              },
+              {
+                "en": ", I ",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": "would have",
+                "role": "target",
+                "useJapanese": false
+              },
+              {
+                "en": " made ",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": "the same serious mistake",
+                "role": "clue",
+                "clueType": "result",
+                "useJapanese": false
+              },
+              {
+                "en": ".",
+                "role": "core",
+                "useJapanese": false
+              }
+            ],
+            [
+              {
+                "en": "Your timely warning helped me avoid a costly error.",
+                "role": "core",
+                "useJapanese": false
+              }
+            ]
+          ],
+          "choices": [
+            "〜しただろう",
+            "〜する予定である",
+            "〜しなければならない",
+            "〜できたかもしれない"
+          ],
+          "answerIndex": 0,
+          "inferenceExplanation": "「Without your advice」や「the same serious mistake」という手がかりから、過去の状況においてもし助言がなければ起こり得た仮想の結果を表していることがわかります。そのため、would haveは「〜しただろう」だと推測できます。",
+          "quality": {
+            "targetOccurrence": 1,
+            "clueCount": 2,
+            "targetProtected": true,
+            "cluesProtected": true
+          }
+        }
+      ],
+      "contextTranslations": [
+        {
+          "q": 13,
+          "target": "have",
+          "english": "I bought a reliable laptop with my own savings last year, and the receipt has my name on it, and no one else uses the computer.",
+          "japanese": "私は昨年、自分で貯めたお金で信頼できるノートパソコンを買い、領収書には私の名前があり、そのコンピューターを使うのは私だけです。"
+        },
+        {
+          "q": 13,
+          "target": "had",
+          "english": "She unfolded it at every fork, and it led her safely back to the main trail.",
+          "japanese": "彼女は道が分かれるたびにその地図を広げ、それを頼りに無事に主要な登山道へ戻りました。"
+        },
+        {
+          "q": 13,
+          "target": "will have",
+          "english": "Residents are very excited to borrow books and use the study rooms there.",
+          "japanese": "住民たちは、そこで本を借りたり学習室を利用したりできることをとても楽しみにしています。"
+        },
+        {
+          "q": 13,
+          "target": "would have",
+          "english": "Your timely warning helped me avoid a costly error.",
+          "japanese": "あなたがちょうどよい時に警告してくれたおかげで、私は大きな損失につながるミスを避けられました。"
+        }
+      ]
+    },
+    {
+      "dataset": "eiken2-mock-2",
+      "q": 19,
+      "question": {
+        "q": 19,
+        "stem": "The professor is planning to retire from his job at the university next year. When he retires, he (   ) at the university for 45 years.",
+        "choices": [
+          "will be teaching",
+          "has taught",
+          "will teach",
+          "will have taught"
+        ],
+        "answerIndex": 3,
+        "translation": "その教授は来年、大学の仕事を退職する予定だ。退職するときには、大学で45年間教えたことになる。"
+      },
+      "words": [],
+      "idioms": [
+        {
+          "q": 19,
+          "is_answer": false,
+          "meaning": "教えていることになるだろう",
+          "example": "Next year, she will be teaching English at a school abroad.",
+          "exampleTranslation": "来年、彼女は海外の学校で英語を教えていることになる。",
+          "pos": "助動詞句",
+          "type": "idiom",
+          "phrase": "will be teaching",
+          "coreImage": {
+            "chain": [
+              {
+                "term": "will",
+                "gloss": "未来を示して"
+              },
+              {
+                "term": "teaching",
+                "gloss": "教えている"
+              },
+              {
+                "gloss": "将来その時点で教えていることになる"
+              }
+            ]
+          }
+        },
+        {
+          "q": 19,
+          "is_answer": false,
+          "meaning": "教えてきた、教えたことがある",
+          "example": "He has taught science at this university since the new building opened.",
+          "exampleTranslation": "彼は新しい建物が開いて以来、この大学で科学を教えてきた。",
+          "pos": "動詞句",
+          "type": "idiom",
+          "phrase": "has taught",
+          "coreImage": {
+            "chain": [
+              {
+                "term": "has",
+                "gloss": "現在まで持続して"
+              },
+              {
+                "term": "taught",
+                "gloss": "教えた"
+              },
+              {
+                "gloss": "過去から現在まで教えてきた"
+              }
+            ]
+          }
+        },
+        {
+          "q": 19,
+          "is_answer": false,
+          "meaning": "教えるだろう",
+          "example": "The visiting professor will teach a special class next Saturday.",
+          "exampleTranslation": "客員教授は来週の土曜日に特別授業を行うだろう。",
+          "pos": "助動詞句",
+          "type": "idiom",
+          "phrase": "will teach",
+          "coreImage": {
+            "chain": [
+              {
+                "term": "will",
+                "gloss": "未来を示して"
+              },
+              {
+                "term": "teach",
+                "gloss": "教える"
+              },
+              {
+                "gloss": "将来教えるだろう"
+              }
+            ]
+          }
+        },
+        {
+          "q": 19,
+          "is_answer": true,
+          "meaning": "教えたことになるだろう",
+          "example": "By next June, the professor will have taught here for forty-five years.",
+          "exampleTranslation": "来年6月までに、その教授はここで45年間教えたことになるだろう。",
+          "pos": "助動詞句",
+          "type": "idiom",
+          "phrase": "will have taught",
+          "coreImage": {
+            "chain": [
+              {
+                "term": "will",
+                "gloss": "未来を示して"
+              },
+              {
+                "term": "have",
+                "gloss": "経験を持って"
+              },
+              {
+                "term": "taught",
+                "gloss": "教えた"
+              },
+              {
+                "gloss": "未来の時点までに教え終えていることになる"
+              }
+            ]
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "q": 19,
+          "type": "idiom",
+          "target": "will be teaching",
+          "meaning": "教えていることになるだろう",
+          "targetSense": "教えていることになるだろう",
+          "pos": "助動詞句",
+          "level": "EIKEN Grade 2",
+          "fullEnglish": [
+            "Next year, she will be teaching English at a school abroad.",
+            "She will be standing in front of a new classroom continuously throughout the entire term, and her adventure in another country is about to begin very soon."
+          ],
+          "mixedEnglish": [
+            "Next year, she will be teaching English at a school abroad.",
+            "She will be standing in front of a new classroom continuously throughout the entire term, and her adventure in another country is about to begin very soon."
+          ],
+          "contextClues": [
+            {
+              "text": "throughout the entire term",
+              "type": "duration"
+            },
+            {
+              "text": "at a school abroad",
+              "type": "location"
+            }
+          ],
+          "inferencePath": [
+            "throughout the entire term",
+            "at a school abroad",
+            "targetSense: 教えていることになるだろう",
+            "will be teaching"
+          ],
+          "segments": [
+            [
+              {
+                "en": "Next year, she ",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": "will be teaching",
+                "role": "target",
+                "useJapanese": false
+              },
+              {
+                "en": " English ",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": "at a school abroad",
+                "role": "clue",
+                "clueType": "location",
+                "useJapanese": false
+              },
+              {
+                "en": ".",
+                "role": "core",
+                "useJapanese": false
+              }
+            ],
+            [
+              {
+                "en": "She will be standing in front of a new classroom continuously ",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": "throughout the entire term",
+                "role": "clue",
+                "clueType": "duration",
+                "useJapanese": false
+              },
+              {
+                "en": ", and ",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": "her adventure in another country is about to begin very soon.",
+                "role": "core",
+                "useJapanese": false
+              }
+            ]
+          ],
+          "choices": [
+            "教えていることになるだろう",
+            "教えていただろう",
+            "教えるつもりだ",
+            "教えているところだ"
+          ],
+          "answerIndex": 0,
+          "inferenceExplanation": "「throughout the entire term」や「at a school abroad」という手がかりから、ある期間にわたってその授業を継続している未来の様子がわかります。そのため、will be teachingは「教えていることになるだろう」だと推測できます。",
+          "quality": {
+            "targetOccurrence": 1,
+            "clueCount": 2,
+            "targetProtected": true,
+            "cluesProtected": true
+          }
+        },
+        {
+          "q": 19,
+          "type": "idiom",
+          "target": "has taught",
+          "meaning": "教えてきた、教えたことがある",
+          "targetSense": "教えてきた",
+          "pos": "動詞句",
+          "level": "EIKEN Grade 2",
+          "fullEnglish": [
+            "He has taught science at this university since the new building opened.",
+            "Former students still remember his classroom demonstrations, and the department recently honored his long career in education."
+          ],
+          "mixedEnglish": [
+            "He has taught science at this university since the new building opened.",
+            "Former students still remember his classroom demonstrations, and the department recently honored his long career in education."
+          ],
+          "contextClues": [
+            {
+              "text": "Former students still remember his classroom demonstrations",
+              "type": "supporting context"
+            },
+            {
+              "text": "and the department recently honored his long career in education",
+              "type": "supporting context"
+            }
+          ],
+          "inferencePath": [
+            "Former students still remember his classroom demonstrations",
+            "and the department recently honored his long career in education",
+            "targetSense: 教えてきた",
+            "has taught"
+          ],
+          "segments": [
+            [
+              {
+                "en": "He ",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": "has taught",
+                "role": "target",
+                "useJapanese": false
+              },
+              {
+                "en": " science at this university since the new building opened.",
+                "role": "core",
+                "useJapanese": false
+              }
+            ],
+            [
+              {
+                "en": "Former students still remember his classroom demonstrations",
+                "role": "clue",
+                "clueType": "supporting context",
+                "useJapanese": false
+              },
+              {
+                "en": ", ",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": "and the department recently honored his long career in education",
+                "role": "clue",
+                "clueType": "supporting context",
+                "useJapanese": false
+              },
+              {
+                "en": ".",
+                "role": "core",
+                "useJapanese": false
+              }
+            ]
+          ],
+          "choices": [
+            "教えてきた",
+            "研究してきた",
+            "学んできた",
+            "支えてきた"
+          ],
+          "answerIndex": 0,
+          "inferenceExplanation": "「Former students still remember his classroom demonstrations」と「and the department recently honored his long career in education」が手がかりです。これらの状況から、has taughtは「教えてきた」を表すと判断できます。",
+          "quality": {
+            "targetOccurrence": 1,
+            "clueCount": 2,
+            "targetProtected": true,
+            "cluesProtected": true
+          }
+        },
+        {
+          "q": 19,
+          "type": "idiom",
+          "target": "will teach",
+          "meaning": "教えるだろう",
+          "targetSense": "教えるだろう",
+          "pos": "助動詞句",
+          "level": "EIKEN Grade 2",
+          "fullEnglish": [
+            "The visiting professor will teach a special class next Saturday.",
+            "Many students are looking forward to attending the lecture, and all necessary materials have already been prepared in advance."
+          ],
+          "mixedEnglish": [
+            "The visiting professor will teach a special class next Saturday.",
+            "Many students are looking forward to attending the lecture, and all necessary materials have already been prepared in advance."
+          ],
+          "contextClues": [
+            {
+              "text": "The visiting professor",
+              "type": "subject"
+            },
+            {
+              "text": "next Saturday",
+              "type": "time"
+            }
+          ],
+          "inferencePath": [
+            "The visiting professor",
+            "next Saturday",
+            "targetSense: 教えるだろう",
+            "will teach"
+          ],
+          "segments": [
+            [
+              {
+                "en": "The visiting professor",
+                "role": "clue",
+                "clueType": "subject",
+                "useJapanese": false
+              },
+              {
+                "en": " ",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": "will teach",
+                "role": "target",
+                "useJapanese": false
+              },
+              {
+                "en": " a special class ",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": "next Saturday",
+                "role": "clue",
+                "clueType": "time",
+                "useJapanese": false
+              },
+              {
+                "en": ".",
+                "role": "core",
+                "useJapanese": false
+              }
+            ],
+            [
+              {
+                "en": "Many students are looking forward to attending the lecture",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": ", and ",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": "all necessary materials have already been prepared in advance.",
+                "role": "core",
+                "useJapanese": false
+              }
+            ]
+          ],
+          "choices": [
+            "教えるだろう",
+            "教えている",
+            "教えた",
+            "教えていた"
+          ],
+          "answerIndex": 0,
+          "inferenceExplanation": "文脈には「The visiting professor」や「next Saturday」という将来の予定に関する手がかりがあります。これらから、未来の特定の時点に行われる予定や予測を表しているため、will teachは「教えるだろう」だと推測できます。",
+          "quality": {
+            "targetOccurrence": 1,
+            "clueCount": 2,
+            "targetProtected": true,
+            "cluesProtected": true
+          }
+        },
+        {
+          "q": 19,
+          "type": "idiom",
+          "target": "will have taught",
+          "meaning": "教えたことになるだろう",
+          "targetSense": "教えたことになるだろう",
+          "pos": "助動詞句",
+          "level": "EIKEN Grade 2",
+          "fullEnglish": [
+            "By next June, the professor will have taught here for forty-five years.",
+            "His long career has been dedicated to scientific research and education, and a special celebration ceremony is planned to honor his retirement."
+          ],
+          "mixedEnglish": [
+            "By next June, the professor will have taught here for forty-five years.",
+            "His long career has been dedicated to scientific research and education, and a special celebration ceremony is planned to honor his retirement."
+          ],
+          "contextClues": [
+            {
+              "text": "By next June",
+              "type": "time"
+            },
+            {
+              "text": "for forty-five years",
+              "type": "duration"
+            }
+          ],
+          "inferencePath": [
+            "By next June",
+            "for forty-five years",
+            "targetSense: 教えたことになるだろう",
+            "will have taught"
+          ],
+          "segments": [
+            [
+              {
+                "en": "By next June",
+                "role": "clue",
+                "clueType": "time",
+                "useJapanese": false
+              },
+              {
+                "en": ", the professor ",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": "will have taught",
+                "role": "target",
+                "useJapanese": false
+              },
+              {
+                "en": " here ",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": "for forty-five years",
+                "role": "clue",
+                "clueType": "duration",
+                "useJapanese": false
+              },
+              {
+                "en": ".",
+                "role": "core",
+                "useJapanese": false
+              }
+            ],
+            [
+              {
+                "en": "His long career has been dedicated to scientific research and education",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": ", and ",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": "a special celebration ceremony is planned to honor his retirement.",
+                "role": "core",
+                "useJapanese": false
+              }
+            ]
+          ],
+          "choices": [
+            "教えたことになるだろう",
+            "教えているだろう",
+            "教えるだろう",
+            "教えていた"
+          ],
+          "answerIndex": 0,
+          "inferenceExplanation": "文脈には「By next June」という未来の期限と「for forty-five years」という期間を示す手がかりがあります。これらから、未来の時点までにその状態が完了し、その期間に達していることを表しているため、will have taughtは「教えたことになるだろう」だと推測できます。",
+          "quality": {
+            "targetOccurrence": 1,
+            "clueCount": 2,
+            "targetProtected": true,
+            "cluesProtected": true
+          }
+        }
+      ],
+      "contextTranslations": [
+        {
+          "q": 19,
+          "target": "will be teaching",
+          "english": "She will be standing in front of a new classroom continuously throughout the entire term, and her adventure in another country is about to begin very soon.",
+          "japanese": "彼女は学期中ずっと新しい教室の前に立って教えることになり、外国での新たな生活が間もなく始まります。"
+        },
+        {
+          "q": 19,
+          "target": "has taught",
+          "english": "Former students still remember his classroom demonstrations, and the department recently honored his long career in education.",
+          "japanese": "教え子たちは今でも彼の教室での実演を覚えており、学部も最近、彼の教育者としての長い経歴をたたえました。"
+        },
+        {
+          "q": 19,
+          "target": "will teach",
+          "english": "Many students are looking forward to attending the lecture, and all necessary materials have already been prepared in advance.",
+          "japanese": "多くの生徒がその講義への出席を楽しみにしており、必要な教材はすべてすでに用意されています。"
+        },
+        {
+          "q": 19,
+          "target": "will have taught",
+          "english": "His long career has been dedicated to scientific research and education, and a special celebration ceremony is planned to honor his retirement.",
+          "japanese": "彼は長い職業人生を科学研究と教育にささげてきており、その退職をたたえる特別な式典が予定されています。"
+        }
+      ]
+    },
+    {
+      "dataset": "eiken2-mock-4",
+      "q": 20,
+      "question": {
+        "q": 20,
+        "stem": "Sam overslept, and his alarm clock was still turned off. He (   ) set his alarm clock. As a result, he woke up too late to get to the station on time.",
+        "choices": [
+          "will not have",
+          "would not have",
+          "should not have",
+          "must not have"
+        ],
+        "answerIndex": 3,
+        "translation": "サムは目覚まし時計をセットしなかったに違いない。彼は駅に時間どおり着くには遅すぎる時間に起きた。"
+      },
+      "words": [],
+      "idioms": [
+        {
+          "q": 20,
+          "is_answer": false,
+          "meaning": "持っていないことになるだろう",
+          "example": "By tomorrow, the store will not have any fresh bread left.",
+          "exampleTranslation": "明日までには、その店には新鮮なパンが残っていないだろう。",
+          "pos": "助動詞句",
+          "type": "idiom",
+          "phrase": "will not have",
+          "coreImage": {
+            "chain": [
+              {
+                "term": "will",
+                "gloss": "未来を示して"
+              },
+              {
+                "term": "have",
+                "gloss": "持つ"
+              },
+              {
+                "gloss": "未来に持っていないことになる"
+              }
+            ]
+          }
+        },
+        {
+          "q": 20,
+          "is_answer": false,
+          "meaning": "〜しなかっただろう",
+          "example": "Without your advice, I would not have made the right decision.",
+          "exampleTranslation": "あなたの助言がなければ、私は正しい決定をしなかっただろう。",
+          "pos": "助動詞句",
+          "type": "idiom",
+          "phrase": "would not have",
+          "coreImage": {
+            "chain": [
+              {
+                "term": "would",
+                "gloss": "仮定の結果を示して"
+              },
+              {
+                "term": "not have",
+                "gloss": "完了形を否定して"
+              },
+              {
+                "gloss": "〜しなかっただろう"
+              }
+            ]
+          }
+        },
+        {
+          "q": 20,
+          "is_answer": false,
+          "meaning": "〜すべきではなかった",
+          "example": "You should not have left the medicine near the young child.",
+          "exampleTranslation": "幼い子どもの近くに薬を置くべきではなかった。",
+          "pos": "助動詞句",
+          "type": "idiom",
+          "phrase": "should not have",
+          "coreImage": {
+            "chain": [
+              {
+                "term": "should",
+                "gloss": "望ましさを示して"
+              },
+              {
+                "term": "have",
+                "gloss": "持つ・する"
+              },
+              {
+                "gloss": "〜すべきではなかった"
+              }
+            ]
+          }
+        },
+        {
+          "q": 20,
+          "is_answer": true,
+          "meaning": "〜したはずがない、〜しなかったに違いない",
+          "example": "The lights are off, so they must not have arrived home yet.",
+          "exampleTranslation": "明かりが消えているので、彼らはまだ帰宅していないに違いない。",
+          "pos": "助動詞句",
+          "type": "idiom",
+          "phrase": "must not have",
+          "coreImage": {
+            "chain": [
+              {
+                "term": "must",
+                "gloss": "強い判断を示して"
+              },
+              {
+                "term": "have",
+                "gloss": "持つ・する"
+              },
+              {
+                "gloss": "〜したはずがない"
+              }
+            ]
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "q": 20,
+          "type": "idiom",
+          "target": "will not have",
+          "meaning": "持っていないことになるだろう",
+          "targetSense": "持っていないことになるだろう",
+          "pos": "助動詞句",
+          "level": "EIKEN Grade 2",
+          "fullEnglish": [
+            "By tomorrow, the store will not have any fresh bread left.",
+            "All the morning supplies are selling out very quickly today."
+          ],
+          "mixedEnglish": [
+            "By tomorrow, the store will not have any fresh bread left.",
+            "All the morning supplies are selling out very quickly today."
+          ],
+          "contextClues": [
+            {
+              "text": "By tomorrow",
+              "type": "situation"
+            },
+            {
+              "text": "selling out very quickly",
+              "type": "cause"
+            }
+          ],
+          "inferencePath": [
+            "By tomorrow",
+            "selling out very quickly",
+            "targetSense: 持っていないことになるだろう",
+            "will not have"
+          ],
+          "segments": [
+            [
+              {
+                "en": "By tomorrow",
+                "role": "clue",
+                "clueType": "situation",
+                "useJapanese": false
+              },
+              {
+                "en": ", the store ",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": "will not have",
+                "role": "target",
+                "useJapanese": false
+              },
+              {
+                "en": " any fresh bread left.",
+                "role": "core",
+                "useJapanese": false
+              }
+            ],
+            [
+              {
+                "en": "All the morning supplies are ",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": "selling out very quickly",
+                "role": "clue",
+                "clueType": "cause",
+                "useJapanese": false
+              },
+              {
+                "en": " today.",
+                "role": "core",
+                "useJapanese": false
+              }
+            ]
+          ],
+          "choices": [
+            "持っていないことになるだろう",
+            "必要ではないだろう",
+            "忘れてしまうだろう",
+            "開いていないだろう"
+          ],
+          "answerIndex": 0,
+          "inferenceExplanation": "「By tomorrow」と「selling out very quickly」という手がかりから、明日には品物が残っていない状態になっていることがわかります。そのため、will not haveは「持っていないことになるだろう」だと推測できます。",
+          "quality": {
+            "targetOccurrence": 1,
+            "clueCount": 2,
+            "targetProtected": true,
+            "cluesProtected": true
+          }
+        },
+        {
+          "q": 20,
+          "type": "idiom",
+          "target": "would not have",
+          "meaning": "〜しなかっただろう",
+          "targetSense": "〜しなかっただろう",
+          "pos": "助動詞句",
+          "level": "EIKEN Grade 2",
+          "fullEnglish": [
+            "Without your advice, I would not have made the right decision.",
+            "I was ready to choose the wrong option, but your warning changed my mind, and the choice I finally made led to a successful result."
+          ],
+          "mixedEnglish": [
+            "Without your advice, I would not have made the right decision.",
+            "I was ready to choose the wrong option, but your warning changed my mind, and the choice I finally made led to a successful result."
+          ],
+          "contextClues": [
+            {
+              "text": "ready to choose the wrong option",
+              "type": "supporting context"
+            },
+            {
+              "text": "warning changed my mind",
+              "type": "supporting context"
+            },
+            {
+              "text": "successful result",
+              "type": "supporting context"
+            }
+          ],
+          "inferencePath": [
+            "ready to choose the wrong option",
+            "warning changed my mind",
+            "successful result",
+            "targetSense: 〜しなかっただろう",
+            "would not have"
+          ],
+          "segments": [
+            [
+              {
+                "en": "Without your advice, I ",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": "would not have",
+                "role": "target",
+                "useJapanese": false
+              },
+              {
+                "en": " made the right decision.",
+                "role": "core",
+                "useJapanese": false
+              }
+            ],
+            [
+              {
+                "en": "I was ",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": "ready to choose the wrong option",
+                "role": "clue",
+                "clueType": "supporting context",
+                "useJapanese": false
+              },
+              {
+                "en": ", but your ",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": "warning changed my mind",
+                "role": "clue",
+                "clueType": "supporting context",
+                "useJapanese": false
+              },
+              {
+                "en": ", and ",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": "the choice I finally made led to a ",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": "successful result",
+                "role": "clue",
+                "clueType": "supporting context",
+                "useJapanese": false
+              },
+              {
+                "en": ".",
+                "role": "core",
+                "useJapanese": false
+              }
+            ]
+          ],
+          "choices": [
+            "〜しなかっただろう",
+            "〜する必要はない",
+            "〜してはいけない",
+            "〜するはずだ"
+          ],
+          "answerIndex": 0,
+          "inferenceExplanation": "「ready to choose the wrong option」と「warning changed my mind」と「successful result」が手がかりです。これらの状況から、would not haveは「〜しなかっただろう」を表すと判断できます。",
+          "quality": {
+            "targetOccurrence": 1,
+            "clueCount": 3,
+            "targetProtected": true,
+            "cluesProtected": true
+          }
+        },
+        {
+          "q": 20,
+          "type": "idiom",
+          "target": "should not have",
+          "meaning": "〜すべきではなかった",
+          "targetSense": "〜すべきではなかった",
+          "pos": "助動詞句",
+          "level": "EIKEN Grade 2",
+          "fullEnglish": [
+            "You should not have left the medicine near the young child.",
+            "It was a very dangerous place for such harmful pills."
+          ],
+          "mixedEnglish": [
+            "You should not have left the medicine near the young child.",
+            "It was a very dangerous place for such harmful pills."
+          ],
+          "contextClues": [
+            {
+              "text": "left the medicine",
+              "type": "behavior"
+            },
+            {
+              "text": "very dangerous place",
+              "type": "contrast"
+            }
+          ],
+          "inferencePath": [
+            "left the medicine",
+            "very dangerous place",
+            "targetSense: 〜すべきではなかった",
+            "should not have"
+          ],
+          "segments": [
+            [
+              {
+                "en": "You ",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": "should not have",
+                "role": "target",
+                "useJapanese": false
+              },
+              {
+                "en": " ",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": "left the medicine",
+                "role": "clue",
+                "clueType": "behavior",
+                "useJapanese": false
+              },
+              {
+                "en": " near the young child.",
+                "role": "core",
+                "useJapanese": false
+              }
+            ],
+            [
+              {
+                "en": "It was a ",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": "very dangerous place",
+                "role": "clue",
+                "clueType": "contrast",
+                "useJapanese": false
+              },
+              {
+                "en": " for such harmful pills.",
+                "role": "core",
+                "useJapanese": false
+              }
+            ]
+          ],
+          "choices": [
+            "〜すべきではなかった",
+            "〜するつもりはなかった",
+            "〜したかもしれない",
+            "〜するはずがなかった"
+          ],
+          "answerIndex": 0,
+          "inferenceExplanation": "「left the medicine」と「very dangerous place」という手がかりから、薬を幼児の近くに置いた行動が危険であり、適切ではなかったことがわかります。そのため、should not haveは「〜すべきではなかった」だと推測できます。",
+          "quality": {
+            "targetOccurrence": 1,
+            "clueCount": 2,
+            "targetProtected": true,
+            "cluesProtected": true
+          }
+        },
+        {
+          "q": 20,
+          "type": "idiom",
+          "target": "must not have",
+          "meaning": "〜したはずがない、〜しなかったに違いない",
+          "targetSense": "〜したはずがない",
+          "pos": "助動詞句",
+          "level": "EIKEN Grade 2",
+          "fullEnglish": [
+            "The lights are off, so they must not have arrived home yet.",
+            "The house is completely dark and quiet at this hour."
+          ],
+          "mixedEnglish": [
+            "The lights are off, so they must not have arrived home yet.",
+            "The house is completely dark and quiet at this hour."
+          ],
+          "contextClues": [
+            {
+              "text": "The lights are off",
+              "type": "cause"
+            },
+            {
+              "text": "completely dark and quiet",
+              "type": "situation"
+            }
+          ],
+          "inferencePath": [
+            "The lights are off",
+            "completely dark and quiet",
+            "targetSense: 〜したはずがない",
+            "must not have"
+          ],
+          "segments": [
+            [
+              {
+                "en": "The lights are off",
+                "role": "clue",
+                "clueType": "cause",
+                "useJapanese": false
+              },
+              {
+                "en": ", so they ",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": "must not have",
+                "role": "target",
+                "useJapanese": false
+              },
+              {
+                "en": " arrived home yet.",
+                "role": "core",
+                "useJapanese": false
+              }
+            ],
+            [
+              {
+                "en": "The house is ",
+                "role": "core",
+                "useJapanese": false
+              },
+              {
+                "en": "completely dark and quiet",
+                "role": "clue",
+                "clueType": "situation",
+                "useJapanese": false
+              },
+              {
+                "en": " at this hour.",
+                "role": "core",
+                "useJapanese": false
+              }
+            ]
+          ],
+          "choices": [
+            "〜したはずがない",
+            "〜しなければならない",
+            "〜するべきではない",
+            "〜したかもしれない"
+          ],
+          "answerIndex": 0,
+          "inferenceExplanation": "「The lights are off」と「completely dark and quiet」という手がかりから、家が暗くて静かなのでまだ到着していないと強く推測できることがわかります。そのため、must not haveは「〜したはずがない」だと推測できます。",
+          "quality": {
+            "targetOccurrence": 1,
+            "clueCount": 2,
+            "targetProtected": true,
+            "cluesProtected": true
+          }
+        }
+      ],
+      "contextTranslations": [
+        {
+          "q": 20,
+          "target": "will not have",
+          "english": "All the morning supplies are selling out very quickly today.",
+          "japanese": "今朝の品は今日、とても速い勢いで売り切れています。"
+        },
+        {
+          "q": 20,
+          "target": "would not have",
+          "english": "I was ready to choose the wrong option, but your warning changed my mind, and the choice I finally made led to a successful result.",
+          "japanese": "私は誤った選択肢を選びかけていましたが、あなたの忠告で考えを変え、最終的に選んだものが良い結果につながりました。"
+        },
+        {
+          "q": 20,
+          "target": "should not have",
+          "english": "It was a very dangerous place for such harmful pills.",
+          "japanese": "そこは、そのような有害な錠剤を置くには非常に危険な場所でした。"
+        },
+        {
+          "q": 20,
+          "target": "must not have",
+          "english": "The house is completely dark and quiet at this hour.",
+          "japanese": "この時間、家の中は真っ暗で物音一つしません。"
+        }
+      ]
+    }
+  ],
+  "wordOriginEntries": {
+    "had": {
+      "surfaceForms": [
+        "had"
+      ],
+      "meanings": [
+        "持っていた、〜した"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "英語 haveの過去分詞形。 → 持っていた、〜した"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/had",
+          "https://www.dictionary.com/browse/have"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/had",
+            "note": "Etymonlineのhad項目で、語源言語・歴史的語形haveを確認。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/have",
+            "note": "Dictionary.comのhad項目のEtymology欄を照合し、英語以前の語形と意味の記述を確認。"
+          }
+        ],
+        "originLanguage": "英語",
+        "etymons": [
+          "have"
+        ],
+        "historicalPath": [
+          "英語 have",
+          "英語 had"
+        ],
+        "components": [],
+        "rootCandidates": [],
+        "semanticBridge": "英語 haveから英語 hadを経て、現在の「持っていた、〜した」へ意味がつながる。",
+        "summary": "英語 haveの過去分詞形。 → 持っていた、〜した",
+        "confidence": "medium",
+        "notes": "B型。資料が示す歴史的語形・派生関係を一行で示し、綴りの類似だけによる語根分解はしていない。",
+        "batch": "batch-056"
+      }
+    },
+    "have": {
+      "surfaceForms": [
+        "have"
+      ],
+      "meanings": [
+        "持っている、〜する"
+      ],
+      "classification": "B",
+      "display": {
+        "type": "B",
+        "derivation": "古英語 habbanから英語 haveへ。 → 持っている、〜する"
+      },
+      "research": {
+        "status": "reviewed",
+        "sources": [
+          "https://www.etymonline.com/word/have",
+          "https://www.dictionary.com/browse/have"
+        ],
+        "sourceNotes": [
+          {
+            "url": "https://www.etymonline.com/word/have",
+            "note": "Etymonlineのhave項目で、語源言語・歴史的語形habbanを確認。"
+          },
+          {
+            "url": "https://www.dictionary.com/browse/have",
+            "note": "Dictionary.comのhave項目のEtymology欄を照合し、英語以前の語形と意味の記述を確認。"
+          }
+        ],
+        "originLanguage": "古英語",
+        "etymons": [
+          "habban"
+        ],
+        "historicalPath": [
+          "古英語 habban",
+          "英語 have"
+        ],
+        "components": [],
+        "rootCandidates": [],
+        "semanticBridge": "古英語 habbanから英語 haveを経て、現在の「持っている、〜する」へ意味がつながる。",
+        "summary": "古英語 habbanから英語 haveへ。 → 持っている、〜する",
+        "confidence": "medium",
+        "notes": "B型。資料が示す歴史的語形・派生関係を一行で示し、綴りの類似だけによる語根分解はしていない。",
+        "batch": "batch-056"
+      }
+    }
+  }
+}

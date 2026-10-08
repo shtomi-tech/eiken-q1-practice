@@ -7541,167 +7541,72 @@
     {
       "q": 20,
       "type": "idiom",
-      "target": "will not have",
-      "meaning": "持っていないことになるだろう",
-      "targetSense": "持っていないことになるだろう",
-      "pos": "助動詞句",
+      "target": "in search of",
+      "meaning": "〜を探して、〜を求めて",
+      "targetSense": "〜を探して",
+      "pos": "前置詞句",
       "level": "EIKEN Grade 2",
       "fullEnglish": [
-        "By tomorrow, the store will not have any fresh bread left.",
-        "All the morning supplies are selling out very quickly today."
+        "Clara went to the bookstore in search of a novel.",
+        "The traveler walked through the ancient market, and his eyes carefully checked every small shop."
       ],
       "mixedEnglish": [
-        "By tomorrow, the store will not have any fresh bread left.",
-        "All the morning supplies are selling out very quickly today."
+        "Clara went to the bookstore in search of a novel.",
+        "The traveler walked through the ancient market, and his eyes carefully checked every small shop."
       ],
       "contextClues": [
         {
-          "text": "By tomorrow",
-          "type": "situation"
+          "text": "The traveler walked",
+          "type": "supporting context"
         },
         {
-          "text": "selling out very quickly",
-          "type": "cause"
+          "text": "through the ancient market",
+          "type": "supporting context"
+        },
+        {
+          "text": "carefully checked every small shop",
+          "type": "behavior"
         }
       ],
       "inferencePath": [
-        "By tomorrow",
-        "selling out very quickly",
-        "targetSense: 持っていないことになるだろう",
-        "will not have"
+        "The traveler walked",
+        "through the ancient market",
+        "carefully checked every small shop",
+        "targetSense: 〜を探して",
+        "in search of"
       ],
       "segments": [
         [
           {
-            "en": "By tomorrow",
-            "role": "clue",
-            "clueType": "situation",
-            "useJapanese": false
-          },
-          {
-            "en": ", the store ",
+            "en": "Clara went to the bookstore ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "will not have",
+            "en": "in search of",
             "role": "target",
             "useJapanese": false
           },
           {
-            "en": " any fresh bread left.",
+            "en": " a novel.",
             "role": "core",
             "useJapanese": false
           }
         ],
         [
           {
-            "en": "All the morning supplies are ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "selling out very quickly",
-            "role": "clue",
-            "clueType": "cause",
-            "useJapanese": false
-          },
-          {
-            "en": " today.",
-            "role": "core",
-            "useJapanese": false
-          }
-        ]
-      ],
-      "choices": [
-        "持っていないことになるだろう",
-        "必要ではないだろう",
-        "忘れてしまうだろう",
-        "開いていないだろう"
-      ],
-      "answerIndex": 0,
-      "inferenceExplanation": "「By tomorrow」と「selling out very quickly」という手がかりから、明日には品物が残っていない状態になっていることがわかります。そのため、will not haveは「持っていないことになるだろう」だと推測できます。",
-      "quality": {
-        "targetOccurrence": 1,
-        "clueCount": 2,
-        "targetProtected": true,
-        "cluesProtected": true
-      }
-    },
-    {
-      "q": 20,
-      "type": "idiom",
-      "target": "would not have",
-      "meaning": "〜しなかっただろう",
-      "targetSense": "〜しなかっただろう",
-      "pos": "助動詞句",
-      "level": "EIKEN Grade 2",
-      "fullEnglish": [
-        "Without your advice, I would not have made the right decision.",
-        "I was ready to choose the wrong option, but your warning changed my mind, and the choice I finally made led to a successful result."
-      ],
-      "mixedEnglish": [
-        "Without your advice, I would not have made the right decision.",
-        "I was ready to choose the wrong option, but your warning changed my mind, and the choice I finally made led to a successful result."
-      ],
-      "contextClues": [
-        {
-          "text": "ready to choose the wrong option",
-          "type": "supporting context"
-        },
-        {
-          "text": "warning changed my mind",
-          "type": "supporting context"
-        },
-        {
-          "text": "successful result",
-          "type": "supporting context"
-        }
-      ],
-      "inferencePath": [
-        "ready to choose the wrong option",
-        "warning changed my mind",
-        "successful result",
-        "targetSense: 〜しなかっただろう",
-        "would not have"
-      ],
-      "segments": [
-        [
-          {
-            "en": "Without your advice, I ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "would not have",
-            "role": "target",
-            "useJapanese": false
-          },
-          {
-            "en": " made the right decision.",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "I was ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "ready to choose the wrong option",
+            "en": "The traveler walked",
             "role": "clue",
             "clueType": "supporting context",
             "useJapanese": false
           },
           {
-            "en": ", but your ",
+            "en": " ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "warning changed my mind",
+            "en": "through the ancient market",
             "role": "clue",
             "clueType": "supporting context",
             "useJapanese": false
@@ -7712,12 +7617,207 @@
             "useJapanese": false
           },
           {
-            "en": "the choice I finally made led to a ",
+            "en": "his eyes ",
             "role": "core",
             "useJapanese": false
           },
           {
-            "en": "successful result",
+            "en": "carefully checked every small shop",
+            "role": "clue",
+            "clueType": "behavior",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "〜を探して",
+        "〜を無視して",
+        "〜を訪れて",
+        "〜を作って"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「The traveler walked」と「through the ancient market」と「carefully checked every small shop」が手がかりです。これらの状況から、in search ofは「〜を探して」を表すと判断できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 3,
+        "targetProtected": true,
+        "cluesProtected": true
+      }
+    },
+    {
+      "q": 20,
+      "type": "idiom",
+      "target": "for fear of",
+      "meaning": "〜を恐れて、〜しないように",
+      "targetSense": "〜を恐れて",
+      "pos": "前置詞句",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "She spoke quietly for fear of waking the baby.",
+        "The little boy walked on tiptoe, and the animal stayed completely still."
+      ],
+      "mixedEnglish": [
+        "She spoke quietly for fear of waking the baby.",
+        "The little boy walked on tiptoe, and the animal stayed completely still."
+      ],
+      "contextClues": [
+        {
+          "text": "The little boy",
+          "type": "supporting context"
+        },
+        {
+          "text": "walked on tiptoe",
+          "type": "supporting context"
+        }
+      ],
+      "inferencePath": [
+        "The little boy",
+        "walked on tiptoe",
+        "targetSense: 〜を恐れて",
+        "for fear of"
+      ],
+      "segments": [
+        [
+          {
+            "en": "She spoke quietly ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "for fear of",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " waking the baby.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The little boy",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": " ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "walked on tiptoe",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": ", and ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "the animal stayed completely still.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "〜を恐れて",
+        "〜を喜んで",
+        "〜を期待して",
+        "〜を無視して"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「The little boy」と「walked on tiptoe」が手がかりです。これらの状況から、for fear ofは「〜を恐れて」を表すと判断できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 2,
+        "targetProtected": true,
+        "cluesProtected": true
+      }
+    },
+    {
+      "q": 20,
+      "type": "idiom",
+      "target": "on behalf of",
+      "meaning": "〜を代表して、〜のために",
+      "targetSense": "〜を代表して",
+      "pos": "前置詞句",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "I accepted the award on behalf of the team.",
+        "The other players remained in their seats while I spoke for all of them, and i thanked the coaches using the team's shared message."
+      ],
+      "mixedEnglish": [
+        "I accepted the award on behalf of the team.",
+        "The other players remained in their seats while I spoke for all of them, and i thanked the coaches using the team's shared message."
+      ],
+      "contextClues": [
+        {
+          "text": "spoke for all of them",
+          "type": "supporting context"
+        },
+        {
+          "text": "team's shared message",
+          "type": "supporting context"
+        }
+      ],
+      "inferencePath": [
+        "spoke for all of them",
+        "team's shared message",
+        "targetSense: 〜を代表して",
+        "on behalf of"
+      ],
+      "segments": [
+        [
+          {
+            "en": "I accepted the award ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "on behalf of",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " the team.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "The other players remained in their seats while I ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "spoke for all of them",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": ", and ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "i thanked the coaches using the ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "team's shared message",
             "role": "clue",
             "clueType": "supporting context",
             "useJapanese": false
@@ -7730,201 +7830,132 @@
         ]
       ],
       "choices": [
-        "〜しなかっただろう",
-        "〜する必要はない",
-        "〜してはいけない",
-        "〜するはずだ"
+        "〜を代表して",
+        "〜に反対して",
+        "〜に直面して",
+        "〜と比較して"
       ],
       "answerIndex": 0,
-      "inferenceExplanation": "「ready to choose the wrong option」と「warning changed my mind」と「successful result」が手がかりです。これらの状況から、would not haveは「〜しなかっただろう」を表すと判断できます。",
+      "inferenceExplanation": "「spoke for all of them」と「team's shared message」が手がかりです。これらの状況から、on behalf ofは「〜を代表して」を表すと判断できます。",
+      "quality": {
+        "targetOccurrence": 1,
+        "clueCount": 2,
+        "targetProtected": true,
+        "cluesProtected": true
+      }
+    },
+    {
+      "q": 20,
+      "type": "idiom",
+      "target": "with regard to",
+      "meaning": "〜に関して",
+      "targetSense": "〜に関して",
+      "pos": "前置詞句",
+      "level": "EIKEN Grade 2",
+      "fullEnglish": [
+        "We have no comments with regard to the plan.",
+        "Reporters asked several questions about it, but the spokesperson discussed only other matters, and the company gave no opinion on that subject."
+      ],
+      "mixedEnglish": [
+        "We have no comments with regard to the plan.",
+        "Reporters asked several questions about it, but the spokesperson discussed only other matters, and the company gave no opinion on that subject."
+      ],
+      "contextClues": [
+        {
+          "text": "questions about it",
+          "type": "supporting context"
+        },
+        {
+          "text": "discussed only other matters",
+          "type": "supporting context"
+        },
+        {
+          "text": "no opinion on that subject",
+          "type": "supporting context"
+        }
+      ],
+      "inferencePath": [
+        "questions about it",
+        "discussed only other matters",
+        "no opinion on that subject",
+        "targetSense: 〜に関して",
+        "with regard to"
+      ],
+      "segments": [
+        [
+          {
+            "en": "We have no comments ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "with regard to",
+            "role": "target",
+            "useJapanese": false
+          },
+          {
+            "en": " the plan.",
+            "role": "core",
+            "useJapanese": false
+          }
+        ],
+        [
+          {
+            "en": "Reporters asked several ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "questions about it",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": ", but the spokesperson ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "discussed only other matters",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": ", and ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "the company gave ",
+            "role": "core",
+            "useJapanese": false
+          },
+          {
+            "en": "no opinion on that subject",
+            "role": "clue",
+            "clueType": "supporting context",
+            "useJapanese": false
+          },
+          {
+            "en": ".",
+            "role": "core",
+            "useJapanese": false
+          }
+        ]
+      ],
+      "choices": [
+        "〜に関して",
+        "〜に反対して",
+        "〜に加えて",
+        "〜に匹敵して"
+      ],
+      "answerIndex": 0,
+      "inferenceExplanation": "「questions about it」と「discussed only other matters」と「no opinion on that subject」が手がかりです。これらの状況から、with regard toは「〜に関して」を表すと判断できます。",
       "quality": {
         "targetOccurrence": 1,
         "clueCount": 3,
-        "targetProtected": true,
-        "cluesProtected": true
-      }
-    },
-    {
-      "q": 20,
-      "type": "idiom",
-      "target": "should not have",
-      "meaning": "〜すべきではなかった",
-      "targetSense": "〜すべきではなかった",
-      "pos": "助動詞句",
-      "level": "EIKEN Grade 2",
-      "fullEnglish": [
-        "You should not have left the medicine near the young child.",
-        "It was a very dangerous place for such harmful pills."
-      ],
-      "mixedEnglish": [
-        "You should not have left the medicine near the young child.",
-        "It was a very dangerous place for such harmful pills."
-      ],
-      "contextClues": [
-        {
-          "text": "left the medicine",
-          "type": "behavior"
-        },
-        {
-          "text": "very dangerous place",
-          "type": "contrast"
-        }
-      ],
-      "inferencePath": [
-        "left the medicine",
-        "very dangerous place",
-        "targetSense: 〜すべきではなかった",
-        "should not have"
-      ],
-      "segments": [
-        [
-          {
-            "en": "You ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "should not have",
-            "role": "target",
-            "useJapanese": false
-          },
-          {
-            "en": " ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "left the medicine",
-            "role": "clue",
-            "clueType": "behavior",
-            "useJapanese": false
-          },
-          {
-            "en": " near the young child.",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "It was a ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "very dangerous place",
-            "role": "clue",
-            "clueType": "contrast",
-            "useJapanese": false
-          },
-          {
-            "en": " for such harmful pills.",
-            "role": "core",
-            "useJapanese": false
-          }
-        ]
-      ],
-      "choices": [
-        "〜すべきではなかった",
-        "〜するつもりはなかった",
-        "〜したかもしれない",
-        "〜するはずがなかった"
-      ],
-      "answerIndex": 0,
-      "inferenceExplanation": "「left the medicine」と「very dangerous place」という手がかりから、薬を幼児の近くに置いた行動が危険であり、適切ではなかったことがわかります。そのため、should not haveは「〜すべきではなかった」だと推測できます。",
-      "quality": {
-        "targetOccurrence": 1,
-        "clueCount": 2,
-        "targetProtected": true,
-        "cluesProtected": true
-      }
-    },
-    {
-      "q": 20,
-      "type": "idiom",
-      "target": "must not have",
-      "meaning": "〜したはずがない、〜しなかったに違いない",
-      "targetSense": "〜したはずがない",
-      "pos": "助動詞句",
-      "level": "EIKEN Grade 2",
-      "fullEnglish": [
-        "The lights are off, so they must not have arrived home yet.",
-        "The house is completely dark and quiet at this hour."
-      ],
-      "mixedEnglish": [
-        "The lights are off, so they must not have arrived home yet.",
-        "The house is completely dark and quiet at this hour."
-      ],
-      "contextClues": [
-        {
-          "text": "The lights are off",
-          "type": "cause"
-        },
-        {
-          "text": "completely dark and quiet",
-          "type": "situation"
-        }
-      ],
-      "inferencePath": [
-        "The lights are off",
-        "completely dark and quiet",
-        "targetSense: 〜したはずがない",
-        "must not have"
-      ],
-      "segments": [
-        [
-          {
-            "en": "The lights are off",
-            "role": "clue",
-            "clueType": "cause",
-            "useJapanese": false
-          },
-          {
-            "en": ", so they ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "must not have",
-            "role": "target",
-            "useJapanese": false
-          },
-          {
-            "en": " arrived home yet.",
-            "role": "core",
-            "useJapanese": false
-          }
-        ],
-        [
-          {
-            "en": "The house is ",
-            "role": "core",
-            "useJapanese": false
-          },
-          {
-            "en": "completely dark and quiet",
-            "role": "clue",
-            "clueType": "situation",
-            "useJapanese": false
-          },
-          {
-            "en": " at this hour.",
-            "role": "core",
-            "useJapanese": false
-          }
-        ]
-      ],
-      "choices": [
-        "〜したはずがない",
-        "〜しなければならない",
-        "〜するべきではない",
-        "〜したかもしれない"
-      ],
-      "answerIndex": 0,
-      "inferenceExplanation": "「The lights are off」と「completely dark and quiet」という手がかりから、家が暗くて静かなのでまだ到着していないと強く推測できることがわかります。そのため、must not haveは「〜したはずがない」だと推測できます。",
-      "quality": {
-        "targetOccurrence": 1,
-        "clueCount": 2,
         "targetProtected": true,
         "cluesProtected": true
       }

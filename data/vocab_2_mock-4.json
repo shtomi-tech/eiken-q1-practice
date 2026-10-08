@@ -509,7 +509,8 @@
       "example": "Having spent all morning on the report, he took a short break.",
       "exampleTranslation": "報告書に午前中ずっと取り組んだので、彼は短い休憩を取った。",
       "pos": "動詞",
-      "word": "having spent"
+      "word": "having spent",
+      "ipa": "/ˈhævɪŋ spɛnt/"
     },
     {
       "q": 13,
@@ -518,7 +519,8 @@
       "example": "She has spent several years studying insects in the rainforest.",
       "exampleTranslation": "彼女は数年間、熱帯雨林で昆虫を研究してきた。",
       "pos": "動詞",
-      "word": "has spent"
+      "word": "has spent",
+      "ipa": "/hæz spɛnt/"
     },
     {
       "q": 13,
@@ -527,7 +529,8 @@
       "example": "By noon, the visitors had spent three hours inside the museum.",
       "exampleTranslation": "正午までに、訪問者たちは博物館の中で3時間過ごしていた。",
       "pos": "動詞",
-      "word": "had spent"
+      "word": "had spent",
+      "ipa": "/hæd spɛnt/"
     },
     {
       "q": 14,
@@ -1085,102 +1088,102 @@
     {
       "q": 20,
       "is_answer": false,
-      "meaning": "持っていないことになるだろう",
-      "example": "By tomorrow, the store will not have any fresh bread left.",
-      "exampleTranslation": "明日までには、その店には新鮮なパンが残っていないだろう。",
-      "pos": "助動詞句",
       "type": "idiom",
-      "phrase": "will not have",
+      "phrase": "in search of",
+      "pos": "前置詞句",
       "coreImage": {
         "chain": [
           {
-            "term": "will",
-            "gloss": "未来を示して"
+            "term": "in",
+            "gloss": "中で"
           },
           {
-            "term": "have",
-            "gloss": "持つ"
+            "term": "search",
+            "gloss": "探すこと"
           },
           {
-            "gloss": "未来に持っていないことになる"
+            "gloss": "探している最中で"
           }
         ]
-      }
+      },
+      "meaning": "〜を探して、〜を求めて",
+      "example": "Clara went to the bookstore in search of a novel.",
+      "exampleTranslation": "クララは小説を探しに本屋に行きました。"
     },
     {
       "q": 20,
       "is_answer": false,
-      "meaning": "〜しなかっただろう",
-      "example": "Without your advice, I would not have made the right decision.",
-      "exampleTranslation": "あなたの助言がなければ、私は正しい決定をしなかっただろう。",
-      "pos": "助動詞句",
       "type": "idiom",
-      "phrase": "would not have",
+      "phrase": "for fear of",
+      "pos": "前置詞句",
       "coreImage": {
         "chain": [
           {
-            "term": "would",
-            "gloss": "仮定の結果を示して"
+            "term": "for",
+            "gloss": "〜のために"
           },
           {
-            "term": "not have",
-            "gloss": "完了形を否定して"
+            "term": "fear",
+            "gloss": "恐れ"
           },
           {
-            "gloss": "〜しなかっただろう"
+            "gloss": "恐れを理由に避ける"
           }
         ]
-      }
-    },
-    {
-      "q": 20,
-      "is_answer": false,
-      "meaning": "〜すべきではなかった",
-      "example": "You should not have left the medicine near the young child.",
-      "exampleTranslation": "幼い子どもの近くに薬を置くべきではなかった。",
-      "pos": "助動詞句",
-      "type": "idiom",
-      "phrase": "should not have",
-      "coreImage": {
-        "chain": [
-          {
-            "term": "should",
-            "gloss": "望ましさを示して"
-          },
-          {
-            "term": "have",
-            "gloss": "持つ・する"
-          },
-          {
-            "gloss": "〜すべきではなかった"
-          }
-        ]
-      }
+      },
+      "meaning": "〜を恐れて、〜しないように",
+      "example": "She spoke quietly for fear of waking the baby.",
+      "exampleTranslation": "彼女は赤ん坊を起こすのを恐れて静かに話した。"
     },
     {
       "q": 20,
       "is_answer": true,
-      "meaning": "〜したはずがない、〜しなかったに違いない",
-      "example": "The lights are off, so they must not have arrived home yet.",
-      "exampleTranslation": "明かりが消えているので、彼らはまだ帰宅していないに違いない。",
-      "pos": "助動詞句",
       "type": "idiom",
-      "phrase": "must not have",
+      "phrase": "on behalf of",
+      "pos": "前置詞句",
       "coreImage": {
         "chain": [
           {
-            "term": "must",
-            "gloss": "強い判断を示して"
+            "term": "on",
+            "gloss": "〜の上に立って"
           },
           {
-            "term": "have",
-            "gloss": "持つ・する"
+            "term": "behalf",
+            "gloss": "利益・代表"
           },
           {
-            "gloss": "〜したはずがない"
+            "gloss": "他者を代表する立場で"
           }
         ]
-      }
+      },
+      "meaning": "〜を代表して、〜のために",
+      "example": "I accepted the award on behalf of the team.",
+      "exampleTranslation": "チームを代表して賞を受け取りました。"
+    },
+    {
+      "q": 20,
+      "is_answer": false,
+      "type": "idiom",
+      "phrase": "with regard to",
+      "pos": "前置詞句",
+      "coreImage": {
+        "chain": [
+          {
+            "term": "with",
+            "gloss": "〜とともに"
+          },
+          {
+            "term": "regard",
+            "gloss": "考慮"
+          },
+          {
+            "gloss": "対象について考えると"
+          }
+        ]
+      },
+      "meaning": "〜に関して",
+      "example": "We have no comments with regard to the plan.",
+      "exampleTranslation": "この計画に関してはコメントはありません。"
     }
   ]
 }
