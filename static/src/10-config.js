@@ -217,12 +217,15 @@ const DAILY_QUOTA_LIMITS = { write: { def: 10, max: 60 } };
 
 function normalizeDailyQuota(candidate) {
   const source = candidate && typeof candidate === "object" && !Array.isArray(candidate) ? candidate : {};
-  return Object.fromEntries(Object.entries(DAILY_QUOTA_LIMITS).map(([id, { def, max }]) => {
+  const quota = Object.fromEntries(Object.entries(DAILY_QUOTA_LIMITS).map(([id, { def, max }]) => {
     // 空文字・null は Number() で 0 になるため、未設定として既定値へ戻す。
     const raw = source[id];
     const value = raw === "" || raw == null ? NaN : Number(raw);
     return [id, Number.isInteger(value) && value >= 0 && value <= max ? value : def];
   }));
+  // 今日の目標数は学習目標（dailyQuestionGoal）と共有する。ここにはノルマから外したときの印（today: 0）だけを持つ。
+  if (source.today === 0 || source.today === "0") quota.today = 0;
+  return quota;
 }
 
 function countEventsToday(events, now = new Date(), predicate = () => true) {
@@ -252,7 +255,7 @@ function dailyQuotaSummary(now = new Date(), plan = {}, {
       && !String(event.result || "").startsWith("reask-")),
   };
   const goals = {
-    today: Math.max(1, Number(plan?.dailyQuestionGoal) || 1),
+    today: quota.today === 0 ? 0 : Math.max(1, Number(plan?.dailyQuestionGoal) || 1),
     review: Math.min(REVIEW_QUOTA_MAX, done.review + nonNegative(reviewDue)),
     write: writeEnabled ? quota.write : 0,
   };

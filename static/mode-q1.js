@@ -231,12 +231,15 @@ const DAILY_QUOTA_LIMITS = { write: { def: 10, max: 60 } };
 
 function normalizeDailyQuota(candidate) {
   const source = candidate && typeof candidate === "object" && !Array.isArray(candidate) ? candidate : {};
-  return Object.fromEntries(Object.entries(DAILY_QUOTA_LIMITS).map(([id, { def, max }]) => {
+  const quota = Object.fromEntries(Object.entries(DAILY_QUOTA_LIMITS).map(([id, { def, max }]) => {
     // 空文字・null は Number() で 0 になるため、未設定として既定値へ戻す。
     const raw = source[id];
     const value = raw === "" || raw == null ? NaN : Number(raw);
     return [id, Number.isInteger(value) && value >= 0 && value <= max ? value : def];
   }));
+  // 今日の目標数は学習目標（dailyQuestionGoal）と共有する。ここにはノルマから外したときの印（today: 0）だけを持つ。
+  if (source.today === 0 || source.today === "0") quota.today = 0;
+  return quota;
 }
 
 function countEventsToday(events, now = new Date(), predicate = () => true) {
@@ -266,7 +269,7 @@ function dailyQuotaSummary(now = new Date(), plan = {}, {
       && !String(event.result || "").startsWith("reask-")),
   };
   const goals = {
-    today: Math.max(1, Number(plan?.dailyQuestionGoal) || 1),
+    today: quota.today === 0 ? 0 : Math.max(1, Number(plan?.dailyQuestionGoal) || 1),
     review: Math.min(REVIEW_QUOTA_MAX, done.review + nonNegative(reviewDue)),
     write: writeEnabled ? quota.write : 0,
   };
@@ -2438,7 +2441,8 @@ function dailyQuotaCard({ grade, plan, limit, writeEnabled, items, achieved, all
   }, "ノルマを設定");
   const settings = el("form", { class: "studyPlanSettings hide", id: settingsId, "aria-labelledby": "dailyQuotaSettingsTitle" });
   const quota = normalizeDailyQuota(plan.dailyQuota);
-  const todayInput = el("input", { type: "number", min: "1", max: String(limit), value: String(plan.dailyQuestionGoal), inputmode: "numeric", name: "quota-today" });
+  const todayValue = quota.today === 0 ? 0 : plan.dailyQuestionGoal;
+  const todayInput = el("input", { type: "number", min: "0", max: String(limit), value: String(todayValue), inputmode: "numeric", name: "quota-today" });
   const writeMax = DAILY_QUOTA_LIMITS.write.max;
   const writeInput = writeEnabled
     ? el("input", { type: "number", min: "0", max: String(writeMax), value: String(quota.write), inputmode: "numeric", name: "quota-write" })
@@ -2450,7 +2454,7 @@ function dailyQuotaCard({ grade, plan, limit, writeEnabled, items, achieved, all
     el("span", { class: "studyPlanFieldHint" }, hint),
   );
   const closeSettings = () => {
-    todayInput.value = String(plan.dailyQuestionGoal);
+    todayInput.value = String(todayValue);
     if (writeInput) writeInput.value = String(quota.write);
     error.textContent = "";
     settings.classList.add("hide");
@@ -2459,9 +2463,9 @@ function dailyQuotaCard({ grade, plan, limit, writeEnabled, items, achieved, all
   };
   settings.appendChild(el("h4", { id: "dailyQuotaSettingsTitle" }, "1日のノルマ"));
   settings.appendChild(el("p", { class: "hint" },
-    `復習は、その時点で期限が来ている語句数から自動で決まります（最大${REVIEW_QUOTA_MAX}語句）。${writeInput ? "書くを0にするとノルマから外します。" : ""}`));
+    `復習は、その時点で期限が来ている語句数から自動で決まります（最大${REVIEW_QUOTA_MAX}語句）。0にした項目はノルマから外します。`));
   settings.appendChild(el("div", { class: "studyPlanFields" },
-    field("今日（問）", todayInput, `新しい設問（1〜${num(limit)}）`),
+    field("今日（問）", todayInput, `新しい設問（0〜${num(limit)}）`),
     writeInput ? field("書く（語句）", writeInput, `意味を書く演習（0〜${writeMax}）`) : null,
   ));
   settings.appendChild(error);
@@ -2472,9 +2476,9 @@ function dailyQuotaCard({ grade, plan, limit, writeEnabled, items, achieved, all
   settings.addEventListener("submit", (event) => {
     event.preventDefault();
     const read = (input) => (input.value.trim() === "" ? NaN : Number(input.value));
-    const dailyQuestionGoal = read(todayInput);
-    if (!Number.isInteger(dailyQuestionGoal) || dailyQuestionGoal < 1 || dailyQuestionGoal > limit) {
-      error.textContent = `今日は1〜${num(limit)}問で入力してください。`;
+    const today = read(todayInput);
+    if (!Number.isInteger(today) || today < 0 || today > limit) {
+      error.textContent = `今日は0〜${num(limit)}問で入力してください。`;
       todayInput.focus();
       return;
     }
@@ -2484,10 +2488,12 @@ function dailyQuotaCard({ grade, plan, limit, writeEnabled, items, achieved, all
       writeInput?.focus();
       return;
     }
+    // 今日を0にしたときは学習目標の1日の問題数を残したまま、ノルマからだけ外す。
+    const { today: _todayFlag, ...savedQuota } = quota;
     studyPlans[grade] = normalizeStudyPlan({
       ...plan,
-      dailyQuestionGoal,
-      dailyQuota: normalizeDailyQuota({ ...quota, write }),
+      dailyQuestionGoal: today > 0 ? today : plan.dailyQuestionGoal,
+      dailyQuota: normalizeDailyQuota({ ...savedQuota, write, ...(today > 0 ? {} : { today: 0 }) }),
     }, limit);
     saveStudyPlan(grade);
     if (cloud) cloud.queueSave({
