@@ -82,7 +82,45 @@ assert.equal(flow.writtenReaskIndex("learned", 2, 10), -1, "覚えた語は再�
 assert.match(extractFunctionBody(source, "recordWrittenResult"), /if \(entry\.reask\)[\s\S]*else[\s\S]*writtenQueue\.splice/,
   "再出題の結果では、さらに再出題を積まない");
 
+// --- 出題の選び方: 苦手を約6割、残りはまだ書いていない語。足りない枠は埋め合う ---
+const picker = new Function([
+  source.match(/const WRITTEN_WEAK_SHARE = [\d.]+;/)[0],
+  extractFunctionBody(source, "pickWrittenItems"),
+  extractFunctionBody(source, "pullMeaningReviewForward"),
+  "return { pickWrittenItems, pullMeaningReviewForward };",
+].join("\n"))();
+const same = (list) => list.slice();
+const entries = (outcome, n, prefix = outcome || "new") =>
+  Array.from({ length: n }, (_, i) => ({ item: `${prefix}${i}`, outcome, at: `2026-10-0${i + 1}` }));
+const countBy = (picked, prefix) => picked.filter((name) => name.startsWith(prefix)).length;
+let picked = picker.pickWrittenItems([...entries("learned", 5), ...entries(null, 10), ...entries("shaky", 4), ...entries("notLearned", 4)], 10, same);
+assert.equal(picked.length, 10);
+assert.equal(countBy(picked, "notLearned"), 4, "未習得を先に取る");
+assert.equal(countBy(picked, "shaky"), 2, "苦手枠は6語まで");
+assert.equal(countBy(picked, "new"), 4, "残りはまだ書いていない語");
+assert.equal(countBy(picked, "learned"), 0);
+picked = picker.pickWrittenItems([...entries(null, 2), ...entries("shaky", 9)], 10, same);
+assert.equal(countBy(picked, "new"), 2);
+assert.equal(countBy(picked, "shaky"), 8, "未出題が足りなければ苦手で埋める");
+picked = picker.pickWrittenItems([...entries("learned", 5), ...entries(null, 3), ...entries("notLearned", 1)], 10, same);
+assert.equal(picked.length, 9, "対象が足りなければあるだけ出す");
+picked = picker.pickWrittenItems([...entries("learned", 5), ...entries(null, 3)], 5, same);
+assert.deepEqual(picked, ["new0", "new1", "new2", "learned0", "learned1"], "覚えた語は前に書いた順に足す");
+assert.equal(picker.pickWrittenItems([...entries("shaky", 3)], 5, same).length, 3);
+
+// 答えを見た語は、意味だけ復習の期限を今へ早める（評価は付けない）
+const now = new Date("2026-10-13T00:00:00Z");
+const scheduled = { items: { k: { lastAnsweredAt: "2026-10-01T00:00:00Z", nextReviewAt: "2026-11-01T00:00:00Z", fsrs: { due: "2026-11-01T00:00:00Z", stability: 20, reps: 3 } } } };
+assert.equal(picker.pullMeaningReviewForward(scheduled, "k", now), true);
+assert.equal(scheduled.items.k.nextReviewAt, now.toISOString());
+assert.equal(scheduled.items.k.fsrs.due, now.toISOString());
+assert.equal(scheduled.items.k.fsrs.stability, 20, "間隔の記憶は変えない");
+assert.equal(picker.pullMeaningReviewForward({ items: {} }, "k", now), false, "まだ復習していない語は触らない");
+assert.equal(picker.pullMeaningReviewForward({ items: { k: { lastAnsweredAt: "x", nextReviewAt: "2026-10-01T00:00:00Z" } } }, "k", now), false, "期限切れはそのまま");
+assert.match(extractFunctionBody(source, "recordWrittenResult"), /if \(step\.outcome === "notLearned"\) reviewPulled = pullMeaningReviewForward\(/);
+assert.match(extractFunctionBody(source, "startWrittenMeaning"), /pickWrittenItems\(writtenEntries\(pool\), size\)/);
+
 // 書いて答える演習は途中保存しない（resume の形を変えない）
 assert.match(source, /session\.mode === "contextLearn" \|\| session\.mode === "written";\n\s+if \(!isTransientContext\) saveResume\(\);/);
 
-console.log("written meaning UI: OK (Cloudflare 版限定・表記ゆれ一致・Jev 判定の採否・段階式の流れ)");
+console.log("written meaning UI: OK (Cloudflare 版限定・表記ゆれ一致・Jev 判定の採否・段階式の流れ・出題の選び方)");
