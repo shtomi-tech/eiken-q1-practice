@@ -427,10 +427,10 @@ function renderHomeContent() {
   home.innerHTML = "";
   homeTabMarks = [];
   if (needsGradeChoice) {
-    setChromeTitle("英検 大問1 単語アプリ");
+    setChromeTitle(appName());
     return renderGradeChoice();
   }
-  setChromeTitle(`${datasetHeadline()} 単語アプリ`);
+  setChromeTitle(`${datasetHeadline()} ${appNameSuffix()}`);
 
   const total = state.qList.length;
   const learned = state.qList.filter((q) => unit(q).learned).length;
