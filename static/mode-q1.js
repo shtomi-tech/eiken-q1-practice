@@ -5329,7 +5329,9 @@ function renderDone(body) {
    （数問あとに単語だけでもう一度）。記憶から引き出す負荷を先に掛け、例文は補助に回す
    （例文あり・なしの定着比較のリサーチより）。
    採点は Cloudflare Worker の /api/grade-meaning（worker/index.mjs）。Worker が無い・失敗した・
-   確信度が低いときは自己採点に戻す。間隔復習（FSRS）の記録には混ぜず、学習履歴にだけ残す。
+   確信度が低いときは自己採点に戻す。間隔復習（FSRS）の評価には混ぜない。ただし答えを見た語は、
+   意味だけ復習の期限を今へ早める（評価は付けず、間隔の計算は次の復習の解答に任せる）。
+   出題は直近の結果で選ぶ: 苦手（未習得 → あやふや）を約6割、まだ書いていない語を残りに充てる。
    参考: kobun-vocab-learning の「選択肢なしで思い出す」。 */
 const WRITTEN_SESSION_SIZE = 10;
 // 答えを見た語を、何問あとにもう一度出すか。
@@ -5341,6 +5343,8 @@ const WRITTEN_MAX_ANSWER_LENGTH = 60;
 const WRITTEN_GRADES = ["correct", "partial", "wrong"];
 const WRITTEN_NO_ANSWER = /^(?:わから(?:ない|ん|ず)|分から(?:ない|ん|ず)|わかりません|分かりません|しらない|知らない|知りません|不明|忘れた|[?？・…ー―\-.。、\s])+$/;
 const WRITTEN_OUTCOME_LABELS = { learned: "単語だけで正解", shaky: "例文で正解", notLearned: "答えを確認" };
+// 1回の出題のうち、苦手な語（未習得・あやふや）に充てる割合。残りはまだ書いていない語。
+const WRITTEN_WEAK_SHARE = 0.6;
 
 // 2段目のヒントに例文を使うため、例文の中に出題形が見つかる語句だけを出す。
 function writtenMeaningItems(items = []) {
@@ -5412,9 +5416,66 @@ function writtenMeaningCard(ready, learnedItems = []) {
   return card;
 }
 
+/**
+ * 語句ごとの「書く」の直近の結果を添える。progress.written が正本で、
+ * 記録が無い語は学習履歴の written-meaning から拾う（progress.written を足す前の分）。
+ */
+function writtenEntries(items) {
+  const fromHistory = new Map();
+  const historyFor = (datasetId, progress) => {
+    if (fromHistory.has(datasetId)) return fromHistory.get(datasetId);
+    const latest = new Map();
+    for (const event of Array.isArray(progress.history) ? progress.history : []) {
+      if (!event || event.kind !== "written-meaning" || !WRITTEN_OUTCOME_LABELS[event.result]) continue;
+      latest.set(`${event.type}:${String(event.surface || "").toLowerCase()}`, { outcome: event.result, at: event.at });
+    }
+    fromHistory.set(datasetId, latest);
+    return latest;
+  };
+  return items.map((item) => {
+    const datasetId = item._datasetId || state.datasetId;
+    const progress = progressFor(datasetId) || {};
+    const saved = progress.written && progress.written[itemKeyOf(item)];
+    const last = saved && WRITTEN_OUTCOME_LABELS[saved.outcome]
+      ? saved
+      : historyFor(datasetId, progress).get(`${item.type}:${String(surfaceOf(item) || "").toLowerCase()}`);
+    return { item, outcome: last ? last.outcome : null, at: last ? last.at : null };
+  });
+}
+
+/**
+ * 出題する語句を選ぶ純粋ロジック。entries: [{ item, outcome, at }]（まだ書いていない語は outcome: null）。
+ * 苦手（未習得 → あやふや）を size の約6割、まだ書いていない語を残りに充て、足りない枠は互いに埋め合う。
+ * それでも足りなければ、単語だけで正解した語を前に書いた順に足す。出題順はシャッフルする。
+ */
+function pickWrittenItems(entries, size, shuffleFn = shuffle) {
+  const withOutcome = (outcome) => shuffleFn(entries.filter((entry) => entry.outcome === outcome));
+  const weak = [...withOutcome("notLearned"), ...withOutcome("shaky")];
+  const fresh = withOutcome(null);
+  const learned = entries.filter((entry) => entry.outcome === "learned")
+    .sort((a, b) => String(a.at || "").localeCompare(String(b.at || "")));
+  const weakSlots = Math.min(weak.length, Math.ceil(size * WRITTEN_WEAK_SHARE));
+  const picked = weak.slice(0, weakSlots);
+  picked.push(...fresh.slice(0, size - picked.length));
+  picked.push(...weak.slice(weakSlots, weakSlots + size - picked.length));
+  picked.push(...learned.slice(0, size - picked.length));
+  return shuffleFn(picked).map((entry) => entry.item);
+}
+
+/** 意味だけ復習の期限を now へ早める。まだ復習していない語（すでに対象）と期限切れの語は触らない。 */
+function pullMeaningReviewForward(progress, key, now = new Date()) {
+  const current = progress.items && progress.items[key];
+  if (!current || !current.lastAnsweredAt || !current.nextReviewAt) return false;
+  if (new Date(current.nextReviewAt).getTime() <= now.getTime()) return false;
+  const due = now.toISOString();
+  current.nextReviewAt = due;
+  if (current.fsrs && typeof current.fsrs === "object") current.fsrs.due = due;
+  return true;
+}
+
 function startWrittenMeaning(items, size = WRITTEN_SESSION_SIZE) {
   const pool = writtenMeaningItems(items);
-  const picked = shuffle(pool).slice(0, size);
+  const picked = withProgressReadCache(() => pickWrittenItems(writtenEntries(pool), size));
   if (!picked.length) {
     renderHome();
     return false;
@@ -5583,6 +5644,14 @@ function recordWrittenResult(entry, step) {
   }
   const datasetId = item._datasetId || state.datasetId;
   const progress = progressFor(datasetId);
+  let reviewPulled = false;
+  if (!entry.reask) {
+    const key = itemKeyOf(item);
+    const now = new Date();
+    if (!progress.written || typeof progress.written !== "object") progress.written = {};
+    progress.written[key] = { outcome: step.outcome, at: now.toISOString() };
+    if (step.outcome === "notLearned") reviewPulled = pullMeaningReviewForward(progress, key, now);
+  }
   appendLearningHistory(progress, {
     kind: "written-meaning",
     type: item.type,
@@ -5590,6 +5659,7 @@ function recordWrittenResult(entry, step) {
     result: entry.reask ? `reask-${step.reaskResult}` : step.outcome,
     hintUsed: session.writtenAnswers.some((a) => a.step === "example"),
     gradedBy: session.writtenGradedBy,
+    ...(reviewPulled ? { reviewPulled: true } : {}),
   });
   saveProgressFor(datasetId, progress);
 }
