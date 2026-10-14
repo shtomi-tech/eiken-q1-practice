@@ -82,6 +82,26 @@ assert.equal(flow.writtenReaskIndex("learned", 2, 10), -1, "覚えた語は再�
 assert.match(extractFunctionBody(source, "recordWrittenResult"), /if \(entry\.reask\)[\s\S]*else[\s\S]*writtenQueue\.splice/,
   "再出題の結果では、さらに再出題を積まない");
 
+// --- 結果画面の Enter で次へ。採点を送った Enter・IME 確定・押しっぱなしでは進めない ---
+const enter = new Function(`${extractFunctionBody(source, "writtenEnterAdvances")}\nreturn writtenEnterAdvances;`)();
+const key = (over = {}) => ({ key: "Enter", timeStamp: 200, target: { tagName: "BODY" }, ...over });
+assert.equal(enter(key(), "result", 100), true, "正解の画面で進む");
+assert.equal(enter(key(), "answer", 100), true, "答えの確認画面でも進む");
+assert.equal(enter(key(), "input", 100), false);
+assert.equal(enter(key(), "self", 100), false, "自己判定は Enter で決めない");
+assert.equal(enter(key({ timeStamp: 50 }), "result", 100), false, "採点を送った同じ Enter では進まない");
+assert.equal(enter(key(), "result", Infinity), false);
+assert.equal(enter(key({ isComposing: true }), "result", 100), false, "IME の変換確定では進まない");
+assert.equal(enter(key({ keyCode: 229 }), "result", 100), false);
+assert.equal(enter(key({ repeat: true }), "result", 100), false, "押しっぱなしで連続して進まない");
+assert.equal(enter(key({ key: "a" }), "result", 100), false);
+assert.equal(enter(key({ shiftKey: true }), "result", 100), false);
+assert.equal(enter(key({ target: { tagName: "BUTTON" } }), "result", 100), false, "ボタン上ではボタン自身に任せる");
+assert.match(extractFunctionBody(source, "applyWrittenGrade"), /session\.writtenPhase = step\.next;\n\s+session\.writtenAdvanceReadyAt = performance\.now\(\);/);
+assert.match(extractFunctionBody(source, "resetWrittenTurn"), /session\.writtenAdvanceReadyAt = Infinity;/);
+assert.match(extractFunctionBody(source, "wireWrittenEnterKey"), /document\.addEventListener\("keydown", \(event\) => \{\n\s+if \(!session \|\| session\.mode !== "written" \|\| session\.stage !== "written"\) return;\n\s+if \(!writtenEnterAdvances\(event, session\.writtenPhase, session\.writtenAdvanceReadyAt\)\) return;\n\s+event\.preventDefault\(\);\n\s+advanceWritten\(\);/);
+assert.match(extractFunctionBody(source, "startWrittenMeaning"), /wireWrittenEnterKey\(\);/);
+
 // --- 出題の選び方: 苦手を約6割、残りはまだ書いていない語。足りない枠は埋め合う ---
 const picker = new Function([
   source.match(/const WRITTEN_WEAK_SHARE = [\d.]+;/)[0],
@@ -123,4 +143,4 @@ assert.match(extractFunctionBody(source, "startWrittenMeaning"), /pickWrittenIte
 // 書いて答える演習は途中保存しない（resume の形を変えない）
 assert.match(source, /session\.mode === "contextLearn" \|\| session\.mode === "written";\n\s+if \(!isTransientContext\) saveResume\(\);/);
 
-console.log("written meaning UI: OK (Cloudflare 版限定・表記ゆれ一致・Jev 判定の採否・段階式の流れ・出題の選び方)");
+console.log("written meaning UI: OK (Cloudflare 版限定・表記ゆれ一致・Jev 判定の採否・段階式の流れ・Enter で次へ・出題の選び方)");

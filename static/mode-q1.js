@@ -5494,6 +5494,7 @@ function startWrittenMeaning(items, size = WRITTEN_SESSION_SIZE) {
     // 語句ごとの結果。{ item, outcome, answers: [], reaskResult }
     writtenResults: [],
   };
+  wireWrittenEnterKey();
   resetWrittenTurn();
   renderSession();
   resetSessionScroll();
@@ -5508,6 +5509,7 @@ function resetWrittenTurn() {
   session.writtenAi = null;
   session.writtenGradedBy = null;
   session.writtenOutcome = null;
+  session.writtenAdvanceReadyAt = Infinity;
 }
 
 /**
@@ -5628,6 +5630,7 @@ function applyWrittenGrade(grade, gradedBy) {
   }
   recordWrittenResult(entry, step);
   session.writtenPhase = step.next;
+  session.writtenAdvanceReadyAt = performance.now();
   renderSession();
 }
 
@@ -5672,6 +5675,32 @@ function advanceWritten() {
     resetWrittenTurn();
   }
   renderSession();
+}
+
+/**
+ * 結果画面（正解・答えの確認）で Enter を「次へ」として扱ってよいか。
+ * 採点を送った Enter・押しっぱなし・IME 変換確定の Enter では進めない。
+ * ボタンやリンクに焦点があるときはブラウザ標準の動作に任せる。
+ */
+function writtenEnterAdvances(event, phase, readyAt) {
+  if (phase !== "result" && phase !== "answer") return false;
+  if (event.key !== "Enter" || event.repeat || event.isComposing || event.keyCode === 229) return false;
+  if (event.ctrlKey || event.altKey || event.metaKey || event.shiftKey) return false;
+  if (!(event.timeStamp > readyAt)) return false;
+  const tag = String(event.target?.tagName || "").toUpperCase();
+  return !["BUTTON", "A", "INPUT", "TEXTAREA", "SELECT"].includes(tag);
+}
+
+let writtenEnterKeyWired = false;
+function wireWrittenEnterKey() {
+  if (writtenEnterKeyWired) return;
+  writtenEnterKeyWired = true;
+  document.addEventListener("keydown", (event) => {
+    if (!session || session.mode !== "written" || session.stage !== "written") return;
+    if (!writtenEnterAdvances(event, session.writtenPhase, session.writtenAdvanceReadyAt)) return;
+    event.preventDefault();
+    advanceWritten();
+  });
 }
 
 function writtenStageBar() {
